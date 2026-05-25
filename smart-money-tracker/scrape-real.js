@@ -47,7 +47,7 @@ const TICKERS = [
             if (data && data.chart && data.chart.result) {
                 const quote = data.chart.result[0].meta;
                 const price = quote.regularMarketPrice;
-                const prevClose = quote.previousClose;
+                const prevClose = quote.chartPreviousClose;
                 const change = price - prevClose;
                 const changePercent = (change / prevClose) * 100;
                 const volume = quote.regularMarketVolume || 0;

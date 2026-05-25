@@ -4,95 +4,95 @@
     "sector": "Financial",
     "category": "Swing",
     "price": 11.06,
-    "change": null,
+    "change": 0.54545454545455,
     "turnover": 83117006,
     "volume": 7515100,
-    "signal": "avoid",
-    "reason": "Kaunter Lemau / Sikat"
+    "signal": "buy",
+    "reason": "🔥 Momentum Kuat & Jerung Masuk"
   },
   {
     "name": "CIMB",
     "sector": "Financial",
     "category": "Swing",
     "price": 7.73,
-    "change": null,
+    "change": -0.25806451612902676,
     "turnover": 54176478,
     "volume": 7008600,
     "signal": "avoid",
-    "reason": "Kaunter Lemau / Sikat"
+    "reason": "⚠️ Jerung Buang Barang / Markup"
   },
   {
     "name": "TENAGA",
     "sector": "Utilities",
     "category": "Swing",
     "price": 14.46,
-    "change": null,
+    "change": 0.27739251040222557,
     "turnover": 41270286,
     "volume": 2854100,
-    "signal": "avoid",
-    "reason": "Kaunter Lemau / Sikat"
+    "signal": "buy",
+    "reason": "🔥 Momentum Kuat & Jerung Masuk"
   },
   {
     "name": "GAMUDA",
     "sector": "Construction",
     "category": "Swing",
     "price": 4.33,
-    "change": null,
+    "change": -1.5909090909090973,
     "turnover": 36271544,
     "volume": 8376800,
     "signal": "avoid",
-    "reason": "Kaunter Lemau / Sikat"
+    "reason": "⚠️ Jerung Buang Barang / Markup"
   },
   {
     "name": "YTLPOWR",
     "sector": "Utilities",
     "category": "Swing",
     "price": 4.17,
-    "change": null,
+    "change": 0.7246376811594264,
     "turnover": 26286429,
     "volume": 6303700,
-    "signal": "avoid",
-    "reason": "Kaunter Lemau / Sikat"
+    "signal": "buy",
+    "reason": "🔥 Momentum Kuat & Jerung Masuk"
   },
   {
     "name": "SUNWAY",
     "sector": "Properties",
     "category": "Swing",
     "price": 5.39,
-    "change": null,
+    "change": -0.1851851851851977,
     "turnover": 21461363,
     "volume": 3981700,
     "signal": "avoid",
-    "reason": "Kaunter Lemau / Sikat"
+    "reason": "⚠️ Jerung Buang Barang / Markup"
   },
   {
     "name": "IJM",
     "sector": "Construction",
     "category": "Swing",
     "price": 2.14,
-    "change": null,
+    "change": 3.381642512077309,
     "turnover": 33504054.000000004,
     "volume": 15656100,
-    "signal": "avoid",
-    "reason": "Kaunter Lemau / Sikat"
+    "signal": "buy",
+    "reason": "🔥 Momentum Kuat & Jerung Masuk"
   },
   {
     "name": "SKYCHIP",
     "sector": "Technology",
     "category": "Intraday",
     "price": 3.41,
-    "change": null,
+    "change": -1.1594202898550736,
     "turnover": 9303844,
     "volume": 2728400,
     "signal": "avoid",
-    "reason": "Kaunter Lemau / Sikat"
+    "reason": "⚠️ Jerung Buang Barang / Markup"
   },
   {
     "name": "NOTION",
     "sector": "Technology",
     "category": "Intraday",
     "price": 0.48,
-    "change": null,
+    "change": 0,
     "turnover": 1338672,
     "volume": 2788900,
     "signal": "avoid",
@@ -103,40 +103,40 @@
     "sector": "Consumer",
     "category": "Intraday",
     "price": 1.57,
-    "change": null,
+    "change": -2.484472049689443,
     "turnover": 31375194,
     "volume": 19984200,
     "signal": "avoid",
-    "reason": "Kaunter Lemau / Sikat"
+    "reason": "⚠️ Jerung Buang Barang / Markup"
   },
   {
     "name": "INARI",
     "sector": "Technology",
     "category": "Intraday",
     "price": 1.98,
-    "change": null,
+    "change": 0.5076142131979701,
     "turnover": 20648232,
     "volume": 10428400,
-    "signal": "avoid",
-    "reason": "Kaunter Lemau / Sikat"
+    "signal": "buy",
+    "reason": "🔥 Momentum Kuat & Jerung Masuk"
   },
   {
     "name": "MYEG",
     "sector": "Technology",
     "category": "Intraday",
     "price": 0.805,
-    "change": null,
+    "change": 1.2578616352201268,
     "turnover": 93797151,
     "volume": 116518200,
-    "signal": "avoid",
-    "reason": "Kaunter Lemau / Sikat"
+    "signal": "buy",
+    "reason": "🔥 Momentum Kuat & Jerung Masuk"
   },
   {
     "name": "EKOVEST",
     "sector": "Construction",
     "category": "Intraday",
     "price": 0.21,
-    "change": null,
+    "change": -2.325581395348839,
     "turnover": 759759,
     "volume": 3617900,
     "signal": "avoid",
@@ -147,10 +147,10 @@
     "sector": "Energy",
     "category": "Penny",
     "price": 0.31,
-    "change": null,
+    "change": -1.5873015873015885,
     "turnover": 7166053,
     "volume": 23116300,
     "signal": "avoid",
-    "reason": "Kaunter Lemau / Sikat"
+    "reason": "⚠️ Jerung Buang Barang / Markup"
   }
 ]
