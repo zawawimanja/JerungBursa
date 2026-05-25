@@ -3,21 +3,39 @@ const path = require('path');
 
 const OUTPUT_FILE = path.join(__dirname, 'live_data.json');
 
-// Base kaunter Bursa (Bluechips & Penny)
 const TICKERS = [
-    { name: 'SKYCHIP', sector: 'Technology', basePrice: 1.45 },
-    { name: 'MYEG', sector: 'Technology', basePrice: 0.85 },
-    { name: 'YTLPOWR', sector: 'Utilities', basePrice: 4.85 },
-    { name: 'GAMUDA', sector: 'Construction', basePrice: 5.20 },
+    // --- Swing / Bluechips (Peram Santai) ---
+    { name: 'MAYBANK', sector: 'Financial', basePrice: 10.05 },
+    { name: 'CIMB', sector: 'Financial', basePrice: 7.15 },
     { name: 'TENAGA', sector: 'Utilities', basePrice: 11.50 },
+    { name: 'GAMUDA', sector: 'Construction', basePrice: 5.20 },
+    { name: 'YTLPOWR', sector: 'Utilities', basePrice: 4.85 },
+    { name: 'SUNWAY', sector: 'Properties', basePrice: 3.50 },
+    { name: 'IJM', sector: 'Construction', basePrice: 3.10 },
+    { name: 'SIMEPROP', sector: 'Properties', basePrice: 1.25 },
+    { name: 'MAHSING', sector: 'Properties', basePrice: 1.85 },
+    { name: 'PBBANK', sector: 'Financial', basePrice: 4.10 },
+    { name: 'FRONTKN', sector: 'Technology', basePrice: 4.20 },
+    
+    // --- Intraday / Momentum (Hit & Run) ---
+    { name: 'SKYCHIP', sector: 'Technology', basePrice: 1.45 },
+    { name: 'NOTION', sector: 'Technology', basePrice: 1.85 },
+    { name: 'MRDIY', sector: 'Consumer', basePrice: 1.55 },
+    { name: 'INARI', sector: 'Technology', basePrice: 3.20 },
+    { name: 'CTOS', sector: 'Technology', basePrice: 1.40 },
+    { name: 'MYEG', sector: 'Technology', basePrice: 0.85 },
+    { name: 'SNS', sector: 'Technology', basePrice: 0.65 },
+    { name: 'JCY', sector: 'Technology', basePrice: 0.60 },
+    { name: 'ECA', sector: 'Technology', basePrice: 0.85 },
+    { name: 'BETA', sector: 'Industrial', basePrice: 0.45 },
+    { name: 'WENTEL', sector: 'Industrial', basePrice: 0.35 },
     { name: 'WCT', sector: 'Construction', basePrice: 0.95 },
     { name: 'EKOVEST', sector: 'Construction', basePrice: 0.45 },
-    { name: 'MRDIY', sector: 'Consumer', basePrice: 1.55 },
-    { name: 'SUNWAY', sector: 'Properties', basePrice: 3.50 },
-    { name: 'INARI', sector: 'Technology', basePrice: 3.20 },
     { name: 'TOPGLOV', sector: 'Healthcare', basePrice: 0.85 },
     { name: 'DSONIC', sector: 'Technology', basePrice: 0.55 },
     { name: 'UEMS', sector: 'Properties', basePrice: 1.05 },
+    
+    // --- Penny / Potensi Sikat ---
     { name: 'VELESTO', sector: 'Energy', basePrice: 0.28 },
     { name: 'MINETEC', sector: 'Industrial', basePrice: 0.15 }, 
     { name: 'SAPNRG', sector: 'Energy', basePrice: 0.05 },  
