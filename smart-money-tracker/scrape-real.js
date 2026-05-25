@@ -12,7 +12,7 @@ const TICKERS = [
     { name: 'YTLPOWR', symbol: '6742.KL', sector: 'Utilities', category: 'Swing' },
     { name: 'SUNWAY', symbol: '5211.KL', sector: 'Properties', category: 'Swing' },
     { name: 'IJM', symbol: '3336.KL', sector: 'Construction', category: 'Swing' },
-    { name: 'SKYCHIP', symbol: '5326.KL', sector: 'Technology', category: 'Intraday' },
+    { name: 'SKYCHIP', symbol: '5357.KL', sector: 'Technology', category: 'Intraday' },
     { name: 'NOTION', symbol: '0083.KL', sector: 'Technology', category: 'Intraday' },
     { name: 'MRDIY', symbol: '5296.KL', sector: 'Consumer', category: 'Intraday' },
     { name: 'INARI', symbol: '0166.KL', sector: 'Technology', category: 'Intraday' },

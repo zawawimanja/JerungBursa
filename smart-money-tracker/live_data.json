@@ -80,12 +80,12 @@
     "name": "SKYCHIP",
     "sector": "Technology",
     "category": "Intraday",
-    "price": 3.41,
-    "change": -1.1594202898550736,
-    "turnover": 9303844,
-    "volume": 2728400,
-    "signal": "avoid",
-    "reason": "⚠️ Jerung Buang Barang / Markup"
+    "price": 2.92,
+    "change": 8.14814814814814,
+    "turnover": 188765444,
+    "volume": 64645700,
+    "signal": "buy",
+    "reason": "🔥 Momentum Kuat & Jerung Masuk"
   },
   {
     "name": "NOTION",
