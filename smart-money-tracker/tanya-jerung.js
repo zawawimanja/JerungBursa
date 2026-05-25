@@ -33,7 +33,9 @@ try {
         modalKecil.slice(0, 3).forEach((c, i) => {
             const lotDapat = Math.floor(2500 / (c.price * 100)); // Anggaran modal RM2500 per kaunter
             console.log(`   ${i+1}. ${c.name} (RM ${c.price.toFixed(3)}) | Naik: +${c.change.toFixed(2)}% | Jerung Masuk: ${(c.turnover/1000000).toFixed(2)} Juta`);
-            console.log(`      💡 Action Plan: Beli ${lotDapat} lot (Guna modal ~RM2,500). Sedia Take Profit bila untung 5%.\n`);
+            console.log(`      💡 Action Plan: Beli ${lotDapat} lot (Guna modal ~RM2,500).`);
+            console.log(`         -> Pilihan A (Intraday): Sedia Take Profit pantas bila untung 5%.`);
+            console.log(`         -> Pilihan B (Peram Agresif): Boleh peram tunggu breakout, TAPI wajib Cut Loss jika jatuh -5%!\n`);
         });
     } else {
         console.log("⚡ KATEGORI LINCAH: Tiada kaunter yang sesuai fasa 'Golden Entry' hari ini.\n");
