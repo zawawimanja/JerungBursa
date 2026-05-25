@@ -4,63 +4,85 @@ puppeteer.use(StealthPlugin());
 const fs = require('fs');
 const path = require('path');
 
-const TICKERS = [
-    // Financial & Core Swing
-    { name: 'MAYBANK', symbol: '1155.KL', sector: 'Financial', category: 'Swing' },
-    { name: 'CIMB', symbol: '1023.KL', sector: 'Financial', category: 'Swing' },
-    { name: 'PBBANK', symbol: '1295.KL', sector: 'Financial', category: 'Swing' },
-    { name: 'TENAGA', symbol: '5347.KL', sector: 'Utilities', category: 'Swing' },
-    { name: 'YTLPOWR', symbol: '6742.KL', sector: 'Utilities', category: 'Swing' },
-    { name: 'YTL', symbol: '4677.KL', sector: 'Utilities', category: 'Swing' },
-    { name: 'GAMUDA', symbol: '5398.KL', sector: 'Construction', category: 'Swing' },
-    { name: 'SUNWAY', symbol: '5211.KL', sector: 'Properties', category: 'Swing' },
-    { name: 'IJM', symbol: '3336.KL', sector: 'Construction', category: 'Swing' },
-    { name: 'WCT', symbol: '9679.KL', sector: 'Construction', category: 'Intraday' },
-    { name: 'MRCB', symbol: '1651.KL', sector: 'Construction', category: 'Intraday' },
-    { name: 'EKOVEST', symbol: '8877.KL', sector: 'Construction', category: 'Intraday' },
-    // Telecom & Energy
-    { name: 'TELEKOM', symbol: '4863.KL', sector: 'Telecommunications', category: 'Swing' },
-    { name: 'MAXIS', symbol: '6012.KL', sector: 'Telecommunications', category: 'Swing' },
-    { name: 'CELCOMDIGI', symbol: '6947.KL', sector: 'Telecommunications', category: 'Swing' },
-    { name: 'DIALOG', symbol: '7277.KL', sector: 'Energy', category: 'Swing' },
-    { name: 'VELESTO', symbol: '5243.KL', sector: 'Energy', category: 'Penny' },
-    { name: 'DAYANG', symbol: '5141.KL', sector: 'Energy', category: 'Intraday' },
-    { name: 'WASCO', symbol: '5142.KL', sector: 'Energy', category: 'Intraday' },
-    { name: 'UZMA', symbol: '7250.KL', sector: 'Energy', category: 'Intraday' },
-    // Technology
-    { name: 'INARI', symbol: '0166.KL', sector: 'Technology', category: 'Intraday' },
-    { name: 'MYEG', symbol: '0138.KL', sector: 'Technology', category: 'Intraday' },
-    { name: 'SKYCHIP', symbol: '5357.KL', sector: 'Technology', category: 'Intraday' },
-    { name: 'NOTION', symbol: '0083.KL', sector: 'Technology', category: 'Intraday' },
-    { name: 'DSONIC', symbol: '5216.KL', sector: 'Technology', category: 'Intraday' },
-    { name: 'JCY', symbol: '5161.KL', sector: 'Technology', category: 'Intraday' },
-    { name: 'DNEX', symbol: '4456.KL', sector: 'Technology', category: 'Intraday' },
-    { name: 'FRONTKN', symbol: '0128.KL', sector: 'Technology', category: 'Swing' },
-    { name: 'GTRONIC', symbol: '7022.KL', sector: 'Technology', category: 'Intraday' },
-    { name: 'MPI', symbol: '3867.KL', sector: 'Technology', category: 'Swing' },
-    // Property
-    { name: 'SIMEPROP', symbol: '5288.KL', sector: 'Properties', category: 'Swing' },
-    { name: 'SPSETIA', symbol: '8664.KL', sector: 'Properties', category: 'Swing' },
-    { name: 'UEMS', symbol: '5148.KL', sector: 'Properties', category: 'Swing' },
-    { name: 'MAHSING', symbol: '8583.KL', sector: 'Properties', category: 'Swing' },
-    { name: 'ECOWLD', symbol: '8206.KL', sector: 'Properties', category: 'Swing' },
-    // Consumer & Others
-    { name: 'MRDIY', symbol: '5296.KL', sector: 'Consumer', category: 'Intraday' },
-    { name: 'CAPITALA', symbol: '5099.KL', sector: 'Consumer', category: 'Intraday' },
-    { name: 'AAX', symbol: '5238.KL', sector: 'Consumer', category: 'Intraday' },
-    { name: 'SIME', symbol: '4197.KL', sector: 'Consumer', category: 'Swing' },
-    // Healthcare
-    { name: 'KPJ', symbol: '5878.KL', sector: 'Healthcare', category: 'Swing' },
-    { name: 'TOPGLOV', symbol: '7113.KL', sector: 'Healthcare', category: 'Intraday' },
-    { name: 'KOSSAN', symbol: '7153.KL', sector: 'Healthcare', category: 'Intraday' },
-    { name: 'SUPERMX', symbol: '7106.KL', sector: 'Healthcare', category: 'Intraday' }
-];
-
 (async () => {
     console.log("🚀 Memulakan enjin Puppeteer Stealth...");
     const browser = await puppeteer.launch({headless: true});
     const page = await browser.newPage();
     
+    console.log("🌐 Sedut senarai Top Active & Top Gainers dari pasaran (Auto-Scan)...");
+    
+    // --- VIP HYBRID LIST (Sentiasa Pantau Kumpulan Jerung & Tech) ---
+    let allTickersMap = new Map();
+    
+    const vipList = [
+        { name: 'GREATEC', symbol: '0208.KL' },
+        { name: 'UNISEM', symbol: '5005.KL' },
+        { name: 'PENTA', symbol: '7160.KL' },
+        { name: 'MI', symbol: '5286.KL' },
+        { name: 'VSTECS', symbol: '5162.KL' },
+        { name: 'KGB', symbol: '0151.KL' },
+        { name: 'NATGATE', symbol: '0270.KL' },
+        { name: 'FRONTKN', symbol: '0128.KL' },
+        { name: 'INARI', symbol: '0166.KL' },
+        { name: 'MPI', symbol: '3867.KL' },
+        { name: 'UWC', symbol: '5292.KL' },
+        { name: 'GTRONIC', symbol: '7022.KL' },
+        { name: 'MYEG', symbol: '0138.KL' },
+        { name: 'MAYBANK', symbol: '1155.KL' },
+        { name: 'CIMB', symbol: '1023.KL' },
+        { name: 'TENAGA', symbol: '5347.KL' },
+        { name: 'GAMUDA', symbol: '5398.KL' },
+        { name: 'SUNWAY', symbol: '5211.KL' },
+        { name: 'IJM', symbol: '3336.KL' }
+    ];
+    
+    vipList.forEach(t => allTickersMap.set(t.symbol, t));
+
+    // Auto-scrape Top Active dari Bursa Malaysia untuk tambah kaunter momentum baru
+    const urls = [
+        'https://www.bursamalaysia.com/market_information/equities_prices?mode=top_active',
+        'https://www.bursamalaysia.com/market_information/equities_prices?mode=top_gainers'
+    ];
+    
+    for (let url of urls) {
+        try {
+            await page.goto(url, {waitUntil: 'networkidle2', timeout: 30000});
+            const data = await page.evaluate(() => {
+                const rows = document.querySelectorAll('table tbody tr');
+                let results = [];
+                rows.forEach(r => {
+                    const nameEl = r.querySelector('td:nth-child(2)');
+                    const codeEl = r.querySelector('td:nth-child(3)');
+                    if(nameEl && codeEl) {
+                        let code = codeEl.textContent.trim();
+                        // Hanya ambil saham sebenar (kod 4 digit seperti 0208), buang warrant/structured warrant
+                        if (code.match(/^\d{4}$/)) {
+                            results.push({
+                                name: nameEl.textContent.trim().split(' ')[0].replace(/\[S\]/g, ''),
+                                symbol: code + '.KL'
+                            });
+                        }
+                    }
+                });
+                return results;
+            });
+            
+            // Masukkan dalam map untuk elak nama bersilang/duplicate
+            data.forEach(t => allTickersMap.set(t.symbol, t));
+        } catch(e) {
+            console.log("⚠️ Gagal loading senarai dari Bursa:", url);
+        }
+    }
+    
+    const TICKERS = Array.from(allTickersMap.values());
+    console.log(`✅ Berjaya kumpul ${TICKERS.length} kaunter tulen dari senarai Top Pasaran hari ini!`);
+    
+    if (TICKERS.length === 0) {
+        console.log("❌ Tiada kaunter ditemui. Sistem mungkin block, atau pasaran tutup.");
+        await browser.close();
+        return;
+    }
+
     console.log("🌐 Mendapatkan 'pass' keselamatan dari Yahoo Finance...");
     try {
         await page.goto('https://finance.yahoo.com', {waitUntil: 'domcontentloaded', timeout: 15000});
@@ -68,7 +90,7 @@ const TICKERS = [
         console.log("⚠️ Yahoo Finance loading slow, continuing anyway...");
     }
     
-    console.log("📊 Menyedut data live pasaran Bursa...");
+    console.log("📊 Menganalisis Formula Smart Money (Turnover + Momentum)...");
     const results = [];
     
     for (let t of TICKERS) {
@@ -93,15 +115,32 @@ const TICKERS = [
                 
                 if (changePercent > 0 && turnover > 3000000) {
                     signal = "buy";
-                    reason = "🔥 Momentum Kuat & Jerung Masuk";
+                    if (changePercent <= 4.0) {
+                        if (price >= 1.50) {
+                            reason = "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)";
+                        } else {
+                            reason = "🔥 GOLDEN ENTRY (Lincah - Midcap / Laju & Volatile)";
+                        }
+                    } else if (changePercent > 4.0 && changePercent <= 8.0) {
+                        reason = "⚡ Momentum Kuat (Sesuai Intraday, Berisiko Swing)";
+                    } else {
+                        reason = "🚨 OVERBOUGHT (Dah Terbang, Awas Kena Dump)";
+                    }
                 } else if (changePercent <= 0 && turnover > 5000000) {
                     reason = "⚠️ Jerung Buang Barang / Markup";
                 }
 
+                let dynamicCategory = "Intraday / Momentum";
+                if (price >= 1.00) {
+                    dynamicCategory = "Swing / Mid-Cap";
+                } else if (price <= 0.30) {
+                    dynamicCategory = "Penny / Spekulatif";
+                }
+
                 results.push({
                     name: t.name,
-                    sector: t.sector,
-                    category: t.category,
+                    sector: "Auto-Scanned", // Kategori auto
+                    category: dynamicCategory,
                     price: price,
                     change: changePercent,
                     turnover: turnover,
@@ -109,18 +148,21 @@ const TICKERS = [
                     signal: signal,
                     reason: reason
                 });
-                console.log(`✅ ${t.name} disedut: RM ${price.toFixed(3)}`);
+                console.log(`✅ ${t.name} disemak: Harga RM ${price.toFixed(3)} | Turnover: ${(turnover/1000000).toFixed(2)}M`);
             } else {
-                console.log(`❌ Gagal dapatkan data ${t.name}`);
+                console.log(`❌ Gagal dapatkan harga Yahoo untuk ${t.name}`);
             }
         } catch (e) {
             console.log(`❌ Ralat pada ${t.name}: ${e.message}`);
         }
     }
     
+    // Auto-susun ranking ikut Turnover tertinggi (Smart Money)
+    results.sort((a, b) => b.turnover - a.turnover);
+
     const outputPath = path.join(__dirname, 'live_data.json');
     fs.writeFileSync(outputPath, JSON.stringify(results, null, 2));
-    console.log(`\n🎉 Selesai! Disimpan ke ${outputPath}`);
+    console.log(`\n🎉 Selesai scan seluruh pasaran! Disimpan ke ${outputPath}`);
     
     await browser.close();
 })();

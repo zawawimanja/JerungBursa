@@ -1,0 +1,640 @@
+
+
+    <div>
+        <!--class="container-fluid"-->
+        
+
+    <nav class="navbar navbar-expand-md sticky-top navbar-dark bg-primary" style="padding: 0.1rem 1rem;">
+
+<!--        <div class="container-fluid">-->
+
+
+            <a class="navbar-brand" href="/v2/">
+                <img alt="KLSE Screener" class="d-inline-block align-middle" src="/v2/img/icon_navbar.png" style="height:30px;">
+                <span class="d-md-none">KLSE Screener</span>
+            </a>
+
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon" style="font-size:0.7em;"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <form class="formSearch form-inline" role="search" action="/v2/search">
+                    <div class="input-group input-group-sm form-inline">
+                        <input type="search" class="form-control form-control-sm ui-autocomplete-input" id="searchquote" name="q" value="" placeholder="Search ticker" style="min-width:100px;" autocomplete="off">
+                        <div class="input-group-append">
+                            <button type="submit" class="btn btn-light">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+
+                    </div>
+                    <span id="quote_loading" style="width:16px;">
+
+                    </span>
+                </form>
+
+                <ul class="nav navbar-nav mr-auto">
+
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-lg fa-filter fa-fw"></i><span>&nbsp;</span><span class="d-md-none d-xl-inline" title="Screener">Screener</span></a>
+                        <div class="dropdown-menu" role="menu">
+                            <a class="dropdown-item" href="/v2/">Stock Screener</a>
+                            <a class="dropdown-item" href="/v2/screener-warrants">Warrant Screener</a>
+                        </div>
+
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"><i class="fa fa-lg fa-globe fa-fw"></i><span>&nbsp;</span><span class="d-md-none d-lg-inline" title="Market">Market</span></a>
+                        <div class="dropdown-menu" role="menu">
+                            <a class="dropdown-item" href="/v2/markets">Overview</a>
+                            <a class="dropdown-item" href="/v2/stocks/heatmap">Heatmap</a>
+                        </div>
+                    </li>
+
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i title="Entitlements" class="fa fa-lg fa-euro-sign fa-fw"></i><span>&nbsp;</span><span class="d-md-none d-xl-inline" title="Entitlements">Entitlements</span></a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/v2/entitlements/dividends">Dividend</a>
+                            <a class="dropdown-item" href="/v2/entitlements/shares-issue">Share issued</a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item "><a class="nav-link" href="/v2/financial-reports"><span title="Financial" class="fa fa-fw fa-lg fa-money-bill-alt"></span><span>&nbsp;</span><span class="d-md-none d-lg-inline" title="Financial">Financial</span></a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i title="News" class="fa fa-lg fa-newspaper fa-fw"></i><span>&nbsp;</span><span class="d-md-none d-xl-inline" title="News">News</span></a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/v2/news"><i title="News" class="fa fa-lg fa-newspaper fa-fw"></i> News</a>
+                            <a class="dropdown-item" href="/v2/announcements"><i title="Announcements" class="fa fa-lg fa-bullhorn fa-fw"></i> Announcements</a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i title="Discussions" class="fa fa-lg fa-comment-dollar fa-fw"></i><span>&nbsp;</span><span class="d-md-none d-xl-inline" title="Discussions">Discussions</span></a>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="/v2/discussion">Comments</a>
+                            <a class="dropdown-item" href="/v2/posts/all">Ideas</a>
+                        </div>
+                    </li>
+                </ul>
+
+
+
+                <ul class="nav navbar-nav ml-auto">
+                                            <li class="nav-item">
+                            <a class="nav-link" href="/v2/users/login?url=screener%2Ftop_gainers"><i class="fa fa-user"></i> Login</a>
+                        </li>
+                    
+                    <li class="nav-item">
+                        <a id="suggestion" class="nav-link" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-lg fa-question"></i><span>&nbsp;</span><span class="d-md-none">Feedback</span></a>
+                        <div class="contact_container dropdown-menu dropdown-menu-right" role="menu" style="min-width:300px;margin-bottom:10px;padding:10px;">
+                            <strong>Help</strong>
+                            <br><br>
+                            <p><a href="https://www.klsescreener.com/v2/contact">Contact us</a></p>
+<!--                            <form method="post" action="contact.php" onclick="">-->
+<!--                                <input type="hidden" name="a" value="suggestion">-->
+<!--                                <input type="hidden" name="url" value="--><!--">-->
+<!--                                Your E-mail:<br/>-->
+<!--                                <input type="text" class="form-control" name="email"><br/>-->
+<!--                                Message:<br/>-->
+<!--                                <textarea name="content"  class="form-control" rows="4" cols="30"></textarea><br/>-->
+<!--                                <input type="submit" class="btn btn-primary" value="Send">-->
+<!--                            </form>-->
+
+                            <p class="suggestion_message"></p>
+                        </div>
+                    </li>
+                </ul>
+
+                
+            </div>
+<!--        </div>-->
+
+    </nav>
+        <div id="content" class="mt-2">
+
+            <div id="aLegMYzGHfnR" style="margin-top:-20px; display:none;">
+                Our website is made possible by displaying non-intrusive online advertisements to our visitors.<br>
+                Please consider supporting us by disabling or pausing your ad blocker.<br>
+            </div>
+
+            
+            <div class="container-fluid">
+                            </div>
+
+            <div class="wrapper-disabled">
+                                <div class="container text-center">
+    <h2>Not Found</h2>
+
+    <br>
+    <div>
+    <img class="img-fluid" src="/v2/img/not-found.png">
+    </div>
+    <br>
+
+        <h6>If you believe this is an error, kindly <a href="/v2/contact" target="_blank">drop us a message with URL</a>.<br>
+        /v2/screener/top_gainers    </h6>
+
+    <br>
+
+    <a href="/v2/">Back to homepage</a>    
+    <hr>
+            <div class="ad_responsive">
+                <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                <!-- Responsive Skyscraper -->
+                <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3964569253220025" data-ad-slot="9922878338" data-ad-format="auto"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+</div>
+
+
+
+</div>            </div>
+        </div>
+
+                        <footer class="footer" id="footer">
+    <div class="footer_container">
+        <div class="wrapper-disabled container">
+
+            <div class="row">
+
+                <div class="col-6 col-md">
+                    <h4>Announcements</h4>
+                    <p><a href="/v2/ipos" target="_blank">IPO</a></p>
+                    <p><a href="/v2/shareholdings" target="_blank">Shareholdings</a></p>
+                </div>
+
+                <div class="col-6 col-md">
+                    <h4>Discussion</h4>
+                    <p><a href="/v2/discussion"><span class="fa fa-comment"></span> Comments</a></p>
+                    <p><a href="/v2/pages/posting_guidelines"><span class="fa fa-info-circle"></span> Guidelines</a></p>
+                </div>
+
+                <div class="col-6 col-md">
+                    <h4>About</h4>
+                    <p><a href="/v2/.."><i class="fa fa-home"></i> Home</a></p>
+                    <p><a href="/v2/contact"><i class="fa fa-envelope"></i> Contact Us</a></p>
+                    <p><a href="/v2/pages/about"><i class="fa fa-info-circle"></i> About us</a></p>
+                    <h4>Follow us</h4>
+                    <p><a href="https://fb.com/klsescreener" target="_blank"><span class="fab fa-facebook-square"></span> Facebook</a></p>
+                </div>
+
+                <div class="col-6 col-md">
+                    <p>Also available on</p>
+
+                    <p><a href="https://play.google.com/store/apps/details?id=net.neobie.klse" target="_blank">
+                            <img alt="Android app on Google Play" src="https://play.google.com/intl/en_gb/badges/images/badge_new.png" title="Android app on Google Play" width="129">
+                        </a>
+
+                    </p><p><a href="https://itunes.apple.com/my/app/klse-screener/id593048150" target="_blank"><img src="//cdn.klsescreener.com/v2/../themes/images/app_store.png" alt="iOS App on AppStore" width="129"></a></p>
+
+                    <p><a href="https://appgallery.cloud.huawei.com/marketshare/app/C101209183" target="_blank"><img src="//cdn.klsescreener.com/v2/../themes/images/20200220_AppGallery_Badge_Black.png" alt="Huawei AppGallery" width="129"></a></p>
+
+                    <p><a href="http://www.windowsphone.com/ms-my/store/app/klse-screener/d92bdf04-adf1-46f8-ada3-f2e62cb974dc" target="_blank"><img src="/v2/../themes/images/154x40_WPS_Download_cyan.png" alt="WP8 App on Windows Phone Store" width="129"></a></p>
+
+                    <p></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    
+    <div id="modal-container">
+
+
+
+    </div>
+
+    <div class="footer_bottom">
+        <div class="wrapper-disabled">
+            <small>
+            © KLSE Screener 2026 | Neobie Enterprise
+            |
+            <span><a href="/v2/pages/terms">Terms of Use</a></span>
+            |
+            <span><a href="/v2/pages/privacy">Privacy Policy</a></span>
+            </small>
+        </div>
+
+    </div>
+</footer>
+        <div id="notify">
+            <div class="ads" style="width:1px;">
+            </div>
+        </div>
+
+
+        <script>
+            $(function() {
+                if (localStorage.getItem("darkSwitch") !== null && localStorage.getItem("darkSwitch") === "dark") {
+                    setCookie("darkSwitch", "dark", 30);
+                    $(".table-theme").addClass('table-dark');
+                } else {
+                    setCookie("darkSwitch", "", 0);
+                    $(".table-theme").removeClass('table-dark');
+                }
+            });
+        </script>
+
+        <script>
+            $(function() {
+                var $notifications_loaded = false;
+                $("#icon_notification").click(function() {
+                    if ($notifications_loaded) {
+                        console.log('loaded');
+                        return;
+                    }
+
+                    $.get('/v2/notifications', function(data) {
+                        $("#icon_notification span.num").remove();
+                        $("#notification-scroll").html(data.html);
+                        $notifications_loaded = true;
+
+                        $.ajax({
+                            url: "/v2/notifications/update_notif_last_check",
+                            method: "PUT"
+                        });
+                    }, 'json');
+                });
+            });
+        </script>
+
+                <script>
+            $(function() {
+                // $.post('/v2/users/device', {adblock: window.adblock}, function(data) {
+                // }, 'json');
+            });
+        </script>
+        
+                <script type="text/javascript" src="//cdn.klsescreener.com/v2/js/dark-mode-switch.js?5"></script>        <script>
+
+        </script>
+
+
+        <div id="fb-root"></div>
+        <script>
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) return;
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.8&appId=690278390997228";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+        </script>
+
+                <script>
+            lazyLoadInstance.update();
+            $(document).ajaxSuccess(function(event, xhr, settings) {
+                lazyLoadInstance.update();
+            });
+            
+            // Fix for navbar/content gap issue at different zoom levels
+            function adjustContentPosition() {
+                var navbarHeight = $('.navbar').outerHeight() || 56; // Default to 56px if not calculated
+                
+                // For mobile devices, use a slightly different approach
+                // if ($(window).width() < 768) {
+                //     // On mobile, ensure no gap exists
+                //     $('#content').css({
+                //         'margin-top': '-1px',
+                //         'padding-top': '0'
+                //     });
+                //     // $('body').css('padding-top', (navbarHeight - 1) + 'px');
+                // } else {
+                //     // On desktop, use standard approach
+                //     $('#content').css('margin-top', '0');
+                //     // $('body').css('padding-top', navbarHeight + 'px');
+                // }
+                
+                // For specific zoom level issues
+                var zoomLevel = Math.round((window.outerWidth / window.innerWidth) * 100);
+                if (zoomLevel > 100) {
+                    // If zoomed in, make sure there's no gap
+                    $('#content').css('margin-top', '-1px');
+                }
+            }
+            
+            // Run on initial load
+            $(document).ready(function() {
+                adjustContentPosition();
+                
+                // Additional check after a short delay to handle any rendering delays
+                setTimeout(adjustContentPosition, 100);
+            });
+            
+            // Run on window resize to handle zoom changes
+            $(window).resize(function() {
+                // Debounce to prevent excessive calls
+                clearTimeout(window.adjustContentTimeout);
+                window.adjustContentTimeout = setTimeout(function() {
+                    adjustContentPosition();
+                }, 250);
+            });
+            
+            // Also run when the page is shown again (important for mobile browsers)
+            window.addEventListener('pageshow', adjustContentPosition);
+        </script>
+
+        <script type="text/javascript" src="//cdn.klsescreener.com/v2/js/prebid-ads.js"></script>
+
+        <script>
+            function isBrave() {
+                if (window.navigator.brave != undefined) {
+                    if (window.navigator.brave.isBrave.name == "isBrave") {
+                    return true;
+                    } else {
+                    return false;
+                    }
+                } else {
+                    return false;
+                }
+            }
+            
+                        if (isBrave()) {
+                gtag('set', 'user_properties', {
+                    isBrave: '1',
+                });
+            } else {
+                gtag('set', 'user_properties', {
+                    isBrave: '0',
+                });
+            }
+                        
+        </script>
+
+        <script type="text/javascript">
+            console.log("_ad", getCookie("_ad") )
+            if ( getCookie("_ad") != "" && getCookie("_ad") != "0" ) {
+                document.getElementById('aLegMYzGHfnR').style.display = 'block';
+            }
+
+        </script>
+        <script>
+            // $(function() {
+            //     var adblock = 0;
+            //     if (window.canRunAds === undefined) {
+            //         adblock = 1;
+            //     }
+            //     checkAdBlock(adblock);
+            //     // console.log("adblock " + adblock);
+            // });
+            
+            //
+            // $(document).ready(function(){
+            //     alert($(".ads").css('display'));
+            //     if($("#notify").width() > 0) {
+            //         alert('No AdBlocker');
+            //     } else {
+            //         alert('AdBlocker Detected');
+            //     }
+            // });
+        </script>
+
+        <script type="text/javascript">
+            // $(function() {
+            //     if (!isBrave()) {
+            //         // window.adblock = 0;
+            //         window.onload = function () { //not working on brave
+            //             setTimeout(function () {
+            //                 var ad = document.querySelector("ins.adsbygoogle");
+            //                 var adblock = 0;
+            //                 if (ad && ad.innerHTML.replace(/\s/g, "").length == 0) {
+            //                     adblock = 1;
+            //                     // window.adblock=1;
+            //                 }
+
+            //                 alert(adblock);
+            //                 checkAdBlock(adblock);
+            //             }, 0);
+            //         }
+            //     }
+            // });
+
+        </script>
+
+        <script>
+
+			async function getFullMachineID() {
+    try {
+        // --- HELPER 1: Canvas Signature ---
+        const getCanvasSignature = () => {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            ctx.textBaseline = "top";
+            ctx.font = "14px 'Arial'";
+            ctx.fillText("KLSE_PRO_2026_CHECK", 2, 2);
+            return canvas.toDataURL();
+        };
+
+        // --- HELPER 2: GPU Renderer ---
+        const getGPU = () => {
+            const canvas = document.createElement('canvas');
+            const gl = canvas.getContext('webgl');
+            const debugInfo = gl?.getExtension('WEBGL_debug_renderer_info');
+            return debugInfo ? gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL) : 'unknown';
+        };
+
+        // 1. Fetch IP (With a strict 2-second timeout)
+        const response = await fetch('https://api64.ipify.org?format=json', { 
+            signal: AbortSignal.timeout(10000) 
+        });
+        if (!response.ok) return null;
+        const ipData = await response.json();
+
+        // 2. Gather Ingredients
+        const ingredients = {
+            ip: ipData.ip,
+            ua: navigator.userAgent,
+            canvas: getCanvasSignature(), // Successfully called helper
+            gpu: getGPU(),               // Successfully called helper
+            cores: navigator.hardwareConcurrency || 0,
+            mem: navigator.deviceMemory || 0,
+            screen: `${screen.width}x${screen.height}`
+        };
+
+        // 3. Generate SHA-256 Hash
+        const dataString = JSON.stringify(ingredients);
+        const encoder = new TextEncoder();
+        const data = encoder.encode(dataString);
+        const hashBuffer = await crypto.subtle.digest('SHA-256', data);
+        
+        const machineID = Array.from(new Uint8Array(hashBuffer))
+            .map(b => b.toString(16).padStart(2, '0'))
+            .join('');
+
+        return { machineID, ingredients };
+
+    } catch (error) {
+        // console.error("MachineID Generation Failed:", error);
+        return null; // Return null so the $.post doesn't fire
+    }
+}
+
+            var checkAdBlock = function(adblock) {
+                if (adblock) {
+                    // adblocker detected, show fallback
+                    document.getElementById('aLegMYzGHfnR').style.display = 'block';
+                    adblock = 1;
+                                            // ga('send', 'event', 'adblock', 'enable', 1);
+                        
+                        var $ad = getCookie("_ad") === "" ? 0 : getCookie("_ad");
+                        setCookie("_ad", ++$ad, 7);
+                        var mod = 3;
+                                                if ($ad % mod == 0) {
+                            // alert("Our website is made possible by displaying non-intrusive online advertisements to our visitors.\n" +
+                            //     "Please consider supporting us by disabling or pausing your ad blocker.");
+                        }
+                        // _gaq.push(['_setCustomVar',
+                        //     1,
+                        //     'Adblock',
+                        //     '1',
+                        // ]);
+                    
+                    getFullMachineID().then(result => {
+						// if (result == null) return;
+						const muid = (result && result.machineID) ? result.machineID : '';
+						console.log("device", muid);
+																	});
+
+                                        gtag('set', 'user_properties', {
+                        adblock: '1',
+                        browserBrave: window.navigator.brave ? 1 : 0,
+                    });
+                    
+                } else {
+                    //alert('adblock not detected');
+                    document.getElementById('aLegMYzGHfnR').style.display = 'none';
+                    adblock = 0;
+                    setCookie("_ad", 0, 7);
+                                            gtag('set', 'user_properties', {
+                            adblock: '0'
+                        });
+                    					//
+					 getFullMachineID().then(result => {
+                        // if (result == null) return;
+						const muid = (result && result.machineID) ? result.machineID : '';
+						console.log("device", muid);
+										});
+                }
+            }
+
+        if (isBrave() || true)
+        {
+            document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                var adsElements = document.querySelectorAll('ins.adsbygoogle');
+
+                if (adsElements.length > 0) {
+                    // console.log("Found adsbygoogle elements.");
+
+                    var adblock = false;
+                    var ad = document.querySelector("ins.adsbygoogle");
+                    if (ad && ad.innerHTML.replace(/\s/g, "").length == 0) {
+                        adblock = true;
+                    }
+
+                    adsElements.forEach(function(ad) {
+                        if (ad.innerHTML.replace(/\s/g, "").length > 0) {
+                            adblock = false; // If any ad has non-empty innerHTML, set adblock to false
+                        }
+                    });
+
+                    var adsElement = document.querySelector('ins.adsbygoogle[data-adsbygoogle-status]');
+                    if (adsElement == null) {
+                        // console.log("No adsbygoogle element with data-adsbygoogle-status attribute found.");
+                        adblock = true;
+                    }
+
+                    adsElements.forEach(function(adElement) {
+                        var iframe = adElement.querySelector('iframe');
+
+                        if (iframe) {
+                            var iframeWidth = iframe.style.width;
+                            var iframeHeight = iframe.style.height;
+
+                            if (iframeWidth === '1px' || iframeHeight === '1px') {
+                                console.log("The iframe inside <ins> has an inline width or height of 1px.");
+                                adblock = true;
+                                document.getElementById('aLegMYzGHfnR').style.display = 'block';
+                            } else {
+                                console.log("The iframe inside <ins> has an inline width and height different from 1px.");
+                            }
+                        }
+                    });
+                    
+                    if (adblock) {
+                        checkAdBlock(1);
+
+                        // if not realtime user
+                                                    // var mod = 3;
+                            // var seconds = 8;
+                            var mod = 3;
+                            var seconds = 5;
+                                                    if ( getCookie("_ad") % mod == 2) {
+                            var ad = getCookie("_ad") == "" ? 0 : getCookie("_ad");
+                            setCookie("_ad", --ad, 7);
+                            var message = `<h3>Hey there!</h3><p>We noticed that you\'re using an ad blocker. While we understand the desire for a seamless browsing experience, we kindly ask you to consider turning it off for our site. Ads help us keep our content free and accessible to everyone, supporting the work we do. Thank you for your understanding and support!
+                                                        <p>
+                            <a href="/v2/plans/index/index" target="_blank"><img src="//cdn.klsescreener.com/v2/../img/realtime-1080.png" style="max-width:100%"></a>
+                            <figcaption  class="text-center"><a href="/v2/plans/index/index" target="_blank">Check out the real-time plans</a></figcaption>
+                            </p>
+                                                        `;
+                            var dialog = bootbox.dialog({
+                                message: message,
+                                size: 'large',
+                                closeButton: false,
+                                onEscape: false,
+                                buttons: {
+                                    ok: {
+                                        label: "I'm an OK button!",
+                                        className: 'btn-info',
+                                        callback: function() {
+                                            console.log('Custom OK clicked');
+                                        }
+                                    }
+                                }
+                            });
+
+                            $(".bootbox-accept").attr("disabled", "disabled");
+                            $(".bootbox-accept").text("Close in " + seconds);
+                            var countdown = setInterval(function(){
+                                seconds--;
+                                // $('#countdown').text(seconds);
+                                $('.bootbox-accept').text("Close in " + seconds);
+                                if(seconds <= 0){
+                                    $(".bootbox-accept").removeAttr("disabled");
+                                    $('.bootbox-accept').text('Close');
+                                    clearInterval(countdown);
+                                    setCookie("_ad", ++ad, 7);
+                                                                    }
+                                
+                            }, 1000);
+                        }
+                        
+                    } else {
+                        checkAdBlock(0);
+                    }
+                } else {
+                    // console.log("No adsbygoogle elements found.");
+                }
+            }, 2000)
+            
+        });
+        }
+       
+        </script>
+
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a01624a209ef44bf',t:'MTc3OTcyODkxNg=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; visibility: hidden;"></iframe><script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v833ccba57c9e4d2798f2e76cebdd09a11778172276447" integrity="sha512-57MDmcccJXYtNnH+ZiBwzC4jb2rvgVCEokYN+L/nLlmO8rfYT/gIpW2A569iJ/3b+0UEasghjuZH/ma3wIs/EQ==" data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;e3a09d1dde9c48c8b4e06ca82a0680d6&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}" crossorigin="anonymous"></script>
+
+
+
+<ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-autocomplete-fixed autocomplete-navbar ui-front" style="display: none;"></ul><div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div>
