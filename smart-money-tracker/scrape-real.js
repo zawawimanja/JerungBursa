@@ -39,6 +39,7 @@ const TICKERS = [
     { name: 'GTRONIC', symbol: '7022.KL', sector: 'Technology', category: 'Intraday' },
     { name: 'MPI', symbol: '3867.KL', sector: 'Technology', category: 'Swing' },
     // Property
+    { name: 'SIMEPROP', symbol: '5288.KL', sector: 'Properties', category: 'Swing' },
     { name: 'SPSETIA', symbol: '8664.KL', sector: 'Properties', category: 'Swing' },
     { name: 'UEMS', symbol: '5148.KL', sector: 'Properties', category: 'Swing' },
     { name: 'MAHSING', symbol: '8583.KL', sector: 'Properties', category: 'Swing' },
