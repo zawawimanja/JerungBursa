@@ -194,7 +194,7 @@
                 tr.innerHTML = `
                     <td>
                         <div class="counter-name">${item.name}</div>
-                        <div class="sector">${item.sector || 'Bursa'}</div>
+                        <div class="sector">${item.sector || 'Bursa'} &bull; <span style="color: #ec4899; font-weight: 500;">${item.category || ''}</span></div>
                     </td>
                     <td class="price ${changeClass}">${item.price.toFixed(3)}</td>
                     <td class="${changeClass}">${changeSign}${item.change.toFixed(2)}%</td>
