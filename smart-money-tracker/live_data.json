@@ -22,6 +22,17 @@
     "reason": "⚠️ Jerung Buang Barang / Markup"
   },
   {
+    "name": "PBBANK",
+    "sector": "Financial",
+    "category": "Swing",
+    "price": 4.76,
+    "change": -0.20964360587001651,
+    "turnover": 58312380,
+    "volume": 12250500,
+    "signal": "avoid",
+    "reason": "⚠️ Jerung Buang Barang / Markup"
+  },
+  {
     "name": "TENAGA",
     "sector": "Utilities",
     "category": "Swing",
@@ -29,6 +40,28 @@
     "change": 0.27739251040222557,
     "turnover": 41270286,
     "volume": 2854100,
+    "signal": "buy",
+    "reason": "🔥 Momentum Kuat & Jerung Masuk"
+  },
+  {
+    "name": "YTLPOWR",
+    "sector": "Utilities",
+    "category": "Swing",
+    "price": 4.17,
+    "change": 0.7246376811594264,
+    "turnover": 26286429,
+    "volume": 6303700,
+    "signal": "buy",
+    "reason": "🔥 Momentum Kuat & Jerung Masuk"
+  },
+  {
+    "name": "YTL",
+    "sector": "Utilities",
+    "category": "Swing",
+    "price": 2.12,
+    "change": 0.47393364928911047,
+    "turnover": 121627368,
+    "volume": 57371400,
     "signal": "buy",
     "reason": "🔥 Momentum Kuat & Jerung Masuk"
   },
@@ -42,17 +75,6 @@
     "volume": 8376800,
     "signal": "avoid",
     "reason": "⚠️ Jerung Buang Barang / Markup"
-  },
-  {
-    "name": "YTLPOWR",
-    "sector": "Utilities",
-    "category": "Swing",
-    "price": 4.17,
-    "change": 0.7246376811594264,
-    "turnover": 26286429,
-    "volume": 6303700,
-    "signal": "buy",
-    "reason": "🔥 Momentum Kuat & Jerung Masuk"
   },
   {
     "name": "SUNWAY",
@@ -73,6 +95,149 @@
     "change": 3.381642512077309,
     "turnover": 33504054.000000004,
     "volume": 15656100,
+    "signal": "buy",
+    "reason": "🔥 Momentum Kuat & Jerung Masuk"
+  },
+  {
+    "name": "WCT",
+    "sector": "Construction",
+    "category": "Intraday",
+    "price": 0.45,
+    "change": -1.0989010989010999,
+    "turnover": 3097890,
+    "volume": 6884200,
+    "signal": "avoid",
+    "reason": "Kaunter Lemau / Sikat"
+  },
+  {
+    "name": "MRCB",
+    "sector": "Construction",
+    "category": "Intraday",
+    "price": 0.325,
+    "change": -4.411764705882357,
+    "turnover": 6794287.5,
+    "volume": 20905500,
+    "signal": "avoid",
+    "reason": "⚠️ Jerung Buang Barang / Markup"
+  },
+  {
+    "name": "EKOVEST",
+    "sector": "Construction",
+    "category": "Intraday",
+    "price": 0.21,
+    "change": -2.325581395348839,
+    "turnover": 759759,
+    "volume": 3617900,
+    "signal": "avoid",
+    "reason": "Kaunter Lemau / Sikat"
+  },
+  {
+    "name": "TELEKOM",
+    "sector": "Telecommunications",
+    "category": "Swing",
+    "price": 7.45,
+    "change": 0,
+    "turnover": 28639290,
+    "volume": 3844200,
+    "signal": "avoid",
+    "reason": "⚠️ Jerung Buang Barang / Markup"
+  },
+  {
+    "name": "MAXIS",
+    "sector": "Telecommunications",
+    "category": "Swing",
+    "price": 3.49,
+    "change": -0.5698005698005577,
+    "turnover": 16933480,
+    "volume": 4852000,
+    "signal": "avoid",
+    "reason": "⚠️ Jerung Buang Barang / Markup"
+  },
+  {
+    "name": "CELCOMDIGI",
+    "sector": "Telecommunications",
+    "category": "Swing",
+    "price": 3.06,
+    "change": 0.327868852459024,
+    "turnover": 7123680,
+    "volume": 2328000,
+    "signal": "buy",
+    "reason": "🔥 Momentum Kuat & Jerung Masuk"
+  },
+  {
+    "name": "DIALOG",
+    "sector": "Energy",
+    "category": "Swing",
+    "price": 2.02,
+    "change": -3.809523809523813,
+    "turnover": 22689448,
+    "volume": 11232400,
+    "signal": "avoid",
+    "reason": "⚠️ Jerung Buang Barang / Markup"
+  },
+  {
+    "name": "VELESTO",
+    "sector": "Energy",
+    "category": "Penny",
+    "price": 0.31,
+    "change": -1.5873015873015885,
+    "turnover": 7166053,
+    "volume": 23116300,
+    "signal": "avoid",
+    "reason": "⚠️ Jerung Buang Barang / Markup"
+  },
+  {
+    "name": "DAYANG",
+    "sector": "Energy",
+    "category": "Intraday",
+    "price": 1.83,
+    "change": -1.6129032258064528,
+    "turnover": 6359433,
+    "volume": 3475100,
+    "signal": "avoid",
+    "reason": "⚠️ Jerung Buang Barang / Markup"
+  },
+  {
+    "name": "WASCO",
+    "sector": "Energy",
+    "category": "Intraday",
+    "price": 0.83,
+    "change": -2.9239766081871372,
+    "turnover": 2521374,
+    "volume": 3037800,
+    "signal": "avoid",
+    "reason": "Kaunter Lemau / Sikat"
+  },
+  {
+    "name": "UZMA",
+    "sector": "Energy",
+    "category": "Intraday",
+    "price": 0.415,
+    "change": -3.4883720930232593,
+    "turnover": 423590.5,
+    "volume": 1020700,
+    "signal": "avoid",
+    "reason": "Kaunter Lemau / Sikat"
+  },
+  {
+    "name": "INARI",
+    "sector": "Technology",
+    "category": "Intraday",
+    "price": 1.98,
+    "change": 0.5076142131979701,
+    "turnover": 20648232,
+    "volume": 10428400,
+    "signal": "buy",
+    "reason": "🔥 Momentum Kuat & Jerung Masuk"
+  },
+  {
+    "name": "MYEG",
+    "sector": "Technology",
+    "category": "Intraday",
+    "price": 0.805,
+    "change": 1.2578616352201268,
+    "turnover": 93797151,
+    "volume": 116518200,
     "signal": "buy",
     "reason": "🔥 Momentum Kuat & Jerung Masuk"
   },
@@ -99,6 +264,116 @@
     "reason": "Kaunter Lemau / Sikat"
   },
   {
+    "name": "DSONIC",
+    "sector": "Technology",
+    "category": "Intraday",
+    "price": 0.28,
+    "change": 1.8181818181818195,
+    "turnover": 971628.0000000001,
+    "volume": 3470100,
+    "signal": "avoid",
+    "reason": "Kaunter Lemau / Sikat"
+  },
+  {
+    "name": "JCY",
+    "sector": "Technology",
+    "category": "Intraday",
+    "price": 0.345,
+    "change": 0,
+    "turnover": 1196080.5,
+    "volume": 3466900,
+    "signal": "avoid",
+    "reason": "Kaunter Lemau / Sikat"
+  },
+  {
+    "name": "DNEX",
+    "sector": "Technology",
+    "category": "Intraday",
+    "price": 0.315,
+    "change": -4.545454545454549,
+    "turnover": 7896766.5,
+    "volume": 25069100,
+    "signal": "avoid",
+    "reason": "⚠️ Jerung Buang Barang / Markup"
+  },
+  {
+    "name": "FRONTKN",
+    "sector": "Technology",
+    "category": "Swing",
+    "price": 4.95,
+    "change": 0.8146639511201635,
+    "turnover": 18213525,
+    "volume": 3679500,
+    "signal": "buy",
+    "reason": "🔥 Momentum Kuat & Jerung Masuk"
+  },
+  {
+    "name": "GTRONIC",
+    "sector": "Technology",
+    "category": "Intraday",
+    "price": 0.25,
+    "change": 0,
+    "turnover": 419475,
+    "volume": 1677900,
+    "signal": "avoid",
+    "reason": "Kaunter Lemau / Sikat"
+  },
+  {
+    "name": "MPI",
+    "sector": "Technology",
+    "category": "Swing",
+    "price": 48,
+    "change": -1.0309278350515463,
+    "turnover": 34809600,
+    "volume": 725200,
+    "signal": "avoid",
+    "reason": "⚠️ Jerung Buang Barang / Markup"
+  },
+  {
+    "name": "SPSETIA",
+    "sector": "Properties",
+    "category": "Swing",
+    "price": 0.98,
+    "change": -1.010101010101011,
+    "turnover": 10629276,
+    "volume": 10846200,
+    "signal": "avoid",
+    "reason": "⚠️ Jerung Buang Barang / Markup"
+  },
+  {
+    "name": "UEMS",
+    "sector": "Properties",
+    "category": "Swing",
+    "price": 0.595,
+    "change": 1.7094017094017109,
+    "turnover": 12461739.5,
+    "volume": 20944100,
+    "signal": "buy",
+    "reason": "🔥 Momentum Kuat & Jerung Masuk"
+  },
+  {
+    "name": "MAHSING",
+    "sector": "Properties",
+    "category": "Swing",
+    "price": 0.975,
+    "change": -1.5151515151515165,
+    "turnover": 5589480,
+    "volume": 5732800,
+    "signal": "avoid",
+    "reason": "⚠️ Jerung Buang Barang / Markup"
+  },
+  {
+    "name": "ECOWLD",
+    "sector": "Properties",
+    "category": "Swing",
+    "price": 2.05,
+    "change": -1.913875598086126,
+    "turnover": 6945809.999999999,
+    "volume": 3388200,
+    "signal": "avoid",
+    "reason": "⚠️ Jerung Buang Barang / Markup"
+  },
+  {
     "name": "MRDIY",
     "sector": "Consumer",
     "category": "Intraday",
@@ -110,47 +385,80 @@
     "reason": "⚠️ Jerung Buang Barang / Markup"
   },
   {
-    "name": "INARI",
-    "sector": "Technology",
+    "name": "CAPITALA",
+    "sector": "Consumer",
     "category": "Intraday",
-    "price": 1.98,
-    "change": 0.5076142131979701,
-    "turnover": 20648232,
-    "volume": 10428400,
-    "signal": "buy",
-    "reason": "🔥 Momentum Kuat & Jerung Masuk"
-  },
-  {
-    "name": "MYEG",
-    "sector": "Technology",
-    "category": "Intraday",
-    "price": 0.805,
-    "change": 1.2578616352201268,
-    "turnover": 93797151,
-    "volume": 116518200,
-    "signal": "buy",
-    "reason": "🔥 Momentum Kuat & Jerung Masuk"
-  },
-  {
-    "name": "EKOVEST",
-    "sector": "Construction",
-    "category": "Intraday",
-    "price": 0.21,
-    "change": -2.325581395348839,
-    "turnover": 759759,
-    "volume": 3617900,
-    "signal": "avoid",
-    "reason": "Kaunter Lemau / Sikat"
-  },
-  {
-    "name": "VELESTO",
-    "sector": "Energy",
-    "category": "Penny",
-    "price": 0.31,
-    "change": -1.5873015873015885,
-    "turnover": 7166053,
-    "volume": 23116300,
+    "price": 0.43,
+    "change": -1.1494252873563229,
+    "turnover": 17408378,
+    "volume": 40484600,
     "signal": "avoid",
     "reason": "⚠️ Jerung Buang Barang / Markup"
+  },
+  {
+    "name": "AAX",
+    "sector": "Consumer",
+    "category": "Intraday",
+    "price": 1.19,
+    "change": 6.249999999999986,
+    "turnover": 48221894,
+    "volume": 40522600,
+    "signal": "buy",
+    "reason": "🔥 Momentum Kuat & Jerung Masuk"
+  },
+  {
+    "name": "SIME",
+    "sector": "Consumer",
+    "category": "Swing",
+    "price": 2.09,
+    "change": 0,
+    "turnover": 11774015,
+    "volume": 5633500,
+    "signal": "avoid",
+    "reason": "⚠️ Jerung Buang Barang / Markup"
+  },
+  {
+    "name": "KPJ",
+    "sector": "Healthcare",
+    "category": "Swing",
+    "price": 3.15,
+    "change": -2.4767801857585163,
+    "turnover": 42848190,
+    "volume": 13602600,
+    "signal": "avoid",
+    "reason": "⚠️ Jerung Buang Barang / Markup"
+  },
+  {
+    "name": "TOPGLOV",
+    "sector": "Healthcare",
+    "category": "Intraday",
+    "price": 0.795,
+    "change": -0.6250000000000006,
+    "turnover": 13897077,
+    "volume": 17480600,
+    "signal": "avoid",
+    "reason": "⚠️ Jerung Buang Barang / Markup"
+  },
+  {
+    "name": "KOSSAN",
+    "sector": "Healthcare",
+    "category": "Intraday",
+    "price": 1.22,
+    "change": -1.6129032258064528,
+    "turnover": 6759410,
+    "volume": 5540500,
+    "signal": "avoid",
+    "reason": "⚠️ Jerung Buang Barang / Markup"
+  },
+  {
+    "name": "SUPERMX",
+    "sector": "Healthcare",
+    "category": "Intraday",
+    "price": 0.325,
+    "change": -1.5151515151515165,
+    "turnover": 2148022.5,
+    "volume": 6609300,
+    "signal": "avoid",
+    "reason": "Kaunter Lemau / Sikat"
   }
 ]
