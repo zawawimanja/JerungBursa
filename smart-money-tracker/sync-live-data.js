@@ -5,6 +5,7 @@ const OUTPUT_FILE = path.join(__dirname, 'live_data.json');
 
 // Base kaunter Bursa (Bluechips & Penny)
 const TICKERS = [
+    { name: 'SKYCHIP', sector: 'Technology', basePrice: 1.45 },
     { name: 'MYEG', sector: 'Technology', basePrice: 0.85 },
     { name: 'YTLPOWR', sector: 'Utilities', basePrice: 4.85 },
     { name: 'GAMUDA', sector: 'Construction', basePrice: 5.20 },
@@ -18,8 +19,8 @@ const TICKERS = [
     { name: 'DSONIC', sector: 'Technology', basePrice: 0.55 },
     { name: 'UEMS', sector: 'Properties', basePrice: 1.05 },
     { name: 'VELESTO', sector: 'Energy', basePrice: 0.28 },
-    { name: 'MINETEC', sector: 'Industrial', basePrice: 0.15 }, // Penny stock example
-    { name: 'SAPNRG', sector: 'Energy', basePrice: 0.05 },  // Penny sikat example
+    { name: 'MINETEC', sector: 'Industrial', basePrice: 0.15 }, 
+    { name: 'SAPNRG', sector: 'Energy', basePrice: 0.05 },  
     { name: 'SUNMED', sector: 'Healthcare', basePrice: 0.18 }
 ];
 
