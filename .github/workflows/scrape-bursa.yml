@@ -1,0 +1,39 @@
+name: Bursa Live Data Scraper
+
+on:
+  schedule:
+    # Run every 10 minutes during Bursa trading hours (01:00 to 09:00 UTC = 09:00 to 17:00 Malaysia Time)
+    # This runs Monday to Friday
+    - cron: '*/10 1-9 * * 1-5'
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+
+jobs:
+  scrape-and-update:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Use stable LTS version
+          
+      - name: Install dependencies
+        run: |
+          cd smart-money-tracker
+          npm install
+          
+      - name: Run Puppeteer Scraper
+        run: |
+          cd smart-money-tracker
+          node scrape-real.js
+          
+      - name: Commit and Push changes
+        run: |
+          git config --global user.name "Bursa Bot Action"
+          git config --global user.email "bot@smartmoneytracker.local"
+          git add smart-money-tracker/live_data.json
+          # Only commit if there are changes
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update live_data.json [skip ci]" && git push)
