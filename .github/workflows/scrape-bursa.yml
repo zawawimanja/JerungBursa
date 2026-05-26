@@ -28,6 +28,7 @@ jobs:
       - name: Run Puppeteer Scraper
         run: |
           cd smart-money-tracker
+          npx puppeteer browsers install chrome
           node scrape-real.js
           
       - name: Commit and Push changes
