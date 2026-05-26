@@ -27,27 +27,10 @@ jobs:
           cd smart-money-tracker
           npm install
           
-      - name: Cache Puppeteer
-        uses: actions/cache@v4
-        with:
-          path: /home/runner/.cache/puppeteer
-          key: puppeteer-${{ runner.os }}-chrome-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            puppeteer-${{ runner.os }}-chrome-
-
-      - name: Install Puppeteer Chrome
-        run: |
-          cd smart-money-tracker
-          npx puppeteer browsers install chrome --with-deps
-        env:
-          PUPPETEER_CACHE_DIR: /home/runner/.cache/puppeteer
-
       - name: Run Puppeteer Scraper
         run: |
           cd smart-money-tracker
           node scrape-real.js
-        env:
-          PUPPETEER_CACHE_DIR: /home/runner/.cache/puppeteer
           
       - name: Commit and Push changes
         run: |
