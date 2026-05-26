@@ -2,8 +2,10 @@ name: Bursa Live Data Scraper
 
 on:
   schedule:
+    # Run every 10 minutes during Bursa trading hours (01:00 to 09:00 UTC = 09:00 to 17:00 Malaysia Time)
+    # This runs Monday to Friday
     - cron: '*/10 1-9 * * 1-5'
-  workflow_dispatch:
+  workflow_dispatch: # Allows manual trigger from GitHub UI
 
 jobs:
   scrape-and-update:
@@ -16,28 +18,19 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
-
-      - name: Cache Puppeteer
-        uses: actions/cache@v3
-        with:
-          path: /home/runner/.cache/puppeteer
-          key: puppeteer-${{ runner.os }}-${{ hashFiles('smart-money-tracker/package.json') }}
-          restore-keys: puppeteer-${{ runner.os }}-
-
+          node-version: '20' # Use stable LTS version
+          
       - name: Install dependencies
         run: |
           cd smart-money-tracker
-          npm install --legacy-peer-deps
-      
-      - name: Install Chrome
+          npm install
+          
+      - name: Install Puppeteer browsers
         run: |
           cd smart-money-tracker
-          npx puppeteer browsers install chrome --with-dependencies
+          npx puppeteer browsers install chrome
           
       - name: Run Puppeteer Scraper
-        env:
-          PUPPETEER_CACHE_DIR: /home/runner/.cache/puppeteer
         run: |
           cd smart-money-tracker
           node scrape-real.js
@@ -46,5 +39,6 @@ jobs:
         run: |
           git config --global user.name "Bursa Bot Action"
           git config --global user.email "bot@smartmoneytracker.local"
-          git add smart-money-tracker/live_data.json smart-money-tracker/history/
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update live_data.json & history [skip ci]" && git push)
+          git add smart-money-tracker/live_data.json
+          # Only commit if there are changes
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update live_data.json [skip ci]" && git push)
