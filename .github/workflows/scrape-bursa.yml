@@ -21,7 +21,7 @@ jobs:
       - name: Cache Puppeteer
         uses: actions/cache@v3
         with:
-          path: ~/.cache/puppeteer
+          path: /home/runner/.cache/puppeteer
           key: puppeteer-${{ runner.os }}-${{ hashFiles('smart-money-tracker/package.json') }}
           restore-keys: puppeteer-${{ runner.os }}-
 
@@ -33,7 +33,7 @@ jobs:
       - name: Install Chrome
         run: |
           cd smart-money-tracker
-          npx puppeteer browsers install chrome --cache-dir /home/runner/.cache/puppeteer
+          npx puppeteer browsers install chrome --with-dependencies
           
       - name: Run Puppeteer Scraper
         env:
