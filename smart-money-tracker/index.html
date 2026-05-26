@@ -82,9 +82,16 @@
     <header>
         <div>
             <h1>Bursa Smart Money Tracker</h1>
-            <p class="subtitle"><span class="pulse"></span>Live Market Scanner - Tracking Top Turnover & Momentum</p>
+            <p class="subtitle" id="dashboardSubtitle"><span class="pulse"></span>Live Market Scanner - Tracking Top Turnover & Momentum</p>
         </div>
-        <button id="refreshBtn">🔄 Refresh Data</button>
+        <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; background: var(--panel-bg); padding: 0.3rem 0.8rem; border-radius: 6px; border: 1px solid #334155;">
+                <label for="historyDate" style="color: #a78bfa; margin: 0;">Bukti Sejarah:</label>
+                <input type="date" id="historyDate" style="background: transparent; color: white; border: none; outline: none; font-family: inherit;">
+                <button id="loadHistoryBtn" style="background: #a78bfa; padding: 0.3rem 0.8rem; font-size: 0.8rem;">📂 Semak</button>
+            </div>
+            <button id="refreshBtn">🔄 Refresh Live</button>
+        </div>
     </header>
 
     <div class="filters">
@@ -439,12 +446,44 @@
             this.style.opacity = '0.7';
             
             await fetchLiveData();
+            document.getElementById('dashboardSubtitle').innerHTML = '<span class="pulse"></span>Live Market Scanner - Tracking Top Turnover & Momentum';
 
             setTimeout(() => {
                 this.textContent = originalText;
                 this.style.opacity = '1';
                 alert('Telah refresh! Jika live_data.json berubah, table akan diupdate.');
             }, 500);
+        });
+
+        // --- Logik Semak Sejarah (History) ---
+        document.getElementById('loadHistoryBtn').addEventListener('click', async function() {
+            const dateVal = document.getElementById('historyDate').value;
+            if(!dateVal) {
+                alert('Sila pilih tarikh pada kalendar terlebih dahulu.');
+                return;
+            }
+            
+            const originalText = this.textContent;
+            this.textContent = '⏳ ...';
+            
+            try {
+                const res = await fetch('history/data_' + dateVal + '.json');
+                if (res.ok) {
+                    const data = await res.json();
+                    if (data && data.length > 0) {
+                        currentData = data;
+                        document.getElementById('dashboardSubtitle').innerHTML = '📂 Menunjukkan Arkib Bukti Sejarah: <strong>' + dateVal + '</strong>';
+                        applyFilters();
+                        alert('Berjaya memuatkan arkib sejarah untuk tarikh: ' + dateVal);
+                    }
+                } else {
+                    alert('Tiada rekod (history) dijumpai untuk tarikh ' + dateVal + '. Pastikan bot telah berjalan pada hari tersebut.');
+                }
+            } catch (e) {
+                alert('Ralat memuatkan rekod sejarah. Pastikan anda berada di server/GitHub Pages.');
+            }
+            
+            this.textContent = originalText;
         });
     </script>
     <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>

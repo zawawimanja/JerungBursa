@@ -166,7 +166,18 @@ const path = require('path');
 
     const outputPath = path.join(__dirname, 'live_data.json');
     fs.writeFileSync(outputPath, JSON.stringify(results, null, 2));
+    
+    // --- SIMPAN SEJARAH (HISTORY) UNTUK BUKTI PRESTASI ---
+    const historyDir = path.join(__dirname, 'history');
+    if (!fs.existsSync(historyDir)){
+        fs.mkdirSync(historyDir);
+    }
+    const today = new Date().toISOString().split('T')[0]; // Format: YYYY-MM-DD
+    const historyPath = path.join(historyDir, `data_${today}.json`);
+    fs.writeFileSync(historyPath, JSON.stringify(results, null, 2));
+    
     console.log(`\n🎉 Selesai scan seluruh pasaran! Disimpan ke ${outputPath}`);
+    console.log(`📂 Salinan sejarah (Proof) disimpan ke ${historyPath}`);
     
     await browser.close();
 })();
