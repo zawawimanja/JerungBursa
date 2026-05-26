@@ -11,13 +11,13 @@ const path = require('path');
         args: ['--no-sandbox', '--disable-setuid-sandbox']
     };
 
-    // Jangan hardcode - biar puppeteer cari sendiri
-    // Dia akan auto-cari dari cache atau installed browsers
+    // Explicitly set cache directory if PUPPETEER_CACHE_DIR env var is set
+    if (process.env.PUPPETEER_CACHE_DIR) {
+        launchOptions.executablePath = path.join(process.env.PUPPETEER_CACHE_DIR, 'chrome', 'linux-1234567890', 'chrome-linux', 'chrome');
+    }
 
     const browser = await puppeteer.launch(launchOptions);
     const page = await browser.newPage();
-
-    // ... rest of code
 
     console.log("🌐 Sedut senarai Top Active & Top Gainers dari pasaran (Auto-Scan)...");
 
