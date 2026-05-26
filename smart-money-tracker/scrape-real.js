@@ -10,20 +10,20 @@ const path = require('path');
         headless: true,
         args: ['--no-sandbox', '--disable-setuid-sandbox']
     };
-    if (process.env.GITHUB_ACTIONS) {
-        launchOptions.executablePath = '/usr/bin/google-chrome';
-    } else {
-        // Run locally
-        launchOptions.executablePath = require('puppeteer').executablePath();
-    }
+
+    // Jangan hardcode - biar puppeteer cari sendiri
+    // Dia akan auto-cari dari cache atau installed browsers
+
     const browser = await puppeteer.launch(launchOptions);
     const page = await browser.newPage();
-    
+
+    // ... rest of code
+
     console.log("🌐 Sedut senarai Top Active & Top Gainers dari pasaran (Auto-Scan)...");
-    
+
     // --- VIP HYBRID LIST (Sentiasa Pantau Kumpulan Jerung & Tech) ---
     let allTickersMap = new Map();
-    
+
     const vipList = [
         { name: 'GREATEC', symbol: '0208.KL' },
         { name: 'UNISEM', symbol: '5005.KL' },
@@ -45,7 +45,7 @@ const path = require('path');
         { name: 'SUNWAY', symbol: '5211.KL' },
         { name: 'IJM', symbol: '3336.KL' }
     ];
-    
+
     vipList.forEach(t => allTickersMap.set(t.symbol, t));
 
     // Auto-scrape Top Active dari Bursa Malaysia untuk tambah kaunter momentum baru
@@ -53,17 +53,17 @@ const path = require('path');
         'https://www.bursamalaysia.com/market_information/equities_prices?mode=top_active',
         'https://www.bursamalaysia.com/market_information/equities_prices?mode=top_gainers'
     ];
-    
+
     for (let url of urls) {
         try {
-            await page.goto(url, {waitUntil: 'networkidle2', timeout: 30000});
+            await page.goto(url, { waitUntil: 'networkidle2', timeout: 30000 });
             const data = await page.evaluate(() => {
                 const rows = document.querySelectorAll('table tbody tr');
                 let results = [];
                 rows.forEach(r => {
                     const nameEl = r.querySelector('td:nth-child(2)');
                     const codeEl = r.querySelector('td:nth-child(3)');
-                    if(nameEl && codeEl) {
+                    if (nameEl && codeEl) {
                         let code = codeEl.textContent.trim();
                         // Hanya ambil saham sebenar (kod 4 digit seperti 0208), buang warrant/structured warrant
                         if (code.match(/^\d{4}$/)) {
@@ -76,17 +76,17 @@ const path = require('path');
                 });
                 return results;
             });
-            
+
             // Masukkan dalam map untuk elak nama bersilang/duplicate
             data.forEach(t => allTickersMap.set(t.symbol, t));
-        } catch(e) {
+        } catch (e) {
             console.log("⚠️ Gagal loading senarai dari Bursa:", url);
         }
     }
-    
+
     const TICKERS = Array.from(allTickersMap.values());
     console.log(`✅ Berjaya kumpul ${TICKERS.length} kaunter tulen dari senarai Top Pasaran hari ini!`);
-    
+
     if (TICKERS.length === 0) {
         console.log("❌ Tiada kaunter ditemui. Sistem mungkin block, atau pasaran tutup.");
         await browser.close();
@@ -95,14 +95,14 @@ const path = require('path');
 
     console.log("🌐 Mendapatkan 'pass' keselamatan dari Yahoo Finance...");
     try {
-        await page.goto('https://finance.yahoo.com', {waitUntil: 'domcontentloaded', timeout: 15000});
-    } catch(e) {
+        await page.goto('https://finance.yahoo.com', { waitUntil: 'domcontentloaded', timeout: 15000 });
+    } catch (e) {
         console.log("⚠️ Yahoo Finance loading slow, continuing anyway...");
     }
-    
+
     console.log("📊 Menganalisis Formula Smart Money (Turnover + Momentum)...");
     const results = [];
-    
+
     for (let t of TICKERS) {
         try {
             const data = await page.evaluate(async (sym) => {
@@ -110,7 +110,7 @@ const path = require('path');
                 if (!res.ok) return null;
                 return await res.json();
             }, t.symbol);
-            
+
             if (data && data.chart && data.chart.result) {
                 const quote = data.chart.result[0].meta;
                 const price = quote.regularMarketPrice;
@@ -119,10 +119,10 @@ const path = require('path');
                 const changePercent = (change / prevClose) * 100;
                 const volume = quote.regularMarketVolume || 0;
                 const turnover = price * volume;
-                
+
                 let signal = "avoid";
                 let reason = "Kaunter Lemau / Sikat";
-                
+
                 if (changePercent > 0 && turnover > 3000000) {
                     signal = "buy";
                     if (changePercent <= 4.0) {
@@ -158,7 +158,7 @@ const path = require('path');
                     signal: signal,
                     reason: reason
                 });
-                console.log(`✅ ${t.name} disemak: Harga RM ${price.toFixed(3)} | Turnover: ${(turnover/1000000).toFixed(2)}M`);
+                console.log(`✅ ${t.name} disemak: Harga RM ${price.toFixed(3)} | Turnover: ${(turnover / 1000000).toFixed(2)}M`);
             } else {
                 console.log(`❌ Gagal dapatkan harga Yahoo untuk ${t.name}`);
             }
@@ -166,24 +166,24 @@ const path = require('path');
             console.log(`❌ Ralat pada ${t.name}: ${e.message}`);
         }
     }
-    
+
     // Auto-susun ranking ikut Turnover tertinggi (Smart Money)
     results.sort((a, b) => b.turnover - a.turnover);
 
     const outputPath = path.join(__dirname, 'live_data.json');
     fs.writeFileSync(outputPath, JSON.stringify(results, null, 2));
-    
+
     // --- SIMPAN SEJARAH (HISTORY) UNTUK BUKTI PRESTASI ---
     const historyDir = path.join(__dirname, 'history');
-    if (!fs.existsSync(historyDir)){
+    if (!fs.existsSync(historyDir)) {
         fs.mkdirSync(historyDir);
     }
     const today = new Date().toISOString().split('T')[0]; // Format: YYYY-MM-DD
     const historyPath = path.join(historyDir, `data_${today}.json`);
     fs.writeFileSync(historyPath, JSON.stringify(results, null, 2));
-    
+
     console.log(`\n🎉 Selesai scan seluruh pasaran! Disimpan ke ${outputPath}`);
     console.log(`📂 Salinan sejarah (Proof) disimpan ke ${historyPath}`);
-    
+
     await browser.close();
 })();

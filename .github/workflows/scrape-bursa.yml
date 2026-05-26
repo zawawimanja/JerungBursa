@@ -8,8 +8,6 @@ on:
 jobs:
   scrape-and-update:
     runs-on: ubuntu-latest
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
     
     steps:
       - name: Checkout repository
@@ -20,17 +18,26 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Cache Puppeteer
+        uses: actions/cache@v3
+        with:
+          path: ~/.cache/puppeteer
+          key: puppeteer-${{ runner.os }}-${{ hashFiles('smart-money-tracker/package.json') }}
+          restore-keys: puppeteer-${{ runner.os }}-
+
       - name: Install dependencies
         run: |
           cd smart-money-tracker
-          npm install
+          npm install --legacy-peer-deps
       
-      - name: Install Puppeteer browsers
+      - name: Install Chrome
         run: |
           cd smart-money-tracker
-          npx puppeteer browsers install chrome
+          npx puppeteer browsers install chrome --cache-dir /home/runner/.cache/puppeteer
           
       - name: Run Puppeteer Scraper
+        env:
+          PUPPETEER_CACHE_DIR: /home/runner/.cache/puppeteer
         run: |
           cd smart-money-tracker
           node scrape-real.js
