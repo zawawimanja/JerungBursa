@@ -19,6 +19,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20' # Use stable LTS version
+
+      - name: Install Chrome dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y chromium-browser
           
       - name: Install dependencies
         run: |
@@ -29,12 +34,20 @@ jobs:
         uses: actions/cache@v4
         with:
           path: /home/runner/.cache/puppeteer
-          key: puppeteer-${{ runner.os }}-chrome
+          key: puppeteer-${{ runner.os }}-chrome-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            puppeteer-${{ runner.os }}-chrome-
+
+      - name: Install Puppeteer Chrome
+        run: |
+          cd smart-money-tracker
+          npx puppeteer browsers install chrome --with-deps
+        env:
+          PUPPETEER_CACHE_DIR: /home/runner/.cache/puppeteer
 
       - name: Run Puppeteer Scraper
         run: |
           cd smart-money-tracker
-          npx puppeteer browsers install chrome --with-deps
           node scrape-real.js
         env:
           PUPPETEER_CACHE_DIR: /home/runner/.cache/puppeteer

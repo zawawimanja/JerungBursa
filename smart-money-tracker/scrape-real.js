@@ -8,7 +8,7 @@ const path = require('path');
     console.log("🚀 Memulakan enjin Puppeteer Stealth...");
     const browser = await puppeteer.launch({
         headless: true,
-        executablePath: require('puppeteer').executablePath(),
+        executablePath: process.env.GITHUB_ACTIONS ? '/usr/bin/chromium-browser' : require('puppeteer').executablePath(),
         args: ['--no-sandbox', '--disable-setuid-sandbox']
     });
     const page = await browser.newPage();
