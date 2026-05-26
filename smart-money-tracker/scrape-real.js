@@ -1,29 +1,9 @@
-const puppeteer = require('puppeteer-extra');
-const StealthPlugin = require('puppeteer-extra-plugin-stealth');
-puppeteer.use(StealthPlugin());
 const fs = require('fs');
 const path = require('path');
 
 (async () => {
-    console.log("🚀 Memulakan enjin Puppeteer Stealth...");
-    const launchOptions = {
-        headless: true,
-        args: ['--no-sandbox', '--disable-setuid-sandbox']
-    };
-
-    // Explicitly set cache directory if PUPPETEER_CACHE_DIR env var is set
-    if (process.env.PUPPETEER_CACHE_DIR) {
-        launchOptions.executablePath = path.join(process.env.PUPPETEER_CACHE_DIR, 'chrome', 'linux-1234567890', 'chrome-linux', 'chrome');
-    }
-
-    const browser = await puppeteer.launch(launchOptions);
-    const page = await browser.newPage();
-
-    console.log("🌐 Sedut senarai Top Active & Top Gainers dari pasaran (Auto-Scan)...");
-
-    // --- VIP HYBRID LIST (Sentiasa Pantau Kumpulan Jerung & Tech) ---
-    let allTickersMap = new Map();
-
+    console.log("🚀 Memulakan scraper tanpa Puppeteer...");
+    
     const vipList = [
         { name: 'GREATEC', symbol: '0208.KL' },
         { name: 'UNISEM', symbol: '5005.KL' },
@@ -46,72 +26,29 @@ const path = require('path');
         { name: 'IJM', symbol: '3336.KL' }
     ];
 
-    vipList.forEach(t => allTickersMap.set(t.symbol, t));
-
-    // Auto-scrape Top Active dari Bursa Malaysia untuk tambah kaunter momentum baru
-    const urls = [
-        'https://www.bursamalaysia.com/market_information/equities_prices?mode=top_active',
-        'https://www.bursamalaysia.com/market_information/equities_prices?mode=top_gainers'
-    ];
-
-    for (let url of urls) {
-        try {
-            await page.goto(url, { waitUntil: 'networkidle2', timeout: 30000 });
-            const data = await page.evaluate(() => {
-                const rows = document.querySelectorAll('table tbody tr');
-                let results = [];
-                rows.forEach(r => {
-                    const nameEl = r.querySelector('td:nth-child(2)');
-                    const codeEl = r.querySelector('td:nth-child(3)');
-                    if (nameEl && codeEl) {
-                        let code = codeEl.textContent.trim();
-                        // Hanya ambil saham sebenar (kod 4 digit seperti 0208), buang warrant/structured warrant
-                        if (code.match(/^\d{4}$/)) {
-                            results.push({
-                                name: nameEl.textContent.trim().split(' ')[0].replace(/\[S\]/g, ''),
-                                symbol: code + '.KL'
-                            });
-                        }
-                    }
-                });
-                return results;
-            });
-
-            // Masukkan dalam map untuk elak nama bersilang/duplicate
-            data.forEach(t => allTickersMap.set(t.symbol, t));
-        } catch (e) {
-            console.log("⚠️ Gagal loading senarai dari Bursa:", url);
-        }
-    }
-
-    const TICKERS = Array.from(allTickersMap.values());
-    console.log(`✅ Berjaya kumpul ${TICKERS.length} kaunter tulen dari senarai Top Pasaran hari ini!`);
-
-    if (TICKERS.length === 0) {
-        console.log("❌ Tiada kaunter ditemui. Sistem mungkin block, atau pasaran tutup.");
-        await browser.close();
-        return;
-    }
-
-    console.log("🌐 Mendapatkan 'pass' keselamatan dari Yahoo Finance...");
-    try {
-        await page.goto('https://finance.yahoo.com', { waitUntil: 'domcontentloaded', timeout: 15000 });
-    } catch (e) {
-        console.log("⚠️ Yahoo Finance loading slow, continuing anyway...");
-    }
-
-    console.log("📊 Menganalisis Formula Smart Money (Turnover + Momentum)...");
+    console.log(`📊 Menganalisis Formula Smart Money (Turnover + Momentum)...`);
     const results = [];
 
-    for (let t of TICKERS) {
+    for (let t of vipList) {
         try {
-            const data = await page.evaluate(async (sym) => {
-                const res = await fetch(`https://query1.finance.yahoo.com/v8/finance/chart/${sym}?interval=1d`);
-                if (!res.ok) return null;
-                return await res.json();
-            }, t.symbol);
+            // Use Yahoo Finance API directly
+            const response = await fetch(
+                `https://query1.finance.yahoo.com/v8/finance/chart/${t.symbol}?interval=1d`,
+                {
+                    headers: {
+                        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+                    }
+                }
+            );
 
-            if (data && data.chart && data.chart.result) {
+            if (!response.ok) {
+                console.log(`⚠️ API error untuk ${t.name}: ${response.status}`);
+                continue;
+            }
+
+            const data = await response.json();
+
+            if (data && data.chart && data.chart.result && data.chart.result.length > 0) {
                 const quote = data.chart.result[0].meta;
                 const price = quote.regularMarketPrice;
                 const prevClose = quote.chartPreviousClose;
@@ -149,7 +86,7 @@ const path = require('path');
 
                 results.push({
                     name: t.name,
-                    sector: "Auto-Scanned", // Kategori auto
+                    sector: "Auto-Scanned",
                     category: dynamicCategory,
                     price: price,
                     change: changePercent,
@@ -167,23 +104,21 @@ const path = require('path');
         }
     }
 
-    // Auto-susun ranking ikut Turnover tertinggi (Smart Money)
+    // Auto-susun ranking ikut Turnover tertinggi
     results.sort((a, b) => b.turnover - a.turnover);
 
     const outputPath = path.join(__dirname, 'live_data.json');
     fs.writeFileSync(outputPath, JSON.stringify(results, null, 2));
 
-    // --- SIMPAN SEJARAH (HISTORY) UNTUK BUKTI PRESTASI ---
+    // Simpan sejarah
     const historyDir = path.join(__dirname, 'history');
     if (!fs.existsSync(historyDir)) {
         fs.mkdirSync(historyDir);
     }
-    const today = new Date().toISOString().split('T')[0]; // Format: YYYY-MM-DD
+    const today = new Date().toISOString().split('T')[0];
     const historyPath = path.join(historyDir, `data_${today}.json`);
     fs.writeFileSync(historyPath, JSON.stringify(results, null, 2));
 
     console.log(`\n🎉 Selesai scan seluruh pasaran! Disimpan ke ${outputPath}`);
     console.log(`📂 Salinan sejarah (Proof) disimpan ke ${historyPath}`);
-
-    await browser.close();
 })();
