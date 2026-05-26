@@ -69,7 +69,7 @@ const path = require('path');
                             reason = "🔥 GOLDEN ENTRY (Lincah - Midcap / Laju & Volatile)";
                         }
                     } else if (changePercent > 4.0 && changePercent <= 8.0) {
-                        reason = "⚡ Momentum Kuat (Sesuai Intraday, Berisiko Swing)";
+                        reason = "⚡ Momentum Kuat (Harga Sedang Mencanak Naik Laju)";
                     } else {
                         reason = "🚨 OVERBOUGHT (Dah Terbang, Awas Kena Dump)";
                     }

@@ -1,0 +1,200 @@
+[
+  {
+    "name": "SKYECHIP",
+    "sector": "Auto-Scanned",
+    "category": "Swing / Mid-Cap",
+    "price": 2.92,
+    "change": 8.15,
+    "turnover": 188770000,
+    "volume": 64650000,
+    "signal": "buy",
+    "reason": "🚨 OVERBOUGHT (Dah Terbang, Awas Kena Dump)"
+  },
+  {
+    "name": "YTL",
+    "sector": "Auto-Scanned",
+    "category": "Swing / Mid-Cap",
+    "price": 2.12,
+    "change": 0.47,
+    "turnover": 121630000,
+    "volume": 57370000,
+    "signal": "buy",
+    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)"
+  },
+  {
+    "name": "ZETRIX",
+    "sector": "Auto-Scanned",
+    "category": "Intraday / Momentum",
+    "price": 0.805,
+    "change": 1.26,
+    "turnover": 93800000,
+    "volume": 116520000,
+    "signal": "buy",
+    "reason": "🔥 GOLDEN ENTRY (Lincah - Midcap / Laju & Volatile)"
+  },
+  {
+    "name": "MAYBANK",
+    "sector": "Auto-Scanned",
+    "category": "Swing / Mid-Cap",
+    "price": 11.06,
+    "change": 0.55,
+    "turnover": 83120000,
+    "volume": 7520000,
+    "signal": "buy",
+    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)"
+  },
+  {
+    "name": "AXIATA",
+    "sector": "Auto-Scanned",
+    "category": "Swing / Mid-Cap",
+    "price": 2.02,
+    "change": 3.59,
+    "turnover": 73680000,
+    "volume": 36480000,
+    "signal": "buy",
+    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)"
+  },
+  {
+    "name": "TANCO",
+    "sector": "Auto-Scanned",
+    "category": "Swing / Mid-Cap",
+    "price": 1.73,
+    "change": 0.58,
+    "turnover": 59780000,
+    "volume": 34550000,
+    "signal": "buy",
+    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)"
+  },
+  {
+    "name": "UNISEM",
+    "sector": "Auto-Scanned",
+    "category": "Swing / Mid-Cap",
+    "price": 4.85,
+    "change": 7.78,
+    "turnover": 54540000,
+    "volume": 11250000,
+    "signal": "buy",
+    "reason": "⚡ Momentum Kuat (Harga Sedang Mencanak Naik Laju)"
+  },
+  {
+    "name": "MI",
+    "sector": "Auto-Scanned",
+    "category": "Swing / Mid-Cap",
+    "price": 4.53,
+    "change": 7.86,
+    "turnover": 48860000,
+    "volume": 10790000,
+    "signal": "buy",
+    "reason": "⚡ Momentum Kuat (Harga Sedang Mencanak Naik Laju)"
+  },
+  {
+    "name": "AAX",
+    "sector": "Auto-Scanned",
+    "category": "Swing / Mid-Cap",
+    "price": 1.19,
+    "change": 6.25,
+    "turnover": 48220000,
+    "volume": 40520000,
+    "signal": "buy",
+    "reason": "⚡ Momentum Kuat (Harga Sedang Mencanak Naik Laju)"
+  },
+  {
+    "name": "GREATEC",
+    "sector": "Auto-Scanned",
+    "category": "Swing / Mid-Cap",
+    "price": 2.74,
+    "change": 6.61,
+    "turnover": 44630000,
+    "volume": 16290000,
+    "signal": "buy",
+    "reason": "⚡ Momentum Kuat (Harga Sedang Mencanak Naik Laju)"
+  },
+  {
+    "name": "TENAGA",
+    "sector": "Auto-Scanned",
+    "category": "Swing / Mid-Cap",
+    "price": 14.46,
+    "change": 0.28,
+    "turnover": 41270000,
+    "volume": 2850000,
+    "signal": "buy",
+    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)"
+  },
+  {
+    "name": "IJM",
+    "sector": "Auto-Scanned",
+    "category": "Swing / Mid-Cap",
+    "price": 2.14,
+    "change": 3.38,
+    "turnover": 33500000,
+    "volume": 15660000,
+    "signal": "buy",
+    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)"
+  },
+  {
+    "name": "KGB",
+    "sector": "Auto-Scanned",
+    "category": "Swing / Mid-Cap",
+    "price": 7.33,
+    "change": 1.10,
+    "turnover": 31060000,
+    "volume": 4240000,
+    "signal": "buy",
+    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)"
+  },
+  {
+    "name": "PENTA",
+    "sector": "Auto-Scanned",
+    "category": "Swing / Mid-Cap",
+    "price": 4.59,
+    "change": 4.79,
+    "turnover": 26290000,
+    "volume": 5730000,
+    "signal": "buy",
+    "reason": "⚡ Momentum Kuat (Harga Sedang Mencanak Naik Laju)"
+  },
+  {
+    "name": "INARI",
+    "sector": "Auto-Scanned",
+    "category": "Swing / Mid-Cap",
+    "price": 1.98,
+    "change": 0.51,
+    "turnover": 20650000,
+    "volume": 10430000,
+    "signal": "buy",
+    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)"
+  },
+  {
+    "name": "FRONTKN",
+    "sector": "Auto-Scanned",
+    "category": "Swing / Mid-Cap",
+    "price": 4.95,
+    "change": 0.81,
+    "turnover": 18210000,
+    "volume": 3680000,
+    "signal": "buy",
+    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)"
+  },
+  {
+    "name": "GIIB",
+    "sector": "Auto-Scanned",
+    "category": "Intraday / Momentum",
+    "price": 0.40,
+    "change": 1.27,
+    "turnover": 13660000,
+    "volume": 34160000,
+    "signal": "buy",
+    "reason": "🔥 GOLDEN ENTRY (Lincah - Midcap / Laju & Volatile)"
+  },
+  {
+    "name": "VSTECS",
+    "sector": "Auto-Scanned",
+    "category": "Swing / Mid-Cap",
+    "price": 6.11,
+    "change": 3.74,
+    "turnover": 7230000,
+    "volume": 1180000,
+    "signal": "buy",
+    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)"
+  }
+]

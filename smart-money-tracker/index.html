@@ -150,11 +150,11 @@
                 <tr>
                     <th style="width: 50px;">No.</th>
                     <th>Kaunter</th>
-                    <th>Harga Semasa</th>
-                    <th>% Perubahan</th>
-                    <th>Nilai Dagangan (Turnover)</th>
-                    <th>Volume</th>
-                    <th>Analisis Sistem</th>
+                    <th style="cursor: pointer; user-select: none;" onclick="setSort('price')">Harga Semasa <span id="sort_price"></span></th>
+                    <th style="cursor: pointer; user-select: none;" onclick="setSort('change')">% Perubahan <span id="sort_change"></span></th>
+                    <th style="cursor: pointer; user-select: none;" onclick="setSort('turnover')">Nilai Dagangan (Turnover) <span id="sort_turnover">▼</span></th>
+                    <th style="cursor: pointer; user-select: none;" onclick="setSort('volume')">Volume <span id="sort_volume"></span></th>
+                    <th style="cursor: pointer; user-select: none;" onclick="setSort('reason')">Analisis Sistem <span id="sort_reason"></span></th>
                 </tr>
             </thead>
             <tbody id="tableBody">
@@ -275,6 +275,28 @@
             { name: "GAMUDA", sector: "Construction", price: 5.20, change: 2.1, turnover: 32000000, volume: 6100000, signal: "buy", reason: "Kaunter Bluechip Stabil" }
         ];
 
+        let currentSortColumn = 'turnover';
+        let currentSortDesc = true;
+
+        function setSort(column) {
+            if (currentSortColumn === column) {
+                currentSortDesc = !currentSortDesc;
+            } else {
+                currentSortColumn = column;
+                currentSortDesc = true;
+            }
+            
+            document.getElementById('sort_price').textContent = '';
+            document.getElementById('sort_change').textContent = '';
+            document.getElementById('sort_turnover').textContent = '';
+            document.getElementById('sort_volume').textContent = '';
+            document.getElementById('sort_reason').textContent = '';
+            
+            document.getElementById('sort_' + column).textContent = currentSortDesc ? '▼' : '▲';
+            
+            applyFilters();
+        }
+
         function formatNumber(num) {
             if (num >= 1000000) return (num / 1000000).toFixed(2) + ' Juta';
             if (num >= 1000) return (num / 1000).toFixed(2) + ' Ribu';
@@ -346,7 +368,20 @@
                 return true;
             });
 
-            filteredData.sort((a, b) => b.turnover - a.turnover);
+            filteredData.sort((a, b) => {
+                let valA = a[currentSortColumn];
+                let valB = b[currentSortColumn];
+                
+                if (typeof valA === 'string' && typeof valB === 'string') {
+                    return currentSortDesc ? valB.localeCompare(valA) : valA.localeCompare(valB);
+                }
+                
+                if (currentSortDesc) {
+                    return valB - valA;
+                } else {
+                    return valA - valB;
+                }
+            });
             renderTable(filteredData);
             renderAIAdvisor(currentData);
         }
