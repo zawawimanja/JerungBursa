@@ -6,7 +6,11 @@ const path = require('path');
 
 (async () => {
     console.log("🚀 Memulakan enjin Puppeteer Stealth...");
-    const browser = await puppeteer.launch({headless: true});
+    const browser = await puppeteer.launch({
+        headless: true,
+        executablePath: require('puppeteer').executablePath(),
+        args: ['--no-sandbox', '--disable-setuid-sandbox']
+    });
     const page = await browser.newPage();
     
     console.log("🌐 Sedut senarai Top Active & Top Gainers dari pasaran (Auto-Scan)...");
