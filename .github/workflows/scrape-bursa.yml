@@ -25,11 +25,6 @@ jobs:
           cd smart-money-tracker
           npm install
           
-      - name: Install Puppeteer browsers
-        run: |
-          cd smart-money-tracker
-          npx puppeteer browsers install chrome
-          
       - name: Run Puppeteer Scraper
         run: |
           cd smart-money-tracker
