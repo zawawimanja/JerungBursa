@@ -1,5 +1,7 @@
 const fs = require('fs');
 const path = require('path');
+const axios = require('axios');
+const cheerio = require('cheerio');
 
 (async () => {
     console.log("🚀 Memulakan scraper tanpa Puppeteer...");
@@ -31,74 +33,70 @@ const path = require('path');
 
     for (let t of vipList) {
         try {
-            // Use Yahoo Finance API directly
-            const response = await fetch(
-                `https://query1.finance.yahoo.com/v8/finance/chart/${t.symbol}?interval=1d`,
-                {
-                    headers: {
-                        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
-                    }
-                }
-            );
+            const code = t.symbol.split('.')[0];
+            const response = await axios.get(`https://www.klsescreener.com/v2/stocks/view/${code}`, {
+                headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' }
+            });
+            const $ = cheerio.load(response.data);
+            
+            const priceStr = $('#price').text().trim();
+            const volumeStr = $('#volume').text().trim().replace(/,/g, '');
+            const priceDiffStr = $('#priceDiff').text().trim();
 
-            if (!response.ok) {
-                console.log(`⚠️ API error untuk ${t.name}: ${response.status}`);
+            const price = parseFloat(priceStr);
+            const volume = parseInt(volumeStr, 10) || 0;
+            
+            let changePercent = 0;
+            const match = priceDiffStr.match(/\((.*?)\%\)/);
+            if (match && match[1]) {
+                changePercent = parseFloat(match[1].replace('+', ''));
+            }
+            const turnover = price * volume;
+
+            if (isNaN(price)) {
+                console.log(`❌ Gagal dapatkan harga untuk ${t.name}`);
                 continue;
             }
 
-            const data = await response.json();
+            let signal = "avoid";
+            let reason = "Kaunter Lemau / Sikat";
 
-            if (data && data.chart && data.chart.result && data.chart.result.length > 0) {
-                const quote = data.chart.result[0].meta;
-                const price = quote.regularMarketPrice;
-                const prevClose = quote.chartPreviousClose;
-                const change = price - prevClose;
-                const changePercent = (change / prevClose) * 100;
-                const volume = quote.regularMarketVolume || 0;
-                const turnover = price * volume;
-
-                let signal = "avoid";
-                let reason = "Kaunter Lemau / Sikat";
-
-                if (changePercent > 0 && turnover > 3000000) {
-                    signal = "buy";
-                    if (changePercent <= 4.0) {
-                        if (price >= 1.50) {
-                            reason = "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)";
-                        } else {
-                            reason = "🔥 GOLDEN ENTRY (Lincah - Midcap / Laju & Volatile)";
-                        }
-                    } else if (changePercent > 4.0 && changePercent <= 8.0) {
-                        reason = "⚡ Momentum Kuat (Harga Sedang Mencanak Naik Laju)";
+            if (changePercent > 0 && turnover > 3000000) {
+                signal = "buy";
+                if (changePercent <= 4.0) {
+                    if (price >= 1.50) {
+                        reason = "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)";
                     } else {
-                        reason = "🚨 OVERBOUGHT (Dah Terbang, Awas Kena Dump)";
+                        reason = "🔥 GOLDEN ENTRY (Lincah - Midcap / Laju & Volatile)";
                     }
-                } else if (changePercent <= 0 && turnover > 5000000) {
-                    reason = "⚠️ Jerung Buang Barang / Markup";
+                } else if (changePercent > 4.0 && changePercent <= 8.0) {
+                    reason = "⚡ Momentum Kuat (Harga Sedang Mencanak Naik Laju)";
+                } else {
+                    reason = "🚨 OVERBOUGHT (Dah Terbang, Awas Kena Dump)";
                 }
-
-                let dynamicCategory = "Intraday / Momentum";
-                if (price >= 1.00) {
-                    dynamicCategory = "Swing / Mid-Cap";
-                } else if (price <= 0.30) {
-                    dynamicCategory = "Penny / Spekulatif";
-                }
-
-                results.push({
-                    name: t.name,
-                    sector: "Auto-Scanned",
-                    category: dynamicCategory,
-                    price: price,
-                    change: changePercent,
-                    turnover: turnover,
-                    volume: volume,
-                    signal: signal,
-                    reason: reason
-                });
-                console.log(`✅ ${t.name} disemak: Harga RM ${price.toFixed(3)} | Turnover: ${(turnover / 1000000).toFixed(2)}M`);
-            } else {
-                console.log(`❌ Gagal dapatkan harga Yahoo untuk ${t.name}`);
+            } else if (changePercent <= 0 && turnover > 5000000) {
+                reason = "⚠️ Jerung Buang Barang / Markup";
             }
+
+            let dynamicCategory = "Intraday / Momentum";
+            if (price >= 1.00) {
+                dynamicCategory = "Swing / Mid-Cap";
+            } else if (price <= 0.30) {
+                dynamicCategory = "Penny / Spekulatif";
+            }
+
+            results.push({
+                name: t.name,
+                sector: "Auto-Scanned",
+                category: dynamicCategory,
+                price: price,
+                change: changePercent,
+                turnover: turnover,
+                volume: volume,
+                signal: signal,
+                reason: reason
+            });
+            console.log(`✅ ${t.name} disemak: Harga RM ${price.toFixed(3)} | Turnover: ${(turnover / 1000000).toFixed(2)}M`);
         } catch (e) {
             console.log(`❌ Ralat pada ${t.name}: ${e.message}`);
         }
