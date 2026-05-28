@@ -2,8 +2,8 @@ name: Bursa Smart Money Auto-Scraper
 
 on:
   schedule:
-    # Run at 08:30 UTC which is 4:30 PM Malaysia Time (Isnin hingga Jumaat)
-    - cron: '30 8 * * 1-5'
+    # Run at 09:15 UTC which is 5:15 PM Malaysia Time (Isnin hingga Jumaat) selepas market tutup
+    - cron: '15 9 * * 1-5'
   workflow_dispatch: # Membenarkan anda tekan butang 'Run' secara manual di GitHub
 
 jobs:
