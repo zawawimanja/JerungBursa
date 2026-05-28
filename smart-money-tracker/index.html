@@ -94,6 +94,15 @@
         </div>
     </header>
 
+    <div id="vip-watchlist-section" style="background: #1e293b; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; border: 1px solid #3b82f6; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+            <h2 style="font-size: 1.3rem; color: #60a5fa; margin: 0;">🎯 Radar Jerung VIP (Top 4 Sektor Teknologi)</h2>
+        </div>
+        <div id="vip-watchlist-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+            <!-- VIP data will be populated here -->
+        </div>
+    </div>
+
     <div class="filters">
         <div class="filter-group" style="flex-grow: 1; min-width: 200px;">
             <label>Cari Kaunter</label>
@@ -315,7 +324,7 @@
                 tr.innerHTML = `
                     <td style="font-weight: 700; color: var(--text-muted); font-size: 1.1rem;">#${index + 1}</td>
                     <td>
-                        <div class="counter-name">${item.name}</div>
+                        <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=5" target="_blank" class="counter-name" title="Buka chart TradingView (5M)" style="color: var(--accent); text-decoration: none;">${item.name} 🔗</a>
                         <div class="sector">${item.sector || 'Bursa'} &bull; <span style="color: #ec4899; font-weight: 500;">${item.category || ''}</span></div>
                     </td>
                     <td class="price ${changeClass}">${item.price.toFixed(3)}</td>
@@ -384,6 +393,7 @@
             });
             renderTable(filteredData);
             renderAIAdvisor(currentData);
+            renderVIPWatchlist(currentData);
         }
 
         function renderAIAdvisor(data) {
@@ -425,7 +435,7 @@
                 lincah.forEach(c => {
                     const lot = Math.floor(allocation / (c.price * 100));
                     html += `<div style="background: #1e293b; padding: 1rem; border-radius: 8px; margin-bottom: 0.8rem; border: 1px solid #334155;">
-                        <div style="font-weight: 700; color: #fff;">${c.name} <span style="color: #94a3b8; font-weight: normal;">(RM ${c.price.toFixed(3)})</span></div>
+                        <div style="font-weight: 700; color: #fff;"><a href="https://www.tradingview.com/chart/?symbol=MYX:${c.name}&interval=5" target="_blank" title="Buka chart TradingView (5M)" style="color: #60a5fa; text-decoration: none;">${c.name} 🔗</a> <span style="color: #94a3b8; font-weight: normal;">(RM ${c.price.toFixed(3)})</span></div>
                         <div style="font-size: 0.8rem; color: var(--success); margin: 0.3rem 0;">Naik: +${c.change.toFixed(2)}% &bull; Jerung: ${(c.turnover/1000000).toFixed(2)} Juta</div>
                         <div style="margin-top: 0.5rem; font-size: 0.85rem; color: #e2e8f0; background: rgba(59, 130, 246, 0.1); padding: 0.5rem; border-radius: 4px; border-left: 2px solid #3b82f6;">
                             💡 Beli <strong>${lot} lot</strong> (Guna modal ~RM${allocation.toLocaleString()}). Take Profit bila capai 5%.
@@ -442,7 +452,7 @@
                 stabil.forEach(c => {
                     const lot = Math.floor(allocation / (c.price * 100));
                     html += `<div style="background: #1e293b; padding: 1rem; border-radius: 8px; margin-bottom: 0.8rem; border: 1px solid #334155;">
-                        <div style="font-weight: 700; color: #fff;">${c.name} <span style="color: #94a3b8; font-weight: normal;">(RM ${c.price.toFixed(3)})</span></div>
+                        <div style="font-weight: 700; color: #fff;"><a href="https://www.tradingview.com/chart/?symbol=MYX:${c.name}&interval=5" target="_blank" title="Buka chart TradingView (5M)" style="color: #60a5fa; text-decoration: none;">${c.name} 🔗</a> <span style="color: #94a3b8; font-weight: normal;">(RM ${c.price.toFixed(3)})</span></div>
                         <div style="font-size: 0.8rem; color: var(--success); margin: 0.3rem 0;">Naik: +${c.change.toFixed(2)}% &bull; Jerung: ${(c.turnover/1000000).toFixed(2)} Juta</div>
                         <div style="margin-top: 0.5rem; font-size: 0.85rem; color: #e2e8f0; background: rgba(16, 185, 129, 0.1); padding: 0.5rem; border-radius: 4px; border-left: 2px solid #10b981;">
                             💡 Beli <strong>${lot} lot</strong> (Guna modal ~RM${allocation.toLocaleString()}). Boleh peram dengan tenang.
@@ -453,6 +463,36 @@
             }
             
             advisorContent.innerHTML = html;
+        }
+
+        function renderVIPWatchlist(data) {
+            const content = document.getElementById('vip-watchlist-content');
+            
+            // AUTOMATIC LOGIC (TEKNOLOGI SAHAJA): Filter valid Buy signals, Uptrend, Jerung Turnover > 3M
+            const techStocks = ['GREATEC', 'UNISEM', 'PENTA', 'MI', 'VSTECS', 'KGB', 'NATGATE', 'FRONTKN', 'INARI', 'MPI', 'UWC', 'GTRONIC', 'MYEG'];
+            const candidates = data.filter(c => techStocks.includes(c.name) && c.change > 0 && c.turnover >= 3000000 && c.signal === 'buy');
+            
+            // Sort by highest Turnover (paling banyak jerung masuk)
+            candidates.sort((a, b) => b.turnover - a.turnover);
+            
+            const vipData = candidates.slice(0, 4);
+            
+            let html = '';
+            if (vipData.length === 0) {
+                html = '<div style="color: var(--text-muted); grid-column: 1 / -1; text-align: center;">Belum ada jerung yang mengganas hari ini...</div>';
+            }
+            vipData.forEach(c => {
+                const changeClass = c.change >= 0 ? 'var(--success)' : 'var(--danger)';
+                const changeSign = c.change > 0 ? '+' : '';
+                html += `
+                <div style="background: #0f172a; padding: 1rem; border-radius: 8px; border: 1px solid #334155; text-align: center;">
+                    <a href="https://www.tradingview.com/chart/?symbol=MYX:${c.name}&interval=5" target="_blank" style="color: #fff; font-weight: 700; font-size: 1.2rem; text-decoration: none; display: block; margin-bottom: 0.5rem;">${c.name} 🔗</a>
+                    <div style="font-size: 1.1rem; color: ${changeClass}; font-weight: 600;">RM ${c.price.toFixed(3)}</div>
+                    <div style="font-size: 0.85rem; color: ${changeClass};">${changeSign}${c.change.toFixed(2)}%</div>
+                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">Turnover: ${(c.turnover/1000000).toFixed(1)}M</div>
+                </div>`;
+            });
+            content.innerHTML = html;
         }
 
 
