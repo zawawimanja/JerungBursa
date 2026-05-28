@@ -83,6 +83,9 @@
         <div>
             <h1>Bursa Smart Money Tracker</h1>
             <p class="subtitle" id="dashboardSubtitle"><span class="pulse"></span>Live Market Scanner - Tracking Top Turnover & Momentum</p>
+            <div id="market-sentiment" style="margin-top: 0.8rem; display: inline-flex; align-items: center; gap: 0.5rem; background: #1e293b; padding: 0.4rem 1rem; border-radius: 20px; border: 1px solid #334155; font-weight: 600; font-size: 0.85rem;">
+                Sentimen Pasaran: <span id="sentiment-text" style="color: #94a3b8;">Menganalisis...</span>
+            </div>
         </div>
         <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
             <div style="display: flex; align-items: center; gap: 0.5rem; background: var(--panel-bg); padding: 0.3rem 0.8rem; border-radius: 6px; border: 1px solid #334155;">
@@ -394,6 +397,7 @@
             renderTable(filteredData);
             renderAIAdvisor(currentData);
             renderVIPWatchlist(currentData);
+            updateSentiment(currentData);
         }
 
         function renderAIAdvisor(data) {
@@ -493,6 +497,27 @@
                 </div>`;
             });
             content.innerHTML = html;
+        }
+
+        function updateSentiment(data) {
+            const activeData = data.filter(c => c.turnover > 1000000); // Fokus pada kaunter yang ada volume jerung
+            const totalActive = activeData.length;
+            if (totalActive === 0) return;
+            
+            const upCount = activeData.filter(c => c.change > 0).length;
+            const percentage = (upCount / totalActive) * 100;
+            const sentimentEl = document.getElementById('sentiment-text');
+            
+            if (percentage >= 50) {
+                sentimentEl.innerHTML = `🐂 BULLISH (${percentage.toFixed(0)}% Kaunter Aktif Naik)`;
+                sentimentEl.style.color = '#10b981';
+            } else if (percentage >= 35) {
+                sentimentEl.innerHTML = `⚖️ SIDEWAY (${percentage.toFixed(0)}% Kaunter Aktif Naik)`;
+                sentimentEl.style.color = '#f59e0b';
+            } else {
+                sentimentEl.innerHTML = `🐻 BEARISH Berdarah (${percentage.toFixed(0)}% Kaunter Aktif Naik)`;
+                sentimentEl.style.color = '#ef4444';
+            }
         }
 
 
