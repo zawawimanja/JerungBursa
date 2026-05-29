@@ -88,6 +88,17 @@
     "reason": "⚠️ Jerung Buang Barang / Markup"
   },
   {
+    "name": "SKYCHIP",
+    "sector": "Auto-Scanned",
+    "category": "Swing / Mid-Cap",
+    "price": 2.97,
+    "change": 5.3,
+    "turnover": 74485521,
+    "volume": 25079300,
+    "signal": "buy",
+    "reason": "⚡ Momentum Kuat (Harga Sedang Mencanak Naik Laju)"
+  },
+  {
     "name": "MYEG",
     "sector": "Auto-Scanned",
     "category": "Intraday / Momentum",
