@@ -1,123 +1,133 @@
 const fs = require('fs');
 const path = require('path');
-const axios = require('axios');
-const cheerio = require('cheerio');
+const puppeteer = require('puppeteer-extra');
+const StealthPlugin = require('puppeteer-extra-plugin-stealth');
+puppeteer.use(StealthPlugin());
 
-(async () => {
-    console.log("🚀 Memulakan scraper tanpa Puppeteer...");
+const OUTPUT_FILE = path.join(__dirname, 'live_data.json');
+
+async function scrapeDynamicData() {
+    console.log("🚀 Memulakan scraper dinamik menggunakan Puppeteer...");
+    let browser;
+    try {
+        browser = await puppeteer.launch({ 
+            headless: true,
+            args: ['--no-sandbox', '--disable-setuid-sandbox'] 
+        });
+    } catch (err) {
+        console.error("❌ Ralat: Gagal melancarkan Chrome. Sila jalankan 'npx puppeteer browsers install chrome' jika anda mencuba ini pada komputer tempatan.");
+        process.exit(1);
+    }
     
-    const vipList = [
-        { name: 'GREATEC', symbol: '0208.KL' },
-        { name: 'UNISEM', symbol: '5005.KL' },
-        { name: 'PENTA', symbol: '7160.KL' },
-        { name: 'MI', symbol: '5286.KL' },
-        { name: 'VSTECS', symbol: '5162.KL' },
-        { name: 'KGB', symbol: '0151.KL' },
-        { name: 'NATGATE', symbol: '0270.KL' },
-        { name: 'FRONTKN', symbol: '0128.KL' },
-        { name: 'INARI', symbol: '0166.KL' },
-        { name: 'MPI', symbol: '3867.KL' },
-        { name: 'UWC', symbol: '5292.KL' },
-        { name: 'GTRONIC', symbol: '7022.KL' },
-        { name: 'MYEG', symbol: '0138.KL' },
-        { name: 'MAYBANK', symbol: '1155.KL' },
-        { name: 'CIMB', symbol: '1023.KL' },
-        { name: 'TENAGA', symbol: '5347.KL' },
-        { name: 'GAMUDA', symbol: '5398.KL' },
-        { name: 'SUNWAY', symbol: '5211.KL' },
-        { name: 'IJM', symbol: '3336.KL' },
-        { name: 'SKYCHIP', symbol: '5357.KL' }
-    ];
-
-    console.log(`📊 Menganalisis Formula Smart Money (Turnover + Momentum)...`);
-    const results = [];
-
-    for (let t of vipList) {
-        try {
-            const code = t.symbol.split('.')[0];
-            const response = await axios.get(`https://www.klsescreener.com/v2/stocks/view/${code}`, {
-                headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' }
-            });
-            const $ = cheerio.load(response.data);
-            
-            const priceStr = $('#price').text().trim();
-            const volumeStr = $('#volume').text().trim().replace(/,/g, '');
-            const priceDiffStr = $('#priceDiff').text().trim();
-
-            const price = parseFloat(priceStr);
-            const volume = parseInt(volumeStr, 10) || 0;
-            
-            let changePercent = 0;
-            const match = priceDiffStr.match(/\((.*?)\%\)/);
-            if (match && match[1]) {
-                changePercent = parseFloat(match[1].replace('+', ''));
-            }
-            const turnover = price * volume;
-
-            if (isNaN(price)) {
-                console.log(`❌ Gagal dapatkan harga untuk ${t.name}`);
-                continue;
-            }
-
-            let signal = "avoid";
-            let reason = "Kaunter Lemau / Sikat";
-
-            if (changePercent > 0 && turnover > 3000000) {
-                signal = "buy";
-                if (changePercent <= 4.0) {
-                    if (price >= 1.50) {
-                        reason = "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)";
-                    } else {
-                        reason = "🔥 GOLDEN ENTRY (Lincah - Midcap / Laju & Volatile)";
+    try {
+        const page = await browser.newPage();
+        
+        // Pergi ke halaman Top Volume KLSE Screener
+        console.log("📥 Menarik data 100 kaunter Top Volume...");
+        await page.goto('https://www.klsescreener.com/v2/screener/top_volume', {waitUntil: 'domcontentloaded', timeout: 60000});
+        
+        const rawCounters = await page.evaluate(() => {
+            let results = [];
+            const rows = document.querySelectorAll('tr.list-group-item');
+            rows.forEach(r => {
+                const nameEl = r.querySelector('a[title]');
+                const codeEl = r.querySelector('.code');
+                const priceEl = r.querySelector('td:nth-child(3)'); // Typically price is the 3rd or 4th column
+                const changeEl = r.querySelector('td:nth-child(4)'); // Change column
+                const volumeEl = r.querySelector('td:nth-child(5)'); // Volume column
+                
+                if (nameEl && codeEl && priceEl && volumeEl) {
+                    let name = nameEl.textContent.trim();
+                    let code = codeEl.textContent.trim();
+                    
+                    // Cleanup price
+                    let priceText = priceEl.textContent.replace(/[^0-9.-]/g, '');
+                    let price = parseFloat(priceText);
+                    
+                    // Cleanup change
+                    let changeText = changeEl ? changeEl.textContent.replace(/[^0-9.-]/g, '') : '0';
+                    let change = parseFloat(changeText);
+                    
+                    // Cleanup volume
+                    // Volume on KLSE screener is in 100 shares. So 1,000 means 100,000 shares
+                    let volText = volumeEl.textContent.replace(/[^0-9.]/g, '');
+                    let rawVol = parseFloat(volText);
+                    let volume = rawVol * 100;
+                    
+                    if (!isNaN(price) && !isNaN(volume)) {
+                        results.push({
+                            name,
+                            symbol: code + '.KL',
+                            price,
+                            change: isNaN(change) ? 0 : change,
+                            volume
+                        });
                     }
-                } else if (changePercent > 4.0 && changePercent <= 8.0) {
-                    reason = "⚡ Momentum Kuat (Harga Sedang Mencanak Naik Laju)";
-                } else {
-                    reason = "🚨 OVERBOUGHT (Dah Terbang, Awas Kena Dump)";
                 }
-            } else if (changePercent <= 0 && turnover > 5000000) {
-                reason = "⚠️ Jerung Buang Barang / Markup";
+            });
+            return results;
+        });
+
+        console.log(`✅ Berjaya jumpa ${rawCounters.length} kaunter.`);
+
+        let processedData = [];
+        
+        console.log("📊 Menganalisis Formula Smart Money (Turnover + Momentum)...");
+        
+        for (let data of rawCounters) {
+            // Turnover = Harga Semasa * Volume Hari Ini
+            const turnover = data.price * data.volume;
+            
+            // Filter: Abaikan penny stocks < 0.10 dan turnover < 3M
+            if (turnover < 3000000) continue;
+            
+            let signal = "avoid";
+            let reason = "Tiada signal / mendatar";
+            
+            if (data.change > 0 && turnover >= 3000000) {
+                signal = "buy";
+                reason = "Momentum Kuat & Duit Jerung Masuk";
+            } else if (data.change <= 0 && turnover >= 3000000) {
+                signal = "avoid";
+                reason = "Jerung Buang Barang / Sikat Berbahaya";
             }
 
-            let dynamicCategory = "Intraday / Momentum";
-            if (price >= 1.00) {
-                dynamicCategory = "Swing / Mid-Cap";
-            } else if (price <= 0.30) {
-                dynamicCategory = "Penny / Spekulatif";
-            }
-
-            results.push({
-                name: t.name,
-                sector: "Auto-Scanned",
-                category: dynamicCategory,
-                price: price,
-                change: changePercent,
+            processedData.push({
+                name: data.name,
+                sector: "Dynamic", // Temporary since sector is harder to grab from screener reliably
+                price: data.price,
+                change: data.change,
                 turnover: turnover,
-                volume: volume,
+                volume: data.volume,
                 signal: signal,
                 reason: reason
             });
-            console.log(`✅ ${t.name} disemak: Harga RM ${price.toFixed(3)} | Turnover: ${(turnover / 1000000).toFixed(2)}M`);
-        } catch (e) {
-            console.log(`❌ Ralat pada ${t.name}: ${e.message}`);
+            
+            console.log(`✅ ${data.name} dianalisis: Harga RM ${data.price.toFixed(3)} | Turnover: ${(turnover / 1000000).toFixed(2)}M`);
         }
+
+        // Susun ikut Turnover paling tinggi
+        processedData.sort((a, b) => b.turnover - a.turnover);
+
+        fs.writeFileSync(OUTPUT_FILE, JSON.stringify(processedData, null, 2));
+        console.log(`\n🎉 Selesai scan pasaran! Disimpan ke ${OUTPUT_FILE}`);
+        
+        // Simpan ke history
+        const today = new Date();
+        const dateString = today.toISOString().split('T')[0];
+        const historyDir = path.join(__dirname, 'history');
+        if (!fs.existsSync(historyDir)) {
+            fs.mkdirSync(historyDir);
+        }
+        const historyFile = path.join(historyDir, `data_${dateString}.json`);
+        fs.writeFileSync(historyFile, JSON.stringify(processedData, null, 2));
+        console.log(`📂 Salinan sejarah disimpan ke ${historyFile}`);
+        
+    } catch (e) {
+        console.error("❌ Ralat Web Scraping:", e);
+    } finally {
+        if (browser) await browser.close();
     }
+}
 
-    // Auto-susun ranking ikut Turnover tertinggi
-    results.sort((a, b) => b.turnover - a.turnover);
-
-    const outputPath = path.join(__dirname, 'live_data.json');
-    fs.writeFileSync(outputPath, JSON.stringify(results, null, 2));
-
-    // Simpan sejarah
-    const historyDir = path.join(__dirname, 'history');
-    if (!fs.existsSync(historyDir)) {
-        fs.mkdirSync(historyDir);
-    }
-    const today = new Date().toISOString().split('T')[0];
-    const historyPath = path.join(historyDir, `data_${today}.json`);
-    fs.writeFileSync(historyPath, JSON.stringify(results, null, 2));
-
-    console.log(`\n🎉 Selesai scan seluruh pasaran! Disimpan ke ${outputPath}`);
-    console.log(`📂 Salinan sejarah (Proof) disimpan ke ${historyPath}`);
-})();
+scrapeDynamicData();
