@@ -99,10 +99,20 @@
 
     <div id="vip-watchlist-section" style="background: #1e293b; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; border: 1px solid #3b82f6; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
-            <h2 style="font-size: 1.3rem; color: #60a5fa; margin: 0;">🎯 Radar Jerung VIP (Top 4 Sektor Teknologi)</h2>
+            <h2 style="font-size: 1.3rem; color: #60a5fa; margin: 0;">🎯 Radar Jerung VIP (Top 4 Momentum Tinggi)</h2>
         </div>
         <div id="vip-watchlist-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
             <!-- VIP data will be populated here -->
+        </div>
+    </div>
+
+    <div id="accumulation-watchlist-section" style="background: #1e293b; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; border: 1px solid #10b981; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
+            <h2 style="font-size: 1.3rem; color: #34d399; margin: 0;">🎯 Radar Akumulasi (Beli Dari Bawah & Swing)</h2>
+            <p style="font-size: 0.85rem; color: #a7f3d0; margin: 0;">Saham belum terbang, jerung baru mula kumpul. (Turnover > 3M, Kenaikan < 3%, Harga <= RM 3.00)</p>
+        </div>
+        <div id="accumulation-watchlist-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+            <!-- Accumulation data will be populated here -->
         </div>
     </div>
 
@@ -397,7 +407,45 @@
             renderTable(filteredData);
             renderAIAdvisor(currentData);
             renderVIPWatchlist(currentData);
+            renderAccumulationWatchlist(currentData);
             updateSentiment(currentData);
+        }
+
+        function renderAccumulationWatchlist(data) {
+            const content = document.getElementById('accumulation-watchlist-content');
+            
+            // Logic: Turnover >= 3M, change > 0 and change <= 3.0 (Accumulation phase), price <= 3.00
+            const candidates = data.filter(c => c.change > 0 && c.change <= 3.0 && c.turnover >= 3000000 && c.price <= 3.00 && c.signal === 'buy');
+            
+            // Sort by highest Turnover (most money flowing in quietly)
+            candidates.sort((a, b) => b.turnover - a.turnover);
+            
+            const accumData = candidates.slice(0, 4);
+            
+            let html = '';
+            if (accumData.length === 0) {
+                html = '<div style="color: #94a3b8; font-style: italic; padding: 1rem;">Tiada kaunter di fasa akumulasi buat masa ini.</div>';
+            } else {
+                accumData.forEach(c => {
+                    html += `
+                    <div style="background: #0f172a; padding: 1rem; border-radius: 8px; border-left: 4px solid #10b981; transition: transform 0.2s;">
+                        <div style="display: flex; justify-content: space-between; align-items: start;">
+                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${c.name}&interval=5" target="_blank" style="font-weight: 800; font-size: 1.1rem; color: #fff; text-decoration: none;">${c.name} 🔗</a>
+                            <span style="background: rgba(16, 185, 129, 0.2); color: #34d399; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">+${c.change.toFixed(2)}%</span>
+                        </div>
+                        <div style="margin-top: 0.5rem; font-size: 0.85rem; color: #cbd5e1;">
+                            Harga: <strong style="color: #f8fafc;">RM ${c.price.toFixed(3)}</strong>
+                        </div>
+                        <div style="margin-top: 0.3rem; font-size: 0.85rem; color: #94a3b8;">
+                            Jerung: <strong style="color: #38bdf8;">${(c.turnover/1000000).toFixed(2)} Juta</strong>
+                        </div>
+                        <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #fbbf24;">
+                            ⏳ Kumpul dari bawah (Potensi Swing)
+                        </div>
+                    </div>`;
+                });
+            }
+            content.innerHTML = html;
         }
 
         function renderAIAdvisor(data) {
