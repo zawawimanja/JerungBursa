@@ -468,15 +468,19 @@
             
             advisorContent.innerHTML = html;
         }
-
+            
         function renderVIPWatchlist(data) {
             const content = document.getElementById('vip-watchlist-content');
             
-            // AUTOMATIC LOGIC (DYNAMIC): Filter valid Buy signals, Uptrend, Jerung Turnover > 3M
-            const candidates = data.filter(c => c.change > 0 && c.turnover >= 3000000 && c.signal === 'buy');
+            // AUTOMATIC LOGIC: Filter valid Buy signals, Jerung Turnover > 3M, dan Harga <= RM 5 (buang Bluechips mahal)
+            const candidates = data.filter(c => c.change > 0 && c.turnover >= 3000000 && c.signal === 'buy' && c.price <= 5.00);
             
-            // Sort by highest Turnover (paling banyak jerung masuk)
-            candidates.sort((a, b) => b.turnover - a.turnover);
+            // Sort by highest PERCENTAGE PROFT (% naik) - dicari oleh jerung runcit
+            candidates.sort((a, b) => {
+                const percentA = (a.change / (a.price - a.change)) * 100;
+                const percentB = (b.change / (b.price - b.change)) * 100;
+                return percentB - percentA;
+            });
             
             const vipData = candidates.slice(0, 4);
             
