@@ -521,19 +521,26 @@
         }
 
 
-        // Cuba baca live_data.json kalau ada
         async function fetchLiveData() {
             try {
-                const res = await fetch('live_data.json');
+                // Fetch dari GitHub Raw untuk sentiasa dapat data terkini (bypass Vercel build cache)
+                const cacheBuster = new Date().getTime();
+                let res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/live_data.json?t=${cacheBuster}`);
+                
+                if (!res.ok) {
+                    // Fallback to local if needed
+                    res = await fetch(`live_data.json?t=${cacheBuster}`);
+                }
+
                 if (res.ok) {
                     const data = await res.json();
                     if (data && data.length > 0) {
                         currentData = data;
-                        console.log("Berjaya load live_data.json");
+                        console.log("Berjaya load live_data.json dari GitHub Raw");
                     }
                 }
             } catch (e) {
-                console.log("Mungkin belum ada live_data.json atau kena run server (CORS issue). Guna dummy data.");
+                console.log("Mungkin belum ada live_data.json atau kena run server (CORS issue). Guna dummy data.", e);
             }
             applyFilters();
         }
