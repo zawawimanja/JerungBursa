@@ -25,7 +25,8 @@ const cheerio = require('cheerio');
         { name: 'TENAGA', symbol: '5347.KL' },
         { name: 'GAMUDA', symbol: '5398.KL' },
         { name: 'SUNWAY', symbol: '5211.KL' },
-        { name: 'IJM', symbol: '3336.KL' }
+        { name: 'IJM', symbol: '3336.KL' },
+        { name: 'SKYCHIP', symbol: '5357.KL' }
     ];
 
     console.log(`📊 Menganalisis Formula Smart Money (Turnover + Momentum)...`);

@@ -473,7 +473,7 @@
             const content = document.getElementById('vip-watchlist-content');
             
             // AUTOMATIC LOGIC (TEKNOLOGI SAHAJA): Filter valid Buy signals, Uptrend, Jerung Turnover > 3M
-            const techStocks = ['GREATEC', 'UNISEM', 'PENTA', 'MI', 'VSTECS', 'KGB', 'NATGATE', 'FRONTKN', 'INARI', 'MPI', 'UWC', 'GTRONIC', 'MYEG'];
+            const techStocks = ['GREATEC', 'UNISEM', 'PENTA', 'MI', 'VSTECS', 'KGB', 'NATGATE', 'FRONTKN', 'INARI', 'MPI', 'UWC', 'GTRONIC', 'MYEG', 'SKYCHIP'];
             const candidates = data.filter(c => techStocks.includes(c.name) && c.change > 0 && c.turnover >= 3000000 && c.signal === 'buy');
             
             // Sort by highest Turnover (paling banyak jerung masuk)
