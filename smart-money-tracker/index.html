@@ -431,8 +431,8 @@
             });
 
             filteredData.sort((a, b) => {
-                let valA = a[currentSortColumn];
-                let valB = b[currentSortColumn];
+                let valA = currentSortColumn === 'change' ? (a.changePct !== undefined ? a.changePct : a.change) : a[currentSortColumn];
+                let valB = currentSortColumn === 'change' ? (b.changePct !== undefined ? b.changePct : b.change) : b[currentSortColumn];
                 
                 if (typeof valA === 'string' && typeof valB === 'string') {
                     return currentSortDesc ? valB.localeCompare(valA) : valA.localeCompare(valB);
