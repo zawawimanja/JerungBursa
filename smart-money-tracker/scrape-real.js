@@ -11,26 +11,10 @@ const HEADERS = {
     'Accept-Language': 'en-US,en;q=0.5',
 };
 
-// =============================================
-// FORMULA:
-//   Turnover  = Harga × Volume
-//   Filter 1  = Turnover >= RM 3,000,000 (Duit Besar)
-//   Filter 2  = Harga    <= RM 3.00      (Harga Masuk)
-//   Filter 3  = Kenaikan < 3%            (Belum Melambung)
-//   Signal    = BUY kalau change > 0 & turnover >= 3M
-//             = AVOID kalau change <= 0
-// =============================================
-
-async function scrapeTopVolume() {
-    console.log('🌐 Menarik data Top Volume dari klse.i3investor.com...');
-    
-    const res = await axios.get('https://klse.i3investor.com/web/market/mostactive', { headers: HEADERS });
-    const $ = cheerio.load(res.data);
-    
-    const rawStocks = [];
-    
-    // Data ada dalam div.row.value | col-4 (name) | col-2 (price) | col-2 (change) | col-4 (volume)
-    $('.row.value').each((i, el) => {
+// Fungsi pembantu untuk tapisan dan parsing setiap baris jadual di i3investor
+function parseTab($, tabSelector) {
+    const stocks = [];
+    $(tabSelector + ' .row.value').each((i, el) => {
         const cols = $(el).find('div[class*="col-"]');
         if (cols.length >= 4) {
             const name = $(cols[0]).find('strong').text().trim();
@@ -43,65 +27,43 @@ async function scrapeTopVolume() {
             const volume = parseInt(volumeText.replace(/[^0-9]/g, ''), 10);
             
             if (name && !isNaN(price) && !isNaN(volume) && volume > 0) {
-                rawStocks.push({ name, price, change: isNaN(change) ? 0 : change, volume });
+                stocks.push({
+                    name,
+                    price,
+                    change: isNaN(change) ? 0 : change,
+                    volume
+                });
             }
         }
     });
-    
-    console.log(`✅ Jumpa ${rawStocks.length} saham dari i3investor.`);
-    return rawStocks;
-}
-
-async function scrapeTopGainers() {
-    console.log('📈 Menarik data Top Gainers dari klse.i3investor.com...');
-    
-    const res = await axios.get('https://klse.i3investor.com/web/market/topgainer', { headers: HEADERS });
-    const $ = cheerio.load(res.data);
-    
-    const gainers = [];
-    
-    $('.row.value').each((i, el) => {
-        const cols = $(el).find('div[class*="col-"]');
-        if (cols.length >= 4) {
-            const name = $(cols[0]).find('strong').text().trim();
-            const priceText = $(cols[1]).find('strong').text().trim();
-            const changeText = $(cols[2]).find('strong').text().trim();
-            const volumeText = $(cols[3]).find('strong').text().trim();
-            
-            const price = parseFloat(priceText.replace(/[^0-9.]/g, ''));
-            const changePct = parseFloat(changeText.replace(/[^0-9.-]/g, ''));
-            const volume = parseInt(volumeText.replace(/[^0-9]/g, ''), 10);
-            
-            if (name && !isNaN(price)) {
-                gainers.push({ name, price, changePct: isNaN(changePct) ? 0 : changePct, volume: isNaN(volume) ? 0 : volume });
-            }
-        }
-    });
-    
-    console.log(`✅ Jumpa ${gainers.length} saham gainer.`);
-    return gainers;
+    return stocks;
 }
 
 async function main() {
-    console.log('🚀 Jerung Bursa Scraper v3.0 (Sumber: i3investor)');
+    console.log('🚀 Jerung Bursa Scraper v3.1 (Sumber: i3investor)');
     console.log('='.repeat(55));
     
-    let topVolume = [], topGainers = [];
+    let allRawStocks = new Map();
     
+    // 1. Ambil data pasaran utama
     try {
-        topVolume = await scrapeTopVolume();
+        console.log('🌐 Menarik data dari klse.i3investor.com...');
+        const res = await axios.get('https://klse.i3investor.com/web/market/mostactive', { headers: HEADERS });
+        const $ = cheerio.load(res.data);
+        
+        const activeStocks = parseTab($, '#tab-active');
+        const gainerStocks = parseTab($, '#tab-gainers');
+        const loserStocks = parseTab($, '#tab-losers');
+        
+        console.log(`✅ Berjaya menarik: ${activeStocks.length} Aktif, ${gainerStocks.length} Gainer, ${loserStocks.length} Loser.`);
+        
+        // Gabungkan semua ke dalam Map unik untuk mengelakkan pertindihan data
+        [...activeStocks, ...gainerStocks, ...loserStocks].forEach(s => {
+            allRawStocks.set(s.name, s);
+        });
+        
     } catch (e) {
-        console.error('❌ Gagal scrape top volume:', e.message);
-    }
-    
-    try {
-        topGainers = await scrapeTopGainers();
-    } catch (e) {
-        console.error('❌ Gagal scrape top gainers:', e.message);
-    }
-    
-    if (topVolume.length === 0) {
-        console.error('❌ Tiada data. Henti.');
+        console.error('❌ Gagal menarik data pasaran:', e.message);
         process.exit(1);
     }
     
@@ -111,18 +73,15 @@ async function main() {
     console.log('\n📊 Menganalisis Formula Smart Money...');
     
     const processedData = [];
+    const topGainers = [];
     
-    for (const stock of topVolume) {
-        // Turnover = Harga × Volume
+    for (const [name, stock] of allRawStocks.entries()) {
         const turnover = stock.price * stock.volume;
+        // Kira peratus perubahan yang betul: (change / previous_price) * 100
+        const previousPrice = stock.price - stock.change;
+        const changePct = previousPrice > 0 ? (stock.change / previousPrice) * 100 : 0;
         
-        // Kira peratus perubahan (change sudah dalam RM, tukar ke %)
-        const changePct = stock.price > 0 ? (stock.change / (stock.price - stock.change)) * 100 : 0;
-        
-        // Filter: Turnover < 3M → skip
-        if (turnover < 3_000_000) continue;
-        
-        // Signal berdasarkan formula
+        // Tentukan signal berdasarkan formula
         let signal = 'avoid';
         let reason = 'Jerung Buang / Mendatar';
         
@@ -131,7 +90,7 @@ async function main() {
             reason = 'Momentum Positif & Duit Jerung Masuk';
         }
         
-        processedData.push({
+        const dataObj = {
             name: stock.name,
             sector: 'Dynamic',
             price: stock.price,
@@ -141,13 +100,29 @@ async function main() {
             volume: stock.volume,
             signal,
             reason,
-        });
+        };
+        
+        // Top Volume Scan: Simpan semua saham yang mempunyai turnover >= RM 3,000,000
+        if (turnover >= 3_000_000) {
+            processedData.push(dataObj);
+        }
+        
+        // Top Gainers Scan: Simpan semua saham yang mencatatkan kenaikan peratusan positif
+        if (stock.change > 0) {
+            topGainers.push({
+                name: stock.name,
+                price: stock.price,
+                changePct: parseFloat(changePct.toFixed(2)),
+                volume: stock.volume,
+                turnover
+            });
+        }
     }
     
-    // Susun ikut turnover tertinggi
+    // Susun processedData mengikut turnover tertinggi
     processedData.sort((a, b) => b.turnover - a.turnover);
     
-    // Susun top gainers
+    // Susun topGainers mengikut peratus kenaikan tertinggi
     topGainers.sort((a, b) => b.changePct - a.changePct);
     
     const output = {
@@ -161,13 +136,13 @@ async function main() {
     console.log(`\n🎉 Selesai! ${processedData.length} saham dianalisis.`);
     console.log(`📂 Disimpan ke ${OUTPUT_FILE}`);
     
-    // Simpan history
+    // Simpan rekod sejarah (history)
     const dateStr = new Date().toISOString().split('T')[0];
     const histDir = path.join(__dirname, 'history');
     if (!fs.existsSync(histDir)) fs.mkdirSync(histDir);
     fs.writeFileSync(path.join(histDir, `data_${dateStr}.json`), JSON.stringify(output, null, 2));
     
-    // Preview top 5
+    // Paparan pratonton 5 terbaik
     console.log('\n📋 Top 5 (Turnover):');
     processedData.slice(0, 5).forEach((s, i) => {
         console.log(`  ${i+1}. ${s.name} | RM${s.price.toFixed(3)} | ${s.changePct >= 0 ? '+' : ''}${s.changePct}% | Turnover: RM${(s.turnover/1e6).toFixed(2)}M | ${s.signal.toUpperCase()}`);
