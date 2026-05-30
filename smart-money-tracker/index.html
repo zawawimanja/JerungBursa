@@ -116,6 +116,43 @@
         </div>
     </div>
 
+    <!-- FORMULA SECTION -->
+    <div style="background: linear-gradient(135deg, #1e1b4b 0%, #1e293b 100%); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; border: 1px solid #4f46e5;">
+        <h2 style="font-size: 1.2rem; color: #a78bfa; margin-bottom: 1rem;">🧮 Formula Yang Digunakan</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
+            <div style="background: rgba(99,102,241,0.15); padding: 1rem; border-radius: 8px; border-left: 3px solid #6366f1;">
+                <div style="font-size: 0.75rem; color: #a5b4fc; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">📐 Nilai Dagangan (Turnover)</div>
+                <div style="font-size: 1rem; color: #e0e7ff; font-family: monospace; font-weight: bold;">Harga × Volume</div>
+                <div style="font-size: 0.8rem; color: #94a3b8; margin-top: 0.4rem;">Nilai RM sebenar yang bergerak hari ini</div>
+            </div>
+            <div style="background: rgba(16,185,129,0.15); padding: 1rem; border-radius: 8px; border-left: 3px solid #10b981;">
+                <div style="font-size: 0.75rem; color: #6ee7b7; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">✅ Filter Masuk Senarai</div>
+                <div style="font-size: 0.85rem; color: #e2e8f0; font-weight: 600;">Turnover ≥ RM 3,000,000</div>
+                <div style="font-size: 0.8rem; color: #94a3b8; margin-top: 0.4rem;">Buang saham tanpa sokongan duit jerung sebenar</div>
+            </div>
+            <div style="background: rgba(16,185,129,0.1); padding: 1rem; border-radius: 8px; border-left: 3px solid #34d399;">
+                <div style="font-size: 0.75rem; color: #6ee7b7; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">🟢 Radar Akumulasi (Swing)</div>
+                <div style="font-size: 0.85rem; color: #e2e8f0; font-weight: 600;">Turnover ≥ 3M<br>Kenaikan: 0% – 3%<br>Harga ≤ RM 3.00</div>
+                <div style="font-size: 0.8rem; color: #94a3b8; margin-top: 0.4rem;">Saham murah yang jerung baru kumpul, belum terbang</div>
+            </div>
+            <div style="background: rgba(59,130,246,0.15); padding: 1rem; border-radius: 8px; border-left: 3px solid #3b82f6;">
+                <div style="font-size: 0.75rem; color: #93c5fd; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">🎯 VIP Top 4 (Radar Jerung)</div>
+                <div style="font-size: 0.85rem; color: #e2e8f0; font-weight: 600;">Turnover ≥ 3M<br>Naik > 0%<br>Harga ≤ RM 5.00</div>
+                <div style="font-size: 0.8rem; color: #94a3b8; margin-top: 0.4rem;">4 saham dengan % kenaikan tertinggi + sokongan duit besar</div>
+            </div>
+            <div style="background: rgba(239,68,68,0.1); padding: 1rem; border-radius: 8px; border-left: 3px solid #ef4444;">
+                <div style="font-size: 0.75rem; color: #fca5a5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">🔴 Signal AVOID</div>
+                <div style="font-size: 0.85rem; color: #e2e8f0; font-weight: 600;">Perubahan ≤ 0%</div>
+                <div style="font-size: 0.8rem; color: #94a3b8; margin-top: 0.4rem;">Jerung buang barang / saham mendatar</div>
+            </div>
+            <div style="background: rgba(245,158,11,0.1); padding: 1rem; border-radius: 8px; border-left: 3px solid #f59e0b;">
+                <div style="font-size: 0.75rem; color: #fcd34d; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">📡 Sumber Data</div>
+                <div style="font-size: 0.85rem; color: #e2e8f0; font-weight: 600;">klse.i3investor.com</div>
+                <div style="font-size: 0.8rem; color: #94a3b8; margin-top: 0.4rem;">Top Most Active + Top Gainers • Auto-update harian 5pm</div>
+            </div>
+        </div>
+    </div>
+
     <div class="filters">
         <div class="filter-group" style="flex-grow: 1; min-width: 200px;">
             <label>Cari Kaunter</label>
@@ -325,14 +362,17 @@
             return num;
         }
 
+
         function renderTable(data) {
             const tbody = document.getElementById('tableBody');
             tbody.innerHTML = '';
 
             data.forEach((item, index) => {
                 const tr = document.createElement('tr');
-                const changeClass = item.change >= 0 ? 'up' : 'down';
-                const changeSign = item.change > 0 ? '+' : '';
+                // Use changePct if available (new format), otherwise fall back to change
+                const pct = item.changePct !== undefined ? item.changePct : item.change;
+                const changeClass = pct >= 0 ? 'up' : 'down';
+                const changeSign = pct > 0 ? '+' : '';
 
                 tr.innerHTML = `
                     <td style="font-weight: 700; color: var(--text-muted); font-size: 1.1rem;">#${index + 1}</td>
@@ -340,12 +380,12 @@
                         <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=5" target="_blank" class="counter-name" title="Buka chart TradingView (5M)" style="color: var(--accent); text-decoration: none;">${item.name} 🔗</a>
                         <div class="sector">${item.sector || 'Bursa'} &bull; <span style="color: #ec4899; font-weight: 500;">${item.category || ''}</span></div>
                     </td>
-                    <td class="price ${changeClass}">${item.price.toFixed(3)}</td>
-                    <td class="${changeClass}">${changeSign}${item.change.toFixed(2)}%</td>
+                    <td class="price ${changeClass}">RM ${item.price.toFixed(3)}</td>
+                    <td class="${changeClass}">${changeSign}${pct.toFixed(2)}%</td>
                     <td>RM ${formatNumber(item.turnover)}</td>
                     <td>${formatNumber(item.volume)}</td>
                     <td>
-                        <div style="font-size: 0.85rem; font-weight: 600; color: ${item.signal === 'buy' ? 'var(--success)' : 'var(--danger)'};">${item.reason}</div>
+                        <div style="font-size: 0.85rem; font-weight: 600; color: ${item.signal === 'buy' ? 'var(--success)' : 'var(--danger)'}">${item.reason}</div>
                     </td>
                 `;
                 tbody.appendChild(tr);
@@ -370,7 +410,7 @@
                 if (item.price < minPrice) return false;
                 if (item.price > maxPrice) return false;
                 if (item.turnover < minTurnover) return false;
-                if (trendFilter === 'up' && item.change <= 0) return false;
+                if (trendFilter === 'up' && (item.changePct !== undefined ? item.changePct : item.change) <= 0) return false;
                 
                 if (categoryFilter !== 'all') {
                     if (!item.category) return false;
@@ -414,8 +454,11 @@
         function renderAccumulationWatchlist(data) {
             const content = document.getElementById('accumulation-watchlist-content');
             
-            // Logic: Turnover >= 3M, change > 0 and change <= 3.0 (Accumulation phase), price <= 3.00
-            const candidates = data.filter(c => c.change > 0 && c.change <= 3.0 && c.turnover >= 3000000 && c.price <= 3.00 && c.signal === 'buy');
+            // Logic: Turnover >= 3M, changePct > 0 and changePct <= 3.0 (Accumulation phase), price <= 3.00
+            const candidates = data.filter(c => {
+                const pct = c.changePct !== undefined ? c.changePct : c.change;
+                return pct > 0 && pct <= 3.0 && c.turnover >= 3000000 && c.price <= 3.00 && c.signal === 'buy';
+            });
             
             // Sort by highest Turnover (most money flowing in quietly)
             candidates.sort((a, b) => b.turnover - a.turnover);
@@ -427,11 +470,12 @@
                 html = '<div style="color: #94a3b8; font-style: italic; padding: 1rem;">Tiada kaunter di fasa akumulasi buat masa ini.</div>';
             } else {
                 accumData.forEach(c => {
+                    const pct = c.changePct !== undefined ? c.changePct : c.change;
                     html += `
                     <div style="background: #0f172a; padding: 1rem; border-radius: 8px; border-left: 4px solid #10b981; transition: transform 0.2s;">
                         <div style="display: flex; justify-content: space-between; align-items: start;">
                             <a href="https://www.tradingview.com/chart/?symbol=MYX:${c.name}&interval=5" target="_blank" style="font-weight: 800; font-size: 1.1rem; color: #fff; text-decoration: none;">${c.name} 🔗</a>
-                            <span style="background: rgba(16, 185, 129, 0.2); color: #34d399; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">+${c.change.toFixed(2)}%</span>
+                            <span style="background: rgba(16, 185, 129, 0.2); color: #34d399; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">+${pct.toFixed(2)}%</span>
                         </div>
                         <div style="margin-top: 0.5rem; font-size: 0.85rem; color: #cbd5e1;">
                             Harga: <strong style="color: #f8fafc;">RM ${c.price.toFixed(3)}</strong>
@@ -520,12 +564,17 @@
         function renderVIPWatchlist(data) {
             const content = document.getElementById('vip-watchlist-content');
             
-            // AUTOMATIC LOGIC: Filter valid Buy signals, Jerung Turnover > 3M, dan Harga <= RM 5 (buang Bluechips mahal)
-            const candidates = data.filter(c => c.change > 0 && c.turnover >= 3000000 && c.signal === 'buy' && c.price <= 5.00);
+            // AUTOMATIC LOGIC: Filter valid Buy signals, Jerung Turnover > 3M, Harga <= RM 5
+            const candidates = data.filter(c => {
+                const pct = c.changePct !== undefined ? c.changePct : c.change;
+                return pct > 0 && c.turnover >= 3000000 && c.signal === 'buy' && c.price <= 5.00;
+            });
             
-            // Sort by highest PERCENTAGE PROFT (% naik) - dicari oleh jerung runcit
+            // Sort by highest PERCENTAGE (% naik)
             candidates.sort((a, b) => {
-                return b.change - a.change;
+                const pA = a.changePct !== undefined ? a.changePct : a.change;
+                const pB = b.changePct !== undefined ? b.changePct : b.change;
+                return pB - pA;
             });
             
             const vipData = candidates.slice(0, 4);
@@ -535,13 +584,14 @@
                 html = '<div style="color: var(--text-muted); grid-column: 1 / -1; text-align: center;">Belum ada jerung yang mengganas hari ini...</div>';
             }
             vipData.forEach(c => {
-                const changeClass = c.change >= 0 ? 'var(--success)' : 'var(--danger)';
-                const changeSign = c.change > 0 ? '+' : '';
+                const pct = c.changePct !== undefined ? c.changePct : c.change;
+                const changeClass = pct >= 0 ? 'var(--success)' : 'var(--danger)';
+                const changeSign = pct > 0 ? '+' : '';
                 html += `
                 <div style="background: #0f172a; padding: 1rem; border-radius: 8px; border: 1px solid #334155; text-align: center;">
                     <a href="https://www.tradingview.com/chart/?symbol=MYX:${c.name}&interval=5" target="_blank" style="color: #fff; font-weight: 700; font-size: 1.2rem; text-decoration: none; display: block; margin-bottom: 0.5rem;">${c.name} 🔗</a>
                     <div style="font-size: 1.1rem; color: ${changeClass}; font-weight: 600;">RM ${c.price.toFixed(3)}</div>
-                    <div style="font-size: 0.85rem; color: ${changeClass};">${changeSign}${c.change.toFixed(2)}%</div>
+                    <div style="font-size: 0.85rem; color: ${changeClass};">${changeSign}${pct.toFixed(2)}%</div>
                     <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">Turnover: ${(c.turnover/1000000).toFixed(1)}M</div>
                 </div>`;
             });
@@ -572,24 +622,38 @@
 
         async function fetchLiveData() {
             try {
-                // Fetch dari GitHub Raw untuk sentiasa dapat data terkini (bypass Vercel build cache)
                 const cacheBuster = new Date().getTime();
                 let res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/live_data.json?t=${cacheBuster}`);
                 
                 if (!res.ok) {
-                    // Fallback to local if needed
                     res = await fetch(`live_data.json?t=${cacheBuster}`);
                 }
 
                 if (res.ok) {
-                    const data = await res.json();
+                    const raw = await res.json();
+                    
+                    // Handle new format: { topVolume: [...], topGainers: [...], lastUpdated, source }
+                    // OR old format: [ ... ] (array directly)
+                    let data;
+                    if (Array.isArray(raw)) {
+                        data = raw; // old format
+                    } else if (raw && raw.topVolume && Array.isArray(raw.topVolume)) {
+                        data = raw.topVolume; // new format
+                        // Update subtitle with source and timestamp
+                        if (raw.lastUpdated) {
+                            const d = new Date(raw.lastUpdated);
+                            const timeStr = d.toLocaleString('ms-MY', { timeZone: 'Asia/Kuala_Lumpur', hour12: false });
+                            document.getElementById('dashboardSubtitle').innerHTML = `<span class="pulse"></span>Live Market Scanner • Sumber: ${raw.source || 'i3investor'} • Dikemaskini: ${timeStr}`;
+                        }
+                    }
+                    
                     if (data && data.length > 0) {
                         currentData = data;
-                        console.log("Berjaya load live_data.json dari GitHub Raw");
+                        console.log(`Berjaya load ${data.length} saham dari live_data.json`);
                     }
                 }
             } catch (e) {
-                console.log("Mungkin belum ada live_data.json atau kena run server (CORS issue). Guna dummy data.", e);
+                console.log("Gagal load live_data.json. Guna dummy data.", e);
             }
             applyFilters();
         }
@@ -625,7 +689,9 @@
             try {
                 const res = await fetch('history/data_' + dateVal + '.json');
                 if (res.ok) {
-                    const data = await res.json();
+                    const raw = await res.json();
+                    // Handle both old array format and new object format
+                    const data = Array.isArray(raw) ? raw : (raw.topVolume || []);
                     if (data && data.length > 0) {
                         currentData = data;
                         document.getElementById('dashboardSubtitle').innerHTML = '📂 Menunjukkan Arkib Bukti Sejarah: <strong>' + dateVal + '</strong>';

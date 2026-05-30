@@ -1,222 +1,403 @@
-[
-  {
-    "name": "MAYBANK",
-    "sector": "Auto-Scanned",
-    "category": "Swing / Mid-Cap",
-    "price": 10.64,
-    "change": 1.3,
-    "turnover": 653612008,
-    "volume": 61429700,
-    "signal": "buy",
-    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)"
-  },
-  {
-    "name": "CIMB",
-    "sector": "Auto-Scanned",
-    "category": "Swing / Mid-Cap",
-    "price": 7.48,
-    "change": -0.1,
-    "turnover": 421547368,
-    "volume": 56356600,
-    "signal": "avoid",
-    "reason": "⚠️ Jerung Buang Barang / Markup"
-  },
-  {
-    "name": "GAMUDA",
-    "sector": "Auto-Scanned",
-    "category": "Swing / Mid-Cap",
-    "price": 4.2,
-    "change": -1.6,
-    "turnover": 206367840,
-    "volume": 49135200,
-    "signal": "avoid",
-    "reason": "⚠️ Jerung Buang Barang / Markup"
-  },
-  {
-    "name": "TENAGA",
-    "sector": "Auto-Scanned",
-    "category": "Swing / Mid-Cap",
-    "price": 14.28,
-    "change": 0.3,
-    "turnover": 199814328,
-    "volume": 13992600,
-    "signal": "buy",
-    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)"
-  },
-  {
-    "name": "SUNWAY",
-    "sector": "Auto-Scanned",
-    "category": "Swing / Mid-Cap",
-    "price": 5.4,
-    "change": 1.9,
-    "turnover": 137636820,
-    "volume": 25488300,
-    "signal": "buy",
-    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)"
-  },
-  {
-    "name": "NATGATE",
-    "sector": "Auto-Scanned",
-    "category": "Intraday / Momentum",
-    "price": 0.88,
-    "change": 15.8,
-    "turnover": 131761168,
-    "volume": 149728600,
-    "signal": "buy",
-    "reason": "🚨 OVERBOUGHT (Dah Terbang, Awas Kena Dump)"
-  },
-  {
-    "name": "IJM",
-    "sector": "Auto-Scanned",
-    "category": "Swing / Mid-Cap",
-    "price": 2.26,
-    "change": 4.2,
-    "turnover": 80597475.99999999,
-    "volume": 35662600,
-    "signal": "buy",
-    "reason": "⚡ Momentum Kuat (Harga Sedang Mencanak Naik Laju)"
-  },
-  {
-    "name": "INARI",
-    "sector": "Auto-Scanned",
-    "category": "Swing / Mid-Cap",
-    "price": 2.34,
-    "change": -0.4,
-    "turnover": 76973364,
-    "volume": 32894600,
-    "signal": "avoid",
-    "reason": "⚠️ Jerung Buang Barang / Markup"
-  },
-  {
-    "name": "SKYCHIP",
-    "sector": "Auto-Scanned",
-    "category": "Swing / Mid-Cap",
-    "price": 2.97,
-    "change": 5.3,
-    "turnover": 74485521,
-    "volume": 25079300,
-    "signal": "buy",
-    "reason": "⚡ Momentum Kuat (Harga Sedang Mencanak Naik Laju)"
-  },
-  {
-    "name": "MYEG",
-    "sector": "Auto-Scanned",
-    "category": "Intraday / Momentum",
-    "price": 0.805,
-    "change": -1.2,
-    "turnover": 68094145,
-    "volume": 84589000,
-    "signal": "avoid",
-    "reason": "⚠️ Jerung Buang Barang / Markup"
-  },
-  {
-    "name": "UNISEM",
-    "sector": "Auto-Scanned",
-    "category": "Swing / Mid-Cap",
-    "price": 5.3,
-    "change": 6,
-    "turnover": 59281030,
-    "volume": 11185100,
-    "signal": "buy",
-    "reason": "⚡ Momentum Kuat (Harga Sedang Mencanak Naik Laju)"
-  },
-  {
-    "name": "KGB",
-    "sector": "Auto-Scanned",
-    "category": "Swing / Mid-Cap",
-    "price": 7.63,
-    "change": 2.7,
-    "turnover": 46658976,
-    "volume": 6115200,
-    "signal": "buy",
-    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)"
-  },
-  {
-    "name": "UWC",
-    "sector": "Auto-Scanned",
-    "category": "Swing / Mid-Cap",
-    "price": 5.93,
-    "change": 2.2,
-    "turnover": 41461967,
-    "volume": 6991900,
-    "signal": "buy",
-    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)"
-  },
-  {
-    "name": "MPI",
-    "sector": "Auto-Scanned",
-    "category": "Swing / Mid-Cap",
-    "price": 49.06,
-    "change": -0.1,
-    "turnover": 40719800,
-    "volume": 830000,
-    "signal": "avoid",
-    "reason": "⚠️ Jerung Buang Barang / Markup"
-  },
-  {
-    "name": "FRONTKN",
-    "sector": "Auto-Scanned",
-    "category": "Swing / Mid-Cap",
-    "price": 4.9,
-    "change": 0.4,
-    "turnover": 36695610,
-    "volume": 7488900,
-    "signal": "buy",
-    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)"
-  },
-  {
-    "name": "MI",
-    "sector": "Auto-Scanned",
-    "category": "Swing / Mid-Cap",
-    "price": 4.82,
-    "change": 3,
-    "turnover": 32863242.000000004,
-    "volume": 6818100,
-    "signal": "buy",
-    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)"
-  },
-  {
-    "name": "GREATEC",
-    "sector": "Auto-Scanned",
-    "category": "Swing / Mid-Cap",
-    "price": 2.69,
-    "change": 0.4,
-    "turnover": 32852163,
-    "volume": 12212700,
-    "signal": "buy",
-    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)"
-  },
-  {
-    "name": "PENTA",
-    "sector": "Auto-Scanned",
-    "category": "Swing / Mid-Cap",
-    "price": 4.56,
-    "change": -1.1,
-    "turnover": 21770807.999999996,
-    "volume": 4774300,
-    "signal": "avoid",
-    "reason": "⚠️ Jerung Buang Barang / Markup"
-  },
-  {
-    "name": "VSTECS",
-    "sector": "Auto-Scanned",
-    "category": "Swing / Mid-Cap",
-    "price": 6.15,
-    "change": 3.5,
-    "turnover": 6642000,
-    "volume": 1080000,
-    "signal": "buy",
-    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)"
-  },
-  {
-    "name": "GTRONIC",
-    "sector": "Auto-Scanned",
-    "category": "Penny / Spekulatif",
-    "price": 0.25,
-    "change": 4.2,
-    "turnover": 857100,
-    "volume": 3428400,
-    "signal": "avoid",
-    "reason": "Kaunter Lemau / Sikat"
-  }
-]
+{
+  "lastUpdated": "2026-05-30T06:55:39.382Z",
+  "source": "klse.i3investor.com",
+  "topVolume": [
+    {
+      "name": "MAYBANK",
+      "sector": "Dynamic",
+      "price": 10.64,
+      "change": 0.14,
+      "changePct": 1.33,
+      "turnover": 653612008,
+      "volume": 61429700,
+      "signal": "buy",
+      "reason": "Momentum Positif & Duit Jerung Masuk"
+    },
+    {
+      "name": "NESTLE",
+      "sector": "Dynamic",
+      "price": 91,
+      "change": -4,
+      "changePct": -4.21,
+      "turnover": 644662200,
+      "volume": 7084200,
+      "signal": "avoid",
+      "reason": "Jerung Buang / Mendatar"
+    },
+    {
+      "name": "AXIATA",
+      "sector": "Dynamic",
+      "price": 2,
+      "change": 0.02,
+      "changePct": 1.01,
+      "turnover": 616802200,
+      "volume": 308401100,
+      "signal": "buy",
+      "reason": "Momentum Positif & Duit Jerung Masuk"
+    },
+    {
+      "name": "YTL",
+      "sector": "Dynamic",
+      "price": 2.05,
+      "change": 0.01,
+      "changePct": 0.49,
+      "turnover": 605874425,
+      "volume": 295548500,
+      "signal": "buy",
+      "reason": "Momentum Positif & Duit Jerung Masuk"
+    },
+    {
+      "name": "QL",
+      "sector": "Dynamic",
+      "price": 3.6,
+      "change": 0.2,
+      "changePct": 5.88,
+      "turnover": 560172600,
+      "volume": 155603500,
+      "signal": "buy",
+      "reason": "Momentum Positif & Duit Jerung Masuk"
+    },
+    {
+      "name": "PBBANK",
+      "sector": "Dynamic",
+      "price": 4.71,
+      "change": -0.06,
+      "changePct": -1.26,
+      "turnover": 511509768,
+      "volume": 108600800,
+      "signal": "avoid",
+      "reason": "Jerung Buang / Mendatar"
+    },
+    {
+      "name": "PETDAG",
+      "sector": "Dynamic",
+      "price": 17.74,
+      "change": 0.4,
+      "changePct": 2.31,
+      "turnover": 511176325.99999994,
+      "volume": 28814900,
+      "signal": "buy",
+      "reason": "Momentum Positif & Duit Jerung Masuk"
+    },
+    {
+      "name": "MRDIY",
+      "sector": "Dynamic",
+      "price": 1.58,
+      "change": 0.01,
+      "changePct": 0.64,
+      "turnover": 455141436,
+      "volume": 288064200,
+      "signal": "buy",
+      "reason": "Momentum Positif & Duit Jerung Masuk"
+    },
+    {
+      "name": "NATGATE",
+      "sector": "Dynamic",
+      "price": 0.88,
+      "change": 0.12,
+      "changePct": 15.79,
+      "turnover": 131761168,
+      "volume": 149728600,
+      "signal": "buy",
+      "reason": "Momentum Positif & Duit Jerung Masuk"
+    },
+    {
+      "name": "AMBANK",
+      "sector": "Dynamic",
+      "price": 6.48,
+      "change": -0.12,
+      "changePct": -1.82,
+      "turnover": 128033784.00000001,
+      "volume": 19758300,
+      "signal": "avoid",
+      "reason": "Jerung Buang / Mendatar"
+    },
+    {
+      "name": "HLBANK",
+      "sector": "Dynamic",
+      "price": 20.88,
+      "change": -0.3,
+      "changePct": -1.42,
+      "turnover": 116919648,
+      "volume": 5599600,
+      "signal": "avoid",
+      "reason": "Jerung Buang / Mendatar"
+    },
+    {
+      "name": "SUNMED",
+      "sector": "Dynamic",
+      "price": 1.77,
+      "change": 0.02,
+      "changePct": 1.14,
+      "turnover": 105027729,
+      "volume": 59337700,
+      "signal": "buy",
+      "reason": "Momentum Positif & Duit Jerung Masuk"
+    },
+    {
+      "name": "PCHEM",
+      "sector": "Dynamic",
+      "price": 5.21,
+      "change": -0.3,
+      "changePct": -5.44,
+      "turnover": 98610191,
+      "volume": 18927100,
+      "signal": "avoid",
+      "reason": "Jerung Buang / Mendatar"
+    },
+    {
+      "name": "AAX",
+      "sector": "Dynamic",
+      "price": 1.2,
+      "change": 0.03,
+      "changePct": 2.56,
+      "turnover": 72486600,
+      "volume": 60405500,
+      "signal": "buy",
+      "reason": "Momentum Positif & Duit Jerung Masuk"
+    },
+    {
+      "name": "ZETRIX",
+      "sector": "Dynamic",
+      "price": 0.805,
+      "change": -0.01,
+      "changePct": -1.23,
+      "turnover": 68094145,
+      "volume": 84589000,
+      "signal": "avoid",
+      "reason": "Jerung Buang / Mendatar"
+    },
+    {
+      "name": "KLCC",
+      "sector": "Dynamic",
+      "price": 8.86,
+      "change": -0.26,
+      "changePct": -2.85,
+      "turnover": 63009661.99999999,
+      "volume": 7111700,
+      "signal": "avoid",
+      "reason": "Jerung Buang / Mendatar"
+    },
+    {
+      "name": "UNISEM",
+      "sector": "Dynamic",
+      "price": 5.3,
+      "change": 0.3,
+      "changePct": 6,
+      "turnover": 59281030,
+      "volume": 11185100,
+      "signal": "buy",
+      "reason": "Momentum Positif & Duit Jerung Masuk"
+    },
+    {
+      "name": "KLK",
+      "sector": "Dynamic",
+      "price": 20.32,
+      "change": 0.36,
+      "changePct": 1.8,
+      "turnover": 46331632,
+      "volume": 2280100,
+      "signal": "buy",
+      "reason": "Momentum Positif & Duit Jerung Masuk"
+    },
+    {
+      "name": "UTDPLT",
+      "sector": "Dynamic",
+      "price": 31.08,
+      "change": 0.58,
+      "changePct": 1.9,
+      "turnover": 43940904,
+      "volume": 1413800,
+      "signal": "buy",
+      "reason": "Momentum Positif & Duit Jerung Masuk"
+    },
+    {
+      "name": "ITMAX",
+      "sector": "Dynamic",
+      "price": 4.95,
+      "change": 0.3,
+      "changePct": 6.45,
+      "turnover": 33401115,
+      "volume": 6747700,
+      "signal": "buy",
+      "reason": "Momentum Positif & Duit Jerung Masuk"
+    },
+    {
+      "name": "MCEMENT",
+      "sector": "Dynamic",
+      "price": 6.54,
+      "change": -0.35,
+      "changePct": -5.08,
+      "turnover": 22689222,
+      "volume": 3469300,
+      "signal": "avoid",
+      "reason": "Jerung Buang / Mendatar"
+    },
+    {
+      "name": "CARLSBG",
+      "sector": "Dynamic",
+      "price": 17.18,
+      "change": 0.48,
+      "changePct": 2.87,
+      "turnover": 14383096,
+      "volume": 837200,
+      "signal": "buy",
+      "reason": "Momentum Positif & Duit Jerung Masuk"
+    },
+    {
+      "name": "BURSA",
+      "sector": "Dynamic",
+      "price": 8.8,
+      "change": 0.32,
+      "changePct": 3.77,
+      "turnover": 8119760.000000001,
+      "volume": 922700,
+      "signal": "buy",
+      "reason": "Momentum Positif & Duit Jerung Masuk"
+    },
+    {
+      "name": "HLIND",
+      "sector": "Dynamic",
+      "price": 19,
+      "change": 0.62,
+      "changePct": 3.37,
+      "turnover": 5240200,
+      "volume": 275800,
+      "signal": "buy",
+      "reason": "Momentum Positif & Duit Jerung Masuk"
+    },
+    {
+      "name": "Dow Jones",
+      "sector": "Dynamic",
+      "price": 51032.46,
+      "change": 363.49,
+      "changePct": 0.72,
+      "turnover": 3623304.66,
+      "volume": 71,
+      "signal": "buy",
+      "reason": "Momentum Positif & Duit Jerung Masuk"
+    }
+  ],
+  "topGainers": [
+    {
+      "name": "Dow Jones",
+      "price": 51032.46,
+      "changePct": 363.49,
+      "volume": 71
+    },
+    {
+      "name": "Nasdaq",
+      "price": 26972.62,
+      "changePct": 55.15,
+      "volume": 20
+    },
+    {
+      "name": "HLIND",
+      "price": 19,
+      "changePct": 0.62,
+      "volume": 275800
+    },
+    {
+      "name": "UTDPLT",
+      "price": 31.08,
+      "changePct": 0.58,
+      "volume": 1413800
+    },
+    {
+      "name": "AJI",
+      "price": 13.86,
+      "changePct": 0.58,
+      "volume": 144300
+    },
+    {
+      "name": "CARLSBG",
+      "price": 17.18,
+      "changePct": 0.48,
+      "volume": 837200
+    },
+    {
+      "name": "PETDAG",
+      "price": 17.74,
+      "changePct": 0.4,
+      "volume": 28814900
+    },
+    {
+      "name": "KLK",
+      "price": 20.32,
+      "changePct": 0.36,
+      "volume": 2280100
+    },
+    {
+      "name": "BURSA",
+      "price": 8.8,
+      "changePct": 0.32,
+      "volume": 922700
+    },
+    {
+      "name": "UNISEM",
+      "price": 5.3,
+      "changePct": 0.3,
+      "volume": 11185100
+    },
+    {
+      "name": "ITMAX",
+      "price": 4.95,
+      "changePct": 0.3,
+      "volume": 6747700
+    },
+    {
+      "name": "NIKKEI-CW",
+      "price": 1.13,
+      "changePct": 0.295,
+      "volume": 11500
+    },
+    {
+      "name": "QL",
+      "price": 3.6,
+      "changePct": 0.2,
+      "volume": 155603500
+    },
+    {
+      "name": "MAYBANK",
+      "price": 10.64,
+      "changePct": 0.14,
+      "volume": 61429700
+    },
+    {
+      "name": "NATGATE",
+      "price": 0.88,
+      "changePct": 0.12,
+      "volume": 149728600
+    },
+    {
+      "name": "AAX",
+      "price": 1.2,
+      "changePct": 0.03,
+      "volume": 60405500
+    },
+    {
+      "name": "AXIATA",
+      "price": 2,
+      "changePct": 0.02,
+      "volume": 308401100
+    },
+    {
+      "name": "SUNMED",
+      "price": 1.77,
+      "changePct": 0.02,
+      "volume": 59337700
+    },
+    {
+      "name": "YTL",
+      "price": 2.05,
+      "changePct": 0.01,
+      "volume": 295548500
+    },
+    {
+      "name": "MRDIY",
+      "price": 1.58,
+      "changePct": 0.01,
+      "volume": 288064200
+    }
+  ]
+}

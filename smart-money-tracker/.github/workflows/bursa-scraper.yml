@@ -21,16 +21,18 @@ jobs:
           node-version: '18'
 
       - name: Install Dependencies
-        run: npm install puppeteer puppeteer-extra puppeteer-extra-plugin-stealth node-fetch@2
+        run: npm install axios cheerio
+        working-directory: smart-money-tracker
 
       - name: Run Bursa Smart Money Scraper
         run: node scrape-real.js
+        working-directory: smart-money-tracker
 
       - name: Commit and Push live_data.json
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add live_data.json
-          git add history/
+          git add smart-money-tracker/live_data.json
+          git add smart-money-tracker/history/
           git commit -m "🤖 Auto-update data Smart Money Bursa: $(date)" || exit 0
           git push
