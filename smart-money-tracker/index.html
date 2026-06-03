@@ -626,7 +626,7 @@
         async function fetchLiveData() {
             try {
                 const cacheBuster = new Date().getTime();
-                let res = await fetch(`https://raw.githubusercontent.com/zawawimanja/BSKL/main/smart-money-tracker/live_data.json?t=${cacheBuster}`);
+                let res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/live_data.json?t=${cacheBuster}`);
                 
                 if (!res.ok) {
                     res = await fetch(`live_data.json?t=${cacheBuster}`);
