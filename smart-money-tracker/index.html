@@ -680,10 +680,22 @@
 
         // --- Logik Semak Sejarah (History) ---
         document.getElementById('loadHistoryBtn').addEventListener('click', async function() {
-            const dateVal = document.getElementById('historyDate').value;
+            let dateVal = document.getElementById('historyDate').value;
             if(!dateVal) {
                 alert('Sila pilih tarikh pada kalendar terlebih dahulu.');
                 return;
+            }
+            
+            // Auto-format jika user copy paste "30/5/2026"
+            if (dateVal.includes('/')) {
+                const parts = dateVal.split(',')[0].trim().split('/');
+                if (parts.length === 3) {
+                    let day = parts[0].padStart(2, '0');
+                    let month = parts[1].padStart(2, '0');
+                    let year = parts[2];
+                    if (year.length === 2) year = '20' + year;
+                    dateVal = `${year}-${month}-${day}`;
+                }
             }
             
             const originalText = this.textContent;
