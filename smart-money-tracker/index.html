@@ -690,7 +690,13 @@
             this.textContent = '⏳ ...';
             
             try {
-                const res = await fetch('history/data_' + dateVal + '.json');
+                const cacheBuster = new Date().getTime();
+                let res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/history/data_${dateVal}.json?t=${cacheBuster}`);
+                
+                if (!res.ok) {
+                    res = await fetch('history/data_' + dateVal + '.json');
+                }
+
                 if (res.ok) {
                     const raw = await res.json();
                     // Handle both old array format and new object format
