@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-09T05:05:13.555Z",
+  "lastUpdated": "2026-06-09T08:39:23.574Z",
   "source": "klse.i3investor.com",
   "topVolume": [
     {
@@ -8,43 +8,142 @@
       "price": 0.81,
       "change": -0.01,
       "changePct": -1.22,
-      "turnover": 35948934,
-      "volume": 44381400,
-      "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
-    },
-    {
-      "name": "TANCO",
-      "sector": "Dynamic",
-      "price": 0.95,
-      "change": -0.17,
-      "changePct": -15.18,
-      "turnover": 33259120,
-      "volume": 35009600,
+      "turnover": 52549236,
+      "volume": 64875600,
       "signal": "avoid",
       "reason": "Jerung Buang / Mendatar"
     },
     {
       "name": "TOPGLOV",
       "sector": "Dynamic",
-      "price": 0.85,
-      "change": 0.005,
-      "changePct": 0.59,
-      "turnover": 31336780,
-      "volume": 36866800,
+      "price": 0.83,
+      "change": -0.015,
+      "changePct": -1.78,
+      "turnover": 45970214,
+      "volume": 55385800,
+      "signal": "avoid",
+      "reason": "Jerung Buang / Mendatar"
+    },
+    {
+      "name": "VITROX",
+      "sector": "Dynamic",
+      "price": 7.08,
+      "change": 0.34,
+      "changePct": 5.04,
+      "turnover": 43645368,
+      "volume": 6164600,
       "signal": "buy",
       "reason": "Momentum Positif & Duit Jerung Masuk"
     },
     {
-      "name": "HSI-PWRP",
+      "name": "TANCO",
       "sector": "Dynamic",
-      "price": 0.23,
-      "change": 0,
-      "changePct": 0,
-      "turnover": 13017379,
-      "volume": 56597300,
+      "price": 0.785,
+      "change": -0.335,
+      "changePct": -29.91,
+      "turnover": 43625354.5,
+      "volume": 55573700,
       "signal": "avoid",
       "reason": "Jerung Buang / Mendatar"
+    },
+    {
+      "name": "IOIPG",
+      "sector": "Dynamic",
+      "price": 4.04,
+      "change": -0.12,
+      "changePct": -2.88,
+      "turnover": 25481088,
+      "volume": 6307200,
+      "signal": "avoid",
+      "reason": "Jerung Buang / Mendatar"
+    },
+    {
+      "name": "MPI",
+      "sector": "Dynamic",
+      "price": 46.84,
+      "change": 1.34,
+      "changePct": 2.95,
+      "turnover": 21068632,
+      "volume": 449800,
+      "signal": "buy",
+      "reason": "Momentum Positif & Duit Jerung Masuk"
+    },
+    {
+      "name": "KGB",
+      "sector": "Dynamic",
+      "price": 7.56,
+      "change": 0.14,
+      "changePct": 1.89,
+      "turnover": 17570196,
+      "volume": 2324100,
+      "signal": "buy",
+      "reason": "Momentum Positif & Duit Jerung Masuk"
+    },
+    {
+      "name": "SUNWAY",
+      "sector": "Dynamic",
+      "price": 5.12,
+      "change": -0.13,
+      "changePct": -2.48,
+      "turnover": 16488960,
+      "volume": 3220500,
+      "signal": "avoid",
+      "reason": "Jerung Buang / Mendatar"
+    },
+    {
+      "name": "UNISEM",
+      "sector": "Dynamic",
+      "price": 4.79,
+      "change": -0.11,
+      "changePct": -2.24,
+      "turnover": 15281058,
+      "volume": 3190200,
+      "signal": "avoid",
+      "reason": "Jerung Buang / Mendatar"
+    },
+    {
+      "name": "HSI-PWRP",
+      "sector": "Dynamic",
+      "price": 0.22,
+      "change": -0.01,
+      "changePct": -4.35,
+      "turnover": 13978954,
+      "volume": 63540700,
+      "signal": "avoid",
+      "reason": "Jerung Buang / Mendatar"
+    },
+    {
+      "name": "NESTLE",
+      "sector": "Dynamic",
+      "price": 93.7,
+      "change": 1.7,
+      "changePct": 1.85,
+      "turnover": 13914450,
+      "volume": 148500,
+      "signal": "buy",
+      "reason": "Momentum Positif & Duit Jerung Masuk"
+    },
+    {
+      "name": "PETGAS",
+      "sector": "Dynamic",
+      "price": 17.34,
+      "change": -0.16,
+      "changePct": -0.91,
+      "turnover": 12505608,
+      "volume": 721200,
+      "signal": "avoid",
+      "reason": "Jerung Buang / Mendatar"
+    },
+    {
+      "name": "SFPTECH",
+      "sector": "Dynamic",
+      "price": 0.32,
+      "change": 0.025,
+      "changePct": 8.47,
+      "turnover": 10420512,
+      "volume": 32564100,
+      "signal": "buy",
+      "reason": "Momentum Positif & Duit Jerung Masuk"
     },
     {
       "name": "HONGSENG",
@@ -52,87 +151,32 @@
       "price": 0.015,
       "change": 0.005,
       "changePct": 50,
-      "turnover": 10061157,
-      "volume": 670743800,
+      "turnover": 10131595.5,
+      "volume": 675439700,
       "signal": "buy",
       "reason": "Momentum Positif & Duit Jerung Masuk"
-    },
-    {
-      "name": "UNISEM",
-      "sector": "Dynamic",
-      "price": 4.77,
-      "change": -0.13,
-      "changePct": -2.65,
-      "turnover": 9006237,
-      "volume": 1888100,
-      "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
-    },
-    {
-      "name": "IOIPG",
-      "sector": "Dynamic",
-      "price": 4.02,
-      "change": -0.14,
-      "changePct": -3.37,
-      "turnover": 8718576,
-      "volume": 2168800,
-      "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
-    },
-    {
-      "name": "SUNWAY",
-      "sector": "Dynamic",
-      "price": 5.13,
-      "change": -0.12,
-      "changePct": -2.29,
-      "turnover": 8472195,
-      "volume": 1651500,
-      "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
     },
     {
       "name": "HSI-CWQU",
       "sector": "Dynamic",
-      "price": 0.155,
-      "change": -0.005,
-      "changePct": -3.13,
-      "turnover": 7348054,
-      "volume": 47406800,
+      "price": 0.16,
+      "change": 0,
+      "changePct": 0,
+      "turnover": 7938304,
+      "volume": 49614400,
       "signal": "avoid",
       "reason": "Jerung Buang / Mendatar"
     },
     {
-      "name": "MPI",
+      "name": "HSI-CWQ7",
       "sector": "Dynamic",
-      "price": 45.72,
-      "change": 0.22,
-      "changePct": 0.48,
-      "turnover": 7255764,
-      "volume": 158700,
+      "price": 0.19,
+      "change": 0.005,
+      "changePct": 2.7,
+      "turnover": 6938401,
+      "volume": 36517900,
       "signal": "buy",
       "reason": "Momentum Positif & Duit Jerung Masuk"
-    },
-    {
-      "name": "NESTLE",
-      "sector": "Dynamic",
-      "price": 92.88,
-      "change": 0.88,
-      "changePct": 0.96,
-      "turnover": 6696648,
-      "volume": 72100,
-      "signal": "buy",
-      "reason": "Momentum Positif & Duit Jerung Masuk"
-    },
-    {
-      "name": "VELESTO",
-      "sector": "Dynamic",
-      "price": 0.295,
-      "change": -0.005,
-      "changePct": -1.67,
-      "turnover": 6414096.5,
-      "volume": 21742700,
-      "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
     },
     {
       "name": "TFP",
@@ -140,143 +184,121 @@
       "price": 0.08,
       "change": 0.025,
       "changePct": 45.45,
-      "turnover": 5266112,
-      "volume": 65826400,
+      "turnover": 6274352,
+      "volume": 78429400,
       "signal": "buy",
       "reason": "Momentum Positif & Duit Jerung Masuk"
-    },
-    {
-      "name": "HSI-CWQ7",
-      "sector": "Dynamic",
-      "price": 0.18,
-      "change": -0.005,
-      "changePct": -2.7,
-      "turnover": 4418028,
-      "volume": 24544600,
-      "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
     },
     {
       "name": "AJI",
       "sector": "Dynamic",
-      "price": 15.24,
-      "change": 0.82,
-      "changePct": 5.69,
-      "turnover": 3727704,
-      "volume": 244600,
-      "signal": "buy",
-      "reason": "Momentum Positif & Duit Jerung Masuk"
-    },
-    {
-      "name": "PPB",
-      "sector": "Dynamic",
-      "price": 9.77,
-      "change": 0.17,
-      "changePct": 1.77,
-      "turnover": 3314961,
-      "volume": 339300,
+      "price": 15.5,
+      "change": 1.08,
+      "changePct": 7.49,
+      "turnover": 5570700,
+      "volume": 359400,
       "signal": "buy",
       "reason": "Momentum Positif & Duit Jerung Masuk"
     }
   ],
   "topGainers": [
     {
-      "name": "VINVEST",
-      "price": 0.035,
-      "changePct": 133.33,
-      "volume": 24082900,
-      "turnover": 842901.5000000001
+      "name": "EG-CH",
+      "price": 0.195,
+      "changePct": 333.33,
+      "volume": 60000,
+      "turnover": 11700
     },
     {
       "name": "HONGSENG",
       "price": 0.015,
       "changePct": 50,
-      "volume": 670743800,
-      "turnover": 10061157
+      "volume": 675439700,
+      "turnover": 10131595.5
     },
     {
       "name": "TFP",
       "price": 0.08,
       "changePct": 45.45,
-      "volume": 65826400,
-      "turnover": 5266112
+      "volume": 78429400,
+      "turnover": 6274352
+    },
+    {
+      "name": "EQ8MID",
+      "price": 1.23,
+      "changePct": 19.42,
+      "volume": 15500,
+      "turnover": 19065
+    },
+    {
+      "name": "NIKKEI-C10",
+      "price": 1.25,
+      "changePct": 17.92,
+      "volume": 3000,
+      "turnover": 3750
     },
     {
       "name": "CEPCO",
-      "price": 4.5,
-      "changePct": 12.78,
-      "volume": 62800,
-      "turnover": 282600
+      "price": 4.7,
+      "changePct": 17.79,
+      "volume": 99300,
+      "turnover": 466710
+    },
+    {
+      "name": "SFPTECH",
+      "price": 0.32,
+      "changePct": 8.47,
+      "volume": 32564100,
+      "turnover": 10420512
     },
     {
       "name": "AJI",
-      "price": 15.24,
-      "changePct": 5.69,
-      "volume": 244600,
-      "turnover": 3727704
+      "price": 15.5,
+      "changePct": 7.49,
+      "volume": 359400,
+      "turnover": 5570700
     },
     {
-      "name": "PJBUMI",
-      "price": 3.58,
-      "changePct": 4.37,
-      "volume": 293000,
-      "turnover": 1048940
-    },
-    {
-      "name": "KESM",
-      "price": 4.13,
-      "changePct": 3.77,
-      "volume": 70900,
-      "turnover": 292817
-    },
-    {
-      "name": "PPB",
-      "price": 9.77,
-      "changePct": 1.77,
-      "volume": 339300,
-      "turnover": 3314961
-    },
-    {
-      "name": "F&N",
-      "price": 26.48,
-      "changePct": 1.3,
-      "volume": 1600,
-      "turnover": 42368
-    },
-    {
-      "name": "NESTLE",
-      "price": 92.88,
-      "changePct": 0.96,
-      "volume": 72100,
-      "turnover": 6696648
-    },
-    {
-      "name": "KLK",
-      "price": 20.24,
-      "changePct": 0.8,
-      "volume": 102300,
-      "turnover": 2070551.9999999998
-    },
-    {
-      "name": "DLADY",
-      "price": 32.9,
-      "changePct": 0.61,
-      "volume": 4300,
-      "turnover": 141470
-    },
-    {
-      "name": "TOPGLOV",
-      "price": 0.85,
-      "changePct": 0.59,
-      "volume": 36866800,
-      "turnover": 31336780
+      "name": "VITROX",
+      "price": 7.08,
+      "changePct": 5.04,
+      "volume": 6164600,
+      "turnover": 43645368
     },
     {
       "name": "MPI",
-      "price": 45.72,
-      "changePct": 0.48,
-      "volume": 158700,
-      "turnover": 7255764
+      "price": 46.84,
+      "changePct": 2.95,
+      "volume": 449800,
+      "turnover": 21068632
+    },
+    {
+      "name": "HSI-CWQ7",
+      "price": 0.19,
+      "changePct": 2.7,
+      "volume": 36517900,
+      "turnover": 6938401
+    },
+    {
+      "name": "KGB",
+      "price": 7.56,
+      "changePct": 1.89,
+      "volume": 2324100,
+      "turnover": 17570196
+    },
+    {
+      "name": "NESTLE",
+      "price": 93.7,
+      "changePct": 1.85,
+      "volume": 148500,
+      "turnover": 13914450
+    },
+    {
+      "name": "F&N",
+      "price": 26.44,
+      "changePct": 1.15,
+      "volume": 58200,
+      "turnover": 1538808
     }
   ]
 }
