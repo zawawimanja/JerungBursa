@@ -59,7 +59,7 @@ if (files.length > 0) {
 const activeTargets = [
   { name: 'ZETRIX', entry: 0.845, category: 'Intraday', cl: 0.803, benteng: 0.800 },
   { name: 'GIIB', entry: 0.480, category: 'Intraday', cl: 0.455, benteng: 0.450 },
-  { name: 'NATGATE', entry: 0.880, category: 'Swing', cl: 0.835, benteng: 0.830 }
+  { name: 'NATGATE', entry: 0.765, category: 'Swing', cl: 0.727, benteng: 0.725 }
 ];
 
 let report = `======================================================
