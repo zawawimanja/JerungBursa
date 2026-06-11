@@ -694,9 +694,9 @@
 
         function updateLiveTargets(data) {
             const targets = [
-                { name: 'ZETRIX', entry: 0.845, date: '10 Jun', category: 'Intraday' },
-                { name: 'GIIB', entry: 0.480, date: '10 Jun', category: 'Intraday' },
-                { name: 'HSI-PWR7', entry: 0.280, date: '10 Jun', category: 'Intraday' }
+                { name: 'ZETRIX', entry: 0.845, date: '10 Jun', category: 'Intraday', cl: 0.803, benteng: 0.800 },
+                { name: 'GIIB', entry: 0.480, date: '10 Jun', category: 'Intraday', cl: 0.455, benteng: 0.450 },
+                { name: 'NATGATE', entry: 0.880, date: '10 Jun', category: 'Swing', cl: 0.835, benteng: 0.830 }
             ];
             
             const container = document.getElementById('live-targets-container');
@@ -710,11 +710,13 @@
                 
                 const tp1 = t.entry * 1.10; // +10%
                 const tp2 = t.entry * 1.17; // +17%
+                const cl = t.cl || (t.entry * 0.95);
+                const benteng = t.benteng || cl;
                 
                 let statusBadge = '';
                 if (changePct >= 10) {
                     statusBadge = `<span style="background: rgba(16, 185, 129, 0.2); color: var(--success); border: 1px solid rgba(16, 185, 129, 0.5); padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">🎯 TARGET HIT</span>`;
-                } else if (changePct < -5) {
+                } else if (currentPrice <= benteng) {
                     statusBadge = `<span style="background: rgba(239, 68, 68, 0.2); color: var(--danger); border: 1px solid rgba(239, 68, 68, 0.5); padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">⚠️ CUT LOSS</span>`;
                 } else {
                     statusBadge = `<span style="background: rgba(59, 130, 246, 0.2); color: var(--accent); border: 1px solid rgba(59, 130, 246, 0.5); padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">RUNNING</span>`;
@@ -736,6 +738,10 @@
                     <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #f59e0b; margin-top: 0.3rem; border-top: 1px dashed #334155; padding-top: 0.3rem;">
                         <span>TP1 (10%): RM ${tp1.toFixed(3)}</span>
                         <span>TP2 (17%): RM ${tp2.toFixed(3)}</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--danger); margin-top: 0.2rem; border-top: 1px dotted #334155; padding-top: 0.2rem;">
+                        <span>Cut Loss: RM ${cl.toFixed(3)}</span>
+                        <span>Benteng Last: RM ${benteng.toFixed(3)}</span>
                     </div>
                 </div>
                 `;

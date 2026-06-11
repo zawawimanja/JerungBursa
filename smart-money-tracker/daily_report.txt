@@ -1,20 +1,21 @@
 ======================================================
-📊 LAPORAN SMART MONEY BURSA - 2026-06-10
+📊 LAPORAN SMART MONEY BURSA - 2026-06-11
 ======================================================
-Masa Kemaskini: 2026-06-10T12:35:17.678Z
-Perbandingan Dengan Tarikh Lepas: 2026-06-10
+Masa Kemaskini: 2026-06-11T02:53:19.301Z
+Perbandingan Dengan Tarikh Lepas: 2026-06-11
 
 🏆 PRESTASI WATCHLIST AKTIF:
 ------------------------------------------------------
 * ZETRIX (Intraday)
-  Harga Entry: RM 0.845 | Harga Kini: RM 0.845
-  Untung/Rugi: 0.00% | Status: [RUNNING]
+  Harga Entry: RM 0.845 | Harga Kini: RM 0.815
+  Untung/Rugi: -3.55% | Status: [RUNNING]
+  Cut Loss: RM 0.803 | Benteng Last: RM 0.800
 * GIIB (Intraday)
-  Harga Entry: RM 0.480 | Harga Kini: RM 0.480
-  Untung/Rugi: 0.00% | Status: [RUNNING]
-* HSI-PWR7 (Intraday)
-  Harga Entry: RM 0.280 | Harga Kini: RM 0.280
-  Untung/Rugi: 0.00% | Status: [RUNNING]
+  Harga Entry: RM 0.480 | Harga Kini: N/A (Tiada dalam Top Volume/Gainers hari ini)
+  Cut Loss: RM 0.455 | Benteng Last: RM 0.450
+* NATGATE (Swing)
+  Harga Entry: RM 0.880 | Harga Kini: N/A (Tiada dalam Top Volume/Gainers hari ini)
+  Cut Loss: RM 0.835 | Benteng Last: RM 0.830
 
 🎯 FRESH BUY SIGNALS HARI INI (Saham Baru / Bertukar BUY):
 ------------------------------------------------------

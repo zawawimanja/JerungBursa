@@ -57,9 +57,9 @@ if (files.length > 0) {
 
 // 3. Define our active tracking list
 const activeTargets = [
-  { name: 'ZETRIX', entry: 0.845, category: 'Intraday' },
-  { name: 'GIIB', entry: 0.480, category: 'Intraday' },
-  { name: 'HSI-PWR7', entry: 0.280, category: 'Intraday' }
+  { name: 'ZETRIX', entry: 0.845, category: 'Intraday', cl: 0.803, benteng: 0.800 },
+  { name: 'GIIB', entry: 0.480, category: 'Intraday', cl: 0.455, benteng: 0.450 },
+  { name: 'NATGATE', entry: 0.880, category: 'Swing', cl: 0.835, benteng: 0.830 }
 ];
 
 let report = `======================================================
@@ -79,15 +79,21 @@ activeTargets.forEach(t => {
     const returnPct = ((currentPrice - t.entry) / t.entry) * 100;
     const sign = returnPct > 0 ? '+' : '';
     let status = 'RUNNING';
+    const limitPrice = t.cl || (t.entry * 0.95);
+    const lastDefense = t.benteng || limitPrice;
+    
     if (returnPct >= 10.0) status = '🎯 TARGET HIT (TP)';
-    else if (returnPct <= -5.0) status = '⚠️ CUT LOSS';
+    else if (currentPrice <= lastDefense) status = '⚠️ BENTENG PECAH (CUT LOSS)';
+    else if (currentPrice <= limitPrice) status = '⚠️ DEKAT CUT LOSS';
     
     report += `\n* ${t.name} (${t.category})
   Harga Entry: RM ${t.entry.toFixed(3)} | Harga Kini: RM ${currentPrice.toFixed(3)}
-  Untung/Rugi: ${sign}${returnPct.toFixed(2)}% | Status: [${status}]`;
+  Untung/Rugi: ${sign}${returnPct.toFixed(2)}% | Status: [${status}]
+  Cut Loss: RM ${limitPrice.toFixed(3)} | Benteng Last: RM ${lastDefense.toFixed(3)}`;
   } else {
     report += `\n* ${t.name} (${t.category})
-  Harga Entry: RM ${t.entry.toFixed(3)} | Harga Kini: N/A (Tiada dalam Top Volume/Gainers hari ini)`;
+  Harga Entry: RM ${t.entry.toFixed(3)} | Harga Kini: N/A (Tiada dalam Top Volume/Gainers hari ini)
+  Cut Loss: RM ${(t.cl || t.entry * 0.95).toFixed(3)} | Benteng Last: RM ${(t.benteng || t.entry * 0.95).toFixed(3)}`;
   }
 });
 
