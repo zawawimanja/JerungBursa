@@ -1,7 +1,7 @@
 ======================================================
 📊 LAPORAN SMART MONEY BURSA - 2026-06-10
 ======================================================
-Masa Kemaskini: 2026-06-10T16:40:44.191Z
+Masa Kemaskini: 2026-06-10T12:35:17.678Z
 Perbandingan Dengan Tarikh Lepas: 2026-06-10
 
 🏆 PRESTASI WATCHLIST AKTIF:
@@ -9,11 +9,11 @@ Perbandingan Dengan Tarikh Lepas: 2026-06-10
 * ZETRIX (Intraday)
   Harga Entry: RM 0.845 | Harga Kini: RM 0.845
   Untung/Rugi: 0.00% | Status: [RUNNING]
-* VS (Intraday)
-  Harga Entry: RM 0.210 | Harga Kini: RM 0.210
+* GIIB (Intraday)
+  Harga Entry: RM 0.480 | Harga Kini: RM 0.480
   Untung/Rugi: 0.00% | Status: [RUNNING]
-* TMK (Swing)
-  Harga Entry: RM 2.200 | Harga Kini: RM 2.200
+* HSI-PWR7 (Intraday)
+  Harga Entry: RM 0.280 | Harga Kini: RM 0.280
   Untung/Rugi: 0.00% | Status: [RUNNING]
 
 🎯 FRESH BUY SIGNALS HARI INI (Saham Baru / Bertukar BUY):

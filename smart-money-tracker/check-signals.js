@@ -58,8 +58,8 @@ if (files.length > 0) {
 // 3. Define our active tracking list
 const activeTargets = [
   { name: 'ZETRIX', entry: 0.845, category: 'Intraday' },
-  { name: 'VS', entry: 0.210, category: 'Intraday' },
-  { name: 'TMK', entry: 2.200, category: 'Swing' }
+  { name: 'GIIB', entry: 0.480, category: 'Intraday' },
+  { name: 'HSI-PWR7', entry: 0.280, category: 'Intraday' }
 ];
 
 let report = `======================================================
