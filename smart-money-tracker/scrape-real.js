@@ -68,6 +68,48 @@ async function main() {
     }
     
     // ==========================================
+    // CUSTOM VIP WATCHLIST (YAHOO FINANCE)
+    // ==========================================
+    const customWatchlist = [
+        { symbol: '5326.KL', name: 'SKYCHIP', sector: 'Technology' },
+        { symbol: '0128.KL', name: 'ZETRIX', sector: 'Technology' },
+        { symbol: '0270.KL', name: 'NATGATE', sector: 'Technology' },
+        { symbol: '7191.KL', name: 'GIIB', sector: 'Industrial' }
+    ];
+
+    console.log('\n🔍 Menarik data Custom VIP Watchlist dari Yahoo Finance...');
+    for (const s of customWatchlist) {
+        try {
+            const res = await axios.get(`https://query1.finance.yahoo.com/v8/finance/chart/${s.symbol}?interval=1d&range=1d`, { headers: HEADERS });
+            const meta = res.data.chart.result[0].meta;
+            const price = meta.regularMarketPrice;
+            const prev = meta.chartPreviousClose;
+            const change = price - prev;
+            const volume = meta.regularMarketVolume || 0;
+            
+            // Hanya tambah jika belum wujud dari i3investor
+            if (!allRawStocks.has(s.name)) {
+                allRawStocks.set(s.name, {
+                    name: s.name,
+                    price: price,
+                    change: change,
+                    volume: volume,
+                    isVip: true,
+                    sector: s.sector
+                });
+                console.log(`   + Tambah ${s.name} (VIP) ke dalam radar (RM ${price.toFixed(3)}).`);
+            } else {
+                const existing = allRawStocks.get(s.name);
+                existing.isVip = true;
+                existing.sector = s.sector;
+                console.log(`   ~ ${s.name} (VIP) sudah pun berada dalam senarai i3investor.`);
+            }
+        } catch (e) {
+            console.log(`   - Gagal mengambil data untuk ${s.name} (${s.symbol})`);
+        }
+    }
+
+    // ==========================================
     // ANALISIS FORMULA SMART MONEY
     // ==========================================
     console.log('\n📊 Menganalisis Formula Smart Money...');
@@ -76,10 +118,20 @@ async function main() {
     const topGainers = [];
     
     for (const [name, stock] of allRawStocks.entries()) {
+        if (name.includes('-')) continue; // Skip all warrants / structured products
+        
         const turnover = stock.price * stock.volume;
         // Kira peratus perubahan yang betul: (change / previous_price) * 100
         const previousPrice = stock.price - stock.change;
         const changePct = previousPrice > 0 ? (stock.change / previousPrice) * 100 : 0;
+        
+        // Tentukan kategori secara dinamik
+        let category = 'Intraday / Momentum'; // Default
+        if (stock.price < 0.20) {
+            category = 'Penny / Spekulatif';
+        } else if (stock.price >= 1.50) {
+            category = 'Swing / Bluechip';
+        }
         
         // Tentukan signal berdasarkan formula
         let signal = 'avoid';
@@ -87,12 +139,29 @@ async function main() {
         
         if (stock.change > 0 && turnover >= 3_000_000) {
             signal = 'buy';
-            reason = 'Momentum Positif & Duit Jerung Masuk';
+            if (stock.price < 0.20) {
+                reason = '⚠️ Penny Goreng: Pam Volume Laju (Intraday Sahaja, Elak Hold!)';
+            } else if (stock.price >= 1.50) {
+                if (changePct <= 3.0) {
+                    reason = '🔥 Golden Hold: Jerung Mula Kumpul (Sesuai Swing/Hold)';
+                } else {
+                    reason = '⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold)';
+                }
+            } else { // Mid-cap RM0.20 - RM1.50
+                if (changePct <= 3.0) {
+                    reason = '🔥 Golden Entry: Jerung Kumpul Selesa (Sesuai Swing/Hold)';
+                } else {
+                    reason = '⚡ Momentum Kuat: Jerung Mula Pam (Sesuai Intraday/Swing)';
+                }
+            }
+        } else if (stock.isVip && stock.change <= 0) {
+            reason = 'VIP Sideway / Pullback (Pantau Peluang)';
         }
         
         const dataObj = {
             name: stock.name,
-            sector: 'Dynamic',
+            sector: stock.sector || 'Bursa',
+            category,
             price: stock.price,
             change: stock.change,
             changePct: parseFloat(changePct.toFixed(2)),
@@ -102,8 +171,8 @@ async function main() {
             reason,
         };
         
-        // Top Volume Scan: Simpan semua saham yang mempunyai turnover >= RM 3,000,000
-        if (turnover >= 3_000_000) {
+        // Top Volume Scan: Simpan semua saham yang mempunyai turnover >= RM 3,000,000 ATAU ianya saham VIP
+        if (turnover >= 3_000_000 || stock.isVip) {
             processedData.push(dataObj);
         }
         
