@@ -57,9 +57,8 @@ if (files.length > 0) {
 
 // 3. Define our active tracking list
 const activeTargets = [
-  { name: 'ZETRIX', entry: 0.845, category: 'Intraday', cl: 0.803, benteng: 0.800 },
-  { name: 'GIIB', entry: 0.480, category: 'Intraday', cl: 0.455, benteng: 0.450 },
-  { name: 'NATGATE', entry: 0.765, category: 'Swing', cl: 0.727, benteng: 0.725 }
+  { name: 'NATGATE', entry: 0.765, category: 'Swing', cl: 0.727, benteng: 0.725 },
+  { name: 'SKYCHIP', entry: 3.380, category: 'Swing', cl: 3.200, benteng: 3.180 }
 ];
 
 let report = `======================================================

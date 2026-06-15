@@ -1,16 +1,16 @@
 {
-  "lastUpdated": "2026-06-15T04:00:08.933Z",
+  "lastUpdated": "2026-06-15T04:10:15.156Z",
   "source": "klse.i3investor.com",
   "topVolume": [
     {
       "name": "PCHEM",
       "sector": "Bursa",
       "category": "Swing / Bluechip",
-      "price": 4.89,
-      "change": -0.45,
-      "changePct": -8.43,
-      "turnover": 94034211,
-      "volume": 19229900,
+      "price": 4.95,
+      "change": -0.39,
+      "changePct": -7.3,
+      "turnover": 98898525,
+      "volume": 19979500,
       "signal": "avoid",
       "reason": "Jerung Buang / Mendatar"
     },
@@ -21,8 +21,8 @@
       "price": 1.28,
       "change": 0.08,
       "changePct": 6.67,
-      "turnover": 65916544,
-      "volume": 51497300,
+      "turnover": 67005440,
+      "volume": 52348000,
       "signal": "buy",
       "reason": "⚡ Momentum Kuat: Jerung Mula Pam (Sesuai Intraday/Swing)"
     },
@@ -33,8 +33,8 @@
       "price": 0.8,
       "change": -0.01,
       "changePct": -1.23,
-      "turnover": 64024080,
-      "volume": 80030100,
+      "turnover": 64926480,
+      "volume": 81158100,
       "signal": "avoid",
       "reason": "VIP Sideway / Pullback (Pantau Peluang)"
     },
@@ -42,11 +42,11 @@
       "name": "PMETAL",
       "sector": "Bursa",
       "category": "Swing / Bluechip",
-      "price": 8.64,
-      "change": -0.33,
-      "changePct": -3.68,
-      "turnover": 41268096,
-      "volume": 4776400,
+      "price": 8.58,
+      "change": -0.39,
+      "changePct": -4.35,
+      "turnover": 44057442,
+      "volume": 5134900,
       "signal": "avoid",
       "reason": "Jerung Buang / Mendatar"
     },
@@ -57,8 +57,8 @@
       "price": 0.14,
       "change": -0.06,
       "changePct": -30,
-      "turnover": 40387298.00000001,
-      "volume": 288480700,
+      "turnover": 40764528.00000001,
+      "volume": 291175200,
       "signal": "avoid",
       "reason": "Jerung Buang / Mendatar"
     },
@@ -69,8 +69,8 @@
       "price": 0.265,
       "change": 0.065,
       "changePct": 32.5,
-      "turnover": 31475825.5,
-      "volume": 118776700,
+      "turnover": 31528163,
+      "volume": 118974200,
       "signal": "buy",
       "reason": "⚡ Momentum Kuat: Jerung Mula Pam (Sesuai Intraday/Swing)"
     },
@@ -81,20 +81,32 @@
       "price": 0.385,
       "change": 0.025,
       "changePct": 6.94,
-      "turnover": 20352832.5,
-      "volume": 52864500,
+      "turnover": 20703182.5,
+      "volume": 53774500,
       "signal": "buy",
       "reason": "⚡ Momentum Kuat: Jerung Mula Pam (Sesuai Intraday/Swing)"
+    },
+    {
+      "name": "TM",
+      "sector": "Bursa",
+      "category": "Swing / Bluechip",
+      "price": 7.45,
+      "change": 0.25,
+      "changePct": 3.47,
+      "turnover": 15623395,
+      "volume": 2097100,
+      "signal": "buy",
+      "reason": "⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold)"
     },
     {
       "name": "MPI",
       "sector": "Bursa",
       "category": "Swing / Bluechip",
-      "price": 49.02,
-      "change": 1.52,
-      "changePct": 3.2,
-      "turnover": 14225604,
-      "volume": 290200,
+      "price": 48.98,
+      "change": 1.48,
+      "changePct": 3.12,
+      "turnover": 15080941.999999998,
+      "volume": 307900,
       "signal": "buy",
       "reason": "⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold)"
     },
@@ -105,8 +117,8 @@
       "price": 6,
       "change": 0.4,
       "changePct": 7.14,
-      "turnover": 13681800,
-      "volume": 2280300,
+      "turnover": 14567400,
+      "volume": 2427900,
       "signal": "buy",
       "reason": "⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold)"
     },
@@ -114,11 +126,11 @@
       "name": "HIBISCS",
       "sector": "Bursa",
       "category": "Swing / Bluechip",
-      "price": 1.85,
-      "change": -0.16,
-      "changePct": -7.96,
-      "turnover": 12654370,
-      "volume": 6840200,
+      "price": 1.84,
+      "change": -0.17,
+      "changePct": -8.46,
+      "turnover": 12832160,
+      "volume": 6974000,
       "signal": "avoid",
       "reason": "Jerung Buang / Mendatar"
     },
@@ -129,20 +141,8 @@
       "price": 4.64,
       "change": 0.33,
       "changePct": 7.66,
-      "turnover": 11700688,
-      "volume": 2521700,
-      "signal": "buy",
-      "reason": "⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold)"
-    },
-    {
-      "name": "SUNCON",
-      "sector": "Bursa",
-      "category": "Swing / Bluechip",
-      "price": 7.32,
-      "change": 0.27,
-      "changePct": 3.83,
-      "turnover": 9838080,
-      "volume": 1344000,
+      "turnover": 11939648,
+      "volume": 2573200,
       "signal": "buy",
       "reason": "⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold)"
     },
@@ -150,11 +150,11 @@
       "name": "NATGATE",
       "sector": "Technology",
       "category": "Intraday / Momentum",
-      "price": 0.775,
-      "change": 0.015000000000000013,
-      "changePct": 1.97,
-      "turnover": 6507597.5,
-      "volume": 8396900,
+      "price": 0.78,
+      "change": 0.020000000000000018,
+      "changePct": 2.63,
+      "turnover": 6565182,
+      "volume": 8416900,
       "signal": "buy",
       "reason": "🔥 Golden Entry: Jerung Kumpul Selesa (Sesuai Swing/Hold)"
     },
@@ -165,10 +165,22 @@
       "price": 0.825,
       "change": -0.155,
       "changePct": -15.82,
-      "turnover": 5763120,
-      "volume": 6985600,
+      "turnover": 5768070,
+      "volume": 6991600,
       "signal": "avoid",
       "reason": "Jerung Buang / Mendatar"
+    },
+    {
+      "name": "SKYCHIP",
+      "sector": "Technology",
+      "category": "Swing / Bluechip",
+      "price": 3.4,
+      "change": 0.040000000000000036,
+      "changePct": 1.19,
+      "turnover": 4898720,
+      "volume": 1440800,
+      "signal": "buy",
+      "reason": "🔥 Golden Hold: Jerung Mula Kumpul (Sesuai Swing/Hold)"
     },
     {
       "name": "HONGSENG",
@@ -177,32 +189,32 @@
       "price": 0.01,
       "change": 0,
       "changePct": 0,
-      "turnover": 4091023,
-      "volume": 409102300,
+      "turnover": 4091209,
+      "volume": 409120900,
       "signal": "avoid",
       "reason": "Jerung Buang / Mendatar"
     },
     {
-      "name": "SKYCHIP",
-      "sector": "Technology",
+      "name": "SAM",
+      "sector": "Bursa",
       "category": "Swing / Bluechip",
-      "price": 3.38,
-      "change": 0.020000000000000018,
-      "changePct": 0.6,
-      "turnover": 3914040,
-      "volume": 1158000,
+      "price": 4.75,
+      "change": 0.4,
+      "changePct": 9.2,
+      "turnover": 4071225,
+      "volume": 857100,
       "signal": "buy",
-      "reason": "🔥 Golden Hold: Jerung Mula Kumpul (Sesuai Swing/Hold)"
+      "reason": "⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold)"
     },
     {
       "name": "NESTLE",
       "sector": "Bursa",
       "category": "Swing / Bluechip",
-      "price": 94.54,
-      "change": -1.06,
-      "changePct": -1.11,
-      "turnover": 3091458,
-      "volume": 32700,
+      "price": 94.62,
+      "change": -0.98,
+      "changePct": -1.03,
+      "turnover": 3226542,
+      "volume": 34100,
       "signal": "avoid",
       "reason": "Jerung Buang / Mendatar"
     },
@@ -224,15 +236,22 @@
       "name": "PENTECH",
       "price": 0.265,
       "changePct": 32.5,
-      "volume": 118776700,
-      "turnover": 31475825.5
+      "volume": 118974200,
+      "turnover": 31528163
+    },
+    {
+      "name": "SAM",
+      "price": 4.75,
+      "changePct": 9.2,
+      "volume": 857100,
+      "turnover": 4071225
     },
     {
       "name": "PENTA",
       "price": 4.64,
       "changePct": 7.66,
-      "volume": 2521700,
-      "turnover": 11700688
+      "volume": 2573200,
+      "turnover": 11939648
     },
     {
       "name": "UMSINT",
@@ -245,36 +264,43 @@
       "name": "UWC",
       "price": 6,
       "changePct": 7.14,
-      "volume": 2280300,
-      "turnover": 13681800
+      "volume": 2427900,
+      "turnover": 14567400
     },
     {
       "name": "DNEX",
       "price": 0.385,
       "changePct": 6.94,
-      "volume": 52864500,
-      "turnover": 20352832.5
+      "volume": 53774500,
+      "turnover": 20703182.5
     },
     {
       "name": "AAX",
       "price": 1.28,
       "changePct": 6.67,
-      "volume": 51497300,
-      "turnover": 65916544
+      "volume": 52348000,
+      "turnover": 67005440
     },
     {
-      "name": "SUNCON",
-      "price": 7.32,
-      "changePct": 3.83,
-      "volume": 1344000,
-      "turnover": 9838080
+      "name": "TM",
+      "price": 7.45,
+      "changePct": 3.47,
+      "volume": 2097100,
+      "turnover": 15623395
     },
     {
       "name": "MPI",
-      "price": 49.02,
-      "changePct": 3.2,
-      "volume": 290200,
-      "turnover": 14225604
+      "price": 48.98,
+      "changePct": 3.12,
+      "volume": 307900,
+      "turnover": 15080941.999999998
+    },
+    {
+      "name": "NATGATE",
+      "price": 0.78,
+      "changePct": 2.63,
+      "volume": 8416900,
+      "turnover": 6565182
     },
     {
       "name": "BKAWAN",
@@ -282,20 +308,6 @@
       "changePct": 2.46,
       "volume": 500,
       "turnover": 10400
-    },
-    {
-      "name": "NATGATE",
-      "price": 0.775,
-      "changePct": 1.97,
-      "volume": 8396900,
-      "turnover": 6507597.5
-    },
-    {
-      "name": "LPI",
-      "price": 15.44,
-      "changePct": 1.85,
-      "volume": 19100,
-      "turnover": 294904
     },
     {
       "name": "F&N",
@@ -306,10 +318,17 @@
     },
     {
       "name": "SKYCHIP",
-      "price": 3.38,
-      "changePct": 0.6,
-      "volume": 1158000,
-      "turnover": 3914040
+      "price": 3.4,
+      "changePct": 1.19,
+      "volume": 1440800,
+      "turnover": 4898720
+    },
+    {
+      "name": "LPI",
+      "price": 15.24,
+      "changePct": 0.53,
+      "volume": 19300,
+      "turnover": 294132
     }
   ]
 }

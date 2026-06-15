@@ -108,7 +108,7 @@
             <!-- Panel 2: 3 Saham Target Semasa -->
             <div style="background: rgba(30, 41, 59, 0.7); padding: 1.2rem; border-radius: 8px; border: 1px solid #334155;">
                 <h3 style="color: #f472b6; font-size: 1.1rem; margin-bottom: 0.8rem; border-bottom: 1px solid #334155; padding-bottom: 0.5rem; display: flex; justify-content: space-between;">
-                    <span>🎯 3 Sasaran Semasa (Dikesan 10 Jun)</span>
+                    <span>🎯 Sasaran Swing Aktif (Live Tracking)</span>
                     <span style="font-size: 0.8rem; color: #f472b6; font-weight: bold; animation: pulse 2s infinite;">LIVE TRACKING</span>
                 </h3>
                 <div id="live-targets-container" style="display: flex; flex-direction: column; gap: 0.6rem;">
@@ -647,9 +647,8 @@
 
         function updateLiveTargets(data) {
             const targets = [
-                { name: 'ZETRIX', entry: 0.845, date: '10 Jun', category: 'Intraday', cl: 0.803, benteng: 0.800 },
-                { name: 'GIIB', entry: 0.480, date: '10 Jun', category: 'Intraday', cl: 0.455, benteng: 0.450 },
-                { name: 'NATGATE', entry: 0.765, date: '10 Jun', category: 'Swing', cl: 0.727, benteng: 0.725 }
+                { name: 'NATGATE', entry: 0.765, date: '10 Jun', category: 'Swing', cl: 0.727, benteng: 0.725 },
+                { name: 'SKYCHIP', entry: 3.380, date: '15 Jun', category: 'Swing', cl: 3.200, benteng: 3.180 }
             ];
             
             const container = document.getElementById('live-targets-container');
