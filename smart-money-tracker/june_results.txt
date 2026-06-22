@@ -1,0 +1,93 @@
+=====================================================================
+📊 TARGETED BACKTEST: 1 JUNE 2026 - TODAY (23 JUNE 2026)
+=====================================================================
+
+Jumlah Trade Dikesan Sejak 1 Jun: 74
+
+1. STRATEGI: SIMPLE EXIT
+   + Win Rate             : 40.5% (30 trade untung)
+   + Purata Return / Trade: -0.40%
+   + JUMLAH KESELURUHAN PROFIT: -29.86%
+
+2. STRATEGI: 50-50 PROFIT LOCK SOP
+   + Win Rate             : 40.5% (30 trade untung)
+   + Purata Return / Trade: -0.68%
+   + JUMLAH KESELURUHAN PROFIT: -50.58%
+
+=====================================================================
+📋 SENARAI SEMUA TRADES DARI 1 JUN - SEKARANG:
+=====================================================================
+   📅 2026-06-01 | 📈 BURSA | Beli: RM 1683.070 | Pullback: 5.0% | Return SOP: +0.49% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-01 | 📈 SSF | Beli: RM 0.380 | Pullback: 9.5% | Return SOP: +2.63% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-01 | 📈 VLB | Beli: RM 0.560 | Pullback: 5.1% | Return SOP: -3.00% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-01 | 📈 UMC | Beli: RM 5.850 | Pullback: 3.0% | Return SOP: +0.85% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-01 | 📈 UNITRADE INDUSTRIES | Beli: RM 0.240 | Pullback: 12.7% | Return SOP: -3.00% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-02 | 📈 SDG | Beli: RM 5.810 | Pullback: 9.9% | Return SOP: +3.27% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 MPI | Beli: RM 49.060 | Pullback: 1.9% | Return SOP: -4.70% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-02 | 📈 YTL | Beli: RM 4.160 | Pullback: 5.9% | Return SOP: +1.68% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 MAYBANK | Beli: RM 10.640 | Pullback: 14.3% | Return SOP: +4.89% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 KLK | Beli: RM 20.320 | Pullback: 12.3% | Return SOP: +2.17% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 UTDPLT | Beli: RM 31.080 | Pullback: 13.4% | Return SOP: +3.67% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 CARLSBG | Beli: RM 17.180 | Pullback: 11.4% | Return SOP: -6.84% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-02 | 📈 HLIND | Beli: RM 19.000 | Pullback: 2.5% | Return SOP: -2.74% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 PMETAL | Beli: RM 9.000 | Pullback: 2.7% | Return SOP: -3.54% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-02 | 📈 TOPGLOV | Beli: RM 0.805 | Pullback: 8.5% | Return SOP: -7.45% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 PETGAS | Beli: RM 17.100 | Pullback: 11.4% | Return SOP: +1.40% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 VITROX | Beli: RM 6.770 | Pullback: 3.3% | Return SOP: +11.28% | TP10 Hit: YA | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 KGB | Beli: RM 7.630 | Pullback: 3.2% | Return SOP: +1.70% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 TMK | Beli: RM 1.930 | Pullback: 1.5% | Return SOP: +19.25% | TP10 Hit: YA | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 DLADY | Beli: RM 32.960 | Pullback: 2.5% | Return SOP: -2.12% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 SUNCON | Beli: RM 7.490 | Pullback: 2.7% | Return SOP: -3.78% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-02 | 📈 PENTA | Beli: RM 4.560 | Pullback: 2.6% | Return SOP: -4.70% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-02 | 📈 KLCC | Beli: RM 8.860 | Pullback: 7.4% | Return SOP: +2.26% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 DNEX | Beli: RM 0.320 | Pullback: 13.5% | Return SOP: -4.52% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-02 | 📈 UWC | Beli: RM 5.930 | Pullback: 2.8% | Return SOP: -6.60% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-02 | 📈 TANCO | Beli: RM 1.750 | Pullback: 1.7% | Return SOP: -5.77% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-02 | 📈 ADNEX | Beli: RM 0.310 | Pullback: 1.6% | Return SOP: +10.65% | TP10 Hit: YA | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 AMBEST | Beli: RM 0.720 | Pullback: 4.6% | Return SOP: -3.67% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-02 | 📈 ISF | Beli: RM 0.565 | Pullback: 7.4% | Return SOP: -9.01% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-02 | 📈 KEEMING | Beli: RM 1.050 | Pullback: 5.4% | Return SOP: +18.81% | TP10 Hit: YA | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 ICENTS | Beli: RM 0.475 | Pullback: 6.9% | Return SOP: -6.06% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-02 | 📈 NORTHERN SOLAR HOLDINGS | Beli: RM 0.700 | Pullback: 13.6% | Return SOP: -6.46% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-02 | 📈 OHM | Beli: RM 0.370 | Pullback: 5.1% | Return SOP: -1.35% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 PEOPLE | Beli: RM 0.240 | Pullback: 14.3% | Return SOP: +2.08% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 KEYFIELD | Beli: RM 1.600 | Pullback: 10.1% | Return SOP: -4.82% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-02 | 📈 MKH OIL PALM (EAST KALIMANTAN) | Beli: RM 0.625 | Pullback: 13.2% | Return SOP: -1.60% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 MKHOP | Beli: RM 0.625 | Pullback: 13.2% | Return SOP: -1.60% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 OBHB | Beli: RM 0.215 | Pullback: 4.4% | Return SOP: -2.33% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 PLINTAS | Beli: RM 0.930 | Pullback: 6.5% | Return SOP: 0.00% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 SDCG | Beli: RM 0.680 | Pullback: 2.9% | Return SOP: +1.47% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 TSA | Beli: RM 0.850 | Pullback: 7.6% | Return SOP: +3.53% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 WINSTAR | Beli: RM 0.565 | Pullback: 10.3% | Return SOP: +0.88% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 DSS | Beli: RM 0.265 | Pullback: 8.6% | Return SOP: -6.66% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-02 | 📈 KITACON | Beli: RM 0.675 | Pullback: 10.6% | Return SOP: +2.22% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 RADIUM | Beli: RM 0.500 | Pullback: 2.9% | Return SOP: -1.00% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 AMEREIT | Beli: RM 1.600 | Pullback: 11.1% | Return SOP: -2.50% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 BETA | Beli: RM 0.635 | Pullback: 0.8% | Return SOP: -5.29% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-02 | 📈 CNERGEN | Beli: RM 0.515 | Pullback: 10.4% | Return SOP: -7.71% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-02 | 📈 LEFORM | Beli: RM 0.170 | Pullback: 8.1% | Return SOP: -5.85% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-02 | 📈 MNHLDG | Beli: RM 2.480 | Pullback: 2.0% | Return SOP: +10.65% | TP10 Hit: YA | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 SUNVIEW | Beli: RM 0.375 | Pullback: 14.8% | Return SOP: -1.33% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 YEWLEE | Beli: RM 0.570 | Pullback: 0.9% | Return SOP: +1.75% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 ECOMATE | Beli: RM 0.860 | Pullback: 4.4% | Return SOP: -0.58% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 PEKAT | Beli: RM 1.640 | Pullback: 13.7% | Return SOP: +3.66% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 PWRWELL | Beli: RM 0.815 | Pullback: 0.6% | Return SOP: +7.98% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-02 | 📈 GREATEC | Beli: RM 2.690 | Pullback: 8.2% | Return SOP: -4.44% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-02 | 📈 SALIRAN GROUP BERHAD | Beli: RM 0.215 | Pullback: 12.2% | Return SOP: -5.26% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-03 | 📈 UMSINT | Beli: RM 0.750 | Pullback: 11.8% | Return SOP: +2.67% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-03 | 📈 VSTECS | Beli: RM 2.073 | Pullback: 5.0% | Return SOP: -7.05% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-03 | 📈 FAMIERA | Beli: RM 0.230 | Pullback: 11.5% | Return SOP: -4.35% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-03 | 📈 GOHUB | Beli: RM 1.280 | Pullback: 9.9% | Return SOP: -3.12% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-03 | 📈 JPG | Beli: RM 1.660 | Pullback: 14.9% | Return SOP: +2.41% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-03 | 📈 MEGA FORTRIS BERHAD | Beli: RM 1.630 | Pullback: 2.4% | Return SOP: -5.98% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-03 | 📈 SWIFT HAULAGE BERHAD | Beli: RM 0.410 | Pullback: 13.7% | Return SOP: -5.37% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-03 | 📈 MEGAFB | Beli: RM 1.630 | Pullback: 2.4% | Return SOP: -5.98% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-04 | 📈 UNISEM | Beli: RM 5.070 | Pullback: 5.8% | Return SOP: -5.49% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-04 | 📈 CBHB | Beli: RM 0.620 | Pullback: 3.9% | Return SOP: +9.44% | TP10 Hit: YA | SL Hit: TIDAK
+   📅 2026-06-04 | 📈 SFPTECH | Beli: RM 0.265 | Pullback: 7.0% | Return SOP: +5.00% | TP10 Hit: YA | SL Hit: TIDAK
+   📅 2026-06-04 | 📈 5E RESOURCES BERHAD | Beli: RM 0.260 | Pullback: 13.3% | Return SOP: -8.60% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-04 | 📈 TEAMSTR | Beli: RM 0.250 | Pullback: 7.4% | Return SOP: -2.00% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-04 | 📈 THMY | Beli: RM 1.690 | Pullback: 7.1% | Return SOP: -7.59% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-04 | 📈 KTI | Beli: RM 0.525 | Pullback: 8.7% | Return SOP: +2.86% | TP10 Hit: TIDAK | SL Hit: TIDAK
+   📅 2026-06-04 | 📈 CORAZA | Beli: RM 0.975 | Pullback: 7.1% | Return SOP: -4.49% | TP10 Hit: TIDAK | SL Hit: YA
+   📅 2026-06-04 | 📈 SOLARVEST HOLDINGS BERHAD | Beli: RM 2.910 | Pullback: 14.2% | Return SOP: +4.12% | TP10 Hit: TIDAK | SL Hit: TIDAK

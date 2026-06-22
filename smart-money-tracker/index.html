@@ -1,707 +1,839 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ms">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bursa Smart Money Tracker</title>
+    <title>Bursa Smart Money Consolidation Suite</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg-color: #0f172a;
-            --panel-bg: #1e293b;
+            --bg-color: #0b0f19;
+            --panel-bg: rgba(22, 28, 45, 0.7);
+            --panel-border: rgba(51, 65, 85, 0.5);
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
-            --accent: #3b82f6;
+            --accent: #6366f1;
+            --accent-glow: rgba(99, 102, 241, 0.4);
             --success: #10b981;
+            --success-glow: rgba(16, 185, 129, 0.3);
             --danger: #ef4444;
             --warning: #f59e0b;
+            --info: #0ea5e9;
         }
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', -apple-system, sans-serif; }
-        body { background-color: var(--bg-color); color: var(--text-main); padding: 2rem; }
-        header { margin-bottom: 2rem; display: flex; justify-content: space-between; align-items: flex-end; }
-        h1 { font-size: 2rem; font-weight: 700; background: linear-gradient(to right, #60a5fa, #a78bfa); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-        .subtitle { color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem; }
-        
-        .filters { background: var(--panel-bg); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; display: flex; gap: 1.5rem; flex-wrap: wrap; border: 1px solid #334155; }
-        .filter-group { display: flex; flex-direction: column; gap: 0.5rem; }
-        label { font-size: 0.85rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 600; }
-        select, input { background: #0f172a; border: 1px solid #334155; color: white; padding: 0.5rem 1rem; border-radius: 6px; outline: none; transition: border-color 0.2s; }
-        select:focus, input:focus { border-color: var(--accent); }
-        button { background: var(--accent); color: white; border: none; padding: 0.5rem 1.5rem; border-radius: 6px; font-weight: 600; cursor: pointer; transition: background 0.2s, transform 0.1s; }
-        button:hover { background: #2563eb; }
-        button:active { transform: scale(0.98); }
 
-        table { width: 100%; border-collapse: collapse; background: var(--panel-bg); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); }
-        th, td { padding: 1rem; text-align: left; }
-        th { background: #0f172a; color: var(--text-muted); font-weight: 600; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em; border-bottom: 1px solid #334155; }
-        tr { border-bottom: 1px solid #334155; transition: background 0.2s; }
-        tr:hover { background: #334155; }
-        tr:last-child { border-bottom: none; }
-        
-        .counter-name { font-weight: 600; font-size: 1.1rem; }
-        .sector { font-size: 0.8rem; color: var(--text-muted); background: #0f172a; padding: 0.2rem 0.5rem; border-radius: 4px; display: inline-block; margin-top: 0.2rem; }
-        .price { font-weight: 600; font-size: 1.1rem; }
-        .up { color: var(--success); }
-        .down { color: var(--danger); }
-        .badge { padding: 0.3rem 0.6rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; }
-        .badge.buy { background: rgba(16, 185, 129, 0.2); color: var(--success); border: 1px solid rgba(16, 185, 129, 0.5); }
-        .badge.avoid { background: rgba(239, 68, 68, 0.2); color: var(--danger); border: 1px solid rgba(239, 68, 68, 0.5); }
-        
-        .pulse { display: inline-block; width: 8px; height: 8px; background-color: var(--success); border-radius: 50%; margin-right: 8px; box-shadow: 0 0 8px var(--success); animation: pulse 2s infinite; }
-        @keyframes pulse { 0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); } 70% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); } 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); } }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
 
-        /* Styles for Educational Section */
-        .info-section { background: var(--panel-bg); padding: 2rem; border-radius: 12px; margin-top: 2rem; border: 1px solid #334155; }
-        .info-section h2 { font-size: 1.5rem; margin-bottom: 1.5rem; color: #a78bfa; font-weight: 700; }
-        .info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-        .info-card { background: #0f172a; padding: 1.5rem; border-radius: 8px; border-left: 4px solid var(--accent); transition: transform 0.2s; }
-        .info-card:hover { transform: translateY(-3px); }
-        .info-card.warning { border-left-color: var(--warning); }
-        .info-card.danger { border-left-color: var(--danger); }
-        .info-card.success { border-left-color: var(--success); }
-        .info-card.info { border-left-color: #a78bfa; }
-        .info-card h3 { font-size: 1.1rem; margin-bottom: 0.8rem; color: var(--text-main); }
-        .info-card p, .info-card ul { font-size: 0.9rem; color: var(--text-muted); line-height: 1.6; }
-        .info-card ul { margin-left: 1.2rem; margin-top: 0.5rem; }
-        .info-card li { margin-bottom: 0.4rem; }
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.08) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text-main);
+            padding: 2rem;
+            min-height: 100vh;
+        }
 
-        /* Mobile Responsive Styles */
-        .table-container { width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: 12px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1); margin-bottom: 2rem; }
+        /* Header styling */
+        header {
+            margin-bottom: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid rgba(51, 65, 85, 0.3);
+        }
+
+        .brand h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #a5b4fc 0%, #6366f1 50%, #34d399 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-top: 0.4rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .pulse {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background-color: var(--success);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--success);
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+
+        /* Tabs Navigation */
+        .tabs-nav {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            background: rgba(15, 23, 42, 0.5);
+            padding: 0.4rem;
+            border-radius: 10px;
+            border: 1px solid var(--panel-border);
+            width: fit-content;
+        }
+
+        .tab-btn {
+            background: transparent;
+            color: var(--text-muted);
+            border: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .tab-btn.active {
+            background: var(--accent);
+            color: white;
+            box-shadow: 0 4px 12px var(--accent-glow);
+        }
+
+        .tab-btn:hover:not(.active) {
+            color: white;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        /* View sections */
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Cards layout */
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .ticker-card {
+            background: var(--panel-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--panel-border);
+            border-radius: 16px;
+            padding: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .ticker-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(99, 102, 241, 0.6);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.15);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 1rem;
+        }
+
+        .card-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: color 0.2s;
+        }
+
+        .card-title:hover {
+            color: #a5b4fc;
+        }
+
+        .card-sector {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.2rem;
+        }
+
+        .card-price-info {
+            text-align: right;
+        }
+
+        .card-price {
+            font-size: 1.4rem;
+            font-weight: 700;
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .card-change {
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: 0.2rem;
+        }
+
+        /* Zones */
+        .zone-badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.35rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            margin-bottom: 1rem;
+        }
+
+        .zone-buy {
+            background: rgba(16, 185, 129, 0.15);
+            color: var(--success);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+            box-shadow: 0 0 15px var(--success-glow);
+        }
+
+        .zone-pending {
+            background: rgba(14, 165, 233, 0.15);
+            color: var(--info);
+            border: 1px solid rgba(14, 165, 233, 0.4);
+        }
+
+        .zone-chase {
+            background: rgba(245, 158, 11, 0.15);
+            color: var(--warning);
+            border: 1px solid rgba(245, 158, 11, 0.4);
+        }
+
+        /* Metric bar */
+        .metric-bar-container {
+            margin: 1rem 0;
+        }
+
+        .metric-bar-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 0.4rem;
+        }
+
+        .metric-bar-bg {
+            background: rgba(255, 255, 255, 0.05);
+            height: 8px;
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .metric-bar-fill {
+            height: 100%;
+            border-radius: 4px;
+            background: linear-gradient(to right, var(--success), var(--accent));
+            transition: width 0.5s ease;
+        }
+
+        /* Parameters list */
+        .params-list {
+            background: rgba(15, 23, 42, 0.4);
+            border-radius: 10px;
+            padding: 0.8rem;
+            margin-top: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .param-row {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.85rem;
+            padding: 0.4rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .param-row:last-child {
+            border-bottom: none;
+        }
+
+        .param-label {
+            color: var(--text-muted);
+        }
+
+        .param-value {
+            font-weight: 600;
+            color: white;
+        }
+
+        /* Calculator Widget */
+        .interactive-panel {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        @media (max-width: 968px) {
+            .interactive-panel {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .calc-card {
+            background: linear-gradient(135deg, #161e33 0%, #0f172a 100%);
+            border: 1px solid var(--accent);
+            border-radius: 16px;
+            padding: 1.8rem;
+            box-shadow: 0 10px 35px rgba(99, 102, 241, 0.15);
+        }
+
+        .calc-header {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: #a5b4fc;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .calc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        @media (max-width: 480px) {
+            .calc-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .calc-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .calc-group label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 700;
+        }
+
+        .calc-group select, .calc-group input {
+            background: #0b0f19;
+            border: 1px solid rgba(99, 102, 241, 0.4);
+            color: white;
+            padding: 0.65rem 1rem;
+            border-radius: 8px;
+            outline: none;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .calc-group select:focus, .calc-group input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 10px rgba(99, 102, 241, 0.3);
+        }
+
+        .calc-results {
+            background: rgba(11, 15, 25, 0.8);
+            border-radius: 12px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .result-row:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+            margin-top: 0.5rem;
+            padding-top: 1rem;
+            border-top: 2px dashed rgba(255, 255, 255, 0.1);
+        }
+
+        .result-label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .result-value {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .result-value.success {
+            color: var(--success);
+            text-shadow: 0 0 10px rgba(16, 185, 129, 0.2);
+        }
+
+        .result-value.danger {
+            color: var(--danger);
+            text-shadow: 0 0 10px rgba(239, 68, 68, 0.2);
+        }
+
+        /* General Scan styling */
+        .filters-panel {
+            background: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            border-radius: 14px;
+            padding: 1.2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: flex-end;
+        }
+
+        .filter-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .filter-item label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .filter-item select, .filter-item input {
+            background: #0b0f19;
+            border: 1px solid var(--panel-border);
+            color: white;
+            padding: 0.5rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        /* General Table styling */
+        .table-wrapper {
+            background: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            margin-bottom: 3rem;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 800px;
+        }
+
+        th {
+            background: rgba(15, 23, 42, 0.8);
+            color: var(--text-muted);
+            font-weight: 700;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 1rem;
+            border-bottom: 1px solid var(--panel-border);
+            text-align: left;
+        }
+
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid rgba(51, 65, 85, 0.2);
+            font-size: 0.95rem;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        .tv-link {
+            color: var(--info);
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.2s;
+        }
+
+        .tv-link:hover {
+            color: #38bdf8;
+            text-decoration: underline;
+        }
+
+        /* Quick Info Board */
+        .guide-board {
+            background: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            border-radius: 16px;
+            padding: 1.8rem;
+            margin-bottom: 2rem;
+        }
+
+        .guide-board h3 {
+            font-family: 'Outfit', sans-serif;
+            color: #a5b4fc;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .guide-item {
+            background: rgba(15, 23, 42, 0.4);
+            padding: 1rem;
+            border-radius: 10px;
+            border-left: 3px solid var(--accent);
+        }
+
+        .guide-item h4 {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: white;
+            margin-bottom: 0.4rem;
+        }
+
+        .guide-item p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+
+        /* Top control panel */
+        .controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .history-input {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(15, 23, 42, 0.5);
+            padding: 0.4rem 0.8rem;
+            border-radius: 8px;
+            border: 1px solid var(--panel-border);
+        }
+
+        .history-input input {
+            background: #0b0f19;
+            border: 1px solid var(--panel-border);
+            color: white;
+            padding: 0.3rem 0.5rem;
+            border-radius: 4px;
+            outline: none;
+            color-scheme: dark;
+            font-size: 0.85rem;
+            cursor: pointer;
+        }
+
+        .btn {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 0.5rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn:hover {
+            background: #4f46e5;
+            box-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-history {
+            background: #a78bfa;
+        }
+
+        .btn-history:hover {
+            background: #8b5cf6;
+            box-shadow: 0 0 10px rgba(139, 92, 246, 0.4);
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
             body { padding: 1rem; }
-            header { flex-direction: column; align-items: flex-start; gap: 1rem; }
-            h1 { font-size: 1.5rem; }
-            .filters { flex-direction: column; gap: 1rem; padding: 1rem; }
-            .filter-group { width: 100%; }
-            .filter-group input, .filter-group select, .filter-group button { width: 100% !important; }
-            .info-section { padding: 1.5rem; }
-            table { min-width: 700px; }
+            header { flex-direction: column; align-items: flex-start; }
+            .controls { width: 100%; justify-content: space-between; }
         }
     </style>
 </head>
 <body>
+
     <header>
-        <div>
-            <h1>Bursa Smart Money Tracker</h1>
-            <p class="subtitle" id="dashboardSubtitle"><span class="pulse"></span>Live Market Scanner - Tracking Top Turnover & Momentum</p>
-            <div id="market-sentiment" style="margin-top: 0.8rem; display: inline-flex; align-items: center; gap: 0.5rem; background: #1e293b; padding: 0.4rem 1rem; border-radius: 20px; border: 1px solid #334155; font-weight: 600; font-size: 0.85rem;">
+        <div class="brand">
+            <h1>Bursa Smart Money Consolidation Suite</h1>
+            <div class="subtitle" id="dashboardSubtitle">
+                <span class="pulse"></span> Live Market Scanner • Mengimbas Tapak Tegar & VSA
+            </div>
+            <div style="margin-top: 0.8rem; display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(15, 23, 42, 0.5); padding: 0.4rem 1rem; border-radius: 20px; border: 1px solid var(--panel-border); font-weight: 600; font-size: 0.85rem;">
                 Sentimen Pasaran: <span id="sentiment-text" style="color: #94a3b8;">Menganalisis...</span>
             </div>
         </div>
-        <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
-            <div style="display: flex; align-items: center; gap: 0.5rem; background: var(--panel-bg); padding: 0.3rem 0.8rem; border-radius: 6px; border: 1px solid #334155;">
-                <label for="historyDate" style="color: #a78bfa; margin: 0; cursor: pointer;">Bukti Sejarah:</label>
-                <input type="date" id="historyDate" style="background: #0f172a; color: white; border: 1px solid #475569; padding: 0.3rem 0.5rem; border-radius: 4px; outline: none; color-scheme: dark; font-family: inherit; cursor: pointer;">
-                <button id="loadHistoryBtn" style="background: #a78bfa; padding: 0.3rem 0.8rem; font-size: 0.8rem;">📂 Semak</button>
+
+        <div class="controls">
+            <div class="history-input">
+                <label for="historyDate" style="color: #a5b4fc; font-size: 0.8rem; font-weight: 700; cursor: pointer;">Arkib Sejarah:</label>
+                <input type="date" id="historyDate">
+                <button id="loadHistoryBtn" class="btn btn-history">📂 Semak</button>
             </div>
-            <button id="refreshBtn">🔄 Refresh Live</button>
+            <button id="refreshBtn" class="btn">🔄 Refresh Live</button>
         </div>
     </header>
 
-    <!-- PROOF OF CONCEPT & LIVE TARGETS TRACKING -->
-    <div id="poc-tracking-section" style="background: linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; border: 1px solid #a78bfa; box-shadow: 0 4px 15px rgba(167, 139, 250, 0.15);">
-        <h2 style="font-size: 1.4rem; color: #c084fc; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">🏆 Watchlist Sasaran (Live Tracking)</h2>
-        <div style="font-size: 0.85rem; color: #cbd5e1; background: rgba(15, 23, 42, 0.4); padding: 0.8rem 1rem; border-radius: 8px; margin-bottom: 1.2rem; border-left: 3px solid #c084fc; line-height: 1.5;">
-            <strong>ℹ️ Kriteria Tapisan Sistem:</strong><br>
-            • <strong>Sasaran Semasa:</strong> Saham berstatus <code>BUY</code>, harga patut (<code>&le; RM 3.00</code>), dana jerung kuat (<code>Turnover &ge; RM 9 Juta</code>), dan berada pada paras permulaan/diskaun.
-        </div>
-        <div>
-            <!-- Panel 2: 3 Saham Target Semasa -->
-            <div style="background: rgba(30, 41, 59, 0.7); padding: 1.2rem; border-radius: 8px; border: 1px solid #334155;">
-                <h3 style="color: #f472b6; font-size: 1.1rem; margin-bottom: 0.8rem; border-bottom: 1px solid #334155; padding-bottom: 0.5rem; display: flex; justify-content: space-between;">
-                    <span>🎯 Sasaran Swing Aktif (Live Tracking)</span>
-                    <span style="font-size: 0.8rem; color: #f472b6; font-weight: bold; animation: pulse 2s infinite;">LIVE TRACKING</span>
-                </h3>
-                <div id="live-targets-container" style="display: flex; flex-direction: column; gap: 0.6rem;">
-                    <!-- Will be updated dynamically by JS -->
+    <div class="tabs-nav">
+        <button class="tab-btn active" onclick="switchTab('core-tab')">🏆 11 Saham Tumpuan Utama</button>
+        <button class="tab-btn" onclick="switchTab('general-tab')">🌐 Scanner Pasaran Luas</button>
+    </div>
+
+    <!-- TAB 1: CORE FOCUS TICKERS -->
+    <div id="core-tab" class="tab-content active">
+        
+        <div class="interactive-panel">
+            <!-- Panel Kiri: Core Ticker Cards Grid -->
+            <div>
+                <div class="cards-grid" id="coreCardsContainer">
+                    <!-- Dynamic Ticker Cards will be inserted here -->
+                </div>
+            </div>
+
+            <!-- Panel Kanan: Interactive Calculator Widget -->
+            <div>
+                <div class="calc-card">
+                    <div class="calc-header">
+                        🧮 Kalkulator Trading Tapak Tegar
+                    </div>
+                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem; line-height: 1.4;">
+                        Pilih saham yang berada di <strong>BUY ZONE</strong> untuk merancang saiz modal, lot pembelian, dan risiko stop loss secara matematik.
+                    </p>
+                    
+                    <div class="calc-grid">
+                        <div class="calc-group">
+                            <label>Pilih Saham</label>
+                            <select id="calcTicker" onchange="calculatePlan()">
+                                <!-- Options populated dynamically -->
+                            </select>
+                        </div>
+                        <div class="calc-group">
+                            <label>Modal Anda (RM)</label>
+                            <input type="number" id="calcCapital" value="5000" min="500" step="500" oninput="calculatePlan()">
+                        </div>
+                    </div>
+
+                    <div class="calc-results">
+                        <div class="result-row">
+                            <span class="result-label">Harga Semasa</span>
+                            <span class="result-value" id="calcCurrentPrice">RM 0.000</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="result-label">Lantai Sokongan (Support Floor)</span>
+                            <span class="result-value" style="color: #60a5fa;" id="calcFloorPrice">RM 0.000</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="result-label">Stop Loss (SL) (-3.0%)</span>
+                            <span class="result-value danger" id="calcSlPrice">RM 0.000</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="result-label">Jumlah Unit Boleh Beli</span>
+                            <span class="result-value" id="calcLots">0 Lot (0 unit)</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="result-label">Jumlah Modal Digunakan</span>
+                            <span class="result-value" id="calcActualCapital">RM 0.00</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="result-label">Maksimum Kerugian (Jika SL Hit)</span>
+                            <span class="result-value danger" id="calcMaxRisk">RM 0.00 (0.00%)</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="result-label">Target Profit 1 (TP1) (+10.0%)</span>
+                            <span class="result-value success" id="calcTp1">RM 0.00 (Gunting RM 0.00)</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="result-label">Target Profit 2 (TP2) (+20.0%)</span>
+                            <span class="result-value success" style="color: #a78bfa;" id="calcTp2">RM 0.00 (Gunting RM 0.00)</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
     </div>
 
-    <div id="vip-watchlist-section" style="background: #1e293b; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; border: 1px solid #3b82f6; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
-            <h2 style="font-size: 1.3rem; color: #60a5fa; margin: 0;">🎯 Radar Jerung VIP (Top 4 Momentum Tinggi)</h2>
-        </div>
-        <div id="vip-watchlist-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-            <!-- VIP data will be populated here -->
-        </div>
-    </div>
-
-    <div id="accumulation-watchlist-section" style="background: #1e293b; padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; border: 1px solid #10b981; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 1rem;">
-            <h2 style="font-size: 1.3rem; color: #34d399; margin: 0;">🎯 Radar Akumulasi (Beli Dari Bawah & Swing)</h2>
-            <p style="font-size: 0.85rem; color: #a7f3d0; margin: 0;">Saham belum terbang, jerung baru mula kumpul. (Turnover > 3M, Kenaikan < 3%, Harga <= RM 3.00)</p>
-        </div>
-        <div id="accumulation-watchlist-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-            <!-- Accumulation data will be populated here -->
-        </div>
-    </div>
-
-    <!-- FORMULA SECTION -->
-    <div style="background: linear-gradient(135deg, #1e1b4b 0%, #1e293b 100%); padding: 1.5rem; border-radius: 12px; margin-bottom: 2rem; border: 1px solid #4f46e5;">
-        <h2 style="font-size: 1.2rem; color: #a78bfa; margin-bottom: 1rem;">🧮 Formula Yang Digunakan</h2>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
-            <div style="background: rgba(99,102,241,0.15); padding: 1rem; border-radius: 8px; border-left: 3px solid #6366f1;">
-                <div style="font-size: 0.75rem; color: #a5b4fc; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">📐 Nilai Dagangan (Turnover)</div>
-                <div style="font-size: 1rem; color: #e0e7ff; font-family: monospace; font-weight: bold;">Harga × Volume</div>
-                <div style="font-size: 0.8rem; color: #94a3b8; margin-top: 0.4rem;">Nilai RM sebenar yang bergerak hari ini</div>
+    <!-- TAB 2: GENERAL BROAD MARKET SCANNER -->
+    <div id="general-tab" class="tab-content">
+        
+        <div class="filters-panel">
+            <div class="filter-item">
+                <label>Cari Kaunter</label>
+                <input type="text" id="searchCounter" placeholder="Nama kaunter..." oninput="applyFilters()">
             </div>
-            <div style="background: rgba(16,185,129,0.15); padding: 1rem; border-radius: 8px; border-left: 3px solid #10b981;">
-                <div style="font-size: 0.75rem; color: #6ee7b7; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">✅ Filter Masuk Senarai</div>
-                <div style="font-size: 0.85rem; color: #e2e8f0; font-weight: 600;">Turnover ≥ RM 3,000,000</div>
-                <div style="font-size: 0.8rem; color: #94a3b8; margin-top: 0.4rem;">Buang saham tanpa sokongan duit jerung sebenar</div>
+            <div class="filter-item">
+                <label>Harga Min (RM)</label>
+                <input type="number" id="minPrice" value="0.05" step="0.05" style="width: 100px;" oninput="applyFilters()">
             </div>
-            <div style="background: rgba(16,185,129,0.1); padding: 1rem; border-radius: 8px; border-left: 3px solid #34d399;">
-                <div style="font-size: 0.75rem; color: #6ee7b7; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">🟢 Radar Akumulasi (Swing)</div>
-                <div style="font-size: 0.85rem; color: #e2e8f0; font-weight: 600;">Turnover ≥ 3M<br>Kenaikan: 0% – 3%<br>Harga ≤ RM 3.00</div>
-                <div style="font-size: 0.8rem; color: #94a3b8; margin-top: 0.4rem;">Saham murah yang jerung baru kumpul, belum terbang</div>
+            <div class="filter-item">
+                <label>Harga Max (RM)</label>
+                <input type="number" id="maxPrice" value="3.00" step="0.05" style="width: 100px;" oninput="applyFilters()">
             </div>
-            <div style="background: rgba(59,130,246,0.15); padding: 1rem; border-radius: 8px; border-left: 3px solid #3b82f6;">
-                <div style="font-size: 0.75rem; color: #93c5fd; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">🎯 VIP Top 4 (Radar Jerung)</div>
-                <div style="font-size: 0.85rem; color: #e2e8f0; font-weight: 600;">Turnover ≥ 3M<br>Naik > 0%<br>Harga ≤ RM 5.00</div>
-                <div style="font-size: 0.8rem; color: #94a3b8; margin-top: 0.4rem;">4 saham dengan % kenaikan tertinggi + sokongan duit besar</div>
-            </div>
-            <div style="background: rgba(239,68,68,0.1); padding: 1rem; border-radius: 8px; border-left: 3px solid #ef4444;">
-                <div style="font-size: 0.75rem; color: #fca5a5; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">🔴 Signal AVOID</div>
-                <div style="font-size: 0.85rem; color: #e2e8f0; font-weight: 600;">Perubahan ≤ 0%</div>
-                <div style="font-size: 0.8rem; color: #94a3b8; margin-top: 0.4rem;">Jerung buang barang / saham mendatar</div>
-            </div>
-            <div style="background: rgba(245,158,11,0.1); padding: 1rem; border-radius: 8px; border-left: 3px solid #f59e0b;">
-                <div style="font-size: 0.75rem; color: #fcd34d; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem;">📡 Sumber Data</div>
-                <div style="font-size: 0.85rem; color: #e2e8f0; font-weight: 600;">klse.i3investor.com</div>
-                <div style="font-size: 0.8rem; color: #94a3b8; margin-top: 0.4rem;">Top Most Active + Top Gainers • Auto-update harian 5pm</div>
-            </div>
-        </div>
-    </div>
-
-    <div class="filters">
-        <div class="filter-group" style="flex-grow: 1; min-width: 200px;">
-            <label>Cari Kaunter</label>
-            <input type="text" id="searchCounter" placeholder="Contoh: SIME..." style="width: 100%;" oninput="applyFilters()">
-        </div>
-        <div class="filter-group">
-            <label>Harga Min (RM)</label>
-            <input type="number" id="minPrice" value="0.30" step="0.05" style="width: 100px;">
-        </div>
-        <div class="filter-group">
-            <label>Harga Max (RM)</label>
-            <input type="number" id="maxPrice" value="50.00" step="0.05" style="width: 100px;">
-        </div>
-        <div class="filter-group">
-            <label>Turnover Minimum</label>
-            <select id="minTurnover">
-                <option value="1000000">1 Juta</option>
-                <option value="3000000" selected>3 Juta</option>
-                <option value="10000000">10 Juta</option>
-            </select>
-        </div>
-        <div class="filter-group">
-            <label>Trend Harga</label>
-            <select id="trendFilter">
-                <option value="all">Semua</option>
-                <option value="up" selected>Uptrend (Hijau Sahaja)</option>
-            </select>
-        </div>
-        <div class="filter-group">
-            <label>Kategori</label>
-            <select id="categoryFilter">
-                <option value="all" selected>Semua</option>
-                <option value="swing">Swing / Mid-Cap</option>
-                <option value="intraday">Intraday / Momentum</option>
-                <option value="penny">Penny / Spekulatif</option>
-            </select>
-        </div>
-        <div class="filter-group">
-            <label>Analisis Signal</label>
-            <select id="signalFilter">
-                <option value="all" selected>Semua Signal</option>
-                <option value="golden">🔥 Golden Entry Sahaja</option>
-                <option value="momentum">⚡ Momentum Kuat Sahaja</option>
-            </select>
-        </div>
-        <div class="filter-group" style="justify-content: flex-end;">
-            <button onclick="applyFilters()">Tapis Sekarang</button>
-        </div>
-    </div>
-
-    <div class="table-container">
-        <table id="scannerTable">
-            <thead>
-                <tr>
-                    <th style="width: 50px;">No.</th>
-                    <th>Kaunter</th>
-                    <th style="cursor: pointer; user-select: none;" onclick="setSort('price')">Harga Closed <span id="sort_price"></span></th>
-                    <th style="cursor: pointer; user-select: none;" onclick="setSort('change')">% Perubahan <span id="sort_change"></span></th>
-                    <th style="cursor: pointer; user-select: none;" onclick="setSort('turnover')">Nilai Dagangan (Turnover) <span id="sort_turnover">▼</span></th>
-                    <th style="cursor: pointer; user-select: none;" onclick="setSort('volume')">Volume <span id="sort_volume"></span></th>
-                    <th style="cursor: pointer; user-select: none;" onclick="setSort('reason')">Analisis Sistem <span id="sort_reason"></span></th>
-                </tr>
-            </thead>
-            <tbody id="tableBody">
-                <!-- Data will be populated here -->
-            </tbody>
-        </table>
-    </div>
-
-    <div id="ai-advisor-section" style="display: none; background: #1e293b; padding: 2rem; border-radius: 12px; margin-bottom: 2rem; border: 1px solid #334155; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
-        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; margin-bottom: 1.5rem; gap: 1rem;">
-            <div>
-                <h2 style="font-size: 1.5rem; color: #fcd34d; margin-bottom: 0.5rem;">🤖 AI Advisor: Cadangan Portfolio</h2>
-                <p style="color: var(--text-muted); font-size: 0.9rem;">Sistem menganalisis data semasa dan memilih kaunter "Golden Entry" yang paling sesuai dengan saiz modal anda.</p>
-            </div>
-            <div style="background: #0f172a; padding: 0.8rem; border-radius: 8px; border: 1px solid #334155; display: flex; gap: 1rem; align-items: center;">
-                <label style="color: #fff; font-size: 0.85rem; font-weight: 600;">Saiz Modal (RM):</label>
-                <select id="modalInput" onchange="applyFilters()" style="background: #1e293b; border: 1px solid #475569; padding: 0.5rem; border-radius: 6px; color: #fcd34d; font-weight: bold;">
-                    <option value="5000">RM 5,000</option>
-                    <option value="10000">RM 10,000</option>
-                    <option value="50000">RM 50,000</option>
-                    <option value="100000">RM 100,000</option>
+            <div class="filter-item">
+                <label>Turnover Minimum</label>
+                <select id="minTurnover" onchange="applyFilters()">
+                    <option value="250000" selected>RM 250k</option>
+                    <option value="1000000">1 Juta</option>
+                    <option value="3000000">3 Juta</option>
+                    <option value="10000000">10 Juta</option>
                 </select>
             </div>
+            <div class="filter-item">
+                <label>Trend Harga</label>
+                <select id="trendFilter" onchange="applyFilters()">
+                    <option value="all" selected>Semua (Hijau & Merah)</option>
+                    <option value="up">Uptrend (Hijau Sahaja)</option>
+                </select>
+            </div>
+            <div class="filter-item">
+                <label>Consolidation Tapak</label>
+                <select id="consolidationFilter" onchange="applyFilters()">
+                    <option value="all" selected>Semua</option>
+                    <option value="tight">🔒 Tapak Tegar Sahaja</option>
+                </select>
+            </div>
+            <button class="btn" style="margin-left: auto;" onclick="applyFilters()">Tapis Sekarang</button>
         </div>
-        <div id="ai-advisor-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">No.</th>
+                        <th>Kaunter</th>
+                        <th>Harga Closed</th>
+                        <th>% Perubahan</th>
+                        <th>Turnover (RM)</th>
+                        <th>Volume</th>
+                        <th>Lantai Sokongan</th>
+                        <th>Setup / Jarak 52W</th>
+                        <th>Analisis Sistem</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <!-- Populated dynamically -->
+                </tbody>
+            </table>
         </div>
+
     </div>
 
-    <div class="info-section">
-        <h2>📚 Panduan & Strategi Trading</h2>
-        <div class="info-grid">
-            <div class="info-card" style="border-left-color: #3b82f6; grid-column: 1 / -1; background: #1e293b;">
-                <h3 style="color: #60a5fa; font-size: 1.3rem;">💡 Macam Mana Sistem Ini Berfungsi? (Khas Untuk Beginner)</h3>
-                <p style="margin-bottom: 0.8rem;">Sistem <strong>Bursa Smart Money Tracker</strong> ini direka khas untuk menjejaki aliran masuk wang besar (jerung) supaya anda tidak terperangkap membeli kaunter "sikat" yang tiada kecairan.</p>
-                <ul>
-                    <li><strong>Langkah 1 (Filter):</strong> Tetapkan <em>Turnover Minimum</em> (contoh: 3 Juta). Sistem automatik akan sembunyikan saham yang tiada sokongan modal sebenar.</li>
-                    <li><strong>Langkah 2 (Kenal Pasti Wang):</strong> Sistem akan kesan kaunter mana yang jerung sedang senyap-senyap <em>accumulate</em> (kumpul) atau pam dengan momentum kuat pada hari ini.</li>
-                    <li><strong>Langkah 3 (Pilih Kategori):</strong> Rujuk tag kategori kaunter. Pilih <strong>Intraday</strong> untuk <em>Hit & Run</em> laju, atau pilih kaunter gergasi <strong>Swing</strong> untuk peram dengan santai!</li>
-                </ul>
+    <!-- GUIDE BOARD -->
+    <div class="guide-board">
+        <h3>📚 Panduan Strategi Multi-Touch Consolidation (Tapak Tegar)</h3>
+        <div class="guide-grid">
+            <div class="guide-item">
+                <h4>1. Kenapa Tapak Tegar Terhasil?</h4>
+                <p>Ia menunjukkan zon harga di mana Smart Money (Jerung) sedang melakukan pembelian terkumpul secara pasif tanpa menolak harga ke atas. Had bawah tapak (Support Floor) menjadi pertahanan yang kuat.</p>
             </div>
-            <div class="info-card warning">
-                <h3>Kenapa Kaunter Jadi "Sikat" (Barcode)?</h3>
-                <p>Terjadi akibat ketiadaan <strong>Kecairan (Liquidity)</strong> dan volume yang mengering. Selepas fasa hype tamat dan jerung 'dump', minat pasaran runcit hilang. Harga hanya melompat antara Bid dan Ask secara mendatar. Elakkan trade kaunter jenis ini kerana modal anda akan "mati" tersangkut lama (opportunity cost).</p>
+            <div class="guide-item" style="border-left-color: var(--success);">
+                <h4>2. SOP Pembelian (Buy Zone)</h4>
+                <p>Masuk pasaran apabila harga semasa berada sangat dekat dengan Support Floor (jarak &le; 2.5%). Ini memberi anda kelebihan harga masuk yang rendah dan kawalan risiko yang sangat optimum.</p>
             </div>
-            <div class="info-card danger">
-                <h3>Skychip vs Sunmed (Hold vs Cut Loss)</h3>
-                <ul>
-                    <li><strong>Kaunter Kualiti (Cth: Skychip):</strong> Mempunyai fundamental syarikat yang padu. Walaupun harga jatuh sementera, institusi akan <em>"buy the dip"</em> dan harga berpotensi melantun balik. Boleh di-hold.</li>
-                    <li><strong>Kaunter Goreng (Cth: Sunmed):</strong> Naik mendadak kerana <em>hype</em> dan sindiket semata-mata. Selepas jatuh, tiada jerung akan kutip balik. Wajib <strong>Cut Loss</strong> dengan pantas sebelum jadi 'sikat' bertahun-tahun!</li>
-                </ul>
+            <div class="guide-item" style="border-left-color: var(--danger);">
+                <h4>3. Pengurusan Risiko Terbuka</h4>
+                <p>Stop Loss (SL) diletakkan ketat pada 3% di bawah Support Floor. Jika harga menembusi Support Floor ke bawah, ini menandakan fasa pengumpulan jerung gagal dan kita keluar dengan kerugian yang kecil.</p>
             </div>
-            <div class="info-card success">
-                <h3>Strategi "Follow the Money" (Top Turnover)</h3>
-                <ul>
-                    <li><strong>Abaikan Top Volume:</strong> Saham berharga 1 sen boleh dapat juta-juta volume tapi nilai duit sebenar yang bergerak adalah sangat kecil.</li>
-                    <li><strong>Raja Sebenar = Top Turnover:</strong> Turnover bermaksud berjuta-juta Ringgit wang jerung sebenar sedang dipam masuk. Fokus kaunter Hijau (Uptrend) dalam senarai Turnover untuk momentum.</li>
-                    <li><strong>Teknik Petang:</strong> Jangan tangkap pisau jam 9 pagi. Cari kaunter berpotensi pada pukul 4:30 petang, letak di Watchlist, dan tumpang momentumnya keesokan pagi.</li>
-                </ul>
-            </div>
-            <div class="info-card info">
-                <h3>Awas Perangkap "Top Gainers"</h3>
-                <ul>
-                    <li><strong>Ilusi Penny Stock:</strong> Saham 1 sen naik setengah sen terus masuk ranking #1 Top Gainers (+50%). Ini ilusi sebab volume kosong!</li>
-                    <li><strong>Risiko FOMO (Pucuk):</strong> Bila masuk senarai Top Gainers (hijau >15%), bermaksud pergerakan besar DAH PUN HABIS. Risiko beli di kemuncak dan jerung mula <em>dump</em>.</li>
-                    <li><strong>Formula Holy Grail:</strong> Guna Top Gainers <strong>HANYA JIKA</strong> ia juga adalah <strong>Top Turnover</strong>. Ini bukti kenaikan harga disokong wang sebenar.</li>
-                </ul>
-            </div>
-            <div class="info-card" style="border-left-color: #8b5cf6;">
-                <h3>Sistem Kuantitatif vs Smart Money Concepts (SMC)</h3>
-                <ul>
-                    <li><strong>SMC (Analisis Carta):</strong> Fokus cari <em>Order Block</em> atau <em>Fair Value Gap (FVG)</em> pada satu carta individu. Boleh membuang masa kalau tersalah kaji kaunter 'sikat'.</li>
-                    <li><strong>Sistem Kita (Analisis Data):</strong> Kita tak teka. Kita sentiasa imbas dan tapis pergerakan <strong>43 Kaunter Elit Bursa</strong> (gabungan Bluechips & kaunter Momentum aktif) untuk cari <strong>BUKTI KUKUH</strong> di mana duit berjuta Ringgit sedang dipam masuk HARI INI.</li>
-                    <li><strong>Kombinasi Padu:</strong> Guna <em>Dashboard</em> ini untuk tapis dan dapatkan 3 kaunter paling panas. Kemudian, barulah buka carta kaunter tersebut dan guna teknik SMC untuk cari <em>entry</em> akar!</li>
-                </ul>
-            </div>
-            <div class="info-card" style="border-left-color: #ec4899;">
-                <h3>Gameplan: Intraday vs Swing Trading</h3>
-                <ul>
-                    <li><strong>Intraday (Hit & Run):</strong> Fokus pada kaunter <em>Mid-cap</em> yang sedang mencanak naik laju (>2%) dengan Turnover besar. Tumpang ombak momentum jerung dan ambil untung pantas sebelum pasaran tutup.</li>
-                    <li><strong>Swing (Peram Santai):</strong> Cari kaunter Gergasi/Bluechip yang Turnover gila babi (Contoh: 15-30 Juta) tapi harga baru naik ciput (+0.5%). Ini petanda jerung sedang senyap-senyap kumpul barang <em>(Accumulation)</em>. Beli dan peram!</li>
-                    <li><strong>Kesimpulan:</strong> Radar ini memberitahu <strong>MANA</strong> duit jerung sedang mengalir. Kalau duit masuk kaunter laju -> <em>Intraday</em>. Kalau duit kumpul kat kaunter gergasi -> <em>Swing</em>.</li>
-                </ul>
-            </div>
-            <div class="info-card" style="border-left-color: #f59e0b;">
-                <h3>🔥 Golden Entry vs ⚡ Momentum Kuat</h3>
-                <ul>
-                    <li><strong>🔥 Golden Entry (Beli Waktu Diskaun):</strong> Kaunter yang uptrend kukuh, tapi sedang berehat (pullback/retracement) di paras sokongan atau moving average. Anda beli di harga diskaun sebelum ia menyambung kenaikan seterusnya (Low Risk, High Reward).</li>
-                    <li><strong>⚡ Momentum Kuat (Tumpang Kereta Api Laju):</strong> Kaunter yang sedang naik mendadak dengan volume/turnover yang luar biasa hari ini. Walaupun harga sudah tinggi (breakout), anda beli kerana momentum yang kuat ini berpotensi menolaknya lebih jauh ke atas.</li>
-                    <li><strong>Kesimpulan:</strong> Guna <em>Golden Entry</em> untuk <strong>Swing/Peram</strong> dengan tenang. Guna <em>Momentum Kuat</em> untuk <strong>Intraday (Hit & Run)</strong> ambil untung hari yang sama.</li>
-                </ul>
-            </div>
-            <div class="info-card" style="border-left-color: #10b981; grid-column: 1 / -1; background: #1e293b;">
-                <h3 style="color: #10b981; font-size: 1.3rem;">🎁 Strategi Gula-Gula Bursa (Door Gift AGM)</h3>
-                <p style="margin-bottom: 0.8rem;">Selepas anda membeli <strong>1 unit saham</strong> (bukan 1 lot, tapi 1 unit melalui Pasaran Odd Lot), ini adalah langkah-langkah yang wajib anda buat untuk mendapatkan e-Voucher AGM:</p>
-                <ul>
-                    <li><strong>Langkah 1 (Tunggu T+2):</strong> Selepas beli, tunggu 2 hari bekerja supaya nama anda didaftarkan secara rasmi di dalam Buku Daftar Pendeposit (Record of Depositors - ROD) syarikat tersebut.</li>
-                    <li><strong>Langkah 2 (Daftar Portal):</strong> Buka akaun pelabur di portal Share Registrar rasmi. Bergantung kepada syarikat, klik link di bawah dan daftar (buat sekali seumur hidup):
-                        <ul style="margin-top: 0.5rem; margin-bottom: 0.5rem; list-style-type: square; margin-left: 1.5rem;">
-                            <li><a href="https://srmy.vistra.com/" target="_blank" style="color: #60a5fa; text-decoration: underline;">Portal Vistra (Tricor) - srmy.vistra.com</a></li>
-                            <li><a href="https://investor.boardroomlimited.com/" target="_blank" style="color: #60a5fa; text-decoration: underline;">Portal Boardroom - investor.boardroomlimited.com</a></li>
-                        </ul>
-                    </li>
-                    <li><strong>Langkah 3 (Mohon RPV):</strong> Apabila syarikat mengumumkan notis AGM, login ke portal berkenaan, cari nama syarikat tersebut dan klik <strong>Register for e-RPV</strong> (Remote Participation & Voting) sebelum tarikh tutup.</li>
-                    <li><strong>Langkah 4 (Hadir Online):</strong> Pada hari AGM berlangsung, buka emel anda, klik pautan (link) yang diberikan dan <strong>Log Masuk</strong> untuk mengesahkan kehadiran anda secara maya.</li>
-                    <li><strong>Langkah 5 (Tebus Voucher):</strong> Selesai! e-Voucher (seperti TnG, Grab, Shopee) akan diemelkan kepada anda secara berperingkat (boleh ambil masa dari 1 hari hingga beberapa minggu).</li>
-                </ul>
+            <div class="guide-item" style="border-left-color: #a78bfa;">
+                <h4>4. SOP Pengambilan Untung (TP)</h4>
+                <p>Cadangan TP1 adalah pada +10.0% kenaikan dari harga belian (Scalping/Swing singkat). TP2 diletakkan pada +20.0% kenaikan bagi menangkap pergerakan breakout ATH/RBS sepenuhnya.</p>
             </div>
         </div>
     </div>
 
     <script>
-        let currentData = [
-            { name: "SKYCHIP", sector: "Technology", price: 1.45, change: 8.5, turnover: 45000000, volume: 31000000, signal: "buy", reason: "Momentum Kuat & Duit Jerung Masuk" },
-            { name: "YTLPOWR", sector: "Utilities", price: 4.85, change: 3.2, turnover: 85000000, volume: 17500000, signal: "buy", reason: "Uptrend Kukuh" },
-            { name: "SUNMED", sector: "Healthcare", price: 0.15, change: -12.5, turnover: 500000, volume: 3300000, signal: "avoid", reason: "Chart Sikat / Tiada Momentum" },
-            { name: "EDGENTA", sector: "Construction", price: 0.98, change: 1.5, turnover: 6000000, volume: 6100000, signal: "buy", reason: "Potensi Breakout" },
-            { name: "PENNYJUNK", sector: "Industrial", price: 0.03, change: 0.0, turnover: 200000, volume: 6600000, signal: "avoid", reason: "Terlalu Murah / Sangat Berisiko" },
-            { name: "GAMUDA", sector: "Construction", price: 5.20, change: 2.1, turnover: 32000000, volume: 6100000, signal: "buy", reason: "Kaunter Bluechip Stabil" }
-        ];
-
+        // Global variables
+        let currentData = [];
+        let coreTickers = ['PENTECH', 'SDCG', 'NE', 'HKB', 'EIPOWER', 'MNHLDG', 'OGX', 'AMS', 'ISF', 'DNEX', 'AMBEST'];
         let currentSortColumn = 'turnover';
         let currentSortDesc = true;
 
-        function setSort(column) {
-            if (currentSortColumn === column) {
-                currentSortDesc = !currentSortDesc;
-            } else {
-                currentSortColumn = column;
-                currentSortDesc = true;
-            }
-            
-            document.getElementById('sort_price').textContent = '';
-            document.getElementById('sort_change').textContent = '';
-            document.getElementById('sort_turnover').textContent = '';
-            document.getElementById('sort_volume').textContent = '';
-            document.getElementById('sort_reason').textContent = '';
-            
-            document.getElementById('sort_' + column).textContent = currentSortDesc ? '▼' : '▲';
-            
-            applyFilters();
+        // Switch Tabs
+        function switchTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            document.getElementById(tabId).classList.add('active');
+            event.currentTarget.classList.add('active');
         }
 
+        // Format Big Numbers
         function formatNumber(num) {
-            if (num >= 1000000) return (num / 1000000).toFixed(2) + ' Juta';
-            if (num >= 1000) return (num / 1000).toFixed(2) + ' Ribu';
-            return num;
+            if (num >= 1000000) {
+                return (num / 1000000).toFixed(2) + ' M';
+            } else if (num >= 1000) {
+                return (num / 1000).toFixed(1) + ' K';
+            }
+            return num.toLocaleString();
         }
 
-
-        function renderTable(data) {
-            const tbody = document.getElementById('tableBody');
-            tbody.innerHTML = '';
-
-            data.forEach((item, index) => {
-                const tr = document.createElement('tr');
-                // Use changePct if available (new format), otherwise fall back to change
-                const pct = item.changePct !== undefined ? item.changePct : item.change;
-                const changeClass = pct >= 0 ? 'up' : 'down';
-                const changeSign = pct > 0 ? '+' : '';
-
-                tr.innerHTML = `
-                    <td style="font-weight: 700; color: var(--text-muted); font-size: 1.1rem;">#${index + 1}</td>
-                    <td>
-                        <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=5" target="_blank" class="counter-name" title="Buka chart TradingView (5M)" style="color: var(--accent); text-decoration: none;">${item.name} 🔗</a>
-                        <div class="sector">${item.sector || 'Bursa'} &bull; <span style="color: #ec4899; font-weight: 500;">${item.category || ''}</span></div>
-                    </td>
-                    <td class="price ${changeClass}">RM ${item.price.toFixed(3)}</td>
-                    <td class="${changeClass}">${changeSign}${pct.toFixed(2)}%</td>
-                    <td>RM ${formatNumber(item.turnover)}</td>
-                    <td>${formatNumber(item.volume)}</td>
-                    <td>
-                        <div style="font-size: 0.85rem; font-weight: 600; color: ${item.signal === 'buy' ? 'var(--success)' : 'var(--danger)'}">${item.reason}</div>
-                    </td>
-                `;
-                tbody.appendChild(tr);
-            });
-            
-            if(data.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="7" style="text-align:center; padding: 2rem; color: var(--text-muted);">Tiada kaunter yang menepati kriteria tapisan anda.</td></tr>';
-            }
-        }
-
-        function applyFilters() {
-            const searchCounter = document.getElementById('searchCounter').value.trim().toLowerCase();
-            const minPrice = parseFloat(document.getElementById('minPrice').value) || 0;
-            const maxPrice = parseFloat(document.getElementById('maxPrice').value) || 99999;
-            const minTurnover = parseFloat(document.getElementById('minTurnover').value);
-            const trendFilter = document.getElementById('trendFilter').value;
-            const categoryFilter = document.getElementById('categoryFilter').value;
-            const signalFilter = document.getElementById('signalFilter').value;
-
-            const filteredData = currentData.filter(item => {
-                if (searchCounter && !item.name.toLowerCase().includes(searchCounter)) return false;
-                if (item.price < minPrice) return false;
-                if (item.price > maxPrice) return false;
-                if (item.turnover < minTurnover) return false;
-                if (trendFilter === 'up' && (item.changePct !== undefined ? item.changePct : item.change) <= 0) return false;
-                
-                if (categoryFilter !== 'all') {
-                    if (!item.category) return false;
-                    const catLower = item.category.toLowerCase();
-                    if (categoryFilter === 'swing' && !catLower.includes('swing')) return false;
-                    if (categoryFilter === 'intraday' && !catLower.includes('intraday')) return false;
-                    if (categoryFilter === 'penny' && !catLower.includes('penny')) return false;
-                }
-
-                if (signalFilter !== 'all') {
-                    if (!item.reason) return false;
-                    const reasonLower = item.reason.toLowerCase();
-                    if (signalFilter === 'golden' && !reasonLower.includes('golden entry')) return false;
-                    if (signalFilter === 'momentum' && !reasonLower.includes('momentum kuat')) return false;
-                }
-                
-                return true;
-            });
-
-            filteredData.sort((a, b) => {
-                let valA = currentSortColumn === 'change' ? (a.changePct !== undefined ? a.changePct : a.change) : a[currentSortColumn];
-                let valB = currentSortColumn === 'change' ? (b.changePct !== undefined ? b.changePct : b.change) : b[currentSortColumn];
-                
-                if (typeof valA === 'string' && typeof valB === 'string') {
-                    return currentSortDesc ? valB.localeCompare(valA) : valA.localeCompare(valB);
-                }
-                
-                if (currentSortDesc) {
-                    return valB - valA;
-                } else {
-                    return valA - valB;
-                }
-            });
-            renderTable(filteredData);
-            renderAIAdvisor(currentData);
-            renderVIPWatchlist(currentData);
-            renderAccumulationWatchlist(currentData);
-            updateSentiment(currentData);
-            updateLiveTargets(currentData);
-        }
-
-        function renderAccumulationWatchlist(data) {
-            const content = document.getElementById('accumulation-watchlist-content');
-            
-            // Logic: Turnover >= 3M, changePct > 0 and changePct <= 3.0 (Accumulation phase), price <= 3.00
-            const candidates = data.filter(c => {
-                const pct = c.changePct !== undefined ? c.changePct : c.change;
-                return pct > 0 && pct <= 3.0 && c.turnover >= 3000000 && c.price <= 3.00 && c.signal === 'buy';
-            });
-            
-            // Sort by highest Turnover (most money flowing in quietly)
-            candidates.sort((a, b) => b.turnover - a.turnover);
-            
-            const accumData = candidates.slice(0, 4);
-            
-            let html = '';
-            if (accumData.length === 0) {
-                html = '<div style="color: #94a3b8; font-style: italic; padding: 1rem;">Tiada kaunter di fasa akumulasi buat masa ini.</div>';
-            } else {
-                accumData.forEach(c => {
-                    const pct = c.changePct !== undefined ? c.changePct : c.change;
-                    html += `
-                    <div style="background: #0f172a; padding: 1rem; border-radius: 8px; border-left: 4px solid #10b981; transition: transform 0.2s;">
-                        <div style="display: flex; justify-content: space-between; align-items: start;">
-                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${c.name}&interval=5" target="_blank" style="font-weight: 800; font-size: 1.1rem; color: #fff; text-decoration: none;">${c.name} 🔗</a>
-                            <span style="background: rgba(16, 185, 129, 0.2); color: #34d399; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.8rem; font-weight: bold;">+${pct.toFixed(2)}%</span>
-                        </div>
-                        <div style="margin-top: 0.5rem; font-size: 0.85rem; color: #cbd5e1;">
-                            Harga: <strong style="color: #f8fafc;">RM ${c.price.toFixed(3)}</strong>
-                        </div>
-                        <div style="margin-top: 0.3rem; font-size: 0.85rem; color: #94a3b8;">
-                            Jerung: <strong style="color: #38bdf8;">${(c.turnover/1000000).toFixed(2)} Juta</strong>
-                        </div>
-                        <div style="margin-top: 0.5rem; font-size: 0.75rem; color: #fbbf24;">
-                            ⏳ Kumpul dari bawah (Potensi Swing)
-                        </div>
-                    </div>`;
-                });
-            }
-            content.innerHTML = html;
-        }
-
-        function renderAIAdvisor(data) {
-            const advisorSection = document.getElementById('ai-advisor-section');
-            const advisorContent = document.getElementById('ai-advisor-content');
-            
-            // Cari Golden Entry (Uptrend, turnover >= 3M, change <= 4%)
-            const goldenEntries = data.filter(c => {
-                const pct = c.changePct !== undefined ? c.changePct : c.change;
-                return pct > 0 && pct <= 4.0 && c.turnover >= 3000000 && c.signal === 'buy';
-            });
-            
-            if (goldenEntries.length === 0) {
-                advisorSection.style.display = 'none';
-                return;
-            }
-            
-            advisorSection.style.display = 'block';
-            advisorContent.innerHTML = '';
-            
-            const modalAmount = parseFloat(document.getElementById('modalInput').value);
-            const allocation = modalAmount / 2; // Pecah kepada 2 kaunter
-            
-            let lincah = goldenEntries.filter(c => c.price >= 0.30 && c.price < 1.50).slice(0, 3);
-            let stabil = goldenEntries.filter(c => c.price >= 1.50).slice(0, 3);
-            
-            // Logik Penapisan Ikut Modal:
-            // Modal Kecil (<= RM20k): Cari Volatility (Lincah)
-            // Modal Besar (> RM20k): Cari Stability (Gergasi)
-            if (modalAmount <= 20000) {
-                stabil = []; // Sembunyikan kaunter gergasi untuk modal kecil
-            } else {
-                lincah = []; // Sembunyikan kaunter lincah untuk modal besar
-            }
-            
-            let html = '';
-            
-            if (lincah.length > 0) {
-                html += `<div style="background: #0f172a; padding: 1.5rem; border-radius: 8px; border-top: 4px solid #f59e0b;">
-                    <h3 style="color: #fcd34d; font-size: 1.1rem; margin-bottom: 0.5rem;">⚡ Kategori Lincah (Untung Laju)</h3>
-                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Potensi 5% cepat. Risiko sederhana. Sangat digalakkan untuk modal bawah RM20k.</p>`;
-                lincah.forEach(c => {
-                    const lot = Math.floor(allocation / (c.price * 100));
-                    html += `<div style="background: #1e293b; padding: 1rem; border-radius: 8px; margin-bottom: 0.8rem; border: 1px solid #334155;">
-                        <div style="font-weight: 700; color: #fff;"><a href="https://www.tradingview.com/chart/?symbol=MYX:${c.name}&interval=5" target="_blank" title="Buka chart TradingView (5M)" style="color: #60a5fa; text-decoration: none;">${c.name} 🔗</a> <span style="color: #94a3b8; font-weight: normal;">(RM ${c.price.toFixed(3)})</span></div>
-                        <div style="font-size: 0.8rem; color: var(--success); margin: 0.3rem 0;">Naik: +${(c.changePct !== undefined ? c.changePct : c.change).toFixed(2)}% &bull; Jerung: ${(c.turnover/1000000).toFixed(2)} Juta</div>
-                        <div style="margin-top: 0.5rem; font-size: 0.85rem; color: #e2e8f0; background: rgba(59, 130, 246, 0.1); padding: 0.5rem; border-radius: 4px; border-left: 2px solid #3b82f6;">
-                            💡 Beli <strong>${lot} lot</strong> (Guna modal ~RM${allocation.toLocaleString()}). Take Profit bila capai 5%.
-                        </div>
-                    </div>`;
-                });
-                html += `</div>`;
-            }
-            
-            if (stabil.length > 0) {
-                html += `<div style="background: #0f172a; padding: 1.5rem; border-radius: 8px; border-top: 4px solid #3b82f6;">
-                    <h3 style="color: #60a5fa; font-size: 1.1rem; margin-bottom: 0.5rem;">🛡️ Kategori Stabil (Peram Santai)</h3>
-                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem;">Sesuai peram seminggu dua. Risiko rendah. Pilihan utama jerung & modal RM50k ke atas.</p>`;
-                stabil.forEach(c => {
-                    const lot = Math.floor(allocation / (c.price * 100));
-                    html += `<div style="background: #1e293b; padding: 1rem; border-radius: 8px; margin-bottom: 0.8rem; border: 1px solid #334155;">
-                        <div style="font-weight: 700; color: #fff;"><a href="https://www.tradingview.com/chart/?symbol=MYX:${c.name}&interval=5" target="_blank" title="Buka chart TradingView (5M)" style="color: #60a5fa; text-decoration: none;">${c.name} 🔗</a> <span style="color: #94a3b8; font-weight: normal;">(RM ${c.price.toFixed(3)})</span></div>
-                        <div style="font-size: 0.8rem; color: var(--success); margin: 0.3rem 0;">Naik: +${(c.changePct !== undefined ? c.changePct : c.change).toFixed(2)}% &bull; Jerung: ${(c.turnover/1000000).toFixed(2)} Juta</div>
-                        <div style="margin-top: 0.5rem; font-size: 0.85rem; color: #e2e8f0; background: rgba(16, 185, 129, 0.1); padding: 0.5rem; border-radius: 4px; border-left: 2px solid #10b981;">
-                            💡 Beli <strong>${lot} lot</strong> (Guna modal ~RM${allocation.toLocaleString()}). Boleh peram dengan tenang.
-                        </div>
-                    </div>`;
-                });
-                html += `</div>`;
-            }
-            
-            advisorContent.innerHTML = html;
-        }
-            
-        function renderVIPWatchlist(data) {
-            const content = document.getElementById('vip-watchlist-content');
-            
-            // AUTOMATIC LOGIC: Filter valid Buy signals, Jerung Turnover > 3M, Harga <= RM 5
-            const candidates = data.filter(c => {
-                const pct = c.changePct !== undefined ? c.changePct : c.change;
-                return pct > 0 && c.turnover >= 3000000 && c.signal === 'buy' && c.price <= 5.00;
-            });
-            
-            // Sort by highest PERCENTAGE (% naik)
-            candidates.sort((a, b) => {
-                const pA = a.changePct !== undefined ? a.changePct : a.change;
-                const pB = b.changePct !== undefined ? b.changePct : b.change;
-                return pB - pA;
-            });
-            
-            const vipData = candidates.slice(0, 4);
-            
-            let html = '';
-            if (vipData.length === 0) {
-                html = '<div style="color: var(--text-muted); grid-column: 1 / -1; text-align: center;">Belum ada jerung yang mengganas hari ini...</div>';
-            }
-            vipData.forEach(c => {
-                const pct = c.changePct !== undefined ? c.changePct : c.change;
-                const changeClass = pct >= 0 ? 'var(--success)' : 'var(--danger)';
-                const changeSign = pct > 0 ? '+' : '';
-                html += `
-                <div style="background: #0f172a; padding: 1rem; border-radius: 8px; border: 1px solid #334155; text-align: center;">
-                    <a href="https://www.tradingview.com/chart/?symbol=MYX:${c.name}&interval=5" target="_blank" style="color: #fff; font-weight: 700; font-size: 1.2rem; text-decoration: none; display: block; margin-bottom: 0.5rem;">${c.name} 🔗</a>
-                    <div style="font-size: 1.1rem; color: ${changeClass}; font-weight: 600;">RM ${c.price.toFixed(3)}</div>
-                    <div style="font-size: 0.85rem; color: ${changeClass};">${changeSign}${pct.toFixed(2)}%</div>
-                    <div style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">Turnover: ${(c.turnover/1000000).toFixed(1)}M</div>
-                </div>`;
-            });
-            content.innerHTML = html;
-        }
-
-        function updateSentiment(data) {
-            const activeData = data.filter(c => c.turnover > 1000000); // Fokus pada kaunter yang ada volume jerung
-            const totalActive = activeData.length;
-            if (totalActive === 0) return;
-            
-            const upCount = activeData.filter(c => c.change > 0).length;
-            const percentage = (upCount / totalActive) * 100;
-            const sentimentEl = document.getElementById('sentiment-text');
-            
-            if (percentage >= 50) {
-                sentimentEl.innerHTML = `🐂 BULLISH (${percentage.toFixed(0)}% Kaunter Aktif Naik)`;
-                sentimentEl.style.color = '#10b981';
-            } else if (percentage >= 35) {
-                sentimentEl.innerHTML = `⚖️ SIDEWAY (${percentage.toFixed(0)}% Kaunter Aktif Naik)`;
-                sentimentEl.style.color = '#f59e0b';
-            } else {
-                sentimentEl.innerHTML = `🐻 BEARISH Berdarah (${percentage.toFixed(0)}% Kaunter Aktif Naik)`;
-                sentimentEl.style.color = '#ef4444';
-            }
-        }
-
-
-        function updateLiveTargets(data) {
-            const targets = [
-                { name: 'NATGATE', entry: 0.765, date: '10 Jun', category: 'Swing', cl: 0.727, benteng: 0.725 },
-                { name: 'SKYCHIP', entry: 3.380, date: '15 Jun', category: 'Swing', cl: 3.200, benteng: 3.180 }
-            ];
-            
-            const container = document.getElementById('live-targets-container');
-            if (!container) return;
-            
-            let html = '';
-            targets.forEach(t => {
-                const stock = data.find(s => s.name.toUpperCase() === t.name);
-                const currentPrice = stock ? stock.price : t.entry;
-                const changePct = ((currentPrice - t.entry) / t.entry) * 100;
-                
-                const tp1 = t.entry * 1.10; // +10%
-                const tp2 = t.entry * 1.17; // +17%
-                const cl = t.cl || (t.entry * 0.95);
-                const benteng = t.benteng || cl;
-                
-                let statusBadge = '';
-                if (changePct >= 10) {
-                    statusBadge = `<span style="background: rgba(16, 185, 129, 0.2); color: var(--success); border: 1px solid rgba(16, 185, 129, 0.5); padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">🎯 TARGET HIT</span>`;
-                } else if (currentPrice <= benteng) {
-                    statusBadge = `<span style="background: rgba(239, 68, 68, 0.2); color: var(--danger); border: 1px solid rgba(239, 68, 68, 0.5); padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">⚠️ CUT LOSS</span>`;
-                } else {
-                    statusBadge = `<span style="background: rgba(59, 130, 246, 0.2); color: var(--accent); border: 1px solid rgba(59, 130, 246, 0.5); padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700;">RUNNING</span>`;
-                }
-                
-                const changeSign = changePct > 0 ? '+' : '';
-                const changeClass = changePct >= 0 ? 'up' : 'down';
-                
-                html += `
-                <div style="padding: 0.6rem; background: rgba(15, 23, 42, 0.5); border-radius: 6px; border-left: 3px solid ${changePct >= 0 ? 'var(--success)' : 'var(--danger)'};">
-                    <div style="display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: bold; margin-bottom: 0.3rem;">
-                        <span><a href="https://www.tradingview.com/chart/?symbol=MYX:${t.name}&interval=5" target="_blank" style="color: #60a5fa; text-decoration: none; font-weight: bold;" title="Buka chart TradingView (5M)">${t.name} 🔗</a> <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: normal;">(${t.category})</span></span>
-                        ${statusBadge}
-                    </div>
-                    <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: var(--text-muted);">
-                        <span>Entry: RM ${t.entry.toFixed(3)}</span>
-                        <span>Kini: <strong style="color: #fff;">RM ${currentPrice.toFixed(3)}</strong> (<span class="${changeClass}" style="font-weight: bold;">${changeSign}${changePct.toFixed(2)}%</span>)</span>
-                    </div>
-                    <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: #f59e0b; margin-top: 0.3rem; border-top: 1px dashed #334155; padding-top: 0.3rem;">
-                        <span>TP1 (10%): RM ${tp1.toFixed(3)}</span>
-                        <span>TP2 (17%): RM ${tp2.toFixed(3)}</span>
-                    </div>
-                    <div style="display: flex; justify-content: space-between; font-size: 0.75rem; color: var(--danger); margin-top: 0.2rem; border-top: 1px dotted #334155; padding-top: 0.2rem;">
-                        <span>Cut Loss: RM ${cl.toFixed(3)}</span>
-                        <span>Benteng Last: RM ${benteng.toFixed(3)}</span>
-                    </div>
-                </div>
-                `;
-            });
-            container.innerHTML = html;
-        }
-
-
+        // Fetch Live Data
         async function fetchLiveData() {
             try {
                 const cacheBuster = new Date().getTime();
@@ -712,100 +844,352 @@
                 }
 
                 if (res.ok) {
-                    const raw = await res.json();
-                    
-                    // Handle new format: { topVolume: [...], topGainers: [...], lastUpdated, source }
-                    // OR old format: [ ... ] (array directly)
-                    let data;
+                    const raw = await res.ok ? await res.json() : [];
+                    let data = [];
                     if (Array.isArray(raw)) {
-                        data = raw; // old format
+                        data = raw;
                     } else if (raw && raw.topVolume && Array.isArray(raw.topVolume)) {
-                        data = raw.topVolume; // new format
-                        // Update subtitle with source and timestamp
+                        data = raw.topVolume;
                         if (raw.lastUpdated) {
                             const d = new Date(raw.lastUpdated);
                             const timeStr = d.toLocaleString('ms-MY', { timeZone: 'Asia/Kuala_Lumpur', hour12: false });
-                            document.getElementById('dashboardSubtitle').innerHTML = `<span class="pulse"></span>Live Market Scanner • Sumber: ${raw.source || 'i3investor'} • Dikemaskini: ${timeStr}`;
+                            document.getElementById('dashboardSubtitle').innerHTML = `<span class="pulse"></span> Live Market Scanner • Sumber: ${raw.source || 'i3investor'} • Dikemaskini: ${timeStr}`;
                         }
                     }
                     
                     if (data && data.length > 0) {
                         currentData = data;
-                        console.log(`Berjaya load ${data.length} saham dari live_data.json`);
+                        console.log(`Loaded ${data.length} counters successfully.`);
                     }
                 }
             } catch (e) {
-                console.log("Gagal load live_data.json. Guna dummy data.", e);
+                console.log("Failed to load live data, using blank array.", e);
             }
             applyFilters();
         }
 
-        fetchLiveData();
+        // Apply filters and render UI elements
+        function applyFilters() {
+            // Render Tab 1 (Core Focus Cards)
+            renderCoreCards();
 
-        document.getElementById('refreshBtn').addEventListener('click', async function() {
-            const originalText = this.textContent;
-            this.textContent = '⏳ Mengambil Data...';
-            this.style.opacity = '0.7';
-            
-            await fetchLiveData();
-            document.getElementById('dashboardSubtitle').innerHTML = '<span class="pulse"></span>Live Market Scanner - Tracking Top Turnover & Momentum';
+            // Filter for Tab 2 (General Broad Market Scanner)
+            const searchCounter = document.getElementById('searchCounter').value.trim().toLowerCase();
+            const minPrice = parseFloat(document.getElementById('minPrice').value) || 0;
+            const maxPrice = parseFloat(document.getElementById('maxPrice').value) || 99999;
+            const minTurnover = parseFloat(document.getElementById('minTurnover').value) || 0;
+            const trendFilter = document.getElementById('trendFilter').value;
+            const consolidationFilter = document.getElementById('consolidationFilter').value;
 
-            setTimeout(() => {
-                this.textContent = originalText;
-                this.style.opacity = '1';
-                alert('Telah refresh! Jika live_data.json berubah, table akan diupdate.');
-            }, 500);
-        });
+            const generalFiltered = currentData.filter(item => {
+                // Filter out Core Tickers from General view to keep it clean, or keep them?
+                // Let's keep general view as the full market scan.
+                if (searchCounter && !item.name.toLowerCase().includes(searchCounter)) return false;
+                if (item.price < minPrice) return false;
+                if (item.price > maxPrice) return false;
+                if (item.turnover < minTurnover) return false;
+                if (trendFilter === 'up' && (item.changePct !== undefined ? item.changePct : item.change) <= 0) return false;
+                if (consolidationFilter === 'tight' && !item.isConsolidation) return false;
+                return true;
+            });
 
-        // --- Logik Semak Sejarah (History) ---
-        document.getElementById('loadHistoryBtn').addEventListener('click', async function() {
-            let dateVal = document.getElementById('historyDate').value;
-            if(!dateVal) {
-                alert('Sila pilih tarikh pada kalendar terlebih dahulu.');
-                return;
-            }
-            
-            // Auto-format jika user copy paste "30/5/2026"
-            if (dateVal.includes('/')) {
-                const parts = dateVal.split(',')[0].trim().split('/');
-                if (parts.length === 3) {
-                    let day = parts[0].padStart(2, '0');
-                    let month = parts[1].padStart(2, '0');
-                    let year = parts[2];
-                    if (year.length === 2) year = '20' + year;
-                    dateVal = `${year}-${month}-${day}`;
+            // Sort Tab 2 data
+            generalFiltered.sort((a, b) => {
+                let valA = a[currentSortColumn];
+                let valB = b[currentSortColumn];
+                if (currentSortColumn === 'change') {
+                    valA = a.changePct !== undefined ? a.changePct : a.change;
+                    valB = b.changePct !== undefined ? b.changePct : b.change;
                 }
-            }
-            
-            const originalText = this.textContent;
-            this.textContent = '⏳ ...';
-            
-            try {
-                const cacheBuster = new Date().getTime();
-                let res = await fetch(`history/data_${dateVal}.json?t=${cacheBuster}`);
-                
-                if (!res.ok) {
-                    res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/history/data_${dateVal}.json?t=${cacheBuster}`);
+                if (typeof valA === 'string' && typeof valB === 'string') {
+                    return currentSortDesc ? valB.localeCompare(valA) : valA.localeCompare(valB);
                 }
+                return currentSortDesc ? valB - valA : valA - valB;
+            });
 
-                if (res.ok) {
-                    const raw = await res.json();
-                    // Handle both old array format and new object format
-                    const data = Array.isArray(raw) ? raw : (raw.topVolume || []);
-                    if (data && data.length > 0) {
-                        currentData = data;
-                        document.getElementById('dashboardSubtitle').innerHTML = '📂 Menunjukkan Arkib Bukti Sejarah: <strong>' + dateVal + '</strong>';
-                        applyFilters();
-                        alert('Berjaya memuatkan arkib sejarah untuk tarikh: ' + dateVal);
+            renderGeneralTable(generalFiltered);
+            updateSentiment(currentData);
+        }
+
+        // Render Core Ticker Cards
+        function renderCoreCards() {
+            const container = document.getElementById('coreCardsContainer');
+            const selectEl = document.getElementById('calcTicker');
+            
+            // Filter only the 11 core focus tickers that are available in currentData
+            const coreData = currentData.filter(c => coreTickers.includes(c.name));
+            
+            // Sort core tickers so that those in the BUY ZONE appear first
+            coreData.sort((a, b) => {
+                const floorA = a.floorLow || (a.price * 0.97);
+                const floorB = b.floorLow || (b.price * 0.97);
+                const distA = ((a.price - floorA) / floorA) * 100;
+                const distB = ((b.price - floorB) / floorB) * 100;
+                return distA - distB;
+            });
+
+            // Keep track of previously selected ticker in calculator
+            const selectedVal = selectEl.value;
+            selectEl.innerHTML = '';
+
+            let cardsHtml = '';
+            if (coreData.length === 0) {
+                cardsHtml = '<div style="color: var(--text-muted); padding: 2rem; text-align: center; grid-column: 1/-1;">Tiada data untuk 11 saham tumpuan dalam live_data.json. Cuba jalankan bot scraper anda.</div>';
+            } else {
+                coreData.forEach(item => {
+                    const pct = item.changePct !== undefined ? item.changePct : item.change;
+                    const changeClass = pct >= 0 ? 'up' : 'down';
+                    const changeSign = pct > 0 ? '+' : '';
+                    
+                    // Support floor calculation: use scraped floorLow, fallback to 3% below price if none
+                    const floorPrice = item.floorLow || (item.price * 0.97);
+                    
+                    // Distance to support floor
+                    const distToFloor = ((item.price - floorPrice) / floorPrice) * 100;
+                    
+                    // Zone calculation
+                    let zoneText = '⏳ Pullback Pending';
+                    let zoneClass = 'zone-pending';
+                    
+                    if (distToFloor <= 2.5) {
+                        zoneText = '🔥 BUY ZONE (Perfect Entry)';
+                        zoneClass = 'zone-buy';
+                    } else if (distToFloor > 6.0) {
+                        zoneText = '🚀 Breakout / Chase';
+                        zoneClass = 'zone-chase';
                     }
-                } else {
-                    alert('Tiada rekod (history) dijumpai untuk tarikh ' + dateVal + '. Pastikan bot telah berjalan pada hari tersebut.');
-                }
-            } catch (e) {
-                alert('Ralat memuatkan rekod sejarah. Pastikan anda berada di server/GitHub Pages.');
+
+                    // Stop Loss & Targets
+                    const stopLoss = floorPrice * 0.97; // 3% below floor
+                    const maxRiskPct = ((item.price - stopLoss) / item.price) * 100;
+                    const tp1 = item.price * 1.10;
+                    const tp2 = item.price * 1.20;
+
+                    // Progress bar width (max 10% distance is 0% progress bar, 0% distance is 100% progress bar)
+                    const progress = Math.max(0, Math.min(100, 100 - (distToFloor * 10)));
+
+                    cardsHtml += `
+                    <div class="ticker-card">
+                        <div class="card-header">
+                            <div>
+                                <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=30" target="_blank" class="card-title">${item.name} 🔗</a>
+                                <div class="card-sector">${item.sector} &bull; VIP Tumpuan</div>
+                            </div>
+                            <div class="card-price-info">
+                                <div class="card-price">RM ${item.price.toFixed(3)}</div>
+                                <div class="card-change ${changeClass}">${changeSign}${pct.toFixed(2)}%</div>
+                            </div>
+                        </div>
+
+                        <span class="zone-badge ${zoneClass}">${zoneText}</span>
+
+                        <div class="metric-bar-container">
+                            <div class="metric-bar-label">
+                                <span>Kedekatan Tapak Sokongan</span>
+                                <span style="font-weight: bold; color: ${distToFloor <= 2.5 ? 'var(--success)' : 'white'};">+${distToFloor.toFixed(2)}%</span>
+                            </div>
+                            <div class="metric-bar-bg">
+                                <div class="metric-bar-fill" style="width: ${progress}%; background: ${distToFloor <= 2.5 ? 'var(--success)' : 'linear-gradient(to right, var(--accent), var(--info))'};"></div>
+                            </div>
+                        </div>
+
+                        <div class="params-list">
+                            <div class="param-row">
+                                <span class="param-label">Lantai Sokongan (Floor)</span>
+                                <span class="param-value" style="color: #60a5fa;">RM ${floorPrice.toFixed(3)}</span>
+                            </div>
+                            <div class="param-row">
+                                <span class="param-label">Touch Count (Tapak)</span>
+                                <span class="param-value">${item.touchCount || 0}x Touches</span>
+                            </div>
+                            <div class="param-row">
+                                <span class="param-label">Stop Loss (SL)</span>
+                                <span class="param-value danger" style="color: var(--danger);">RM ${stopLoss.toFixed(3)} (-${maxRiskPct.toFixed(1)}%)</span>
+                            </div>
+                            <div class="param-row">
+                                <span class="param-label">Target TP1 (+10%)</span>
+                                <span class="param-value success" style="color: var(--success);">RM ${tp1.toFixed(3)}</span>
+                            </div>
+                            <div class="param-row">
+                                <span class="param-label">Target TP2 (+20%)</span>
+                                <span class="param-value" style="color: #c084fc;">RM ${tp2.toFixed(3)}</span>
+                            </div>
+                        </div>
+                    </div>`;
+
+                    // Populate calculator dropdown
+                    const option = document.createElement('option');
+                    option.value = item.name;
+                    option.textContent = `${item.name} (RM ${item.price.toFixed(3)})`;
+                    selectEl.appendChild(option);
+                });
             }
+
+            container.innerHTML = cardsHtml;
+
+            // Restore calculator selection if valid, else select first item
+            if (selectedVal && coreData.some(c => c.name === selectedVal)) {
+                selectEl.value = selectedVal;
+            } else if (coreData.length > 0) {
+                selectEl.value = coreData[0].name;
+            }
+
+            calculatePlan();
+        }
+
+        // Render General Broad Market Scanner Table
+        function renderGeneralTable(data) {
+            const tbody = document.getElementById('tableBody');
+            tbody.innerHTML = '';
+
+            data.forEach((item, index) => {
+                const pct = item.changePct !== undefined ? item.changePct : item.change;
+                const changeClass = pct >= 0 ? 'up' : 'down';
+                const changeSign = pct > 0 ? '+' : '';
+                
+                const floorPrice = item.floorLow || (item.price * 0.97);
+                const setupBadge = item.isConsolidation 
+                    ? `<span class="zone-badge zone-buy" style="margin-bottom:0; font-size:0.68rem; padding: 0.2rem 0.5rem;">🔒 Tapak (${item.touchCount}x)</span>`
+                    : `<span class="zone-badge zone-pending" style="margin-bottom:0; font-size:0.68rem; padding: 0.2rem 0.5rem; background:transparent; border-color:var(--text-muted); color:var(--text-muted);">${item.setupName || 'Pullback'}</span>`;
+
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                    <td style="font-weight: 700; color: var(--text-muted);">#${index + 1}</td>
+                    <td>
+                        <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=5" target="_blank" class="tv-link">${item.name} 🔗</a>
+                        <div style="font-size:0.75rem; color:var(--text-muted);">${item.sector}</div>
+                    </td>
+                    <td style="font-weight: 700;">RM ${item.price.toFixed(3)}</td>
+                    <td class="${changeClass}" style="font-weight: 600;">${changeSign}${pct.toFixed(2)}%</td>
+                    <td>RM ${formatNumber(item.turnover)}</td>
+                    <td>${formatNumber(item.volume)}</td>
+                    <td style="color:#60a5fa; font-weight:600;">RM ${floorPrice.toFixed(3)}</td>
+                    <td>${setupBadge}</td>
+                    <td style="font-size: 0.8rem; font-weight: 600; color: ${item.signal === 'buy' ? 'var(--success)' : 'var(--text-muted)'}">${item.reason}</td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            if (data.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="9" style="text-align:center; padding: 2.5rem; color: var(--text-muted);">Tiada kaunter yang menepati kriteria tapisan semasa. Guna butang Refresh atau ubah filter.</td></tr>';
+            }
+        }
+
+        // Market Sentiment Indicator
+        function updateSentiment(data) {
+            const activeData = data.filter(c => c.turnover > 250000);
+            const totalActive = activeData.length;
+            if (totalActive === 0) return;
             
-            this.textContent = originalText;
+            const upCount = activeData.filter(c => c.change > 0).length;
+            const percentage = (upCount / totalActive) * 100;
+            const sentimentEl = document.getElementById('sentiment-text');
+            
+            if (percentage >= 50) {
+                sentimentEl.innerHTML = `🐂 BULLISH (${percentage.toFixed(0)}% Kaunter Naik)`;
+                sentimentEl.style.color = '#10b981';
+            } else if (percentage >= 35) {
+                sentimentEl.innerHTML = `⚖️ SIDEWAY (${percentage.toFixed(0)}% Kaunter Naik)`;
+                sentimentEl.style.color = '#f59e0b';
+            } else {
+                sentimentEl.innerHTML = `🐻 BEARISH (${percentage.toFixed(0)}% Kaunter Naik)`;
+                sentimentEl.style.color = '#ef4444';
+            }
+        }
+
+        // Interactive Calculator logic
+        function calculatePlan() {
+            const ticker = document.getElementById('calcTicker').value;
+            const capital = parseFloat(document.getElementById('calcCapital').value) || 0;
+            
+            const item = currentData.find(c => c.name === ticker);
+            if (!item) return;
+
+            const price = item.price;
+            const floorPrice = item.floorLow || (price * 0.97);
+            const slPrice = floorPrice * 0.97; // 3% below floor
+            
+            const maxRiskPct = ((price - slPrice) / price) * 100;
+            
+            // Calculate lots (1 lot = 100 units)
+            const lotCost = price * 100;
+            const maxLots = Math.floor(capital / lotCost);
+            const actualCapital = maxLots * lotCost;
+            
+            // Risks and TP
+            const maxLoss = actualCapital * (maxRiskPct / 100);
+            const tp1Price = price * 1.10;
+            const tp2Price = price * 1.20;
+            const tp1Gain = actualCapital * 0.10;
+            const tp2Gain = actualCapital * 0.20;
+
+            // Update UI elements
+            document.getElementById('calcCurrentPrice').textContent = `RM ${price.toFixed(3)}`;
+            document.getElementById('calcFloorPrice').textContent = `RM ${floorPrice.toFixed(3)}`;
+            document.getElementById('calcSlPrice').textContent = `RM ${slPrice.toFixed(3)} (-${maxRiskPct.toFixed(1)}%)`;
+            
+            document.getElementById('calcLots').textContent = `${maxLots} Lot (${(maxLots * 100).toLocaleString()} Unit)`;
+            document.getElementById('calcActualCapital').textContent = `RM ${actualCapital.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+            
+            document.getElementById('calcMaxRisk').textContent = `-RM ${maxLoss.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})} (-${maxRiskPct.toFixed(1)}%)`;
+            document.getElementById('calcTp1').textContent = `RM ${tp1Price.toFixed(3)} (+RM ${tp1Gain.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})})`;
+            document.getElementById('calcTp2').textContent = `RM ${tp2Price.toFixed(3)} (+RM ${tp2Gain.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})})`;
+        }
+
+        // Sorting helpers
+        function setSort(col) {
+            if (currentSortColumn === col) {
+                currentSortDesc = !currentSortDesc;
+            } else {
+                currentSortColumn = col;
+                currentSortDesc = true;
+            }
+            applyFilters();
+        }
+
+        // Page setup and event listeners
+        window.addEventListener('DOMContentLoaded', () => {
+            fetchLiveData();
+
+            document.getElementById('refreshBtn').addEventListener('click', async function() {
+                const text = this.textContent;
+                this.textContent = '⏳ Loading...';
+                await fetchLiveData();
+                this.textContent = text;
+            });
+
+            // History Archive semakan
+            document.getElementById('loadHistoryBtn').addEventListener('click', async function() {
+                const dateVal = document.getElementById('historyDate').value;
+                if (!dateVal) {
+                    alert('Sila pilih tarikh pada kalendar terlebih dahulu.');
+                    return;
+                }
+                const text = this.textContent;
+                this.textContent = '⏳ ...';
+                try {
+                    const cacheBuster = new Date().getTime();
+                    let res = await fetch(`history/data_${dateVal}.json?t=${cacheBuster}`);
+                    if (!res.ok) {
+                        res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/history/data_${dateVal}.json?t=${cacheBuster}`);
+                    }
+                    if (res.ok) {
+                        const raw = await res.json();
+                        const data = Array.isArray(raw) ? raw : (raw.topVolume || []);
+                        if (data && data.length > 0) {
+                            currentData = data;
+                            document.getElementById('dashboardSubtitle').innerHTML = `📂 Menunjukkan Arkib Bukti Sejarah: <strong>${dateVal}</strong>`;
+                            applyFilters();
+                            alert(`Berjaya memuatkan arkib sejarah untuk tarikh: ${dateVal}`);
+                        }
+                    } else {
+                        alert(`Tiada rekod dijumpai untuk tarikh: ${dateVal}`);
+                    }
+                } catch(e) {
+                    alert('Ralat memuatkan rekod sejarah.');
+                }
+                this.textContent = text;
+            });
         });
     </script>
     <script defer src="https://cdn.vercel-insights.com/v1/script.js"></script>
