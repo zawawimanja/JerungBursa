@@ -649,6 +649,7 @@
             <span style="font-weight: 700; font-size: 0.9rem; color: #a5b4fc;">➕ Tambah Saham Fokus:</span>
             <input type="text" id="newFocusTicker" placeholder="Contoh: DNEX" style="text-transform: uppercase; background: #0b0f19; border: 1px solid var(--panel-border); color: white; padding: 0.4rem 0.8rem; border-radius: 6px; width: 140px; font-weight: 700;">
             <button onclick="addFocusTicker()" class="btn" style="padding: 0.4rem 1rem;">Tambah</button>
+            <button onclick="resetFocusWatchlist()" class="btn" style="padding: 0.4rem 1rem; background: #475569;">Reset Default</button>
             <span style="font-size: 0.8rem; color: var(--text-muted); margin-left: auto;">*Nota: Pastikan kaunter telah didaftarkan dalam scraper.</span>
         </div>
 
@@ -872,6 +873,14 @@
             }
         }
 
+        function resetFocusWatchlist() {
+            if (confirm('Adakah anda mahu set semula senarai kepada 11 kaunter default?')) {
+                coreTickers = [...defaultTickers];
+                localStorage.setItem('coreTickers', JSON.stringify(coreTickers));
+                applyFilters();
+            }
+        }
+
         // Format Big Numbers
         function formatNumber(num) {
             if (num >= 1000000) {
@@ -931,8 +940,10 @@
             const consolidationFilter = document.getElementById('consolidationFilter').value;
 
             const generalFiltered = currentData.filter(item => {
-                // Filter out Core Tickers from General view to keep it clean, or keep them?
-                // Let's keep general view as the full market scan.
+                // Exclude downtrend / avoid counters to focus only on healthy setups
+                if (item.signal === 'avoid') return false;
+                if (item.setupName && (item.setupName.includes('Downtrend') || item.setupName.includes('Avoid'))) return false;
+
                 if (searchCounter && !item.name.toLowerCase().includes(searchCounter)) return false;
                 if (item.price < minPrice) return false;
                 if (item.price > maxPrice) return false;
