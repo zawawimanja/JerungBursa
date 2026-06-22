@@ -644,70 +644,117 @@
     <!-- TAB 1: CORE FOCUS TICKERS -->
     <div id="core-tab" class="tab-content active">
         
-        <div class="interactive-panel">
-            <!-- Panel Kiri: Core Ticker Cards Grid -->
-            <div>
-                <div class="cards-grid" id="coreCardsContainer">
-                    <!-- Dynamic Ticker Cards will be inserted here -->
+        <!-- Bar Tambah Ticker -->
+        <div style="background: var(--panel-bg); border: 1px solid var(--panel-border); padding: 1rem; border-radius: 12px; margin-bottom: 1.5rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+            <span style="font-weight: 700; font-size: 0.9rem; color: #a5b4fc;">➕ Tambah Saham Fokus:</span>
+            <input type="text" id="newFocusTicker" placeholder="Contoh: DNEX" style="text-transform: uppercase; background: #0b0f19; border: 1px solid var(--panel-border); color: white; padding: 0.4rem 0.8rem; border-radius: 6px; width: 140px; font-weight: 700;">
+            <button onclick="addFocusTicker()" class="btn" style="padding: 0.4rem 1rem;">Tambah</button>
+            <span style="font-size: 0.8rem; color: var(--text-muted); margin-left: auto;">*Nota: Pastikan kaunter telah didaftarkan dalam scraper.</span>
+        </div>
+
+        <!-- Jadual Widescreen Saham Tumpuan -->
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 50px;">No.</th>
+                        <th>Kaunter</th>
+                        <th>Harga Closed</th>
+                        <th>% Perubahan</th>
+                        <th>Lantai Sokongan (Floor)</th>
+                        <th>Jarak Ke Lantai</th>
+                        <th>Zon Belian</th>
+                        <th>Stop Loss (SL)</th>
+                        <th>Target TP1 (+10%)</th>
+                        <th>Target TP2 (+20%)</th>
+                        <th style="width: 60px; text-align: center;">Padam</th>
+                    </tr>
+                </thead>
+                <tbody id="coreTableBody">
+                    <!-- Dynamic Table Rows populated here -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Panel Kalkulator & SOP (2-Column Grid) -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+            <!-- Kalkulator -->
+            <div class="calc-card" style="margin-bottom: 0;">
+                <div class="calc-header">
+                    🧮 Kalkulator Trading Tapak Tegar
+                </div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem; line-height: 1.4;">
+                    Pilih saham yang berada di <strong>BUY ZONE</strong> untuk merancang saiz modal, lot pembelian, dan risiko stop loss secara matematik.
+                </p>
+                
+                <div class="calc-grid">
+                    <div class="calc-group">
+                        <label>Pilih Saham</label>
+                        <select id="calcTicker" onchange="calculatePlan()">
+                            <!-- Options populated dynamically -->
+                        </select>
+                    </div>
+                    <div class="calc-group">
+                        <label>Modal Anda (RM)</label>
+                        <input type="number" id="calcCapital" value="5000" min="500" step="500" oninput="calculatePlan()">
+                    </div>
+                </div>
+
+                <div class="calc-results">
+                    <div class="result-row">
+                        <span class="result-label">Harga Semasa</span>
+                        <span class="result-value" id="calcCurrentPrice">RM 0.000</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Lantai Sokongan (Support Floor)</span>
+                        <span class="result-value" style="color: #60a5fa;" id="calcFloorPrice">RM 0.000</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Stop Loss (SL) (-3.0%)</span>
+                        <span class="result-value danger" id="calcSlPrice">RM 0.000</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Jumlah Unit Boleh Beli</span>
+                        <span class="result-value" id="calcLots">0 Lot (0 unit)</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Jumlah Modal Digunakan</span>
+                        <span class="result-value" id="calcActualCapital">RM 0.00</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Maksimum Kerugian (Jika SL Hit)</span>
+                        <span class="result-value danger" id="calcMaxRisk">RM 0.00 (0.00%)</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Target Profit 1 (TP1) (+10.0%)</span>
+                        <span class="result-value success" id="calcTp1">RM 0.00 (Gunting RM 0.00)</span>
+                    </div>
+                    <div class="result-row">
+                        <span class="result-label">Target Profit 2 (TP2) (+20.0%)</span>
+                        <span class="result-value success" style="color: #a78bfa;" id="calcTp2">RM 0.00 (Gunting RM 0.00)</span>
+                    </div>
                 </div>
             </div>
 
-            <!-- Panel Kanan: Interactive Calculator Widget -->
-            <div>
-                <div class="calc-card">
-                    <div class="calc-header">
-                        🧮 Kalkulator Trading Tapak Tegar
+            <!-- Panduan SOP -->
+            <div class="guide-board" style="margin-bottom: 0;">
+                <h3>📚 Panduan & SOP Trading Tapak Tegar</h3>
+                <div style="display: flex; flex-direction: column; gap: 1.2rem; height: 100%;">
+                    <div class="guide-item" style="border-left-color: var(--accent);">
+                        <h4>1. Kenapa Tapak Tegar Terhasil?</h4>
+                        <p>Ia menunjukkan zon harga di mana Smart Money (Jerung) sedang melakukan pembelian terkumpul secara pasif tanpa menolak harga ke atas. Had bawah tapak (Support Floor) menjadi pertahanan yang kuat.</p>
                     </div>
-                    <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem; line-height: 1.4;">
-                        Pilih saham yang berada di <strong>BUY ZONE</strong> untuk merancang saiz modal, lot pembelian, dan risiko stop loss secara matematik.
-                    </p>
-                    
-                    <div class="calc-grid">
-                        <div class="calc-group">
-                            <label>Pilih Saham</label>
-                            <select id="calcTicker" onchange="calculatePlan()">
-                                <!-- Options populated dynamically -->
-                            </select>
-                        </div>
-                        <div class="calc-group">
-                            <label>Modal Anda (RM)</label>
-                            <input type="number" id="calcCapital" value="5000" min="500" step="500" oninput="calculatePlan()">
-                        </div>
+                    <div class="guide-item" style="border-left-color: var(--success);">
+                        <h4>2. SOP Pembelian (Buy Zone)</h4>
+                        <p>Masuk pasaran apabila harga semasa berada sangat dekat dengan Support Floor (jarak &le; 2.5%). Ini memberi anda kelebihan harga masuk yang rendah dan kawalan risiko yang sangat optimum.</p>
                     </div>
-
-                    <div class="calc-results">
-                        <div class="result-row">
-                            <span class="result-label">Harga Semasa</span>
-                            <span class="result-value" id="calcCurrentPrice">RM 0.000</span>
-                        </div>
-                        <div class="result-row">
-                            <span class="result-label">Lantai Sokongan (Support Floor)</span>
-                            <span class="result-value" style="color: #60a5fa;" id="calcFloorPrice">RM 0.000</span>
-                        </div>
-                        <div class="result-row">
-                            <span class="result-label">Stop Loss (SL) (-3.0%)</span>
-                            <span class="result-value danger" id="calcSlPrice">RM 0.000</span>
-                        </div>
-                        <div class="result-row">
-                            <span class="result-label">Jumlah Unit Boleh Beli</span>
-                            <span class="result-value" id="calcLots">0 Lot (0 unit)</span>
-                        </div>
-                        <div class="result-row">
-                            <span class="result-label">Jumlah Modal Digunakan</span>
-                            <span class="result-value" id="calcActualCapital">RM 0.00</span>
-                        </div>
-                        <div class="result-row">
-                            <span class="result-label">Maksimum Kerugian (Jika SL Hit)</span>
-                            <span class="result-value danger" id="calcMaxRisk">RM 0.00 (0.00%)</span>
-                        </div>
-                        <div class="result-row">
-                            <span class="result-label">Target Profit 1 (TP1) (+10.0%)</span>
-                            <span class="result-value success" id="calcTp1">RM 0.00 (Gunting RM 0.00)</span>
-                        </div>
-                        <div class="result-row">
-                            <span class="result-label">Target Profit 2 (TP2) (+20.0%)</span>
-                            <span class="result-value success" style="color: #a78bfa;" id="calcTp2">RM 0.00 (Gunting RM 0.00)</span>
-                        </div>
+                    <div class="guide-item" style="border-left-color: var(--danger);">
+                        <h4>3. Pengurusan Risiko Terbuka</h4>
+                        <p>Stop Loss (SL) diletakkan ketat pada 3% di bawah Support Floor. Jika harga menembusi Support Floor ke bawah, ini menandakan fasa pengumpulan jerung gagal dan kita keluar dengan kerugian yang kecil.</p>
+                    </div>
+                    <div class="guide-item" style="border-left-color: #a78bfa;">
+                        <h4>4. SOP Pengambilan Untung (TP)</h4>
+                        <p>Cadangan TP1 adalah pada +10.0% kenaikan dari harga belian (Scalping/Swing singkat). TP2 diletakkan pada +20.0% kenaikan bagi menangkap pergerakan breakout ATH/RBS sepenuhnya.</p>
                     </div>
                 </div>
             </div>
@@ -780,33 +827,12 @@
 
     </div>
 
-    <!-- GUIDE BOARD -->
-    <div class="guide-board">
-        <h3>📚 Panduan Strategi Multi-Touch Consolidation (Tapak Tegar)</h3>
-        <div class="guide-grid">
-            <div class="guide-item">
-                <h4>1. Kenapa Tapak Tegar Terhasil?</h4>
-                <p>Ia menunjukkan zon harga di mana Smart Money (Jerung) sedang melakukan pembelian terkumpul secara pasif tanpa menolak harga ke atas. Had bawah tapak (Support Floor) menjadi pertahanan yang kuat.</p>
-            </div>
-            <div class="guide-item" style="border-left-color: var(--success);">
-                <h4>2. SOP Pembelian (Buy Zone)</h4>
-                <p>Masuk pasaran apabila harga semasa berada sangat dekat dengan Support Floor (jarak &le; 2.5%). Ini memberi anda kelebihan harga masuk yang rendah dan kawalan risiko yang sangat optimum.</p>
-            </div>
-            <div class="guide-item" style="border-left-color: var(--danger);">
-                <h4>3. Pengurusan Risiko Terbuka</h4>
-                <p>Stop Loss (SL) diletakkan ketat pada 3% di bawah Support Floor. Jika harga menembusi Support Floor ke bawah, ini menandakan fasa pengumpulan jerung gagal dan kita keluar dengan kerugian yang kecil.</p>
-            </div>
-            <div class="guide-item" style="border-left-color: #a78bfa;">
-                <h4>4. SOP Pengambilan Untung (TP)</h4>
-                <p>Cadangan TP1 adalah pada +10.0% kenaikan dari harga belian (Scalping/Swing singkat). TP2 diletakkan pada +20.0% kenaikan bagi menangkap pergerakan breakout ATH/RBS sepenuhnya.</p>
-            </div>
-        </div>
-    </div>
 
     <script>
         // Global variables
         let currentData = [];
-        let coreTickers = ['PENTECH', 'SDCG', 'NE', 'HKB', 'EIPOWER', 'MNHLDG', 'OGX', 'AMS', 'ISF', 'DNEX', 'AMBEST'];
+        let defaultTickers = ['PENTECH', 'SDCG', 'NE', 'HKB', 'EIPOWER', 'MNHLDG', 'OGX', 'AMS', 'ISF', 'DNEX', 'AMBEST'];
+        let coreTickers = JSON.parse(localStorage.getItem('coreTickers')) || defaultTickers;
         let currentSortColumn = 'turnover';
         let currentSortDesc = true;
 
@@ -821,6 +847,29 @@
 
             document.getElementById(tabId).classList.add('active');
             event.currentTarget.classList.add('active');
+        }
+
+        // Manage Focus Watchlist
+        function addFocusTicker() {
+            const input = document.getElementById('newFocusTicker');
+            const ticker = input.value.trim().toUpperCase();
+            if (!ticker) return;
+            if (coreTickers.includes(ticker)) {
+                alert('Kaunter ini sudah ada dalam senarai!');
+                return;
+            }
+            coreTickers.push(ticker);
+            localStorage.setItem('coreTickers', JSON.stringify(coreTickers));
+            input.value = '';
+            applyFilters();
+        }
+
+        function removeFocusTicker(ticker) {
+            if (confirm(`Adakah anda pasti mahu mengeluarkan ${ticker} dari Tumpuan Utama?`)) {
+                coreTickers = coreTickers.filter(t => t !== ticker);
+                localStorage.setItem('coreTickers', JSON.stringify(coreTickers));
+                applyFilters();
+            }
         }
 
         // Format Big Numbers
@@ -911,12 +960,12 @@
             updateSentiment(currentData);
         }
 
-        // Render Core Ticker Cards
+        // Render Core Ticker Table
         function renderCoreCards() {
-            const container = document.getElementById('coreCardsContainer');
+            const container = document.getElementById('coreTableBody');
             const selectEl = document.getElementById('calcTicker');
             
-            // Filter only the 11 core focus tickers that are available in currentData
+            // Filter only the core focus tickers that are available in currentData
             const coreData = currentData.filter(c => coreTickers.includes(c.name));
             
             // Sort core tickers so that those in the BUY ZONE appear first
@@ -932,11 +981,11 @@
             const selectedVal = selectEl.value;
             selectEl.innerHTML = '';
 
-            let cardsHtml = '';
+            let rowsHtml = '';
             if (coreData.length === 0) {
-                cardsHtml = '<div style="color: var(--text-muted); padding: 2rem; text-align: center; grid-column: 1/-1;">Tiada data untuk 11 saham tumpuan dalam live_data.json. Cuba jalankan bot scraper anda.</div>';
+                rowsHtml = '<tr><td colspan="11" style="color: var(--text-muted); padding: 2rem; text-align: center;">Tiada data untuk saham tumpuan dalam live_data.json. Tambah saham fokus di atas atau jalankan bot scraper anda.</td></tr>';
             } else {
-                coreData.forEach(item => {
+                coreData.forEach((item, index) => {
                     const pct = item.changePct !== undefined ? item.changePct : item.change;
                     const changeClass = pct >= 0 ? 'up' : 'down';
                     const changeSign = pct > 0 ? '+' : '';
@@ -948,14 +997,14 @@
                     const distToFloor = ((item.price - floorPrice) / floorPrice) * 100;
                     
                     // Zone calculation
-                    let zoneText = '⏳ Pullback Pending';
+                    let zoneText = '⏳ Pullback';
                     let zoneClass = 'zone-pending';
                     
                     if (distToFloor <= 2.5) {
-                        zoneText = '🔥 BUY ZONE (Perfect Entry)';
+                        zoneText = '🔥 BUY ZONE';
                         zoneClass = 'zone-buy';
                     } else if (distToFloor > 6.0) {
-                        zoneText = '🚀 Breakout / Chase';
+                        zoneText = '🚀 Breakout';
                         zoneClass = 'zone-chase';
                     }
 
@@ -965,57 +1014,35 @@
                     const tp1 = item.price * 1.10;
                     const tp2 = item.price * 1.20;
 
-                    // Progress bar width (max 10% distance is 0% progress bar, 0% distance is 100% progress bar)
-                    const progress = Math.max(0, Math.min(100, 100 - (distToFloor * 10)));
-
-                    cardsHtml += `
-                    <div class="ticker-card">
-                        <div class="card-header">
-                            <div>
-                                <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=30" target="_blank" class="card-title">${item.name} 🔗</a>
-                                <div class="card-sector">${item.sector} &bull; VIP Tumpuan</div>
-                            </div>
-                            <div class="card-price-info">
-                                <div class="card-price">RM ${item.price.toFixed(3)}</div>
-                                <div class="card-change ${changeClass}">${changeSign}${pct.toFixed(2)}%</div>
-                            </div>
-                        </div>
-
-                        <span class="zone-badge ${zoneClass}">${zoneText}</span>
-
-                        <div class="metric-bar-container">
-                            <div class="metric-bar-label">
-                                <span>Kedekatan Tapak Sokongan</span>
-                                <span style="font-weight: bold; color: ${distToFloor <= 2.5 ? 'var(--success)' : 'white'};">+${distToFloor.toFixed(2)}%</span>
-                            </div>
-                            <div class="metric-bar-bg">
-                                <div class="metric-bar-fill" style="width: ${progress}%; background: ${distToFloor <= 2.5 ? 'var(--success)' : 'linear-gradient(to right, var(--accent), var(--info))'};"></div>
-                            </div>
-                        </div>
-
-                        <div class="params-list">
-                            <div class="param-row">
-                                <span class="param-label">Lantai Sokongan (Floor)</span>
-                                <span class="param-value" style="color: #60a5fa;">RM ${floorPrice.toFixed(3)}</span>
-                            </div>
-                            <div class="param-row">
-                                <span class="param-label">Touch Count (Tapak)</span>
-                                <span class="param-value">${item.touchCount || 0}x Touches</span>
-                            </div>
-                            <div class="param-row">
-                                <span class="param-label">Stop Loss (SL)</span>
-                                <span class="param-value danger" style="color: var(--danger);">RM ${stopLoss.toFixed(3)} (-${maxRiskPct.toFixed(1)}%)</span>
-                            </div>
-                            <div class="param-row">
-                                <span class="param-label">Target TP1 (+10%)</span>
-                                <span class="param-value success" style="color: var(--success);">RM ${tp1.toFixed(3)}</span>
-                            </div>
-                            <div class="param-row">
-                                <span class="param-label">Target TP2 (+20%)</span>
-                                <span class="param-value" style="color: #c084fc;">RM ${tp2.toFixed(3)}</span>
-                            </div>
-                        </div>
-                    </div>`;
+                    rowsHtml += `
+                    <tr>
+                        <td style="font-weight: bold; color: var(--text-muted);">${index + 1}</td>
+                        <td>
+                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=30" target="_blank" class="tv-link">${item.name} 🔗</a>
+                            <div style="font-size: 0.75rem; color: var(--text-muted);">${item.sector || 'VIP Focus'}</div>
+                        </td>
+                        <td style="font-weight: 700; color: white;">RM ${item.price.toFixed(3)}</td>
+                        <td class="${changeClass}" style="font-weight: 700;">${changeSign}${pct.toFixed(2)}%</td>
+                        <td>
+                            <span style="font-weight: 700; color: #60a5fa;">RM ${floorPrice.toFixed(3)}</span>
+                            <div style="font-size: 0.75rem; color: var(--text-muted);">${item.touchCount || 0}x Tapak</div>
+                        </td>
+                        <td>
+                            <span style="font-weight: 700; color: ${distToFloor <= 2.5 ? 'var(--success)' : 'white'};">+${distToFloor.toFixed(2)}%</span>
+                        </td>
+                        <td>
+                            <span class="zone-badge ${zoneClass}" style="font-size: 0.75rem; padding: 0.2rem 0.6rem;">${zoneText}</span>
+                        </td>
+                        <td class="danger" style="font-weight: 700;">
+                            RM ${stopLoss.toFixed(3)}
+                            <div style="font-size: 0.75rem; color: var(--danger); font-weight: normal;">-${maxRiskPct.toFixed(1)}%</div>
+                        </td>
+                        <td class="success" style="font-weight: 700; color: var(--success);">RM ${tp1.toFixed(3)}</td>
+                        <td style="font-weight: 700; color: #c084fc;">RM ${tp2.toFixed(3)}</td>
+                        <td style="text-align: center;">
+                            <button onclick="removeFocusTicker('${item.name}')" style="background: rgba(239, 68, 68, 0.15); border: none; color: var(--danger); font-weight: 900; padding: 0.2rem 0.5rem; border-radius: 4px; cursor: pointer; transition: all 0.2s;" title="Padam dari Tumpuan Utama">×</button>
+                        </td>
+                    </tr>`;
 
                     // Populate calculator dropdown
                     const option = document.createElement('option');
@@ -1025,7 +1052,7 @@
                 });
             }
 
-            container.innerHTML = cardsHtml;
+            container.innerHTML = rowsHtml;
 
             // Restore calculator selection if valid, else select first item
             if (selectedVal && coreData.some(c => c.name === selectedVal)) {
