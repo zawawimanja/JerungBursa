@@ -662,8 +662,8 @@
                         <th>Kaunter</th>
                         <th>Harga Closed</th>
                         <th>% Perubahan</th>
-                        <th>Lantai Sokongan (Floor)</th>
-                        <th>Jarak Ke Lantai</th>
+                        <th style="cursor: pointer;" onclick="setCoreSort('floorLow')" title="Klik untuk susun">Lantai Sokongan (Floor) ↕</th>
+                        <th style="cursor: pointer;" onclick="setCoreSort('distToFloor')" title="Klik untuk susun">Jarak Ke Lantai ↕</th>
                         <th>Zon Belian</th>
                         <th>Stop Loss (SL)</th>
                         <th>Target TP1 (+10%)</th>
@@ -813,8 +813,8 @@
                         <th>Kaunter</th>
                         <th>Harga Closed</th>
                         <th>% Perubahan</th>
-                        <th>Lantai Sokongan (Floor)</th>
-                        <th>Jarak Ke Lantai</th>
+                        <th style="cursor: pointer;" onclick="setSort('floorLow')" title="Klik untuk susun">Lantai Sokongan (Floor) ↕</th>
+                        <th style="cursor: pointer;" onclick="setSort('distToFloor')" title="Klik untuk susun">Jarak Ke Lantai ↕</th>
                         <th>Zon Belian</th>
                         <th>Stop Loss (SL)</th>
                         <th>Target TP1 (+10%)</th>
@@ -838,6 +838,8 @@
         let coreTickers = JSON.parse(localStorage.getItem('coreTickers')) || defaultTickers;
         let currentSortColumn = 'turnover';
         let currentSortDesc = true;
+        let coreSortColumn = 'distToFloor';
+        let coreSortDesc = false;
 
         // Switch Tabs
         function switchTab(tabId) {
@@ -967,7 +969,16 @@
                 if (currentSortColumn === 'change') {
                     valA = a.changePct !== undefined ? a.changePct : a.change;
                     valB = b.changePct !== undefined ? b.changePct : b.change;
+                } else if (currentSortColumn === 'floorLow') {
+                    valA = a.floorLow || (a.price * 0.97);
+                    valB = b.floorLow || (b.price * 0.97);
+                } else if (currentSortColumn === 'distToFloor') {
+                    const fA = a.floorLow || (a.price * 0.97);
+                    const fB = b.floorLow || (b.price * 0.97);
+                    valA = ((a.price - fA) / fA) * 100;
+                    valB = ((b.price - fB) / fB) * 100;
                 }
+                
                 if (typeof valA === 'string' && typeof valB === 'string') {
                     return currentSortDesc ? valB.localeCompare(valA) : valA.localeCompare(valB);
                 }
@@ -986,13 +997,19 @@
             // Filter only the core focus tickers that are available in currentData
             const coreData = currentData.filter(c => coreTickers.includes(c.name));
             
-            // Sort core tickers so that those in the BUY ZONE appear first
+            // Sort core tickers
             coreData.sort((a, b) => {
-                const floorA = a.floorLow || (a.price * 0.97);
-                const floorB = b.floorLow || (b.price * 0.97);
-                const distA = ((a.price - floorA) / floorA) * 100;
-                const distB = ((b.price - floorB) / floorB) * 100;
-                return distA - distB;
+                let valA, valB;
+                if (coreSortColumn === 'floorLow') {
+                    valA = a.floorLow || (a.price * 0.97);
+                    valB = b.floorLow || (b.price * 0.97);
+                } else { // default distToFloor
+                    const floorA = a.floorLow || (a.price * 0.97);
+                    const floorB = b.floorLow || (b.price * 0.97);
+                    valA = ((a.price - floorA) / floorA) * 100;
+                    valB = ((b.price - floorB) / floorB) * 100;
+                }
+                return coreSortDesc ? valB - valA : valA - valB;
             });
 
             // Keep track of previously selected ticker in calculator
@@ -1215,6 +1232,16 @@
             } else {
                 currentSortColumn = col;
                 currentSortDesc = true;
+            }
+            applyFilters();
+        }
+
+        function setCoreSort(col) {
+            if (coreSortColumn === col) {
+                coreSortDesc = !coreSortDesc;
+            } else {
+                coreSortColumn = col;
+                coreSortDesc = false; // default to ascending for distToFloor
             }
             applyFilters();
         }
