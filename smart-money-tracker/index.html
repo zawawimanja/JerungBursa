@@ -646,12 +646,17 @@
         <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9)); border: 2px solid #f59e0b; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.4); position: relative; overflow: hidden;">
             <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: rgba(245, 158, 11, 0.12); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
             
-            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
-                <span style="font-size: 1.6rem;">🔥</span>
-                <div>
-                    <h2 style="margin: 0; font-size: 1.25rem; color: #f59e0b; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;">Zon Gabungan Emas (Low Risk / High Conviction)</h2>
-                    <p style="margin: 0.15rem 0 0 0; font-size: 0.78rem; color: #94a3b8;">Setup Paling Selamat: Harga Rapat ke Lantai (≤ 2.5%) + Sentuhan Tapak Kuat (≥ 10x) + Bawah RM3.00</p>
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <span style="font-size: 1.6rem;">🔥</span>
+                    <div>
+                        <h2 style="margin: 0; font-size: 1.25rem; color: #f59e0b; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;">Zon Gabungan Emas (Low Risk / High Conviction)</h2>
+                        <p style="margin: 0.15rem 0 0 0; font-size: 0.78rem; color: #94a3b8;">Setup Paling Selamat: Harga Rapat ke Lantai (≤ 2.5%) + Sentuhan Tapak Kuat (≥ 10x) + Bawah RM3.00</p>
+                    </div>
                 </div>
+                <button onclick="copyTradingViewWatchlist(event)" style="background: #f59e0b; color: #0f172a; border: none; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 800; font-size: 0.82rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: transform 0.2s; box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    📋 Salin Watchlist TV
+                </button>
             </div>
             
             <div id="goldenCardsContainer" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem;">
@@ -1139,6 +1144,70 @@
             });
             
             container.innerHTML = cardsHtml;
+        }
+
+        // Copy Golden Zone Watchlist for TradingView
+        function copyTradingViewWatchlist(event) {
+            const btn = event ? (event.currentTarget || event.target) : null;
+            
+            // Filter currentData for Golden Setups (same as renderGoldenZone)
+            const goldenList = currentData.filter(item => {
+                const floor = item.floorLow || (item.price * 0.97);
+                const dist = ((item.price - floor) / floor) * 100;
+                
+                const isDowntrend = item.setupName && (
+                    item.setupName.includes('Downtrend') || 
+                    item.setupName.includes('Avoid') || 
+                    item.setupName === 'N/A'
+                );
+                
+                return !isDowntrend && 
+                       item.price <= 3.00 && 
+                       (item.touchCount >= 10) && 
+                       (dist <= 2.5);
+            });
+            
+            if (goldenList.length === 0) {
+                alert('Tiada kaunter dalam Zon Gabungan Emas untuk disalin!');
+                return;
+            }
+            
+            // Sort by:
+            // 1. Distance to floor (ascending) - closest first
+            // 2. Touch count (descending) - stronger floor first if distance is equal
+            goldenList.sort((a, b) => {
+                const floorA = a.floorLow || (a.price * 0.97);
+                const distA = ((a.price - floorA) / floorA) * 100;
+                
+                const floorB = b.floorLow || (b.price * 0.97);
+                const distB = ((b.price - floorB) / floorB) * 100;
+                
+                if (Math.abs(distA - distB) < 0.001) {
+                    return b.touchCount - a.touchCount;
+                }
+                return distA - distB;
+            });
+            
+            // Format into TV watchlist comma-separated format
+            const tvString = goldenList.map(item => `MYX:${item.name}`).join(',');
+            
+            navigator.clipboard.writeText(tvString).then(() => {
+                // Show a nice feedback message
+                if (btn) {
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = '✅ Berjaya Disalin!';
+                    btn.style.background = 'var(--success)';
+                    btn.style.color = 'white';
+                    
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.style.background = '#f59e0b';
+                        btn.style.color = '#0f172a';
+                    }, 2000);
+                }
+            }).catch(err => {
+                alert('Gagal menyalin: ' + err);
+            });
         }
 
         // Render Core Ticker Table
