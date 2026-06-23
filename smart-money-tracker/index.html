@@ -611,6 +611,11 @@
             header { flex-direction: column; align-items: flex-start; }
             .controls { width: 100%; justify-content: space-between; }
         }
+        .golden-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px -5px rgba(245, 158, 11, 0.25), 0 8px 8px -6px rgba(0, 0, 0, 0.3) !important;
+            border-color: rgba(245, 158, 11, 0.7) !important;
+        }
     </style>
 </head>
 <body>
@@ -635,6 +640,25 @@
             <button id="refreshBtn" class="btn">🔄 Refresh Live</button>
         </div>
     </header>
+
+    <!-- NEW SECTION: 🔥 ZON GABUNGAN EMAS (LOW RISK / HIGH CONVICTION) -->
+    <div id="golden-zone-section" style="margin-bottom: 2rem;">
+        <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9)); border: 2px solid #f59e0b; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.4); position: relative; overflow: hidden;">
+            <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: rgba(245, 158, 11, 0.12); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
+            
+            <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.25rem;">
+                <span style="font-size: 1.6rem;">🔥</span>
+                <div>
+                    <h2 style="margin: 0; font-size: 1.25rem; color: #f59e0b; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;">Zon Gabungan Emas (Low Risk / High Conviction)</h2>
+                    <p style="margin: 0.15rem 0 0 0; font-size: 0.78rem; color: #94a3b8;">Setup Paling Selamat: Harga Rapat ke Lantai (≤ 2.5%) + Sentuhan Tapak Kuat (≥ 10x) + Bawah RM3.00</p>
+                </div>
+            </div>
+            
+            <div id="goldenCardsContainer" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem;">
+                <!-- Dynamically populated cards -->
+            </div>
+        </div>
+    </div>
 
     <div class="tabs-nav">
         <button class="tab-btn active" onclick="switchTab('core-tab')">🏆 11 Saham Tumpuan Utama</button>
@@ -940,6 +964,9 @@
             // Render Tab 1 (Core Focus Cards)
             renderCoreCards();
 
+            // Render Golden Zone Cards
+            renderGoldenZone();
+
             // Filter for Tab 2 (General Broad Market Scanner)
             const searchCounter = document.getElementById('searchCounter').value.trim().toLowerCase();
             const minPrice = parseFloat(document.getElementById('minPrice').value) || 0;
@@ -999,6 +1026,119 @@
 
             renderGeneralTable(generalFiltered);
             updateSentiment(currentData);
+        }
+
+        // Render Golden Zone Cards
+        function renderGoldenZone() {
+            const container = document.getElementById('goldenCardsContainer');
+            if (!container) return;
+            
+            // Filter currentData for Golden Setups:
+            // 1. Not Downtrend (setupName !== '🧊 Downtrend / Avoid')
+            // 2. Price <= 3.00
+            // 3. touchCount >= 10
+            // 4. Distance to floor <= 2.5%
+            const goldenList = currentData.filter(item => {
+                const floor = item.floorLow || (item.price * 0.97);
+                const dist = ((item.price - floor) / floor) * 100;
+                
+                const isDowntrend = item.setupName && (
+                    item.setupName.includes('Downtrend') || 
+                    item.setupName.includes('Avoid') || 
+                    item.setupName === 'N/A'
+                );
+                
+                return !isDowntrend && 
+                       item.price <= 3.00 && 
+                       (item.touchCount >= 10) && 
+                       (dist <= 2.5);
+            });
+            
+            if (goldenList.length === 0) {
+                container.innerHTML = `
+                    <div style="grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; background: rgba(15, 23, 42, 0.4); border: 1px dashed var(--panel-border); border-radius: 12px; text-align: center; color: var(--text-muted);">
+                        <span style="font-size: 1.5rem; margin-bottom: 0.5rem;">⏳</span>
+                        <div style="font-size: 0.85rem; font-weight: 600;">Tiada Setup Gabungan Emas Aktif</div>
+                        <div style="font-size: 0.75rem; margin-top: 0.2rem;">Menunggu pasaran membuat pullback sihat ke lantai sokongan yang kukuh (≥10x sentuhan).</div>
+                    </div>
+                `;
+                return;
+            }
+            
+            // Sort by:
+            // 1. Distance to floor (ascending) - closest first
+            // 2. Touch count (descending) - stronger floor first if distance is equal
+            goldenList.sort((a, b) => {
+                const floorA = a.floorLow || (a.price * 0.97);
+                const distA = ((a.price - floorA) / floorA) * 100;
+                
+                const floorB = b.floorLow || (b.price * 0.97);
+                const distB = ((b.price - floorB) / floorB) * 100;
+                
+                if (Math.abs(distA - distB) < 0.001) {
+                    return b.touchCount - a.touchCount;
+                }
+                return distA - distB;
+            });
+            
+            let cardsHtml = '';
+            goldenList.forEach((item, index) => {
+                const floor = item.floorLow || (item.price * 0.97);
+                const dist = ((item.price - floor) / floor) * 100;
+                const stopLoss = floor * 0.97;
+                const tp1 = item.price * 1.10;
+                const tp2 = item.price * 1.20;
+                const pct = item.changePct !== undefined ? item.changePct : item.change;
+                const changeClass = pct >= 0 ? 'up' : 'down';
+                const changeSign = pct > 0 ? '+' : '';
+                
+                cardsHtml += `
+                    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 12px; padding: 1.25rem 1rem 1rem 1rem; display: flex; flex-direction: column; gap: 0.75rem; transition: all 0.2s; position: relative;" class="golden-card">
+                        <!-- Ranking Badge -->
+                        <div style="position: absolute; top: -8px; left: -8px; background: #f59e0b; color: #0f172a; font-weight: 900; font-size: 0.75rem; padding: 0.15rem 0.45rem; border-radius: 6px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); z-index: 10;">
+                            #${index + 1}
+                        </div>
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                            <div style="padding-left: 0.4rem;">
+                                <div style="font-weight: 900; font-size: 1.15rem; color: white; display: flex; align-items: center; gap: 0.4rem;">
+                                    ${item.name}
+                                    <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=30" target="_blank" style="font-size: 0.75rem; color: #f59e0b; text-decoration: none;" title="TradingView 30m Chart">🔗</a>
+                                </div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted);">${item.sector || 'Bursa'}</div>
+                            </div>
+                            <div style="text-align: right;">
+                                <div style="font-weight: 800; font-size: 1.1rem; color: white;">RM ${item.price.toFixed(3)}</div>
+                                <div class="${changeClass}" style="font-size: 0.8rem; font-weight: 700;">${changeSign}${pct.toFixed(2)}%</div>
+                            </div>
+                        </div>
+                        
+                        <div style="background: rgba(245, 158, 11, 0.08); border-radius: 8px; padding: 0.5rem 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <div style="font-size: 0.7rem; color: #f59e0b; font-weight: 700; text-transform: uppercase;">Lantai Sokongan</div>
+                                <div style="font-weight: 800; color: white; font-size: 0.95rem;">RM ${floor.toFixed(3)}</div>
+                            </div>
+                            <div style="text-align: right;">
+                                <div style="font-size: 0.7rem; color: #f59e0b; font-weight: 700; text-transform: uppercase;">Sentuhan</div>
+                                <div style="font-weight: 800; color: white; font-size: 0.95rem;">${item.touchCount}x Tapak</div>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: space-between; font-size: 0.75rem; border-top: 1px solid var(--panel-border); padding-top: 0.5rem; margin-top: auto;">
+                            <div>
+                                <span style="color: var(--danger); font-weight: bold;">SL (3%):</span>
+                                <span style="color: white; font-weight: 700;">RM ${stopLoss.toFixed(3)}</span>
+                            </div>
+                            <div>
+                                <span style="color: var(--success); font-weight: bold;">Jarak:</span>
+                                <span style="color: ${dist <= 1.0 ? 'var(--success)' : 'white'}; font-weight: 700;">+${dist.toFixed(2)}%</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            });
+            
+            container.innerHTML = cardsHtml;
         }
 
         // Render Core Ticker Table
