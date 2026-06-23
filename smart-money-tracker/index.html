@@ -970,8 +970,8 @@
                     valA = a.changePct !== undefined ? a.changePct : a.change;
                     valB = b.changePct !== undefined ? b.changePct : b.change;
                 } else if (currentSortColumn === 'floorLow') {
-                    valA = a.floorLow || (a.price * 0.97);
-                    valB = b.floorLow || (b.price * 0.97);
+                    valA = a.touchCount || 0;
+                    valB = b.touchCount || 0;
                 } else if (currentSortColumn === 'distToFloor') {
                     const fA = a.floorLow || (a.price * 0.97);
                     const fB = b.floorLow || (b.price * 0.97);
@@ -1001,8 +1001,8 @@
             coreData.sort((a, b) => {
                 let valA, valB;
                 if (coreSortColumn === 'floorLow') {
-                    valA = a.floorLow || (a.price * 0.97);
-                    valB = b.floorLow || (b.price * 0.97);
+                    valA = a.touchCount || 0;
+                    valB = b.touchCount || 0;
                 } else { // default distToFloor
                     const floorA = a.floorLow || (a.price * 0.97);
                     const floorB = b.floorLow || (b.price * 0.97);
@@ -1231,7 +1231,7 @@
                 currentSortDesc = !currentSortDesc;
             } else {
                 currentSortColumn = col;
-                currentSortDesc = true;
+                currentSortDesc = col === 'distToFloor' ? false : true;
             }
             applyFilters();
         }
@@ -1241,7 +1241,7 @@
                 coreSortDesc = !coreSortDesc;
             } else {
                 coreSortColumn = col;
-                coreSortDesc = false; // default to ascending for distToFloor
+                coreSortDesc = col === 'floorLow' ? true : false;
             }
             applyFilters();
         }
