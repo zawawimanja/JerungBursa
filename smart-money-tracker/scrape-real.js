@@ -201,7 +201,9 @@ async function main() {
                     const closeTightness = ((maxClose - minClose) / minClose) * 100;
                     
                     const lows = lastDays.map(d => d.low);
-                    const minLow = Math.min(...lows);
+                    // Tapisan wick harian: Abaikan low yang > 5% di bawah minClose untuk elak outlier
+                    const validLows = lows.filter(l => l >= minClose * 0.95);
+                    const minLow = validLows.length > 0 ? Math.min(...validLows) : Math.min(...lows);
                     const maxLow = Math.max(...lows);
                     const lowTightness = ((maxLow - minLow) / minLow) * 100;
                     
@@ -213,6 +215,13 @@ async function main() {
                         }
                     });
                     
+                    const closesDaily = validDays.map(d => d.close).filter(c => c !== null && c !== undefined);
+                    const sma50 = closesDaily.length >= 50
+                        ? closesDaily.slice(-50).reduce((a, b) => a + b, 0) / 50
+                        : (closesDaily.reduce((a, b) => a + b, 0) / closesDaily.length);
+                    stock.sma50 = sma50;
+                    stock.hasEnoughSmaData = closesDaily.length >= 20;
+
                     stock.closeTightness = parseFloat(closeTightness.toFixed(2));
                     stock.lowTightness = parseFloat(lowTightness.toFixed(2));
                     stock.touchCount = touchCount;
@@ -263,12 +272,15 @@ async function main() {
                                         const minIntraClose = Math.min(...last12Closes);
                                         const intraCloseTightness = ((maxIntraClose - minIntraClose) / minIntraClose) * 100;
                                         
+                                        // Sentiasa kemas kini floorLow dan touchCount berasaskan intraday 3 hari
+                                        // (selepas menolak wicks ekor melampau bawah 6%)
+                                        stock.floorLow = floorLow;
+                                        stock.touchCount = intraTouches;
+                                        
                                         if (intraCloseTightness <= 3.8 && intraTouches >= 4) {
                                             isConsolidation = true;
                                             stock.closeTightness = parseFloat(intraCloseTightness.toFixed(2));
-                                            stock.touchCount = intraTouches;
                                             stock.isIntradayValidated = true;
-                                            stock.floorLow = floorLow;
                                         }
                                     }
                                 }
@@ -317,14 +329,16 @@ async function main() {
         let setupName = 'N/A';
         if (stock.high52) {
             pullback = parseFloat(((stock.high52 - stock.price) / stock.high52 * 100).toFixed(2));
-            if (pullback <= 5.0) {
+            const isSmaDowntrend = (stock.sma50 && stock.hasEnoughSmaData) ? (stock.price < stock.sma50) : false;
+            
+            if (isSmaDowntrend || pullback > 30.0) {
+                setupName = '🧊 Downtrend / Avoid';
+            } else if (pullback <= 5.0) {
                 setupName = '🔥 RBS Retest / Near ATH';
             } else if (pullback <= 15.0) {
                 setupName = '📉 Healthy Dip';
             } else if (pullback <= 30.0) {
                 setupName = '🔻 Buy Support / Deep Pullback';
-            } else {
-                setupName = '🧊 Downtrend / Avoid';
             }
         }
         
@@ -332,7 +346,10 @@ async function main() {
         let signal = 'avoid';
         let reason = 'Jerung Buang / Mendatar';
         
-        if (stock.isConsolidation) {
+        if (setupName === '🧊 Downtrend / Avoid') {
+            signal = 'avoid';
+            reason = '🧊 Saham Downtrend: Elak Trading!';
+        } else if (stock.isConsolidation) {
             signal = 'buy';
             if (stock.price < 0.20) {
                 reason = '⚠️ Penny Goreng: Tapak Tegar (Intraday Sahaja, Elak Hold!)';
@@ -363,7 +380,7 @@ async function main() {
         }
         
         // Perkayakan sebab dengan maklumat pullback
-        if (stock.high52) {
+        if (stock.high52 && setupName !== '🧊 Downtrend / Avoid') {
             if (pullback <= 5.0) {
                 reason += ' (Near ATH)';
             } else if (pullback <= 15.0) {

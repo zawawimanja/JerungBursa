@@ -949,9 +949,21 @@
             const consolidationFilter = document.getElementById('consolidationFilter').value;
 
             const generalFiltered = currentData.filter(item => {
-                // Exclude downtrend / avoid counters to focus only on healthy setups
-                if (item.signal === 'avoid') return false;
-                if (item.setupName && (item.setupName.includes('Downtrend') || item.setupName.includes('Avoid'))) return false;
+                // Sentiasa buang kaunter yang ber-setup Downtrend / Avoid / NA
+                const isDowntrendOrAvoidSetup = item.setupName && (
+                    item.setupName.includes('Downtrend') || 
+                    item.setupName.includes('Avoid') || 
+                    item.setupName === 'N/A'
+                );
+                if (isDowntrendOrAvoidSetup) return false;
+
+                // Jika isyaratnya 'avoid' tetapi tiada setup berkualiti, barulah ditapis keluar
+                const isQualitySetup = item.setupName && (
+                    item.setupName.includes('RBS Retest') || 
+                    item.setupName.includes('Healthy Dip') || 
+                    item.setupName.includes('Buy Support')
+                );
+                if (item.signal === 'avoid' && !isQualitySetup) return false;
 
                 if (searchCounter && !item.name.toLowerCase().includes(searchCounter)) return false;
                 if (item.price < minPrice) return false;
