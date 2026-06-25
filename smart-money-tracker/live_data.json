@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-25T11:17:09.985Z",
+  "lastUpdated": "2026-06-25T17:09:39.918Z",
   "source": "klse.i3investor.com",
   "topVolume": [
     {
@@ -17,10 +17,11 @@
       "pullback": 16.95,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 3.34,
-      "lowTightness": 9.2,
+      "lowTightness": 2.18,
       "touchCount": 10,
       "isConsolidation": true,
-      "floorLow": 7.71999979019165
+      "floorLow": 7.71999979019165,
+      "hasLowerWickRejection": true
     },
     {
       "name": "AAX",
@@ -36,11 +37,12 @@
       "high52": 2.3299999237060547,
       "pullback": 47.21,
       "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 6.5,
-      "lowTightness": 7.44,
-      "touchCount": 1,
+      "closeTightness": 3.1,
+      "lowTightness": 3.17,
+      "touchCount": 2,
       "isConsolidation": false,
-      "floorLow": 1.2100000381469727
+      "floorLow": 1.2599999904632568,
+      "hasLowerWickRejection": true
     },
     {
       "name": "PCHEM",
@@ -56,11 +58,12 @@
       "high52": 6.159999847412109,
       "pullback": 36.36,
       "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 8.93,
-      "lowTightness": 11.32,
+      "closeTightness": 10.59,
+      "lowTightness": 10.05,
       "touchCount": 2,
       "isConsolidation": false,
-      "floorLow": 3.799999952316284
+      "floorLow": 3.9800000190734863,
+      "hasLowerWickRejection": true
     },
     {
       "name": "ZETRIX",
@@ -80,7 +83,8 @@
       "lowTightness": 2.29,
       "touchCount": 24,
       "isConsolidation": true,
-      "floorLow": 4.889999866485596
+      "floorLow": 4.889999866485596,
+      "hasLowerWickRejection": true
     },
     {
       "name": "KGB",
@@ -93,14 +97,15 @@
       "volume": 8573900,
       "signal": "buy",
       "reason": "⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold) (Near ATH)",
-      "high52": 7.96999979019165,
-      "pullback": 0.38,
+      "high52": 7.940000057220459,
+      "pullback": 0,
       "setupName": "🔥 RBS Retest / Near ATH",
-      "closeTightness": 9.07,
-      "lowTightness": 5.65,
+      "closeTightness": 8.38,
+      "lowTightness": 5.79,
       "touchCount": 19,
       "isConsolidation": false,
-      "floorLow": 7.46999979019165
+      "floorLow": 7.46999979019165,
+      "hasLowerWickRejection": false
     },
     {
       "name": "SKYECHIP",
@@ -112,15 +117,16 @@
       "turnover": 47293452,
       "volume": 15608400,
       "signal": "buy",
-      "reason": "🔒 Tapak Tegar (17x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Pullback Support)",
+      "reason": "🔥 Golden Hold: Jerung Mula Kumpul (Sesuai Swing/Hold) (Pullback Support)",
       "high52": 3.799999952316284,
       "pullback": 20.26,
       "setupName": "🔻 Buy Support / Deep Pullback",
-      "closeTightness": 2.33,
-      "lowTightness": 7.67,
+      "closeTightness": 13.13,
+      "lowTightness": 8.8,
       "touchCount": 17,
-      "isConsolidation": true,
-      "floorLow": 2.9800000190734863
+      "isConsolidation": false,
+      "floorLow": 2.9800000190734863,
+      "hasLowerWickRejection": true
     },
     {
       "name": "VITROX",
@@ -133,14 +139,15 @@
       "volume": 5032900,
       "signal": "buy",
       "reason": "⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold) (Near ATH)",
-      "high52": 7.920000076293945,
-      "pullback": 0.88,
+      "high52": 7.619999885559082,
+      "pullback": -3.02,
       "setupName": "🔥 RBS Retest / Near ATH",
-      "closeTightness": 9.03,
-      "lowTightness": 3.38,
+      "closeTightness": 5.56,
+      "lowTightness": 3.66,
       "touchCount": 15,
       "isConsolidation": false,
-      "floorLow": 7.380000114440918
+      "floorLow": 7.380000114440918,
+      "hasLowerWickRejection": true
     },
     {
       "name": "MISC",
@@ -156,11 +163,12 @@
       "high52": 9.039999961853027,
       "pullback": 13.83,
       "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 3.98,
-      "lowTightness": 3.34,
+      "closeTightness": 0.12,
+      "lowTightness": 1.26,
       "touchCount": 6,
       "isConsolidation": true,
-      "floorLow": 7.789999961853027
+      "floorLow": 7.789999961853027,
+      "hasLowerWickRejection": true
     },
     {
       "name": "NATGATE",
@@ -176,11 +184,12 @@
       "high52": 1.7999999523162842,
       "pullback": 54.17,
       "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 13.01,
-      "lowTightness": 5.52,
-      "touchCount": 2,
+      "closeTightness": 4.79,
+      "lowTightness": 2.07,
+      "touchCount": 3,
       "isConsolidation": false,
-      "floorLow": 0.7250000238418579
+      "floorLow": 0.7250000238418579,
+      "hasLowerWickRejection": true
     },
     {
       "name": "IHH",
@@ -197,10 +206,11 @@
       "pullback": 18.23,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 1.75,
-      "lowTightness": 1.89,
+      "lowTightness": 2.59,
       "touchCount": 19,
       "isConsolidation": true,
-      "floorLow": 8.520000457763672
+      "floorLow": 8.520000457763672,
+      "hasLowerWickRejection": false
     },
     {
       "name": "HLBANK",
@@ -220,7 +230,8 @@
       "lowTightness": 1.29,
       "touchCount": 24,
       "isConsolidation": true,
-      "floorLow": 21.739999771118164
+      "floorLow": 21.739999771118164,
+      "hasLowerWickRejection": false
     },
     {
       "name": "DNEX",
@@ -232,15 +243,16 @@
       "turnover": 21322664.5,
       "volume": 47916100,
       "signal": "buy",
-      "reason": "🔒 Tapak Tegar (21x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
+      "reason": "🔥 Golden Entry: Jerung Kumpul Selesa (Sesuai Swing/Hold) (Healthy Dip)",
       "high52": 0.48500001430511475,
       "pullback": 8.25,
       "setupName": "📉 Healthy Dip",
-      "closeTightness": 3.45,
+      "closeTightness": 9.41,
       "lowTightness": 7.06,
       "touchCount": 21,
-      "isConsolidation": true,
-      "floorLow": 0.4300000071525574
+      "isConsolidation": false,
+      "floorLow": 0.4300000071525574,
+      "hasLowerWickRejection": true
     },
     {
       "name": "UWC",
@@ -252,15 +264,16 @@
       "turnover": 21272460,
       "volume": 3223100,
       "signal": "buy",
-      "reason": "🔒 Tapak Tegar (20x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
+      "reason": "⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold) (Near ATH)",
       "high52": 6.599999904632568,
       "pullback": 0,
       "setupName": "🔥 RBS Retest / Near ATH",
-      "closeTightness": 3.61,
-      "lowTightness": 4.98,
+      "closeTightness": 8.2,
+      "lowTightness": 3.99,
       "touchCount": 20,
-      "isConsolidation": true,
-      "floorLow": 6.320000171661377
+      "isConsolidation": false,
+      "floorLow": 6.320000171661377,
+      "hasLowerWickRejection": false
     },
     {
       "name": "PETDAG",
@@ -277,10 +290,11 @@
       "pullback": 22.69,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 1.63,
-      "lowTightness": 1.41,
+      "lowTightness": 0.97,
       "touchCount": 24,
       "isConsolidation": true,
-      "floorLow": 18.399999618530273
+      "floorLow": 18.399999618530273,
+      "hasLowerWickRejection": true
     },
     {
       "name": "SUNMED",
@@ -297,10 +311,11 @@
       "pullback": 26.42,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 1.1,
-      "lowTightness": 1.12,
+      "lowTightness": 2.84,
       "touchCount": 24,
       "isConsolidation": true,
-      "floorLow": 1.7999999523162842
+      "floorLow": 1.7999999523162842,
+      "hasLowerWickRejection": false
     },
     {
       "name": "MPI",
@@ -312,15 +327,16 @@
       "turnover": 18943400,
       "volume": 386600,
       "signal": "buy",
-      "reason": "🔒 Tapak Tegar (20x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
+      "reason": "⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold) (Near ATH)",
       "high52": 50.79999923706055,
       "pullback": 3.54,
       "setupName": "🔥 RBS Retest / Near ATH",
-      "closeTightness": 3.59,
-      "lowTightness": 5.27,
+      "closeTightness": 7.31,
+      "lowTightness": 5.49,
       "touchCount": 20,
-      "isConsolidation": true,
-      "floorLow": 47.099998474121094
+      "isConsolidation": false,
+      "floorLow": 47.099998474121094,
+      "hasLowerWickRejection": false
     },
     {
       "name": "OPPSTAR",
@@ -336,11 +352,12 @@
       "high52": 1.059999942779541,
       "pullback": 39.62,
       "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 7.56,
-      "lowTightness": 5.98,
-      "touchCount": 3,
+      "closeTightness": 5.88,
+      "lowTightness": 1.71,
+      "touchCount": 4,
       "isConsolidation": false,
-      "floorLow": 0.5849999785423279
+      "floorLow": 0.5849999785423279,
+      "hasLowerWickRejection": true
     },
     {
       "name": "MNHLDG",
@@ -351,16 +368,17 @@
       "changePct": 0,
       "turnover": 13580280,
       "volume": 4850100,
-      "signal": "buy",
-      "reason": "🔒 Tapak Tegar (18x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
-      "high52": 2.8499999046325684,
-      "pullback": 1.75,
+      "signal": "avoid",
+      "reason": "VIP Sideway / Pullback (Pantau Peluang) (Near ATH)",
+      "high52": 2.819999933242798,
+      "pullback": 0.71,
       "setupName": "🔥 RBS Retest / Near ATH",
-      "closeTightness": 2.16,
-      "lowTightness": 8.66,
+      "closeTightness": 7.28,
+      "lowTightness": 5.12,
       "touchCount": 18,
-      "isConsolidation": true,
-      "floorLow": 2.7699999809265137
+      "isConsolidation": false,
+      "floorLow": 2.7699999809265137,
+      "hasLowerWickRejection": false
     },
     {
       "name": "TANCO",
@@ -377,10 +395,11 @@
       "pullback": 92.42,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 7.69,
-      "lowTightness": 4,
+      "lowTightness": 8,
       "touchCount": 1,
       "isConsolidation": false,
-      "floorLow": 0.125
+      "floorLow": 0.125,
+      "hasLowerWickRejection": true
     },
     {
       "name": "VS",
@@ -397,10 +416,11 @@
       "pullback": 77.01,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 5.26,
-      "lowTightness": 2.63,
-      "touchCount": 3,
+      "lowTightness": null,
+      "touchCount": 4,
       "isConsolidation": false,
-      "floorLow": 0.1899999976158142
+      "floorLow": 0.1899999976158142,
+      "hasLowerWickRejection": false
     },
     {
       "name": "UTDPLT",
@@ -417,10 +437,11 @@
       "pullback": 10.14,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 3.65,
-      "lowTightness": 3.25,
+      "lowTightness": 4.76,
       "touchCount": 6,
       "isConsolidation": true,
-      "floorLow": 32.2400016784668
+      "floorLow": 32.2400016784668,
+      "hasLowerWickRejection": false
     },
     {
       "name": "KLK",
@@ -437,10 +458,11 @@
       "pullback": 8.46,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 1.79,
-      "lowTightness": 1.34,
+      "lowTightness": 1.55,
       "touchCount": 23,
       "isConsolidation": true,
-      "floorLow": 21.100000381469727
+      "floorLow": 21.100000381469727,
+      "hasLowerWickRejection": true
     },
     {
       "name": "SAM",
@@ -452,15 +474,16 @@
       "turnover": 6586601.999999999,
       "volume": 1301700,
       "signal": "buy",
-      "reason": "🔒 Tapak Tegar (21x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
+      "reason": "⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold) (Near ATH)",
       "high52": 5.25,
       "pullback": 3.62,
       "setupName": "🔥 RBS Retest / Near ATH",
-      "closeTightness": 3.69,
+      "closeTightness": 7.45,
       "lowTightness": 3.18,
       "touchCount": 21,
-      "isConsolidation": true,
-      "floorLow": 4.900000095367432
+      "isConsolidation": false,
+      "floorLow": 4.900000095367432,
+      "hasLowerWickRejection": true
     },
     {
       "name": "NE",
@@ -476,11 +499,12 @@
       "high52": 1.1299999952316284,
       "pullback": 6.19,
       "setupName": "📉 Healthy Dip",
-      "closeTightness": 1.92,
+      "closeTightness": 3.92,
       "lowTightness": 5.53,
       "touchCount": 22,
       "isConsolidation": true,
-      "floorLow": 1.0299999713897705
+      "floorLow": 1.0299999713897705,
+      "hasLowerWickRejection": false
     },
     {
       "name": "KEEMING",
@@ -492,15 +516,16 @@
       "turnover": 4743750,
       "volume": 2875000,
       "signal": "buy",
-      "reason": "🔒 Tapak Tegar (11x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
-      "high52": 1.6699999570846558,
-      "pullback": 1.2,
+      "reason": "⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold) (Near ATH)",
+      "high52": 1.600000023841858,
+      "pullback": -3.12,
       "setupName": "🔥 RBS Retest / Near ATH",
-      "closeTightness": 3.75,
-      "lowTightness": 11.19,
+      "closeTightness": 18.52,
+      "lowTightness": 11.76,
       "touchCount": 11,
-      "isConsolidation": true,
-      "floorLow": 1.590000033378601
+      "isConsolidation": false,
+      "floorLow": 1.590000033378601,
+      "hasLowerWickRejection": false
     },
     {
       "name": "CBHB",
@@ -512,15 +537,16 @@
       "turnover": 4256525,
       "volume": 6548500,
       "signal": "buy",
-      "reason": "🔒 Tapak Tegar (21x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
+      "reason": "🔥 Golden Entry: Jerung Kumpul Selesa (Sesuai Swing/Hold) (Healthy Dip)",
       "high52": 0.7099999785423279,
       "pullback": 8.45,
       "setupName": "📉 Healthy Dip",
-      "closeTightness": 2.31,
-      "lowTightness": 3.17,
+      "closeTightness": 7.14,
+      "lowTightness": 6.35,
       "touchCount": 21,
-      "isConsolidation": true,
-      "floorLow": 0.6499999761581421
+      "isConsolidation": false,
+      "floorLow": 0.6499999761581421,
+      "hasLowerWickRejection": false
     },
     {
       "name": "LWSABAH",
@@ -532,15 +558,16 @@
       "turnover": 3813840,
       "volume": 2648500,
       "signal": "buy",
-      "reason": "🔒 Tapak Tegar (20x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
+      "reason": "🔥 Golden Entry: Jerung Kumpul Selesa (Sesuai Swing/Hold) (Healthy Dip)",
       "high52": 1.690000057220459,
       "pullback": 14.79,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 3.6,
-      "lowTightness": 2.9,
+      "lowTightness": 2.19,
       "touchCount": 20,
-      "isConsolidation": true,
-      "floorLow": 1.4299999475479126
+      "isConsolidation": false,
+      "floorLow": 1.4299999475479126,
+      "hasLowerWickRejection": true
     },
     {
       "name": "TMK",
@@ -552,15 +579,16 @@
       "turnover": 3804155.9999999995,
       "volume": 1515600,
       "signal": "buy",
-      "reason": "🔒 Tapak Tegar (18x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
+      "reason": "🔥 Golden Hold: Jerung Mula Kumpul (Sesuai Swing/Hold) (Healthy Dip)",
       "high52": 2.75,
       "pullback": 8.73,
       "setupName": "📉 Healthy Dip",
-      "closeTightness": 2.02,
-      "lowTightness": 6.94,
+      "closeTightness": 10.89,
+      "lowTightness": 6.5,
       "touchCount": 18,
-      "isConsolidation": true,
-      "floorLow": 2.4600000381469727
+      "isConsolidation": false,
+      "floorLow": 2.4600000381469727,
+      "hasLowerWickRejection": false
     },
     {
       "name": "SUM",
@@ -577,10 +605,11 @@
       "pullback": 9.17,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 3.03,
-      "lowTightness": 1.01,
+      "lowTightness": 2.04,
       "touchCount": 20,
       "isConsolidation": true,
-      "floorLow": 0.4950000047683716
+      "floorLow": 0.4950000047683716,
+      "hasLowerWickRejection": false
     },
     {
       "name": "F&N",
@@ -596,11 +625,12 @@
       "high52": 36.81999969482422,
       "pullback": 23.47,
       "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 2.85,
-      "lowTightness": 1.1,
+      "closeTightness": 2.48,
+      "lowTightness": 2.05,
       "touchCount": 20,
       "isConsolidation": false,
-      "floorLow": 27.299999237060547
+      "floorLow": 27.299999237060547,
+      "hasLowerWickRejection": false
     },
     {
       "name": "OGX",
@@ -616,11 +646,12 @@
       "high52": 0.5299999713897705,
       "pullback": 5.66,
       "setupName": "📉 Healthy Dip",
-      "closeTightness": 9.89,
-      "lowTightness": 4.4,
+      "closeTightness": 6.59,
+      "lowTightness": 5.56,
       "touchCount": 6,
       "isConsolidation": false,
-      "floorLow": 0.4749999940395355
+      "floorLow": 0.4749999940395355,
+      "hasLowerWickRejection": false
     },
     {
       "name": "EIPOWER",
@@ -640,7 +671,8 @@
       "lowTightness": 2.31,
       "touchCount": 24,
       "isConsolidation": true,
-      "floorLow": 0.6650000214576721
+      "floorLow": 0.6650000214576721,
+      "hasLowerWickRejection": true
     },
     {
       "name": "AMBEST",
@@ -657,10 +689,11 @@
       "pullback": 7.45,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 8.48,
-      "lowTightness": 7.5,
+      "lowTightness": 8.12,
       "touchCount": 12,
       "isConsolidation": false,
-      "floorLow": 0.8299999833106995
+      "floorLow": 0.8299999833106995,
+      "hasLowerWickRejection": true
     },
     {
       "name": "PENTECH",
@@ -671,16 +704,17 @@
       "changePct": -1.59,
       "turnover": 2370694,
       "volume": 7647400,
-      "signal": "buy",
-      "reason": "🔒 Tapak Tegar (23x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
+      "signal": "avoid",
+      "reason": "VIP Sideway / Pullback (Pantau Peluang) (Healthy Dip)",
       "high52": 0.35499998927116394,
       "pullback": 12.68,
       "setupName": "📉 Healthy Dip",
-      "closeTightness": 3.23,
+      "closeTightness": 7.94,
       "lowTightness": 8.2,
       "touchCount": 23,
-      "isConsolidation": true,
-      "floorLow": 0.3100000023841858
+      "isConsolidation": false,
+      "floorLow": 0.3100000023841858,
+      "hasLowerWickRejection": true
     },
     {
       "name": "IAB",
@@ -697,10 +731,11 @@
       "pullback": 30.5,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 6.11,
-      "lowTightness": 2.31,
+      "lowTightness": 4.58,
       "touchCount": 3,
       "isConsolidation": false,
-      "floorLow": 1.2999999523162842
+      "floorLow": 1.309999942779541,
+      "hasLowerWickRejection": false
     },
     {
       "name": "HKB",
@@ -712,15 +747,16 @@
       "turnover": 1574650,
       "volume": 2249500,
       "signal": "buy",
-      "reason": "🔒 Tapak Tegar (23x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
+      "reason": "🔥 Golden Entry: Jerung Kumpul Selesa (Sesuai Swing/Hold) (Near ATH)",
       "high52": 0.7049999833106995,
       "pullback": 0.71,
       "setupName": "🔥 RBS Retest / Near ATH",
-      "closeTightness": 2.17,
-      "lowTightness": 9.52,
+      "closeTightness": 9.52,
+      "lowTightness": 6.4,
       "touchCount": 23,
-      "isConsolidation": true,
-      "floorLow": 0.6899999976158142
+      "isConsolidation": false,
+      "floorLow": 0.6899999976158142,
+      "hasLowerWickRejection": true
     },
     {
       "name": "AMS",
@@ -731,16 +767,17 @@
       "changePct": 0,
       "turnover": 1530262.5,
       "volume": 4192500,
-      "signal": "buy",
-      "reason": "🔒 Tapak Tegar (16x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
+      "signal": "avoid",
+      "reason": "VIP Sideway / Pullback (Pantau Peluang) (Healthy Dip)",
       "high52": 0.42500001192092896,
       "pullback": 14.12,
       "setupName": "📉 Healthy Dip",
-      "closeTightness": 1.37,
-      "lowTightness": 8.33,
+      "closeTightness": 9.59,
+      "lowTightness": 8.22,
       "touchCount": 16,
-      "isConsolidation": true,
-      "floorLow": 0.36000001430511475
+      "isConsolidation": false,
+      "floorLow": 0.36000001430511475,
+      "hasLowerWickRejection": false
     },
     {
       "name": "SDCG",
@@ -760,7 +797,8 @@
       "lowTightness": 0.73,
       "touchCount": 24,
       "isConsolidation": true,
-      "floorLow": 0.6850000023841858
+      "floorLow": 0.6850000023841858,
+      "hasLowerWickRejection": false
     },
     {
       "name": "MMCS",
@@ -780,7 +818,8 @@
       "lowTightness": 1.96,
       "touchCount": 24,
       "isConsolidation": true,
-      "floorLow": 0.25999999046325684
+      "floorLow": 0.25999999046325684,
+      "hasLowerWickRejection": true
     },
     {
       "name": "ISF",
@@ -792,15 +831,16 @@
       "turnover": 1054050.5,
       "volume": 2046700,
       "signal": "avoid",
-      "reason": "🔒 Tapak Tegar (22x) | 🧊 Saham Downtrend: Elak Trading!",
+      "reason": "🧊 Saham Downtrend: Elak Trading!",
       "high52": 0.6100000143051147,
       "pullback": 15.57,
       "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 2.97,
-      "lowTightness": 5.1,
+      "closeTightness": 6.06,
+      "lowTightness": 7.14,
       "touchCount": 22,
-      "isConsolidation": true,
-      "floorLow": 0.5099999904632568
+      "isConsolidation": false,
+      "floorLow": 0.5099999904632568,
+      "hasLowerWickRejection": false
     },
     {
       "name": "ELSA",
@@ -816,11 +856,12 @@
       "high52": 0.2849999964237213,
       "pullback": 26.32,
       "setupName": "🔻 Buy Support / Deep Pullback",
-      "closeTightness": 14.29,
-      "lowTightness": 17.5,
+      "closeTightness": 13.33,
+      "lowTightness": 13.64,
       "touchCount": 5,
       "isConsolidation": false,
-      "floorLow": 0.20000000298023224
+      "floorLow": 0.20000000298023224,
+      "hasLowerWickRejection": true
     },
     {
       "name": "ADNEX",
@@ -836,11 +877,12 @@
       "high52": 0.39500001072883606,
       "pullback": 5.06,
       "setupName": "📉 Healthy Dip",
-      "closeTightness": 2.67,
+      "closeTightness": 4.05,
       "lowTightness": 1.33,
       "touchCount": 4,
       "isConsolidation": true,
-      "floorLow": 0.36000001430511475
+      "floorLow": 0.36000001430511475,
+      "hasLowerWickRejection": false
     },
     {
       "name": "CNERGEN",
@@ -852,15 +894,16 @@
       "turnover": 409615,
       "volume": 671500,
       "signal": "buy",
-      "reason": "🔒 Tapak Tegar (7x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
+      "reason": "🔥 Golden Entry: Jerung Kumpul Selesa (Sesuai Swing/Hold) (Healthy Dip)",
       "high52": 0.6499999761581421,
       "pullback": 6.15,
       "setupName": "📉 Healthy Dip",
-      "closeTightness": 3.39,
-      "lowTightness": 6.42,
+      "closeTightness": 11.93,
+      "lowTightness": 7.34,
       "touchCount": 7,
-      "isConsolidation": true,
-      "floorLow": 0.5799999833106995
+      "isConsolidation": false,
+      "floorLow": 0.5799999833106995,
+      "hasLowerWickRejection": false
     },
     {
       "name": "GIIB",
@@ -877,10 +920,11 @@
       "pullback": 45.83,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": null,
-      "lowTightness": null,
-      "touchCount": 4,
+      "lowTightness": 4,
+      "touchCount": 3,
       "isConsolidation": false,
-      "floorLow": 0.125
+      "floorLow": 0.125,
+      "hasLowerWickRejection": false
     }
   ],
   "topGainers": [
@@ -910,8 +954,8 @@
       "changePct": 6.8,
       "volume": 5032900,
       "turnover": 39508265,
-      "high52": 7.920000076293945,
-      "pullback": 0.88,
+      "high52": 7.619999885559082,
+      "pullback": -3.02,
       "setupName": "🔥 RBS Retest / Near ATH"
     },
     {
@@ -930,8 +974,8 @@
       "changePct": 5.31,
       "volume": 8573900,
       "turnover": 68076766,
-      "high52": 7.96999979019165,
-      "pullback": 0.38,
+      "high52": 7.940000057220459,
+      "pullback": 0,
       "setupName": "🔥 RBS Retest / Near ATH"
     },
     {
@@ -1000,8 +1044,8 @@
       "changePct": 3.12,
       "volume": 2875000,
       "turnover": 4743750,
-      "high52": 1.6699999570846558,
-      "pullback": 1.2,
+      "high52": 1.600000023841858,
+      "pullback": -3.12,
       "setupName": "🔥 RBS Retest / Near ATH"
     },
     {

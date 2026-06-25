@@ -167,23 +167,28 @@ async function main() {
         try {
             const yRes = await axios.get(`https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?interval=1d&range=1y`, { headers: HEADERS });
             if (yRes.data && yRes.data.chart && yRes.data.chart.result && yRes.data.chart.result[0]) {
-                const result = yRes.data.chart.result[0];
-                const timestamp = result.timestamp;
-                const quote = result.indicators.quote[0];
-                const close = quote.close;
-                const low = quote.low;
-                const high = quote.high;
-                
-                const validDays = [];
-                for (let i = 0; i < timestamp.length; i++) {
-                    if (close[i] !== null && close[i] !== undefined && low[i] !== null && low[i] !== undefined && high[i] !== null && high[i] !== undefined) {
-                        validDays.push({
-                            close: close[i],
-                            low: low[i],
-                            high: high[i]
-                        });
-                    }
-                }
+                 const result = yRes.data.chart.result[0];
+                 const timestamp = result.timestamp;
+                 const quote = result.indicators.quote[0];
+                 const close = quote.close;
+                 const low = quote.low;
+                 const high = quote.high;
+                 const open = quote.open || [];
+                 
+                 const validDays = [];
+                 for (let i = 0; i < timestamp.length; i++) {
+                     if (close[i] !== null && close[i] !== undefined && 
+                         low[i] !== null && low[i] !== undefined && 
+                         high[i] !== null && high[i] !== undefined &&
+                         open[i] !== null && open[i] !== undefined) {
+                         validDays.push({
+                             open: open[i],
+                             close: close[i],
+                             low: low[i],
+                             high: high[i]
+                         });
+                     }
+                 }
                 
                 if (validDays.length >= 2) {
                     let high52 = 0;
@@ -191,9 +196,20 @@ async function main() {
                         if (d.high > high52) high52 = d.high;
                     });
                     stock.high52 = high52;
-                    
                     const lastDays = validDays.slice(-4);
-                    const currentPrice = lastDays[lastDays.length - 1].close;
+                    const lastDay = lastDays[lastDays.length - 1];
+                    const currentPrice = lastDay.close;
+                    
+                    // Hitung Lower Wick Rejection harian (Ekor di bawah)
+                    const dailyBody = Math.abs(lastDay.close - lastDay.open);
+                    const dailyLowerShadow = Math.min(lastDay.open, lastDay.close) - lastDay.low;
+                    const dailyTotalRange = lastDay.high - lastDay.low;
+                    const hasLowerWickRejection = dailyTotalRange > 0 && (
+                        (dailyLowerShadow / dailyTotalRange >= 0.20) || 
+                        (dailyBody > 0 && dailyLowerShadow / dailyBody >= 0.40) ||
+                        (dailyBody === 0 && dailyLowerShadow > 0)
+                    );
+                    stock.hasLowerWickRejection = hasLowerWickRejection;
                     
                     const closes = lastDays.map(d => d.close);
                     const maxClose = Math.max(...closes);
@@ -277,7 +293,10 @@ async function main() {
                                         stock.floorLow = floorLow;
                                         stock.touchCount = intraTouches;
                                         
-                                        if (intraCloseTightness <= 3.8 && intraTouches >= 4) {
+                                        // Guardrail: Jangan benarkan overwrite jika daily tightness terlalu longgar (saham sedang bocor/runtuh/volatile)
+                                        const isDailyTooVolatile = closeTightness > 6.0 || lowTightness > 5.0;
+                                        
+                                        if (intraCloseTightness <= 3.8 && intraTouches >= 4 && !isDailyTooVolatile) {
                                             isConsolidation = true;
                                             stock.closeTightness = parseFloat(intraCloseTightness.toFixed(2));
                                             stock.isIntradayValidated = true;
@@ -408,7 +427,8 @@ async function main() {
             lowTightness: stock.lowTightness || null,
             touchCount: stock.touchCount || 0,
             isConsolidation: stock.isConsolidation || false,
-            floorLow: stock.floorLow || null
+            floorLow: stock.floorLow || null,
+            hasLowerWickRejection: stock.hasLowerWickRejection || false
         };
         
         // Top Volume Scan: Simpan semua saham yang mempunyai turnover >= RM 3,000,000 ATAU ianya saham VIP

@@ -1006,7 +1006,7 @@
                 if (consolidationFilter === 'tight' && !item.isConsolidation) return false;
                 if (consolidationFilter === 'golden_ogx') {
                     const floor = item.floorLow || (item.price * 0.97);
-                    const dist = ((item.price - floor) / floor) * 100;
+                    const dist = parseFloat((((item.price - floor) / floor) * 100).toFixed(2));
                     const isDowntrend = item.setupName && (
                         item.setupName.includes('Downtrend') || 
                         item.setupName.includes('Avoid') || 
@@ -1017,7 +1017,8 @@
                                        item.signal === 'buy' && 
                                        item.touchCount >= 10 && 
                                        dist <= 1.5 && 
-                                       !isDowntrend;
+                                       !isDowntrend &&
+                                       item.hasLowerWickRejection;
                     if (!matchesOgx) return false;
                 }
                 return true;
@@ -1038,6 +1039,11 @@
                     const fB = b.floorLow || (b.price * 0.97);
                     valA = ((a.price - fA) / fA) * 100;
                     valB = ((b.price - fB) / fB) * 100;
+                    
+                    // Secondary sort: jika jarak sama, susun mengikut touchCount terbanyak
+                    if (Math.abs(valA - valB) < 0.001) {
+                        return currentSortDesc ? (a.touchCount - b.touchCount) : (b.touchCount - a.touchCount);
+                    }
                 }
                 
                 if (typeof valA === 'string' && typeof valB === 'string') {
@@ -1062,7 +1068,7 @@
             // 4. Distance to floor <= 2.5%
             const goldenList = currentData.filter(item => {
                 const floor = item.floorLow || (item.price * 0.97);
-                const dist = ((item.price - floor) / floor) * 100;
+                const dist = parseFloat((((item.price - floor) / floor) * 100).toFixed(2));
                 
                 const isDowntrend = item.setupName && (
                     item.setupName.includes('Downtrend') || 
@@ -1070,13 +1076,14 @@
                     item.setupName === 'N/A'
                 );
                 
-                // Kriteria Emas Mutlak (Ala-OGX): Wajib Consolidation + Wajib BUY + Rapat Lantai (≤ 1.5%) + Sentuhan Kuat (≥ 10x) + Bukan Downtrend + Bawah RM3.00
+                // Kriteria Emas Mutlak (Ala-OGX): Wajib Consolidation + Wajib BUY + Rapat Lantai (≤ 1.5%) + Sentuhan Kuat (≥ 10x) + Bukan Downtrend + Bawah RM3.00 + Wajib Ekor Rejection Harian
                 return item.isConsolidation && 
                        item.signal === 'buy' && 
                        !isDowntrend && 
                        item.price <= 3.00 && 
                        item.touchCount >= 10 && 
-                       dist <= 1.5;
+                       dist <= 1.5 && 
+                       item.hasLowerWickRejection;
             });
             
             if (goldenList.length === 0) {
@@ -1130,7 +1137,10 @@
                                     ${item.name}
                                     <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=30" target="_blank" style="font-size: 0.75rem; color: #f59e0b; text-decoration: none;" title="TradingView 30m Chart">🔗</a>
                                 </div>
-                                <div style="font-size: 0.75rem; color: var(--text-muted);">${item.sector || 'Bursa'}</div>
+                                <div style="font-size: 0.75rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.4rem; margin-top: 0.1rem;">
+                                    <span>${item.sector || 'Bursa'}</span>
+                                    ${item.hasLowerWickRejection ? `<span style="background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 0.65rem; font-weight: 800; padding: 0.05rem 0.35rem; border-radius: 4px; border: 1px solid rgba(16, 185, 129, 0.25);" title="Daily Lower Wick Rejection (Ekor di Bawah)">🧬 REJECT EKOR</span>` : ''}
+                                </div>
                             </div>
                             <div style="text-align: right;">
                                 <div style="font-weight: 800; font-size: 1.1rem; color: white;">RM ${item.price.toFixed(3)}</div>
@@ -1173,7 +1183,7 @@
             // Filter currentData for Golden Setups (same as renderGoldenZone)
             const goldenList = currentData.filter(item => {
                 const floor = item.floorLow || (item.price * 0.97);
-                const dist = ((item.price - floor) / floor) * 100;
+                const dist = parseFloat((((item.price - floor) / floor) * 100).toFixed(2));
                 
                 const isDowntrend = item.setupName && (
                     item.setupName.includes('Downtrend') || 
@@ -1181,13 +1191,14 @@
                     item.setupName === 'N/A'
                 );
                 
-                // Kriteria Emas Mutlak (Ala-OGX): Wajib Consolidation + Wajib BUY + Rapat Lantai (≤ 1.5%) + Sentuhan Kuat (≥ 10x) + Bukan Downtrend + Bawah RM3.00
+                // Kriteria Emas Mutlak (Ala-OGX): Wajib Consolidation + Wajib BUY + Rapat Lantai (≤ 1.5%) + Sentuhan Kuat (≥ 10x) + Bukan Downtrend + Bawah RM3.00 + Wajib Ekor Rejection Harian
                 return item.isConsolidation && 
                        item.signal === 'buy' && 
                        !isDowntrend && 
                        item.price <= 3.00 && 
                        item.touchCount >= 10 && 
-                       dist <= 1.5;
+                       dist <= 1.5 && 
+                       item.hasLowerWickRejection;
             });
             
             if (goldenList.length === 0) {
@@ -1252,6 +1263,11 @@
                     const floorB = b.floorLow || (b.price * 0.97);
                     valA = ((a.price - floorA) / floorA) * 100;
                     valB = ((b.price - floorB) / floorB) * 100;
+                    
+                    // Secondary sort: jika jarak sama, susun mengikut touchCount terbanyak
+                    if (Math.abs(valA - valB) < 0.001) {
+                        return coreSortDesc ? (a.touchCount - b.touchCount) : (b.touchCount - a.touchCount);
+                    }
                 }
                 return coreSortDesc ? valB - valA : valA - valB;
             });
