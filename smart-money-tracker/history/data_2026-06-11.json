@@ -20,7 +20,7 @@
       "isConsolidation": false,
       "pullback": 18.44,
       "setupName": "🧊 Downtrend / Avoid",
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "ZETRIX",
@@ -80,7 +80,7 @@
       "isConsolidation": false,
       "pullback": 88.76,
       "setupName": "🧊 Downtrend / Avoid",
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "PETDAG",

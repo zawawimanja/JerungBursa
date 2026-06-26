@@ -375,7 +375,7 @@
       "isConsolidation": true,
       "pullback": 5.56,
       "setupName": "🧊 Downtrend / Avoid",
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "ALLIANZ",
@@ -406,7 +406,7 @@
       "isConsolidation": false,
       "pullback": 37.93,
       "setupName": "🧊 Downtrend / Avoid",
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "HSI-CWQH",

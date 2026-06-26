@@ -429,7 +429,7 @@
       "isConsolidation": false,
       "pullback": 45.83,
       "setupName": "🧊 Downtrend / Avoid",
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     }
   ],
   "topGainers": [

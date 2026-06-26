@@ -200,17 +200,6 @@ async function main() {
                     const lastDay = lastDays[lastDays.length - 1];
                     const currentPrice = lastDay.close;
                     
-                    // Hitung Lower Wick Rejection harian (Ekor di bawah)
-                    const dailyBody = Math.abs(lastDay.close - lastDay.open);
-                    const dailyLowerShadow = Math.min(lastDay.open, lastDay.close) - lastDay.low;
-                    const dailyTotalRange = lastDay.high - lastDay.low;
-                    const hasLowerWickRejection = dailyTotalRange > 0 && (
-                        (dailyLowerShadow / dailyTotalRange >= 0.20) || 
-                        (dailyBody > 0 && dailyLowerShadow / dailyBody >= 0.40) ||
-                        (dailyBody === 0 && dailyLowerShadow > 0)
-                    );
-                    stock.hasLowerWickRejection = hasLowerWickRejection;
-                    
                     const closes = lastDays.map(d => d.close);
                     const maxClose = Math.max(...closes);
                     const minClose = Math.min(...closes);
@@ -222,6 +211,22 @@ async function main() {
                     const minLow = validLows.length > 0 ? Math.min(...validLows) : Math.min(...lows);
                     const maxLow = Math.max(...lows);
                     const lowTightness = ((maxLow - minLow) / minLow) * 100;
+
+                    // Hitung Lower Wick Rejection harian (Ekor di bawah)
+                    const dailyBody = Math.abs(lastDay.close - lastDay.open);
+                    const dailyLowerShadow = Math.min(lastDay.open, lastDay.close) - lastDay.low;
+                    const dailyTotalRange = lastDay.high - lastDay.low;
+                    
+                    const floorDist = ((currentPrice - minLow) / minLow) * 100;
+                    const isDojiConsolidation = (dailyBody / currentPrice <= 0.015) && (floorDist <= 1.5);
+                    
+                    const hasLowerWickRejection = (dailyTotalRange > 0 && (
+                        (dailyLowerShadow / dailyTotalRange >= 0.20) || 
+                        (dailyBody > 0 && dailyLowerShadow / dailyBody >= 0.40) ||
+                        (dailyBody === 0 && dailyLowerShadow > 0)
+                    )) || isDojiConsolidation;
+
+                    stock.hasLowerWickRejection = hasLowerWickRejection;
                     
                     let touchCount = 0;
                     lastDays.forEach(d => {

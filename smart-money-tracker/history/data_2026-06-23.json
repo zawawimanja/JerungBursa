@@ -149,7 +149,7 @@
       "isConsolidation": true,
       "floorLow": 21.719999313354492,
       "isIntradayValidated": true,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "MPI",
@@ -718,7 +718,7 @@
       "isConsolidation": true,
       "floorLow": 0.6850000023841858,
       "isIntradayValidated": true,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "IAB",

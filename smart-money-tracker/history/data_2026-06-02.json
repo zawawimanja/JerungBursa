@@ -20,7 +20,7 @@
       "isConsolidation": true,
       "pullback": 14.33,
       "setupName": "🧊 Downtrend / Avoid",
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "NESTLE",
@@ -193,7 +193,7 @@
       "isConsolidation": false,
       "pullback": 19.07,
       "setupName": "🧊 Downtrend / Avoid",
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "SUNMED",
@@ -233,7 +233,7 @@
       "isConsolidation": false,
       "pullback": 15.42,
       "setupName": "🧊 Downtrend / Avoid",
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "AAX",
@@ -264,7 +264,7 @@
       "isConsolidation": false,
       "pullback": 21.84,
       "setupName": "🧊 Downtrend / Avoid",
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "KLCC",
@@ -284,7 +284,7 @@
       "isConsolidation": true,
       "pullback": 7.42,
       "setupName": "🧊 Downtrend / Avoid",
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "UNISEM",
@@ -384,7 +384,7 @@
       "isConsolidation": false,
       "pullback": 25.17,
       "setupName": "🧊 Downtrend / Avoid",
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "CARLSBG",

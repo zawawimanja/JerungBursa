@@ -286,7 +286,7 @@
       "isConsolidation": true,
       "pullback": 2.66,
       "setupName": "🔥 RBS Retest / Near ATH",
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "HEIM",

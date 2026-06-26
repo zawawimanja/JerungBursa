@@ -234,7 +234,7 @@
       "touchCount": 24,
       "isConsolidation": true,
       "floorLow": 21.739999771118164,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isIntradayValidated": true
     },
     {
@@ -300,7 +300,7 @@
       "touchCount": 24,
       "isConsolidation": true,
       "floorLow": 18.399999618530273,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isIntradayValidated": true
     },
     {

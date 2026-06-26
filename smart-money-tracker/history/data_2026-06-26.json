@@ -286,17 +286,17 @@
       "changePct": -5.34,
       "turnover": 3377908,
       "volume": 705200,
-      "signal": "avoid",
-      "reason": "VIP Sideway / Pullback (Pantau Peluang) (Healthy Dip)",
+      "signal": "buy",
+      "reason": "🔒 Tapak Tegar (11x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
       "high52": 5.25,
-      "pullback": 8.76,
+      "pullback": 8,
       "setupName": "📉 Healthy Dip",
-      "closeTightness": 5.64,
+      "closeTightness": 4.76,
       "lowTightness": 1.69,
       "touchCount": 11,
-      "isConsolidation": false,
+      "isConsolidation": true,
       "floorLow": 4.760000228881836,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "SUM",
@@ -331,11 +331,11 @@
       "signal": "buy",
       "reason": "⚡ Momentum Kuat: Jerung Mula Pam (Sesuai Intraday/Swing) (Near ATH)",
       "high52": 0.7450000047683716,
-      "pullback": 2.68,
+      "pullback": 2.01,
       "setupName": "🔥 RBS Retest / Near ATH",
-      "closeTightness": 7.41,
+      "closeTightness": 8.15,
       "lowTightness": 9.3,
-      "touchCount": 16,
+      "touchCount": 15,
       "isConsolidation": false,
       "floorLow": 0.7099999785423279,
       "hasLowerWickRejection": false
@@ -374,14 +374,14 @@
       "signal": "buy",
       "reason": "🔥 Golden Hold: Jerung Mula Kumpul (Sesuai Swing/Hold) (Near ATH)",
       "high52": 1.7400000095367432,
-      "pullback": 2.87,
+      "pullback": 4.02,
       "setupName": "🔥 RBS Retest / Near ATH",
-      "closeTightness": 11.18,
+      "closeTightness": 9.87,
       "lowTightness": 7.89,
-      "touchCount": 18,
+      "touchCount": 19,
       "isConsolidation": false,
       "floorLow": 1.6399999856948853,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "AMS",
@@ -417,7 +417,7 @@
       "signal": "buy",
       "reason": "🔒 Tapak Tegar (12x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
       "high52": 0.7099999785423279,
-      "pullback": 9.86,
+      "pullback": 9.15,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 2.36,
       "lowTightness": 3.17,
@@ -446,7 +446,7 @@
       "touchCount": 24,
       "isConsolidation": true,
       "floorLow": 0.6899999976158142,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isIntradayValidated": true
     },
     {
@@ -461,14 +461,14 @@
       "signal": "avoid",
       "reason": "🧊 Saham Downtrend: Elak Trading!",
       "high52": 2,
-      "pullback": 31.5,
+      "pullback": 31,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 6.11,
       "lowTightness": 4.62,
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 1.2999999523162842,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "ISF",
@@ -486,7 +486,7 @@
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 8.08,
       "lowTightness": 4.08,
-      "touchCount": 20,
+      "touchCount": 19,
       "isConsolidation": false,
       "floorLow": 0.5049999952316284,
       "hasLowerWickRejection": false
@@ -503,7 +503,7 @@
       "signal": "buy",
       "reason": "🔒 Tapak Tegar (22x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
       "high52": 2.75,
-      "pullback": 9.45,
+      "pullback": 9.82,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 2.43,
       "lowTightness": 6.94,
@@ -567,16 +567,16 @@
       "turnover": 815190,
       "volume": 562200,
       "signal": "buy",
-      "reason": "🔒 Tapak Tegar (22x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Pullback Support)",
+      "reason": "🔒 Tapak Tegar (22x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
       "high52": 1.690000057220459,
-      "pullback": 15.38,
-      "setupName": "🔻 Buy Support / Deep Pullback",
+      "pullback": 14.79,
+      "setupName": "📉 Healthy Dip",
       "closeTightness": 2.8,
       "lowTightness": 3.62,
       "touchCount": 22,
       "isConsolidation": true,
       "floorLow": 1.4299999475479126,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isIntradayValidated": true
     },
     {
@@ -631,16 +631,16 @@
       "turnover": 317746,
       "volume": 1222100,
       "signal": "buy",
-      "reason": "🔒 Tapak Tegar (24x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
+      "reason": "🔒 Tapak Tegar (24x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
       "high52": 0.2750000059604645,
-      "pullback": 5.45,
-      "setupName": "📉 Healthy Dip",
-      "closeTightness": 3.85,
+      "pullback": 3.64,
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "closeTightness": 1.89,
       "lowTightness": 1.96,
       "touchCount": 24,
       "isConsolidation": true,
       "floorLow": 0.25999999046325684,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "ADNEX",
@@ -661,7 +661,7 @@
       "touchCount": 7,
       "isConsolidation": true,
       "floorLow": 0.36500000953674316,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "CNERGEN",
@@ -675,14 +675,14 @@
       "signal": "avoid",
       "reason": "VIP Sideway / Pullback (Pantau Peluang) (Healthy Dip)",
       "high52": 0.6499999761581421,
-      "pullback": 9.23,
+      "pullback": 7.69,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 11.93,
       "lowTightness": 8.26,
       "touchCount": 16,
       "isConsolidation": false,
       "floorLow": 0.5899999737739563,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "ELSA",
@@ -700,7 +700,7 @@
       "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 7.14,
       "lowTightness": 10,
-      "touchCount": 17,
+      "touchCount": 18,
       "isConsolidation": false,
       "floorLow": 0.20999999344348907,
       "hasLowerWickRejection": false

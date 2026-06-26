@@ -43,7 +43,7 @@
       "isConsolidation": true,
       "floorLow": 0.7549999952316284,
       "isIntradayValidated": true,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "KGB",
@@ -193,7 +193,7 @@
       "isConsolidation": true,
       "floorLow": 46.5,
       "isIntradayValidated": true,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "UTDPLT",
@@ -301,7 +301,7 @@
       "isConsolidation": true,
       "floorLow": 21.920000076293945,
       "isIntradayValidated": true,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "MCEMENT",
@@ -598,7 +598,7 @@
       "isConsolidation": true,
       "floorLow": 0.6899999976158142,
       "isIntradayValidated": true,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "SUM",
@@ -683,7 +683,7 @@
       "touchCount": 18,
       "isConsolidation": false,
       "floorLow": 0.36500000953674316,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "NE",
@@ -769,7 +769,7 @@
       "isConsolidation": true,
       "floorLow": 0.45500001311302185,
       "isIntradayValidated": true,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "CNERGEN",
@@ -855,7 +855,7 @@
       "isConsolidation": true,
       "floorLow": 0.375,
       "isIntradayValidated": true,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "GIIB",
