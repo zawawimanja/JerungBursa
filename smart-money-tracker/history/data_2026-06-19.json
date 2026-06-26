@@ -24,7 +24,16 @@
       "turnover": 133660800,
       "volume": 17472000,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "🧊 Saham Downtrend: Elak Trading! (Healthy Dip)",
+      "high52": 8.949999809265137,
+      "closeTightness": 1.7,
+      "lowTightness": 4.04,
+      "touchCount": 1,
+      "floorLow": 7.429999828338623,
+      "isConsolidation": false,
+      "pullback": 14.53,
+      "setupName": "🧊 Downtrend / Avoid",
+      "hasLowerWickRejection": true
     },
     {
       "name": "PCHEM",
@@ -36,7 +45,16 @@
       "turnover": 86286126,
       "volume": 19217400,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "🧊 Saham Downtrend: Elak Trading! (Pullback Support)",
+      "high52": 6.159999847412109,
+      "closeTightness": 2,
+      "lowTightness": 3.2,
+      "touchCount": 3,
+      "floorLow": 4.369999885559082,
+      "isConsolidation": false,
+      "pullback": 27.11,
+      "setupName": "🧊 Downtrend / Avoid",
+      "hasLowerWickRejection": true
     },
     {
       "name": "DNEX",
@@ -48,7 +66,16 @@
       "turnover": 83903205,
       "volume": 180437000,
       "signal": "buy",
-      "reason": "⚡ Momentum Kuat: Jerung Mula Pam (Sesuai Intraday/Swing)"
+      "reason": "⚡ Momentum Kuat: Jerung Mula Pam (Sesuai Intraday/Swing) (Near ATH)",
+      "high52": 0.4749999940395355,
+      "closeTightness": 20.78,
+      "lowTightness": 3.95,
+      "touchCount": 3,
+      "floorLow": 0.3799999952316284,
+      "isConsolidation": false,
+      "pullback": 2.11,
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "hasLowerWickRejection": false
     },
     {
       "name": "ZETRIX",
@@ -59,8 +86,17 @@
       "changePct": 1.3,
       "turnover": 83602506,
       "volume": 107182700,
-      "signal": "buy",
-      "reason": "🔥 Golden Entry: Jerung Kumpul Selesa (Sesuai Swing/Hold)"
+      "signal": "avoid",
+      "reason": "🧊 Saham Downtrend: Elak Trading! (Pullback Support)",
+      "high52": 1.0299999713897705,
+      "closeTightness": 5.19,
+      "lowTightness": 6,
+      "touchCount": 2,
+      "floorLow": 0.75,
+      "isConsolidation": false,
+      "pullback": 24.27,
+      "setupName": "🧊 Downtrend / Avoid",
+      "hasLowerWickRejection": true
     },
     {
       "name": "SKYECHIP",
@@ -72,7 +108,16 @@
       "turnover": 63336039,
       "volume": 20497100,
       "signal": "buy",
-      "reason": "⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold)"
+      "reason": "⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold) (Pullback Support)",
+      "high52": 3.799999952316284,
+      "closeTightness": 8.04,
+      "lowTightness": 1.77,
+      "touchCount": 4,
+      "floorLow": 2.8299999237060547,
+      "isConsolidation": false,
+      "pullback": 18.68,
+      "setupName": "🔻 Buy Support / Deep Pullback",
+      "hasLowerWickRejection": false
     },
     {
       "name": "TOPGLOV",
@@ -84,7 +129,16 @@
       "turnover": 61205472,
       "volume": 85007600,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "🧊 Saham Downtrend: Elak Trading! (Pullback Support)",
+      "high52": 0.8799999952316284,
+      "closeTightness": 8.33,
+      "lowTightness": 9.93,
+      "touchCount": 2,
+      "floorLow": 0.7049999833106995,
+      "isConsolidation": false,
+      "pullback": 18.18,
+      "setupName": "🧊 Downtrend / Avoid",
+      "hasLowerWickRejection": true
     },
     {
       "name": "UWC",
@@ -96,7 +150,16 @@
       "turnover": 57785640,
       "volume": 8755400,
       "signal": "buy",
-      "reason": "⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold)"
+      "reason": "⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold) (Near ATH)",
+      "high52": 6.599999904632568,
+      "closeTightness": 8.02,
+      "lowTightness": 5.62,
+      "touchCount": 2,
+      "floorLow": 5.869999885559082,
+      "isConsolidation": false,
+      "pullback": 0,
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "hasLowerWickRejection": false
     },
     {
       "name": "MPI",
@@ -108,7 +171,16 @@
       "turnover": 30773330,
       "volume": 616700,
       "signal": "buy",
-      "reason": "🔥 Golden Hold: Jerung Mula Kumpul (Sesuai Swing/Hold)"
+      "reason": "🔒 Tapak Tegar (3x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
+      "high52": 50.79999923706055,
+      "closeTightness": 2.76,
+      "lowTightness": 2.18,
+      "touchCount": 3,
+      "floorLow": 47.79999923706055,
+      "isConsolidation": true,
+      "pullback": 1.77,
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "hasLowerWickRejection": false
     },
     {
       "name": "MCEMENT",
@@ -120,7 +192,16 @@
       "turnover": 30583960,
       "volume": 4307600,
       "signal": "buy",
-      "reason": "⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold)"
+      "reason": "⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold) (Pullback Support)",
+      "high52": 8.739999771118164,
+      "closeTightness": 4.72,
+      "lowTightness": 0.89,
+      "touchCount": 4,
+      "floorLow": 6.71999979019165,
+      "isConsolidation": false,
+      "pullback": 18.76,
+      "setupName": "🔻 Buy Support / Deep Pullback",
+      "hasLowerWickRejection": false
     },
     {
       "name": "NATGATE",
@@ -132,7 +213,16 @@
       "turnover": 26995792,
       "volume": 36480800,
       "signal": "avoid",
-      "reason": "VIP Sideway / Pullback (Pantau Peluang)"
+      "reason": "🧊 Saham Downtrend: Elak Trading!",
+      "high52": 1.7999999523162842,
+      "closeTightness": 8.78,
+      "lowTightness": 8.16,
+      "touchCount": 1,
+      "floorLow": 0.7350000143051147,
+      "isConsolidation": false,
+      "pullback": 58.89,
+      "setupName": "🧊 Downtrend / Avoid",
+      "hasLowerWickRejection": false
     },
     {
       "name": "PPB",
@@ -143,8 +233,17 @@
       "changePct": 8.82,
       "turnover": 24556179.999999996,
       "volume": 2426500,
-      "signal": "buy",
-      "reason": "⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold)"
+      "signal": "avoid",
+      "reason": "🧊 Saham Downtrend: Elak Trading! (Pullback Support)",
+      "high52": 12.279999732971191,
+      "closeTightness": 10.48,
+      "lowTightness": 1.54,
+      "touchCount": 4,
+      "floorLow": 9.109999656677246,
+      "isConsolidation": false,
+      "pullback": 17.59,
+      "setupName": "🧊 Downtrend / Avoid",
+      "hasLowerWickRejection": false
     },
     {
       "name": "UTDPLT",
@@ -156,7 +255,16 @@
       "turnover": 22107553.999999996,
       "volume": 676900,
       "signal": "buy",
-      "reason": "🔥 Golden Hold: Jerung Mula Kumpul (Sesuai Swing/Hold)"
+      "reason": "🔒 Tapak Tegar (4x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
+      "high52": 35.880001068115234,
+      "closeTightness": 3.68,
+      "lowTightness": 1.09,
+      "touchCount": 4,
+      "floorLow": 31.31999969482422,
+      "isConsolidation": true,
+      "pullback": 8.97,
+      "setupName": "📉 Healthy Dip",
+      "hasLowerWickRejection": false
     },
     {
       "name": "PENTECH",
@@ -168,7 +276,16 @@
       "turnover": 18763810,
       "volume": 57734800,
       "signal": "buy",
-      "reason": "⚡ Momentum Kuat: Jerung Mula Pam (Sesuai Intraday/Swing)"
+      "reason": "⚡ Momentum Kuat: Jerung Mula Pam (Sesuai Intraday/Swing) (Near ATH)",
+      "high52": 0.3400000035762787,
+      "closeTightness": 25,
+      "lowTightness": 24,
+      "touchCount": 1,
+      "floorLow": 0.25,
+      "isConsolidation": false,
+      "pullback": 4.41,
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "hasLowerWickRejection": false
     },
     {
       "name": "SKYCHIP",
@@ -180,7 +297,16 @@
       "turnover": 16534946,
       "volume": 4618700,
       "signal": "buy",
-      "reason": "🔥 Golden Hold: Jerung Mula Kumpul (Sesuai Swing/Hold)"
+      "reason": "🔥 Golden Hold: Jerung Mula Kumpul (Sesuai Swing/Hold) (Pullback Support)",
+      "high52": 3.799999952316284,
+      "closeTightness": 8.04,
+      "lowTightness": 1.77,
+      "touchCount": 4,
+      "floorLow": 2.8299999237060547,
+      "isConsolidation": false,
+      "pullback": 18.68,
+      "setupName": "🔻 Buy Support / Deep Pullback",
+      "hasLowerWickRejection": false
     },
     {
       "name": "TANCO",
@@ -192,7 +318,16 @@
       "turnover": 15827938.000000002,
       "volume": 113056700,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "🧊 Saham Downtrend: Elak Trading!",
+      "high52": 1.7799999713897705,
+      "closeTightness": 15.38,
+      "lowTightness": 0,
+      "touchCount": 4,
+      "floorLow": 0.13500000536441803,
+      "isConsolidation": false,
+      "pullback": 92.13,
+      "setupName": "🧊 Downtrend / Avoid",
+      "hasLowerWickRejection": true
     },
     {
       "name": "KLK",
@@ -204,7 +339,16 @@
       "turnover": 12723406,
       "volume": 605300,
       "signal": "buy",
-      "reason": "🔥 Golden Hold: Jerung Mula Kumpul (Sesuai Swing/Hold)"
+      "reason": "🔒 Tapak Tegar (4x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
+      "high52": 23.18000030517578,
+      "closeTightness": 1.84,
+      "lowTightness": 1.08,
+      "touchCount": 4,
+      "floorLow": 20.459999084472656,
+      "isConsolidation": true,
+      "pullback": 9.32,
+      "setupName": "📉 Healthy Dip",
+      "hasLowerWickRejection": false
     },
     {
       "name": "NESTLE",
@@ -228,7 +372,16 @@
       "turnover": 12389104.000000002,
       "volume": 44246800,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "🧊 Saham Downtrend: Elak Trading!",
+      "high52": 1.0800000429153442,
+      "closeTightness": 16.07,
+      "lowTightness": 16.36,
+      "touchCount": 1,
+      "floorLow": 0.2750000059604645,
+      "isConsolidation": false,
+      "pullback": 74.07,
+      "setupName": "🧊 Downtrend / Avoid",
+      "hasLowerWickRejection": false
     },
     {
       "name": "FRONTKN",
@@ -252,7 +405,16 @@
       "turnover": 0,
       "volume": 0,
       "signal": "avoid",
-      "reason": "VIP Sideway / Pullback (Pantau Peluang)"
+      "reason": "🧊 Saham Downtrend: Elak Trading!",
+      "high52": 0.23999999463558197,
+      "closeTightness": 0,
+      "lowTightness": 4,
+      "touchCount": 2,
+      "floorLow": 0.125,
+      "isConsolidation": false,
+      "pullback": 45.83,
+      "setupName": "🧊 Downtrend / Avoid",
+      "hasLowerWickRejection": false
     }
   ],
   "topGainers": [

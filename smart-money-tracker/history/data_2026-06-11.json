@@ -11,7 +11,16 @@
       "turnover": 173867020,
       "volume": 23817400,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "🧊 Saham Downtrend: Elak Trading! (Pullback Support)",
+      "high52": 8.949999809265137,
+      "closeTightness": 1.37,
+      "lowTightness": 0.55,
+      "touchCount": 4,
+      "floorLow": 7.300000190734863,
+      "isConsolidation": false,
+      "pullback": 18.44,
+      "setupName": "🧊 Downtrend / Avoid",
+      "hasLowerWickRejection": false
     },
     {
       "name": "ZETRIX",
@@ -22,7 +31,16 @@
       "turnover": 117537561.00000001,
       "volume": 145108100,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "🧊 Saham Downtrend: Elak Trading! (Pullback Support)",
+      "high52": 1.0299999713897705,
+      "closeTightness": 4.32,
+      "lowTightness": 3.12,
+      "touchCount": 3,
+      "floorLow": 0.800000011920929,
+      "isConsolidation": false,
+      "pullback": 21.36,
+      "setupName": "🧊 Downtrend / Avoid",
+      "hasLowerWickRejection": false
     },
     {
       "name": "PCHEM",
@@ -33,7 +51,16 @@
       "turnover": 74897140,
       "volume": 12913300,
       "signal": "buy",
-      "reason": "Momentum Positif & Duit Jerung Masuk"
+      "reason": "⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold) (Healthy Dip)",
+      "high52": 6.159999847412109,
+      "closeTightness": 6.42,
+      "lowTightness": 4.23,
+      "touchCount": 3,
+      "floorLow": 5.440000057220459,
+      "isConsolidation": false,
+      "pullback": 5.84,
+      "setupName": "📉 Healthy Dip",
+      "hasLowerWickRejection": false
     },
     {
       "name": "TANCO",
@@ -44,7 +71,16 @@
       "turnover": 46633320,
       "volume": 233166600,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "🧊 Saham Downtrend: Elak Trading!",
+      "high52": 1.7799999713897705,
+      "closeTightness": 460,
+      "lowTightness": 460,
+      "touchCount": 1,
+      "floorLow": 0.20000000298023224,
+      "isConsolidation": false,
+      "pullback": 88.76,
+      "setupName": "🧊 Downtrend / Avoid",
+      "hasLowerWickRejection": false
     },
     {
       "name": "PETDAG",
@@ -55,7 +91,16 @@
       "turnover": 43320084,
       "volume": 2444700,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "🧊 Saham Downtrend: Elak Trading! (Pullback Support)",
+      "high52": 23.799999237060547,
+      "closeTightness": 5.19,
+      "lowTightness": 3.95,
+      "touchCount": 1,
+      "floorLow": 17.719999313354492,
+      "isConsolidation": false,
+      "pullback": 25.55,
+      "setupName": "🧊 Downtrend / Avoid",
+      "hasLowerWickRejection": false
     },
     {
       "name": "VITROX",
@@ -66,7 +111,16 @@
       "turnover": 36638784,
       "volume": 5032800,
       "signal": "buy",
-      "reason": "Momentum Positif & Duit Jerung Masuk"
+      "reason": "⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold) (Near ATH)",
+      "high52": 7.309999942779541,
+      "closeTightness": 8.01,
+      "lowTightness": 5.61,
+      "touchCount": 1,
+      "floorLow": 6.590000152587891,
+      "isConsolidation": false,
+      "pullback": 0.41,
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "hasLowerWickRejection": false
     },
     {
       "name": "NESTLE",
@@ -87,8 +141,17 @@
       "changePct": 2.95,
       "turnover": 32145640,
       "volume": 4612000,
-      "signal": "buy",
-      "reason": "Momentum Positif & Duit Jerung Masuk"
+      "signal": "avoid",
+      "reason": "🧊 Saham Downtrend: Elak Trading! (Healthy Dip)",
+      "high52": 7.699999809265137,
+      "closeTightness": 5.91,
+      "lowTightness": 7.51,
+      "touchCount": 2,
+      "floorLow": 6.659999847412109,
+      "isConsolidation": false,
+      "pullback": 9.48,
+      "setupName": "🧊 Downtrend / Avoid",
+      "hasLowerWickRejection": true
     },
     {
       "name": "MPI",
@@ -99,7 +162,16 @@
       "turnover": 29387324,
       "volume": 617900,
       "signal": "buy",
-      "reason": "Momentum Positif & Duit Jerung Masuk"
+      "reason": "🔥 Golden Hold: Jerung Mula Kumpul (Sesuai Swing/Hold) (Healthy Dip)",
+      "high52": 50.220001220703125,
+      "closeTightness": 4.53,
+      "lowTightness": 4.77,
+      "touchCount": 1,
+      "floorLow": 44,
+      "isConsolidation": false,
+      "pullback": 5.3,
+      "setupName": "📉 Healthy Dip",
+      "hasLowerWickRejection": true
     },
     {
       "name": "PENTA",
@@ -110,7 +182,16 @@
       "turnover": 28564505,
       "volume": 6536500,
       "signal": "buy",
-      "reason": "Momentum Positif & Duit Jerung Masuk"
+      "reason": "⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold) (Healthy Dip)",
+      "high52": 4.679999828338623,
+      "closeTightness": 7.9,
+      "lowTightness": 2.81,
+      "touchCount": 2,
+      "floorLow": 3.9200000762939453,
+      "isConsolidation": false,
+      "pullback": 6.62,
+      "setupName": "📉 Healthy Dip",
+      "hasLowerWickRejection": false
     },
     {
       "name": "MMCS",
@@ -143,7 +224,16 @@
       "turnover": 14052834,
       "volume": 671100,
       "signal": "buy",
-      "reason": "Momentum Positif & Duit Jerung Masuk"
+      "reason": "🔒 Tapak Tegar (3x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
+      "high52": 23.18000030517578,
+      "closeTightness": 4.28,
+      "lowTightness": 2.63,
+      "touchCount": 3,
+      "floorLow": 19.780000686645508,
+      "isConsolidation": true,
+      "pullback": 9.66,
+      "setupName": "📉 Healthy Dip",
+      "hasLowerWickRejection": true
     },
     {
       "name": "HSI-CWQ7",
@@ -165,7 +255,16 @@
       "turnover": 9669600,
       "volume": 306000,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "🔒 Tapak Tegar (4x) | 🧊 Saham Downtrend: Elak Trading! (Healthy Dip)",
+      "high52": 35.880001068115234,
+      "closeTightness": 2.22,
+      "lowTightness": 1.21,
+      "touchCount": 4,
+      "floorLow": 31.360000610351562,
+      "isConsolidation": true,
+      "pullback": 11.93,
+      "setupName": "🧊 Downtrend / Avoid",
+      "hasLowerWickRejection": true
     },
     {
       "name": "VS",
@@ -176,7 +275,16 @@
       "turnover": 8549040,
       "volume": 42745200,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "🧊 Saham Downtrend: Elak Trading!",
+      "high52": 0.8700000047683716,
+      "closeTightness": 5,
+      "lowTightness": 2.56,
+      "touchCount": 1,
+      "floorLow": 0.19499999284744263,
+      "isConsolidation": false,
+      "pullback": 77.01,
+      "setupName": "🧊 Downtrend / Avoid",
+      "hasLowerWickRejection": false
     },
     {
       "name": "HSI-CWQ6",
@@ -198,7 +306,16 @@
       "turnover": 5498169,
       "volume": 589300,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "🧊 Saham Downtrend: Elak Trading! (Pullback Support)",
+      "high52": 12.279999732971191,
+      "closeTightness": 2.89,
+      "lowTightness": 2.47,
+      "touchCount": 1,
+      "floorLow": 9.319999694824219,
+      "isConsolidation": false,
+      "pullback": 24.02,
+      "setupName": "🧊 Downtrend / Avoid",
+      "hasLowerWickRejection": false
     },
     {
       "name": "HSI-CWQU",
@@ -231,7 +348,16 @@
       "turnover": 3441210,
       "volume": 376500,
       "signal": "buy",
-      "reason": "Momentum Positif & Duit Jerung Masuk"
+      "reason": "🔒 Tapak Tegar (4x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
+      "high52": 9.569999694824219,
+      "closeTightness": 2.47,
+      "lowTightness": 1.58,
+      "touchCount": 4,
+      "floorLow": 8.859999656677246,
+      "isConsolidation": true,
+      "pullback": 4.49,
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "hasLowerWickRejection": true
     }
   ],
   "topGainers": [

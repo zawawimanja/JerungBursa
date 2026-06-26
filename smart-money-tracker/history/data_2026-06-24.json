@@ -20,7 +20,8 @@
       "lowTightness": 8.8,
       "touchCount": 6,
       "isConsolidation": false,
-      "floorLow": 2.869999885559082
+      "floorLow": 2.869999885559082,
+      "hasLowerWickRejection": true
     },
     {
       "name": "ZETRIX",
@@ -32,15 +33,17 @@
       "turnover": 83378953.5,
       "volume": 110435700,
       "signal": "avoid",
-      "reason": "🔒 Tapak Tegar (24x) | 🧊 Saham Downtrend: Elak Trading!",
-      "high52": 5.099999904632568,
-      "pullback": 85.2,
+      "reason": "🔒 Tapak Tegar (22x) | 🧊 Saham Downtrend: Elak Trading! (Pullback Support)",
+      "high52": 1.0299999713897705,
+      "pullback": 26.7,
       "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 0.61,
-      "lowTightness": 2.29,
-      "touchCount": 24,
+      "closeTightness": 1.32,
+      "lowTightness": 1.99,
+      "touchCount": 22,
       "isConsolidation": true,
-      "floorLow": 4.889999866485596
+      "floorLow": 0.7549999952316284,
+      "isIntradayValidated": true,
+      "hasLowerWickRejection": false
     },
     {
       "name": "KGB",
@@ -60,7 +63,9 @@
       "lowTightness": 5.79,
       "touchCount": 20,
       "isConsolidation": true,
-      "floorLow": 7.289999961853027
+      "floorLow": 7.289999961853027,
+      "isIntradayValidated": true,
+      "hasLowerWickRejection": false
     },
     {
       "name": "PENTA",
@@ -80,7 +85,8 @@
       "lowTightness": 1.47,
       "touchCount": 24,
       "isConsolidation": true,
-      "floorLow": 4.820000171661377
+      "floorLow": 4.820000171661377,
+      "hasLowerWickRejection": false
     },
     {
       "name": "UWC",
@@ -100,7 +106,9 @@
       "lowTightness": 3.99,
       "touchCount": 19,
       "isConsolidation": true,
-      "floorLow": 6.159999847412109
+      "floorLow": 6.159999847412109,
+      "isIntradayValidated": true,
+      "hasLowerWickRejection": false
     },
     {
       "name": "DUFU",
@@ -140,7 +148,8 @@
       "lowTightness": 5.12,
       "touchCount": 12,
       "isConsolidation": false,
-      "floorLow": 2.680000066757202
+      "floorLow": 2.680000066757202,
+      "hasLowerWickRejection": false
     },
     {
       "name": "DNEX",
@@ -160,7 +169,9 @@
       "lowTightness": 7.06,
       "touchCount": 19,
       "isConsolidation": true,
-      "floorLow": 0.42500001192092896
+      "floorLow": 0.42500001192092896,
+      "isIntradayValidated": true,
+      "hasLowerWickRejection": true
     },
     {
       "name": "MPI",
@@ -180,7 +191,9 @@
       "lowTightness": 5.49,
       "touchCount": 23,
       "isConsolidation": true,
-      "floorLow": 46.5
+      "floorLow": 46.5,
+      "isIntradayValidated": true,
+      "hasLowerWickRejection": false
     },
     {
       "name": "UTDPLT",
@@ -200,7 +213,9 @@
       "lowTightness": 4.76,
       "touchCount": 21,
       "isConsolidation": true,
-      "floorLow": 33.279998779296875
+      "floorLow": 33.279998779296875,
+      "isIntradayValidated": true,
+      "hasLowerWickRejection": false
     },
     {
       "name": "NATGATE",
@@ -220,7 +235,8 @@
       "lowTightness": 2.07,
       "touchCount": 3,
       "isConsolidation": false,
-      "floorLow": 0.7250000238418579
+      "floorLow": 0.7250000238418579,
+      "hasLowerWickRejection": true
     },
     {
       "name": "SUNMED",
@@ -232,7 +248,7 @@
       "turnover": 13754371,
       "volume": 7599100,
       "signal": "avoid",
-      "reason": "🔒 Tapak Tegar (24x) | 🧊 Saham Downtrend: Elak Trading!",
+      "reason": "🔒 Tapak Tegar (24x) | 🧊 Saham Downtrend: Elak Trading! (Pullback Support)",
       "high52": 2.4600000381469727,
       "pullback": 26.42,
       "setupName": "🧊 Downtrend / Avoid",
@@ -240,7 +256,9 @@
       "lowTightness": 2.84,
       "touchCount": 24,
       "isConsolidation": true,
-      "floorLow": 1.809999942779541
+      "floorLow": 1.809999942779541,
+      "isIntradayValidated": true,
+      "hasLowerWickRejection": false
     },
     {
       "name": "TANCO",
@@ -260,7 +278,8 @@
       "lowTightness": 8,
       "touchCount": 1,
       "isConsolidation": false,
-      "floorLow": 0.125
+      "floorLow": 0.125,
+      "hasLowerWickRejection": true
     },
     {
       "name": "HLBANK",
@@ -280,7 +299,9 @@
       "lowTightness": 1.29,
       "touchCount": 24,
       "isConsolidation": true,
-      "floorLow": 21.920000076293945
+      "floorLow": 21.920000076293945,
+      "isIntradayValidated": true,
+      "hasLowerWickRejection": false
     },
     {
       "name": "MCEMENT",
@@ -292,7 +313,7 @@
       "turnover": 8444052,
       "volume": 1295100,
       "signal": "avoid",
-      "reason": "🔒 Tapak Tegar (14x) | 🧊 Saham Downtrend: Elak Trading!",
+      "reason": "🔒 Tapak Tegar (14x) | 🧊 Saham Downtrend: Elak Trading! (Pullback Support)",
       "high52": 8.739999771118164,
       "pullback": 25.4,
       "setupName": "🧊 Downtrend / Avoid",
@@ -300,7 +321,9 @@
       "lowTightness": 5.06,
       "touchCount": 14,
       "isConsolidation": true,
-      "floorLow": 6.519999980926514
+      "floorLow": 6.519999980926514,
+      "isIntradayValidated": true,
+      "hasLowerWickRejection": false
     },
     {
       "name": "NESTLE",
@@ -340,7 +363,8 @@
       "lowTightness": 6.5,
       "touchCount": 6,
       "isConsolidation": false,
-      "floorLow": 2.4600000381469727
+      "floorLow": 2.4600000381469727,
+      "hasLowerWickRejection": false
     },
     {
       "name": "PENTECH",
@@ -360,7 +384,9 @@
       "lowTightness": 8.2,
       "touchCount": 11,
       "isConsolidation": true,
-      "floorLow": 0.3100000023841858
+      "floorLow": 0.3100000023841858,
+      "isIntradayValidated": true,
+      "hasLowerWickRejection": true
     },
     {
       "name": "XL",
@@ -400,7 +426,9 @@
       "lowTightness": 3.18,
       "touchCount": 13,
       "isConsolidation": true,
-      "floorLow": 4.71999979019165
+      "floorLow": 4.71999979019165,
+      "isIntradayValidated": true,
+      "hasLowerWickRejection": true
     },
     {
       "name": "OPPSTAR",
@@ -420,7 +448,8 @@
       "lowTightness": 1.71,
       "touchCount": 4,
       "isConsolidation": false,
-      "floorLow": 0.5849999785423279
+      "floorLow": 0.5849999785423279,
+      "hasLowerWickRejection": true
     },
     {
       "name": "HLFG",
@@ -460,7 +489,8 @@
       "lowTightness": 11.76,
       "touchCount": 15,
       "isConsolidation": false,
-      "floorLow": 1.5299999713897705
+      "floorLow": 1.5299999713897705,
+      "hasLowerWickRejection": false
     },
     {
       "name": "EIPOWER",
@@ -480,7 +510,8 @@
       "lowTightness": 2.31,
       "touchCount": 10,
       "isConsolidation": true,
-      "floorLow": 0.6499999761581421
+      "floorLow": 0.6499999761581421,
+      "hasLowerWickRejection": true
     },
     {
       "name": "HHRG",
@@ -497,10 +528,11 @@
       "pullback": 34.48,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 23.53,
-      "lowTightness": null,
+      "lowTightness": 0,
       "touchCount": 4,
       "isConsolidation": false,
-      "floorLow": 0.09000000357627869
+      "floorLow": 0.09000000357627869,
+      "hasLowerWickRejection": true
     },
     {
       "name": "CBHB",
@@ -520,7 +552,9 @@
       "lowTightness": 6.35,
       "touchCount": 23,
       "isConsolidation": true,
-      "floorLow": 0.6299999952316284
+      "floorLow": 0.6299999952316284,
+      "isIntradayValidated": true,
+      "hasLowerWickRejection": false
     },
     {
       "name": "HKB",
@@ -540,7 +574,9 @@
       "lowTightness": 6.4,
       "touchCount": 15,
       "isConsolidation": true,
-      "floorLow": 0.6650000214576721
+      "floorLow": 0.6650000214576721,
+      "isIntradayValidated": true,
+      "hasLowerWickRejection": true
     },
     {
       "name": "SDCG",
@@ -560,7 +596,9 @@
       "lowTightness": 0.73,
       "touchCount": 24,
       "isConsolidation": true,
-      "floorLow": 0.6899999976158142
+      "floorLow": 0.6899999976158142,
+      "isIntradayValidated": true,
+      "hasLowerWickRejection": false
     },
     {
       "name": "SUM",
@@ -580,7 +618,9 @@
       "lowTightness": 2.04,
       "touchCount": 19,
       "isConsolidation": true,
-      "floorLow": 0.5
+      "floorLow": 0.5,
+      "isIntradayValidated": true,
+      "hasLowerWickRejection": false
     },
     {
       "name": "AMBEST",
@@ -600,7 +640,8 @@
       "lowTightness": 8.12,
       "touchCount": 4,
       "isConsolidation": false,
-      "floorLow": 0.800000011920929
+      "floorLow": 0.800000011920929,
+      "hasLowerWickRejection": true
     },
     {
       "name": "LWSABAH",
@@ -620,7 +661,8 @@
       "lowTightness": 2.19,
       "touchCount": 23,
       "isConsolidation": false,
-      "floorLow": 1.399999976158142
+      "floorLow": 1.399999976158142,
+      "hasLowerWickRejection": true
     },
     {
       "name": "AMS",
@@ -640,7 +682,8 @@
       "lowTightness": 8.22,
       "touchCount": 18,
       "isConsolidation": false,
-      "floorLow": 0.36500000953674316
+      "floorLow": 0.36500000953674316,
+      "hasLowerWickRejection": false
     },
     {
       "name": "NE",
@@ -660,7 +703,8 @@
       "lowTightness": 5.53,
       "touchCount": 21,
       "isConsolidation": true,
-      "floorLow": 1.0099999904632568
+      "floorLow": 1.0099999904632568,
+      "hasLowerWickRejection": false
     },
     {
       "name": "ELSA",
@@ -680,7 +724,8 @@
       "lowTightness": 13.64,
       "touchCount": 6,
       "isConsolidation": false,
-      "floorLow": 0.2150000035762787
+      "floorLow": 0.2150000035762787,
+      "hasLowerWickRejection": true
     },
     {
       "name": "ISF",
@@ -692,7 +737,7 @@
       "turnover": 1107263,
       "volume": 2192600,
       "signal": "avoid",
-      "reason": "🔒 Tapak Tegar (22x) | 🧊 Saham Downtrend: Elak Trading!",
+      "reason": "🔒 Tapak Tegar (22x) | 🧊 Saham Downtrend: Elak Trading! (Pullback Support)",
       "high52": 0.6100000143051147,
       "pullback": 17.21,
       "setupName": "🧊 Downtrend / Avoid",
@@ -700,7 +745,9 @@
       "lowTightness": 7.14,
       "touchCount": 22,
       "isConsolidation": true,
-      "floorLow": 0.5
+      "floorLow": 0.5,
+      "isIntradayValidated": true,
+      "hasLowerWickRejection": false
     },
     {
       "name": "OGX",
@@ -720,7 +767,9 @@
       "lowTightness": 5.56,
       "touchCount": 19,
       "isConsolidation": true,
-      "floorLow": 0.45500001311302185
+      "floorLow": 0.45500001311302185,
+      "isIntradayValidated": true,
+      "hasLowerWickRejection": false
     },
     {
       "name": "CNERGEN",
@@ -740,7 +789,8 @@
       "lowTightness": 7.34,
       "touchCount": 9,
       "isConsolidation": false,
-      "floorLow": 0.5699999928474426
+      "floorLow": 0.5699999928474426,
+      "hasLowerWickRejection": false
     },
     {
       "name": "MMCS",
@@ -760,7 +810,9 @@
       "lowTightness": 1.96,
       "touchCount": 24,
       "isConsolidation": true,
-      "floorLow": 0.25999999046325684
+      "floorLow": 0.25999999046325684,
+      "isIntradayValidated": true,
+      "hasLowerWickRejection": true
     },
     {
       "name": "IAB",
@@ -780,7 +832,8 @@
       "lowTightness": 4.58,
       "touchCount": 3,
       "isConsolidation": false,
-      "floorLow": 1.309999942779541
+      "floorLow": 1.309999942779541,
+      "hasLowerWickRejection": false
     },
     {
       "name": "ADNEX",
@@ -800,7 +853,9 @@
       "lowTightness": 1.33,
       "touchCount": 13,
       "isConsolidation": true,
-      "floorLow": 0.375
+      "floorLow": 0.375,
+      "isIntradayValidated": true,
+      "hasLowerWickRejection": false
     },
     {
       "name": "GIIB",
@@ -816,11 +871,12 @@
       "high52": 0.23999999463558197,
       "pullback": 45.83,
       "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": null,
+      "closeTightness": 0,
       "lowTightness": 4,
       "touchCount": 3,
       "isConsolidation": false,
-      "floorLow": 0.125
+      "floorLow": 0.125,
+      "hasLowerWickRejection": false
     }
   ],
   "topGainers": [

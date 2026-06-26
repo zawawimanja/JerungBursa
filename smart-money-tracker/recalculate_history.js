@@ -53,6 +53,7 @@ async function recalculateArchive(dateStr) {
             const dClose = dQuote.close;
             const dLow = dQuote.low;
             const dHigh = dQuote.high;
+            const dOpen = dQuote.open;
             
             const validDays = [];
             for (let i = 0; i < dTimestamps.length; i++) {
@@ -60,9 +61,10 @@ async function recalculateArchive(dateStr) {
                 const dDate = getLocalDate(ts);
                 if (dDate > dateStr) continue; // Potong data selepas tarikh arkib
                 
-                if (dClose[i] !== null && dClose[i] !== undefined && dLow[i] !== null && dLow[i] !== undefined && dHigh[i] !== null && dHigh[i] !== undefined) {
+                if (dClose[i] !== null && dClose[i] !== undefined && dLow[i] !== null && dLow[i] !== undefined && dHigh[i] !== null && dHigh[i] !== undefined && dOpen[i] !== null && dOpen[i] !== undefined) {
                     validDays.push({
                         close: dClose[i],
+                        open: dOpen[i],
                         low: dLow[i],
                         high: dHigh[i],
                         date: dDate
@@ -87,7 +89,18 @@ async function recalculateArchive(dateStr) {
             
             // Kira daily fallback floor dengan wick filter
             const lastDays = validDays.slice(-4);
-            const currentPrice = lastDays[lastDays.length - 1].close;
+            const lastDay = lastDays[lastDays.length - 1];
+            const currentPrice = lastDay.close;
+            
+            // Hitung Lower Wick Rejection harian (Ekor di bawah)
+            const dailyBody = Math.abs(lastDay.close - lastDay.open);
+            const dailyLowerShadow = Math.min(lastDay.open, lastDay.close) - lastDay.low;
+            const dailyTotalRange = lastDay.high - lastDay.low;
+            const hasLowerWickRejection = dailyTotalRange > 0 && (
+                (dailyLowerShadow / dailyTotalRange >= 0.20) || 
+                (dailyBody > 0 && dailyLowerShadow / dailyBody >= 0.40) ||
+                (dailyBody === 0 && dailyLowerShadow > 0)
+            );
             
             const closes = lastDays.map(d => d.close);
             const maxClose = Math.max(...closes);
@@ -245,6 +258,7 @@ async function recalculateArchive(dateStr) {
             
             item.signal = signal;
             item.reason = isConsolidation ? `🔒 Tapak Tegar (${item.touchCount}x) | ${reason}` : reason;
+            item.hasLowerWickRejection = hasLowerWickRejection;
             
         } catch (e) {
             console.error(`❌ Gagal mengemas kini ${item.name}: ${e.message}`);
@@ -257,8 +271,15 @@ async function recalculateArchive(dateStr) {
 }
 
 async function run() {
-    await recalculateArchive('2026-06-22'); // Semalam
-    await recalculateArchive('2026-06-23'); // Hari ini
+    const historyDir = path.join(__dirname, 'history');
+    const files = fs.readdirSync(historyDir);
+    const jsonFiles = files.filter(f => f.startsWith('data_') && f.endsWith('.json')).sort();
+    
+    console.log(`Menjumpai ${jsonFiles.length} fail arkib untuk dikira semula...`);
+    for (const file of jsonFiles) {
+        const dateStr = file.replace('data_', '').replace('.json', '');
+        await recalculateArchive(dateStr);
+    }
     console.log('\n🎉 Pengemaskinian Sejarah Selesai Sepenuhnya!');
 }
 
