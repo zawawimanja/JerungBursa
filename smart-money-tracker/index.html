@@ -651,12 +651,24 @@
                     <span style="font-size: 1.6rem;">🔥</span>
                     <div>
                         <h2 style="margin: 0; font-size: 1.25rem; color: #f59e0b; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;">Zon Gabungan Emas (Kriteria Ala-OGX)</h2>
-                        <p style="margin: 0.15rem 0 0 0; font-size: 0.78rem; color: #94a3b8;">Zon Emas: Consolidation Tapak Rapat ke Lantai (≤ 1.5%) + Sentuhan Padat (≥ 10x) + Wajib Isyarat BUY + Tiada Downtrend</p>
+                        <p style="margin: 0.15rem 0 0 0; font-size: 0.78rem; color: #94a3b8;">Zon Emas: Consolidation Tapak Rapat ke Lantai (≤ 3.0%) + Sentuhan (≥ 3x Daily) + Wajib Isyarat BUY + Tiada Downtrend</p>
                     </div>
                 </div>
-                <button onclick="copyTradingViewWatchlist(event)" style="background: #f59e0b; color: #0f172a; border: none; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 800; font-size: 0.82rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: transform 0.2s; box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                    📋 Salin Watchlist TV
-                </button>
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <!-- Penapis SOP -->
+                    <div style="background: rgba(15, 23, 42, 0.6); padding: 0.25rem; border-radius: 8px; border: 1px solid var(--panel-border); display: flex; gap: 0.25rem;">
+                        <button id="sopMutlakBtn" onclick="toggleSopFilter('mutlak')" style="background: #f59e0b; color: #0f172a; border: none; padding: 0.45rem 0.85rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem; cursor: pointer; transition: all 0.2s;">
+                            👑 SOP Mutlak
+                        </button>
+                        <button id="sopBiasaBtn" onclick="toggleSopFilter('biasa')" style="background: transparent; color: #94a3b8; border: none; padding: 0.45rem 0.85rem; border-radius: 6px; font-weight: 700; font-size: 0.75rem; cursor: pointer; transition: all 0.2s;">
+                            ⚠️ SOP Biasa
+                        </button>
+                    </div>
+                    
+                    <button onclick="copyTradingViewWatchlist(event)" style="background: #f59e0b; color: #0f172a; border: none; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 800; font-size: 0.82rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: transform 0.2s; box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                        📋 Salin Watchlist TV
+                    </button>
+                </div>
             </div>
             
             <div id="goldenCardsContainer" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem;">
@@ -823,6 +835,36 @@
         let currentData = [];
         let currentSortColumn = 'turnover';
         let currentSortDesc = true;
+        let currentSopFilter = 'mutlak';
+
+        function toggleSopFilter(type) {
+            currentSopFilter = type;
+            
+            const btnMutlak = document.getElementById('sopMutlakBtn');
+            const btnBiasa = document.getElementById('sopBiasaBtn');
+            
+            if (!btnMutlak || !btnBiasa) return;
+            
+            if (type === 'mutlak') {
+                btnMutlak.style.background = '#f59e0b';
+                btnMutlak.style.color = '#0f172a';
+                btnMutlak.style.fontWeight = '800';
+                
+                btnBiasa.style.background = 'transparent';
+                btnBiasa.style.color = '#94a3b8';
+                btnBiasa.style.fontWeight = '700';
+            } else {
+                btnBiasa.style.background = '#f59e0b';
+                btnBiasa.style.color = '#0f172a';
+                btnBiasa.style.fontWeight = '800';
+                
+                btnMutlak.style.background = 'transparent';
+                btnMutlak.style.color = '#94a3b8';
+                btnMutlak.style.fontWeight = '700';
+            }
+            
+            renderGoldenZone();
+        }
 
         function removeGeneralTicker(ticker) {
             currentData = currentData.filter(t => t.name !== ticker);
@@ -983,14 +1025,17 @@
                     item.setupName === 'N/A'
                 );
                 
-                // Kriteria Emas Mutlak (Ala-OGX): Wajib Consolidation + Wajib BUY + Rapat Lantai (≤ 3.0%) + Sentuhan Kuat (≥ 3x Daily) + Bukan Downtrend + Bawah RM3.00 + Wajib Ekor Rejection Harian
-                return item.isConsolidation && 
+                const matchesBase = item.isConsolidation && 
                        item.signal === 'buy' && 
                        !isDowntrend && 
                        item.price <= 3.00 && 
                        item.touchCount >= 3 && 
-                       dist <= 3.0 && 
-                       item.hasLowerWickRejection;
+                       dist <= 3.0;
+                       
+                if (currentSopFilter === 'mutlak') {
+                    return matchesBase && item.hasLowerWickRejection;
+                }
+                return matchesBase;
             });
             
             if (goldenList.length === 0) {
@@ -1098,14 +1143,17 @@
                     item.setupName === 'N/A'
                 );
                 
-                // Kriteria Emas Mutlak (Ala-OGX): Wajib Consolidation + Wajib BUY + Rapat Lantai (≤ 3.0%) + Sentuhan Kuat (≥ 3x Daily) + Bukan Downtrend + Bawah RM3.00 + Wajib Ekor Rejection Harian
-                return item.isConsolidation && 
+                const matchesBase = item.isConsolidation && 
                        item.signal === 'buy' && 
                        !isDowntrend && 
                        item.price <= 3.00 && 
                        item.touchCount >= 3 && 
-                       dist <= 3.0 && 
-                       item.hasLowerWickRejection;
+                       dist <= 3.0;
+                       
+                if (currentSopFilter === 'mutlak') {
+                    return matchesBase && item.hasLowerWickRejection;
+                }
+                return matchesBase;
             });
             
             if (goldenList.length === 0) {
