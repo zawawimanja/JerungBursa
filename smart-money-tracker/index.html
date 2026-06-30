@@ -658,10 +658,10 @@
                     <!-- SOP Filter Buttons -->
                     <div style="background: rgba(15, 23, 42, 0.6); padding: 0.25rem; border-radius: 8px; border: 1px solid var(--panel-border); display: flex; gap: 0.25rem;">
                         <button id="sopMutlakBtn" onclick="toggleSopFilter('mutlak')" style="background: #f59e0b; color: #0f172a; border: none; padding: 0.45rem 0.85rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem; cursor: pointer; transition: all 0.2s;">
-                            👑 Strict SOP
+                            👑 Strict SOP (Wick Rejection)
                         </button>
                         <button id="sopBiasaBtn" onclick="toggleSopFilter('biasa')" style="background: transparent; color: #94a3b8; border: none; padding: 0.45rem 0.85rem; border-radius: 6px; font-weight: 700; font-size: 0.75rem; cursor: pointer; transition: all 0.2s;">
-                            ⚠️ Standard SOP
+                            ⚠️ Standard SOP (No Rejection)
                         </button>
                     </div>
                     
@@ -935,7 +935,7 @@
                 if (currentSopFilter === 'mutlak') {
                     return matchesBase && item.hasLowerWickRejection;
                 }
-                return matchesBase;
+                return matchesBase && !item.hasLowerWickRejection;
             });
             
             // Populate calculator dropdown
@@ -1077,7 +1077,7 @@
                 if (currentSopFilter === 'mutlak') {
                     return matchesBase && item.hasLowerWickRejection;
                 }
-                return matchesBase;
+                return matchesBase && !item.hasLowerWickRejection;
             });
             
             if (goldenList.length === 0) {
