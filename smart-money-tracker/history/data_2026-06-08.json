@@ -19,7 +19,9 @@
       "floorLow": 0.800000011920929,
       "isConsolidation": false,
       "pullback": 20.39,
-      "setupName": "🔻 Buy Support / Deep Pullback"
+      "setupName": "🔻 Buy Support / Deep Pullback",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "IHH",
@@ -60,7 +62,9 @@
       "floorLow": 0.7599999904632568,
       "isConsolidation": false,
       "pullback": 3.98,
-      "setupName": "🔥 RBS Retest / Near ATH"
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "PCHEM",
@@ -79,7 +83,9 @@
       "floorLow": 5.210000038146973,
       "isConsolidation": true,
       "pullback": 10.06,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "MPI",
@@ -98,7 +104,9 @@
       "floorLow": 44,
       "isConsolidation": false,
       "pullback": 9.4,
-      "setupName": "📉 Healthy Dip"
+      "setupName": "📉 Healthy Dip",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "TANCO",
@@ -117,7 +125,9 @@
       "floorLow": 1.1200000047683716,
       "isConsolidation": false,
       "pullback": 37.08,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "PETDAG",
@@ -136,7 +146,9 @@
       "floorLow": 17.1200008392334,
       "isConsolidation": false,
       "pullback": 21.85,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "SDG",
@@ -155,7 +167,9 @@
       "floorLow": 5.760000228881836,
       "isConsolidation": true,
       "pullback": 6.67,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "HEIM",
@@ -174,7 +188,9 @@
       "floorLow": 19.860000610351562,
       "isConsolidation": false,
       "pullback": 22.18,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "HLBANK",
@@ -193,7 +209,9 @@
       "floorLow": 20.799999237060547,
       "isConsolidation": false,
       "pullback": 18.76,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "HSI-CWQ7",
@@ -223,7 +241,9 @@
       "floorLow": 0.2199999988079071,
       "isConsolidation": false,
       "pullback": 1.67,
-      "setupName": "🔥 RBS Retest / Near ATH"
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "HSI-PWRP",
@@ -253,7 +273,9 @@
       "floorLow": 0.1899999976158142,
       "isConsolidation": false,
       "pullback": 75.86,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "TFP",
@@ -263,8 +285,8 @@
       "changePct": 83.33,
       "turnover": 3145461,
       "volume": 57190200,
-      "signal": "buy",
-      "reason": "⚠️ Penny Goreng: Pam Volume Laju (Intraday Sahaja, Elak Hold!) (Healthy Dip)",
+      "signal": "avoid",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.05999999865889549,
       "closeTightness": 120,
       "lowTightness": 100,
@@ -272,7 +294,9 @@
       "floorLow": 0.014999999664723873,
       "isConsolidation": false,
       "pullback": 8.33,
-      "setupName": "📉 Healthy Dip"
+      "setupName": "📉 Healthy Dip",
+      "isCombStock": true,
+      "hasLowerWickRejection": false
     },
     {
       "name": "HHRG",
@@ -291,7 +315,9 @@
       "floorLow": 0.07999999821186066,
       "isConsolidation": false,
       "pullback": 41.38,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     }
   ],
   "topGainers": [

@@ -21,7 +21,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 7.71999979019165,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "AAX",
@@ -63,7 +64,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 3.799999952316284,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "ZETRIX",
@@ -84,7 +86,8 @@
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.75,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "KGB",
@@ -105,7 +108,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 7.260000228881836,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "SKYECHIP",
@@ -126,7 +130,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 2.7300000190734863,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "VITROX",
@@ -147,7 +152,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 6.940000057220459,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "MISC",
@@ -189,7 +195,8 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.7250000238418579,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "IHH",
@@ -231,7 +238,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 20.8799991607666,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "DNEX",
@@ -252,7 +260,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.33000001311302185,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "UWC",
@@ -273,7 +282,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 5.300000190734863,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "PETDAG",
@@ -294,7 +304,8 @@
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 17.719999313354492,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "SUNMED",
@@ -315,7 +326,8 @@
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 1.75,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "MPI",
@@ -336,7 +348,8 @@
       "touchCount": 3,
       "isConsolidation": true,
       "floorLow": 46,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "OPPSTAR",
@@ -357,7 +370,8 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.5099999904632568,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "MNHLDG",
@@ -378,7 +392,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 2.450000047683716,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "TANCO",
@@ -399,7 +414,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.11999999731779099,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "VS",
@@ -420,7 +436,8 @@
       "touchCount": 7,
       "isConsolidation": false,
       "floorLow": 0.1899999976158142,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "UTDPLT",
@@ -441,7 +458,8 @@
       "touchCount": 6,
       "isConsolidation": true,
       "floorLow": 31.31999969482422,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "KLK",
@@ -462,7 +480,8 @@
       "touchCount": 6,
       "isConsolidation": true,
       "floorLow": 20.299999237060547,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "SAM",
@@ -483,7 +502,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 4.260000228881836,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "NE",
@@ -504,7 +524,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.9449999928474426,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "KEEMING",
@@ -525,7 +546,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 1.090000033378601,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "CBHB",
@@ -546,7 +568,8 @@
       "touchCount": 3,
       "isConsolidation": true,
       "floorLow": 0.6299999952316284,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "LWSABAH",
@@ -567,7 +590,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 1.25,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "TMK",
@@ -588,7 +612,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 2.1600000858306885,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "SUM",
@@ -609,7 +634,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.39500001072883606,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "F&N",
@@ -630,7 +656,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 25.520000457763672,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "OGX",
@@ -651,7 +678,8 @@
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.44999998807907104,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "EIPOWER",
@@ -672,7 +700,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.5649999976158142,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "AMBEST",
@@ -693,7 +722,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.7200000286102295,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "PENTECH",
@@ -714,7 +744,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.25,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "IAB",
@@ -735,7 +766,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 1.2100000381469727,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "HKB",
@@ -756,7 +788,8 @@
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.5199999809265137,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "AMS",
@@ -777,7 +810,8 @@
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.36000001430511475,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "SDCG",
@@ -798,7 +832,8 @@
       "touchCount": 4,
       "isConsolidation": true,
       "floorLow": 0.6700000166893005,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "MMCS",
@@ -819,7 +854,8 @@
       "touchCount": 3,
       "isConsolidation": true,
       "floorLow": 0.2150000035762787,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "ISF",
@@ -840,7 +876,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.49000000953674316,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "ELSA",
@@ -861,7 +898,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.20000000298023224,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "ADNEX",
@@ -882,7 +920,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.3100000023841858,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "CNERGEN",
@@ -903,7 +942,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.5199999809265137,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "GIIB",
@@ -924,7 +964,8 @@
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 0.125,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     }
   ],
   "topGainers": [

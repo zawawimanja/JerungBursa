@@ -19,7 +19,9 @@
       "floorLow": 10.5,
       "isConsolidation": false,
       "pullback": 14.33,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "NESTLE",
@@ -49,7 +51,9 @@
       "floorLow": 1.8799999952316284,
       "isConsolidation": false,
       "pullback": 28.32,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "YTL",
@@ -68,7 +72,9 @@
       "floorLow": 4,
       "isConsolidation": true,
       "pullback": 5.88,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "QL",
@@ -87,7 +93,9 @@
       "floorLow": 3.2799999713897705,
       "isConsolidation": false,
       "pullback": 23.08,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "PBBANK",
@@ -117,7 +125,9 @@
       "floorLow": 17.1200008392334,
       "isConsolidation": false,
       "pullback": 25.46,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "MRDIY",
@@ -136,7 +146,9 @@
       "floorLow": 1.5399999618530273,
       "isConsolidation": false,
       "pullback": 17.71,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "NATGATE",
@@ -155,7 +167,9 @@
       "floorLow": 0.699999988079071,
       "isConsolidation": false,
       "pullback": 51.11,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "AMBANK",
@@ -185,7 +199,9 @@
       "floorLow": 20.8799991607666,
       "isConsolidation": false,
       "pullback": 19.07,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "SUNMED",
@@ -204,7 +220,9 @@
       "floorLow": 1.7400000095367432,
       "isConsolidation": false,
       "pullback": 28.05,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "PCHEM",
@@ -223,7 +241,9 @@
       "floorLow": 5.210000038146973,
       "isConsolidation": false,
       "pullback": 15.42,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "AAX",
@@ -253,7 +273,9 @@
       "floorLow": 0.7950000166893005,
       "isConsolidation": false,
       "pullback": 21.84,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "KLCC",
@@ -272,7 +294,9 @@
       "floorLow": 8.859999656677246,
       "isConsolidation": true,
       "pullback": 7.42,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "UNISEM",
@@ -291,7 +315,9 @@
       "floorLow": 3.809999942779541,
       "isConsolidation": false,
       "pullback": 0,
-      "setupName": "🔥 RBS Retest / Near ATH"
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "KLK",
@@ -310,7 +336,9 @@
       "floorLow": 19.3799991607666,
       "isConsolidation": true,
       "pullback": 12.34,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "UTDPLT",
@@ -329,7 +357,9 @@
       "floorLow": 30,
       "isConsolidation": true,
       "pullback": 13.38,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "ITMAX",
@@ -348,7 +378,9 @@
       "floorLow": 4.53000020980835,
       "isConsolidation": false,
       "pullback": 5.17,
-      "setupName": "📉 Healthy Dip"
+      "setupName": "📉 Healthy Dip",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "MCEMENT",
@@ -367,7 +399,9 @@
       "floorLow": 6.539999961853027,
       "isConsolidation": false,
       "pullback": 25.17,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "CARLSBG",
@@ -386,7 +420,9 @@
       "floorLow": 16.5,
       "isConsolidation": true,
       "pullback": 11.44,
-      "setupName": "📉 Healthy Dip"
+      "setupName": "📉 Healthy Dip",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "BURSA",
@@ -405,7 +441,9 @@
       "floorLow": 1680.5899658203125,
       "isConsolidation": true,
       "pullback": 4.98,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "HLIND",
@@ -424,7 +462,9 @@
       "floorLow": 17.100000381469727,
       "isConsolidation": false,
       "pullback": 2.46,
-      "setupName": "🔥 RBS Retest / Near ATH"
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     }
   ],
   "topGainers": [

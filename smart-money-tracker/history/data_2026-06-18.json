@@ -20,7 +20,9 @@
       "floorLow": 8.119999885559082,
       "isConsolidation": false,
       "pullback": 9.17,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "ZETRIX",
@@ -40,7 +42,9 @@
       "floorLow": 0.75,
       "isConsolidation": false,
       "pullback": 25.24,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "SUM",
@@ -52,7 +56,9 @@
       "turnover": 101638845,
       "volume": 193597800,
       "signal": "buy",
-      "reason": "⚡ Momentum Kuat: Jerung Mula Pam (Sesuai Intraday/Swing)"
+      "reason": "⚡ Momentum Kuat: Jerung Mula Pam (Sesuai Intraday/Swing)",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "TOPGLOV",
@@ -72,7 +78,9 @@
       "floorLow": 0.7099999785423279,
       "isConsolidation": false,
       "pullback": 18.18,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "AAX",
@@ -104,7 +112,9 @@
       "floorLow": 0.11999999731779099,
       "isConsolidation": false,
       "pullback": 91.85,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "SKYCHIP",
@@ -124,7 +134,9 @@
       "floorLow": 2.7300000190734863,
       "isConsolidation": false,
       "pullback": 24.74,
-      "setupName": "🔻 Buy Support / Deep Pullback"
+      "setupName": "🔻 Buy Support / Deep Pullback",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "PARAGON",
@@ -156,7 +168,9 @@
       "floorLow": 17.719999313354492,
       "isConsolidation": false,
       "pullback": 21.68,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "VITROX",
@@ -176,7 +190,9 @@
       "floorLow": 6.590000152587891,
       "isConsolidation": true,
       "pullback": 1.71,
-      "setupName": "🔥 RBS Retest / Near ATH"
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "UNISEM",
@@ -196,7 +212,9 @@
       "floorLow": 4.480000019073486,
       "isConsolidation": false,
       "pullback": 14.13,
-      "setupName": "📉 Healthy Dip"
+      "setupName": "📉 Healthy Dip",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "FFB",
@@ -216,7 +234,9 @@
       "floorLow": 2.130000114440918,
       "isConsolidation": false,
       "pullback": 24.42,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "MPI",
@@ -236,7 +256,9 @@
       "floorLow": 44,
       "isConsolidation": false,
       "pullback": 4.41,
-      "setupName": "🔥 RBS Retest / Near ATH"
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "NATGATE",
@@ -256,7 +278,9 @@
       "floorLow": 0.75,
       "isConsolidation": false,
       "pullback": 56.94,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "NESTLE",
@@ -288,7 +312,9 @@
       "floorLow": 30.020000457763672,
       "isConsolidation": false,
       "pullback": 11.37,
-      "setupName": "📉 Healthy Dip"
+      "setupName": "📉 Healthy Dip",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "HLIND",
@@ -308,7 +334,9 @@
       "floorLow": 17.920000076293945,
       "isConsolidation": true,
       "pullback": 1.75,
-      "setupName": "🔥 RBS Retest / Near ATH"
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "VINVEST",
@@ -319,8 +347,8 @@
       "changePct": 25,
       "turnover": 3845190,
       "volume": 76903800,
-      "signal": "buy",
-      "reason": "⚠️ Penny Goreng: Pam Volume Laju (Intraday Sahaja, Elak Hold!) (Healthy Dip)",
+      "signal": "avoid",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.054999999701976776,
       "closeTightness": 100,
       "lowTightness": 166.67,
@@ -328,7 +356,9 @@
       "floorLow": 0.014999999664723873,
       "isConsolidation": false,
       "pullback": 9.09,
-      "setupName": "📉 Healthy Dip"
+      "setupName": "📉 Healthy Dip",
+      "isCombStock": true,
+      "hasLowerWickRejection": false
     },
     {
       "name": "GIIB",
@@ -348,7 +378,9 @@
       "floorLow": 0.125,
       "isConsolidation": false,
       "pullback": 45.83,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": true,
+      "hasLowerWickRejection": true
     }
   ],
   "topGainers": [

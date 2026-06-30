@@ -19,7 +19,9 @@
       "floorLow": 7.199999809265137,
       "isConsolidation": false,
       "pullback": 18.44,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "ZETRIX",
@@ -38,7 +40,9 @@
       "floorLow": 0.800000011920929,
       "isConsolidation": false,
       "pullback": 21.36,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "PCHEM",
@@ -57,7 +61,9 @@
       "floorLow": 5.210000038146973,
       "isConsolidation": false,
       "pullback": 5.84,
-      "setupName": "📉 Healthy Dip"
+      "setupName": "📉 Healthy Dip",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "TANCO",
@@ -76,7 +82,9 @@
       "floorLow": 0.20000000298023224,
       "isConsolidation": false,
       "pullback": 88.76,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "PETDAG",
@@ -95,7 +103,9 @@
       "floorLow": 17.1200008392334,
       "isConsolidation": false,
       "pullback": 25.55,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "VITROX",
@@ -114,7 +124,9 @@
       "floorLow": 6.590000152587891,
       "isConsolidation": false,
       "pullback": 0.41,
-      "setupName": "🔥 RBS Retest / Near ATH"
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "NESTLE",
@@ -144,7 +156,9 @@
       "floorLow": 6.659999847412109,
       "isConsolidation": false,
       "pullback": 9.48,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "MPI",
@@ -163,7 +177,9 @@
       "floorLow": 44,
       "isConsolidation": false,
       "pullback": 5.3,
-      "setupName": "📉 Healthy Dip"
+      "setupName": "📉 Healthy Dip",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "PENTA",
@@ -182,7 +198,9 @@
       "floorLow": 3.9200000762939453,
       "isConsolidation": false,
       "pullback": 6.62,
-      "setupName": "📉 Healthy Dip"
+      "setupName": "📉 Healthy Dip",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "MMCS",
@@ -193,7 +211,9 @@
       "turnover": 28148962.5,
       "volume": 125106500,
       "signal": "buy",
-      "reason": "Momentum Positif & Duit Jerung Masuk"
+      "reason": "Momentum Positif & Duit Jerung Masuk",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "HSI-PWRP",
@@ -223,7 +243,9 @@
       "floorLow": 19.3799991607666,
       "isConsolidation": true,
       "pullback": 9.66,
-      "setupName": "📉 Healthy Dip"
+      "setupName": "📉 Healthy Dip",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "HSI-CWQ7",
@@ -253,7 +275,9 @@
       "floorLow": 29.860000610351562,
       "isConsolidation": true,
       "pullback": 11.93,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "VS",
@@ -272,7 +296,9 @@
       "floorLow": 0.19499999284744263,
       "isConsolidation": false,
       "pullback": 77.01,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "HSI-CWQ6",
@@ -302,7 +328,9 @@
       "floorLow": 9.319999694824219,
       "isConsolidation": false,
       "pullback": 24.02,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "HSI-CWQU",
@@ -343,7 +371,9 @@
       "floorLow": 8.779999732971191,
       "isConsolidation": true,
       "pullback": 4.49,
-      "setupName": "🔥 RBS Retest / Near ATH"
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     }
   ],
   "topGainers": [

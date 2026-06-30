@@ -20,7 +20,9 @@
       "floorLow": 8.119999885559082,
       "isConsolidation": false,
       "pullback": 12.58,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "MAYBANK",
@@ -40,7 +42,9 @@
       "floorLow": 10.319999694824219,
       "isConsolidation": false,
       "pullback": 10.14,
-      "setupName": "📉 Healthy Dip"
+      "setupName": "📉 Healthy Dip",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "ZETRIX",
@@ -60,7 +64,9 @@
       "floorLow": 0.7950000166893005,
       "isConsolidation": false,
       "pullback": 22.33,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "TOPGLOV",
@@ -80,7 +86,9 @@
       "floorLow": 0.7400000095367432,
       "isConsolidation": false,
       "pullback": 15.34,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "PENTECH",
@@ -100,7 +108,9 @@
       "floorLow": 0.25,
       "isConsolidation": false,
       "pullback": 1.56,
-      "setupName": "🔥 RBS Retest / Near ATH"
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "TANCO",
@@ -120,7 +130,9 @@
       "floorLow": 0.11999999731779099,
       "isConsolidation": false,
       "pullback": 91.57,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "ELSA",
@@ -132,7 +144,9 @@
       "turnover": 21355922.5,
       "volume": 77657900,
       "signal": "buy",
-      "reason": "⚡ Momentum Kuat: Jerung Mula Pam (Sesuai Intraday/Swing)"
+      "reason": "⚡ Momentum Kuat: Jerung Mula Pam (Sesuai Intraday/Swing)",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "MPI",
@@ -152,7 +166,9 @@
       "floorLow": 44,
       "isConsolidation": false,
       "pullback": 2.95,
-      "setupName": "🔥 RBS Retest / Near ATH"
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "HLBANK",
@@ -172,7 +188,9 @@
       "floorLow": 20.799999237060547,
       "isConsolidation": true,
       "pullback": 14.73,
-      "setupName": "📉 Healthy Dip"
+      "setupName": "📉 Healthy Dip",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "NESTLE",
@@ -204,7 +222,9 @@
       "floorLow": 7.309999942779541,
       "isConsolidation": false,
       "pullback": 2.27,
-      "setupName": "🔥 RBS Retest / Near ATH"
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "GASMSIA",
@@ -236,7 +256,9 @@
       "floorLow": 0.2150000035762787,
       "isConsolidation": false,
       "pullback": 1.96,
-      "setupName": "🔥 RBS Retest / Near ATH"
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "UTDPLT",
@@ -256,7 +278,9 @@
       "floorLow": 29.860000610351562,
       "isConsolidation": false,
       "pullback": 10.2,
-      "setupName": "📉 Healthy Dip"
+      "setupName": "📉 Healthy Dip",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "PETGAS",
@@ -276,7 +300,9 @@
       "floorLow": 16.899999618530273,
       "isConsolidation": true,
       "pullback": 10.16,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "SKYCHIP",
@@ -296,7 +322,9 @@
       "floorLow": 2.7300000190734863,
       "isConsolidation": false,
       "pullback": 23.68,
-      "setupName": "🔻 Buy Support / Deep Pullback"
+      "setupName": "🔻 Buy Support / Deep Pullback",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "NATGATE",
@@ -316,7 +344,9 @@
       "floorLow": 0.75,
       "isConsolidation": false,
       "pullback": 55.28,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "GIIB",
@@ -336,7 +366,9 @@
       "floorLow": 0.125,
       "isConsolidation": false,
       "pullback": 45.83,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": true,
+      "hasLowerWickRejection": true
     }
   ],
   "topGainers": [

@@ -153,7 +153,7 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.7200000286102295,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": false
     },
     {
@@ -263,7 +263,7 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 5.869999885559082,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": false
     },
     {
@@ -329,7 +329,7 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.11999999731779099,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": false
     },
     {
@@ -395,7 +395,7 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.7250000238418579,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": false
     },
     {
@@ -505,7 +505,7 @@
       "touchCount": 9,
       "isConsolidation": false,
       "floorLow": 18.3799991607666,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": false
     },
     {
@@ -527,7 +527,7 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 1.7599999904632568,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": false
     },
     {
@@ -549,7 +549,7 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 1.7599999904632568,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": false
     },
     {
@@ -571,7 +571,7 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 4.320000171661377,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": false
     },
     {
@@ -593,7 +593,7 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 2.140000104904175,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": false
     },
     {
@@ -615,7 +615,7 @@
       "touchCount": 10,
       "isConsolidation": true,
       "floorLow": 17.15999984741211,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": false
     },
     {
@@ -747,7 +747,7 @@
       "touchCount": 7,
       "isConsolidation": true,
       "floorLow": 7.260000228881836,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": false
     },
     {
@@ -835,7 +835,7 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 1.2999999523162842,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": false
     },
     {
@@ -1099,7 +1099,7 @@
       "touchCount": 4,
       "isConsolidation": true,
       "floorLow": 1.75,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": false
     },
     {
@@ -1363,7 +1363,7 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 2.3399999141693115,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": false
     },
     {
@@ -1429,7 +1429,7 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 1.2799999713897705,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": false
     },
     {
@@ -1473,7 +1473,7 @@
       "touchCount": 4,
       "isConsolidation": true,
       "floorLow": 1.6799999475479126,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": false
     },
     {
@@ -1671,7 +1671,7 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.2800000011920929,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": false
     },
     {
@@ -1803,7 +1803,7 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.6650000214576721,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": false
     },
     {
@@ -1869,7 +1869,7 @@
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 0.2549999952316284,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": true
     },
     {
@@ -1891,7 +1891,7 @@
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 1,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": false
     },
     {
@@ -1913,7 +1913,7 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 1,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": false
     },
     {
@@ -1979,7 +1979,7 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.0949999988079071,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": true
     },
     {
@@ -2067,7 +2067,7 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.1899999976158142,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": true
     },
     {
@@ -2177,7 +2177,7 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.6349999904632568,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": false
     },
     {
@@ -2199,7 +2199,7 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.07500000298023224,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": false
     },
     {
@@ -2221,7 +2221,7 @@
       "touchCount": 9,
       "isConsolidation": true,
       "floorLow": 0.23999999463558197,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": false
     },
     {
@@ -2265,7 +2265,7 @@
       "touchCount": 4,
       "isConsolidation": true,
       "floorLow": 0.44999998807907104,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": false
     },
     {
@@ -2353,7 +2353,7 @@
       "touchCount": 3,
       "isConsolidation": true,
       "floorLow": 0.47999998927116394,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": false
     },
     {
@@ -2419,7 +2419,7 @@
       "touchCount": 9,
       "isConsolidation": false,
       "floorLow": 2.2799999713897705,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": false
     },
     {
@@ -2463,7 +2463,7 @@
       "touchCount": 7,
       "isConsolidation": false,
       "floorLow": 0.2549999952316284,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": false
     },
     {
@@ -2485,7 +2485,7 @@
       "touchCount": 10,
       "isConsolidation": true,
       "floorLow": 0.7400000095367432,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": false
     },
     {
@@ -2551,7 +2551,7 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.2199999988079071,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": false
     },
     {
@@ -2573,7 +2573,7 @@
       "touchCount": 3,
       "isConsolidation": true,
       "floorLow": 1.2799999713897705,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": false
     },
     {
@@ -2661,7 +2661,7 @@
       "touchCount": 4,
       "isConsolidation": true,
       "floorLow": 1.5,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": true
     },
     {
@@ -2683,7 +2683,7 @@
       "touchCount": 6,
       "isConsolidation": true,
       "floorLow": 8.829999923706055,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": false
     },
     {
@@ -2727,7 +2727,7 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.6650000214576721,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": false
     },
     {
@@ -2815,8 +2815,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.7400000095367432,
-      "hasLowerWickRejection": false,
-      "isCombStock": true
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "SSF",
@@ -2925,7 +2925,7 @@
       "touchCount": 5,
       "isConsolidation": true,
       "floorLow": 0.5450000166893005,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -3189,7 +3189,7 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.20000000298023224,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": false
     },
     {
@@ -3277,7 +3277,7 @@
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 1.159999966621399,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -3343,7 +3343,7 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.2549999952316284,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": false
     },
     {
@@ -3365,7 +3365,7 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.2549999952316284,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": false
     },
     {
@@ -3387,7 +3387,7 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.16500000655651093,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -3409,7 +3409,7 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.4050000011920929,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": false
     },
     {
@@ -3607,7 +3607,7 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.3050000071525574,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -3629,7 +3629,7 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.17000000178813934,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": true
     },
     {
@@ -3673,7 +3673,7 @@
       "touchCount": 10,
       "isConsolidation": true,
       "floorLow": 31.920000076293945,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": false
     },
     {
@@ -3695,7 +3695,7 @@
       "touchCount": 9,
       "isConsolidation": true,
       "floorLow": 0.5049999952316284,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": true
     },
     {
@@ -3717,7 +3717,7 @@
       "touchCount": 5,
       "isConsolidation": true,
       "floorLow": 18.3799991607666,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": false
     },
     {
@@ -3783,7 +3783,7 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.13500000536441803,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -3827,7 +3827,7 @@
       "touchCount": 10,
       "isConsolidation": true,
       "floorLow": 0.6050000190734863,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": true
     },
     {
@@ -3849,7 +3849,7 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.19499999284744263,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -3915,7 +3915,7 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.32499998807907104,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -3959,7 +3959,7 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.20499999821186066,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": true
     },
     {
@@ -4047,7 +4047,7 @@
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 0.08500000089406967,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": true
     },
     {
@@ -4311,7 +4311,7 @@
       "touchCount": 7,
       "isConsolidation": false,
       "floorLow": 0.574999988079071,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -4377,7 +4377,7 @@
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.4000000059604645,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": true
     },
     {
@@ -4399,7 +4399,7 @@
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.4000000059604645,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": true
     },
     {
@@ -4465,7 +4465,7 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.2199999988079071,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -4487,7 +4487,7 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.2199999988079071,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -4531,7 +4531,7 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.2150000035762787,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": true
     },
     {
@@ -4619,7 +4619,7 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.375,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": true
     },
     {
@@ -4641,7 +4641,7 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.375,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": true
     },
     {
@@ -4663,7 +4663,7 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.3100000023841858,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": true
     },
     {
@@ -4729,7 +4729,7 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.019999999552965164,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": true
     },
     {
@@ -4883,7 +4883,7 @@
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.07999999821186066,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": true
     },
     {
@@ -4949,7 +4949,7 @@
       "touchCount": 7,
       "isConsolidation": false,
       "floorLow": 0.6549999713897705,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": true
     },
     {
@@ -4971,7 +4971,7 @@
       "touchCount": 4,
       "isConsolidation": true,
       "floorLow": 0.75,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -4993,7 +4993,7 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.20999999344348907,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": true
     },
     {
@@ -5059,7 +5059,7 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.20999999344348907,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -5103,7 +5103,7 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.36000001430511475,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": true
     },
     {
@@ -5125,7 +5125,7 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.0949999988079071,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -5191,7 +5191,7 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.23000000417232513,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -5213,7 +5213,7 @@
       "touchCount": 5,
       "isConsolidation": true,
       "floorLow": 0.8399999737739563,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -5301,7 +5301,7 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.08500000089406967,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -5521,7 +5521,7 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.125,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": true
     },
     {
@@ -5543,7 +5543,7 @@
       "touchCount": 7,
       "isConsolidation": false,
       "floorLow": 0.12999999523162842,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -5609,7 +5609,7 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.14499999582767487,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": true
     },
     {
@@ -5631,7 +5631,7 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.18000000715255737,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": true
     },
     {
@@ -5873,7 +5873,7 @@
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.14000000059604645,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": true
     },
     {
@@ -5895,7 +5895,7 @@
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 0.2849999964237213,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -5939,7 +5939,7 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.10499999672174454,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -5961,7 +5961,7 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.9700000286102295,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -5983,7 +5983,7 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.9700000286102295,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -6005,7 +6005,7 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.9700000286102295,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -6049,7 +6049,7 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.11999999731779099,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -6071,7 +6071,7 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.0949999988079071,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -6137,7 +6137,7 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.4000000059604645,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -6159,7 +6159,7 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.11999999731779099,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -6181,7 +6181,7 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.11999999731779099,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -6203,7 +6203,7 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.11999999731779099,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -6291,7 +6291,7 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.2150000035762787,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -6467,7 +6467,7 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.0949999988079071,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": true
     },
     {
@@ -6555,7 +6555,7 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.20000000298023224,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": true
     },
     {
@@ -6753,7 +6753,7 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.004999999888241291,
-      "hasLowerWickRejection": true,
+      "hasLowerWickRejection": false,
       "isCombStock": true
     },
     {
@@ -6797,7 +6797,7 @@
       "touchCount": 0,
       "isConsolidation": false,
       "floorLow": null,
-      "hasLowerWickRejection": false,
+      "hasLowerWickRejection": true,
       "isCombStock": false
     },
     {

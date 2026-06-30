@@ -19,7 +19,9 @@
       "floorLow": 7.199999809265137,
       "isConsolidation": false,
       "pullback": 19.55,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "PMETAL",
@@ -38,7 +40,9 @@
       "floorLow": 8.699999809265137,
       "isConsolidation": false,
       "pullback": 1.07,
-      "setupName": "🔥 RBS Retest / Near ATH"
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "NATGATE",
@@ -57,7 +61,9 @@
       "floorLow": 0.699999988079071,
       "isConsolidation": false,
       "pullback": 53.33,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "NESTLE",
@@ -87,7 +93,9 @@
       "floorLow": 5.210000038146973,
       "isConsolidation": false,
       "pullback": 10.39,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "ZETRIX",
@@ -106,7 +114,9 @@
       "floorLow": 0.7950000166893005,
       "isConsolidation": false,
       "pullback": 19.9,
-      "setupName": "🔻 Buy Support / Deep Pullback"
+      "setupName": "🔻 Buy Support / Deep Pullback",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "PETDAG",
@@ -125,7 +135,9 @@
       "floorLow": 17.1200008392334,
       "isConsolidation": false,
       "pullback": 21.85,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "TOPGLOV",
@@ -144,7 +156,9 @@
       "floorLow": 0.7599999904632568,
       "isConsolidation": false,
       "pullback": 2.84,
-      "setupName": "🔥 RBS Retest / Near ATH"
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "MI",
@@ -166,7 +180,9 @@
       "turnover": 39199230,
       "volume": 124442000,
       "signal": "buy",
-      "reason": "Momentum Positif & Duit Jerung Masuk"
+      "reason": "Momentum Positif & Duit Jerung Masuk",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "KLK",
@@ -185,7 +201,9 @@
       "floorLow": 19.3799991607666,
       "isConsolidation": false,
       "pullback": 15.88,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "GIIB",
@@ -204,7 +222,9 @@
       "floorLow": 0.12999999523162842,
       "isConsolidation": false,
       "pullback": 43.75,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": true,
+      "hasLowerWickRejection": true
     },
     {
       "name": "VS",
@@ -223,7 +243,9 @@
       "floorLow": 0.1899999976158142,
       "isConsolidation": false,
       "pullback": 74.71,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "MCEMENT",
@@ -242,7 +264,9 @@
       "floorLow": 6.539999961853027,
       "isConsolidation": false,
       "pullback": 20.59,
-      "setupName": "🔻 Buy Support / Deep Pullback"
+      "setupName": "🔻 Buy Support / Deep Pullback",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "UTDPLT",
@@ -261,7 +285,9 @@
       "floorLow": 29.860000610351562,
       "isConsolidation": false,
       "pullback": 16.05,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "PHARMA",
@@ -291,7 +317,9 @@
       "floorLow": 4.349999904632568,
       "isConsolidation": false,
       "pullback": 13.61,
-      "setupName": "📉 Healthy Dip"
+      "setupName": "📉 Healthy Dip",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "CARLSBG",
@@ -310,7 +338,9 @@
       "floorLow": 16.079999923706055,
       "isConsolidation": false,
       "pullback": 17.01,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "F&N",
@@ -329,7 +359,9 @@
       "floorLow": 27.479999542236328,
       "isConsolidation": false,
       "pullback": 24.88,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "SOP",
@@ -359,7 +391,9 @@
       "floorLow": 1672.739990234375,
       "isConsolidation": true,
       "pullback": 5.56,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "ALLIANZ",
@@ -389,7 +423,9 @@
       "floorLow": 0.07999999821186066,
       "isConsolidation": false,
       "pullback": 37.93,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "HSI-CWQH",

@@ -43,7 +43,8 @@
       "isConsolidation": false,
       "floorLow": 7.670000076293945,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "MAYBANK",
@@ -65,7 +66,8 @@
       "isConsolidation": true,
       "floorLow": 10.65999984741211,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "CIMB",
@@ -86,8 +88,9 @@
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 7.320000171661377,
-      "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": true,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "PBBANK",
@@ -130,7 +133,8 @@
       "isConsolidation": true,
       "floorLow": 5.909999847412109,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "INARI",
@@ -172,8 +176,9 @@
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 0.75,
-      "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": true,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "VITROX",
@@ -194,7 +199,8 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 7.090000152587891,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "MPI",
@@ -216,7 +222,8 @@
       "isConsolidation": true,
       "floorLow": 46.29999923706055,
       "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "YTL",
@@ -237,8 +244,9 @@
       "touchCount": 6,
       "isConsolidation": true,
       "floorLow": 4.019999980926514,
-      "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": true,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "UWC",
@@ -259,8 +267,9 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 5.559999942779541,
-      "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": false,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "PCHEM",
@@ -281,7 +290,8 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 3.759999990463257,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "DNEX",
@@ -302,7 +312,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.3400000035762787,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "TANCO",
@@ -323,7 +334,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.11999999731779099,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "KGB",
@@ -345,7 +357,8 @@
       "isConsolidation": false,
       "floorLow": 7.260000228881836,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "UTDPLT",
@@ -367,7 +380,8 @@
       "isConsolidation": true,
       "floorLow": 31.31999969482422,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "NATGATE",
@@ -388,7 +402,8 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.7250000238418579,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "SKYCHIP",
@@ -410,7 +425,8 @@
       "isConsolidation": false,
       "floorLow": 2.8299999237060547,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "SKYECHIP",
@@ -432,7 +448,8 @@
       "isConsolidation": false,
       "floorLow": 2.8299999237060547,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "PENTA",
@@ -454,7 +471,8 @@
       "isConsolidation": false,
       "floorLow": 4.309999942779541,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "HLBANK",
@@ -476,7 +494,8 @@
       "isConsolidation": false,
       "floorLow": 21.059999465942383,
       "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "PETDAG",
@@ -498,7 +517,8 @@
       "isConsolidation": false,
       "floorLow": 17.8799991607666,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "SUNMED",
@@ -519,8 +539,9 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 1.7599999904632568,
-      "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": false,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "SUNWAY",
@@ -541,8 +562,9 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 1.7599999904632568,
-      "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": false,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "UNISEM",
@@ -563,7 +585,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 4.320000171661377,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "SCGBHD",
@@ -585,7 +608,8 @@
       "isConsolidation": false,
       "floorLow": 2.0899999141693115,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "PETGAS",
@@ -606,8 +630,9 @@
       "touchCount": 10,
       "isConsolidation": true,
       "floorLow": 17.15999984741211,
-      "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": true,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "LIFTECH",
@@ -649,8 +674,9 @@
       "touchCount": 6,
       "isConsolidation": true,
       "floorLow": 20.459999084472656,
-      "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": false,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "MRDIY",
@@ -672,7 +698,8 @@
       "isConsolidation": false,
       "floorLow": 1.559999942779541,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "99 SPEED MART RETAIL",
@@ -693,8 +720,9 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 3.319999933242798,
-      "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": true,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "AXIATA",
@@ -715,8 +743,9 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 1.840000033378601,
-      "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": false,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "SUNCON",
@@ -737,8 +766,9 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 6.849999904632568,
-      "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": true,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "TOPGLOV",
@@ -760,7 +790,8 @@
       "isConsolidation": false,
       "floorLow": 0.675000011920929,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "VELESTO",
@@ -803,7 +834,8 @@
       "isConsolidation": true,
       "floorLow": 0.6299999952316284,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "IAB",
@@ -824,7 +856,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 1.2599999904632568,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "HKB",
@@ -845,8 +878,9 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.5199999809265137,
-      "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": false,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "MEGA FORTRIS BERHAD",
@@ -868,7 +902,8 @@
       "isConsolidation": false,
       "floorLow": 1.5800000429153442,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "MEGAFB",
@@ -890,7 +925,8 @@
       "isConsolidation": false,
       "floorLow": 1.5800000429153442,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "MEGA FORTRIS",
@@ -912,7 +948,8 @@
       "isConsolidation": false,
       "floorLow": 1.5800000429153442,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "MNHLDG",
@@ -934,7 +971,8 @@
       "isConsolidation": false,
       "floorLow": 2.5399999618530273,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "YEWLEE",
@@ -956,7 +994,8 @@
       "isConsolidation": true,
       "floorLow": 0.574999988079071,
       "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "SNS",
@@ -977,7 +1016,8 @@
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.48500001430511475,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "NE",
@@ -998,8 +1038,9 @@
       "touchCount": 4,
       "isConsolidation": true,
       "floorLow": 0.9950000047683716,
-      "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": true,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "NORTHEAST GROUP BERHAD",
@@ -1020,8 +1061,9 @@
       "touchCount": 4,
       "isConsolidation": true,
       "floorLow": 0.9950000047683716,
-      "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": true,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "SKPRES",
@@ -1042,7 +1084,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.26499998569488525,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "QL",
@@ -1064,7 +1107,8 @@
       "isConsolidation": false,
       "floorLow": 3.690000057220459,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "JPG",
@@ -1086,7 +1130,8 @@
       "isConsolidation": true,
       "floorLow": 1.6699999570846558,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "SOLARVEST HOLDINGS BERHAD",
@@ -1107,8 +1152,9 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 2.8299999237060547,
-      "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": false,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "SLVEST",
@@ -1129,8 +1175,9 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 2.8299999237060547,
-      "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": false,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "MMCS",
@@ -1151,7 +1198,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.2150000035762787,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "MCEMENT",
@@ -1173,7 +1221,8 @@
       "isConsolidation": false,
       "floorLow": 6.380000114440918,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "PPB",
@@ -1195,7 +1244,8 @@
       "isConsolidation": false,
       "floorLow": 9.109999656677246,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "OPPSTAR",
@@ -1216,7 +1266,8 @@
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.5199999809265137,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "SAM",
@@ -1238,7 +1289,8 @@
       "isConsolidation": false,
       "floorLow": 4.320000171661377,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "GREATEC",
@@ -1260,7 +1312,8 @@
       "isConsolidation": true,
       "floorLow": 2.4700000286102295,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "EIPOWER",
@@ -1281,7 +1334,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.5950000286102295,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "EI POWER BERHAD [S]",
@@ -1302,7 +1356,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.5950000286102295,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "RAMSSOL",
@@ -1323,7 +1378,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.6499999761581421,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "TMK",
@@ -1344,7 +1400,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 2.2300000190734863,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "VS",
@@ -1365,7 +1422,8 @@
       "touchCount": 7,
       "isConsolidation": false,
       "floorLow": 0.1899999976158142,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "HEIM",
@@ -1387,7 +1445,8 @@
       "isConsolidation": false,
       "floorLow": 19.200000762939453,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "SRIDGE",
@@ -1429,7 +1488,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 1.190000057220459,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "ELRIDGE",
@@ -1450,7 +1510,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.7850000262260437,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "THMY",
@@ -1471,7 +1532,8 @@
       "touchCount": 4,
       "isConsolidation": true,
       "floorLow": 1.6799999475479126,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "SUM",
@@ -1493,7 +1555,8 @@
       "isConsolidation": false,
       "floorLow": 0.39500001072883606,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "ITMAX",
@@ -1515,7 +1578,8 @@
       "isConsolidation": true,
       "floorLow": 4.739999771118164,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "VSTECS",
@@ -1536,7 +1600,8 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 1.7100000381469727,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "CORAZA",
@@ -1557,8 +1622,9 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.949999988079071,
-      "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": false,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "SFPTECH",
@@ -1579,8 +1645,9 @@
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.2549999952316284,
-      "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": false,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "ECOSHOP",
@@ -1601,8 +1668,9 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 1.2400000095367432,
-      "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": false,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "ECOMATE",
@@ -1613,8 +1681,8 @@
       "changePct": -0.58,
       "turnover": 2918457.065105438,
       "volume": 3413400,
-      "signal": "buy",
-      "reason": "🔒 Tapak Tegar (10x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
+      "signal": "avoid",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.8999999761581421,
       "pullback": 5,
       "setupName": "🔥 RBS Retest / Near ATH",
@@ -1623,7 +1691,8 @@
       "touchCount": 10,
       "isConsolidation": true,
       "floorLow": 0.8500000238418579,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "PWRWELL",
@@ -1645,7 +1714,8 @@
       "isConsolidation": false,
       "floorLow": 0.7549999952316284,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "PENTECH",
@@ -1666,7 +1736,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.25,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "KOPI",
@@ -1687,7 +1758,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.8949999809265137,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "ORIENTAL KOPI HOLDINGS",
@@ -1708,7 +1780,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.8949999809265137,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "AMBEST",
@@ -1729,7 +1802,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.800000011920929,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "MCLEAN",
@@ -1750,7 +1824,8 @@
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.6700000166893005,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "GENERGY",
@@ -1771,7 +1846,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.30000001192092896,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "CTOS",
@@ -1792,7 +1868,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.6600000262260437,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "MTT SHIPPING AND LOGISTICS BHD",
@@ -1813,8 +1890,9 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.9150000214576721,
-      "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": false,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "MTTSL",
@@ -1835,8 +1913,9 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.9150000214576721,
-      "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": false,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "SUNLOGY",
@@ -1857,7 +1936,8 @@
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 0.2549999952316284,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "INFOM",
@@ -1878,7 +1958,8 @@
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 1,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "CHB",
@@ -1899,7 +1980,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 1.0099999904632568,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "EMPIRE PREMIUM FOOD BERHAD",
@@ -1921,7 +2003,8 @@
       "isConsolidation": false,
       "floorLow": 0.9800000190734863,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "EMPIRE",
@@ -1943,7 +2026,8 @@
       "isConsolidation": false,
       "floorLow": 0.9800000190734863,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "SENHENG",
@@ -1964,7 +2048,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.0949999988079071,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "ICENTS",
@@ -1985,7 +2070,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.4449999928474426,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "PEKAT",
@@ -2006,7 +2092,8 @@
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 1.5800000429153442,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "LWSABAH",
@@ -2028,7 +2115,8 @@
       "isConsolidation": false,
       "floorLow": 1.2899999618530273,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "ENPRO",
@@ -2049,7 +2137,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.19499999284744263,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "CARLSBG",
@@ -2071,7 +2160,8 @@
       "isConsolidation": false,
       "floorLow": 16.139999389648438,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "SDCG",
@@ -2092,8 +2182,9 @@
       "touchCount": 3,
       "isConsolidation": true,
       "floorLow": 0.6700000166893005,
-      "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": false,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "UUE HOLDINGS BERHAD",
@@ -2114,8 +2205,9 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.35499998927116394,
-      "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": false,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "UUE",
@@ -2136,8 +2228,9 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.35499998927116394,
-      "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": false,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "ATECH",
@@ -2158,7 +2251,8 @@
       "touchCount": 7,
       "isConsolidation": false,
       "floorLow": 0.6349999904632568,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "HHRG",
@@ -2179,7 +2273,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.06499999761581421,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "TEAMSTR",
@@ -2201,7 +2296,8 @@
       "isConsolidation": false,
       "floorLow": 0.23499999940395355,
       "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "CHEEDING",
@@ -2222,7 +2318,8 @@
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 0.6399999856948853,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "OGX",
@@ -2243,7 +2340,8 @@
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.44999998807907104,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "F&N",
@@ -2265,7 +2363,8 @@
       "isConsolidation": false,
       "floorLow": 26.100000381469727,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "LSH",
@@ -2286,7 +2385,8 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 1.5499999523162842,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "EDELTEQ",
@@ -2307,7 +2407,8 @@
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.3100000023841858,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "HEGROUP",
@@ -2328,7 +2429,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.47999998927116394,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "JTGROUP",
@@ -2349,7 +2451,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.4699999988079071,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "ISF",
@@ -2370,7 +2473,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.49000000953674316,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "FFB",
@@ -2392,7 +2496,8 @@
       "isConsolidation": false,
       "floorLow": 2.1600000858306885,
       "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "SUNVIEW",
@@ -2414,7 +2519,8 @@
       "isConsolidation": false,
       "floorLow": 0.36500000953674316,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "CEB",
@@ -2435,8 +2541,9 @@
       "touchCount": 7,
       "isConsolidation": false,
       "floorLow": 0.2549999952316284,
-      "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": true,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "LHI",
@@ -2457,8 +2564,9 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.7200000286102295,
-      "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": true,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "AMS",
@@ -2479,7 +2587,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.3499999940395355,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "AMS ADVANCED MATERIAL BERHAD",
@@ -2500,7 +2609,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.3499999940395355,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "ECA",
@@ -2522,7 +2632,8 @@
       "isConsolidation": true,
       "floorLow": 0.2199999988079071,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "SAMAIDEN",
@@ -2544,7 +2655,8 @@
       "isConsolidation": false,
       "floorLow": 1.2799999713897705,
       "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "TFP",
@@ -2565,7 +2677,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.05000000074505806,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "BUSCAP",
@@ -2586,7 +2699,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.23000000417232513,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "KTI",
@@ -2608,7 +2722,8 @@
       "isConsolidation": true,
       "floorLow": 0.5299999713897705,
       "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "AMEREIT",
@@ -2630,7 +2745,8 @@
       "isConsolidation": true,
       "floorLow": 1.5,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": true
     },
     {
       "name": "KLCC",
@@ -2651,8 +2767,9 @@
       "touchCount": 4,
       "isConsolidation": true,
       "floorLow": 8.859999656677246,
-      "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": true,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "PMCK",
@@ -2674,7 +2791,8 @@
       "isConsolidation": false,
       "floorLow": 0.1899999976158142,
       "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": true
     },
     {
       "name": "LACMED",
@@ -2695,7 +2813,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.6499999761581421,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "WELLS",
@@ -2716,7 +2835,8 @@
       "touchCount": 10,
       "isConsolidation": false,
       "floorLow": 0.5699999928474426,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "MKH OIL PALM (EAST KALIMANTAN)",
@@ -2738,7 +2858,8 @@
       "isConsolidation": true,
       "floorLow": 0.6150000095367432,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": true
     },
     {
       "name": "MKHOP",
@@ -2760,7 +2881,8 @@
       "isConsolidation": true,
       "floorLow": 0.6150000095367432,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": true
     },
     {
       "name": "CPETECH",
@@ -2781,7 +2903,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.7400000095367432,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "SSF",
@@ -2792,8 +2915,8 @@
       "changePct": 0,
       "turnover": 560078.9794564247,
       "volume": 1436100,
-      "signal": "buy",
-      "reason": "🔒 Tapak Tegar (10x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
+      "signal": "avoid",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.41999998688697815,
       "pullback": 8.33,
       "setupName": "📉 Healthy Dip",
@@ -2802,8 +2925,9 @@
       "touchCount": 10,
       "isConsolidation": true,
       "floorLow": 0.38499999046325684,
-      "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": true,
+      "isIntradayValidated": true,
+      "isCombStock": true
     },
     {
       "name": "AQUAWALK",
@@ -2824,7 +2948,8 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.16500000655651093,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "GOLDEN DESTINATIONS GROUP BERHAD",
@@ -2845,8 +2970,9 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.3499999940395355,
-      "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": true,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "GDGROUP",
@@ -2867,8 +2993,9 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.3499999940395355,
-      "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": true,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "VLB",
@@ -2879,8 +3006,8 @@
       "changePct": 2.5,
       "turnover": 547903.5084962845,
       "volume": 890900,
-      "signal": "buy",
-      "reason": "🔥 Golden Entry: Jerung Kumpul Selesa (Sesuai Swing/Hold) (Near ATH)",
+      "signal": "avoid",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.6050000190734863,
       "pullback": 0.83,
       "setupName": "🔥 RBS Retest / Near ATH",
@@ -2889,8 +3016,9 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.5299999713897705,
-      "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": true,
+      "isIntradayValidated": true,
+      "isCombStock": true
     },
     {
       "name": "3REN",
@@ -2911,7 +3039,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.375,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "CLOUDPT",
@@ -2932,7 +3061,8 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.41999998688697815,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "OHM",
@@ -2943,8 +3073,8 @@
       "changePct": 2.82,
       "turnover": 512423.5133886337,
       "volume": 1403900,
-      "signal": "buy",
-      "reason": "🔥 Golden Entry: Jerung Kumpul Selesa (Sesuai Swing/Hold) (Healthy Dip)",
+      "signal": "avoid",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.38999998569488525,
       "pullback": 6.41,
       "setupName": "📉 Healthy Dip",
@@ -2953,8 +3083,9 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.35499998927116394,
-      "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": false,
+      "isIntradayValidated": true,
+      "isCombStock": true
     },
     {
       "name": "DXN",
@@ -2976,7 +3107,8 @@
       "isConsolidation": false,
       "floorLow": 0.45500001311302185,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "TTVHB",
@@ -2997,7 +3129,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.23000000417232513,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "CNERGEN",
@@ -3018,7 +3151,8 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.5350000262260437,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "MANFORCE GROUP BERHAD",
@@ -3039,7 +3173,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.2750000059604645,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "MFGROUP",
@@ -3060,7 +3195,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.2750000059604645,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "FIBRO",
@@ -3081,7 +3217,8 @@
       "touchCount": 7,
       "isConsolidation": false,
       "floorLow": 0.800000011920929,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "NESTCON",
@@ -3092,8 +3229,8 @@
       "changePct": 5.26,
       "turnover": 423520.0063109398,
       "volume": 1058800,
-      "signal": "buy",
-      "reason": "⚡ Momentum Kuat: Jerung Mula Pam (Sesuai Intraday/Swing) (Near ATH)",
+      "signal": "avoid",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.38499999046325684,
       "pullback": 1.3,
       "setupName": "🔥 RBS Retest / Near ATH",
@@ -3102,7 +3239,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.3499999940395355,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "OXB",
@@ -3123,7 +3261,8 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.33000001311302185,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": false
     },
     {
       "name": "ELSA",
@@ -3144,7 +3283,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.20000000298023224,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "OVH",
@@ -3155,8 +3295,8 @@
       "changePct": 9.09,
       "turnover": 382463.9914512634,
       "volume": 1593600,
-      "signal": "buy",
-      "reason": "⚡ Momentum Kuat: Jerung Mula Pam (Sesuai Intraday/Swing) (Healthy Dip)",
+      "signal": "avoid",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.23999999463558197,
       "pullback": 6.25,
       "setupName": "📉 Healthy Dip",
@@ -3165,7 +3305,8 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.1899999976158142,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "MESTRON",
@@ -3186,7 +3327,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.07000000029802322,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "KITACON",
@@ -3207,7 +3349,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.6499999761581421,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "GOHUB",
@@ -3228,7 +3371,8 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 1.159999966621399,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "SDS",
@@ -3249,7 +3393,8 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.33500000834465027,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "LGMS",
@@ -3270,7 +3415,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.4300000071525574,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "WENTEL ENGINEERING",
@@ -3291,8 +3437,9 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.23999999463558197,
-      "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": false,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "WENTEL",
@@ -3313,8 +3460,9 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.23999999463558197,
-      "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": false,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "SET",
@@ -3335,7 +3483,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.1599999964237213,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "REACHTEN",
@@ -3356,7 +3505,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.4050000011920929,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "5E RESOURCES BERHAD",
@@ -3377,7 +3527,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.23499999940395355,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "5ER",
@@ -3398,7 +3549,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.23499999940395355,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "TAGHILL",
@@ -3419,7 +3571,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.05000000074505806,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "DESTINI BERHAD",
@@ -3440,7 +3593,8 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.2800000011920929,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "DESTINI",
@@ -3461,7 +3615,8 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.2800000011920929,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "POLYMER",
@@ -3482,7 +3637,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.11500000208616257,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "TELADAN",
@@ -3503,7 +3659,8 @@
       "touchCount": 10,
       "isConsolidation": false,
       "floorLow": 0.75,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "FOODIE",
@@ -3524,7 +3681,8 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.2800000011920929,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "INFOTEC",
@@ -3545,7 +3703,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.33000001311302185,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "TECHSTORE",
@@ -3566,7 +3725,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.17000000178813934,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "ORKIM",
@@ -3587,7 +3747,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.8299999833106995,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "DLADY",
@@ -3608,8 +3769,9 @@
       "touchCount": 9,
       "isConsolidation": true,
       "floorLow": 31.920000076293945,
-      "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": true,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "RADIUM",
@@ -3620,8 +3782,8 @@
       "changePct": 0.99,
       "turnover": 150551.99718475342,
       "volume": 295200,
-      "signal": "buy",
-      "reason": "🔒 Tapak Tegar (3x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
+      "signal": "avoid",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.5199999809265137,
       "pullback": 2.88,
       "setupName": "🔥 RBS Retest / Near ATH",
@@ -3631,7 +3793,8 @@
       "isConsolidation": true,
       "floorLow": 0.49000000953674316,
       "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": true
     },
     {
       "name": "HLIND",
@@ -3652,8 +3815,9 @@
       "touchCount": 3,
       "isConsolidation": true,
       "floorLow": 18.040000915527344,
-      "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": false,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "SAG",
@@ -3674,7 +3838,8 @@
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 0.6600000262260437,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "PTRB",
@@ -3695,7 +3860,8 @@
       "touchCount": 7,
       "isConsolidation": false,
       "floorLow": 0.26499998569488525,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "BMS",
@@ -3716,7 +3882,8 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.14000000059604645,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "HSSBAKERY",
@@ -3737,7 +3904,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.1550000011920929,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "BETA",
@@ -3748,8 +3916,8 @@
       "changePct": 0.81,
       "turnover": 123504.00094985962,
       "volume": 199200,
-      "signal": "buy",
-      "reason": "🔒 Tapak Tegar (3x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
+      "signal": "avoid",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.6399999856948853,
       "pullback": 3.12,
       "setupName": "🔥 RBS Retest / Near ATH",
@@ -3759,7 +3927,8 @@
       "isConsolidation": true,
       "floorLow": 0.5950000286102295,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": true
     },
     {
       "name": "CLITE",
@@ -3780,7 +3949,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.19499999284744263,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "UMC",
@@ -3791,8 +3961,8 @@
       "changePct": 0,
       "turnover": 115830.00111579895,
       "volume": 19500,
-      "signal": "buy",
-      "reason": "🔒 Tapak Tegar (10x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
+      "signal": "avoid",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 6.03000020980835,
       "pullback": 2.16,
       "setupName": "🔥 RBS Retest / Near ATH",
@@ -3802,7 +3972,8 @@
       "isConsolidation": true,
       "floorLow": 5.849999904632568,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": true
     },
     {
       "name": "KEYFIELD",
@@ -3824,7 +3995,8 @@
       "isConsolidation": true,
       "floorLow": 1.4900000095367432,
       "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": true
     },
     {
       "name": "ADNEX",
@@ -3835,8 +4007,8 @@
       "changePct": -3.85,
       "turnover": 108075,
       "volume": 288200,
-      "signal": "buy",
-      "reason": "🔒 Tapak Tegar (3x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
+      "signal": "avoid",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.39500001072883606,
       "pullback": 3.8,
       "setupName": "🔥 RBS Retest / Near ATH",
@@ -3846,7 +4018,8 @@
       "isConsolidation": true,
       "floorLow": 0.3199999928474426,
       "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": true
     },
     {
       "name": "PPJACK",
@@ -3868,7 +4041,8 @@
       "isConsolidation": true,
       "floorLow": 0.9049999713897705,
       "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": true
     },
     {
       "name": "WESTRVR",
@@ -3889,7 +4063,8 @@
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.20499999821186066,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "ICTZONE",
@@ -3911,7 +4086,8 @@
       "isConsolidation": false,
       "floorLow": 0.17000000178813934,
       "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": true
     },
     {
       "name": "AGMO",
@@ -3932,7 +4108,8 @@
       "touchCount": 9,
       "isConsolidation": false,
       "floorLow": 0.3100000023841858,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "WINSTAR",
@@ -3943,8 +4120,8 @@
       "changePct": 0,
       "turnover": 89778.49962115288,
       "volume": 158900,
-      "signal": "buy",
-      "reason": "🔒 Tapak Tegar (9x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
+      "signal": "avoid",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.6299999952316284,
       "pullback": 10.32,
       "setupName": "📉 Healthy Dip",
@@ -3953,7 +4130,8 @@
       "touchCount": 9,
       "isConsolidation": true,
       "floorLow": 0.550000011920929,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "MSB",
@@ -3974,7 +4152,8 @@
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 0.07999999821186066,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "NORTHERN SOLAR HOLDINGS",
@@ -3995,7 +4174,8 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.6200000047683716,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "NORTHERN",
@@ -4016,7 +4196,8 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.6200000047683716,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "MERSEC",
@@ -4037,7 +4218,8 @@
       "touchCount": 10,
       "isConsolidation": false,
       "floorLow": 0.25999999046325684,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "EPB",
@@ -4058,7 +4240,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.23999999463558197,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "OPTIMAX",
@@ -4079,8 +4262,9 @@
       "touchCount": 10,
       "isConsolidation": false,
       "floorLow": 0.5199999809265137,
-      "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": true,
+      "isIntradayValidated": true,
+      "isCombStock": true
     },
     {
       "name": "CRPMATE",
@@ -4101,8 +4285,9 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.17499999701976776,
-      "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": false,
+      "isIntradayValidated": true,
+      "isCombStock": true
     },
     {
       "name": "AIMFLEX",
@@ -4123,8 +4308,9 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.07500000298023224,
-      "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": true,
+      "isIntradayValidated": true,
+      "isCombStock": true
     },
     {
       "name": "KENERGY",
@@ -4145,7 +4331,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.48500001430511475,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "PLINTAS",
@@ -4167,7 +4354,8 @@
       "isConsolidation": true,
       "floorLow": 0.9100000262260437,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": true
     },
     {
       "name": "AJI",
@@ -4188,7 +4376,8 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.9900000095367432,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "DSS",
@@ -4209,7 +4398,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.23000000417232513,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "ADB",
@@ -4230,7 +4420,8 @@
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.574999988079071,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "FEYTECH",
@@ -4251,7 +4442,8 @@
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.19499999284744263,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "UNIQUE",
@@ -4272,7 +4464,8 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.38999998569488525,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "SKYWLD",
@@ -4293,7 +4486,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.4000000059604645,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "SKYWORLD DEVELOPMENT",
@@ -4314,7 +4508,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.4000000059604645,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "PARADIGM",
@@ -4335,8 +4530,9 @@
       "touchCount": 10,
       "isConsolidation": true,
       "floorLow": 0.9350000023841858,
-      "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": true,
+      "isIntradayValidated": true,
+      "isCombStock": true
     },
     {
       "name": "EMCC",
@@ -4358,7 +4554,8 @@
       "isConsolidation": false,
       "floorLow": 0.3149999976158142,
       "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": true
     },
     {
       "name": "INSPACE CREATION BERHAD",
@@ -4379,7 +4576,8 @@
       "touchCount": 10,
       "isConsolidation": false,
       "floorLow": 0.2199999988079071,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "INSPACE",
@@ -4400,7 +4598,8 @@
       "touchCount": 10,
       "isConsolidation": false,
       "floorLow": 0.2199999988079071,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "YXPM",
@@ -4421,7 +4620,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.20000000298023224,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "PEOPLE",
@@ -4442,7 +4642,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.22499999403953552,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "HAWK",
@@ -4463,7 +4664,8 @@
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.18000000715255737,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "STEEL HAWK BERHAD",
@@ -4484,7 +4686,8 @@
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.18000000715255737,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "STEEL HAWK",
@@ -4505,7 +4708,8 @@
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.18000000715255737,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "SWIFT HAULAGE BERHAD",
@@ -4526,7 +4730,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.375,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "SWIFT",
@@ -4547,7 +4752,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.375,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "HOCKSOON",
@@ -4568,7 +4774,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.3100000023841858,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "CENGILD",
@@ -4589,7 +4796,8 @@
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.19499999284744263,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "SORENTO",
@@ -4610,7 +4818,8 @@
       "touchCount": 5,
       "isConsolidation": true,
       "floorLow": 0.6150000095367432,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "VINVEST",
@@ -4631,7 +4840,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.019999999552965164,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "HAILY",
@@ -4652,7 +4862,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.17499999701976776,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "NADIBHD",
@@ -4674,7 +4885,8 @@
       "isConsolidation": false,
       "floorLow": 0.3400000035762787,
       "hasLowerWickRejection": true,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": true
     },
     {
       "name": "AZAM JAYA BERHAD",
@@ -4695,7 +4907,8 @@
       "touchCount": 10,
       "isConsolidation": false,
       "floorLow": 0.9850000143051147,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "AZAMJAYA",
@@ -4716,7 +4929,8 @@
       "touchCount": 10,
       "isConsolidation": false,
       "floorLow": 0.9850000143051147,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "PGLOBAL",
@@ -4737,8 +4951,9 @@
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.44999998807907104,
-      "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": true,
+      "isIntradayValidated": true,
+      "isCombStock": true
     },
     {
       "name": "HONGSENG",
@@ -4759,7 +4974,8 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.004999999888241291,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": false
     },
     {
       "name": "KHB",
@@ -4780,7 +4996,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.07000000029802322,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "GOLD LI HOLDINGS BERHAD",
@@ -4801,7 +5018,8 @@
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.10000000149011612,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "GOLDLI",
@@ -4822,7 +5040,8 @@
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.10000000149011612,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "SENFONG",
@@ -4843,7 +5062,8 @@
       "touchCount": 7,
       "isConsolidation": false,
       "floorLow": 0.6549999713897705,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "YENHER",
@@ -4854,8 +5074,8 @@
       "changePct": 5.3,
       "turnover": 24088.500505685806,
       "volume": 30300,
-      "signal": "buy",
-      "reason": "🔒 Tapak Tegar (4x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
+      "signal": "avoid",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.8600000143051147,
       "pullback": 12.21,
       "setupName": "📉 Healthy Dip",
@@ -4864,7 +5084,8 @@
       "touchCount": 4,
       "isConsolidation": true,
       "floorLow": 0.75,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "PMIBHD",
@@ -4885,7 +5106,8 @@
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.2150000035762787,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "RTECH",
@@ -4906,7 +5128,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.17000000178813934,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "RT",
@@ -4927,7 +5150,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.17000000178813934,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "MTAG",
@@ -4948,7 +5172,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.20999999344348907,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "ORGABIO",
@@ -4969,7 +5194,8 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.2849999964237213,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "CKI",
@@ -4990,7 +5216,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.3449999988079071,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "MOBILIA",
@@ -5011,7 +5238,8 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.0949999988079071,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "KJTS",
@@ -5032,7 +5260,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.7200000286102295,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "ZANTAT",
@@ -5053,7 +5282,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.12999999523162842,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "VTC",
@@ -5074,7 +5304,8 @@
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.23499999940395355,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "TSA",
@@ -5085,8 +5316,8 @@
       "changePct": 0.57,
       "turnover": 18039.999902248383,
       "volume": 20500,
-      "signal": "buy",
-      "reason": "🔒 Tapak Tegar (4x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
+      "signal": "avoid",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.9200000166893005,
       "pullback": 4.35,
       "setupName": "🔥 RBS Retest / Near ATH",
@@ -5095,7 +5326,8 @@
       "touchCount": 4,
       "isConsolidation": true,
       "floorLow": 0.8399999737739563,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "GLXT",
@@ -5116,7 +5348,8 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.19499999284744263,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "PANDA",
@@ -5137,7 +5370,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.18000000715255737,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "TOPVISN",
@@ -5158,7 +5392,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.1550000011920929,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "SUMI",
@@ -5179,7 +5414,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.08500000089406967,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "BWYS",
@@ -5200,7 +5436,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.1550000011920929,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "SUPREME CONSOLIDATED RESOURCES BERHAD",
@@ -5221,7 +5458,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.1899999976158142,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "SUPREME",
@@ -5242,7 +5480,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.1899999976158142,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "CARLORINO",
@@ -5263,7 +5502,8 @@
       "touchCount": 10,
       "isConsolidation": false,
       "floorLow": 0.1899999976158142,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "RL",
@@ -5284,7 +5524,8 @@
       "touchCount": 10,
       "isConsolidation": false,
       "floorLow": 0.1899999976158142,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "SYNERGY",
@@ -5305,7 +5546,8 @@
       "touchCount": 7,
       "isConsolidation": false,
       "floorLow": 0.18000000715255737,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "SALIRAN GROUP BERHAD",
@@ -5326,8 +5568,9 @@
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.1899999976158142,
-      "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": true,
+      "isIntradayValidated": true,
+      "isCombStock": true
     },
     {
       "name": "SALIRAN",
@@ -5348,8 +5591,9 @@
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.1899999976158142,
-      "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": true,
+      "isIntradayValidated": true,
+      "isCombStock": true
     },
     {
       "name": "PLYTEC",
@@ -5370,7 +5614,8 @@
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.16500000655651093,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "OGM",
@@ -5391,7 +5636,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.125,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "PSP",
@@ -5412,7 +5658,8 @@
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.12999999523162842,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "JSSOLAR",
@@ -5433,7 +5680,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.1899999976158142,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "SINKUNG",
@@ -5454,7 +5702,8 @@
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.07500000298023224,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "MINOX",
@@ -5475,7 +5724,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.14499999582767487,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "VERDANT",
@@ -5496,7 +5746,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.18000000715255737,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "COLFORM",
@@ -5517,7 +5768,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.23499999940395355,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "FLEXI",
@@ -5538,7 +5790,8 @@
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.11999999731779099,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "DCHCARE",
@@ -5559,7 +5812,8 @@
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.0949999988079071,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "KUCINGKO",
@@ -5580,7 +5834,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.08500000089406967,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "LEFORM",
@@ -5601,7 +5856,8 @@
       "touchCount": 6,
       "isConsolidation": true,
       "floorLow": 0.1599999964237213,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "TOPMIX",
@@ -5623,7 +5879,8 @@
       "isConsolidation": false,
       "floorLow": 0.4099999964237213,
       "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "isIntradayValidated": true,
+      "isCombStock": true
     },
     {
       "name": "GIIB",
@@ -5644,7 +5901,8 @@
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 0.125,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "EIB",
@@ -5665,7 +5923,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.125,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "HPMT",
@@ -5686,7 +5945,8 @@
       "touchCount": 9,
       "isConsolidation": false,
       "floorLow": 0.17000000178813934,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "MSTGOLF",
@@ -5707,7 +5967,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.11999999731779099,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "XPB",
@@ -5728,7 +5989,8 @@
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.14000000059604645,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "VOLCANO",
@@ -5749,7 +6011,8 @@
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.2849999964237213,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "HPPHB",
@@ -5770,7 +6033,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.30000001192092896,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "SBS",
@@ -5791,7 +6055,8 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.10499999672174454,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "MASTER TEC GROUP BERHAD",
@@ -5812,7 +6077,8 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.9700000286102295,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "MTEC",
@@ -5833,7 +6099,8 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.9700000286102295,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "MASTER TEC GROUP",
@@ -5854,7 +6121,8 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.9700000286102295,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "TJSETIA",
@@ -5875,7 +6143,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.1850000023841858,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "VANZO",
@@ -5896,7 +6165,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.11999999731779099,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "SPRING",
@@ -5917,7 +6187,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.0949999988079071,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "DENGKIL",
@@ -5938,7 +6209,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.11999999731779099,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "WAWASAN DENGKIL HOLDINGS",
@@ -5959,7 +6231,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.11999999731779099,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "AGX",
@@ -5980,7 +6253,8 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.4000000059604645,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "OCEAN FRESH BERHAD",
@@ -6001,7 +6275,8 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.125,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "OFB",
@@ -6022,7 +6297,8 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.125,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "OCEAN FRESH",
@@ -6043,7 +6319,8 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.125,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "ALPHA IVF GROUP",
@@ -6064,7 +6341,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.09000000357627869,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "L&PBHD",
@@ -6085,7 +6363,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.09000000357627869,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "ALPHA",
@@ -6106,7 +6385,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.09000000357627869,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "FAMIERA",
@@ -6127,7 +6407,8 @@
       "touchCount": 9,
       "isConsolidation": false,
       "floorLow": 0.2199999988079071,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "EFRAME",
@@ -6148,7 +6429,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.23999999463558197,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "A1AKK",
@@ -6169,7 +6451,8 @@
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.15000000596046448,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "GEOHAN",
@@ -6190,7 +6473,8 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.2800000011920929,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "PMW",
@@ -6211,7 +6495,8 @@
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 0.24500000476837158,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "INNATURE",
@@ -6232,7 +6517,8 @@
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.1550000011920929,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "SBH",
@@ -6253,7 +6539,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.13500000536441803,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "AGRICOR",
@@ -6274,7 +6561,8 @@
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.3799999952316284,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "DPIH",
@@ -6295,7 +6583,8 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.0949999988079071,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "ANEKA",
@@ -6316,7 +6605,8 @@
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.10999999940395355,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "CAMAROE",
@@ -6337,7 +6627,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.07000000029802322,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "CREST",
@@ -6358,7 +6649,8 @@
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 0.46000000834465027,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "OBHB",
@@ -6379,7 +6671,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.20499999821186066,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "KGW",
@@ -6400,7 +6693,8 @@
       "touchCount": 7,
       "isConsolidation": false,
       "floorLow": 0.0949999988079071,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "TCS",
@@ -6421,7 +6715,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.07500000298023224,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "DAY3",
@@ -6442,7 +6737,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.10000000149011612,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "WTEC",
@@ -6463,7 +6759,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.10000000149011612,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "SCB",
@@ -6484,7 +6781,8 @@
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 0.004999999888241291,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "TASHIN",
@@ -6505,7 +6803,8 @@
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.19499999284744263,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "ACO",
@@ -6526,7 +6825,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.15000000596046448,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "KHJB",
@@ -6547,7 +6847,8 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.0949999988079071,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "METRO",
@@ -6568,7 +6869,8 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.004999999888241291,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true,
+      "isCombStock": true
     },
     {
       "name": "UMSINT",
@@ -6589,7 +6891,8 @@
       "touchCount": 4,
       "isConsolidation": true,
       "floorLow": 0.7250000238418579,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "BURSA",
@@ -6610,8 +6913,9 @@
       "touchCount": 7,
       "isConsolidation": true,
       "floorLow": 1659.739990234375,
-      "hasLowerWickRejection": false,
-      "isIntradayValidated": true
+      "hasLowerWickRejection": true,
+      "isIntradayValidated": true,
+      "isCombStock": false
     },
     {
       "name": "FPHB",
@@ -6632,7 +6936,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.29499998688697815,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "UNITRADE INDUSTRIES",
@@ -6653,7 +6958,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.22499999403953552,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "CEKD",
@@ -6674,7 +6980,8 @@
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.27000001072883606,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "FARM PRICE",
@@ -6695,7 +7002,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.29499998688697815,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "MBN",
@@ -6716,7 +7024,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.07500000298023224,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     },
     {
       "name": "UNITRAD",
@@ -6737,7 +7046,8 @@
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.22499999403953552,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isCombStock": true
     }
   ],
   "topGainers": [

@@ -19,7 +19,9 @@
       "floorLow": 10.319999694824219,
       "isConsolidation": true,
       "pullback": 13.04,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "ZETRIX",
@@ -38,7 +40,9 @@
       "floorLow": 0.7950000166893005,
       "isConsolidation": false,
       "pullback": 19.9,
-      "setupName": "🔻 Buy Support / Deep Pullback"
+      "setupName": "🔻 Buy Support / Deep Pullback",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "SCGBHD",
@@ -57,7 +61,9 @@
       "floorLow": 1.9500000476837158,
       "isConsolidation": false,
       "pullback": 8.33,
-      "setupName": "📉 Healthy Dip"
+      "setupName": "📉 Healthy Dip",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "CBHB",
@@ -76,7 +82,9 @@
       "floorLow": 0.5350000262260437,
       "isConsolidation": false,
       "pullback": 0.73,
-      "setupName": "🔥 RBS Retest / Near ATH"
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "KGB",
@@ -95,7 +103,9 @@
       "floorLow": 7.019999980926514,
       "isConsolidation": true,
       "pullback": 3.29,
-      "setupName": "🔥 RBS Retest / Near ATH"
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "SUNCON",
@@ -114,7 +124,9 @@
       "floorLow": 7.150000095367432,
       "isConsolidation": false,
       "pullback": 5.84,
-      "setupName": "📉 Healthy Dip"
+      "setupName": "📉 Healthy Dip",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "NESTLE",
@@ -144,7 +156,9 @@
       "floorLow": 17.1200008392334,
       "isConsolidation": false,
       "pullback": 19.16,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "CTOS",
@@ -163,7 +177,9 @@
       "floorLow": 0.5699999928474426,
       "isConsolidation": false,
       "pullback": 36.27,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "MPI",
@@ -182,7 +198,9 @@
       "floorLow": 45.68000030517578,
       "isConsolidation": false,
       "pullback": 6.81,
-      "setupName": "📉 Healthy Dip"
+      "setupName": "📉 Healthy Dip",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "HLBANK",
@@ -201,7 +219,9 @@
       "floorLow": 20.799999237060547,
       "isConsolidation": false,
       "pullback": 17.36,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "GIIB",
@@ -220,7 +240,9 @@
       "floorLow": 0.12999999523162842,
       "isConsolidation": false,
       "pullback": 43.75,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": true,
+      "hasLowerWickRejection": false
     },
     {
       "name": "UTDPLT",
@@ -239,7 +261,9 @@
       "floorLow": 29.860000610351562,
       "isConsolidation": false,
       "pullback": 10.26,
-      "setupName": "📉 Healthy Dip"
+      "setupName": "📉 Healthy Dip",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "PETGAS",
@@ -258,7 +282,9 @@
       "floorLow": 16.6200008392334,
       "isConsolidation": true,
       "pullback": 9.43,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "PHARMA",
@@ -321,7 +347,9 @@
       "floorLow": 26.31999969482422,
       "isConsolidation": false,
       "pullback": 28.3,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "CARLSBG",
@@ -340,7 +368,9 @@
       "floorLow": 15.920000076293945,
       "isConsolidation": false,
       "pullback": 17.53,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     }
   ],
   "topGainers": [

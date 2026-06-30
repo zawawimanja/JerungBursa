@@ -20,7 +20,9 @@
       "floorLow": 4.510000228881836,
       "isConsolidation": false,
       "pullback": 26.62,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "PMETAL",
@@ -40,7 +42,9 @@
       "floorLow": 8.319999694824219,
       "isConsolidation": false,
       "pullback": 10.45,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "AAX",
@@ -72,7 +76,9 @@
       "floorLow": 7.199999809265137,
       "isConsolidation": true,
       "pullback": 14.08,
-      "setupName": "📉 Healthy Dip"
+      "setupName": "📉 Healthy Dip",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "ZETRIX",
@@ -92,7 +98,9 @@
       "floorLow": 0.7950000166893005,
       "isConsolidation": false,
       "pullback": 21.36,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "TOPGLOV",
@@ -112,7 +120,9 @@
       "floorLow": 0.7749999761581421,
       "isConsolidation": false,
       "pullback": 11.36,
-      "setupName": "📉 Healthy Dip"
+      "setupName": "📉 Healthy Dip",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "UWC",
@@ -132,7 +142,9 @@
       "floorLow": 5.300000190734863,
       "isConsolidation": false,
       "pullback": 1.27,
-      "setupName": "🔥 RBS Retest / Near ATH"
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "PENTA",
@@ -152,7 +164,9 @@
       "floorLow": 3.9200000762939453,
       "isConsolidation": false,
       "pullback": 0,
-      "setupName": "🔥 RBS Retest / Near ATH"
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "PENTECH",
@@ -164,7 +178,9 @@
       "turnover": 42992170,
       "volume": 165354500,
       "signal": "buy",
-      "reason": "⚡ Momentum Kuat: Jerung Mula Pam (Sesuai Intraday/Swing)"
+      "reason": "⚡ Momentum Kuat: Jerung Mula Pam (Sesuai Intraday/Swing)",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "TANCO",
@@ -184,7 +200,9 @@
       "floorLow": 0.11999999731779099,
       "isConsolidation": false,
       "pullback": 92.7,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "DNEX",
@@ -204,7 +222,9 @@
       "floorLow": 0.29499998688697815,
       "isConsolidation": false,
       "pullback": 0,
-      "setupName": "🔥 RBS Retest / Near ATH"
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "UNISEM",
@@ -224,7 +244,9 @@
       "floorLow": 4.480000019073486,
       "isConsolidation": false,
       "pullback": 8.92,
-      "setupName": "📉 Healthy Dip"
+      "setupName": "📉 Healthy Dip",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "MPI",
@@ -244,7 +266,9 @@
       "floorLow": 44,
       "isConsolidation": false,
       "pullback": 3.54,
-      "setupName": "🔥 RBS Retest / Near ATH"
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "HIBISCS",
@@ -276,7 +300,9 @@
       "floorLow": 0.75,
       "isConsolidation": false,
       "pullback": 55.28,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "SAM",
@@ -296,7 +322,9 @@
       "floorLow": 4.150000095367432,
       "isConsolidation": false,
       "pullback": 4.54,
-      "setupName": "🔥 RBS Retest / Near ATH"
+      "setupName": "🔥 RBS Retest / Near ATH",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "HLBANK",
@@ -316,7 +344,9 @@
       "floorLow": 20.799999237060547,
       "isConsolidation": false,
       "pullback": 16.05,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": false,
+      "hasLowerWickRejection": false
     },
     {
       "name": "SKYCHIP",
@@ -336,7 +366,9 @@
       "floorLow": 2.7300000190734863,
       "isConsolidation": false,
       "pullback": 23.42,
-      "setupName": "🔻 Buy Support / Deep Pullback"
+      "setupName": "🔻 Buy Support / Deep Pullback",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "NESTLE",
@@ -380,7 +412,9 @@
       "floorLow": 0.004999999888241291,
       "isConsolidation": false,
       "pullback": 25,
-      "setupName": "🔻 Buy Support / Deep Pullback"
+      "setupName": "🔻 Buy Support / Deep Pullback",
+      "isCombStock": false,
+      "hasLowerWickRejection": true
     },
     {
       "name": "TAANN",
@@ -412,7 +446,9 @@
       "floorLow": 0.12999999523162842,
       "isConsolidation": false,
       "pullback": 45.83,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🧊 Downtrend / Avoid",
+      "isCombStock": true,
+      "hasLowerWickRejection": true
     }
   ],
   "topGainers": [
