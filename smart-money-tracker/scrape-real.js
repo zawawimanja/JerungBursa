@@ -448,13 +448,18 @@ async function main() {
             signal = 'avoid';
             reason = '🧊 Downtrend Stock: Avoid Trading!';
         } else if (stock.isConsolidation) {
-            signal = 'buy';
-            if (stock.price < 0.20) {
-                reason = '⚠️ Pump & Dump Penny: Consolidation Base (Intraday Only, Avoid Hold!)';
-            } else if (stock.price >= 1.50) {
-                reason = '🔥 Golden Hold: Solid Consolidation Base (Suitable for Swing/Hold)';
+            if (turnover < 250000) {
+                signal = 'avoid';
+                reason = '⚠️ Low Liquidity / Comb Stock: Consolidation Base (Avoid Trading!)';
             } else {
-                reason = '🔥 Golden Entry: Solid Consolidation Base (Suitable for Swing/Hold)';
+                signal = 'buy';
+                if (stock.price < 0.20) {
+                    reason = '⚠️ Pump & Dump Penny: Consolidation Base (Intraday Only, Avoid Hold!)';
+                } else if (stock.price >= 1.50) {
+                    reason = '🔥 Golden Hold: Solid Consolidation Base (Suitable for Swing/Hold)';
+                } else {
+                    reason = '🔥 Golden Entry: Solid Consolidation Base (Suitable for Swing/Hold)';
+                }
             }
         } else if (stock.change > 0 && turnover >= 250000) {
             signal = 'buy';

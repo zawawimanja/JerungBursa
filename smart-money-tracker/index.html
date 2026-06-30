@@ -928,7 +928,8 @@
                        item.price <= 3.00 && 
                        item.touchCount >= 3 && 
                        dist <= 3.0 &&
-                       isNearAthOr52w;
+                       isNearAthOr52w &&
+                       item.turnover >= 250000;
                         
                 if (currentSopFilter === 'mutlak') {
                     return matchesBase && item.hasLowerWickRejection;
@@ -1068,7 +1069,8 @@
                        item.price <= 3.00 && 
                        item.touchCount >= 3 && 
                        dist <= 3.0 &&
-                       isNearAthOr52w;
+                       isNearAthOr52w &&
+                       item.turnover >= 250000;
                         
                 if (currentSopFilter === 'mutlak') {
                     return matchesBase && item.hasLowerWickRejection;
