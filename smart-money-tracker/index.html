@@ -908,7 +908,8 @@
             // Filter currentData for Golden Setups:
             // 1. Not Downtrend (setupName !== '🧊 Downtrend / Avoid')
             // 2. Price <= 3.00
-            // 3. touch            const goldenList = currentData.filter(item => {
+            // 3. Touch count >= 3
+            const goldenList = currentData.filter(item => {
                 const floor = item.floorLow || (item.price * 0.97);
                 const dist = parseFloat((((item.price - floor) / floor) * 100).toFixed(2));
                 
