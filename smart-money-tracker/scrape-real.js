@@ -300,6 +300,30 @@ async function main() {
                     });
                     stock.high52 = high52;
                     
+                    // Kaunter Sikat (Comb Stock) Detection over the last 20 trading days
+                    const last20 = validDays.slice(-20);
+                    let sumTurnover20 = 0;
+                    let flatDays20 = 0;
+                    let activeDays20 = 0;
+
+                    last20.forEach(d => {
+                        if (d.volume > 0) {
+                            activeDays20++;
+                            sumTurnover20 += d.close * d.volume;
+                            if (d.high === d.low) {
+                                flatDays20++;
+                            }
+                        }
+                    });
+
+                    const avgTurnover20 = activeDays20 > 0 ? (sumTurnover20 / activeDays20) : 0;
+                    const flatPct20 = activeDays20 > 0 ? ((flatDays20 / activeDays20) * 100) : 0;
+
+                    // Exclude if average daily turnover < 500k OR has high percentage of flat candles (>= 15%)
+                    const isCombStock = (avgTurnover20 < 500000) || (flatPct20 >= 15.0);
+                    stock.isCombStock = isCombStock;
+                    stock.avgTurnover20 = avgTurnover20;
+                    
                     const lastDays = validDays.slice(-4);
                     const lastDay = lastDays[lastDays.length - 1];
                     const prevDay = lastDays[lastDays.length - 2];
@@ -444,7 +468,10 @@ async function main() {
         let signal = 'avoid';
         let reason = 'Selling Pressure / Flat';
         
-        if (setupName === '🧊 Downtrend / Avoid') {
+        if (stock.isCombStock) {
+            signal = 'avoid';
+            reason = '⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)';
+        } else if (setupName === '🧊 Downtrend / Avoid') {
             signal = 'avoid';
             reason = '🧊 Downtrend Stock: Avoid Trading!';
         } else if (stock.isConsolidation) {
@@ -512,7 +539,8 @@ async function main() {
             touchCount: stock.touchCount || 0,
             isConsolidation: stock.isConsolidation || false,
             floorLow: stock.floorLow || null,
-            hasLowerWickRejection: stock.hasLowerWickRejection || false
+            hasLowerWickRejection: stock.hasLowerWickRejection || false,
+            isCombStock: stock.isCombStock || false
         };
         
         // Top Volume Scan: Simpan semua saham yang mempunyai turnover >= RM 3,000,000 ATAU ianya saham VIP
