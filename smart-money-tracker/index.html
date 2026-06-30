@@ -677,72 +677,6 @@
         </div>
     </div>
 
-    <!-- MAIN SCANNER DISPLAY -->
-    <div style="margin-top: 1.5rem;">
-        
-        <div class="filters-panel">
-            <div class="filter-item">
-                <label>Cari Kaunter</label>
-                <input type="text" id="searchCounter" placeholder="Nama kaunter..." oninput="applyFilters()">
-            </div>
-            <div class="filter-item">
-                <label>Harga Min (RM)</label>
-                <input type="number" id="minPrice" value="0.05" step="0.05" style="width: 100px;" oninput="applyFilters()">
-            </div>
-            <div class="filter-item">
-                <label>Harga Max (RM)</label>
-                <input type="number" id="maxPrice" value="3.00" step="0.05" style="width: 100px;" oninput="applyFilters()">
-            </div>
-            <div class="filter-item">
-                <label>Turnover Minimum</label>
-                <select id="minTurnover" onchange="applyFilters()">
-                    <option value="250000" selected>RM 250k</option>
-                    <option value="1000000">1 Juta</option>
-                    <option value="3000000">3 Juta</option>
-                    <option value="10000000">10 Juta</option>
-                </select>
-            </div>
-            <div class="filter-item">
-                <label>Trend Harga</label>
-                <select id="trendFilter" onchange="applyFilters()">
-                    <option value="all" selected>Semua (Hijau & Merah)</option>
-                    <option value="up">Uptrend (Hijau Sahaja)</option>
-                </select>
-            </div>
-            <div class="filter-item">
-                <label>Consolidation Tapak</label>
-                <select id="consolidationFilter" onchange="applyFilters()">
-                    <option value="all" selected>Semua</option>
-                    <option value="tight">🔒 Tapak Tegar Sahaja</option>
-                    <option value="golden_ogx">👑 Setup Emas (Ala-OGX)</option>
-                </select>
-            </div>
-            <button class="btn" style="margin-left: auto;" onclick="applyFilters()">Tapis Sekarang</button>
-        </div>
-
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th style="width: 50px;">No.</th>
-                        <th>Kaunter</th>
-                        <th>Harga Closed</th>
-                        <th>% Perubahan</th>
-                        <th style="cursor: pointer;" onclick="setSort('floorLow')" title="Klik untuk susun">Lantai Sokongan (Floor) ↕</th>
-                        <th style="cursor: pointer;" onclick="setSort('distToFloor')" title="Klik untuk susun">Jarak Ke Lantai ↕</th>
-                        <th>Zon Belian</th>
-                        <th>Stop Loss (SL)</th>
-                        <th>Target TP1 (+10%)</th>
-                        <th>Target TP2 (+20%)</th>
-                        <th style="width: 60px; text-align: center;">Padam</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody">
-                    <!-- Populated dynamically -->
-                </tbody>
-            </table>
-        </div>
-
         <!-- Panel Kalkulator & SOP (2-Column Grid) -->
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
             <!-- Kalkulator -->
@@ -866,10 +800,6 @@
             renderGoldenZone();
         }
 
-        function removeGeneralTicker(ticker) {
-            currentData = currentData.filter(t => t.name !== ticker);
-            applyFilters();
-        }
 
         // Format Big Numbers
         function formatNumber(num) {
@@ -920,88 +850,6 @@
         function applyFilters() {
             // Render Golden Zone Cards
             renderGoldenZone();
-
-            // Filter for Tab 2 (General Broad Market Scanner)
-            const searchCounter = document.getElementById('searchCounter').value.trim().toLowerCase();
-            const minPrice = parseFloat(document.getElementById('minPrice').value) || 0;
-            const maxPrice = parseFloat(document.getElementById('maxPrice').value) || 99999;
-            const minTurnover = parseFloat(document.getElementById('minTurnover').value) || 0;
-            const trendFilter = document.getElementById('trendFilter').value;
-            const consolidationFilter = document.getElementById('consolidationFilter').value;
-
-            const generalFiltered = currentData.filter(item => {
-                // Sentiasa buang kaunter yang ber-setup Downtrend / Avoid / NA
-                const isDowntrendOrAvoidSetup = item.setupName && (
-                    item.setupName.includes('Downtrend') || 
-                    item.setupName.includes('Avoid') || 
-                    item.setupName === 'N/A'
-                );
-                if (isDowntrendOrAvoidSetup) return false;
-
-                // Jika isyaratnya 'avoid' tetapi tiada setup berkualiti, barulah ditapis keluar
-                const isQualitySetup = item.setupName && (
-                    item.setupName.includes('RBS Retest') || 
-                    item.setupName.includes('Healthy Dip') || 
-                    item.setupName.includes('Buy Support')
-                );
-                if (item.signal === 'avoid' && !isQualitySetup) return false;
-
-                if (searchCounter && !item.name.toLowerCase().includes(searchCounter)) return false;
-                if (item.price < minPrice) return false;
-                if (item.price > maxPrice) return false;
-                if (item.turnover < minTurnover) return false;
-                if (trendFilter === 'up' && (item.changePct !== undefined ? item.changePct : item.change) <= 0) return false;
-                if (consolidationFilter === 'tight' && !item.isConsolidation) return false;
-                if (consolidationFilter === 'golden_ogx') {
-                    const floor = item.floorLow || (item.price * 0.97);
-                    const dist = parseFloat((((item.price - floor) / floor) * 100).toFixed(2));
-                    const isDowntrend = item.setupName && (
-                        item.setupName.includes('Downtrend') || 
-                        item.setupName.includes('Avoid') || 
-                        item.setupName === 'N/A'
-                    );
-                    
-                    const matchesOgx = item.isConsolidation && 
-                                       item.signal === 'buy' && 
-                                       item.touchCount >= 3 && 
-                                       dist <= 3.0 && 
-                                       !isDowntrend &&
-                                       item.hasLowerWickRejection;
-                    if (!matchesOgx) return false;
-                }
-                return true;
-            });
-
-            // Sort Tab 2 data
-            generalFiltered.sort((a, b) => {
-                let valA = a[currentSortColumn];
-                let valB = b[currentSortColumn];
-                if (currentSortColumn === 'change') {
-                    valA = a.changePct !== undefined ? a.changePct : a.change;
-                    valB = b.changePct !== undefined ? b.changePct : b.change;
-                } else if (currentSortColumn === 'floorLow') {
-                    valA = a.touchCount || 0;
-                    valB = b.touchCount || 0;
-                } else if (currentSortColumn === 'distToFloor') {
-                    const fA = a.floorLow || (a.price * 0.97);
-                    const fB = b.floorLow || (b.price * 0.97);
-                    valA = ((a.price - fA) / fA) * 100;
-                    valB = ((b.price - fB) / fB) * 100;
-                    
-                    // Secondary sort: jika jarak sama, susun mengikut touchCount terbanyak
-                    if (Math.abs(valA - valB) < 0.001) {
-                        return currentSortDesc ? (a.touchCount - b.touchCount) : (b.touchCount - a.touchCount);
-                    }
-                }
-                
-                if (typeof valA === 'string' && typeof valB === 'string') {
-                    return currentSortDesc ? valB.localeCompare(valA) : valA.localeCompare(valB);
-                }
-                return currentSortDesc ? valB - valA : valA - valB;
-            });
-
-            renderGeneralTable(generalFiltered);
-            populateCalculatorDropdown(generalFiltered);
             updateSentiment(currentData);
         }
 
@@ -1037,6 +885,9 @@
                 }
                 return matchesBase;
             });
+            
+            // Populate calculator dropdown
+            populateCalculatorDropdown(goldenList);
             
             if (goldenList.length === 0) {
                 container.innerHTML = `
@@ -1233,71 +1084,6 @@
             calculatePlan();
         }
 
-        // Render General Broad Market Scanner Table
-        function renderGeneralTable(data) {
-            const tbody = document.getElementById('tableBody');
-            tbody.innerHTML = '';
-
-            data.forEach((item, index) => {
-                const pct = item.changePct !== undefined ? item.changePct : item.change;
-                const changeClass = pct >= 0 ? 'up' : 'down';
-                const changeSign = pct > 0 ? '+' : '';
-                
-                const floorPrice = item.floorLow || (item.price * 0.97);
-                const distToFloor = ((item.price - floorPrice) / floorPrice) * 100;
-                
-                let zoneText = '⏳ Pullback';
-                let zoneClass = 'zone-pending';
-                if (distToFloor <= 2.5) {
-                    zoneText = '🔥 BUY ZONE';
-                    zoneClass = 'zone-buy';
-                } else if (distToFloor > 6.0) {
-                    zoneText = '🚀 Breakout';
-                    zoneClass = 'zone-chase';
-                }
-
-                const stopLoss = floorPrice * 0.97; // 3% below floor
-                const maxRiskPct = ((item.price - stopLoss) / item.price) * 100;
-                const tp1 = item.price * 1.10;
-                const tp2 = item.price * 1.20;
-
-                const tr = document.createElement('tr');
-                tr.innerHTML = `
-                    <td style="font-weight: bold; color: var(--text-muted);">${index + 1}</td>
-                    <td>
-                        <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=5" target="_blank" class="tv-link">${item.name} 🔗</a>
-                        <div style="font-size:0.75rem; color:var(--text-muted);">${item.sector || ''}</div>
-                        ${item.reason ? `<div style="font-size: 0.7rem; color: ${item.signal === 'avoid' ? 'var(--danger)' : '#f59e0b'}; margin-top: 0.15rem; font-weight: 500;">${item.reason}</div>` : ''}
-                    </td>
-                    <td style="font-weight: 700; color: white;">RM ${item.price.toFixed(3)}</td>
-                    <td class="${changeClass}" style="font-weight: 700;">${changeSign}${pct.toFixed(2)}%</td>
-                    <td>
-                        <span style="font-weight: 700; color: #60a5fa;">RM ${floorPrice.toFixed(3)}</span>
-                        <div style="font-size: 0.75rem; color: var(--text-muted);">${item.touchCount || 0}x Tapak</div>
-                    </td>
-                    <td>
-                        <span style="font-weight: 700; color: ${distToFloor <= 2.5 ? 'var(--success)' : 'white'};">+${distToFloor.toFixed(2)}%</span>
-                    </td>
-                    <td>
-                        <span class="zone-badge ${zoneClass}" style="font-size: 0.75rem; padding: 0.2rem 0.6rem;">${zoneText}</span>
-                    </td>
-                    <td class="danger" style="font-weight: 700;">
-                        RM ${stopLoss.toFixed(3)}
-                        <div style="font-size: 0.75rem; color: var(--danger); font-weight: normal;">-${maxRiskPct.toFixed(1)}%</div>
-                    </td>
-                    <td class="success" style="font-weight: 700; color: var(--success);">RM ${tp1.toFixed(3)}</td>
-                    <td style="font-weight: 700; color: #c084fc;">RM ${tp2.toFixed(3)}</td>
-                    <td style="text-align: center;">
-                        <button onclick="removeGeneralTicker('${item.name}')" style="background: rgba(239, 68, 68, 0.15); border: none; color: var(--danger); font-weight: 900; padding: 0.2rem 0.5rem; border-radius: 4px; cursor: pointer; transition: all 0.2s;" title="Padam dari senarai ini">×</button>
-                    </td>
-                `;
-                tbody.appendChild(tr);
-            });
-
-            if (data.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="11" style="text-align:center; padding: 2.5rem; color: var(--text-muted);">Tiada kaunter yang menepati kriteria tapisan semasa. Guna butang Refresh atau ubah filter.</td></tr>';
-            }
-        }
 
         // Market Sentiment Indicator
         function updateSentiment(data) {
@@ -1360,16 +1146,6 @@
             document.getElementById('calcTp2').textContent = `RM ${tp2Price.toFixed(3)} (+RM ${tp2Gain.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})})`;
         }
 
-        // Sorting helpers
-        function setSort(col) {
-            if (currentSortColumn === col) {
-                currentSortDesc = !currentSortDesc;
-            } else {
-                currentSortColumn = col;
-                currentSortDesc = col === 'distToFloor' ? false : true;
-            }
-            applyFilters();
-        }
 
         // Page setup and event listeners
         window.addEventListener('DOMContentLoaded', () => {
