@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T10:19:41.457Z",
+  "lastUpdated": "2026-06-30T11:31:47.382Z",
   "source": "klse.i3investor.com",
   "topVolume": [
     {
@@ -84,7 +84,7 @@
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 7.380000114440918,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "SDG",
@@ -235,7 +235,7 @@
     },
     {
       "name": "UWC",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Swing / Bluechip",
       "price": 6.630000114440918,
       "change": 0.15000009536743164,
@@ -462,7 +462,7 @@
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 21.360000610351562,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "PETDAG",
@@ -550,7 +550,7 @@
     },
     {
       "name": "SCGBHD",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Swing / Bluechip",
       "price": 2.369999885559082,
       "change": 0.019999980926513672,
@@ -634,7 +634,7 @@
     },
     {
       "name": "MRDIY",
-      "sector": "Consumer",
+      "sector": "Bursa",
       "category": "Swing / Bluechip",
       "price": 1.6399999856948853,
       "change": 0.009999990463256836,
@@ -655,7 +655,7 @@
     },
     {
       "name": "99 SPEED MART RETAIL",
-      "sector": "Consumer",
+      "sector": "Bursa",
       "category": "Swing / Bluechip",
       "price": 3.5299999713897705,
       "change": -0.029999971389770508,
@@ -823,7 +823,7 @@
     },
     {
       "name": "MEGA FORTRIS BERHAD",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Swing / Bluechip",
       "price": 1.649999976158142,
       "change": -0.019999980926513672,
@@ -844,7 +844,7 @@
     },
     {
       "name": "MEGAFB",
-      "sector": "IPO",
+      "sector": "Bursa",
       "category": "Swing / Bluechip",
       "price": 1.649999976158142,
       "change": -0.019999980926513672,
@@ -907,7 +907,7 @@
     },
     {
       "name": "YEWLEE",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.6000000238418579,
       "change": 0,
@@ -928,7 +928,7 @@
     },
     {
       "name": "SNS",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.5249999761581421,
       "change": 0.019999980926513672,
@@ -970,7 +970,7 @@
     },
     {
       "name": "NORTHEAST GROUP BERHAD",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 1.149999976158142,
       "change": 0.059999942779541016,
@@ -1033,7 +1033,7 @@
     },
     {
       "name": "JPG",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Swing / Bluechip",
       "price": 1.7799999713897705,
       "change": 0,
@@ -1054,7 +1054,7 @@
     },
     {
       "name": "SOLARVEST HOLDINGS BERHAD",
-      "sector": "Utilities",
+      "sector": "Bursa",
       "category": "Swing / Bluechip",
       "price": 2.990000009536743,
       "change": 0,
@@ -1075,7 +1075,7 @@
     },
     {
       "name": "SLVEST",
-      "sector": "Utilities",
+      "sector": "Bursa",
       "category": "Swing / Bluechip",
       "price": 2.990000009536743,
       "change": 0,
@@ -1201,7 +1201,7 @@
     },
     {
       "name": "GREATEC",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Swing / Bluechip",
       "price": 2.609999895095825,
       "change": -0.009999990463256836,
@@ -1243,7 +1243,7 @@
     },
     {
       "name": "EI POWER BERHAD [S]",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.675000011920929,
       "change": 0.020000040531158447,
@@ -1264,7 +1264,7 @@
     },
     {
       "name": "RAMSSOL",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.6800000071525574,
       "change": -0.004999995231628418,
@@ -1369,7 +1369,7 @@
     },
     {
       "name": "ELRIDGE",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.8849999904632568,
       "change": 0.014999985694885254,
@@ -1390,7 +1390,7 @@
     },
     {
       "name": "THMY",
-      "sector": "Consumer",
+      "sector": "Bursa",
       "category": "Swing / Bluechip",
       "price": 1.7699999809265137,
       "change": 0.009999990463256836,
@@ -1432,7 +1432,7 @@
     },
     {
       "name": "ITMAX",
-      "sector": "Technology",
+      "sector": "Bursa",
       "category": "Swing / Bluechip",
       "price": 4.880000114440918,
       "change": 0.039999961853027344,
@@ -1474,7 +1474,7 @@
     },
     {
       "name": "CORAZA",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.9900000095367432,
       "change": 0.004999995231628418,
@@ -1495,7 +1495,7 @@
     },
     {
       "name": "SFPTECH",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.29499998688697815,
       "change": 0,
@@ -1516,7 +1516,7 @@
     },
     {
       "name": "ECOSHOP",
-      "sector": "Consumer",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 1.3200000524520874,
       "change": 0.020000100135803223,
@@ -1537,7 +1537,7 @@
     },
     {
       "name": "ECOMATE",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.8550000190734863,
       "change": -0.004999995231628418,
@@ -1554,11 +1554,11 @@
       "touchCount": 10,
       "isConsolidation": true,
       "floorLow": 0.8500000238418579,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "PWRWELL",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.8149999976158142,
       "change": 0.009999990463256836,
@@ -1600,7 +1600,7 @@
     },
     {
       "name": "KOPI",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.9350000023841858,
       "change": 0,
@@ -1621,7 +1621,7 @@
     },
     {
       "name": "ORIENTAL KOPI HOLDINGS",
-      "sector": "Consumer",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.9350000023841858,
       "change": 0,
@@ -1684,7 +1684,7 @@
     },
     {
       "name": "GENERGY",
-      "sector": "Energy",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.3499999940395355,
       "change": 0.030000001192092896,
@@ -1705,7 +1705,7 @@
     },
     {
       "name": "CTOS",
-      "sector": "Financial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.6650000214576721,
       "change": -0.004999995231628418,
@@ -1726,7 +1726,7 @@
     },
     {
       "name": "MTT SHIPPING AND LOGISTICS BHD",
-      "sector": "Transportation",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.9800000190734863,
       "change": -0.004999995231628418,
@@ -1747,7 +1747,7 @@
     },
     {
       "name": "MTTSL",
-      "sector": "Transportation",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.9800000190734863,
       "change": -0.004999995231628418,
@@ -1768,7 +1768,7 @@
     },
     {
       "name": "SUNLOGY",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.29499998688697815,
       "change": -0.005000025033950806,
@@ -1789,7 +1789,7 @@
     },
     {
       "name": "INFOM",
-      "sector": "Technology",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 1.1699999570846558,
       "change": 0.06999993324279785,
@@ -1810,7 +1810,7 @@
     },
     {
       "name": "CHB",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 1.090000033378601,
       "change": 0.08000004291534424,
@@ -1831,7 +1831,7 @@
     },
     {
       "name": "EMPIRE PREMIUM FOOD BERHAD",
-      "sector": "Consumer",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.9900000095367432,
       "change": 0.004999995231628418,
@@ -1852,7 +1852,7 @@
     },
     {
       "name": "EMPIRE",
-      "sector": "Consumer",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.9900000095367432,
       "change": 0.004999995231628418,
@@ -1873,7 +1873,7 @@
     },
     {
       "name": "SENHENG",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.14000000059604645,
       "change": -0.004999995231628418,
@@ -1894,7 +1894,7 @@
     },
     {
       "name": "ICENTS",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.5199999809265137,
       "change": -0.004999995231628418,
@@ -1915,7 +1915,7 @@
     },
     {
       "name": "PEKAT",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Swing / Bluechip",
       "price": 1.7200000286102295,
       "change": 0.019999980926513672,
@@ -1957,7 +1957,7 @@
     },
     {
       "name": "ENPRO",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.20000000298023224,
       "change": 0,
@@ -2020,7 +2020,7 @@
     },
     {
       "name": "UUE HOLDINGS BERHAD",
-      "sector": "Utilities",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.4749999940395355,
       "change": 0.025000005960464478,
@@ -2041,7 +2041,7 @@
     },
     {
       "name": "UUE",
-      "sector": "Utilities",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.4749999940395355,
       "change": 0.025000005960464478,
@@ -2062,7 +2062,7 @@
     },
     {
       "name": "ATECH",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.6600000262260437,
       "change": 0.010000050067901611,
@@ -2104,7 +2104,7 @@
     },
     {
       "name": "TEAMSTR",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.23999999463558197,
       "change": -0.005000010132789612,
@@ -2125,7 +2125,7 @@
     },
     {
       "name": "CHEEDING",
-      "sector": "Utilities",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.6499999761581421,
       "change": -0.004999995231628418,
@@ -2142,7 +2142,7 @@
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 0.6449999809265137,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "OGX",
@@ -2188,7 +2188,7 @@
     },
     {
       "name": "LSH",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Swing / Bluechip",
       "price": 1.7599999904632568,
       "change": 0.009999990463256836,
@@ -2209,7 +2209,7 @@
     },
     {
       "name": "EDELTEQ",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.3400000035762787,
       "change": 0.025000005960464478,
@@ -2230,7 +2230,7 @@
     },
     {
       "name": "HEGROUP",
-      "sector": "Utilities",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.5,
       "change": 0.004999995231628418,
@@ -2251,7 +2251,7 @@
     },
     {
       "name": "JTGROUP",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.5799999833106995,
       "change": 0.034999966621398926,
@@ -2293,7 +2293,7 @@
     },
     {
       "name": "FFB",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Swing / Bluechip",
       "price": 2.2899999618530273,
       "change": -0.009999990463256836,
@@ -2314,7 +2314,7 @@
     },
     {
       "name": "SUNVIEW",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.3700000047683716,
       "change": 0,
@@ -2398,7 +2398,7 @@
     },
     {
       "name": "AMS ADVANCED MATERIAL BERHAD",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.3499999940395355,
       "change": 0.004999995231628418,
@@ -2419,7 +2419,7 @@
     },
     {
       "name": "ECA",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.3199999928474426,
       "change": -0.004999995231628418,
@@ -2440,7 +2440,7 @@
     },
     {
       "name": "SAMAIDEN",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 1.399999976158142,
       "change": 0.009999990463256836,
@@ -2461,7 +2461,7 @@
     },
     {
       "name": "TFP",
-      "sector": "Technology",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.07999999821186066,
       "change": -0.005000002682209015,
@@ -2482,7 +2482,7 @@
     },
     {
       "name": "BUSCAP",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.25,
       "change": 0.004999995231628418,
@@ -2503,7 +2503,7 @@
     },
     {
       "name": "KTI",
-      "sector": "Property",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.5400000214576721,
       "change": 0,
@@ -2520,11 +2520,11 @@
       "touchCount": 10,
       "isConsolidation": true,
       "floorLow": 0.5350000262260437,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "AMEREIT",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Swing / Bluechip",
       "price": 1.5700000524520874,
       "change": 0.020000100135803223,
@@ -2566,7 +2566,7 @@
     },
     {
       "name": "PMCK",
-      "sector": "Healthcare",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.1899999976158142,
       "change": 0,
@@ -2587,7 +2587,7 @@
     },
     {
       "name": "LACMED",
-      "sector": "Healthcare",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.7850000262260437,
       "change": -0.004999995231628418,
@@ -2608,7 +2608,7 @@
     },
     {
       "name": "WELLS",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.5899999737739563,
       "change": 0.004999995231628418,
@@ -2629,7 +2629,7 @@
     },
     {
       "name": "MKH OIL PALM (EAST KALIMANTAN)",
-      "sector": "Plantation",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.6200000047683716,
       "change": 0,
@@ -2650,7 +2650,7 @@
     },
     {
       "name": "MKHOP",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.6200000047683716,
       "change": 0,
@@ -2671,7 +2671,7 @@
     },
     {
       "name": "CPETECH",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.8149999976158142,
       "change": 0.019999980926513672,
@@ -2692,7 +2692,7 @@
     },
     {
       "name": "SSF",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.38999998569488525,
       "change": 0,
@@ -2709,11 +2709,11 @@
       "touchCount": 10,
       "isConsolidation": true,
       "floorLow": 0.38499999046325684,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "AQUAWALK",
-      "sector": "Consumer",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.1850000023841858,
       "change": 0.004999995231628418,
@@ -2734,7 +2734,7 @@
     },
     {
       "name": "GOLDEN DESTINATIONS GROUP BERHAD",
-      "sector": "Consumer",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.4000000059604645,
       "change": 0.010000020265579224,
@@ -2755,7 +2755,7 @@
     },
     {
       "name": "GDGROUP",
-      "sector": "Consumer",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.4000000059604645,
       "change": 0.010000020265579224,
@@ -2776,7 +2776,7 @@
     },
     {
       "name": "VLB",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.6150000095367432,
       "change": 0.014999985694885254,
@@ -2818,7 +2818,7 @@
     },
     {
       "name": "CLOUDPT",
-      "sector": "Technology",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.41999998688697815,
       "change": -0.005000025033950806,
@@ -2835,11 +2835,11 @@
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.41499999165534973,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "OHM",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.36500000953674316,
       "change": 0.010000020265579224,
@@ -2860,7 +2860,7 @@
     },
     {
       "name": "DXN",
-      "sector": "Consumer",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.46000000834465027,
       "change": 0,
@@ -2881,7 +2881,7 @@
     },
     {
       "name": "TTVHB",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.2750000059604645,
       "change": 0.010000020265579224,
@@ -2923,7 +2923,7 @@
     },
     {
       "name": "MANFORCE GROUP BERHAD",
-      "sector": "Human",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.2750000059604645,
       "change": -0.004999995231628418,
@@ -2944,7 +2944,7 @@
     },
     {
       "name": "MFGROUP",
-      "sector": "Human",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.2750000059604645,
       "change": -0.004999995231628418,
@@ -2965,7 +2965,7 @@
     },
     {
       "name": "FIBRO",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.7749999761581421,
       "change": -0.025000035762786865,
@@ -2982,11 +2982,11 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.7749999761581421,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "NESTCON",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.4000000059604645,
       "change": 0.02000001072883606,
@@ -3007,7 +3007,7 @@
     },
     {
       "name": "OXB",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.35499998927116394,
       "change": 0.014999985694885254,
@@ -3070,7 +3070,7 @@
     },
     {
       "name": "MESTRON",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.0949999988079071,
       "change": -0.005000002682209015,
@@ -3091,7 +3091,7 @@
     },
     {
       "name": "KITACON",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.6499999761581421,
       "change": -0.004999995231628418,
@@ -3108,11 +3108,11 @@
       "touchCount": 3,
       "isConsolidation": true,
       "floorLow": 0.6499999761581421,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "GOHUB",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 1.2000000476837158,
       "change": 0,
@@ -3133,7 +3133,7 @@
     },
     {
       "name": "SDS",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.375,
       "change": -0.004999995231628418,
@@ -3154,7 +3154,7 @@
     },
     {
       "name": "LGMS",
-      "sector": "Technology",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.4650000035762787,
       "change": -0.004999995231628418,
@@ -3175,7 +3175,7 @@
     },
     {
       "name": "WENTEL ENGINEERING",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.25999999046325684,
       "change": -0.004999995231628418,
@@ -3196,7 +3196,7 @@
     },
     {
       "name": "WENTEL",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.25999999046325684,
       "change": -0.004999995231628418,
@@ -3217,7 +3217,7 @@
     },
     {
       "name": "SET",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.1899999976158142,
       "change": 0.004999995231628418,
@@ -3238,7 +3238,7 @@
     },
     {
       "name": "REACHTEN",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.4050000011920929,
       "change": -0.009999990463256836,
@@ -3259,7 +3259,7 @@
     },
     {
       "name": "5E RESOURCES BERHAD",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.24500000476837158,
       "change": 0,
@@ -3280,7 +3280,7 @@
     },
     {
       "name": "5ER",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.24500000476837158,
       "change": 0,
@@ -3301,7 +3301,7 @@
     },
     {
       "name": "TAGHILL",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.054999999701976776,
       "change": -0.004999998956918716,
@@ -3322,7 +3322,7 @@
     },
     {
       "name": "DESTINI BERHAD",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.28999999165534973,
       "change": 0.004999995231628418,
@@ -3343,7 +3343,7 @@
     },
     {
       "name": "DESTINI",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.28999999165534973,
       "change": 0.004999995231628418,
@@ -3364,7 +3364,7 @@
     },
     {
       "name": "POLYMER",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.15000000596046448,
       "change": 0.005000010132789612,
@@ -3385,7 +3385,7 @@
     },
     {
       "name": "TELADAN",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.7549999952316284,
       "change": 0,
@@ -3402,7 +3402,7 @@
       "touchCount": 10,
       "isConsolidation": false,
       "floorLow": 0.75,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "FOODIE",
@@ -3427,7 +3427,7 @@
     },
     {
       "name": "INFOTEC",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.3050000071525574,
       "change": -0.030000001192092896,
@@ -3448,7 +3448,7 @@
     },
     {
       "name": "TECHSTORE",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.17499999701976776,
       "change": 0,
@@ -3469,7 +3469,7 @@
     },
     {
       "name": "ORKIM",
-      "sector": "Energy",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.8799999952316284,
       "change": 0.014999985694885254,
@@ -3511,7 +3511,7 @@
     },
     {
       "name": "RADIUM",
-      "sector": "Property",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.5099999904632568,
       "change": 0.004999995231628418,
@@ -3553,7 +3553,7 @@
     },
     {
       "name": "SAG",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.6899999976158142,
       "change": -0.009999990463256836,
@@ -3574,7 +3574,7 @@
     },
     {
       "name": "PTRB",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.2800000011920929,
       "change": 0,
@@ -3595,7 +3595,7 @@
     },
     {
       "name": "BMS",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.14000000059604645,
       "change": -0.004999995231628418,
@@ -3616,7 +3616,7 @@
     },
     {
       "name": "HSSBAKERY",
-      "sector": "Consumer",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.1550000011920929,
       "change": -0.01000000536441803,
@@ -3633,11 +3633,11 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.1550000011920929,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "BETA",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.6200000047683716,
       "change": 0.004999995231628418,
@@ -3658,7 +3658,7 @@
     },
     {
       "name": "CLITE",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.20999999344348907,
       "change": 0.009999990463256836,
@@ -3679,7 +3679,7 @@
     },
     {
       "name": "UMC",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Swing / Bluechip",
       "price": 5.940000057220459,
       "change": 0,
@@ -3700,7 +3700,7 @@
     },
     {
       "name": "KEYFIELD",
-      "sector": "Energy",
+      "sector": "Bursa",
       "category": "Swing / Bluechip",
       "price": 1.5299999713897705,
       "change": 0.009999990463256836,
@@ -3759,11 +3759,11 @@
       "touchCount": 10,
       "isConsolidation": true,
       "floorLow": 0.9049999713897705,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "WESTRVR",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.22499999403953552,
       "change": 0,
@@ -3784,7 +3784,7 @@
     },
     {
       "name": "ICTZONE",
-      "sector": "Technology",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.17499999701976776,
       "change": 0,
@@ -3805,7 +3805,7 @@
     },
     {
       "name": "AGMO",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.3199999928474426,
       "change": 0.004999995231628418,
@@ -3826,7 +3826,7 @@
     },
     {
       "name": "WINSTAR",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.5649999976158142,
       "change": 0,
@@ -3847,7 +3847,7 @@
     },
     {
       "name": "MSB",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.08500000089406967,
       "change": 0,
@@ -3868,7 +3868,7 @@
     },
     {
       "name": "NORTHERN SOLAR HOLDINGS",
-      "sector": "Renewable",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.625,
       "change": 0.004999995231628418,
@@ -3927,11 +3927,11 @@
       "touchCount": 10,
       "isConsolidation": false,
       "floorLow": 0.25999999046325684,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "EPB",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.25999999046325684,
       "change": -0.004999995231628418,
@@ -3952,7 +3952,7 @@
     },
     {
       "name": "OPTIMAX",
-      "sector": "Healthcare",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.5249999761581421,
       "change": 0,
@@ -3969,11 +3969,11 @@
       "touchCount": 10,
       "isConsolidation": false,
       "floorLow": 0.5199999809265137,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "CRPMATE",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.17499999701976776,
       "change": 0,
@@ -3994,7 +3994,7 @@
     },
     {
       "name": "AIMFLEX",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.07999999821186066,
       "change": 0,
@@ -4015,7 +4015,7 @@
     },
     {
       "name": "KENERGY",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.5099999904632568,
       "change": 0.009999990463256836,
@@ -4036,7 +4036,7 @@
     },
     {
       "name": "PLINTAS",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.9100000262260437,
       "change": 0,
@@ -4078,7 +4078,7 @@
     },
     {
       "name": "DSS",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.2549999952316284,
       "change": 0.004999995231628418,
@@ -4099,7 +4099,7 @@
     },
     {
       "name": "ADB",
-      "sector": "IPO",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.5849999785423279,
       "change": 0.004999995231628418,
@@ -4120,7 +4120,7 @@
     },
     {
       "name": "FEYTECH",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.20999999344348907,
       "change": 0,
@@ -4141,7 +4141,7 @@
     },
     {
       "name": "UNIQUE",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.41999998688697815,
       "change": -0.005000025033950806,
@@ -4162,7 +4162,7 @@
     },
     {
       "name": "SKYWLD",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.4099999964237213,
       "change": 0.009999990463256836,
@@ -4183,7 +4183,7 @@
     },
     {
       "name": "SKYWORLD DEVELOPMENT",
-      "sector": "Property",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.4099999964237213,
       "change": 0.009999990463256836,
@@ -4221,7 +4221,7 @@
       "touchCount": 10,
       "isConsolidation": true,
       "floorLow": 0.9350000023841858,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "EMCC",
@@ -4246,7 +4246,7 @@
     },
     {
       "name": "INSPACE CREATION BERHAD",
-      "sector": "Consumer",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.22499999403953552,
       "change": -0.005000010132789612,
@@ -4267,7 +4267,7 @@
     },
     {
       "name": "INSPACE",
-      "sector": "Consumer",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.22499999403953552,
       "change": -0.005000010132789612,
@@ -4288,7 +4288,7 @@
     },
     {
       "name": "YXPM",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.20000000298023224,
       "change": 0,
@@ -4305,11 +4305,11 @@
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.20000000298023224,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "PEOPLE",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.22499999403953552,
       "change": -0.025000005960464478,
@@ -4330,7 +4330,7 @@
     },
     {
       "name": "HAWK",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.1899999976158142,
       "change": 0,
@@ -4351,7 +4351,7 @@
     },
     {
       "name": "STEEL HAWK BERHAD",
-      "sector": "Energy",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.1899999976158142,
       "change": 0,
@@ -4393,7 +4393,7 @@
     },
     {
       "name": "SWIFT HAULAGE BERHAD",
-      "sector": "Logistics",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.3799999952316284,
       "change": -0.004999995231628418,
@@ -4414,7 +4414,7 @@
     },
     {
       "name": "SWIFT",
-      "sector": "Logistics",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.3799999952316284,
       "change": -0.004999995231628418,
@@ -4435,7 +4435,7 @@
     },
     {
       "name": "HOCKSOON",
-      "sector": "Consumer",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.33500000834465027,
       "change": 0.004999995231628418,
@@ -4456,7 +4456,7 @@
     },
     {
       "name": "CENGILD",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.19499999284744263,
       "change": 0,
@@ -4473,11 +4473,11 @@
       "touchCount": 7,
       "isConsolidation": false,
       "floorLow": 0.19499999284744263,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "SORENTO",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.6449999809265137,
       "change": 0.014999985694885254,
@@ -4519,7 +4519,7 @@
     },
     {
       "name": "HAILY",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.18000000715255737,
       "change": 0.005000010132789612,
@@ -4540,7 +4540,7 @@
     },
     {
       "name": "NADIBHD",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.3499999940395355,
       "change": 0,
@@ -4561,7 +4561,7 @@
     },
     {
       "name": "AZAM JAYA BERHAD",
-      "sector": "Construction",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 1,
       "change": 0,
@@ -4582,7 +4582,7 @@
     },
     {
       "name": "AZAMJAYA",
-      "sector": "Construction",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 1,
       "change": 0,
@@ -4603,7 +4603,7 @@
     },
     {
       "name": "PGLOBAL",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.44999998807907104,
       "change": -0.005000025033950806,
@@ -4620,7 +4620,7 @@
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 0.4449999928474426,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "HONGSENG",
@@ -4666,7 +4666,7 @@
     },
     {
       "name": "GOLD LI HOLDINGS BERHAD",
-      "sector": "Property",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.10000000149011612,
       "change": -0.004999995231628418,
@@ -4687,7 +4687,7 @@
     },
     {
       "name": "GOLDLI",
-      "sector": "Property",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.10000000149011612,
       "change": -0.004999995231628418,
@@ -4708,7 +4708,7 @@
     },
     {
       "name": "SENFONG",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.6700000166893005,
       "change": 0,
@@ -4750,7 +4750,7 @@
     },
     {
       "name": "PMIBHD",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.2150000035762787,
       "change": -0.004999995231628418,
@@ -4771,7 +4771,7 @@
     },
     {
       "name": "RTECH",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.18000000715255737,
       "change": 0,
@@ -4792,7 +4792,7 @@
     },
     {
       "name": "RT",
-      "sector": "IPO",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.18000000715255737,
       "change": 0,
@@ -4813,7 +4813,7 @@
     },
     {
       "name": "MTAG",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.2199999988079071,
       "change": 0,
@@ -4834,7 +4834,7 @@
     },
     {
       "name": "ORGABIO",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.29499998688697815,
       "change": 0.004999995231628418,
@@ -4855,7 +4855,7 @@
     },
     {
       "name": "CKI",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.3700000047683716,
       "change": -0.004999995231628418,
@@ -4876,7 +4876,7 @@
     },
     {
       "name": "MOBILIA",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.10000000149011612,
       "change": 0.005000002682209015,
@@ -4897,7 +4897,7 @@
     },
     {
       "name": "KJTS",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.7099999785423279,
       "change": -0.010000050067901611,
@@ -4914,11 +4914,11 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.699999988079071,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "ZANTAT",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.1550000011920929,
       "change": -0.01000000536441803,
@@ -4939,7 +4939,7 @@
     },
     {
       "name": "VTC",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.23499999940395355,
       "change": 0,
@@ -4960,7 +4960,7 @@
     },
     {
       "name": "TSA",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.8799999952316284,
       "change": 0.004999995231628418,
@@ -4981,7 +4981,7 @@
     },
     {
       "name": "GLXT",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.20000000298023224,
       "change": 0,
@@ -5002,7 +5002,7 @@
     },
     {
       "name": "PANDA",
-      "sector": "IPO",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.1899999976158142,
       "change": 0.009999990463256836,
@@ -5023,7 +5023,7 @@
     },
     {
       "name": "TOPVISN",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.16500000655651093,
       "change": 0.01000000536441803,
@@ -5044,7 +5044,7 @@
     },
     {
       "name": "SUMI",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.08500000089406967,
       "change": -0.005000002682209015,
@@ -5065,7 +5065,7 @@
     },
     {
       "name": "BWYS",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.1599999964237213,
       "change": 0,
@@ -5086,7 +5086,7 @@
     },
     {
       "name": "SUPREME CONSOLIDATED RESOURCES BERHAD",
-      "sector": "Consumer",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.20000000298023224,
       "change": 0,
@@ -5107,7 +5107,7 @@
     },
     {
       "name": "SUPREME",
-      "sector": "Consumer",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.20000000298023224,
       "change": 0,
@@ -5128,7 +5128,7 @@
     },
     {
       "name": "CARLORINO",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.19499999284744263,
       "change": 0,
@@ -5149,7 +5149,7 @@
     },
     {
       "name": "RL",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.19499999284744263,
       "change": 0,
@@ -5170,7 +5170,7 @@
     },
     {
       "name": "SYNERGY",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.18000000715255737,
       "change": 0,
@@ -5191,7 +5191,7 @@
     },
     {
       "name": "SALIRAN GROUP BERHAD",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.1899999976158142,
       "change": 0,
@@ -5208,7 +5208,7 @@
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 0.1899999976158142,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "SALIRAN",
@@ -5229,11 +5229,11 @@
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 0.1899999976158142,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "PLYTEC",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.18000000715255737,
       "change": 0,
@@ -5254,7 +5254,7 @@
     },
     {
       "name": "OGM",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.14499999582767487,
       "change": 0,
@@ -5275,7 +5275,7 @@
     },
     {
       "name": "PSP",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.13500000536441803,
       "change": 0.005000010132789612,
@@ -5296,7 +5296,7 @@
     },
     {
       "name": "JSSOLAR",
-      "sector": "Energy",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.19499999284744263,
       "change": 0,
@@ -5317,7 +5317,7 @@
     },
     {
       "name": "SINKUNG",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.07999999821186066,
       "change": 0,
@@ -5338,7 +5338,7 @@
     },
     {
       "name": "MINOX",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.17000000178813934,
       "change": 0,
@@ -5359,7 +5359,7 @@
     },
     {
       "name": "VERDANT",
-      "sector": "Energy",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.20000000298023224,
       "change": -0.004999995231628418,
@@ -5380,7 +5380,7 @@
     },
     {
       "name": "COLFORM",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.2549999952316284,
       "change": 0.015000000596046448,
@@ -5401,7 +5401,7 @@
     },
     {
       "name": "FLEXI",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.125,
       "change": 0,
@@ -5422,7 +5422,7 @@
     },
     {
       "name": "DCHCARE",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.10000000149011612,
       "change": -0.004999995231628418,
@@ -5464,7 +5464,7 @@
     },
     {
       "name": "LEFORM",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.16500000655651093,
       "change": 0,
@@ -5485,7 +5485,7 @@
     },
     {
       "name": "TOPMIX",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.41999998688697815,
       "change": 0,
@@ -5548,7 +5548,7 @@
     },
     {
       "name": "HPMT",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.17499999701976776,
       "change": 0,
@@ -5569,7 +5569,7 @@
     },
     {
       "name": "MSTGOLF",
-      "sector": "Consumer",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.15000000596046448,
       "change": 0,
@@ -5590,7 +5590,7 @@
     },
     {
       "name": "XPB",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.14499999582767487,
       "change": 0,
@@ -5611,7 +5611,7 @@
     },
     {
       "name": "VOLCANO",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.28999999165534973,
       "change": 0.004999995231628418,
@@ -5632,7 +5632,7 @@
     },
     {
       "name": "HPPHB",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.30000001192092896,
       "change": 0,
@@ -5649,11 +5649,11 @@
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.30000001192092896,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "SBS",
-      "sector": "Consumer",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.125,
       "change": 0,
@@ -5674,7 +5674,7 @@
     },
     {
       "name": "MASTER TEC GROUP BERHAD",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.9850000143051147,
       "change": 0.014999985694885254,
@@ -5695,7 +5695,7 @@
     },
     {
       "name": "MTEC",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.9850000143051147,
       "change": 0.014999985694885254,
@@ -5737,7 +5737,7 @@
     },
     {
       "name": "TJSETIA",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.20000000298023224,
       "change": 0,
@@ -5758,7 +5758,7 @@
     },
     {
       "name": "VANZO",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.12999999523162842,
       "change": 0.009999997913837433,
@@ -5779,7 +5779,7 @@
     },
     {
       "name": "SPRING",
-      "sector": "Consumer",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.10000000149011612,
       "change": 0.005000002682209015,
@@ -5800,7 +5800,7 @@
     },
     {
       "name": "DENGKIL",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.125,
       "change": -0.004999995231628418,
@@ -5821,7 +5821,7 @@
     },
     {
       "name": "WAWASAN DENGKIL HOLDINGS",
-      "sector": "Construction",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.125,
       "change": -0.004999995231628418,
@@ -5842,7 +5842,7 @@
     },
     {
       "name": "AGX",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.41999998688697815,
       "change": 0.014999985694885254,
@@ -5863,7 +5863,7 @@
     },
     {
       "name": "OCEAN FRESH BERHAD",
-      "sector": "Consumer",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.125,
       "change": 0.005000002682209015,
@@ -5884,7 +5884,7 @@
     },
     {
       "name": "OFB",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.125,
       "change": 0.005000002682209015,
@@ -5926,7 +5926,7 @@
     },
     {
       "name": "ALPHA IVF GROUP",
-      "sector": "Healthcare",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.10000000149011612,
       "change": 0,
@@ -5947,7 +5947,7 @@
     },
     {
       "name": "L&PBHD",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.10000000149011612,
       "change": 0,
@@ -5989,7 +5989,7 @@
     },
     {
       "name": "FAMIERA",
-      "sector": "Consumer",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.22499999403953552,
       "change": 0.009999990463256836,
@@ -6010,7 +6010,7 @@
     },
     {
       "name": "EFRAME",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.27000001072883606,
       "change": 0.005000025033950806,
@@ -6031,7 +6031,7 @@
     },
     {
       "name": "A1AKK",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.15000000596046448,
       "change": 0,
@@ -6048,11 +6048,11 @@
       "touchCount": 7,
       "isConsolidation": false,
       "floorLow": 0.15000000596046448,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "GEOHAN",
-      "sector": "Construction",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.28999999165534973,
       "change": 0,
@@ -6073,7 +6073,7 @@
     },
     {
       "name": "PMW",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.25,
       "change": 0.004999995231628418,
@@ -6115,7 +6115,7 @@
     },
     {
       "name": "SBH",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.14499999582767487,
       "change": 0,
@@ -6136,7 +6136,7 @@
     },
     {
       "name": "AGRICOR",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.4050000011920929,
       "change": 0.030000001192092896,
@@ -6157,7 +6157,7 @@
     },
     {
       "name": "DPIH",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.10499999672174454,
       "change": 0,
@@ -6178,7 +6178,7 @@
     },
     {
       "name": "ANEKA",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.10999999940395355,
       "change": 0,
@@ -6220,7 +6220,7 @@
     },
     {
       "name": "CREST",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.46000000834465027,
       "change": 0,
@@ -6237,11 +6237,11 @@
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 0.46000000834465027,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "OBHB",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.20000000298023224,
       "change": 0,
@@ -6258,11 +6258,11 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.20000000298023224,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "KGW",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.10000000149011612,
       "change": 0,
@@ -6283,7 +6283,7 @@
     },
     {
       "name": "TCS",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.07999999821186066,
       "change": 0,
@@ -6304,7 +6304,7 @@
     },
     {
       "name": "DAY3",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.11999999731779099,
       "change": 0.015000000596046448,
@@ -6325,7 +6325,7 @@
     },
     {
       "name": "WTEC",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.10999999940395355,
       "change": -0.009999997913837433,
@@ -6346,7 +6346,7 @@
     },
     {
       "name": "SCB",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.009999999776482582,
       "change": 0,
@@ -6367,7 +6367,7 @@
     },
     {
       "name": "TASHIN",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.19499999284744263,
       "change": 0,
@@ -6384,11 +6384,11 @@
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 0.19499999284744263,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "ACO",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.1599999964237213,
       "change": 0,
@@ -6430,7 +6430,7 @@
     },
     {
       "name": "METRO",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Penny / Spekulatif",
       "price": 0.004999999888241291,
       "change": 0,
@@ -6447,7 +6447,7 @@
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.004999999888241291,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": true
     },
     {
       "name": "UMSINT",
@@ -6493,7 +6493,7 @@
     },
     {
       "name": "FPHB",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.33000001311302185,
       "change": 0,
@@ -6514,7 +6514,7 @@
     },
     {
       "name": "UNITRADE INDUSTRIES",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.23999999463558197,
       "change": 0,
@@ -6535,7 +6535,7 @@
     },
     {
       "name": "CEKD",
-      "sector": "Industrial",
+      "sector": "Bursa",
       "category": "Intraday / Momentum",
       "price": 0.29499998688697815,
       "change": 0,
