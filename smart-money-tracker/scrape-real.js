@@ -50,8 +50,101 @@ function parseTab($, tabSelector) {
     return stocks;
 }
 
+async function scrapeBursaMalaysia() {
+    console.log('\n🔄 Menggunakan fallback: Menarik data dari bursamalaysia.com via Puppeteer...');
+    const puppeteer = require('puppeteer-extra');
+    const StealthPlugin = require('puppeteer-extra-plugin-stealth');
+    try {
+        puppeteer.use(StealthPlugin());
+    } catch (e) {
+        // stealth plugin might already be registered
+    }
+    
+    let browser;
+    const stocks = [];
+    try {
+        browser = await puppeteer.launch({
+            headless: true,
+            executablePath: '/usr/bin/google-chrome',
+            args: ['--no-sandbox', '--disable-setuid-sandbox']
+        });
+        const page = await browser.newPage();
+        await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
+        
+        const modes = ['top_active', 'top_gainers', 'top_losers'];
+        for (const mode of modes) {
+            console.log(`   - Melawat Bursa Malaysia mode=${mode}...`);
+            await page.goto(`https://www.bursamalaysia.com/market_information/equities_prices?mode=${mode}`, {
+                waitUntil: 'networkidle2',
+                timeout: 60000
+            });
+            
+            await page.waitForSelector('table tbody tr', { timeout: 15000 }).catch(() => {});
+            
+            const scraped = await page.evaluate(() => {
+                const rows = document.querySelectorAll('table tbody tr');
+                let list = [];
+                rows.forEach(r => {
+                    const cols = r.querySelectorAll('td');
+                    if (cols.length >= 8) {
+                        const nameText = cols[1].innerText.trim();
+                        const code = cols[2].innerText.trim();
+                        const priceVal = parseFloat(cols[4].innerText.trim().replace(/,/g, ''));
+                        const changeVal = parseFloat(cols[6].innerText.trim().replace(/,/g, ''));
+                        const volumeVal = parseInt(cols[8].innerText.trim().replace(/,/g, ''), 10) * 100;
+                        
+                        if (nameText && !isNaN(priceVal) && !isNaN(volumeVal)) {
+                            list.push({
+                                nameText,
+                                code,
+                                price: priceVal,
+                                change: isNaN(changeVal) ? 0 : changeVal,
+                                volume: volumeVal
+                            });
+                        }
+                    }
+                });
+                return list;
+            });
+            
+            console.log(`     -> Dijumpai ${scraped.length} saham.`);
+            scraped.forEach(s => {
+                const cleanName = s.nameText.replace(/\s*\[S\]\s*$/, '').trim();
+                stocks.push({
+                    name: cleanName,
+                    price: s.price,
+                    change: s.change,
+                    volume: s.volume,
+                    code: s.code
+                });
+            });
+        }
+    } catch (err) {
+        console.error('❌ Gagal menarik data dari Bursa Malaysia:', err.message);
+    } finally {
+        if (browser) await browser.close();
+    }
+    return stocks;
+}
+
+async function pLimit(concurrency, items, fn) {
+    const results = [];
+    const executing = new Set();
+    for (const item of items) {
+        const p = Promise.resolve().then(() => fn(item));
+        results.push(p);
+        executing.add(p);
+        const clean = () => executing.delete(p);
+        p.then(clean, clean);
+        if (executing.size >= concurrency) {
+            await Promise.race(executing);
+        }
+    }
+    return Promise.all(results);
+}
+
 async function main() {
-    console.log('🚀 Jerung Bursa Scraper v3.1 (Sumber: i3investor)');
+    console.log('🚀 Jerung Bursa Scraper v3.1 (Sumber: i3investor / Fallback: Bursa Malaysia)');
     console.log('='.repeat(55));
     
     let allRawStocks = new Map();
@@ -74,77 +167,83 @@ async function main() {
         });
         
     } catch (e) {
-        console.error('❌ Gagal menarik data pasaran:', e.message);
-        process.exit(1);
+        console.warn('⚠️ Gagal menarik data pasaran dari i3investor:', e.message);
+        
+        // Fallback ke Bursa Malaysia via Puppeteer
+        const fallbackStocks = await scrapeBursaMalaysia();
+        if (fallbackStocks.length > 0) {
+            console.log(`✅ Berjaya menarik ${fallbackStocks.length} saham dari fallback Bursa Malaysia.`);
+            fallbackStocks.forEach(s => {
+                allRawStocks.set(s.name, s);
+            });
+        } else {
+            console.error('❌ Tiada data diperolehi dari i3investor dan fallback Bursa Malaysia. Menghentikan scraper.');
+            process.exit(1);
+        }
     }
     
     // ==========================================
     // CUSTOM VIP WATCHLIST (YAHOO FINANCE)
     // ==========================================
-    const customWatchlist = [
-        { symbol: '5357.KL', name: 'SKYECHIP', sector: 'Technology' },
-        { symbol: '0275.KL', name: 'OPPSTAR', sector: 'Technology' },
-        { symbol: '0453.KL', name: 'EIPOWER', sector: 'Industrial' },
-        { symbol: '0457.KL', name: 'PENTECH', sector: 'Industrial' },
-        { symbol: '0392.KL', name: 'KEEMING', sector: 'Consumer' },
-        { symbol: '0459.KL', name: 'SUM', sector: 'Technology' },
-        { symbol: '0396.KL', name: 'ADNEX', sector: 'Technology' },
-        { symbol: '0359.KL', name: 'HKB', sector: 'Technology' },
-        { symbol: '0391.KL', name: 'AMBEST', sector: 'Consumer' },
-        { symbol: '5555.KL', name: 'SUNMED', sector: 'Healthcare' },
-        { symbol: '0456.KL', name: 'MMCS', sector: 'Technology' },
-        { symbol: '4456.KL', name: 'DNEX', sector: 'Technology' },
-        { symbol: '0399.KL', name: 'AMS', sector: 'Industrial' },
-        { symbol: '0321.KL', name: 'SDCG', sector: 'Utilities' },
-        { symbol: '0325.KL', name: 'NE', sector: 'Technology' },
-        { symbol: '0390.KL', name: 'ISF', sector: 'Consumer' },
-        { symbol: '0395.KL', name: 'OGX', sector: 'Industrial' },
-        { symbol: '0245.KL', name: 'MNHLDG', sector: 'Technology' },
-        { symbol: '5328.KL', name: 'LWSABAH', sector: 'Utilities' },
-        { symbol: '0339.KL', name: 'CBHB', sector: 'Property' },
-        { symbol: '0376.KL', name: 'IAB', sector: 'Consumer' },
-        { symbol: '0246.KL', name: 'CNERGEN', sector: 'Technology' },
-        { symbol: '0458.KL', name: 'ELSA', sector: 'Technology' },
-        { symbol: '9822.KL', name: 'SAM', sector: 'Industrial' },
-        { symbol: '5330.KL', name: 'TMK', sector: 'Industrial' },
-        { symbol: '0128.KL', name: 'ZETRIX', sector: 'Technology' },
-        { symbol: '0270.KL', name: 'NATGATE', sector: 'Technology' },
-        { symbol: '7191.KL', name: 'GIIB', sector: 'Industrial' }
-    ];
-
-    console.log('\n🔍 Menarik data Custom VIP Watchlist dari Yahoo Finance...');
-    for (const s of customWatchlist) {
+    const mappings = JSON.parse(fs.readFileSync(path.join(__dirname, 'symbol_mappings.json'), 'utf8'));
+    
+    // Load sectors from IPO data if available
+    const ipoDataPath = '/home/awi/Desktop/ipohunterv2/data.json';
+    const ipoSectors = {};
+    if (fs.existsSync(ipoDataPath)) {
         try {
-            const res = await axios.get(`https://query1.finance.yahoo.com/v8/finance/chart/${s.symbol}?interval=1d&range=1d`, { headers: HEADERS });
-            const meta = res.data.chart.result[0].meta;
-            const price = meta.regularMarketPrice;
-            const prev = meta.chartPreviousClose;
-            const change = price - prev;
-            const volume = meta.regularMarketVolume || 0;
-            
-            const code = s.symbol.split('.')[0];
-            
-            // Hanya tambah jika belum wujud dari i3investor
-            if (!allRawStocks.has(s.name)) {
-                allRawStocks.set(s.name, {
-                    name: s.name,
-                    price: price,
-                    change: change,
-                    volume: volume,
-                    isVip: true,
-                    sector: s.sector,
-                    code: code
-                });
-                console.log(`   + Tambah ${s.name} (VIP) ke dalam radar (RM ${price.toFixed(3)}).`);
-            } else {
-                const existing = allRawStocks.get(s.name);
-                existing.isVip = true;
-                existing.sector = s.sector;
-                existing.code = code;
-                console.log(`   ~ ${s.name} (VIP) sudah pun berada dalam senarai i3investor.`);
-            }
+            const ipos = JSON.parse(fs.readFileSync(ipoDataPath, 'utf8'));
+            ipos.forEach(ipo => {
+                const sym = ipo.symbol ? ipo.symbol.toUpperCase().trim() : '';
+                const name = ipo.companyName ? ipo.companyName.toUpperCase().trim() : '';
+                const sec = ipo.sector ? ipo.sector.split(' ')[0] : 'IPO';
+                if (sym) ipoSectors[sym] = sec;
+                if (name) ipoSectors[name] = sec;
+            });
         } catch (e) {
-            console.log(`   - Gagal mengambil data untuk ${s.name} (${s.symbol})`);
+            // Ignore
+        }
+    }
+    
+    // Pre-defined sectors from hardcoded list
+    const predefinedSectors = {
+        'SKYECHIP': 'Technology', 'OPPSTAR': 'Technology', 'EIPOWER': 'Industrial',
+        'PENTECH': 'Industrial', 'KEEMING': 'Consumer', 'SUM': 'Technology',
+        'ADNEX': 'Technology', 'HKB': 'Technology', 'AMBEST': 'Consumer',
+        'SUNMED': 'Healthcare', 'MMCS': 'Technology', 'DNEX': 'Technology',
+        'AMS': 'Industrial', 'SDCG': 'Utilities', 'NE': 'Technology',
+        'ISF': 'Consumer', 'OGX': 'Industrial', 'MNHLDG': 'Technology',
+        'LWSABAH': 'Utilities', 'CBHB': 'Property', 'IAB': 'Consumer',
+        'CNERGEN': 'Technology', 'ELSA': 'Technology', 'SAM': 'Industrial',
+        'TMK': 'Industrial', 'ZETRIX': 'Technology', 'NATGATE': 'Technology',
+        'GIIB': 'Industrial', 'MCLEAN': 'Industrial'
+    };
+    
+    const customWatchlist = Object.entries(mappings).map(([name, symbol]) => {
+        let sector = predefinedSectors[name] || ipoSectors[name] || 'Bursa';
+        if (sector.includes('(')) sector = sector.split('(')[0].trim();
+        const code = symbol.split('.')[0];
+        return { symbol, name, sector, code };
+    });
+
+    console.log('\n🔍 Mendaftarkan Custom VIP Watchlist dari symbol_mappings.json...');
+    for (const s of customWatchlist) {
+        // Hanya tambah jika belum wujud dari i3investor / Bursa Malaysia
+        if (!allRawStocks.has(s.name)) {
+            allRawStocks.set(s.name, {
+                name: s.name,
+                price: 0,
+                change: 0,
+                volume: 0,
+                isVip: true,
+                sector: s.sector,
+                code: s.code
+            });
+        } else {
+            const existing = allRawStocks.get(s.name);
+            existing.isVip = true;
+            existing.sector = s.sector;
+            existing.code = s.code;
         }
     }
 
@@ -156,24 +255,27 @@ async function main() {
     for (const [name, stock] of allRawStocks.entries()) {
         if (name.includes('-')) continue; // Skip warrants
         const turnover = stock.price * stock.volume;
-        if (turnover >= 250000 || stock.isVip) {
+        if (stock.isVip || turnover >= 250000) {
             candidates.push(stock);
         }
     }
 
-    const yahooPromises = candidates.map(async (stock) => {
+    console.log(`⏳ Memulakan imbasan ke atas ${candidates.length} kaunter calon secara selari (concurrency: 10)...`);
+    
+    await pLimit(10, candidates, async (stock) => {
         if (!stock.code) return;
         const symbol = `${stock.code}.KL`;
         try {
             const yRes = await axios.get(`https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?interval=1d&range=1y`, { headers: HEADERS });
             if (yRes.data && yRes.data.chart && yRes.data.chart.result && yRes.data.chart.result[0]) {
                  const result = yRes.data.chart.result[0];
-                 const timestamp = result.timestamp;
+                 const timestamp = result.timestamp || [];
                  const quote = result.indicators.quote[0];
-                 const close = quote.close;
-                 const low = quote.low;
-                 const high = quote.high;
+                 const close = quote.close || [];
+                 const low = quote.low || [];
+                 const high = quote.high || [];
                  const open = quote.open || [];
+                 const volumeArr = quote.volume || [];
                  
                  const validDays = [];
                  for (let i = 0; i < timestamp.length; i++) {
@@ -185,7 +287,8 @@ async function main() {
                              open: open[i],
                              close: close[i],
                              low: low[i],
-                             high: high[i]
+                             high: high[i],
+                             volume: volumeArr[i] || 0
                          });
                      }
                  }
@@ -196,20 +299,31 @@ async function main() {
                         if (d.high > high52) high52 = d.high;
                     });
                     stock.high52 = high52;
+                    
                     const lastDays = validDays.slice(-4);
                     const lastDay = lastDays[lastDays.length - 1];
+                    const prevDay = lastDays[lastDays.length - 2];
                     const currentPrice = lastDay.close;
+                    const prevClose = prevDay ? prevDay.close : result.meta.chartPreviousClose || currentPrice;
+                    
+                    // Kemas kini data harga semasa
+                    stock.price = currentPrice;
+                    stock.change = currentPrice - prevClose;
+                    stock.volume = lastDay.volume || result.meta.regularMarketVolume || 0;
                     
                     const closes = lastDays.map(d => d.close);
                     const maxClose = Math.max(...closes);
                     const minClose = Math.min(...closes);
                     const closeTightness = ((maxClose - minClose) / minClose) * 100;
                     
-                    const lows = lastDays.map(d => d.low);
-                    // Tapisan wick harian: Abaikan low yang > 5% di bawah minClose untuk elak outlier
-                    const validLows = lows.filter(l => l >= minClose * 0.95);
-                    const minLow = validLows.length > 0 ? Math.min(...validLows) : Math.min(...lows);
-                    const maxLow = Math.max(...lows);
+                    // --- DAILY FLOOR & TOUCHCOUNT LOGIC (TradingView 1D CS Match) ---
+                    // Lookback 10 daily candles to find the local daily support floor and count touches
+                    const lookbackDays = Math.min(10, validDays.length);
+                    const dailyLookback = validDays.slice(-lookbackDays);
+                    const dailyLows = dailyLookback.map(d => d.low);
+                    
+                    const minLow = Math.min(...dailyLows);
+                    const maxLow = Math.max(...dailyLows);
                     const lowTightness = ((maxLow - minLow) / minLow) * 100;
 
                     // Hitung Lower Wick Rejection harian (Ekor di bawah)
@@ -229,9 +343,9 @@ async function main() {
                     stock.hasLowerWickRejection = hasLowerWickRejection;
                     
                     let touchCount = 0;
-                    lastDays.forEach(d => {
+                    dailyLookback.forEach(d => {
                         const diffPct = ((d.low - minLow) / minLow) * 100;
-                        if (diffPct <= 2.0) {
+                        if (diffPct <= 2.0) { // within 2% of the daily floor
                             touchCount++;
                         }
                     });
@@ -249,71 +363,8 @@ async function main() {
                     stock.floorLow = minLow;
                     
                     const pullback = ((high52 - currentPrice) / high52) * 100;
-                    let isConsolidation = (pullback <= 15.0 && closeTightness <= 5.5 && (lowTightness <= 4.0 || touchCount >= 2));
-                    
-                    if (pullback <= 30.0) {
-                        try {
-                            const intraRes = await axios.get(`https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?interval=30m&range=3d`, { headers: HEADERS });
-                            if (intraRes.data && intraRes.data.chart && intraRes.data.chart.result && intraRes.data.chart.result[0]) {
-                                const intraResult = intraRes.data.chart.result[0];
-                                const intraQuote = intraResult.indicators.quote[0];
-                                const iClose = intraQuote.close || [];
-                                const iLow = intraQuote.low || [];
-                                
-                                const validCandles = [];
-                                for (let j = 0; j < iClose.length; j++) {
-                                    if (iClose[j] !== null && iClose[j] !== undefined && iLow[j] !== null && iLow[j] !== undefined) {
-                                        validCandles.push({ close: iClose[j], low: iLow[j] });
-                                    }
-                                }
-                                
-                                if (validCandles.length >= 12) {
-                                    const sampleCandles = validCandles.slice(-24);
-                                    const sampleCloses = sampleCandles.map(c => c.close);
-                                    const sampleLows = sampleCandles.map(c => c.low);
-                                    
-                                    const currentPriceIntra = sampleCloses[sampleCloses.length - 1];
-                                    const minAllowedLow = currentPriceIntra * 0.94;
-                                    const filteredLows = sampleLows.filter(l => l >= minAllowedLow);
-                                    
-                                    if (filteredLows.length >= 5) {
-                                        const recentLows = filteredLows.slice(-10);
-                                        const floorLow = Math.min(...recentLows);
-                                        
-                                        let intraTouches = 0;
-                                        sampleLows.forEach(l => {
-                                            const diff = ((l - floorLow) / floorLow) * 100;
-                                            if (Math.abs(diff) <= 2.5) {
-                                                intraTouches++;
-                                            }
-                                        });
-                                        
-                                        const last12Closes = sampleCloses.slice(-12);
-                                        const maxIntraClose = Math.max(...last12Closes);
-                                        const minIntraClose = Math.min(...last12Closes);
-                                        const intraCloseTightness = ((maxIntraClose - minIntraClose) / minIntraClose) * 100;
-                                        
-                                        // Sentiasa kemas kini floorLow dan touchCount berasaskan intraday 3 hari
-                                        // (selepas menolak wicks ekor melampau bawah 6%)
-                                        stock.floorLow = floorLow;
-                                        stock.touchCount = intraTouches;
-                                        
-                                        // Guardrail: Jangan benarkan overwrite jika daily tightness terlalu longgar (saham sedang bocor/runtuh/volatile)
-                                        const isDailyTooVolatile = closeTightness > 6.0 || lowTightness > 5.0;
-                                        
-                                        if (intraCloseTightness <= 3.8 && intraTouches >= 4 && !isDailyTooVolatile) {
-                                            isConsolidation = true;
-                                            stock.closeTightness = parseFloat(intraCloseTightness.toFixed(2));
-                                            stock.isIntradayValidated = true;
-                                        }
-                                    }
-                                }
-                            }
-                        } catch (err) {
-                            // Silently ignore or log error
-                        }
-                    }
-                    
+                    // Consolidation: pullback <= 15%, short-term close tightness <= 5.5%, and must have touchCount >= 3 (retest 3 times or more on daily chart)
+                    let isConsolidation = (pullback <= 15.0 && closeTightness <= 5.5 && touchCount >= 3);
                     stock.isConsolidation = isConsolidation;
                 }
             }
@@ -321,8 +372,6 @@ async function main() {
             console.log(`   - Gagal fetch data sejarah Yahoo untuk ${stock.name} (${symbol}): ${e.message}`);
         }
     });
-
-    await Promise.all(yahooPromises);
 
     // ==========================================
     // ANALISIS FORMULA SMART MONEY

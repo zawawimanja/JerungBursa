@@ -665,24 +665,49 @@
         </div>
     </div>
 
-    <div class="tabs-nav">
-        <button class="tab-btn active" onclick="switchTab('core-tab')">🏆 11 Saham Tumpuan Utama</button>
-        <button class="tab-btn" onclick="switchTab('general-tab')">🌐 Scanner Pasaran Luas</button>
-    </div>
-
-    <!-- TAB 1: CORE FOCUS TICKERS -->
-    <div id="core-tab" class="tab-content active">
+    <!-- MAIN SCANNER DISPLAY -->
+    <div style="margin-top: 1.5rem;">
         
-        <!-- Bar Tambah Ticker -->
-        <div style="background: var(--panel-bg); border: 1px solid var(--panel-border); padding: 1rem; border-radius: 12px; margin-bottom: 1.5rem; display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
-            <span style="font-weight: 700; font-size: 0.9rem; color: #a5b4fc;">➕ Tambah Saham Fokus:</span>
-            <input type="text" id="newFocusTicker" placeholder="Contoh: DNEX" style="text-transform: uppercase; background: #0b0f19; border: 1px solid var(--panel-border); color: white; padding: 0.4rem 0.8rem; border-radius: 6px; width: 140px; font-weight: 700;">
-            <button onclick="addFocusTicker()" class="btn" style="padding: 0.4rem 1rem;">Tambah</button>
-            <button onclick="resetFocusWatchlist()" class="btn" style="padding: 0.4rem 1rem; background: #475569;">Reset Default</button>
-            <span style="font-size: 0.8rem; color: var(--text-muted); margin-left: auto;">*Nota: Pastikan kaunter telah didaftarkan dalam scraper.</span>
+        <div class="filters-panel">
+            <div class="filter-item">
+                <label>Cari Kaunter</label>
+                <input type="text" id="searchCounter" placeholder="Nama kaunter..." oninput="applyFilters()">
+            </div>
+            <div class="filter-item">
+                <label>Harga Min (RM)</label>
+                <input type="number" id="minPrice" value="0.05" step="0.05" style="width: 100px;" oninput="applyFilters()">
+            </div>
+            <div class="filter-item">
+                <label>Harga Max (RM)</label>
+                <input type="number" id="maxPrice" value="3.00" step="0.05" style="width: 100px;" oninput="applyFilters()">
+            </div>
+            <div class="filter-item">
+                <label>Turnover Minimum</label>
+                <select id="minTurnover" onchange="applyFilters()">
+                    <option value="250000" selected>RM 250k</option>
+                    <option value="1000000">1 Juta</option>
+                    <option value="3000000">3 Juta</option>
+                    <option value="10000000">10 Juta</option>
+                </select>
+            </div>
+            <div class="filter-item">
+                <label>Trend Harga</label>
+                <select id="trendFilter" onchange="applyFilters()">
+                    <option value="all" selected>Semua (Hijau & Merah)</option>
+                    <option value="up">Uptrend (Hijau Sahaja)</option>
+                </select>
+            </div>
+            <div class="filter-item">
+                <label>Consolidation Tapak</label>
+                <select id="consolidationFilter" onchange="applyFilters()">
+                    <option value="all" selected>Semua</option>
+                    <option value="tight">🔒 Tapak Tegar Sahaja</option>
+                    <option value="golden_ogx">👑 Setup Emas (Ala-OGX)</option>
+                </select>
+            </div>
+            <button class="btn" style="margin-left: auto;" onclick="applyFilters()">Tapis Sekarang</button>
         </div>
 
-        <!-- Jadual Widescreen Saham Tumpuan -->
         <div class="table-wrapper">
             <table>
                 <thead>
@@ -691,8 +716,8 @@
                         <th>Kaunter</th>
                         <th>Harga Closed</th>
                         <th>% Perubahan</th>
-                        <th style="cursor: pointer;" onclick="setCoreSort('floorLow')" title="Klik untuk susun">Lantai Sokongan (Floor) ↕</th>
-                        <th style="cursor: pointer;" onclick="setCoreSort('distToFloor')" title="Klik untuk susun">Jarak Ke Lantai ↕</th>
+                        <th style="cursor: pointer;" onclick="setSort('floorLow')" title="Klik untuk susun">Lantai Sokongan (Floor) ↕</th>
+                        <th style="cursor: pointer;" onclick="setSort('distToFloor')" title="Klik untuk susun">Jarak Ke Lantai ↕</th>
                         <th>Zon Belian</th>
                         <th>Stop Loss (SL)</th>
                         <th>Target TP1 (+10%)</th>
@@ -700,8 +725,8 @@
                         <th style="width: 60px; text-align: center;">Padam</th>
                     </tr>
                 </thead>
-                <tbody id="coreTableBody">
-                    <!-- Dynamic Table Rows populated here -->
+                <tbody id="tableBody">
+                    <!-- Populated dynamically -->
                 </tbody>
             </table>
         </div>
@@ -792,132 +817,16 @@
 
     </div>
 
-    <!-- TAB 2: GENERAL BROAD MARKET SCANNER -->
-    <div id="general-tab" class="tab-content">
-        
-        <div class="filters-panel">
-            <div class="filter-item">
-                <label>Cari Kaunter</label>
-                <input type="text" id="searchCounter" placeholder="Nama kaunter..." oninput="applyFilters()">
-            </div>
-            <div class="filter-item">
-                <label>Harga Min (RM)</label>
-                <input type="number" id="minPrice" value="0.05" step="0.05" style="width: 100px;" oninput="applyFilters()">
-            </div>
-            <div class="filter-item">
-                <label>Harga Max (RM)</label>
-                <input type="number" id="maxPrice" value="3.00" step="0.05" style="width: 100px;" oninput="applyFilters()">
-            </div>
-            <div class="filter-item">
-                <label>Turnover Minimum</label>
-                <select id="minTurnover" onchange="applyFilters()">
-                    <option value="250000" selected>RM 250k</option>
-                    <option value="1000000">1 Juta</option>
-                    <option value="3000000">3 Juta</option>
-                    <option value="10000000">10 Juta</option>
-                </select>
-            </div>
-            <div class="filter-item">
-                <label>Trend Harga</label>
-                <select id="trendFilter" onchange="applyFilters()">
-                    <option value="all" selected>Semua (Hijau & Merah)</option>
-                    <option value="up">Uptrend (Hijau Sahaja)</option>
-                </select>
-            </div>
-            <div class="filter-item">
-                <label>Consolidation Tapak</label>
-                <select id="consolidationFilter" onchange="applyFilters()">
-                    <option value="all" selected>Semua</option>
-                    <option value="tight">🔒 Tapak Tegar Sahaja</option>
-                    <option value="golden_ogx">👑 Setup Emas (Ala-OGX)</option>
-                </select>
-            </div>
-            <button class="btn" style="margin-left: auto;" onclick="applyFilters()">Tapis Sekarang</button>
-        </div>
-
-        <div class="table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th style="width: 50px;">No.</th>
-                        <th>Kaunter</th>
-                        <th>Harga Closed</th>
-                        <th>% Perubahan</th>
-                        <th style="cursor: pointer;" onclick="setSort('floorLow')" title="Klik untuk susun">Lantai Sokongan (Floor) ↕</th>
-                        <th style="cursor: pointer;" onclick="setSort('distToFloor')" title="Klik untuk susun">Jarak Ke Lantai ↕</th>
-                        <th>Zon Belian</th>
-                        <th>Stop Loss (SL)</th>
-                        <th>Target TP1 (+10%)</th>
-                        <th>Target TP2 (+20%)</th>
-                        <th style="width: 60px; text-align: center;">Padam</th>
-                    </tr>
-                </thead>
-                <tbody id="tableBody">
-                    <!-- Populated dynamically -->
-                </tbody>
-            </table>
-        </div>
-
-    </div>
-
 
     <script>
         // Global variables
         let currentData = [];
-        let defaultTickers = ['PENTECH', 'SDCG', 'NE', 'HKB', 'EIPOWER', 'MNHLDG', 'OGX', 'AMS', 'ISF', 'DNEX', 'AMBEST'];
-        let coreTickers = JSON.parse(localStorage.getItem('coreTickers')) || defaultTickers;
         let currentSortColumn = 'turnover';
         let currentSortDesc = true;
-        let coreSortColumn = 'distToFloor';
-        let coreSortDesc = false;
-
-        // Switch Tabs
-        function switchTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(tab => {
-                tab.classList.remove('active');
-            });
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-
-            document.getElementById(tabId).classList.add('active');
-            event.currentTarget.classList.add('active');
-        }
-
-        // Manage Focus Watchlist
-        function addFocusTicker() {
-            const input = document.getElementById('newFocusTicker');
-            const ticker = input.value.trim().toUpperCase();
-            if (!ticker) return;
-            if (coreTickers.includes(ticker)) {
-                alert('Kaunter ini sudah ada dalam senarai!');
-                return;
-            }
-            coreTickers.push(ticker);
-            localStorage.setItem('coreTickers', JSON.stringify(coreTickers));
-            input.value = '';
-            applyFilters();
-        }
-
-        function removeFocusTicker(ticker) {
-            if (confirm(`Adakah anda pasti mahu mengeluarkan ${ticker} dari Tumpuan Utama?`)) {
-                coreTickers = coreTickers.filter(t => t !== ticker);
-                localStorage.setItem('coreTickers', JSON.stringify(coreTickers));
-                applyFilters();
-            }
-        }
 
         function removeGeneralTicker(ticker) {
             currentData = currentData.filter(t => t.name !== ticker);
             applyFilters();
-        }
-
-        function resetFocusWatchlist() {
-            if (confirm('Adakah anda mahu set semula senarai kepada 11 kaunter default?')) {
-                coreTickers = [...defaultTickers];
-                localStorage.setItem('coreTickers', JSON.stringify(coreTickers));
-                applyFilters();
-            }
         }
 
         // Format Big Numbers
@@ -967,9 +876,6 @@
 
         // Apply filters and render UI elements
         function applyFilters() {
-            // Render Tab 1 (Core Focus Cards)
-            renderCoreCards();
-
             // Render Golden Zone Cards
             renderGoldenZone();
 
@@ -1015,8 +921,8 @@
                     
                     const matchesOgx = item.isConsolidation && 
                                        item.signal === 'buy' && 
-                                       item.touchCount >= 10 && 
-                                       dist <= 1.5 && 
+                                       item.touchCount >= 3 && 
+                                       dist <= 3.0 && 
                                        !isDowntrend &&
                                        item.hasLowerWickRejection;
                     if (!matchesOgx) return false;
@@ -1053,6 +959,7 @@
             });
 
             renderGeneralTable(generalFiltered);
+            populateCalculatorDropdown(generalFiltered);
             updateSentiment(currentData);
         }
 
@@ -1076,13 +983,13 @@
                     item.setupName === 'N/A'
                 );
                 
-                // Kriteria Emas Mutlak (Ala-OGX): Wajib Consolidation + Wajib BUY + Rapat Lantai (≤ 1.5%) + Sentuhan Kuat (≥ 10x) + Bukan Downtrend + Bawah RM3.00 + Wajib Ekor Rejection Harian
+                // Kriteria Emas Mutlak (Ala-OGX): Wajib Consolidation + Wajib BUY + Rapat Lantai (≤ 3.0%) + Sentuhan Kuat (≥ 3x Daily) + Bukan Downtrend + Bawah RM3.00 + Wajib Ekor Rejection Harian
                 return item.isConsolidation && 
                        item.signal === 'buy' && 
                        !isDowntrend && 
                        item.price <= 3.00 && 
-                       item.touchCount >= 10 && 
-                       dist <= 1.5 && 
+                       item.touchCount >= 3 && 
+                       dist <= 3.0 && 
                        item.hasLowerWickRejection;
             });
             
@@ -1091,7 +998,7 @@
                     <div style="grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; background: rgba(15, 23, 42, 0.4); border: 1px dashed var(--panel-border); border-radius: 12px; text-align: center; color: var(--text-muted);">
                         <span style="font-size: 1.5rem; margin-bottom: 0.5rem;">⏳</span>
                         <div style="font-size: 0.85rem; font-weight: 600;">Tiada Setup Gabungan Emas Aktif</div>
-                        <div style="font-size: 0.75rem; margin-top: 0.2rem;">Menunggu pasaran membuat pullback sihat ke lantai sokongan yang kukuh (≥10x sentuhan).</div>
+                        <div style="font-size: 0.75rem; margin-top: 0.2rem;">Menunggu pasaran membuat pullback sihat ke lantai sokongan yang kukuh (≥3x sentuhan harian).</div>
                     </div>
                 `;
                 return;
@@ -1191,13 +1098,13 @@
                     item.setupName === 'N/A'
                 );
                 
-                // Kriteria Emas Mutlak (Ala-OGX): Wajib Consolidation + Wajib BUY + Rapat Lantai (≤ 1.5%) + Sentuhan Kuat (≥ 10x) + Bukan Downtrend + Bawah RM3.00 + Wajib Ekor Rejection Harian
+                // Kriteria Emas Mutlak (Ala-OGX): Wajib Consolidation + Wajib BUY + Rapat Lantai (≤ 3.0%) + Sentuhan Kuat (≥ 3x Daily) + Bukan Downtrend + Bawah RM3.00 + Wajib Ekor Rejection Harian
                 return item.isConsolidation && 
                        item.signal === 'buy' && 
                        !isDowntrend && 
                        item.price <= 3.00 && 
-                       item.touchCount >= 10 && 
-                       dist <= 1.5 && 
+                       item.touchCount >= 3 && 
+                       dist <= 3.0 && 
                        item.hasLowerWickRejection;
             });
             
@@ -1244,117 +1151,35 @@
             });
         }
 
-        // Render Core Ticker Table
-        function renderCoreCards() {
-            const container = document.getElementById('coreTableBody');
+        // Populate Calculator Dropdown with all matched scanner tickers
+        function populateCalculatorDropdown(data) {
             const selectEl = document.getElementById('calcTicker');
-            
-            // Filter only the core focus tickers that are available in currentData
-            const coreData = currentData.filter(c => coreTickers.includes(c.name));
-            
-            // Sort core tickers
-            coreData.sort((a, b) => {
-                let valA, valB;
-                if (coreSortColumn === 'floorLow') {
-                    valA = a.touchCount || 0;
-                    valB = b.touchCount || 0;
-                } else { // default distToFloor
-                    const floorA = a.floorLow || (a.price * 0.97);
-                    const floorB = b.floorLow || (b.price * 0.97);
-                    valA = ((a.price - floorA) / floorA) * 100;
-                    valB = ((b.price - floorB) / floorB) * 100;
-                    
-                    // Secondary sort: jika jarak sama, susun mengikut touchCount terbanyak
-                    if (Math.abs(valA - valB) < 0.001) {
-                        return coreSortDesc ? (a.touchCount - b.touchCount) : (b.touchCount - a.touchCount);
-                    }
-                }
-                return coreSortDesc ? valB - valA : valA - valB;
-            });
-
-            // Keep track of previously selected ticker in calculator
+            if (!selectEl) return;
             const selectedVal = selectEl.value;
             selectEl.innerHTML = '';
 
-            let rowsHtml = '';
-            if (coreData.length === 0) {
-                rowsHtml = '<tr><td colspan="11" style="color: var(--text-muted); padding: 2rem; text-align: center;">Tiada data untuk saham tumpuan dalam live_data.json. Tambah saham fokus di atas atau jalankan bot scraper anda.</td></tr>';
-            } else {
-                coreData.forEach((item, index) => {
-                    const pct = item.changePct !== undefined ? item.changePct : item.change;
-                    const changeClass = pct >= 0 ? 'up' : 'down';
-                    const changeSign = pct > 0 ? '+' : '';
-                    
-                    // Support floor calculation: use scraped floorLow, fallback to 3% below price if none
-                    const floorPrice = item.floorLow || (item.price * 0.97);
-                    
-                    // Distance to support floor
-                    const distToFloor = ((item.price - floorPrice) / floorPrice) * 100;
-                    
-                    // Zone calculation
-                    let zoneText = '⏳ Pullback';
-                    let zoneClass = 'zone-pending';
-                    
-                    if (distToFloor <= 2.5) {
-                        zoneText = '🔥 BUY ZONE';
-                        zoneClass = 'zone-buy';
-                    } else if (distToFloor > 6.0) {
-                        zoneText = '🚀 Breakout';
-                        zoneClass = 'zone-chase';
-                    }
-
-                    // Stop Loss & Targets
-                    const stopLoss = floorPrice * 0.97; // 3% below floor
-                    const maxRiskPct = ((item.price - stopLoss) / item.price) * 100;
-                    const tp1 = item.price * 1.10;
-                    const tp2 = item.price * 1.20;
-
-                    rowsHtml += `
-                    <tr>
-                        <td style="font-weight: bold; color: var(--text-muted);">${index + 1}</td>
-                        <td>
-                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=30" target="_blank" class="tv-link">${item.name} 🔗</a>
-                            <div style="font-size: 0.75rem; color: var(--text-muted);">${item.sector || 'VIP Focus'}</div>
-                            ${item.reason ? `<div style="font-size: 0.7rem; color: ${item.signal === 'avoid' ? 'var(--danger)' : '#f59e0b'}; margin-top: 0.15rem; font-weight: 500;">${item.reason}</div>` : ''}
-                        </td>
-                        <td style="font-weight: 700; color: white;">RM ${item.price.toFixed(3)}</td>
-                        <td class="${changeClass}" style="font-weight: 700;">${changeSign}${pct.toFixed(2)}%</td>
-                        <td>
-                            <span style="font-weight: 700; color: #60a5fa;">RM ${floorPrice.toFixed(3)}</span>
-                            <div style="font-size: 0.75rem; color: var(--text-muted);">${item.touchCount || 0}x Tapak</div>
-                        </td>
-                        <td>
-                            <span style="font-weight: 700; color: ${distToFloor <= 2.5 ? 'var(--success)' : 'white'};">+${distToFloor.toFixed(2)}%</span>
-                        </td>
-                        <td>
-                            <span class="zone-badge ${zoneClass}" style="font-size: 0.75rem; padding: 0.2rem 0.6rem;">${zoneText}</span>
-                        </td>
-                        <td class="danger" style="font-weight: 700;">
-                            RM ${stopLoss.toFixed(3)}
-                            <div style="font-size: 0.75rem; color: var(--danger); font-weight: normal;">-${maxRiskPct.toFixed(1)}%</div>
-                        </td>
-                        <td class="success" style="font-weight: 700; color: var(--success);">RM ${tp1.toFixed(3)}</td>
-                        <td style="font-weight: 700; color: #c084fc;">RM ${tp2.toFixed(3)}</td>
-                        <td style="text-align: center;">
-                            <button onclick="removeFocusTicker('${item.name}')" style="background: rgba(239, 68, 68, 0.15); border: none; color: var(--danger); font-weight: 900; padding: 0.2rem 0.5rem; border-radius: 4px; cursor: pointer; transition: all 0.2s;" title="Padam dari Tumpuan Utama">×</button>
-                        </td>
-                    </tr>`;
-
-                    // Populate calculator dropdown
-                    const option = document.createElement('option');
-                    option.value = item.name;
-                    option.textContent = `${item.name} (RM ${item.price.toFixed(3)})`;
-                    selectEl.appendChild(option);
-                });
+            if (data.length === 0) {
+                const option = document.createElement('option');
+                option.textContent = '-- Tiada Kaunter --';
+                selectEl.appendChild(option);
+                return;
             }
 
-            container.innerHTML = rowsHtml;
+            // Sort alphabetically for easy selection
+            const sortedData = [...data].sort((a, b) => a.name.localeCompare(b.name));
 
-            // Restore calculator selection if valid, else select first item
-            if (selectedVal && coreData.some(c => c.name === selectedVal)) {
+            sortedData.forEach(item => {
+                const option = document.createElement('option');
+                option.value = item.name;
+                option.textContent = `${item.name} (RM ${item.price.toFixed(3)})`;
+                selectEl.appendChild(option);
+            });
+
+            // Restore selection if still in data list, else default to first
+            if (selectedVal && sortedData.some(c => c.name === selectedVal)) {
                 selectEl.value = selectedVal;
-            } else if (coreData.length > 0) {
-                selectEl.value = coreData[0].name;
+            } else {
+                selectEl.value = sortedData[0].name;
             }
 
             calculatePlan();
@@ -1494,16 +1319,6 @@
             } else {
                 currentSortColumn = col;
                 currentSortDesc = col === 'distToFloor' ? false : true;
-            }
-            applyFilters();
-        }
-
-        function setCoreSort(col) {
-            if (coreSortColumn === col) {
-                coreSortDesc = !coreSortDesc;
-            } else {
-                coreSortColumn = col;
-                coreSortDesc = col === 'floorLow' ? true : false;
             }
             applyFilters();
         }

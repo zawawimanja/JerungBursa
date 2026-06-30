@@ -86,8 +86,7 @@ async function recalculateArchive(dateStr) {
                 if (d.high > high52) high52 = d.high;
             });
             item.high52 = high52;
-            
-            // Kira daily fallback floor dengan wick filter
+                 // Kira daily floor dengan 10-day lookback (TradingView 1D CS Match)
             const lastDays = validDays.slice(-4);
             const lastDay = lastDays[lastDays.length - 1];
             const currentPrice = lastDay.close;
@@ -97,11 +96,12 @@ async function recalculateArchive(dateStr) {
             const minClose = Math.min(...closes);
             const closeTightness = ((maxClose - minClose) / minClose) * 100;
             
-            const lows = lastDays.map(d => d.low);
-            const validLows = lows.filter(l => l >= minClose * 0.95);
-            const minLow = validLows.length > 0 ? Math.min(...validLows) : Math.min(...lows);
+            const lookbackDays = Math.min(10, validDays.length);
+            const dailyLookback = validDays.slice(-lookbackDays);
+            const dailyLows = dailyLookback.map(d => d.low);
             
-            const maxLow = Math.max(...lows);
+            const minLow = Math.min(...dailyLows);
+            const maxLow = Math.max(...dailyLows);
             const lowTightness = ((maxLow - minLow) / minLow) * 100;
 
             // Hitung Lower Wick Rejection harian (Ekor di bawah)
@@ -119,9 +119,9 @@ async function recalculateArchive(dateStr) {
             )) || isDojiConsolidation;
             
             let touchCount = 0;
-            lastDays.forEach(d => {
+            dailyLookback.forEach(d => {
                 const diffPct = ((d.low - minLow) / minLow) * 100;
-                if (diffPct <= 2.0) {
+                if (diffPct <= 2.0) { // within 2% of the daily floor
                     touchCount++;
                 }
             });
@@ -132,73 +132,7 @@ async function recalculateArchive(dateStr) {
             item.floorLow = minLow;
             
             const pullback = ((high52 - currentPrice) / high52) * 100;
-            let isConsolidation = (pullback <= 15.0 && closeTightness <= 5.5 && (lowTightness <= 4.0 || touchCount >= 2));
-            
-            // 2. Fetch intraday 30m data
-            if (pullback <= 30.0) {
-                try {
-                    const intraRes = await axios.get(`https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?interval=30m&range=5d`, { headers: HEADERS });
-                    if (intraRes.data && intraRes.data.chart && intraRes.data.chart.result && intraRes.data.chart.result[0]) {
-                        const intraResult = intraRes.data.chart.result[0];
-                        const iTimestamps = intraResult.timestamp;
-                        const iQuote = intraResult.indicators.quote[0];
-                        const iClose = iQuote.close || [];
-                        const iLow = iQuote.low || [];
-                        
-                        const validCandles = [];
-                        for (let j = 0; j < iTimestamps.length; j++) {
-                            const ts = iTimestamps[j];
-                            const iDate = getLocalDate(ts);
-                            if (iDate > dateStr) continue; // Potong data selepas tarikh arkib
-                            
-                            if (iClose[j] !== null && iClose[j] !== undefined && iLow[j] !== null && iLow[j] !== undefined) {
-                                validCandles.push({ close: iClose[j], low: iLow[j] });
-                            }
-                        }
-                        
-                        if (validCandles.length >= 12) {
-                            const sampleCandles = validCandles.slice(-24);
-                            const sampleCloses = sampleCandles.map(c => c.close);
-                            const sampleLows = sampleCandles.map(c => c.low);
-                            
-                            const currentPriceIntra = sampleCloses[sampleCloses.length - 1];
-                            const minAllowedLow = currentPriceIntra * 0.94;
-                            const filteredLows = sampleLows.filter(l => l >= minAllowedLow);
-                            
-                            if (filteredLows.length >= 5) {
-                                const recentLows = filteredLows.slice(-10);
-                                const floorLow = Math.min(...recentLows);
-                                
-                                let intraTouches = 0;
-                                sampleLows.forEach(l => {
-                                    const diff = ((l - floorLow) / floorLow) * 100;
-                                    if (Math.abs(diff) <= 2.5) {
-                                        intraTouches++;
-                                    }
-                                });
-                                
-                                const last12Closes = sampleCloses.slice(-12);
-                                const maxIntraClose = Math.max(...last12Closes);
-                                const minIntraClose = Math.min(...last12Closes);
-                                const intraCloseTightness = ((maxIntraClose - minIntraClose) / minIntraClose) * 100;
-                                
-                                // Sentiasa kemas kini floorLow dan touchCount berasaskan intraday 3 hari
-                                item.floorLow = floorLow;
-                                item.touchCount = intraTouches;
-                                
-                                if (intraCloseTightness <= 3.8 && intraTouches >= 4) {
-                                    isConsolidation = true;
-                                    item.closeTightness = parseFloat(intraCloseTightness.toFixed(2));
-                                    item.isIntradayValidated = true;
-                                }
-                            }
-                        }
-                    }
-                } catch (err) {
-                    // Silently ignore or log error
-                }
-            }
-            
+            let isConsolidation = (pullback <= 15.0 && closeTightness <= 5.5 && touchCount >= 3);
             item.isConsolidation = isConsolidation;
             
             // Recalculate pullback setupName

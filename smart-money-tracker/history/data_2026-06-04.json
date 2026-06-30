@@ -10,17 +10,16 @@
       "changePct": -3.02,
       "turnover": 133299900,
       "volume": 14811100,
-      "signal": "buy",
-      "reason": "🔒 Tapak Tegar (1x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
+      "signal": "avoid",
+      "reason": "VIP Sideway / Pullback (Pantau Peluang) (Near ATH)",
       "high52": 9.380000114440918,
       "closeTightness": 3.11,
       "lowTightness": 3.45,
       "touchCount": 1,
       "floorLow": 8.699999809265137,
-      "isConsolidation": true,
+      "isConsolidation": false,
       "pullback": 4.05,
-      "setupName": "🔥 RBS Retest / Near ATH",
-      "hasLowerWickRejection": false
+      "setupName": "🔥 RBS Retest / Near ATH"
     },
     {
       "name": "SDG",
@@ -31,16 +30,15 @@
       "turnover": 122645220,
       "volume": 20305500,
       "signal": "buy",
-      "reason": "🔒 Tapak Tegar (4x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
+      "reason": "🔒 Tapak Tegar (7x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
       "high52": 6.449999809265137,
       "closeTightness": 3.96,
-      "lowTightness": 1.39,
-      "touchCount": 4,
+      "lowTightness": 2.78,
+      "touchCount": 7,
       "floorLow": 5.760000228881836,
       "isConsolidation": true,
       "pullback": 6.36,
-      "setupName": "📉 Healthy Dip",
-      "hasLowerWickRejection": false
+      "setupName": "📉 Healthy Dip"
     },
     {
       "name": "MAYBANK",
@@ -51,16 +49,15 @@
       "turnover": 116085900,
       "volume": 10951500,
       "signal": "avoid",
-      "reason": "🔒 Tapak Tegar (3x) | 🧊 Saham Downtrend: Elak Trading! (Healthy Dip)",
+      "reason": "🔒 Tapak Tegar (4x) | 🧊 Saham Downtrend: Elak Trading! (Healthy Dip)",
       "high52": 12.420000076293945,
       "closeTightness": 2.11,
-      "lowTightness": 3.1,
-      "touchCount": 3,
+      "lowTightness": 6.98,
+      "touchCount": 4,
       "floorLow": 10.319999694824219,
       "isConsolidation": true,
       "pullback": 14.65,
-      "setupName": "🧊 Downtrend / Avoid",
-      "hasLowerWickRejection": false
+      "setupName": "🧊 Downtrend / Avoid"
     },
     {
       "name": "ZETRIX",
@@ -74,13 +71,12 @@
       "reason": "VIP Sideway / Pullback (Pantau Peluang) (Pullback Support)",
       "high52": 1.0299999713897705,
       "closeTightness": 2.48,
-      "lowTightness": 1.87,
-      "touchCount": 4,
-      "floorLow": 0.800000011920929,
+      "lowTightness": 3.14,
+      "touchCount": 6,
+      "floorLow": 0.7950000166893005,
       "isConsolidation": false,
       "pullback": 19.9,
-      "setupName": "🔻 Buy Support / Deep Pullback",
-      "hasLowerWickRejection": true
+      "setupName": "🔻 Buy Support / Deep Pullback"
     },
     {
       "name": "PETDAG",
@@ -94,13 +90,12 @@
       "reason": "🧊 Saham Downtrend: Elak Trading! (Pullback Support)",
       "high52": 23.799999237060547,
       "closeTightness": 5.86,
-      "lowTightness": 5.07,
-      "touchCount": 1,
-      "floorLow": 17.34000015258789,
+      "lowTightness": 8.06,
+      "touchCount": 2,
+      "floorLow": 17.1200008392334,
       "isConsolidation": false,
       "pullback": 21.09,
-      "setupName": "🧊 Downtrend / Avoid",
-      "hasLowerWickRejection": true
+      "setupName": "🧊 Downtrend / Avoid"
     },
     {
       "name": "NESTLE",
@@ -136,13 +131,12 @@
       "reason": "🧊 Saham Downtrend: Elak Trading!",
       "high52": 0.8700000047683716,
       "closeTightness": 7.32,
-      "lowTightness": 5.13,
-      "touchCount": 1,
-      "floorLow": 0.19499999284744263,
+      "lowTightness": 7.89,
+      "touchCount": 4,
+      "floorLow": 0.1899999976158142,
       "isConsolidation": false,
       "pullback": 75.29,
-      "setupName": "🧊 Downtrend / Avoid",
-      "hasLowerWickRejection": true
+      "setupName": "🧊 Downtrend / Avoid"
     },
     {
       "name": "CTOS",
@@ -156,13 +150,12 @@
       "reason": "🧊 Saham Downtrend: Elak Trading!",
       "high52": 1.0199999809265137,
       "closeTightness": 3.36,
-      "lowTightness": 7.89,
+      "lowTightness": 14.91,
       "touchCount": 1,
       "floorLow": 0.5699999928474426,
       "isConsolidation": false,
       "pullback": 39.71,
-      "setupName": "🧊 Downtrend / Avoid",
-      "hasLowerWickRejection": true
+      "setupName": "🧊 Downtrend / Avoid"
     },
     {
       "name": "MPI",
@@ -172,17 +165,16 @@
       "changePct": -2.99,
       "turnover": 27244792,
       "volume": 574300,
-      "signal": "buy",
-      "reason": "🔒 Tapak Tegar (1x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
+      "signal": "avoid",
+      "reason": "VIP Sideway / Pullback (Pantau Peluang) (Healthy Dip)",
       "high52": 50.220001220703125,
       "closeTightness": 3.41,
-      "lowTightness": 3.41,
+      "lowTightness": 10.93,
       "touchCount": 1,
-      "floorLow": 47.439998626708984,
-      "isConsolidation": true,
+      "floorLow": 44.29999923706055,
+      "isConsolidation": false,
       "pullback": 5.54,
-      "setupName": "📉 Healthy Dip",
-      "hasLowerWickRejection": false
+      "setupName": "📉 Healthy Dip"
     },
     {
       "name": "UTDPLT",
@@ -193,16 +185,15 @@
       "turnover": 24126040,
       "volume": 770800,
       "signal": "avoid",
-      "reason": "🔒 Tapak Tegar (3x) | 🧊 Saham Downtrend: Elak Trading! (Healthy Dip)",
+      "reason": "🔒 Tapak Tegar (9x) | 🧊 Saham Downtrend: Elak Trading! (Healthy Dip)",
       "high52": 35.880001068115234,
       "closeTightness": 3.92,
       "lowTightness": 4.09,
-      "touchCount": 3,
+      "touchCount": 9,
       "floorLow": 29.860000610351562,
       "isConsolidation": true,
       "pullback": 12.76,
-      "setupName": "🧊 Downtrend / Avoid",
-      "hasLowerWickRejection": false
+      "setupName": "🧊 Downtrend / Avoid"
     },
     {
       "name": "SKPRES",
@@ -216,13 +207,12 @@
       "reason": "🧊 Saham Downtrend: Elak Trading!",
       "high52": 1.0800000429153442,
       "closeTightness": 7.14,
-      "lowTightness": 5.97,
-      "touchCount": 2,
-      "floorLow": 0.33500000834465027,
+      "lowTightness": 17.74,
+      "touchCount": 1,
+      "floorLow": 0.3100000023841858,
       "isConsolidation": false,
       "pullback": 65.28,
-      "setupName": "🧊 Downtrend / Avoid",
-      "hasLowerWickRejection": false
+      "setupName": "🧊 Downtrend / Avoid"
     },
     {
       "name": "VELESTO",
@@ -247,13 +237,12 @@
       "reason": "🧊 Saham Downtrend: Elak Trading!",
       "high52": 0.23999999463558197,
       "closeTightness": 3.7,
-      "lowTightness": 7.69,
-      "touchCount": 3,
+      "lowTightness": 11.54,
+      "touchCount": 4,
       "floorLow": 0.12999999523162842,
       "isConsolidation": false,
       "pullback": 43.75,
-      "setupName": "🧊 Downtrend / Avoid",
-      "hasLowerWickRejection": true
+      "setupName": "🧊 Downtrend / Avoid"
     },
     {
       "name": "KLK",
@@ -264,16 +253,15 @@
       "turnover": 16650860,
       "volume": 824300,
       "signal": "avoid",
-      "reason": "🔒 Tapak Tegar (3x) | 🧊 Saham Downtrend: Elak Trading! (Healthy Dip)",
+      "reason": "🔒 Tapak Tegar (4x) | 🧊 Saham Downtrend: Elak Trading! (Healthy Dip)",
       "high52": 23.18000030517578,
       "closeTightness": 4.21,
-      "lowTightness": 4.85,
-      "touchCount": 3,
+      "lowTightness": 4.95,
+      "touchCount": 4,
       "floorLow": 19.3799991607666,
       "isConsolidation": true,
       "pullback": 12.86,
-      "setupName": "🧊 Downtrend / Avoid",
-      "hasLowerWickRejection": false
+      "setupName": "🧊 Downtrend / Avoid"
     },
     {
       "name": "UWC",
@@ -287,13 +275,12 @@
       "reason": "VIP Sideway / Pullback (Pantau Peluang) (Healthy Dip)",
       "high52": 6.099999904632568,
       "closeTightness": 5.7,
-      "lowTightness": 5.89,
+      "lowTightness": 8.01,
       "touchCount": 1,
-      "floorLow": 5.599999904632568,
+      "floorLow": 5.489999771118164,
       "isConsolidation": false,
       "pullback": 8.03,
-      "setupName": "📉 Healthy Dip",
-      "hasLowerWickRejection": false
+      "setupName": "📉 Healthy Dip"
     },
     {
       "name": "MI",
@@ -318,13 +305,12 @@
       "reason": "🧊 Saham Downtrend: Elak Trading! (Pullback Support)",
       "high52": 36.81999969482422,
       "closeTightness": 5.28,
-      "lowTightness": 5.36,
+      "lowTightness": 7.89,
       "touchCount": 1,
       "floorLow": 26.860000610351562,
       "isConsolidation": false,
       "pullback": 27,
-      "setupName": "🧊 Downtrend / Avoid",
-      "hasLowerWickRejection": false
+      "setupName": "🧊 Downtrend / Avoid"
     },
     {
       "name": "HSI-PWRP",
@@ -349,13 +335,12 @@
       "reason": "VIP Sideway / Pullback (Pantau Peluang) (Healthy Dip)",
       "high52": 4.679999828338623,
       "closeTightness": 7.29,
-      "lowTightness": 7.29,
+      "lowTightness": 13.02,
       "touchCount": 1,
-      "floorLow": 4.25,
+      "floorLow": 4.070000171661377,
       "isConsolidation": false,
       "pullback": 9.19,
-      "setupName": "📉 Healthy Dip",
-      "hasLowerWickRejection": false
+      "setupName": "📉 Healthy Dip"
     },
     {
       "name": "SOP",
@@ -380,13 +365,12 @@
       "reason": "🧊 Saham Downtrend: Elak Trading!",
       "high52": 0.14499999582767487,
       "closeTightness": 5.56,
-      "lowTightness": 5.56,
-      "touchCount": 2,
-      "floorLow": 0.09000000357627869,
+      "lowTightness": 31.25,
+      "touchCount": 1,
+      "floorLow": 0.07999999821186066,
       "isConsolidation": false,
       "pullback": 34.48,
-      "setupName": "🧊 Downtrend / Avoid",
-      "hasLowerWickRejection": true
+      "setupName": "🧊 Downtrend / Avoid"
     }
   ],
   "topGainers": [

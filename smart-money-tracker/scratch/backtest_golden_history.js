@@ -5,38 +5,15 @@ const axios = require('axios');
 const HISTORY_DIR = path.join(__dirname, '../history');
 const HEADERS = { 'User-Agent': 'Mozilla/5.0' };
 
+let symbolMappings = {};
+try {
+    symbolMappings = JSON.parse(fs.readFileSync(path.join(__dirname, '../symbol_mappings.json'), 'utf8'));
+} catch (e) {
+    console.error("Warning: symbol_mappings.json not found, using fallbacks");
+}
+
 function getTickerSymbol(name) {
-    const mapping = {
-        'SKYECHIP': '5357.KL',
-        'OPPSTAR': '0275.KL',
-        'EIPOWER': '0453.KL',
-        'PENTECH': '0457.KL',
-        'KEEMING': '0392.KL',
-        'SUM': '0459.KL',
-        'ADNEX': '0396.KL',
-        'HKB': '0359.KL',
-        'AMBEST': '0391.KL',
-        'SUNMED': '5555.KL',
-        'MMCS': '0456.KL',
-        'DNEX': '4456.KL',
-        'AMS': '0399.KL',
-        'SDCG': '0321.KL',
-        'NE': '0325.KL',
-        'ISF': '0390.KL',
-        'OGX': '0395.KL',
-        'MNHLDG': '0245.KL',
-        'LWSABAH': '5328.KL',
-        'CBHB': '0339.KL',
-        'IAB': '0376.KL',
-        'CNERGEN': '0246.KL',
-        'ELSA': '0458.KL',
-        'SAM': '9822.KL',
-        'TMK': '5330.KL',
-        'ZETRIX': '0128.KL',
-        'NATGATE': '0270.KL',
-        'GIIB': '7191.KL'
-    };
-    if (mapping[name]) return mapping[name];
+    if (symbolMappings[name]) return symbolMappings[name];
     return name + '.KL';
 }
 
@@ -70,8 +47,8 @@ async function runBacktest() {
                 item.signal === 'buy' && 
                 !isDowntrend && 
                 item.price <= 3.00 && 
-                item.touchCount >= 10 && 
-                dist <= 1.5) {
+                item.touchCount >= 3 && 
+                dist <= 3.0) {
                 
                 signals.push({
                     date: dateStr,
