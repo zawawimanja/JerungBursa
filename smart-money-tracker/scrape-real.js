@@ -317,13 +317,47 @@ async function main() {
                     const closeTightness = ((maxClose - minClose) / minClose) * 100;
                     
                     // --- DAILY FLOOR & TOUCHCOUNT LOGIC (TradingView 1D CS Match) ---
-                    // Lookback 10 daily candles to find the local daily support floor and count touches
-                    const lookbackDays = Math.min(10, validDays.length);
-                    const dailyLookback = validDays.slice(-lookbackDays);
-                    const dailyLows = dailyLookback.map(d => d.low);
+                    // --- DUAL-WINDOW DAILY FLOOR & TOUCHCOUNT LOGIC ---
+                    // We calculate two potential floors: 10-day (standard) and 5-day (recent/staircase breakout).
+                    // If the 5-day floor is closer to the current price and has strong support, we use it to avoid breakout/IPO skew.
+                    const lookback10 = Math.min(10, validDays.length);
+                    const dailyLookback10 = validDays.slice(-lookback10);
+                    const lows10 = dailyLookback10.map(d => d.low);
+                    const floor10 = Math.min(...lows10);
+                    const dist10 = ((currentPrice - floor10) / floor10) * 100;
                     
-                    const minLow = Math.min(...dailyLows);
-                    const maxLow = Math.max(...dailyLows);
+                    let touch10 = 0;
+                    dailyLookback10.forEach(d => {
+                        if (((d.low - floor10) / floor10) * 100 <= 2.0) touch10++;
+                    });
+                    
+                    const lookback5 = Math.min(5, validDays.length);
+                    const dailyLookback5 = validDays.slice(-lookback5);
+                    const lows5 = dailyLookback5.map(d => d.low);
+                    const floor5 = Math.min(...lows5);
+                    const dist5 = ((currentPrice - floor5) / floor5) * 100;
+                    
+                    let touch5 = 0;
+                    dailyLookback10.forEach(d => {
+                        if (Math.abs(((d.low - floor5) / floor5) * 100) <= 2.0) touch5++;
+                    });
+
+                    // Determine which floor to use:
+                    // We prefer the 5-day floor if the 10-day floor is too far (>3.0%) AND the 5-day floor is valid (dist <= 3.0% and touchCount >= 3)
+                    // Or if it's a young IPO (<25 days), we default to the 5-day floor.
+                    let minLow = floor10;
+                    let touchCount = touch10;
+                    
+                    if (validDays.length < 25) {
+                        minLow = floor5;
+                        touchCount = touch5;
+                    } else if (dist10 > 3.0 && dist5 <= 3.0 && touch5 >= 3) {
+                        minLow = floor5;
+                        touchCount = touch5;
+                    }
+                    
+                    const floorDist = ((currentPrice - minLow) / minLow) * 100;
+                    const maxLow = Math.max(...(validDays.length < 25 ? lows5 : lows10));
                     const lowTightness = ((maxLow - minLow) / minLow) * 100;
 
                     // Hitung Lower Wick Rejection harian (Ekor di bawah)
@@ -331,7 +365,6 @@ async function main() {
                     const dailyLowerShadow = Math.min(lastDay.open, lastDay.close) - lastDay.low;
                     const dailyTotalRange = lastDay.high - lastDay.low;
                     
-                    const floorDist = ((currentPrice - minLow) / minLow) * 100;
                     const isDojiConsolidation = (dailyBody / currentPrice <= 0.015) && (floorDist <= 1.5);
                     
                     const hasLowerWickRejection = (dailyTotalRange > 0 && (
@@ -341,14 +374,6 @@ async function main() {
                     )) || isDojiConsolidation;
 
                     stock.hasLowerWickRejection = hasLowerWickRejection;
-                    
-                    let touchCount = 0;
-                    dailyLookback.forEach(d => {
-                        const diffPct = ((d.low - minLow) / minLow) * 100;
-                        if (diffPct <= 2.0) { // within 2% of the daily floor
-                            touchCount++;
-                        }
-                    });
                     
                     const closesDaily = validDays.map(d => d.close).filter(c => c !== null && c !== undefined);
                     const sma50 = closesDaily.length >= 50
@@ -415,41 +440,41 @@ async function main() {
             }
         }
         
-        // Tentukan signal berdasarkan formula
+        // Determine signal based on formulas
         let signal = 'avoid';
-        let reason = 'Jerung Buang / Mendatar';
+        let reason = 'Selling Pressure / Flat';
         
         if (setupName === '🧊 Downtrend / Avoid') {
             signal = 'avoid';
-            reason = '🧊 Saham Downtrend: Elak Trading!';
+            reason = '🧊 Downtrend Stock: Avoid Trading!';
         } else if (stock.isConsolidation) {
             signal = 'buy';
             if (stock.price < 0.20) {
-                reason = '⚠️ Penny Goreng: Tapak Tegar (Intraday Sahaja, Elak Hold!)';
+                reason = '⚠️ Pump & Dump Penny: Consolidation Base (Intraday Only, Avoid Hold!)';
             } else if (stock.price >= 1.50) {
-                reason = '🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold)';
+                reason = '🔥 Golden Hold: Solid Consolidation Base (Suitable for Swing/Hold)';
             } else {
-                reason = '🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold)';
+                reason = '🔥 Golden Entry: Solid Consolidation Base (Suitable for Swing/Hold)';
             }
         } else if (stock.change > 0 && turnover >= 250000) {
             signal = 'buy';
             if (stock.price < 0.20) {
-                reason = '⚠️ Penny Goreng: Pam Volume Laju (Intraday Sahaja, Elak Hold!)';
+                reason = '⚠️ Pump & Dump Penny: High Volume Pump (Intraday Only, Avoid Hold!)';
             } else if (stock.price >= 1.50) {
                 if (changePct <= 3.0) {
-                    reason = '🔥 Golden Hold: Jerung Mula Kumpul (Sesuai Swing/Hold)';
+                    reason = '🔥 Golden Hold: Smart Money Accumulation (Suitable for Swing/Hold)';
                 } else {
-                    reason = '⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold)';
+                    reason = '⚡ Bluechip Momentum: Institutional Buy Pump (Suitable for Swing/Hold)';
                 }
             } else { // Mid-cap RM0.20 - RM1.50
                 if (changePct <= 3.0) {
-                    reason = '🔥 Golden Entry: Jerung Kumpul Selesa (Sesuai Swing/Hold)';
+                    reason = '🔥 Golden Entry: Smart Money Accumulating (Suitable for Swing/Hold)';
                 } else {
-                    reason = '⚡ Momentum Kuat: Jerung Mula Pam (Sesuai Intraday/Swing)';
+                    reason = '⚡ Strong Momentum: Smart Money Buying (Suitable for Intraday/Swing)';
                 }
             }
         } else if (stock.isVip && stock.change <= 0) {
-            reason = 'VIP Sideway / Pullback (Pantau Peluang)';
+            reason = 'VIP Sideway / Pullback (Monitor for Opportunities)';
         }
         
         // Perkayakan sebab dengan maklumat pullback
@@ -473,7 +498,7 @@ async function main() {
             turnover,
             volume: stock.volume,
             signal,
-            reason: stock.isConsolidation ? `🔒 Tapak Tegar (${stock.touchCount}x) | ${reason}` : reason,
+            reason: stock.isConsolidation ? `🔒 Solid Base (${stock.touchCount}x) | ${reason}` : reason,
             high52: stock.high52 || null,
             pullback: pullback,
             setupName: setupName,

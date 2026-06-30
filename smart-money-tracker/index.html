@@ -624,18 +624,18 @@
         <div class="brand">
             <h1>Bursa Smart Money Consolidation Suite</h1>
             <div class="subtitle" id="dashboardSubtitle">
-                <span class="pulse"></span> Live Market Scanner • Mengimbas Tapak Tegar & VSA
+                <span class="pulse"></span> Live Market Scanner • Scanning Consolidation Bases & VSA
             </div>
             <div style="margin-top: 0.8rem; display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(15, 23, 42, 0.5); padding: 0.4rem 1rem; border-radius: 20px; border: 1px solid var(--panel-border); font-weight: 600; font-size: 0.85rem;">
-                Sentimen Pasaran: <span id="sentiment-text" style="color: #94a3b8;">Menganalisis...</span>
+                Market Sentiment: <span id="sentiment-text" style="color: #94a3b8;">Analyzing...</span>
             </div>
         </div>
 
         <div class="controls">
             <div class="history-input">
-                <label for="historyDate" style="color: #a5b4fc; font-size: 0.8rem; font-weight: 700; cursor: pointer;">Arkib Sejarah:</label>
+                <label for="historyDate" style="color: #a5b4fc; font-size: 0.8rem; font-weight: 700; cursor: pointer;">Historical Archive:</label>
                 <input type="date" id="historyDate">
-                <button id="loadHistoryBtn" class="btn btn-history">📂 Semak</button>
+                <button id="loadHistoryBtn" class="btn btn-history">📂 Load</button>
             </div>
             <button id="refreshBtn" class="btn">🔄 Refresh Live</button>
         </div>
@@ -650,23 +650,23 @@
                 <div style="display: flex; align-items: center; gap: 0.75rem;">
                     <span style="font-size: 1.6rem;">🔥</span>
                     <div>
-                        <h2 style="margin: 0; font-size: 1.25rem; color: #f59e0b; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;">Zon Gabungan Emas (Kriteria Ala-OGX)</h2>
-                        <p style="margin: 0.15rem 0 0 0; font-size: 0.78rem; color: #94a3b8;">Zon Emas: Consolidation Tapak Rapat ke Lantai (≤ 3.0%) + Sentuhan (≥ 3x Daily 1D TF) + Wajib Isyarat BUY + Tiada Downtrend</p>
+                        <h2 style="margin: 0; font-size: 1.25rem; color: #f59e0b; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;">Golden Zone Consolidation (OGX-Style)</h2>
+                        <p style="margin: 0.15rem 0 0 0; font-size: 0.78rem; color: #94a3b8;">Golden Zone: Base Consolidation Close to Floor (≤ 3.0%) + Support Test (≥ 3x Daily 1D TF) + Near Peak (52W/ATH Pullback ≤ 15.0%) + BUY Signal Required + No Downtrend</p>
                     </div>
                 </div>
                 <div style="display: flex; align-items: center; gap: 0.75rem;">
-                    <!-- Penapis SOP -->
+                    <!-- SOP Filter Buttons -->
                     <div style="background: rgba(15, 23, 42, 0.6); padding: 0.25rem; border-radius: 8px; border: 1px solid var(--panel-border); display: flex; gap: 0.25rem;">
                         <button id="sopMutlakBtn" onclick="toggleSopFilter('mutlak')" style="background: #f59e0b; color: #0f172a; border: none; padding: 0.45rem 0.85rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem; cursor: pointer; transition: all 0.2s;">
-                            👑 SOP Mutlak
+                            👑 Strict SOP
                         </button>
                         <button id="sopBiasaBtn" onclick="toggleSopFilter('biasa')" style="background: transparent; color: #94a3b8; border: none; padding: 0.45rem 0.85rem; border-radius: 6px; font-weight: 700; font-size: 0.75rem; cursor: pointer; transition: all 0.2s;">
-                            ⚠️ SOP Biasa
+                            ⚠️ Standard SOP
                         </button>
                     </div>
                     
                     <button onclick="copyTradingViewWatchlist(event)" style="background: #f59e0b; color: #0f172a; border: none; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 800; font-size: 0.82rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: transform 0.2s; box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                        📋 Salin Watchlist TV
+                        📋 Copy TV Watchlist
                     </button>
                 </div>
             </div>
@@ -682,32 +682,32 @@
             <!-- Kalkulator -->
             <div class="calc-card" style="margin-bottom: 0;">
                 <div class="calc-header">
-                    🧮 Kalkulator Trading Tapak Tegar
+                    🧮 Trading Base Calculator
                 </div>
                 <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem; line-height: 1.4;">
-                    Pilih saham yang berada di <strong>BUY ZONE</strong> untuk merancang saiz modal, lot pembelian, dan risiko stop loss secara matematik.
+                    Select a stock in the <strong>BUY ZONE</strong> to mathematically plan your capital sizing, position lot sizes, and stop loss risks.
                 </p>
                 
                 <div class="calc-grid">
                     <div class="calc-group">
-                        <label>Pilih Saham</label>
+                        <label>Select Stock</label>
                         <select id="calcTicker" onchange="calculatePlan()">
                             <!-- Options populated dynamically -->
                         </select>
                     </div>
                     <div class="calc-group">
-                        <label>Modal Anda (RM)</label>
+                        <label>Your Capital (RM)</label>
                         <input type="number" id="calcCapital" value="5000" min="500" step="500" oninput="calculatePlan()">
                     </div>
                 </div>
 
                 <div class="calc-results">
                     <div class="result-row">
-                        <span class="result-label">Harga Semasa</span>
+                        <span class="result-label">Current Price</span>
                         <span class="result-value" id="calcCurrentPrice">RM 0.000</span>
                     </div>
                     <div class="result-row">
-                        <span class="result-label">Lantai Sokongan (Support Floor)</span>
+                        <span class="result-label">Support Floor</span>
                         <span class="result-value" style="color: #60a5fa;" id="calcFloorPrice">RM 0.000</span>
                     </div>
                     <div class="result-row">
@@ -715,52 +715,56 @@
                         <span class="result-value danger" id="calcSlPrice">RM 0.000</span>
                     </div>
                     <div class="result-row">
-                        <span class="result-label">Jumlah Unit Boleh Beli</span>
-                        <span class="result-value" id="calcLots">0 Lot (0 unit)</span>
+                        <span class="result-label">Purchasable Lot Size</span>
+                        <span class="result-value" id="calcLots">0 Lots (0 units)</span>
                     </div>
                     <div class="result-row">
-                        <span class="result-label">Jumlah Modal Digunakan</span>
+                        <span class="result-label">Actual Capital Invested</span>
                         <span class="result-value" id="calcActualCapital">RM 0.00</span>
                     </div>
                     <div class="result-row">
-                        <span class="result-label">Maksimum Kerugian (Jika SL Hit)</span>
+                        <span class="result-label">Maximum Loss (If SL Hit)</span>
                         <span class="result-value danger" id="calcMaxRisk">RM 0.00 (0.00%)</span>
                     </div>
                     <div class="result-row">
                         <span class="result-label">Target Profit 1 (TP1) (+10.0%)</span>
-                        <span class="result-value success" id="calcTp1">RM 0.00 (Gunting RM 0.00)</span>
+                        <span class="result-value success" id="calcTp1">RM 0.00 (Profit RM 0.00)</span>
                     </div>
                     <div class="result-row">
                         <span class="result-label">Target Profit 2 (TP2) (+20.0%)</span>
-                        <span class="result-value success" style="color: #a78bfa;" id="calcTp2">RM 0.00 (Gunting RM 0.00)</span>
+                        <span class="result-value success" style="color: #a78bfa;" id="calcTp2">RM 0.00 (Profit RM 0.00)</span>
                     </div>
                 </div>
             </div>
 
-            <!-- Panduan SOP -->
+            <!-- SOP Guide Board -->
             <div class="guide-board" style="margin-bottom: 0;">
-                <h3>📚 Panduan & SOP Trading Tapak Tegar</h3>
+                <h3>📚 Trading SOP & Guide Board</h3>
                 <div style="display: flex; flex-direction: column; gap: 1.2rem; height: 100%;">
                     <div class="guide-item" style="border-left-color: var(--accent);">
-                        <h4>1. Kenapa Tapak Tegar Terhasil?</h4>
-                        <p>Ia menunjukkan zon harga di mana Smart Money (Jerung) sedang melakukan pembelian terkumpul secara pasif tanpa menolak harga ke atas. Had bawah tapak (Support Floor) menjadi pertahanan yang kuat.</p>
+                        <h4>1. Why Consolidation Bases Form?</h4>
+                        <p>It represents the price zone where Smart Money is passively accumulating shares near their **52-Week High / ATH** (pullback &le; 15.0%) without driving the price up. The lower limit (Support Floor) acts as a strong defense line.</p>
                     </div>
                     <div class="guide-item" style="border-left-color: var(--success);">
-                        <h4>2. SOP Pembelian (Buy Zone)</h4>
-                        <p>Masuk pasaran apabila harga semasa berada sangat dekat dengan Support Floor (jarak &le; 2.5%). Ini memberi anda kelebihan harga masuk yang rendah dan kawalan risiko yang sangat optimum.</p>
+                        <h4>2. Entry Strategy (Buy Zone)</h4>
+                        <p>Enter the market when the current price is extremely close to the Support Floor (distance &le; 2.5%) and in a healthy pullback from its 52W peak (pullback &le; 15.0%). This provides a low-risk entry and optimal risk-reward ratio.</p>
                     </div>
                     <div class="guide-item" style="border-left-color: var(--danger);">
-                        <h4>3. Pengurusan Risiko Terbuka</h4>
-                        <p>Stop Loss (SL) diletakkan ketat pada 3% di bawah Support Floor. Jika harga menembusi Support Floor ke bawah, ini menandakan fasa pengumpulan jerung gagal dan kita keluar dengan kerugian yang kecil.</p>
+                        <h4>3. Risk Management</h4>
+                        <p>Stop Loss (SL) is placed strictly 3% below the Support Floor. If the price breaks below this floor, it signifies the accumulation structure has failed, and we exit with a minimal loss.</p>
                     </div>
                     <div class="guide-item" style="border-left-color: #a78bfa;">
-                        <h4>4. SOP Pengambilan Untung (TP)</h4>
-                        <p>Cadangan TP1 adalah pada +10.0% kenaikan dari harga belian (Scalping/Swing singkat). TP2 diletakkan pada +20.0% kenaikan bagi menangkap pergerakan breakout ATH/RBS sepenuhnya.</p>
+                        <h4>4. Take Profit (TP) Execution</h4>
+                        <p>TP1 is set at +10.0% from entry for quick swing profits. TP2 is set at +20.0% to capture the full ATH breakout / RBS momentum.</p>
                     </div>
                     <div class="guide-item" style="border-left-color: #f59e0b;">
-                        <h4>5. Perbezaan SOP Mutlak vs SOP Biasa</h4>
-                        <p><strong>👑 SOP Mutlak (Ala-OGX, HKB, KEEMING):</strong> Wajib ada <em>Lower Wick Rejection</em> (Reject Ekor Bawah 🧬) pada <strong>Daily (1D) Timeframe</strong> sebagai bukti nyata jerung aktif membeli di harga lantai. Kriteria ini mempunyai kebarangkalian menang (win rate) tertinggi dan pergerakan breakout terpantas.<br>
-                        <strong>⚠️ SOP Biasa:</strong> Menapis semua kaunter dalam tapak pengumpulan yang rapat lantai (≤ 3.0%) tetapi tiada rejection ekor harian yang jelas pada hari ini.</p>
+                        <h4>5. Strict SOP vs. Standard SOP</h4>
+                        <p><strong>👑 Strict SOP (OGX, HKB, KEEMING Style):</strong> Must be near the **All-Time High (ATH) or 52-Week High (Pullback &le; 15.0%)** + Must have a <em>Lower Wick Rejection</em> (Reject Ekor Bawah 🧬) on the **Daily (1D) Timeframe** proving that Smart Money is actively buying at the floor. This setup yields the highest win-rate and fastest breakout speed.<br>
+                        <strong>⚠️ Standard SOP:</strong> Filters all counters consolidating close to their support floor (≤ 3.0%) and near peaks (pullback &le; 15.0%), but without a prominent daily wick rejection today.</p>
+                    </div>
+                    <div class="guide-item" style="border-left-color: #3b82f6;">
+                        <h4>6. Dual-Window Floor (Staircase Breakouts & IPOs)</h4>
+                        <p>To accurately capture high-momentum stocks forming staircase breakouts (higher base consolidations like TMK) or recent IPOs with short history (< 25 trading days like MMCS), the engine dynamically adapts between 10-day and 5-day support floors. If the 10-day floor is too far (> 3.0%) but a new 5-day base is established (≤ 3.0%) with strong touch validation (TouchCount &ge; 3x harian), the system automatically triggers an entry signal.</p>
                     </div>
                 </div>
             </div>
@@ -769,15 +773,15 @@
         <!-- Visual Setup Rujukan (Sebelum / Selepas) -->
         <div class="guide-board" style="margin-top: 2rem; text-align: center;">
             <h3 style="margin-bottom: 1.2rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;">
-                📈 Visual Rujukan Setup Tapak & Reject Ekor (SOP Mutlak)
+                📈 Reference Visual: Consolidation Base & Wick Rejection (Strict SOP)
             </h3>
             <div style="max-width: 600px; margin: 0 auto;">
-                <img src="./sop_before_after_chart.png" alt="Rujukan Setup Tapak Tegar & Rejection" style="width: 100%; border-radius: 12px; border: 1px solid var(--panel-border); box-shadow: 0 10px 30px rgba(0,0,0,0.6);">
+                <img src="./sop_before_after_chart.png" alt="Consolidation Base & Rejection Reference" style="width: 100%; border-radius: 12px; border: 1px solid var(--panel-border); box-shadow: 0 10px 30px rgba(0,0,0,0.6);">
             </div>
             <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 1rem; line-height: 1.5;">
-                Rajah di atas menunjukkan anatomi setup premium kami (seperti OGX, HKB, KEEMING) pada <strong>Daily (1D) Timeframe</strong>. 
-                Bahagian <strong>Sebelum</strong> menunjukkan pengumpulan jerung dengan cucukan ekor panjang ke lantai sokongan (rejection), 
-                manakala bahagian <strong>Selepas</strong> menunjukkan breakout rally agresif hasil kemasukan volume pembelian institusi.
+                The diagram above illustrates the anatomy of our premium setup (such as OGX, HKB, KEEMING) on the <strong>Daily (1D) Timeframe</strong>. 
+                The <strong>Before</strong> stage shows Smart Money accumulation with a long lower wick piercing the support floor (rejection), 
+                while the <strong>After</strong> stage shows the aggressive breakout rally driven by institutional buying volume.
             </p>
         </div>
 
@@ -833,35 +837,58 @@
 
         // Fetch Live Data
         async function fetchLiveData() {
-            try {
-                const cacheBuster = new Date().getTime();
-                let res = await fetch(`live_data.json?t=${cacheBuster}`);
-                
-                if (!res.ok) {
-                    res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/live_data.json?t=${cacheBuster}`);
-                }
+            const cacheBuster = new Date().getTime();
+            let raw = null;
+            let loadedLocal = false;
 
-                if (res.ok) {
-                    const raw = await res.ok ? await res.json() : [];
-                    let data = [];
-                    if (Array.isArray(raw)) {
-                        data = raw;
-                    } else if (raw && raw.topVolume && Array.isArray(raw.topVolume)) {
-                        data = raw.topVolume;
-                        if (raw.lastUpdated) {
-                            const d = new Date(raw.lastUpdated);
-                            const timeStr = d.toLocaleString('ms-MY', { timeZone: 'Asia/Kuala_Lumpur', hour12: false });
-                            document.getElementById('dashboardSubtitle').innerHTML = `<span class="pulse"></span> Live Market Scanner • Sumber: ${raw.source || 'i3investor'} • Dikemaskini: ${timeStr}`;
-                        }
+            // Try to load local file if not on file:// protocol
+            if (window.location.protocol !== 'file:') {
+                try {
+                    const res = await fetch(`live_data.json?t=${cacheBuster}`);
+                    if (res.ok) {
+                        raw = await res.json();
+                        loadedLocal = true;
                     }
-                    
-                    if (data && data.length > 0) {
-                        currentData = data;
-                        console.log(`Loaded ${data.length} counters successfully.`);
+                } catch (e) {
+                    console.log("Failed to fetch local data, will try fallback.", e);
+                }
+            } else {
+                console.warn("Running under file:// protocol. Local data access blocked by browser CORS policy. Falling back to GitHub raw storage.");
+                const notice = document.getElementById('dashboardSubtitle');
+                if (notice) {
+                    notice.innerHTML = `<span class="pulse" style="background: #f59e0b;"></span> Running via file:// (CORS Restricted) • Loading from GitHub Online...`;
+                }
+            }
+
+            // Fallback to GitHub if local load failed
+            if (!loadedLocal) {
+                try {
+                    const res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/live_data.json?t=${cacheBuster}`);
+                    if (res.ok) {
+                        raw = await res.json();
+                    }
+                } catch (e) {
+                    console.error("Failed to fetch online fallback data.", e);
+                }
+            }
+
+            if (raw) {
+                let data = [];
+                if (Array.isArray(raw)) {
+                    data = raw;
+                } else if (raw && raw.topVolume && Array.isArray(raw.topVolume)) {
+                    data = raw.topVolume;
+                    if (raw.lastUpdated) {
+                        const d = new Date(raw.lastUpdated);
+                        const timeStr = d.toLocaleString('en-US', { timeZone: 'Asia/Kuala_Lumpur', hour12: false });
+                        document.getElementById('dashboardSubtitle').innerHTML = `<span class="pulse"></span> Live Market Scanner • Source: ${raw.source || 'i3investor'} • Last Updated: ${timeStr}`;
                     }
                 }
-            } catch (e) {
-                console.log("Failed to load live data, using blank array.", e);
+                
+                if (data && data.length > 0) {
+                    currentData = data;
+                    console.log(`Loaded ${data.length} counters successfully.`);
+                }
             }
             applyFilters();
         }
@@ -881,9 +908,7 @@
             // Filter currentData for Golden Setups:
             // 1. Not Downtrend (setupName !== '🧊 Downtrend / Avoid')
             // 2. Price <= 3.00
-            // 3. touchCount >= 10
-            // 4. Distance to floor <= 2.5%
-            const goldenList = currentData.filter(item => {
+            // 3. touch            const goldenList = currentData.filter(item => {
                 const floor = item.floorLow || (item.price * 0.97);
                 const dist = parseFloat((((item.price - floor) / floor) * 100).toFixed(2));
                 
@@ -893,13 +918,17 @@
                     item.setupName === 'N/A'
                 );
                 
+                // Wajib Near ATH / 52W Setup (Pullback <= 15.0%)
+                const isNearAthOr52w = item.pullback !== undefined && item.pullback !== null && item.pullback <= 15.0;
+                
                 const matchesBase = item.isConsolidation && 
                        item.signal === 'buy' && 
                        !isDowntrend && 
                        item.price <= 3.00 && 
                        item.touchCount >= 3 && 
-                       dist <= 3.0;
-                       
+                       dist <= 3.0 &&
+                       isNearAthOr52w;
+                        
                 if (currentSopFilter === 'mutlak') {
                     return matchesBase && item.hasLowerWickRejection;
                 }
@@ -913,8 +942,8 @@
                 container.innerHTML = `
                     <div style="grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; background: rgba(15, 23, 42, 0.4); border: 1px dashed var(--panel-border); border-radius: 12px; text-align: center; color: var(--text-muted);">
                         <span style="font-size: 1.5rem; margin-bottom: 0.5rem;">⏳</span>
-                        <div style="font-size: 0.85rem; font-weight: 600;">Tiada Setup Gabungan Emas Aktif</div>
-                        <div style="font-size: 0.75rem; margin-top: 0.2rem;">Menunggu pasaran membuat pullback sihat ke lantai sokongan yang kukuh (≥3x sentuhan harian).</div>
+                        <div style="font-size: 0.85rem; font-weight: 600;">No Active Golden Zone Setups (ATH/52W High)</div>
+                        <div style="font-size: 0.75rem; margin-top: 0.2rem;">Waiting for the market to make a healthy pullback to a solid support floor (≥3x daily touches, pullback ≤15.0% from peak).</div>
                     </div>
                 `;
                 return;
@@ -947,6 +976,11 @@
                 const changeClass = pct >= 0 ? 'up' : 'down';
                 const changeSign = pct > 0 ? '+' : '';
                 
+                // Determine 52W status text and color
+                const pullbackVal = item.pullback !== null ? item.pullback : 0;
+                const pullbackLabel = pullbackVal <= 5.0 ? 'NEAR ATH' : '52W SETUP';
+                const pullbackColor = pullbackVal <= 5.0 ? '#10b981' : '#f59e0b';
+                
                 cardsHtml += `
                     <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 12px; padding: 1.25rem 1rem 1rem 1rem; display: flex; flex-direction: column; gap: 0.75rem; transition: all 0.2s; position: relative;" class="golden-card">
                         <!-- Ranking Badge -->
@@ -960,9 +994,10 @@
                                     ${item.name}
                                     <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=30" target="_blank" style="font-size: 0.75rem; color: #f59e0b; text-decoration: none;" title="TradingView 30m Chart">🔗</a>
                                 </div>
-                                <div style="font-size: 0.75rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.4rem; margin-top: 0.1rem;">
+                                <div style="font-size: 0.75rem; color: var(--text-muted); display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin-top: 0.2rem;">
                                     <span>${item.sector || 'Bursa'}</span>
-                                    ${item.hasLowerWickRejection ? `<span style="background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 0.65rem; font-weight: 800; padding: 0.05rem 0.35rem; border-radius: 4px; border: 1px solid rgba(16, 185, 129, 0.25);" title="Daily Lower Wick Rejection (Ekor di Bawah)">🧬 REJECT EKOR</span>` : ''}
+                                    ${item.hasLowerWickRejection ? `<span style="background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 0.65rem; font-weight: 800; padding: 0.05rem 0.35rem; border-radius: 4px; border: 1px solid rgba(16, 185, 129, 0.25);" title="Daily Lower Wick Rejection (Wick at Bottom)">🧬 WICK REJECTION</span>` : ''}
+                                    ${item.high52 ? `<span style="background: rgba(59, 130, 246, 0.15); color: #60a5fa; font-size: 0.65rem; font-weight: 800; padding: 0.05rem 0.35rem; border-radius: 4px; border: 1px solid rgba(59, 130, 246, 0.25);" title="52W High: RM ${item.high52.toFixed(3)} (Pullback: ${pullbackVal.toFixed(1)}%)">🏷️ ${pullbackLabel}</span>` : ''}
                                 </div>
                             </div>
                             <div style="text-align: right;">
@@ -971,14 +1006,23 @@
                             </div>
                         </div>
                         
-                        <div style="background: rgba(245, 158, 11, 0.08); border-radius: 8px; padding: 0.5rem 0.75rem; display: flex; justify-content: space-between; align-items: center;">
+                        <!-- Support Floor & 52W High Metrics -->
+                        <div style="background: rgba(245, 158, 11, 0.08); border-radius: 8px; padding: 0.5rem 0.75rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
                             <div>
-                                <div style="font-size: 0.7rem; color: #f59e0b; font-weight: 700; text-transform: uppercase;">Lantai Sokongan</div>
+                                <div style="font-size: 0.7rem; color: #f59e0b; font-weight: 700; text-transform: uppercase;">Support Floor</div>
                                 <div style="font-weight: 800; color: white; font-size: 0.95rem;">RM ${floor.toFixed(3)}</div>
                             </div>
                             <div style="text-align: right;">
-                                <div style="font-size: 0.7rem; color: #f59e0b; font-weight: 700; text-transform: uppercase;">Sentuhan</div>
-                                <div style="font-weight: 800; color: white; font-size: 0.95rem;">${item.touchCount}x Tapak</div>
+                                <div style="font-size: 0.7rem; color: #f59e0b; font-weight: 700; text-transform: uppercase;">Floor Touches</div>
+                                <div style="font-weight: 800; color: white; font-size: 0.95rem;">${item.touchCount}x Touches</div>
+                            </div>
+                            <div style="border-top: 1px solid rgba(245, 158, 11, 0.15); padding-top: 0.4rem; margin-top: 0.2rem;">
+                                <div style="font-size: 0.7rem; color: #60a5fa; font-weight: 700; text-transform: uppercase;">52W High Ref</div>
+                                <div style="font-weight: 800; color: white; font-size: 0.95rem;">${item.high52 ? `RM ${item.high52.toFixed(3)}` : 'N/A'}</div>
+                            </div>
+                            <div style="text-align: right; border-top: 1px solid rgba(245, 158, 11, 0.15); padding-top: 0.4rem; margin-top: 0.2rem;">
+                                <div style="font-size: 0.7rem; color: #60a5fa; font-weight: 700; text-transform: uppercase;">Pullback From High</div>
+                                <div style="font-weight: 800; color: ${pullbackColor}; font-size: 0.95rem;">-${pullbackVal.toFixed(2)}%</div>
                             </div>
                         </div>
                         
@@ -988,7 +1032,7 @@
                                 <span style="color: white; font-weight: 700;">RM ${stopLoss.toFixed(3)}</span>
                             </div>
                             <div>
-                                <span style="color: var(--success); font-weight: bold;">Jarak:</span>
+                                <span style="color: var(--success); font-weight: bold;">Distance:</span>
                                 <span style="color: ${dist <= 1.0 ? 'var(--success)' : 'white'}; font-weight: 700;">+${dist.toFixed(2)}%</span>
                             </div>
                         </div>
@@ -1014,13 +1058,17 @@
                     item.setupName === 'N/A'
                 );
                 
+                // Wajib Near ATH / 52W Setup (Pullback <= 15.0%)
+                const isNearAthOr52w = item.pullback !== undefined && item.pullback !== null && item.pullback <= 15.0;
+                
                 const matchesBase = item.isConsolidation && 
                        item.signal === 'buy' && 
                        !isDowntrend && 
                        item.price <= 3.00 && 
                        item.touchCount >= 3 && 
-                       dist <= 3.0;
-                       
+                       dist <= 3.0 &&
+                       isNearAthOr52w;
+                        
                 if (currentSopFilter === 'mutlak') {
                     return matchesBase && item.hasLowerWickRejection;
                 }
@@ -1028,7 +1076,7 @@
             });
             
             if (goldenList.length === 0) {
-                alert('Tiada kaunter dalam Zon Gabungan Emas untuk disalin!');
+                alert('No counters in the Golden Zone to copy!');
                 return;
             }
             
@@ -1055,7 +1103,7 @@
                 // Show a nice feedback message
                 if (btn) {
                     const originalText = btn.innerHTML;
-                    btn.innerHTML = '✅ Berjaya Disalin!';
+                    btn.innerHTML = '✅ Watchlist Copied!';
                     btn.style.background = 'var(--success)';
                     btn.style.color = 'white';
                     
@@ -1066,7 +1114,7 @@
                     }, 2000);
                 }
             }).catch(err => {
-                alert('Gagal menyalin: ' + err);
+                alert('Failed to copy: ' + err);
             });
         }
 
@@ -1079,7 +1127,7 @@
 
             if (data.length === 0) {
                 const option = document.createElement('option');
-                option.textContent = '-- Tiada Kaunter --';
+                option.textContent = '-- No Counters --';
                 selectEl.appendChild(option);
                 return;
             }
@@ -1116,13 +1164,13 @@
             const sentimentEl = document.getElementById('sentiment-text');
             
             if (percentage >= 50) {
-                sentimentEl.innerHTML = `🐂 BULLISH (${percentage.toFixed(0)}% Kaunter Naik)`;
+                sentimentEl.innerHTML = `🐂 BULLISH (${percentage.toFixed(0)}% Counters Up)`;
                 sentimentEl.style.color = '#10b981';
             } else if (percentage >= 35) {
-                sentimentEl.innerHTML = `⚖️ SIDEWAY (${percentage.toFixed(0)}% Kaunter Naik)`;
+                sentimentEl.innerHTML = `⚖️ SIDEWAY (${percentage.toFixed(0)}% Counters Up)`;
                 sentimentEl.style.color = '#f59e0b';
             } else {
-                sentimentEl.innerHTML = `🐻 BEARISH (${percentage.toFixed(0)}% Kaunter Naik)`;
+                sentimentEl.innerHTML = `🐻 BEARISH (${percentage.toFixed(0)}% Counters Up)`;
                 sentimentEl.style.color = '#ef4444';
             }
         }
@@ -1158,7 +1206,7 @@
             document.getElementById('calcFloorPrice').textContent = `RM ${floorPrice.toFixed(3)}`;
             document.getElementById('calcSlPrice').textContent = `RM ${slPrice.toFixed(3)} (-${maxRiskPct.toFixed(1)}%)`;
             
-            document.getElementById('calcLots').textContent = `${maxLots} Lot (${(maxLots * 100).toLocaleString()} Unit)`;
+            document.getElementById('calcLots').textContent = `${maxLots} Lots (${(maxLots * 100).toLocaleString()} Units)`;
             document.getElementById('calcActualCapital').textContent = `RM ${actualCapital.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
             
             document.getElementById('calcMaxRisk').textContent = `-RM ${maxLoss.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})} (-${maxRiskPct.toFixed(1)}%)`;
@@ -1178,11 +1226,11 @@
                 this.textContent = text;
             });
 
-            // History Archive semakan
+            // History Archive check
             document.getElementById('loadHistoryBtn').addEventListener('click', async function() {
                 const dateVal = document.getElementById('historyDate').value;
                 if (!dateVal) {
-                    alert('Sila pilih tarikh pada kalendar terlebih dahulu.');
+                    alert('Please select a date from the calendar first.');
                     return;
                 }
                 const text = this.textContent;
@@ -1198,15 +1246,15 @@
                         const data = Array.isArray(raw) ? raw : (raw.topVolume || []);
                         if (data && data.length > 0) {
                             currentData = data;
-                            document.getElementById('dashboardSubtitle').innerHTML = `📂 Menunjukkan Arkib Bukti Sejarah: <strong>${dateVal}</strong>`;
+                            document.getElementById('dashboardSubtitle').innerHTML = `📂 Historical Archive: <strong>${dateVal}</strong>`;
                             applyFilters();
-                            alert(`Berjaya memuatkan arkib sejarah untuk tarikh: ${dateVal}`);
+                            alert(`Successfully loaded historical archive for date: ${dateVal}`);
                         }
                     } else {
-                        alert(`Tiada rekod dijumpai untuk tarikh: ${dateVal}`);
+                        alert(`No record found for date: ${dateVal}`);
                     }
                 } catch(e) {
-                    alert('Ralat memuatkan rekod sejarah.');
+                    alert('Error loading historical record.');
                 }
                 this.textContent = text;
             });
