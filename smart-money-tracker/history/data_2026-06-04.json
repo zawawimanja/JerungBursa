@@ -22,7 +22,9 @@
       "setupName": "🔥 RBS Retest / Near ATH",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 8.446800050735474,
+      "sma200": 7.12180000782013
     },
     {
       "name": "SDG",
@@ -44,7 +46,9 @@
       "setupName": "📉 Healthy Dip",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 6.0173999786376955,
+      "sma200": 5.590900011062622
     },
     {
       "name": "MAYBANK",
@@ -66,7 +70,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 11.12600004196167,
+      "sma200": 10.703799991607665
     },
     {
       "name": "ZETRIX",
@@ -88,7 +94,9 @@
       "setupName": "🔻 Buy Support / Deep Pullback",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.8125000011920929,
+      "sma200": 0.8244000020623207
     },
     {
       "name": "PETDAG",
@@ -110,7 +118,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 20.20519989013672,
+      "sma200": 21.169599981307982
     },
     {
       "name": "NESTLE",
@@ -154,7 +164,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.20429999709129334,
+      "sma200": 0.42259999841451645
     },
     {
       "name": "CTOS",
@@ -165,7 +177,7 @@
       "turnover": 29826885,
       "volume": 48499000,
       "signal": "avoid",
-      "reason": "🧊 Saham Downtrend: Elak Trading!",
+      "reason": "🧊 Saham Downtrend: Elak Trading! (Pullback Support)",
       "high52": 1.0199999809265137,
       "closeTightness": 3.36,
       "lowTightness": 7.89,
@@ -176,7 +188,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.66200000166893,
+      "sma200": 0.8105749979615211
     },
     {
       "name": "MPI",
@@ -198,7 +212,9 @@
       "setupName": "📉 Healthy Dip",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 38.02919994354248,
+      "sma200": 32.2938000869751
     },
     {
       "name": "UTDPLT",
@@ -220,7 +236,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 31.99720001220703,
+      "sma200": 28.540800008773804
     },
     {
       "name": "SKPRES",
@@ -242,7 +260,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 0.38429999887943267,
+      "sma200": 0.6242249988019466
     },
     {
       "name": "VELESTO",
@@ -275,7 +295,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": true,
       "hasLowerWickRejection": true,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 0.1439000016450882,
+      "sma200": 0.1598000019416213
     },
     {
       "name": "KLK",
@@ -297,7 +319,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 20.931599922180176,
+      "sma200": 20.252900066375734
     },
     {
       "name": "UWC",
@@ -319,7 +343,9 @@
       "setupName": "📉 Healthy Dip",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 5.010799975395202,
+      "sma200": 4.166350011825561
     },
     {
       "name": "MI",
@@ -352,7 +378,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 29.598799896240234,
+      "sma200": 31.053899927139284
     },
     {
       "name": "HSI-PWRP",
@@ -385,7 +413,9 @@
       "setupName": "📉 Healthy Dip",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 3.840400023460388,
+      "sma200": 3.735500010251999
     },
     {
       "name": "SOP",
@@ -406,8 +436,8 @@
       "changePct": 5.56,
       "turnover": 4758550,
       "volume": 50090000,
-      "signal": "avoid",
-      "reason": "🧊 Saham Downtrend: Elak Trading!",
+      "signal": "buy",
+      "reason": "⚠️ Penny Goreng: Pam Volume Laju (Intraday Sahaja, Elak Hold!) (Pullback Support)",
       "high52": 0.14499999582767487,
       "closeTightness": 5.56,
       "lowTightness": 5.56,
@@ -415,10 +445,12 @@
       "floorLow": 0.09000000357627869,
       "isConsolidation": false,
       "pullback": 34.48,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 0.07169999912381173,
+      "sma200": 0.07772499967366457
     }
   ],
   "topGainers": [

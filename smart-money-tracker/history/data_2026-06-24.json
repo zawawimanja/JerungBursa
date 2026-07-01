@@ -23,7 +23,9 @@
       "floorLow": 2.8299999237060547,
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 2.8675000170866647,
+      "sma200": 2.8675000170866647
     },
     {
       "name": "ZETRIX",
@@ -46,7 +48,9 @@
       "floorLow": 0.75,
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.8256000006198883,
+      "sma200": 0.8190250024199486
     },
     {
       "name": "KGB",
@@ -69,7 +73,9 @@
       "floorLow": 7.260000228881836,
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 6.8230000019073485,
+      "sma200": 5.643700022697448
     },
     {
       "name": "PENTA",
@@ -92,7 +98,9 @@
       "floorLow": 4.75,
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 4.242600016593933,
+      "sma200": 3.796300011873245
     },
     {
       "name": "UWC",
@@ -115,7 +123,9 @@
       "floorLow": 6.019999980926514,
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 5.48439995765686,
+      "sma200": 4.371200007200241
     },
     {
       "name": "DUFU",
@@ -158,7 +168,9 @@
       "floorLow": 2.5399999618530273,
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 2.3584000182151796,
+      "sma200": 1.878750005364418
     },
     {
       "name": "DNEX",
@@ -181,7 +193,9 @@
       "floorLow": 0.3799999952316284,
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 0.3372000002861023,
+      "sma200": 0.29654999867081644
     },
     {
       "name": "MPI",
@@ -204,7 +218,9 @@
       "floorLow": 46,
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 42.84160007476807,
+      "sma200": 33.824700107574465
     },
     {
       "name": "UTDPLT",
@@ -227,7 +243,9 @@
       "floorLow": 31.31999969482422,
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 31.61000003814697,
+      "sma200": 29.185599985122682
     },
     {
       "name": "NATGATE",
@@ -250,7 +268,9 @@
       "floorLow": 0.7250000238418579,
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 0.7775999999046326,
+      "sma200": 0.9484499993920327
     },
     {
       "name": "SUNMED",
@@ -273,7 +293,9 @@
       "floorLow": 1.7599999904632568,
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 1.8295999956130982,
+      "sma200": 1.8758208876225486
     },
     {
       "name": "TANCO",
@@ -296,7 +318,9 @@
       "floorLow": 0.125,
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 1.3410000026226043,
+      "sma200": 1.2068499982357026
     },
     {
       "name": "HLBANK",
@@ -319,7 +343,9 @@
       "floorLow": 21.719999313354492,
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 21.92159999847412,
+      "sma200": 22.007699909210206
     },
     {
       "name": "MCEMENT",
@@ -342,7 +368,9 @@
       "floorLow": 6.519999980926514,
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 6.945399980545044,
+      "sma200": 7.0491999959945675
     },
     {
       "name": "NESTLE",
@@ -385,7 +413,9 @@
       "floorLow": 2.4600000381469727,
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 1.8927999901771546,
+      "sma200": 1.479399996995926
     },
     {
       "name": "PENTECH",
@@ -408,7 +438,9 @@
       "floorLow": 0.30000001192092896,
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.3135714275496347,
+      "sma200": 0.3135714275496347
     },
     {
       "name": "XL",
@@ -451,7 +483,9 @@
       "floorLow": 4.71999979019165,
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 4.343600020408631,
+      "sma200": 3.9182500159740448
     },
     {
       "name": "OPPSTAR",
@@ -474,7 +508,9 @@
       "floorLow": 0.5099999904632568,
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.5227000030875206,
+      "sma200": 0.40955000013113024
     },
     {
       "name": "HLFG",
@@ -517,7 +553,9 @@
       "floorLow": 1.3600000143051147,
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 1.0510999989509582,
+      "sma200": 0.9200561776589812
     },
     {
       "name": "EIPOWER",
@@ -540,7 +578,9 @@
       "floorLow": 0.6499999761581421,
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 0.6150000043537306,
+      "sma200": 0.6150000043537306
     },
     {
       "name": "HHRG",
@@ -552,10 +592,10 @@
       "turnover": 3419506,
       "volume": 35994800,
       "signal": "avoid",
-      "reason": "🧊 Saham Downtrend: Elak Trading!",
+      "reason": "VIP Sideway / Pullback (Pantau Peluang) (Pullback Support)",
       "high52": 0.14499999582767487,
       "pullback": 34.48,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 23.53,
       "lowTightness": 20,
       "touchCount": 2,
@@ -563,7 +603,9 @@
       "floorLow": 0.07500000298023224,
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.0785999995470047,
+      "sma200": 0.07524999976158142
     },
     {
       "name": "CBHB",
@@ -586,7 +628,9 @@
       "floorLow": 0.6299999952316284,
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 0.6079000020027161,
+      "sma200": 0.5209999996423721
     },
     {
       "name": "HKB",
@@ -609,7 +653,9 @@
       "floorLow": 0.6299999952316284,
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 0.3922999981045723,
+      "sma200": 0.2273500005155802
     },
     {
       "name": "SDCG",
@@ -632,7 +678,9 @@
       "floorLow": 0.6850000023841858,
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 0.6784000062942505,
+      "sma200": 0.6026500016450882
     },
     {
       "name": "SUM",
@@ -655,7 +703,9 @@
       "floorLow": 0.39500001072883606,
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.5139999866485596,
+      "sma200": 0.5139999866485596
     },
     {
       "name": "AMBEST",
@@ -678,7 +728,9 @@
       "floorLow": 0.800000011920929,
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.6715000015497208,
+      "sma200": 0.5083333340383345
     },
     {
       "name": "LWSABAH",
@@ -701,7 +753,9 @@
       "floorLow": 1.3700000047683716,
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 1.3361999988555908,
+      "sma200": 1.2769999995827674
     },
     {
       "name": "AMS",
@@ -724,7 +778,9 @@
       "floorLow": 0.36000001430511475,
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.36202381267434075,
+      "sma200": 0.36202381267434075
     },
     {
       "name": "NE",
@@ -747,7 +803,9 @@
       "floorLow": 0.9950000047683716,
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 0.9350999939441681,
+      "sma200": 0.7701499983668327
     },
     {
       "name": "ELSA",
@@ -770,7 +828,9 @@
       "floorLow": 0.20499999821186066,
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.24583332985639572,
+      "sma200": 0.24583332985639572
     },
     {
       "name": "ISF",
@@ -793,7 +853,9 @@
       "floorLow": 0.49000000953674316,
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.5223999953269959,
+      "sma200": 0.48176767338405957
     },
     {
       "name": "OGX",
@@ -816,7 +878,9 @@
       "floorLow": 0.44999998807907104,
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.36519999861717223,
+      "sma200": 0.33964788619901093
     },
     {
       "name": "CNERGEN",
@@ -839,7 +903,9 @@
       "floorLow": 0.5450000166893005,
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 0.47180000245571135,
+      "sma200": 0.4452750000357628
     },
     {
       "name": "MMCS",
@@ -862,7 +928,9 @@
       "floorLow": 0.24500000476837158,
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 0.24666666322284275,
+      "sma200": 0.24666666322284275
     },
     {
       "name": "IAB",
@@ -874,7 +942,7 @@
       "turnover": 472682,
       "volume": 355400,
       "signal": "avoid",
-      "reason": "🧊 Saham Downtrend: Elak Trading!",
+      "reason": "🧊 Saham Downtrend: Elak Trading! (Pullback Support)",
       "high52": 2,
       "pullback": 33.5,
       "setupName": "🧊 Downtrend / Avoid",
@@ -885,7 +953,9 @@
       "floorLow": 1.309999942779541,
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 1.399000005722046,
+      "sma200": 1.3362500017009131
     },
     {
       "name": "ADNEX",
@@ -908,7 +978,9 @@
       "floorLow": 0.3400000035762787,
       "isCombStock": true,
       "hasLowerWickRejection": false,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 0.30550000071525574,
+      "sma200": 0.28897058810381326
     },
     {
       "name": "GIIB",
@@ -931,7 +1003,9 @@
       "floorLow": 0.125,
       "isCombStock": true,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.14020000100135804,
+      "sma200": 0.1573000017926097
     }
   ],
   "topGainers": [

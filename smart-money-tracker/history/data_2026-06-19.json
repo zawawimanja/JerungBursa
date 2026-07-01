@@ -35,7 +35,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 7.65039999961853,
+      "sma200": 7.779299991130829
     },
     {
       "name": "PCHEM",
@@ -58,7 +60,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 5.473399991989136,
+      "sma200": 4.292599999904633
     },
     {
       "name": "DNEX",
@@ -81,7 +85,9 @@
       "setupName": "🔥 RBS Retest / Near ATH",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 0.3281000000238419,
+      "sma200": 0.2935749986767769
     },
     {
       "name": "ZETRIX",
@@ -104,7 +110,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.8249000000953675,
+      "sma200": 0.8205750024318695
     },
     {
       "name": "SKYECHIP",
@@ -127,7 +135,9 @@
       "setupName": "🔻 Buy Support / Deep Pullback",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 2.831904785973685,
+      "sma200": 2.831904785973685
     },
     {
       "name": "TOPGLOV",
@@ -150,7 +160,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.7753000032901763,
+      "sma200": 0.6552000024914741
     },
     {
       "name": "UWC",
@@ -173,7 +185,9 @@
       "setupName": "🔥 RBS Retest / Near ATH",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 5.362199954986572,
+      "sma200": 4.320050008296967
     },
     {
       "name": "MPI",
@@ -196,7 +210,9 @@
       "setupName": "🔥 RBS Retest / Near ATH",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 41.76800003051758,
+      "sma200": 33.51570010185242
     },
     {
       "name": "MCEMENT",
@@ -219,7 +235,9 @@
       "setupName": "🔻 Buy Support / Deep Pullback",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 6.942199983596802,
+      "sma200": 7.031549994945526
     },
     {
       "name": "NATGATE",
@@ -242,7 +260,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.7769000005722045,
+      "sma200": 0.956799999177456
     },
     {
       "name": "PPB",
@@ -265,7 +285,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 10.672600116729736,
+      "sma200": 10.816300048828126
     },
     {
       "name": "UTDPLT",
@@ -288,7 +310,9 @@
       "setupName": "📉 Healthy Dip",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 31.613200111389162,
+      "sma200": 29.027300004959105
     },
     {
       "name": "PENTECH",
@@ -311,7 +335,9 @@
       "setupName": "🔥 RBS Retest / Near ATH",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.30249999463558197,
+      "sma200": 0.30249999463558197
     },
     {
       "name": "SKYCHIP",
@@ -334,7 +360,9 @@
       "setupName": "🔻 Buy Support / Deep Pullback",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 2.831904785973685,
+      "sma200": 2.831904785973685
     },
     {
       "name": "TANCO",
@@ -357,7 +385,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 1.4323000007867812,
+      "sma200": 1.2156499986350537
     },
     {
       "name": "KLK",
@@ -380,7 +410,9 @@
       "setupName": "📉 Healthy Dip",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 20.773999938964845,
+      "sma200": 20.299800062179564
     },
     {
       "name": "NESTLE",
@@ -415,7 +447,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.37049999833106995,
+      "sma200": 0.5942999985814095
     },
     {
       "name": "FRONTKN",
@@ -450,7 +484,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": true,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.1413000014424324,
+      "sma200": 0.15787500191479922
     }
   ],
   "topGainers": [

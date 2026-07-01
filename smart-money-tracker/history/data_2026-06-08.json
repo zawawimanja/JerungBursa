@@ -22,7 +22,9 @@
       "setupName": "🔻 Buy Support / Deep Pullback",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.8156000006198884,
+      "sma200": 0.8237750020623207
     },
     {
       "name": "IHH",
@@ -66,7 +68,9 @@
       "setupName": "🔥 RBS Retest / Near ATH",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 0.7642000031471252,
+      "sma200": 0.6482000032067299
     },
     {
       "name": "PCHEM",
@@ -88,7 +92,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 5.605600004196167,
+      "sma200": 4.2555500030517575
     },
     {
       "name": "MPI",
@@ -110,7 +116,9 @@
       "setupName": "📉 Healthy Dip",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 38.716799926757815,
+      "sma200": 32.53090008735657
     },
     {
       "name": "TANCO",
@@ -121,7 +129,7 @@
       "turnover": 34131104,
       "volume": 30474200,
       "signal": "avoid",
-      "reason": "🧊 Saham Downtrend: Elak Trading!",
+      "reason": "🧊 Saham Downtrend: Elak Trading! (Pullback Support)",
       "high52": 1.7799999713897705,
       "closeTightness": 57.14,
       "lowTightness": 56.25,
@@ -132,7 +140,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 1.6277999997138977,
+      "sma200": 1.2335749992728233
     },
     {
       "name": "PETDAG",
@@ -154,7 +164,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 20.091599884033204,
+      "sma200": 21.122699975967407
     },
     {
       "name": "SDG",
@@ -176,7 +188,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 6.022999973297119,
+      "sma200": 5.600950009822846
     },
     {
       "name": "HEIM",
@@ -198,7 +212,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 22.30599998474121,
+      "sma200": 22.32879994392395
     },
     {
       "name": "HLBANK",
@@ -220,7 +236,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 21.984399948120117,
+      "sma200": 21.908299922943115
     },
     {
       "name": "HSI-CWQ7",
@@ -253,7 +271,9 @@
       "setupName": "🔥 RBS Retest / Near ATH",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 0.16879999801516532,
+      "sma200": 0.14874999951571227
     },
     {
       "name": "HSI-PWRP",
@@ -286,7 +306,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.20129999697208403,
+      "sma200": 0.41702499851584435
     },
     {
       "name": "TFP",
@@ -308,7 +330,9 @@
       "setupName": "📉 Healthy Dip",
       "isCombStock": true,
       "hasLowerWickRejection": false,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 0.02279999986290932,
+      "sma200": 0.02434999996330589
     },
     {
       "name": "HHRG",
@@ -330,7 +354,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.07279999926686287,
+      "sma200": 0.07759999968111515
     }
   ],
   "topGainers": [

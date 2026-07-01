@@ -33,7 +33,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 5.5809999942779545,
+      "sma200": 4.2935500025749205
     },
     {
       "name": "ZETRIX",
@@ -55,7 +57,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.8217000007629395,
+      "sma200": 0.8224250024557114
     },
     {
       "name": "AAX",
@@ -88,7 +92,9 @@
       "setupName": "📉 Healthy Dip",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 0.7786000025272369,
+      "sma200": 0.6524250027537346
     },
     {
       "name": "UNISEM",
@@ -110,7 +116,9 @@
       "setupName": "📉 Healthy Dip",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 3.828400011062622,
+      "sma200": 3.2831500017642976
     },
     {
       "name": "PETDAG",
@@ -132,7 +140,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 19.794799880981444,
+      "sma200": 21.03369997024536
     },
     {
       "name": "NESTLE",
@@ -176,7 +186,9 @@
       "setupName": "🔥 RBS Retest / Near ATH",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 0.3177999991178513,
+      "sma200": 0.2902249985933304
     },
     {
       "name": "HSI-PWRP",
@@ -209,7 +221,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 21.898799972534178,
+      "sma200": 21.933199911117555
     },
     {
       "name": "SUNWAY",
@@ -231,7 +245,9 @@
       "setupName": "🔻 Buy Support / Deep Pullback",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 1.8475999975204467,
+      "sma200": 1.8838333268960317
     },
     {
       "name": "HSI-CWQ7",
@@ -286,7 +302,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 20.89519992828369,
+      "sma200": 20.276300067901612
     }
   ],
   "topGainers": [

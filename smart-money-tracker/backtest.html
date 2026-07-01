@@ -445,59 +445,57 @@
         <!-- Metrics Display -->
         <div class="grid-stats">
             <div class="stat-card one-day">
-                <h2>📊 Prestasi 1-Hari (Entry: 30 Jun ➡️ Result: 1 Julai)</h2>
+                <h2 id="one-day-title">📊 Prestasi 1-Hari</h2>
                 <div class="stat-row">
                     <span class="stat-label">Kadar Kemenangan (Win Rate)</span>
                     <div>
-                        <span class="stat-value success">83.33%</span>
+                        <span id="one-day-winrate" class="stat-value success">-%</span>
                     </div>
                 </div>
                 <div class="stat-row">
                     <span class="stat-label">Purata Pulangan Portfolio</span>
                     <div>
-                        <span class="stat-value success">+4.33%</span>
+                        <span id="one-day-avg-return" class="stat-value success">-%</span>
                         <div class="stat-subtext">Hanya dalam tempoh 24 jam</div>
                     </div>
                 </div>
                 <div class="stat-row">
                     <span class="stat-label">Nisbah Untung / Rugi</span>
-                    <span class="stat-value" style="font-size: 1.3rem;">10 Untung | 2 Rugi</span>
+                    <span id="one-day-ratio" class="stat-value" style="font-size: 1.3rem;">- Untung | - Rugi</span>
                 </div>
             </div>
 
             <div class="stat-card seven-day">
-                <h2>📈 Prestasi 7-Hari Terakhir (Entry: 22 Jun ➡️ 1 Julai)</h2>
+                <h2 id="seven-day-title">📈 Prestasi Swing Terakhir</h2>
                 <div class="stat-row">
                     <span class="stat-label">Kadar Kemenangan Swing</span>
                     <div>
-                        <span class="stat-value accent">71.11%</span>
-                        <div class="stat-subtext">Diuji atas 45 trade bergerak</div>
+                        <span id="seven-day-winrate" class="stat-value accent">-%</span>
                     </div>
                 </div>
                 <div class="stat-row">
                     <span class="stat-label">Kadar Stop Loss Hit (SL %)</span>
                     <div>
-                        <span class="stat-value danger">8.47%</span>
-                        <div class="stat-subtext">Hanya 5 kali terkena SL 3%</div>
+                        <span id="seven-day-sl-rate" class="stat-value danger">-%</span>
                     </div>
                 </div>
                 <div class="stat-row">
                     <span class="stat-label">Jumlah Isyarat Diproses</span>
-                    <span class="stat-value" style="font-size: 1.3rem;">59 Isyarat Setup</span>
+                    <span id="seven-day-total" class="stat-value" style="font-size: 1.3rem;">- Isyarat Setup</span>
                 </div>
             </div>
         </div>
 
         <!-- Navigation Tabs -->
         <div class="tabs-header">
-            <button class="tab-btn active" onclick="switchTab('one-day')">Laporan 1-Hari (30 Jun -> 1 Jul) </button>
-            <button class="tab-btn" onclick="switchTab('seven-day')">Laporan Penuh 7-Hari (59 Isyarat)</button>
+            <button id="tab-one-day-btn" class="tab-btn active" onclick="switchTab('one-day')">Laporan 1-Hari</button>
+            <button id="tab-seven-day-btn" class="tab-btn" onclick="switchTab('seven-day')">Laporan Penuh Swing</button>
         </div>
 
         <!-- Tab 1: One Day Detailed Report -->
         <div id="panel-one-day" class="panel">
             <div class="panel-header">
-                <div class="panel-title">Hasil Keputusan Isyarat Kemasukan 30 Jun (Semalam)</div>
+                <div id="panel-one-day-title" class="panel-title">Hasil Keputusan Isyarat Kemasukan Semalam</div>
             </div>
             <div class="table-container">
                 <table>
@@ -506,134 +504,15 @@
                             <th>No</th>
                             <th>Kaunter</th>
                             <th>Kategori Setup</th>
-                            <th style="text-align: right;">Harga Kemasukan (30/6)</th>
-                            <th style="text-align: right;">Harga Hari Ini (1/7)</th>
+                            <th style="text-align: right;">Harga Kemasukan</th>
+                            <th style="text-align: right;">Harga Hari Ini</th>
                             <th style="text-align: right;">Kenaikan Tertinggi</th>
                             <th style="text-align: right;">Hasil Bersih (%)</th>
                             <th style="text-align: center;">Status</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>#1</td>
-                            <td style="font-weight: 700; color: white;">CHB</td>
-                            <td><span class="tag-pill explosive">🚀 EXPLOSIVE</span></td>
-                            <td style="text-align: right;">RM 1.090</td>
-                            <td style="text-align: right;">RM 1.410</td>
-                            <td style="text-align: right; color: var(--success); font-weight: 700;">+29.36%</td>
-                            <td style="text-align: right; color: var(--success); font-weight: 700;">+29.36%</td>
-                            <td style="text-align: center;"><span class="status-badge profit-big">PROFIT MEGA</span></td>
-                        </tr>
-                        <tr>
-                            <td>#2</td>
-                            <td style="font-weight: 700; color: white;">SUM</td>
-                            <td><span class="tag-pill staircase">🪜 STAIRCASE</span></td>
-                            <td style="text-align: right;">RM 0.495</td>
-                            <td style="text-align: right;">RM 0.540</td>
-                            <td style="text-align: right; color: var(--success); font-weight: 700;">+9.09%</td>
-                            <td style="text-align: right; color: var(--success); font-weight: 700;">+9.09%</td>
-                            <td style="text-align: center;"><span class="status-badge profit-big">PROFIT MEGA</span></td>
-                        </tr>
-                        <tr>
-                            <td>#3</td>
-                            <td style="font-weight: 700; color: white;">PEKAT</td>
-                            <td><span class="tag-pill staircase">🪜 STAIRCASE</span></td>
-                            <td style="text-align: right;">RM 1.720</td>
-                            <td style="text-align: right;">RM 1.780</td>
-                            <td style="text-align: right; color: var(--success); font-weight: 700;">+3.49%</td>
-                            <td style="text-align: right; color: var(--success); font-weight: 700;">+3.49%</td>
-                            <td style="text-align: center;"><span class="status-badge profit">PROFIT</span></td>
-                        </tr>
-                        <tr>
-                            <td>#4</td>
-                            <td style="font-weight: 700; color: white;">MMCS</td>
-                            <td><span class="tag-pill explosive">🚀 EXPLOSIVE</span></td>
-                            <td style="text-align: right;">RM 0.285</td>
-                            <td style="text-align: right;">RM 0.295</td>
-                            <td style="text-align: right; color: var(--success); font-weight: 700;">+3.51%</td>
-                            <td style="text-align: right; color: var(--success); font-weight: 700;">+3.51%</td>
-                            <td style="text-align: center;"><span class="status-badge profit">PROFIT</span></td>
-                        </tr>
-                        <tr>
-                            <td>#5</td>
-                            <td style="font-weight: 700; color: white;">UUE</td>
-                            <td><span class="tag-pill explosive">🚀 EXPLOSIVE</span></td>
-                            <td style="text-align: right;">RM 0.475</td>
-                            <td style="text-align: right;">RM 0.485</td>
-                            <td style="text-align: right; color: var(--success); font-weight: 700;">+2.11%</td>
-                            <td style="text-align: right; color: var(--success); font-weight: 700;">+2.11%</td>
-                            <td style="text-align: center;"><span class="status-badge profit">PROFIT</span></td>
-                        </tr>
-                        <tr>
-                            <td>#6</td>
-                            <td style="font-weight: 700; color: white;">CORAZA</td>
-                            <td><span class="tag-pill staircase">🪜 STAIRCASE</span></td>
-                            <td style="text-align: right;">RM 0.990</td>
-                            <td style="text-align: right;">RM 1.010</td>
-                            <td style="text-align: right; color: var(--success); font-weight: 700;">+2.02%</td>
-                            <td style="text-align: right; color: var(--success); font-weight: 700;">+2.02%</td>
-                            <td style="text-align: center;"><span class="status-badge profit">PROFIT</span></td>
-                        </tr>
-                        <tr>
-                            <td>#7</td>
-                            <td style="font-weight: 700; color: white;">PWRWELL</td>
-                            <td><span class="tag-pill staircase">🪜 STAIRCASE</span></td>
-                            <td style="text-align: right;">RM 0.815</td>
-                            <td style="text-align: right;">RM 0.830</td>
-                            <td style="text-align: right; color: var(--success); font-weight: 700;">+1.84%</td>
-                            <td style="text-align: right; color: var(--success); font-weight: 700;">+1.84%</td>
-                            <td style="text-align: center;"><span class="status-badge profit">PROFIT</span></td>
-                        </tr>
-                        <tr>
-                            <td>#8</td>
-                            <td style="font-weight: 700; color: white;">MCLEAN</td>
-                            <td><span class="tag-pill staircase">🪜 STAIRCASE</span></td>
-                            <td style="text-align: right;">RM 0.785</td>
-                            <td style="text-align: right;">RM 0.795</td>
-                            <td style="text-align: right; color: var(--success); font-weight: 700;">+1.27%</td>
-                            <td style="text-align: right; color: var(--success); font-weight: 700;">+1.27%</td>
-                            <td style="text-align: center;"><span class="status-badge profit">PROFIT</span></td>
-                        </tr>
-                        <tr>
-                            <td>#9</td>
-                            <td style="font-weight: 700; color: white;">INFOM</td>
-                            <td><span class="tag-pill explosive">🚀 EXPLOSIVE</span></td>
-                            <td style="text-align: right;">RM 1.170</td>
-                            <td style="text-align: right;">RM 1.180</td>
-                            <td style="text-align: right; color: var(--success); font-weight: 700;">+0.85%</td>
-                            <td style="text-align: right; color: var(--success); font-weight: 700;">+0.85%</td>
-                            <td style="text-align: center;"><span class="status-badge profit">PROFIT</span></td>
-                        </tr>
-                        <tr>
-                            <td>#10</td>
-                            <td style="font-weight: 700; color: white;">EIPOWER</td>
-                            <td><span class="tag-pill staircase">🪜 STAIRCASE</span></td>
-                            <td style="text-align: right;">RM 0.675</td>
-                            <td style="text-align: right;">RM 0.680</td>
-                            <td style="text-align: right; color: var(--success); font-weight: 700;">+0.74%</td>
-                            <td style="text-align: right; color: var(--success); font-weight: 700;">+0.74%</td>
-                            <td style="text-align: center;"><span class="status-badge profit">PROFIT</span></td>
-                        </tr>
-                        <tr>
-                            <td>#11</td>
-                            <td style="font-weight: 700; color: white;">OGX</td>
-                            <td><span class="tag-pill staircase">🪜 STAIRCASE</span></td>
-                            <td style="text-align: right;">RM 0.495</td>
-                            <td style="text-align: right;">RM 0.490</td>
-                            <td style="text-align: right; color: var(--danger); font-weight: 700;">-1.01%</td>
-                            <td style="text-align: right; color: var(--danger); font-weight: 700;">-1.01%</td>
-                            <td style="text-align: center;"><span class="status-badge loss">FLOAT LOSS</span></td>
-                        </tr>
-                        <tr>
-                            <td>#12</td>
-                            <td style="font-weight: 700; color: white;">IAB</td>
-                            <td><span class="tag-pill explosive">🚀 EXPLOSIVE</span></td>
-                            <td style="text-align: right;">RM 1.520</td>
-                            <td style="text-align: right;">RM 1.500</td>
-                            <td style="text-align: right; color: var(--danger); font-weight: 700;">-1.32%</td>
-                            <td style="text-align: right; color: var(--danger); font-weight: 700;">-1.32%</td>
-                            <td style="text-align: center;"><span class="status-badge loss">FLOAT LOSS</span></td>
-                        </tr>
+                    <tbody id="one-day-backtest-tbody">
+                        <!-- Filled by Javascript dynamically -->
                     </tbody>
                 </table>
             </div>
@@ -672,71 +551,162 @@
     </div>
 
     <script>
+        // Data generated dynamically from the backtest compiler script
         const fullData = [
-            { date: '2026-06-22', name: 'SKYECHIP', style: 'EXPLOSIVE', entryPrice: 3.360, finalPrice: 2.950, maxGain: 0.00, finalGain: -12.20, status: 'LOSS' },
-            { date: '2026-06-22', name: 'EIPOWER', style: 'EXPLOSIVE', entryPrice: 0.690, finalPrice: 0.680, maxGain: 0.00, finalGain: -1.45, status: 'LOSS' },
-            { date: '2026-06-22', name: 'KEEMING', style: 'EXPLOSIVE', entryPrice: 1.470, finalPrice: 1.850, maxGain: 25.85, finalGain: 25.85, status: 'PROFIT_BIG' },
-            { date: '2026-06-22', name: 'AMBEST', style: 'STAIRCASE', entryPrice: 0.895, finalPrice: 0.868, maxGain: 1.12, finalGain: -3.00, status: 'SL_HIT' },
-            { date: '2026-06-23', name: 'KEEMING', style: 'STAIRCASE', entryPrice: 1.520, finalPrice: 1.850, maxGain: 21.71, finalGain: 21.71, status: 'PROFIT_BIG' },
-            { date: '2026-06-23', name: 'HKB', style: 'STAIRCASE', entryPrice: 0.675, finalPrice: 0.655, maxGain: 3.70, finalGain: -3.00, status: 'SL_HIT' },
-            { date: '2026-06-24', name: 'MNHLDG', style: 'EXPLOSIVE', entryPrice: 2.800, finalPrice: 2.890, maxGain: 3.21, finalGain: 3.21, status: 'PROFIT' },
-            { date: '2026-06-24', name: 'DNEX', style: 'EXPLOSIVE', entryPrice: 0.440, finalPrice: 0.450, maxGain: 2.27, finalGain: 2.27, status: 'PROFIT' },
-            { date: '2026-06-24', name: 'EIPOWER', style: 'STAIRCASE', entryPrice: 0.680, finalPrice: 0.680, maxGain: 0.00, finalGain: 0.00, status: 'FLAT' },
-            { date: '2026-06-24', name: 'CBHB', style: 'STAIRCASE', entryPrice: 0.645, finalPrice: 0.670, maxGain: 3.88, finalGain: 3.88, status: 'PROFIT' },
-            { date: '2026-06-24', name: 'HKB', style: 'STAIRCASE', entryPrice: 0.690, finalPrice: 0.669, maxGain: 1.45, finalGain: -3.00, status: 'SL_HIT' },
+            { date: '2026-06-22', name: 'SKYECHIP', style: 'EXPLOSIVE', entryPrice: 3.580, finalPrice: 3.570, maxGain: 1.40, finalGain: -0.28, status: 'LOSS' },
+            { date: '2026-06-22', name: 'TMK', style: 'EXPLOSIVE', entryPrice: 2.750, finalPrice: 2.386, maxGain: 0.00, finalGain: -13.23, status: 'SL_HIT' },
+            { date: '2026-06-22', name: 'EIPOWER', style: 'EXPLOSIVE', entryPrice: 0.690, finalPrice: 0.685, maxGain: 3.62, finalGain: -0.72, status: 'LOSS' },
+            { date: '2026-06-22', name: 'KEEMING', style: 'EXPLOSIVE', entryPrice: 1.470, finalPrice: 1.870, maxGain: 27.89, finalGain: 27.21, status: 'PROFIT_BIG' },
+            { date: '2026-06-22', name: 'AMBEST', style: 'STAIRCASE', entryPrice: 0.895, finalPrice: 0.834, maxGain: 1.12, finalGain: -6.79, status: 'SL_HIT' },
+            { date: '2026-06-23', name: 'KEEMING', style: 'STAIRCASE', entryPrice: 1.520, finalPrice: 1.870, maxGain: 23.68, finalGain: 23.03, status: 'PROFIT_BIG' },
+            { date: '2026-06-23', name: 'HKB', style: 'STAIRCASE', entryPrice: 0.675, finalPrice: 0.606, maxGain: 10.37, finalGain: -10.19, status: 'SL_HIT' },
+            { date: '2026-06-24', name: 'MNHLDG', style: 'EXPLOSIVE', entryPrice: 2.800, finalPrice: 2.920, maxGain: 4.64, finalGain: 4.29, status: 'PROFIT' },
+            { date: '2026-06-24', name: 'DNEX', style: 'EXPLOSIVE', entryPrice: 0.440, finalPrice: 0.450, maxGain: 3.41, finalGain: 2.27, status: 'PROFIT' },
+            { date: '2026-06-24', name: 'KEEMING', style: 'EXPLOSIVE', entryPrice: 1.600, finalPrice: 1.870, maxGain: 17.50, finalGain: 16.87, status: 'PROFIT_BIG' },
+            { date: '2026-06-24', name: 'EIPOWER', style: 'STAIRCASE', entryPrice: 0.680, finalPrice: 0.630, maxGain: 1.47, finalGain: -7.28, status: 'SL_HIT' },
+            { date: '2026-06-24', name: 'CBHB', style: 'STAIRCASE', entryPrice: 0.645, finalPrice: 0.685, maxGain: 6.98, finalGain: 6.20, status: 'PROFIT_BIG' },
+            { date: '2026-06-24', name: 'HKB', style: 'STAIRCASE', entryPrice: 0.690, finalPrice: 0.611, maxGain: 7.97, finalGain: -11.43, status: 'SL_HIT' },
             { date: '2026-06-24', name: 'SDCG', style: 'STAIRCASE', entryPrice: 0.695, finalPrice: 0.700, maxGain: 0.72, finalGain: 0.72, status: 'PROFIT' },
-            { date: '2026-06-24', name: 'NE', style: 'EXPLOSIVE', entryPrice: 1.060, finalPrice: 1.170, maxGain: 10.38, finalGain: 10.38, status: 'PROFIT_BIG' },
-            { date: '2026-06-24', name: 'CNERGEN', style: 'EXPLOSIVE', entryPrice: 0.605, finalPrice: 0.630, maxGain: 4.13, finalGain: 4.13, status: 'PROFIT' },
-            { date: '2026-06-25', name: 'CBHB', style: 'STAIRCASE', entryPrice: 0.650, finalPrice: 0.670, maxGain: 3.08, finalGain: 3.08, status: 'PROFIT' },
-            { date: '2026-06-25', name: 'TMK', style: 'STAIRCASE', entryPrice: 2.510, finalPrice: 2.435, maxGain: 0.00, finalGain: -3.00, status: 'SL_HIT' },
-            { date: '2026-06-25', name: 'OGX', style: 'EXPLOSIVE', entryPrice: 0.500, finalPrice: 0.490, maxGain: 0.00, finalGain: -2.00, status: 'LOSS' },
-            { date: '2026-06-25', name: 'AMBEST', style: 'EXPLOSIVE', entryPrice: 0.870, finalPrice: 0.905, maxGain: 4.02, finalGain: 4.02, status: 'PROFIT' },
-            { date: '2026-06-25', name: 'HKB', style: 'STAIRCASE', entryPrice: 0.700, finalPrice: 0.679, maxGain: 0.00, finalGain: -3.00, status: 'SL_HIT' },
-            { date: '2026-06-25', name: 'MMCS', style: 'STAIRCASE', entryPrice: 0.270, finalPrice: 0.295, maxGain: 9.26, finalGain: 9.26, status: 'PROFIT' },
-            { date: '2026-06-25', name: 'CNERGEN', style: 'STAIRCASE', entryPrice: 0.610, finalPrice: 0.630, maxGain: 3.28, finalGain: 3.28, status: 'PROFIT' },
-            { date: '2026-06-26', name: 'CBHB', style: 'EXPLOSIVE', entryPrice: 0.670, finalPrice: 0.670, maxGain: 0.00, finalGain: 0.00, status: 'FLAT' },
-            { date: '2026-06-26', name: 'MNHLDG', style: 'STAIRCASE', entryPrice: 2.890, finalPrice: 2.890, maxGain: 0.00, finalGain: 0.00, status: 'FLAT' },
-            { date: '2026-06-26', name: 'NE', style: 'EXPLOSIVE', entryPrice: 1.150, finalPrice: 1.170, maxGain: 1.74, finalGain: 1.74, status: 'PROFIT' },
-            { date: '2026-06-26', name: 'NORTHEAST', style: 'EXPLOSIVE', entryPrice: 1.150, finalPrice: 1.150, maxGain: 0.00, finalGain: 0.00, status: 'FLAT' },
-            { date: '2026-06-26', name: 'MMCS', style: 'EXPLOSIVE', entryPrice: 0.285, finalPrice: 0.295, maxGain: 3.51, finalGain: 3.51, status: 'PROFIT' },
-            { date: '2026-06-26', name: 'AMBEST', style: 'STAIRCASE', entryPrice: 0.905, finalPrice: 0.905, maxGain: 0.00, finalGain: 0.00, status: 'FLAT' },
-            { date: '2026-06-26', name: 'MCLEAN', style: 'STAIRCASE', entryPrice: 0.785, finalPrice: 0.795, maxGain: 1.27, finalGain: 1.27, status: 'PROFIT' },
-            { date: '2026-06-26', name: 'CHB', style: 'EXPLOSIVE', entryPrice: 1.090, finalPrice: 1.410, maxGain: 29.36, finalGain: 29.36, status: 'PROFIT_BIG' },
-            { date: '2026-06-26', name: 'OGX', style: 'STAIRCASE', entryPrice: 0.495, finalPrice: 0.490, maxGain: 0.00, finalGain: -1.01, status: 'LOSS' },
-            { date: '2026-06-29', name: 'SCGBHD', style: 'STAIRCASE', entryPrice: 2.370, finalPrice: 2.370, maxGain: 0.00, finalGain: 0.00, status: 'FLAT' },
-            { date: '2026-06-29', name: 'CBHB', style: 'EXPLOSIVE', entryPrice: 0.670, finalPrice: 0.670, maxGain: 0.00, finalGain: 0.00, status: 'FLAT' },
-            { date: '2026-06-29', name: 'NE', style: 'EXPLOSIVE', entryPrice: 1.150, finalPrice: 1.170, maxGain: 1.74, finalGain: 1.74, status: 'PROFIT' },
-            { date: '2026-06-29', name: 'NORTHEAST', style: 'EXPLOSIVE', entryPrice: 1.150, finalPrice: 1.150, maxGain: 0.00, finalGain: 0.00, status: 'FLAT' },
-            { date: '2026-06-29', name: 'MMCS', style: 'EXPLOSIVE', entryPrice: 0.285, finalPrice: 0.295, maxGain: 3.51, finalGain: 3.51, status: 'PROFIT' },
-            { date: '2026-06-29', name: 'CORAZA', style: 'STAIRCASE', entryPrice: 0.990, finalPrice: 1.010, maxGain: 2.02, finalGain: 2.02, status: 'PROFIT' },
-            { date: '2026-06-29', name: 'AMBEST', style: 'STAIRCASE', entryPrice: 0.905, finalPrice: 0.905, maxGain: 0.00, finalGain: 0.00, status: 'FLAT' },
-            { date: '2026-06-29', name: 'MCLEAN', style: 'STAIRCASE', entryPrice: 0.785, finalPrice: 0.795, maxGain: 1.27, finalGain: 1.27, status: 'PROFIT' },
-            { date: '2026-06-29', name: 'CHB', style: 'EXPLOSIVE', entryPrice: 1.090, finalPrice: 1.410, maxGain: 29.36, finalGain: 29.36, status: 'PROFIT_BIG' },
-            { date: '2026-06-29', name: 'OGX', style: 'STAIRCASE', entryPrice: 0.495, finalPrice: 0.490, maxGain: 0.00, finalGain: -1.01, status: 'LOSS' },
-            { date: '2026-06-29', name: 'OHM', style: 'STAIRCASE', entryPrice: 0.365, finalPrice: 0.360, maxGain: 0.00, finalGain: -1.37, status: 'LOSS' },
-            { date: '2026-06-30', name: 'SCGBHD', style: 'STAIRCASE', entryPrice: 2.370, finalPrice: 2.370, maxGain: 0.00, finalGain: 0.00, status: 'FLAT' },
-            { date: '2026-06-30', name: 'CBHB', style: 'EXPLOSIVE', entryPrice: 0.670, finalPrice: 0.670, maxGain: 0.00, finalGain: 0.00, status: 'FLAT' },
-            { date: '2026-06-30', name: 'IAB', style: 'EXPLOSIVE', entryPrice: 1.520, finalPrice: 1.500, maxGain: 0.00, finalGain: -1.32, status: 'LOSS' },
-            { date: '2026-06-30', name: 'MNHLDG', style: 'STAIRCASE', entryPrice: 2.890, finalPrice: 2.890, maxGain: 0.00, finalGain: 0.00, status: 'FLAT' },
-            { date: '2026-06-30', name: 'MMCS', style: 'EXPLOSIVE', entryPrice: 0.285, finalPrice: 0.295, maxGain: 3.51, finalGain: 3.51, status: 'PROFIT' },
-            { date: '2026-06-30', name: 'EIPOWER', style: 'STAIRCASE', entryPrice: 0.675, finalPrice: 0.680, maxGain: 0.74, finalGain: 0.74, status: 'PROFIT' },
-            { date: '2026-06-30', name: 'EI POWER [S]', style: 'STAIRCASE', entryPrice: 0.675, finalPrice: 0.675, maxGain: 0.00, finalGain: 0.00, status: 'FLAT' },
-            { date: '2026-06-30', name: 'SUM', style: 'STAIRCASE', entryPrice: 0.495, finalPrice: 0.540, maxGain: 9.09, finalGain: 9.09, status: 'PROFIT_BIG' },
-            { date: '2026-06-30', name: 'CORAZA', style: 'STAIRCASE', entryPrice: 0.990, finalPrice: 1.010, maxGain: 2.02, finalGain: 2.02, status: 'PROFIT' },
-            { date: '2026-06-30', name: 'PWRWELL', style: 'STAIRCASE', entryPrice: 0.815, finalPrice: 0.830, maxGain: 1.84, finalGain: 1.84, status: 'PROFIT' },
-            { date: '2026-06-30', name: 'AMBEST', style: 'STAIRCASE', entryPrice: 0.905, finalPrice: 0.905, maxGain: 0.00, finalGain: 0.00, status: 'FLAT' },
-            { date: '2026-06-30', name: 'MCLEAN', style: 'STAIRCASE', entryPrice: 0.785, finalPrice: 0.795, maxGain: 1.27, finalGain: 1.27, status: 'PROFIT' },
-            { date: '2026-06-30', name: 'INFOM', style: 'EXPLOSIVE', entryPrice: 1.170, finalPrice: 1.180, maxGain: 0.85, finalGain: 0.85, status: 'PROFIT' },
+            { date: '2026-06-24', name: 'NE', style: 'EXPLOSIVE', entryPrice: 1.060, finalPrice: 1.150, maxGain: 10.38, finalGain: 8.49, status: 'PROFIT_BIG' },
+            { date: '2026-06-24', name: 'CNERGEN', style: 'EXPLOSIVE', entryPrice: 0.605, finalPrice: 0.630, maxGain: 6.61, finalGain: 4.13, status: 'PROFIT' },
+            { date: '2026-06-25', name: 'OPPSTAR', style: 'EXPLOSIVE', entryPrice: 0.640, finalPrice: 0.655, maxGain: 3.13, finalGain: 2.34, status: 'PROFIT' },
+            { date: '2026-06-25', name: 'CBHB', style: 'STAIRCASE', entryPrice: 0.650, finalPrice: 0.685, maxGain: 6.15, finalGain: 5.38, status: 'PROFIT_BIG' },
+            { date: '2026-06-25', name: 'TMK', style: 'STAIRCASE', entryPrice: 2.510, finalPrice: 2.377, maxGain: 1.59, finalGain: -5.32, status: 'SL_HIT' },
+            { date: '2026-06-25', name: 'OGX', style: 'EXPLOSIVE', entryPrice: 0.500, finalPrice: 0.495, maxGain: 1.00, finalGain: -1.00, status: 'LOSS' },
+            { date: '2026-06-25', name: 'AMBEST', style: 'EXPLOSIVE', entryPrice: 0.870, finalPrice: 0.910, maxGain: 8.62, finalGain: 4.60, status: 'PROFIT' },
+            { date: '2026-06-25', name: 'HKB', style: 'STAIRCASE', entryPrice: 0.700, finalPrice: 0.626, maxGain: 6.43, finalGain: -10.62, status: 'SL_HIT' },
+            { date: '2026-06-25', name: 'MMCS', style: 'STAIRCASE', entryPrice: 0.270, finalPrice: 0.295, maxGain: 11.11, finalGain: 9.26, status: 'PROFIT_BIG' },
+            { date: '2026-06-25', name: 'CNERGEN', style: 'STAIRCASE', entryPrice: 0.610, finalPrice: 0.630, maxGain: 5.74, finalGain: 3.28, status: 'PROFIT' },
+            { date: '2026-06-26', name: 'CBHB', style: 'EXPLOSIVE', entryPrice: 0.645, finalPrice: 0.685, maxGain: 6.98, finalGain: 6.20, status: 'PROFIT_BIG' },
+            { date: '2026-06-26', name: 'IAB', style: 'EXPLOSIVE', entryPrice: 1.370, finalPrice: 1.500, maxGain: 12.41, finalGain: 9.49, status: 'PROFIT_BIG' },
+            { date: '2026-06-26', name: 'MNHLDG', style: 'STAIRCASE', entryPrice: 2.790, finalPrice: 2.920, maxGain: 5.02, finalGain: 4.66, status: 'PROFIT' },
+            { date: '2026-06-26', name: 'NE', style: 'EXPLOSIVE', entryPrice: 1.050, finalPrice: 1.150, maxGain: 11.43, finalGain: 9.52, status: 'PROFIT_BIG' },
+            { date: '2026-06-26', name: 'MMCS', style: 'EXPLOSIVE', entryPrice: 0.260, finalPrice: 0.295, maxGain: 15.38, finalGain: 13.46, status: 'PROFIT_BIG' },
+            { date: '2026-06-26', name: 'AMBEST', style: 'STAIRCASE', entryPrice: 0.865, finalPrice: 0.910, maxGain: 9.25, finalGain: 5.20, status: 'PROFIT_BIG' },
+            { date: '2026-06-26', name: 'MCLEAN', style: 'STAIRCASE', entryPrice: 0.735, finalPrice: 0.790, maxGain: 10.88, finalGain: 7.48, status: 'PROFIT_BIG' },
+            { date: '2026-06-26', name: 'CHB', style: 'EXPLOSIVE', entryPrice: 1.040, finalPrice: 1.410, maxGain: 35.58, finalGain: 35.58, status: 'PROFIT_BIG' },
+            { date: '2026-06-26', name: 'UUE HOLDINGS BERHAD', style: 'EXPLOSIVE', entryPrice: 0.450, finalPrice: 0.485, maxGain: 8.89, finalGain: 7.78, status: 'PROFIT_BIG' },
+            { date: '2026-06-26', name: 'OGX', style: 'STAIRCASE', entryPrice: 0.480, finalPrice: 0.495, maxGain: 5.21, finalGain: 3.13, status: 'PROFIT' },
+            { date: '2026-06-26', name: 'OXB', style: 'EXPLOSIVE', entryPrice: 0.340, finalPrice: 0.350, maxGain: 4.41, finalGain: 2.94, status: 'PROFIT' },
+            { date: '2026-06-29', name: 'SCGBHD', style: 'STAIRCASE', entryPrice: 2.350, finalPrice: 2.360, maxGain: 2.98, finalGain: 0.43, status: 'PROFIT' },
+            { date: '2026-06-29', name: 'CBHB', style: 'EXPLOSIVE', entryPrice: 0.645, finalPrice: 0.685, maxGain: 6.98, finalGain: 6.20, status: 'PROFIT_BIG' },
+            { date: '2026-06-29', name: 'IAB', style: 'EXPLOSIVE', entryPrice: 1.420, finalPrice: 1.500, maxGain: 8.45, finalGain: 5.63, status: 'PROFIT_BIG' },
+            { date: '2026-06-29', name: 'MNHLDG', style: 'STAIRCASE', entryPrice: 2.880, finalPrice: 2.920, maxGain: 1.74, finalGain: 1.39, status: 'PROFIT' },
+            { date: '2026-06-29', name: 'NE', style: 'EXPLOSIVE', entryPrice: 1.090, finalPrice: 1.150, maxGain: 7.34, finalGain: 5.50, status: 'PROFIT_BIG' },
+            { date: '2026-06-29', name: 'MMCS', style: 'EXPLOSIVE', entryPrice: 0.265, finalPrice: 0.295, maxGain: 13.21, finalGain: 11.32, status: 'PROFIT_BIG' },
+            { date: '2026-06-29', name: 'CORAZA', style: 'STAIRCASE', entryPrice: 0.985, finalPrice: 1.010, maxGain: 4.57, finalGain: 2.54, status: 'PROFIT' },
+            { date: '2026-06-29', name: 'AMBEST', style: 'STAIRCASE', entryPrice: 0.895, finalPrice: 0.910, maxGain: 5.59, finalGain: 1.68, status: 'PROFIT' },
+            { date: '2026-06-29', name: 'MCLEAN', style: 'STAIRCASE', entryPrice: 0.780, finalPrice: 0.790, maxGain: 4.49, finalGain: 1.28, status: 'PROFIT' },
+            { date: '2026-06-29', name: 'INFOM', style: 'EXPLOSIVE', entryPrice: 1.100, finalPrice: 1.190, maxGain: 10.00, finalGain: 8.18, status: 'PROFIT_BIG' },
+            { date: '2026-06-29', name: 'CHB', style: 'EXPLOSIVE', entryPrice: 1.010, finalPrice: 1.410, maxGain: 39.60, finalGain: 39.60, status: 'PROFIT_BIG' },
+            { date: '2026-06-29', name: 'UUE HOLDINGS BERHAD', style: 'EXPLOSIVE', entryPrice: 0.450, finalPrice: 0.485, maxGain: 8.89, finalGain: 7.78, status: 'PROFIT_BIG' },
+            { date: '2026-06-29', name: 'OGX', style: 'STAIRCASE', entryPrice: 0.490, finalPrice: 0.495, maxGain: 3.06, finalGain: 1.02, status: 'PROFIT' },
+            { date: '2026-06-29', name: 'OHM', style: 'STAIRCASE', entryPrice: 0.355, finalPrice: 0.360, maxGain: 2.82, finalGain: 1.41, status: 'PROFIT' },
+            { date: '2026-06-29', name: 'OXB', style: 'EXPLOSIVE', entryPrice: 0.340, finalPrice: 0.350, maxGain: 4.41, finalGain: 2.94, status: 'PROFIT' },
+            { date: '2026-06-30', name: 'SCGBHD', style: 'STAIRCASE', entryPrice: 2.370, finalPrice: 2.360, maxGain: 2.11, finalGain: -0.42, status: 'LOSS' },
+            { date: '2026-06-30', name: 'CBHB', style: 'EXPLOSIVE', entryPrice: 0.670, finalPrice: 0.685, maxGain: 2.24, finalGain: 2.24, status: 'PROFIT' },
+            { date: '2026-06-30', name: 'IAB', style: 'EXPLOSIVE', entryPrice: 1.520, finalPrice: 1.500, maxGain: 1.32, finalGain: -1.32, status: 'LOSS' },
+            { date: '2026-06-30', name: 'MNHLDG', style: 'STAIRCASE', entryPrice: 2.890, finalPrice: 2.920, maxGain: 1.38, finalGain: 1.04, status: 'PROFIT' },
+            { date: '2026-06-30', name: 'NE', style: 'EXPLOSIVE', entryPrice: 1.150, finalPrice: 1.150, maxGain: 1.74, finalGain: 0.00, status: 'FLAT' },
+            { date: '2026-06-30', name: 'MMCS', style: 'EXPLOSIVE', entryPrice: 0.285, finalPrice: 0.295, maxGain: 5.26, finalGain: 3.51, status: 'PROFIT' },
+            { date: '2026-06-30', name: 'EIPOWER', style: 'STAIRCASE', entryPrice: 0.675, finalPrice: 0.685, maxGain: 2.96, finalGain: 1.48, status: 'PROFIT' },
+            { date: '2026-06-30', name: 'SUM', style: 'STAIRCASE', entryPrice: 0.495, finalPrice: 0.535, maxGain: 10.10, finalGain: 8.08, status: 'PROFIT_BIG' },
+            { date: '2026-06-30', name: 'CORAZA', style: 'STAIRCASE', entryPrice: 0.990, finalPrice: 1.010, maxGain: 4.04, finalGain: 2.02, status: 'PROFIT' },
+            { date: '2026-06-30', name: 'PWRWELL', style: 'STAIRCASE', entryPrice: 0.815, finalPrice: 0.840, maxGain: 3.07, finalGain: 3.07, status: 'PROFIT' },
+            { date: '2026-06-30', name: 'AMBEST', style: 'STAIRCASE', entryPrice: 0.905, finalPrice: 0.910, maxGain: 4.42, finalGain: 0.55, status: 'PROFIT' },
+            { date: '2026-06-30', name: 'MCLEAN', style: 'STAIRCASE', entryPrice: 0.785, finalPrice: 0.790, maxGain: 3.82, finalGain: 0.64, status: 'PROFIT' },
+            { date: '2026-06-30', name: 'INFOM', style: 'EXPLOSIVE', entryPrice: 1.170, finalPrice: 1.190, maxGain: 2.56, finalGain: 1.71, status: 'PROFIT' },
             { date: '2026-06-30', name: 'CHB', style: 'EXPLOSIVE', entryPrice: 1.090, finalPrice: 1.410, maxGain: 29.36, finalGain: 29.36, status: 'PROFIT_BIG' },
-            { date: '2026-06-30', name: 'PEKAT', style: 'STAIRCASE', entryPrice: 1.720, finalPrice: 1.780, maxGain: 3.49, finalGain: 3.49, status: 'PROFIT' },
-            { date: '2026-06-30', name: 'UUE HOLDINGS', style: 'EXPLOSIVE', entryPrice: 0.475, finalPrice: 0.475, maxGain: 0.00, finalGain: 0.00, status: 'FLAT' },
-            { date: '2026-06-30', name: 'UUE', style: 'EXPLOSIVE', entryPrice: 0.475, finalPrice: 0.485, maxGain: 2.11, finalGain: 2.11, status: 'PROFIT' },
-            { date: '2026-06-30', name: 'OGX', style: 'STAIRCASE', entryPrice: 0.495, finalPrice: 0.490, maxGain: 0.00, finalGain: -1.01, status: 'LOSS' }
+            { date: '2026-06-30', name: 'PEKAT', style: 'STAIRCASE', entryPrice: 1.720, finalPrice: 1.800, maxGain: 5.23, finalGain: 4.65, status: 'PROFIT' },
+            { date: '2026-06-30', name: 'UUE HOLDINGS BERHAD', style: 'EXPLOSIVE', entryPrice: 0.475, finalPrice: 0.485, maxGain: 3.16, finalGain: 2.11, status: 'PROFIT' },
+            { date: '2026-06-30', name: 'OGX', style: 'STAIRCASE', entryPrice: 0.495, finalPrice: 0.495, maxGain: 1.01, finalGain: 0.00, status: 'FLAT' },
+            { date: '2026-06-30', name: 'OXB', style: 'EXPLOSIVE', entryPrice: 0.355, finalPrice: 0.350, maxGain: 0.00, finalGain: -1.41, status: 'LOSS' }
         ];
 
-        function initFullTable() {
-            const tbody = document.getElementById('full-backtest-tbody');
-            let html = '';
+        function initDashboard() {
+            const dates = [...new Set(fullData.map(item => item.date))].sort((a, b) => b.localeCompare(a));
+            const latestDate = dates[0] || '';
+
+            if (latestDate) {
+                document.getElementById('one-day-title').innerHTML = `📊 Prestasi 1-Hari (Entry: ${formatDate(latestDate)})`;
+                document.getElementById('panel-one-day-title').innerHTML = `Hasil Keputusan Isyarat Kemasukan ${formatDate(latestDate)}`;
+            }
+
+            const oneDayTrades = fullData.filter(item => item.date === latestDate);
+            const oneDayTbody = document.getElementById('one-day-backtest-tbody');
+            let oneDayHtml = '';
+            
+            let oneDayWins = 0;
+            let oneDayLosses = 0;
+            let oneDayFlats = 0;
+            let oneDayTotalReturn = 0;
+
+            oneDayTrades.forEach((row, idx) => {
+                let tagClass = row.style === 'EXPLOSIVE' ? 'explosive' : 'staircase';
+                let tagLabel = row.style === 'EXPLOSIVE' ? '🚀 EXPLOSIVE' : '🪜 STAIRCASE';
+                
+                let gainColor = row.finalGain > 0 ? 'var(--success)' : (row.finalGain < 0 ? 'var(--danger)' : 'white');
+                let gainSign = row.finalGain > 0 ? '+' : '';
+                
+                let statusLabel = '';
+                let statusClass = '';
+                if (row.status === 'PROFIT_BIG') {
+                    statusLabel = 'PROFIT MEGA';
+                    statusClass = 'profit-big';
+                    oneDayWins++;
+                } else if (row.status === 'PROFIT') {
+                    statusLabel = 'PROFIT';
+                    statusClass = 'profit';
+                    oneDayWins++;
+                } else if (row.status === 'SL_HIT') {
+                    statusLabel = '🛑 SL HIT';
+                    statusClass = 'loss-sl';
+                    oneDayLosses++;
+                } else if (row.status === 'LOSS') {
+                    statusLabel = 'FLOAT LOSS';
+                    statusClass = 'loss';
+                    oneDayLosses++;
+                } else {
+                    statusLabel = 'FLAT / SERI';
+                    statusClass = 'flat';
+                    oneDayFlats++;
+                }
+
+                oneDayTotalReturn += row.finalGain;
+
+                oneDayHtml += `
+                    <tr>
+                        <td>#${idx + 1}</td>
+                        <td style="font-weight: 700; color: white;">${row.name}</td>
+                        <td><span class="tag-pill ${tagClass}">${tagLabel}</span></td>
+                        <td style="text-align: right;">RM ${row.entryPrice.toFixed(3)}</td>
+                        <td style="text-align: right;">RM ${row.finalPrice.toFixed(3)}</td>
+                        <td style="text-align: right; color: var(--success); font-weight: 700;">+${row.maxGain.toFixed(2)}%</td>
+                        <td style="text-align: right; color: ${gainColor}; font-weight: 700;">${gainSign}${row.finalGain.toFixed(2)}%</td>
+                        <td style="text-align: center;"><span class="status-badge ${statusClass}">${statusLabel}</span></td>
+                    </tr>
+                `;
+            });
+            oneDayTbody.innerHTML = oneDayHtml || '<tr><td colspan="8" style="text-align:center;">Tiada isyarat dikesan.</td></tr>';
+
+            const oneDayTotal = oneDayTrades.length;
+            if (oneDayTotal > 0) {
+                const oneDayWinRate = (oneDayWins / oneDayTotal) * 100;
+                const oneDayAvgReturn = oneDayTotalReturn / oneDayTotal;
+                
+                document.getElementById('one-day-winrate').innerText = `${oneDayWinRate.toFixed(2)}%`;
+                document.getElementById('one-day-avg-return').innerText = `${oneDayAvgReturn >= 0 ? '+' : ''}${oneDayAvgReturn.toFixed(2)}%`;
+                document.getElementById('one-day-ratio').innerText = `${oneDayWins} Untung | ${oneDayLosses + oneDayFlats} Rugi/Flat`;
+            }
+
+            const fullTbody = document.getElementById('full-backtest-tbody');
+            let fullHtml = '';
+            
+            let fullWins = 0;
+            let fullLosses = 0;
+            let fullFlats = 0;
+            let fullSlHits = 0;
+
             fullData.forEach(row => {
                 let tagClass = row.style === 'EXPLOSIVE' ? 'explosive' : 'staircase';
                 let tagLabel = row.style === 'EXPLOSIVE' ? '🚀 EXPLOSIVE' : '🪜 STAIRCASE';
@@ -749,21 +719,27 @@
                 if (row.status === 'PROFIT_BIG') {
                     statusLabel = 'PROFIT MEGA';
                     statusClass = 'profit-big';
+                    fullWins++;
                 } else if (row.status === 'PROFIT') {
                     statusLabel = 'PROFIT';
                     statusClass = 'profit';
+                    fullWins++;
                 } else if (row.status === 'SL_HIT') {
                     statusLabel = '🛑 SL HIT';
                     statusClass = 'loss-sl';
+                    fullSlHits++;
+                    fullLosses++;
                 } else if (row.status === 'LOSS') {
                     statusLabel = 'FLOAT LOSS';
                     statusClass = 'loss';
+                    fullLosses++;
                 } else {
                     statusLabel = 'FLAT / SERI';
                     statusClass = 'flat';
+                    fullFlats++;
                 }
 
-                html += `
+                fullHtml += `
                     <tr>
                         <td style="color: var(--text-secondary); font-weight: 500;">${row.date}</td>
                         <td style="font-weight: 700; color: white;">${row.name}</td>
@@ -776,28 +752,47 @@
                     </tr>
                 `;
             });
-            tbody.innerHTML = html;
+            fullTbody.innerHTML = fullHtml || '<tr><td colspan="8" style="text-align:center;">Tiada data.</td></tr>';
+
+            const totalSwing = fullData.length;
+            if (totalSwing > 0) {
+                const swingWinRate = (fullWins / totalSwing) * 100;
+                const slHitRate = (fullSlHits / totalSwing) * 100;
+                
+                document.getElementById('seven-day-winrate').innerText = `${swingWinRate.toFixed(2)}%`;
+                document.getElementById('seven-day-sl-rate').innerText = `${slHitRate.toFixed(2)}%`;
+                document.getElementById('seven-day-total').innerText = `${totalSwing} Isyarat Setup`;
+                
+                document.getElementById('seven-day-title').innerHTML = `📈 Prestasi Swing Terakhir (${dates[dates.length-1]} ➡️ ${latestDate})`;
+                document.getElementById('tab-seven-day-btn').innerText = `Laporan Penuh Swing (${totalSwing} Isyarat)`;
+                document.getElementById('tab-one-day-btn').innerText = `Laporan 1-Hari (${formatDate(latestDate)})`;
+            }
+        }
+
+        function formatDate(dateStr) {
+            if (!dateStr) return '';
+            const parts = dateStr.split('-');
+            if (parts.length !== 3) return dateStr;
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Ogos', 'Sep', 'Okt', 'Nov', 'Dis'];
+            const day = parseInt(parts[2], 10);
+            const monthIdx = parseInt(parts[1], 10) - 1;
+            return `${day} ${months[monthIdx]}`;
         }
 
         function switchTab(tabId) {
-            // Manage buttons active state
             document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-
-            // Manage panels visibility
             if (tabId === 'one-day') {
+                document.getElementById('tab-one-day-btn').classList.add('active');
                 document.getElementById('panel-one-day').style.display = 'block';
                 document.getElementById('panel-seven-day').style.display = 'none';
             } else {
+                document.getElementById('tab-seven-day-btn').classList.add('active');
                 document.getElementById('panel-one-day').style.display = 'none';
                 document.getElementById('panel-seven-day').style.display = 'block';
             }
         }
 
-        // Initialize table on load
-        window.addEventListener('load', () => {
-            initFullTable();
-        });
+        window.addEventListener('load', initDashboard);
     </script>
 </body>
 </html>

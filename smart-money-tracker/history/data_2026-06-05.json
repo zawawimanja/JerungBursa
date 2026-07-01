@@ -22,7 +22,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 11.1132000541687,
+      "sma200": 10.709249992370605
     },
     {
       "name": "ZETRIX",
@@ -44,7 +46,9 @@
       "setupName": "🔻 Buy Support / Deep Pullback",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.8140000009536743,
+      "sma200": 0.8241250020265579
     },
     {
       "name": "SCGBHD",
@@ -66,7 +70,9 @@
       "setupName": "📉 Healthy Dip",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 1.9919999814033509,
+      "sma200": 2.078899981379509
     },
     {
       "name": "CBHB",
@@ -88,7 +94,9 @@
       "setupName": "🔥 RBS Retest / Near ATH",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 0.57400000333786,
+      "sma200": 0.5006499999761581
     },
     {
       "name": "KGB",
@@ -110,7 +118,9 @@
       "setupName": "🔥 RBS Retest / Near ATH",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 6.174800004959106,
+      "sma200": 5.468050019741058
     },
     {
       "name": "SUNCON",
@@ -132,7 +142,9 @@
       "setupName": "📉 Healthy Dip",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 7.019799976348877,
+      "sma200": 6.312249994277954
     },
     {
       "name": "NESTLE",
@@ -165,7 +177,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 20.157999877929687,
+      "sma200": 21.147299976348876
     },
     {
       "name": "CTOS",
@@ -176,7 +190,7 @@
       "turnover": 27855425,
       "volume": 42854500,
       "signal": "avoid",
-      "reason": "🧊 Saham Downtrend: Elak Trading!",
+      "reason": "🧊 Saham Downtrend: Elak Trading! (Pullback Support)",
       "high52": 1.0199999809265137,
       "closeTightness": 9.24,
       "lowTightness": 7.89,
@@ -187,7 +201,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 0.6617000007629394,
+      "sma200": 0.8092249977588654
     },
     {
       "name": "MPI",
@@ -209,7 +225,9 @@
       "setupName": "📉 Healthy Dip",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 38.38719993591309,
+      "sma200": 32.4178000831604
     },
     {
       "name": "HLBANK",
@@ -231,7 +249,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 22.015199966430664,
+      "sma200": 21.90199993133545
     },
     {
       "name": "GIIB",
@@ -253,7 +273,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": true,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.14400000184774397,
+      "sma200": 0.15960000198334456
     },
     {
       "name": "UTDPLT",
@@ -275,7 +297,9 @@
       "setupName": "📉 Healthy Dip",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 31.9692000579834,
+      "sma200": 28.5918000125885
     },
     {
       "name": "PETGAS",
@@ -297,7 +321,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 17.84280002593994,
+      "sma200": 18.191700086593627
     },
     {
       "name": "PHARMA",
@@ -363,7 +389,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 29.53119987487793,
+      "sma200": 31.046999921798704
     },
     {
       "name": "CARLSBG",
@@ -385,7 +413,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 16.79239990234375,
+      "sma200": 16.926999940872193
     }
   ],
   "topGainers": [

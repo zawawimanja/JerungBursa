@@ -80,6 +80,13 @@ async function recalculateArchive(dateStr) {
                 : (closesDaily.reduce((a, b) => a + b, 0) / closesDaily.length);
             const hasEnoughSmaData = closesDaily.length >= 20;
             
+            const sma200 = closesDaily.length >= 200
+                ? closesDaily.slice(-200).reduce((a, b) => a + b, 0) / 200
+                : (closesDaily.reduce((a, b) => a + b, 0) / closesDaily.length);
+                
+            item.sma50 = sma50;
+            item.sma200 = sma200;
+            
             // Cari 52W High up to target date
             let high52 = 0;
             validDays.forEach(d => {
@@ -181,14 +188,19 @@ async function recalculateArchive(dateStr) {
             // Recalculate pullback setupName
             item.pullback = pullback !== null ? parseFloat(pullback.toFixed(2)) : null;
             const isSmaDowntrend = (sma50 && hasEnoughSmaData) ? (item.price < sma50) : false;
+            const isSma200Downtrend = sma200 ? (item.price < sma200) : false;
+            
+            // Logik pintar: Pullback sehingga 40% dibenarkan jika harga di atas SMA200 (Long-term Bullish)
+            // Jika tidak, had pullback adalah 30%
+            const maxPullbackAllowed = (!isSma200Downtrend && sma200) ? 40.0 : 30.0;
 
-            if (isSmaDowntrend || pullback > 30.0) {
+            if (isSmaDowntrend || pullback > maxPullbackAllowed) {
                 item.setupName = '🧊 Downtrend / Avoid';
             } else if (pullback <= 5.0) {
                 item.setupName = '🔥 RBS Retest / Near ATH';
             } else if (pullback <= 15.0) {
                 item.setupName = '📉 Healthy Dip';
-            } else if (pullback <= 30.0) {
+            } else if (pullback <= 40.0) {
                 item.setupName = '🔻 Buy Support / Deep Pullback';
             }
             
@@ -243,7 +255,7 @@ async function recalculateArchive(dateStr) {
                 reason += ' (Near ATH)';
             } else if (pullback <= 15.0) {
                 reason += ' (Healthy Dip)';
-            } else if (pullback <= 30.0) {
+            } else if (pullback <= 40.0) {
                 reason += ' (Pullback Support)';
             }
             

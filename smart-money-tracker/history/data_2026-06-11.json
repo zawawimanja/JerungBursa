@@ -22,7 +22,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 7.635399990081787,
+      "sma200": 7.773649988174438
     },
     {
       "name": "ZETRIX",
@@ -44,7 +46,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.8206000006198884,
+      "sma200": 0.8227000024914741
     },
     {
       "name": "PCHEM",
@@ -66,7 +70,9 @@
       "setupName": "📉 Healthy Dip",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 5.582199993133545,
+      "sma200": 4.285450001955033
     },
     {
       "name": "TANCO",
@@ -88,7 +94,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 1.57160000115633,
+      "sma200": 1.230149999037385
     },
     {
       "name": "PETDAG",
@@ -110,7 +118,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 19.870799865722656,
+      "sma200": 21.057399969100953
     },
     {
       "name": "VITROX",
@@ -132,7 +142,9 @@
       "setupName": "🔥 RBS Retest / Near ATH",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 5.725599994659424,
+      "sma200": 4.621399992704392
     },
     {
       "name": "NESTLE",
@@ -165,7 +177,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 7.0383999729156494,
+      "sma200": 6.342949993610382
     },
     {
       "name": "MPI",
@@ -187,7 +201,9 @@
       "setupName": "📉 Healthy Dip",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 39.81559993743897,
+      "sma200": 32.89480009078979
     },
     {
       "name": "PENTA",
@@ -209,7 +225,9 @@
       "setupName": "📉 Healthy Dip",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 3.957000021934509,
+      "sma200": 3.748950011730194
     },
     {
       "name": "MMCS",
@@ -255,7 +273,9 @@
       "setupName": "📉 Healthy Dip",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 20.910399932861328,
+      "sma200": 20.27010006904602
     },
     {
       "name": "HSI-CWQ7",
@@ -288,7 +308,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 31.83760013580322,
+      "sma200": 28.781900005340574
     },
     {
       "name": "VS",
@@ -310,7 +332,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.20039999693632127,
+      "sma200": 0.40834999866783617
     },
     {
       "name": "HSI-CWQ6",
@@ -343,7 +367,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 10.935000095367432,
+      "sma200": 10.800350050926209
     },
     {
       "name": "HSI-CWQU",
@@ -387,7 +413,9 @@
       "setupName": "🔥 RBS Retest / Near ATH",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 9.067599983215333,
+      "sma200": 8.94385000705719
     }
   ],
   "topGainers": [

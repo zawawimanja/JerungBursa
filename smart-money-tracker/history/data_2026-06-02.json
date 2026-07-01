@@ -22,7 +22,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 11.164400043487548,
+      "sma200": 10.694999985694885
     },
     {
       "name": "NESTLE",
@@ -55,7 +57,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 2.211800007820129,
+      "sma200": 2.45364999294281
     },
     {
       "name": "YTL",
@@ -77,7 +81,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 3.7578000164031984,
+      "sma200": 3.6485499966144563
     },
     {
       "name": "QL",
@@ -99,7 +105,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 3.730399990081787,
+      "sma200": 4.02320001244545
     },
     {
       "name": "PBBANK",
@@ -132,7 +140,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 20.326399879455565,
+      "sma200": 21.211399974823
     },
     {
       "name": "MRDIY",
@@ -154,7 +164,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 1.6152000045776367,
+      "sma200": 1.630949998497963
     },
     {
       "name": "NATGATE",
@@ -176,7 +188,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 0.7496000027656555,
+      "sma200": 0.9879750001430512
     },
     {
       "name": "AMBANK",
@@ -209,7 +223,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 22.108399963378908,
+      "sma200": 21.87589994430542
     },
     {
       "name": "SUNMED",
@@ -231,7 +247,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 1.9043999934196472,
+      "sma200": 1.9032692244419684
     },
     {
       "name": "PCHEM",
@@ -253,7 +271,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 5.617600021362304,
+      "sma200": 4.222200005054474
     },
     {
       "name": "AAX",
@@ -286,7 +306,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 0.8099000024795532,
+      "sma200": 0.8250000020861625
     },
     {
       "name": "KLCC",
@@ -308,7 +330,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 9.07679998397827,
+      "sma200": 8.929900007247925
     },
     {
       "name": "UNISEM",
@@ -330,7 +354,9 @@
       "setupName": "🔥 RBS Retest / Near ATH",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 3.475600004196167,
+      "sma200": 3.1858000004291536
     },
     {
       "name": "KLK",
@@ -352,7 +378,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 20.93239990234375,
+      "sma200": 20.247600059509278
     },
     {
       "name": "UTDPLT",
@@ -374,7 +402,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 32.14159999847412,
+      "sma200": 28.452600011825563
     },
     {
       "name": "ITMAX",
@@ -396,7 +426,9 @@
       "setupName": "📉 Healthy Dip",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "EXPLOSIVE"
+      "setupStyle": "EXPLOSIVE",
+      "sma50": 4.748399972915649,
+      "sma200": 4.667749981880188
     },
     {
       "name": "MCEMENT",
@@ -418,7 +450,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 6.805799989700318,
+      "sma200": 6.94074999332428
     },
     {
       "name": "CARLSBG",
@@ -440,7 +474,9 @@
       "setupName": "📉 Healthy Dip",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "SWING PLAY"
+      "setupStyle": "SWING PLAY",
+      "sma50": 16.83999988555908,
+      "sma200": 16.944399938583373
     },
     {
       "name": "BURSA",
@@ -462,7 +498,9 @@
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
       "hasLowerWickRejection": true,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 1711.8574047851562,
+      "sma200": 1665.8813513183593
     },
     {
       "name": "HLIND",
@@ -484,7 +522,9 @@
       "setupName": "🔥 RBS Retest / Near ATH",
       "isCombStock": false,
       "hasLowerWickRejection": false,
-      "setupStyle": "STAIRCASE"
+      "setupStyle": "STAIRCASE",
+      "sma50": 17.64759994506836,
+      "sma200": 15.961100001335144
     }
   ],
   "topGainers": [
