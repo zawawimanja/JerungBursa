@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JerungBursa - Panduan SOP Dagangan Pullback Bounce</title>
+    <!-- Inter Font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --panel-bg: rgba(17, 24, 39, 0.7);
+            --panel-border: rgba(255, 255, 255, 0.08);
+            --accent: #3b82f6;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --glow-color: rgba(59, 130, 246, 0.15);
+            --explosive-color: #fb7185;
+            --staircase-color: #22d3ee;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.05) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(59, 130, 246, 0.08) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(251, 113, 133, 0.05) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 2rem 1.5rem;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* Header Style */
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        header::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--staircase-color), var(--accent), var(--explosive-color));
+            margin: 1.5rem auto 0 auto;
+            border-radius: 2px;
+        }
+
+        header h1 {
+            font-size: 2.3rem;
+            font-weight: 900;
+            letter-spacing: -0.025em;
+            background: linear-gradient(135deg, #ffffff 40%, var(--text-secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Navigation Buttons */
+        .nav-links {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            gap: 0.8rem;
+        }
+
+        .btn-nav {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--panel-border);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-nav:hover {
+            color: white;
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.15);
+        }
+
+        @media (max-width: 900px) {
+            .nav-links {
+                position: static;
+                transform: none;
+                margin-bottom: 1.5rem;
+                justify-content: center;
+            }
+        }
+
+        /* Quick Stats Bar */
+        .stats-bar {
+            background: rgba(30, 41, 59, 0.4);
+            border: 1px solid var(--panel-border);
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        @media (max-width: 600px) {
+            .stats-bar {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+        }
+
+        .stats-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.2rem;
+        }
+
+        .stats-val {
+            font-size: 1.5rem;
+            font-weight: 800;
+        }
+
+        .stats-val.success { color: var(--success); }
+        .stats-val.accent { color: var(--staircase-color); }
+        .stats-val.danger { color: var(--danger); }
+
+        .stats-lbl {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        /* Section Panels */
+        .section-panel {
+            background: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(12px);
+        }
+
+        .panel-title {
+            font-size: 1.35rem;
+            font-weight: 800;
+            margin-bottom: 1.25rem;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            border-bottom: 1px solid var(--panel-border);
+            padding-bottom: 0.75rem;
+        }
+
+        /* Grid SOP Cards */
+        .sop-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 800px) {
+            .sop-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .sop-card {
+            background: rgba(15, 23, 42, 0.4);
+            border: 1px solid var(--panel-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: transform 0.2s ease, border-color 0.2s ease;
+        }
+
+        .sop-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(255,255,255,0.15);
+        }
+
+        .sop-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .sop-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .sop-card li {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 0.6rem;
+            position: relative;
+            padding-left: 1.2rem;
+        }
+
+        .sop-card li::before {
+            content: '•';
+            color: var(--accent);
+            font-size: 1.2rem;
+            position: absolute;
+            left: 0;
+            top: -0.2rem;
+        }
+
+        /* Highlights */
+        .highlight-success { color: var(--success); font-weight: 700; }
+        .highlight-danger { color: var(--danger); font-weight: 700; }
+        .highlight-warning { color: var(--warning); font-weight: 700; }
+
+        /* Calculator Styles */
+        .calc-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .calc-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-secondary);
+            margin-bottom: 0.4rem;
+        }
+
+        .form-group input, .form-group select {
+            width: 100%;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--panel-border);
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            outline: none;
+            transition: border-color 0.2s ease;
+        }
+
+        .form-group input:focus {
+            border-color: var(--accent);
+        }
+
+        .calc-results {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--panel-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .result-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.6rem 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .result-row:last-child {
+            border-bottom: none;
+        }
+
+        .result-lbl {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .result-val {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: white;
+        }
+
+        .result-val.highlight {
+            color: var(--success);
+            font-size: 1.2rem;
+        }
+
+        .result-val.danger {
+            color: var(--danger);
+        }
+
+        /* Case Studies */
+        .case-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .case-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .case-card {
+            background: rgba(15, 23, 42, 0.4);
+            border: 1px solid var(--panel-border);
+            border-radius: 12px;
+            padding: 1.5rem;
+        }
+
+        .case-card h3 {
+            font-size: 1.15rem;
+            font-weight: 800;
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .badge {
+            font-size: 0.7rem;
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            font-weight: 700;
+        }
+
+        .badge.explosive { background: rgba(251, 113, 133, 0.15); color: var(--explosive-color); border: 1px solid rgba(251, 113, 133, 0.3); }
+        .badge.staircase { background: rgba(34, 211, 238, 0.15); color: var(--staircase-color); border: 1px solid rgba(34, 211, 238, 0.3); }
+
+        .case-step {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 0.5rem;
+            padding-left: 0.75rem;
+            border-left: 2px solid var(--panel-border);
+        }
+
+        .case-step strong {
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="nav-links">
+                <a href="./index.html" class="btn-nav">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+                    Tracker Utama
+                </a>
+                <a href="./backtest.html" class="btn-nav">
+                    📊 Laporan Backtest
+                </a>
+            </div>
+            <h1>SOP & Panduan Dagangan Pullback Bounce</h1>
+            <p>Sistem panduan pengurusan risiko tegar dan pemilihan saham momentum tinggi bagi hasil backtest konsisten.</p>
+        </header>
+
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stats-item">
+                <span class="stats-val success">77.94%</span>
+                <span class="stats-lbl">Win Rate Penuh Swing</span>
+            </div>
+            <div class="stats-item">
+                <span class="stats-val accent">+3.18%</span>
+                <span class="stats-lbl">Purata Pulangan 24-Jam</span>
+            </div>
+            <div class="stats-item">
+                <span class="stats-val danger">10.29%</span>
+                <span class="stats-lbl">Stop Loss Hit Rate</span>
+            </div>
+        </div>
+
+        <!-- 3 Core Steps Section -->
+        <div class="section-panel">
+            <div class="panel-title">📘 Tiga Langkah SOP Utama JerungBursa</div>
+            <div class="sop-grid">
+                <!-- Step 1 -->
+                <div class="sop-card">
+                    <h3>🕒 1. Waktu Kemasukan</h3>
+                    <ul>
+                        <li><strong class="highlight-warning">🚨 SOP Tegar:</strong> Beli hanya pada **sesi petang (4:30 PM - 4:45 PM)** atau **pre-closing match (4:50 PM - 5:00 PM)**.</li>
+                        <li><strong>Elak Risiko:</strong> Jangan sesekali masuk pada waktu pagi atau pre-open.</li>
+                        <li><strong>Kenapa?</strong> Kita mahu mengesahkan lilin harian ditutup hijau (*reversal candle*) untuk mengelakkan *fakeout* (reversal palsu).</li>
+                    </ul>
+                </div>
+                <!-- Step 2 -->
+                <div class="sop-card">
+                    <h3>🔍 2. Pemilihan Kaunter</h3>
+                    <ul>
+                        <li><strong class="highlight-success">Pilih 3 - 5 Kaunter Sahaja:</strong> Jangan pecahkan modal terlalu kecil untuk semua kaunter.</li>
+                        <li><strong>Sektor Hangat:</strong> Utamakan kaunter dalam sektor yang mempunyai kemasukan *Smart Money* tinggi hari itu.</li>
+                        <li><strong>Cari Setup Terbaik:</strong> Utamakan kategori <span class="highlight-success">🚀 EXPLOSIVE</span> yang volatilitinya tinggi dan dekat dengan *Support Floor*.</li>
+                    </ul>
+                </div>
+                <!-- Step 3 -->
+                <div class="sop-card">
+                    <h3>🛡️ 3. Had & Kawalan Risiko</h3>
+                    <ul>
+                        <li><strong>Stop Loss Tegar:</strong> Letak SL secara disiplin pada <strong class="highlight-danger">3% di bawah Support Floor (floorLow)</strong>.</li>
+                        <li><strong>Nisbah Ganjaran:</strong> Sasarkan keuntungan (*Take Profit*) sekurang-kurangnya 10% - 20% mengikut momentum kaunter.</li>
+                        <li><strong>Position Sizing:</strong> Gunakan kalkulator di bawah untuk menentukan saiz lot beli mengikut toleransi rugi anda.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Position Sizer Calculator -->
+        <div class="section-panel">
+            <div class="panel-title">🧮 Kalkulator Pengurusan Risiko & Saiz Posisi</div>
+            <div class="calc-grid">
+                <!-- Form Inputs -->
+                <div>
+                    <div class="form-group">
+                        <label for="totalCapital">Jumlah Modal Dagangan (RM)</label>
+                        <input type="number" id="totalCapital" value="10000" oninput="calculateSizing()">
+                    </div>
+                    <div class="form-group">
+                        <label for="riskPct">Toleransi Risiko Maksimum per Trade (%)</label>
+                        <select id="riskPct" onchange="calculateSizing()">
+                            <option value="1">1% Risiko (Sangat Selamat)</option>
+                            <option value="1.5">1.5% Risiko (Sederhana)</option>
+                            <option value="2">2% Risiko (Agresif)</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="entryPrice">Harga Kemasukan / Penutup Semasa (RM)</label>
+                        <input type="number" id="entryPrice" value="0.450" step="0.005" oninput="calculateSizing()">
+                    </div>
+                    <div class="form-group">
+                        <label for="supportFloor">Lantai Sokongan / Support Floor (RM)</label>
+                        <input type="number" id="supportFloor" value="0.410" step="0.005" oninput="calculateSizing()">
+                    </div>
+                </div>
+
+                <!-- Live Results -->
+                <div class="calc-results">
+                    <div>
+                        <div class="result-row">
+                            <span class="result-lbl">Harga Stop Loss (3% Bawah Support)</span>
+                            <span class="result-val danger" id="valStopLoss">RM -</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="result-lbl">Peratus Jarak Kerugian (%)</span>
+                            <span class="result-val danger" id="valRiskDistance">-%</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="result-lbl">Jumlah Risiko Maksimum (RM)</span>
+                            <span class="result-val danger" id="valRiskRM">RM -</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="result-lbl">Had Kuantiti Beli (Units)</span>
+                            <span class="result-val highlight" id="valUnits">- units</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="result-lbl">Had Kuantiti Beli (Lots)</span>
+                            <span class="result-val highlight" id="valLots">- lots</span>
+                        </div>
+                    </div>
+                    <div style="border-top: 1px solid var(--panel-border); padding-top: 1rem; margin-top: 1rem;">
+                        <div class="result-row">
+                            <span class="result-lbl">Jumlah Modal Diperlukan</span>
+                            <span class="result-val highlight" id="valCapitalRequired">RM -</span>
+                        </div>
+                        <div class="result-row">
+                            <span class="result-lbl">Peratusan Dedahan Portfolio (%)</span>
+                            <span class="result-val" id="valExposurePct">-%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Case Studies -->
+        <div class="section-panel">
+            <div class="panel-title">📚 Contoh Kajian Kes Sebenar</div>
+            <div class="case-grid">
+                <!-- Case 1 -->
+                <div class="case-card">
+                    <h3>CHB <span class="badge explosive">🚀 EXPLOSIVE</span></h3>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Kajian kes pullback bounce pada 30 Jun:</p>
+                    <div class="case-step"><strong>1. Trigger:</strong> Pullback sihat ke support RM 1.050 selepas rali tinggi.</div>
+                    <div class="case-step"><strong>2. Reversal:</strong> Menutup hijau pada 30 Jun (RM 1.090) ➔ <em>SOP Beli petang tersebut!</em></div>
+                    <div class="case-step"><strong>3. Hasil:</strong> Keesokan harinya (1 Julai) melonjak tinggi sehingga **RM 1.410 (+29.36% profit)**.</div>
+                </div>
+                <!-- Case 2 -->
+                <div class="case-card">
+                    <h3>DNEX <span class="badge explosive">🚀 EXPLOSIVE</span></h3>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Kajian kes penapisan disiplin isyarat:</p>
+                    <div class="case-step"><strong>30 Jun:</strong> Harga jatuh ke RM 0.415 (-1.19%). Tiada reversal dikesan ➔ <em>SOP: Status 'avoid' (Elak beli!)</em>.</div>
+                    <div class="case-step"><strong>1 Julai:</strong> Sah melantun hijau kuat (+8.43%) dan ditutup pada RM 0.450 ➔ <em>SOP: Status 'buy' (Beli petang tadi!)</em>.</div>
+                    <div class="case-step"><strong>Hasil:</strong> Mengelakkan tersangkut di pisau jatuh semalam dan masuk tepat ketika momentum bertukar arah hari ini.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function calculateSizing() {
+            const capital = parseFloat(document.getElementById('totalCapital').value) || 0;
+            const riskPct = parseFloat(document.getElementById('riskPct').value) || 0;
+            const entry = parseFloat(document.getElementById('entryPrice').value) || 0;
+            const support = parseFloat(document.getElementById('supportFloor').value) || 0;
+
+            if (capital <= 0 || entry <= 0 || support <= 0 || support >= entry) {
+                document.getElementById('valStopLoss').innerText = 'RM -';
+                document.getElementById('valRiskDistance').innerText = '-%';
+                document.getElementById('valRiskRM').innerText = 'RM -';
+                document.getElementById('valUnits').innerText = '- units';
+                document.getElementById('valLots').innerText = '- lots';
+                document.getElementById('valCapitalRequired').innerText = 'RM -';
+                document.getElementById('valExposurePct').innerText = '-%';
+                return;
+            }
+
+            // Stop loss is 3% below support floor
+            const stopLoss = support * 0.97;
+            const riskDistancePct = ((entry - stopLoss) / entry) * 100;
+            
+            // Risk amount in RM
+            const riskRM = capital * (riskPct / 100);
+            
+            // Position sizing calculation
+            // Risk per unit = entryPrice - stopLossPrice
+            const riskPerUnit = entry - stopLoss;
+            let unitsToBuy = Math.floor(riskRM / riskPerUnit);
+            
+            // Limit to what capital can actually buy
+            const maxUnitsByCapital = Math.floor(capital / entry);
+            if (unitsToBuy > maxUnitsByCapital) {
+                unitsToBuy = maxUnitsByCapital;
+            }
+            
+            // Round down to nearest 100 units for Bursa lot sizing
+            const lotsToBuy = Math.floor(unitsToBuy / 100);
+            const actualUnits = lotsToBuy * 100;
+            
+            const capitalRequired = actualUnits * entry;
+            const actualRiskRM = (entry - stopLoss) * actualUnits;
+            const exposurePct = (capitalRequired / capital) * 100;
+
+            // Update UI
+            document.getElementById('valStopLoss').innerText = 'RM ' + stopLoss.toFixed(3);
+            document.getElementById('valRiskDistance').innerText = riskDistancePct.toFixed(2) + '%';
+            document.getElementById('valRiskRM').innerText = 'RM ' + actualRiskRM.toFixed(2) + ' (' + ((actualRiskRM / capital) * 100).toFixed(2) + '% account)';
+            document.getElementById('valUnits').innerText = actualUnits.toLocaleString() + ' units';
+            document.getElementById('valLots').innerText = lotsToBuy.toLocaleString() + ' lots';
+            document.getElementById('valCapitalRequired').innerText = 'RM ' + capitalRequired.toFixed(2);
+            document.getElementById('valExposurePct').innerText = exposurePct.toFixed(2) + '%';
+        }
+
+        // Run once on load
+        window.addEventListener('load', calculateSizing);
+    </script>
+</body>
+</html>

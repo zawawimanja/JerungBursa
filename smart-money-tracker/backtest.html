@@ -117,11 +117,37 @@
             transform: translateY(-50%) translateX(-4px);
         }
 
+        .sop-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--panel-border);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .sop-btn:hover {
+            color: white;
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.15);
+            transform: translateY(-50%) translateX(4px);
+        }
+
         @media (max-width: 900px) {
-            .back-btn {
+            .back-btn, .sop-btn {
                 position: static;
                 transform: none;
-                margin-bottom: 1.5rem;
+                margin-bottom: 1rem;
             }
             header {
                 text-align: center;
@@ -440,6 +466,9 @@
             </a>
             <h1>Laporan Pengesahan Prestasi Backtest</h1>
             <p>Penyata bukti telus dan data empirikal prestasi setup imbasan JerungBursa diuji pada pasaran sebenar (22 Jun hingga 1 Julai).</p>
+            <a href="./sop.html" class="sop-btn">
+                📘 Panduan SOP
+            </a>
         </header>
 
         <!-- Metrics Display -->
