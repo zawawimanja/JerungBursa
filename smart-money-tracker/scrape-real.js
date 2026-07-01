@@ -216,7 +216,7 @@ async function main() {
         'LWSABAH': 'Utilities', 'CBHB': 'Property', 'IAB': 'Consumer',
         'CNERGEN': 'Technology', 'ELSA': 'Technology', 'SAM': 'Industrial',
         'TMK': 'Industrial', 'ZETRIX': 'Technology', 'NATGATE': 'Technology',
-        'GIIB': 'Industrial', 'MCLEAN': 'Industrial'
+        'GIIB': 'Industrial', 'MCLEAN': 'Industrial', 'EXSIMHB': 'Consumer'
     };
     
     const customWatchlist = Object.entries(mappings).map(([name, symbol]) => {
@@ -422,6 +422,11 @@ async function main() {
                     stock.sma50 = sma50;
                     stock.hasEnoughSmaData = closesDaily.length >= 20;
 
+                    const sma200 = closesDaily.length >= 200
+                        ? closesDaily.slice(-200).reduce((a, b) => a + b, 0) / 200
+                        : (closesDaily.reduce((a, b) => a + b, 0) / closesDaily.length);
+                    stock.sma200 = sma200;
+
                     stock.closeTightness = parseFloat(closeTightness.toFixed(2));
                     stock.lowTightness = parseFloat(lowTightness.toFixed(2));
                     stock.touchCount = touchCount;
@@ -483,14 +488,19 @@ async function main() {
         if (stock.high52) {
             pullback = parseFloat(((stock.high52 - stock.price) / stock.high52 * 100).toFixed(2));
             const isSmaDowntrend = (stock.sma50 && stock.hasEnoughSmaData) ? (stock.price < stock.sma50) : false;
+            const isSma200Downtrend = stock.sma200 ? (stock.price < stock.sma200) : false;
             
-            if (isSmaDowntrend || pullback > 30.0) {
+            // Logik pintar: Pullback sehingga 40% dibenarkan jika harga di atas SMA200 (Long-term Bullish)
+            // Jika tidak, had pullback adalah 30%
+            const maxPullbackAllowed = (!isSma200Downtrend && stock.sma200) ? 40.0 : 30.0;
+            
+            if (isSmaDowntrend || pullback > maxPullbackAllowed) {
                 setupName = '🧊 Downtrend / Avoid';
             } else if (pullback <= 5.0) {
                 setupName = '🔥 RBS Retest / Near ATH';
             } else if (pullback <= 15.0) {
                 setupName = '📉 Healthy Dip';
-            } else if (pullback <= 30.0) {
+            } else if (pullback <= 40.0) {
                 setupName = '🔻 Buy Support / Deep Pullback';
             }
         }
@@ -555,7 +565,7 @@ async function main() {
                 reason += ' (Near ATH)';
             } else if (pullback <= 15.0) {
                 reason += ' (Healthy Dip)';
-            } else if (pullback <= 30.0) {
+            } else if (pullback <= 40.0) {
                 reason += ' (Pullback Support)';
             }
         }
@@ -581,7 +591,9 @@ async function main() {
             isConsolidation: stock.isConsolidation || false,
             floorLow: stock.floorLow || null,
             hasLowerWickRejection: stock.hasLowerWickRejection || false,
-            isCombStock: stock.isCombStock || false
+            isCombStock: stock.isCombStock || false,
+            sma50: stock.sma50 || null,
+            sma200: stock.sma200 || null
         };
         
         // Top Volume Scan: Simpan semua saham yang mempunyai turnover >= RM 3,000,000 ATAU ianya saham VIP

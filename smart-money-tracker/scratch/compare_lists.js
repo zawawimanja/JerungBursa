@@ -5,14 +5,14 @@ const watchlist = [
     'HKB', 'DNEX', 'SUM', 'SKYECHIP', 'CHEEDING', 'OPPSTAR', 'ELRIDGE', 'CTOS',
     'MMCS', 'AMS', 'CNERGEN', 'CBHB', 'KEEMING', 'EIPOWER', 'SUNMED', 'MNHLDG',
     'LWSABAH', 'MCLEAN', 'AMBEST', 'ADNEX', 'PENTECH', 'SDCG', 'OGX', 'NE',
-    'SAM', 'TMK', 'IAB'
+    'SAM', 'TMK', 'IAB', 'EXSIMHB'
 ];
 
 function compare() {
     const rawData = JSON.parse(fs.readFileSync(path.join(__dirname, '../live_data.json'), 'utf8'));
     const stocks = rawData.topVolume || [];
     
-    console.log(`Checking watchlist items against live_data.json:`);
+    console.log(`Checking watchlist items against live_data.json (using Smart Filter rules):`);
     console.log('='.repeat(100));
     console.log(`Counter   | Price | Change% | Pullback | SetupStyle | SetupName                    | In Dashboard?`);
     console.log('='.repeat(100));
@@ -30,7 +30,10 @@ function compare() {
             
             // Check if it would be shown on dashboard:
             const pullbackVal = matched.pullback !== null ? matched.pullback : 0;
-            const hasPullback = pullbackVal >= 0.5 && pullbackVal <= 25.0;
+            const isAboveSma200 = matched.sma200 ? matched.price >= matched.sma200 : false;
+            const maxPullbackLimit = isAboveSma200 ? 40.0 : 30.0;
+            const hasPullback = pullbackVal >= 0.0 && pullbackVal <= maxPullbackLimit;
+            
             const isBouncing = matched.change > 0;
             const isDowntrend = matched.setupName && (
                 matched.setupName.includes('Downtrend') || 

@@ -1075,8 +1075,10 @@
                 if (!item.high52) return false;
                 const pullbackVal = item.pullback !== null ? item.pullback : 0;
                 
-                // Pullback between 0.5% and 25% (near peak but pulled back) - relaxed to 25.0%
-                const hasPullback = pullbackVal >= 0.5 && pullbackVal <= 25.0;
+                // Pullback between 0.0% and 30.0% (relaxed to 40.0% if above SMA200)
+                const isAboveSma200 = item.sma200 ? item.price >= item.sma200 : false;
+                const maxPullbackLimit = isAboveSma200 ? 40.0 : 30.0;
+                const hasPullback = pullbackVal >= 0.0 && pullbackVal <= maxPullbackLimit;
                 
                 // Bouncing today
                 const isBouncing = item.change > 0;
@@ -1272,7 +1274,12 @@
             const reversalList = currentData.filter(item => {
                 if (!item.high52) return false;
                 const pullbackVal = item.pullback !== null ? item.pullback : 0;
-                const hasPullback = pullbackVal >= 0.5 && pullbackVal <= 25.0; // relaxed to 25.0%
+                
+                // Pullback between 0.0% and 30.0% (relaxed to 40.0% if above SMA200)
+                const isAboveSma200 = item.sma200 ? item.price >= item.sma200 : false;
+                const maxPullbackLimit = isAboveSma200 ? 40.0 : 30.0;
+                const hasPullback = pullbackVal >= 0.0 && pullbackVal <= maxPullbackLimit;
+                
                 const isBouncing = item.change > 0;
                 const isDowntrend = item.setupName && (
                     item.setupName.includes('Downtrend') || 
