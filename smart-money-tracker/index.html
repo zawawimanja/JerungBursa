@@ -661,6 +661,49 @@
         </div>
     </header>
 
+    <!-- PREMIUM HYBRID (TEKNIK C) RECOMMENDED PICKS BOX -->
+    <div id="hybrid-recommendations-section" style="margin-bottom: 2rem; display: none;">
+        <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 2px dashed #3b82f6; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15); position: relative; overflow: hidden;">
+            <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(59, 130, 246, 0.15); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(59, 130, 246, 0.2); padding-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                    <span style="font-size: 1.8rem;">🎯</span>
+                    <div>
+                        <h2 style="margin: 0; font-size: 1.3rem; color: #3b82f6; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;">Pilihan Utama Harian: Hibrid Premium (Teknik C)</h2>
+                        <p style="margin: 0.15rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
+                            SOP Terunggul: 1 Explosive Teratas + 1 Staircase Teratas (Mesti Turnover ≥ RM 5 Juta) untuk perlindungan Stop Loss Maksimum.
+                        </p>
+                    </div>
+                </div>
+                <div style="font-size: 0.85rem; background: rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 0.35rem 0.75rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(59, 130, 246, 0.3);">
+                    Kadar Kemenangan: 81.82% | SL Hit: 0.00%
+                </div>
+            </div>
+            
+            <div class="table-wrapper" style="margin-top: 1rem; margin-bottom: 0; overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr>
+                            <th style="width: 50px; text-align: center; color: #3b82f6;">No</th>
+                            <th style="color: #3b82f6; text-align: left;">Counter</th>
+                            <th style="text-align: center; color: #3b82f6;">Kategori Setup</th>
+                            <th style="text-align: right; color: #3b82f6;">Price</th>
+                            <th style="text-align: right; color: #3b82f6;">Change</th>
+                            <th style="text-align: right; color: #3b82f6;">Support Floor</th>
+                            <th style="text-align: right; color: #3b82f6;">Stop Loss (3%)</th>
+                            <th style="text-align: right; color: #3b82f6;">Turnover</th>
+                            <th style="color: #3b82f6; text-align: left;">Sektor</th>
+                        </tr>
+                    </thead>
+                    <tbody id="hybridPicksTableBody">
+                        <!-- Dynamically populated pick rows -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
     <!-- PULLBACK REVERSAL SECTION -->
     <div id="reversals-section" style="margin-bottom: 2rem;">
         <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9)); border: 2px solid var(--info); border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.4); position: relative; overflow: hidden;">
@@ -1192,6 +1235,117 @@
                 
                 return currentSortDesc ? valB - valA : valA - valB;
             });
+            
+            // Populate Hibrid Premium (Teknik C) picks
+            const hybridTbody = document.getElementById('hybridPicksTableBody');
+            const hybridSection = document.getElementById('hybrid-recommendations-section');
+            
+            if (hybridTbody && hybridSection) {
+                // Filter items for Technique C: setupStyle is EXPLOSIVE or STAIRCASE and turnover >= 5M
+                const validPicks = reversalList.filter(item => {
+                    const pct = item.changePct !== undefined ? item.changePct : item.change;
+                    const pb = item.pullback !== null ? item.pullback : 0;
+                    const style = item.setupStyle || (
+                        pct >= 5.0 || (pct >= 3.5 && pb > 5.0) ? 'EXPLOSIVE' : (
+                            pb <= 10.0 && (item.isConsolidation || (item.lowTightness && item.lowTightness <= 8.0) || (item.touchCount && item.touchCount >= 2)) ? 'STAIRCASE' : 'SWING PLAY'
+                        )
+                    );
+                    return (style === 'EXPLOSIVE' || style === 'STAIRCASE') && (item.turnover >= 5000000);
+                });
+                
+                // Separate by style
+                const exps = validPicks.filter(item => {
+                    const pct = item.changePct !== undefined ? item.changePct : item.change;
+                    const pb = item.pullback !== null ? item.pullback : 0;
+                    const style = item.setupStyle || (
+                        pct >= 5.0 || (pct >= 3.5 && pb > 5.0) ? 'EXPLOSIVE' : (
+                            pb <= 10.0 && (item.isConsolidation || (item.lowTightness && item.lowTightness <= 8.0) || (item.touchCount && item.touchCount >= 2)) ? 'STAIRCASE' : 'SWING PLAY'
+                        )
+                    );
+                    return style === 'EXPLOSIVE';
+                });
+                
+                const stairs = validPicks.filter(item => {
+                    const pct = item.changePct !== undefined ? item.changePct : item.change;
+                    const pb = item.pullback !== null ? item.pullback : 0;
+                    const style = item.setupStyle || (
+                        pct >= 5.0 || (pct >= 3.5 && pb > 5.0) ? 'EXPLOSIVE' : (
+                            pb <= 10.0 && (item.isConsolidation || (item.lowTightness && item.lowTightness <= 8.0) || (item.touchCount && item.touchCount >= 2)) ? 'STAIRCASE' : 'SWING PLAY'
+                        )
+                    );
+                    return style === 'STAIRCASE';
+                });
+                
+                // Sort by turnover descending
+                exps.sort((a, b) => b.turnover - a.turnover);
+                stairs.sort((a, b) => b.turnover - a.turnover);
+                
+                const topExp = exps[0];
+                const topStair = stairs[0];
+                
+                if (topExp || topStair) {
+                    hybridSection.style.display = 'block';
+                    let hybridHtml = '';
+                    let rowCount = 1;
+                    
+                    if (topExp) {
+                        const floor = topExp.floorLow || (topExp.price * 0.95);
+                        const stopLoss = floor * 0.97;
+                        const turnoverM = (topExp.turnover / 1e6).toFixed(2);
+                        const pct = topExp.changePct !== undefined ? topExp.changePct : topExp.change;
+                        const changeClass = pct >= 0 ? 'success' : 'danger';
+                        const changeSign = pct > 0 ? '+' : '';
+                        
+                        hybridHtml += `
+                            <tr>
+                                <td style="text-align: center; font-weight: bold; color: #a5b4fc;">${rowCount++}</td>
+                                <td style="font-weight: 900; color: white; font-size: 1.1rem;">${topExp.name}</td>
+                                <td style="text-align: center;"><span class="tag-pill explosive" style="font-size: 0.75rem;">🚀 EXPLOSIVE</span></td>
+                                <td style="text-align: right; font-weight: bold; color: white;">RM ${topExp.price.toFixed(3)}</td>
+                                <td style="text-align: right; font-weight: bold;" class="${changeClass}">${changeSign}${pct.toFixed(2)}%</td>
+                                <td style="text-align: right; color: #10b981; font-weight: 700;">RM ${floor.toFixed(3)}</td>
+                                <td style="text-align: right; color: #ef4444; font-weight: 700;">RM ${stopLoss.toFixed(3)}</td>
+                                <td style="text-align: right; color: #f59e0b; font-weight: 700;">RM ${turnoverM}M</td>
+                                <td style="color: #94a3b8;">${topExp.sector || 'Teknologi'}</td>
+                            </tr>
+                        `;
+                    }
+                    
+                    if (topStair) {
+                        const floor = topStair.floorLow || (topStair.price * 0.95);
+                        const stopLoss = floor * 0.97;
+                        const turnoverM = (topStair.turnover / 1e6).toFixed(2);
+                        const pct = topStair.changePct !== undefined ? topStair.changePct : topStair.change;
+                        const changeClass = pct >= 0 ? 'success' : 'danger';
+                        const changeSign = pct > 0 ? '+' : '';
+                        
+                        hybridHtml += `
+                            <tr>
+                                <td style="text-align: center; font-weight: bold; color: #a5b4fc;">${rowCount++}</td>
+                                <td style="font-weight: 900; color: white; font-size: 1.1rem;">${topStair.name}</td>
+                                <td style="text-align: center;"><span class="tag-pill staircase" style="font-size: 0.75rem;">🪜 STAIRCASE</span></td>
+                                <td style="text-align: right; font-weight: bold; color: white;">RM ${topStair.price.toFixed(3)}</td>
+                                <td style="text-align: right; font-weight: bold;" class="${changeClass}">${changeSign}${pct.toFixed(2)}%</td>
+                                <td style="text-align: right; color: #10b981; font-weight: 700;">RM ${floor.toFixed(3)}</td>
+                                <td style="text-align: right; color: #ef4444; font-weight: 700;">RM ${stopLoss.toFixed(3)}</td>
+                                <td style="text-align: right; color: #f59e0b; font-weight: 700;">RM ${turnoverM}M</td>
+                                <td style="color: #94a3b8;">${topStair.sector || 'Teknologi'}</td>
+                            </tr>
+                        `;
+                    }
+                    
+                    hybridTbody.innerHTML = hybridHtml;
+                } else {
+                    hybridSection.style.display = 'block';
+                    hybridTbody.innerHTML = `
+                        <tr>
+                            <td colspan="9" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
+                                ⏳ Tiada kaunter EXPLOSIVE atau STAIRCASE hari ini yang melepasi tapisan Turnover ≥ RM 5 Juta.
+                            </td>
+                        </tr>
+                    `;
+                }
+            }
             
             // Populate calculator dropdown
             populateCalculatorDropdown(reversalList);

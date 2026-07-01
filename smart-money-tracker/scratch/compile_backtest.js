@@ -245,20 +245,20 @@ async function compile() {
                 const dayLow = chart.low[i];
                 const dayClose = chart.close[i];
                 
-                if (dayLow <= stopLossPrice && !isSlHit) {
+                if (dayLow !== null && dayLow !== undefined && dayLow <= stopLossPrice && !isSlHit) {
                     isSlHit = true;
                     slHitIdx = i;
                     finalPrice = stopLossPrice;
                 }
                 
                 if (!isSlHit) {
-                    if (dayHigh > maxHigh) maxHigh = dayHigh;
-                    finalPrice = dayClose;
+                    if (dayHigh !== null && dayHigh !== undefined && dayHigh > maxHigh) maxHigh = dayHigh;
+                    if (dayClose !== null && dayClose !== undefined) finalPrice = dayClose;
                 }
             }
             
-            const maxGain = ((maxHigh - entryPrice) / entryPrice) * 100;
-            let finalGain = ((finalPrice - entryPrice) / entryPrice) * 100;
+            const maxGain = entryPrice > 0 ? (((maxHigh - entryPrice) / entryPrice) * 100) : 0;
+            let finalGain = entryPrice > 0 ? (((finalPrice - entryPrice) / entryPrice) * 100) : 0;
             
             let status = 'FLAT';
             if (isSlHit) {
@@ -279,7 +279,8 @@ async function compile() {
                 finalPrice,
                 maxGain,
                 finalGain,
-                status
+                status,
+                turnover: item.turnover || 0
             });
         });
     }
@@ -297,7 +298,7 @@ async function compile() {
     const regex = /(\/\/ Data generated dynamically from the backtest compiler script\r?\n\s*const fullData = \[\r?\n)([\s\S]*?)(\s*\];)/;
     
     const formattedData = allTrades.map(t => {
-        return `            { date: '${t.date}', name: '${t.name}', style: '${t.style}', entryPrice: ${t.entryPrice.toFixed(3)}, finalPrice: ${t.finalPrice.toFixed(3)}, maxGain: ${t.maxGain.toFixed(2)}, finalGain: ${t.finalGain.toFixed(2)}, status: '${t.status}' }`;
+        return `            { date: '${t.date}', name: '${t.name}', style: '${t.style}', entryPrice: ${t.entryPrice.toFixed(3)}, finalPrice: ${t.finalPrice.toFixed(3)}, maxGain: ${t.maxGain.toFixed(2)}, finalGain: ${t.finalGain.toFixed(2)}, status: '${t.status}', turnover: ${t.turnover} }`;
     }).join(',\n');
     
     const newScriptSection = `// Data generated dynamically from the backtest compiler script\n        const fullData = [\n${formattedData}\n        ];`;
