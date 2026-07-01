@@ -608,9 +608,21 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            body { padding: 1rem; }
-            header { flex-direction: column; align-items: flex-start; }
-            .controls { width: 100%; justify-content: space-between; }
+            body { padding: 0.8rem; }
+            header { flex-direction: column; align-items: stretch; gap: 1rem; }
+            .brand h1 { font-size: 1.6rem; text-align: center; }
+            .brand { display: flex; flex-direction: column; align-items: center; }
+            .subtitle { font-size: 0.82rem; text-align: center; }
+            .controls { width: 100%; justify-content: center; gap: 0.6rem; }
+            .history-input { width: 100%; justify-content: center; }
+            .hide-mobile { display: none !important; }
+            th, td { padding: 0.6rem 0.5rem; font-size: 0.82rem; }
+            table { min-width: 100%; }
+        }
+        @media (max-width: 480px) {
+            .controls { flex-direction: column; align-items: stretch; }
+            .btn { text-align: center; justify-content: center; }
+            .brand h1 { font-size: 1.45rem; }
         }
         .golden-card:hover {
             transform: translateY(-4px);
@@ -670,11 +682,11 @@
                             <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('price')">Price <span id="sort-icon-price" style="font-size: 0.75rem;">⇅</span></th>
                             <th style="text-align: center; cursor: pointer; user-select: none;" onclick="setSort('tags')">Tags <span id="sort-icon-tags" style="font-size: 0.75rem;">⇅</span></th>
                             <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('change')">Change <span id="sort-icon-change" style="font-size: 0.75rem;">⇅</span></th>
-                            <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('high52')">52W High <span id="sort-icon-high52" style="font-size: 0.75rem;">⇅</span></th>
-                            <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('pullback')">Pullback [C] <span id="sort-icon-pullback" style="font-size: 0.75rem;">⇅</span></th>
+                            <th class="hide-mobile" style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('high52')">52W High <span id="sort-icon-high52" style="font-size: 0.75rem;">⇅</span></th>
+                            <th class="hide-mobile" style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('pullback')">Pullback [C] <span id="sort-icon-pullback" style="font-size: 0.75rem;">⇅</span></th>
                             <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('dist')">Dist to Floor [B] <span id="sort-icon-dist" style="font-size: 0.75rem;">⇅</span></th>
                             <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('turnover')">Turnover [A] <span id="sort-icon-turnover" style="font-size: 0.75rem;">⇅</span></th>
-                            <th style="text-align: right;">Stop Loss (3%)</th>
+                            <th class="hide-mobile" style="text-align: right;">Stop Loss (3%)</th>
                         </tr>
                     </thead>
                     <tbody id="reversalsTableBody">
@@ -1238,11 +1250,11 @@
                         <td style="text-align: right; font-weight: 700; color: white;">RM ${item.price.toFixed(3)}</td>
                         <td style="text-align: center;">${tagsHtml}</td>
                         <td style="text-align: right; font-weight: 700; color: ${pct >= 0 ? 'var(--success)' : 'var(--danger)'};">${changeSign}${pct.toFixed(2)}%</td>
-                        <td style="text-align: right; font-weight: 700; color: white;">RM ${item.high52.toFixed(3)}</td>
-                        <td style="text-align: right; font-weight: 700; color: #ef4444;">-${pullbackVal.toFixed(2)}%</td>
+                        <td class="hide-mobile" style="text-align: right; font-weight: 700; color: white;">RM ${item.high52.toFixed(3)}</td>
+                        <td class="hide-mobile" style="text-align: right; font-weight: 700; color: #ef4444;">-${pullbackVal.toFixed(2)}%</td>
                         <td style="text-align: right; font-weight: 700; color: white;">+${dist.toFixed(2)}% <span style="font-size: 0.78rem; color: var(--text-muted); font-weight: 500;">(RM ${floor.toFixed(3)})</span></td>
                         <td style="text-align: right; font-weight: 700; color: white;">RM ${formatNumber(item.turnover)}</td>
-                        <td style="text-align: right; font-weight: 700; color: var(--danger);">RM ${stopLoss.toFixed(3)}</td>
+                        <td class="hide-mobile" style="text-align: right; font-weight: 700; color: var(--danger);">RM ${stopLoss.toFixed(3)}</td>
                     </tr>
                 `;
             });

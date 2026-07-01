@@ -399,6 +399,31 @@
         .info-footer strong {
             color: var(--warning);
         }
+
+        /* Mobile View Optimization */
+        @media (max-width: 768px) {
+            body { padding: 1rem 0.8rem; }
+            header h1 { font-size: 1.6rem; }
+            header p { font-size: 0.9rem; }
+            .stat-card { padding: 1.2rem; }
+            .stat-value { font-size: 1.45rem; }
+            .stat-label { font-size: 0.85rem; }
+            .hide-mobile { display: none !important; }
+            th, td { padding: 0.6rem 0.5rem; font-size: 0.82rem; }
+            table { min-width: 100%; }
+            .tabs-header { width: 100%; display: flex; justify-content: center; margin: 0 auto 1.5rem auto; }
+            .tab-btn { padding: 0.5rem 0.8rem; font-size: 0.8rem; }
+            .panel { padding: 1rem; }
+            .panel-title { font-size: 1.05rem; }
+            
+            /* Hide columns 4 and 5 in the static table (Tab 1) on mobile */
+            #panel-one-day table th:nth-child(4),
+            #panel-one-day table td:nth-child(4),
+            #panel-one-day table th:nth-child(5),
+            #panel-one-day table td:nth-child(5) {
+                display: none !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -621,8 +646,8 @@
                             <th>Tarikh Masuk</th>
                             <th>Kaunter</th>
                             <th>Setup Tag</th>
-                            <th style="text-align: right;">Harga Masuk</th>
-                            <th style="text-align: right;">Harga Akhir (1/7)</th>
+                            <th class="hide-mobile" style="text-align: right;">Harga Masuk</th>
+                            <th class="hide-mobile" style="text-align: right;">Harga Akhir (1/7)</th>
                             <th style="text-align: right;">Max Gain</th>
                             <th style="text-align: right;">Hasil Akhir (%)</th>
                             <th style="text-align: center;">Status</th>
@@ -738,8 +763,8 @@
                         <td style="color: var(--text-secondary); font-weight: 500;">${row.date}</td>
                         <td style="font-weight: 700; color: white;">${row.name}</td>
                         <td><span class="tag-pill ${tagClass}">${tagLabel}</span></td>
-                        <td style="text-align: right;">RM ${row.entryPrice.toFixed(3)}</td>
-                        <td style="text-align: right;">RM ${row.finalPrice.toFixed(3)}</td>
+                        <td class="hide-mobile" style="text-align: right;">RM ${row.entryPrice.toFixed(3)}</td>
+                        <td class="hide-mobile" style="text-align: right;">RM ${row.finalPrice.toFixed(3)}</td>
                         <td style="text-align: right; color: var(--success); font-weight: 700;">+${row.maxGain.toFixed(2)}%</td>
                         <td style="text-align: right; color: ${gainColor}; font-weight: 700;">${gainSign}${row.finalGain.toFixed(2)}%</td>
                         <td style="text-align: center;"><span class="status-badge ${statusClass}">${statusLabel}</span></td>
