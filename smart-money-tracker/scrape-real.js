@@ -341,9 +341,9 @@ async function main() {
                     const closeTightness = ((maxClose - minClose) / minClose) * 100;
                     
                     // --- DAILY FLOOR & TOUCHCOUNT LOGIC (TradingView 1D CS Match) ---
-                    // --- DUAL-WINDOW DAILY FLOOR & TOUCHCOUNT LOGIC ---
-                    // We calculate two potential floors: 10-day (standard) and 5-day (recent/staircase breakout).
-                    // If the 5-day floor is closer to the current price and has strong support, we use it to avoid breakout/IPO skew.
+                    // We calculate three potential floors: 10-day (standard), 5-day (recent), and 3-day (strong breakout/ATH runner).
+                    const pullbackValForFloor = high52 ? (((high52 - currentPrice) / high52) * 100) : 0;
+                    
                     const lookback10 = Math.min(10, validDays.length);
                     const dailyLookback10 = validDays.slice(-lookback10);
                     const lows10 = dailyLookback10.map(d => d.low);
@@ -366,15 +366,26 @@ async function main() {
                         if (Math.abs(((d.low - floor5) / floor5) * 100) <= 2.0) touch5++;
                     });
 
+                    const lookback3 = Math.min(3, validDays.length);
+                    const dailyLookback3 = validDays.slice(-lookback3);
+                    const lows3 = dailyLookback3.map(d => d.low);
+                    const floor3 = Math.min(...lows3);
+
                     // Determine which floor to use:
-                    // We prefer the recent 5-day floor if the stock has moved up and established a higher floor (floor5 >= floor10 * 1.03).
-                    // Or if the 10-day floor is too far (dist10 > 3.0) and the 5-day floor is closer and has consolidated (dist5 <= 4.0).
                     let minLow = floor10;
                     let touchCount = touch10;
                     
                     if (validDays.length < 25) {
                         minLow = floor5;
                         touchCount = touch5;
+                    } else if (pullbackValForFloor <= 5.0 && floor3 >= floor10 * 1.03) {
+                        // For strong ATH/breakout runners, we use the recent 3-day support floor
+                        minLow = floor3;
+                        let touch3 = 0;
+                        dailyLookback10.forEach(d => {
+                            if (Math.abs(((d.low - floor3) / floor3) * 100) <= 2.0) touch3++;
+                        });
+                        touchCount = touch3;
                     } else if (floor5 >= floor10 * 1.03) {
                         minLow = floor5;
                         touchCount = touch5;
@@ -436,9 +447,23 @@ async function main() {
     const processedData = [];
     const topGainers = [];
     
+    // De-duplicate raw stocks by Yahoo symbol, keeping the one with the shorter name
+    const dedupedStocks = new Map();
     for (const [name, stock] of allRawStocks.entries()) {
-        if (name.includes('-')) continue; // Skip all warrants / structured products
-        
+        if (name.includes('-')) continue;
+        const symbol = mappings[name] || name + '.KL';
+        if (dedupedStocks.has(symbol)) {
+            const existing = dedupedStocks.get(symbol);
+            if (name.length < existing.name.length) {
+                dedupedStocks.set(symbol, stock);
+            }
+        } else {
+            dedupedStocks.set(symbol, stock);
+        }
+    }
+
+    for (const stock of dedupedStocks.values()) {
+        const name = stock.name;
         const turnover = stock.price * stock.volume;
         // Kira peratus perubahan yang betul: (change / previous_price) * 100
         const previousPrice = stock.price - stock.change;
@@ -467,6 +492,15 @@ async function main() {
                 setupName = '📉 Healthy Dip';
             } else if (pullback <= 30.0) {
                 setupName = '🔻 Buy Support / Deep Pullback';
+            }
+        }
+        
+        let setupStyle = 'SWING PLAY';
+        if (pullback !== null) {
+            if (changePct >= 5.0 || (changePct >= 3.5 && pullback > 5.0)) {
+                setupStyle = 'EXPLOSIVE';
+            } else if (pullback <= 10.0 && (stock.isConsolidation || stock.lowTightness <= 8.0 || stock.touchCount >= 2)) {
+                setupStyle = 'STAIRCASE';
             }
         }
         
@@ -530,6 +564,7 @@ async function main() {
             name: stock.name,
             sector: stock.sector || 'Bursa',
             category,
+            setupStyle,
             price: stock.price,
             change: stock.change,
             changePct: parseFloat(changePct.toFixed(2)),
@@ -583,8 +618,9 @@ async function main() {
     };
     
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(output, null, 2));
+    fs.writeFileSync(path.join(__dirname, 'live_data.js'), `window.liveData = ${JSON.stringify(output)};`);
     console.log(`\n🎉 Selesai! ${processedData.length} saham dianalisis.`);
-    console.log(`📂 Disimpan ke ${OUTPUT_FILE}`);
+    console.log(`📂 Disimpan ke ${OUTPUT_FILE} dan live_data.js`);
     
     // Simpan rekod sejarah (history)
     const dateStr = new Date().toISOString().split('T')[0];

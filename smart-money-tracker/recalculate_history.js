@@ -96,6 +96,8 @@ async function recalculateArchive(dateStr) {
             const minClose = Math.min(...closes);
             const closeTightness = ((maxClose - minClose) / minClose) * 100;
             
+            const pullbackValForFloor = high52 ? (((high52 - currentPrice) / high52) * 100) : 0;
+            
             const lookback10 = Math.min(10, validDays.length);
             const dailyLookback10 = validDays.slice(-lookback10);
             const lows10 = dailyLookback10.map(d => d.low);
@@ -118,15 +120,26 @@ async function recalculateArchive(dateStr) {
                 if (Math.abs(((d.low - floor5) / floor5) * 100) <= 2.0) touch5++;
             });
 
+            const lookback3 = Math.min(3, validDays.length);
+            const dailyLookback3 = validDays.slice(-lookback3);
+            const lows3 = dailyLookback3.map(d => d.low);
+            const floor3 = Math.min(...lows3);
+
             // Determine which floor to use:
-            // We prefer the recent 5-day floor if the stock has moved up and established a higher floor (floor5 >= floor10 * 1.03).
-            // Or if the 10-day floor is too far (dist10 > 3.0) and the 5-day floor is closer and has consolidated (dist5 <= 4.0).
             let minLow = floor10;
             let touchCount = touch10;
             
             if (validDays.length < 25) {
                 minLow = floor5;
                 touchCount = touch5;
+            } else if (pullbackValForFloor <= 5.0 && floor3 >= floor10 * 1.03) {
+                // For strong ATH/breakout runners, we use the recent 3-day support floor
+                minLow = floor3;
+                let touch3 = 0;
+                dailyLookback10.forEach(d => {
+                    if (Math.abs(((d.low - floor3) / floor3) * 100) <= 2.0) touch3++;
+                });
+                touchCount = touch3;
             } else if (floor5 >= floor10 * 1.03) {
                 minLow = floor5;
                 touchCount = touch5;
@@ -178,6 +191,16 @@ async function recalculateArchive(dateStr) {
             } else if (pullback <= 30.0) {
                 item.setupName = '🔻 Buy Support / Deep Pullback';
             }
+            
+            let setupStyle = 'SWING PLAY';
+            if (pullback !== null) {
+                if (item.changePct >= 5.0 || (item.changePct >= 3.5 && pullback > 5.0)) {
+                    setupStyle = 'EXPLOSIVE';
+                } else if (pullback <= 10.0 && (isConsolidation || lowTightness <= 8.0 || touchCount >= 2)) {
+                    setupStyle = 'STAIRCASE';
+                }
+            }
+            item.setupStyle = setupStyle;
             
             // Recalculate signal and reason
             let signal = 'avoid';

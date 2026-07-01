@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <script src="live_data.js"></script>
     <style>
         :root {
             --bg-color: #0b0f19;
@@ -665,14 +666,13 @@
                         <tr>
                             <th style="width: 50px; text-align: center;">No</th>
                             <th style="cursor: pointer; user-select: none;" onclick="setSort('name')">Counter <span id="sort-icon-name" style="font-size: 0.75rem;">⇅</span></th>
-                            <th>Sector</th>
                             <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('price')">Price <span id="sort-icon-price" style="font-size: 0.75rem;">⇅</span></th>
                             <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('change')">Change <span id="sort-icon-change" style="font-size: 0.75rem;">⇅</span></th>
                             <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('high52')">52W High <span id="sort-icon-high52" style="font-size: 0.75rem;">⇅</span></th>
                             <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('pullback')">Pullback [C] <span id="sort-icon-pullback" style="font-size: 0.75rem;">⇅</span></th>
                             <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('dist')">Dist to Floor [B] <span id="sort-icon-dist" style="font-size: 0.75rem;">⇅</span></th>
                             <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('turnover')">Turnover [A] <span id="sort-icon-turnover" style="font-size: 0.75rem;">⇅</span></th>
-                            <th style="text-align: center;">Tags</th>
+                            <th style="text-align: center; cursor: pointer; user-select: none;" onclick="setSort('tags')">Tags <span id="sort-icon-tags" style="font-size: 0.75rem;">⇅</span></th>
                             <th style="text-align: right;">Stop Loss (3%)</th>
                         </tr>
                     </thead>
@@ -680,6 +680,22 @@
                         <!-- Dynamically populated table rows -->
                     </tbody>
                 </table>
+            </div>
+
+            <!-- Setup Styles Legend -->
+            <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.78rem;">
+                <div style="display: flex; align-items: center; gap: 0.4rem;">
+                    <span style="background: rgba(244, 63, 94, 0.18); color: #fb7185; font-size: 0.65rem; font-weight: 900; padding: 0.15rem 0.4rem; border-radius: 4px; border: 1px solid rgba(244, 63, 94, 0.3);">🚀 EXPLOSIVE</span>
+                    <span style="color: var(--text-muted);">Melantun kuat & volum raksasa selepas pullback (Fast Swing/Momentum)</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.4rem;">
+                    <span style="background: rgba(6, 182, 212, 0.18); color: #22d3ee; font-size: 0.65rem; font-weight: 900; padding: 0.15rem 0.4rem; border-radius: 4px; border: 1px solid rgba(6, 182, 212, 0.3);">🪜 STAIRCASE</span>
+                    <span style="color: var(--text-muted);">Merayap naik secara konsisten membina lantai sokongan ke arah ATH (Steady Swing)</span>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.4rem;">
+                    <span style="background: rgba(99, 102, 241, 0.12); color: #a5b4fc; font-size: 0.65rem; font-weight: 900; padding: 0.15rem 0.4rem; border-radius: 4px; border: 1px solid rgba(99, 102, 241, 0.22);">🔄 SWING PLAY</span>
+                    <span style="color: var(--text-muted);">Pembetulan harga biasa dalam zon dagangan sihat</span>
+                </div>
             </div>
         </div>
     </div>
@@ -847,10 +863,17 @@
                     console.log("Failed to fetch local data, will try fallback.", e);
                 }
             } else {
-                console.warn("Running under file:// protocol. Local data access blocked by browser CORS policy. Falling back to GitHub raw storage.");
-                const notice = document.getElementById('dashboardSubtitle');
-                if (notice) {
-                    notice.innerHTML = `<span class="pulse" style="background: #f59e0b;"></span> Running via file:// (CORS Restricted) • Loading from GitHub Online...`;
+                // For file:// protocol, we can bypass CORS by reading window.liveData pre-loaded from live_data.js script tag!
+                if (window.liveData) {
+                    raw = window.liveData;
+                    loadedLocal = true;
+                    console.log("Loaded local data from live_data.js script successfully.");
+                } else {
+                    console.warn("Running under file:// protocol and live_data.js not loaded. Falling back to GitHub raw storage.");
+                    const notice = document.getElementById('dashboardSubtitle');
+                    if (notice) {
+                        notice.innerHTML = `<span class="pulse" style="background: #f59e0b;"></span> Running via file:// (CORS Restricted) • Loading from GitHub Online...`;
+                    }
                 }
             }
 
@@ -1003,7 +1026,7 @@
 
         // Update Sort Icons in Table Header
         function updateHeaders() {
-            const cols = ['name', 'price', 'change', 'high52', 'pullback', 'dist', 'turnover'];
+            const cols = ['name', 'price', 'change', 'high52', 'pullback', 'dist', 'turnover', 'tags'];
             cols.forEach(c => {
                 const el = document.getElementById(`sort-icon-${c}`);
                 if (!el) return;
@@ -1051,6 +1074,24 @@
 
             // Sort by current selected column
             reversalList.sort((a, b) => {
+                // Special default sort: If currentSortColumn is 'turnover' and currentSortDesc is true (default load state)
+                if (currentSortColumn === 'turnover' && currentSortDesc) {
+                    const floorA = a.floorLow || (a.price * 0.97);
+                    const distA = ((a.price - floorA) / floorA) * 100;
+                    
+                    const floorB = b.floorLow || (b.price * 0.97);
+                    const distB = ((b.price - floorB) / floorB) * 100;
+                    
+                    const isLowRiskA = distA <= 10.0;
+                    const isLowRiskB = distB <= 10.0;
+                    
+                    if (isLowRiskA && !isLowRiskB) return -1;
+                    if (!isLowRiskA && isLowRiskB) return 1;
+                    
+                    // If both are in the same risk group, sort by turnover descending
+                    return b.turnover - a.turnover;
+                }
+
                 let valA, valB;
                 
                 if (currentSortColumn === 'name') {
@@ -1077,6 +1118,24 @@
                 } else if (currentSortColumn === 'turnover') {
                     valA = a.turnover || 0;
                     valB = b.turnover || 0;
+                } else if (currentSortColumn === 'tags') {
+                    // Custom priority order: EXPLOSIVE (1) -> STAIRCASE (2) -> SWING PLAY (3)
+                    const getTagPriority = (item) => {
+                        const style = item.setupStyle || (
+                            (item.changePct !== undefined ? item.changePct : item.change) >= 5.0 || 
+                            ((item.changePct !== undefined ? item.changePct : item.change) >= 3.5 && (item.pullback !== null ? item.pullback : 0) > 5.0) ? 'EXPLOSIVE' : (
+                                (item.pullback !== null ? item.pullback : 0) <= 10.0 && (item.isConsolidation || (item.lowTightness && item.lowTightness <= 8.0) || (item.touchCount && item.touchCount >= 2)) ? 'STAIRCASE' : 'SWING PLAY'
+                            )
+                        );
+                        if (style === 'EXPLOSIVE') return 1;
+                        if (style === 'STAIRCASE') return 2;
+                        return 3;
+                    };
+                    valA = getTagPriority(a);
+                    valB = getTagPriority(b);
+                    // Since 1 is top priority, a lower priority number means it should go first.
+                    // So we invert the comparison: when desc is true, we want lower priority values (1) first.
+                    return currentSortDesc ? valA - valB : valB - valA;
                 } else {
                     // Default fallback sorting (pullback)
                     valA = a.pullback !== null ? a.pullback : 0;
@@ -1093,7 +1152,7 @@
             if (reversalList.length === 0) {
                 tbody.innerHTML = `
                     <tr>
-                        <td colspan="11" style="text-align: center; color: var(--text-muted); padding: 2rem;">
+                        <td colspan="10" style="text-align: center; color: var(--text-muted); padding: 2rem;">
                             ⏳ No Pullback Bounce Reversals Found - Waiting for 52W/ATH stocks with healthy pullbacks to start rising.
                         </td>
                     </tr>
@@ -1113,6 +1172,22 @@
                 const pullbackVal = item.pullback !== null ? item.pullback : 0;
                 
                 let tagsHtml = '';
+                
+                // Render setupStyle tag if it exists, otherwise fall back to dynamic calculation
+                const setupStyle = item.setupStyle || (
+                    pct >= 5.0 || (pct >= 3.5 && pullbackVal > 5.0) ? 'EXPLOSIVE' : (
+                        pullbackVal <= 10.0 && (item.isConsolidation || (item.lowTightness && item.lowTightness <= 8.0) || (item.touchCount && item.touchCount >= 2)) ? 'STAIRCASE' : 'SWING PLAY'
+                    )
+                );
+                
+                if (setupStyle === 'EXPLOSIVE') {
+                    tagsHtml += `<span style="background: rgba(244, 63, 94, 0.18); color: #fb7185; font-size: 0.65rem; font-weight: 900; padding: 0.15rem 0.4rem; border-radius: 4px; border: 1px solid rgba(244, 63, 94, 0.3); margin-right: 0.3rem;">🚀 EXPLOSIVE</span>`;
+                } else if (setupStyle === 'STAIRCASE') {
+                    tagsHtml += `<span style="background: rgba(6, 182, 212, 0.18); color: #22d3ee; font-size: 0.65rem; font-weight: 900; padding: 0.15rem 0.4rem; border-radius: 4px; border: 1px solid rgba(6, 182, 212, 0.3); margin-right: 0.3rem;">🪜 STAIRCASE</span>`;
+                } else {
+                    tagsHtml += `<span style="background: rgba(99, 102, 241, 0.12); color: #a5b4fc; font-size: 0.65rem; font-weight: 900; padding: 0.15rem 0.4rem; border-radius: 4px; border: 1px solid rgba(99, 102, 241, 0.22); margin-right: 0.3rem;">🔄 SWING PLAY</span>`;
+                }
+
                 if (item.isConsolidation) {
                     tagsHtml += `<span style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; font-size: 0.65rem; font-weight: 800; padding: 0.15rem 0.35rem; border-radius: 4px; border: 1px solid rgba(245, 158, 11, 0.25); margin-right: 0.3rem;">🔒 CONSOLIDATION</span>`;
                 }
@@ -1133,7 +1208,6 @@
                                 <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="font-size: 0.75rem; color: var(--info); text-decoration: none;" title="TradingView Chart">🔗</a>
                             </span>
                         </td>
-                        <td style="color: var(--text-muted); font-size: 0.85rem;">${item.sector || 'Bursa'}</td>
                         <td style="text-align: right; font-weight: 700; color: white;">RM ${item.price.toFixed(3)}</td>
                         <td style="text-align: right; font-weight: 700; color: ${pct >= 0 ? 'var(--success)' : 'var(--danger)'};">${changeSign}${pct.toFixed(2)}%</td>
                         <td style="text-align: right; font-weight: 700; color: white;">RM ${item.high52.toFixed(3)}</td>
