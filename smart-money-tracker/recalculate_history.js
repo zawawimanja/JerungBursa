@@ -119,16 +119,19 @@ async function recalculateArchive(dateStr) {
             });
 
             // Determine which floor to use:
-            // We prefer the 5-day floor if the 10-day floor is too far (>3.0%) AND the 5-day floor is valid.
-            // For the 5-day floor, touchCount >= 2 or extremely tight consolidation (closeTightness <= 5.5) is enough.
+            // We prefer the recent 5-day floor if the stock has moved up and established a higher floor (floor5 >= floor10 * 1.03).
+            // Or if the 10-day floor is too far (dist10 > 3.0) and the 5-day floor is closer and has consolidated (dist5 <= 4.0).
             let minLow = floor10;
             let touchCount = touch10;
             
             if (validDays.length < 25) {
                 minLow = floor5;
                 touchCount = touch5;
+            } else if (floor5 >= floor10 * 1.03) {
+                minLow = floor5;
+                touchCount = touch5;
             } else if (dist10 > 3.0) {
-                if (dist5 <= 3.0 && (touch5 >= 2 || closeTightness <= 5.5)) {
+                if (dist5 <= 4.0 && (touch5 >= 2 || closeTightness <= 5.5)) {
                     minLow = floor5;
                     touchCount = Math.max(touch5, 2);
                 }

@@ -651,7 +651,7 @@
                     <span style="font-size: 1.6rem;">📈</span>
                     <div>
                         <h2 style="margin: 0; font-size: 1.25rem; color: var(--info); font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;">Pullback Bounce Reversals</h2>
-                        <p style="margin: 0.15rem 0 0 0; font-size: 0.78rem; color: #94a3b8;">52W / ATH Squeeze Bounce: Near peak (52W/ATH pullback 0.5% - 25.0%) + Bouncing today (change > 0.0%) + High volume + No Downtrend</p>
+                        <p style="margin: 0.15rem 0 0 0; font-size: 0.78rem; color: #94a3b8;">Isih kepala lajur untuk mencari setup: <strong>[A]</strong> Momentum Terkuat | <strong>[B]</strong> Risiko Terendah (Rapat Lantai) | <strong>[C]</strong> Swing Play / Volatility Pantas</p>
                     </div>
                 </div>
                 <button onclick="copyReversalsWatchlist(event)" style="background: var(--info); color: #0f172a; border: none; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 800; font-size: 0.82rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: transform 0.2s; box-shadow: 0 4px 10px rgba(14, 165, 233, 0.3);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
@@ -669,9 +669,9 @@
                             <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('price')">Price <span id="sort-icon-price" style="font-size: 0.75rem;">⇅</span></th>
                             <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('change')">Change <span id="sort-icon-change" style="font-size: 0.75rem;">⇅</span></th>
                             <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('high52')">52W High <span id="sort-icon-high52" style="font-size: 0.75rem;">⇅</span></th>
-                            <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('pullback')">Pullback <span id="sort-icon-pullback" style="font-size: 0.75rem;">⇅</span></th>
-                            <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('dist')">Dist to Floor <span id="sort-icon-dist" style="font-size: 0.75rem;">⇅</span></th>
-                            <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('turnover')">Turnover <span id="sort-icon-turnover" style="font-size: 0.75rem;">⇅</span></th>
+                            <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('pullback')">Pullback [C] <span id="sort-icon-pullback" style="font-size: 0.75rem;">⇅</span></th>
+                            <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('dist')">Dist to Floor [B] <span id="sort-icon-dist" style="font-size: 0.75rem;">⇅</span></th>
+                            <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('turnover')">Turnover [A] <span id="sort-icon-turnover" style="font-size: 0.75rem;">⇅</span></th>
                             <th style="text-align: center;">Tags</th>
                             <th style="text-align: right;">Stop Loss (3%)</th>
                         </tr>
@@ -1041,7 +1041,7 @@
                 return hasPullback && 
                        isBouncing && 
                        !isDowntrend && 
-                       item.price >= 0.25 && item.price <= 3.00 && 
+                       item.price >= 0.25 && item.price <= 4.00 && 
                        item.turnover >= 250000 && 
                        !item.isCombStock;
             });
@@ -1138,7 +1138,7 @@
                         <td style="text-align: right; font-weight: 700; color: ${pct >= 0 ? 'var(--success)' : 'var(--danger)'};">${changeSign}${pct.toFixed(2)}%</td>
                         <td style="text-align: right; font-weight: 700; color: white;">RM ${item.high52.toFixed(3)}</td>
                         <td style="text-align: right; font-weight: 700; color: #ef4444;">-${pullbackVal.toFixed(2)}%</td>
-                        <td style="text-align: right; font-weight: 700; color: white;">+${dist.toFixed(2)}%</td>
+                        <td style="text-align: right; font-weight: 700; color: white;">+${dist.toFixed(2)}% <span style="font-size: 0.78rem; color: var(--text-muted); font-weight: 500;">(RM ${floor.toFixed(3)})</span></td>
                         <td style="text-align: right; font-weight: 700; color: white;">RM ${formatNumber(item.turnover)}</td>
                         <td style="text-align: center;">${tagsHtml}</td>
                         <td style="text-align: right; font-weight: 700; color: var(--danger);">RM ${stopLoss.toFixed(3)}</td>
@@ -1164,7 +1164,7 @@
                 return hasPullback && 
                        isBouncing && 
                        !isDowntrend && 
-                       item.price >= 0.25 && item.price <= 3.00 && 
+                       item.price >= 0.25 && item.price <= 4.00 && 
                        item.turnover >= 250000 && 
                        !item.isCombStock;
             });

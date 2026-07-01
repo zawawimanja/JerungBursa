@@ -28,8 +28,8 @@ topVolume.forEach(item => {
     // 3. Ada kenaikan hari ini (changePct > 0)
     if (item.change <= 0) return;
     
-    // 4. Saringan Price (Bawah 3 sahaja), Liquidity & Kualiti standard
-    if (item.price > 3.00) return;
+    // 4. Saringan Price (Antara 0.25 hingga 4.00), Liquidity & Kualiti standard
+    if (item.price < 0.25 || item.price > 4.00) return;
     if (item.turnover < 250000) return;
     if (item.setupName === '🧊 Downtrend / Avoid') return;
     if (item.isCombStock) return;
