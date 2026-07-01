@@ -641,38 +641,45 @@
         </div>
     </header>
 
-    <!-- NEW SECTION: 🔥 ZON GABUNGAN EMAS (LOW RISK / HIGH CONVICTION) -->
-    <div id="golden-zone-section" style="margin-bottom: 2rem;">
-        <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9)); border: 2px solid #f59e0b; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.4); position: relative; overflow: hidden;">
-            <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: rgba(245, 158, 11, 0.12); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
+    <!-- PULLBACK REVERSAL SECTION -->
+    <div id="reversals-section" style="margin-bottom: 2rem;">
+        <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9)); border: 2px solid var(--info); border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.4); position: relative; overflow: hidden;">
+            <div style="position: absolute; top: -50px; right: -50px; width: 150px; height: 150px; background: rgba(14, 165, 233, 0.12); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
             
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1.25rem;">
                 <div style="display: flex; align-items: center; gap: 0.75rem;">
-                    <span style="font-size: 1.6rem;">🔥</span>
+                    <span style="font-size: 1.6rem;">📈</span>
                     <div>
-                        <h2 style="margin: 0; font-size: 1.25rem; color: #f59e0b; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;">Golden Zone Consolidation (OGX-Style)</h2>
-                        <p style="margin: 0.15rem 0 0 0; font-size: 0.78rem; color: #94a3b8;">Golden Zone: Base Consolidation Close to Floor (≤ 3.0%) + Support Test (≥ 3x Daily 1D TF) + Near Peak (52W/ATH Pullback ≤ 15.0%) + BUY Signal Required + No Downtrend</p>
+                        <h2 style="margin: 0; font-size: 1.25rem; color: var(--info); font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;">Pullback Bounce Reversals</h2>
+                        <p style="margin: 0.15rem 0 0 0; font-size: 0.78rem; color: #94a3b8;">52W / ATH Squeeze Bounce: Near peak (52W/ATH pullback 0.5% - 25.0%) + Bouncing today (change > 0.0%) + High volume + No Downtrend</p>
                     </div>
                 </div>
-                <div style="display: flex; align-items: center; gap: 0.75rem;">
-                    <!-- SOP Filter Buttons -->
-                    <div style="background: rgba(15, 23, 42, 0.6); padding: 0.25rem; border-radius: 8px; border: 1px solid var(--panel-border); display: flex; gap: 0.25rem;">
-                        <button id="sopMutlakBtn" onclick="toggleSopFilter('mutlak')" style="background: #f59e0b; color: #0f172a; border: none; padding: 0.45rem 0.85rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem; cursor: pointer; transition: all 0.2s;">
-                            👑 Strict SOP (Wick Rejection)
-                        </button>
-                        <button id="sopBiasaBtn" onclick="toggleSopFilter('biasa')" style="background: transparent; color: #94a3b8; border: none; padding: 0.45rem 0.85rem; border-radius: 6px; font-weight: 700; font-size: 0.75rem; cursor: pointer; transition: all 0.2s;">
-                            ⚠️ Standard SOP (No Rejection)
-                        </button>
-                    </div>
-                    
-                    <button onclick="copyTradingViewWatchlist(event)" style="background: #f59e0b; color: #0f172a; border: none; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 800; font-size: 0.82rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: transform 0.2s; box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                        📋 Copy TV Watchlist
-                    </button>
-                </div>
+                <button onclick="copyReversalsWatchlist(event)" style="background: var(--info); color: #0f172a; border: none; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 800; font-size: 0.82rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: transform 0.2s; box-shadow: 0 4px 10px rgba(14, 165, 233, 0.3);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                    📋 Copy TV Watchlist
+                </button>
             </div>
             
-            <div id="goldenCardsContainer" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem;">
-                <!-- Dynamically populated cards -->
+            <div class="table-wrapper" style="margin-top: 1rem; margin-bottom: 0;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 50px; text-align: center;">No</th>
+                            <th style="cursor: pointer; user-select: none;" onclick="setSort('name')">Counter <span id="sort-icon-name" style="font-size: 0.75rem;">⇅</span></th>
+                            <th>Sector</th>
+                            <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('price')">Price <span id="sort-icon-price" style="font-size: 0.75rem;">⇅</span></th>
+                            <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('change')">Change <span id="sort-icon-change" style="font-size: 0.75rem;">⇅</span></th>
+                            <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('high52')">52W High <span id="sort-icon-high52" style="font-size: 0.75rem;">⇅</span></th>
+                            <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('pullback')">Pullback <span id="sort-icon-pullback" style="font-size: 0.75rem;">⇅</span></th>
+                            <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('dist')">Dist to Floor <span id="sort-icon-dist" style="font-size: 0.75rem;">⇅</span></th>
+                            <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('turnover')">Turnover <span id="sort-icon-turnover" style="font-size: 0.75rem;">⇅</span></th>
+                            <th style="text-align: center;">Tags</th>
+                            <th style="text-align: right;">Stop Loss (3%)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="reversalsTableBody">
+                        <!-- Dynamically populated table rows -->
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
@@ -810,36 +817,6 @@
         let currentData = [];
         let currentSortColumn = 'turnover';
         let currentSortDesc = true;
-        let currentSopFilter = 'mutlak';
-
-        function toggleSopFilter(type) {
-            currentSopFilter = type;
-            
-            const btnMutlak = document.getElementById('sopMutlakBtn');
-            const btnBiasa = document.getElementById('sopBiasaBtn');
-            
-            if (!btnMutlak || !btnBiasa) return;
-            
-            if (type === 'mutlak') {
-                btnMutlak.style.background = '#f59e0b';
-                btnMutlak.style.color = '#0f172a';
-                btnMutlak.style.fontWeight = '800';
-                
-                btnBiasa.style.background = 'transparent';
-                btnBiasa.style.color = '#94a3b8';
-                btnBiasa.style.fontWeight = '700';
-            } else {
-                btnBiasa.style.background = '#f59e0b';
-                btnBiasa.style.color = '#0f172a';
-                btnBiasa.style.fontWeight = '800';
-                
-                btnMutlak.style.background = 'transparent';
-                btnMutlak.style.color = '#94a3b8';
-                btnMutlak.style.fontWeight = '700';
-            }
-            
-            renderGoldenZone();
-        }
 
 
         // Format Big Numbers
@@ -912,232 +889,8 @@
 
         // Apply filters and render UI elements
         function applyFilters() {
-            // Render Golden Zone Cards
-            renderGoldenZone();
             updateSentiment(currentData);
-        }
-
-        // Render Golden Zone Cards
-        function renderGoldenZone() {
-            const container = document.getElementById('goldenCardsContainer');
-            if (!container) return;
-            
-            // Filter currentData for Golden Setups:
-            // 1. Not Downtrend (setupName !== '🧊 Downtrend / Avoid')
-            // 2. Price <= 3.00
-            // 3. Touch count >= 3
-            const goldenList = currentData.filter(item => {
-                const floor = item.floorLow || (item.price * 0.97);
-                const dist = parseFloat((((item.price - floor) / floor) * 100).toFixed(2));
-                
-                const isDowntrend = item.setupName && (
-                    item.setupName.includes('Downtrend') || 
-                    item.setupName.includes('Avoid') || 
-                    item.setupName === 'N/A'
-                );
-                
-                // Wajib Near ATH / 52W Setup (Pullback <= 15.0%)
-                const isNearAthOr52w = item.pullback !== undefined && item.pullback !== null && item.pullback <= 15.0;
-                
-                const matchesBase = item.isConsolidation && 
-                       item.signal === 'buy' && 
-                       !isDowntrend && 
-                       item.price <= 3.00 && 
-                       item.touchCount >= 3 && 
-                       dist <= 3.0 &&
-                       isNearAthOr52w &&
-                       item.turnover >= 250000 &&
-                       !item.isCombStock;
-                        
-                if (currentSopFilter === 'mutlak') {
-                    return matchesBase && item.hasLowerWickRejection;
-                }
-                return matchesBase && !item.hasLowerWickRejection;
-            });
-            
-            // Populate calculator dropdown
-            populateCalculatorDropdown(goldenList);
-            
-            if (goldenList.length === 0) {
-                container.innerHTML = `
-                    <div style="grid-column: 1 / -1; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; background: rgba(15, 23, 42, 0.4); border: 1px dashed var(--panel-border); border-radius: 12px; text-align: center; color: var(--text-muted);">
-                        <span style="font-size: 1.5rem; margin-bottom: 0.5rem;">⏳</span>
-                        <div style="font-size: 0.85rem; font-weight: 600;">No Active Golden Zone Setups (ATH/52W High)</div>
-                        <div style="font-size: 0.75rem; margin-top: 0.2rem;">Waiting for the market to make a healthy pullback to a solid support floor (≥3x daily touches, pullback ≤15.0% from peak).</div>
-                    </div>
-                `;
-                return;
-            }
-            
-            // Sort by:
-            // 1. Distance to floor (ascending) - closest first
-            // 2. Touch count (descending) - stronger floor first if distance is equal
-            goldenList.sort((a, b) => {
-                const floorA = a.floorLow || (a.price * 0.97);
-                const distA = ((a.price - floorA) / floorA) * 100;
-                
-                const floorB = b.floorLow || (b.price * 0.97);
-                const distB = ((b.price - floorB) / floorB) * 100;
-                
-                if (Math.abs(distA - distB) < 0.001) {
-                    return b.touchCount - a.touchCount;
-                }
-                return distA - distB;
-            });
-            
-            let cardsHtml = '';
-            goldenList.forEach((item, index) => {
-                const floor = item.floorLow || (item.price * 0.97);
-                const dist = ((item.price - floor) / floor) * 100;
-                const stopLoss = floor * 0.97;
-                const tp1 = item.price * 1.10;
-                const tp2 = item.price * 1.20;
-                const pct = item.changePct !== undefined ? item.changePct : item.change;
-                const changeClass = pct >= 0 ? 'up' : 'down';
-                const changeSign = pct > 0 ? '+' : '';
-                
-                // Determine 52W status text and color
-                const pullbackVal = item.pullback !== null ? item.pullback : 0;
-                const pullbackLabel = pullbackVal <= 5.0 ? 'NEAR ATH' : '52W SETUP';
-                const pullbackColor = pullbackVal <= 5.0 ? '#10b981' : '#f59e0b';
-                
-                cardsHtml += `
-                    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 12px; padding: 1.25rem 1rem 1rem 1rem; display: flex; flex-direction: column; gap: 0.75rem; transition: all 0.2s; position: relative;" class="golden-card">
-                        <!-- Ranking Badge -->
-                        <div style="position: absolute; top: -8px; left: -8px; background: #f59e0b; color: #0f172a; font-weight: 900; font-size: 0.75rem; padding: 0.15rem 0.45rem; border-radius: 6px; box-shadow: 0 4px 6px rgba(0,0,0,0.3); z-index: 10;">
-                            #${index + 1}
-                        </div>
-                        
-                        <div style="display: flex; justify-content: space-between; align-items: flex-start;">
-                            <div style="padding-left: 0.4rem;">
-                                <div style="font-weight: 900; font-size: 1.15rem; color: white; display: flex; align-items: center; gap: 0.4rem;">
-                                    ${item.name}
-                                    <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="font-size: 0.75rem; color: #f59e0b; text-decoration: none;" title="TradingView Daily Chart">🔗</a>
-                                </div>
-                                <div style="font-size: 0.75rem; color: var(--text-muted); display: flex; flex-wrap: wrap; align-items: center; gap: 0.4rem; margin-top: 0.2rem;">
-                                    <span>${item.sector || 'Bursa'}</span>
-                                    ${item.hasLowerWickRejection ? `<span style="background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 0.65rem; font-weight: 800; padding: 0.05rem 0.35rem; border-radius: 4px; border: 1px solid rgba(16, 185, 129, 0.25);" title="Daily Lower Wick Rejection (Wick at Bottom)">🧬 WICK REJECTION</span>` : ''}
-                                    ${item.high52 ? `<span style="background: rgba(59, 130, 246, 0.15); color: #60a5fa; font-size: 0.65rem; font-weight: 800; padding: 0.05rem 0.35rem; border-radius: 4px; border: 1px solid rgba(59, 130, 246, 0.25);" title="52W High: RM ${item.high52.toFixed(3)} (Pullback: ${pullbackVal.toFixed(1)}%)">🏷️ ${pullbackLabel}</span>` : ''}
-                                </div>
-                            </div>
-                            <div style="text-align: right;">
-                                <div style="font-weight: 800; font-size: 1.1rem; color: white;">RM ${item.price.toFixed(3)}</div>
-                                <div class="${changeClass}" style="font-size: 0.8rem; font-weight: 700;">${changeSign}${pct.toFixed(2)}%</div>
-                            </div>
-                        </div>
-                        
-                        <!-- Support Floor & 52W High Metrics -->
-                        <div style="background: rgba(245, 158, 11, 0.08); border-radius: 8px; padding: 0.5rem 0.75rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
-                            <div>
-                                <div style="font-size: 0.7rem; color: #f59e0b; font-weight: 700; text-transform: uppercase;">Support Floor</div>
-                                <div style="font-weight: 800; color: white; font-size: 0.95rem;">RM ${floor.toFixed(3)}</div>
-                            </div>
-                            <div style="text-align: right;">
-                                <div style="font-size: 0.7rem; color: #f59e0b; font-weight: 700; text-transform: uppercase;">Floor Touches</div>
-                                <div style="font-weight: 800; color: white; font-size: 0.95rem;">${item.touchCount}x Touches</div>
-                            </div>
-                            <div style="border-top: 1px solid rgba(245, 158, 11, 0.15); padding-top: 0.4rem; margin-top: 0.2rem;">
-                                <div style="font-size: 0.7rem; color: #60a5fa; font-weight: 700; text-transform: uppercase;">52W High Ref</div>
-                                <div style="font-weight: 800; color: white; font-size: 0.95rem;">${item.high52 ? `RM ${item.high52.toFixed(3)}` : 'N/A'}</div>
-                            </div>
-                            <div style="text-align: right; border-top: 1px solid rgba(245, 158, 11, 0.15); padding-top: 0.4rem; margin-top: 0.2rem;">
-                                <div style="font-size: 0.7rem; color: #60a5fa; font-weight: 700; text-transform: uppercase;">Pullback From High</div>
-                                <div style="font-weight: 800; color: ${pullbackColor}; font-size: 0.95rem;">-${pullbackVal.toFixed(2)}%</div>
-                            </div>
-                        </div>
-                        
-                        <div style="display: flex; justify-content: space-between; font-size: 0.75rem; border-top: 1px solid var(--panel-border); padding-top: 0.5rem; margin-top: auto;">
-                            <div>
-                                <span style="color: var(--danger); font-weight: bold;">SL (3%):</span>
-                                <span style="color: white; font-weight: 700;">RM ${stopLoss.toFixed(3)}</span>
-                            </div>
-                            <div>
-                                <span style="color: var(--success); font-weight: bold;">Distance:</span>
-                                <span style="color: ${dist <= 1.0 ? 'var(--success)' : 'white'}; font-weight: 700;">+${dist.toFixed(2)}%</span>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            });
-            
-            container.innerHTML = cardsHtml;
-        }
-
-        // Copy Golden Zone Watchlist for TradingView
-        function copyTradingViewWatchlist(event) {
-            const btn = event ? (event.currentTarget || event.target) : null;
-            
-            // Filter currentData for Golden Setups (same as renderGoldenZone)
-            const goldenList = currentData.filter(item => {
-                const floor = item.floorLow || (item.price * 0.97);
-                const dist = parseFloat((((item.price - floor) / floor) * 100).toFixed(2));
-                
-                const isDowntrend = item.setupName && (
-                    item.setupName.includes('Downtrend') || 
-                    item.setupName.includes('Avoid') || 
-                    item.setupName === 'N/A'
-                );
-                
-                // Wajib Near ATH / 52W Setup (Pullback <= 15.0%)
-                const isNearAthOr52w = item.pullback !== undefined && item.pullback !== null && item.pullback <= 15.0;
-                
-                const matchesBase = item.isConsolidation && 
-                       item.signal === 'buy' && 
-                       !isDowntrend && 
-                       item.price <= 3.00 && 
-                       item.touchCount >= 3 && 
-                       dist <= 3.0 &&
-                       isNearAthOr52w &&
-                       item.turnover >= 250000 &&
-                       !item.isCombStock;
-                        
-                if (currentSopFilter === 'mutlak') {
-                    return matchesBase && item.hasLowerWickRejection;
-                }
-                return matchesBase && !item.hasLowerWickRejection;
-            });
-            
-            if (goldenList.length === 0) {
-                alert('No counters in the Golden Zone to copy!');
-                return;
-            }
-            
-            // Sort by:
-            // 1. Distance to floor (ascending) - closest first
-            // 2. Touch count (descending) - stronger floor first if distance is equal
-            goldenList.sort((a, b) => {
-                const floorA = a.floorLow || (a.price * 0.97);
-                const distA = ((a.price - floorA) / floorA) * 100;
-                
-                const floorB = b.floorLow || (b.price * 0.97);
-                const distB = ((b.price - floorB) / floorB) * 100;
-                
-                if (Math.abs(distA - distB) < 0.001) {
-                    return b.touchCount - a.touchCount;
-                }
-                return distA - distB;
-            });
-            
-            // Format into TV watchlist comma-separated format
-            const tvString = goldenList.map(item => `MYX:${item.name}`).join(',');
-            
-            navigator.clipboard.writeText(tvString).then(() => {
-                // Show a nice feedback message
-                if (btn) {
-                    const originalText = btn.innerHTML;
-                    btn.innerHTML = '✅ Watchlist Copied!';
-                    btn.style.background = 'var(--success)';
-                    btn.style.color = 'white';
-                    
-                    setTimeout(() => {
-                        btn.innerHTML = originalText;
-                        btn.style.background = '#f59e0b';
-                        btn.style.color = '#0f172a';
-                    }, 2000);
-                }
-            }).catch(err => {
-                alert('Failed to copy: ' + err);
-            });
+            renderReversals();
         }
 
         // Populate Calculator Dropdown with all matched scanner tickers
@@ -1234,6 +987,212 @@
             document.getElementById('calcMaxRisk').textContent = `-RM ${maxLoss.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})} (-${maxRiskPct.toFixed(1)}%)`;
             document.getElementById('calcTp1').textContent = `RM ${tp1Price.toFixed(3)} (+RM ${tp1Gain.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})})`;
             document.getElementById('calcTp2').textContent = `RM ${tp2Price.toFixed(3)} (+RM ${tp2Gain.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})})`;
+        }
+
+        // Set Sorting Column & Order
+        function setSort(column) {
+            if (currentSortColumn === column) {
+                currentSortDesc = !currentSortDesc;
+            } else {
+                currentSortColumn = column;
+                currentSortDesc = true;
+            }
+            updateHeaders();
+            renderReversals();
+        }
+
+        // Update Sort Icons in Table Header
+        function updateHeaders() {
+            const cols = ['name', 'price', 'change', 'high52', 'pullback', 'dist', 'turnover'];
+            cols.forEach(c => {
+                const el = document.getElementById(`sort-icon-${c}`);
+                if (!el) return;
+                if (currentSortColumn === c) {
+                    el.innerHTML = currentSortDesc ? '▼' : '▲';
+                    el.style.color = 'var(--info)';
+                } else {
+                    el.innerHTML = '⇅';
+                    el.style.color = 'var(--text-muted)';
+                }
+            });
+        }
+
+        // Render Reversal Bounce Table
+        function renderReversals() {
+            const tbody = document.getElementById('reversalsTableBody');
+            if (!tbody) return;
+            
+            const reversalList = currentData.filter(item => {
+                if (!item.high52) return false;
+                const pullbackVal = item.pullback !== null ? item.pullback : 0;
+                
+                // Pullback between 0.5% and 25% (near peak but pulled back) - relaxed to 25.0%
+                const hasPullback = pullbackVal >= 0.5 && pullbackVal <= 25.0;
+                
+                // Bouncing today
+                const isBouncing = item.change > 0;
+                
+                const isDowntrend = item.setupName && (
+                    item.setupName.includes('Downtrend') || 
+                    item.setupName.includes('Avoid') || 
+                    item.setupName === 'N/A'
+                );
+                
+                return hasPullback && 
+                       isBouncing && 
+                       !isDowntrend && 
+                       item.price >= 0.25 && item.price <= 3.00 && 
+                       item.turnover >= 250000 && 
+                       !item.isCombStock;
+            });
+            
+            // Update sort icons in table headers
+            updateHeaders();
+
+            // Sort by current selected column
+            reversalList.sort((a, b) => {
+                let valA, valB;
+                
+                if (currentSortColumn === 'name') {
+                    valA = a.name;
+                    valB = b.name;
+                    return currentSortDesc ? valB.localeCompare(valA) : valA.localeCompare(valB);
+                } else if (currentSortColumn === 'price') {
+                    valA = a.price;
+                    valB = b.price;
+                } else if (currentSortColumn === 'change') {
+                    valA = a.changePct !== undefined ? a.changePct : a.change;
+                    valB = b.changePct !== undefined ? b.changePct : b.change;
+                } else if (currentSortColumn === 'high52') {
+                    valA = a.high52 || 0;
+                    valB = b.high52 || 0;
+                } else if (currentSortColumn === 'pullback') {
+                    valA = a.pullback !== null ? a.pullback : 0;
+                    valB = b.pullback !== null ? b.pullback : 0;
+                } else if (currentSortColumn === 'dist') {
+                    const floorA = a.floorLow || (a.price * 0.97);
+                    valA = ((a.price - floorA) / floorA) * 100;
+                    const floorB = b.floorLow || (b.price * 0.97);
+                    valB = ((b.price - floorB) / floorB) * 100;
+                } else if (currentSortColumn === 'turnover') {
+                    valA = a.turnover || 0;
+                    valB = b.turnover || 0;
+                } else {
+                    // Default fallback sorting (pullback)
+                    valA = a.pullback !== null ? a.pullback : 0;
+                    valB = b.pullback !== null ? b.pullback : 0;
+                    return valA - valB; 
+                }
+                
+                return currentSortDesc ? valB - valA : valA - valB;
+            });
+            
+            // Populate calculator dropdown
+            populateCalculatorDropdown(reversalList);
+            
+            if (reversalList.length === 0) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="11" style="text-align: center; color: var(--text-muted); padding: 2rem;">
+                            ⏳ No Pullback Bounce Reversals Found - Waiting for 52W/ATH stocks with healthy pullbacks to start rising.
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+            
+            let tableHtml = '';
+            reversalList.forEach((item, index) => {
+                const floor = item.floorLow || (item.price * 0.97);
+                const dist = ((item.price - floor) / floor) * 100;
+                const stopLoss = floor * 0.97;
+                const pct = item.changePct !== undefined ? item.changePct : item.change;
+                const changeClass = pct >= 0 ? 'success' : 'danger';
+                const changeSign = pct > 0 ? '+' : '';
+                
+                const pullbackVal = item.pullback !== null ? item.pullback : 0;
+                
+                let tagsHtml = '';
+                if (item.isConsolidation) {
+                    tagsHtml += `<span style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; font-size: 0.65rem; font-weight: 800; padding: 0.15rem 0.35rem; border-radius: 4px; border: 1px solid rgba(245, 158, 11, 0.25); margin-right: 0.3rem;">🔒 CONSOLIDATION</span>`;
+                }
+                if (pullbackVal <= 5.0) {
+                    tagsHtml += `<span style="background: rgba(16, 185, 129, 0.15); color: #10b981; font-size: 0.65rem; font-weight: 800; padding: 0.15rem 0.35rem; border-radius: 4px; border: 1px solid rgba(16, 185, 129, 0.25);">🚀 NEAR ATH</span>`;
+                } else if (pullbackVal <= 15.0) {
+                    tagsHtml += `<span style="background: rgba(59, 130, 246, 0.15); color: #60a5fa; font-size: 0.65rem; font-weight: 800; padding: 0.15rem 0.35rem; border-radius: 4px; border: 1px solid rgba(59, 130, 246, 0.25);">📉 HEALTHY DIP</span>`;
+                } else {
+                    tagsHtml += `<span style="background: rgba(167, 139, 250, 0.15); color: #c084fc; font-size: 0.65rem; font-weight: 800; padding: 0.15rem 0.35rem; border-radius: 4px; border: 1px solid rgba(167, 139, 250, 0.25);">🔻 DEEP DIP</span>`;
+                }
+                
+                tableHtml += `
+                    <tr>
+                        <td style="text-align: center; font-weight: 800; color: var(--info);">#${index + 1}</td>
+                        <td style="font-weight: 700; color: white;">
+                            <span style="display: inline-flex; align-items: center; gap: 0.3rem;">
+                                ${item.name}
+                                <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="font-size: 0.75rem; color: var(--info); text-decoration: none;" title="TradingView Chart">🔗</a>
+                            </span>
+                        </td>
+                        <td style="color: var(--text-muted); font-size: 0.85rem;">${item.sector || 'Bursa'}</td>
+                        <td style="text-align: right; font-weight: 700; color: white;">RM ${item.price.toFixed(3)}</td>
+                        <td style="text-align: right; font-weight: 700; color: ${pct >= 0 ? 'var(--success)' : 'var(--danger)'};">${changeSign}${pct.toFixed(2)}%</td>
+                        <td style="text-align: right; font-weight: 700; color: white;">RM ${item.high52.toFixed(3)}</td>
+                        <td style="text-align: right; font-weight: 700; color: #ef4444;">-${pullbackVal.toFixed(2)}%</td>
+                        <td style="text-align: right; font-weight: 700; color: white;">+${dist.toFixed(2)}%</td>
+                        <td style="text-align: right; font-weight: 700; color: white;">RM ${formatNumber(item.turnover)}</td>
+                        <td style="text-align: center;">${tagsHtml}</td>
+                        <td style="text-align: right; font-weight: 700; color: var(--danger);">RM ${stopLoss.toFixed(3)}</td>
+                    </tr>
+                `;
+            });
+            tbody.innerHTML = tableHtml;
+        }
+
+        // Copy Reversal watchlist for TradingView
+        function copyReversalsWatchlist(event) {
+            const btn = event ? (event.currentTarget || event.target) : null;
+            const reversalList = currentData.filter(item => {
+                if (!item.high52) return false;
+                const pullbackVal = item.pullback !== null ? item.pullback : 0;
+                const hasPullback = pullbackVal >= 0.5 && pullbackVal <= 25.0; // relaxed to 25.0%
+                const isBouncing = item.change > 0;
+                const isDowntrend = item.setupName && (
+                    item.setupName.includes('Downtrend') || 
+                    item.setupName.includes('Avoid') || 
+                    item.setupName === 'N/A'
+                );
+                return hasPullback && 
+                       isBouncing && 
+                       !isDowntrend && 
+                       item.price >= 0.25 && item.price <= 3.00 && 
+                       item.turnover >= 250000 && 
+                       !item.isCombStock;
+            });
+            
+            if (reversalList.length === 0) {
+                alert('No counters in Pullback Bounce to copy!');
+                return;
+            }
+            
+            reversalList.sort((a, b) => a.pullback - b.pullback);
+            const tvString = reversalList.map(item => `MYX:${item.name}`).join(',');
+            
+            navigator.clipboard.writeText(tvString).then(() => {
+                if (btn) {
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = '✅ Watchlist Copied!';
+                    btn.style.background = 'var(--success)';
+                    btn.style.color = 'white';
+                    
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.style.background = 'var(--info)';
+                        btn.style.color = '#0f172a';
+                    }, 2000);
+                }
+            }).catch(err => {
+                alert('Failed to copy: ' + err);
+            });
         }
 
 

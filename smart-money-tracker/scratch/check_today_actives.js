@@ -23,13 +23,19 @@ for (const item of list) {
         item.setupName === 'N/A'
     );
     
+    // Dynamic distance to floor limit: 8.0% for near ATH (pullback <= 5%), 5.0% for healthy dip (pullback <= 15%), 3.0% for others
+    let maxDist = 3.0;
+    if (item.pullback !== null && item.pullback !== undefined) {
+        if (item.pullback <= 5.0) maxDist = 8.0;
+        else if (item.pullback <= 15.0) maxDist = 5.0;
+    }
+    
     // Check if it fits the active Golden Setup criteria:
     if (item.isConsolidation && 
         item.signal === 'buy' && 
         !isDowntrend && 
         item.price <= 3.00 && 
-        item.touchCount >= 3 && 
-        dist <= 3.0) {
+        dist <= maxDist) {
         
         activeSetups.push({
             name: item.name,

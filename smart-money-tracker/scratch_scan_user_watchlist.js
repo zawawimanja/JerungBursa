@@ -32,40 +32,44 @@ async function fetchChart(symbol) {
         });
         const result = response.data.chart.result[0];
         if (result && result.timestamp) {
-            const timestamps = result.timestamp;
             const quote = result.indicators.quote[0];
-            const close = quote.close;
-            const high = quote.high;
+            const close = quote.close || [];
+            const high = quote.high || [];
             
-            // Get latest price
-            let currentPrice = result.meta.regularMarketPrice;
-            if (currentPrice === undefined || currentPrice === null) {
-                for (let i = close.length - 1; i >= 0; i--) {
-                    if (close[i] !== null && close[i] !== undefined) {
-                        currentPrice = close[i];
-                        break;
-                    }
+            // Filter valid closes
+            const validDays = [];
+            for (let i = 0; i < close.length; i++) {
+                if (close[i] !== null && close[i] !== undefined && high[i] !== null && high[i] !== undefined) {
+                    validDays.push({
+                        close: close[i],
+                        high: high[i]
+                    });
                 }
             }
             
-            const prevClose = result.meta.chartPreviousClose || currentPrice;
-            const changePct = ((currentPrice - prevClose) / prevClose) * 100;
-            const dailyVolume = result.meta.regularMarketVolume || 0;
-            const turnover = dailyVolume * currentPrice;
-            
-            // Calculate 52W High
-            let high52 = 0;
-            high.forEach(h => {
-                if (h > high52) high52 = h;
-            });
-            
-            return {
-                currentPrice,
-                changePct,
-                high52,
-                turnover,
-                dailyVolume
-            };
+            if (validDays.length >= 2) {
+                const lastDay = validDays[validDays.length - 1];
+                const prevDay = validDays[validDays.length - 2];
+                const currentPrice = lastDay.close;
+                const prevClose = prevDay.close;
+                const changePct = ((currentPrice - prevClose) / prevClose) * 100;
+                const dailyVolume = result.meta.regularMarketVolume || 0;
+                const turnover = dailyVolume * currentPrice;
+                
+                // Calculate 52W High
+                let high52 = 0;
+                validDays.forEach(d => {
+                    if (d.high > high52) high52 = d.high;
+                });
+                
+                return {
+                    currentPrice,
+                    changePct,
+                    high52,
+                    turnover,
+                    dailyVolume
+                };
+            }
         }
     } catch (e) {
         // console.error(`Error fetching chart for ${symbol}: ${e.message}`);
@@ -97,9 +101,9 @@ async function run() {
         const pullback = ((data.high52 - data.currentPrice) / data.high52) * 100;
         
         let setup = 'Avoid / Downtrend';
-        if (pullback >= 0 && pullback <= 5.0) setup = 'RBS Retest';
-        else if (pullback > 5.0 && pullback <= 15.0) setup = 'Healthy Dip';
-        else if (pullback > 15.0 && pullback <= 30.0) setup = 'Deep Pullback';
+        if (pullback <= 5.0) setup = 'RBS Retest';
+        else if (pullback <= 15.0) setup = 'Healthy Dip';
+        else if (pullback <= 30.0) setup = 'Deep Pullback';
         
         results.push({
             name,

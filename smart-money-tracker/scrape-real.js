@@ -319,8 +319,8 @@ async function main() {
                     const avgTurnover20 = activeDays20 > 0 ? (sumTurnover20 / activeDays20) : 0;
                     const flatPct20 = activeDays20 > 0 ? ((flatDays20 / activeDays20) * 100) : 0;
 
-                    // Exclude if average daily turnover < 500k OR has high percentage of flat candles (>= 15%)
-                    const isCombStock = (avgTurnover20 < 500000) || (flatPct20 >= 15.0);
+                    // Exclude if average daily turnover < 250k OR has high percentage of flat candles (>= 10%)
+                    const isCombStock = (flatPct20 >= 10.0) || (avgTurnover20 < 250000);
                     stock.isCombStock = isCombStock;
                     stock.avgTurnover20 = avgTurnover20;
                     
@@ -367,21 +367,23 @@ async function main() {
                     });
 
                     // Determine which floor to use:
-                    // We prefer the 5-day floor if the 10-day floor is too far (>3.0%) AND the 5-day floor is valid (dist <= 3.0% and touchCount >= 3)
-                    // Or if it's a young IPO (<25 days), we default to the 5-day floor.
+                    // We prefer the 5-day floor if the 10-day floor is too far (>3.0%) AND the 5-day floor is valid.
+                    // For the 5-day floor, touchCount >= 2 or extremely tight consolidation (closeTightness <= 5.5) is enough.
                     let minLow = floor10;
                     let touchCount = touch10;
                     
                     if (validDays.length < 25) {
                         minLow = floor5;
                         touchCount = touch5;
-                    } else if (dist10 > 3.0 && dist5 <= 3.0 && touch5 >= 3) {
-                        minLow = floor5;
-                        touchCount = touch5;
+                    } else if (dist10 > 3.0) {
+                        if (dist5 <= 3.0 && (touch5 >= 2 || closeTightness <= 5.5)) {
+                            minLow = floor5;
+                            touchCount = Math.max(touch5, 2);
+                        }
                     }
                     
                     const floorDist = ((currentPrice - minLow) / minLow) * 100;
-                    const maxLow = Math.max(...(validDays.length < 25 ? lows5 : lows10));
+                    const maxLow = Math.max(...(validDays.length < 25 ? lows5 : (minLow === floor5 ? lows5 : lows10)));
                     const lowTightness = ((maxLow - minLow) / minLow) * 100;
 
                     // Hitung Lower Wick Rejection harian (Ekor di bawah)
@@ -392,9 +394,9 @@ async function main() {
                     const isDojiConsolidation = (dailyBody / currentPrice <= 0.015) && (floorDist <= 1.5);
                     
                     const hasLowerWickRejection = (dailyTotalRange > 0 && (
-                        (dailyLowerShadow / dailyTotalRange >= 0.20) || 
-                        (dailyBody > 0 && dailyLowerShadow / dailyBody >= 0.40) ||
-                        (dailyBody === 0 && dailyLowerShadow > 0)
+                         (dailyLowerShadow / dailyTotalRange >= 0.20) || 
+                         (dailyBody > 0 && dailyLowerShadow / dailyBody >= 0.40) ||
+                         (dailyBody === 0 && dailyLowerShadow > 0)
                     )) || isDojiConsolidation;
 
                     stock.hasLowerWickRejection = hasLowerWickRejection;
@@ -412,8 +414,9 @@ async function main() {
                     stock.floorLow = minLow;
                     
                     const pullback = ((high52 - currentPrice) / high52) * 100;
-                    // Consolidation: pullback <= 15%, short-term close tightness <= 5.5%, and must have touchCount >= 3 (retest 3 times or more on daily chart)
-                    let isConsolidation = (pullback <= 15.0 && closeTightness <= 5.5 && touchCount >= 3);
+                    // Consolidation: pullback <= 15%, short-term close tightness <= 5.5%, and must have touchCount >= minTouchCountRequired
+                    const minTouchCountRequired = (validDays.length < 25 || minLow === floor5) ? 2 : 3;
+                    let isConsolidation = (pullback <= 15.0 && closeTightness <= 5.5 && touchCount >= minTouchCountRequired);
                     stock.isConsolidation = isConsolidation;
                 }
             }

@@ -96,12 +96,46 @@ async function recalculateArchive(dateStr) {
             const minClose = Math.min(...closes);
             const closeTightness = ((maxClose - minClose) / minClose) * 100;
             
-            const lookbackDays = Math.min(10, validDays.length);
-            const dailyLookback = validDays.slice(-lookbackDays);
-            const dailyLows = dailyLookback.map(d => d.low);
+            const lookback10 = Math.min(10, validDays.length);
+            const dailyLookback10 = validDays.slice(-lookback10);
+            const lows10 = dailyLookback10.map(d => d.low);
+            const floor10 = Math.min(...lows10);
+            const dist10 = ((currentPrice - floor10) / floor10) * 100;
             
-            const minLow = Math.min(...dailyLows);
-            const maxLow = Math.max(...dailyLows);
+            let touch10 = 0;
+            dailyLookback10.forEach(d => {
+                if (((d.low - floor10) / floor10) * 100 <= 2.0) touch10++;
+            });
+            
+            const lookback5 = Math.min(5, validDays.length);
+            const dailyLookback5 = validDays.slice(-lookback5);
+            const lows5 = dailyLookback5.map(d => d.low);
+            const floor5 = Math.min(...lows5);
+            const dist5 = ((currentPrice - floor5) / floor5) * 100;
+            
+            let touch5 = 0;
+            dailyLookback10.forEach(d => {
+                if (Math.abs(((d.low - floor5) / floor5) * 100) <= 2.0) touch5++;
+            });
+
+            // Determine which floor to use:
+            // We prefer the 5-day floor if the 10-day floor is too far (>3.0%) AND the 5-day floor is valid.
+            // For the 5-day floor, touchCount >= 2 or extremely tight consolidation (closeTightness <= 5.5) is enough.
+            let minLow = floor10;
+            let touchCount = touch10;
+            
+            if (validDays.length < 25) {
+                minLow = floor5;
+                touchCount = touch5;
+            } else if (dist10 > 3.0) {
+                if (dist5 <= 3.0 && (touch5 >= 2 || closeTightness <= 5.5)) {
+                    minLow = floor5;
+                    touchCount = Math.max(touch5, 2);
+                }
+            }
+            
+            const floorDist = ((currentPrice - minLow) / minLow) * 100;
+            const maxLow = Math.max(...(validDays.length < 25 ? lows5 : (minLow === floor5 ? lows5 : lows10)));
             const lowTightness = ((maxLow - minLow) / minLow) * 100;
 
             // Hitung Lower Wick Rejection harian (Ekor di bawah)
@@ -109,7 +143,6 @@ async function recalculateArchive(dateStr) {
             const dailyLowerShadow = Math.min(lastDay.open, lastDay.close) - lastDay.low;
             const dailyTotalRange = lastDay.high - lastDay.low;
             
-            const floorDist = ((currentPrice - minLow) / minLow) * 100;
             const isDojiConsolidation = (dailyBody / currentPrice <= 0.015) && (floorDist <= 1.5);
             
             const hasLowerWickRejection = (dailyTotalRange > 0 && (
@@ -117,22 +150,16 @@ async function recalculateArchive(dateStr) {
                 (dailyBody > 0 && dailyLowerShadow / dailyBody >= 0.40) ||
                 (dailyBody === 0 && dailyLowerShadow > 0)
             )) || isDojiConsolidation;
-            
-            let touchCount = 0;
-            dailyLookback.forEach(d => {
-                const diffPct = ((d.low - minLow) / minLow) * 100;
-                if (diffPct <= 2.0) { // within 2% of the daily floor
-                    touchCount++;
-                }
-            });
-            
+
             item.closeTightness = parseFloat(closeTightness.toFixed(2));
             item.lowTightness = parseFloat(lowTightness.toFixed(2));
             item.touchCount = touchCount;
             item.floorLow = minLow;
             
             const pullback = ((high52 - currentPrice) / high52) * 100;
-            let isConsolidation = (pullback <= 15.0 && closeTightness <= 5.5 && touchCount >= 3);
+            // Consolidation: pullback <= 15%, short-term close tightness <= 5.5%, and must have touchCount >= minTouchCountRequired
+            const minTouchCountRequired = (validDays.length < 25 || minLow === floor5) ? 2 : 3;
+            let isConsolidation = (pullback <= 15.0 && closeTightness <= 5.5 && touchCount >= minTouchCountRequired);
             item.isConsolidation = isConsolidation;
             
             // Recalculate pullback setupName
