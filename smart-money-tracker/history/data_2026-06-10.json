@@ -21,7 +21,8 @@
       "pullback": 17.96,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "isCombStock": false,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "PCHEM",
@@ -32,17 +33,18 @@
       "turnover": 28270512,
       "volume": 5066400,
       "signal": "avoid",
-      "reason": "🔒 Tapak Tegar (3x) | 🧊 Saham Downtrend: Elak Trading! (Healthy Dip)",
+      "reason": "🔒 Tapak Tegar (7x) | 🧊 Saham Downtrend: Elak Trading! (Healthy Dip)",
       "high52": 6.159999847412109,
       "closeTightness": 2.76,
-      "lowTightness": 5.18,
-      "touchCount": 3,
-      "floorLow": 5.210000038146973,
+      "lowTightness": 0.93,
+      "touchCount": 7,
+      "floorLow": 5.400000095367432,
       "isConsolidation": true,
       "pullback": 9.42,
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "TANCO",
@@ -56,14 +58,15 @@
       "reason": "🧊 Saham Downtrend: Elak Trading!",
       "high52": 1.7799999713897705,
       "closeTightness": 218,
-      "lowTightness": 250,
+      "lowTightness": 238,
       "touchCount": 1,
       "floorLow": 0.5,
       "isConsolidation": false,
       "pullback": 71.91,
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "GIIB",
@@ -77,14 +80,15 @@
       "reason": "🧊 Saham Downtrend: Elak Trading!",
       "high52": 0.23999999463558197,
       "closeTightness": 3.7,
-      "lowTightness": 7.69,
+      "lowTightness": 0,
       "touchCount": 8,
       "floorLow": 0.12999999523162842,
       "isConsolidation": false,
       "pullback": 43.75,
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": true,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "CAPITALA",
@@ -109,14 +113,15 @@
       "reason": "⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold) (Healthy Dip)",
       "high52": 2.183332920074463,
       "closeTightness": 9.29,
-      "lowTightness": 16.48,
+      "lowTightness": 14.02,
       "touchCount": 1,
       "floorLow": 1.7599999904632568,
       "isConsolidation": false,
       "pullback": 9.31,
       "setupName": "📉 Healthy Dip",
       "isCombStock": false,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "NESTLE",
@@ -152,14 +157,15 @@
       "reason": "⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold) (Near ATH)",
       "high52": 2.259999990463257,
       "closeTightness": 6.28,
-      "lowTightness": 10.81,
-      "touchCount": 3,
-      "floorLow": 1.850000023841858,
+      "lowTightness": 1.49,
+      "touchCount": 5,
+      "floorLow": 2.0199999809265137,
       "isConsolidation": false,
       "pullback": 2.65,
       "setupName": "🔥 RBS Retest / Near ATH",
       "isCombStock": false,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "HSI-PWR7",
@@ -202,7 +208,8 @@
       "pullback": 11.65,
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SFPTECH",
@@ -216,14 +223,15 @@
       "reason": "VIP Sideway / Pullback (Pantau Peluang) (Healthy Dip)",
       "high52": 0.33000001311302185,
       "closeTightness": 10.17,
-      "lowTightness": 28.89,
-      "touchCount": 2,
-      "floorLow": 0.22499999403953552,
+      "lowTightness": 13.73,
+      "touchCount": 3,
+      "floorLow": 0.2549999952316284,
       "isConsolidation": false,
       "pullback": 9.09,
       "setupName": "📉 Healthy Dip",
       "isCombStock": false,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "VS",
@@ -244,7 +252,8 @@
       "pullback": 75.86,
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "HONGSENG",
@@ -265,7 +274,8 @@
       "pullback": 50,
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "HSI-CWQU",
@@ -290,14 +300,15 @@
       "reason": "🔒 Tapak Tegar (10x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
       "high52": 33.79999923706055,
       "closeTightness": 0.92,
-      "lowTightness": 0.8,
+      "lowTightness": 0.31,
       "touchCount": 10,
       "floorLow": 32.70000076293945,
       "isConsolidation": true,
       "pullback": 2.66,
       "setupName": "🔥 RBS Retest / Near ATH",
       "isCombStock": false,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "HEIM",
@@ -311,14 +322,15 @@
       "reason": "🧊 Saham Downtrend: Elak Trading! (Pullback Support)",
       "high52": 25.8799991607666,
       "closeTightness": 5.78,
-      "lowTightness": 9,
+      "lowTightness": 5.93,
       "touchCount": 2,
       "floorLow": 18.8799991607666,
       "isConsolidation": false,
       "pullback": 24.96,
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "RAPID",

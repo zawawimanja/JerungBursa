@@ -21,7 +21,8 @@ console.log(`Loaded ${historyData.length} days of historical records for backtes
 
 const backtestResults = {
     STAIRCASE: [],
-    EXPLOSIVE: []
+    EXPLOSIVE: [],
+    'SWING PLAY': []
 };
 
 // Map of date index for fast lookup
@@ -66,7 +67,7 @@ for (let i = 0; i < historyData.length - 1; i++) {
             style = 'STAIRCASE';
         }
 
-        if (style === 'EXPLOSIVE' || style === 'STAIRCASE') {
+        if (style === 'EXPLOSIVE' || style === 'STAIRCASE' || style === 'SWING PLAY') {
             const entryPrice = item.price;
             const floorPrice = item.floorLow || (entryPrice * 0.97);
             const slPrice = floorPrice * 0.97; // 3% below floor
@@ -115,7 +116,7 @@ for (let i = 0; i < historyData.length - 1; i++) {
 }
 
 // Print Backtest Performance
-['STAIRCASE', 'EXPLOSIVE'].forEach(style => {
+['STAIRCASE', 'EXPLOSIVE', 'SWING PLAY'].forEach(style => {
     const samples = backtestResults[style];
     console.log(`\n==================================================`);
     console.log(`📊 PERFORMANSI BACKTEST SETUP: ${style}`);

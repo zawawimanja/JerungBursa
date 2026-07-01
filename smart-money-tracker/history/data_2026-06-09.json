@@ -21,7 +21,8 @@
       "pullback": 19.9,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "isCombStock": false,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "TANCO",
@@ -42,7 +43,8 @@
       "pullback": 55.06,
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "VITROX",
@@ -63,7 +65,8 @@
       "pullback": 0,
       "setupName": "🔥 RBS Retest / Near ATH",
       "isCombStock": false,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "TOPGLOV",
@@ -74,17 +77,18 @@
       "turnover": 51665377.5,
       "volume": 62624700,
       "signal": "buy",
-      "reason": "🔒 Tapak Tegar (3x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
+      "reason": "🔒 Tapak Tegar (6x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
       "high52": 0.8799999952316284,
       "closeTightness": 4.32,
-      "lowTightness": 7.89,
-      "touchCount": 3,
-      "floorLow": 0.7599999904632568,
+      "lowTightness": 3.14,
+      "touchCount": 6,
+      "floorLow": 0.7950000166893005,
       "isConsolidation": true,
       "pullback": 6.25,
       "setupName": "📉 Healthy Dip",
       "isCombStock": false,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "MPI",
@@ -98,14 +102,15 @@
       "reason": "🔥 Golden Hold: Jerung Mula Kumpul (Sesuai Swing/Hold) (Healthy Dip)",
       "high52": 50.220001220703125,
       "closeTightness": 4.26,
-      "lowTightness": 11.68,
+      "lowTightness": 10.05,
       "touchCount": 1,
       "floorLow": 44,
       "isConsolidation": false,
       "pullback": 6.81,
       "setupName": "📉 Healthy Dip",
       "isCombStock": false,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "NESTLE",
@@ -130,14 +135,15 @@
       "reason": "VIP Sideway / Pullback (Pantau Peluang) (Pullback Support)",
       "high52": 2.4600000381469727,
       "closeTightness": 1.16,
-      "lowTightness": 3.51,
+      "lowTightness": 2.34,
       "touchCount": 4,
       "floorLow": 1.7100000381469727,
       "isConsolidation": false,
       "pullback": 28.86,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "isCombStock": false,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "KGB",
@@ -151,14 +157,15 @@
       "reason": "⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold) (Near ATH)",
       "high52": 7.909999847412109,
       "closeTightness": 6.47,
-      "lowTightness": 9.69,
-      "touchCount": 1,
-      "floorLow": 7.019999980926514,
+      "lowTightness": 5.34,
+      "touchCount": 4,
+      "floorLow": 7.309999942779541,
       "isConsolidation": false,
       "pullback": 3.29,
       "setupName": "🔥 RBS Retest / Near ATH",
       "isCombStock": false,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "PETGAS",
@@ -169,17 +176,18 @@
       "turnover": 15281436,
       "volume": 882300,
       "signal": "avoid",
-      "reason": "🔒 Tapak Tegar (4x) | 🧊 Saham Downtrend: Elak Trading! (Healthy Dip)",
+      "reason": "🔒 Tapak Tegar (8x) | 🧊 Saham Downtrend: Elak Trading! (Healthy Dip)",
       "high52": 19.299999237060547,
       "closeTightness": 1.74,
-      "lowTightness": 4.45,
-      "touchCount": 4,
-      "floorLow": 16.6200008392334,
+      "lowTightness": 2.72,
+      "touchCount": 8,
+      "floorLow": 16.899999618530273,
       "isConsolidation": true,
       "pullback": 10.26,
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "HSI-PWRP",
@@ -211,7 +219,8 @@
       "pullback": 10.31,
       "setupName": "📉 Healthy Dip",
       "isCombStock": false,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SFPTECH",
@@ -225,14 +234,15 @@
       "reason": "⚡ Momentum Kuat: Jerung Mula Pam (Sesuai Intraday/Swing) (Near ATH)",
       "high52": 0.33000001311302185,
       "closeTightness": 22.64,
-      "lowTightness": 31.82,
-      "touchCount": 1,
-      "floorLow": 0.2199999988079071,
+      "lowTightness": 11.54,
+      "touchCount": 4,
+      "floorLow": 0.25999999046325684,
       "isConsolidation": false,
       "pullback": 1.52,
       "setupName": "🔥 RBS Retest / Near ATH",
       "isCombStock": false,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "HONGSENG",
@@ -253,7 +263,8 @@
       "pullback": 25,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "isCombStock": false,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "HSI-CWQU",
@@ -285,8 +296,8 @@
       "changePct": 54.55,
       "turnover": 6952515.500000001,
       "volume": 81794300,
-      "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "signal": "buy",
+      "reason": "⚠️ Penny Goreng: Pam Volume Laju (Intraday Sahaja, Elak Hold!) (Healthy Dip)",
       "high52": 0.09000000357627869,
       "closeTightness": 240,
       "lowTightness": 200,
@@ -296,7 +307,8 @@
       "pullback": 5.56,
       "setupName": "📉 Healthy Dip",
       "isCombStock": true,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "AJI",
@@ -306,18 +318,19 @@
       "changePct": 7.35,
       "turnover": 5721408,
       "volume": 369600,
-      "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "signal": "buy",
+      "reason": "⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold) (Pullback Support)",
       "high52": 1.2949999570846558,
       "closeTightness": 0,
-      "lowTightness": 2.54,
+      "lowTightness": 1.52,
       "touchCount": 9,
       "floorLow": 0.9850000143051147,
       "isConsolidation": false,
       "pullback": 22.01,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "isCombStock": true,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "HHRG",
@@ -331,14 +344,15 @@
       "reason": "🧊 Saham Downtrend: Elak Trading!",
       "high52": 0.14499999582767487,
       "closeTightness": 26.67,
-      "lowTightness": 50,
+      "lowTightness": 28.57,
       "touchCount": 1,
       "floorLow": 0.07000000029802322,
       "isConsolidation": false,
       "pullback": 48.28,
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "setupStyle": "SWING PLAY"
     }
   ],
   "topGainers": [

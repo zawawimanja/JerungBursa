@@ -633,6 +633,7 @@
         </div>
 
         <div class="controls">
+            <a href="./backtest.html" class="btn" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.25);">📊 Laporan Backtest</a>
             <div class="history-input">
                 <label for="historyDate" style="color: #a5b4fc; font-size: 0.8rem; font-weight: 700; cursor: pointer;">Historical Archive:</label>
                 <input type="date" id="historyDate">
@@ -667,12 +668,12 @@
                             <th style="width: 50px; text-align: center;">No</th>
                             <th style="cursor: pointer; user-select: none;" onclick="setSort('name')">Counter <span id="sort-icon-name" style="font-size: 0.75rem;">⇅</span></th>
                             <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('price')">Price <span id="sort-icon-price" style="font-size: 0.75rem;">⇅</span></th>
+                            <th style="text-align: center; cursor: pointer; user-select: none;" onclick="setSort('tags')">Tags <span id="sort-icon-tags" style="font-size: 0.75rem;">⇅</span></th>
                             <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('change')">Change <span id="sort-icon-change" style="font-size: 0.75rem;">⇅</span></th>
                             <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('high52')">52W High <span id="sort-icon-high52" style="font-size: 0.75rem;">⇅</span></th>
                             <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('pullback')">Pullback [C] <span id="sort-icon-pullback" style="font-size: 0.75rem;">⇅</span></th>
                             <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('dist')">Dist to Floor [B] <span id="sort-icon-dist" style="font-size: 0.75rem;">⇅</span></th>
                             <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('turnover')">Turnover [A] <span id="sort-icon-turnover" style="font-size: 0.75rem;">⇅</span></th>
-                            <th style="text-align: center; cursor: pointer; user-select: none;" onclick="setSort('tags')">Tags <span id="sort-icon-tags" style="font-size: 0.75rem;">⇅</span></th>
                             <th style="text-align: right;">Stop Loss (3%)</th>
                         </tr>
                     </thead>
@@ -765,46 +766,54 @@
                 <h3>📚 Trading SOP & Guide Board</h3>
                 <div style="display: flex; flex-direction: column; gap: 1.2rem; height: 100%;">
                     <div class="guide-item" style="border-left-color: var(--accent);">
-                        <h4>1. Why Consolidation Bases Form?</h4>
-                        <p>It represents the price zone where Smart Money is passively accumulating shares near their **52-Week High / ATH** (pullback &le; 15.0%) without driving the price up. The lower limit (Support Floor) acts as a strong defense line.</p>
+                        <h4>1. Kenapa Tapisan Reversal & Swing Terbentuk?</h4>
+                        <p>Kita menjejak pergerakan dana institusi (*smart money*) yang sedang mengumpul saham bermutu tinggi berhampiran kemuncak ATH. Pergerakan lantai sokongan harian dinamik (tingkap 3-hari/5-hari/10-hari) bertindak sebagai benteng pertahanan risiko kita.</p>
                     </div>
                     <div class="guide-item" style="border-left-color: var(--success);">
-                        <h4>2. Entry Strategy (Buy Zone)</h4>
-                        <p>Enter the market when the current price is extremely close to the Support Floor (distance &le; 2.5%) and in a healthy pullback from its 52W peak (pullback &le; 15.0%). This provides a low-risk entry and optimal risk-reward ratio.</p>
+                        <h4>2. Pemilihan Setup (Berdasarkan Kategori Tags)</h4>
+                        <p>Isih kolum <strong>Tags</strong> untuk memilih jenis setup swing hold yang anda mahukan:</p>
+                        <ul style="margin: 0.3rem 0 0 0; padding-left: 1.2rem; font-size: 0.8rem; line-height: 1.4; color: var(--text-muted); list-style-type: none;">
+                            <li style="margin-bottom: 0.4rem;"><strong>🚀 EXPLOSIVE:</strong> Sesuai untuk swing pantas (2-5 hari). Kaunter melantun kuat hari ini selepas pullback. Pilih yang mempunyai <strong>Dist to Floor &le; 10.0%</strong>.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>🪜 STAIRCASE:</strong> Sesuai untuk swing tenang (1-2 minggu). Kaunter merayap naik membina lantai baharu dekat ATH. Beli pada harga senyap, set SL, dan tunggu breakout.</li>
+                            <li style="margin-bottom: 0.4rem;"><strong>🔄 SWING PLAY:</strong> ⚠️ Elakkan. Rekod backtest menunjukkan ia adalah "Dead Money" dengan pulangan negatif.</li>
+                        </ul>
                     </div>
                     <div class="guide-item" style="border-left-color: var(--danger);">
-                        <h4>3. Risk Management</h4>
-                        <p>Stop Loss (SL) is placed strictly 3% below the Support Floor. If the price breaks below this floor, it signifies the accumulation structure has failed, and we exit with a minimal loss.</p>
+                        <h4>3. Kawalan Risiko (Stop Loss - SL)</h4>
+                        <p>Stop Loss (SL) diletakkan secara disiplin pada **3.0% di bawah harga lantai (floor)** yang ditunjukkan oleh kalkulator. Sekiranya harga tutup di bawah SL, keluar tanpa emosi untuk mengehadkan kerugian.</p>
                     </div>
                     <div class="guide-item" style="border-left-color: #a78bfa;">
-                        <h4>4. Take Profit (TP) Execution</h4>
-                        <p>TP1 is set at +10.0% from entry for quick swing profits. TP2 is set at +20.0% to capture the full ATH breakout / RBS momentum.</p>
+                        <h4>4. Sasaran Untung (Take Profit - TP)</h4>
+                        <p><strong>TP1 (+10.0%):</strong> Untuk mengunci keuntungan swing pantas. <strong>TP2 (+20.0%):</strong> Untuk menumpang rali momentum breakout ATH / RBS baharu.</p>
                     </div>
                     <div class="guide-item" style="border-left-color: #f59e0b; background: rgba(245, 158, 11, 0.03); padding: 1rem; border-radius: 8px;">
-                        <h4>5. Backtest Insights (Strict vs. Standard SOP)</h4>
-                        <p style="margin-bottom: 0.8rem; font-weight: 700; color: #f59e0b;">Berdasarkan data dan logik backtest:</p>
+                        <h4>5. Hasil Backtest Rasmi (Arkib 29 Hari)</h4>
+                        <p style="margin-bottom: 0.8rem; font-weight: 700; color: #f59e0b;">Prestasi setup diuji sejak 25 Mei 2026:</p>
                         
                         <div style="display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.82rem; line-height: 1.45;">
-                            <div style="background: rgba(16, 185, 129, 0.08); border-left: 3px solid #10b981; padding: 0.5rem 0.75rem; border-radius: 4px;">
-                                <strong style="color: #10b981; display: flex; align-items: center; gap: 0.3rem;">👑 Strict SOP (Mutlak) — Pemenang Mutlak Entri Terus</strong>
-                                <ul style="margin: 0.3rem 0 0 0; padding-left: 1.2rem; color: #e2e8f0;">
-                                    <li><strong>Win-Rate:</strong> Biasanya mencecah <strong>70% - 80%</strong>.</li>
-                                    <li><strong>Drawdown (Penurunan harga selepas beli):</strong> Sangat minimal kerana kita beli tepat sewaktu harga melantun (rejection).</li>
+                            <div style="background: rgba(244, 63, 94, 0.08); border-left: 3px solid #fb7185; padding: 0.5rem 0.75rem; border-radius: 4px;">
+                                <strong style="color: #fb7185; display: flex; align-items: center; gap: 0.3rem;">🚀 EXPLOSIVE — Letupan Volum & Win Rate Tertinggi</strong>
+                                <ul style="margin: 0.3rem 0 0 0; padding-left: 1.2rem; color: #e2e8f0; list-style-type: disc;">
+                                    <li><strong>Win-Rate (T+5):</strong> Mencecah <strong>61.54%</strong> (Purata Pulangan: <strong>+2.58%</strong>).</li>
+                                    <li><strong>Kadar SL Hit:</strong> <strong>0.00%</strong> (Sangat selamat dalam masa 5 hari).</li>
                                 </ul>
                             </div>
                             
+                            <div style="background: rgba(6, 182, 212, 0.08); border-left: 3px solid #22d3ee; padding: 0.5rem 0.75rem; border-radius: 4px;">
+                                <strong style="color: #22d3ee; display: flex; align-items: center; gap: 0.3rem;">🪜 STAIRCASE — Sangat Tenang & Risiko Minima</strong>
+                                <ul style="margin: 0.3rem 0 0 0; padding-left: 1.2rem; color: #e2e8f0; list-style-type: disc;">
+                                    <li><strong>Win-Rate (T+5):</strong> Mencecah <strong>55.56%</strong> (Purata Pulangan: <strong>+2.01%</strong>).</li>
+                                    <li><strong>Kadar SL Hit:</strong> <strong>14.29%</strong> (Normal bagi kaunter mengumpul tapak).</li>
+                                </ul>
+                            </div>
+
                             <div style="background: rgba(239, 68, 68, 0.05); border-left: 3px solid #ef4444; padding: 0.5rem 0.75rem; border-radius: 4px;">
-                                <strong style="color: #f87171; display: flex; align-items: center; gap: 0.3rem;">⚠️ Standard SOP (Biasa) — Sesuai Untuk Watchlist Seminggu</strong>
-                                <ul style="margin: 0.3rem 0 0 0; padding-left: 1.2rem; color: #cbd5e1;">
-                                    <li><strong>Win-Rate:</strong> Kadar kemenangan lebih rendah (<strong>~50% - 60%</strong>).</li>
-                                    <li><strong>Sebab:</strong> Tanpa tapisan wick rejection, saham tersebut mungkin akan terus mendatar (sideway) selama 5 hingga 10 hari lagi sebelum melonjak, atau ia boleh bocor support secara perlahan-lahan.</li>
+                                <strong style="color: #f87171; display: flex; align-items: center; gap: 0.3rem;">🔄 SWING PLAY — Elakkan (Dead Money / Hanyut)</strong>
+                                <ul style="margin: 0.3rem 0 0 0; padding-left: 1.2rem; color: #cbd5e1; list-style-type: disc;">
+                                    <li><strong>Win-Rate (T+5):</strong> Rendah (<strong>36.36%</strong>) dengan purata pulangan negatif (<strong>-4.40%</strong>).</li>
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                    <div class="guide-item" style="border-left-color: #3b82f6;">
-                        <h4>6. Dual-Window Floor (Staircase Breakouts & IPOs)</h4>
-                        <p>To accurately capture high-momentum stocks forming staircase breakouts (higher base consolidations like TMK) or recent IPOs with short history (< 25 trading days like MMCS), the engine dynamically adapts between 10-day and 5-day support floors. If the 10-day floor is too far (> 3.0%) but a new 5-day base is established (≤ 3.0%) with strong touch validation (TouchCount &ge; 3x harian), the system automatically triggers an entry signal.</p>
                     </div>
                 </div>
             </div>
@@ -1061,12 +1070,24 @@
                     item.setupName === 'N/A'
                 );
                 
-                return hasPullback && 
+                const passBasic = hasPullback && 
                        isBouncing && 
                        !isDowntrend && 
                        item.price >= 0.25 && item.price <= 4.00 && 
                        item.turnover >= 250000 && 
                        !item.isCombStock;
+                       
+                if (!passBasic) return false;
+                
+                // Filter out SWING PLAY: only keep EXPLOSIVE and STAIRCASE
+                const pct = item.changePct !== undefined ? item.changePct : item.change;
+                const setupStyle = item.setupStyle || (
+                    pct >= 5.0 || (pct >= 3.5 && pullbackVal > 5.0) ? 'EXPLOSIVE' : (
+                        pullbackVal <= 10.0 && (item.isConsolidation || (item.lowTightness && item.lowTightness <= 8.0) || (item.touchCount && item.touchCount >= 2)) ? 'STAIRCASE' : 'SWING PLAY'
+                    )
+                );
+                
+                return setupStyle === 'EXPLOSIVE' || setupStyle === 'STAIRCASE';
             });
             
             // Update sort icons in table headers
@@ -1119,23 +1140,29 @@
                     valA = a.turnover || 0;
                     valB = b.turnover || 0;
                 } else if (currentSortColumn === 'tags') {
-                    // Custom priority order: EXPLOSIVE (1) -> STAIRCASE (2) -> SWING PLAY (3)
-                    const getTagPriority = (item) => {
-                        const style = item.setupStyle || (
-                            (item.changePct !== undefined ? item.changePct : item.change) >= 5.0 || 
-                            ((item.changePct !== undefined ? item.changePct : item.change) >= 3.5 && (item.pullback !== null ? item.pullback : 0) > 5.0) ? 'EXPLOSIVE' : (
-                                (item.pullback !== null ? item.pullback : 0) <= 10.0 && (item.isConsolidation || (item.lowTightness && item.lowTightness <= 8.0) || (item.touchCount && item.touchCount >= 2)) ? 'STAIRCASE' : 'SWING PLAY'
+                    const getStyle = (item) => {
+                        const pct = item.changePct !== undefined ? item.changePct : item.change;
+                        const pb = item.pullback !== null ? item.pullback : 0;
+                        return item.setupStyle || (
+                            pct >= 5.0 || (pct >= 3.5 && pb > 5.0) ? 'EXPLOSIVE' : (
+                                pb <= 10.0 && (item.isConsolidation || (item.lowTightness && item.lowTightness <= 8.0) || (item.touchCount && item.touchCount >= 2)) ? 'STAIRCASE' : 'SWING PLAY'
                             )
                         );
-                        if (style === 'EXPLOSIVE') return 1;
-                        if (style === 'STAIRCASE') return 2;
-                        return 3;
                     };
-                    valA = getTagPriority(a);
-                    valB = getTagPriority(b);
-                    // Since 1 is top priority, a lower priority number means it should go first.
-                    // So we invert the comparison: when desc is true, we want lower priority values (1) first.
-                    return currentSortDesc ? valA - valB : valB - valA;
+                    const styleA = getStyle(a);
+                    const styleB = getStyle(b);
+                    
+                    let priorityA, priorityB;
+                    if (currentSortDesc) {
+                        // Descending: EXPLOSIVE (1) -> STAIRCASE (2) -> SWING PLAY (3)
+                        priorityA = styleA === 'EXPLOSIVE' ? 1 : (styleA === 'STAIRCASE' ? 2 : 3);
+                        priorityB = styleB === 'EXPLOSIVE' ? 1 : (styleB === 'STAIRCASE' ? 2 : 3);
+                    } else {
+                        // Ascending: STAIRCASE (1) -> EXPLOSIVE (2) -> SWING PLAY (3)
+                        priorityA = styleA === 'STAIRCASE' ? 1 : (styleA === 'EXPLOSIVE' ? 2 : 3);
+                        priorityB = styleB === 'STAIRCASE' ? 1 : (styleB === 'EXPLOSIVE' ? 2 : 3);
+                    }
+                    return priorityA - priorityB;
                 } else {
                     // Default fallback sorting (pullback)
                     valA = a.pullback !== null ? a.pullback : 0;
@@ -1209,12 +1236,12 @@
                             </span>
                         </td>
                         <td style="text-align: right; font-weight: 700; color: white;">RM ${item.price.toFixed(3)}</td>
+                        <td style="text-align: center;">${tagsHtml}</td>
                         <td style="text-align: right; font-weight: 700; color: ${pct >= 0 ? 'var(--success)' : 'var(--danger)'};">${changeSign}${pct.toFixed(2)}%</td>
                         <td style="text-align: right; font-weight: 700; color: white;">RM ${item.high52.toFixed(3)}</td>
                         <td style="text-align: right; font-weight: 700; color: #ef4444;">-${pullbackVal.toFixed(2)}%</td>
                         <td style="text-align: right; font-weight: 700; color: white;">+${dist.toFixed(2)}% <span style="font-size: 0.78rem; color: var(--text-muted); font-weight: 500;">(RM ${floor.toFixed(3)})</span></td>
                         <td style="text-align: right; font-weight: 700; color: white;">RM ${formatNumber(item.turnover)}</td>
-                        <td style="text-align: center;">${tagsHtml}</td>
                         <td style="text-align: right; font-weight: 700; color: var(--danger);">RM ${stopLoss.toFixed(3)}</td>
                     </tr>
                 `;
@@ -1235,12 +1262,23 @@
                     item.setupName.includes('Avoid') || 
                     item.setupName === 'N/A'
                 );
-                return hasPullback && 
+                const passBasic = hasPullback && 
                        isBouncing && 
                        !isDowntrend && 
                        item.price >= 0.25 && item.price <= 4.00 && 
                        item.turnover >= 250000 && 
                        !item.isCombStock;
+                       
+                if (!passBasic) return false;
+                
+                const pct = item.changePct !== undefined ? item.changePct : item.change;
+                const setupStyle = item.setupStyle || (
+                    pct >= 5.0 || (pct >= 3.5 && pullbackVal > 5.0) ? 'EXPLOSIVE' : (
+                        pullbackVal <= 10.0 && (item.isConsolidation || (item.lowTightness && item.lowTightness <= 8.0) || (item.touchCount && item.touchCount >= 2)) ? 'STAIRCASE' : 'SWING PLAY'
+                    )
+                );
+                
+                return setupStyle === 'EXPLOSIVE' || setupStyle === 'STAIRCASE';
             });
             
             if (reversalList.length === 0) {

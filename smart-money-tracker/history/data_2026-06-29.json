@@ -38,13 +38,14 @@
       "pullback": 17.06,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 7.66,
-      "lowTightness": 11.07,
+      "lowTightness": 8.96,
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 7.590000152587891,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "MAYBANK",
@@ -61,13 +62,14 @@
       "pullback": 13.04,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 0.93,
-      "lowTightness": 3.36,
+      "lowTightness": 1.12,
       "touchCount": 7,
       "isConsolidation": true,
       "floorLow": 10.699999809265137,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "CIMB",
@@ -84,13 +86,14 @@
       "pullback": 16.76,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 0.81,
-      "lowTightness": 4.74,
+      "lowTightness": 1.36,
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 7.380000114440918,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "PBBANK",
@@ -134,7 +137,8 @@
       "floorLow": 5.909999847412109,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "INARI",
@@ -172,12 +176,13 @@
       "pullback": 26.21,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 1.99,
-      "lowTightness": 10.42,
+      "lowTightness": 5.56,
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.7200000286102295,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "VITROX",
@@ -194,13 +199,14 @@
       "pullback": 4.92,
       "setupName": "🔥 RBS Retest / Near ATH",
       "closeTightness": 8.13,
-      "lowTightness": 4.51,
+      "lowTightness": 2.82,
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 7.099999904632568,
       "hasLowerWickRejection": false,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "MPI",
@@ -217,12 +223,13 @@
       "pullback": 3.35,
       "setupName": "🔥 RBS Retest / Near ATH",
       "closeTightness": 4.74,
-      "lowTightness": 5.71,
+      "lowTightness": 1.95,
       "touchCount": 5,
       "isConsolidation": true,
       "floorLow": 46.20000076293945,
       "hasLowerWickRejection": false,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "YTL",
@@ -239,12 +246,13 @@
       "pullback": 4.75,
       "setupName": "🔥 RBS Retest / Near ATH",
       "closeTightness": 3.19,
-      "lowTightness": 2.99,
+      "lowTightness": 2.49,
       "touchCount": 6,
       "isConsolidation": true,
       "floorLow": 4.019999980926514,
       "hasLowerWickRejection": false,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "UWC",
@@ -256,18 +264,19 @@
       "turnover": 31857150.54988861,
       "volume": 4805000,
       "signal": "buy",
-      "reason": "🔥 Golden Hold: Jerung Mula Kumpul (Sesuai Swing/Hold) (Near ATH)",
+      "reason": "🔒 Tapak Tegar (6x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
       "high52": 6.599999904632568,
       "pullback": 1.82,
       "setupName": "🔥 RBS Retest / Near ATH",
       "closeTightness": 4.76,
-      "lowTightness": 11.86,
-      "touchCount": 1,
-      "isConsolidation": false,
-      "floorLow": 5.650000095367432,
+      "lowTightness": 1.94,
+      "touchCount": 6,
+      "isConsolidation": true,
+      "floorLow": 6.199999809265137,
       "hasLowerWickRejection": false,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "PCHEM",
@@ -284,12 +293,13 @@
       "pullback": 34.25,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 4.59,
-      "lowTightness": 19.95,
+      "lowTightness": 6.91,
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 3.759999990463257,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "DNEX",
@@ -306,13 +316,14 @@
       "pullback": 13.4,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 5.95,
-      "lowTightness": 26.39,
-      "touchCount": 1,
+      "lowTightness": 4.88,
+      "touchCount": 2,
       "isConsolidation": false,
-      "floorLow": 0.36000001430511475,
+      "floorLow": 0.4099999964237213,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "TANCO",
@@ -329,12 +340,13 @@
       "pullback": 91.85,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 7.41,
-      "lowTightness": 12.5,
-      "touchCount": 2,
+      "lowTightness": 3.85,
+      "touchCount": 4,
       "isConsolidation": false,
-      "floorLow": 0.11999999731779099,
+      "floorLow": 0.12999999523162842,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "KGB",
@@ -346,18 +358,19 @@
       "turnover": 23816800,
       "volume": 2977100,
       "signal": "buy",
-      "reason": "🔥 Golden Hold: Jerung Mula Kumpul (Sesuai Swing/Hold) (Near ATH)",
+      "reason": "🔒 Tapak Tegar (2x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
       "high52": 7.96999979019165,
       "pullback": 0.5,
       "setupName": "🔥 RBS Retest / Near ATH",
       "closeTightness": 5.31,
       "lowTightness": 7.16,
       "touchCount": 2,
-      "isConsolidation": false,
+      "isConsolidation": true,
       "floorLow": 7.260000228881836,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "UTDPLT",
@@ -369,18 +382,19 @@
       "turnover": 23189081.283569336,
       "volume": 701000,
       "signal": "buy",
-      "reason": "🔒 Tapak Tegar (4x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
+      "reason": "🔒 Tapak Tegar (8x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
       "high52": 35.880001068115234,
       "pullback": 8.97,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 4.09,
-      "lowTightness": 5.36,
-      "touchCount": 4,
+      "lowTightness": 3.25,
+      "touchCount": 8,
       "isConsolidation": true,
-      "floorLow": 31.31999969482422,
+      "floorLow": 31.959999084472656,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "NATGATE",
@@ -402,7 +416,8 @@
       "isConsolidation": false,
       "floorLow": 0.7250000238418579,
       "hasLowerWickRejection": false,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SKYCHIP",
@@ -419,13 +434,14 @@
       "pullback": 22.11,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 4.12,
-      "lowTightness": 9.19,
-      "touchCount": 6,
+      "lowTightness": 4.88,
+      "touchCount": 7,
       "isConsolidation": false,
-      "floorLow": 2.8299999237060547,
+      "floorLow": 2.869999885559082,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SKYECHIP",
@@ -442,13 +458,14 @@
       "pullback": 22.11,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 4.12,
-      "lowTightness": 9.19,
-      "touchCount": 6,
+      "lowTightness": 4.88,
+      "touchCount": 7,
       "isConsolidation": false,
-      "floorLow": 2.8299999237060547,
+      "floorLow": 2.869999885559082,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "PENTA",
@@ -459,19 +476,20 @@
       "changePct": 0,
       "turnover": 19135774.839925766,
       "volume": 4003300,
-      "signal": "avoid",
-      "reason": "VIP Sideway / Pullback (Pantau Peluang) (Healthy Dip)",
+      "signal": "buy",
+      "reason": "🔒 Tapak Tegar (7x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
       "high52": 5.139999866485596,
       "pullback": 7,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 4.39,
-      "lowTightness": 14.55,
-      "touchCount": 1,
-      "isConsolidation": false,
-      "floorLow": 4.329999923706055,
+      "lowTightness": 5.53,
+      "touchCount": 7,
+      "isConsolidation": true,
+      "floorLow": 4.699999809265137,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "HLBANK",
@@ -488,13 +506,14 @@
       "pullback": 17.05,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 2.52,
-      "lowTightness": 2.9,
+      "lowTightness": 2.43,
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 21.399999618530273,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "PETDAG",
@@ -511,13 +530,14 @@
       "pullback": 20.92,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 2.28,
-      "lowTightness": 4.36,
-      "touchCount": 2,
+      "lowTightness": 1.52,
+      "touchCount": 8,
       "isConsolidation": false,
-      "floorLow": 17.8799991607666,
+      "floorLow": 18.3799991607666,
       "hasLowerWickRejection": false,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SUNMED",
@@ -540,7 +560,8 @@
       "floorLow": 1.7599999904632568,
       "hasLowerWickRejection": false,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SUNWAY",
@@ -563,7 +584,8 @@
       "floorLow": 1.7599999904632568,
       "hasLowerWickRejection": false,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "UNISEM",
@@ -580,12 +602,13 @@
       "pullback": 11.34,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 6.19,
-      "lowTightness": 9.72,
+      "lowTightness": 4.4,
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 4.320000171661377,
       "hasLowerWickRejection": false,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SCGBHD",
@@ -607,7 +630,8 @@
       "isConsolidation": false,
       "floorLow": 2.140000104904175,
       "hasLowerWickRejection": false,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "PETGAS",
@@ -630,7 +654,8 @@
       "floorLow": 17.15999984741211,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "LIFTECH",
@@ -674,7 +699,8 @@
       "floorLow": 20.459999084472656,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "MRDIY",
@@ -691,13 +717,14 @@
       "pullback": 15.1,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 1.23,
-      "lowTightness": 5.77,
-      "touchCount": 2,
+      "lowTightness": 1.24,
+      "touchCount": 7,
       "isConsolidation": false,
-      "floorLow": 1.559999942779541,
+      "floorLow": 1.6100000143051147,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "99 SPEED MART RETAIL",
@@ -709,18 +736,19 @@
       "turnover": 11540981.906461716,
       "volume": 3269400,
       "signal": "buy",
-      "reason": "🔒 Tapak Tegar (3x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
+      "reason": "🔒 Tapak Tegar (4x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
       "high52": 4.150000095367432,
       "pullback": 14.22,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 1.97,
-      "lowTightness": 7.19,
-      "touchCount": 3,
+      "lowTightness": 2.58,
+      "touchCount": 4,
       "isConsolidation": true,
-      "floorLow": 3.3399999141693115,
+      "floorLow": 3.490000009536743,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "AXIATA",
@@ -737,13 +765,14 @@
       "pullback": 24.37,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 6.57,
-      "lowTightness": 12.37,
-      "touchCount": 2,
+      "lowTightness": 6.63,
+      "touchCount": 6,
       "isConsolidation": false,
-      "floorLow": 1.8600000143051147,
+      "floorLow": 1.9600000381469727,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SUNCON",
@@ -755,18 +784,19 @@
       "turnover": 10884949.748516083,
       "volume": 1465000,
       "signal": "buy",
-      "reason": "🔥 Golden Hold: Jerung Mula Kumpul (Sesuai Swing/Hold) (Near ATH)",
+      "reason": "🔒 Tapak Tegar (6x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
       "high52": 7.699999809265137,
       "pullback": 3.9,
       "setupName": "🔥 RBS Retest / Near ATH",
       "closeTightness": 2.05,
-      "lowTightness": 5.25,
-      "touchCount": 2,
-      "isConsolidation": false,
-      "floorLow": 7.050000190734863,
+      "lowTightness": 2.07,
+      "touchCount": 6,
+      "isConsolidation": true,
+      "floorLow": 7.260000228881836,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "TOPGLOV",
@@ -783,13 +813,14 @@
       "pullback": 21.02,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 2.19,
-      "lowTightness": 14.81,
+      "lowTightness": 2.22,
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.675000011920929,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "VELESTO",
@@ -827,13 +858,14 @@
       "pullback": 9.15,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 0.78,
-      "lowTightness": 7.14,
+      "lowTightness": 3.17,
       "touchCount": 4,
       "isConsolidation": true,
       "floorLow": 0.6299999952316284,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "IAB",
@@ -856,7 +888,8 @@
       "floorLow": 1.2999999523162842,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "HKB",
@@ -878,7 +911,8 @@
       "isConsolidation": false,
       "floorLow": 0.5049999952316284,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "MEGA FORTRIS BERHAD",
@@ -889,19 +923,20 @@
       "changePct": -1.2,
       "turnover": 7541159.891033173,
       "volume": 4570400,
-      "signal": "avoid",
-      "reason": "VIP Sideway / Pullback (Pantau Peluang) (Near ATH)",
+      "signal": "buy",
+      "reason": "🔒 Tapak Tegar (2x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
       "high52": 1.75,
       "pullback": 4.57,
       "setupName": "🔥 RBS Retest / Near ATH",
       "closeTightness": 1.8,
-      "lowTightness": 6.96,
-      "touchCount": 1,
-      "isConsolidation": false,
-      "floorLow": 1.5800000429153442,
+      "lowTightness": 3.68,
+      "touchCount": 2,
+      "isConsolidation": true,
+      "floorLow": 1.6299999952316284,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "MEGAFB",
@@ -912,19 +947,20 @@
       "changePct": -1.2,
       "turnover": 7541159.891033173,
       "volume": 4570400,
-      "signal": "avoid",
-      "reason": "VIP Sideway / Pullback (Pantau Peluang) (Near ATH)",
+      "signal": "buy",
+      "reason": "🔒 Tapak Tegar (2x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
       "high52": 1.75,
       "pullback": 4.57,
       "setupName": "🔥 RBS Retest / Near ATH",
       "closeTightness": 1.8,
-      "lowTightness": 6.96,
-      "touchCount": 1,
-      "isConsolidation": false,
-      "floorLow": 1.5800000429153442,
+      "lowTightness": 3.68,
+      "touchCount": 2,
+      "isConsolidation": true,
+      "floorLow": 1.6299999952316284,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "MEGA FORTRIS",
@@ -935,19 +971,20 @@
       "changePct": -1.2,
       "turnover": 7541159.891033173,
       "volume": 4570400,
-      "signal": "avoid",
-      "reason": "VIP Sideway / Pullback (Pantau Peluang) (Near ATH)",
+      "signal": "buy",
+      "reason": "🔒 Tapak Tegar (2x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
       "high52": 1.75,
       "pullback": 4.57,
       "setupName": "🔥 RBS Retest / Near ATH",
       "closeTightness": 1.8,
-      "lowTightness": 6.96,
-      "touchCount": 1,
-      "isConsolidation": false,
-      "floorLow": 1.5800000429153442,
+      "lowTightness": 3.68,
+      "touchCount": 2,
+      "isConsolidation": true,
+      "floorLow": 1.6299999952316284,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "MNHLDG",
@@ -959,18 +996,19 @@
       "turnover": 7343201.266551018,
       "volume": 2540900,
       "signal": "buy",
-      "reason": "🔥 Golden Hold: Jerung Mula Kumpul (Sesuai Swing/Hold) (Near ATH)",
+      "reason": "🔒 Tapak Tegar (4x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
       "high52": 2.890000104904175,
       "pullback": 0.35,
       "setupName": "🔥 RBS Retest / Near ATH",
       "closeTightness": 3.23,
-      "lowTightness": 8.66,
-      "touchCount": 2,
-      "isConsolidation": false,
-      "floorLow": 2.5399999618530273,
+      "lowTightness": 0.36,
+      "touchCount": 4,
+      "isConsolidation": true,
+      "floorLow": 2.75,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "YEWLEE",
@@ -982,18 +1020,19 @@
       "turnover": 7255080.2882909775,
       "volume": 12091800,
       "signal": "buy",
-      "reason": "🔒 Tapak Tegar (7x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
+      "reason": "🔒 Tapak Tegar (10x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
       "high52": 0.6050000190734863,
       "pullback": 0.83,
       "setupName": "🔥 RBS Retest / Near ATH",
       "closeTightness": 1.69,
-      "lowTightness": 2.61,
-      "touchCount": 7,
+      "lowTightness": 1.72,
+      "touchCount": 10,
       "isConsolidation": true,
-      "floorLow": 0.574999988079071,
+      "floorLow": 0.5799999833106995,
       "hasLowerWickRejection": false,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "SNS",
@@ -1010,12 +1049,13 @@
       "pullback": 34.84,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 6.06,
-      "lowTightness": 4.08,
+      "lowTightness": 2.04,
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.49000000953674316,
       "hasLowerWickRejection": false,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "NE",
@@ -1027,17 +1067,18 @@
       "turnover": 7017759.854507446,
       "volume": 6102400,
       "signal": "buy",
-      "reason": "🔒 Tapak Tegar (3x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
+      "reason": "🔒 Tapak Tegar (8x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
       "high52": 1.1299999952316284,
       "pullback": 3.54,
       "setupName": "🔥 RBS Retest / Near ATH",
       "closeTightness": 3.81,
-      "lowTightness": 5.53,
-      "touchCount": 3,
+      "lowTightness": 1.94,
+      "touchCount": 8,
       "isConsolidation": true,
-      "floorLow": 0.9950000047683716,
+      "floorLow": 1.0299999713897705,
       "hasLowerWickRejection": false,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "NORTHEAST GROUP BERHAD",
@@ -1049,17 +1090,18 @@
       "turnover": 7017759.854507446,
       "volume": 6102400,
       "signal": "buy",
-      "reason": "🔒 Tapak Tegar (3x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
+      "reason": "🔒 Tapak Tegar (8x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
       "high52": 1.1299999952316284,
       "pullback": 3.54,
       "setupName": "🔥 RBS Retest / Near ATH",
       "closeTightness": 3.81,
-      "lowTightness": 5.53,
-      "touchCount": 3,
+      "lowTightness": 1.94,
+      "touchCount": 8,
       "isConsolidation": true,
-      "floorLow": 0.9950000047683716,
+      "floorLow": 1.0299999713897705,
       "hasLowerWickRejection": false,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "SKPRES",
@@ -1076,12 +1118,13 @@
       "pullback": 72.69,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 5.17,
-      "lowTightness": 20.75,
+      "lowTightness": 13.21,
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.26499998569488525,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "QL",
@@ -1104,7 +1147,8 @@
       "floorLow": 3.690000057220459,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "JPG",
@@ -1116,18 +1160,19 @@
       "turnover": 6540965.89486599,
       "volume": 3674700,
       "signal": "buy",
-      "reason": "🔒 Tapak Tegar (3x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
+      "reason": "🔒 Tapak Tegar (4x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
       "high52": 1.9500000476837158,
       "pullback": 8.72,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 2.81,
-      "lowTightness": 7.78,
-      "touchCount": 3,
+      "lowTightness": 2.86,
+      "touchCount": 4,
       "isConsolidation": true,
-      "floorLow": 1.6699999570846558,
+      "floorLow": 1.75,
       "hasLowerWickRejection": false,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "SOLARVEST HOLDINGS BERHAD",
@@ -1138,19 +1183,20 @@
       "changePct": 0,
       "turnover": 6177938.019704819,
       "volume": 2066200,
-      "signal": "avoid",
-      "reason": "VIP Sideway / Pullback (Pantau Peluang) (Healthy Dip)",
+      "signal": "buy",
+      "reason": "🔒 Tapak Tegar (2x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
       "high52": 3.390000104904175,
       "pullback": 11.8,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 4.91,
-      "lowTightness": 4.95,
+      "lowTightness": 4.59,
       "touchCount": 2,
-      "isConsolidation": false,
+      "isConsolidation": true,
       "floorLow": 2.8299999237060547,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SLVEST",
@@ -1161,19 +1207,20 @@
       "changePct": 0,
       "turnover": 6177938.019704819,
       "volume": 2066200,
-      "signal": "avoid",
-      "reason": "VIP Sideway / Pullback (Pantau Peluang) (Healthy Dip)",
+      "signal": "buy",
+      "reason": "🔒 Tapak Tegar (2x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
       "high52": 3.390000104904175,
       "pullback": 11.8,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 4.91,
-      "lowTightness": 4.95,
+      "lowTightness": 4.59,
       "touchCount": 2,
-      "isConsolidation": false,
+      "isConsolidation": true,
       "floorLow": 2.8299999237060547,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "MMCS",
@@ -1185,18 +1232,19 @@
       "turnover": 5991212.924820185,
       "volume": 21021800,
       "signal": "buy",
-      "reason": "⚡ Momentum Kuat: Jerung Mula Pam (Sesuai Intraday/Swing) (Near ATH)",
+      "reason": "🔒 Tapak Tegar (6x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
       "high52": 0.2750000059604645,
       "pullback": 3.64,
       "setupName": "🔥 RBS Retest / Near ATH",
       "closeTightness": 3.85,
-      "lowTightness": 20.93,
-      "touchCount": 1,
-      "isConsolidation": false,
-      "floorLow": 0.2150000035762787,
+      "lowTightness": 1.96,
+      "touchCount": 6,
+      "isConsolidation": true,
+      "floorLow": 0.2549999952316284,
       "hasLowerWickRejection": false,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "MCEMENT",
@@ -1213,13 +1261,14 @@
       "pullback": 26.54,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 2.19,
-      "lowTightness": 8.56,
+      "lowTightness": 5.39,
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 6.309999942779541,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "PPB",
@@ -1242,7 +1291,8 @@
       "floorLow": 9.109999656677246,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "OPPSTAR",
@@ -1259,12 +1309,13 @@
       "pullback": 41.98,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 5.79,
-      "lowTightness": 19.23,
+      "lowTightness": 5.08,
       "touchCount": 4,
       "isConsolidation": false,
-      "floorLow": 0.5199999809265137,
+      "floorLow": 0.5899999737739563,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SAM",
@@ -1275,18 +1326,19 @@
       "changePct": 0,
       "turnover": 5547269.896268845,
       "volume": 1087700,
-      "signal": "avoid",
-      "reason": "VIP Sideway / Pullback (Pantau Peluang) (Near ATH)",
+      "signal": "buy",
+      "reason": "🔒 Tapak Tegar (8x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
       "high52": 5.25,
       "pullback": 2.86,
       "setupName": "🔥 RBS Retest / Near ATH",
       "closeTightness": 4.94,
-      "lowTightness": 10.43,
-      "touchCount": 1,
-      "isConsolidation": false,
-      "floorLow": 4.409999847412109,
+      "lowTightness": 2.31,
+      "touchCount": 8,
+      "isConsolidation": true,
+      "floorLow": 4.760000228881836,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "GREATEC",
@@ -1303,13 +1355,14 @@
       "pullback": 10.58,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 3.56,
-      "lowTightness": 6.48,
+      "lowTightness": 1.21,
       "touchCount": 5,
       "isConsolidation": true,
       "floorLow": 2.4700000286102295,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "EIPOWER",
@@ -1326,13 +1379,14 @@
       "pullback": 10.88,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 6.25,
-      "lowTightness": 9.6,
+      "lowTightness": 5.56,
       "touchCount": 3,
       "isConsolidation": false,
-      "floorLow": 0.625,
+      "floorLow": 0.6299999952316284,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "EI POWER BERHAD [S]",
@@ -1349,13 +1403,14 @@
       "pullback": 10.88,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 6.25,
-      "lowTightness": 9.6,
+      "lowTightness": 5.56,
       "touchCount": 3,
       "isConsolidation": false,
-      "floorLow": 0.625,
+      "floorLow": 0.6299999952316284,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "RAMSSOL",
@@ -1372,12 +1427,13 @@
       "pullback": 37.16,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 1.47,
-      "lowTightness": 3.03,
-      "touchCount": 7,
+      "lowTightness": 1.49,
+      "touchCount": 10,
       "isConsolidation": false,
-      "floorLow": 0.6600000262260437,
+      "floorLow": 0.6700000166893005,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "TMK",
@@ -1388,19 +1444,20 @@
       "changePct": -3.27,
       "turnover": 4356296.789646149,
       "volume": 1838100,
-      "signal": "avoid",
-      "reason": "VIP Sideway / Pullback (Pantau Peluang) (Healthy Dip)",
+      "signal": "buy",
+      "reason": "🔒 Tapak Tegar (2x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
       "high52": 2.75,
       "pullback": 10.91,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 2.45,
-      "lowTightness": 17.49,
-      "touchCount": 1,
-      "isConsolidation": false,
-      "floorLow": 2.2300000190734863,
+      "lowTightness": 10.08,
+      "touchCount": 2,
+      "isConsolidation": true,
+      "floorLow": 2.380000114440918,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "VS",
@@ -1422,7 +1479,8 @@
       "isConsolidation": false,
       "floorLow": 0.1899999976158142,
       "hasLowerWickRejection": false,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "HEIM",
@@ -1445,7 +1503,8 @@
       "floorLow": 19.200000762939453,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SRIDGE",
@@ -1483,12 +1542,13 @@
       "pullback": 0.53,
       "setupName": "🔥 RBS Retest / Near ATH",
       "closeTightness": 16.25,
-      "lowTightness": 37.1,
+      "lowTightness": 6.92,
       "touchCount": 1,
       "isConsolidation": false,
-      "floorLow": 1.2400000095367432,
+      "floorLow": 1.590000033378601,
       "hasLowerWickRejection": false,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "ELRIDGE",
@@ -1505,12 +1565,13 @@
       "pullback": 42.76,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 1.15,
-      "lowTightness": 10.19,
-      "touchCount": 2,
+      "lowTightness": 1.76,
+      "touchCount": 5,
       "isConsolidation": false,
-      "floorLow": 0.7850000262260437,
+      "floorLow": 0.8500000238418579,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "THMY",
@@ -1527,13 +1588,14 @@
       "pullback": 12,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 3.51,
-      "lowTightness": 10.71,
+      "lowTightness": 3.57,
       "touchCount": 4,
       "isConsolidation": true,
       "floorLow": 1.6799999475479126,
       "hasLowerWickRejection": false,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SUM",
@@ -1550,12 +1612,13 @@
       "pullback": 10.09,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 8.51,
-      "lowTightness": 26.58,
-      "touchCount": 1,
+      "lowTightness": 9.89,
+      "touchCount": 2,
       "isConsolidation": false,
-      "floorLow": 0.39500001072883606,
+      "floorLow": 0.45500001311302185,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "ITMAX",
@@ -1572,13 +1635,14 @@
       "pullback": 7.28,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 1.24,
-      "lowTightness": 2.11,
+      "lowTightness": 1.9,
       "touchCount": 9,
       "isConsolidation": true,
       "floorLow": 4.739999771118164,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "VSTECS",
@@ -1595,13 +1659,14 @@
       "pullback": 19.85,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 5.78,
-      "lowTightness": 12.87,
+      "lowTightness": 3.51,
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 1.7100000381469727,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "CORAZA",
@@ -1618,13 +1683,14 @@
       "pullback": 8.8,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 5.7,
-      "lowTightness": 9.47,
+      "lowTightness": 3.68,
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.949999988079071,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "SFPTECH",
@@ -1646,7 +1712,8 @@
       "isConsolidation": true,
       "floorLow": 0.2549999952316284,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "ECOSHOP",
@@ -1663,13 +1730,14 @@
       "pullback": 22.16,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 3.08,
-      "lowTightness": 7.26,
-      "touchCount": 2,
+      "lowTightness": 3.91,
+      "touchCount": 4,
       "isConsolidation": false,
-      "floorLow": 1.2400000095367432,
+      "floorLow": 1.2799999713897705,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "ECOMATE",
@@ -1680,8 +1748,8 @@
       "changePct": -0.58,
       "turnover": 2918457.065105438,
       "volume": 3413400,
-      "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "signal": "buy",
+      "reason": "🔒 Tapak Tegar (10x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
       "high52": 0.8999999761581421,
       "pullback": 4.44,
       "setupName": "🔥 RBS Retest / Near ATH",
@@ -1692,7 +1760,8 @@
       "floorLow": 0.8500000238418579,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "PWRWELL",
@@ -1709,12 +1778,13 @@
       "pullback": 10.06,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 5.81,
-      "lowTightness": 14.57,
+      "lowTightness": 9.93,
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.7549999952316284,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "PENTECH",
@@ -1731,13 +1801,14 @@
       "pullback": 18.31,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 12.5,
-      "lowTightness": 32,
-      "touchCount": 1,
+      "lowTightness": 17.86,
+      "touchCount": 2,
       "isConsolidation": false,
-      "floorLow": 0.25,
+      "floorLow": 0.2800000011920929,
       "hasLowerWickRejection": false,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "KOPI",
@@ -1754,12 +1825,13 @@
       "pullback": 41.93,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 2.14,
-      "lowTightness": 6.08,
-      "touchCount": 1,
+      "lowTightness": 1.61,
+      "touchCount": 7,
       "isConsolidation": false,
-      "floorLow": 0.9049999713897705,
+      "floorLow": 0.9300000071525574,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "ORIENTAL KOPI HOLDINGS",
@@ -1776,12 +1848,13 @@
       "pullback": 41.93,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 2.14,
-      "lowTightness": 6.08,
-      "touchCount": 1,
+      "lowTightness": 1.61,
+      "touchCount": 7,
       "isConsolidation": false,
-      "floorLow": 0.9049999713897705,
+      "floorLow": 0.9300000071525574,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "AMBEST",
@@ -1798,12 +1871,13 @@
       "pullback": 4.79,
       "setupName": "🔥 RBS Retest / Near ATH",
       "closeTightness": 8.48,
-      "lowTightness": 11.25,
-      "touchCount": 1,
+      "lowTightness": 7.23,
+      "touchCount": 3,
       "isConsolidation": false,
-      "floorLow": 0.800000011920929,
+      "floorLow": 0.8299999833106995,
       "hasLowerWickRejection": false,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "MCLEAN",
@@ -1820,12 +1894,13 @@
       "pullback": 1.27,
       "setupName": "🔥 RBS Retest / Near ATH",
       "closeTightness": 11.43,
-      "lowTightness": 8.15,
-      "touchCount": 3,
+      "lowTightness": 4.29,
+      "touchCount": 4,
       "isConsolidation": false,
-      "floorLow": 0.675000011920929,
+      "floorLow": 0.699999988079071,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "GENERGY",
@@ -1842,12 +1917,13 @@
       "pullback": 67.35,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 3.13,
-      "lowTightness": 33.33,
+      "lowTightness": 8.33,
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.30000001192092896,
       "hasLowerWickRejection": false,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "CTOS",
@@ -1869,7 +1945,8 @@
       "isConsolidation": false,
       "floorLow": 0.6600000262260437,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "MTT SHIPPING AND LOGISTICS BHD",
@@ -1892,7 +1969,8 @@
       "floorLow": 0.9350000023841858,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "MTTSL",
@@ -1915,7 +1993,8 @@
       "floorLow": 0.9350000023841858,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "SUNLOGY",
@@ -1932,12 +2011,13 @@
       "pullback": 35.48,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 17.65,
-      "lowTightness": 5.88,
+      "lowTightness": 3.92,
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 0.2549999952316284,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "INFOM",
@@ -1959,7 +2039,8 @@
       "isConsolidation": false,
       "floorLow": 1,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "CHB",
@@ -1976,12 +2057,13 @@
       "pullback": 19.84,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 3.96,
-      "lowTightness": 14,
+      "lowTightness": 5,
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 1,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "EMPIRE PREMIUM FOOD BERHAD",
@@ -1998,13 +2080,14 @@
       "pullback": 18.6,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 3.55,
-      "lowTightness": 7.69,
+      "lowTightness": 4.62,
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.9750000238418579,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "EMPIRE",
@@ -2021,13 +2104,14 @@
       "pullback": 18.6,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 3.55,
-      "lowTightness": 7.69,
+      "lowTightness": 4.62,
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.9750000238418579,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SENHENG",
@@ -2044,12 +2128,13 @@
       "pullback": 36.96,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 31.82,
-      "lowTightness": 57.89,
+      "lowTightness": 21.05,
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.0949999988079071,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "ICENTS",
@@ -2066,13 +2151,14 @@
       "pullback": 0.94,
       "setupName": "🔥 RBS Retest / Near ATH",
       "closeTightness": 9.37,
-      "lowTightness": 13.48,
+      "lowTightness": 6.32,
       "touchCount": 2,
       "isConsolidation": false,
-      "floorLow": 0.4449999928474426,
+      "floorLow": 0.4749999940395355,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "PEKAT",
@@ -2089,13 +2175,14 @@
       "pullback": 10.53,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 7.59,
-      "lowTightness": 4.43,
+      "lowTightness": 2.53,
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 1.5800000429153442,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "LWSABAH",
@@ -2118,7 +2205,8 @@
       "floorLow": 1.340000033378601,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "ENPRO",
@@ -2135,12 +2223,13 @@
       "pullback": 34.43,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 2.5,
-      "lowTightness": 5.13,
+      "lowTightness": 2.56,
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.19499999284744263,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "CARLSBG",
@@ -2153,17 +2242,18 @@
       "volume": 95600,
       "signal": "avoid",
       "reason": "🧊 Saham Downtrend: Elak Trading! (Pullback Support)",
-      "high52": 19.399999618530273,
-      "pullback": 16.08,
+      "high52": 19.280000686645508,
+      "pullback": 15.56,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 0.12,
-      "lowTightness": 1.73,
+      "lowTightness": 0.74,
       "touchCount": 10,
       "isConsolidation": false,
       "floorLow": 16.139999389648438,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SDCG",
@@ -2174,19 +2264,20 @@
       "changePct": 0,
       "turnover": 1539089.9737894535,
       "volume": 2198700,
-      "signal": "avoid",
-      "reason": "VIP Sideway / Pullback (Pantau Peluang) (Near ATH)",
+      "signal": "buy",
+      "reason": "🔒 Tapak Tegar (9x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
       "high52": 0.699999988079071,
       "pullback": 0,
       "setupName": "🔥 RBS Retest / Near ATH",
       "closeTightness": 0.72,
-      "lowTightness": 3.73,
-      "touchCount": 2,
-      "isConsolidation": false,
-      "floorLow": 0.6700000166893005,
+      "lowTightness": 1.46,
+      "touchCount": 9,
+      "isConsolidation": true,
+      "floorLow": 0.6850000023841858,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "UUE HOLDINGS BERHAD",
@@ -2203,12 +2294,13 @@
       "pullback": 28.57,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 5.68,
-      "lowTightness": 21.62,
+      "lowTightness": 7.14,
       "touchCount": 2,
       "isConsolidation": false,
-      "floorLow": 0.3700000047683716,
+      "floorLow": 0.41999998688697815,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "UUE",
@@ -2225,12 +2317,13 @@
       "pullback": 28.57,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 5.68,
-      "lowTightness": 21.62,
+      "lowTightness": 7.14,
       "touchCount": 2,
       "isConsolidation": false,
-      "floorLow": 0.3700000047683716,
+      "floorLow": 0.41999998688697815,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "ATECH",
@@ -2247,12 +2340,13 @@
       "pullback": 44.44,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 0.78,
-      "lowTightness": 6.3,
+      "lowTightness": 1.57,
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.6349999904632568,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "HHRG",
@@ -2269,12 +2363,13 @@
       "pullback": 41.38,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 11.76,
-      "lowTightness": 28.57,
+      "lowTightness": 5.88,
       "touchCount": 1,
       "isConsolidation": false,
-      "floorLow": 0.07000000029802322,
+      "floorLow": 0.08500000089406967,
       "hasLowerWickRejection": false,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "TEAMSTR",
@@ -2286,18 +2381,19 @@
       "turnover": 1353623.9697441459,
       "volume": 5640100,
       "signal": "avoid",
-      "reason": "🧊 Saham Downtrend: Elak Trading! (Healthy Dip)",
+      "reason": "🔒 Tapak Tegar (8x) | 🧊 Saham Downtrend: Elak Trading! (Healthy Dip)",
       "high52": 0.27000001072883606,
       "pullback": 9.26,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 2.08,
-      "lowTightness": 4.26,
-      "touchCount": 1,
-      "isConsolidation": false,
-      "floorLow": 0.23499999940395355,
+      "lowTightness": 2.08,
+      "touchCount": 8,
+      "isConsolidation": true,
+      "floorLow": 0.23999999463558197,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "CHEEDING",
@@ -2314,12 +2410,13 @@
       "pullback": 31.77,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 0.77,
-      "lowTightness": 3.88,
+      "lowTightness": 0.78,
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 0.6449999809265137,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "OGX",
@@ -2341,7 +2438,8 @@
       "isConsolidation": false,
       "floorLow": 0.44999998807907104,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "F&N",
@@ -2358,13 +2456,14 @@
       "pullback": 24.33,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 2.85,
-      "lowTightness": 3.64,
-      "touchCount": 4,
+      "lowTightness": 1.1,
+      "touchCount": 9,
       "isConsolidation": false,
-      "floorLow": 26.899999618530273,
+      "floorLow": 27.299999237060547,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "LSH",
@@ -2381,12 +2480,13 @@
       "pullback": 31.64,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 7.43,
-      "lowTightness": 19.35,
-      "touchCount": 2,
+      "lowTightness": 8.19,
+      "touchCount": 4,
       "isConsolidation": false,
-      "floorLow": 1.5499999523162842,
+      "floorLow": 1.7100000381469727,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "EDELTEQ",
@@ -2403,12 +2503,13 @@
       "pullback": 44.25,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 1.59,
-      "lowTightness": 6.45,
+      "lowTightness": 1.61,
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.3100000023841858,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "HEGROUP",
@@ -2425,12 +2526,13 @@
       "pullback": 13.16,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 4.08,
-      "lowTightness": 11.46,
+      "lowTightness": 4.17,
       "touchCount": 3,
       "isConsolidation": true,
       "floorLow": 0.47999998927116394,
       "hasLowerWickRejection": false,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "JTGROUP",
@@ -2441,19 +2543,20 @@
       "changePct": 6.42,
       "turnover": 1091269.968599081,
       "volume": 1881500,
-      "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "signal": "buy",
+      "reason": "⚡ Momentum Kuat: Jerung Mula Pam (Sesuai Intraday/Swing) (Pullback Support)",
       "high52": 0.7699999809265137,
       "pullback": 29.22,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 3.77,
-      "lowTightness": 14.58,
-      "touchCount": 1,
+      "lowTightness": 4.76,
+      "touchCount": 3,
       "isConsolidation": false,
-      "floorLow": 0.47999998927116394,
+      "floorLow": 0.5249999761581421,
       "hasLowerWickRejection": false,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "ISF",
@@ -2470,13 +2573,14 @@
       "pullback": 10.66,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 7.92,
-      "lowTightness": 11.22,
+      "lowTightness": 7.14,
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.49000000953674316,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "FFB",
@@ -2493,13 +2597,14 @@
       "pullback": 24.09,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 1.75,
-      "lowTightness": 4.57,
-      "touchCount": 2,
+      "lowTightness": 0.88,
+      "touchCount": 8,
       "isConsolidation": false,
-      "floorLow": 2.190000057220459,
-      "hasLowerWickRejection": false,
+      "floorLow": 2.2699999809265137,
+      "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SUNVIEW",
@@ -2516,13 +2621,14 @@
       "pullback": 15.91,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 1.37,
-      "lowTightness": 1.37,
+      "lowTightness": 0,
       "touchCount": 10,
       "isConsolidation": false,
       "floorLow": 0.36500000953674316,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "CEB",
@@ -2544,7 +2650,8 @@
       "isConsolidation": false,
       "floorLow": 0.2549999952316284,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "LHI",
@@ -2555,19 +2662,20 @@
       "changePct": 0,
       "turnover": 965883.9878797531,
       "volume": 1270900,
-      "signal": "avoid",
-      "reason": "VIP Sideway / Pullback (Pantau Peluang) (Healthy Dip)",
+      "signal": "buy",
+      "reason": "🔒 Tapak Tegar (9x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
       "high52": 0.8349999785423279,
       "pullback": 8.98,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 2.01,
-      "lowTightness": 3.45,
-      "touchCount": 2,
-      "isConsolidation": false,
-      "floorLow": 0.7250000238418579,
+      "lowTightness": 1.35,
+      "touchCount": 9,
+      "isConsolidation": true,
+      "floorLow": 0.7400000095367432,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "AMS",
@@ -2584,12 +2692,13 @@
       "pullback": 18.82,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 5.8,
-      "lowTightness": 16.18,
+      "lowTightness": 7.35,
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.3400000035762787,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "AMS ADVANCED MATERIAL BERHAD",
@@ -2606,12 +2715,13 @@
       "pullback": 18.82,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 5.8,
-      "lowTightness": 16.18,
+      "lowTightness": 7.35,
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.3400000035762787,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "ECA",
@@ -2628,12 +2738,13 @@
       "pullback": 0,
       "setupName": "🔥 RBS Retest / Near ATH",
       "closeTightness": 14.04,
-      "lowTightness": 29.55,
-      "touchCount": 2,
+      "lowTightness": 3.64,
+      "touchCount": 4,
       "isConsolidation": false,
-      "floorLow": 0.2199999988079071,
+      "floorLow": 0.2750000059604645,
       "hasLowerWickRejection": false,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "SAMAIDEN",
@@ -2656,7 +2767,8 @@
       "floorLow": 1.2799999713897705,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "TFP",
@@ -2678,7 +2790,8 @@
       "isConsolidation": false,
       "floorLow": 0.05000000074505806,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "BUSCAP",
@@ -2695,12 +2808,13 @@
       "pullback": 32.88,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 4.17,
-      "lowTightness": 6.52,
-      "touchCount": 2,
+      "lowTightness": 4.26,
+      "touchCount": 5,
       "isConsolidation": false,
-      "floorLow": 0.23000000417232513,
+      "floorLow": 0.23499999940395355,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "KTI",
@@ -2723,7 +2837,8 @@
       "floorLow": 0.5299999713897705,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "AMEREIT",
@@ -2746,7 +2861,8 @@
       "floorLow": 1.5,
       "hasLowerWickRejection": false,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "KLCC",
@@ -2763,13 +2879,14 @@
       "pullback": 4.6,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 2.35,
-      "lowTightness": 4.42,
+      "lowTightness": 1.93,
       "touchCount": 5,
       "isConsolidation": true,
       "floorLow": 8.829999923706055,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "PMCK",
@@ -2791,7 +2908,8 @@
       "isConsolidation": false,
       "floorLow": 0.1899999976158142,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "LACMED",
@@ -2808,12 +2926,13 @@
       "pullback": 41.04,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 8.05,
-      "lowTightness": 20,
-      "touchCount": 1,
+      "lowTightness": 11.43,
+      "touchCount": 2,
       "isConsolidation": false,
-      "floorLow": 0.6499999761581421,
+      "floorLow": 0.699999988079071,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "WELLS",
@@ -2836,7 +2955,8 @@
       "floorLow": 0.5699999928474426,
       "hasLowerWickRejection": false,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "MKH OIL PALM (EAST KALIMANTAN)",
@@ -2859,7 +2979,8 @@
       "floorLow": 0.6150000095367432,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "MKHOP",
@@ -2882,7 +3003,8 @@
       "floorLow": 0.6150000095367432,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "CPETECH",
@@ -2899,12 +3021,13 @@
       "pullback": 19.7,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 6.58,
-      "lowTightness": 8.78,
+      "lowTightness": 6.08,
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.7400000095367432,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SSF",
@@ -2915,8 +3038,8 @@
       "changePct": 0,
       "turnover": 560078.9794564247,
       "volume": 1436100,
-      "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "signal": "buy",
+      "reason": "🔒 Tapak Tegar (10x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
       "high52": 0.41999998688697815,
       "pullback": 7.14,
       "setupName": "📉 Healthy Dip",
@@ -2927,7 +3050,8 @@
       "floorLow": 0.38499999046325684,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "AQUAWALK",
@@ -2949,7 +3073,8 @@
       "isConsolidation": false,
       "floorLow": 0.16500000655651093,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "GOLDEN DESTINATIONS GROUP BERHAD",
@@ -2966,13 +3091,14 @@
       "pullback": 21.21,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 2.63,
-      "lowTightness": 6.85,
-      "touchCount": 1,
+      "lowTightness": 1.32,
+      "touchCount": 8,
       "isConsolidation": false,
-      "floorLow": 0.36500000953674316,
+      "floorLow": 0.3799999952316284,
       "hasLowerWickRejection": false,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "GDGROUP",
@@ -2989,13 +3115,14 @@
       "pullback": 21.21,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 2.63,
-      "lowTightness": 6.85,
-      "touchCount": 1,
+      "lowTightness": 1.32,
+      "touchCount": 8,
       "isConsolidation": false,
-      "floorLow": 0.36500000953674316,
+      "floorLow": 0.3799999952316284,
       "hasLowerWickRejection": false,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "VLB",
@@ -3006,19 +3133,20 @@
       "changePct": 2.5,
       "turnover": 547903.5084962845,
       "volume": 890900,
-      "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "signal": "buy",
+      "reason": "🔥 Golden Entry: Jerung Kumpul Selesa (Sesuai Swing/Hold) (Near ATH)",
       "high52": 0.6050000190734863,
       "pullback": 0.83,
       "setupName": "🔥 RBS Retest / Near ATH",
       "closeTightness": 0,
-      "lowTightness": 9.17,
-      "touchCount": 6,
-      "isConsolidation": true,
-      "floorLow": 0.5450000166893005,
+      "lowTightness": 2.59,
+      "touchCount": 2,
+      "isConsolidation": false,
+      "floorLow": 0.5799999833106995,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "3REN",
@@ -3035,13 +3163,14 @@
       "pullback": 14.58,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 3.75,
-      "lowTightness": 9.09,
+      "lowTightness": 3.9,
       "touchCount": 5,
       "isConsolidation": true,
       "floorLow": 0.38499999046325684,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "CLOUDPT",
@@ -3058,12 +3187,13 @@
       "pullback": 53.3,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 2.38,
-      "lowTightness": 6.02,
+      "lowTightness": 3.61,
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.41499999165534973,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "OHM",
@@ -3085,7 +3215,8 @@
       "isConsolidation": false,
       "floorLow": 0.35499998927116394,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "DXN",
@@ -3108,7 +3239,8 @@
       "floorLow": 0.45500001311302185,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "TTVHB",
@@ -3125,12 +3257,13 @@
       "pullback": 58.59,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 7.55,
-      "lowTightness": 15.22,
-      "touchCount": 1,
+      "lowTightness": 3.92,
+      "touchCount": 4,
       "isConsolidation": false,
-      "floorLow": 0.23000000417232513,
+      "floorLow": 0.2549999952316284,
       "hasLowerWickRejection": false,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "CNERGEN",
@@ -3147,12 +3280,13 @@
       "pullback": 2.31,
       "setupName": "🔥 RBS Retest / Near ATH",
       "closeTightness": 7.63,
-      "lowTightness": 9.17,
-      "touchCount": 2,
+      "lowTightness": 2.59,
+      "touchCount": 5,
       "isConsolidation": false,
-      "floorLow": 0.5450000166893005,
+      "floorLow": 0.5799999833106995,
       "hasLowerWickRejection": false,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "MANFORCE GROUP BERHAD",
@@ -3169,13 +3303,14 @@
       "pullback": 26.32,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 1.79,
-      "lowTightness": 5.45,
+      "lowTightness": 3.64,
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.2750000059604645,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "MFGROUP",
@@ -3192,13 +3327,14 @@
       "pullback": 26.32,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 1.79,
-      "lowTightness": 5.45,
+      "lowTightness": 3.64,
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.2750000059604645,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "FIBRO",
@@ -3215,12 +3351,13 @@
       "pullback": 17.95,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 0.62,
-      "lowTightness": 7.05,
+      "lowTightness": 3.21,
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.7799999713897705,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "NESTCON",
@@ -3231,8 +3368,8 @@
       "changePct": 5.26,
       "turnover": 423520.0063109398,
       "volume": 1058800,
-      "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "signal": "buy",
+      "reason": "🔒 Tapak Tegar (4x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
       "high52": 0.38499999046325684,
       "pullback": 1.3,
       "setupName": "🔥 RBS Retest / Near ATH",
@@ -3242,7 +3379,8 @@
       "isConsolidation": true,
       "floorLow": 0.35499998927116394,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "OXB",
@@ -3259,12 +3397,13 @@
       "pullback": 32,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 2.94,
-      "lowTightness": 12.12,
+      "lowTightness": 3.03,
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.33000001311302185,
       "hasLowerWickRejection": false,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "ELSA",
@@ -3281,12 +3420,13 @@
       "pullback": 26.32,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 7.14,
-      "lowTightness": 27.5,
+      "lowTightness": 10,
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.20000000298023224,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "OVH",
@@ -3297,8 +3437,8 @@
       "changePct": 9.09,
       "turnover": 382463.9914512634,
       "volume": 1593600,
-      "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "signal": "buy",
+      "reason": "⚡ Momentum Kuat: Jerung Mula Pam (Sesuai Intraday/Swing) (Healthy Dip)",
       "high52": 0.23999999463558197,
       "pullback": 8.33,
       "setupName": "📉 Healthy Dip",
@@ -3308,7 +3448,8 @@
       "isConsolidation": false,
       "floorLow": 0.1899999976158142,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "MESTRON",
@@ -3325,12 +3466,13 @@
       "pullback": 60,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 17.65,
-      "lowTightness": 85.71,
+      "lowTightness": 42.86,
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.07000000029802322,
       "hasLowerWickRejection": false,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "KITACON",
@@ -3352,7 +3494,8 @@
       "isConsolidation": false,
       "floorLow": 0.6499999761581421,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "GOHUB",
@@ -3375,7 +3518,8 @@
       "floorLow": 1.159999966621399,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SDS",
@@ -3392,12 +3536,13 @@
       "pullback": 55.29,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 11.76,
-      "lowTightness": 17.91,
+      "lowTightness": 4.48,
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.33500000834465027,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "LGMS",
@@ -3414,12 +3559,13 @@
       "pullback": 50.53,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 3.3,
-      "lowTightness": 9.3,
+      "lowTightness": 4.65,
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.4300000071525574,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "WENTEL ENGINEERING",
@@ -3436,12 +3582,13 @@
       "pullback": 26.39,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 3.92,
-      "lowTightness": 3.92,
+      "lowTightness": 1.96,
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.2549999952316284,
       "hasLowerWickRejection": false,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "WENTEL",
@@ -3458,12 +3605,13 @@
       "pullback": 26.39,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 3.92,
-      "lowTightness": 3.92,
+      "lowTightness": 1.96,
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.2549999952316284,
       "hasLowerWickRejection": false,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SET",
@@ -3480,12 +3628,13 @@
       "pullback": 43.08,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 2.7,
-      "lowTightness": 18.75,
-      "touchCount": 1,
+      "lowTightness": 5.56,
+      "touchCount": 4,
       "isConsolidation": false,
-      "floorLow": 0.1599999964237213,
+      "floorLow": 0.18000000715255737,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "REACHTEN",
@@ -3502,13 +3651,14 @@
       "pullback": 23.85,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 3.61,
-      "lowTightness": 18.29,
+      "lowTightness": 2.44,
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.4099999964237213,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "5E RESOURCES BERHAD",
@@ -3530,7 +3680,8 @@
       "isConsolidation": false,
       "floorLow": 0.23499999940395355,
       "hasLowerWickRejection": false,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "5ER",
@@ -3552,7 +3703,8 @@
       "isConsolidation": false,
       "floorLow": 0.23499999940395355,
       "hasLowerWickRejection": false,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "TAGHILL",
@@ -3569,12 +3721,13 @@
       "pullback": 29.41,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 9.09,
-      "lowTightness": 20,
-      "touchCount": 1,
+      "lowTightness": 9.09,
+      "touchCount": 7,
       "isConsolidation": false,
-      "floorLow": 0.05000000074505806,
+      "floorLow": 0.054999999701976776,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "DESTINI BERHAD",
@@ -3591,12 +3744,13 @@
       "pullback": 44.12,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 7.02,
-      "lowTightness": 16.07,
+      "lowTightness": 3.57,
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.2800000011920929,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "DESTINI",
@@ -3613,12 +3767,13 @@
       "pullback": 44.12,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 7.02,
-      "lowTightness": 16.07,
+      "lowTightness": 3.57,
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.2800000011920929,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "POLYMER",
@@ -3640,7 +3795,8 @@
       "isConsolidation": false,
       "floorLow": 0.11500000208616257,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "TELADAN",
@@ -3663,7 +3819,8 @@
       "floorLow": 0.75,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "FOODIE",
@@ -3685,7 +3842,8 @@
       "isConsolidation": false,
       "floorLow": 0.2849999964237213,
       "hasLowerWickRejection": false,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "INFOTEC",
@@ -3702,12 +3860,13 @@
       "pullback": 40.18,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 5.97,
-      "lowTightness": 10.61,
+      "lowTightness": 7.58,
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.33000001311302185,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "TECHSTORE",
@@ -3729,7 +3888,8 @@
       "isConsolidation": false,
       "floorLow": 0.17000000178813934,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "ORKIM",
@@ -3746,12 +3906,13 @@
       "pullback": 28.51,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 4.82,
-      "lowTightness": 5.42,
+      "lowTightness": 4.82,
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.8299999833106995,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "DLADY",
@@ -3774,7 +3935,8 @@
       "floorLow": 31.920000076293945,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "RADIUM",
@@ -3785,19 +3947,20 @@
       "changePct": 0.99,
       "turnover": 150551.99718475342,
       "volume": 295200,
-      "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "signal": "buy",
+      "reason": "🔒 Tapak Tegar (9x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
       "high52": 0.5199999809265137,
       "pullback": 2.88,
       "setupName": "🔥 RBS Retest / Near ATH",
       "closeTightness": 0.99,
-      "lowTightness": 3.06,
-      "touchCount": 3,
+      "lowTightness": 0,
+      "touchCount": 9,
       "isConsolidation": true,
-      "floorLow": 0.49000000953674316,
-      "hasLowerWickRejection": false,
+      "floorLow": 0.5049999952316284,
+      "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "HLIND",
@@ -3809,18 +3972,19 @@
       "turnover": 148362.0054244995,
       "volume": 7900,
       "signal": "buy",
-      "reason": "🔒 Tapak Tegar (3x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
+      "reason": "🔒 Tapak Tegar (9x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
       "high52": 19.479999542236328,
       "pullback": 3.29,
       "setupName": "🔥 RBS Retest / Near ATH",
       "closeTightness": 0.96,
-      "lowTightness": 4.28,
-      "touchCount": 3,
+      "lowTightness": 1.39,
+      "touchCount": 9,
       "isConsolidation": true,
-      "floorLow": 18.219999313354492,
-      "hasLowerWickRejection": false,
+      "floorLow": 18.639999389648438,
+      "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "SAG",
@@ -3837,12 +4001,13 @@
       "pullback": 24.32,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 4.48,
-      "lowTightness": 5.3,
+      "lowTightness": 3.03,
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 0.6600000262260437,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "PTRB",
@@ -3859,12 +4024,13 @@
       "pullback": 24.32,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 3.7,
-      "lowTightness": 7.84,
+      "lowTightness": 5.88,
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.2549999952316284,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "BMS",
@@ -3881,12 +4047,13 @@
       "pullback": 32.56,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 3.57,
-      "lowTightness": 7.41,
+      "lowTightness": 3.7,
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.13500000536441803,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "HSSBAKERY",
@@ -3909,7 +4076,8 @@
       "floorLow": 0.1550000011920929,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "BETA",
@@ -3920,8 +4088,8 @@
       "changePct": 0.81,
       "turnover": 123504.00094985962,
       "volume": 199200,
-      "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "signal": "buy",
+      "reason": "🔒 Tapak Tegar (10x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
       "high52": 0.6399999856948853,
       "pullback": 3.91,
       "setupName": "🔥 RBS Retest / Near ATH",
@@ -3932,7 +4100,8 @@
       "floorLow": 0.6050000190734863,
       "hasLowerWickRejection": false,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "CLITE",
@@ -3949,12 +4118,13 @@
       "pullback": 31.03,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 2.5,
-      "lowTightness": 15.38,
+      "lowTightness": 2.56,
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.19499999284744263,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "UMC",
@@ -3965,8 +4135,8 @@
       "changePct": 0,
       "turnover": 115830.00111579895,
       "volume": 19500,
-      "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "signal": "buy",
+      "reason": "🔒 Tapak Tegar (10x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
       "high52": 6.03000020980835,
       "pullback": 1.49,
       "setupName": "🔥 RBS Retest / Near ATH",
@@ -3977,7 +4147,8 @@
       "floorLow": 5.880000114440918,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "KEYFIELD",
@@ -4000,7 +4171,8 @@
       "floorLow": 1.4900000095367432,
       "hasLowerWickRejection": false,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "ADNEX",
@@ -4011,18 +4183,19 @@
       "changePct": -3.85,
       "turnover": 108075,
       "volume": 288200,
-      "signal": "avoid",
-      "reason": "VIP Sideway / Pullback (Pantau Peluang) (Near ATH)",
+      "signal": "buy",
+      "reason": "🔒 Tapak Tegar (2x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
       "high52": 0.39500001072883606,
       "pullback": 1.27,
       "setupName": "🔥 RBS Retest / Near ATH",
       "closeTightness": 4,
-      "lowTightness": 18.75,
+      "lowTightness": 15.15,
       "touchCount": 2,
-      "isConsolidation": false,
-      "floorLow": 0.3199999928474426,
+      "isConsolidation": true,
+      "floorLow": 0.33000001311302185,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "PPJACK",
@@ -4039,13 +4212,14 @@
       "pullback": 6.63,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 0.55,
-      "lowTightness": 1.66,
+      "lowTightness": 1.1,
       "touchCount": 10,
       "isConsolidation": true,
       "floorLow": 0.9049999713897705,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "WESTRVR",
@@ -4067,7 +4241,8 @@
       "isConsolidation": false,
       "floorLow": 0.20499999821186066,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "ICTZONE",
@@ -4090,7 +4265,8 @@
       "floorLow": 0.17000000178813934,
       "hasLowerWickRejection": false,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "AGMO",
@@ -4107,12 +4283,13 @@
       "pullback": 43.75,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 1.59,
-      "lowTightness": 6.56,
+      "lowTightness": 3.28,
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.3050000071525574,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "WINSTAR",
@@ -4123,19 +4300,20 @@
       "changePct": 0,
       "turnover": 89778.49962115288,
       "volume": 158900,
-      "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "signal": "buy",
+      "reason": "🔒 Tapak Tegar (9x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
       "high52": 0.6299999952316284,
       "pullback": 10.32,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 0,
-      "lowTightness": 3.64,
+      "lowTightness": 1.82,
       "touchCount": 9,
       "isConsolidation": true,
       "floorLow": 0.550000011920929,
       "hasLowerWickRejection": false,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "MSB",
@@ -4157,7 +4335,8 @@
       "isConsolidation": false,
       "floorLow": 0.07999999821186066,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "NORTHERN SOLAR HOLDINGS",
@@ -4179,7 +4358,8 @@
       "isConsolidation": false,
       "floorLow": 0.6200000047683716,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "NORTHERN",
@@ -4201,7 +4381,8 @@
       "isConsolidation": false,
       "floorLow": 0.6200000047683716,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "MERSEC",
@@ -4223,7 +4404,8 @@
       "isConsolidation": false,
       "floorLow": 0.25999999046325684,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "EPB",
@@ -4236,16 +4418,17 @@
       "volume": 279600,
       "signal": "avoid",
       "reason": "🧊 Saham Downtrend: Elak Trading!",
-      "high52": 0.5299999713897705,
-      "pullback": 50,
+      "high52": 0.5249999761581421,
+      "pullback": 49.52,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 3.92,
-      "lowTightness": 8.33,
-      "touchCount": 1,
+      "lowTightness": 4,
+      "touchCount": 8,
       "isConsolidation": false,
-      "floorLow": 0.23999999463558197,
+      "floorLow": 0.25,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "OPTIMAX",
@@ -4268,7 +4451,8 @@
       "floorLow": 0.5199999809265137,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "CRPMATE",
@@ -4291,7 +4475,8 @@
       "floorLow": 0.17499999701976776,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "AIMFLEX",
@@ -4314,7 +4499,8 @@
       "floorLow": 0.07500000298023224,
       "hasLowerWickRejection": false,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "KENERGY",
@@ -4331,12 +4517,13 @@
       "pullback": 39.76,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 2.04,
-      "lowTightness": 6.19,
+      "lowTightness": 3.09,
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.48500001430511475,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "PLINTAS",
@@ -4353,13 +4540,14 @@
       "pullback": 8.54,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 1.1,
-      "lowTightness": 1.65,
+      "lowTightness": 0,
       "touchCount": 10,
       "isConsolidation": true,
       "floorLow": 0.9100000262260437,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "AJI",
@@ -4381,7 +4569,8 @@
       "isConsolidation": false,
       "floorLow": 0.9900000095367432,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "DSS",
@@ -4398,12 +4587,13 @@
       "pullback": 12.07,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 4.08,
-      "lowTightness": 10.87,
+      "lowTightness": 8.7,
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.23000000417232513,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "ADB",
@@ -4425,7 +4615,8 @@
       "isConsolidation": false,
       "floorLow": 0.574999988079071,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "FEYTECH",
@@ -4442,12 +4633,13 @@
       "pullback": 46.15,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 5,
-      "lowTightness": 20.51,
+      "lowTightness": 2.56,
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.19499999284744263,
       "hasLowerWickRejection": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "UNIQUE",
@@ -4470,7 +4662,8 @@
       "floorLow": 0.38999998569488525,
       "hasLowerWickRejection": false,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SKYWLD",
@@ -4487,12 +4680,13 @@
       "pullback": 32.2,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 3.75,
-      "lowTightness": 5,
+      "lowTightness": 2.5,
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.4000000059604645,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SKYWORLD DEVELOPMENT",
@@ -4509,12 +4703,13 @@
       "pullback": 32.2,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 3.75,
-      "lowTightness": 5,
+      "lowTightness": 2.5,
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.4000000059604645,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "PARADIGM",
@@ -4537,7 +4732,8 @@
       "floorLow": 0.9350000023841858,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "EMCC",
@@ -4554,13 +4750,14 @@
       "pullback": 26.44,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 1.56,
-      "lowTightness": 3.17,
+      "lowTightness": 1.59,
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.3149999976158142,
       "hasLowerWickRejection": false,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "INSPACE CREATION BERHAD",
@@ -4582,7 +4779,8 @@
       "isConsolidation": false,
       "floorLow": 0.2199999988079071,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "INSPACE",
@@ -4604,7 +4802,8 @@
       "isConsolidation": false,
       "floorLow": 0.2199999988079071,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "YXPM",
@@ -4621,12 +4820,13 @@
       "pullback": 24.53,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 2.5,
-      "lowTightness": 5,
+      "lowTightness": 2.5,
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.20000000298023224,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "PEOPLE",
@@ -4648,7 +4848,8 @@
       "isConsolidation": false,
       "floorLow": 0.22499999403953552,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "HAWK",
@@ -4670,7 +4871,8 @@
       "isConsolidation": false,
       "floorLow": 0.18000000715255737,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "STEEL HAWK BERHAD",
@@ -4692,7 +4894,8 @@
       "isConsolidation": false,
       "floorLow": 0.18000000715255737,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "STEEL HAWK",
@@ -4714,7 +4917,8 @@
       "isConsolidation": false,
       "floorLow": 0.18000000715255737,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SWIFT HAULAGE BERHAD",
@@ -4736,7 +4940,8 @@
       "isConsolidation": false,
       "floorLow": 0.375,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SWIFT",
@@ -4758,7 +4963,8 @@
       "isConsolidation": false,
       "floorLow": 0.375,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "HOCKSOON",
@@ -4780,7 +4986,8 @@
       "isConsolidation": false,
       "floorLow": 0.3100000023841858,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "CENGILD",
@@ -4803,7 +5010,8 @@
       "floorLow": 0.19499999284744263,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SORENTO",
@@ -4826,7 +5034,8 @@
       "floorLow": 0.6150000095367432,
       "hasLowerWickRejection": false,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "VINVEST",
@@ -4843,12 +5052,13 @@
       "pullback": 54.55,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 20,
-      "lowTightness": 100,
-      "touchCount": 1,
+      "lowTightness": 20,
+      "touchCount": 5,
       "isConsolidation": false,
-      "floorLow": 0.019999999552965164,
-      "hasLowerWickRejection": false,
-      "isCombStock": true
+      "floorLow": 0.02500000037252903,
+      "hasLowerWickRejection": true,
+      "isCombStock": true,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "HAILY",
@@ -4865,12 +5075,13 @@
       "pullback": 30,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 2.86,
-      "lowTightness": 8.57,
+      "lowTightness": 2.86,
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.17499999701976776,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "NADIBHD",
@@ -4887,13 +5098,14 @@
       "pullback": 23.91,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 1.45,
-      "lowTightness": 2.94,
+      "lowTightness": 1.47,
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.3400000035762787,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "AZAM JAYA BERHAD",
@@ -4916,7 +5128,8 @@
       "floorLow": 0.9850000143051147,
       "hasLowerWickRejection": false,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "AZAMJAYA",
@@ -4939,7 +5152,8 @@
       "floorLow": 0.9850000143051147,
       "hasLowerWickRejection": false,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "PGLOBAL",
@@ -4956,13 +5170,14 @@
       "pullback": 20.87,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 0,
-      "lowTightness": 5.62,
+      "lowTightness": 1.12,
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.4449999928474426,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "HONGSENG",
@@ -4984,7 +5199,8 @@
       "isConsolidation": false,
       "floorLow": 0.004999999888241291,
       "hasLowerWickRejection": false,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "KHB",
@@ -5001,12 +5217,13 @@
       "pullback": 41.38,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 0,
-      "lowTightness": 21.43,
-      "touchCount": 1,
+      "lowTightness": 6.25,
+      "touchCount": 4,
       "isConsolidation": false,
-      "floorLow": 0.07000000029802322,
+      "floorLow": 0.07999999821186066,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "GOLD LI HOLDINGS BERHAD",
@@ -5023,12 +5240,13 @@
       "pullback": 19.23,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 5,
-      "lowTightness": 5,
+      "lowTightness": 0,
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.10000000149011612,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "GOLDLI",
@@ -5045,12 +5263,13 @@
       "pullback": 19.23,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 5,
-      "lowTightness": 5,
+      "lowTightness": 0,
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.10000000149011612,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SENFONG",
@@ -5072,7 +5291,8 @@
       "isConsolidation": false,
       "floorLow": 0.6549999713897705,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "YENHER",
@@ -5083,18 +5303,19 @@
       "changePct": 5.3,
       "turnover": 24088.500505685806,
       "volume": 30300,
-      "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "signal": "buy",
+      "reason": "🔒 Tapak Tegar (4x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
       "high52": 0.8600000143051147,
       "pullback": 12.21,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 0.66,
-      "lowTightness": 5.33,
+      "lowTightness": 2.67,
       "touchCount": 4,
       "isConsolidation": true,
       "floorLow": 0.75,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "PMIBHD",
@@ -5111,12 +5332,13 @@
       "pullback": 16.98,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 2.33,
-      "lowTightness": 6.98,
+      "lowTightness": 2.33,
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 0.2150000035762787,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "RTECH",
@@ -5138,7 +5360,8 @@
       "isConsolidation": false,
       "floorLow": 0.17000000178813934,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "RT",
@@ -5160,7 +5383,8 @@
       "isConsolidation": false,
       "floorLow": 0.17000000178813934,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "MTAG",
@@ -5182,7 +5406,8 @@
       "isConsolidation": false,
       "floorLow": 0.20999999344348907,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "ORGABIO",
@@ -5195,8 +5420,8 @@
       "volume": 73200,
       "signal": "avoid",
       "reason": "🧊 Saham Downtrend: Elak Trading! (Pullback Support)",
-      "high52": 0.3499999940395355,
-      "pullback": 17.14,
+      "high52": 0.3449999988079071,
+      "pullback": 15.94,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 0,
       "lowTightness": 5.26,
@@ -5204,7 +5429,8 @@
       "isConsolidation": false,
       "floorLow": 0.2849999964237213,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "CKI",
@@ -5226,7 +5452,8 @@
       "isConsolidation": false,
       "floorLow": 0.3499999940395355,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "MOBILIA",
@@ -5243,12 +5470,13 @@
       "pullback": 26.92,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 0,
-      "lowTightness": 5.26,
+      "lowTightness": 0,
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.0949999988079071,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "KJTS",
@@ -5265,12 +5493,13 @@
       "pullback": 60.22,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 3.47,
-      "lowTightness": 12.14,
+      "lowTightness": 7.86,
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.699999988079071,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "ZANTAT",
@@ -5287,12 +5516,13 @@
       "pullback": 44.07,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 10,
-      "lowTightness": 26.92,
-      "touchCount": 2,
+      "lowTightness": 17.86,
+      "touchCount": 3,
       "isConsolidation": false,
-      "floorLow": 0.12999999523162842,
+      "floorLow": 0.14000000059604645,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "VTC",
@@ -5309,13 +5539,14 @@
       "pullback": 26.56,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 2.13,
-      "lowTightness": 6.52,
+      "lowTightness": 4.35,
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.23000000417232513,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "TSA",
@@ -5326,18 +5557,19 @@
       "changePct": 0.57,
       "turnover": 18039.999902248383,
       "volume": 20500,
-      "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "signal": "buy",
+      "reason": "🔒 Tapak Tegar (4x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Near ATH)",
       "high52": 0.9200000166893005,
       "pullback": 4.89,
       "setupName": "🔥 RBS Retest / Near ATH",
       "closeTightness": 2.33,
-      "lowTightness": 4.76,
+      "lowTightness": 4.17,
       "touchCount": 4,
       "isConsolidation": true,
       "floorLow": 0.8399999737739563,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "GLXT",
@@ -5354,12 +5586,13 @@
       "pullback": 23.08,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 0,
-      "lowTightness": 7.69,
+      "lowTightness": 2.56,
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.19499999284744263,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "PANDA",
@@ -5381,7 +5614,8 @@
       "isConsolidation": false,
       "floorLow": 0.18000000715255737,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "TOPVISN",
@@ -5403,7 +5637,8 @@
       "isConsolidation": false,
       "floorLow": 0.1550000011920929,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "SUMI",
@@ -5425,7 +5660,8 @@
       "isConsolidation": false,
       "floorLow": 0.08500000089406967,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "BWYS",
@@ -5442,12 +5678,13 @@
       "pullback": 36,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 9.38,
-      "lowTightness": 12.9,
+      "lowTightness": 6.45,
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.1550000011920929,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SUPREME CONSOLIDATED RESOURCES BERHAD",
@@ -5469,7 +5706,8 @@
       "isConsolidation": false,
       "floorLow": 0.1899999976158142,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SUPREME",
@@ -5491,7 +5729,8 @@
       "isConsolidation": false,
       "floorLow": 0.1899999976158142,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "CARLORINO",
@@ -5513,7 +5752,8 @@
       "isConsolidation": false,
       "floorLow": 0.1899999976158142,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "RL",
@@ -5535,7 +5775,8 @@
       "isConsolidation": false,
       "floorLow": 0.1899999976158142,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SYNERGY",
@@ -5552,12 +5793,13 @@
       "pullback": 71.2,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 5.56,
-      "lowTightness": 2.78,
+      "lowTightness": 0,
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.18000000715255737,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SALIRAN GROUP BERHAD",
@@ -5574,13 +5816,14 @@
       "pullback": 22.45,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 0,
-      "lowTightness": 7.89,
+      "lowTightness": 0,
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 0.1899999976158142,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SALIRAN",
@@ -5597,13 +5840,14 @@
       "pullback": 22.45,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 0,
-      "lowTightness": 7.89,
+      "lowTightness": 0,
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 0.1899999976158142,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "PLYTEC",
@@ -5620,12 +5864,13 @@
       "pullback": 40,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 2.86,
-      "lowTightness": 6.06,
+      "lowTightness": 2.94,
       "touchCount": 3,
       "isConsolidation": false,
-      "floorLow": 0.16500000655651093,
+      "floorLow": 0.17000000178813934,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "OGM",
@@ -5642,12 +5887,13 @@
       "pullback": 39.58,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 3.57,
-      "lowTightness": 12,
-      "touchCount": 1,
+      "lowTightness": 3.7,
+      "touchCount": 4,
       "isConsolidation": false,
-      "floorLow": 0.125,
+      "floorLow": 0.13500000536441803,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "PSP",
@@ -5664,12 +5910,13 @@
       "pullback": 23.53,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 3.85,
-      "lowTightness": 7.69,
+      "lowTightness": 0,
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 0.12999999523162842,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "JSSOLAR",
@@ -5691,7 +5938,8 @@
       "isConsolidation": false,
       "floorLow": 0.1899999976158142,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SINKUNG",
@@ -5708,12 +5956,13 @@
       "pullback": 38.46,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 6.67,
-      "lowTightness": 13.33,
+      "lowTightness": 6.67,
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.07500000298023224,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "MINOX",
@@ -5730,12 +5979,13 @@
       "pullback": 32,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 3.03,
-      "lowTightness": 17.24,
-      "touchCount": 1,
+      "lowTightness": 6.25,
+      "touchCount": 3,
       "isConsolidation": false,
-      "floorLow": 0.14499999582767487,
+      "floorLow": 0.1599999964237213,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "VERDANT",
@@ -5757,7 +6007,8 @@
       "isConsolidation": false,
       "floorLow": 0.18000000715255737,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "COLFORM",
@@ -5774,12 +6025,13 @@
       "pullback": 31.43,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 6.25,
-      "lowTightness": 10.64,
+      "lowTightness": 6.38,
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.23499999940395355,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "FLEXI",
@@ -5796,12 +6048,13 @@
       "pullback": 28.57,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 0,
-      "lowTightness": 8.33,
+      "lowTightness": 4.17,
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.11999999731779099,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "DCHCARE",
@@ -5823,7 +6076,8 @@
       "isConsolidation": false,
       "floorLow": 0.0949999988079071,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "KUCINGKO",
@@ -5840,12 +6094,13 @@
       "pullback": 20,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 0,
-      "lowTightness": 11.11,
-      "touchCount": 1,
+      "lowTightness": 5.26,
+      "touchCount": 7,
       "isConsolidation": false,
-      "floorLow": 0.09000000357627869,
+      "floorLow": 0.0949999988079071,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "LEFORM",
@@ -5867,7 +6122,8 @@
       "isConsolidation": true,
       "floorLow": 0.1599999964237213,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "TOPMIX",
@@ -5884,13 +6140,14 @@
       "pullback": 19.23,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 3.66,
-      "lowTightness": 2.44,
+      "lowTightness": 1.22,
       "touchCount": 7,
       "isConsolidation": false,
       "floorLow": 0.4099999964237213,
       "hasLowerWickRejection": false,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "GIIB",
@@ -5912,7 +6169,8 @@
       "isConsolidation": false,
       "floorLow": 0.125,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "EIB",
@@ -5929,12 +6187,13 @@
       "pullback": 50,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 12,
-      "lowTightness": 20,
+      "lowTightness": 12,
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.125,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "HPMT",
@@ -5956,7 +6215,8 @@
       "isConsolidation": false,
       "floorLow": 0.17000000178813934,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "MSTGOLF",
@@ -5978,7 +6238,8 @@
       "isConsolidation": false,
       "floorLow": 0.11999999731779099,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "XPB",
@@ -5995,12 +6256,13 @@
       "pullback": 39.58,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 0,
-      "lowTightness": 7.14,
+      "lowTightness": 3.57,
       "touchCount": 4,
       "isConsolidation": false,
       "floorLow": 0.14000000059604645,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "VOLCANO",
@@ -6013,16 +6275,17 @@
       "volume": 24000,
       "signal": "avoid",
       "reason": "🧊 Saham Downtrend: Elak Trading!",
-      "high52": 0.5600000023841858,
-      "pullback": 49.11,
+      "high52": 0.5550000071525574,
+      "pullback": 48.65,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 7.02,
-      "lowTightness": 8.77,
+      "lowTightness": 1.75,
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.2849999964237213,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "HPPHB",
@@ -6039,12 +6302,13 @@
       "pullback": 17.81,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 5,
-      "lowTightness": 13.33,
+      "lowTightness": 5,
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.30000001192092896,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SBS",
@@ -6061,12 +6325,13 @@
       "pullback": 51.92,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 0,
-      "lowTightness": 14.29,
-      "touchCount": 2,
+      "lowTightness": 0,
+      "touchCount": 5,
       "isConsolidation": false,
-      "floorLow": 0.10499999672174454,
+      "floorLow": 0.11999999731779099,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "MASTER TEC GROUP BERHAD",
@@ -6083,13 +6348,14 @@
       "pullback": 19.17,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 2.58,
-      "lowTightness": 3.09,
+      "lowTightness": 1.55,
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.9700000286102295,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "MTEC",
@@ -6106,13 +6372,14 @@
       "pullback": 19.17,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 2.58,
-      "lowTightness": 3.09,
+      "lowTightness": 1.55,
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.9700000286102295,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "MASTER TEC GROUP",
@@ -6129,13 +6396,14 @@
       "pullback": 19.17,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 2.58,
-      "lowTightness": 3.09,
+      "lowTightness": 1.55,
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.9700000286102295,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "TJSETIA",
@@ -6152,12 +6420,13 @@
       "pullback": 21.57,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 2.5,
-      "lowTightness": 13.51,
+      "lowTightness": 10.81,
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.1850000023841858,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "VANZO",
@@ -6179,7 +6448,8 @@
       "isConsolidation": false,
       "floorLow": 0.11999999731779099,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "SPRING",
@@ -6201,7 +6471,8 @@
       "isConsolidation": false,
       "floorLow": 0.0949999988079071,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "DENGKIL",
@@ -6218,12 +6489,13 @@
       "pullback": 51.85,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 4,
-      "lowTightness": 12.5,
+      "lowTightness": 8.33,
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.11999999731779099,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "WAWASAN DENGKIL HOLDINGS",
@@ -6240,12 +6512,13 @@
       "pullback": 51.85,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 4,
-      "lowTightness": 12.5,
+      "lowTightness": 8.33,
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.11999999731779099,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "AGX",
@@ -6262,12 +6535,13 @@
       "pullback": 35.2,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 3.7,
-      "lowTightness": 8.75,
+      "lowTightness": 7.5,
       "touchCount": 3,
       "isConsolidation": false,
       "floorLow": 0.4000000059604645,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "OCEAN FRESH BERHAD",
@@ -6284,12 +6558,13 @@
       "pullback": 57.14,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 4.17,
-      "lowTightness": 12.5,
+      "lowTightness": 4.17,
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.11999999731779099,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "OFB",
@@ -6306,12 +6581,13 @@
       "pullback": 57.14,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 4.17,
-      "lowTightness": 12.5,
+      "lowTightness": 4.17,
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.11999999731779099,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "OCEAN FRESH",
@@ -6328,12 +6604,13 @@
       "pullback": 57.14,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 4.17,
-      "lowTightness": 12.5,
+      "lowTightness": 4.17,
       "touchCount": 1,
       "isConsolidation": false,
       "floorLow": 0.11999999731779099,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "ALPHA IVF GROUP",
@@ -6350,12 +6627,13 @@
       "pullback": 35.48,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 0,
-      "lowTightness": 11.11,
+      "lowTightness": 5.56,
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.09000000357627869,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "L&PBHD",
@@ -6372,12 +6650,13 @@
       "pullback": 35.48,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 0,
-      "lowTightness": 11.11,
+      "lowTightness": 5.56,
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.09000000357627869,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "ALPHA",
@@ -6394,12 +6673,13 @@
       "pullback": 35.48,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 0,
-      "lowTightness": 11.11,
+      "lowTightness": 5.56,
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.09000000357627869,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "FAMIERA",
@@ -6421,7 +6701,8 @@
       "isConsolidation": false,
       "floorLow": 0.2150000035762787,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "EFRAME",
@@ -6438,12 +6719,13 @@
       "pullback": 43.01,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 0,
-      "lowTightness": 10.42,
-      "touchCount": 1,
+      "lowTightness": 0,
+      "touchCount": 7,
       "isConsolidation": false,
-      "floorLow": 0.23999999463558197,
-      "hasLowerWickRejection": false,
-      "isCombStock": true
+      "floorLow": 0.26499998569488525,
+      "hasLowerWickRejection": true,
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "A1AKK",
@@ -6460,12 +6742,13 @@
       "pullback": 41.18,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 3.33,
-      "lowTightness": 6.67,
+      "lowTightness": 0,
       "touchCount": 6,
       "isConsolidation": false,
       "floorLow": 0.15000000596046448,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "GEOHAN",
@@ -6482,12 +6765,13 @@
       "pullback": 47.27,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 1.75,
-      "lowTightness": 3.57,
-      "touchCount": 8,
+      "lowTightness": 1.75,
+      "touchCount": 10,
       "isConsolidation": false,
-      "floorLow": 0.2800000011920929,
+      "floorLow": 0.2849999964237213,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "PMW",
@@ -6509,7 +6793,8 @@
       "isConsolidation": false,
       "floorLow": 0.23999999463558197,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "INNATURE",
@@ -6531,7 +6816,8 @@
       "isConsolidation": false,
       "floorLow": 0.1550000011920929,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SBH",
@@ -6553,7 +6839,8 @@
       "isConsolidation": false,
       "floorLow": 0.13500000536441803,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "AGRICOR",
@@ -6575,7 +6862,8 @@
       "isConsolidation": false,
       "floorLow": 0.375,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "DPIH",
@@ -6592,12 +6880,13 @@
       "pullback": 19.23,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 5,
-      "lowTightness": 10.53,
+      "lowTightness": 5.26,
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.0949999988079071,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "ANEKA",
@@ -6619,7 +6908,8 @@
       "isConsolidation": false,
       "floorLow": 0.10499999672174454,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "CAMAROE",
@@ -6636,12 +6926,13 @@
       "pullback": 48.48,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 5.88,
-      "lowTightness": 21.43,
-      "touchCount": 1,
+      "lowTightness": 6.25,
+      "touchCount": 3,
       "isConsolidation": false,
-      "floorLow": 0.07000000029802322,
+      "floorLow": 0.07999999821186066,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "CREST",
@@ -6663,7 +6954,8 @@
       "isConsolidation": false,
       "floorLow": 0.46000000834465027,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "OBHB",
@@ -6685,7 +6977,8 @@
       "isConsolidation": false,
       "floorLow": 0.20000000298023224,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "KGW",
@@ -6702,12 +6995,13 @@
       "pullback": 50,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 5.26,
-      "lowTightness": 5.26,
+      "lowTightness": 0,
       "touchCount": 8,
       "isConsolidation": false,
       "floorLow": 0.0949999988079071,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "TCS",
@@ -6729,7 +7023,8 @@
       "isConsolidation": false,
       "floorLow": 0.07500000298023224,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "DAY3",
@@ -6751,7 +7046,8 @@
       "isConsolidation": false,
       "floorLow": 0.10499999672174454,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "WTEC",
@@ -6773,7 +7069,8 @@
       "isConsolidation": false,
       "floorLow": 0.10000000149011612,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SCB",
@@ -6795,7 +7092,8 @@
       "isConsolidation": false,
       "floorLow": 0.004999999888241291,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "TASHIN",
@@ -6812,12 +7110,13 @@
       "pullback": 23.53,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 0,
-      "lowTightness": 5.13,
+      "lowTightness": 0,
       "touchCount": 5,
       "isConsolidation": false,
       "floorLow": 0.19499999284744263,
       "hasLowerWickRejection": true,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "ACO",
@@ -6839,7 +7138,8 @@
       "isConsolidation": false,
       "floorLow": 0.15000000596046448,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "KHJB",
@@ -6856,12 +7156,13 @@
       "pullback": 24.14,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 4.76,
-      "lowTightness": 15.79,
-      "touchCount": 2,
+      "lowTightness": 10,
+      "touchCount": 4,
       "isConsolidation": false,
-      "floorLow": 0.0949999988079071,
+      "floorLow": 0.10000000149011612,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "METRO",
@@ -6883,7 +7184,8 @@
       "isConsolidation": false,
       "floorLow": 0.004999999888241291,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "UMSINT",
@@ -6905,7 +7207,8 @@
       "isConsolidation": true,
       "floorLow": 0.7250000238418579,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "BURSA",
@@ -6922,13 +7225,14 @@
       "pullback": 5.95,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 1.1,
-      "lowTightness": 3.38,
+      "lowTightness": 1.52,
       "touchCount": 7,
       "isConsolidation": true,
       "floorLow": 1655.280029296875,
       "hasLowerWickRejection": true,
       "isIntradayValidated": true,
-      "isCombStock": false
+      "isCombStock": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "FPHB",
@@ -6941,8 +7245,8 @@
       "volume": 0,
       "signal": "avoid",
       "reason": "VIP Sideway / Pullback (Pantau Peluang) (Pullback Support)",
-      "high52": 0.4650000035762787,
-      "pullback": 29.03,
+      "high52": 0.46000000834465027,
+      "pullback": 28.26,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 1.52,
       "lowTightness": 8.2,
@@ -6950,7 +7254,8 @@
       "isConsolidation": false,
       "floorLow": 0.3050000071525574,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "UNITRADE INDUSTRIES",
@@ -6972,7 +7277,8 @@
       "isConsolidation": false,
       "floorLow": 0.22499999403953552,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "CEKD",
@@ -6994,7 +7300,8 @@
       "isConsolidation": false,
       "floorLow": 0.27000001072883606,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "FARM PRICE",
@@ -7007,8 +7314,8 @@
       "volume": 0,
       "signal": "avoid",
       "reason": "VIP Sideway / Pullback (Pantau Peluang) (Pullback Support)",
-      "high52": 0.4650000035762787,
-      "pullback": 29.03,
+      "high52": 0.46000000834465027,
+      "pullback": 28.26,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 1.52,
       "lowTightness": 8.2,
@@ -7016,7 +7323,8 @@
       "isConsolidation": false,
       "floorLow": 0.3050000071525574,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "MBN",
@@ -7033,12 +7341,13 @@
       "pullback": 36,
       "setupName": "🧊 Downtrend / Avoid",
       "closeTightness": 0,
-      "lowTightness": 26.67,
+      "lowTightness": 6.67,
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.07500000298023224,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "UNITRAD",
@@ -7060,7 +7369,8 @@
       "isConsolidation": false,
       "floorLow": 0.22499999403953552,
       "hasLowerWickRejection": false,
-      "isCombStock": true
+      "isCombStock": true,
+      "setupStyle": "SWING PLAY"
     }
   ],
   "topGainers": [

@@ -21,7 +21,8 @@
       "pullback": 20.39,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "isCombStock": false,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "IHH",
@@ -57,14 +58,15 @@
       "reason": "⚡ Momentum Kuat: Jerung Mula Pam (Sesuai Intraday/Swing) (Near ATH)",
       "high52": 0.8799999952316284,
       "closeTightness": 5.56,
-      "lowTightness": 5.92,
-      "touchCount": 3,
-      "floorLow": 0.7599999904632568,
+      "lowTightness": 0.62,
+      "touchCount": 6,
+      "floorLow": 0.800000011920929,
       "isConsolidation": false,
       "pullback": 3.98,
       "setupName": "🔥 RBS Retest / Near ATH",
       "isCombStock": false,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "PCHEM",
@@ -78,14 +80,15 @@
       "reason": "🔒 Tapak Tegar (5x) | 🧊 Saham Downtrend: Elak Trading! (Healthy Dip)",
       "high52": 6.159999847412109,
       "closeTightness": 2.03,
-      "lowTightness": 5.18,
+      "lowTightness": 4.41,
       "touchCount": 5,
       "floorLow": 5.210000038146973,
       "isConsolidation": true,
       "pullback": 10.06,
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "MPI",
@@ -99,14 +102,15 @@
       "reason": "VIP Sideway / Pullback (Pantau Peluang) (Healthy Dip)",
       "high52": 50.220001220703125,
       "closeTightness": 7.47,
-      "lowTightness": 11.68,
+      "lowTightness": 11.5,
       "touchCount": 1,
       "floorLow": 44,
       "isConsolidation": false,
       "pullback": 9.4,
       "setupName": "📉 Healthy Dip",
       "isCombStock": false,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "TANCO",
@@ -127,7 +131,8 @@
       "pullback": 37.08,
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "PETDAG",
@@ -141,14 +146,15 @@
       "reason": "🧊 Saham Downtrend: Elak Trading! (Pullback Support)",
       "high52": 23.799999237060547,
       "closeTightness": 3.44,
-      "lowTightness": 9.81,
-      "touchCount": 2,
-      "floorLow": 17.1200008392334,
+      "lowTightness": 5.98,
+      "touchCount": 5,
+      "floorLow": 17.739999771118164,
       "isConsolidation": false,
       "pullback": 21.85,
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SDG",
@@ -162,14 +168,15 @@
       "reason": "🔒 Tapak Tegar (6x) | 🧊 Saham Downtrend: Elak Trading! (Healthy Dip)",
       "high52": 6.449999809265137,
       "closeTightness": 3.42,
-      "lowTightness": 2.78,
+      "lowTightness": 2.6,
       "touchCount": 6,
       "floorLow": 5.760000228881836,
       "isConsolidation": true,
       "pullback": 6.67,
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "HEIM",
@@ -183,14 +190,15 @@
       "reason": "🧊 Saham Downtrend: Elak Trading! (Pullback Support)",
       "high52": 25.8799991607666,
       "closeTightness": 1.1,
-      "lowTightness": 4.33,
+      "lowTightness": 3.22,
       "touchCount": 4,
       "floorLow": 19.860000610351562,
       "isConsolidation": false,
       "pullback": 22.18,
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "HLBANK",
@@ -204,14 +212,15 @@
       "reason": "🧊 Saham Downtrend: Elak Trading! (Pullback Support)",
       "high52": 25.799999237060547,
       "closeTightness": 1.72,
-      "lowTightness": 5.29,
+      "lowTightness": 0.96,
       "touchCount": 7,
       "floorLow": 20.799999237060547,
       "isConsolidation": false,
       "pullback": 18.76,
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "HSI-CWQ7",
@@ -236,14 +245,15 @@
       "reason": "VIP Sideway / Pullback (Pantau Peluang) (Near ATH)",
       "high52": 0.30000001192092896,
       "closeTightness": 13.21,
-      "lowTightness": 29.55,
-      "touchCount": 1,
-      "floorLow": 0.2199999988079071,
+      "lowTightness": 11.76,
+      "touchCount": 3,
+      "floorLow": 0.2549999952316284,
       "isConsolidation": false,
       "pullback": 1.67,
       "setupName": "🔥 RBS Retest / Near ATH",
       "isCombStock": false,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "HSI-PWRP",
@@ -268,14 +278,15 @@
       "reason": "🧊 Saham Downtrend: Elak Trading!",
       "high52": 0.8700000047683716,
       "closeTightness": 4.76,
-      "lowTightness": 7.89,
+      "lowTightness": 2.5,
       "touchCount": 2,
-      "floorLow": 0.1899999976158142,
+      "floorLow": 0.20000000298023224,
       "isConsolidation": false,
       "pullback": 75.86,
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "TFP",
@@ -285,18 +296,19 @@
       "changePct": 83.33,
       "turnover": 3145461,
       "volume": 57190200,
-      "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "signal": "buy",
+      "reason": "⚠️ Penny Goreng: Pam Volume Laju (Intraday Sahaja, Elak Hold!) (Healthy Dip)",
       "high52": 0.05999999865889549,
       "closeTightness": 120,
-      "lowTightness": 100,
-      "touchCount": 1,
-      "floorLow": 0.014999999664723873,
+      "lowTightness": 50,
+      "touchCount": 2,
+      "floorLow": 0.019999999552965164,
       "isConsolidation": false,
       "pullback": 8.33,
       "setupName": "📉 Healthy Dip",
       "isCombStock": true,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "setupStyle": "EXPLOSIVE"
     },
     {
       "name": "HHRG",
@@ -310,14 +322,15 @@
       "reason": "🧊 Saham Downtrend: Elak Trading!",
       "high52": 0.14499999582767487,
       "closeTightness": 11.76,
-      "lowTightness": 31.25,
+      "lowTightness": 18.75,
       "touchCount": 1,
       "floorLow": 0.07999999821186066,
       "isConsolidation": false,
       "pullback": 41.38,
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "setupStyle": "SWING PLAY"
     }
   ],
   "topGainers": [

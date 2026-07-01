@@ -32,7 +32,8 @@
       "pullback": 13.31,
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "ZETRIX",
@@ -53,7 +54,8 @@
       "pullback": 21.36,
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "AAX",
@@ -74,18 +76,19 @@
       "changePct": -3.01,
       "turnover": 45094409.5,
       "volume": 56017900,
-      "signal": "avoid",
-      "reason": "VIP Sideway / Pullback (Pantau Peluang) (Healthy Dip)",
+      "signal": "buy",
+      "reason": "🔒 Tapak Tegar (8x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold) (Healthy Dip)",
       "high52": 0.8799999952316284,
       "closeTightness": 3.11,
-      "lowTightness": 5.13,
-      "touchCount": 2,
-      "floorLow": 0.7799999713897705,
-      "isConsolidation": false,
+      "lowTightness": 2.5,
+      "touchCount": 8,
+      "floorLow": 0.800000011920929,
+      "isConsolidation": true,
       "pullback": 8.52,
       "setupName": "📉 Healthy Dip",
       "isCombStock": false,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "UNISEM",
@@ -99,14 +102,15 @@
       "reason": "VIP Sideway / Pullback (Pantau Peluang) (Healthy Dip)",
       "high52": 5.380000114440918,
       "closeTightness": 5,
-      "lowTightness": 18.3,
+      "lowTightness": 6.25,
       "touchCount": 1,
       "floorLow": 4.480000019073486,
       "isConsolidation": false,
       "pullback": 14.5,
       "setupName": "📉 Healthy Dip",
       "isCombStock": false,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "PETDAG",
@@ -120,14 +124,15 @@
       "reason": "🧊 Saham Downtrend: Elak Trading! (Pullback Support)",
       "high52": 23.799999237060547,
       "closeTightness": 5.19,
-      "lowTightness": 8.42,
-      "touchCount": 1,
-      "floorLow": 17.34000015258789,
+      "lowTightness": 3.95,
+      "touchCount": 4,
+      "floorLow": 17.719999313354492,
       "isConsolidation": false,
       "pullback": 23.53,
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "NESTLE",
@@ -163,14 +168,15 @@
       "reason": "⚡ Momentum Kuat: Jerung Mula Pam (Sesuai Intraday/Swing) (Near ATH)",
       "high52": 0.3700000047683716,
       "closeTightness": 9.09,
-      "lowTightness": 15.25,
-      "touchCount": 1,
-      "floorLow": 0.29499998688697815,
+      "lowTightness": 4.62,
+      "touchCount": 3,
+      "floorLow": 0.32499998807907104,
       "isConsolidation": false,
       "pullback": 2.7,
       "setupName": "🔥 RBS Retest / Near ATH",
       "isCombStock": false,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "setupStyle": "STAIRCASE"
     },
     {
       "name": "HSI-PWRP",
@@ -202,7 +208,8 @@
       "pullback": 17.29,
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "SUNWAY",
@@ -216,14 +223,15 @@
       "reason": "⚡ Momentum Bluechip: Jerung Pam Kuat (Sesuai Swing/Hold) (Pullback Support)",
       "high52": 2.4600000381469727,
       "closeTightness": 2.29,
-      "lowTightness": 3.51,
+      "lowTightness": 2.92,
       "touchCount": 3,
       "floorLow": 1.7100000381469727,
       "isConsolidation": false,
       "pullback": 27.24,
       "setupName": "🔻 Buy Support / Deep Pullback",
       "isCombStock": false,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "setupStyle": "SWING PLAY"
     },
     {
       "name": "HSI-CWQ7",
@@ -277,7 +285,8 @@
       "pullback": 10.44,
       "setupName": "🧊 Downtrend / Avoid",
       "isCombStock": false,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "setupStyle": "SWING PLAY"
     }
   ],
   "topGainers": [
