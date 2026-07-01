@@ -523,7 +523,7 @@
                 </div>
             </div>
             <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem; line-height: 1.6;">
-                Berdasarkan data empirikal pasaran sebenar (22 Jun - Kini), strategi paling cemerlang dan selamat untuk mengelak kerugian Stop Loss adalah <strong>membeli hanya 1 kaunter EXPLOSIVE teratas + 1 kaunter STAIRCASE teratas sehari</strong> yang disokong oleh volum <em>Smart Money</em> tinggi (Turnover ≥ RM 5 Juta).
+                Berdasarkan data empirikal pasaran sebenar (22 Jun - Kini), strategi paling cemerlang dan selamat untuk mengelak kerugian Stop Loss adalah <strong>membeli hanya 1 kaunter EXPLOSIVE teratas + 1 kaunter STAIRCASE teratas sehari</strong> yang disokong oleh volum <em>Smart Money</em> tinggi (Turnover ≥ RM 5 Juta). <strong style="color: #60a5fa;">⚠️ Nota Penting: Ini adalah strategi SWING (pegangan 1-10 hari), BUKAN INTRADAY. Walaupun isyarat dijana setiap hari, posisi diswing sehingga mencapai target atau stop loss.</strong>
             </p>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem;">
                 <div style="background: rgba(15, 23, 42, 0.5); border: 1px solid var(--panel-border); padding: 1rem; border-radius: 10px; text-align: center;">
@@ -548,6 +548,7 @@
         <div class="tabs-header">
             <button id="tab-one-day-btn" class="tab-btn active" onclick="switchTab('one-day')">Laporan 1-Hari</button>
             <button id="tab-seven-day-btn" class="tab-btn" onclick="switchTab('seven-day')">Laporan Penuh Swing</button>
+            <button id="tab-hybrid-btn" class="tab-btn" onclick="switchTab('hybrid')">Laporan Teknik C (Teroptimum)</button>
         </div>
 
         <!-- Tab 1: One Day Detailed Report -->
@@ -597,6 +598,33 @@
                     </thead>
                     <tbody id="full-backtest-tbody">
                         <!-- Filled by Javascript below -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Tab 3: Teknik C Detailed Report -->
+        <div id="panel-hybrid" class="panel" style="display: none;">
+            <div class="panel-header">
+                <div class="panel-title" style="color: #3b82f6;">Hasil Keputusan Isyarat Hibrid Premium (Teknik C)</div>
+            </div>
+            <div class="table-container" style="max-height: 550px; overflow-y: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tarikh Masuk</th>
+                            <th>Kaunter</th>
+                            <th>Setup Tag</th>
+                            <th style="text-align: right;">Harga Masuk</th>
+                            <th style="text-align: right;">Harga Akhir</th>
+                            <th style="text-align: right;">Max Gain</th>
+                            <th style="text-align: right;">Hasil Akhir (%)</th>
+                            <th style="text-align: center;">Status</th>
+                            <th style="text-align: right;">Turnover</th>
+                        </tr>
+                    </thead>
+                    <tbody id="hybrid-backtest-tbody">
+                        <!-- Filled by Javascript dynamically -->
                     </tbody>
                 </table>
             </div>
@@ -872,6 +900,57 @@
                 } else {
                     document.getElementById('hybrid-sl-rate').style.color = 'var(--danger)';
                 }
+
+                // Populate Hybrid table body
+                const hybridTbody = document.getElementById('hybrid-backtest-tbody');
+                if (hybridTbody) {
+                    let hybridHtml = '';
+                    hybridTrades.forEach(row => {
+                        let tagClass = row.style === 'EXPLOSIVE' ? 'explosive' : 'staircase';
+                        let tagLabel = row.style === 'EXPLOSIVE' ? '🚀 EXPLOSIVE' : '🪜 STAIRCASE';
+                        
+                        let gainColor = row.finalGain > 0 ? 'var(--success)' : (row.finalGain < 0 ? 'var(--danger)' : 'white');
+                        let gainSign = row.finalGain > 0 ? '+' : '';
+                        
+                        let statusLabel = '';
+                        let statusClass = '';
+                        if (row.status === 'PROFIT_BIG') {
+                            statusLabel = 'PROFIT MEGA';
+                            statusClass = 'profit-big';
+                        } else if (row.status === 'PROFIT') {
+                            statusLabel = 'PROFIT';
+                            statusClass = 'profit';
+                        } else if (row.status === 'SL_HIT') {
+                            statusLabel = '🛑 SL HIT';
+                            statusClass = 'loss-sl';
+                        } else if (row.status === 'LOSS') {
+                            statusLabel = 'FLOAT LOSS';
+                            statusClass = 'loss';
+                        } else {
+                            statusLabel = 'FLAT / SERI';
+                            statusClass = 'flat';
+                        }
+                        
+                        const turnoverM = row.turnover ? `RM ${(row.turnover / 1e6).toFixed(2)}M` : 'N/A';
+
+                        hybridHtml += `
+                            <tr>
+                                <td style="color: var(--text-secondary); font-weight: 500;">${row.date}</td>
+                                <td style="font-weight: 700; color: white;">${row.name}</td>
+                                <td><span class="tag-pill ${tagClass}">${tagLabel}</span></td>
+                                <td style="text-align: right;">RM ${row.entryPrice.toFixed(3)}</td>
+                                <td style="text-align: right;">RM ${row.finalPrice.toFixed(3)}</td>
+                                <td style="text-align: right; color: var(--success); font-weight: 700;">+${row.maxGain.toFixed(2)}%</td>
+                                <td style="text-align: right; color: ${gainColor}; font-weight: 700;">${gainSign}${row.finalGain.toFixed(2)}%</td>
+                                <td style="text-align: center;"><span class="status-badge ${statusClass}">${statusLabel}</span></td>
+                                <td style="text-align: right; color: var(--warning); font-weight: 600;">${turnoverM}</td>
+                            </tr>
+                        `;
+                    });
+                    hybridTbody.innerHTML = hybridHtml || '<tr><td colspan="9" style="text-align:center;">Tiada data.</td></tr>';
+                }
+                
+                document.getElementById('tab-hybrid-btn').innerText = `Laporan Teknik C (${totalHybrid} Isyarat)`;
             }
         }
 
@@ -887,14 +966,19 @@
 
         function switchTab(tabId) {
             document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('panel-one-day').style.display = 'none';
+            document.getElementById('panel-seven-day').style.display = 'none';
+            document.getElementById('panel-hybrid').style.display = 'none';
+            
             if (tabId === 'one-day') {
                 document.getElementById('tab-one-day-btn').classList.add('active');
                 document.getElementById('panel-one-day').style.display = 'block';
-                document.getElementById('panel-seven-day').style.display = 'none';
-            } else {
+            } else if (tabId === 'seven-day') {
                 document.getElementById('tab-seven-day-btn').classList.add('active');
-                document.getElementById('panel-one-day').style.display = 'none';
                 document.getElementById('panel-seven-day').style.display = 'block';
+            } else if (tabId === 'hybrid') {
+                document.getElementById('tab-hybrid-btn').classList.add('active');
+                document.getElementById('panel-hybrid').style.display = 'block';
             }
         }
 
