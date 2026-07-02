@@ -1308,6 +1308,25 @@
                 
                 const topExps = exps.slice(0, 6);
                 const topStairs = stairs.slice(0, 6);
+
+                // Sort topExps and topStairs for rendering: VVIP (Score >= 8) first, then by Smart Score descending, then by turnover descending
+                const renderSortFn = (a, b) => {
+                    const scoreA = calculateSmartScore(a);
+                    const scoreB = calculateSmartScore(b);
+                    const isVvipA = (a.isVvip && scoreA >= 8) ? 1 : 0;
+                    const isVvipB = (b.isVvip && scoreB >= 8) ? 1 : 0;
+
+                    if (isVvipB !== isVvipA) {
+                        return isVvipB - isVvipA; // VVIP first
+                    }
+                    if (scoreB !== scoreA) {
+                        return scoreB - scoreA; // Highest score next
+                    }
+                    return b.turnover - a.turnover; // Turnover tie-breaker
+                };
+
+                topExps.sort(renderSortFn);
+                topStairs.sort(renderSortFn);
                 
                 if (topExps.length > 0 || topStairs.length > 0) {
                     hybridSection.style.display = 'block';
