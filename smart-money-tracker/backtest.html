@@ -1022,10 +1022,15 @@
                  let vvipTotalReturn = 0;
                  
                  vvipList.forEach(t => {
-                     if (t.status.startsWith('PROFIT')) vvipWins++;
-                     if (t.status === 'SL_HIT') vvipSlHits++;
-                     vvipTotalReturn += t.finalGain;
-                 });
+                      let gain = t.finalGain;
+                      if (t.status === 'SL_HIT') {
+                          gain = -3.00; // Enforce Strict 3% Stop Loss from entry price!
+                          vvipSlHits++;
+                      } else {
+                          if (t.status.startsWith('PROFIT')) vvipWins++;
+                      }
+                      vvipTotalReturn += gain;
+                  });
                  
                  const vvipWinRate = (vvipWins / totalVvip) * 100;
                  const vvipSlRate = (vvipSlHits / totalVvip) * 100;
@@ -1083,8 +1088,15 @@
                     let tagClass = row.style === 'EXPLOSIVE' ? 'explosive' : 'staircase';
                     let tagLabel = row.style === 'EXPLOSIVE' ? '🚀 EXPLOSIVE' : '🪜 STAIRCASE';
                     
-                    let gainColor = row.finalGain > 0 ? 'var(--success)' : (row.finalGain < 0 ? 'var(--danger)' : 'white');
-                    let gainSign = row.finalGain > 0 ? '+' : '';
+                    let finalGain = row.finalGain;
+                    let finalPrice = row.finalPrice;
+                    if (row.status === 'SL_HIT') {
+                        finalGain = -3.00;
+                        finalPrice = row.entryPrice * 0.97;
+                    }
+                    
+                    let gainColor = finalGain > 0 ? 'var(--success)' : (finalGain < 0 ? 'var(--danger)' : 'white');
+                    let gainSign = finalGain > 0 ? '+' : '';
                     
                     let statusLabel = '';
                     let statusClass = '';
@@ -1117,9 +1129,9 @@
                             </td>
                             <td><span class="tag-pill ${tagClass}">${tagLabel}</span></td>
                             <td style="text-align: right;">RM ${row.entryPrice.toFixed(3)}</td>
-                            <td style="text-align: right;">RM ${row.finalPrice.toFixed(3)}</td>
+                            <td style="text-align: right;">RM ${finalPrice.toFixed(3)}</td>
                             <td style="text-align: right; color: var(--success); font-weight: 700;">+${row.maxGain.toFixed(2)}%</td>
-                            <td style="text-align: right; color: ${gainColor}; font-weight: 700;">${gainSign}${row.finalGain.toFixed(2)}%</td>
+                            <td style="text-align: right; color: ${gainColor}; font-weight: 700;">${gainSign}${finalGain.toFixed(2)}%</td>
                             <td style="text-align: center;"><span class="status-badge ${statusClass}">${statusLabel}</span></td>
                             <td style="text-align: right; color: var(--warning); font-weight: 600;">${turnoverM}</td>
                         </tr>

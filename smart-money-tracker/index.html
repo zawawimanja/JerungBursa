@@ -1238,6 +1238,7 @@
                     if (isSleepingOrAvoidStock(item)) return false;
                     if (item.price < 0.25 || item.price > 4.00) return false;
                     if (item.turnover < 750000) return false;
+                    if (calculateSmartScore(item) < 8) return false;
 
                     const pct = item.changePct !== undefined ? item.changePct : item.change;
                     const pb = item.pullback !== null ? item.pullback : 0;
@@ -1381,7 +1382,7 @@
                     hybridTbody.innerHTML = `
                         <tr>
                             <td colspan="8" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
-                                ⏳ Tiada kaunter EXPLOSIVE atau STAIRCASE hari ini yang melepasi tapisan Turnover ≥ RM 750K.
+                                ⏳ Tiada kaunter EXPLOSIVE atau STAIRCASE hari ini yang melepasi tapisan Turnover &ge; RM 750k dan Skor VVIP &ge; 8.
                             </td>
                         </tr>
                     `;
