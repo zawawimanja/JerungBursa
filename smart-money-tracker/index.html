@@ -713,6 +713,53 @@
         </div>
     </div>
 
+    <!-- VVIP SUPER TREND (POSITION PLAY) RECOMMENDED PICKS BOX -->
+    <div id="super-trend-recommendations-section" style="margin-bottom: 2rem; display: none;">
+        <div style="background: linear-gradient(135deg, rgba(88, 28, 135, 0.2), rgba(15, 23, 42, 0.98)); border: 2px dashed #a855f7; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(168, 85, 247, 0.15); position: relative; overflow: hidden;">
+            <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(168, 85, 247, 0.15); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(168, 85, 247, 0.2); padding-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1; min-width: 300px;">
+                    <span style="font-size: 1.8rem;">🏆</span>
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                            <h2 style="margin: 0; font-size: 1.3rem; color: #c084fc; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem;">Pilihan Khas: VVIP Super Trend (Position Play)</h2>
+                            <span style="font-size: 0.7rem; background: rgba(168, 85, 247, 0.2); color: #c084fc; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(168, 85, 247, 0.3); white-space: nowrap;">💎 HOLD LAMA (1-3 BULAN)</span>
+                            <span style="font-size: 0.7rem; background: rgba(16, 185, 129, 0.2); color: #10b981; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(16, 185, 129, 0.3); white-space: nowrap;">Hold Win: 60.0% | PnL: +398.7%</span>
+                        </div>
+                        <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
+                            SOP Gergasi (Let Profits Run): Skor &ge; 11 + Turnover &ge; RM 5.0M. <strong style="color: #c084fc;">Gaya: Position Play (Pegangan 30-90 Hari) dengan Trailing Stop 10%!</strong>
+                        </p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
+                    <button onclick="copySuperTrendWatchlist()" style="background: #a855f7; color: white; border: none; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 800; font-size: 0.82rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: transform 0.2s; box-shadow: 0 4px 10px rgba(168, 85, 247, 0.3);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                        📋 Copy Super Trend
+                    </button>
+                </div>
+            </div>
+            
+            <div class="table-wrapper" style="margin-top: 1rem; margin-bottom: 0; overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr>
+                            <th style="width: 50px; text-align: center; color: #c084fc;">No</th>
+                            <th style="color: #c084fc; text-align: left;">Counter</th>
+                            <th style="text-align: center; color: #c084fc;">Kategori Setup</th>
+                            <th style="text-align: right; color: #c084fc;">Price</th>
+                            <th style="text-align: right; color: #c084fc;">Change</th>
+                            <th style="text-align: right; color: #c084fc;">Turnover</th>
+                            <th style="text-align: right; color: #c084fc;">SOP Trailing Stop (10%)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="superTrendPicksTableBody">
+                        <!-- Dynamically populated pick rows -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
     <!-- PULLBACK REVERSAL SECTION -->
     <div id="reversals-section" style="margin-bottom: 2rem;">
         <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.8), rgba(15, 23, 42, 0.9)); border: 2px solid var(--info); border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.4); position: relative; overflow: hidden;">
@@ -1389,7 +1436,92 @@
                 }
             }
             
-            // Populate calculator dropdown
+            // Populate Super Trend (Position Play - Hold Lama) picks
+            const superTrendTbody = document.getElementById('superTrendPicksTableBody');
+            const superTrendSection = document.getElementById('super-trend-recommendations-section');
+            
+            if (superTrendTbody && superTrendSection) {
+                // Filter items for Super Trend:
+                // 1. Must be EXPLOSIVE or STAIRCASE
+                // 2. Score >= 11
+                // 3. Turnover >= 5,000,000
+                const superTrendPicks = currentData.filter(item => {
+                    if (!item.high52) return false;
+                    if (isSleepingOrAvoidStock(item)) return false;
+                    if (item.price < 0.25 || item.price > 4.00) return false;
+                    if (item.turnover < 5000000) return false;
+                    if (calculateSmartScore(item) < 11) return false;
+                    
+                    const pct = item.changePct !== undefined ? item.changePct : item.change;
+                    const pb = item.pullback !== null ? item.pullback : 0;
+                    const style = item.setupStyle || (
+                        pct >= 5.0 || (pct >= 3.5 && pb > 5.0) ? 'EXPLOSIVE' : (
+                            pb <= 10.0 && (item.isConsolidation || (item.lowTightness && item.lowTightness <= 8.0) || (item.touchCount && item.touchCount >= 2)) ? 'STAIRCASE' : 'SWING PLAY'
+                        )
+                    );
+                    return style === 'EXPLOSIVE' || style === 'STAIRCASE';
+                });
+                
+                // Sort by turnover descending
+                superTrendPicks.sort((a, b) => b.turnover - a.turnover);
+                
+                if (superTrendPicks.length > 0) {
+                    superTrendSection.style.display = 'block';
+                    let superTrendHtml = '';
+                    let superRowCount = 1;
+                    
+                    superTrendPicks.forEach(item => {
+                        const score = calculateSmartScore(item);
+                        const turnoverM = (item.turnover / 1e6).toFixed(2);
+                        const pct = item.changePct !== undefined ? item.changePct : item.change;
+                        const changeClass = pct >= 0 ? 'success' : 'danger';
+                        const changeSign = pct > 0 ? '+' : '';
+                        
+                        const pb = item.pullback !== null ? item.pullback : 0;
+                        const style = item.setupStyle || (
+                            pct >= 5.0 || (pct >= 3.5 && pb > 5.0) ? 'EXPLOSIVE' : (
+                                pb <= 10.0 && (item.isConsolidation || (item.lowTightness && item.lowTightness <= 8.0) || (item.touchCount && item.touchCount >= 2)) ? 'STAIRCASE' : 'SWING PLAY'
+                            )
+                        );
+                        
+                        const styleBadge = style === 'EXPLOSIVE' 
+                            ? `<span class="tag-pill explosive" style="font-size: 0.75rem;">🚀 EXPLOSIVE</span>`
+                            : `<span class="tag-pill staircase" style="font-size: 0.75rem;">🪜 STAIRCASE</span>`;
+                            
+                        const scoreBadge = score === 15 
+                            ? `<span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.3); color: #fb923c; border: 1px solid rgba(245, 158, 11, 0.5); padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.1rem; font-weight: 900; box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);">🏆 Gold: 15/15</span>` 
+                            : `<span style="font-size: 0.72rem; background: rgba(168, 85, 247, 0.2); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.4); padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.1rem; font-weight: 800;">Score: ${score}/15</span>`;
+                            
+                        superTrendHtml += `
+                            <tr>
+                                <td style="text-align: center; font-weight: bold; color: #c084fc;">${superRowCount++}</td>
+                                <td style="font-weight: 900; color: white; font-size: 1.1rem;">
+                                    <span style="display: inline-flex; align-items: center; gap: 0.35rem;">
+                                        ${item.name}
+                                        <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="font-size: 0.8rem; color: var(--info); text-decoration: none;" title="TradingView Chart">🔗</a>
+                                        ${scoreBadge}
+                                    </span>
+                                </td>
+                                <td style="text-align: center;">${styleBadge}</td>
+                                <td style="text-align: right; font-weight: bold; color: white;">RM ${item.price.toFixed(3)}</td>
+                                <td style="text-align: right; font-weight: bold; color: var(--${changeClass});">${changeSign}${pct.toFixed(2)}%</td>
+                                <td style="text-align: right; color: #f59e0b; font-weight: 700;">RM ${turnoverM}M</td>
+                                <td style="text-align: right; color: #c084fc; font-weight: 700;">🛡️ Jual jika jatuh 10% dari Puncak</td>
+                            </tr>
+                        `;
+                    });
+                    superTrendTbody.innerHTML = superTrendHtml;
+                } else {
+                    superTrendSection.style.display = 'block';
+                    superTrendTbody.innerHTML = `
+                        <tr>
+                            <td colspan="7" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
+                                ⏳ Tiada kaunter VVIP Super Trend hari ini. (Skor &ge; 11 dan Turnover &ge; RM 5.0M untuk hold lama).
+                            </td>
+                        </tr>
+                    `;
+                }
+            }
             populateCalculatorDropdown(reversalList);
             
             if (reversalList.length === 0) {
@@ -1611,6 +1743,44 @@
                 alert('Failed to copy Hybrid: ' + err);
             });
         }
+
+        // Copy all Super Trend watchlist for TradingView
+        function copySuperTrendWatchlist() {
+            const listToCopy = [];
+            const rows = document.querySelectorAll('#superTrendPicksTableBody tr');
+            
+            rows.forEach(r => {
+                const nameCell = r.querySelector('td:nth-child(2)');
+                if (nameCell) {
+                    const name = nameCell.textContent.split('🏆')[0].split('Score:')[0].replace('🔗', '').trim();
+                    if (name && !name.includes("Tiada kaunter")) {
+                        listToCopy.push(`MYX:${name}`);
+                    }
+                }
+            });
+            
+            if (listToCopy.length === 0) {
+                alert("Tiada kaunter Super Trend hari ini untuk disalin.");
+                return;
+            }
+            
+            const tvList = listToCopy.join(',');
+            navigator.clipboard.writeText(tvList).then(() => {
+                const btn = document.querySelector('button[onclick="copySuperTrendWatchlist()"]');
+                const origText = btn.innerHTML;
+                btn.innerHTML = '✅ Copied Super Trend!';
+                btn.style.background = '#10b981';
+                btn.style.color = '#0f172a';
+                setTimeout(() => {
+                    btn.innerHTML = origText;
+                    btn.style.background = '#a855f7';
+                    btn.style.color = 'white';
+                }, 2000);
+            }).catch(err => {
+                alert('Failed to copy Super Trend: ' + err);
+            });
+        }
+
 
 
         // Page setup and event listeners
