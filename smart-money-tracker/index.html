@@ -667,28 +667,26 @@
             <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(59, 130, 246, 0.15); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
             
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(59, 130, 246, 0.2); padding-bottom: 0.75rem;">
-                <div style="display: flex; align-items: center; gap: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1; min-width: 300px;">
                     <span style="font-size: 1.8rem;">🎯</span>
                     <div>
-                        <h2 style="margin: 0; font-size: 1.3rem; color: #3b82f6; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;">Pilihan Utama Harian: Hibrid Premium (Teknik C)</h2>
-                        <p style="margin: 0.15rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                            <h2 style="margin: 0; font-size: 1.3rem; color: #3b82f6; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem;">Pilihan Utama: Hibrid VVIP (Teknik C)</h2>
+                            <span style="font-size: 0.7rem; background: rgba(16, 185, 129, 0.2); color: #10b981; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(16, 185, 129, 0.3); white-space: nowrap;">📈 SWING ONLY</span>
+                            <span style="font-size: 0.7rem; background: rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(59, 130, 246, 0.3); white-space: nowrap;">Win: 56.5% | SL: 9.4%</span>
+                        </div>
+                        <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
                             SOP Terunggul: Top 6 Explosive + Top 6 Staircase (Isih Turnover, Mesti Turnover ≥ RM 750K). <strong style="color: #60a5fa;">Gaya: SWING PLAY (Pegang 1-10 Hari), BUKAN INTRADAY!</strong>
                         </p>
                     </div>
                 </div>
-                <div style="display: flex; gap: 0.5rem; align-items: center;">
-                    <button onclick="copyVvipWatchlist()" style="font-size: 0.82rem; background: rgba(245, 158, 11, 0.2); color: #fb923c; padding: 0.35rem 0.75rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(245, 158, 11, 0.3); cursor: pointer; display: inline-flex; align-items: center; gap: 0.25rem; transition: background 0.2s;" onmouseover="this.style.background='rgba(245, 158, 11, 0.3)'" onmouseout="this.style.background='rgba(245, 158, 11, 0.2)'">
+                <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
+                    <button onclick="copyVvipWatchlist()" style="background: #f59e0b; color: #0f172a; border: none; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 800; font-size: 0.82rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: transform 0.2s; box-shadow: 0 4px 10px rgba(245, 158, 11, 0.3);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                         🔥 Copy VVIP Only
                     </button>
-                    <button onclick="copyHybridWatchlist()" style="font-size: 0.82rem; background: rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 0.35rem 0.75rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(59, 130, 246, 0.3); cursor: pointer; display: inline-flex; align-items: center; gap: 0.25rem; transition: background 0.2s;" onmouseover="this.style.background='rgba(59, 130, 246, 0.3)'" onmouseout="this.style.background='rgba(59, 130, 246, 0.2)'">
-                        📋 Copy All Hybrid
+                    <button onclick="copyHybridWatchlist()" style="background: #3b82f6; color: white; border: none; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 800; font-size: 0.82rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: transform 0.2s; box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                        📋 Copy Hybrid (TV)
                     </button>
-                    <div style="font-size: 0.82rem; background: rgba(16, 185, 129, 0.2); color: #10b981; padding: 0.35rem 0.75rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(16, 185, 129, 0.3);">
-                        📈 SWING ONLY
-                    </div>
-                    <div style="font-size: 0.82rem; background: rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 0.35rem 0.75rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(59, 130, 246, 0.3);">
-                        Kadar Kemenangan: 56.5% | SL Hit: 9.4% | Total PnL: +297.4%
-                    </div>
                 </div>
             </div>
             
@@ -1589,12 +1587,12 @@
                 const btn = document.querySelector('button[onclick="copyVvipWatchlist()"]');
                 const origText = btn.innerHTML;
                 btn.innerHTML = '✅ Copied VVIP!';
-                btn.style.borderColor = '#10b981';
-                btn.style.color = '#10b981';
+                btn.style.background = '#10b981';
+                btn.style.color = '#0f172a';
                 setTimeout(() => {
                     btn.innerHTML = origText;
-                    btn.style.borderColor = 'rgba(245, 158, 11, 0.3)';
-                    btn.style.color = '#fb923c';
+                    btn.style.background = '#f59e0b';
+                    btn.style.color = '#0f172a';
                 }, 2000);
             }).catch(err => {
                 alert('Failed to copy VVIP: ' + err);
@@ -1626,13 +1624,13 @@
             navigator.clipboard.writeText(tvList).then(() => {
                 const btn = document.querySelector('button[onclick="copyHybridWatchlist()"]');
                 const origText = btn.innerHTML;
-                btn.innerHTML = '✅ Copied All!';
-                btn.style.borderColor = '#10b981';
-                btn.style.color = '#10b981';
+                btn.innerHTML = '✅ Copied Hybrid!';
+                btn.style.background = '#10b981';
+                btn.style.color = '#0f172a';
                 setTimeout(() => {
                     btn.innerHTML = origText;
-                    btn.style.borderColor = 'rgba(59, 130, 246, 0.3)';
-                    btn.style.color = '#60a5fa';
+                    btn.style.background = '#3b82f6';
+                    btn.style.color = 'white';
                 }, 2000);
             }).catch(err => {
                 alert('Failed to copy Hybrid: ' + err);
