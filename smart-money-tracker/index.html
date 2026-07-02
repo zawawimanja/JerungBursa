@@ -748,6 +748,7 @@
                             <th style="text-align: center; color: #c084fc;">Kategori Setup</th>
                             <th style="text-align: right; color: #c084fc;">Price</th>
                             <th style="text-align: right; color: #c084fc;">Change</th>
+                            <th style="text-align: right; color: #c084fc;">Support Floor</th>
                             <th style="text-align: right; color: #c084fc;">Turnover</th>
                             <th style="text-align: right; color: #c084fc;">SOP Trailing Stop (10%)</th>
                         </tr>
@@ -1492,6 +1493,9 @@
                             ? `<span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.3); color: #fb923c; border: 1px solid rgba(245, 158, 11, 0.5); padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.1rem; font-weight: 900; box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);">🏆 Gold: 15/15</span>` 
                             : `<span style="font-size: 0.72rem; background: rgba(168, 85, 247, 0.2); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.4); padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.1rem; font-weight: 800;">Score: ${score}/15</span>`;
                             
+                        const floor = item.floorLow || (item.price * 0.95);
+                        const distToFloor = ((item.price - floor) / floor) * 100;
+
                         superTrendHtml += `
                             <tr>
                                 <td style="text-align: center; font-weight: bold; color: #c084fc;">${superRowCount++}</td>
@@ -1505,8 +1509,9 @@
                                 <td style="text-align: center;">${styleBadge}</td>
                                 <td style="text-align: right; font-weight: bold; color: white;">RM ${item.price.toFixed(3)}</td>
                                 <td style="text-align: right; font-weight: bold; color: var(--${changeClass});">${changeSign}${pct.toFixed(2)}%</td>
+                                <td style="text-align: right; color: #10b981; font-weight: 700;">RM ${floor.toFixed(3)} <span style="font-size: 0.72rem; color: #94a3b8; font-weight: normal;">(${distToFloor.toFixed(1)}%)</span></td>
                                 <td style="text-align: right; color: #f59e0b; font-weight: 700;">RM ${turnoverM}M</td>
-                                <td style="text-align: right; color: #c084fc; font-weight: 700;">🛡️ Jual jika jatuh 10% dari Puncak</td>
+                                <td style="text-align: right; color: #c084fc; font-weight: 700;">🛡️ Trailing Stop 10%</td>
                             </tr>
                         `;
                     });
