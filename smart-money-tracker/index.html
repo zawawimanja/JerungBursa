@@ -1221,7 +1221,10 @@
                             pb <= 10.0 && (item.isConsolidation || (item.lowTightness && item.lowTightness <= 8.0) || (item.touchCount && item.touchCount >= 2)) ? 'STAIRCASE' : 'SWING PLAY'
                         )
                     );
-                    return (style === 'EXPLOSIVE' || style === 'STAIRCASE') && (item.turnover >= 750000) && !item.isCombStock;
+                    return (style === 'EXPLOSIVE' || style === 'STAIRCASE') && 
+                           (item.price >= 0.25 && item.price <= 4.00) && 
+                           (item.turnover >= 750000) && 
+                           !item.isCombStock;
                 });
                 
                 // Separate by style
