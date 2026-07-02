@@ -672,7 +672,7 @@
                     <div>
                         <h2 style="margin: 0; font-size: 1.3rem; color: #3b82f6; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;">Pilihan Utama Harian: Hibrid Premium (Teknik C)</h2>
                         <p style="margin: 0.15rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
-                            SOP Terunggul: 1 Explosive Teratas + 1 Staircase Teratas (Mesti Turnover ≥ RM 5 Juta). <strong style="color: #60a5fa;">Gaya: SWING PLAY (Pegang 1-10 Hari), BUKAN INTRADAY!</strong>
+                            SOP Terunggul: Top 6 Explosive + Top 6 Staircase (Isih Turnover, Mesti Turnover ≥ RM 750K). <strong style="color: #60a5fa;">Gaya: SWING PLAY (Pegang 1-10 Hari), BUKAN INTRADAY!</strong>
                         </p>
                     </div>
                 </div>
@@ -681,7 +681,7 @@
                         📈 SWING ONLY
                     </div>
                     <div style="font-size: 0.82rem; background: rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 0.35rem 0.75rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(59, 130, 246, 0.3);">
-                        Kadar Kemenangan: 81.82% | SL Hit: 0.00%
+                        Kadar Kemenangan: 56.5% | SL Hit: 9.4% | Total PnL: +297.4%
                     </div>
                 </div>
             </div>
@@ -1026,6 +1026,45 @@
         }
 
 
+        // Calculate dynamic Smart Score for ranking
+        function calculateSmartScore(item) {
+            let score = 0;
+            const price = item.price;
+            const floorLow = item.floorLow || (price * 0.95);
+            const distToFloor = ((price - floorLow) / floorLow) * 100;
+            const pullbackVal = item.pullback !== null ? item.pullback : 0;
+            const pct = item.changePct !== undefined ? item.changePct : item.change;
+            
+            // 1. Proximity to Floor (Safer Entry)
+            if (distToFloor <= 1.5) score += 4;
+            else if (distToFloor <= 3.0) score += 2;
+            else if (distToFloor <= 5.0) score += 1;
+            
+            // 2. Floor Strength (Support touches)
+            if (item.touchCount >= 5) score += 3;
+            else if (item.touchCount >= 3) score += 2;
+            else if (item.touchCount >= 2) score += 1;
+            
+            // 3. Consolidation Base
+            if (item.isConsolidation) score += 2;
+            
+            // 4. Zon Emas Pullback (ATH / RBS)
+            if (pullbackVal <= 5.0) score += 3; // RBS/Near ATH
+            else if (pullbackVal <= 12.0) score += 2; // Healthy pullback
+            else if (pullbackVal <= 25.0) score += 1;
+            
+            // 5. SMA Trend Alignment
+            const isAboveSma50 = item.sma50 ? price >= item.sma50 : false;
+            const isAboveSma200 = item.sma200 ? price >= item.sma200 : false;
+            if (isAboveSma50) score += 2;
+            if (isAboveSma200) score += 1;
+            
+            // 6. High volume spike confirmation (Liquidity score booster)
+            if (item.turnover >= 5000000) score += 1;
+            
+            return score;
+        }
+
         // Market Sentiment Indicator
         function updateSentiment(data) {
             const activeData = data.filter(c => c.turnover > 250000);
@@ -1246,7 +1285,7 @@
             const hybridSection = document.getElementById('hybrid-recommendations-section');
             
             if (hybridTbody && hybridSection) {
-                // Filter items for Technique C: setupStyle is EXPLOSIVE or STAIRCASE and turnover >= 5M
+                // Filter items for Technique C: setupStyle is EXPLOSIVE or STAIRCASE and turnover >= 1.5M
                 const validPicks = reversalList.filter(item => {
                     const pct = item.changePct !== undefined ? item.changePct : item.change;
                     const pb = item.pullback !== null ? item.pullback : 0;
@@ -1255,7 +1294,7 @@
                             pb <= 10.0 && (item.isConsolidation || (item.lowTightness && item.lowTightness <= 8.0) || (item.touchCount && item.touchCount >= 2)) ? 'STAIRCASE' : 'SWING PLAY'
                         )
                     );
-                    return (style === 'EXPLOSIVE' || style === 'STAIRCASE') && (item.turnover >= 5000000);
+                    return (style === 'EXPLOSIVE' || style === 'STAIRCASE') && (item.turnover >= 750000);
                 });
                 
                 // Separate by style
@@ -1282,62 +1321,79 @@
                 });
                 
                 // Sort by turnover descending
-                exps.sort((a, b) => b.turnover - a.turnover);
-                stairs.sort((a, b) => b.turnover - a.turnover);
+                const sortFn = (a, b) => b.turnover - a.turnover;
+                exps.sort(sortFn);
+                stairs.sort(sortFn);
                 
-                const topExp = exps[0];
-                const topStair = stairs[0];
+                const topExps = exps.slice(0, 6);
+                const topStairs = stairs.slice(0, 6);
                 
-                if (topExp || topStair) {
+                if (topExps.length > 0 || topStairs.length > 0) {
                     hybridSection.style.display = 'block';
                     let hybridHtml = '';
                     let rowCount = 1;
                     
-                    if (topExp) {
-                        const floor = topExp.floorLow || (topExp.price * 0.95);
+                    // Render Top Explosives
+                    topExps.forEach(item => {
+                        const score = calculateSmartScore(item);
+                        const floor = item.floorLow || (item.price * 0.95);
                         const stopLoss = floor * 0.97;
-                        const turnoverM = (topExp.turnover / 1e6).toFixed(2);
-                        const pct = topExp.changePct !== undefined ? topExp.changePct : topExp.change;
+                        const turnoverM = (item.turnover / 1e6).toFixed(2);
+                        const pct = item.changePct !== undefined ? item.changePct : item.change;
                         const changeClass = pct >= 0 ? 'success' : 'danger';
                         const changeSign = pct > 0 ? '+' : '';
+                        
+                        const vvipBadge = (item.isVvip && score >= 8) ? `<span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.25); color: #fb923c; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.3rem; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.4);">🔥 VVIP</span>` : '';
                         
                         hybridHtml += `
                             <tr>
                                 <td style="text-align: center; font-weight: bold; color: #a5b4fc;">${rowCount++}</td>
-                                <td style="font-weight: 900; color: white; font-size: 1.1rem;">${topExp.name}</td>
+                                <td style="font-weight: 900; color: white; font-size: 1.1rem;">
+                                    ${item.name}
+                                    <span style="font-size: 0.72rem; background: rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.3rem; font-weight: 700;">Score: ${score}</span>
+                                    ${vvipBadge}
+                                </td>
                                 <td style="text-align: center;"><span class="tag-pill explosive" style="font-size: 0.75rem;">🚀 EXPLOSIVE</span></td>
-                                <td style="text-align: right; font-weight: bold; color: white;">RM ${topExp.price.toFixed(3)}</td>
+                                <td style="text-align: right; font-weight: bold; color: white;">RM ${item.price.toFixed(3)}</td>
                                 <td style="text-align: right; font-weight: bold;" class="${changeClass}">${changeSign}${pct.toFixed(2)}%</td>
                                 <td style="text-align: right; color: #10b981; font-weight: 700;">RM ${floor.toFixed(3)}</td>
                                 <td style="text-align: right; color: #ef4444; font-weight: 700;">RM ${stopLoss.toFixed(3)}</td>
                                 <td style="text-align: right; color: #f59e0b; font-weight: 700;">RM ${turnoverM}M</td>
-                                <td style="color: #94a3b8;">${topExp.sector || 'Teknologi'}</td>
+                                <td style="color: #94a3b8;">${item.sector || 'Teknologi'}</td>
                             </tr>
                         `;
-                    }
+                    });
                     
-                    if (topStair) {
-                        const floor = topStair.floorLow || (topStair.price * 0.95);
+                    // Render Top Staircases
+                    topStairs.forEach(item => {
+                        const score = calculateSmartScore(item);
+                        const floor = item.floorLow || (item.price * 0.95);
                         const stopLoss = floor * 0.97;
-                        const turnoverM = (topStair.turnover / 1e6).toFixed(2);
-                        const pct = topStair.changePct !== undefined ? topStair.changePct : topStair.change;
+                        const turnoverM = (item.turnover / 1e6).toFixed(2);
+                        const pct = item.changePct !== undefined ? item.changePct : item.change;
                         const changeClass = pct >= 0 ? 'success' : 'danger';
                         const changeSign = pct > 0 ? '+' : '';
+                        
+                        const vvipBadge = (item.isVvip && score >= 8) ? `<span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.25); color: #fb923c; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.3rem; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.4);">🔥 VVIP</span>` : '';
                         
                         hybridHtml += `
                             <tr>
                                 <td style="text-align: center; font-weight: bold; color: #a5b4fc;">${rowCount++}</td>
-                                <td style="font-weight: 900; color: white; font-size: 1.1rem;">${topStair.name}</td>
+                                <td style="font-weight: 900; color: white; font-size: 1.1rem;">
+                                    ${item.name}
+                                    <span style="font-size: 0.72rem; background: rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.3rem; font-weight: 700;">Score: ${score}</span>
+                                    ${vvipBadge}
+                                </td>
                                 <td style="text-align: center;"><span class="tag-pill staircase" style="font-size: 0.75rem;">🪜 STAIRCASE</span></td>
-                                <td style="text-align: right; font-weight: bold; color: white;">RM ${topStair.price.toFixed(3)}</td>
+                                <td style="text-align: right; font-weight: bold; color: white;">RM ${item.price.toFixed(3)}</td>
                                 <td style="text-align: right; font-weight: bold;" class="${changeClass}">${changeSign}${pct.toFixed(2)}%</td>
                                 <td style="text-align: right; color: #10b981; font-weight: 700;">RM ${floor.toFixed(3)}</td>
                                 <td style="text-align: right; color: #ef4444; font-weight: 700;">RM ${stopLoss.toFixed(3)}</td>
                                 <td style="text-align: right; color: #f59e0b; font-weight: 700;">RM ${turnoverM}M</td>
-                                <td style="color: #94a3b8;">${topStair.sector || 'Teknologi'}</td>
+                                <td style="color: #94a3b8;">${item.sector || 'Teknologi'}</td>
                             </tr>
                         `;
-                    }
+                    });
                     
                     hybridTbody.innerHTML = hybridHtml;
                 } else {
@@ -1345,7 +1401,7 @@
                     hybridTbody.innerHTML = `
                         <tr>
                             <td colspan="9" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
-                                ⏳ Tiada kaunter EXPLOSIVE atau STAIRCASE hari ini yang melepasi tapisan Turnover ≥ RM 5 Juta.
+                                ⏳ Tiada kaunter EXPLOSIVE atau STAIRCASE hari ini yang melepasi tapisan Turnover ≥ RM 750K.
                             </td>
                         </tr>
                     `;
@@ -1411,6 +1467,7 @@
                         <td style="font-weight: 700; color: white;">
                             <span style="display: inline-flex; align-items: center; gap: 0.3rem;">
                                 ${item.name}
+                                ${(item.isVvip && calculateSmartScore(item) >= 8) ? `<span style="font-size: 0.65rem; background: rgba(245, 158, 11, 0.25); color: #fb923c; padding: 0.05rem 0.25rem; border-radius: 3px; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.4);">🔥 VVIP</span>` : ''}
                                 <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="font-size: 0.75rem; color: var(--info); text-decoration: none;" title="TradingView Chart">🔗</a>
                             </span>
                         </td>

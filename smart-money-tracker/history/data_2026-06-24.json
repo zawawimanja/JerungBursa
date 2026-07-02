@@ -25,7 +25,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 2.8675000170866647,
-      "sma200": 2.8675000170866647
+      "sma200": 2.8675000170866647,
+      "isVvip": true
     },
     {
       "name": "ZETRIX",
@@ -50,7 +51,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.8256000006198883,
-      "sma200": 0.8190250024199486
+      "sma200": 0.8190250024199486,
+      "isVvip": true
     },
     {
       "name": "KGB",
@@ -75,7 +77,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 6.8230000019073485,
-      "sma200": 5.643700022697448
+      "sma200": 5.643700022697448,
+      "isVvip": true
     },
     {
       "name": "PENTA",
@@ -125,7 +128,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "STAIRCASE",
       "sma50": 5.48439995765686,
-      "sma200": 4.371200007200241
+      "sma200": 4.371200007200241,
+      "isVvip": true
     },
     {
       "name": "DUFU",
@@ -170,7 +174,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 2.3584000182151796,
-      "sma200": 1.878750005364418
+      "sma200": 1.878750005364418,
+      "isVvip": true
     },
     {
       "name": "DNEX",
@@ -195,7 +200,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.3372000002861023,
-      "sma200": 0.29654999867081644
+      "sma200": 0.29654999867081644,
+      "isVvip": true
     },
     {
       "name": "MPI",
@@ -220,7 +226,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "STAIRCASE",
       "sma50": 42.84160007476807,
-      "sma200": 33.824700107574465
+      "sma200": 33.824700107574465,
+      "isVvip": true
     },
     {
       "name": "UTDPLT",
@@ -245,7 +252,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "STAIRCASE",
       "sma50": 31.61000003814697,
-      "sma200": 29.185599985122682
+      "sma200": 29.185599985122682,
+      "isVvip": true
     },
     {
       "name": "NATGATE",
@@ -270,7 +278,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.7775999999046326,
-      "sma200": 0.9484499993920327
+      "sma200": 0.9484499993920327,
+      "isVvip": true
     },
     {
       "name": "SUNMED",
@@ -295,7 +304,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 1.8295999956130982,
-      "sma200": 1.8758208876225486
+      "sma200": 1.8758208876225486,
+      "isVvip": true
     },
     {
       "name": "TANCO",
@@ -320,7 +330,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 1.3410000026226043,
-      "sma200": 1.2068499982357026
+      "sma200": 1.2068499982357026,
+      "isVvip": true
     },
     {
       "name": "HLBANK",
@@ -345,7 +356,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 21.92159999847412,
-      "sma200": 22.007699909210206
+      "sma200": 22.007699909210206,
+      "isVvip": true
     },
     {
       "name": "MCEMENT",
@@ -415,7 +427,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "STAIRCASE",
       "sma50": 1.8927999901771546,
-      "sma200": 1.479399996995926
+      "sma200": 1.479399996995926,
+      "isVvip": true
     },
     {
       "name": "PENTECH",
@@ -440,7 +453,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.3135714275496347,
-      "sma200": 0.3135714275496347
+      "sma200": 0.3135714275496347,
+      "isVvip": true
     },
     {
       "name": "XL",
@@ -485,7 +499,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "STAIRCASE",
       "sma50": 4.343600020408631,
-      "sma200": 3.9182500159740448
+      "sma200": 3.9182500159740448,
+      "isVvip": true
     },
     {
       "name": "OPPSTAR",
@@ -510,7 +525,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.5227000030875206,
-      "sma200": 0.40955000013113024
+      "sma200": 0.40955000013113024,
+      "isVvip": true
     },
     {
       "name": "HLFG",
@@ -555,7 +571,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 1.0510999989509582,
-      "sma200": 0.9200561776589812
+      "sma200": 0.9200561776589812,
+      "isVvip": true
     },
     {
       "name": "EIPOWER",
@@ -580,7 +597,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "STAIRCASE",
       "sma50": 0.6150000043537306,
-      "sma200": 0.6150000043537306
+      "sma200": 0.6150000043537306,
+      "isVvip": true
     },
     {
       "name": "HHRG",
@@ -630,7 +648,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "STAIRCASE",
       "sma50": 0.6079000020027161,
-      "sma200": 0.5209999996423721
+      "sma200": 0.5209999996423721,
+      "isVvip": true
     },
     {
       "name": "HKB",
@@ -655,7 +674,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "STAIRCASE",
       "sma50": 0.3922999981045723,
-      "sma200": 0.2273500005155802
+      "sma200": 0.2273500005155802,
+      "isVvip": true
     },
     {
       "name": "SDCG",
@@ -680,7 +700,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "STAIRCASE",
       "sma50": 0.6784000062942505,
-      "sma200": 0.6026500016450882
+      "sma200": 0.6026500016450882,
+      "isVvip": true
     },
     {
       "name": "SUM",
@@ -705,7 +726,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.5139999866485596,
-      "sma200": 0.5139999866485596
+      "sma200": 0.5139999866485596,
+      "isVvip": true
     },
     {
       "name": "AMBEST",
@@ -730,7 +752,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.6715000015497208,
-      "sma200": 0.5083333340383345
+      "sma200": 0.5083333340383345,
+      "isVvip": true
     },
     {
       "name": "LWSABAH",
@@ -755,7 +778,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 1.3361999988555908,
-      "sma200": 1.2769999995827674
+      "sma200": 1.2769999995827674,
+      "isVvip": true
     },
     {
       "name": "AMS",
@@ -780,7 +804,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.36202381267434075,
-      "sma200": 0.36202381267434075
+      "sma200": 0.36202381267434075,
+      "isVvip": true
     },
     {
       "name": "NE",
@@ -805,7 +830,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.9350999939441681,
-      "sma200": 0.7701499983668327
+      "sma200": 0.7701499983668327,
+      "isVvip": true
     },
     {
       "name": "ELSA",
@@ -830,7 +856,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.24583332985639572,
-      "sma200": 0.24583332985639572
+      "sma200": 0.24583332985639572,
+      "isVvip": true
     },
     {
       "name": "ISF",
@@ -855,7 +882,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.5223999953269959,
-      "sma200": 0.48176767338405957
+      "sma200": 0.48176767338405957,
+      "isVvip": true
     },
     {
       "name": "OGX",
@@ -880,7 +908,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.36519999861717223,
-      "sma200": 0.33964788619901093
+      "sma200": 0.33964788619901093,
+      "isVvip": true
     },
     {
       "name": "CNERGEN",
@@ -905,7 +934,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.47180000245571135,
-      "sma200": 0.4452750000357628
+      "sma200": 0.4452750000357628,
+      "isVvip": true
     },
     {
       "name": "MMCS",
@@ -930,7 +960,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "STAIRCASE",
       "sma50": 0.24666666322284275,
-      "sma200": 0.24666666322284275
+      "sma200": 0.24666666322284275,
+      "isVvip": true
     },
     {
       "name": "IAB",
@@ -955,7 +986,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 1.399000005722046,
-      "sma200": 1.3362500017009131
+      "sma200": 1.3362500017009131,
+      "isVvip": true
     },
     {
       "name": "ADNEX",
@@ -980,7 +1012,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "STAIRCASE",
       "sma50": 0.30550000071525574,
-      "sma200": 0.28897058810381326
+      "sma200": 0.28897058810381326,
+      "isVvip": true
     },
     {
       "name": "GIIB",
@@ -1005,7 +1038,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.14020000100135804,
-      "sma200": 0.1573000017926097
+      "sma200": 0.1573000017926097,
+      "isVvip": true
     }
   ],
   "topGainers": [

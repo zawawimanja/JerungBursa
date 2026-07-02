@@ -104,7 +104,7 @@ async function compile() {
         
     const targetFiles = files.filter(f => {
         const dateStr = f.replace('data_', '').replace('.json', '');
-        return dateStr >= '2026-06-22';
+        return dateStr >= '2026-05-30';
     });
     
     // Remove the latest file because we cannot forward-test it yet (no future data)
@@ -280,7 +280,13 @@ async function compile() {
                 maxGain,
                 finalGain,
                 status,
-                turnover: item.turnover || 0
+                turnover: item.turnover || 0,
+                pullback: item.pullback,
+                floorLow: item.floorLow,
+                touchCount: item.touchCount,
+                isConsolidation: item.isConsolidation || false,
+                sma50: item.sma50 || null,
+                sma200: item.sma200 || null
             });
         });
     }
@@ -298,7 +304,7 @@ async function compile() {
     const regex = /(\/\/ Data generated dynamically from the backtest compiler script\r?\n\s*const fullData = \[\r?\n)([\s\S]*?)(\s*\];)/;
     
     const formattedData = allTrades.map(t => {
-        return `            { date: '${t.date}', name: '${t.name}', style: '${t.style}', entryPrice: ${t.entryPrice.toFixed(3)}, finalPrice: ${t.finalPrice.toFixed(3)}, maxGain: ${t.maxGain.toFixed(2)}, finalGain: ${t.finalGain.toFixed(2)}, status: '${t.status}', turnover: ${t.turnover} }`;
+        return `            { date: '${t.date}', name: '${t.name}', style: '${t.style}', entryPrice: ${t.entryPrice.toFixed(3)}, finalPrice: ${t.finalPrice.toFixed(3)}, maxGain: ${t.maxGain.toFixed(2)}, finalGain: ${t.finalGain.toFixed(2)}, status: '${t.status}', turnover: ${t.turnover}, pullback: ${t.pullback !== null && t.pullback !== undefined ? t.pullback.toFixed(2) : null}, floorLow: ${t.floorLow !== null && t.floorLow !== undefined ? t.floorLow.toFixed(3) : null}, touchCount: ${t.touchCount || 0}, isConsolidation: ${t.isConsolidation}, sma50: ${t.sma50 !== null ? t.sma50.toFixed(3) : null}, sma200: ${t.sma200 !== null ? t.sma200.toFixed(3) : null} }`;
     }).join(',\n');
     
     const newScriptSection = `// Data generated dynamically from the backtest compiler script\n        const fullData = [\n${formattedData}\n        ];`;

@@ -35,7 +35,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 5.5809999942779545,
-      "sma200": 4.2935500025749205
+      "sma200": 4.2935500025749205,
+      "isVvip": true
     },
     {
       "name": "ZETRIX",
@@ -59,7 +60,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.8217000007629395,
-      "sma200": 0.8224250024557114
+      "sma200": 0.8224250024557114,
+      "isVvip": true
     },
     {
       "name": "AAX",
@@ -142,7 +144,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 19.794799880981444,
-      "sma200": 21.03369997024536
+      "sma200": 21.03369997024536,
+      "isVvip": true
     },
     {
       "name": "NESTLE",
@@ -153,7 +156,8 @@
       "turnover": 19483280,
       "volume": 203800,
       "signal": "buy",
-      "reason": "Momentum Positif & Duit Jerung Masuk"
+      "reason": "Momentum Positif & Duit Jerung Masuk",
+      "isVvip": true
     },
     {
       "name": "CAPITALA",
@@ -199,7 +203,8 @@
       "turnover": 11040192,
       "volume": 61334400,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "Jerung Buang / Mendatar",
+      "isVvip": true
     },
     {
       "name": "HLBANK",
@@ -258,7 +263,8 @@
       "turnover": 10007376,
       "volume": 52670400,
       "signal": "buy",
-      "reason": "Momentum Positif & Duit Jerung Masuk"
+      "reason": "Momentum Positif & Duit Jerung Masuk",
+      "isVvip": true
     },
     {
       "name": "PARAGON",
@@ -304,7 +310,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 20.89519992828369,
-      "sma200": 20.276300067901612
+      "sma200": 20.276300067901612,
+      "isVvip": true
     }
   ],
   "topGainers": [

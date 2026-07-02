@@ -25,7 +25,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 5.5519999980926515,
-      "sma200": 4.29525000333786
+      "sma200": 4.29525000333786,
+      "isVvip": true
     },
     {
       "name": "PMETAL",
@@ -62,7 +63,8 @@
       "turnover": 127034237,
       "volume": 96972700,
       "signal": "buy",
-      "reason": "⚡ Momentum Kuat: Jerung Mula Pam (Sesuai Intraday/Swing)"
+      "reason": "⚡ Momentum Kuat: Jerung Mula Pam (Sesuai Intraday/Swing)",
+      "isVvip": true
     },
     {
       "name": "CIMB",
@@ -112,7 +114,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.8229000008106232,
-      "sma200": 0.8221000024676323
+      "sma200": 0.8221000024676323,
+      "isVvip": true
     },
     {
       "name": "TOPGLOV",
@@ -137,7 +140,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.7790000021457673,
-      "sma200": 0.6533250024914742
+      "sma200": 0.6533250024914742,
+      "isVvip": true
     },
     {
       "name": "UWC",
@@ -251,7 +255,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.3204999995231628,
-      "sma200": 0.2910249986499548
+      "sma200": 0.2910249986499548,
+      "isVvip": true
     },
     {
       "name": "UNISEM",
@@ -276,7 +281,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 3.8728000116348267,
-      "sma200": 3.295200002193451
+      "sma200": 3.295200002193451,
+      "isVvip": true
     },
     {
       "name": "MPI",
@@ -388,7 +394,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 21.891999969482423,
-      "sma200": 21.941999912261963
+      "sma200": 21.941999912261963,
+      "isVvip": true
     },
     {
       "name": "SKYCHIP",
@@ -425,7 +432,8 @@
       "turnover": 11632950,
       "volume": 123100,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "Jerung Buang / Mendatar",
+      "isVvip": true
     },
     {
       "name": "ECONBHD",

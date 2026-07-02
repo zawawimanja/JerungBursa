@@ -112,7 +112,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.8249000000953675,
-      "sma200": 0.8205750024318695
+      "sma200": 0.8205750024318695,
+      "isVvip": true
     },
     {
       "name": "SKYECHIP",
@@ -162,7 +163,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.7753000032901763,
-      "sma200": 0.6552000024914741
+      "sma200": 0.6552000024914741,
+      "isVvip": true
     },
     {
       "name": "UWC",
@@ -212,7 +214,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "STAIRCASE",
       "sma50": 41.76800003051758,
-      "sma200": 33.51570010185242
+      "sma200": 33.51570010185242,
+      "isVvip": true
     },
     {
       "name": "MCEMENT",
@@ -262,7 +265,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.7769000005722045,
-      "sma200": 0.956799999177456
+      "sma200": 0.956799999177456,
+      "isVvip": true
     },
     {
       "name": "PPB",
@@ -312,7 +316,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "STAIRCASE",
       "sma50": 31.613200111389162,
-      "sma200": 29.027300004959105
+      "sma200": 29.027300004959105,
+      "isVvip": true
     },
     {
       "name": "PENTECH",
@@ -362,7 +367,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 2.831904785973685,
-      "sma200": 2.831904785973685
+      "sma200": 2.831904785973685,
+      "isVvip": true
     },
     {
       "name": "TANCO",
@@ -387,7 +393,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 1.4323000007867812,
-      "sma200": 1.2156499986350537
+      "sma200": 1.2156499986350537,
+      "isVvip": true
     },
     {
       "name": "KLK",
@@ -424,7 +431,8 @@
       "turnover": 12393136,
       "volume": 128800,
       "signal": "buy",
-      "reason": "🔥 Golden Hold: Jerung Mula Kumpul (Sesuai Swing/Hold)"
+      "reason": "🔥 Golden Hold: Jerung Mula Kumpul (Sesuai Swing/Hold)",
+      "isVvip": true
     },
     {
       "name": "SKPRES",
@@ -486,7 +494,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.1413000014424324,
-      "sma200": 0.15787500191479922
+      "sma200": 0.15787500191479922,
+      "isVvip": true
     }
   ],
   "topGainers": [

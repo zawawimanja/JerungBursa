@@ -48,7 +48,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.8206000006198884,
-      "sma200": 0.8227000024914741
+      "sma200": 0.8227000024914741,
+      "isVvip": true
     },
     {
       "name": "PCHEM",
@@ -72,7 +73,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 5.582199993133545,
-      "sma200": 4.285450001955033
+      "sma200": 4.285450001955033,
+      "isVvip": true
     },
     {
       "name": "TANCO",
@@ -96,7 +98,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 1.57160000115633,
-      "sma200": 1.230149999037385
+      "sma200": 1.230149999037385,
+      "isVvip": true
     },
     {
       "name": "PETDAG",
@@ -155,7 +158,8 @@
       "turnover": 33717600,
       "volume": 356800,
       "signal": "buy",
-      "reason": "Momentum Positif & Duit Jerung Masuk"
+      "reason": "Momentum Positif & Duit Jerung Masuk",
+      "isVvip": true
     },
     {
       "name": "SUNCON",
@@ -251,7 +255,8 @@
       "turnover": 17680135,
       "volume": 64291400,
       "signal": "buy",
-      "reason": "Momentum Positif & Duit Jerung Masuk"
+      "reason": "Momentum Positif & Duit Jerung Masuk",
+      "isVvip": true
     },
     {
       "name": "KLK",
@@ -275,7 +280,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "STAIRCASE",
       "sma50": 20.910399932861328,
-      "sma200": 20.27010006904602
+      "sma200": 20.27010006904602,
+      "isVvip": true
     },
     {
       "name": "HSI-CWQ7",
@@ -286,7 +292,8 @@
       "turnover": 13138145.5,
       "volume": 90607900,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "Jerung Buang / Mendatar",
+      "isVvip": true
     },
     {
       "name": "UTDPLT",
@@ -334,7 +341,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.20039999693632127,
-      "sma200": 0.40834999866783617
+      "sma200": 0.40834999866783617,
+      "isVvip": true
     },
     {
       "name": "HSI-CWQ6",
@@ -380,7 +388,8 @@
       "turnover": 4381632,
       "volume": 36513600,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "Jerung Buang / Mendatar",
+      "isVvip": true
     },
     {
       "name": "ZETRIX-CBM",

@@ -72,7 +72,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.7532000017166137,
-      "sma200": 0.9854249998927116
+      "sma200": 0.9854249998927116,
+      "isVvip": true
     },
     {
       "name": "NESTLE",
@@ -83,7 +84,8 @@
       "turnover": 93071104,
       "volume": 995200,
       "signal": "buy",
-      "reason": "Momentum Positif & Duit Jerung Masuk"
+      "reason": "Momentum Positif & Duit Jerung Masuk",
+      "isVvip": true
     },
     {
       "name": "PCHEM",
@@ -107,7 +109,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 5.618400020599365,
-      "sma200": 4.230750005245209
+      "sma200": 4.230750005245209,
+      "isVvip": true
     },
     {
       "name": "ZETRIX",
@@ -131,7 +134,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.8107000017166137,
-      "sma200": 0.8247500020265579
+      "sma200": 0.8247500020265579,
+      "isVvip": true
     },
     {
       "name": "PETDAG",
@@ -155,7 +159,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 20.261599884033203,
-      "sma200": 21.190199975967406
+      "sma200": 21.190199975967406,
+      "isVvip": true
     },
     {
       "name": "TOPGLOV",
@@ -227,7 +232,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 20.923999900817872,
-      "sma200": 20.249000062942503
+      "sma200": 20.249000062942503,
+      "isVvip": true
     },
     {
       "name": "GIIB",
@@ -299,7 +305,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 6.814599990844727,
-      "sma200": 6.948499994277954
+      "sma200": 6.948499994277954,
+      "isVvip": true
     },
     {
       "name": "UTDPLT",
@@ -323,7 +330,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 32.04760002136231,
-      "sma200": 28.4943000125885
+      "sma200": 28.4943000125885,
+      "isVvip": true
     },
     {
       "name": "PHARMA",
@@ -382,7 +390,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 16.821999893188476,
-      "sma200": 16.938699941635132
+      "sma200": 16.938699941635132,
+      "isVvip": true
     },
     {
       "name": "F&N",
@@ -441,7 +450,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "STAIRCASE",
       "sma50": 1710.8980053710939,
-      "sma200": 1666.4995013427733
+      "sma200": 1666.4995013427733,
+      "isVvip": true
     },
     {
       "name": "ALLIANZ",

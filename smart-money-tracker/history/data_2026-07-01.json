@@ -25,7 +25,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 4.078599982261657,
-      "sma200": 3.6425999903678896
+      "sma200": 3.6425999903678896,
+      "isVvip": true
     },
     {
       "name": "MAYBANK",
@@ -50,7 +51,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 10.97480007171631,
-      "sma200": 10.791499996185303
+      "sma200": 10.791499996185303,
+      "isVvip": true
     },
     {
       "name": "INARI",
@@ -75,7 +77,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 2.092199995517731,
-      "sma200": 1.9348000013828277
+      "sma200": 1.9348000013828277,
+      "isVvip": true
     },
     {
       "name": "PMETAL",
@@ -100,7 +103,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 8.629600038528443,
-      "sma200": 7.372550003528595
+      "sma200": 7.372550003528595,
+      "isVvip": true
     },
     {
       "name": "CIMB",
@@ -125,7 +129,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 7.645,
-      "sma200": 7.783499989509583
+      "sma200": 7.783499989509583,
+      "isVvip": true
     },
     {
       "name": "VITROX",
@@ -150,7 +155,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 6.515599975585937,
-      "sma200": 4.855449986457825
+      "sma200": 4.855449986457825,
+      "isVvip": true
     },
     {
       "name": "PCHEM",
@@ -175,7 +181,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 5.20439998626709,
-      "sma200": 4.279750001430512
+      "sma200": 4.279750001430512,
+      "isVvip": true
     },
     {
       "name": "PENTA",
@@ -200,7 +207,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 4.37340003490448,
-      "sma200": 3.8282000160217287
+      "sma200": 3.8282000160217287,
+      "isVvip": true
     },
     {
       "name": "HLBANK",
@@ -225,7 +233,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 21.87319999694824,
-      "sma200": 22.043599910736084
+      "sma200": 22.043599910736084,
+      "isVvip": true
     },
     {
       "name": "DNEX",
@@ -250,7 +259,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.3494999992847443,
-      "sma200": 0.3011999983340502
+      "sma200": 0.3011999983340502,
+      "isVvip": true
     },
     {
       "name": "SDG",
@@ -275,7 +285,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 6.012200012207031,
-      "sma200": 5.679950015544891
+      "sma200": 5.679950015544891,
+      "isVvip": true
     },
     {
       "name": "NATGATE",
@@ -300,7 +311,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.7880000007152558,
-      "sma200": 0.9380999997258186
+      "sma200": 0.9380999997258186,
+      "isVvip": true
     },
     {
       "name": "SLVEST",
@@ -325,7 +337,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 2.848799991607666,
-      "sma200": 2.7762499994039533
+      "sma200": 2.7762499994039533,
+      "isVvip": true
     },
     {
       "name": "TANCO",
@@ -350,7 +363,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 1.1905000033974646,
-      "sma200": 1.1915999982506036
+      "sma200": 1.1915999982506036,
+      "isVvip": true
     },
     {
       "name": "ZETRIX",
@@ -375,7 +389,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.8225,
-      "sma200": 0.8166000017523766
+      "sma200": 0.8166000017523766,
+      "isVvip": true
     },
     {
       "name": "MPI",
@@ -400,7 +415,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 44.48640007019043,
-      "sma200": 34.352000102996826
+      "sma200": 34.352000102996826,
+      "isVvip": true
     },
     {
       "name": "SKYCHIP",
@@ -425,7 +441,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 3.434399971961975,
-      "sma200": 3.4185999989509583
+      "sma200": 3.4185999989509583,
+      "isVvip": true
     },
     {
       "name": "ECOSHOP",
@@ -450,7 +467,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 1.2687999987602234,
-      "sma200": 1.4041000020503998
+      "sma200": 1.4041000020503998,
+      "isVvip": true
     },
     {
       "name": "UNISEM",
@@ -475,7 +493,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 4.272800002098084,
-      "sma200": 3.4069499981403353
+      "sma200": 3.4069499981403353,
+      "isVvip": true
     },
     {
       "name": "UWC",
@@ -500,7 +519,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 5.693199968338012,
-      "sma200": 4.462250007390976
+      "sma200": 4.462250007390976,
+      "isVvip": true
     },
     {
       "name": "SUM",
@@ -525,7 +545,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.5054999977350235,
-      "sma200": 0.5054999977350235
+      "sma200": 0.5054999977350235,
+      "isVvip": true
     },
     {
       "name": "KGB",
@@ -550,7 +571,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 7.080199995040894,
-      "sma200": 5.715000023841858
+      "sma200": 5.715000023841858,
+      "isVvip": true
     },
     {
       "name": "GREATEC",
@@ -575,7 +597,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 2.534600009918213,
-      "sma200": 2.0437999975681307
+      "sma200": 2.0437999975681307,
+      "isVvip": true
     },
     {
       "name": "DUFU",
@@ -625,7 +648,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.5597000026702881,
-      "sma200": 0.41229999989271165
+      "sma200": 0.41229999989271165,
+      "isVvip": true
     },
     {
       "name": "SUNMED",
@@ -650,7 +674,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 1.8253999900817872,
-      "sma200": 1.871111101574368
+      "sma200": 1.871111101574368,
+      "isVvip": true
     },
     {
       "name": "PETGAS",
@@ -675,7 +700,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 17.598399887084963,
-      "sma200": 18.077100048065187
+      "sma200": 18.077100048065187,
+      "isVvip": true
     },
     {
       "name": "AAX",
@@ -750,7 +776,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 2.0883999824523927,
-      "sma200": 2.1012499815225603
+      "sma200": 2.1012499815225603,
+      "isVvip": true
     },
     {
       "name": "KLCC",
@@ -775,7 +802,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 9.105400009155273,
-      "sma200": 8.97600000858307
+      "sma200": 8.97600000858307,
+      "isVvip": true
     },
     {
       "name": "KLK",
@@ -800,7 +828,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 20.707599906921388,
-      "sma200": 20.357000045776367
+      "sma200": 20.357000045776367,
+      "isVvip": true
     },
     {
       "name": "TMK",
@@ -825,7 +854,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 1.9837999892234803,
-      "sma200": 1.511099997162819
+      "sma200": 1.511099997162819,
+      "isVvip": true
     },
     {
       "name": "TOPGLOV",
@@ -850,7 +880,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.7640000021457672,
-      "sma200": 0.6587750017642975
+      "sma200": 0.6587750017642975,
+      "isVvip": true
     },
     {
       "name": "TM",
@@ -900,7 +931,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 1.7540000009536743,
-      "sma200": 1.612399994134903
+      "sma200": 1.612399994134903,
+      "isVvip": true
     },
     {
       "name": "SRIDGE",
@@ -950,7 +982,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.2022999966144562,
-      "sma200": 0.37614999823272227
+      "sma200": 0.37614999823272227,
+      "isVvip": true
     },
     {
       "name": "MNHLDG",
@@ -975,7 +1008,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 2.446600022315979,
-      "sma200": 1.9107500058412552
+      "sma200": 1.9107500058412552,
+      "isVvip": true
     },
     {
       "name": "CHB",
@@ -1000,7 +1034,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.9441999900341034,
-      "sma200": 0.8718499973416328
+      "sma200": 0.8718499973416328,
+      "isVvip": true
     },
     {
       "name": "PETDAG",
@@ -1025,7 +1060,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 19.22479991912842,
-      "sma200": 20.820499982833862
+      "sma200": 20.820499982833862,
+      "isVvip": true
     },
     {
       "name": "PPB",
@@ -1050,7 +1086,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 10.273600101470947,
-      "sma200": 10.822000045776367
+      "sma200": 10.822000045776367,
+      "isVvip": true
     },
     {
       "name": "SAM",
@@ -1075,7 +1112,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 4.501200013160705,
-      "sma200": 3.9511500144004823
+      "sma200": 3.9511500144004823,
+      "isVvip": true
     },
     {
       "name": "YEWLEE",
@@ -1100,7 +1138,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.568499995470047,
-      "sma200": 0.47229999855160715
+      "sma200": 0.47229999855160715,
+      "isVvip": true
     },
     {
       "name": "AXIATA",
@@ -1125,7 +1164,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 2.1089999985694887,
-      "sma200": 2.393999989628792
+      "sma200": 2.393999989628792,
+      "isVvip": true
     },
     {
       "name": "SUNCON",
@@ -1150,7 +1190,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 7.22979995727539,
-      "sma200": 6.421049990653992
+      "sma200": 6.421049990653992,
+      "isVvip": true
     },
     {
       "name": "NE",
@@ -1175,7 +1216,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.9677999925613403,
-      "sma200": 0.7813999977707863
+      "sma200": 0.7813999977707863,
+      "isVvip": true
     },
     {
       "name": "QL",
@@ -1200,7 +1242,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 3.713799991607666,
-      "sma200": 3.9794000136852263
+      "sma200": 3.9794000136852263,
+      "isVvip": true
     },
     {
       "name": "MRDIY",
@@ -1225,7 +1268,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 1.63660001039505,
-      "sma200": 1.6378000003099442
+      "sma200": 1.6378000003099442,
+      "isVvip": true
     },
     {
       "name": "SNS",
@@ -1250,7 +1294,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.49439999639987947,
-      "sma200": 0.5437749983370304
+      "sma200": 0.5437749983370304,
+      "isVvip": true
     },
     {
       "name": "ITMAX",
@@ -1275,7 +1320,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 4.817000017166138,
-      "sma200": 4.719249992370606
+      "sma200": 4.719249992370606,
+      "isVvip": true
     },
     {
       "name": "CBHB",
@@ -1300,7 +1346,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.6139000022411346,
-      "sma200": 0.5289499993622303
+      "sma200": 0.5289499993622303,
+      "isVvip": true
     },
     {
       "name": "ELRIDGE",
@@ -1325,7 +1372,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.8580999994277954,
-      "sma200": 0.9303500002622604
+      "sma200": 0.9303500002622604,
+      "isVvip": true
     },
     {
       "name": "EIPOWER",
@@ -1350,7 +1398,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.6241071458373751,
-      "sma200": 0.6241071458373751
+      "sma200": 0.6241071458373751,
+      "isVvip": true
     },
     {
       "name": "RAMSSOL",
@@ -1375,7 +1424,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.7088000059127808,
-      "sma200": 0.8850249966979027
+      "sma200": 0.8850249966979027,
+      "isVvip": true
     },
     {
       "name": "FFB",
@@ -1400,7 +1450,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 2.304599986076355,
-      "sma200": 2.5015999925136567
+      "sma200": 2.5015999925136567,
+      "isVvip": true
     },
     {
       "name": "THMY",
@@ -1425,7 +1476,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 1.5326000094413756,
-      "sma200": 1.1311403519926015
+      "sma200": 1.1311403519926015,
+      "isVvip": true
     },
     {
       "name": "PEKAT",
@@ -1450,7 +1502,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 1.6154000020027162,
-      "sma200": 1.5657500010728835
+      "sma200": 1.5657500010728835,
+      "isVvip": true
     },
     {
       "name": "MEGAFB",
@@ -1475,7 +1528,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 1.5470000076293946,
-      "sma200": 1.0369000032544136
+      "sma200": 1.0369000032544136,
+      "isVvip": true
     },
     {
       "name": "IAB",
@@ -1500,7 +1554,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 1.4068000030517578,
-      "sma200": 1.3393195278545809
+      "sma200": 1.3393195278545809,
+      "isVvip": true
     },
     {
       "name": "UTDPLT",
@@ -1525,7 +1580,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 31.544799995422363,
-      "sma200": 29.436799983978272
+      "sma200": 29.436799983978272,
+      "isVvip": true
     },
     {
       "name": "CHEEDING",
@@ -1550,7 +1606,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.6795000052452087,
-      "sma200": 0.7393406629562378
+      "sma200": 0.7393406629562378,
+      "isVvip": true
     },
     {
       "name": "CORAZA",
@@ -1575,7 +1632,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.9177999937534332,
-      "sma200": 0.6702249994874001
+      "sma200": 0.6702249994874001,
+      "isVvip": true
     },
     {
       "name": "EMPIRE",
@@ -1600,7 +1658,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 1.0020999920368194,
-      "sma200": 1.0028431286998825
+      "sma200": 1.0028431286998825,
+      "isVvip": true
     },
     {
       "name": "MCEMENT",
@@ -1625,7 +1684,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 6.897599992752075,
-      "sma200": 7.063899998664856
+      "sma200": 7.063899998664856,
+      "isVvip": true
     },
     {
       "name": "HKB",
@@ -1650,7 +1710,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.4304999989271164,
-      "sma200": 0.23940000049769877
+      "sma200": 0.23940000049769877,
+      "isVvip": true
     },
     {
       "name": "CTOS",
@@ -1675,7 +1736,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.678600002527237,
-      "sma200": 0.7918749982118607
+      "sma200": 0.7918749982118607,
+      "isVvip": true
     },
     {
       "name": "KOPI",
@@ -1700,7 +1762,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 1.0264000022411346,
-      "sma200": 1.2274999985098838
+      "sma200": 1.2274999985098838,
+      "isVvip": true
     },
     {
       "name": "PENTECH",
@@ -1725,7 +1788,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.30541666348775226,
-      "sma200": 0.30541666348775226
+      "sma200": 0.30541666348775226,
+      "isVvip": true
     },
     {
       "name": "LWSABAH",
@@ -1750,7 +1814,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 1.3598000025749206,
-      "sma200": 1.2915000006556512
+      "sma200": 1.2915000006556512,
+      "isVvip": true
     },
     {
       "name": "SKPRES",
@@ -1775,7 +1840,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.3562999993562698,
-      "sma200": 0.5697999988496304
+      "sma200": 0.5697999988496304,
+      "isVvip": true
     },
     {
       "name": "VSTECS",
@@ -1800,7 +1866,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 1.8645331168174744,
-      "sma200": 1.5255163806676864
+      "sma200": 1.5255163806676864,
+      "isVvip": true
     },
     {
       "name": "SDCG",
@@ -1825,7 +1892,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.6819000029563904,
-      "sma200": 0.6063500010967254
+      "sma200": 0.6063500010967254,
+      "isVvip": true
     },
     {
       "name": "SFPTECH",
@@ -1850,7 +1918,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.22469999760389328,
-      "sma200": 0.1604749992117286
+      "sma200": 0.1604749992117286,
+      "isVvip": true
     },
     {
       "name": "PWRWELL",
@@ -1875,7 +1944,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.7772999978065491,
-      "sma200": 0.6488999974727631
+      "sma200": 0.6488999974727631,
+      "isVvip": true
     },
     {
       "name": "AMBEST",
@@ -1900,7 +1970,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.7126000022888184,
-      "sma200": 0.5277551026368628
+      "sma200": 0.5277551026368628,
+      "isVvip": true
     },
     {
       "name": "ICENTS",
@@ -1925,7 +1996,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.4450999981164932,
-      "sma200": 0.4242499992251396
+      "sma200": 0.4242499992251396,
+      "isVvip": true
     },
     {
       "name": "SAMAIDEN",
@@ -1950,7 +2022,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 1.2960000014305115,
-      "sma200": 1.2820750024914742
+      "sma200": 1.2820750024914742,
+      "isVvip": true
     },
     {
       "name": "MCLEAN",
@@ -1975,7 +2048,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.6422000002861022,
-      "sma200": 0.5751749974489212
+      "sma200": 0.5751749974489212,
+      "isVvip": true
     },
     {
       "name": "MMCS",
@@ -2000,7 +2074,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.2567857099430902,
-      "sma200": 0.2567857099430902
+      "sma200": 0.2567857099430902,
+      "isVvip": true
     },
     {
       "name": "ECOMATE",
@@ -2025,7 +2100,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.8536000204086304,
-      "sma200": 0.8275250151753426
+      "sma200": 0.8275250151753426,
+      "isVvip": true
     },
     {
       "name": "SUNVIEW",
@@ -2050,7 +2126,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.3678000068664551,
-      "sma200": 0.3681250001490116
+      "sma200": 0.3681250001490116,
+      "isVvip": true
     },
     {
       "name": "ATECH",
@@ -2075,7 +2152,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.7216999995708465,
-      "sma200": 0.8241499969363213
+      "sma200": 0.8241499969363213,
+      "isVvip": true
     },
     {
       "name": "KENERGY",
@@ -2100,7 +2178,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.53049999833107,
-      "sma200": 0.5879749995470047
+      "sma200": 0.5879749995470047,
+      "isVvip": true
     },
     {
       "name": "HEGROUP",
@@ -2125,7 +2204,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.42690000116825105,
-      "sma200": 0.3695750005543232
+      "sma200": 0.3695750005543232,
+      "isVvip": true
     },
     {
       "name": "SOP",
@@ -2175,7 +2255,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 1.138899999856949,
-      "sma200": 0.9659042542285108
+      "sma200": 0.9659042542285108,
+      "isVvip": true
     },
     {
       "name": "HEIM",
@@ -2200,7 +2281,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 21.184400024414064,
-      "sma200": 22.161999950408937
+      "sma200": 22.161999950408937,
+      "isVvip": true
     },
     {
       "name": "HSSBAKERY",
@@ -2225,7 +2307,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.1650000044277736,
-      "sma200": 0.1650000044277736
+      "sma200": 0.1650000044277736,
+      "isVvip": true
     },
     {
       "name": "AMS",
@@ -2250,7 +2333,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.3611702158095989,
-      "sma200": 0.3611702158095989
+      "sma200": 0.3611702158095989,
+      "isVvip": true
     },
     {
       "name": "LHI",
@@ -2275,7 +2359,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.7353000044822693,
-      "sma200": 0.7176000016927719
+      "sma200": 0.7176000016927719,
+      "isVvip": true
     },
     {
       "name": "MTTSL",
@@ -2300,7 +2385,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.9395918359561842,
-      "sma200": 0.9395918359561842
+      "sma200": 0.9395918359561842,
+      "isVvip": true
     },
     {
       "name": "CNERGEN",
@@ -2325,7 +2411,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.4970000022649765,
-      "sma200": 0.4525
+      "sma200": 0.4525,
+      "isVvip": true
     },
     {
       "name": "HHRG",
@@ -2350,7 +2437,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.08139999978244304,
-      "sma200": 0.07419999979436398
+      "sma200": 0.07419999979436398,
+      "isVvip": true
     },
     {
       "name": "EXSIMHB",
@@ -2400,7 +2488,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.21049999862909316,
-      "sma200": 0.22149999924004077
+      "sma200": 0.22149999924004077,
+      "isVvip": true
     },
     {
       "name": "JTGROUP",
@@ -2425,7 +2514,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.5133000010251999,
-      "sma200": 0.6061500023305416
+      "sma200": 0.6061500023305416,
+      "isVvip": true
     },
     {
       "name": "LACMED",
@@ -2450,7 +2540,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.7859000027179718,
-      "sma200": 0.8926642328283213
+      "sma200": 0.8926642328283213,
+      "isVvip": true
     },
     {
       "name": "LSH",
@@ -2475,7 +2566,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 1.762799985408783,
-      "sma200": 1.927099991440773
+      "sma200": 1.927099991440773,
+      "isVvip": true
     },
     {
       "name": "ECA",
@@ -2500,7 +2592,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.21689999908208846,
-      "sma200": 0.1888500002771616
+      "sma200": 0.1888500002771616,
+      "isVvip": true
     },
     {
       "name": "OGX",
@@ -2525,7 +2618,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.3879999989271164,
-      "sma200": 0.349671051690453
+      "sma200": 0.349671051690453,
+      "isVvip": true
     },
     {
       "name": "TEAMSTR",
@@ -2550,7 +2644,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.24919999927282332,
-      "sma200": 0.24557471189690733
+      "sma200": 0.24557471189690733,
+      "isVvip": true
     },
     {
       "name": "TTVHB",
@@ -2575,7 +2670,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.25989999920129775,
-      "sma200": 0.25732499942183495
+      "sma200": 0.25732499942183495,
+      "isVvip": true
     },
     {
       "name": "GDGROUP",
@@ -2600,7 +2696,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.3572999995946884,
-      "sma200": 0.35798076884104657
+      "sma200": 0.35798076884104657,
+      "isVvip": true
     },
     {
       "name": "F&N",
@@ -2625,7 +2722,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 28.727999877929687,
-      "sma200": 31.048699922561646
+      "sma200": 31.048699922561646,
+      "isVvip": true
     },
     {
       "name": "MTEC",
@@ -2650,7 +2748,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 1.0132999873161317,
-      "sma200": 1.080674998164177
+      "sma200": 1.080674998164177,
+      "isVvip": true
     },
     {
       "name": "UUE",
@@ -2675,7 +2774,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.41190000116825104,
-      "sma200": 0.4784832915663719
+      "sma200": 0.4784832915663719,
+      "isVvip": true
     },
     {
       "name": "FOODIE",
@@ -2700,7 +2800,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.32590000092983246,
-      "sma200": 0.3780344821255783
+      "sma200": 0.3780344821255783,
+      "isVvip": true
     },
     {
       "name": "ISF",
@@ -2725,7 +2826,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.5292999964952468,
-      "sma200": 0.48442307429818005
+      "sma200": 0.48442307429818005,
+      "isVvip": true
     },
     {
       "name": "KTI",
@@ -2750,7 +2852,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.543300005197525,
-      "sma200": 0.4456749999523163
+      "sma200": 0.4456749999523163,
+      "isVvip": true
     },
     {
       "name": "CLOUDPT",
@@ -2775,7 +2878,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.4972000002861023,
-      "sma200": 0.6137499986588955
+      "sma200": 0.6137499986588955,
+      "isVvip": true
     },
     {
       "name": "CPETECH",
@@ -2800,7 +2904,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.7996999955177307,
-      "sma200": 0.6439999979734421
+      "sma200": 0.6439999979734421,
+      "isVvip": true
     },
     {
       "name": "3REN",
@@ -2825,7 +2930,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.3935999995470047,
-      "sma200": 0.37877500042319295
+      "sma200": 0.37877500042319295,
+      "isVvip": true
     },
     {
       "name": "ORKIM",
@@ -2850,7 +2956,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.9000999939441681,
-      "sma200": 0.9764855011649753
+      "sma200": 0.9764855011649753,
+      "isVvip": true
     },
     {
       "name": "AQUAWALK",
@@ -2875,7 +2982,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.1853999999165535,
-      "sma200": 0.28634868473990965
+      "sma200": 0.28634868473990965,
+      "isVvip": true
     },
     {
       "name": "WENTEL",
@@ -2900,7 +3008,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.26029999762773515,
-      "sma200": 0.27812499821186065
+      "sma200": 0.27812499821186065,
+      "isVvip": true
     },
     {
       "name": "GENERGY",
@@ -2925,7 +3034,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.510899994969368,
-      "sma200": 0.6279044052695527
+      "sma200": 0.6279044052695527,
+      "isVvip": true
     },
     {
       "name": "EDELTEQ",
@@ -2950,7 +3060,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.35479999959468844,
-      "sma200": 0.4169250002503395
+      "sma200": 0.4169250002503395,
+      "isVvip": true
     },
     {
       "name": "ACO",
@@ -2975,7 +3086,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.1625,
-      "sma200": 0.18152499869465827
+      "sma200": 0.18152499869465827,
+      "isVvip": true
     },
     {
       "name": "SUNLOGY",
@@ -3000,7 +3112,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.27019999861717225,
-      "sma200": 0.2837999977916479
+      "sma200": 0.2837999977916479,
+      "isVvip": true
     },
     {
       "name": "WELLS",
@@ -3025,7 +3138,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.6073999977111817,
-      "sma200": 0.6489250001311302
+      "sma200": 0.6489250001311302,
+      "isVvip": true
     },
     {
       "name": "CARLSBG",
@@ -3050,7 +3164,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 16.62919994354248,
-      "sma200": 16.890399951934814
+      "sma200": 16.890399951934814,
+      "isVvip": true
     },
     {
       "name": "AMEREIT",
@@ -3075,7 +3190,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 1.6037999868392945,
-      "sma200": 1.618799998164177
+      "sma200": 1.618799998164177,
+      "isVvip": true
     },
     {
       "name": "MKHOP",
@@ -3100,7 +3216,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.6229000067710877,
-      "sma200": 0.6186750063300133
+      "sma200": 0.6186750063300133,
+      "isVvip": true
     },
     {
       "name": "CEB",
@@ -3125,7 +3242,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.27910000026226045,
-      "sma200": 0.2860749992728233
+      "sma200": 0.2860749992728233,
+      "isVvip": true
     },
     {
       "name": "MESTRON",
@@ -3150,7 +3268,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.12950000032782555,
-      "sma200": 0.165325000397861
+      "sma200": 0.165325000397861,
+      "isVvip": true
     },
     {
       "name": "KJTS",
@@ -3175,7 +3294,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.7987000024318696,
-      "sma200": 1.1028499999642372
+      "sma200": 1.1028499999642372,
+      "isVvip": true
     },
     {
       "name": "HLFG",
@@ -3225,7 +3345,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.16720000222325326,
-      "sma200": 0.17945000063627958
+      "sma200": 0.17945000063627958,
+      "isVvip": true
     },
     {
       "name": "HLIND",
@@ -3250,7 +3371,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 18.37039993286133,
-      "sma200": 16.531899995803833
+      "sma200": 16.531899995803833,
+      "isVvip": true
     },
     {
       "name": "MFGROUP",
@@ -3275,7 +3397,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.2896999987959862,
-      "sma200": 0.252424995675683
+      "sma200": 0.252424995675683,
+      "isVvip": true
     },
     {
       "name": "INFOM",
@@ -3300,7 +3423,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 1.1080000042915343,
-      "sma200": 1.2609500038623809
+      "sma200": 1.2609500038623809,
+      "isVvip": true
     },
     {
       "name": "TAGHILL",
@@ -3325,7 +3449,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.05939999893307686,
-      "sma200": 0.06182499879971146
+      "sma200": 0.06182499879971146,
+      "isVvip": true
     },
     {
       "name": "REACHTEN",
@@ -3350,7 +3475,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.42209999680519106,
-      "sma200": 0.4599999988079071
+      "sma200": 0.4599999988079071,
+      "isVvip": true
     },
     {
       "name": "UNIQUE",
@@ -3375,7 +3501,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.3963999968767166,
-      "sma200": 0.42349999979138375
+      "sma200": 0.42349999979138375,
+      "isVvip": true
     },
     {
       "name": "SORENTO",
@@ -3400,7 +3527,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.6452999925613403,
-      "sma200": 0.5531749957799912
+      "sma200": 0.5531749957799912,
+      "isVvip": true
     },
     {
       "name": "ICTZONE",
@@ -3425,7 +3553,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.17990000277757645,
-      "sma200": 0.17777500227093695
+      "sma200": 0.17777500227093695,
+      "isVvip": true
     },
     {
       "name": "BUSCAP",
@@ -3450,7 +3579,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.2529999978840351,
-      "sma200": 0.2529999978840351
+      "sma200": 0.2529999978840351,
+      "isVvip": true
     },
     {
       "name": "MINOX",
@@ -3475,7 +3605,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.17720000118017196,
-      "sma200": 0.18517500132322312
+      "sma200": 0.18517500132322312,
+      "isVvip": true
     },
     {
       "name": "TOPMIX",
@@ -3500,7 +3631,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.449799998998642,
-      "sma200": 0.4657250007987022
+      "sma200": 0.4657250007987022,
+      "isVvip": true
     },
     {
       "name": "ELSA",
@@ -3525,7 +3657,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.2336363602768291,
-      "sma200": 0.2336363602768291
+      "sma200": 0.2336363602768291,
+      "isVvip": true
     },
     {
       "name": "MERSEC",
@@ -3550,7 +3683,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.2652999931573868,
-      "sma200": 0.30099999859929083
+      "sma200": 0.30099999859929083,
+      "isVvip": true
     },
     {
       "name": "RADIUM",
@@ -3575,7 +3709,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.5008999991416931,
-      "sma200": 0.5008499991893768
+      "sma200": 0.5008499991893768,
+      "isVvip": true
     },
     {
       "name": "TFP",
@@ -3600,7 +3735,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.04589999996125698,
-      "sma200": 0.02992500000167638
+      "sma200": 0.02992500000167638,
+      "isVvip": true
     },
     {
       "name": "LGMS",
@@ -3625,7 +3761,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.5122999972105027,
-      "sma200": 0.5827749978005886
+      "sma200": 0.5827749978005886,
+      "isVvip": true
     },
     {
       "name": "DXN",
@@ -3650,7 +3787,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.45920000195503236,
-      "sma200": 0.49159999504685403
+      "sma200": 0.49159999504685403,
+      "isVvip": true
     },
     {
       "name": "OXB",
@@ -3675,7 +3813,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.3451000028848648,
-      "sma200": 0.3041999998688698
+      "sma200": 0.3041999998688698,
+      "isVvip": true
     },
     {
       "name": "POLYMER",
@@ -3700,7 +3839,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.13630000114440918,
-      "sma200": 0.16304054151515704
+      "sma200": 0.16304054151515704,
+      "isVvip": true
     },
     {
       "name": "UMC",
@@ -3725,7 +3865,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 5.888599967956543,
-      "sma200": 5.82370001077652
+      "sma200": 5.82370001077652,
+      "isVvip": true
     },
     {
       "name": "GOLDLI",
@@ -3750,7 +3891,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.10854838644304583,
-      "sma200": 0.10854838644304583
+      "sma200": 0.10854838644304583,
+      "isVvip": true
     },
     {
       "name": "FEYTECH",
@@ -3775,7 +3917,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.22669999778270722,
-      "sma200": 0.2648249989002943
+      "sma200": 0.2648249989002943,
+      "isVvip": true
     },
     {
       "name": "SSF",
@@ -3800,7 +3943,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.38629999160766604,
-      "sma200": 0.3943999971449375
+      "sma200": 0.3943999971449375,
+      "isVvip": true
     },
     {
       "name": "AJI",
@@ -3825,7 +3969,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 1.0035999989509583,
-      "sma200": 1.0548999881744385
+      "sma200": 1.0548999881744385,
+      "isVvip": true
     },
     {
       "name": "NADIBHD",
@@ -3850,7 +3995,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.3525999993085861,
-      "sma200": 0.3987499997019768
+      "sma200": 0.3987499997019768,
+      "isVvip": true
     },
     {
       "name": "PPJACK",
@@ -3875,7 +4021,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.9171000123023987,
-      "sma200": 0.9182500004768371
+      "sma200": 0.9182500004768371,
+      "isVvip": true
     },
     {
       "name": "DLADY",
@@ -3900,7 +4047,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 32.73359985351563,
-      "sma200": 30.76939992904663
+      "sma200": 30.76939992904663,
+      "isVvip": true
     },
     {
       "name": "SUMI",
@@ -3925,7 +4073,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.09580000072717666,
-      "sma200": 0.10619999993592501
+      "sma200": 0.10619999993592501,
+      "isVvip": true
     },
     {
       "name": "INFOTEC",
@@ -3950,7 +4099,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.3575999999046326,
-      "sma200": 0.38540000006556513
+      "sma200": 0.38540000006556513,
+      "isVvip": true
     },
     {
       "name": "SDS",
@@ -3975,7 +4125,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.43050000071525574,
-      "sma200": 0.6072250021994114
+      "sma200": 0.6072250021994114,
+      "isVvip": true
     },
     {
       "name": "NORTHERN",
@@ -4000,7 +4151,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.6439999997615814,
-      "sma200": 0.6352750013768673
+      "sma200": 0.6352750013768673,
+      "isVvip": true
     },
     {
       "name": "SET",
@@ -4025,7 +4177,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.17370000064373017,
-      "sma200": 0.19312500022351742
+      "sma200": 0.19312500022351742,
+      "isVvip": true
     },
     {
       "name": "OHM",
@@ -4050,7 +4203,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.3551000040769577,
-      "sma200": 0.3286000007390976
+      "sma200": 0.3286000007390976,
+      "isVvip": true
     },
     {
       "name": "VLB",
@@ -4075,7 +4229,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.567700001001358,
-      "sma200": 0.49735000133514407
+      "sma200": 0.49735000133514407,
+      "isVvip": true
     },
     {
       "name": "VINVEST",
@@ -4100,7 +4255,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.02289999967440963,
-      "sma200": 0.028574999743141233
+      "sma200": 0.028574999743141233,
+      "isVvip": true
     },
     {
       "name": "BETA",
@@ -4125,7 +4281,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.6109000051021576,
-      "sma200": 0.5250999988615512
+      "sma200": 0.5250999988615512,
+      "isVvip": true
     },
     {
       "name": "AIMFLEX",
@@ -4150,7 +4307,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.0820999999344349,
-      "sma200": 0.08397500023245812
+      "sma200": 0.08397500023245812,
+      "isVvip": true
     },
     {
       "name": "PMCK",
@@ -4175,7 +4333,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.19849999845027924,
-      "sma200": 0.20499999895691873
+      "sma200": 0.20499999895691873,
+      "isVvip": true
     },
     {
       "name": "HOCKSOON",
@@ -4200,7 +4359,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.3478999996185303,
-      "sma200": 0.37258064458447115
+      "sma200": 0.37258064458447115,
+      "isVvip": true
     },
     {
       "name": "PLYTEC",
@@ -4225,7 +4385,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.1697000017762184,
-      "sma200": 0.16900000013411046
+      "sma200": 0.16900000013411046,
+      "isVvip": true
     },
     {
       "name": "ADNEX",
@@ -4250,7 +4411,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.31649999976158144,
-      "sma200": 0.29513698591761395
+      "sma200": 0.29513698591761395,
+      "isVvip": true
     },
     {
       "name": "MSB",
@@ -4275,7 +4437,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.07770000100135803,
-      "sma200": 0.09515000063925981
+      "sma200": 0.09515000063925981,
+      "isVvip": true
     },
     {
       "name": "OGM",
@@ -4300,7 +4463,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.1321999979019165,
-      "sma200": 0.1385238086893445
+      "sma200": 0.1385238086893445,
+      "isVvip": true
     },
     {
       "name": "NESTCON",
@@ -4325,7 +4489,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.35600000143051147,
-      "sma200": 0.3263500019907951
+      "sma200": 0.3263500019907951,
+      "isVvip": true
     },
     {
       "name": "PLINTAS",
@@ -4350,7 +4515,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.92660001039505,
-      "sma200": 0.9530500018596649
+      "sma200": 0.9530500018596649,
+      "isVvip": true
     },
     {
       "name": "OPTIMAX",
@@ -4375,7 +4541,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.5372999930381774,
-      "sma200": 0.5847249957919121
+      "sma200": 0.5847249957919121,
+      "isVvip": true
     },
     {
       "name": "PGLOBAL",
@@ -4400,7 +4567,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.468299999833107,
-      "sma200": 0.46587499901652335
+      "sma200": 0.46587499901652335,
+      "isVvip": true
     },
     {
       "name": "CLITE",
@@ -4425,7 +4593,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.21879999905824662,
-      "sma200": 0.23334999918937682
+      "sma200": 0.23334999918937682,
+      "isVvip": true
     },
     {
       "name": "RL",
@@ -4450,7 +4619,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.1995999976992607,
-      "sma200": 0.23524999886751174
+      "sma200": 0.23524999886751174,
+      "isVvip": true
     },
     {
       "name": "5ER",
@@ -4475,7 +4645,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.2524999979138374,
-      "sma200": 0.25311320542164567
+      "sma200": 0.25311320542164567,
+      "isVvip": true
     },
     {
       "name": "CKI",
@@ -4500,7 +4671,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.40410000205039975,
-      "sma200": 0.5628000001609326
+      "sma200": 0.5628000001609326,
+      "isVvip": true
     },
     {
       "name": "EMCC",
@@ -4525,7 +4697,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.3265999972820282,
-      "sma200": 0.3489249986410141
+      "sma200": 0.3489249986410141,
+      "isVvip": true
     },
     {
       "name": "EPB",
@@ -4550,7 +4723,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.273899998664856,
-      "sma200": 0.34955000013113025
+      "sma200": 0.34955000013113025,
+      "isVvip": true
     },
     {
       "name": "ADB",
@@ -4575,7 +4749,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.6403999996185302,
-      "sma200": 0.7793749979138375
+      "sma200": 0.7793749979138375,
+      "isVvip": true
     },
     {
       "name": "CRPMATE",
@@ -4600,7 +4775,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.1889999997615814,
-      "sma200": 0.1810499994456768
+      "sma200": 0.1810499994456768,
+      "isVvip": true
     },
     {
       "name": "GOHUB",
@@ -4625,7 +4801,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 1.1902000033855438,
-      "sma200": 0.8590750002861023
+      "sma200": 0.8590750002861023,
+      "isVvip": true
     },
     {
       "name": "WINSTAR",
@@ -4650,7 +4827,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.5577999997138977,
-      "sma200": 0.5367249956727028
+      "sma200": 0.5367249956727028,
+      "isVvip": true
     },
     {
       "name": "SWIFT",
@@ -4675,7 +4853,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.41880000054836275,
-      "sma200": 0.39789999932050707
+      "sma200": 0.39789999932050707,
+      "isVvip": true
     },
     {
       "name": "TECHSTORE",
@@ -4700,7 +4879,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2173999983072281,
-      "sma200": 0.2600749970972538
+      "sma200": 0.2600749970972538,
+      "isVvip": true
     },
     {
       "name": "AGMO",
@@ -4725,7 +4905,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.34979999899864195,
-      "sma200": 0.36034999921917915
+      "sma200": 0.36034999921917915,
+      "isVvip": true
     },
     {
       "name": "DCHCARE",
@@ -4750,7 +4931,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.10829999938607215,
-      "sma200": 0.11957499962300062
+      "sma200": 0.11957499962300062,
+      "isVvip": true
     },
     {
       "name": "YXPM",
@@ -4775,7 +4957,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.21069999754428864,
-      "sma200": 0.22029999896883964
+      "sma200": 0.22029999896883964,
+      "isVvip": true
     },
     {
       "name": "WESTRVR",
@@ -4800,7 +4983,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.21559999853372575,
-      "sma200": 0.21809999912977218
+      "sma200": 0.21809999912977218,
+      "isVvip": true
     },
     {
       "name": "PEOPLE",
@@ -4825,7 +5009,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.24210000067949294,
-      "sma200": 0.23074999958276748
+      "sma200": 0.23074999958276748,
+      "isVvip": true
     },
     {
       "name": "GEOHAN",
@@ -4850,7 +5035,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2971999967098236,
-      "sma200": 0.35399999767541884
+      "sma200": 0.35399999767541884,
+      "isVvip": true
     },
     {
       "name": "KEYFIELD",
@@ -4875,7 +5061,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 1.6116000056266784,
-      "sma200": 1.5399499982595444
+      "sma200": 1.5399499982595444,
+      "isVvip": true
     },
     {
       "name": "GLXT",
@@ -4900,7 +5087,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.20799999952316284,
-      "sma200": 0.2104499988257885
+      "sma200": 0.2104499988257885,
+      "isVvip": true
     },
     {
       "name": "DESTINI",
@@ -4925,7 +5113,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.30940000057220457,
-      "sma200": 0.33375000074505806
+      "sma200": 0.33375000074505806,
+      "isVvip": true
     },
     {
       "name": "EFRAME",
@@ -4950,7 +5139,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.26429999560117723,
-      "sma200": 0.33412499852478506
+      "sma200": 0.33412499852478506,
+      "isVvip": true
     },
     {
       "name": "PARADIGM",
@@ -4975,7 +5165,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.9630999958515167,
-      "sma200": 0.9764499953389167
+      "sma200": 0.9764499953389167,
+      "isVvip": true
     },
     {
       "name": "SKYWLD",
@@ -5000,7 +5191,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.4161999970674515,
-      "sma200": 0.47019999980926513
+      "sma200": 0.47019999980926513,
+      "isVvip": true
     },
     {
       "name": "VANZO",
@@ -5025,7 +5217,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.12899999752640723,
-      "sma200": 0.14027499992400408
+      "sma200": 0.14027499992400408,
+      "isVvip": true
     },
     {
       "name": "MSTGOLF",
@@ -5050,7 +5243,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.15540000170469284,
-      "sma200": 0.18117499999701978
+      "sma200": 0.18117499999701978,
+      "isVvip": true
     },
     {
       "name": "FPHB",
@@ -5075,7 +5269,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.3217000013589859,
-      "sma200": 0.3784500007331371
+      "sma200": 0.3784500007331371,
+      "isVvip": true
     },
     {
       "name": "OBHB",
@@ -5100,7 +5295,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.21149999886751175,
-      "sma200": 0.1791500011086464
+      "sma200": 0.1791500011086464,
+      "isVvip": true
     },
     {
       "name": "DENGKIL",
@@ -5125,7 +5321,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.13730000019073485,
-      "sma200": 0.17332500033080578
+      "sma200": 0.17332500033080578,
+      "isVvip": true
     },
     {
       "name": "ORGABIO",
@@ -5150,7 +5347,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.29570000171661376,
-      "sma200": 0.2956250004470348
+      "sma200": 0.2956250004470348,
+      "isVvip": true
     },
     {
       "name": "OFB",
@@ -5175,7 +5373,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.14249999985098838,
-      "sma200": 0.18922499891370534
+      "sma200": 0.18922499891370534,
+      "isVvip": true
     },
     {
       "name": "GIIB",
@@ -5200,7 +5399,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.13890000075101852,
-      "sma200": 0.15642500165849924
+      "sma200": 0.15642500165849924,
+      "isVvip": true
     },
     {
       "name": "TSA",
@@ -5225,7 +5425,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.8617000114917756,
-      "sma200": 0.7990500071644783
+      "sma200": 0.7990500071644783,
+      "isVvip": true
     },
     {
       "name": "AGX",
@@ -5250,7 +5451,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.4184000027179718,
-      "sma200": 0.4697999981045723
+      "sma200": 0.4697999981045723,
+      "isVvip": true
     },
     {
       "name": "TELADAN",
@@ -5275,7 +5477,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.783500006198883,
-      "sma200": 0.8338249972462655
+      "sma200": 0.8338249972462655,
+      "isVvip": true
     },
     {
       "name": "KGW",
@@ -5300,7 +5503,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.10179999932646751,
-      "sma200": 0.13172500032931567
+      "sma200": 0.13172500032931567,
+      "isVvip": true
     },
     {
       "name": "ANEKA",
@@ -5325,7 +5529,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.11680000007152558,
-      "sma200": 0.1286499999836087
+      "sma200": 0.1286499999836087,
+      "isVvip": true
     },
     {
       "name": "PMW",
@@ -5350,7 +5555,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.2618999981880188,
-      "sma200": 0.28339869066391116
+      "sma200": 0.28339869066391116,
+      "isVvip": true
     },
     {
       "name": "JSSOLAR",
@@ -5375,7 +5581,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.20759999692440034,
-      "sma200": 0.25263020761000615
+      "sma200": 0.25263020761000615,
+      "isVvip": true
     },
     {
       "name": "METRO",
@@ -5400,7 +5607,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.00789999982342124,
-      "sma200": 0.00944999978877604
+      "sma200": 0.00944999978877604,
+      "isVvip": true
     },
     {
       "name": "FLEXI",
@@ -5425,7 +5633,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.13129999965429306,
-      "sma200": 0.1316999978199601
+      "sma200": 0.1316999978199601,
+      "isVvip": true
     },
     {
       "name": "LEFORM",
@@ -5450,7 +5659,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.1680000028014183,
-      "sma200": 0.16525000125169753
+      "sma200": 0.16525000125169753,
+      "isVvip": true
     },
     {
       "name": "BMS",
@@ -5475,7 +5685,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.1499000009894371,
-      "sma200": 0.16446043347283232
+      "sma200": 0.16446043347283232,
+      "isVvip": true
     },
     {
       "name": "OVH",
@@ -5500,7 +5711,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2077999985218048,
-      "sma200": 0.16512500010430814
+      "sma200": 0.16512500010430814,
+      "isVvip": true
     },
     {
       "name": "KITACON",
@@ -5525,7 +5737,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.6788000047206879,
-      "sma200": 0.7069000050425529
+      "sma200": 0.7069000050425529,
+      "isVvip": true
     },
     {
       "name": "VERDANT",
@@ -5550,7 +5763,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.20139999836683273,
-      "sma200": 0.23258720858152523
+      "sma200": 0.23258720858152523,
+      "isVvip": true
     },
     {
       "name": "TCS",
@@ -5575,7 +5789,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.08600000083446503,
-      "sma200": 0.10349999986588955
+      "sma200": 0.10349999986588955,
+      "isVvip": true
     },
     {
       "name": "VOLCANO",
@@ -5600,7 +5815,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.28619999915361405,
-      "sma200": 0.3620499976724386
+      "sma200": 0.3620499976724386,
+      "isVvip": true
     },
     {
       "name": "UNITRAD",
@@ -5625,7 +5841,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.23819999814033507,
-      "sma200": 0.24582499839365482
+      "sma200": 0.24582499839365482,
+      "isVvip": true
     },
     {
       "name": "SENFONG",
@@ -5650,7 +5867,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.6728000140190125,
-      "sma200": 0.7028250023722649
+      "sma200": 0.7028250023722649,
+      "isVvip": true
     },
     {
       "name": "VTC",
@@ -5675,7 +5893,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2428999975323677,
-      "sma200": 0.24009999863803386
+      "sma200": 0.24009999863803386,
+      "isVvip": true
     },
     {
       "name": "SUPREME",
@@ -5700,7 +5919,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.19879999935626982,
-      "sma200": 0.20804999850690364
+      "sma200": 0.20804999850690364,
+      "isVvip": true
     },
     {
       "name": "HAILY",
@@ -5725,7 +5945,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.1899999985098839,
-      "sma200": 0.20679999873042107
+      "sma200": 0.20679999873042107,
+      "isVvip": true
     },
     {
       "name": "EIB",
@@ -5750,7 +5971,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.1532000011205673,
-      "sma200": 0.1546500002220273
+      "sma200": 0.1546500002220273,
+      "isVvip": true
     },
     {
       "name": "HPMT",
@@ -5775,7 +5997,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.17460000038146972,
-      "sma200": 0.19074999868869782
+      "sma200": 0.19074999868869782,
+      "isVvip": true
     },
     {
       "name": "DAY3",
@@ -5800,7 +6023,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.12309999898076057,
-      "sma200": 0.15247500147670506
+      "sma200": 0.15247500147670506,
+      "isVvip": true
     },
     {
       "name": "CENGILD",
@@ -5825,7 +6049,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.20879999727010726,
-      "sma200": 0.2194499985873699
+      "sma200": 0.2194499985873699,
+      "isVvip": true
     },
     {
       "name": "SBS",
@@ -5850,7 +6075,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.12199999898672104,
-      "sma200": 0.13622727217999372
+      "sma200": 0.13622727217999372,
+      "isVvip": true
     },
     {
       "name": "MBN",
@@ -5875,7 +6101,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.09450000017881394,
-      "sma200": 0.10462499886751175
+      "sma200": 0.10462499886751175,
+      "isVvip": true
     },
     {
       "name": "UMSINT",
@@ -5900,7 +6127,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.7695999956130981,
-      "sma200": 0.7671499994397163
+      "sma200": 0.7671499994397163,
+      "isVvip": true
     },
     {
       "name": "TJSETIA",
@@ -5925,7 +6153,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2066999977827072,
-      "sma200": 0.20314999878406526
+      "sma200": 0.20314999878406526,
+      "isVvip": true
     },
     {
       "name": "MOBILIA",
@@ -5950,7 +6179,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.09190000131726266,
-      "sma200": 0.09515000030398368
+      "sma200": 0.09515000030398368,
+      "isVvip": true
     },
     {
       "name": "SPRING",
@@ -5975,7 +6205,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.11380000069737434,
-      "sma200": 0.1266750006377697
+      "sma200": 0.1266750006377697,
+      "isVvip": true
     },
     {
       "name": "A1AKK",
@@ -6000,7 +6231,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.16410000175237655,
-      "sma200": 0.20185000039637088
+      "sma200": 0.20185000039637088,
+      "isVvip": true
     },
     {
       "name": "YENHER",
@@ -6025,7 +6257,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.7716999971866607,
-      "sma200": 0.7925249984860421
+      "sma200": 0.7925249984860421,
+      "isVvip": true
     },
     {
       "name": "MTAG",
@@ -6050,7 +6283,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2322999992966652,
-      "sma200": 0.2507749992609024
+      "sma200": 0.2507749992609024,
+      "isVvip": true
     },
     {
       "name": "AZAMJAYA",
@@ -6075,7 +6309,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 1.012999987602234,
-      "sma200": 1.0333249849081039
+      "sma200": 1.0333249849081039,
+      "isVvip": true
     },
     {
       "name": "KHB",
@@ -6100,7 +6335,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.0849000008404255,
-      "sma200": 0.09867500010877847
+      "sma200": 0.09867500010877847,
+      "isVvip": true
     },
     {
       "name": "SAG",
@@ -6125,7 +6361,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.7146000063419342,
-      "sma200": 0.7765750035643577
+      "sma200": 0.7765750035643577,
+      "isVvip": true
     },
     {
       "name": "ZANTAT",
@@ -6150,7 +6387,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.1655000001192093,
-      "sma200": 0.20699999921023846
+      "sma200": 0.20699999921023846,
+      "isVvip": true
     },
     {
       "name": "PANDA",
@@ -6175,7 +6413,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.20039999783039092,
-      "sma200": 0.22439999833703042
+      "sma200": 0.22439999833703042,
+      "isVvip": true
     },
     {
       "name": "INSPACE",
@@ -6200,7 +6439,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.22743242938776273,
-      "sma200": 0.22743242938776273
+      "sma200": 0.22743242938776273,
+      "isVvip": true
     },
     {
       "name": "KHJB",
@@ -6225,7 +6465,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.10329999908804893,
-      "sma200": 0.11614999897778035
+      "sma200": 0.11614999897778035,
+      "isVvip": true
     },
     {
       "name": "XPB",
@@ -6250,7 +6491,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.14509999841451646,
-      "sma200": 0.1635340310984257
+      "sma200": 0.1635340310984257,
+      "isVvip": true
     },
     {
       "name": "HONGSENG",
@@ -6275,7 +6517,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.008999999798834323,
-      "sma200": 0.008049999820068479
+      "sma200": 0.008049999820068479,
+      "isVvip": true
     },
     {
       "name": "HPPHB",
@@ -6300,7 +6543,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.3027000027894974,
-      "sma200": 0.31075000047683715
+      "sma200": 0.31075000047683715,
+      "isVvip": true
     },
     {
       "name": "KUCINGKO",
@@ -6325,7 +6569,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.08190000087022781,
-      "sma200": 0.09327499978244305
+      "sma200": 0.09327499978244305,
+      "isVvip": true
     },
     {
       "name": "ALPHA",
@@ -6350,7 +6595,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.10109999999403954,
-      "sma200": 0.10242499984800815
+      "sma200": 0.10242499984800815,
+      "isVvip": true
     },
     {
       "name": "SBH",
@@ -6375,7 +6621,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.148499998152256,
-      "sma200": 0.17774999879300593
+      "sma200": 0.17774999879300593,
+      "isVvip": true
     },
     {
       "name": "RT",
@@ -6400,7 +6647,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.1851000028848648,
-      "sma200": 0.1928750005364418
+      "sma200": 0.1928750005364418,
+      "isVvip": true
     },
     {
       "name": "CREST",
@@ -6425,7 +6673,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.4729999983310699,
-      "sma200": 0.4939999975264072
+      "sma200": 0.4939999975264072,
+      "isVvip": true
     },
     {
       "name": "FIBRO",
@@ -6450,7 +6699,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.8395999991893768,
-      "sma200": 0.751024999320507
+      "sma200": 0.751024999320507,
+      "isVvip": true
     },
     {
       "name": "DSS",
@@ -6475,7 +6725,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.25479999601840975,
-      "sma200": 0.2515499976277351
+      "sma200": 0.2515499976277351,
+      "isVvip": true
     },
     {
       "name": "DPIH",
@@ -6500,7 +6751,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.10399999856948852,
-      "sma200": 0.10589999888092279
+      "sma200": 0.10589999888092279,
+      "isVvip": true
     },
     {
       "name": "INNATURE",
@@ -6525,7 +6777,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.17440000265836716,
-      "sma200": 0.17737500198185444
+      "sma200": 0.17737500198185444,
+      "isVvip": true
     },
     {
       "name": "BWYS",
@@ -6550,7 +6803,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.1700000011920929,
-      "sma200": 0.19552499935030937
+      "sma200": 0.19552499935030937,
+      "isVvip": true
     },
     {
       "name": "AGRICOR",
@@ -6575,7 +6829,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.3906000000238419,
-      "sma200": 0.4299999998509884
+      "sma200": 0.4299999998509884,
+      "isVvip": true
     },
     {
       "name": "SCB",
@@ -6600,7 +6855,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.009999999776482582,
-      "sma200": 0.009274999792687595
+      "sma200": 0.009274999792687595,
+      "isVvip": true
     },
     {
       "name": "PSP",
@@ -6625,7 +6881,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.13129999950528146,
-      "sma200": 0.13141843935487962
+      "sma200": 0.13141843935487962,
+      "isVvip": true
     },
     {
       "name": "COLFORM",
@@ -6650,7 +6907,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2510999971628189,
-      "sma200": 0.28739999830722807
+      "sma200": 0.28739999830722807,
+      "isVvip": true
     },
     {
       "name": "TOPVISN",
@@ -6675,7 +6933,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.16280000060796737,
-      "sma200": 0.17827499978244304
+      "sma200": 0.17827499978244304,
+      "isVvip": true
     },
     {
       "name": "HAWK",
@@ -6700,7 +6959,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2021999990940094,
-      "sma200": 0.2633499977737665
+      "sma200": 0.2633499977737665,
+      "isVvip": true
     },
     {
       "name": "FAMIERA",
@@ -6725,7 +6985,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.21639999777078628,
-      "sma200": 0.21490445704596817
+      "sma200": 0.21490445704596817,
+      "isVvip": true
     },
     {
       "name": "PMIBHD",
@@ -6750,7 +7011,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.22519999980926514,
-      "sma200": 0.2179999990016222
+      "sma200": 0.2179999990016222,
+      "isVvip": true
     },
     {
       "name": "TASHIN",
@@ -6775,7 +7037,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.20469999819993973,
-      "sma200": 0.21119999811053275
+      "sma200": 0.21119999811053275,
+      "isVvip": true
     },
     {
       "name": "SINKUNG",
@@ -6800,7 +7063,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.08019999921321869,
-      "sma200": 0.09260000009089708
+      "sma200": 0.09260000009089708,
+      "isVvip": true
     },
     {
       "name": "WTEC",
@@ -6825,7 +7089,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.11899999886751175,
-      "sma200": 0.1444250001385808
+      "sma200": 0.1444250001385808,
+      "isVvip": true
     },
     {
       "name": "SYNERGY",
@@ -6850,7 +7115,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.19820000022649764,
-      "sma200": 0.28167500026524067
+      "sma200": 0.28167500026524067,
+      "isVvip": true
     },
     {
       "name": "CAMAROE",
@@ -6875,7 +7141,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.07710000172257424,
-      "sma200": 0.10359459491194906
+      "sma200": 0.10359459491194906,
+      "isVvip": true
     },
     {
       "name": "SALIRAN",
@@ -6900,7 +7167,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.20980000019073486,
-      "sma200": 0.21587499871850013
+      "sma200": 0.21587499871850013,
+      "isVvip": true
     },
     {
       "name": "BURSA",
@@ -6925,7 +7193,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": null,
-      "sma200": null
+      "sma200": null,
+      "isVvip": true
     },
     {
       "name": "PTRB",
@@ -6950,7 +7219,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.29270000219345094,
-      "sma200": 0.29517500251531603
+      "sma200": 0.29517500251531603,
+      "isVvip": true
     },
     {
       "name": "CEKD",
@@ -6975,7 +7245,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2901999980211258,
-      "sma200": 0.3126500007510185
+      "sma200": 0.3126500007510185,
+      "isVvip": true
     }
   ],
   "topGainers": [

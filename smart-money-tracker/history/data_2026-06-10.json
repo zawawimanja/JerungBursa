@@ -24,7 +24,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.8192000007629394,
-      "sma200": 0.823150002360344
+      "sma200": 0.823150002360344,
+      "isVvip": true
     },
     {
       "name": "PCHEM",
@@ -72,7 +73,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 1.5966000020503999,
-      "sma200": 1.2328249990940094
+      "sma200": 1.2328249990940094,
+      "isVvip": true
     },
     {
       "name": "GIIB",
@@ -142,7 +144,8 @@
       "turnover": 13785660,
       "volume": 147000,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "Jerung Buang / Mendatar",
+      "isVvip": true
     },
     {
       "name": "HSI-CWQ7",
@@ -153,7 +156,8 @@
       "turnover": 13528276,
       "volume": 87279200,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "Jerung Buang / Mendatar",
+      "isVvip": true
     },
     {
       "name": "TMK",
@@ -199,7 +203,8 @@
       "turnover": 12546441,
       "volume": 46468300,
       "signal": "buy",
-      "reason": "Momentum Positif & Duit Jerung Masuk"
+      "reason": "Momentum Positif & Duit Jerung Masuk",
+      "isVvip": true
     },
     {
       "name": "KLK",
@@ -247,7 +252,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "STAIRCASE",
       "sma50": 0.17699999809265138,
-      "sma200": 0.1503749994561076
+      "sma200": 0.1503749994561076,
+      "isVvip": true
     },
     {
       "name": "VS",
@@ -295,7 +301,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.008999999798834323,
-      "sma200": 0.007874999823980034
+      "sma200": 0.007874999823980034,
+      "isVvip": true
     },
     {
       "name": "HSI-CWQU",
@@ -306,7 +313,8 @@
       "turnover": 8030412,
       "volume": 61772400,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "Jerung Buang / Mendatar",
+      "isVvip": true
     },
     {
       "name": "DLADY",

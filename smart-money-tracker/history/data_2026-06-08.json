@@ -24,7 +24,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.8156000006198884,
-      "sma200": 0.8237750020623207
+      "sma200": 0.8237750020623207,
+      "isVvip": true
     },
     {
       "name": "IHH",
@@ -46,7 +47,8 @@
       "turnover": 42412000,
       "volume": 461000,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "Jerung Buang / Mendatar",
+      "isVvip": true
     },
     {
       "name": "TOPGLOV",
@@ -118,7 +120,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 38.716799926757815,
-      "sma200": 32.53090008735657
+      "sma200": 32.53090008735657,
+      "isVvip": true
     },
     {
       "name": "TANCO",
@@ -166,7 +169,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 20.091599884033204,
-      "sma200": 21.122699975967407
+      "sma200": 21.122699975967407,
+      "isVvip": true
     },
     {
       "name": "SDG",
@@ -238,7 +242,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 21.984399948120117,
-      "sma200": 21.908299922943115
+      "sma200": 21.908299922943115,
+      "isVvip": true
     },
     {
       "name": "HSI-CWQ7",
@@ -249,7 +254,8 @@
       "turnover": 12740617,
       "volume": 68868200,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "Jerung Buang / Mendatar",
+      "isVvip": true
     },
     {
       "name": "SFPTECH",
@@ -284,7 +290,8 @@
       "turnover": 10234563,
       "volume": 44498100,
       "signal": "buy",
-      "reason": "Momentum Positif & Duit Jerung Masuk"
+      "reason": "Momentum Positif & Duit Jerung Masuk",
+      "isVvip": true
     },
     {
       "name": "VS",

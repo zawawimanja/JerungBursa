@@ -21,7 +21,8 @@
       "touchCount": 24,
       "isConsolidation": false,
       "floorLow": 4.190000057220459,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isVvip": true
     },
     {
       "name": "PMETAL",
@@ -47,7 +48,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 8.642400035858154,
-      "sma200": 7.351850004196167
+      "sma200": 7.351850004196167,
+      "isVvip": true
     },
     {
       "name": "MAYBANK",
@@ -73,7 +75,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 10.989200096130372,
-      "sma200": 10.784249997138977
+      "sma200": 10.784249997138977,
+      "isVvip": true
     },
     {
       "name": "CIMB",
@@ -99,7 +102,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 7.646799993515015,
-      "sma200": 7.782199990749359
+      "sma200": 7.782199990749359,
+      "isVvip": true
     },
     {
       "name": "PBBANK",
@@ -120,7 +124,8 @@
       "touchCount": 24,
       "isConsolidation": true,
       "floorLow": 4.789999961853027,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isVvip": true
     },
     {
       "name": "SDG",
@@ -146,7 +151,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 6.012600002288818,
-      "sma200": 5.67105001449585
+      "sma200": 5.67105001449585,
+      "isVvip": true
     },
     {
       "name": "INARI",
@@ -167,7 +173,8 @@
       "touchCount": 22,
       "isConsolidation": true,
       "floorLow": 2.2100000381469727,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isVvip": true
     },
     {
       "name": "ZETRIX",
@@ -192,7 +199,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.8251999998092652,
-      "sma200": 0.8176000019907952
+      "sma200": 0.8176000019907952,
+      "isVvip": true
     },
     {
       "name": "VITROX",
@@ -218,7 +226,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 6.399599971771241,
-      "sma200": 4.815999985933304
+      "sma200": 4.815999985933304,
+      "isVvip": true
     },
     {
       "name": "MPI",
@@ -243,7 +252,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 43.87280006408692,
-      "sma200": 34.140000104904175
+      "sma200": 34.140000104904175,
+      "isVvip": true
     },
     {
       "name": "YTL",
@@ -268,7 +278,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 4.054199991226196,
-      "sma200": 3.6402999925613404
+      "sma200": 3.6402999925613404,
+      "isVvip": true
     },
     {
       "name": "UWC",
@@ -294,7 +305,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 5.609199962615967,
-      "sma200": 4.425150008201599
+      "sma200": 4.425150008201599,
+      "isVvip": true
     },
     {
       "name": "PCHEM",
@@ -319,7 +331,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 5.266199979782105,
-      "sma200": 4.282199997901916
+      "sma200": 4.282199997901916,
+      "isVvip": true
     },
     {
       "name": "DNEX",
@@ -345,7 +358,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.3446999996900558,
-      "sma200": 0.29929999843239785
+      "sma200": 0.29929999843239785,
+      "isVvip": true
     },
     {
       "name": "TANCO",
@@ -370,7 +384,8 @@
       "isCombStock": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 1.2507000038027762,
-      "sma200": 1.1978749983757735
+      "sma200": 1.1978749983757735,
+      "isVvip": true
     },
     {
       "name": "KGB",
@@ -396,7 +411,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 6.980999994277954,
-      "sma200": 5.68510002374649
+      "sma200": 5.68510002374649,
+      "isVvip": true
     },
     {
       "name": "UTDPLT",
@@ -422,7 +438,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 31.57840000152588,
-      "sma200": 29.332699975967408
+      "sma200": 29.332699975967408,
+      "isVvip": true
     },
     {
       "name": "NATGATE",
@@ -447,7 +464,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.7833000004291535,
-      "sma200": 0.9417249998450279
+      "sma200": 0.9417249998450279,
+      "isVvip": true
     },
     {
       "name": "SKYCHIP",
@@ -473,7 +491,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 2.8785185372387923,
-      "sma200": 2.8785185372387923
+      "sma200": 2.8785185372387923,
+      "isVvip": true
     },
     {
       "name": "SKYECHIP",
@@ -499,7 +518,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 2.8785185372387923,
-      "sma200": 2.8785185372387923
+      "sma200": 2.8785185372387923,
+      "isVvip": true
     },
     {
       "name": "PENTA",
@@ -525,7 +545,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 4.33040002822876,
-      "sma200": 3.815650014877319
+      "sma200": 3.815650014877319,
+      "isVvip": true
     },
     {
       "name": "HLBANK",
@@ -551,7 +572,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 21.907999992370605,
-      "sma200": 22.030899906158446
+      "sma200": 22.030899906158446,
+      "isVvip": true
     },
     {
       "name": "PETDAG",
@@ -577,7 +599,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 19.29519992828369,
-      "sma200": 20.850699977874754
+      "sma200": 20.850699977874754,
+      "isVvip": true
     },
     {
       "name": "SUNMED",
@@ -603,7 +626,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 1.8259999918937684,
-      "sma200": 1.8725714189665659
+      "sma200": 1.8725714189665659,
+      "isVvip": true
     },
     {
       "name": "SUNWAY",
@@ -629,7 +653,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 1.8259999918937684,
-      "sma200": 1.8725714189665659
+      "sma200": 1.8725714189665659,
+      "isVvip": true
     },
     {
       "name": "UNISEM",
@@ -654,7 +679,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 4.202600002288818,
-      "sma200": 3.385849999189377
+      "sma200": 3.385849999189377,
+      "isVvip": true
     },
     {
       "name": "SCGBHD",
@@ -679,7 +705,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 2.0779999828338624,
-      "sma200": 2.0984999817609786
+      "sma200": 2.0984999817609786,
+      "isVvip": true
     },
     {
       "name": "PETGAS",
@@ -705,7 +732,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 17.62199993133545,
-      "sma200": 18.088900060653685
+      "sma200": 18.088900060653685,
+      "isVvip": true
     },
     {
       "name": "LIFTECH",
@@ -726,7 +754,8 @@
       "touchCount": 0,
       "isConsolidation": false,
       "floorLow": null,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isVvip": true
     },
     {
       "name": "KLK",
@@ -752,7 +781,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 20.70799991607666,
-      "sma200": 20.345900049209593
+      "sma200": 20.345900049209593,
+      "isVvip": true
     },
     {
       "name": "MRDIY",
@@ -778,7 +808,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 1.634800009727478,
-      "sma200": 1.6370500004291535
+      "sma200": 1.6370500004291535,
+      "isVvip": true
     },
     {
       "name": "99 SPEED MART RETAIL",
@@ -804,7 +835,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 3.4381999731063844,
-      "sma200": 3.4080999994277956
+      "sma200": 3.4080999994277956,
+      "isVvip": true
     },
     {
       "name": "AXIATA",
@@ -830,7 +862,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 2.1160000014305114,
-      "sma200": 2.397649990916252
+      "sma200": 2.397649990916252,
+      "isVvip": true
     },
     {
       "name": "SUNCON",
@@ -856,7 +889,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 7.212799968719483,
-      "sma200": 6.411349990367889
+      "sma200": 6.411349990367889,
+      "isVvip": true
     },
     {
       "name": "TOPGLOV",
@@ -882,7 +916,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.7662000024318695,
-      "sma200": 0.6580500018596649
+      "sma200": 0.6580500018596649,
+      "isVvip": true
     },
     {
       "name": "VELESTO",
@@ -903,7 +938,8 @@
       "touchCount": 13,
       "isConsolidation": false,
       "floorLow": 0.25999999046325684,
-      "hasLowerWickRejection": true
+      "hasLowerWickRejection": true,
+      "isVvip": true
     },
     {
       "name": "CBHB",
@@ -929,7 +965,8 @@
       "isCombStock": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.6116000020503998,
-      "sma200": 0.5256749992072582
+      "sma200": 0.5256749992072582,
+      "isVvip": true
     },
     {
       "name": "IAB",
@@ -955,7 +992,8 @@
       "isCombStock": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 1.4042000031471253,
-      "sma200": 1.3372754504580697
+      "sma200": 1.3372754504580697,
+      "isVvip": true
     },
     {
       "name": "HKB",
@@ -980,7 +1018,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.41709999859333036,
-      "sma200": 0.2349750005453825
+      "sma200": 0.2349750005453825,
+      "isVvip": true
     },
     {
       "name": "MEGA FORTRIS BERHAD",
@@ -1006,7 +1045,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 1.5302000093460082,
-      "sma200": 1.026625003516674
+      "sma200": 1.026625003516674,
+      "isVvip": true
     },
     {
       "name": "MEGAFB",
@@ -1032,7 +1072,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 1.5302000093460082,
-      "sma200": 1.026625003516674
+      "sma200": 1.026625003516674,
+      "isVvip": true
     },
     {
       "name": "MEGA FORTRIS",
@@ -1058,7 +1099,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 1.5302000093460082,
-      "sma200": 1.026625003516674
+      "sma200": 1.026625003516674,
+      "isVvip": true
     },
     {
       "name": "MNHLDG",
@@ -1084,7 +1126,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 2.4102000188827515,
-      "sma200": 1.8977000051736832
+      "sma200": 1.8977000051736832,
+      "isVvip": true
     },
     {
       "name": "YEWLEE",
@@ -1110,7 +1153,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 0.5666999959945679,
-      "sma200": 0.47112499848008155
+      "sma200": 0.47112499848008155,
+      "isVvip": true
     },
     {
       "name": "SNS",
@@ -1135,7 +1179,8 @@
       "isCombStock": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.4931999969482422,
-      "sma200": 0.5438499985635281
+      "sma200": 0.5438499985635281,
+      "isVvip": true
     },
     {
       "name": "NE",
@@ -1160,7 +1205,8 @@
       "isCombStock": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.953099993467331,
-      "sma200": 0.7764249980449677
+      "sma200": 0.7764249980449677,
+      "isVvip": true
     },
     {
       "name": "NORTHEAST GROUP BERHAD",
@@ -1185,7 +1231,8 @@
       "isCombStock": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.953099993467331,
-      "sma200": 0.7764249980449677
+      "sma200": 0.7764249980449677,
+      "isVvip": true
     },
     {
       "name": "SKPRES",
@@ -1210,7 +1257,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.36049999892711637,
-      "sma200": 0.5760749991238118
+      "sma200": 0.5760749991238118,
+      "isVvip": true
     },
     {
       "name": "QL",
@@ -1236,7 +1284,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 3.7145999908447265,
-      "sma200": 3.983750013113022
+      "sma200": 3.983750013113022,
+      "isVvip": true
     },
     {
       "name": "JPG",
@@ -1262,7 +1311,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 1.7558000016212463,
-      "sma200": 1.6080999946594239
+      "sma200": 1.6080999946594239,
+      "isVvip": true
     },
     {
       "name": "SOLARVEST HOLDINGS BERHAD",
@@ -1288,7 +1338,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 2.834999990463257,
-      "sma200": 2.7695999997854233
+      "sma200": 2.7695999997854233,
+      "isVvip": true
     },
     {
       "name": "SLVEST",
@@ -1314,7 +1365,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 2.834999990463257,
-      "sma200": 2.7695999997854233
+      "sma200": 2.7695999997854233,
+      "isVvip": true
     },
     {
       "name": "MMCS",
@@ -1340,7 +1392,8 @@
       "isCombStock": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.2512499963243802,
-      "sma200": 0.2512499963243802
+      "sma200": 0.2512499963243802,
+      "isVvip": true
     },
     {
       "name": "MCEMENT",
@@ -1366,7 +1419,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 6.927399988174439,
-      "sma200": 7.058749997615815
+      "sma200": 7.058749997615815,
+      "isVvip": true
     },
     {
       "name": "PPB",
@@ -1392,7 +1446,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 10.368600101470948,
-      "sma200": 10.827250046730041
+      "sma200": 10.827250046730041,
+      "isVvip": true
     },
     {
       "name": "OPPSTAR",
@@ -1417,7 +1472,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.5453000032901764,
-      "sma200": 0.4113000002503395
+      "sma200": 0.4113000002503395,
+      "isVvip": true
     },
     {
       "name": "SAM",
@@ -1442,7 +1498,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 4.445800013542176,
-      "sma200": 3.9376500141620636
+      "sma200": 3.9376500141620636,
+      "isVvip": true
     },
     {
       "name": "GREATEC",
@@ -1468,7 +1525,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 2.514600009918213,
-      "sma200": 2.0385999977588654
+      "sma200": 2.0385999977588654,
+      "isVvip": true
     },
     {
       "name": "EIPOWER",
@@ -1494,7 +1552,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.6198076949669764,
-      "sma200": 0.6198076949669764
+      "sma200": 0.6198076949669764,
+      "isVvip": true
     },
     {
       "name": "EI POWER BERHAD [S]",
@@ -1520,7 +1579,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.6198076949669764,
-      "sma200": 0.6198076949669764
+      "sma200": 0.6198076949669764,
+      "isVvip": true
     },
     {
       "name": "RAMSSOL",
@@ -1545,7 +1605,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.7140000057220459,
-      "sma200": 0.8871749964356422
+      "sma200": 0.8871749964356422,
+      "isVvip": true
     },
     {
       "name": "TMK",
@@ -1571,7 +1632,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 1.950399992465973,
-      "sma200": 1.4988999980688096
+      "sma200": 1.4988999980688096,
+      "isVvip": true
     },
     {
       "name": "VS",
@@ -1596,7 +1658,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.2020999962091446,
-      "sma200": 0.3808749983459711
+      "sma200": 0.3808749983459711,
+      "isVvip": true
     },
     {
       "name": "HEIM",
@@ -1622,7 +1685,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 21.337200050354003,
-      "sma200": 22.176199951171874
+      "sma200": 22.176199951171874,
+      "isVvip": true
     },
     {
       "name": "SRIDGE",
@@ -1643,7 +1707,8 @@
       "touchCount": 2,
       "isConsolidation": false,
       "floorLow": 0.10499999672174454,
-      "hasLowerWickRejection": false
+      "hasLowerWickRejection": false,
+      "isVvip": true
     },
     {
       "name": "KEEMING",
@@ -1668,7 +1733,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 1.1027999997138977,
-      "sma200": 0.9466847809760467
+      "sma200": 0.9466847809760467,
+      "isVvip": true
     },
     {
       "name": "ELRIDGE",
@@ -1693,7 +1759,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.8587999999523163,
-      "sma200": 0.9285000002384186
+      "sma200": 0.9285000002384186,
+      "isVvip": true
     },
     {
       "name": "THMY",
@@ -1719,7 +1786,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 1.50660001039505,
-      "sma200": 1.1232248530585385
+      "sma200": 1.1232248530585385,
+      "isVvip": true
     },
     {
       "name": "SUM",
@@ -1744,7 +1812,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.5031249932944775,
-      "sma200": 0.5031249932944775
+      "sma200": 0.5031249932944775,
+      "isVvip": true
     },
     {
       "name": "ITMAX",
@@ -1770,7 +1839,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 4.817400007247925,
-      "sma200": 4.713749990463257
+      "sma200": 4.713749990463257,
+      "isVvip": true
     },
     {
       "name": "VSTECS",
@@ -1796,7 +1866,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 1.8607330965995788,
-      "sma200": 1.5199330407381058
+      "sma200": 1.5199330407381058,
+      "isVvip": true
     },
     {
       "name": "CORAZA",
@@ -1822,7 +1893,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 0.9085999929904938,
-      "sma200": 0.6661999997496605
+      "sma200": 0.6661999997496605,
+      "isVvip": true
     },
     {
       "name": "SFPTECH",
@@ -1847,7 +1919,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.21809999793767929,
-      "sma200": 0.15892499934881926
+      "sma200": 0.15892499934881926,
+      "isVvip": true
     },
     {
       "name": "ECOSHOP",
@@ -1873,7 +1946,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 1.2671999955177307,
-      "sma200": 1.4041000020503998
+      "sma200": 1.4041000020503998,
+      "isVvip": true
     },
     {
       "name": "ECOMATE",
@@ -1899,7 +1973,8 @@
       "isCombStock": true,
       "setupStyle": "STAIRCASE",
       "sma50": 0.8536000204086304,
-      "sma200": 0.8263250151276589
+      "sma200": 0.8263250151276589,
+      "isVvip": true
     },
     {
       "name": "PWRWELL",
@@ -1924,7 +1999,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.7708999991416932,
-      "sma200": 0.6460249978303909
+      "sma200": 0.6460249978303909,
+      "isVvip": true
     },
     {
       "name": "PENTECH",
@@ -1950,7 +2026,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.3074999988079071,
-      "sma200": 0.3074999988079071
+      "sma200": 0.3074999988079071,
+      "isVvip": true
     },
     {
       "name": "KOPI",
@@ -1975,7 +2052,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 1.0349000012874603,
-      "sma200": 1.2297249981760978
+      "sma200": 1.2297249981760978,
+      "isVvip": true
     },
     {
       "name": "ORIENTAL KOPI HOLDINGS",
@@ -2000,7 +2078,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 1.0349000012874603,
-      "sma200": 1.2297249981760978
+      "sma200": 1.2297249981760978,
+      "isVvip": true
     },
     {
       "name": "AMBEST",
@@ -2025,7 +2104,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 0.696800001859665,
-      "sma200": 0.5198437506332994
+      "sma200": 0.5198437506332994,
+      "isVvip": true
     },
     {
       "name": "MCLEAN",
@@ -2050,7 +2130,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 0.6340999984741211,
-      "sma200": 0.5703999972343445
+      "sma200": 0.5703999972343445,
+      "isVvip": true
     },
     {
       "name": "GENERGY",
@@ -2075,7 +2156,8 @@
       "isCombStock": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.5222999942302704,
-      "sma200": 0.6319776052859292
+      "sma200": 0.6319776052859292,
+      "isVvip": true
     },
     {
       "name": "CTOS",
@@ -2100,7 +2182,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.6778000020980834,
-      "sma200": 0.7939749979972839
+      "sma200": 0.7939749979972839,
+      "isVvip": true
     },
     {
       "name": "MTT SHIPPING AND LOGISTICS BHD",
@@ -2126,7 +2209,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 0.9381914887022464,
-      "sma200": 0.9381914887022464
+      "sma200": 0.9381914887022464,
+      "isVvip": true
     },
     {
       "name": "MTTSL",
@@ -2152,7 +2236,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 0.9381914887022464,
-      "sma200": 0.9381914887022464
+      "sma200": 0.9381914887022464,
+      "isVvip": true
     },
     {
       "name": "SUNLOGY",
@@ -2177,7 +2262,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.2691999989748001,
-      "sma200": 0.2842249978333712
+      "sma200": 0.2842249978333712,
+      "isVvip": true
     },
     {
       "name": "INFOM",
@@ -2202,7 +2288,8 @@
       "isCombStock": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 1.1078000044822693,
-      "sma200": 1.2611000037193298
+      "sma200": 1.2611000037193298,
+      "isVvip": true
     },
     {
       "name": "CHB",
@@ -2227,7 +2314,8 @@
       "isCombStock": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.9233999907970428,
-      "sma200": 0.86907499730587
+      "sma200": 0.86907499730587,
+      "isVvip": true
     },
     {
       "name": "EMPIRE PREMIUM FOOD BERHAD",
@@ -2253,7 +2341,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 1.0023469304551884,
-      "sma200": 1.0023469304551884
+      "sma200": 1.0023469304551884,
+      "isVvip": true
     },
     {
       "name": "EMPIRE",
@@ -2279,7 +2368,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 1.0023469304551884,
-      "sma200": 1.0023469304551884
+      "sma200": 1.0023469304551884,
+      "isVvip": true
     },
     {
       "name": "SENHENG",
@@ -2304,7 +2394,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.16920000210404396,
-      "sma200": 0.17975000064820051
+      "sma200": 0.17975000064820051,
+      "isVvip": true
     },
     {
       "name": "ICENTS",
@@ -2330,7 +2421,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 0.4394999980926514,
-      "sma200": 0.42337499916553495
+      "sma200": 0.42337499916553495,
+      "isVvip": true
     },
     {
       "name": "PEKAT",
@@ -2356,7 +2448,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 1.608800003528595,
-      "sma200": 1.5652500015497208
+      "sma200": 1.5652500015497208,
+      "isVvip": true
     },
     {
       "name": "LWSABAH",
@@ -2382,7 +2475,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 1.3578000020980836,
-      "sma200": 1.285575000345707
+      "sma200": 1.285575000345707,
+      "isVvip": true
     },
     {
       "name": "ENPRO",
@@ -2407,7 +2501,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.21149999856948853,
-      "sma200": 0.22189999923110007
+      "sma200": 0.22189999923110007,
+      "isVvip": true
     },
     {
       "name": "CARLSBG",
@@ -2433,7 +2528,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 16.648399925231935,
-      "sma200": 16.893999948501587
+      "sma200": 16.893999948501587,
+      "isVvip": true
     },
     {
       "name": "SDCG",
@@ -2459,7 +2555,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 0.6805000042915345,
-      "sma200": 0.6049000012874604
+      "sma200": 0.6049000012874604,
+      "isVvip": true
     },
     {
       "name": "UUE HOLDINGS BERHAD",
@@ -2484,7 +2581,8 @@
       "isCombStock": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.4103000009059906,
-      "sma200": 0.47899995639920234
+      "sma200": 0.47899995639920234,
+      "isVvip": true
     },
     {
       "name": "UUE",
@@ -2509,7 +2607,8 @@
       "isCombStock": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.4103000009059906,
-      "sma200": 0.47899995639920234
+      "sma200": 0.47899995639920234,
+      "isVvip": true
     },
     {
       "name": "ATECH",
@@ -2534,7 +2633,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.7234999990463257,
-      "sma200": 0.8276999965310097
+      "sma200": 0.8276999965310097,
+      "isVvip": true
     },
     {
       "name": "HHRG",
@@ -2559,7 +2659,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.08049999974668026,
-      "sma200": 0.07464999977499247
+      "sma200": 0.07464999977499247,
+      "isVvip": true
     },
     {
       "name": "TEAMSTR",
@@ -2585,7 +2686,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 0.2492999991774559,
-      "sma200": 0.2456470580661998
+      "sma200": 0.2456470580661998,
+      "isVvip": true
     },
     {
       "name": "CHEEDING",
@@ -2610,7 +2712,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.6819000053405762,
-      "sma200": 0.7401666704151365
+      "sma200": 0.7401666704151365,
+      "isVvip": true
     },
     {
       "name": "OGX",
@@ -2635,7 +2738,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 0.37849999845027926,
-      "sma200": 0.34574324214780655
+      "sma200": 0.34574324214780655,
+      "isVvip": true
     },
     {
       "name": "F&N",
@@ -2661,7 +2765,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 28.844399871826173,
-      "sma200": 31.045699920654297
+      "sma200": 31.045699920654297,
+      "isVvip": true
     },
     {
       "name": "LSH",
@@ -2686,7 +2791,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 1.765999984741211,
-      "sma200": 1.9217999911308288
+      "sma200": 1.9217999911308288,
+      "isVvip": true
     },
     {
       "name": "EDELTEQ",
@@ -2711,7 +2817,8 @@
       "isCombStock": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.3550999993085861,
-      "sma200": 0.41710000023245813
+      "sma200": 0.41710000023245813,
+      "isVvip": true
     },
     {
       "name": "HEGROUP",
@@ -2736,7 +2843,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.4185000020265579,
-      "sma200": 0.3682250006496906
+      "sma200": 0.3682250006496906,
+      "isVvip": true
     },
     {
       "name": "JTGROUP",
@@ -2762,7 +2870,8 @@
       "isCombStock": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.5117000013589859,
-      "sma200": 0.6063000024855136
+      "sma200": 0.6063000024855136,
+      "isVvip": true
     },
     {
       "name": "ISF",
@@ -2788,7 +2897,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.5267999958992005,
-      "sma200": 0.48323529111404045
+      "sma200": 0.48323529111404045,
+      "isVvip": true
     },
     {
       "name": "FFB",
@@ -2814,7 +2924,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 2.308199987411499,
-      "sma200": 2.498849992752075
+      "sma200": 2.498849992752075,
+      "isVvip": true
     },
     {
       "name": "SUNVIEW",
@@ -2840,7 +2951,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.3673000067472458,
-      "sma200": 0.36820000007748604
+      "sma200": 0.36820000007748604,
+      "isVvip": true
     },
     {
       "name": "CEB",
@@ -2865,7 +2977,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.2805000001192093,
-      "sma200": 0.28664999932050705
+      "sma200": 0.28664999932050705,
+      "isVvip": true
     },
     {
       "name": "LHI",
@@ -2891,7 +3004,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 0.735600004196167,
-      "sma200": 0.7160750019550324
+      "sma200": 0.7160750019550324,
+      "isVvip": true
     },
     {
       "name": "AMS",
@@ -2916,7 +3030,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.36144444743792215,
-      "sma200": 0.36144444743792215
+      "sma200": 0.36144444743792215,
+      "isVvip": true
     },
     {
       "name": "AMS ADVANCED MATERIAL BERHAD",
@@ -2941,7 +3056,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.36144444743792215,
-      "sma200": 0.36144444743792215
+      "sma200": 0.36144444743792215,
+      "isVvip": true
     },
     {
       "name": "ECA",
@@ -2966,7 +3082,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 0.21069999903440476,
-      "sma200": 0.18712500028312207
+      "sma200": 0.18712500028312207,
+      "isVvip": true
     },
     {
       "name": "SAMAIDEN",
@@ -2992,7 +3109,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 1.290200002193451,
-      "sma200": 1.2800750032067298
+      "sma200": 1.2800750032067298,
+      "isVvip": true
     },
     {
       "name": "TFP",
@@ -3017,7 +3135,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.04360000003129244,
-      "sma200": 0.029350000019185245
+      "sma200": 0.029350000019185245,
+      "isVvip": true
     },
     {
       "name": "BUSCAP",
@@ -3042,7 +3161,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.25333333098226124,
-      "sma200": 0.25333333098226124
+      "sma200": 0.25333333098226124,
+      "isVvip": true
     },
     {
       "name": "KTI",
@@ -3068,7 +3188,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 0.5425000035762787,
-      "sma200": 0.4442749997973442
+      "sma200": 0.4442749997973442,
+      "isVvip": true
     },
     {
       "name": "AMEREIT",
@@ -3094,7 +3215,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 1.6047999882698059,
-      "sma200": 1.6187499982118607
+      "sma200": 1.6187499982118607,
+      "isVvip": true
     },
     {
       "name": "KLCC",
@@ -3120,7 +3242,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 9.106200008392333,
-      "sma200": 8.972350010871887
+      "sma200": 8.972350010871887,
+      "isVvip": true
     },
     {
       "name": "PMCK",
@@ -3145,7 +3268,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.19899999856948852,
-      "sma200": 0.20499999895691873
+      "sma200": 0.20499999895691873,
+      "isVvip": true
     },
     {
       "name": "LACMED",
@@ -3170,7 +3294,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.7909000015258789,
-      "sma200": 0.8942592581113179
+      "sma200": 0.8942592581113179,
+      "isVvip": true
     },
     {
       "name": "WELLS",
@@ -3196,7 +3321,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.6094999969005584,
-      "sma200": 0.6494750002026558
+      "sma200": 0.6494750002026558,
+      "isVvip": true
     },
     {
       "name": "MKH OIL PALM (EAST KALIMANTAN)",
@@ -3222,7 +3348,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.6225000071525574,
-      "sma200": 0.6187750062346459
+      "sma200": 0.6187750062346459,
+      "isVvip": true
     },
     {
       "name": "MKHOP",
@@ -3248,7 +3375,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.6225000071525574,
-      "sma200": 0.6187750062346459
+      "sma200": 0.6187750062346459,
+      "isVvip": true
     },
     {
       "name": "CPETECH",
@@ -3273,7 +3401,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.7905999958515167,
-      "sma200": 0.6425499981641769
+      "sma200": 0.6425499981641769,
+      "isVvip": true
     },
     {
       "name": "SSF",
@@ -3299,7 +3428,8 @@
       "isCombStock": true,
       "setupStyle": "STAIRCASE",
       "sma50": 0.38619999170303343,
-      "sma200": 0.39427499726414683
+      "sma200": 0.39427499726414683,
+      "isVvip": true
     },
     {
       "name": "AQUAWALK",
@@ -3324,7 +3454,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.18780000001192093,
-      "sma200": 0.28766666720310846
+      "sma200": 0.28766666720310846,
+      "isVvip": true
     },
     {
       "name": "GOLDEN DESTINATIONS GROUP BERHAD",
@@ -3350,7 +3481,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.3561999994516373,
-      "sma200": 0.3561999994516373
+      "sma200": 0.3561999994516373,
+      "isVvip": true
     },
     {
       "name": "GDGROUP",
@@ -3376,7 +3508,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.3561999994516373,
-      "sma200": 0.3561999994516373
+      "sma200": 0.3561999994516373,
+      "isVvip": true
     },
     {
       "name": "VLB",
@@ -3402,7 +3535,8 @@
       "isCombStock": true,
       "setupStyle": "STAIRCASE",
       "sma50": 0.5653000009059906,
-      "sma200": 0.49600000113248827
+      "sma200": 0.49600000113248827,
+      "isVvip": true
     },
     {
       "name": "3REN",
@@ -3428,7 +3562,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.390799999833107,
-      "sma200": 0.37800000041723253
+      "sma200": 0.37800000041723253,
+      "isVvip": true
     },
     {
       "name": "CLOUDPT",
@@ -3453,7 +3588,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.5003000003099441,
-      "sma200": 0.6167249986529351
+      "sma200": 0.6167249986529351,
+      "isVvip": true
     },
     {
       "name": "OHM",
@@ -3478,7 +3614,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 0.35400000393390657,
-      "sma200": 0.3278500005602837
+      "sma200": 0.3278500005602837,
+      "isVvip": true
     },
     {
       "name": "DXN",
@@ -3504,7 +3641,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.4598000013828278,
-      "sma200": 0.4919999949634075
+      "sma200": 0.4919999949634075,
+      "isVvip": true
     },
     {
       "name": "TTVHB",
@@ -3529,7 +3667,8 @@
       "isCombStock": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.2563999989628792,
-      "sma200": 0.25812499940395356
+      "sma200": 0.25812499940395356,
+      "isVvip": true
     },
     {
       "name": "CNERGEN",
@@ -3554,7 +3693,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 0.4873000019788742,
-      "sma200": 0.4494749999046326
+      "sma200": 0.4494749999046326,
+      "isVvip": true
     },
     {
       "name": "MANFORCE GROUP BERHAD",
@@ -3580,7 +3720,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.28829999834299086,
-      "sma200": 0.2520749955624342
+      "sma200": 0.2520749955624342,
+      "isVvip": true
     },
     {
       "name": "MFGROUP",
@@ -3606,7 +3747,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.28829999834299086,
-      "sma200": 0.2520749955624342
+      "sma200": 0.2520749955624342,
+      "isVvip": true
     },
     {
       "name": "FIBRO",
@@ -3631,7 +3773,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.844099999666214,
-      "sma200": 0.7502749994397163
+      "sma200": 0.7502749994397163,
+      "isVvip": true
     },
     {
       "name": "NESTCON",
@@ -3656,7 +3799,8 @@
       "isCombStock": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.3534000015258789,
-      "sma200": 0.3255000019073486
+      "sma200": 0.3255000019073486,
+      "isVvip": true
     },
     {
       "name": "OXB",
@@ -3681,7 +3825,8 @@
       "isCombStock": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.34270000338554385,
-      "sma200": 0.3043500000238419
+      "sma200": 0.3043500000238419,
+      "isVvip": true
     },
     {
       "name": "ELSA",
@@ -3706,7 +3851,8 @@
       "isCombStock": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.23444444106684792,
-      "sma200": 0.23444444106684792
+      "sma200": 0.23444444106684792,
+      "isVvip": true
     },
     {
       "name": "OVH",
@@ -3731,7 +3877,8 @@
       "isCombStock": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.20579999834299087,
-      "sma200": 0.16412500008940697
+      "sma200": 0.16412500008940697,
+      "isVvip": true
     },
     {
       "name": "MESTRON",
@@ -3756,7 +3903,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.13150000020861627,
-      "sma200": 0.16670000042766334
+      "sma200": 0.16670000042766334,
+      "isVvip": true
     },
     {
       "name": "KITACON",
@@ -3781,7 +3929,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.6806000053882599,
-      "sma200": 0.7075500050187111
+      "sma200": 0.7075500050187111,
+      "isVvip": true
     },
     {
       "name": "GOHUB",
@@ -3807,7 +3956,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 1.1788000023365022,
-      "sma200": 0.8563749998807907
+      "sma200": 0.8563749998807907,
+      "isVvip": true
     },
     {
       "name": "SDS",
@@ -3832,7 +3982,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.43610000014305117,
-      "sma200": 0.6106500025093555
+      "sma200": 0.6106500025093555,
+      "isVvip": true
     },
     {
       "name": "LGMS",
@@ -3857,7 +4008,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.515199996829033,
-      "sma200": 0.5856999976933003
+      "sma200": 0.5856999976933003,
+      "isVvip": true
     },
     {
       "name": "WENTEL ENGINEERING",
@@ -3882,7 +4034,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.26119999796152116,
-      "sma200": 0.27862499833106996
+      "sma200": 0.27862499833106996,
+      "isVvip": true
     },
     {
       "name": "WENTEL",
@@ -3907,7 +4060,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.26119999796152116,
-      "sma200": 0.27862499833106996
+      "sma200": 0.27862499833106996,
+      "isVvip": true
     },
     {
       "name": "SET",
@@ -3932,7 +4086,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.17330000102519988,
-      "sma200": 0.19357500024139881
+      "sma200": 0.19357500024139881,
+      "isVvip": true
     },
     {
       "name": "REACHTEN",
@@ -3958,7 +4113,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.42199999690055845,
-      "sma200": 0.4604749989509582
+      "sma200": 0.4604749989509582,
+      "isVvip": true
     },
     {
       "name": "5E RESOURCES BERHAD",
@@ -3983,7 +4139,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.25309999734163285,
-      "sma200": 0.25343137015314665
+      "sma200": 0.25343137015314665,
+      "isVvip": true
     },
     {
       "name": "5ER",
@@ -4008,7 +4165,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.25309999734163285,
-      "sma200": 0.25343137015314665
+      "sma200": 0.25343137015314665,
+      "isVvip": true
     },
     {
       "name": "TAGHILL",
@@ -4033,7 +4191,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.05949999891221523,
-      "sma200": 0.06184999879449606
+      "sma200": 0.06184999879449606,
+      "isVvip": true
     },
     {
       "name": "DESTINI BERHAD",
@@ -4058,7 +4217,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.30960000097751617,
-      "sma200": 0.3352500008046627
+      "sma200": 0.3352500008046627,
+      "isVvip": true
     },
     {
       "name": "DESTINI",
@@ -4083,7 +4243,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.30960000097751617,
-      "sma200": 0.3352500008046627
+      "sma200": 0.3352500008046627,
+      "isVvip": true
     },
     {
       "name": "POLYMER",
@@ -4108,7 +4269,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.13590000092983245,
-      "sma200": 0.163219178988509
+      "sma200": 0.163219178988509,
+      "isVvip": true
     },
     {
       "name": "TELADAN",
@@ -4134,7 +4296,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.7853000068664551,
-      "sma200": 0.8355249974131584
+      "sma200": 0.8355249974131584,
+      "isVvip": true
     },
     {
       "name": "FOODIE",
@@ -4159,7 +4322,8 @@
       "isCombStock": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.3269000005722046,
-      "sma200": 0.3790559433140121
+      "sma200": 0.3790559433140121,
+      "isVvip": true
     },
     {
       "name": "INFOTEC",
@@ -4184,7 +4348,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.36089999973773956,
-      "sma200": 0.3864000000059605
+      "sma200": 0.3864000000059605,
+      "isVvip": true
     },
     {
       "name": "TECHSTORE",
@@ -4209,7 +4374,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.22049999833106995,
-      "sma200": 0.26082499712705615
+      "sma200": 0.26082499712705615,
+      "isVvip": true
     },
     {
       "name": "ORKIM",
@@ -4234,7 +4400,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.9023999941349029,
-      "sma200": 0.9779044056639952
+      "sma200": 0.9779044056639952,
+      "isVvip": true
     },
     {
       "name": "DLADY",
@@ -4260,7 +4427,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 32.717599868774414,
-      "sma200": 30.741399927139284
+      "sma200": 30.741399927139284,
+      "isVvip": true
     },
     {
       "name": "RADIUM",
@@ -4286,7 +4454,8 @@
       "isCombStock": true,
       "setupStyle": "STAIRCASE",
       "sma50": 0.5004999995231628,
-      "sma200": 0.5006499993801117
+      "sma200": 0.5006499993801117,
+      "isVvip": true
     },
     {
       "name": "HLIND",
@@ -4312,7 +4481,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 18.30919990539551,
-      "sma200": 16.47989999294281
+      "sma200": 16.47989999294281,
+      "isVvip": true
     },
     {
       "name": "SAG",
@@ -4337,7 +4507,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.7165000069141388,
-      "sma200": 0.7782000038027763
+      "sma200": 0.7782000038027763,
+      "isVvip": true
     },
     {
       "name": "PTRB",
@@ -4362,7 +4533,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.2936000019311905,
-      "sma200": 0.29520000249147416
+      "sma200": 0.29520000249147416,
+      "isVvip": true
     },
     {
       "name": "BMS",
@@ -4387,7 +4559,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.15020000129938127,
-      "sma200": 0.16478102376861295
+      "sma200": 0.16478102376861295,
+      "isVvip": true
     },
     {
       "name": "HSSBAKERY",
@@ -4413,7 +4586,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.17000000476837157,
-      "sma200": 0.17000000476837157
+      "sma200": 0.17000000476837157,
+      "isVvip": true
     },
     {
       "name": "BETA",
@@ -4439,7 +4613,8 @@
       "isCombStock": true,
       "setupStyle": "STAIRCASE",
       "sma50": 0.6092000043392182,
-      "sma200": 0.5230249987542629
+      "sma200": 0.5230249987542629,
+      "isVvip": true
     },
     {
       "name": "CLITE",
@@ -4464,7 +4639,8 @@
       "isCombStock": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.21829999893903732,
-      "sma200": 0.23374999925494194
+      "sma200": 0.23374999925494194,
+      "isVvip": true
     },
     {
       "name": "UMC",
@@ -4490,7 +4666,8 @@
       "isCombStock": true,
       "setupStyle": "STAIRCASE",
       "sma50": 5.887799968719483,
-      "sma200": 5.817250010967254
+      "sma200": 5.817250010967254,
+      "isVvip": true
     },
     {
       "name": "KEYFIELD",
@@ -4516,7 +4693,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 1.61260000705719,
-      "sma200": 1.538099998831749
+      "sma200": 1.538099998831749,
+      "isVvip": true
     },
     {
       "name": "ADNEX",
@@ -4541,7 +4719,8 @@
       "isCombStock": true,
       "setupStyle": "STAIRCASE",
       "sma50": 0.31240000009536745,
-      "sma200": 0.292887323549096
+      "sma200": 0.292887323549096,
+      "isVvip": true
     },
     {
       "name": "PPJACK",
@@ -4567,7 +4746,8 @@
       "isCombStock": true,
       "setupStyle": "STAIRCASE",
       "sma50": 0.9171000123023987,
-      "sma200": 0.9185500001907348
+      "sma200": 0.9185500001907348,
+      "isVvip": true
     },
     {
       "name": "WESTRVR",
@@ -4592,7 +4772,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.21479999870061875,
-      "sma200": 0.2181499992311001
+      "sma200": 0.2181499992311001,
+      "isVvip": true
     },
     {
       "name": "ICTZONE",
@@ -4618,7 +4799,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.17990000307559967,
-      "sma200": 0.17770000226795674
+      "sma200": 0.17770000226795674,
+      "isVvip": true
     },
     {
       "name": "AGMO",
@@ -4643,7 +4825,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.3508999991416931,
-      "sma200": 0.36142499923706056
+      "sma200": 0.36142499923706056,
+      "isVvip": true
     },
     {
       "name": "WINSTAR",
@@ -4669,7 +4852,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.5569000005722046,
-      "sma200": 0.5364499959349632
+      "sma200": 0.5364499959349632,
+      "isVvip": true
     },
     {
       "name": "MSB",
@@ -4694,7 +4878,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.07710000097751618,
-      "sma200": 0.0958750006183982
+      "sma200": 0.0958750006183982,
+      "isVvip": true
     },
     {
       "name": "NORTHERN SOLAR HOLDINGS",
@@ -4719,7 +4904,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.6429999995231629,
-      "sma200": 0.6361250014603138
+      "sma200": 0.6361250014603138,
+      "isVvip": true
     },
     {
       "name": "NORTHERN",
@@ -4744,7 +4930,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.6429999995231629,
-      "sma200": 0.6361250014603138
+      "sma200": 0.6361250014603138,
+      "isVvip": true
     },
     {
       "name": "MERSEC",
@@ -4769,7 +4956,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.26569999396801,
-      "sma200": 0.3018999986350536
+      "sma200": 0.3018999986350536,
+      "isVvip": true
     },
     {
       "name": "EPB",
@@ -4794,7 +4982,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.2771999996900558,
-      "sma200": 0.3512250003218651
+      "sma200": 0.3512250003218651,
+      "isVvip": true
     },
     {
       "name": "OPTIMAX",
@@ -4820,7 +5009,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.5377999949455261,
-      "sma200": 0.5852749958634377
+      "sma200": 0.5852749958634377,
+      "isVvip": true
     },
     {
       "name": "CRPMATE",
@@ -4846,7 +5036,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.19039999961853027,
-      "sma200": 0.18112499952316286
+      "sma200": 0.18112499952316286,
+      "isVvip": true
     },
     {
       "name": "AIMFLEX",
@@ -4872,7 +5063,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.08190000012516975,
-      "sma200": 0.08397500023245812
+      "sma200": 0.08397500023245812,
+      "isVvip": true
     },
     {
       "name": "KENERGY",
@@ -4897,7 +5089,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.5352999985218048,
-      "sma200": 0.5891749995946884
+      "sma200": 0.5891749995946884,
+      "isVvip": true
     },
     {
       "name": "PLINTAS",
@@ -4923,7 +5116,8 @@
       "isCombStock": true,
       "setupStyle": "STAIRCASE",
       "sma50": 0.9276000094413758,
-      "sma200": 0.953700001835823
+      "sma200": 0.953700001835823,
+      "isVvip": true
     },
     {
       "name": "AJI",
@@ -4948,7 +5142,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 1.0015000009536743,
-      "sma200": 1.0562499886751175
+      "sma200": 1.0562499886751175,
+      "isVvip": true
     },
     {
       "name": "DSS",
@@ -4973,7 +5168,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.25479999601840975,
-      "sma200": 0.25147499769926074
+      "sma200": 0.25147499769926074,
+      "isVvip": true
     },
     {
       "name": "ADB",
@@ -4998,7 +5194,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.6425999999046326,
-      "sma200": 0.7842999985814094
+      "sma200": 0.7842999985814094,
+      "isVvip": true
     },
     {
       "name": "FEYTECH",
@@ -5023,7 +5220,8 @@
       "isCombStock": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.22769999802112578,
-      "sma200": 0.2661749989539385
+      "sma200": 0.2661749989539385,
+      "isVvip": true
     },
     {
       "name": "UNIQUE",
@@ -5049,7 +5247,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.39489999651908875,
-      "sma200": 0.42354999989271164
+      "sma200": 0.42354999989271164,
+      "isVvip": true
     },
     {
       "name": "SKYWLD",
@@ -5074,7 +5273,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.41529999673366547,
-      "sma200": 0.4710249999165535
+      "sma200": 0.4710249999165535,
+      "isVvip": true
     },
     {
       "name": "SKYWORLD DEVELOPMENT",
@@ -5099,7 +5299,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.41529999673366547,
-      "sma200": 0.4710249999165535
+      "sma200": 0.4710249999165535,
+      "isVvip": true
     },
     {
       "name": "PARADIGM",
@@ -5125,7 +5326,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.9647999966144561,
-      "sma200": 0.9769499954581261
+      "sma200": 0.9769499954581261,
+      "isVvip": true
     },
     {
       "name": "EMCC",
@@ -5151,7 +5353,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.32649999737739566,
-      "sma200": 0.3497749987244606
+      "sma200": 0.3497749987244606,
+      "isVvip": true
     },
     {
       "name": "INSPACE CREATION BERHAD",
@@ -5176,7 +5379,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.2277142826999937,
-      "sma200": 0.2277142826999937
+      "sma200": 0.2277142826999937,
+      "isVvip": true
     },
     {
       "name": "INSPACE",
@@ -5201,7 +5405,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.2277142826999937,
-      "sma200": 0.2277142826999937
+      "sma200": 0.2277142826999937,
+      "isVvip": true
     },
     {
       "name": "YXPM",
@@ -5226,7 +5431,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.21099999755620957,
-      "sma200": 0.22042499892413617
+      "sma200": 0.22042499892413617,
+      "isVvip": true
     },
     {
       "name": "PEOPLE",
@@ -5251,7 +5457,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.24270000100135802,
-      "sma200": 0.23079999960958958
+      "sma200": 0.23079999960958958,
+      "isVvip": true
     },
     {
       "name": "HAWK",
@@ -5276,7 +5483,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.20459999918937682,
-      "sma200": 0.26499999783933165
+      "sma200": 0.26499999783933165,
+      "isVvip": true
     },
     {
       "name": "STEEL HAWK BERHAD",
@@ -5301,7 +5509,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.20459999918937682,
-      "sma200": 0.26499999783933165
+      "sma200": 0.26499999783933165,
+      "isVvip": true
     },
     {
       "name": "STEEL HAWK",
@@ -5326,7 +5535,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.20459999918937682,
-      "sma200": 0.26499999783933165
+      "sma200": 0.26499999783933165,
+      "isVvip": true
     },
     {
       "name": "SWIFT HAULAGE BERHAD",
@@ -5351,7 +5561,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.420100000500679,
-      "sma200": 0.39827499926090243
+      "sma200": 0.39827499926090243,
+      "isVvip": true
     },
     {
       "name": "SWIFT",
@@ -5376,7 +5587,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.420100000500679,
-      "sma200": 0.39827499926090243
+      "sma200": 0.39827499926090243,
+      "isVvip": true
     },
     {
       "name": "HOCKSOON",
@@ -5401,7 +5613,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.3495999997854233,
-      "sma200": 0.37357142796883214
+      "sma200": 0.37357142796883214,
+      "isVvip": true
     },
     {
       "name": "CENGILD",
@@ -5427,7 +5640,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.20929999709129332,
-      "sma200": 0.21979999862611294
+      "sma200": 0.21979999862611294,
+      "isVvip": true
     },
     {
       "name": "SORENTO",
@@ -5453,7 +5667,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.6467999923229217,
-      "sma200": 0.5504499956965446
+      "sma200": 0.5504499956965446,
+      "isVvip": true
     },
     {
       "name": "VINVEST",
@@ -5478,7 +5693,8 @@
       "isCombStock": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.022799999695271255,
-      "sma200": 0.028699999735690655
+      "sma200": 0.028699999735690655,
+      "isVvip": true
     },
     {
       "name": "HAILY",
@@ -5503,7 +5719,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.19089999854564665,
-      "sma200": 0.20702499873936175
+      "sma200": 0.20702499873936175,
+      "isVvip": true
     },
     {
       "name": "NADIBHD",
@@ -5529,7 +5746,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.35479999959468844,
-      "sma200": 0.39907499969005583
+      "sma200": 0.39907499969005583,
+      "isVvip": true
     },
     {
       "name": "AZAM JAYA BERHAD",
@@ -5555,7 +5773,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 1.0133999872207642,
-      "sma200": 1.0337249845266343
+      "sma200": 1.0337249845266343,
+      "isVvip": true
     },
     {
       "name": "AZAMJAYA",
@@ -5581,7 +5800,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 1.0133999872207642,
-      "sma200": 1.0337249845266343
+      "sma200": 1.0337249845266343,
+      "isVvip": true
     },
     {
       "name": "PGLOBAL",
@@ -5607,7 +5827,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.46939999997615817,
-      "sma200": 0.4666999991238117
+      "sma200": 0.4666999991238117,
+      "isVvip": true
     },
     {
       "name": "HONGSENG",
@@ -5632,7 +5853,8 @@
       "isCombStock": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.008999999798834323,
-      "sma200": 0.008049999820068479
+      "sma200": 0.008049999820068479,
+      "isVvip": true
     },
     {
       "name": "KHB",
@@ -5657,7 +5879,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.08550000086426734,
-      "sma200": 0.0990250001475215
+      "sma200": 0.0990250001475215,
+      "isVvip": true
     },
     {
       "name": "GOLD LI HOLDINGS BERHAD",
@@ -5682,7 +5905,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.10913793023290305,
-      "sma200": 0.10913793023290305
+      "sma200": 0.10913793023290305,
+      "isVvip": true
     },
     {
       "name": "GOLDLI",
@@ -5707,7 +5931,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.10913793023290305,
-      "sma200": 0.10913793023290305
+      "sma200": 0.10913793023290305,
+      "isVvip": true
     },
     {
       "name": "SENFONG",
@@ -5732,7 +5957,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.6729000139236451,
-      "sma200": 0.7037750020623207
+      "sma200": 0.7037750020623207,
+      "isVvip": true
     },
     {
       "name": "YENHER",
@@ -5757,7 +5983,8 @@
       "isCombStock": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.7714999961853027,
-      "sma200": 0.792649998664856
+      "sma200": 0.792649998664856,
+      "isVvip": true
     },
     {
       "name": "PMIBHD",
@@ -5782,7 +6009,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.22539999961853027,
-      "sma200": 0.2178749989718199
+      "sma200": 0.2178749989718199,
+      "isVvip": true
     },
     {
       "name": "RTECH",
@@ -5807,7 +6035,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.1851000025868416,
-      "sma200": 0.1928750005364418
+      "sma200": 0.1928750005364418,
+      "isVvip": true
     },
     {
       "name": "RT",
@@ -5832,7 +6061,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.1851000025868416,
-      "sma200": 0.1928750005364418
+      "sma200": 0.1928750005364418,
+      "isVvip": true
     },
     {
       "name": "MTAG",
@@ -5857,7 +6087,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.23339999943971634,
-      "sma200": 0.25137499928474427
+      "sma200": 0.25137499928474427,
+      "isVvip": true
     },
     {
       "name": "ORGABIO",
@@ -5882,7 +6113,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.2959000027179718,
-      "sma200": 0.2957500006258488
+      "sma200": 0.2957500006258488,
+      "isVvip": true
     },
     {
       "name": "CKI",
@@ -5907,7 +6139,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.4083000022172928,
-      "sma200": 0.5675000001490116
+      "sma200": 0.5675000001490116,
+      "isVvip": true
     },
     {
       "name": "MOBILIA",
@@ -5932,7 +6165,8 @@
       "isCombStock": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.09140000134706497,
-      "sma200": 0.09522500026971102
+      "sma200": 0.09522500026971102,
+      "isVvip": true
     },
     {
       "name": "KJTS",
@@ -5957,7 +6191,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.8059000015258789,
-      "sma200": 1.1121249997615814
+      "sma200": 1.1121249997615814,
+      "isVvip": true
     },
     {
       "name": "ZANTAT",
@@ -5982,7 +6217,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.16600000023841857,
-      "sma200": 0.20774999916553497
+      "sma200": 0.20774999916553497,
+      "isVvip": true
     },
     {
       "name": "VTC",
@@ -6008,7 +6244,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.24129999727010726,
-      "sma200": 0.24052499867975713
+      "sma200": 0.24052499867975713,
+      "isVvip": true
     },
     {
       "name": "TSA",
@@ -6033,7 +6270,8 @@
       "isCombStock": true,
       "setupStyle": "STAIRCASE",
       "sma50": 0.8602000117301941,
-      "sma200": 0.7975500074028968
+      "sma200": 0.7975500074028968,
+      "isVvip": true
     },
     {
       "name": "GLXT",
@@ -6058,7 +6296,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.20809999942779542,
-      "sma200": 0.21042499877512455
+      "sma200": 0.21042499877512455,
+      "isVvip": true
     },
     {
       "name": "PANDA",
@@ -6083,7 +6322,8 @@
       "isCombStock": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.2004999977350235,
-      "sma200": 0.22504999831318856
+      "sma200": 0.22504999831318856,
+      "isVvip": true
     },
     {
       "name": "TOPVISN",
@@ -6108,7 +6348,8 @@
       "isCombStock": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.16210000067949296,
-      "sma200": 0.17877499975264072
+      "sma200": 0.17877499975264072,
+      "isVvip": true
     },
     {
       "name": "SUMI",
@@ -6133,7 +6374,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.09640000060200692,
-      "sma200": 0.10669999994337559
+      "sma200": 0.10669999994337559,
+      "isVvip": true
     },
     {
       "name": "BWYS",
@@ -6158,7 +6400,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.1704000014066696,
-      "sma200": 0.19612499937415123
+      "sma200": 0.19612499937415123,
+      "isVvip": true
     },
     {
       "name": "SUPREME CONSOLIDATED RESOURCES BERHAD",
@@ -6183,7 +6426,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.19889999955892562,
-      "sma200": 0.2082499985396862
+      "sma200": 0.2082499985396862,
+      "isVvip": true
     },
     {
       "name": "SUPREME",
@@ -6208,7 +6452,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.19889999955892562,
-      "sma200": 0.2082499985396862
+      "sma200": 0.2082499985396862,
+      "isVvip": true
     },
     {
       "name": "CARLORINO",
@@ -6233,7 +6478,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.20069999784231185,
-      "sma200": 0.2359499989449978
+      "sma200": 0.2359499989449978,
+      "isVvip": true
     },
     {
       "name": "RL",
@@ -6258,7 +6504,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.20069999784231185,
-      "sma200": 0.2359499989449978
+      "sma200": 0.2359499989449978,
+      "isVvip": true
     },
     {
       "name": "SYNERGY",
@@ -6283,7 +6530,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.1994999998807907,
-      "sma200": 0.2835750002413988
+      "sma200": 0.2835750002413988,
+      "isVvip": true
     },
     {
       "name": "SALIRAN GROUP BERHAD",
@@ -6309,7 +6557,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.21110000014305114,
-      "sma200": 0.21597499877214432
+      "sma200": 0.21597499877214432,
+      "isVvip": true
     },
     {
       "name": "SALIRAN",
@@ -6335,7 +6584,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.21110000014305114,
-      "sma200": 0.21597499877214432
+      "sma200": 0.21597499877214432,
+      "isVvip": true
     },
     {
       "name": "PLYTEC",
@@ -6360,7 +6610,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.16910000175237655,
-      "sma200": 0.1698250000923872
+      "sma200": 0.1698250000923872,
+      "isVvip": true
     },
     {
       "name": "OGM",
@@ -6385,7 +6636,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.13169999778270722,
-      "sma200": 0.13844660112580048
+      "sma200": 0.13844660112580048,
+      "isVvip": true
     },
     {
       "name": "PSP",
@@ -6410,7 +6662,8 @@
       "isCombStock": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.13099999949336052,
-      "sma200": 0.13140287732692074
+      "sma200": 0.13140287732692074,
+      "isVvip": true
     },
     {
       "name": "JSSOLAR",
@@ -6435,7 +6688,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.2078999972343445,
-      "sma200": 0.25323684144961206
+      "sma200": 0.25323684144961206,
+      "isVvip": true
     },
     {
       "name": "SINKUNG",
@@ -6460,7 +6714,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.08049999937415123,
-      "sma200": 0.09297500010579825
+      "sma200": 0.09297500010579825,
+      "isVvip": true
     },
     {
       "name": "MINOX",
@@ -6485,7 +6740,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.17780000120401382,
-      "sma200": 0.18582500129938126
+      "sma200": 0.18582500129938126,
+      "isVvip": true
     },
     {
       "name": "VERDANT",
@@ -6510,7 +6766,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.20159999817609786,
-      "sma200": 0.2329705874709522
+      "sma200": 0.2329705874709522,
+      "isVvip": true
     },
     {
       "name": "COLFORM",
@@ -6535,7 +6792,8 @@
       "isCombStock": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.25169999718666075,
-      "sma200": 0.28822499841451643
+      "sma200": 0.28822499841451643,
+      "isVvip": true
     },
     {
       "name": "FLEXI",
@@ -6560,7 +6818,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.13179999947547913,
-      "sma200": 0.13212499778717757
+      "sma200": 0.13212499778717757,
+      "isVvip": true
     },
     {
       "name": "DCHCARE",
@@ -6585,7 +6844,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.10889999940991402,
-      "sma200": 0.11989999957382678
+      "sma200": 0.11989999957382678,
+      "isVvip": true
     },
     {
       "name": "KUCINGKO",
@@ -6610,7 +6870,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.0807000008225441,
-      "sma200": 0.09334999974817038
+      "sma200": 0.09334999974817038,
+      "isVvip": true
     },
     {
       "name": "LEFORM",
@@ -6635,7 +6896,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.16830000281333923,
-      "sma200": 0.16512500129640104
+      "sma200": 0.16512500129640104,
+      "isVvip": true
     },
     {
       "name": "TOPMIX",
@@ -6661,7 +6923,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.452299998998642,
-      "sma200": 0.46620000079274176
+      "sma200": 0.46620000079274176,
+      "isVvip": true
     },
     {
       "name": "GIIB",
@@ -6686,7 +6949,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.1394000008702278,
-      "sma200": 0.15672500167042017
+      "sma200": 0.15672500167042017,
+      "isVvip": true
     },
     {
       "name": "EIB",
@@ -6711,7 +6975,8 @@
       "isCombStock": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.15340000092983247,
-      "sma200": 0.15457500021904708
+      "sma200": 0.15457500021904708,
+      "isVvip": true
     },
     {
       "name": "HPMT",
@@ -6736,7 +7001,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.1744000005722046,
-      "sma200": 0.1910249987244606
+      "sma200": 0.1910249987244606,
+      "isVvip": true
     },
     {
       "name": "MSTGOLF",
@@ -6761,7 +7027,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.1559000015258789,
-      "sma200": 0.18162499986588954
+      "sma200": 0.18162499986588954,
+      "isVvip": true
     },
     {
       "name": "XPB",
@@ -6786,7 +7053,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.14549999862909316,
-      "sma200": 0.16373015845578814
+      "sma200": 0.16373015845578814,
+      "isVvip": true
     },
     {
       "name": "VOLCANO",
@@ -6811,7 +7079,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.28369999945163726,
-      "sma200": 0.36409999780356883
+      "sma200": 0.36409999780356883,
+      "isVvip": true
     },
     {
       "name": "HPPHB",
@@ -6836,7 +7105,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.3021000027656555,
-      "sma200": 0.31070000037550927
+      "sma200": 0.31070000037550927,
+      "isVvip": true
     },
     {
       "name": "SBS",
@@ -6861,7 +7131,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.1220999988913536,
-      "sma200": 0.13643518462777138
+      "sma200": 0.13643518462777138,
+      "isVvip": true
     },
     {
       "name": "MASTER TEC GROUP BERHAD",
@@ -6887,7 +7158,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 1.0153999853134155,
-      "sma200": 1.0826999980211258
+      "sma200": 1.0826999980211258,
+      "isVvip": true
     },
     {
       "name": "MTEC",
@@ -6913,7 +7185,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 1.0153999853134155,
-      "sma200": 1.0826999980211258
+      "sma200": 1.0826999980211258,
+      "isVvip": true
     },
     {
       "name": "MASTER TEC GROUP",
@@ -6939,7 +7212,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 1.0153999853134155,
-      "sma200": 1.0826999980211258
+      "sma200": 1.0826999980211258,
+      "isVvip": true
     },
     {
       "name": "TJSETIA",
@@ -6964,7 +7238,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.20699999779462813,
-      "sma200": 0.20319999873638153
+      "sma200": 0.20319999873638153,
+      "isVvip": true
     },
     {
       "name": "VANZO",
@@ -6989,7 +7264,8 @@
       "isCombStock": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.12899999752640723,
-      "sma200": 0.1406250000372529
+      "sma200": 0.1406250000372529,
+      "isVvip": true
     },
     {
       "name": "SPRING",
@@ -7014,7 +7290,8 @@
       "isCombStock": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.11440000057220459,
-      "sma200": 0.12697500061243772
+      "sma200": 0.12697500061243772,
+      "isVvip": true
     },
     {
       "name": "DENGKIL",
@@ -7039,7 +7316,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.1380000001192093,
-      "sma200": 0.17452500030398369
+      "sma200": 0.17452500030398369,
+      "isVvip": true
     },
     {
       "name": "WAWASAN DENGKIL HOLDINGS",
@@ -7064,7 +7342,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.1380000001192093,
-      "sma200": 0.17452500030398369
+      "sma200": 0.17452500030398369,
+      "isVvip": true
     },
     {
       "name": "AGX",
@@ -7089,7 +7368,8 @@
       "isCombStock": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.41930000245571136,
-      "sma200": 0.4706749980151653
+      "sma200": 0.4706749980151653,
+      "isVvip": true
     },
     {
       "name": "OCEAN FRESH BERHAD",
@@ -7114,7 +7394,8 @@
       "isCombStock": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.14399999991059304,
-      "sma200": 0.19029999893158675
+      "sma200": 0.19029999893158675,
+      "isVvip": true
     },
     {
       "name": "OFB",
@@ -7139,7 +7420,8 @@
       "isCombStock": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.14399999991059304,
-      "sma200": 0.19029999893158675
+      "sma200": 0.19029999893158675,
+      "isVvip": true
     },
     {
       "name": "OCEAN FRESH",
@@ -7164,7 +7446,8 @@
       "isCombStock": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.14399999991059304,
-      "sma200": 0.19029999893158675
+      "sma200": 0.19029999893158675,
+      "isVvip": true
     },
     {
       "name": "ALPHA IVF GROUP",
@@ -7189,7 +7472,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.10149999991059304,
-      "sma200": 0.10232499986886978
+      "sma200": 0.10232499986886978,
+      "isVvip": true
     },
     {
       "name": "L&PBHD",
@@ -7214,7 +7498,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.10149999991059304,
-      "sma200": 0.10232499986886978
+      "sma200": 0.10232499986886978,
+      "isVvip": true
     },
     {
       "name": "ALPHA",
@@ -7239,7 +7524,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.10149999991059304,
-      "sma200": 0.10232499986886978
+      "sma200": 0.10232499986886978,
+      "isVvip": true
     },
     {
       "name": "FAMIERA",
@@ -7264,7 +7550,8 @@
       "isCombStock": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.21549999773502349,
-      "sma200": 0.21483870812000766
+      "sma200": 0.21483870812000766,
+      "isVvip": true
     },
     {
       "name": "EFRAME",
@@ -7289,7 +7576,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.2650999954342842,
-      "sma200": 0.33537499852478503
+      "sma200": 0.33537499852478503,
+      "isVvip": true
     },
     {
       "name": "A1AKK",
@@ -7314,7 +7602,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.164800001680851,
-      "sma200": 0.20257500030100345
+      "sma200": 0.20257500030100345,
+      "isVvip": true
     },
     {
       "name": "GEOHAN",
@@ -7339,7 +7628,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.2997999972105026,
-      "sma200": 0.3549275339945503
+      "sma200": 0.3549275339945503,
+      "isVvip": true
     },
     {
       "name": "PMW",
@@ -7364,7 +7654,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.2632999980449677,
-      "sma200": 0.28387416997887444
+      "sma200": 0.28387416997887444,
+      "isVvip": true
     },
     {
       "name": "INNATURE",
@@ -7389,7 +7680,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.17500000298023224,
-      "sma200": 0.17752500206232072
+      "sma200": 0.17752500206232072,
+      "isVvip": true
     },
     {
       "name": "SBH",
@@ -7414,7 +7706,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.14919999837875367,
-      "sma200": 0.1783499988168478
+      "sma200": 0.1783499988168478,
+      "isVvip": true
     },
     {
       "name": "AGRICOR",
@@ -7439,7 +7732,8 @@
       "isCombStock": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.39050000011920927,
-      "sma200": 0.4303499998152256
+      "sma200": 0.4303499998152256,
+      "isVvip": true
     },
     {
       "name": "DPIH",
@@ -7464,7 +7758,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.10399999856948852,
-      "sma200": 0.10592499889433384
+      "sma200": 0.10592499889433384,
+      "isVvip": true
     },
     {
       "name": "ANEKA",
@@ -7489,7 +7784,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.11760000020265579,
-      "sma200": 0.12912499997764826
+      "sma200": 0.12912499997764826,
+      "isVvip": true
     },
     {
       "name": "CAMAROE",
@@ -7514,7 +7810,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.0768000017106533,
-      "sma200": 0.10379781451870183
+      "sma200": 0.10379781451870183,
+      "isVvip": true
     },
     {
       "name": "CREST",
@@ -7539,7 +7836,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.4737999975681305,
-      "sma200": 0.4946999971568584
+      "sma200": 0.4946999971568584,
+      "isVvip": true
     },
     {
       "name": "OBHB",
@@ -7564,7 +7862,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.2109999990463257,
-      "sma200": 0.17872500114142895
+      "sma200": 0.17872500114142895,
+      "isVvip": true
     },
     {
       "name": "KGW",
@@ -7589,7 +7888,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.10209999918937683,
-      "sma200": 0.1319750003144145
+      "sma200": 0.1319750003144145,
+      "isVvip": true
     },
     {
       "name": "TCS",
@@ -7614,7 +7914,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.08630000099539757,
-      "sma200": 0.10389999985694885
+      "sma200": 0.10389999985694885,
+      "isVvip": true
     },
     {
       "name": "DAY3",
@@ -7639,7 +7940,8 @@
       "isCombStock": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.12389999881386757,
-      "sma200": 0.15332500141113997
+      "sma200": 0.15332500141113997,
+      "isVvip": true
     },
     {
       "name": "WTEC",
@@ -7664,7 +7966,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.11939999878406525,
-      "sma200": 0.14475000012665987
+      "sma200": 0.14475000012665987,
+      "isVvip": true
     },
     {
       "name": "SCB",
@@ -7689,7 +7992,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.009999999776482582,
-      "sma200": 0.009249999793246389
+      "sma200": 0.009249999793246389,
+      "isVvip": true
     },
     {
       "name": "TASHIN",
@@ -7714,7 +8018,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.205199998319149,
-      "sma200": 0.2112249980866909
+      "sma200": 0.2112249980866909,
+      "isVvip": true
     },
     {
       "name": "ACO",
@@ -7739,7 +8044,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.16259999990463256,
-      "sma200": 0.18199999868869782
+      "sma200": 0.18199999868869782,
+      "isVvip": true
     },
     {
       "name": "KHJB",
@@ -7764,7 +8070,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.10329999893903732,
-      "sma200": 0.11634999897331
+      "sma200": 0.11634999897331,
+      "isVvip": true
     },
     {
       "name": "METRO",
@@ -7789,7 +8096,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.007799999825656414,
-      "sma200": 0.009474999788217246
+      "sma200": 0.009474999788217246,
+      "isVvip": true
     },
     {
       "name": "UMSINT",
@@ -7814,7 +8122,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.7705999946594239,
-      "sma200": 0.767449999153614
+      "sma200": 0.767449999153614,
+      "isVvip": true
     },
     {
       "name": "BURSA",
@@ -7840,7 +8149,8 @@
       "isCombStock": false,
       "setupStyle": "STAIRCASE",
       "sma50": 1707.8068017578125,
-      "sma200": 1675.3109533691406
+      "sma200": 1675.3109533691406,
+      "isVvip": true
     },
     {
       "name": "FPHB",
@@ -7865,7 +8175,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.3224000006914139,
-      "sma200": 0.378925000578165
+      "sma200": 0.378925000578165,
+      "isVvip": true
     },
     {
       "name": "UNITRADE INDUSTRIES",
@@ -7890,7 +8201,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.23879999816417694,
-      "sma200": 0.24607499830424787
+      "sma200": 0.24607499830424787,
+      "isVvip": true
     },
     {
       "name": "CEKD",
@@ -7915,7 +8227,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.28989999830722807,
-      "sma200": 0.3129000008106232
+      "sma200": 0.3129000008106232,
+      "isVvip": true
     },
     {
       "name": "FARM PRICE",
@@ -7940,7 +8253,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.3224000006914139,
-      "sma200": 0.378925000578165
+      "sma200": 0.378925000578165,
+      "isVvip": true
     },
     {
       "name": "MBN",
@@ -7965,7 +8279,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.0947000002861023,
-      "sma200": 0.10474999886006117
+      "sma200": 0.10474999886006117,
+      "isVvip": true
     },
     {
       "name": "UNITRAD",
@@ -7990,7 +8305,8 @@
       "isCombStock": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.23879999816417694,
-      "sma200": 0.24607499830424787
+      "sma200": 0.24607499830424787,
+      "isVvip": true
     }
   ],
   "topGainers": [

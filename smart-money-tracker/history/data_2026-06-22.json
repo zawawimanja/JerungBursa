@@ -25,7 +25,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 2.8559091091156006,
-      "sma200": 2.8559091091156006
+      "sma200": 2.8559091091156006,
+      "isVvip": true
     },
     {
       "name": "ZETRIX",
@@ -51,7 +52,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.8254000008106231,
-      "sma200": 0.8201500025391578
+      "sma200": 0.8201500025391578,
+      "isVvip": true
     },
     {
       "name": "AAX",
@@ -96,7 +98,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 5.446999988555908,
-      "sma200": 4.2904999995231625
+      "sma200": 4.2904999995231625,
+      "isVvip": true
     },
     {
       "name": "DNEX",
@@ -122,7 +125,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "STAIRCASE",
       "sma50": 0.331700000166893,
-      "sma200": 0.2946749986708164
+      "sma200": 0.2946749986708164,
+      "isVvip": true
     },
     {
       "name": "OPPSTAR",
@@ -172,7 +176,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.14100000143051147,
-      "sma200": 0.15767500188201666
+      "sma200": 0.15767500188201666,
+      "isVvip": true
     },
     {
       "name": "NESTLE",
@@ -192,7 +197,8 @@
       "lowTightness": 1.19,
       "touchCount": 24,
       "isConsolidation": true,
-      "floorLow": 95
+      "floorLow": 95,
+      "isVvip": true
     },
     {
       "name": "SUM",
@@ -268,7 +274,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 1.401900001168251,
-      "sma200": 1.2126999984681606
+      "sma200": 1.2126999984681606,
+      "isVvip": true
     },
     {
       "name": "SKPRES",
@@ -293,7 +300,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.3682999986410141,
-      "sma200": 0.5911749987304211
+      "sma200": 0.5911749987304211,
+      "isVvip": true
     },
     {
       "name": "TMK",
@@ -344,7 +352,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "STAIRCASE",
       "sma50": 42.15680004119873,
-      "sma200": 33.625000104904174
+      "sma200": 33.625000104904174,
+      "isVvip": true
     },
     {
       "name": "EIPOWER",
@@ -395,7 +404,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.7770000004768371,
-      "sma200": 0.9544749990105629
+      "sma200": 0.9544749990105629,
+      "isVvip": true
     },
     {
       "name": "PENTECH",
@@ -421,7 +431,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.30999999642372134,
-      "sma200": 0.30999999642372134
+      "sma200": 0.30999999642372134,
+      "isVvip": true
     },
     {
       "name": "PPB",
@@ -447,7 +458,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 10.621000118255616,
-      "sma200": 10.823250050544738
+      "sma200": 10.823250050544738,
+      "isVvip": true
     },
     {
       "name": "SAM",
@@ -498,7 +510,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 6.9479999828338626,
-      "sma200": 7.038849995136261
+      "sma200": 7.038849995136261,
+      "isVvip": true
     },
     {
       "name": "CBHB",

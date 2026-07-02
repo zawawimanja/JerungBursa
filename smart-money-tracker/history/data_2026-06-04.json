@@ -24,7 +24,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "STAIRCASE",
       "sma50": 8.446800050735474,
-      "sma200": 7.12180000782013
+      "sma200": 7.12180000782013,
+      "isVvip": true
     },
     {
       "name": "SDG",
@@ -96,7 +97,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.8125000011920929,
-      "sma200": 0.8244000020623207
+      "sma200": 0.8244000020623207,
+      "isVvip": true
     },
     {
       "name": "PETDAG",
@@ -120,7 +122,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 20.20519989013672,
-      "sma200": 21.169599981307982
+      "sma200": 21.169599981307982,
+      "isVvip": true
     },
     {
       "name": "NESTLE",
@@ -131,7 +134,8 @@
       "turnover": 61618736,
       "volume": 647800,
       "signal": "buy",
-      "reason": "Momentum Positif & Duit Jerung Masuk"
+      "reason": "Momentum Positif & Duit Jerung Masuk",
+      "isVvip": true
     },
     {
       "name": "PHARMA",
@@ -142,7 +146,8 @@
       "turnover": 42150572,
       "volume": 145346800,
       "signal": "buy",
-      "reason": "Momentum Positif & Duit Jerung Masuk"
+      "reason": "Momentum Positif & Duit Jerung Masuk",
+      "isVvip": true
     },
     {
       "name": "VS",
@@ -166,7 +171,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.20429999709129334,
-      "sma200": 0.42259999841451645
+      "sma200": 0.42259999841451645,
+      "isVvip": true
     },
     {
       "name": "CTOS",
@@ -238,7 +244,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 31.99720001220703,
-      "sma200": 28.540800008773804
+      "sma200": 28.540800008773804,
+      "isVvip": true
     },
     {
       "name": "SKPRES",
@@ -297,7 +304,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.1439000016450882,
-      "sma200": 0.1598000019416213
+      "sma200": 0.1598000019416213,
+      "isVvip": true
     },
     {
       "name": "KLK",
@@ -321,7 +329,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 20.931599922180176,
-      "sma200": 20.252900066375734
+      "sma200": 20.252900066375734,
+      "isVvip": true
     },
     {
       "name": "UWC",
@@ -356,7 +365,8 @@
       "turnover": 12410202,
       "volume": 2569400,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "Jerung Buang / Mendatar",
+      "isVvip": true
     },
     {
       "name": "F&N",
@@ -380,7 +390,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 29.598799896240234,
-      "sma200": 31.053899927139284
+      "sma200": 31.053899927139284,
+      "isVvip": true
     },
     {
       "name": "HSI-PWRP",
@@ -426,7 +437,8 @@
       "turnover": 4835808,
       "volume": 1042200,
       "signal": "buy",
-      "reason": "Momentum Positif & Duit Jerung Masuk"
+      "reason": "Momentum Positif & Duit Jerung Masuk",
+      "isVvip": true
     },
     {
       "name": "HHRG",
@@ -450,7 +462,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.07169999912381173,
-      "sma200": 0.07772499967366457
+      "sma200": 0.07772499967366457,
+      "isVvip": true
     }
   ],
   "topGainers": [

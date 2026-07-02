@@ -25,7 +25,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 8.61440004348755,
-      "sma200": 7.264600005149841
+      "sma200": 7.264600005149841,
+      "isVvip": true
     },
     {
       "name": "ZETRIX",
@@ -50,7 +51,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.8241000008583069,
-      "sma200": 0.8211000025272369
+      "sma200": 0.8211000025272369,
+      "isVvip": true
     },
     {
       "name": "SUM",
@@ -89,7 +91,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.7764000022411346,
-      "sma200": 0.6545750024914742
+      "sma200": 0.6545750024914742,
+      "isVvip": true
     },
     {
       "name": "AAX",
@@ -126,7 +129,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 1.4617000010609627,
-      "sma200": 1.2185999987274407
+      "sma200": 1.2185999987274407,
+      "isVvip": true
     },
     {
       "name": "SKYCHIP",
@@ -151,7 +155,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "EXPLOSIVE",
       "sma50": 2.8190000295639037,
-      "sma200": 2.8190000295639037
+      "sma200": 2.8190000295639037,
+      "isVvip": true
     },
     {
       "name": "PARAGON",
@@ -288,7 +293,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "STAIRCASE",
       "sma50": 41.35,
-      "sma200": 33.40120009422302
+      "sma200": 33.40120009422302,
+      "isVvip": true
     },
     {
       "name": "NATGATE",
@@ -313,7 +319,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.7761000001430511,
-      "sma200": 0.9590999993681908
+      "sma200": 0.9590999993681908,
+      "isVvip": true
     },
     {
       "name": "NESTLE",
@@ -325,7 +332,8 @@
       "turnover": 12977096,
       "volume": 136400,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "Jerung Buang / Mendatar",
+      "isVvip": true
     },
     {
       "name": "UTDPLT",
@@ -350,7 +358,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 31.63720012664795,
-      "sma200": 28.975700006484985
+      "sma200": 28.975700006484985,
+      "isVvip": true
     },
     {
       "name": "HLIND",
@@ -425,7 +434,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.14160000145435334,
-      "sma200": 0.15807500194758176
+      "sma200": 0.15807500194758176,
+      "isVvip": true
     }
   ],
   "topGainers": [

@@ -622,6 +622,38 @@ async function main() {
     // Susun topGainers mengikut peratus kenaikan tertinggi
     topGainers.sort((a, b) => b.changePct - a.changePct);
     
+    // Tag VVIP (appeared in previous history file)
+    try {
+        const histDir = path.join(__dirname, 'history');
+        if (fs.existsSync(histDir)) {
+            const histFiles = fs.readdirSync(histDir)
+                .filter(f => f.startsWith('data_') && f.endsWith('.json'))
+                .sort();
+            
+            const todayStr = new Date().toISOString().split('T')[0];
+            const prevFiles = histFiles.filter(f => f < `data_${todayStr}.json`);
+            if (prevFiles.length > 0) {
+                const prevFile = prevFiles[prevFiles.length - 1];
+                const prevFilePath = path.join(histDir, prevFile);
+                console.log(`\n🔍 Membandingkan dengan data sejarah semalam: ${prevFile} untuk tagging VVIP...`);
+                const prevData = JSON.parse(fs.readFileSync(prevFilePath, 'utf8'));
+                const prevTopVolume = prevData.topVolume || [];
+                const prevNames = new Set(prevTopVolume.map(item => item.name.toUpperCase()));
+                
+                let vvipCount = 0;
+                processedData.forEach(item => {
+                    if (prevNames.has(item.name.toUpperCase())) {
+                        item.isVvip = true;
+                        vvipCount++;
+                    }
+                });
+                console.log(`✅ Berjaya tag ${vvipCount} kaunter sebagai VVIP (Momentum Berterusan).`);
+            }
+        }
+    } catch (err) {
+        console.error("Warning checking VVIP:", err.message);
+    }
+    
     const output = {
         lastUpdated: new Date().toISOString(),
         source: 'klse.i3investor.com',

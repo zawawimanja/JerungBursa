@@ -24,7 +24,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 11.164400043487548,
-      "sma200": 10.694999985694885
+      "sma200": 10.694999985694885,
+      "isVvip": true
     },
     {
       "name": "NESTLE",
@@ -35,7 +36,8 @@
       "turnover": 644662200,
       "volume": 7084200,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "Jerung Buang / Mendatar",
+      "isVvip": true
     },
     {
       "name": "AXIATA",
@@ -59,7 +61,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 2.211800007820129,
-      "sma200": 2.45364999294281
+      "sma200": 2.45364999294281,
+      "isVvip": true
     },
     {
       "name": "YTL",
@@ -83,7 +86,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "STAIRCASE",
       "sma50": 3.7578000164031984,
-      "sma200": 3.6485499966144563
+      "sma200": 3.6485499966144563,
+      "isVvip": true
     },
     {
       "name": "QL",
@@ -107,7 +111,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 3.730399990081787,
-      "sma200": 4.02320001244545
+      "sma200": 4.02320001244545,
+      "isVvip": true
     },
     {
       "name": "PBBANK",
@@ -118,7 +123,8 @@
       "turnover": 511509768,
       "volume": 108600800,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "Jerung Buang / Mendatar",
+      "isVvip": true
     },
     {
       "name": "PETDAG",
@@ -142,7 +148,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 20.326399879455565,
-      "sma200": 21.211399974823
+      "sma200": 21.211399974823,
+      "isVvip": true
     },
     {
       "name": "MRDIY",
@@ -166,7 +173,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 1.6152000045776367,
-      "sma200": 1.630949998497963
+      "sma200": 1.630949998497963,
+      "isVvip": true
     },
     {
       "name": "NATGATE",
@@ -190,7 +198,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.7496000027656555,
-      "sma200": 0.9879750001430512
+      "sma200": 0.9879750001430512,
+      "isVvip": true
     },
     {
       "name": "AMBANK",
@@ -201,7 +210,8 @@
       "turnover": 128033784.00000001,
       "volume": 19758300,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "Jerung Buang / Mendatar",
+      "isVvip": true
     },
     {
       "name": "HLBANK",
@@ -225,7 +235,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 22.108399963378908,
-      "sma200": 21.87589994430542
+      "sma200": 21.87589994430542,
+      "isVvip": true
     },
     {
       "name": "SUNMED",
@@ -249,7 +260,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 1.9043999934196472,
-      "sma200": 1.9032692244419684
+      "sma200": 1.9032692244419684,
+      "isVvip": true
     },
     {
       "name": "PCHEM",
@@ -273,7 +285,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 5.617600021362304,
-      "sma200": 4.222200005054474
+      "sma200": 4.222200005054474,
+      "isVvip": true
     },
     {
       "name": "AAX",
@@ -284,7 +297,8 @@
       "turnover": 72486600,
       "volume": 60405500,
       "signal": "buy",
-      "reason": "Momentum Positif & Duit Jerung Masuk"
+      "reason": "Momentum Positif & Duit Jerung Masuk",
+      "isVvip": true
     },
     {
       "name": "ZETRIX",
@@ -308,7 +322,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.8099000024795532,
-      "sma200": 0.8250000020861625
+      "sma200": 0.8250000020861625,
+      "isVvip": true
     },
     {
       "name": "KLCC",
@@ -332,7 +347,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "STAIRCASE",
       "sma50": 9.07679998397827,
-      "sma200": 8.929900007247925
+      "sma200": 8.929900007247925,
+      "isVvip": true
     },
     {
       "name": "UNISEM",
@@ -356,7 +372,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 3.475600004196167,
-      "sma200": 3.1858000004291536
+      "sma200": 3.1858000004291536,
+      "isVvip": true
     },
     {
       "name": "KLK",
@@ -380,7 +397,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 20.93239990234375,
-      "sma200": 20.247600059509278
+      "sma200": 20.247600059509278,
+      "isVvip": true
     },
     {
       "name": "UTDPLT",
@@ -404,7 +422,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 32.14159999847412,
-      "sma200": 28.452600011825563
+      "sma200": 28.452600011825563,
+      "isVvip": true
     },
     {
       "name": "ITMAX",
@@ -428,7 +447,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 4.748399972915649,
-      "sma200": 4.667749981880188
+      "sma200": 4.667749981880188,
+      "isVvip": true
     },
     {
       "name": "MCEMENT",
@@ -452,7 +472,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 6.805799989700318,
-      "sma200": 6.94074999332428
+      "sma200": 6.94074999332428,
+      "isVvip": true
     },
     {
       "name": "CARLSBG",
@@ -476,7 +497,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 16.83999988555908,
-      "sma200": 16.944399938583373
+      "sma200": 16.944399938583373,
+      "isVvip": true
     },
     {
       "name": "BURSA",
@@ -500,7 +522,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "STAIRCASE",
       "sma50": 1711.8574047851562,
-      "sma200": 1665.8813513183593
+      "sma200": 1665.8813513183593,
+      "isVvip": true
     },
     {
       "name": "HLIND",
@@ -524,7 +547,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "STAIRCASE",
       "sma50": 17.64759994506836,
-      "sma200": 15.961100001335144
+      "sma200": 15.961100001335144,
+      "isVvip": true
     }
   ],
   "topGainers": [

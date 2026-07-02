@@ -24,7 +24,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 11.1132000541687,
-      "sma200": 10.709249992370605
+      "sma200": 10.709249992370605,
+      "isVvip": true
     },
     {
       "name": "ZETRIX",
@@ -48,7 +49,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.8140000009536743,
-      "sma200": 0.8241250020265579
+      "sma200": 0.8241250020265579,
+      "isVvip": true
     },
     {
       "name": "SCGBHD",
@@ -155,7 +157,8 @@
       "turnover": 31065260,
       "volume": 329500,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "Jerung Buang / Mendatar",
+      "isVvip": true
     },
     {
       "name": "PETDAG",
@@ -179,7 +182,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 20.157999877929687,
-      "sma200": 21.147299976348876
+      "sma200": 21.147299976348876,
+      "isVvip": true
     },
     {
       "name": "CTOS",
@@ -203,7 +207,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.6617000007629394,
-      "sma200": 0.8092249977588654
+      "sma200": 0.8092249977588654,
+      "isVvip": true
     },
     {
       "name": "MPI",
@@ -227,7 +232,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "STAIRCASE",
       "sma50": 38.38719993591309,
-      "sma200": 32.4178000831604
+      "sma200": 32.4178000831604,
+      "isVvip": true
     },
     {
       "name": "HLBANK",
@@ -275,7 +281,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.14400000184774397,
-      "sma200": 0.15960000198334456
+      "sma200": 0.15960000198334456,
+      "isVvip": true
     },
     {
       "name": "UTDPLT",
@@ -299,7 +306,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 31.9692000579834,
-      "sma200": 28.5918000125885
+      "sma200": 28.5918000125885,
+      "isVvip": true
     },
     {
       "name": "PETGAS",
@@ -334,7 +342,8 @@
       "turnover": 12594972.500000002,
       "volume": 45799900,
       "signal": "avoid",
-      "reason": "Jerung Buang / Mendatar"
+      "reason": "Jerung Buang / Mendatar",
+      "isVvip": true
     },
     {
       "name": "HSI-PWRP",
@@ -345,7 +354,8 @@
       "turnover": 11800579,
       "volume": 57563800,
       "signal": "buy",
-      "reason": "Momentum Positif & Duit Jerung Masuk"
+      "reason": "Momentum Positif & Duit Jerung Masuk",
+      "isVvip": true
     },
     {
       "name": "HSI-CWQ7",
@@ -391,7 +401,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 29.53119987487793,
-      "sma200": 31.046999921798704
+      "sma200": 31.046999921798704,
+      "isVvip": true
     },
     {
       "name": "CARLSBG",

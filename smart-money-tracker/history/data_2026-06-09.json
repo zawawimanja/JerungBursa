@@ -24,7 +24,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.8174000000953674,
-      "sma200": 0.8234000021219253
+      "sma200": 0.8234000021219253,
+      "isVvip": true
     },
     {
       "name": "TANCO",
@@ -48,7 +49,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 1.615200001001358,
-      "sma200": 1.233974999189377
+      "sma200": 1.233974999189377,
+      "isVvip": true
     },
     {
       "name": "VITROX",
@@ -96,7 +98,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "STAIRCASE",
       "sma50": 0.7693000030517578,
-      "sma200": 0.6492250031232834
+      "sma200": 0.6492250031232834,
+      "isVvip": true
     },
     {
       "name": "MPI",
@@ -120,7 +123,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 39.072799911499025,
-      "sma200": 32.65070008277893
+      "sma200": 32.65070008277893,
+      "isVvip": true
     },
     {
       "name": "NESTLE",
@@ -131,7 +135,8 @@
       "turnover": 23591112,
       "volume": 249800,
       "signal": "buy",
-      "reason": "Momentum Positif & Duit Jerung Masuk"
+      "reason": "Momentum Positif & Duit Jerung Masuk",
+      "isVvip": true
     },
     {
       "name": "SUNWAY",
@@ -214,7 +219,8 @@
       "turnover": 15249816,
       "volume": 63540900,
       "signal": "buy",
-      "reason": "Momentum Positif & Duit Jerung Masuk"
+      "reason": "Momentum Positif & Duit Jerung Masuk",
+      "isVvip": true
     },
     {
       "name": "UTDPLT",
@@ -262,7 +268,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.1730999977886677,
-      "sma200": 0.1496249994263053
+      "sma200": 0.1496249994263053,
+      "isVvip": true
     },
     {
       "name": "HONGSENG",
@@ -308,7 +315,8 @@
       "turnover": 7168102.5,
       "volume": 36759500,
       "signal": "buy",
-      "reason": "Momentum Positif & Duit Jerung Masuk"
+      "reason": "Momentum Positif & Duit Jerung Masuk",
+      "isVvip": true
     },
     {
       "name": "TFP",
@@ -332,7 +340,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.024099999889731407,
-      "sma200": 0.024624999971129
+      "sma200": 0.024624999971129,
+      "isVvip": true
     },
     {
       "name": "AJI",
@@ -380,7 +389,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.0730999993532896,
-      "sma200": 0.07744999971240758
+      "sma200": 0.07744999971240758,
+      "isVvip": true
     }
   ],
   "topGainers": [

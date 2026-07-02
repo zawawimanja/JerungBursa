@@ -25,7 +25,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 8.601800031661988,
-      "sma200": 7.25025000333786
+      "sma200": 7.25025000333786,
+      "isVvip": true
     },
     {
       "name": "MAYBANK",
@@ -75,7 +76,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.8237000012397766,
-      "sma200": 0.8217250025272369
+      "sma200": 0.8217250025272369,
+      "isVvip": true
     },
     {
       "name": "TOPGLOV",
@@ -100,7 +102,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 0.7777000021934509,
-      "sma200": 0.6539750024676323
+      "sma200": 0.6539750024676323,
+      "isVvip": true
     },
     {
       "name": "PENTECH",
@@ -125,7 +128,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 0.2874999940395355,
-      "sma200": 0.2874999940395355
+      "sma200": 0.2874999940395355,
+      "isVvip": true
     },
     {
       "name": "TANCO",
@@ -150,7 +154,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "EXPLOSIVE",
       "sma50": 1.490200002193451,
-      "sma200": 1.221549998819828
+      "sma200": 1.221549998819828,
+      "isVvip": true
     },
     {
       "name": "SKYCHIP",
@@ -175,7 +180,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 2.816842141904329,
-      "sma200": 2.816842141904329
+      "sma200": 2.816842141904329,
+      "isVvip": true
     },
     {
       "name": "ELSA",
@@ -214,7 +220,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "STAIRCASE",
       "sma50": 40.96479995727539,
-      "sma200": 33.283500089645386
+      "sma200": 33.283500089645386,
+      "isVvip": true
     },
     {
       "name": "NATGATE",
@@ -239,7 +246,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.7751000010967255,
-      "sma200": 0.9612249997258187
+      "sma200": 0.9612249997258187,
+      "isVvip": true
     },
     {
       "name": "HLBANK",
@@ -264,7 +272,8 @@
       "hasLowerWickRejection": false,
       "setupStyle": "SWING PLAY",
       "sma50": 21.897599983215333,
-      "sma200": 21.952799911499024
+      "sma200": 21.952799911499024,
+      "isVvip": true
     },
     {
       "name": "NESTLE",
@@ -276,7 +285,8 @@
       "turnover": 18150000,
       "volume": 187500,
       "signal": "buy",
-      "reason": "🔥 Golden Hold: Jerung Mula Kumpul (Sesuai Swing/Hold)"
+      "reason": "🔥 Golden Hold: Jerung Mula Kumpul (Sesuai Swing/Hold)",
+      "isVvip": true
     },
     {
       "name": "KGB",
@@ -413,7 +423,8 @@
       "hasLowerWickRejection": true,
       "setupStyle": "SWING PLAY",
       "sma50": 0.14200000166893006,
-      "sma200": 0.1582500020042062
+      "sma200": 0.1582500020042062,
+      "isVvip": true
     }
   ],
   "topGainers": [
