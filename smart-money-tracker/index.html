@@ -1212,7 +1212,7 @@
             const hybridSection = document.getElementById('hybrid-recommendations-section');
             
             if (hybridTbody && hybridSection) {
-                // Filter items for Technique C: setupStyle is EXPLOSIVE or STAIRCASE and turnover >= 1.5M
+                // Filter items for Technique C: setupStyle is EXPLOSIVE or STAIRCASE and turnover >= 750k and not a comb stock
                 const validPicks = reversalList.filter(item => {
                     const pct = item.changePct !== undefined ? item.changePct : item.change;
                     const pb = item.pullback !== null ? item.pullback : 0;
@@ -1221,7 +1221,7 @@
                             pb <= 10.0 && (item.isConsolidation || (item.lowTightness && item.lowTightness <= 8.0) || (item.touchCount && item.touchCount >= 2)) ? 'STAIRCASE' : 'SWING PLAY'
                         )
                     );
-                    return (style === 'EXPLOSIVE' || style === 'STAIRCASE') && (item.turnover >= 750000);
+                    return (style === 'EXPLOSIVE' || style === 'STAIRCASE') && (item.turnover >= 750000) && !item.isCombStock;
                 });
                 
                 // Separate by style

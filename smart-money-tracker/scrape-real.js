@@ -300,29 +300,29 @@ async function main() {
                     });
                     stock.high52 = high52;
                     
-                    // Kaunter Sikat (Comb Stock) Detection over the last 20 trading days
-                    const last20 = validDays.slice(-20);
-                    let sumTurnover20 = 0;
-                    let flatDays20 = 0;
-                    let activeDays20 = 0;
+                    // Kaunter Sikat (Comb Stock) / Saham Tidur Detection over the last 30 trading days
+                    const last30 = validDays.slice(-30);
+                    let sumTurnover30 = 0;
+                    let flatDays30 = 0;
+                    let activeDays30 = 0;
 
-                    last20.forEach(d => {
+                    last30.forEach(d => {
                         if (d.volume > 0) {
-                            activeDays20++;
-                            sumTurnover20 += d.close * d.volume;
+                            activeDays30++;
+                            sumTurnover30 += d.close * d.volume;
                             if (d.high === d.low) {
-                                flatDays20++;
+                                flatDays30++;
                             }
                         }
                     });
 
-                    const avgTurnover20 = activeDays20 > 0 ? (sumTurnover20 / activeDays20) : 0;
-                    const flatPct20 = activeDays20 > 0 ? ((flatDays20 / activeDays20) * 100) : 0;
+                    const avgTurnover30 = activeDays30 > 0 ? (sumTurnover30 / activeDays30) : 0;
+                    const flatPct30 = activeDays30 > 0 ? ((flatDays30 / activeDays30) * 100) : 0;
 
-                    // Exclude if average daily turnover < 250k OR has high percentage of flat candles (>= 10%)
-                    const isCombStock = (flatPct20 >= 10.0) || (avgTurnover20 < 250000);
+                    // Exclude if average daily turnover over 30 days < 500k (sekat saham tidur) OR has high percentage of flat candles (>= 10%)
+                    const isCombStock = (flatPct30 >= 10.0) || (avgTurnover30 < 500000);
                     stock.isCombStock = isCombStock;
-                    stock.avgTurnover20 = avgTurnover20;
+                    stock.avgTurnover20 = avgTurnover30;
                     
                     const lastDays = validDays.slice(-4);
                     const lastDay = lastDays[lastDays.length - 1];
