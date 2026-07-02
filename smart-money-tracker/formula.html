@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JerungBursa - Formula & Kriteria VVIP</title>
+    <!-- Inter Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --panel-bg: rgba(17, 24, 39, 0.7);
+            --panel-border: rgba(255, 255, 255, 0.08);
+            --accent: #3b82f6;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --glow-color: rgba(245, 158, 11, 0.15);
+            --vvip-color: #fb923c;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(16, 185, 129, 0.04) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(245, 158, 11, 0.06) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(59, 130, 246, 0.04) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 2rem 1.5rem;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        header::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--success), var(--warning), var(--accent));
+            margin: 1.5rem auto 0 auto;
+            border-radius: 2px;
+        }
+
+        header h1 {
+            font-size: 2.3rem;
+            font-weight: 900;
+            letter-spacing: -0.025em;
+            background: linear-gradient(135deg, #ffffff 40%, var(--vvip-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Navigation */
+        .nav-links {
+            display: flex;
+            gap: 0.8rem;
+            justify-content: flex-start;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--panel-border);
+            padding-bottom: 1rem;
+        }
+
+        .btn-nav {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--panel-border);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-nav:hover {
+            color: white;
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.15);
+        }
+
+        @media (max-width: 900px) {
+            .nav-links {
+                justify-content: center;
+            }
+        }
+
+        /* Panels */
+        .panel {
+            background: var(--panel-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--panel-border);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .panel-title {
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            border-bottom: 1px solid var(--panel-border);
+            padding-bottom: 0.75rem;
+        }
+
+        .formula-box {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px dashed var(--vvip-color);
+            border-radius: 12px;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            text-align: center;
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--vvip-color);
+        }
+
+        /* Lists */
+        ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.75rem;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+
+        strong {
+            color: white;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        th {
+            background: rgba(255,255,255,0.02);
+            border-bottom: 2px solid var(--panel-border);
+            padding: 0.75rem 1rem;
+            text-align: left;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        td {
+            border-bottom: 1px solid var(--panel-border);
+            padding: 0.75rem 1rem;
+            vertical-align: top;
+        }
+
+        tr:hover td {
+            background: rgba(255,255,255,0.01);
+        }
+
+        /* Calculator Styles */
+        .calc-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .calc-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 0.85rem;
+            background: rgba(255,255,255,0.02);
+            border: 1px solid var(--panel-border);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .calc-row:hover {
+            background: rgba(255,255,255,0.05);
+            border-color: rgba(255,255,255,0.12);
+        }
+
+        .calc-row input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            margin-top: 0.15rem;
+            cursor: pointer;
+            accent-color: var(--vvip-color);
+        }
+
+        .calc-label {
+            flex-grow: 1;
+            font-size: 0.92rem;
+            font-weight: 500;
+        }
+
+        .calc-desc {
+            display: block;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+            margin-top: 0.2rem;
+        }
+
+        .calc-points {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: var(--warning);
+            white-space: nowrap;
+        }
+
+        .calc-result {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(251, 146, 60, 0.15) 100%);
+            border: 2px solid var(--vvip-color);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            box-shadow: 0 5px 15px rgba(245, 158, 11, 0.1);
+        }
+
+        .score-display {
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: var(--vvip-color);
+        }
+
+        .verdict-badge {
+            padding: 0.4rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.9rem;
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .verdict-approved {
+            background: rgba(16, 185, 129, 0.2);
+            color: var(--success);
+            border: 1px solid rgba(16, 185, 129, 0.4);
+        }
+
+        .verdict-pending {
+            background: rgba(239, 68, 68, 0.15);
+            color: var(--danger);
+            border: 1px solid rgba(239, 68, 68, 0.35);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="nav-links">
+                <a href="./index.html" class="btn-nav">🏠 Utama</a>
+                <a href="./sop.html" class="btn-nav">📘 Panduan SOP</a>
+            </div>
+            <h1>Formula & Kriteria VVIP</h1>
+            <p>SOP Penyaringan Hibrid Pintar untuk Swing Trading Berketepatan Tinggi</p>
+        </header>
+
+        <!-- Core Formula Panel -->
+        <div class="panel" style="border-color: rgba(245, 158, 11, 0.3); box-shadow: 0 0 25px rgba(245, 158, 11, 0.08);">
+            <div class="panel-title" style="color: var(--vvip-color); border-color: rgba(245, 158, 11, 0.2);">
+                <span>🔥</span> Formula Utama VVIP
+            </div>
+            <p style="color: var(--text-secondary); font-size: 0.98rem; line-height: 1.6;">
+                Sesebuah kaunter hanya layak dicalonkan dan memaparkan lencana <strong>🔥 VVIP</strong> di dashboard sekiranya ia melepasi tapisan asas pangkalan data (Backend) dan berjaya mengumpul markah minimum pada dashboard (Frontend):
+            </p>
+            <div class="formula-box">
+                VVIP = (Aktif Semalam & Hari Ini) AND (Bukan Comb/Downtrend) AND (Smart Score &ge; 8)
+            </div>
+            <p style="color: var(--text-muted); font-size: 0.85rem; text-align: center;">
+                *Formula ini menjamin kaunter mempunyai kecairan aktif, dalam fasa pullback/tapak tegar yang sihat, dan berada pada risiko minimum (SL 3%).
+            </p>
+        </div>
+
+        <!-- Backend Filter Panel -->
+        <div class="panel">
+            <div class="panel-title" style="color: var(--success);">
+                <span>⚙️</span> Fasa 1: Tapisan Kelayakan Asas (Backend Scraper)
+            </div>
+            <p style="margin-bottom: 1rem; font-size: 0.95rem;">
+                Setiap 10 minit semasa market berjalan, skrip scraper (`scrape-real.js`) melakukan audit terhadap data pasaran KLSE. Kaunter wajib memenuhi syarat-syarat berikut untuk mendapat status kelayakan VVIP:
+            </p>
+            <ul>
+                <li>
+                    <strong>Kemunculan Berturut-turut (Continuous Momentum)</strong>: 
+                    Kaunter mesti tersenarai dalam pangkalan data <em>Top Volume</em> semalam dan hari ini. Kaunter naik sehari tanpa volum sambungan akan ditolak secara automatik.
+                </li>
+                <li>
+                    <strong>Bukan Saham Tidur (Anti-Comb Stock)</strong>: 
+                    Label `isCombStock` wajib bernilai <em>false</em>. Pergerakan harga jenis tik-tik-tik seperti sikat ditolak keras untuk mengelakkan risiko modal tersangkut.
+                </li>
+                <li>
+                    <strong>Bukan Saham Menurun (Anti-Downtrend)</strong>: 
+                    Harga semasa mesti di atas paras sokongan/trend asas. Status setup pasaran tidak boleh mengandungi perkataan <code>DOWNTREND</code>, <code>AVOID</code>, atau <code>N/A</code>.
+                </li>
+                <li>
+                    <strong>Ulasan Selamat (Clean Metadata)</strong>: 
+                    Ulasan/ulasan automatik (reasoning metadata) tidak boleh mengandungi frasa amaran kecairan rendah atau mendatar seperti <code>COMB</code>, <code>AVOID</code>, atau <code>ILLIQUID</code>.
+                </li>
+            </ul>
+        </div>
+
+        <!-- Smart Score Panel -->
+        <div class="panel">
+            <div class="panel-title" style="color: var(--accent);">
+                <span>📊</span> Fasa 2: Sistem Pemarkahan Pintar (Smart Score)
+            </div>
+            <p style="margin-bottom: 1rem; font-size: 0.95rem;">
+                Sekiranya lulus kelayakan asas di atas, status VVIP akan diputuskan berdasarkan pengiraan <strong>Smart Score</strong> harian. Markah ini menilai keselamatan kemasukan (entry safety) dan potensi lonjakan (bounce potential):
+            </p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Kriteria Penilaian</th>
+                        <th>Kondisi Teknikal</th>
+                        <th style="text-align: center;">Markah</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1. Jarak ke Lantai (Risk Proximity)</strong><br><span style="font-size: 0.78rem; color: var(--text-muted);">Menilai saiz Stop Loss untuk kemasukan yang selamat</span></td>
+                        <td>Jarak harga semasa ke Support Floor ≤ 1.5%<br>Jarak harga semasa ke Support Floor ≤ 3.0%<br>Jarak harga semasa ke Support Floor ≤ 5.0%</td>
+                        <td style="text-align: center; font-weight: 700; color: var(--warning);">+4 Mata<br>+2 Mata<br>+1 Mata</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2. Kekuatan Lantai (Floor Strength)</strong><br><span style="font-size: 0.78rem; color: var(--text-muted);">Berapa kali harga harian melantun pada paras sokongan</span></td>
+                        <td>Sokongan Floor disentuh ≥ 5 kali<br>Sokongan Floor disentuh ≥ 3 kali<br>Sokongan Floor disentuh ≥ 2 kali</td>
+                        <td style="text-align: center; font-weight: 700; color: var(--warning);">+3 Mata<br>+2 Mata<br>+1 Mata</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3. Asas Sideway (Consolidation Base)</strong><br><span style="font-size: 0.78rem; color: var(--text-muted);">Kaunter berehat rapat dengan volum mengering</span></td>
+                        <td>Peringkat Konsolidasi dikesan (Consolidation = True)</td>
+                        <td style="text-align: center; font-weight: 700; color: var(--warning);">+2 Mata</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4. Zon Emas Pullback</strong><br><span style="font-size: 0.78rem; color: var(--text-muted);">Kedudukan harga dari puncak 52-Minggu (ATH)</span></td>
+                        <td>Pullback ≤ 5.0% (Retest RBS / Near ATH)<br>Pullback ≤ 12.0% (Pullback Sihat / Dip)<br>Pullback ≤ 25.0% (Diskaun Selesa)</td>
+                        <td style="text-align: center; font-weight: 700; color: var(--warning);">+3 Mata<br>+2 Mata<br>+1 Mata</td>
+                    </tr>
+                    <tr>
+                        <td><strong>5. Penjajaran Trend (Moving Average)</strong><br><span style="font-size: 0.78rem; color: var(--text-muted);">Pengesahan aliran menaik jangka sederhana & panjang</span></td>
+                        <td>Harga di atas garisan SMA 50<br>Harga di atas garisan SMA 200</td>
+                        <td style="text-align: center; font-weight: 700; color: var(--warning);">+2 Mata<br>+1 Mata</td>
+                    </tr>
+                    <tr>
+                        <td><strong>6. Volum Urus Niaga (Liquidity)</strong><br><span style="font-size: 0.78rem; color: var(--text-muted);">Pengesahan kemasukan dana jerung institusi</span></td>
+                        <td>Turnover harian ≥ RM 5,000,000</td>
+                        <td style="text-align: center; font-weight: 700; color: var(--warning);">+1 Mata</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Interactive Calculator Panel -->
+        <div class="panel" style="border-color: rgba(59, 130, 246, 0.25);">
+            <div class="panel-title" style="color: var(--accent); border-color: rgba(59, 130, 246, 0.15);">
+                <span>🧮</span> Kalkulator Simulasi Smart Score
+            </div>
+            <p style="font-size: 0.92rem; color: var(--text-secondary);">
+                Pilih kriteria teknikal saham pilihan abang untuk melihat simulasi pemarkahan dan keputusan kelayakan VVIP:
+            </p>
+
+            <div class="calc-grid">
+                <!-- Group 1: Jarak Lantai -->
+                <div class="calc-row" onclick="toggleCheckbox('floor15')">
+                    <input type="checkbox" id="floor15" data-points="4" onchange="calculateScore()">
+                    <div class="calc-label">
+                        Jarak ke Support Floor ≤ 1.5%
+                        <span class="calc-desc">Sangat rapat dengan lantai. Potensi Stop Loss super kecil (~3% sahaja).</span>
+                    </div>
+                    <div class="calc-points">+4 Mata</div>
+                </div>
+                <div class="calc-row" onclick="toggleCheckbox('floor30')">
+                    <input type="checkbox" id="floor30" data-points="2" onchange="calculateScore()">
+                    <div class="calc-label">
+                        Jarak ke Support Floor ≤ 3.0%
+                        <span class="calc-desc">Hampir dengan lantai sokongan harian. Masih selamat untuk kemasukan swing.</span>
+                    </div>
+                    <div class="calc-points">+2 Mata</div>
+                </div>
+
+                <!-- Group 2: Touch Count -->
+                <div class="calc-row" onclick="toggleCheckbox('touch5')">
+                    <input type="checkbox" id="touch5" data-points="3" onchange="calculateScore()">
+                    <div class="calc-label">
+                        Sokongan Lantai Disentuh ≥ 5 Kali
+                        <span class="calc-desc">Strong accumulation area. Tapak terbukti kukuh sukar bocor.</span>
+                    </div>
+                    <div class="calc-points">+3 Mata</div>
+                </div>
+                <div class="calc-row" onclick="toggleCheckbox('touch3')">
+                    <input type="checkbox" id="touch3" data-points="2" onchange="calculateScore()">
+                    <div class="calc-label">
+                        Sokongan Lantai Disentuh ≥ 3 Kali
+                        <span class="calc-desc">Kekuatan lantai yang sederhana. Tapak sokongan yang sihat.</span>
+                    </div>
+                    <div class="calc-points">+2 Mata</div>
+                </div>
+
+                <!-- Consolidation -->
+                <div class="calc-row" onclick="toggleCheckbox('consolidation')">
+                    <input type="checkbox" id="consolidation" data-points="2" onchange="calculateScore()">
+                    <div class="calc-label">
+                        Asas Konsolidasi Padat (Consolidation = True)
+                        <span class="calc-desc">Pergerakan harga mendatar dalam range sempit (close tightness ≤ 5.5%).</span>
+                    </div>
+                    <div class="calc-points">+2 Mata</div>
+                </div>
+
+                <!-- Pullback -->
+                <div class="calc-row" onclick="toggleCheckbox('pullback5')">
+                    <input type="checkbox" id="pullback5" data-points="3" onchange="calculateScore()">
+                    <div class="calc-label">
+                        Pullback dari ATH ≤ 5.0% (RBS / Breakout Runner)
+                        <span class="calc-desc">Dalam zon retest RBS (Resistance Become Support). Momentum menaik sangat kuat.</span>
+                    </div>
+                    <div class="calc-points">+3 Mata</div>
+                </div>
+                <div class="calc-row" onclick="toggleCheckbox('pullback12')">
+                    <input type="checkbox" id="pullback12" data-points="2" onchange="calculateScore()">
+                    <div class="calc-label">
+                        Pullback dari ATH ≤ 12.0% (Healthy Dip)
+                        <span class="calc-desc">Pullback sederhana untuk swing. Peluang beli di atas diskaun harga yang sihat.</span>
+                    </div>
+                    <div class="calc-points">+2 Mata</div>
+                </div>
+
+                <!-- SMA -->
+                <div class="calc-row" onclick="toggleCheckbox('sma50')">
+                    <input type="checkbox" id="sma50" data-points="2" onchange="calculateScore()">
+                    <div class="calc-label">
+                        Harga di atas SMA 50
+                        <span class="calc-desc">Trend jangka sederhana adalah Bullish.</span>
+                    </div>
+                    <div class="calc-points">+2 Mata</div>
+                </div>
+                <div class="calc-row" onclick="toggleCheckbox('sma200')">
+                    <input type="checkbox" id="sma200" data-points="1" onchange="calculateScore()">
+                    <div class="calc-label">
+                        Harga di atas SMA 200
+                        <span class="calc-desc">Trend jangka panjang adalah Bullish (Upward bias).</span>
+                    </div>
+                    <div class="calc-points">+1 Mata</div>
+                </div>
+
+                <!-- Liquidity -->
+                <div class="calc-row" onclick="toggleCheckbox('turnover5m')">
+                    <input type="checkbox" id="turnover5m" data-points="1" onchange="calculateScore()">
+                    <div class="calc-label">
+                        Turnover Harian ≥ RM 5,000,000
+                        <span class="calc-desc">Kemasukan jerung institusi bersaiz besar (high liquidity).</span>
+                    </div>
+                    <div class="calc-points">+1 Mata</div>
+                </div>
+            </div>
+
+            <!-- Simulation Result -->
+            <div class="calc-result">
+                <div>
+                    <h4 style="font-size: 1.05rem; font-weight: 800; color: white; margin-bottom: 0.2rem;">Hasil Keputusan Simulasi:</h4>
+                    <p style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 0.6rem;">Status kelayakan VVIP (Perlu markah &ge; 8)</p>
+                    <div id="verdictBadge" class="verdict-badge verdict-pending">Pending</div>
+                </div>
+                <div style="text-align: right;">
+                    <span style="font-size: 0.8rem; color: var(--text-muted); display: block; font-weight: 600; text-transform: uppercase;">Smart Score</span>
+                    <span id="scoreVal" class="score-display">0</span> <span style="font-size: 1.1rem; color: var(--text-muted);">/ 15</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleCheckbox(id) {
+            const cb = document.getElementById(id);
+            if (cb) {
+                // Handle mutually exclusive items
+                if (id === 'floor15' && cb.checked === false) {
+                    document.getElementById('floor30').checked = false;
+                } else if (id === 'floor30' && cb.checked === false) {
+                    document.getElementById('floor15').checked = false;
+                }
+                
+                if (id === 'touch5' && cb.checked === false) {
+                    document.getElementById('touch3').checked = false;
+                } else if (id === 'touch3' && cb.checked === false) {
+                    document.getElementById('touch5').checked = false;
+                }
+
+                if (id === 'pullback5' && cb.checked === false) {
+                    document.getElementById('pullback12').checked = false;
+                } else if (id === 'pullback12' && cb.checked === false) {
+                    document.getElementById('pullback5').checked = false;
+                }
+
+                cb.checked = !cb.checked;
+                
+                // Mutual exclusivity enforcement
+                if (id === 'floor15' && cb.checked) document.getElementById('floor30').checked = false;
+                if (id === 'floor30' && cb.checked) document.getElementById('floor15').checked = false;
+                
+                if (id === 'touch5' && cb.checked) document.getElementById('touch3').checked = false;
+                if (id === 'touch3' && cb.checked) document.getElementById('touch5').checked = false;
+
+                if (id === 'pullback5' && cb.checked) document.getElementById('pullback12').checked = false;
+                if (id === 'pullback12' && cb.checked) document.getElementById('pullback5').checked = false;
+
+                calculateScore();
+            }
+        }
+
+        // Prevent checkbox double-triggering when clicking label/row
+        const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        checkboxes.forEach(cb => {
+            cb.addEventListener('click', (e) => {
+                e.stopPropagation();
+                
+                const id = cb.id;
+                if (id === 'floor15' && cb.checked) document.getElementById('floor30').checked = false;
+                if (id === 'floor30' && cb.checked) document.getElementById('floor15').checked = false;
+                
+                if (id === 'touch5' && cb.checked) document.getElementById('touch3').checked = false;
+                if (id === 'touch3' && cb.checked) document.getElementById('touch5').checked = false;
+
+                if (id === 'pullback5' && cb.checked) document.getElementById('pullback12').checked = false;
+                if (id === 'pullback12' && cb.checked) document.getElementById('pullback5').checked = false;
+                
+                calculateScore();
+            });
+        });
+
+        function calculateScore() {
+            let total = 0;
+            const cbs = document.querySelectorAll('input[type="checkbox"]');
+            cbs.forEach(cb => {
+                if (cb.checked) {
+                    total += parseInt(cb.getAttribute('data-points'));
+                }
+            });
+
+            document.getElementById('scoreVal').innerText = total;
+
+            const verdict = document.getElementById('verdictBadge');
+            if (total >= 8) {
+                verdict.innerText = "🔥 VVIP Approved";
+                verdict.className = "verdict-badge verdict-approved";
+            } else {
+                verdict.innerText = "⚠️ Under Scrutiny (Score < 8)";
+                verdict.className = "verdict-badge verdict-pending";
+            }
+        }
+    </script>
+</body>
+</html>

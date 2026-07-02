@@ -652,6 +652,7 @@
         <div class="controls">
             <a href="./backtest.html" class="btn" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.25);">📊 Laporan Backtest</a>
             <a href="./sop.html" class="btn" style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.25);">📘 Panduan SOP</a>
+            <a href="./formula.html" class="btn" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: #0f172a; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 800; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.25);">🔥 Formula VVIP</a>
             <div class="history-input">
                 <label for="historyDate" style="color: #a5b4fc; font-size: 0.8rem; font-weight: 700; cursor: pointer;">Historical Archive:</label>
                 <input type="date" id="historyDate">
@@ -673,10 +674,10 @@
                         <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
                             <h2 style="margin: 0; font-size: 1.3rem; color: #3b82f6; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem;">Pilihan Utama: Hibrid VVIP (Teknik C)</h2>
                             <span style="font-size: 0.7rem; background: rgba(16, 185, 129, 0.2); color: #10b981; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(16, 185, 129, 0.3); white-space: nowrap;">📈 SWING ONLY</span>
-                            <span style="font-size: 0.7rem; background: rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(59, 130, 246, 0.3); white-space: nowrap;">Win: 56.5% | SL: 9.4%</span>
+                            <span style="font-size: 0.7rem; background: rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(59, 130, 246, 0.3); white-space: nowrap;">VVIP Win: 81.3% | SL: 12.5%</span>
                         </div>
                         <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
-                            SOP Terunggul: Top 6 Explosive + Top 6 Staircase (Isih Turnover, Mesti Turnover ≥ RM 750K). <strong style="color: #60a5fa;">Gaya: SWING PLAY (Pegang 1-10 Hari), BUKAN INTRADAY!</strong>
+                            SOP Terunggul (Optimasi): Had Top 6 + Turnover ≥ RM 1.0M. <strong style="color: #60a5fa;">Gaya: SWING PLAY (Pegang 1-10 Hari), BUKAN INTRADAY!</strong>
                         </p>
                     </div>
                 </div>
@@ -702,7 +703,6 @@
                             <th style="text-align: right; color: #3b82f6;">Support Floor</th>
                             <th style="text-align: right; color: #3b82f6;">Stop Loss (3%)</th>
                             <th style="text-align: right; color: #3b82f6;">Turnover</th>
-                            <th style="color: #3b82f6; text-align: left;">Sektor</th>
                         </tr>
                     </thead>
                     <tbody id="hybridPicksTableBody">
@@ -726,46 +726,53 @@
                         <p style="margin: 0.15rem 0 0 0; font-size: 0.78rem; color: #94a3b8;">Isih kepala lajur untuk mencari setup: <strong>[A]</strong> Momentum Terkuat | <strong>[B]</strong> Risiko Terendah (Rapat Lantai) | <strong>[C]</strong> Swing Play / Volatility Pantas</p>
                     </div>
                 </div>
-                <button onclick="copyReversalsWatchlist(event)" style="background: var(--info); color: #0f172a; border: none; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 800; font-size: 0.82rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: transform 0.2s; box-shadow: 0 4px 10px rgba(14, 165, 233, 0.3);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                    📋 Copy TV Watchlist
-                </button>
+                <div style="display: flex; gap: 0.6rem; align-items: center;">
+                    <button id="btn-toggle-reversals" onclick="toggleReversalsSection()" style="background: rgba(255,255,255,0.05); color: #94a3b8; border: 1px solid var(--panel-border); padding: 0.5rem 1rem; border-radius: 8px; font-weight: 800; font-size: 0.82rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'">
+                        👁️ Hide Section
+                    </button>
+                    <button onclick="copyReversalsWatchlist(event)" style="background: var(--info); color: #0f172a; border: none; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 800; font-size: 0.82rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: transform 0.2s; box-shadow: 0 4px 10px rgba(14, 165, 233, 0.3);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                        📋 Copy TV Watchlist
+                    </button>
+                </div>
             </div>
             
-            <div class="table-wrapper" style="margin-top: 1rem; margin-bottom: 0;">
-                <table>
-                    <thead>
-                        <tr>
-                            <th style="width: 50px; text-align: center;">No</th>
-                            <th style="cursor: pointer; user-select: none;" onclick="setSort('name')">Counter <span id="sort-icon-name" style="font-size: 0.75rem;">⇅</span></th>
-                            <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('price')">Price <span id="sort-icon-price" style="font-size: 0.75rem;">⇅</span></th>
-                            <th style="text-align: center; cursor: pointer; user-select: none;" onclick="setSort('tags')">Tags <span id="sort-icon-tags" style="font-size: 0.75rem;">⇅</span></th>
-                            <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('change')">Change <span id="sort-icon-change" style="font-size: 0.75rem;">⇅</span></th>
-                            <th class="hide-mobile" style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('high52')">52W High <span id="sort-icon-high52" style="font-size: 0.75rem;">⇅</span></th>
-                            <th class="hide-mobile" style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('pullback')">Pullback [C] <span id="sort-icon-pullback" style="font-size: 0.75rem;">⇅</span></th>
-                            <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('dist')">Dist to Floor [B] <span id="sort-icon-dist" style="font-size: 0.75rem;">⇅</span></th>
-                            <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('turnover')">Turnover [A] <span id="sort-icon-turnover" style="font-size: 0.75rem;">⇅</span></th>
-                            <th class="hide-mobile" style="text-align: right;">Stop Loss (3%)</th>
-                        </tr>
-                    </thead>
-                    <tbody id="reversalsTableBody">
-                        <!-- Dynamically populated table rows -->
-                    </tbody>
-                </table>
-            </div>
+            <div id="reversals-content">
+                <div class="table-wrapper" style="margin-top: 1rem; margin-bottom: 0;">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 50px; text-align: center;">No</th>
+                                <th style="cursor: pointer; user-select: none;" onclick="setSort('name')">Counter <span id="sort-icon-name" style="font-size: 0.75rem;">⇅</span></th>
+                                <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('price')">Price <span id="sort-icon-price" style="font-size: 0.75rem;">⇅</span></th>
+                                <th style="text-align: center; cursor: pointer; user-select: none;" onclick="setSort('tags')">Tags <span id="sort-icon-tags" style="font-size: 0.75rem;">⇅</span></th>
+                                <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('change')">Change <span id="sort-icon-change" style="font-size: 0.75rem;">⇅</span></th>
+                                <th class="hide-mobile" style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('high52')">52W High <span id="sort-icon-high52" style="font-size: 0.75rem;">⇅</span></th>
+                                <th class="hide-mobile" style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('pullback')">Pullback [C] <span id="sort-icon-pullback" style="font-size: 0.75rem;">⇅</span></th>
+                                <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('dist')">Dist to Floor [B] <span id="sort-icon-dist" style="font-size: 0.75rem;">⇅</span></th>
+                                <th style="text-align: right; cursor: pointer; user-select: none;" onclick="setSort('turnover')">Turnover [A] <span id="sort-icon-turnover" style="font-size: 0.75rem;">⇅</span></th>
+                                <th class="hide-mobile" style="text-align: right;">Stop Loss (3%)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reversalsTableBody">
+                            <!-- Dynamically populated table rows -->
+                        </tbody>
+                    </table>
+                </div>
 
-            <!-- Setup Styles Legend -->
-            <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.78rem;">
-                <div style="display: flex; align-items: center; gap: 0.4rem;">
-                    <span style="background: rgba(244, 63, 94, 0.18); color: #fb7185; font-size: 0.65rem; font-weight: 900; padding: 0.15rem 0.4rem; border-radius: 4px; border: 1px solid rgba(244, 63, 94, 0.3);">🚀 EXPLOSIVE</span>
-                    <span style="color: var(--text-muted);">Melantun kuat & volum raksasa selepas pullback (Fast Swing/Momentum)</span>
-                </div>
-                <div style="display: flex; align-items: center; gap: 0.4rem;">
-                    <span style="background: rgba(6, 182, 212, 0.18); color: #22d3ee; font-size: 0.65rem; font-weight: 900; padding: 0.15rem 0.4rem; border-radius: 4px; border: 1px solid rgba(6, 182, 212, 0.3);">🪜 STAIRCASE</span>
-                    <span style="color: var(--text-muted);">Merayap naik secara konsisten membina lantai sokongan ke arah ATH (Steady Swing)</span>
-                </div>
-                <div style="display: flex; align-items: center; gap: 0.4rem;">
-                    <span style="background: rgba(99, 102, 241, 0.12); color: #a5b4fc; font-size: 0.65rem; font-weight: 900; padding: 0.15rem 0.4rem; border-radius: 4px; border: 1px solid rgba(99, 102, 241, 0.22);">🔄 SWING PLAY</span>
-                    <span style="color: var(--text-muted);">Pembetulan harga biasa dalam zon dagangan sihat</span>
+                <!-- Setup Styles Legend -->
+                <div style="display: flex; gap: 1.5rem; flex-wrap: wrap; margin-top: 1rem; padding-top: 0.75rem; border-top: 1px solid rgba(255,255,255,0.06); font-size: 0.78rem;">
+                    <div style="display: flex; align-items: center; gap: 0.4rem;">
+                        <span style="background: rgba(244, 63, 94, 0.18); color: #fb7185; font-size: 0.65rem; font-weight: 900; padding: 0.15rem 0.4rem; border-radius: 4px; border: 1px solid rgba(244, 63, 94, 0.3);">🚀 EXPLOSIVE</span>
+                        <span style="color: var(--text-muted);">Melantun kuat & volum raksasa selepas pullback (Fast Swing/Momentum)</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.4rem;">
+                        <span style="background: rgba(6, 182, 212, 0.18); color: #22d3ee; font-size: 0.65rem; font-weight: 900; padding: 0.15rem 0.4rem; border-radius: 4px; border: 1px solid rgba(6, 182, 212, 0.3);">🪜 STAIRCASE</span>
+                        <span style="color: var(--text-muted);">Merayap naik secara konsisten membina lantai sokongan ke arah ATH (Steady Swing)</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.4rem;">
+                        <span style="background: rgba(99, 102, 241, 0.12); color: #a5b4fc; font-size: 0.65rem; font-weight: 900; padding: 0.15rem 0.4rem; border-radius: 4px; border: 1px solid rgba(99, 102, 241, 0.22);">🔄 SWING PLAY</span>
+                        <span style="color: var(--text-muted);">Pembetulan harga biasa dalam zon dagangan sihat</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -835,6 +842,20 @@
         let currentData = [];
         let currentSortColumn = 'turnover';
         let currentSortDesc = true;
+
+        // Helper to identify comb stocks (saham tidur), illiquid stocks, or downtrend/avoid stocks
+        function isSleepingOrAvoidStock(item) {
+            if (!item) return false;
+            if (item.isCombStock) return true;
+            
+            const setup = (item.setupName || '').toUpperCase();
+            if (setup.includes('DOWNTREND') || setup.includes('AVOID') || setup === 'N/A') return true;
+            
+            const reason = (item.reason || '').toUpperCase();
+            if (reason.includes('COMB') || reason.includes('AVOID') || reason.includes('ILLIQUID')) return true;
+            
+            return false;
+        }
 
 
         // Format Big Numbers
@@ -1098,18 +1119,11 @@
                 // Bouncing today
                 const isBouncing = item.change > 0;
                 
-                const isDowntrend = item.setupName && (
-                    item.setupName.includes('Downtrend') || 
-                    item.setupName.includes('Avoid') || 
-                    item.setupName === 'N/A'
-                );
-                
                 const passBasic = hasPullback && 
                        isBouncing && 
-                       !isDowntrend && 
                        item.price >= 0.25 && item.price <= 4.00 && 
                        item.turnover >= 250000 && 
-                       !item.isCombStock;
+                       !isSleepingOrAvoidStock(item);
                        
                 if (!passBasic) return false;
                 
@@ -1213,7 +1227,18 @@
             
             if (hybridTbody && hybridSection) {
                 // Filter items for Technique C: setupStyle is EXPLOSIVE or STAIRCASE and turnover >= 750k and not a comb stock
-                const validPicks = reversalList.filter(item => {
+                const validPicks = currentData.filter(item => {
+                    if (!item.high52) return false;
+                    const pullbackVal = item.pullback !== null ? item.pullback : 0;
+                    const isAboveSma200 = item.sma200 ? item.price >= item.sma200 : false;
+                    const maxPullbackLimit = isAboveSma200 ? 40.0 : 30.0;
+                    const hasPullback = pullbackVal >= 0.0 && pullbackVal <= maxPullbackLimit;
+                    if (!hasPullback) return false;
+
+                    if (isSleepingOrAvoidStock(item)) return false;
+                    if (item.price < 0.25 || item.price > 4.00) return false;
+                    if (item.turnover < 750000) return false;
+
                     const pct = item.changePct !== undefined ? item.changePct : item.change;
                     const pb = item.pullback !== null ? item.pullback : 0;
                     const style = item.setupStyle || (
@@ -1221,10 +1246,7 @@
                             pb <= 10.0 && (item.isConsolidation || (item.lowTightness && item.lowTightness <= 8.0) || (item.touchCount && item.touchCount >= 2)) ? 'STAIRCASE' : 'SWING PLAY'
                         )
                     );
-                    return (style === 'EXPLOSIVE' || style === 'STAIRCASE') && 
-                           (item.price >= 0.25 && item.price <= 4.00) && 
-                           (item.turnover >= 750000) && 
-                           !item.isCombStock;
+                    return style === 'EXPLOSIVE' || style === 'STAIRCASE';
                 });
                 
                 // Separate by style
@@ -1291,21 +1313,27 @@
                         
                         const vvipBadge = (item.isVvip && score >= 8) ? `<span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.25); color: #fb923c; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.3rem; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.4);">🔥 VVIP</span>` : '';
                         
+                        const scoreBadge = score === 15 
+                            ? `<span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.3); color: #fb923c; border: 1px solid rgba(245, 158, 11, 0.5); padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.1rem; font-weight: 900; box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);">🏆 Gold: 15/15</span>` 
+                            : `<span style="font-size: 0.72rem; background: rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.1rem; font-weight: 700;">Score: ${score}/15</span>`;
+
                         hybridHtml += `
                             <tr>
                                 <td style="text-align: center; font-weight: bold; color: #a5b4fc;">${rowCount++}</td>
                                 <td style="font-weight: 900; color: white; font-size: 1.1rem;">
-                                    ${item.name}
-                                    <span style="font-size: 0.72rem; background: rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.3rem; font-weight: 700;">Score: ${score}</span>
-                                    ${vvipBadge}
+                                    <span style="display: inline-flex; align-items: center; gap: 0.35rem;">
+                                        ${item.name}
+                                        <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="font-size: 0.8rem; color: var(--info); text-decoration: none;" title="TradingView Chart">🔗</a>
+                                        ${scoreBadge}
+                                        ${vvipBadge}
+                                    </span>
                                 </td>
                                 <td style="text-align: center;"><span class="tag-pill explosive" style="font-size: 0.75rem;">🚀 EXPLOSIVE</span></td>
                                 <td style="text-align: right; font-weight: bold; color: white;">RM ${item.price.toFixed(3)}</td>
-                                <td style="text-align: right; font-weight: bold;" class="${changeClass}">${changeSign}${pct.toFixed(2)}%</td>
+                                <td style="text-align: right; font-weight: bold; color: var(--${changeClass});">${changeSign}${pct.toFixed(2)}%</td>
                                 <td style="text-align: right; color: #10b981; font-weight: 700;">RM ${floor.toFixed(3)}</td>
                                 <td style="text-align: right; color: #ef4444; font-weight: 700;">RM ${stopLoss.toFixed(3)}</td>
                                 <td style="text-align: right; color: #f59e0b; font-weight: 700;">RM ${turnoverM}M</td>
-                                <td style="color: #94a3b8;">${item.sector || 'Teknologi'}</td>
                             </tr>
                         `;
                     });
@@ -1322,21 +1350,27 @@
                         
                         const vvipBadge = (item.isVvip && score >= 8) ? `<span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.25); color: #fb923c; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.3rem; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.4);">🔥 VVIP</span>` : '';
                         
+                        const scoreBadge = score === 15 
+                            ? `<span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.3); color: #fb923c; border: 1px solid rgba(245, 158, 11, 0.5); padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.1rem; font-weight: 900; box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);">🏆 Gold: 15/15</span>` 
+                            : `<span style="font-size: 0.72rem; background: rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.1rem; font-weight: 700;">Score: ${score}/15</span>`;
+
                         hybridHtml += `
                             <tr>
                                 <td style="text-align: center; font-weight: bold; color: #a5b4fc;">${rowCount++}</td>
                                 <td style="font-weight: 900; color: white; font-size: 1.1rem;">
-                                    ${item.name}
-                                    <span style="font-size: 0.72rem; background: rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.3rem; font-weight: 700;">Score: ${score}</span>
-                                    ${vvipBadge}
+                                    <span style="display: inline-flex; align-items: center; gap: 0.35rem;">
+                                        ${item.name}
+                                        <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="font-size: 0.8rem; color: var(--info); text-decoration: none;" title="TradingView Chart">🔗</a>
+                                        ${scoreBadge}
+                                        ${vvipBadge}
+                                    </span>
                                 </td>
                                 <td style="text-align: center;"><span class="tag-pill staircase" style="font-size: 0.75rem;">🪜 STAIRCASE</span></td>
                                 <td style="text-align: right; font-weight: bold; color: white;">RM ${item.price.toFixed(3)}</td>
-                                <td style="text-align: right; font-weight: bold;" class="${changeClass}">${changeSign}${pct.toFixed(2)}%</td>
+                                <td style="text-align: right; font-weight: bold; color: var(--${changeClass});">${changeSign}${pct.toFixed(2)}%</td>
                                 <td style="text-align: right; color: #10b981; font-weight: 700;">RM ${floor.toFixed(3)}</td>
                                 <td style="text-align: right; color: #ef4444; font-weight: 700;">RM ${stopLoss.toFixed(3)}</td>
                                 <td style="text-align: right; color: #f59e0b; font-weight: 700;">RM ${turnoverM}M</td>
-                                <td style="color: #94a3b8;">${item.sector || 'Teknologi'}</td>
                             </tr>
                         `;
                     });
@@ -1346,7 +1380,7 @@
                     hybridSection.style.display = 'block';
                     hybridTbody.innerHTML = `
                         <tr>
-                            <td colspan="9" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
+                            <td colspan="8" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
                                 ⏳ Tiada kaunter EXPLOSIVE atau STAIRCASE hari ini yang melepasi tapisan Turnover ≥ RM 750K.
                             </td>
                         </tr>
@@ -1444,17 +1478,11 @@
                 const hasPullback = pullbackVal >= 0.0 && pullbackVal <= maxPullbackLimit;
                 
                 const isBouncing = item.change > 0;
-                const isDowntrend = item.setupName && (
-                    item.setupName.includes('Downtrend') || 
-                    item.setupName.includes('Avoid') || 
-                    item.setupName === 'N/A'
-                );
                 const passBasic = hasPullback && 
                        isBouncing && 
-                       !isDowntrend && 
                        item.price >= 0.25 && item.price <= 4.00 && 
                        item.turnover >= 250000 && 
-                       !item.isCombStock;
+                       !isSleepingOrAvoidStock(item);
                        
                 if (!passBasic) return false;
                 
@@ -1494,6 +1522,20 @@
             });
         }
 
+        function toggleReversalsSection() {
+            const content = document.getElementById('reversals-content');
+            const btn = document.getElementById('btn-toggle-reversals');
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                btn.innerHTML = '👁️ Hide Section';
+                localStorage.setItem('hideReversals', 'false');
+            } else {
+                content.style.display = 'none';
+                btn.innerHTML = '👁️ Show Section';
+                localStorage.setItem('hideReversals', 'true');
+            }
+        }
+
         // Copy VVIP only watchlist for TradingView
         function copyVvipWatchlist() {
             const listToCopy = [];
@@ -1504,8 +1546,7 @@
                 if (badge) {
                     const nameCell = r.querySelector('td:nth-child(2)');
                     if (nameCell) {
-                        // Extract name by splitting at the first spaces/html tags
-                        const name = nameCell.textContent.split('Score:')[0].trim();
+                        const name = nameCell.textContent.split('Score:')[0].replace('🔗', '').trim();
                         listToCopy.push(`MYX:${name}`);
                     }
                 }
@@ -1541,8 +1582,7 @@
             rows.forEach(r => {
                 const nameCell = r.querySelector('td:nth-child(2)');
                 if (nameCell) {
-                    // Extract name by splitting at the first spaces/html tags
-                    const name = nameCell.textContent.split('Score:')[0].trim();
+                    const name = nameCell.textContent.split('Score:')[0].replace('🔗', '').trim();
                     if (name && !name.includes("Tiada kaunter")) {
                         listToCopy.push(`MYX:${name}`);
                     }
@@ -1575,6 +1615,14 @@
         // Page setup and event listeners
         window.addEventListener('DOMContentLoaded', () => {
             fetchLiveData();
+
+            // Check saved show/hide state for Reversals section
+            if (localStorage.getItem('hideReversals') === 'true') {
+                const content = document.getElementById('reversals-content');
+                if (content) content.style.display = 'none';
+                const btn = document.getElementById('btn-toggle-reversals');
+                if (btn) btn.innerHTML = '👁️ Show Section';
+            }
 
             document.getElementById('refreshBtn').addEventListener('click', async function() {
                 const text = this.textContent;

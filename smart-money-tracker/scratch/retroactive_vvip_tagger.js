@@ -13,6 +13,20 @@ const files = fs.readdirSync(histDir)
 
 console.log(`🔍 Menjumpai ${files.length} fail sejarah untuk tag retroactive VVIP...`);
 
+// Helper function to identify comb stocks (saham tidur), illiquid stocks, or downtrend/avoid stocks
+const isSleepingOrAvoidStock = (item) => {
+    if (!item) return false;
+    if (item.isCombStock) return true;
+    
+    const setup = (item.setupName || '').toUpperCase();
+    if (setup.includes('DOWNTREND') || setup.includes('AVOID') || setup === 'N/A') return true;
+    
+    const reason = (item.reason || '').toUpperCase();
+    if (reason.includes('COMB') || reason.includes('AVOID') || reason.includes('ILLIQUID')) return true;
+    
+    return false;
+};
+
 for (let i = 1; i < files.length; i++) {
     const prevFile = files[i - 1];
     const currentFile = files[i];
@@ -31,11 +45,20 @@ for (let i = 1; i < files.length; i++) {
         
         let taggedCount = 0;
         currentTopVolume.forEach(item => {
-            if (prevNames.has(item.name.toUpperCase())) {
-                item.isVvip = true;
-                taggedCount++;
+            const name = item.name.toUpperCase();
+            if (prevNames.has(name)) {
+                const yesterdayItem = prevTopVolume.find(x => x.name.toUpperCase() === name);
+                const wasYesterdayBad = isSleepingOrAvoidStock(yesterdayItem);
+                const isTodayBad = isSleepingOrAvoidStock(item);
+                
+                if (!wasYesterdayBad && !isTodayBad) {
+                    item.isVvip = true;
+                    taggedCount++;
+                } else {
+                    delete item.isVvip;
+                }
             } else {
-                delete item.isVvip; // Ensure clean state
+                delete item.isVvip;
             }
         });
         

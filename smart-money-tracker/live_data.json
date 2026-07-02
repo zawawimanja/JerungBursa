@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-02T11:02:35.173Z",
+  "lastUpdated": "2026-07-02T14:35:58.980Z",
   "source": "klse.i3investor.com",
   "topVolume": [
     {
@@ -25,8 +25,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.8209999990463257,
-      "sma200": 0.8162250015139579,
-      "isVvip": true
+      "sma200": 0.8162250015139579
     },
     {
       "name": "CIMB",
@@ -51,8 +50,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 7.642199993133545,
-      "sma200": 7.784949989318847,
-      "isVvip": true
+      "sma200": 7.784949989318847
     },
     {
       "name": "YTL",
@@ -103,8 +101,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 8.6214000415802,
-      "sma200": 7.382450003623962,
-      "isVvip": true
+      "sma200": 7.382450003623962
     },
     {
       "name": "MAYBANK",
@@ -129,8 +126,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 10.962800064086913,
-      "sma200": 10.794999995231628,
-      "isVvip": true
+      "sma200": 10.794999995231628
     },
     {
       "name": "SKYCHIP",
@@ -207,8 +203,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 1.2138000011444092,
-      "sma200": 1.5267000031471252,
-      "isVvip": true
+      "sma200": 1.5267000031471252
     },
     {
       "name": "TM",
@@ -233,8 +228,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 7.446200008392334,
-      "sma200": 7.473650007247925,
-      "isVvip": true
+      "sma200": 7.473650007247925
     },
     {
       "name": "VITROX",
@@ -264,7 +258,7 @@
     },
     {
       "name": "CHB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Swing / Bluechip",
       "setupStyle": "EXPLOSIVE",
       "price": 1.5099999904632568,
@@ -290,7 +284,7 @@
     },
     {
       "name": "ECOSHOP",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Intraday / Momentum",
       "setupStyle": "EXPLOSIVE",
       "price": 1.4299999475479126,
@@ -368,7 +362,7 @@
     },
     {
       "name": "MRDIY",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Swing / Bluechip",
       "setupStyle": "SWING PLAY",
       "price": 1.649999976158142,
@@ -389,8 +383,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 1.6378000092506408,
-      "sma200": 1.6381999999284744,
-      "isVvip": true
+      "sma200": 1.6381999999284744
     },
     {
       "name": "SUNMED",
@@ -441,12 +434,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 2.106199996471405,
-      "sma200": 2.3917999893426893,
-      "isVvip": true
+      "sma200": 2.3917999893426893
     },
     {
       "name": "UWC",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Swing / Bluechip",
       "setupStyle": "STAIRCASE",
       "price": 6.449999809265137,
@@ -545,8 +537,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 5.181199989318848,
-      "sma200": 4.278450002670288,
-      "isVvip": true
+      "sma200": 4.278450002670288
     },
     {
       "name": "PENTA",
@@ -597,12 +588,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 6.013800010681153,
-      "sma200": 5.684550015926361,
-      "isVvip": true
+      "sma200": 5.684550015926361
     },
     {
       "name": "GREATEC",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Swing / Bluechip",
       "setupStyle": "SWING PLAY",
       "price": 2.5399999618530273,
@@ -623,8 +613,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 2.541000008583069,
-      "sma200": 2.046049997806549,
-      "isVvip": true
+      "sma200": 2.046049997806549
     },
     {
       "name": "SUM",
@@ -675,8 +664,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.7903000009059906,
-      "sma200": 0.9365249994397163,
-      "isVvip": true
+      "sma200": 0.9365249994397163
     },
     {
       "name": "PETDAG",
@@ -701,8 +689,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 19.202799911499024,
-      "sma200": 20.80439998626709,
-      "isVvip": true
+      "sma200": 20.80439998626709
     },
     {
       "name": "DUFU",
@@ -830,12 +817,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.7630000019073486,
-      "sma200": 0.6591500017046928,
-      "isVvip": true
+      "sma200": 0.6591500017046928
     },
     {
       "name": "KOPI",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.8949999809265137,
@@ -856,8 +842,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 1.021300002336502,
-      "sma200": 1.2264749982953072,
-      "isVvip": true
+      "sma200": 1.2264749982953072
     },
     {
       "name": "TANCO",
@@ -882,8 +867,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 1.162000002861023,
-      "sma200": 1.1885499981045724,
-      "isVvip": true
+      "sma200": 1.1885499981045724
     },
     {
       "name": "PENTECH",
@@ -913,7 +897,7 @@
     },
     {
       "name": "SLVEST",
-      "sector": "Bursa",
+      "sector": "Utilities",
       "category": "Swing / Bluechip",
       "setupStyle": "STAIRCASE",
       "price": 3.069999933242798,
@@ -986,12 +970,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 6.877199993133545,
-      "sma200": 7.064899997711182,
-      "isVvip": true
+      "sma200": 7.064899997711182
     },
     {
       "name": "SCGBHD",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Swing / Bluechip",
       "setupStyle": "STAIRCASE",
       "price": 2.3399999141693115,
@@ -1038,8 +1021,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.3485999992489815,
-      "sma200": 0.3070500000566244,
-      "isVvip": true
+      "sma200": 0.3070500000566244
     },
     {
       "name": "NESTLE",
@@ -1064,8 +1046,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 96.93640029907226,
-      "sma200": 105.08430011749267,
-      "isVvip": true
+      "sma200": 105.08430011749267
     },
     {
       "name": "CBHB",
@@ -1095,7 +1076,7 @@
     },
     {
       "name": "MEGAFB",
-      "sector": "Bursa",
+      "sector": "IPO",
       "category": "Swing / Bluechip",
       "setupStyle": "STAIRCASE",
       "price": 1.6200000047683716,
@@ -1147,7 +1128,7 @@
     },
     {
       "name": "THMY",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Swing / Bluechip",
       "setupStyle": "SWING PLAY",
       "price": 1.7100000381469727,
@@ -1194,12 +1175,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 21.852000007629396,
-      "sma200": 22.049799909591673,
-      "isVvip": true
+      "sma200": 22.049799909591673
     },
     {
       "name": "RAMSSOL",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.6800000071525574,
@@ -1220,8 +1200,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.7064000058174134,
-      "sma200": 0.8839749968051911,
-      "isVvip": true
+      "sma200": 0.8839749968051911
     },
     {
       "name": "PETGAS",
@@ -1246,8 +1225,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 17.581599884033203,
-      "sma200": 18.07100004196167,
-      "isVvip": true
+      "sma200": 18.07100004196167
     },
     {
       "name": "PPB",
@@ -1272,8 +1250,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 10.232200107574464,
-      "sma200": 10.817650046348572,
-      "isVvip": true
+      "sma200": 10.817650046348572
     },
     {
       "name": "NE",
@@ -1303,7 +1280,7 @@
     },
     {
       "name": "JPG",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Swing / Bluechip",
       "setupStyle": "STAIRCASE",
       "price": 1.7999999523162842,
@@ -1329,7 +1306,7 @@
     },
     {
       "name": "YEWLEE",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.5849999785423279,
@@ -1355,7 +1332,7 @@
     },
     {
       "name": "ELRIDGE",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.925000011920929,
@@ -1376,8 +1353,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.8583999991416931,
-      "sma200": 0.9313750001788139,
-      "isVvip": true
+      "sma200": 0.9313750001788139
     },
     {
       "name": "OPPSTAR",
@@ -1402,12 +1378,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.5666000026464463,
-      "sma200": 0.4128249999880791,
-      "isVvip": true
+      "sma200": 0.4128249999880791
     },
     {
       "name": "SUNVIEW",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.3700000047683716,
@@ -1428,12 +1403,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.3680000066757202,
-      "sma200": 0.3680750001966953,
-      "isVvip": true
+      "sma200": 0.3680750001966953
     },
     {
       "name": "ITMAX",
-      "sector": "Bursa",
+      "sector": "Technology",
       "category": "Swing / Bluechip",
       "setupStyle": "STAIRCASE",
       "price": 4.849999904632568,
@@ -1459,7 +1433,7 @@
     },
     {
       "name": "LSH",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Swing / Bluechip",
       "setupStyle": "SWING PLAY",
       "price": 1.75,
@@ -1480,8 +1454,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 1.7621999859809876,
-      "sma200": 1.9296999913454056,
-      "isVvip": true
+      "sma200": 1.9296999913454056
     },
     {
       "name": "KLK",
@@ -1511,7 +1484,7 @@
     },
     {
       "name": "ECOMATE",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.8550000190734863,
@@ -1532,8 +1505,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.8535000205039978,
-      "sma200": 0.8281250151991845,
-      "isVvip": true
+      "sma200": 0.8281250151991845
     },
     {
       "name": "MMCS",
@@ -1563,7 +1535,7 @@
     },
     {
       "name": "SFPTECH",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.30000001192092896,
@@ -1615,7 +1587,7 @@
     },
     {
       "name": "SNS",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.4950000047683716,
@@ -1636,12 +1608,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.4947999966144562,
-      "sma200": 0.5434749983251095,
-      "isVvip": true
+      "sma200": 0.5434749983251095
     },
     {
       "name": "MTTSL",
-      "sector": "Bursa",
+      "sector": "Transportation",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.9700000286102295,
@@ -1719,7 +1690,7 @@
     },
     {
       "name": "CORAZA",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.9850000143051147,
@@ -1766,8 +1737,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.36145833631356555,
-      "sma200": 0.36145833631356555,
-      "isVvip": true
+      "sma200": 0.36145833631356555
     },
     {
       "name": "KEEMING",
@@ -1797,7 +1767,7 @@
     },
     {
       "name": "CTOS",
-      "sector": "Bursa",
+      "sector": "Financial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.6850000023841858,
@@ -1818,12 +1788,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.6790000021457672,
-      "sma200": 0.7908499982953071,
-      "isVvip": true
+      "sma200": 0.7908499982953071
     },
     {
       "name": "FFB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Swing / Bluechip",
       "setupStyle": "SWING PLAY",
       "price": 2.25,
@@ -1844,8 +1813,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 2.3025999879837036,
-      "sma200": 2.5025999927520752,
-      "isVvip": true
+      "sma200": 2.5025999927520752
     },
     {
       "name": "SDCG",
@@ -1870,8 +1838,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.6826000022888183,
-      "sma200": 0.607075001001358,
-      "isVvip": true
+      "sma200": 0.607075001001358
     },
     {
       "name": "EIPOWER",
@@ -1901,7 +1868,7 @@
     },
     {
       "name": "SUNLOGY",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.28999999165534973,
@@ -1922,12 +1889,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.27049999833106997,
-      "sma200": 0.28354999773204326,
-      "isVvip": true
+      "sma200": 0.28354999773204326
     },
     {
       "name": "DXN",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.45500001311302185,
@@ -1948,12 +1914,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.45890000224113464,
-      "sma200": 0.4913749951124191,
-      "isVvip": true
+      "sma200": 0.4913749951124191
     },
     {
       "name": "SAMAIDEN",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 1.409999966621399,
@@ -1979,7 +1944,7 @@
     },
     {
       "name": "INFOM",
-      "sector": "Bursa",
+      "sector": "Technology",
       "category": "Intraday / Momentum",
       "setupStyle": "EXPLOSIVE",
       "price": 1.2699999809265137,
@@ -2031,7 +1996,7 @@
     },
     {
       "name": "ICTZONE",
-      "sector": "Bursa",
+      "sector": "Technology",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.1899999976158142,
@@ -2052,8 +2017,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.18020000278949738,
-      "sma200": 0.17787500225007535,
-      "isVvip": true
+      "sma200": 0.17787500225007535
     },
     {
       "name": "HEIM",
@@ -2078,12 +2042,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 21.102800025939942,
-      "sma200": 22.15599994659424,
-      "isVvip": true
+      "sma200": 22.15599994659424
     },
     {
       "name": "ENPRO",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.20000000298023224,
@@ -2104,12 +2067,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2099999988079071,
-      "sma200": 0.22127499923110008,
-      "isVvip": true
+      "sma200": 0.22127499923110008
     },
     {
       "name": "TEAMSTR",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.25,
@@ -2130,12 +2092,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.2492999991774559,
-      "sma200": 0.2456249992617152,
-      "isVvip": true
+      "sma200": 0.2456249992617152
     },
     {
       "name": "PWRWELL",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.824999988079071,
@@ -2213,7 +2174,7 @@
     },
     {
       "name": "HEGROUP",
-      "sector": "Bursa",
+      "sector": "Utilities",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.5199999809265137,
@@ -2239,7 +2200,7 @@
     },
     {
       "name": "SENHENG",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "EXPLOSIVE",
       "price": 0.15000000596046448,
@@ -2260,8 +2221,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.16640000239014627,
-      "sma200": 0.1793500006571412,
-      "isVvip": true
+      "sma200": 0.1793500006571412
     },
     {
       "name": "VSTECS",
@@ -2286,8 +2246,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 1.8655331158638,
-      "sma200": 1.5280663806200028,
-      "isVvip": true
+      "sma200": 1.5280663806200028
     },
     {
       "name": "AMBEST",
@@ -2364,8 +2323,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 16.61599994659424,
-      "sma200": 16.887499952316283,
-      "isVvip": true
+      "sma200": 16.887499952316283
     },
     {
       "name": "HHRG",
@@ -2390,12 +2348,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.08189999982714653,
-      "sma200": 0.07404999982565641,
-      "isVvip": true
+      "sma200": 0.07404999982565641
     },
     {
       "name": "CHEEDING",
-      "sector": "Bursa",
+      "sector": "Utilities",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.6800000071525574,
@@ -2421,7 +2378,7 @@
     },
     {
       "name": "PEKAT",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Swing / Bluechip",
       "setupStyle": "STAIRCASE",
       "price": 1.7899999618530273,
@@ -2473,7 +2430,7 @@
     },
     {
       "name": "GENERGY",
-      "sector": "Bursa",
+      "sector": "Energy",
       "category": "Intraday / Momentum",
       "setupStyle": "EXPLOSIVE",
       "price": 0.3799999952316284,
@@ -2494,8 +2451,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.5056999951601029,
-      "sma200": 0.6260948840284,
-      "isVvip": true
+      "sma200": 0.6260948840284
     },
     {
       "name": "OGX",
@@ -2525,7 +2481,7 @@
     },
     {
       "name": "OXB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.33500000834465027,
@@ -2546,8 +2502,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.3456000030040741,
-      "sma200": 0.3041249999403954,
-      "isVvip": true
+      "sma200": 0.3041249999403954
     },
     {
       "name": "LHI",
@@ -2598,12 +2553,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.20239999651908874,
-      "sma200": 0.3739249982684851,
-      "isVvip": true
+      "sma200": 0.3739249982684851
     },
     {
       "name": "ICENTS",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.5400000214576721,
@@ -2629,7 +2583,7 @@
     },
     {
       "name": "UUE",
-      "sector": "Bursa",
+      "sector": "Utilities",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.48500001430511475,
@@ -2655,7 +2609,7 @@
     },
     {
       "name": "KTI",
-      "sector": "Bursa",
+      "sector": "Property",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.5299999713897705,
@@ -2676,8 +2630,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.5436000049114227,
-      "sma200": 0.4462499998509884,
-      "isVvip": true
+      "sma200": 0.4462499998509884
     },
     {
       "name": "LWSABAH",
@@ -2707,7 +2660,7 @@
     },
     {
       "name": "ATECH",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.6800000071525574,
@@ -2728,12 +2681,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.7208999991416931,
-      "sma200": 0.8224999970197677,
-      "isVvip": true
+      "sma200": 0.8224999970197677
     },
     {
       "name": "TTVHB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.2800000011920929,
@@ -2754,12 +2706,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.26169999927282334,
-      "sma200": 0.25692499935626983,
-      "isVvip": true
+      "sma200": 0.25692499935626983
     },
     {
       "name": "SSF",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.38999998569488525,
@@ -2780,12 +2731,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.3863999915122986,
-      "sma200": 0.39442499712109563,
-      "isVvip": true
+      "sma200": 0.39442499712109563
     },
     {
       "name": "REACHTEN",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.4050000011920929,
@@ -2806,12 +2756,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.4221999967098236,
-      "sma200": 0.45969999879598616,
-      "isVvip": true
+      "sma200": 0.45969999879598616
     },
     {
       "name": "ORKIM",
-      "sector": "Bursa",
+      "sector": "Energy",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.875,
@@ -2832,12 +2781,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.8983999943733215,
-      "sma200": 0.9757553896458029,
-      "isVvip": true
+      "sma200": 0.9757553896458029
     },
     {
       "name": "WELLS",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.6000000238418579,
@@ -2858,8 +2806,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.6062999987602233,
-      "sma200": 0.6486500003933906,
-      "isVvip": true
+      "sma200": 0.6486500003933906
     },
     {
       "name": "3REN",
@@ -2889,7 +2836,7 @@
     },
     {
       "name": "AQUAWALK",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.1899999976158142,
@@ -2910,12 +2857,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.18429999977350234,
-      "sma200": 0.28571895475870646,
-      "isVvip": true
+      "sma200": 0.28571895475870646
     },
     {
       "name": "TFP",
-      "sector": "Bursa",
+      "sector": "Technology",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.07000000029802322,
@@ -2936,12 +2882,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.046799999959766865,
-      "sma200": 0.030175000005401673,
-      "isVvip": true
+      "sma200": 0.030175000005401673
     },
     {
       "name": "5ER",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.24500000476837158,
@@ -2962,8 +2907,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.2522999981045723,
-      "sma200": 0.25296296096510357,
-      "isVvip": true
+      "sma200": 0.25296296096510357
     },
     {
       "name": "SKPRES",
@@ -2988,8 +2932,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.3541999995708466,
-      "sma200": 0.5666999989748001,
-      "isVvip": true
+      "sma200": 0.5666999989748001
     },
     {
       "name": "F&N",
@@ -3014,12 +2957,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 28.66079990386963,
-      "sma200": 31.05269992828369,
-      "isVvip": true
+      "sma200": 31.05269992828369
     },
     {
       "name": "ECA",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.32499998807907104,
@@ -3045,7 +2987,7 @@
     },
     {
       "name": "EMPIRE",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 1.0099999904632568,
@@ -3071,7 +3013,7 @@
     },
     {
       "name": "BUSCAP",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.25,
@@ -3092,8 +3034,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.2528571408419382,
-      "sma200": 0.2528571408419382,
-      "isVvip": true
+      "sma200": 0.2528571408419382
     },
     {
       "name": "CNERGEN",
@@ -3123,7 +3064,7 @@
     },
     {
       "name": "GDGROUP",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.4050000011920929,
@@ -3175,7 +3116,7 @@
     },
     {
       "name": "HSSBAKERY",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.15000000596046448,
@@ -3201,7 +3142,7 @@
     },
     {
       "name": "CRPMATE",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.17000000178813934,
@@ -3222,8 +3163,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.18849999994039535,
-      "sma200": 0.18099999941885472,
-      "isVvip": true
+      "sma200": 0.18099999941885472
     },
     {
       "name": "CEB",
@@ -3248,12 +3188,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.2785000002384186,
-      "sma200": 0.28579999923706056,
-      "isVvip": true
+      "sma200": 0.28579999923706056
     },
     {
       "name": "RADIUM",
-      "sector": "Bursa",
+      "sector": "Property",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.5149999856948853,
@@ -3274,12 +3213,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.5012999987602234,
-      "sma200": 0.5009749990701675,
-      "isVvip": true
+      "sma200": 0.5009749990701675
     },
     {
       "name": "KENERGY",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.4300000071525574,
@@ -3300,12 +3238,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.5276999986171722,
-      "sma200": 0.5871999996900559,
-      "isVvip": true
+      "sma200": 0.5871999996900559
     },
     {
       "name": "UMC",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Swing / Bluechip",
       "setupStyle": "STAIRCASE",
       "price": 6.050000190734863,
@@ -3326,8 +3263,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 5.890599975585937,
-      "sma200": 5.8269500112533565,
-      "isVvip": true
+      "sma200": 5.8269500112533565
     },
     {
       "name": "ELSA",
@@ -3357,7 +3293,7 @@
     },
     {
       "name": "CPETECH",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.8149999976158142,
@@ -3404,8 +3340,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.9620999956130981,
-      "sma200": 0.976174995303154,
-      "isVvip": true
+      "sma200": 0.976174995303154
     },
     {
       "name": "MERSEC",
@@ -3430,12 +3365,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.2650999927520752,
-      "sma200": 0.30054999858140946,
-      "isVvip": true
+      "sma200": 0.30054999858140946
     },
     {
       "name": "SORENTO",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.6700000166893005,
@@ -3456,12 +3390,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.6451999926567078,
-      "sma200": 0.5545999959111214,
-      "isVvip": true
+      "sma200": 0.5545999959111214
     },
     {
       "name": "MINOX",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.17000000178813934,
@@ -3482,8 +3415,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.17720000118017196,
-      "sma200": 0.18517500132322312,
-      "isVvip": true
+      "sma200": 0.18517500132322312
     },
     {
       "name": "KLCC",
@@ -3508,8 +3440,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 9.101599998474121,
-      "sma200": 8.97755000591278,
-      "isVvip": true
+      "sma200": 8.97755000591278
     },
     {
       "name": "FOODIE",
@@ -3534,12 +3465,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.32540000081062315,
-      "sma200": 0.37756849253830843,
-      "isVvip": true
+      "sma200": 0.37756849253830843
     },
     {
       "name": "SBS",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.125,
@@ -3560,12 +3490,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.12199999898672104,
-      "sma200": 0.13612612558377757,
-      "isVvip": true
+      "sma200": 0.13612612558377757
     },
     {
       "name": "LGMS",
-      "sector": "Bursa",
+      "sector": "Technology",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.45500001311302185,
@@ -3586,12 +3515,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.5109999978542328,
-      "sma200": 0.5812249979376793,
-      "isVvip": true
+      "sma200": 0.5812249979376793
     },
     {
       "name": "CLOUDPT",
-      "sector": "Bursa",
+      "sector": "Technology",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.4350000023841858,
@@ -3612,12 +3540,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.49550000071525574,
-      "sma200": 0.6122249986231327,
-      "isVvip": true
+      "sma200": 0.6122249986231327
     },
     {
       "name": "SET",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.1899999976158142,
@@ -3638,12 +3565,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.1739000004529953,
-      "sma200": 0.19290000021457673,
-      "isVvip": true
+      "sma200": 0.19290000021457673
     },
     {
       "name": "GOHUB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 1.2000000476837158,
@@ -3669,7 +3595,7 @@
     },
     {
       "name": "FEYTECH",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.2150000035762787,
@@ -3690,12 +3616,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.2263999977707863,
-      "sma200": 0.26417499892413615,
-      "isVvip": true
+      "sma200": 0.26417499892413615
     },
     {
       "name": "WENTEL",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.25999999046325684,
@@ -3716,12 +3641,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.26009999722242355,
-      "sma200": 0.27784999817609785,
-      "isVvip": true
+      "sma200": 0.27784999817609785
     },
     {
       "name": "EDELTEQ",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.3400000035762787,
@@ -3742,8 +3666,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.3545999997854233,
-      "sma200": 0.4168750002980232,
-      "isVvip": true
+      "sma200": 0.4168750002980232
     },
     {
       "name": "AJI",
@@ -3768,12 +3691,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 1.0035999989509583,
-      "sma200": 1.0548999881744385,
-      "isVvip": true
+      "sma200": 1.0548999881744385
     },
     {
       "name": "OHM",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.35499998927116394,
@@ -3794,12 +3716,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.35560000360012056,
-      "sma200": 0.3289250007271767,
-      "isVvip": true
+      "sma200": 0.3289250007271767
     },
     {
       "name": "NADIBHD",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.3449999988079071,
@@ -3820,12 +3741,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.351499999165535,
-      "sma200": 0.39854999974370003,
-      "isVvip": true
+      "sma200": 0.39854999974370003
     },
     {
       "name": "JTGROUP",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.5899999737739563,
@@ -3846,12 +3766,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.5141000002622604,
-      "sma200": 0.6059750021994114,
-      "isVvip": true
+      "sma200": 0.6059750021994114
     },
     {
       "name": "TECHSTORE",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.17499999701976776,
@@ -3872,12 +3791,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.21589999824762343,
-      "sma200": 0.2596749971061945,
-      "isVvip": true
+      "sma200": 0.2596749971061945
     },
     {
       "name": "TAGHILL",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.054999999701976776,
@@ -3898,12 +3816,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.05919999897480011,
-      "sma200": 0.06179999880492687,
-      "isVvip": true
+      "sma200": 0.06179999880492687
     },
     {
       "name": "SENFONG",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.6700000166893005,
@@ -3924,12 +3841,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.6727000141143799,
-      "sma200": 0.7023250025510788,
-      "isVvip": true
+      "sma200": 0.7023250025510788
     },
     {
       "name": "MKHOP",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.6200000047683716,
@@ -3950,12 +3866,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.6231000065803528,
-      "sma200": 0.6186000064015389,
-      "isVvip": true
+      "sma200": 0.6186000064015389
     },
     {
       "name": "KJTS",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.7250000238418579,
@@ -3976,12 +3891,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.7952000033855439,
-      "sma200": 1.0985749998688699,
-      "isVvip": true
+      "sma200": 1.0985749998688699
     },
     {
       "name": "GLXT",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.20000000298023224,
@@ -4002,12 +3916,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.20799999952316284,
-      "sma200": 0.2104499988257885,
-      "isVvip": true
+      "sma200": 0.2104499988257885
     },
     {
       "name": "SDS",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.38999998569488525,
@@ -4028,12 +3941,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.42800000071525574,
-      "sma200": 0.6055000020563602,
-      "isVvip": true
+      "sma200": 0.6055000020563602
     },
     {
       "name": "MFGROUP",
-      "sector": "Bursa",
+      "sector": "Human",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.2750000059604645,
@@ -4054,12 +3966,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.2903999990224838,
-      "sma200": 0.25259999573230746,
-      "isVvip": true
+      "sma200": 0.25259999573230746
     },
     {
       "name": "SWIFT",
-      "sector": "Bursa",
+      "sector": "Logistics",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.3799999952316284,
@@ -4080,12 +3991,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.4181000006198883,
-      "sma200": 0.3977749992907047,
-      "isVvip": true
+      "sma200": 0.3977749992907047
     },
     {
       "name": "CLITE",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.20000000298023224,
@@ -4106,12 +4016,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.21879999905824662,
-      "sma200": 0.23312499918043614,
-      "isVvip": true
+      "sma200": 0.23312499918043614
     },
     {
       "name": "INSPACE",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.22499999403953552,
@@ -4132,8 +4041,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.22736841793123044,
-      "sma200": 0.22736841793123044,
-      "isVvip": true
+      "sma200": 0.22736841793123044
     },
     {
       "name": "HLFG",
@@ -4158,12 +4066,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 18.692400016784667,
-      "sma200": 18.90590003013611,
-      "isVvip": true
+      "sma200": 18.90590003013611
     },
     {
       "name": "BETA",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.625,
@@ -4184,8 +4091,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.6119000053405762,
-      "sma200": 0.5261499989032745,
-      "isVvip": true
+      "sma200": 0.5261499989032745
     },
     {
       "name": "SALIRAN",
@@ -4210,12 +4116,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.20900000035762786,
-      "sma200": 0.21577499873936176,
-      "isVvip": true
+      "sma200": 0.21577499873936176
     },
     {
       "name": "PLINTAS",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.9100000262260437,
@@ -4236,12 +4141,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.9260000109672546,
-      "sma200": 0.9528000020980835,
-      "isVvip": true
+      "sma200": 0.9528000020980835
     },
     {
       "name": "TELADAN",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.75,
@@ -4262,12 +4166,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.7825000059604644,
-      "sma200": 0.8329499971866607,
-      "isVvip": true
+      "sma200": 0.8329499971866607
     },
     {
       "name": "LEFORM",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.1599999964237213,
@@ -4288,12 +4191,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.16780000269412995,
-      "sma200": 0.16530000120401384,
-      "isVvip": true
+      "sma200": 0.16530000120401384
     },
     {
       "name": "RT",
-      "sector": "Bursa",
+      "sector": "IPO",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.1850000023841858,
@@ -4314,12 +4216,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.1851000028848648,
-      "sma200": 0.1929250005632639,
-      "isVvip": true
+      "sma200": 0.1929250005632639
     },
     {
       "name": "KEYFIELD",
-      "sector": "Bursa",
+      "sector": "Energy",
       "category": "Swing / Bluechip",
       "setupStyle": "SWING PLAY",
       "price": 1.5299999713897705,
@@ -4340,8 +4241,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 1.612400004863739,
-      "sma200": 1.5409499979019166,
-      "isVvip": true
+      "sma200": 1.5409499979019166
     },
     {
       "name": "EMCC",
@@ -4366,12 +4266,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.32689999759197236,
-      "sma200": 0.34862499877810477,
-      "isVvip": true
+      "sma200": 0.34862499877810477
     },
     {
       "name": "DENGKIL",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.125,
@@ -4392,12 +4291,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.13700000017881395,
-      "sma200": 0.17280000030994416,
-      "isVvip": true
+      "sma200": 0.17280000030994416
     },
     {
       "name": "SKYWLD",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.4050000011920929,
@@ -4418,12 +4316,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.4164999973773956,
-      "sma200": 0.46969999983906746,
-      "isVvip": true
+      "sma200": 0.46969999983906746
     },
     {
       "name": "GOLDLI",
-      "sector": "Bursa",
+      "sector": "Property",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.10000000149011612,
@@ -4444,12 +4341,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.10828124941326678,
-      "sma200": 0.10828124941326678,
-      "isVvip": true
+      "sma200": 0.10828124941326678
     },
     {
       "name": "POLYMER",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.15000000596046448,
@@ -4470,12 +4366,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.13650000125169753,
-      "sma200": 0.16295302114230675,
-      "isVvip": true
+      "sma200": 0.16295302114230675
     },
     {
       "name": "XPB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.14000000059604645,
@@ -4496,12 +4391,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.14469999849796294,
-      "sma200": 0.16341145802289248,
-      "isVvip": true
+      "sma200": 0.16341145802289248
     },
     {
       "name": "SAG",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.699999988079071,
@@ -4522,12 +4416,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.7138000059127808,
-      "sma200": 0.7758250033855438,
-      "isVvip": true
+      "sma200": 0.7758250033855438
     },
     {
       "name": "OPTIMAX",
-      "sector": "Bursa",
+      "sector": "Healthcare",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.5299999713897705,
@@ -4548,12 +4441,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.5371999919414521,
-      "sma200": 0.5843999955058098,
-      "isVvip": true
+      "sma200": 0.5843999955058098
     },
     {
       "name": "INFOTEC",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.32499998807907104,
@@ -4574,12 +4466,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.35589999973773956,
-      "sma200": 0.3849750000238419,
-      "isVvip": true
+      "sma200": 0.3849750000238419
     },
     {
       "name": "ORGABIO",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.30000001192092896,
@@ -4600,12 +4491,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.29590000212192535,
-      "sma200": 0.2956000004708767,
-      "isVvip": true
+      "sma200": 0.2956000004708767
     },
     {
       "name": "PMCK",
-      "sector": "Bursa",
+      "sector": "Healthcare",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.1899999976158142,
@@ -4626,12 +4516,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.19829999834299086,
-      "sma200": 0.20497499898076058,
-      "isVvip": true
+      "sma200": 0.20497499898076058
     },
     {
       "name": "AGX",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "EXPLOSIVE",
       "price": 0.4650000035762787,
@@ -4652,12 +4541,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.41860000252723695,
-      "sma200": 0.4695749981701374,
-      "isVvip": true
+      "sma200": 0.4695749981701374
     },
     {
       "name": "AGMO",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.3100000023841858,
@@ -4678,12 +4566,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.3491999989748001,
-      "sma200": 0.35982499927282335,
-      "isVvip": true
+      "sma200": 0.35982499927282335
     },
     {
       "name": "OBHB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "EXPLOSIVE",
       "price": 0.20499999821186066,
@@ -4704,8 +4591,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2116999989748001,
-      "sma200": 0.17940000109374524,
-      "isVvip": true
+      "sma200": 0.17940000109374524
     },
     {
       "name": "MBN",
@@ -4730,12 +4616,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.0946000000834465,
-      "sma200": 0.10462499886751175,
-      "isVvip": true
+      "sma200": 0.10462499886751175
     },
     {
       "name": "MESTRON",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.09000000357627869,
@@ -4756,12 +4641,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.1285000003874302,
-      "sma200": 0.16465000044554473,
-      "isVvip": true
+      "sma200": 0.16465000044554473
     },
     {
       "name": "LACMED",
-      "sector": "Bursa",
+      "sector": "Healthcare",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.7699999809265137,
@@ -4782,12 +4666,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.7832000029087066,
-      "sma200": 0.8917753614377284,
-      "isVvip": true
+      "sma200": 0.8917753614377284
     },
     {
       "name": "MSB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "EXPLOSIVE",
       "price": 0.09000000357627869,
@@ -4808,12 +4691,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.07810000106692314,
-      "sma200": 0.09482500065118074,
-      "isVvip": true
+      "sma200": 0.09482500065118074
     },
     {
       "name": "VLB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.6100000143051147,
@@ -4834,12 +4716,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.5690000009536743,
-      "sma200": 0.49797500133514405,
-      "isVvip": true
+      "sma200": 0.49797500133514405
     },
     {
       "name": "AIMFLEX",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.07999999821186066,
@@ -4860,12 +4741,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.08219999983906746,
-      "sma200": 0.08397500023245812,
-      "isVvip": true
+      "sma200": 0.08397500023245812
     },
     {
       "name": "BMS",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.14499999582767487,
@@ -4886,8 +4766,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.14980000078678132,
-      "sma200": 0.1643214303467955,
-      "isVvip": true
+      "sma200": 0.1643214303467955
     },
     {
       "name": "NORTHERN",
@@ -4912,12 +4791,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.6450999999046325,
-      "sma200": 0.6350250013172627,
-      "isVvip": true
+      "sma200": 0.6350250013172627
     },
     {
       "name": "VTC",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.23499999940395355,
@@ -4938,12 +4816,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.24369999766349792,
-      "sma200": 0.2398249986767769,
-      "isVvip": true
+      "sma200": 0.2398249986767769
     },
     {
       "name": "PEOPLE",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "EXPLOSIVE",
       "price": 0.23499999940395355,
@@ -4964,8 +4841,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.24210000067949294,
-      "sma200": 0.23074999958276748,
-      "isVvip": true
+      "sma200": 0.23074999958276748
     },
     {
       "name": "PPJACK",
@@ -4990,12 +4866,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.9170000123977661,
-      "sma200": 0.9181500005722046,
-      "isVvip": true
+      "sma200": 0.9181500005722046
     },
     {
       "name": "JSSOLAR",
-      "sector": "Bursa",
+      "sector": "Energy",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.19499999284744263,
@@ -5016,12 +4891,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.20739999681711196,
-      "sma200": 0.2523316054609773,
-      "isVvip": true
+      "sma200": 0.2523316054609773
     },
     {
       "name": "HOCKSOON",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.3149999976158142,
@@ -5042,12 +4916,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.3469999992847443,
-      "sma200": 0.3719680845103365,
-      "isVvip": true
+      "sma200": 0.3719680845103365
     },
     {
       "name": "SUMI",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "EXPLOSIVE",
       "price": 0.0949999988079071,
@@ -5068,12 +4941,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.09560000076889992,
-      "sma200": 0.10599999990314245,
-      "isVvip": true
+      "sma200": 0.10599999990314245
     },
     {
       "name": "TJSETIA",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "EXPLOSIVE",
       "price": 0.20999999344348907,
@@ -5094,12 +4966,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2062999975681305,
-      "sma200": 0.2031249988079071,
-      "isVvip": true
+      "sma200": 0.2031249988079071
     },
     {
       "name": "PTRB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.2750000059604645,
@@ -5120,8 +4991,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2910000026226044,
-      "sma200": 0.2951250025629997,
-      "isVvip": true
+      "sma200": 0.2951250025629997
     },
     {
       "name": "ALPHA",
@@ -5146,12 +5016,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.10100000008940696,
-      "sma200": 0.10242499984800815,
-      "isVvip": true
+      "sma200": 0.10242499984800815
     },
     {
       "name": "UNIQUE",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.4300000071525574,
@@ -5172,12 +5041,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.39729999721050263,
-      "sma200": 0.42347499981522563,
-      "isVvip": true
+      "sma200": 0.42347499981522563
     },
     {
       "name": "HPMT",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.18000000715255737,
@@ -5198,12 +5066,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.17530000060796738,
-      "sma200": 0.1902749987691641,
-      "isVvip": true
+      "sma200": 0.1902749987691641
     },
     {
       "name": "AMEREIT",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Swing / Bluechip",
       "setupStyle": "SWING PLAY",
       "price": 1.5199999809265137,
@@ -5224,12 +5091,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 1.6021999859809875,
-      "sma200": 1.6186999982595445,
-      "isVvip": true
+      "sma200": 1.6186999982595445
     },
     {
       "name": "EFRAME",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.26499998569488525,
@@ -5250,12 +5116,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.26429999560117723,
-      "sma200": 0.33412499852478506,
-      "isVvip": true
+      "sma200": 0.33412499852478506
     },
     {
       "name": "WINSTAR",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.5600000023841858,
@@ -5276,12 +5141,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.558400000333786,
-      "sma200": 0.5368749958276748,
-      "isVvip": true
+      "sma200": 0.5368749958276748
     },
     {
       "name": "HAILY",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.17499999701976776,
@@ -5302,12 +5166,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.18949999839067458,
-      "sma200": 0.20667499870061876,
-      "isVvip": true
+      "sma200": 0.20667499870061876
     },
     {
       "name": "TSA",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.875,
@@ -5328,8 +5191,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.8623000109195709,
-      "sma200": 0.7998500072956085,
-      "isVvip": true
+      "sma200": 0.7998500072956085
     },
     {
       "name": "ADNEX",
@@ -5354,12 +5216,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.31879999935626985,
-      "sma200": 0.2963513508439064,
-      "isVvip": true
+      "sma200": 0.2963513508439064
     },
     {
       "name": "OGM",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "EXPLOSIVE",
       "price": 0.14499999582767487,
@@ -5380,12 +5241,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.13249999791383743,
-      "sma200": 0.1385849047944231,
-      "isVvip": true
+      "sma200": 0.1385849047944231
     },
     {
       "name": "BWYS",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.1599999964237213,
@@ -5406,12 +5266,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.16980000108480453,
-      "sma200": 0.19522499933838844,
-      "isVvip": true
+      "sma200": 0.19522499933838844
     },
     {
       "name": "FLEXI",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "EXPLOSIVE",
       "price": 0.12999999523162842,
@@ -5432,12 +5291,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.13129999965429306,
-      "sma200": 0.13154999781399965,
-      "isVvip": true
+      "sma200": 0.13154999781399965
     },
     {
       "name": "CKI",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.375,
@@ -5458,12 +5316,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.4022000020742416,
-      "sma200": 0.5604750002920628,
-      "isVvip": true
+      "sma200": 0.5604750002920628
     },
     {
       "name": "ADB",
-      "sector": "Bursa",
+      "sector": "IPO",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.5950000286102295,
@@ -5484,12 +5341,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.6397000002861023,
-      "sma200": 0.7769999977946281,
-      "isVvip": true
+      "sma200": 0.7769999977946281
     },
     {
       "name": "PGLOBAL",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.45500001311302185,
@@ -5510,12 +5366,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.46810000002384183,
-      "sma200": 0.4655499991774559,
-      "isVvip": true
+      "sma200": 0.4655499991774559
     },
     {
       "name": "HAWK",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.1899999976158142,
@@ -5536,12 +5391,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.2012999990582466,
-      "sma200": 0.26252499781548977,
-      "isVvip": true
+      "sma200": 0.26252499781548977
     },
     {
       "name": "CENGILD",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.20000000298023224,
@@ -5562,12 +5416,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.20859999746084212,
-      "sma200": 0.21927499860525132,
-      "isVvip": true
+      "sma200": 0.21927499860525132
     },
     {
       "name": "NESTCON",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.4000000059604645,
@@ -5588,8 +5441,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.3572000014781952,
-      "sma200": 0.32675000205636023,
-      "isVvip": true
+      "sma200": 0.32675000205636023
     },
     {
       "name": "DLADY",
@@ -5614,12 +5466,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 32.74919990539551,
-      "sma200": 30.820199937820433,
-      "isVvip": true
+      "sma200": 30.820199937820433
     },
     {
       "name": "KGW",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.0949999988079071,
@@ -5640,12 +5491,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.10159999936819077,
-      "sma200": 0.13160000033676625,
-      "isVvip": true
+      "sma200": 0.13160000033676625
     },
     {
       "name": "WESTRVR",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.2199999988079071,
@@ -5666,12 +5516,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2157999986410141,
-      "sma200": 0.21794999912381172,
-      "isVvip": true
+      "sma200": 0.21794999912381172
     },
     {
       "name": "GEOHAN",
-      "sector": "Bursa",
+      "sector": "Construction",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.28999999165534973,
@@ -5692,8 +5541,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.2957999962568283,
-      "sma200": 0.3535460969235035,
-      "isVvip": true
+      "sma200": 0.3535460969235035
     },
     {
       "name": "VINVEST",
@@ -5718,12 +5566,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.02309999966993928,
-      "sma200": 0.028549999739043416,
-      "isVvip": true
+      "sma200": 0.028549999739043416
     },
     {
       "name": "PANDA",
-      "sector": "Bursa",
+      "sector": "IPO",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.1899999976158142,
@@ -5744,12 +5591,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.20029999792575837,
-      "sma200": 0.22407499834895134,
-      "isVvip": true
+      "sma200": 0.22407499834895134
     },
     {
       "name": "MTEC",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.9800000190734863,
@@ -5770,12 +5616,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 1.0122999882698058,
-      "sma200": 1.0796749985218048,
-      "isVvip": true
+      "sma200": 1.0796749985218048
     },
     {
       "name": "PMW",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.25,
@@ -5796,12 +5641,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2612999981641769,
-      "sma200": 0.28318181604921044,
-      "isVvip": true
+      "sma200": 0.28318181604921044
     },
     {
       "name": "DSS",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.25,
@@ -5822,12 +5666,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.25479999601840975,
-      "sma200": 0.2515499976277351,
-      "isVvip": true
+      "sma200": 0.2515499976277351
     },
     {
       "name": "ANEKA",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.10999999940395355,
@@ -5848,12 +5691,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.11680000007152558,
-      "sma200": 0.1286499999836087,
-      "isVvip": true
+      "sma200": 0.1286499999836087
     },
     {
       "name": "ACO",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.1550000011920929,
@@ -5874,12 +5716,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.16240000009536742,
-      "sma200": 0.1812499987334013,
-      "isVvip": true
+      "sma200": 0.1812499987334013
     },
     {
       "name": "PLYTEC",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.1899999976158142,
@@ -5900,8 +5741,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.17020000159740448,
-      "sma200": 0.16865000016987325,
-      "isVvip": true
+      "sma200": 0.16865000016987325
     },
     {
       "name": "OVH",
@@ -5926,8 +5766,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.20849999874830247,
-      "sma200": 0.1655750001221895,
-      "isVvip": true
+      "sma200": 0.1655750001221895
     },
     {
       "name": "UNITRAD",
@@ -5952,12 +5791,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.23819999814033507,
-      "sma200": 0.24572499841451645,
-      "isVvip": true
+      "sma200": 0.24572499841451645
     },
     {
       "name": "DCHCARE",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "EXPLOSIVE",
       "price": 0.10000000149011612,
@@ -5978,12 +5816,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.10809999942779541,
-      "sma200": 0.1194499996304512,
-      "isVvip": true
+      "sma200": 0.1194499996304512
     },
     {
       "name": "RL",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.19499999284744263,
@@ -6004,8 +5841,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.19919999748468398,
-      "sma200": 0.23497499883174897,
-      "isVvip": true
+      "sma200": 0.23497499883174897
     },
     {
       "name": "HONGSENG",
@@ -6030,12 +5866,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.00909999979659915,
-      "sma200": 0.008049999820068479,
-      "isVvip": true
+      "sma200": 0.008049999820068479
     },
     {
       "name": "AGRICOR",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.41499999165534973,
@@ -6056,12 +5891,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.39119999945163725,
-      "sma200": 0.4294499997794628,
-      "isVvip": true
+      "sma200": 0.4294499997794628
     },
     {
       "name": "SUPREME",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.20000000298023224,
@@ -6082,12 +5916,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.19879999935626982,
-      "sma200": 0.20797499850392343,
-      "isVvip": true
+      "sma200": 0.20797499850392343
     },
     {
       "name": "VOLCANO",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.30000001192092896,
@@ -6108,12 +5941,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.287399999499321,
-      "sma200": 0.3611749977618456,
-      "isVvip": true
+      "sma200": 0.3611749977618456
     },
     {
       "name": "TCS",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.08500000089406967,
@@ -6134,12 +5966,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.08590000078082084,
-      "sma200": 0.10332499988377095,
-      "isVvip": true
+      "sma200": 0.10332499988377095
     },
     {
       "name": "EPB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.25999999046325684,
@@ -6160,12 +5991,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.27249999821186066,
-      "sma200": 0.3486750000715256,
-      "isVvip": true
+      "sma200": 0.3486750000715256
     },
     {
       "name": "VANZO",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.125,
@@ -6186,12 +6016,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.12889999762177468,
-      "sma200": 0.14007499989122152,
-      "isVvip": true
+      "sma200": 0.14007499989122152
     },
     {
       "name": "FAMIERA",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.2199999988079071,
@@ -6212,12 +6041,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2167999976873398,
-      "sma200": 0.21493670731028425,
-      "isVvip": true
+      "sma200": 0.21493670731028425
     },
     {
       "name": "ZANTAT",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.16500000655651093,
@@ -6238,12 +6066,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.16500000029802322,
-      "sma200": 0.2066249992698431,
-      "isVvip": true
+      "sma200": 0.2066249992698431
     },
     {
       "name": "PSP",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "EXPLOSIVE",
       "price": 0.13500000536441803,
@@ -6264,8 +6091,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.1314999996125698,
-      "sma200": 0.13144366165072147,
-      "isVvip": true
+      "sma200": 0.13144366165072147
     },
     {
       "name": "UMSINT",
@@ -6290,12 +6116,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.7695999956130981,
-      "sma200": 0.7671499994397163,
-      "isVvip": true
+      "sma200": 0.7671499994397163
     },
     {
       "name": "CEKD",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.2750000059604645,
@@ -6316,12 +6141,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2904999977350235,
-      "sma200": 0.3120250007510185,
-      "isVvip": true
+      "sma200": 0.3120250007510185
     },
     {
       "name": "SYNERGY",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.18000000715255737,
@@ -6342,12 +6166,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.19760000050067902,
-      "sma200": 0.2807250002771616,
-      "isVvip": true
+      "sma200": 0.2807250002771616
     },
     {
       "name": "MTAG",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.2199999988079071,
@@ -6368,8 +6191,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.23209999918937682,
-      "sma200": 0.2504749992489815,
-      "isVvip": true
+      "sma200": 0.2504749992489815
     },
     {
       "name": "YENHER",
@@ -6394,12 +6216,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.7716999971866607,
-      "sma200": 0.7925249984860421,
-      "isVvip": true
+      "sma200": 0.7925249984860421
     },
     {
       "name": "TOPMIX",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.4099999964237213,
@@ -6420,12 +6241,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.4484999990463257,
-      "sma200": 0.46540000081062316,
-      "isVvip": true
+      "sma200": 0.46540000081062316
     },
     {
       "name": "AZAMJAYA",
-      "sector": "Bursa",
+      "sector": "Construction",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 1,
@@ -6446,8 +6266,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 1.012999987602234,
-      "sma200": 1.0333249849081039,
-      "isVvip": true
+      "sma200": 1.0333249849081039
     },
     {
       "name": "KHB",
@@ -6472,8 +6291,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.08470000073313713,
-      "sma200": 0.098525000102818,
-      "isVvip": true
+      "sma200": 0.098525000102818
     },
     {
       "name": "GIIB",
@@ -6498,12 +6316,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.13870000064373017,
-      "sma200": 0.15625000160187483,
-      "isVvip": true
+      "sma200": 0.15625000160187483
     },
     {
       "name": "MOBILIA",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "EXPLOSIVE",
       "price": 0.10499999672174454,
@@ -6524,8 +6341,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.09220000118017196,
-      "sma200": 0.09512500029057264,
-      "isVvip": true
+      "sma200": 0.09512500029057264
     },
     {
       "name": "EIB",
@@ -6550,8 +6366,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.1526000013947487,
-      "sma200": 0.15475000020116567,
-      "isVvip": true
+      "sma200": 0.15475000020116567
     },
     {
       "name": "CAMAROE",
@@ -6576,12 +6391,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.07740000173449517,
-      "sma200": 0.10352150571121964,
-      "isVvip": true
+      "sma200": 0.10352150571121964
     },
     {
       "name": "HPPHB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.28999999165534973,
@@ -6602,12 +6416,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.3029000025987625,
-      "sma200": 0.31075000047683715,
-      "isVvip": true
+      "sma200": 0.31075000047683715
     },
     {
       "name": "MSTGOLF",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.15000000596046448,
@@ -6628,12 +6441,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.1551000016927719,
-      "sma200": 0.18092500001192094,
-      "isVvip": true
+      "sma200": 0.18092500001192094
     },
     {
       "name": "A1AKK",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.15000000596046448,
@@ -6654,12 +6466,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.16370000183582306,
-      "sma200": 0.20150000043213367,
-      "isVvip": true
+      "sma200": 0.20150000043213367
     },
     {
       "name": "VERDANT",
-      "sector": "Bursa",
+      "sector": "Energy",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.20000000298023224,
@@ -6680,8 +6491,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2011999985575676,
-      "sma200": 0.23239884323122872,
-      "isVvip": true
+      "sma200": 0.23239884323122872
     },
     {
       "name": "KUCINGKO",
@@ -6706,12 +6516,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.08190000087022781,
-      "sma200": 0.09327499978244305,
-      "isVvip": true
+      "sma200": 0.09327499978244305
     },
     {
       "name": "DAY3",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.10000000149011612,
@@ -6732,12 +6541,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.12249999910593033,
-      "sma200": 0.1520250014960766,
-      "isVvip": true
+      "sma200": 0.1520250014960766
     },
     {
       "name": "SBH",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.14499999582767487,
@@ -6758,12 +6566,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.148499998152256,
-      "sma200": 0.17774999879300593,
-      "isVvip": true
+      "sma200": 0.17774999879300593
     },
     {
       "name": "SINKUNG",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.07999999821186066,
@@ -6784,12 +6591,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.08019999921321869,
-      "sma200": 0.09242500007152557,
-      "isVvip": true
+      "sma200": 0.09242500007152557
     },
     {
       "name": "CREST",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.46000000834465027,
@@ -6810,12 +6616,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.4724999982118607,
-      "sma200": 0.4936499977111816,
-      "isVvip": true
+      "sma200": 0.4936499977111816
     },
     {
       "name": "DPIH",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.10499999672174454,
@@ -6836,8 +6641,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.10399999856948852,
-      "sma200": 0.10589999888092279,
-      "isVvip": true
+      "sma200": 0.10589999888092279
     },
     {
       "name": "INNATURE",
@@ -6862,12 +6666,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.17440000265836716,
-      "sma200": 0.17737500198185444,
-      "isVvip": true
+      "sma200": 0.17737500198185444
     },
     {
       "name": "SPRING",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.10000000149011612,
@@ -6888,12 +6691,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.11300000086426736,
-      "sma200": 0.1261000006645918,
-      "isVvip": true
+      "sma200": 0.1261000006645918
     },
     {
       "name": "DESTINI",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.28999999165534973,
@@ -6914,8 +6716,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.30900000035762787,
-      "sma200": 0.33300000071525576,
-      "isVvip": true
+      "sma200": 0.33300000071525576
     },
     {
       "name": "KHJB",
@@ -6940,12 +6741,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.10329999908804893,
-      "sma200": 0.11609999895095825,
-      "isVvip": true
+      "sma200": 0.11609999895095825
     },
     {
       "name": "METRO",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.009999999776482582,
@@ -6966,12 +6766,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.007999999821186066,
-      "sma200": 0.009424999789334833,
-      "isVvip": true
+      "sma200": 0.009424999789334833
     },
     {
       "name": "OFB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.12999999523162842,
@@ -6992,12 +6791,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.1419999997317791,
-      "sma200": 0.18869999889284372,
-      "isVvip": true
+      "sma200": 0.18869999889284372
     },
     {
       "name": "WTEC",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "EXPLOSIVE",
       "price": 0.11999999731779099,
@@ -7018,12 +6816,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.11859999880194665,
-      "sma200": 0.1437500000745058,
-      "isVvip": true
+      "sma200": 0.1437500000745058
     },
     {
       "name": "TOPVISN",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.16500000655651093,
@@ -7044,12 +6841,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.16300000071525575,
-      "sma200": 0.17804999984800815,
-      "isVvip": true
+      "sma200": 0.17804999984800815
     },
     {
       "name": "FIBRO",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.7749999761581421,
@@ -7070,12 +6866,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.8372999989986419,
-      "sma200": 0.7514499992132186,
-      "isVvip": true
+      "sma200": 0.7514499992132186
     },
     {
       "name": "FPHB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.33000001311302185,
@@ -7096,12 +6891,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.3214000016450882,
-      "sma200": 0.3782750007510185,
-      "isVvip": true
+      "sma200": 0.3782750007510185
     },
     {
       "name": "COLFORM",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.2549999952316284,
@@ -7122,12 +6916,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2510999971628189,
-      "sma200": 0.28739999830722807,
-      "isVvip": true
+      "sma200": 0.28739999830722807
     },
     {
       "name": "PMIBHD",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.2150000035762787,
@@ -7148,12 +6941,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.22509999990463256,
-      "sma200": 0.2180499990284443,
-      "isVvip": true
+      "sma200": 0.2180499990284443
     },
     {
       "name": "KITACON",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.6700000166893005,
@@ -7174,12 +6966,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.6782000052928925,
-      "sma200": 0.7066750052571297,
-      "isVvip": true
+      "sma200": 0.7066750052571297
     },
     {
       "name": "TASHIN",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.20000000298023224,
@@ -7200,12 +6991,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.20469999819993973,
-      "sma200": 0.21119999811053275,
-      "isVvip": true
+      "sma200": 0.21119999811053275
     },
     {
       "name": "SCB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.009999999776482582,
@@ -7226,8 +7016,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.009999999776482582,
-      "sma200": 0.009299999792128802,
-      "isVvip": true
+      "sma200": 0.009299999792128802
     },
     {
       "name": "BURSA",
@@ -7252,12 +7041,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": null,
-      "sma200": null,
-      "isVvip": true
+      "sma200": null
     },
     {
       "name": "YXPM",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.20000000298023224,
@@ -7278,8 +7066,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.2104999977350235,
-      "sma200": 0.2200999990105629,
-      "isVvip": true
+      "sma200": 0.2200999990105629
     }
   ],
   "topGainers": [

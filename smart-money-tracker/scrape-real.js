@@ -622,7 +622,21 @@ async function main() {
     // Susun topGainers mengikut peratus kenaikan tertinggi
     topGainers.sort((a, b) => b.changePct - a.changePct);
     
-    // Tag VVIP (appeared in previous history file)
+    // Helper function to identify comb stocks (saham tidur), illiquid stocks, or downtrend/avoid stocks
+    const isSleepingOrAvoidStock = (item) => {
+        if (!item) return false;
+        if (item.isCombStock) return true;
+        
+        const setup = (item.setupName || '').toUpperCase();
+        if (setup.includes('DOWNTREND') || setup.includes('AVOID') || setup === 'N/A') return true;
+        
+        const reason = (item.reason || '').toUpperCase();
+        if (reason.includes('COMB') || reason.includes('AVOID') || reason.includes('ILLIQUID')) return true;
+        
+        return false;
+    };
+
+    // Tag VVIP (appeared in previous history file and is not a comb/downtrend stock yesterday or today)
     try {
         const histDir = path.join(__dirname, 'history');
         if (fs.existsSync(histDir)) {
@@ -642,12 +656,19 @@ async function main() {
                 
                 let vvipCount = 0;
                 processedData.forEach(item => {
-                    if (prevNames.has(item.name.toUpperCase())) {
-                        item.isVvip = true;
-                        vvipCount++;
+                    const name = item.name.toUpperCase();
+                    if (prevNames.has(name)) {
+                        const yesterdayItem = prevTopVolume.find(x => x.name.toUpperCase() === name);
+                        const wasYesterdayBad = isSleepingOrAvoidStock(yesterdayItem);
+                        const isTodayBad = isSleepingOrAvoidStock(item);
+                        
+                        if (!wasYesterdayBad && !isTodayBad) {
+                            item.isVvip = true;
+                            vvipCount++;
+                        }
                     }
                 });
-                console.log(`✅ Berjaya tag ${vvipCount} kaunter sebagai VVIP (Momentum Berterusan).`);
+                console.log(`✅ Berjaya tag ${vvipCount} kaunter sebagai VVIP (Momentum Aktif Berterusan).`);
             }
         }
     } catch (err) {
