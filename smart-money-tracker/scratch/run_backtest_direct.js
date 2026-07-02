@@ -61,9 +61,9 @@ datesList.forEach((date, dateIdx) => {
     const exps = dayRows.filter(r => r.style === 'EXPLOSIVE');
     const stairs = dayRows.filter(r => r.style === 'STAIRCASE');
     
-    // Had Top 6 + Turnover Min RM 5.0M
-    const filteredExps = exps.filter(t => t.turnover >= 5000000);
-    const filteredStairs = stairs.filter(t => t.turnover >= 5000000);
+    // Had Top 6 + Turnover Min RM 1.5M
+    const filteredExps = exps.filter(t => t.turnover >= 1500000);
+    const filteredStairs = stairs.filter(t => t.turnover >= 1500000);
     
     // Sort by turnover descending to rank (matching backtest.html)
     const sortFn = (a, b) => (b.turnover || 0) - (a.turnover || 0);
