@@ -678,7 +678,10 @@
                 </div>
                 <div style="display: flex; gap: 0.5rem; align-items: center;">
                     <button onclick="copyVvipWatchlist()" style="font-size: 0.82rem; background: rgba(245, 158, 11, 0.2); color: #fb923c; padding: 0.35rem 0.75rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(245, 158, 11, 0.3); cursor: pointer; display: inline-flex; align-items: center; gap: 0.25rem; transition: background 0.2s;" onmouseover="this.style.background='rgba(245, 158, 11, 0.3)'" onmouseout="this.style.background='rgba(245, 158, 11, 0.2)'">
-                        📋 Copy VVIP Only
+                        🔥 Copy VVIP Only
+                    </button>
+                    <button onclick="copyHybridWatchlist()" style="font-size: 0.82rem; background: rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 0.35rem 0.75rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(59, 130, 246, 0.3); cursor: pointer; display: inline-flex; align-items: center; gap: 0.25rem; transition: background 0.2s;" onmouseover="this.style.background='rgba(59, 130, 246, 0.3)'" onmouseout="this.style.background='rgba(59, 130, 246, 0.2)'">
+                        📋 Copy All Hybrid
                     </button>
                     <div style="font-size: 0.82rem; background: rgba(16, 185, 129, 0.2); color: #10b981; padding: 0.35rem 0.75rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(16, 185, 129, 0.3);">
                         📈 SWING ONLY
@@ -1595,6 +1598,44 @@
                 }, 2000);
             }).catch(err => {
                 alert('Failed to copy VVIP: ' + err);
+            });
+        }
+
+        // Copy all hybrid watchlist for TradingView
+        function copyHybridWatchlist() {
+            const listToCopy = [];
+            const rows = document.querySelectorAll('#hybridPicksTableBody tr');
+            
+            rows.forEach(r => {
+                const nameCell = r.querySelector('td:nth-child(2)');
+                if (nameCell) {
+                    // Extract name by splitting at the first spaces/html tags
+                    const name = nameCell.textContent.split('Score:')[0].trim();
+                    if (name && !name.includes("Tiada kaunter")) {
+                        listToCopy.push(`MYX:${name}`);
+                    }
+                }
+            });
+            
+            if (listToCopy.length === 0) {
+                alert("Tiada kaunter Hybrid hari ini untuk disalin.");
+                return;
+            }
+            
+            const tvList = listToCopy.join(',');
+            navigator.clipboard.writeText(tvList).then(() => {
+                const btn = document.querySelector('button[onclick="copyHybridWatchlist()"]');
+                const origText = btn.innerHTML;
+                btn.innerHTML = '✅ Copied All!';
+                btn.style.borderColor = '#10b981';
+                btn.style.color = '#10b981';
+                setTimeout(() => {
+                    btn.innerHTML = origText;
+                    btn.style.borderColor = 'rgba(59, 130, 246, 0.3)';
+                    btn.style.color = '#60a5fa';
+                }, 2000);
+            }).catch(err => {
+                alert('Failed to copy Hybrid: ' + err);
             });
         }
 
