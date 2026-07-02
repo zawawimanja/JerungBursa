@@ -1250,15 +1250,7 @@
                     return style === 'STAIRCASE';
                 });
                 
-                // Sort by turnover descending
-                const sortFn = (a, b) => b.turnover - a.turnover;
-                exps.sort(sortFn);
-                stairs.sort(sortFn);
-                
-                const topExps = exps.slice(0, 6);
-                const topStairs = stairs.slice(0, 6);
-
-                // Sort topExps and topStairs for rendering: VVIP (Score >= 8) first, then by Smart Score descending, then by turnover descending
+                // Sort function for ranking: VVIP (Score >= 8) first, then by Smart Score descending, then by turnover descending
                 const renderSortFn = (a, b) => {
                     const scoreA = calculateSmartScore(a);
                     const scoreB = calculateSmartScore(b);
@@ -1274,8 +1266,13 @@
                     return b.turnover - a.turnover; // Turnover tie-breaker
                 };
 
-                topExps.sort(renderSortFn);
-                topStairs.sort(renderSortFn);
+                // Sort the entire candidates list by the smart score criteria first
+                exps.sort(renderSortFn);
+                stairs.sort(renderSortFn);
+                
+                // Then slice the top 6 highest ranking picks
+                const topExps = exps.slice(0, 6);
+                const topStairs = stairs.slice(0, 6);
                 
                 if (topExps.length > 0 || topStairs.length > 0) {
                     hybridSection.style.display = 'block';
