@@ -829,61 +829,42 @@
 
             <!-- SOP Guide Board -->
             <div class="guide-board" style="margin-bottom: 0;">
-                <h3>📚 Trading SOP & Guide Board</h3>
+                <h3>📚 Trading SOP: VVIP Anti-SL Strategy</h3>
                 <div style="display: flex; flex-direction: column; gap: 1.2rem; height: 100%;">
-                    <div class="guide-item" style="border-left-color: var(--accent);">
-                        <h4>1. Kenapa Tapisan Reversal & Swing Terbentuk?</h4>
-                        <p>Kita menjejak pergerakan dana institusi (*smart money*) yang sedang mengumpul saham bermutu tinggi berhampiran kemuncak ATH. Pergerakan lantai sokongan harian dinamik (tingkap 3-hari/5-hari/10-hari) bertindak sebagai benteng pertahanan risiko kita.</p>
+                    <div class="guide-item" style="border-left-color: #f59e0b; background: rgba(245, 158, 11, 0.02);">
+                        <h4>1. Pilih Hanya Kaunter Berlabel 🔥 VVIP</h4>
+                        <p>Di bawah jadual <strong>Hibrid Premium (Teknik C)</strong>, pilih hanya kaunter yang mempunyai lencana <strong>🔥 VVIP</strong>. Ini adalah kaunter yang muncul berturut-turut di radar volume dengan Smart Score ≥ 8.</p>
                     </div>
-                    <div class="guide-item" style="border-left-color: var(--success);">
-                        <h4>2. Pemilihan Setup (Berdasarkan Kategori Tags)</h4>
-                        <p>Isih kolum <strong>Tags</strong> untuk memilih jenis setup swing hold yang anda mahukan:</p>
-                        <ul style="margin: 0.3rem 0 0 0; padding-left: 1.2rem; font-size: 0.8rem; line-height: 1.4; color: var(--text-muted); list-style-type: none;">
-                            <li style="margin-bottom: 0.4rem;"><strong>🚀 EXPLOSIVE:</strong> Sesuai untuk swing pantas (2-5 hari). Kaunter melantun kuat hari ini selepas pullback. Pilih yang mempunyai <strong>Dist to Floor &le; 10.0%</strong>.</li>
-                            <li style="margin-bottom: 0.4rem;"><strong>🪜 STAIRCASE:</strong> Sesuai untuk swing tenang (1-2 minggu). Kaunter merayap naik membina lantai baharu dekat ATH. Beli pada harga senyap, set SL, dan tunggu breakout.</li>
-                            <li style="margin-bottom: 0.4rem;"><strong>🔄 SWING PLAY:</strong> ⚠️ Elakkan. Rekod backtest menunjukkan ia adalah "Dead Money" dengan pulangan negatif.</li>
+                    <div class="guide-item" style="border-left-color: var(--accent);">
+                        <h4>2. Pecahan Modal Optimum (RM 5,000)</h4>
+                        <p>Bahagikan modal sama rata untuk mengurangkan kos yuran broker:</p>
+                        <ul style="margin: 0.3rem 0 0 0; padding-left: 1.2rem; font-size: 0.8rem; line-height: 1.4; color: var(--text-muted); list-style-type: disc;">
+                            <li>1 Kaunter VVIP: Labur RM 5,000 (100% modal)</li>
+                            <li>2 Kaunter VVIP: Labur RM 2,500 setiap satu (50%/50%)</li>
+                            <li>3 Kaunter VVIP: Labur RM 1,666 setiap satu (33%/33%/33%)</li>
+                            <li>4+ Kaunter VVIP: Pilih maksimum 3 kaunter dengan Smart Score tertinggi sahaja.</li>
                         </ul>
                     </div>
                     <div class="guide-item" style="border-left-color: var(--danger);">
                         <h4>3. Kawalan Risiko (Stop Loss - SL)</h4>
-                        <p>Stop Loss (SL) diletakkan secara disiplin pada **3.0% di bawah harga lantai (floor)** yang ditunjukkan oleh kalkulator. Sekiranya harga tutup di bawah SL, keluar tanpa emosi untuk mengehadkan kerugian.</p>
+                        <p>Gunakan <strong>Trading Base Calculator</strong> di bawah untuk mengira lot pembelian. Tetapkan Stop Loss keras pada <strong>3.0% di bawah Support Floor</strong>. Keluar serta-merta jika harga ditutup di bawah SL.</p>
                     </div>
-                    <div class="guide-item" style="border-left-color: #a78bfa;">
+                    <div class="guide-item" style="border-left-color: var(--success);">
                         <h4>4. Sasaran Untung (Take Profit - TP)</h4>
-                        <p><strong>TP1 (+10.0%):</strong> Untuk mengunci keuntungan swing pantas. <strong>TP2 (+20.0%):</strong> Untuk menumpang rali momentum breakout ATH / RBS baharu.</p>
+                        <p>Jual 50% pegangan di <strong>TP1 (+10.0%)</strong> untuk mengunci keuntungan swing. Biarkan baki 50% berjalan sehingga <strong>TP2 (+20.0% atau lebih)</strong> untuk menunggang momentum breakout.</p>
                     </div>
-                    <div class="guide-item" style="border-left-color: #f59e0b; background: rgba(245, 158, 11, 0.03); padding: 1rem; border-radius: 8px;">
-                        <h4>5. Hasil Backtest Rasmi (Arkib 29 Hari)</h4>
-                        <p style="margin-bottom: 0.8rem; font-weight: 700; color: #f59e0b;">Prestasi setup diuji sejak 25 Mei 2026:</p>
-                        
-                        <div style="display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.82rem; line-height: 1.45;">
-                            <div style="background: rgba(244, 63, 94, 0.08); border-left: 3px solid #fb7185; padding: 0.5rem 0.75rem; border-radius: 4px;">
-                                <strong style="color: #fb7185; display: flex; align-items: center; gap: 0.3rem;">🚀 EXPLOSIVE — Letupan Volum & Win Rate Tertinggi</strong>
-                                <ul style="margin: 0.3rem 0 0 0; padding-left: 1.2rem; color: #e2e8f0; list-style-type: disc;">
-                                    <li><strong>Win-Rate (T+5):</strong> Mencecah <strong>61.54%</strong> (Purata Pulangan: <strong>+2.58%</strong>).</li>
-                                    <li><strong>Kadar SL Hit:</strong> <strong>0.00%</strong> (Sangat selamat dalam masa 5 hari).</li>
-                                </ul>
-                            </div>
-                            
-                            <div style="background: rgba(6, 182, 212, 0.08); border-left: 3px solid #22d3ee; padding: 0.5rem 0.75rem; border-radius: 4px;">
-                                <strong style="color: #22d3ee; display: flex; align-items: center; gap: 0.3rem;">🪜 STAIRCASE — Sangat Tenang & Risiko Minima</strong>
-                                <ul style="margin: 0.3rem 0 0 0; padding-left: 1.2rem; color: #e2e8f0; list-style-type: disc;">
-                                    <li><strong>Win-Rate (T+5):</strong> Mencecah <strong>55.56%</strong> (Purata Pulangan: <strong>+2.01%</strong>).</li>
-                                    <li><strong>Kadar SL Hit:</strong> <strong>14.29%</strong> (Normal bagi kaunter mengumpul tapak).</li>
-                                </ul>
-                            </div>
-
-                            <div style="background: rgba(239, 68, 68, 0.05); border-left: 3px solid #ef4444; padding: 0.5rem 0.75rem; border-radius: 4px;">
-                                <strong style="color: #f87171; display: flex; align-items: center; gap: 0.3rem;">🔄 SWING PLAY — Elakkan (Dead Money / Hanyut)</strong>
-                                <ul style="margin: 0.3rem 0 0 0; padding-left: 1.2rem; color: #cbd5e1; list-style-type: disc;">
-                                    <li><strong>Win-Rate (T+5):</strong> Rendah (<strong>36.36%</strong>) dengan purata pulangan negatif (<strong>-4.40%</strong>).</li>
-                                </ul>
-                            </div>
-                        </div>
+                    <div class="guide-item" style="border-left-color: #a78bfa; background: rgba(167, 139, 250, 0.03); padding: 1rem; border-radius: 8px;">
+                        <h4>5. Hasil Backtest Rasmi (Gaya VVIP - 3 Jun - 1 Jul)</h4>
+                        <p style="margin-bottom: 0.8rem; font-weight: 700; color: #a78bfa;">Prestasi diuji sepanjang sebulan dengan gandaan compounding:</p>
+                        <ul style="margin: 0.3rem 0 0 0; padding-left: 1.2rem; color: #e2e8f0; list-style-type: disc; font-size: 0.82rem; line-height: 1.45;">
+                            <li><strong>Kadar Kemenangan (Win Rate):</strong> Mencecah <strong>87.0%</strong> (20/23 trade untung).</li>
+                            <li><strong>Kadar Stop Loss Hit:</strong> <strong>0.0%</strong> (Tiada satu pun trade terkena SL -3%).</li>
+                            <li><strong>Purata Untung Per Trade:</strong> <strong>+8.07%</strong> per trade.</li>
+                            <li><strong>Pertumbuhan Modal RM 5,000:</strong> Berkembang menjadi <strong>RM 10,987 (+119.7% ROI)</strong>.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </div>
 
         <!-- Visual Setup Rujukan (Sebelum / Selepas) -->
         <div class="guide-board" style="margin-top: 2rem; text-align: center;">
