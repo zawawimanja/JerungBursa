@@ -907,7 +907,7 @@
         };
 
         const freshIpos = [
-            'SKYECHIP', 'PENTECH', 'SUM', 'ELSA', 'NE', 'AMBEST', 'AMS',
+            'SKYECHIP', 'PENTECH', 'SUM', 'ELSA', 'AMBEST', 'AMS',
             'EIPOWER', 'ISF', 'KEEMING', 'TEAMSTR', 'MMCS', 'GDGROUP',
             'GOLDLI', 'HOCKSOON', 'OGX', 'SBS', 'SRKK', 'EMPIRE'
         ];
@@ -915,6 +915,14 @@
         // Helper to check if a stock is a fresh IPO
         function isFreshIpo(item) {
             if (!item || !item.ipoGrade) return false;
+            
+            // If it is in a downtrend / avoid, it is not fresh anymore (it goes to mature)
+            const setup = (item.setupName || '').toUpperCase();
+            if (setup.includes('DOWNTREND') || setup.includes('AVOID') || setup === 'N/A') return false;
+            
+            const reason = (item.reason || '').toUpperCase();
+            if (reason.includes('AVOID')) return false;
+
             const cleanName = item.name.toUpperCase().trim();
             return freshIpos.includes(cleanName) || Object.keys(ipoMap).some(key => {
                 if (!freshIpos.includes(key)) return false;

@@ -11,6 +11,12 @@ const HEADERS = {
     'Accept-Language': 'en-US,en;q=0.5',
 };
 
+const freshIpos = [
+    'SKYECHIP', 'PENTECH', 'SUM', 'ELSA', 'AMBEST', 'AMS',
+    'EIPOWER', 'ISF', 'KEEMING', 'TEAMSTR', 'MMCS', 'GDGROUP',
+    'GOLDLI', 'HOCKSOON', 'OGX', 'SBS', 'SRKK', 'EMPIRE'
+];
+
 // Fungsi pembantu untuk tapisan dan parsing setiap baris jadual di i3investor
 function parseTab($, tabSelector) {
     const stocks = [];
@@ -508,16 +514,24 @@ async function main() {
         let setupName = 'N/A';
         if (stock.high52) {
             pullback = parseFloat(((stock.high52 - stock.price) / stock.high52 * 100).toFixed(2));
-            const isPremiumIpo = stock.ipoGrade === 'A' || stock.ipoGrade === 'B';
             const isSmaDowntrend = (stock.sma50 && stock.hasEnoughSmaData) ? (stock.price < stock.sma50) : false;
             const isSma200Downtrend = stock.sma200 ? (stock.price < stock.sma200) : false;
             
+            const cleanStockName = stock.name.toUpperCase().trim();
+            const isInFreshIpoList = freshIpos.includes(cleanStockName) || freshIpos.some(key => {
+                const normKey = key.replace(/[^A-Z0-9]/g, '');
+                const normName = cleanStockName.replace(/[^A-Z0-9]/g, '');
+                return normName.startsWith(normKey);
+            });
+            // Fresh IPO definition: has IPO grade, is in fresh IPO list, and is NOT in SMA downtrend
+            const isFreshIpo = (stock.ipoGrade === 'A' || stock.ipoGrade === 'B' || stock.ipoGrade === 'C') && isInFreshIpoList && !isSmaDowntrend;
+
             // Logik pintar: Pullback sehingga 40% dibenarkan jika harga di atas SMA200 (Long-term Bullish)
-            // Premium IPO dibenarkan pullback sehingga 55%
-            const maxPullbackAllowed = isPremiumIpo ? 55.0 : ((!isSma200Downtrend && stock.sma200) ? 40.0 : 30.0);
+            // Fresh IPO dibenarkan pullback sehingga 55%
+            const maxPullbackAllowed = isFreshIpo ? 55.0 : ((!isSma200Downtrend && stock.sma200) ? 40.0 : 30.0);
             
-            // Premium IPO dikecualikan daripada isSmaDowntrend untuk mengelakkan penyingkiran semasa dip/pullback
-            if ((isSmaDowntrend && !isPremiumIpo) || pullback > maxPullbackAllowed) {
+            // Only fresh IPOs are exempt from SMA downtrend filtering to allow initial pullback setup trading
+            if ((isSmaDowntrend && !isFreshIpo) || pullback > maxPullbackAllowed) {
                 setupName = '🧊 Downtrend / Avoid';
             } else if (pullback <= 5.0) {
                 setupName = '🔥 RBS Retest / Near ATH';
