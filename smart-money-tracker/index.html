@@ -1810,12 +1810,22 @@
             // History Archive check
             document.getElementById('loadHistoryBtn').addEventListener('click', async function() {
                 const dateVal = document.getElementById('historyDate').value;
+                const btn = this;
+                const originalText = btn.innerHTML;
+
                 if (!dateVal) {
-                    alert('Please select a date from the calendar first.');
+                    btn.innerHTML = '⚠️ Select Date';
+                    btn.style.background = '#f59e0b';
+                    btn.style.color = '#0f172a';
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.style.background = '';
+                        btn.style.color = '';
+                    }, 2000);
                     return;
                 }
-                const text = this.textContent;
-                this.textContent = '⏳ ...';
+
+                btn.innerHTML = '⏳ Loading...';
                 try {
                     const cacheBuster = new Date().getTime();
                     let res = await fetch(`history/data_${dateVal}.json?t=${cacheBuster}`);
@@ -1829,15 +1839,32 @@
                             currentData = data;
                             document.getElementById('dashboardSubtitle').innerHTML = `📂 Historical Archive: <strong>${dateVal}</strong>`;
                             applyFilters();
-                            alert(`Successfully loaded historical archive for date: ${dateVal}`);
+                            
+                            // Success feedback
+                            btn.innerHTML = '✅ Loaded!';
+                            btn.style.background = '#10b981';
+                            btn.style.color = 'white';
+                            setTimeout(() => {
+                                btn.innerHTML = originalText;
+                                btn.style.background = '';
+                                btn.style.color = '';
+                            }, 2000);
+                        } else {
+                            throw new Error('Empty data');
                         }
                     } else {
-                        alert(`No record found for date: ${dateVal}`);
+                        throw new Error('Not found');
                     }
                 } catch(e) {
-                    alert('Error loading historical record.');
+                    btn.innerHTML = '❌ Not Found';
+                    btn.style.background = '#ef4444';
+                    btn.style.color = 'white';
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.style.background = '';
+                        btn.style.color = '';
+                    }, 2000);
                 }
-                this.textContent = text;
             });
         });
     </script>
