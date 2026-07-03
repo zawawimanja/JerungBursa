@@ -675,6 +675,31 @@ async function main() {
         console.error("Warning checking VVIP:", err.message);
     }
     
+    // Read IPO Grades from neighboring directory
+    try {
+        const ipoDataPath = 'C:/Users/aaror/OneDrive - PERTUBUHAN KESELAMATAN SOSIAL/Desktop/ipo/data.json';
+        if (fs.existsSync(ipoDataPath)) {
+            const ipoList = JSON.parse(fs.readFileSync(ipoDataPath, 'utf8'));
+            const ipoMap = {};
+            ipoList.forEach(ipo => {
+                if (ipo.symbol) {
+                    ipoMap[ipo.symbol.toUpperCase().trim()] = ipo.predictedGrade || 'Unrated';
+                }
+            });
+            let ipoTagCount = 0;
+            processedData.forEach(item => {
+                const grade = ipoMap[item.name.toUpperCase().trim()];
+                if (grade) {
+                    item.ipoGrade = grade;
+                    ipoTagCount++;
+                }
+            });
+            console.log(`✅ Berjaya memadankan ${ipoTagCount} kaunter dengan Gred IPO dari projek sebelah.`);
+        }
+    } catch (err) {
+        console.error("Warning loading IPO grades:", err.message);
+    }
+    
     const output = {
         lastUpdated: new Date().toISOString(),
         source: 'klse.i3investor.com',

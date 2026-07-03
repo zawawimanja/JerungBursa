@@ -1366,6 +1366,8 @@
                             ? `<span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.3); color: #fb923c; border: 1px solid rgba(245, 158, 11, 0.5); padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.1rem; font-weight: 900; box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);">🏆 Gold: 15/15</span>` 
                             : `<span style="font-size: 0.72rem; background: rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.1rem; font-weight: 700;">Score: ${score}/15</span>`;
 
+                        const ipoBadge = item.ipoGrade ? (item.ipoGrade === 'A' ? `<span style="font-size: 0.72rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(59, 130, 246, 0.25)); color: #34d399; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.2rem; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.4); box-shadow: 0 0 5px rgba(52, 211, 153, 0.3);">💎 IPO A</span>` : (item.ipoGrade === 'B' ? `<span style="font-size: 0.72rem; background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(99, 102, 241, 0.25)); color: #c084fc; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.2rem; font-weight: 800; border: 1px solid rgba(168, 85, 247, 0.4); box-shadow: 0 0 5px rgba(192, 132, 252, 0.3);">🚀 IPO B</span>` : (item.ipoGrade === 'C' ? `<span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.2); color: #fbbf24; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.2rem; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.35);">⚠️ IPO C</span>` : ''))) : '';
+
                         hybridHtml += `
                             <tr>
                                 <td style="text-align: center; font-weight: bold; color: #a5b4fc;">${rowCount++}</td>
@@ -1375,6 +1377,7 @@
                                         <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="font-size: 0.8rem; color: var(--info); text-decoration: none;" title="TradingView Chart">🔗</a>
                                         ${scoreBadge}
                                         ${vvipBadge}
+                                        ${ipoBadge}
                                     </span>
                                 </td>
                                 <td style="text-align: center;"><span class="tag-pill explosive" style="font-size: 0.75rem;">🚀 EXPLOSIVE</span></td>
@@ -1403,6 +1406,8 @@
                             ? `<span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.3); color: #fb923c; border: 1px solid rgba(245, 158, 11, 0.5); padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.1rem; font-weight: 900; box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);">🏆 Gold: 15/15</span>` 
                             : `<span style="font-size: 0.72rem; background: rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.1rem; font-weight: 700;">Score: ${score}/15</span>`;
 
+                        const ipoBadge = item.ipoGrade ? (item.ipoGrade === 'A' ? `<span style="font-size: 0.72rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(59, 130, 246, 0.25)); color: #34d399; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.2rem; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.4); box-shadow: 0 0 5px rgba(52, 211, 153, 0.3);">💎 IPO A</span>` : (item.ipoGrade === 'B' ? `<span style="font-size: 0.72rem; background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(99, 102, 241, 0.25)); color: #c084fc; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.2rem; font-weight: 800; border: 1px solid rgba(168, 85, 247, 0.4); box-shadow: 0 0 5px rgba(192, 132, 252, 0.3);">🚀 IPO B</span>` : (item.ipoGrade === 'C' ? `<span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.2); color: #fbbf24; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.2rem; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.35);">⚠️ IPO C</span>` : ''))) : '';
+
                         hybridHtml += `
                             <tr>
                                 <td style="text-align: center; font-weight: bold; color: #a5b4fc;">${rowCount++}</td>
@@ -1412,6 +1417,7 @@
                                         <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="font-size: 0.8rem; color: var(--info); text-decoration: none;" title="TradingView Chart">🔗</a>
                                         ${scoreBadge}
                                         ${vvipBadge}
+                                        ${ipoBadge}
                                     </span>
                                 </td>
                                 <td style="text-align: center;"><span class="tag-pill staircase" style="font-size: 0.75rem;">🪜 STAIRCASE</span></td>
@@ -1496,6 +1502,8 @@
                         const floor = item.floorLow || (item.price * 0.95);
                         const distToFloor = ((item.price - floor) / floor) * 100;
 
+                        const ipoBadge = item.ipoGrade ? (item.ipoGrade === 'A' ? `<span style="font-size: 0.72rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(59, 130, 246, 0.25)); color: #34d399; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.2rem; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.4); box-shadow: 0 0 5px rgba(52, 211, 153, 0.3);">💎 IPO A</span>` : (item.ipoGrade === 'B' ? `<span style="font-size: 0.72rem; background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(99, 102, 241, 0.25)); color: #c084fc; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.2rem; font-weight: 800; border: 1px solid rgba(168, 85, 247, 0.4); box-shadow: 0 0 5px rgba(192, 132, 252, 0.3);">🚀 IPO B</span>` : (item.ipoGrade === 'C' ? `<span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.2); color: #fbbf24; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.2rem; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.35);">⚠️ IPO C</span>` : ''))) : '';
+
                         superTrendHtml += `
                             <tr>
                                 <td style="text-align: center; font-weight: bold; color: #c084fc;">${superRowCount++}</td>
@@ -1504,6 +1512,7 @@
                                         ${item.name}
                                         <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="font-size: 0.8rem; color: var(--info); text-decoration: none;" title="TradingView Chart">🔗</a>
                                         ${scoreBadge}
+                                        ${ipoBadge}
                                     </span>
                                 </td>
                                 <td style="text-align: center;">${styleBadge}</td>
@@ -1579,13 +1588,16 @@
                     tagsHtml += `<span style="background: rgba(167, 139, 250, 0.15); color: #c084fc; font-size: 0.65rem; font-weight: 800; padding: 0.15rem 0.35rem; border-radius: 4px; border: 1px solid rgba(167, 139, 250, 0.25);">🔻 DEEP DIP</span>`;
                 }
                 
+                        const ipoBadge = item.ipoGrade ? (item.ipoGrade === 'A' ? `<span style="font-size: 0.65rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(59, 130, 246, 0.25)); color: #34d399; padding: 0.05rem 0.25rem; border-radius: 3px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.4); box-shadow: 0 0 5px rgba(52, 211, 153, 0.3);">💎 IPO A</span>` : (item.ipoGrade === 'B' ? `<span style="font-size: 0.65rem; background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(99, 102, 241, 0.25)); color: #c084fc; padding: 0.05rem 0.25rem; border-radius: 3px; font-weight: 800; border: 1px solid rgba(168, 85, 247, 0.4); box-shadow: 0 0 5px rgba(192, 132, 252, 0.3);">🚀 IPO B</span>` : (item.ipoGrade === 'C' ? `<span style="font-size: 0.65rem; background: rgba(245, 158, 11, 0.2); color: #fbbf24; padding: 0.05rem 0.25rem; border-radius: 3px; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.35);">⚠️ IPO C</span>` : ''))) : '';
+
                 tableHtml += `
                     <tr>
                         <td style="text-align: center; font-weight: 800; color: var(--info);">#${index + 1}</td>
                         <td style="font-weight: 700; color: white;">
                             <span style="display: inline-flex; align-items: center; gap: 0.3rem;">
                                 ${item.name}
-                                ${(item.isVvip && calculateSmartScore(item) >= 8) ? `<span style="font-size: 0.65rem; background: rgba(245, 158, 11, 0.25); color: #fb923c; padding: 0.05rem 0.25rem; border-radius: 3px; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.4);">🔥 VVIP</span>` : ''}
+                                ${(item.isVvip && calculateSmartScore(item) >= 12) ? `<span style="font-size: 0.65rem; background: rgba(245, 158, 11, 0.25); color: #fb923c; padding: 0.05rem 0.25rem; border-radius: 3px; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.4);">🔥 VVIP</span>` : ''}
+                                ${ipoBadge}
                                 <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="font-size: 0.75rem; color: var(--info); text-decoration: none;" title="TradingView Chart">🔗</a>
                             </span>
                         </td>
