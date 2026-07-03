@@ -708,7 +708,11 @@ async function main() {
             const ipoMap = {};
             ipoList.forEach(ipo => {
                 if (ipo.symbol) {
-                    ipoMap[ipo.symbol.toUpperCase().trim()] = ipo.predictedGrade || 'Unrated';
+                    // Only treat as IPO if listing year is 2020 or later
+                    const listingYear = parseInt(ipo.year) || (ipo.listingDate ? parseInt(ipo.listingDate.split('-')[2]) : 0);
+                    if (listingYear >= 2020) {
+                        ipoMap[ipo.symbol.toUpperCase().trim()] = ipo.predictedGrade || 'Unrated';
+                    }
                 }
             });
             let ipoTagCount = 0;

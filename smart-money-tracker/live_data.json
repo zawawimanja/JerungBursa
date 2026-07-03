@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T12:58:04.855Z",
+  "lastUpdated": "2026-07-03T15:53:45.063Z",
   "source": "klse.i3investor.com",
   "topVolume": [
     {
@@ -155,8 +155,8 @@
       "sma200": 7.7868999886512755
     },
     {
-      "name": "SKYCHIP",
-      "sector": "Bursa",
+      "name": "99 SPEED MART RETAIL",
+      "sector": "Consumer",
       "category": "Swing / Bluechip",
       "setupStyle": "SWING PLAY",
       "price": 3.700000047683716,
@@ -463,8 +463,7 @@
       "isCombStock": false,
       "sma50": 5.7635999584198,
       "sma200": 4.497000006437301,
-      "isVvip": true,
-      "ipoGrade": "A"
+      "isVvip": true
     },
     {
       "name": "DNEX",
@@ -490,8 +489,33 @@
       "isCombStock": false,
       "sma50": 0.35439999878406525,
       "sma200": 0.3031999982893467,
-      "isVvip": true,
-      "ipoGrade": "B"
+      "isVvip": true
+    },
+    {
+      "name": "SKYCHIP",
+      "sector": "Bursa",
+      "category": "Swing / Bluechip",
+      "setupStyle": "SWING PLAY",
+      "price": 3.049999952316284,
+      "change": 0.009999990463256836,
+      "changePct": 0.33,
+      "turnover": 12823724.799513817,
+      "volume": 4204500,
+      "signal": "buy",
+      "reason": "🔥 Golden Hold: Smart Money Accumulation (Suitable for Swing/Hold) (Pullback Support)",
+      "high52": 3.799999952316284,
+      "pullback": 19.74,
+      "setupName": "🔻 Buy Support / Deep Pullback",
+      "closeTightness": 5.08,
+      "lowTightness": 7.67,
+      "touchCount": 4,
+      "isConsolidation": false,
+      "floorLow": 2.869999885559082,
+      "hasLowerWickRejection": true,
+      "isCombStock": false,
+      "sma50": 2.898709689417193,
+      "sma200": 2.898709689417193,
+      "isVvip": true
     },
     {
       "name": "AAX",
@@ -802,8 +826,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 2.5474000072479246,
-      "sma200": 2.0483999979496,
-      "ipoGrade": "C"
+      "sma200": 2.0483999979496
     },
     {
       "name": "SLVEST",
@@ -829,8 +852,7 @@
       "isCombStock": false,
       "sma50": 2.862199988365173,
       "sma200": 2.7809499996900557,
-      "isVvip": true,
-      "ipoGrade": "B"
+      "isVvip": true
     },
     {
       "name": "NATGATE",
@@ -2132,8 +2154,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.04780000001192093,
-      "sma200": 0.030425000018440188,
-      "ipoGrade": "B"
+      "sma200": 0.030425000018440188
     },
     {
       "name": "LHI",
@@ -3106,8 +3127,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.1276000003516674,
-      "sma200": 0.16402500044554472,
-      "ipoGrade": "B"
+      "sma200": 0.16402500044554472
     },
     {
       "name": "AMEREIT",
@@ -4067,8 +4087,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.08219999983906746,
-      "sma200": 0.08400000020861625,
-      "ipoGrade": "B"
+      "sma200": 0.08400000020861625
     },
     {
       "name": "SET",
@@ -4145,8 +4164,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.3504999989271164,
-      "sma200": 0.3983749997615814,
-      "ipoGrade": "B"
+      "sma200": 0.3983749997615814
     },
     {
       "name": "INSPACE",
@@ -4454,8 +4472,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.4257000005245209,
-      "sma200": 0.6037750019133091,
-      "ipoGrade": "B"
+      "sma200": 0.6037750019133091
     },
     {
       "name": "AGMO",
@@ -4921,8 +4938,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.30850000023841856,
-      "sma200": 0.3322500006854534,
-      "ipoGrade": "B"
+      "sma200": 0.3322500006854534
     },
     {
       "name": "CKI",
@@ -5154,8 +5170,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.17530000060796738,
-      "sma200": 0.1902749987691641,
-      "ipoGrade": "C"
+      "sma200": 0.1902749987691641
     },
     {
       "name": "CLITE",
@@ -6134,8 +6149,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.10399999856948852,
-      "sma200": 0.10587499890476465,
-      "ipoGrade": "B"
+      "sma200": 0.10587499890476465
     },
     {
       "name": "KGW",
@@ -6237,8 +6251,7 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.23159999907016754,
-      "sma200": 0.25017499923706055,
-      "ipoGrade": "B"
+      "sma200": 0.25017499923706055
     },
     {
       "name": "GEOHAN",
@@ -6652,8 +6665,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.11300000086426736,
-      "sma200": 0.1261000006645918,
-      "ipoGrade": "B"
+      "sma200": 0.1261000006645918
     },
     {
       "name": "PLYTEC",
@@ -7246,8 +7258,7 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.20459999829530717,
-      "sma200": 0.21117499813437463,
-      "ipoGrade": "B"
+      "sma200": 0.21117499813437463
     },
     {
       "name": "YENHER",
