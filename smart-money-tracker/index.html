@@ -1286,7 +1286,7 @@
                     if (isSleepingOrAvoidStock(item)) return false;
                     if (item.price < 0.25 || item.price > 4.00) return false;
                     if (item.turnover < 750000) return false;
-                    if (calculateSmartScore(item) < 8) return false;
+                    if (calculateSmartScore(item) < 12) return false;
 
                     const pct = item.changePct !== undefined ? item.changePct : item.change;
                     const pb = item.pullback !== null ? item.pullback : 0;
@@ -1325,8 +1325,8 @@
                 const renderSortFn = (a, b) => {
                     const scoreA = calculateSmartScore(a);
                     const scoreB = calculateSmartScore(b);
-                    const isVvipA = (a.isVvip && scoreA >= 8) ? 1 : 0;
-                    const isVvipB = (b.isVvip && scoreB >= 8) ? 1 : 0;
+                    const isVvipA = (a.isVvip && scoreA >= 12) ? 1 : 0;
+                    const isVvipB = (b.isVvip && scoreB >= 12) ? 1 : 0;
 
                     if (isVvipB !== isVvipA) {
                         return isVvipB - isVvipA; // VVIP first
@@ -1360,7 +1360,7 @@
                         const changeClass = pct >= 0 ? 'success' : 'danger';
                         const changeSign = pct > 0 ? '+' : '';
                         
-                        const vvipBadge = (item.isVvip && score >= 8) ? `<span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.25); color: #fb923c; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.3rem; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.4);">🔥 VVIP</span>` : '';
+                        const vvipBadge = (item.isVvip && score >= 12) ? `<span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.25); color: #fb923c; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.3rem; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.4);">🔥 VVIP</span>` : '';
                         
                         const scoreBadge = score === 15 
                             ? `<span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.3); color: #fb923c; border: 1px solid rgba(245, 158, 11, 0.5); padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.1rem; font-weight: 900; box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);">🏆 Gold: 15/15</span>` 
@@ -1397,7 +1397,7 @@
                         const changeClass = pct >= 0 ? 'success' : 'danger';
                         const changeSign = pct > 0 ? '+' : '';
                         
-                        const vvipBadge = (item.isVvip && score >= 8) ? `<span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.25); color: #fb923c; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.3rem; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.4);">🔥 VVIP</span>` : '';
+                        const vvipBadge = (item.isVvip && score >= 12) ? `<span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.25); color: #fb923c; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.3rem; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.4);">🔥 VVIP</span>` : '';
                         
                         const scoreBadge = score === 15 
                             ? `<span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.3); color: #fb923c; border: 1px solid rgba(245, 158, 11, 0.5); padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.1rem; font-weight: 900; box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);">🏆 Gold: 15/15</span>` 

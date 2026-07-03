@@ -95,7 +95,7 @@ datesList.forEach((dateStr) => {
         if (isSleepingOrAvoidStock(item)) return false;
         if (item.price < 0.25 || item.price > 4.00) return false;
         if (item.turnover < 750000) return false;
-        if (calculateSmartScore(item) < 8) return false;
+        if (calculateSmartScore(item) < 12) return false;
 
         const pct = item.changePct !== undefined ? item.changePct : item.change;
         const pb = item.pullback !== null ? item.pullback : 0;
@@ -111,8 +111,8 @@ datesList.forEach((dateStr) => {
     const renderSortFn = (a, b) => {
         const scoreA = calculateSmartScore(a);
         const scoreB = calculateSmartScore(b);
-        const isVvipA = (a.isVvip && scoreA >= 8) ? 1 : 0;
-        const isVvipB = (b.isVvip && scoreB >= 8) ? 1 : 0;
+        const isVvipA = (a.isVvip && scoreA >= 12) ? 1 : 0;
+        const isVvipB = (b.isVvip && scoreB >= 12) ? 1 : 0;
 
         if (isVvipB !== isVvipA) return isVvipB - isVvipA;
         if (scoreB !== scoreA) return scoreB - scoreA;
