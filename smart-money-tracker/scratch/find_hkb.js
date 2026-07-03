@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const historyDir = 'c:\\Users\\aaror\\OneDrive - PERTUBUHAN KESELAMATAN SOSIAL\\Desktop\\JerungBursa\\smart-money-tracker\\history';
+const historyDir = path.join(__dirname, '../history');
 
 console.log('Searching for HKB in history directory:', historyDir);
 

@@ -475,7 +475,7 @@
                 </div>
             </div>
             <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem; line-height: 1.6;">
-                Strategi Teknik C menggabungkan **Top 6 kaunter EXPLOSIVE teratas + Top 6 kaunter STAIRCASE teratas** mengikut Turnover harian (Turnover harian mestilah &ge; RM 750K). Ini adalah posisi swing jangka masa sederhana (pegangan 1-10 hari).
+                Strategi Teknik C menggunakan sistem **VVIP Trend Rider (5-Slot Beli & Peram)** di mana kita membeli kaunter VVIP Premium IPO peringkat teratas dan memegangnya selagi harga bertahan di atas Support Floor (Stop Loss 3%). Tiada sasaran Take Profit yang kaku untuk memaksimumkan keuntungan trend menaik.
             </p>
             <!-- Stats Comparison Grid -->
             <div style="margin-top: 1rem;">
@@ -748,7 +748,7 @@
             { date: '2026-06-16', name: 'THMY', style: 'STAIRCASE', entryPrice: 1.920, finalPrice: 1.770, maxGain: 4.17, finalGain: -7.81, status: 'LOSS', turnover: 2022527.9547929764, pullback: 0.52, floorLow: 1.700, touchCount: 3, isConsolidation: false, sma50: 1.380, sma200: 1.091 },
             { date: '2026-06-16', name: 'LHI', style: 'STAIRCASE', entryPrice: 0.755, finalPrice: 0.760, maxGain: 1.99, finalGain: 0.66, status: 'PROFIT', turnover: 1274515.491950512, pullback: 9.58, floorLow: 0.705, touchCount: 6, isConsolidation: true, sma50: 0.733, sma200: 0.711 },
             { date: '2026-06-16', name: 'ICENTS', style: 'STAIRCASE', entryPrice: 0.490, finalPrice: 0.470, maxGain: 0.00, finalGain: -3.99, status: 'SL_HIT', turnover: 250390.00487327576, pullback: 3.92, floorLow: 0.485, touchCount: 3, isConsolidation: true, sma50: 0.423, sma200: 0.422 },
-            { date: '2026-06-18', name: 'SKYECHIP', style: 'EXPLOSIVE', entryPrice: 3.570, finalPrice: 3.620, maxGain: 1.96, finalGain: 1.40, status: 'PROFIT', turnover: 46335386.1335516, pullback: 13.98, floorLow: 3.250, touchCount: 4, isConsolidation: false, sma50: 3.410, sma200: 3.371 },
+            { date: '2026-06-18', name: 'SKYECHIP', style: 'EXPLOSIVE', entryPrice: 2.860, finalPrice: 3.123, maxGain: 21.33, finalGain: 9.20, status: 'PROFIT', turnover: 32778174.0, pullback: 24.74, floorLow: 2.210, touchCount: 4, isConsolidation: false, sma50: 2.920, sma200: 2.880 },
             { date: '2026-06-18', name: 'MRDIY', style: 'EXPLOSIVE', entryPrice: 1.680, finalPrice: 1.650, maxGain: 0.00, finalGain: -1.79, status: 'LOSS', turnover: 29687279.073119164, pullback: 12.50, floorLow: 1.560, touchCount: 9, isConsolidation: false, sma50: 1.621, sma200: 1.633 },
             { date: '2026-06-18', name: 'TMK', style: 'STAIRCASE', entryPrice: 2.490, finalPrice: 2.350, maxGain: 10.44, finalGain: -5.62, status: 'LOSS', turnover: 12420867.047572136, pullback: 3.11, floorLow: 2.230, touchCount: 2, isConsolidation: false, sma50: 1.800, sma200: 1.450 },
             { date: '2026-06-18', name: 'ECOSHOP', style: 'EXPLOSIVE', entryPrice: 1.330, finalPrice: 1.430, maxGain: 9.02, finalGain: 7.52, status: 'PROFIT_BIG', turnover: 8762971.282756329, pullback: 20.36, floorLow: 1.200, touchCount: 4, isConsolidation: false, sma50: 1.260, sma200: 1.405 },
@@ -914,6 +914,14 @@
 
         function initDashboard() {
             // Calculate dynamic Smart Score for ranking
+            const ipoMap = {
+                'SKYECHIP': 'A', 'PENTECH': 'A', 'ECOSHOP': 'A', 'EMPIRE': 'A', 'SRKK': 'A',
+                'SUM': 'B', 'ELSA': 'B', 'NE': 'B', 'AMBEST': 'B', 'AMS': 'B',
+                'EIPOWER': 'B', 'ISF': 'B', 'KEEMING': 'B', 'TEAMSTR': 'B', 'CBHB': 'B',
+                'HEGROUP': 'B', 'MNHLDG': 'B', 'TMK': 'B', 'YEWLEE': 'B', 'HKB': 'B', 'UUE': 'B',
+                'MMCS': 'C', 'GDGROUP': 'C', 'GOLDLI': 'C', 'HOCKSOON': 'C', 'OGX': 'C', 'SBS': 'C'
+            };
+
             function calculateSmartScore(item) {
                 let score = 0;
                 const price = item.entryPrice || item.price;
@@ -948,7 +956,18 @@
                 // 6. High volume spike confirmation (Liquidity score booster)
                 if (item.turnover >= 5000000) score += 1;
                 
-                return score;
+                // 7. Premium IPO Grade Booster
+                const grade = ipoMap[item.name.toUpperCase().trim()];
+                if (grade === 'A') score += 3;
+                else if (grade === 'B') score += 2;
+                else if (grade === 'C') score += 1;
+                
+                // 8. Momentum Booster: Near ATH (pullback <= 3%) + Strong Uptrend (Above SMA50 & SMA200)
+                if (pullbackVal <= 3.0 && isAboveSma50 && isAboveSma200) {
+                    score += 2;
+                }
+                
+                return Math.min(15, score);
             }
 
             let limitVal = 'top6';
@@ -965,12 +984,47 @@
             datesList.forEach((d, dateIdx) => {
                 const dayRows = fullData.filter(r => r.date === d);
                 
-                // Separate by style and filter by dynamic turnover limit
-                const exps = dayRows.filter(r => r.style === 'EXPLOSIVE' && (r.turnover === undefined || r.turnover >= minTurnover));
-                const stairs = dayRows.filter(r => r.style === 'STAIRCASE' && (r.turnover === undefined || r.turnover >= minTurnover));
+                // Separate by style and filter by dynamic turnover limit (relaxed to 400k for all IPOs)
+                const exps = dayRows.filter(r => {
+                    if (r.style !== 'EXPLOSIVE') return false;
+                    const grade = ipoMap[r.name.toUpperCase().trim()] || 'Non-IPO';
+                    const isIpo = grade === 'A' || grade === 'B' || grade === 'C';
+                    const currentMinTurnover = isIpo ? 400000 : minTurnover;
+                    return r.turnover === undefined || r.turnover >= currentMinTurnover;
+                });
                 
-                // Sort by turnover descending to rank
-                const sortFn = (a, b) => (b.turnover || 0) - (a.turnover || 0);
+                const stairs = dayRows.filter(r => {
+                    if (r.style !== 'STAIRCASE') return false;
+                    const grade = ipoMap[r.name.toUpperCase().trim()] || 'Non-IPO';
+                    const isIpo = grade === 'A' || grade === 'B' || grade === 'C';
+                    const currentMinTurnover = isIpo ? 400000 : minTurnover;
+                    return r.turnover === undefined || r.turnover >= currentMinTurnover;
+                });
+                
+                // Sort by: Premium IPO (A/B) first, then Score descending, then turnover (lightweight IPO first, high volume non-IPO first)
+                const sortFn = (a, b) => {
+                    const gradeA = ipoMap[a.name.toUpperCase().trim()] || 'Non-IPO';
+                    const gradeB = ipoMap[b.name.toUpperCase().trim()] || 'Non-IPO';
+                    const isPremiumIpoA = (gradeA === 'A' || gradeA === 'B') ? 1 : 0;
+                    const isPremiumIpoB = (gradeB === 'A' || gradeB === 'B') ? 1 : 0;
+
+                    if (isPremiumIpoB !== isPremiumIpoA) {
+                        return isPremiumIpoB - isPremiumIpoA;
+                    }
+
+                    const scoreA = calculateSmartScore(a);
+                    const scoreB = calculateSmartScore(b);
+                    if (scoreB !== scoreA) {
+                        return scoreB - scoreA;
+                    }
+
+                    const isIpoA = gradeA === 'A' || gradeA === 'B' || gradeA === 'C';
+                    const isIpoB = gradeB === 'A' || gradeB === 'B' || gradeB === 'C';
+                    if (isIpoA && isIpoB) {
+                        return (a.turnover || 0) - (b.turnover || 0); // Lightweight first
+                    }
+                    return (b.turnover || 0) - (a.turnover || 0); // High volume non-IPO first
+                };
                 exps.sort(sortFn);
                 stairs.sort(sortFn);
                 
@@ -996,7 +1050,12 @@
                 selectedExps.forEach(t => {
                     const item = { ...t };
                     const score = calculateSmartScore(t);
-                    if (prevPicks.includes(t.name) && score >= 8) {
+                    const grade = ipoMap[t.name.toUpperCase().trim()] || 'Non-IPO';
+                    let minScore = 12;
+                    if (grade === 'A' || grade === 'B') minScore = 10;
+                    else if (grade === 'C') minScore = 11;
+
+                    if (prevPicks.includes(t.name) && score >= minScore) {
                         item.isVvip = true;
                     }
                     hybridTrades.push(item);
@@ -1004,7 +1063,12 @@
                 selectedStairs.forEach(t => {
                     const item = { ...t };
                     const score = calculateSmartScore(t);
-                    if (prevPicks.includes(t.name) && score >= 8) {
+                    const grade = ipoMap[t.name.toUpperCase().trim()] || 'Non-IPO';
+                    let minScore = 12;
+                    if (grade === 'A' || grade === 'B') minScore = 10;
+                    else if (grade === 'C') minScore = 11;
+
+                    if (prevPicks.includes(t.name) && score >= minScore) {
                         item.isVvip = true;
                     }
                     hybridTrades.push(item);

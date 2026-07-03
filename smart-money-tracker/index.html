@@ -658,6 +658,19 @@
                 <input type="date" id="historyDate">
                 <button id="loadHistoryBtn" class="btn btn-history">📂 Load</button>
             </div>
+            <label class="vvip-toggle-container" style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.5rem 0.8rem; border-radius: 8px; border: 1px solid rgba(245, 158, 11, 0.35); cursor: pointer; user-select: none; transition: all 0.2s ease-in-out;">
+                <input type="checkbox" id="vvipOnlyToggle" checked style="accent-color: #fb923c; cursor: pointer; width: 1.1rem; height: 1.1rem;">
+                <span style="color: #fb923c; font-size: 0.85rem; font-weight: 800; display: flex; align-items: center; gap: 0.25rem;">🔥 VVIP Only</span>
+            </label>
+            <div class="ipo-filter-container" style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.45rem 0.8rem; border-radius: 8px; border: 1px solid rgba(96, 165, 250, 0.35); transition: all 0.2s ease-in-out;">
+                <label for="ipoAgeFilter" style="color: #60a5fa; font-size: 0.85rem; font-weight: 800; display: flex; align-items: center; gap: 0.25rem; cursor: pointer; user-select: none;">✨ IPO Status:</label>
+                <select id="ipoAgeFilter" style="background: rgba(15, 23, 42, 0.9); color: white; border: 1px solid rgba(96, 165, 250, 0.5); border-radius: 6px; padding: 0.2rem 0.5rem; font-size: 0.8rem; font-weight: 700; cursor: pointer; outline: none; font-family: inherit;">
+                    <option value="ALL">All Stocks</option>
+                    <option value="FRESH">✨ Fresh IPO Only</option>
+                    <option value="MATURE">🧱 Mature IPO Only</option>
+                    <option value="ALL_IPO">💎 All IPOs Only</option>
+                </select>
+            </div>
             <button id="refreshBtn" class="btn">🔄 Refresh Live</button>
         </div>
     </header>
@@ -676,7 +689,7 @@
                             <span style="font-size: 0.7rem; background: rgba(16, 185, 129, 0.2); color: #10b981; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(16, 185, 129, 0.3); white-space: nowrap;">📈 SWING ONLY</span>
                         </div>
                         <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
-                            SOP Terunggul (Optimasi): Had Top 6 + Turnover &ge; RM 750k. <strong style="color: #60a5fa;">Gaya: SWING PLAY (Pegang 1-10 Hari), BUKAN INTRADAY!</strong>
+                            SOP Terunggul (Optimasi): <strong style="color: #34d399;">VVIP Trend Rider (5-Slot Beli & Peram)</strong>. Peram selagi di atas Support Floor (SL -3%). <strong style="color: #60a5fa;">Gaya: RIDE THE TREND (Tanpa TP Kaku)!</strong>
                         </p>
                     </div>
                 </div>
@@ -889,9 +902,29 @@
         let currentSortColumn = 'turnover';
         let currentSortDesc = true;
 
+        // Dynamically map IPO Grades for live and historical data (in case JSON doesn't contain ipoGrade)
+        const ipoMap = {
+            'SKYECHIP': 'A', 'PENTECH': 'A', 'ECOSHOP': 'A', 'EMPIRE': 'A', 'SRKK': 'A',
+            'SUM': 'B', 'ELSA': 'B', 'NE': 'B', 'AMBEST': 'B', 'AMS': 'B',
+            'EIPOWER': 'B', 'ISF': 'B', 'KEEMING': 'B', 'TEAMSTR': 'B', 'CBHB': 'B',
+            'HEGROUP': 'B', 'MNHLDG': 'B', 'TMK': 'B', 'YEWLEE': 'B', 'HKB': 'B', 'UUE': 'B',
+            'MMCS': 'C', 'GDGROUP': 'C', 'GOLDLI': 'C', 'HOCKSOON': 'C', 'OGX': 'C', 'SBS': 'C'
+        };
+
+        const freshIpos = [
+            'SKYECHIP', 'PENTECH', 'SUM', 'ELSA', 'NE', 'AMBEST', 'AMS',
+            'EIPOWER', 'ISF', 'KEEMING', 'TEAMSTR', 'MMCS', 'GDGROUP',
+            'GOLDLI', 'HOCKSOON', 'OGX', 'SBS', 'SRKK', 'EMPIRE'
+        ];
+
         // Helper to identify comb stocks (saham tidur), illiquid stocks, or downtrend/avoid stocks
         function isSleepingOrAvoidStock(item) {
             if (!item) return false;
+            
+            // IPOs (Grade A/B/C) are exempt from downtrend / avoid filtering, allowing multiple entry setups on pullback!
+            const isIpo = item.ipoGrade === 'A' || item.ipoGrade === 'B' || item.ipoGrade === 'C';
+            if (isIpo) return false;
+
             if (item.isCombStock) return true;
             
             const setup = (item.setupName || '').toUpperCase();
@@ -901,6 +934,27 @@
             if (reason.includes('COMB') || reason.includes('AVOID') || reason.includes('ILLIQUID')) return true;
             
             return false;
+        }
+
+        // Helper to match IPO age filter (All, Fresh, Mature, All IPO)
+        function matchesIpoAgeFilter(item, filterValue) {
+            if (!filterValue || filterValue === 'ALL') return true;
+            
+            const isIpo = !!item.ipoGrade;
+            if (filterValue === 'ALL_IPO') return isIpo;
+            if (!isIpo) return false;
+            
+            const cleanName = item.name.toUpperCase().trim();
+            const isFresh = freshIpos.includes(cleanName) || Object.keys(ipoMap).some(key => {
+                if (!freshIpos.includes(key)) return false;
+                const normKey = key.replace(/[^A-Z0-9]/g, '');
+                const normName = cleanName.replace(/[^A-Z0-9]/g, '');
+                return normName.includes(normKey) || normKey.includes(normName);
+            });
+            
+            if (filterValue === 'FRESH') return isFresh;
+            if (filterValue === 'MATURE') return !isFresh;
+            return true;
         }
 
 
@@ -981,6 +1035,27 @@
 
         // Apply filters and render UI elements
         function applyFilters() {
+            if (currentData && Array.isArray(currentData)) {
+                currentData.forEach(item => {
+                    if (!item.ipoGrade) {
+                        const cleanName = item.name.toUpperCase().trim();
+                        if (ipoMap[cleanName]) {
+                            item.ipoGrade = ipoMap[cleanName];
+                        } else {
+                            // Robust partial match to catch suffixes like "EI POWER BERHAD [S]" or "AMS ADVANCED..."
+                            const foundKey = Object.keys(ipoMap).find(key => {
+                                const normKey = key.replace(/[^A-Z0-9]/g, '');
+                                const normName = cleanName.replace(/[^A-Z0-9]/g, '');
+                                return normName.includes(normKey) || normKey.includes(normName);
+                            });
+                            if (foundKey) {
+                                item.ipoGrade = ipoMap[foundKey];
+                            }
+                        }
+                    }
+                });
+            }
+
             updateSentiment(currentData);
             renderReversals();
         }
@@ -1056,7 +1131,17 @@
             // 6. High volume spike confirmation (Liquidity score booster)
             if (item.turnover >= 5000000) score += 1;
             
-            return score;
+            // 7. Premium IPO Grade Booster
+            if (item.ipoGrade === 'A') score += 3;
+            else if (item.ipoGrade === 'B') score += 2;
+            else if (item.ipoGrade === 'C') score += 1;
+            
+            // 8. Momentum Booster: Near ATH (pullback <= 3%) + Strong Uptrend (Above SMA50 & SMA200)
+            if (pullbackVal <= 3.0 && isAboveSma50 && isAboveSma200) {
+                score += 2;
+            }
+            
+            return Math.min(15, score);
         }
 
         // Market Sentiment Indicator
@@ -1157,9 +1242,10 @@
                 if (!item.high52) return false;
                 const pullbackVal = item.pullback !== null ? item.pullback : 0;
                 
-                // Pullback between 0.0% and 30.0% (relaxed to 40.0% if above SMA200)
+                // Pullback between 0.0% and 30.0% (relaxed to 40.0% if above SMA200, 55.0% for Premium IPOs)
                 const isAboveSma200 = item.sma200 ? item.price >= item.sma200 : false;
-                const maxPullbackLimit = isAboveSma200 ? 40.0 : 30.0;
+                const isPremiumIpo = item.ipoGrade === 'A' || item.ipoGrade === 'B';
+                const maxPullbackLimit = isPremiumIpo ? 55.0 : (isAboveSma200 ? 40.0 : 30.0);
                 const hasPullback = pullbackVal >= 0.0 && pullbackVal <= maxPullbackLimit;
                 
                 // Bouncing today
@@ -1172,8 +1258,11 @@
                        !isSleepingOrAvoidStock(item);
                        
                 if (!passBasic) return false;
+
+                const ipoAgeFilterVal = document.getElementById('ipoAgeFilter') ? document.getElementById('ipoAgeFilter').value : 'ALL';
+                if (!matchesIpoAgeFilter(item, ipoAgeFilterVal)) return false;
                 
-                // Filter out SWING PLAY: only keep EXPLOSIVE and STAIRCASE
+                // Filter out SWING PLAY: only keep EXPLOSIVE and STAIRCASE (allow all styles for Premium IPOs)
                 const pct = item.changePct !== undefined ? item.changePct : item.change;
                 const setupStyle = item.setupStyle || (
                     pct >= 5.0 || (pct >= 3.5 && pullbackVal > 5.0) ? 'EXPLOSIVE' : (
@@ -1181,7 +1270,7 @@
                     )
                 );
                 
-                return setupStyle === 'EXPLOSIVE' || setupStyle === 'STAIRCASE';
+                return setupStyle === 'EXPLOSIVE' || setupStyle === 'STAIRCASE' || isPremiumIpo;
             });
             
             // Update sort icons in table headers
@@ -1273,18 +1362,25 @@
             
             if (hybridTbody && hybridSection) {
                 // Filter items for Technique C: setupStyle is EXPLOSIVE or STAIRCASE and turnover >= 750k and not a comb stock
-                const validPicks = currentData.filter(item => {
+                let validPicks = currentData.filter(item => {
                     if (!item.high52) return false;
                     const pullbackVal = item.pullback !== null ? item.pullback : 0;
                     const isAboveSma200 = item.sma200 ? item.price >= item.sma200 : false;
-                    const maxPullbackLimit = isAboveSma200 ? 40.0 : 30.0;
+                    const isIpo = item.ipoGrade === 'A' || item.ipoGrade === 'B' || item.ipoGrade === 'C';
+                    const isPremiumIpo = item.ipoGrade === 'A' || item.ipoGrade === 'B';
+                    const maxPullbackLimit = isIpo ? 55.0 : (isAboveSma200 ? 40.0 : 30.0);
                     const hasPullback = pullbackVal >= 0.0 && pullbackVal <= maxPullbackLimit;
                     if (!hasPullback) return false;
 
                     if (isSleepingOrAvoidStock(item)) return false;
                     if (item.price < 0.25 || item.price > 4.00) return false;
-                    if (item.turnover < 750000) return false;
-                    if (calculateSmartScore(item) < 12) return false;
+                    const minTurnover = isIpo ? 400000 : 750000;
+                    if (item.turnover < minTurnover) return false;
+                    const minScore = isPremiumIpo ? 10 : (item.ipoGrade === 'C' ? 11 : 12);
+                    if (calculateSmartScore(item) < minScore) return false;
+
+                    const ipoAgeFilterVal = document.getElementById('ipoAgeFilter') ? document.getElementById('ipoAgeFilter').value : 'ALL';
+                    if (!matchesIpoAgeFilter(item, ipoAgeFilterVal)) return false;
 
                     const pct = item.changePct !== undefined ? item.changePct : item.change;
                     const pb = item.pullback !== null ? item.pullback : 0;
@@ -1293,8 +1389,17 @@
                             pb <= 10.0 && (item.isConsolidation || (item.lowTightness && item.lowTightness <= 8.0) || (item.touchCount && item.touchCount >= 2)) ? 'STAIRCASE' : 'SWING PLAY'
                         )
                     );
-                    return style === 'EXPLOSIVE' || style === 'STAIRCASE';
+                    return style === 'EXPLOSIVE' || style === 'STAIRCASE' || isPremiumIpo;
                 });
+
+                const vvipOnly = document.getElementById('vvipOnlyToggle') ? document.getElementById('vvipOnlyToggle').checked : false;
+                if (vvipOnly) {
+                    validPicks = validPicks.filter(item => {
+                        const isPremiumIpo = item.ipoGrade === 'A' || item.ipoGrade === 'B';
+                        const minScore = isPremiumIpo ? 10 : (item.ipoGrade === 'C' ? 11 : 12);
+                        return item.isVvip && calculateSmartScore(item) >= minScore;
+                    });
+                }
                 
                 // Separate by style
                 const exps = validPicks.filter(item => {
@@ -1316,15 +1421,27 @@
                             pb <= 10.0 && (item.isConsolidation || (item.lowTightness && item.lowTightness <= 8.0) || (item.touchCount && item.touchCount >= 2)) ? 'STAIRCASE' : 'SWING PLAY'
                         )
                     );
-                    return style === 'STAIRCASE';
+                    if (style === 'STAIRCASE') return true;
+                    const isPremiumIpo = item.ipoGrade === 'A' || item.ipoGrade === 'B';
+                    if (isPremiumIpo && style === 'SWING PLAY') return true; // Premium IPOs in deep pullback default to STAIRCASE pick
+                    return false;
                 });
                 
-                // Sort function for ranking: VVIP (Score >= 8) first, then by Smart Score descending, then by turnover descending
+                // Sort function for ranking: Premium IPOs (Grade A/B) first, then VVIP, then by Smart Score descending, then by turnover (lightweight IPOs first, high volume non-IPOs first)
                 const renderSortFn = (a, b) => {
+                    const isPremiumIpoA = (a.ipoGrade === 'A' || a.ipoGrade === 'B') ? 1 : 0;
+                    const isPremiumIpoB = (b.ipoGrade === 'A' || b.ipoGrade === 'B') ? 1 : 0;
+
+                    if (isPremiumIpoB !== isPremiumIpoA) {
+                        return isPremiumIpoB - isPremiumIpoA; // Premium IPOs (A/B) first
+                    }
+
                     const scoreA = calculateSmartScore(a);
                     const scoreB = calculateSmartScore(b);
-                    const isVvipA = (a.isVvip && scoreA >= 12) ? 1 : 0;
-                    const isVvipB = (b.isVvip && scoreB >= 12) ? 1 : 0;
+                    const minScoreA = isPremiumIpoA ? 10 : 12;
+                    const minScoreB = isPremiumIpoB ? 10 : 12;
+                    const isVvipA = (a.isVvip && scoreA >= minScoreA) ? 1 : 0;
+                    const isVvipB = (b.isVvip && scoreB >= minScoreB) ? 1 : 0;
 
                     if (isVvipB !== isVvipA) {
                         return isVvipB - isVvipA; // VVIP first
@@ -1332,16 +1449,22 @@
                     if (scoreB !== scoreA) {
                         return scoreB - scoreA; // Highest score next
                     }
-                    return b.turnover - a.turnover; // Turnover tie-breaker
+
+                    const isIpoA = a.ipoGrade === 'A' || a.ipoGrade === 'B' || a.ipoGrade === 'C';
+                    const isIpoB = b.ipoGrade === 'A' || b.ipoGrade === 'B' || b.ipoGrade === 'C';
+                    if (isIpoA && isIpoB) {
+                        return a.turnover - b.turnover; // Lightweight IPOs first
+                    }
+                    return b.turnover - a.turnover; // High volume non-IPOs first
                 };
 
                 // Sort the entire candidates list by the smart score criteria first
                 exps.sort(renderSortFn);
                 stairs.sort(renderSortFn);
                 
-                // Then slice the top 6 highest ranking picks
-                const topExps = exps.slice(0, 6);
-                const topStairs = stairs.slice(0, 6);
+                // Then slice the top 20 highest ranking picks to prevent clipping valid VVIPs
+                const topExps = exps.slice(0, 20);
+                const topStairs = stairs.slice(0, 20);
                 
                 if (topExps.length > 0 || topStairs.length > 0) {
                     hybridSection.style.display = 'block';
@@ -1358,13 +1481,25 @@
                         const changeClass = pct >= 0 ? 'success' : 'danger';
                         const changeSign = pct > 0 ? '+' : '';
                         
-                        const vvipBadge = (item.isVvip && score >= 12) ? `<span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.25); color: #fb923c; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.3rem; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.4);">🔥 VVIP</span>` : '';
+                        const minVvipScore = (item.ipoGrade === 'A' || item.ipoGrade === 'B') ? 10 : (item.ipoGrade === 'C' ? 11 : 12);
+                        const vvipBadge = (item.isVvip && score >= minVvipScore) ? `<span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.25); color: #fb923c; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.3rem; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.4);">🔥 VVIP</span>` : '';
                         
                         const scoreBadge = score === 15 
                             ? `<span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.3); color: #fb923c; border: 1px solid rgba(245, 158, 11, 0.5); padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.1rem; font-weight: 900; box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);">🏆 Gold: 15/15</span>` 
                             : `<span style="font-size: 0.72rem; background: rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.1rem; font-weight: 700;">Score: ${score}/15</span>`;
 
                         const ipoBadge = item.ipoGrade ? (item.ipoGrade === 'A' ? `<span style="font-size: 0.72rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(59, 130, 246, 0.25)); color: #34d399; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.2rem; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.4); box-shadow: 0 0 5px rgba(52, 211, 153, 0.3);">💎 IPO A</span>` : (item.ipoGrade === 'B' ? `<span style="font-size: 0.72rem; background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(99, 102, 241, 0.25)); color: #c084fc; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.2rem; font-weight: 800; border: 1px solid rgba(168, 85, 247, 0.4); box-shadow: 0 0 5px rgba(192, 132, 252, 0.3);">🚀 IPO B</span>` : (item.ipoGrade === 'C' ? `<span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.2); color: #fbbf24; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.2rem; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.35);">⚠️ IPO C</span>` : ''))) : '';
+
+                        const cleanNameExp = item.name.toUpperCase().trim();
+                        const isFreshExp = freshIpos.includes(cleanNameExp) || Object.keys(ipoMap).some(key => {
+                            if (!freshIpos.includes(key)) return false;
+                            const normKey = key.replace(/[^A-Z0-9]/g, '');
+                            const normName = cleanNameExp.replace(/[^A-Z0-9]/g, '');
+                            return normName.includes(normKey) || normKey.includes(normName);
+                        });
+                        const freshBadge = item.ipoGrade ? (isFreshExp 
+                            ? `<span style="font-size: 0.72rem; background: rgba(16, 185, 129, 0.2); color: #34d399; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.2rem; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.35);">✨ FRESH</span>` 
+                            : `<span style="font-size: 0.72rem; background: rgba(156, 163, 175, 0.2); color: #d1d5db; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.2rem; font-weight: 800; border: 1px solid rgba(156, 163, 175, 0.35);">🧱 MATURE</span>`) : '';
 
                         hybridHtml += `
                             <tr>
@@ -1376,6 +1511,7 @@
                                         ${scoreBadge}
                                         ${vvipBadge}
                                         ${ipoBadge}
+                                        ${freshBadge}
                                     </span>
                                 </td>
                                 <td style="text-align: center;"><span class="tag-pill explosive" style="font-size: 0.75rem;">🚀 EXPLOSIVE</span></td>
@@ -1396,15 +1532,26 @@
                         const turnoverM = (item.turnover / 1e6).toFixed(2);
                         const pct = item.changePct !== undefined ? item.changePct : item.change;
                         const changeClass = pct >= 0 ? 'success' : 'danger';
-                        const changeSign = pct > 0 ? '+' : '';
-                        
-                        const vvipBadge = (item.isVvip && score >= 12) ? `<span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.25); color: #fb923c; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.3rem; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.4);">🔥 VVIP</span>` : '';
+                        const changeSign = pct >= 0 ? '+' : '';
+                        const minVvipScore = (item.ipoGrade === 'A' || item.ipoGrade === 'B') ? 10 : (item.ipoGrade === 'C' ? 11 : 12);
+                        const vvipBadge = (item.isVvip && score >= minVvipScore) ? `<span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.25); color: #fb923c; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.3rem; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.4); font-family: inherit;">🔥 VVIP</span>` : '';
                         
                         const scoreBadge = score === 15 
                             ? `<span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.3); color: #fb923c; border: 1px solid rgba(245, 158, 11, 0.5); padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.1rem; font-weight: 900; box-shadow: 0 0 10px rgba(245, 158, 11, 0.4);">🏆 Gold: 15/15</span>` 
                             : `<span style="font-size: 0.72rem; background: rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.1rem; font-weight: 700;">Score: ${score}/15</span>`;
 
                         const ipoBadge = item.ipoGrade ? (item.ipoGrade === 'A' ? `<span style="font-size: 0.72rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(59, 130, 246, 0.25)); color: #34d399; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.2rem; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.4); box-shadow: 0 0 5px rgba(52, 211, 153, 0.3);">💎 IPO A</span>` : (item.ipoGrade === 'B' ? `<span style="font-size: 0.72rem; background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(99, 102, 241, 0.25)); color: #c084fc; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.2rem; font-weight: 800; border: 1px solid rgba(168, 85, 247, 0.4); box-shadow: 0 0 5px rgba(192, 132, 252, 0.3);">🚀 IPO B</span>` : (item.ipoGrade === 'C' ? `<span style="font-size: 0.72rem; background: rgba(245, 158, 11, 0.2); color: #fbbf24; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.2rem; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.35);">⚠️ IPO C</span>` : ''))) : '';
+
+                        const cleanNameStair = item.name.toUpperCase().trim();
+                        const isFreshStair = freshIpos.includes(cleanNameStair) || Object.keys(ipoMap).some(key => {
+                            if (!freshIpos.includes(key)) return false;
+                            const normKey = key.replace(/[^A-Z0-9]/g, '');
+                            const normName = cleanNameStair.replace(/[^A-Z0-9]/g, '');
+                            return normName.includes(normKey) || normKey.includes(normName);
+                        });
+                        const freshBadge = item.ipoGrade ? (isFreshStair 
+                            ? `<span style="font-size: 0.72rem; background: rgba(16, 185, 129, 0.2); color: #34d399; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.2rem; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.35);">✨ FRESH</span>` 
+                            : `<span style="font-size: 0.72rem; background: rgba(156, 163, 175, 0.2); color: #d1d5db; padding: 0.1rem 0.35rem; border-radius: 4px; margin-left: 0.2rem; font-weight: 800; border: 1px solid rgba(156, 163, 175, 0.35);">🧱 MATURE</span>`) : '';
 
                         hybridHtml += `
                             <tr>
@@ -1416,6 +1563,7 @@
                                         ${scoreBadge}
                                         ${vvipBadge}
                                         ${ipoBadge}
+                                        ${freshBadge}
                                     </span>
                                 </td>
                                 <td style="text-align: center;"><span class="tag-pill staircase" style="font-size: 0.75rem;">🪜 STAIRCASE</span></td>
@@ -1456,6 +1604,9 @@
                     if (item.price < 0.25 || item.price > 4.00) return false;
                     if (item.turnover < 5000000) return false;
                     if (calculateSmartScore(item) < 11) return false;
+
+                    const ipoAgeFilterVal = document.getElementById('ipoAgeFilter') ? document.getElementById('ipoAgeFilter').value : 'ALL';
+                    if (!matchesIpoAgeFilter(item, ipoAgeFilterVal)) return false;
                     
                     const pct = item.changePct !== undefined ? item.changePct : item.change;
                     const pb = item.pullback !== null ? item.pullback : 0;
@@ -1588,14 +1739,26 @@
                 
                         const ipoBadge = item.ipoGrade ? (item.ipoGrade === 'A' ? `<span style="font-size: 0.65rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(59, 130, 246, 0.25)); color: #34d399; padding: 0.05rem 0.25rem; border-radius: 3px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.4); box-shadow: 0 0 5px rgba(52, 211, 153, 0.3);">💎 IPO A</span>` : (item.ipoGrade === 'B' ? `<span style="font-size: 0.65rem; background: linear-gradient(135deg, rgba(168, 85, 247, 0.25), rgba(99, 102, 241, 0.25)); color: #c084fc; padding: 0.05rem 0.25rem; border-radius: 3px; font-weight: 800; border: 1px solid rgba(168, 85, 247, 0.4); box-shadow: 0 0 5px rgba(192, 132, 252, 0.3);">🚀 IPO B</span>` : (item.ipoGrade === 'C' ? `<span style="font-size: 0.65rem; background: rgba(245, 158, 11, 0.2); color: #fbbf24; padding: 0.05rem 0.25rem; border-radius: 3px; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.35);">⚠️ IPO C</span>` : ''))) : '';
 
+                        const cleanNameRev = item.name.toUpperCase().trim();
+                        const isFreshRev = freshIpos.includes(cleanNameRev) || Object.keys(ipoMap).some(key => {
+                            if (!freshIpos.includes(key)) return false;
+                            const normKey = key.replace(/[^A-Z0-9]/g, '');
+                            const normName = cleanNameRev.replace(/[^A-Z0-9]/g, '');
+                            return normName.includes(normKey) || normKey.includes(normName);
+                        });
+                        const freshBadge = item.ipoGrade ? (isFreshRev 
+                            ? `<span style="font-size: 0.65rem; background: rgba(16, 185, 129, 0.2); color: #34d399; padding: 0.05rem 0.25rem; border-radius: 3px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.35);">✨ FRESH</span>` 
+                            : `<span style="font-size: 0.65rem; background: rgba(156, 163, 175, 0.2); color: #d1d5db; padding: 0.05rem 0.25rem; border-radius: 3px; font-weight: 800; border: 1px solid rgba(156, 163, 175, 0.35);">🧱 MATURE</span>`) : '';
+
                 tableHtml += `
                     <tr>
                         <td style="text-align: center; font-weight: 800; color: var(--info);">#${index + 1}</td>
                         <td style="font-weight: 700; color: white;">
                             <span style="display: inline-flex; align-items: center; gap: 0.3rem;">
                                 ${item.name}
-                                ${(item.isVvip && calculateSmartScore(item) >= 12) ? `<span style="font-size: 0.65rem; background: rgba(245, 158, 11, 0.25); color: #fb923c; padding: 0.05rem 0.25rem; border-radius: 3px; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.4);">🔥 VVIP</span>` : ''}
+                                ${(item.isVvip && calculateSmartScore(item) >= ((item.ipoGrade === 'A' || item.ipoGrade === 'B') ? 10 : (item.ipoGrade === 'C' ? 11 : 12))) ? `<span style="font-size: 0.65rem; background: rgba(245, 158, 11, 0.25); color: #fb923c; padding: 0.05rem 0.25rem; border-radius: 3px; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.4);">🔥 VVIP</span>` : ''}
                                 ${ipoBadge}
+                                ${freshBadge}
                                 <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="font-size: 0.75rem; color: var(--info); text-decoration: none;" title="TradingView Chart">🔗</a>
                             </span>
                         </td>
@@ -1620,9 +1783,10 @@
                 if (!item.high52) return false;
                 const pullbackVal = item.pullback !== null ? item.pullback : 0;
                 
-                // Pullback between 0.0% and 30.0% (relaxed to 40.0% if above SMA200)
+                // Pullback between 0.0% and 30.0% (relaxed to 40.0% if above SMA200, 55.0% for Premium IPOs)
                 const isAboveSma200 = item.sma200 ? item.price >= item.sma200 : false;
-                const maxPullbackLimit = isAboveSma200 ? 40.0 : 30.0;
+                const isPremiumIpo = item.ipoGrade === 'A' || item.ipoGrade === 'B';
+                const maxPullbackLimit = isPremiumIpo ? 55.0 : (isAboveSma200 ? 40.0 : 30.0);
                 const hasPullback = pullbackVal >= 0.0 && pullbackVal <= maxPullbackLimit;
                 
                 const isBouncing = item.change > 0;
@@ -1633,6 +1797,9 @@
                        !isSleepingOrAvoidStock(item);
                        
                 if (!passBasic) return false;
+
+                const ipoAgeFilterVal = document.getElementById('ipoAgeFilter') ? document.getElementById('ipoAgeFilter').value : 'ALL';
+                if (!matchesIpoAgeFilter(item, ipoAgeFilterVal)) return false;
                 
                 const pct = item.changePct !== undefined ? item.changePct : item.change;
                 const setupStyle = item.setupStyle || (
@@ -1641,7 +1808,7 @@
                     )
                 );
                 
-                return setupStyle === 'EXPLOSIVE' || setupStyle === 'STAIRCASE';
+                return setupStyle === 'EXPLOSIVE' || setupStyle === 'STAIRCASE' || isPremiumIpo;
             });
             
             if (reversalList.length === 0) {
@@ -1809,6 +1976,14 @@
                 const btn = document.getElementById('btn-toggle-reversals');
                 if (btn) btn.innerHTML = '👁️ Show Section';
             }
+
+            document.getElementById('vvipOnlyToggle').addEventListener('change', function() {
+                applyFilters();
+            });
+
+            document.getElementById('ipoAgeFilter').addEventListener('change', function() {
+                applyFilters();
+            });
 
             document.getElementById('refreshBtn').addEventListener('click', async function() {
                 const text = this.textContent;

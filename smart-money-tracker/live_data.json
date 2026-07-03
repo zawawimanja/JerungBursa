@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T10:34:24.779Z",
+  "lastUpdated": "2026-07-03T12:58:04.855Z",
   "source": "klse.i3investor.com",
   "topVolume": [
     {
@@ -230,7 +230,8 @@
       "isCombStock": false,
       "sma50": 1.8225999927520753,
       "sma200": 1.8708108019184422,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "A"
     },
     {
       "name": "VELESTO",
@@ -259,7 +260,7 @@
     },
     {
       "name": "MRDIY",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Swing / Bluechip",
       "setupStyle": "SWING PLAY",
       "price": 1.6699999570846558,
@@ -281,7 +282,8 @@
       "isCombStock": false,
       "sma50": 1.6390000081062317,
       "sma200": 1.6387999999523162,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "C"
     },
     {
       "name": "VITROX",
@@ -361,7 +363,7 @@
     },
     {
       "name": "SCGBHD",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Swing / Bluechip",
       "setupStyle": "STAIRCASE",
       "price": 2.4100000858306885,
@@ -383,7 +385,8 @@
       "isCombStock": false,
       "sma50": 2.098799982070923,
       "sma200": 2.10374998152256,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "C"
     },
     {
       "name": "PCHEM",
@@ -438,7 +441,7 @@
     },
     {
       "name": "UWC",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Swing / Bluechip",
       "setupStyle": "STAIRCASE",
       "price": 6.400000095367432,
@@ -460,7 +463,8 @@
       "isCombStock": false,
       "sma50": 5.7635999584198,
       "sma200": 4.497000006437301,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "A"
     },
     {
       "name": "DNEX",
@@ -486,7 +490,8 @@
       "isCombStock": false,
       "sma50": 0.35439999878406525,
       "sma200": 0.3031999982893467,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B"
     },
     {
       "name": "AAX",
@@ -515,7 +520,7 @@
     },
     {
       "name": "ECOSHOP",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 1.4299999475479126,
@@ -537,7 +542,8 @@
       "isCombStock": false,
       "sma50": 1.2749999976158142,
       "sma200": 1.4049500012397766,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "A"
     },
     {
       "name": "KGB",
@@ -589,7 +595,8 @@
       "isCombStock": false,
       "sma50": 0.6285000026226044,
       "sma200": 0.6285000026226044,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B"
     },
     {
       "name": "TANCO",
@@ -665,7 +672,8 @@
       "isCombStock": false,
       "sma50": 0.36255102315727544,
       "sma200": 0.36255102315727544,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B"
     },
     {
       "name": "ECKEM",
@@ -690,7 +698,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": null,
-      "sma200": null
+      "sma200": null,
+      "ipoGrade": "D"
     },
     {
       "name": "HLBANK",
@@ -745,7 +754,7 @@
     },
     {
       "name": "CHB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Swing / Bluechip",
       "setupStyle": "EXPLOSIVE",
       "price": 1.6299999952316284,
@@ -767,11 +776,12 @@
       "isCombStock": false,
       "sma50": 0.9781999886035919,
       "sma200": 0.8778749972581863,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B"
     },
     {
       "name": "GREATEC",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Swing / Bluechip",
       "setupStyle": "SWING PLAY",
       "price": 2.559999942779541,
@@ -792,11 +802,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 2.5474000072479246,
-      "sma200": 2.0483999979496
+      "sma200": 2.0483999979496,
+      "ipoGrade": "C"
     },
     {
       "name": "SLVEST",
-      "sector": "Bursa",
+      "sector": "Utilities",
       "category": "Swing / Bluechip",
       "setupStyle": "SWING PLAY",
       "price": 3.049999952316284,
@@ -818,7 +829,8 @@
       "isCombStock": false,
       "sma50": 2.862199988365173,
       "sma200": 2.7809499996900557,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B"
     },
     {
       "name": "NATGATE",
@@ -831,10 +843,10 @@
       "turnover": 7896943.414902687,
       "volume": 8923100,
       "signal": "avoid",
-      "reason": "🧊 Downtrend Stock: Avoid Trading!",
+      "reason": "VIP Sideway / Pullback (Monitor for Opportunities)",
       "high52": 1.7999999523162842,
       "pullback": 50.83,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Premium IPO Deep Pullback",
       "closeTightness": 2.29,
       "lowTightness": 9.37,
       "touchCount": 2,
@@ -843,7 +855,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.7922000002861023,
-      "sma200": 0.9349499991536141
+      "sma200": 0.9349499991536141,
+      "ipoGrade": "B"
     },
     {
       "name": "DUFU",
@@ -924,7 +937,7 @@
     },
     {
       "name": "RAMSSOL",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.6949999928474426,
@@ -932,11 +945,11 @@
       "changePct": 2.21,
       "turnover": 6076176.437467337,
       "volume": 8742700,
-      "signal": "avoid",
-      "reason": "🧊 Downtrend Stock: Avoid Trading!",
+      "signal": "buy",
+      "reason": "🔥 Golden Entry: Smart Money Accumulating (Suitable for Swing/Hold) (Pullback Support)",
       "high52": 1.090000033378601,
       "pullback": 36.24,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 2.21,
       "lowTightness": 1.49,
       "touchCount": 10,
@@ -945,7 +958,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.7044000053405761,
-      "sma200": 0.8829499968886375
+      "sma200": 0.8829499968886375,
+      "ipoGrade": "B"
     },
     {
       "name": "KEEMING",
@@ -971,11 +985,12 @@
       "isCombStock": false,
       "sma50": 1.1707999980449677,
       "sma200": 0.9828645816693703,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B"
     },
     {
       "name": "MEGAFB",
-      "sector": "Bursa",
+      "sector": "IPO",
       "category": "Swing / Bluechip",
       "setupStyle": "STAIRCASE",
       "price": 1.649999976158142,
@@ -997,7 +1012,8 @@
       "isCombStock": false,
       "sma50": 1.5628000068664551,
       "sma200": 1.0468500033020973,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "Unrated"
     },
     {
       "name": "PENTA",
@@ -1049,11 +1065,12 @@
       "isCombStock": false,
       "sma50": 0.9807999920845032,
       "sma200": 0.7861749973893165,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "A"
     },
     {
       "name": "SFPTECH",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.3050000071525574,
@@ -1075,7 +1092,8 @@
       "isCombStock": false,
       "sma50": 0.2314999979734421,
       "sma200": 0.16212499927729368,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B"
     },
     {
       "name": "VS",
@@ -1104,7 +1122,7 @@
     },
     {
       "name": "THMY",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Swing / Bluechip",
       "setupStyle": "SWING PLAY",
       "price": 1.7000000476837158,
@@ -1126,11 +1144,12 @@
       "isCombStock": false,
       "sma50": 1.553400011062622,
       "sma200": 1.1377745680726332,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B"
     },
     {
       "name": "CHEEDING",
-      "sector": "Bursa",
+      "sector": "Utilities",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.699999988079071,
@@ -1181,7 +1200,7 @@
     },
     {
       "name": "YEWLEE",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.5899999737739563,
@@ -1203,7 +1222,8 @@
       "isCombStock": false,
       "sma50": 0.5706999945640564,
       "sma200": 0.47342499837279317,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "C"
     },
     {
       "name": "QL",
@@ -1233,7 +1253,7 @@
     },
     {
       "name": "FFB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Swing / Bluechip",
       "setupStyle": "SWING PLAY",
       "price": 2.2799999713897705,
@@ -1241,11 +1261,11 @@
       "changePct": 1.33,
       "turnover": 4272263.946390152,
       "volume": 1873800,
-      "signal": "avoid",
-      "reason": "🧊 Downtrend Stock: Avoid Trading!",
+      "signal": "buy",
+      "reason": "🔥 Golden Hold: Smart Money Accumulation (Suitable for Swing/Hold) (Pullback Support)",
       "high52": 3.0299999713897705,
       "pullback": 24.75,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 1.78,
       "lowTightness": 3.15,
       "touchCount": 3,
@@ -1254,11 +1274,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 2.299599986076355,
-      "sma200": 2.5037499928474425
+      "sma200": 2.5037499928474425,
+      "ipoGrade": "A"
     },
     {
       "name": "JPG",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Swing / Bluechip",
       "setupStyle": "STAIRCASE",
       "price": 1.7999999523162842,
@@ -1280,11 +1301,12 @@
       "isCombStock": false,
       "sma50": 1.753600001335144,
       "sma200": 1.6167499935626983,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "C"
     },
     {
       "name": "SNS",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.5049999952316284,
@@ -1292,11 +1314,11 @@
       "changePct": 2.02,
       "turnover": 4018436.462056637,
       "volume": 7957300,
-      "signal": "avoid",
-      "reason": "🧊 Downtrend Stock: Avoid Trading!",
+      "signal": "buy",
+      "reason": "🔥 Golden Entry: Smart Money Accumulating (Suitable for Swing/Hold) (Pullback Support)",
       "high52": 0.7749999761581421,
       "pullback": 34.84,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 6.06,
       "lowTightness": 5.1,
       "touchCount": 5,
@@ -1305,11 +1327,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.4952999967336655,
-      "sma200": 0.5432249982655049
+      "sma200": 0.5432249982655049,
+      "ipoGrade": "B"
     },
     {
       "name": "KOPI",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.9049999713897705,
@@ -1317,11 +1340,11 @@
       "changePct": 1.12,
       "turnover": 3950958.375096321,
       "volume": 4365700,
-      "signal": "avoid",
-      "reason": "🧊 Downtrend Stock: Avoid Trading!",
+      "signal": "buy",
+      "reason": "🔥 Golden Entry: Smart Money Accumulating (Suitable for Swing/Hold)",
       "high52": 1.6100000143051147,
       "pullback": 43.79,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Premium IPO Deep Pullback",
       "closeTightness": 4.47,
       "lowTightness": 3.91,
       "touchCount": 2,
@@ -1330,7 +1353,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 1.0162000024318696,
-      "sma200": 1.225399998128414
+      "sma200": 1.225399998128414,
+      "ipoGrade": "B"
     },
     {
       "name": "HHRG",
@@ -1406,7 +1430,8 @@
       "isCombStock": false,
       "sma50": 2.4764000272750852,
       "sma200": 1.923600006699562,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B"
     },
     {
       "name": "UTDPLT",
@@ -1484,7 +1509,8 @@
       "isCombStock": false,
       "sma50": 0.6169000029563904,
       "sma200": 0.5322249995172024,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B"
     },
     {
       "name": "PETGAS",
@@ -1513,7 +1539,7 @@
     },
     {
       "name": "UUE",
-      "sector": "Bursa",
+      "sector": "Utilities",
       "category": "Intraday / Momentum",
       "setupStyle": "EXPLOSIVE",
       "price": 0.5049999952316284,
@@ -1535,7 +1561,8 @@
       "isCombStock": false,
       "sma50": 0.4142000013589859,
       "sma200": 0.4781832966208458,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B"
     },
     {
       "name": "IAB",
@@ -1561,7 +1588,8 @@
       "isCombStock": false,
       "sma50": 1.4062000036239624,
       "sma200": 1.3411988316223635,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B"
     },
     {
       "name": "HEIM",
@@ -1615,7 +1643,7 @@
     },
     {
       "name": "ICTZONE",
-      "sector": "Bursa",
+      "sector": "Technology",
       "category": "Intraday / Momentum",
       "setupStyle": "EXPLOSIVE",
       "price": 0.20000000298023224,
@@ -1636,7 +1664,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.18040000289678573,
-      "sma200": 0.17797500222921372
+      "sma200": 0.17797500222921372,
+      "ipoGrade": "C"
     },
     {
       "name": "SUM",
@@ -1662,7 +1691,8 @@
       "isCombStock": false,
       "sma50": 0.5104166691501936,
       "sma200": 0.5104166691501936,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B"
     },
     {
       "name": "OGX",
@@ -1688,7 +1718,8 @@
       "isCombStock": false,
       "sma50": 0.39719999969005587,
       "sma200": 0.3532692300967681,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "C"
     },
     {
       "name": "SUNCON",
@@ -1726,11 +1757,11 @@
       "changePct": 0.79,
       "turnover": 2275395.465826988,
       "volume": 3583300,
-      "signal": "avoid",
-      "reason": "🧊 Downtrend Stock: Avoid Trading!",
+      "signal": "buy",
+      "reason": "🔥 Golden Entry: Smart Money Accumulating (Suitable for Swing/Hold)",
       "high52": 1.059999942779541,
       "pullback": 40.09,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Premium IPO Deep Pullback",
       "closeTightness": 3.97,
       "lowTightness": 7.69,
       "touchCount": 4,
@@ -1739,7 +1770,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.5735000026226044,
-      "sma200": 0.4134499999880791
+      "sma200": 0.4134499999880791,
+      "ipoGrade": "B"
     },
     {
       "name": "HLFG",
@@ -1768,7 +1800,7 @@
     },
     {
       "name": "CORAZA",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 1,
@@ -1790,11 +1822,12 @@
       "isCombStock": false,
       "sma50": 0.9264999949932098,
       "sma200": 0.6743749997019768,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B"
     },
     {
       "name": "ICENTS",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "EXPLOSIVE",
       "price": 0.5699999928474426,
@@ -1816,11 +1849,12 @@
       "isCombStock": false,
       "sma50": 0.4514999979734421,
       "sma200": 0.4256499992311001,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B"
     },
     {
       "name": "ECOMATE",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.8550000190734863,
@@ -1841,7 +1875,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.8534000205993653,
-      "sma200": 0.8287250152230263
+      "sma200": 0.8287250152230263,
+      "ipoGrade": "B"
     },
     {
       "name": "SDCG",
@@ -1866,7 +1901,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.683600002527237,
-      "sma200": 0.6078000009059906
+      "sma200": 0.6078000009059906,
+      "ipoGrade": "B"
     },
     {
       "name": "PENTECH",
@@ -1892,11 +1928,12 @@
       "isCombStock": false,
       "sma50": 0.3049999986376081,
       "sma200": 0.3049999986376081,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "A"
     },
     {
       "name": "SUNVIEW",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.3700000047683716,
@@ -1917,7 +1954,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.36820000648498535,
-      "sma200": 0.3680500002205372
+      "sma200": 0.3680500002205372,
+      "ipoGrade": "B"
     },
     {
       "name": "SKPRES",
@@ -1971,7 +2009,7 @@
     },
     {
       "name": "ELRIDGE",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.925000011920929,
@@ -1980,10 +2018,10 @@
       "turnover": 1926312.5248253345,
       "volume": 2082500,
       "signal": "avoid",
-      "reason": "🧊 Downtrend Stock: Avoid Trading!",
+      "reason": "VIP Sideway / Pullback (Monitor for Opportunities) (Pullback Support)",
       "high52": 1.5199999809265137,
       "pullback": 39.14,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 4.52,
       "lowTightness": 7.65,
       "touchCount": 6,
@@ -1992,7 +2030,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.8582999992370606,
-      "sma200": 0.9324000000953674
+      "sma200": 0.9324000000953674,
+      "ipoGrade": "B"
     },
     {
       "name": "DLADY",
@@ -2046,7 +2085,7 @@
     },
     {
       "name": "SENHENG",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.14499999582767487,
@@ -2067,11 +2106,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.1653000022470951,
-      "sma200": 0.17925000060349702
+      "sma200": 0.17925000060349702,
+      "ipoGrade": "C"
     },
     {
       "name": "TFP",
-      "sector": "Bursa",
+      "sector": "Technology",
       "category": "Penny / Spekulatif",
       "setupStyle": "EXPLOSIVE",
       "price": 0.07500000298023224,
@@ -2092,7 +2132,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.04780000001192093,
-      "sma200": 0.030425000018440188
+      "sma200": 0.030425000018440188,
+      "ipoGrade": "B"
     },
     {
       "name": "LHI",
@@ -2144,7 +2185,8 @@
       "isCombStock": false,
       "sma50": 0.4436999994516373,
       "sma200": 0.24405000053346157,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B"
     },
     {
       "name": "MMCS",
@@ -2170,11 +2212,12 @@
       "isCombStock": false,
       "sma50": 0.26281249709427357,
       "sma200": 0.26281249709427357,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "C"
     },
     {
       "name": "ENPRO",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.20499999821186066,
@@ -2183,10 +2226,10 @@
       "turnover": 1581308.4862068295,
       "volume": 7713700,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.3050000071525574,
       "pullback": 32.79,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 2.5,
       "lowTightness": 5.26,
       "touchCount": 1,
@@ -2195,7 +2238,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2095999988913536,
-      "sma200": 0.22109999924898147
+      "sma200": 0.22109999924898147,
+      "ipoGrade": "B"
     },
     {
       "name": "SAM",
@@ -2250,7 +2294,7 @@
     },
     {
       "name": "JTGROUP",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "EXPLOSIVE",
       "price": 0.6299999952316284,
@@ -2271,7 +2315,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.5155000001192093,
-      "sma200": 0.6058250020444393
+      "sma200": 0.6058250020444393,
+      "ipoGrade": "B"
     },
     {
       "name": "VSTECS",
@@ -2300,7 +2345,7 @@
     },
     {
       "name": "PEKAT",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Swing / Bluechip",
       "setupStyle": "STAIRCASE",
       "price": 1.7699999809265137,
@@ -2322,11 +2367,12 @@
       "isCombStock": false,
       "sma50": 1.6240000009536744,
       "sma200": 1.5662000006437302,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B"
     },
     {
       "name": "DXN",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.45500001311302185,
@@ -2347,7 +2393,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.4584000027179718,
-      "sma200": 0.49117499515414237
+      "sma200": 0.49117499515414237,
+      "ipoGrade": "C"
     },
     {
       "name": "TMK",
@@ -2373,11 +2420,12 @@
       "isCombStock": false,
       "sma50": 2.01839998960495,
       "sma200": 1.5235499972105027,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "A"
     },
     {
       "name": "CTOS",
-      "sector": "Bursa",
+      "sector": "Financial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.675000011920929,
@@ -2386,10 +2434,10 @@
       "turnover": 1175580.0207614899,
       "volume": 1741600,
       "signal": "avoid",
-      "reason": "🧊 Downtrend Stock: Avoid Trading!",
+      "reason": "VIP Sideway / Pullback (Monitor for Opportunities) (Pullback Support)",
       "high52": 1.0199999809265137,
       "pullback": 33.82,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 3.76,
       "lowTightness": 2.26,
       "touchCount": 4,
@@ -2398,11 +2446,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.6792000019550324,
-      "sma200": 0.7897499984502793
+      "sma200": 0.7897499984502793,
+      "ipoGrade": "A"
     },
     {
       "name": "GENERGY",
-      "sector": "Bursa",
+      "sector": "Energy",
       "category": "Intraday / Momentum",
       "setupStyle": "EXPLOSIVE",
       "price": 0.41499999165534973,
@@ -2423,7 +2472,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.5010999953746795,
-      "sma200": 0.624565210895262
+      "sma200": 0.624565210895262,
+      "ipoGrade": "C"
     },
     {
       "name": "MCLEAN",
@@ -2453,7 +2503,7 @@
     },
     {
       "name": "HEGROUP",
-      "sector": "Bursa",
+      "sector": "Utilities",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.5299999713897705,
@@ -2475,7 +2525,8 @@
       "isCombStock": false,
       "sma50": 0.4356999999284744,
       "sma200": 0.3710250003635883,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B"
     },
     {
       "name": "3REN",
@@ -2527,11 +2578,12 @@
       "isCombStock": false,
       "sma50": 0.5310999971628189,
       "sma200": 0.48542452617636267,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B"
     },
     {
       "name": "ITMAX",
-      "sector": "Bursa",
+      "sector": "Technology",
       "category": "Swing / Bluechip",
       "setupStyle": "STAIRCASE",
       "price": 4.840000152587891,
@@ -2553,11 +2605,12 @@
       "isCombStock": false,
       "sma50": 4.816400012969971,
       "sma200": 4.7242999935150145,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "A"
     },
     {
       "name": "MFGROUP",
-      "sector": "Bursa",
+      "sector": "Human",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.2800000011920929,
@@ -2566,10 +2619,10 @@
       "turnover": 981204.0041774511,
       "volume": 3504300,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.3799999952316284,
       "pullback": 26.32,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 1.82,
       "lowTightness": 1.85,
       "touchCount": 6,
@@ -2578,11 +2631,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.29119999915361405,
-      "sma200": 0.25279999576509
+      "sma200": 0.25279999576509,
+      "ipoGrade": "B"
     },
     {
       "name": "KTI",
-      "sector": "Bursa",
+      "sector": "Property",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.5299999713897705,
@@ -2603,11 +2657,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.5437000048160553,
-      "sma200": 0.4468499997258186
+      "sma200": 0.4468499997258186,
+      "ipoGrade": "C"
     },
     {
       "name": "ATECH",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.6850000023841858,
@@ -2628,11 +2683,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.7200999987125397,
-      "sma200": 0.8208749970793724
+      "sma200": 0.8208749970793724,
+      "ipoGrade": "C"
     },
     {
       "name": "SAMAIDEN",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 1.399999976158142,
@@ -2654,11 +2710,12 @@
       "isCombStock": false,
       "sma50": 1.3,
       "sma200": 1.2841250017285346,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B"
     },
     {
       "name": "PSP",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "EXPLOSIVE",
       "price": 0.14499999582767487,
@@ -2679,11 +2736,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.13189999952912332,
-      "sma200": 0.13153846119042042
+      "sma200": 0.13153846119042042,
+      "ipoGrade": "C"
     },
     {
       "name": "WENTEL",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "EXPLOSIVE",
       "price": 0.2750000059604645,
@@ -2704,7 +2762,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.26009999722242355,
-      "sma200": 0.277624998241663
+      "sma200": 0.277624998241663,
+      "ipoGrade": "B"
     },
     {
       "name": "AMBEST",
@@ -2730,11 +2789,12 @@
       "isCombStock": false,
       "sma50": 0.7272000014781952,
       "sma200": 0.5352500000596047,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B"
     },
     {
       "name": "TEAMSTR",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.25,
@@ -2756,11 +2816,12 @@
       "isCombStock": false,
       "sma50": 0.24939999908208846,
       "sma200": 0.24567415657338132,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B"
     },
     {
       "name": "EMPIRE",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 1.0099999904632568,
@@ -2782,11 +2843,12 @@
       "isCombStock": false,
       "sma50": 1.0025999915599824,
       "sma200": 1.003113198955104,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "A"
     },
     {
       "name": "MTTSL",
-      "sector": "Bursa",
+      "sector": "Transportation",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.9750000238418579,
@@ -2808,11 +2870,12 @@
       "isCombStock": false,
       "sma50": 0.9397000002861023,
       "sma200": 0.9408823532216689,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B"
     },
     {
       "name": "ECA",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.32499998807907104,
@@ -2834,11 +2897,12 @@
       "isCombStock": false,
       "sma50": 0.22339999854564666,
       "sma200": 0.19060000017285347,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B"
     },
     {
       "name": "HSSBAKERY",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.14499999582767487,
@@ -2860,11 +2924,12 @@
       "isCombStock": false,
       "sma50": 0.16111111475361717,
       "sma200": 0.16111111475361717,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "C"
     },
     {
       "name": "PWRWELL",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.824999988079071,
@@ -2886,7 +2951,8 @@
       "isCombStock": false,
       "sma50": 0.7837999963760376,
       "sma200": 0.6514999973773956,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "C"
     },
     {
       "name": "FOODIE",
@@ -2915,7 +2981,7 @@
     },
     {
       "name": "SSF",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.38999998569488525,
@@ -2936,11 +3002,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.3863999915122986,
-      "sma200": 0.39442499712109563
+      "sma200": 0.39442499712109563,
+      "ipoGrade": "B"
     },
     {
       "name": "CLOUDPT",
-      "sector": "Bursa",
+      "sector": "Technology",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.4449999928474426,
@@ -2948,11 +3015,11 @@
       "changePct": 2.3,
       "turnover": 627093.9899206161,
       "volume": 1409200,
-      "signal": "avoid",
-      "reason": "🧊 Downtrend Stock: Avoid Trading!",
+      "signal": "buy",
+      "reason": "🔥 Golden Entry: Smart Money Accumulating (Suitable for Swing/Hold)",
       "high52": 0.9100000262260437,
       "pullback": 51.1,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Premium IPO Deep Pullback",
       "closeTightness": 5.95,
       "lowTightness": 4.82,
       "touchCount": 4,
@@ -2961,11 +3028,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.49330000042915345,
-      "sma200": 0.6106999985873699
+      "sma200": 0.6106999985873699,
+      "ipoGrade": "B"
     },
     {
       "name": "WELLS",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.6100000143051147,
@@ -2986,11 +3054,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.6052999985218048,
-      "sma200": 0.6484500005841255
+      "sma200": 0.6484500005841255,
+      "ipoGrade": "B"
     },
     {
       "name": "AQUAWALK",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.1850000023841858,
@@ -3011,11 +3080,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.18299999982118606,
-      "sma200": 0.28506493558744334
+      "sma200": 0.28506493558744334,
+      "ipoGrade": "C"
     },
     {
       "name": "MESTRON",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "EXPLOSIVE",
       "price": 0.0949999988079071,
@@ -3036,11 +3106,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.1276000003516674,
-      "sma200": 0.16402500044554472
+      "sma200": 0.16402500044554472,
+      "ipoGrade": "B"
     },
     {
       "name": "AMEREIT",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Swing / Bluechip",
       "setupStyle": "SWING PLAY",
       "price": 1.5499999523162842,
@@ -3061,11 +3132,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 1.6015999841690063,
-      "sma200": 1.618799998164177
+      "sma200": 1.618799998164177,
+      "ipoGrade": "C"
     },
     {
       "name": "OHM",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "EXPLOSIVE",
       "price": 0.38499999046325684,
@@ -3086,11 +3158,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.3568000036478043,
-      "sma200": 0.3293500006198883
+      "sma200": 0.3293500006198883,
+      "ipoGrade": "C"
     },
     {
       "name": "BUSCAP",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.24500000476837158,
@@ -3111,11 +3184,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.25249999829313974,
-      "sma200": 0.25249999829313974
+      "sma200": 0.25249999829313974,
+      "ipoGrade": "C"
     },
     {
       "name": "CPETECH",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.8299999833106995,
@@ -3137,11 +3211,12 @@
       "isCombStock": false,
       "sma50": 0.8044999957084655,
       "sma200": 0.6451749977469444,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "C"
     },
     {
       "name": "FEYTECH",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.2199999988079071,
@@ -3149,11 +3224,11 @@
       "changePct": 2.33,
       "turnover": 485319.9973702431,
       "volume": 2206000,
-      "signal": "avoid",
-      "reason": "🧊 Downtrend Stock: Avoid Trading!",
+      "signal": "buy",
+      "reason": "🔥 Golden Entry: Smart Money Accumulating (Suitable for Swing/Hold)",
       "high52": 0.38999998569488525,
       "pullback": 43.59,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Premium IPO Deep Pullback",
       "closeTightness": 4.76,
       "lowTightness": 7.69,
       "touchCount": 3,
@@ -3162,7 +3237,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.2263999977707863,
-      "sma200": 0.2635749989002943
+      "sma200": 0.2635749989002943,
+      "ipoGrade": "A"
     },
     {
       "name": "KLCC",
@@ -3213,7 +3289,8 @@
       "isCombStock": false,
       "sma50": 1.3632000041007997,
       "sma200": 1.2973500010371208,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "A"
     },
     {
       "name": "CEB",
@@ -3268,7 +3345,7 @@
     },
     {
       "name": "TTVHB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.2800000011920929,
@@ -3289,11 +3366,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.263199999332428,
-      "sma200": 0.25647499933838847
+      "sma200": 0.25647499933838847,
+      "ipoGrade": "B"
     },
     {
       "name": "PMCK",
-      "sector": "Bursa",
+      "sector": "Healthcare",
       "category": "Intraday / Momentum",
       "setupStyle": "EXPLOSIVE",
       "price": 0.20000000298023224,
@@ -3314,11 +3392,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.19829999834299086,
-      "sma200": 0.20497499898076058
+      "sma200": 0.20497499898076058,
+      "ipoGrade": "C"
     },
     {
       "name": "SUNLOGY",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.29499998688697815,
@@ -3339,11 +3418,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2707999980449676,
-      "sma200": 0.28337499760091306
+      "sma200": 0.28337499760091306,
+      "ipoGrade": "C"
     },
     {
       "name": "GDGROUP",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.4099999964237213,
@@ -3365,11 +3445,12 @@
       "isCombStock": false,
       "sma50": 0.35959999918937685,
       "sma200": 0.3598148143953747,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "C"
     },
     {
       "name": "GOHUB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 1.2000000476837158,
@@ -3390,11 +3471,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 1.1970000064373016,
-      "sma200": 0.8618250006437301
+      "sma200": 0.8618250006437301,
+      "ipoGrade": "B"
     },
     {
       "name": "INFOM",
-      "sector": "Bursa",
+      "sector": "Technology",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 1.2799999713897705,
@@ -3416,11 +3498,12 @@
       "isCombStock": false,
       "sma50": 1.1136000037193299,
       "sma200": 1.261150003671646,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B"
     },
     {
       "name": "OXB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.33000001311302185,
@@ -3429,10 +3512,10 @@
       "turnover": 369666.0146892071,
       "volume": 1120200,
       "signal": "avoid",
-      "reason": "🧊 Downtrend Stock: Avoid Trading!",
+      "reason": "VIP Sideway / Pullback (Monitor for Opportunities) (Pullback Support)",
       "high52": 0.5,
       "pullback": 34,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 7.58,
       "lowTightness": 4.55,
       "touchCount": 5,
@@ -3441,11 +3524,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.34580000340938566,
-      "sma200": 0.30400000005960465
+      "sma200": 0.30400000005960465,
+      "ipoGrade": "B"
     },
     {
       "name": "LSH",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Swing / Bluechip",
       "setupStyle": "SWING PLAY",
       "price": 1.7300000190734863,
@@ -3466,7 +3550,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 1.7609999871253967,
-      "sma200": 1.9322499912977218
+      "sma200": 1.9322499912977218,
+      "ipoGrade": "C"
     },
     {
       "name": "VINVEST",
@@ -3495,7 +3580,7 @@
     },
     {
       "name": "MKHOP",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.625,
@@ -3516,11 +3601,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.6233000063896179,
-      "sma200": 0.6185750064253807
+      "sma200": 0.6185750064253807,
+      "ipoGrade": "C"
     },
     {
       "name": "REACHTEN",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.4050000011920929,
@@ -3541,11 +3627,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.4217999964952469,
-      "sma200": 0.4593249988555908
+      "sma200": 0.4593249988555908,
+      "ipoGrade": "C"
     },
     {
       "name": "SORENTO",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.6899999976158142,
@@ -3566,11 +3653,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.6452999925613403,
-      "sma200": 0.5561249959468841
+      "sma200": 0.5561249959468841,
+      "ipoGrade": "C"
     },
     {
       "name": "TAGHILL",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.054999999701976776,
@@ -3591,11 +3679,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.05899999901652336,
-      "sma200": 0.06177499881014228
+      "sma200": 0.06177499881014228,
+      "ipoGrade": "C"
     },
     {
       "name": "NESTCON",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.41999998688697815,
@@ -3616,11 +3705,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.3588000011444092,
-      "sma200": 0.3272500020265579
+      "sma200": 0.3272500020265579,
+      "ipoGrade": "B"
     },
     {
       "name": "5ER",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.24500000476837158,
@@ -3629,10 +3719,10 @@
       "turnover": 280084.0054512024,
       "volume": 1143200,
       "signal": "avoid",
-      "reason": "🧊 Downtrend Stock: Avoid Trading!",
+      "reason": "VIP Sideway / Pullback (Monitor for Opportunities) (Pullback Support)",
       "high52": 0.30000001192092896,
       "pullback": 18.33,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": null,
       "lowTightness": 2.08,
       "touchCount": 5,
@@ -3641,11 +3731,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.2519999983906746,
-      "sma200": 0.2528181799433448
+      "sma200": 0.2528181799433448,
+      "ipoGrade": "B"
     },
     {
       "name": "LGMS",
-      "sector": "Bursa",
+      "sector": "Technology",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.44999998807907104,
@@ -3657,7 +3748,7 @@
       "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.949999988079071,
       "pullback": 52.63,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Premium IPO Deep Pullback",
       "closeTightness": 3.33,
       "lowTightness": 1.12,
       "touchCount": 8,
@@ -3666,11 +3757,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.5091999971866608,
-      "sma200": 0.5796499979496003
+      "sma200": 0.5796499979496003,
+      "ipoGrade": "B"
     },
     {
       "name": "EDELTEQ",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.3400000035762787,
@@ -3679,10 +3771,10 @@
       "turnover": 249662.00262606144,
       "volume": 734300,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.5649999976158142,
       "pullback": 39.82,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": null,
       "lowTightness": 9.68,
       "touchCount": 5,
@@ -3691,7 +3783,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.3543999999761581,
-      "sma200": 0.4167500002682209
+      "sma200": 0.4167500002682209,
+      "ipoGrade": "B"
     },
     {
       "name": "ELSA",
@@ -3717,11 +3810,12 @@
       "isCombStock": false,
       "sma50": 0.23269230471207544,
       "sma200": 0.23269230471207544,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B"
     },
     {
       "name": "SKYWLD",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.39500001072883606,
@@ -3742,11 +3836,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.41659999787807467,
-      "sma200": 0.4691499999165535
+      "sma200": 0.4691499999165535,
+      "ipoGrade": "C"
     },
     {
       "name": "KENERGY",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.4350000023841858,
@@ -3758,7 +3853,7 @@
       "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.8299999833106995,
       "pullback": 47.59,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Premium IPO Deep Pullback",
       "closeTightness": 18.6,
       "lowTightness": 23.17,
       "touchCount": 1,
@@ -3767,11 +3862,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.5248999989032745,
-      "sma200": 0.586424999833107
+      "sma200": 0.586424999833107,
+      "ipoGrade": "B"
     },
     {
       "name": "RADIUM",
-      "sector": "Bursa",
+      "sector": "Property",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.5199999809265137,
@@ -3792,11 +3888,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.5017999982833863,
-      "sma200": 0.5011249989271164
+      "sma200": 0.5011249989271164,
+      "ipoGrade": "C"
     },
     {
       "name": "POLYMER",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.15000000596046448,
@@ -3817,11 +3914,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.1367000013589859,
-      "sma200": 0.16286666770776112
+      "sma200": 0.16286666770776112,
+      "ipoGrade": "C"
     },
     {
       "name": "TECHSTORE",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.17499999701976776,
@@ -3833,7 +3931,7 @@
       "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.3449999988079071,
       "pullback": 49.28,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Premium IPO Deep Pullback",
       "closeTightness": null,
       "lowTightness": 2.94,
       "touchCount": 1,
@@ -3842,11 +3940,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2140999984741211,
-      "sma200": 0.2592999970912933
+      "sma200": 0.2592999970912933,
+      "ipoGrade": "B"
     },
     {
       "name": "KJTS",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.7250000238418579,
@@ -3867,7 +3966,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.7917000043392182,
-      "sma200": 1.0944500002264976
+      "sma200": 1.0944500002264976,
+      "ipoGrade": "B"
     },
     {
       "name": "EXSIMHB",
@@ -3946,7 +4046,7 @@
     },
     {
       "name": "AIMFLEX",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.07999999821186066,
@@ -3955,10 +4055,10 @@
       "turnover": 168799.996227026,
       "volume": 2110000,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.10000000149011612,
       "pullback": 20,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": null,
       "lowTightness": 6.67,
       "touchCount": 6,
@@ -3967,11 +4067,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.08219999983906746,
-      "sma200": 0.08400000020861625
+      "sma200": 0.08400000020861625,
+      "ipoGrade": "B"
     },
     {
       "name": "SET",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.1850000023841858,
@@ -3983,7 +4084,7 @@
       "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.32499998807907104,
       "pullback": 43.08,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Premium IPO Deep Pullback",
       "closeTightness": 5.41,
       "lowTightness": 5.56,
       "touchCount": 3,
@@ -3992,11 +4093,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.17400000035762786,
-      "sma200": 0.19270000025629996
+      "sma200": 0.19270000025629996,
+      "ipoGrade": "B"
     },
     {
       "name": "LACMED",
-      "sector": "Bursa",
+      "sector": "Healthcare",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.7649999856948853,
@@ -4017,11 +4119,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.780400003194809,
-      "sma200": 0.8908633083748303
+      "sma200": 0.8908633083748303,
+      "ipoGrade": "C"
     },
     {
       "name": "NADIBHD",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.3449999988079071,
@@ -4030,10 +4133,10 @@
       "turnover": 138620.99952101707,
       "volume": 401800,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.46000000834465027,
       "pullback": 25,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 1.45,
       "lowTightness": 2.99,
       "touchCount": 5,
@@ -4042,11 +4145,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.3504999989271164,
-      "sma200": 0.3983749997615814
+      "sma200": 0.3983749997615814,
+      "ipoGrade": "B"
     },
     {
       "name": "INSPACE",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.22499999403953552,
@@ -4055,10 +4159,10 @@
       "turnover": 130724.99653697014,
       "volume": 581000,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.28999999165534973,
       "pullback": 22.41,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 2.27,
       "lowTightness": 2.27,
       "touchCount": 7,
@@ -4067,7 +4171,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.22730768911349467,
-      "sma200": 0.22730768911349467
+      "sma200": 0.22730768911349467,
+      "ipoGrade": "B"
     },
     {
       "name": "CNERGEN",
@@ -4092,11 +4197,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.5065000021457672,
-      "sma200": 0.45574999988079073
+      "sma200": 0.45574999988079073,
+      "ipoGrade": "B"
     },
     {
       "name": "CRPMATE",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.16500000655651093,
@@ -4105,10 +4211,10 @@
       "turnover": 125647.50499278307,
       "volume": 761500,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.22499999403953552,
       "pullback": 26.67,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 6.06,
       "lowTightness": 6.06,
       "touchCount": 1,
@@ -4117,7 +4223,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.18780000001192093,
-      "sma200": 0.18094999946653842
+      "sma200": 0.18094999946653842,
+      "ipoGrade": "B"
     },
     {
       "name": "MERSEC",
@@ -4171,7 +4278,7 @@
     },
     {
       "name": "BWYS",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.1550000011920929,
@@ -4180,10 +4287,10 @@
       "turnover": 111910.00086069107,
       "volume": 722000,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.25,
       "pullback": 38,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 3.23,
       "lowTightness": 3.23,
       "touchCount": 3,
@@ -4192,11 +4299,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.1695000010728836,
-      "sma200": 0.19489999935030938
+      "sma200": 0.19489999935030938,
+      "ipoGrade": "B"
     },
     {
       "name": "HOCKSOON",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.3199999928474426,
@@ -4217,7 +4325,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.34619999885559083,
-      "sma200": 0.3714210519665166
+      "sma200": 0.3714210519665166,
+      "ipoGrade": "C"
     },
     {
       "name": "PPJACK",
@@ -4246,7 +4355,7 @@
     },
     {
       "name": "KEYFIELD",
-      "sector": "Bursa",
+      "sector": "Energy",
       "category": "Swing / Bluechip",
       "setupStyle": "SWING PLAY",
       "price": 1.5299999713897705,
@@ -4255,10 +4364,10 @@
       "turnover": 93023.99826049805,
       "volume": 60800,
       "signal": "avoid",
-      "reason": "🔒 Solid Base (8x) | ⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "🔒 Solid Base (8x) | ⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Healthy Dip)",
       "high52": 1.7799999713897705,
       "pullback": 14.04,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "📉 Healthy Dip",
       "closeTightness": 1.31,
       "lowTightness": 1.99,
       "touchCount": 8,
@@ -4267,11 +4376,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 1.612400004863739,
-      "sma200": 1.5418999975919723
+      "sma200": 1.5418999975919723,
+      "ipoGrade": "A"
     },
     {
       "name": "KITACON",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.6399999856948853,
@@ -4280,10 +4390,10 @@
       "turnover": 91583.99795293808,
       "volume": 143100,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.7549999952316284,
       "pullback": 15.23,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 4.69,
       "lowTightness": 6.35,
       "touchCount": 1,
@@ -4292,11 +4402,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.6770000052452088,
-      "sma200": 0.7063000053167343
+      "sma200": 0.7063000053167343,
+      "ipoGrade": "A"
     },
     {
       "name": "SBS",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Penny / Spekulatif",
       "setupStyle": "EXPLOSIVE",
       "price": 0.12999999523162842,
@@ -4317,11 +4428,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.12199999898672104,
-      "sma200": 0.13607142799134767
+      "sma200": 0.13607142799134767,
+      "ipoGrade": "C"
     },
     {
       "name": "SDS",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.38999998569488525,
@@ -4333,7 +4445,7 @@
       "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.8500000238418579,
       "pullback": 54.12,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Premium IPO Deep Pullback",
       "closeTightness": 4,
       "lowTightness": 10,
       "touchCount": 3,
@@ -4342,11 +4454,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.4257000005245209,
-      "sma200": 0.6037750019133091
+      "sma200": 0.6037750019133091,
+      "ipoGrade": "B"
     },
     {
       "name": "AGMO",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.3149999976158142,
@@ -4358,7 +4471,7 @@
       "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.5600000023841858,
       "pullback": 43.75,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Premium IPO Deep Pullback",
       "closeTightness": 3.23,
       "lowTightness": 1.64,
       "touchCount": 7,
@@ -4367,11 +4480,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.3483999991416931,
-      "sma200": 0.3592999993264675
+      "sma200": 0.3592999993264675,
+      "ipoGrade": "B"
     },
     {
       "name": "PTRB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "EXPLOSIVE",
       "price": 0.2849999964237213,
@@ -4392,11 +4506,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2903000026941299,
-      "sma200": 0.29517500251531603
+      "sma200": 0.29517500251531603,
+      "ipoGrade": "C"
     },
     {
       "name": "TOPMIX",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.4099999964237213,
@@ -4405,10 +4520,10 @@
       "turnover": 78186.99931800365,
       "volume": 190700,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.5199999809265137,
       "pullback": 21.15,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 2.44,
       "lowTightness": 2.47,
       "touchCount": 5,
@@ -4417,11 +4532,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.4474999988079071,
-      "sma200": 0.4651250007748604
+      "sma200": 0.4651250007748604,
+      "ipoGrade": "B"
     },
     {
       "name": "GLXT",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.20000000298023224,
@@ -4430,10 +4546,10 @@
       "turnover": 74420.00110894442,
       "volume": 372100,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.25999999046325684,
       "pullback": 23.08,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": null,
       "lowTightness": 2.63,
       "touchCount": 1,
@@ -4442,11 +4558,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.20789999961853028,
-      "sma200": 0.21047499887645243
+      "sma200": 0.21047499887645243,
+      "ipoGrade": "B"
     },
     {
       "name": "BETA",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.6299999952316284,
@@ -4467,11 +4584,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.6129000055789947,
-      "sma200": 0.527249998897314
+      "sma200": 0.527249998897314,
+      "ipoGrade": "B"
     },
     {
       "name": "OBHB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.2150000035762787,
@@ -4492,11 +4610,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.21199999898672103,
-      "sma200": 0.17967500112950802
+      "sma200": 0.17967500112950802,
+      "ipoGrade": "C"
     },
     {
       "name": "VLB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.6050000190734863,
@@ -4517,11 +4636,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.5701000010967254,
-      "sma200": 0.4985750013589859
+      "sma200": 0.4985750013589859,
+      "ipoGrade": "B"
     },
     {
       "name": "ADB",
-      "sector": "Bursa",
+      "sector": "IPO",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.6000000238418579,
@@ -4542,11 +4662,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.6390000009536743,
-      "sma200": 0.7745999976992607
+      "sma200": 0.7745999976992607,
+      "ipoGrade": "Unrated"
     },
     {
       "name": "ORKIM",
-      "sector": "Bursa",
+      "sector": "Energy",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.8799999952316284,
@@ -4555,10 +4676,10 @@
       "turnover": 55263.999700546265,
       "volume": 62800,
       "signal": "avoid",
-      "reason": "🧊 Downtrend Stock: Avoid Trading!",
+      "reason": "Selling Pressure / Flat (Pullback Support)",
       "high52": 1.2100000381469727,
       "pullback": 27.27,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 0.57,
       "lowTightness": 5.42,
       "touchCount": 3,
@@ -4567,11 +4688,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.8972999942302704,
-      "sma200": 0.9750714225428445
+      "sma200": 0.9750714225428445,
+      "ipoGrade": "A"
     },
     {
       "name": "SUMI",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.0949999988079071,
@@ -4592,7 +4714,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.09550000071525573,
-      "sma200": 0.10582499992102384
+      "sma200": 0.10582499992102384,
+      "ipoGrade": "C"
     },
     {
       "name": "KHB",
@@ -4621,7 +4744,7 @@
     },
     {
       "name": "AGX",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.44999998807907104,
@@ -4642,11 +4765,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.41890000224113466,
-      "sma200": 0.46932499811053274
+      "sma200": 0.46932499811053274,
+      "ipoGrade": "B"
     },
     {
       "name": "INFOTEC",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.33000001311302185,
@@ -4667,11 +4791,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.3552999997138977,
-      "sma200": 0.3845250001549721
+      "sma200": 0.3845250001549721,
+      "ipoGrade": "C"
     },
     {
       "name": "PGLOBAL",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.45500001311302185,
@@ -4692,11 +4817,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.4675,
-      "sma200": 0.46517499938607215
+      "sma200": 0.46517499938607215,
+      "ipoGrade": "C"
     },
     {
       "name": "GOLDLI",
-      "sector": "Bursa",
+      "sector": "Property",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.10000000149011612,
@@ -4717,11 +4843,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.10803030250650464,
-      "sma200": 0.10803030250650464
+      "sma200": 0.10803030250650464,
+      "ipoGrade": "C"
     },
     {
       "name": "BMS",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.14499999582767487,
@@ -4742,11 +4869,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.14980000078678132,
-      "sma200": 0.16418439889630526
+      "sma200": 0.16418439889630526,
+      "ipoGrade": "C"
     },
     {
       "name": "UNIQUE",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.42500001192092896,
@@ -4767,11 +4895,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.3978999972343445,
-      "sma200": 0.4234249998629093
+      "sma200": 0.4234249998629093,
+      "ipoGrade": "C"
     },
     {
       "name": "DESTINI",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.2849999964237213,
@@ -4783,7 +4912,7 @@
       "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.5099999904632568,
       "pullback": 44.12,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Premium IPO Deep Pullback",
       "closeTightness": 3.51,
       "lowTightness": 3.64,
       "touchCount": 4,
@@ -4792,11 +4921,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.30850000023841856,
-      "sma200": 0.3322500006854534
+      "sma200": 0.3322500006854534,
+      "ipoGrade": "B"
     },
     {
       "name": "CKI",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.3700000047683716,
@@ -4817,11 +4947,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.4003000020980835,
-      "sma200": 0.5581250004470348
+      "sma200": 0.5581250004470348,
+      "ipoGrade": "C"
     },
     {
       "name": "UMC",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Swing / Bluechip",
       "setupStyle": "STAIRCASE",
       "price": 6.050000190734863,
@@ -4842,11 +4973,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 5.892999982833862,
-      "sma200": 5.830250012874603
+      "sma200": 5.830250012874603,
+      "ipoGrade": "B"
     },
     {
       "name": "EPB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.26499998569488525,
@@ -4858,7 +4990,7 @@
       "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.5199999809265137,
       "pullback": 49.04,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Premium IPO Deep Pullback",
       "closeTightness": 1.92,
       "lowTightness": 4,
       "touchCount": 7,
@@ -4867,11 +4999,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.2709999978542328,
-      "sma200": 0.3478249999880791
+      "sma200": 0.3478249999880791,
+      "ipoGrade": "B"
     },
     {
       "name": "SWIFT",
-      "sector": "Bursa",
+      "sector": "Logistics",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.375,
@@ -4892,11 +5025,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.41740000069141386,
-      "sma200": 0.39759999930858614
+      "sma200": 0.39759999930858614,
+      "ipoGrade": "C"
     },
     {
       "name": "TJSETIA",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "EXPLOSIVE",
       "price": 0.20999999344348907,
@@ -4917,11 +5051,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2062999975681305,
-      "sma200": 0.2031249988079071
+      "sma200": 0.2031249988079071,
+      "ipoGrade": "A"
     },
     {
       "name": "LEFORM",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.1599999964237213,
@@ -4942,7 +5077,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.16770000249147415,
-      "sma200": 0.16537500120699405
+      "sma200": 0.16537500120699405,
+      "ipoGrade": "C"
     },
     {
       "name": "PARADIGM",
@@ -4971,7 +5107,7 @@
     },
     {
       "name": "OPTIMAX",
-      "sector": "Bursa",
+      "sector": "Healthcare",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.5249999761581421,
@@ -4980,10 +5116,10 @@
       "turnover": 32812.49850988388,
       "volume": 62500,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.7149999737739563,
       "pullback": 26.57,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 0.95,
       "lowTightness": 1.92,
       "touchCount": 10,
@@ -4992,11 +5128,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.536999990940094,
-      "sma200": 0.5839749953150749
+      "sma200": 0.5839749953150749,
+      "ipoGrade": "B"
     },
     {
       "name": "HPMT",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.18000000715255737,
@@ -5017,11 +5154,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.17530000060796738,
-      "sma200": 0.1902749987691641
+      "sma200": 0.1902749987691641,
+      "ipoGrade": "C"
     },
     {
       "name": "CLITE",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.20000000298023224,
@@ -5042,11 +5180,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2188999992609024,
-      "sma200": 0.2329249992221594
+      "sma200": 0.2329249992221594,
+      "ipoGrade": "C"
     },
     {
       "name": "MSB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.08500000089406967,
@@ -5067,11 +5206,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.07840000107884407,
-      "sma200": 0.09447500064969062
+      "sma200": 0.09447500064969062,
+      "ipoGrade": "C"
     },
     {
       "name": "DENGKIL",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.125,
@@ -5083,7 +5223,7 @@
       "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.27000001072883606,
       "pullback": 53.7,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Premium IPO Deep Pullback",
       "closeTightness": 4,
       "lowTightness": 4.17,
       "touchCount": 3,
@@ -5092,11 +5232,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.13670000016689302,
-      "sma200": 0.1722000002861023
+      "sma200": 0.1722000002861023,
+      "ipoGrade": "B"
     },
     {
       "name": "JSSOLAR",
-      "sector": "Bursa",
+      "sector": "Energy",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.19499999284744263,
@@ -5108,7 +5249,7 @@
       "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.42500001192092896,
       "pullback": 54.12,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Premium IPO Deep Pullback",
       "closeTightness": null,
       "lowTightness": 2.63,
       "touchCount": 2,
@@ -5117,7 +5258,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.20689999669790268,
-      "sma200": 0.2520360816846189
+      "sma200": 0.2520360816846189,
+      "ipoGrade": "B"
     },
     {
       "name": "EMCC",
@@ -5146,7 +5288,7 @@
     },
     {
       "name": "FLEXI",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "EXPLOSIVE",
       "price": 0.12999999523162842,
@@ -5155,10 +5297,10 @@
       "turnover": 27065.999007225037,
       "volume": 208200,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.17499999701976776,
       "pullback": 25.71,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 18.18,
       "lowTightness": 13.64,
       "touchCount": 2,
@@ -5167,11 +5309,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.13129999965429306,
-      "sma200": 0.13154999781399965
+      "sma200": 0.13154999781399965,
+      "ipoGrade": "B"
     },
     {
       "name": "TELADAN",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.7549999952316284,
@@ -5180,10 +5323,10 @@
       "turnover": 26122.999835014343,
       "volume": 34600,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 1.0299999713897705,
       "pullback": 26.7,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 0.67,
       "lowTightness": 0.67,
       "touchCount": 10,
@@ -5192,11 +5335,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.7816000056266784,
-      "sma200": 0.8320999971032143
+      "sma200": 0.8320999971032143,
+      "ipoGrade": "B"
     },
     {
       "name": "RT",
-      "sector": "Bursa",
+      "sector": "IPO",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.18000000715255737,
@@ -5217,11 +5361,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.18500000298023223,
-      "sma200": 0.19295000061392784
+      "sma200": 0.19295000061392784,
+      "ipoGrade": "Unrated"
     },
     {
       "name": "SAG",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.6899999976158142,
@@ -5230,10 +5375,10 @@
       "turnover": 25184.99991297722,
       "volume": 36500,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.925000011920929,
       "pullback": 25.41,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 2.19,
       "lowTightness": 1.47,
       "touchCount": 6,
@@ -5242,11 +5387,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.7129000055789948,
-      "sma200": 0.7750000032782555
+      "sma200": 0.7750000032782555,
+      "ipoGrade": "B"
     },
     {
       "name": "OGM",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.14499999582767487,
@@ -5267,11 +5413,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.13279999792575836,
-      "sma200": 0.13864485891622919
+      "sma200": 0.13864485891622919,
+      "ipoGrade": "C"
     },
     {
       "name": "PANDA",
-      "sector": "Bursa",
+      "sector": "IPO",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.1899999976158142,
@@ -5292,11 +5439,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.20009999781847,
-      "sma200": 0.2237749983370304
+      "sma200": 0.2237749983370304,
+      "ipoGrade": "Unrated"
     },
     {
       "name": "AZAMJAYA",
-      "sector": "Bursa",
+      "sector": "Construction",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 1,
@@ -5305,10 +5453,10 @@
       "turnover": 24000,
       "volume": 24000,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 1.2000000476837158,
       "pullback": 16.67,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": null,
       "lowTightness": 1.52,
       "touchCount": 10,
@@ -5317,11 +5465,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 1.0121999883651733,
-      "sma200": 1.0330249851942062
+      "sma200": 1.0330249851942062,
+      "ipoGrade": "A"
     },
     {
       "name": "MTEC",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.9800000190734863,
@@ -5330,10 +5479,10 @@
       "turnover": 22638.000440597534,
       "volume": 23100,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 1.2000000476837158,
       "pullback": 18.33,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 0.51,
       "lowTightness": 0.52,
       "touchCount": 9,
@@ -5342,11 +5491,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 1.0110999894142152,
-      "sma200": 1.0786749988794326
+      "sma200": 1.0786749988794326,
+      "ipoGrade": "B"
     },
     {
       "name": "TSA",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.8700000047683716,
@@ -5367,11 +5517,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.8628000104427338,
-      "sma200": 0.8005750072002411
+      "sma200": 0.8005750072002411,
+      "ipoGrade": "B"
     },
     {
       "name": "WINSTAR",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.5600000023841858,
@@ -5392,11 +5543,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.5590000009536743,
-      "sma200": 0.537024995982647
+      "sma200": 0.537024995982647,
+      "ipoGrade": "B"
     },
     {
       "name": "PMW",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.25,
@@ -5417,7 +5569,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2605999982357025,
-      "sma200": 0.28296773981663487
+      "sma200": 0.28296773981663487,
+      "ipoGrade": "C"
     },
     {
       "name": "INNATURE",
@@ -5446,7 +5599,7 @@
     },
     {
       "name": "DSS",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.25,
@@ -5455,10 +5608,10 @@
       "turnover": 16900,
       "volume": 67600,
       "signal": "avoid",
-      "reason": "🔒 Solid Base (4x) | ⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "🔒 Solid Base (4x) | ⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Healthy Dip)",
       "high52": 0.28999999165534973,
       "pullback": 13.79,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "📉 Healthy Dip",
       "closeTightness": 2,
       "lowTightness": 4.08,
       "touchCount": 4,
@@ -5467,7 +5620,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.25469999611377714,
-      "sma200": 0.25149999767541886
+      "sma200": 0.25149999767541886,
+      "ipoGrade": "B"
     },
     {
       "name": "ALPHA",
@@ -5521,7 +5675,7 @@
     },
     {
       "name": "WESTRVR",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "EXPLOSIVE",
       "price": 0.23000000417232513,
@@ -5542,11 +5696,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.21619999885559082,
-      "sma200": 0.21789999917149544
+      "sma200": 0.21789999917149544,
+      "ipoGrade": "C"
     },
     {
       "name": "A1AKK",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.15000000596046448,
@@ -5558,7 +5713,7 @@
       "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.2549999952316284,
       "pullback": 41.18,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Premium IPO Deep Pullback",
       "closeTightness": 3.33,
       "lowTightness": null,
       "touchCount": 10,
@@ -5567,11 +5722,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.16330000191926955,
-      "sma200": 0.20112500049173831
+      "sma200": 0.20112500049173831,
+      "ipoGrade": "B"
     },
     {
       "name": "AGRICOR",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.41499999165534973,
@@ -5592,11 +5748,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.39119999945163725,
-      "sma200": 0.4294499997794628
+      "sma200": 0.4294499997794628,
+      "ipoGrade": "B"
     },
     {
       "name": "CENGILD",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.19499999284744263,
@@ -5605,10 +5762,10 @@
       "turnover": 13259.999513626099,
       "volume": 68000,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.2750000059604645,
       "pullback": 29.09,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 2.56,
       "lowTightness": null,
       "touchCount": 7,
@@ -5617,7 +5774,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.2082999974489212,
-      "sma200": 0.21907499857246876
+      "sma200": 0.21907499857246876,
+      "ipoGrade": "B"
     },
     {
       "name": "KUCINGKO",
@@ -5646,7 +5804,7 @@
     },
     {
       "name": "VTC",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.23499999940395355,
@@ -5655,10 +5813,10 @@
       "turnover": 13159.999966621399,
       "volume": 56000,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.3199999928474426,
       "pullback": 26.56,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": null,
       "lowTightness": 2.17,
       "touchCount": 2,
@@ -5667,11 +5825,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.24449999779462814,
-      "sma200": 0.23952499873936176
+      "sma200": 0.23952499873936176,
+      "ipoGrade": "B"
     },
     {
       "name": "FIBRO",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.7850000262260437,
@@ -5692,7 +5851,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.8346999990940094,
-      "sma200": 0.7519999992847443
+      "sma200": 0.7519999992847443,
+      "ipoGrade": "C"
     },
     {
       "name": "GIIB",
@@ -5721,7 +5881,7 @@
     },
     {
       "name": "TCS",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.08500000089406967,
@@ -5730,10 +5890,10 @@
       "turnover": 11475.000120699406,
       "volume": 135000,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.14000000059604645,
       "pullback": 39.29,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 6.25,
       "lowTightness": 6.67,
       "touchCount": 1,
@@ -5742,7 +5902,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.08590000078082084,
-      "sma200": 0.10332499988377095
+      "sma200": 0.10332499988377095,
+      "ipoGrade": "B"
     },
     {
       "name": "MBN",
@@ -5771,7 +5932,7 @@
     },
     {
       "name": "DAY3",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "EXPLOSIVE",
       "price": 0.11500000208616257,
@@ -5783,7 +5944,7 @@
       "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.23499999940395355,
       "pullback": 51.06,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Premium IPO Deep Pullback",
       "closeTightness": 20,
       "lowTightness": 33.33,
       "touchCount": 1,
@@ -5792,7 +5953,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.12219999924302101,
-      "sma200": 0.15167500149458646
+      "sma200": 0.15167500149458646,
+      "ipoGrade": "B"
     },
     {
       "name": "SALIRAN",
@@ -5821,7 +5983,7 @@
     },
     {
       "name": "DCHCARE",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.10000000149011612,
@@ -5833,7 +5995,7 @@
       "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.18000000715255737,
       "pullback": 44.44,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Premium IPO Deep Pullback",
       "closeTightness": 5.26,
       "lowTightness": 10.53,
       "touchCount": 4,
@@ -5842,11 +6004,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.10789999946951866,
-      "sma200": 0.11932499963790179
+      "sma200": 0.11932499963790179,
+      "ipoGrade": "B"
     },
     {
       "name": "VERDANT",
-      "sector": "Bursa",
+      "sector": "Energy",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.20000000298023224,
@@ -5858,7 +6021,7 @@
       "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.38499999046325684,
       "pullback": 48.05,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Premium IPO Deep Pullback",
       "closeTightness": null,
       "lowTightness": 5.26,
       "touchCount": 1,
@@ -5867,11 +6030,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.20109999865293504,
-      "sma200": 0.23221264299990116
+      "sma200": 0.23221264299990116,
+      "ipoGrade": "B"
     },
     {
       "name": "YXPM",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.20499999821186066,
@@ -5880,10 +6044,10 @@
       "turnover": 10249.999910593033,
       "volume": 50000,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.26499998569488525,
       "pullback": 22.64,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 2.5,
       "lowTightness": 2.5,
       "touchCount": 5,
@@ -5892,11 +6056,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2099999976158142,
-      "sma200": 0.2197499990463257
+      "sma200": 0.2197499990463257,
+      "ipoGrade": "B"
     },
     {
       "name": "CEKD",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "EXPLOSIVE",
       "price": 0.2849999964237213,
@@ -5905,10 +6070,10 @@
       "turnover": 8834.99988913536,
       "volume": 31000,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.4000000059604645,
       "pullback": 28.75,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 7.27,
       "lowTightness": 9.26,
       "touchCount": 4,
@@ -5917,11 +6082,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.29059999763965605,
-      "sma200": 0.31170000076293947
+      "sma200": 0.31170000076293947,
+      "ipoGrade": "B"
     },
     {
       "name": "VANZO",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "EXPLOSIVE",
       "price": 0.12999999523162842,
@@ -5942,11 +6108,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.12899999752640723,
-      "sma200": 0.13987499985843896
+      "sma200": 0.13987499985843896,
+      "ipoGrade": "B"
     },
     {
       "name": "DPIH",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.10000000149011612,
@@ -5955,10 +6122,10 @@
       "turnover": 6900.000102818012,
       "volume": 69000,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.12999999523162842,
       "pullback": 23.08,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 5,
       "lowTightness": 10.53,
       "touchCount": 2,
@@ -5967,11 +6134,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.10399999856948852,
-      "sma200": 0.10587499890476465
+      "sma200": 0.10587499890476465,
+      "ipoGrade": "B"
     },
     {
       "name": "KGW",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.0949999988079071,
@@ -5983,7 +6151,7 @@
       "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.20000000298023224,
       "pullback": 52.5,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Premium IPO Deep Pullback",
       "closeTightness": 5.26,
       "lowTightness": 5.26,
       "touchCount": 9,
@@ -5992,11 +6160,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.10139999940991401,
-      "sma200": 0.13147500034421683
+      "sma200": 0.13147500034421683,
+      "ipoGrade": "B"
     },
     {
       "name": "HAILY",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.18000000715255737,
@@ -6005,10 +6174,10 @@
       "turnover": 5904.000234603882,
       "volume": 32800,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.25,
       "pullback": 28,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 2.86,
       "lowTightness": 2.94,
       "touchCount": 3,
@@ -6017,7 +6186,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.1890999984741211,
-      "sma200": 0.20657499872148036
+      "sma200": 0.20657499872148036,
+      "ipoGrade": "B"
     },
     {
       "name": "CAMAROE",
@@ -6046,7 +6216,7 @@
     },
     {
       "name": "MTAG",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.2199999988079071,
@@ -6055,10 +6225,10 @@
       "turnover": 5587.99996972084,
       "volume": 25400,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.3449999988079071,
       "pullback": 36.23,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": null,
       "lowTightness": 2.38,
       "touchCount": 2,
@@ -6067,11 +6237,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.23159999907016754,
-      "sma200": 0.25017499923706055
+      "sma200": 0.25017499923706055,
+      "ipoGrade": "B"
     },
     {
       "name": "GEOHAN",
-      "sector": "Bursa",
+      "sector": "Construction",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.28999999165534973,
@@ -6092,11 +6263,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.2948999959230423,
-      "sma200": 0.3530985891399249
+      "sma200": 0.3530985891399249,
+      "ipoGrade": "C"
     },
     {
       "name": "FAMIERA",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.2199999988079071,
@@ -6117,11 +6289,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.21739999771118165,
-      "sma200": 0.21496855191089823
+      "sma200": 0.21496855191089823,
+      "ipoGrade": "C"
     },
     {
       "name": "OFB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "EXPLOSIVE",
       "price": 0.14000000059604645,
@@ -6133,7 +6306,7 @@
       "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.2800000011920929,
       "pullback": 50,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Premium IPO Deep Pullback",
       "closeTightness": 12,
       "lowTightness": 12.5,
       "touchCount": 1,
@@ -6142,11 +6315,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.14169999971985817,
-      "sma200": 0.18819999892264605
+      "sma200": 0.18819999892264605,
+      "ipoGrade": "B"
     },
     {
       "name": "SBH",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.14000000059604645,
@@ -6155,10 +6329,10 @@
       "turnover": 4200.000017881393,
       "volume": 30000,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.23000000417232513,
       "pullback": 39.13,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 3.57,
       "lowTightness": 3.57,
       "touchCount": 5,
@@ -6167,11 +6341,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.1476999980211258,
-      "sma200": 0.17712499879300594
+      "sma200": 0.17712499879300594,
+      "ipoGrade": "B"
     },
     {
       "name": "MOBILIA",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "EXPLOSIVE",
       "price": 0.10499999672174454,
@@ -6192,7 +6367,8 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.09220000118017196,
-      "sma200": 0.09512500029057264
+      "sma200": 0.09512500029057264,
+      "ipoGrade": "B"
     },
     {
       "name": "EIB",
@@ -6221,7 +6397,7 @@
     },
     {
       "name": "MSTGOLF",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.15000000596046448,
@@ -6242,11 +6418,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.15480000168085098,
-      "sma200": 0.18070000007748604
+      "sma200": 0.18070000007748604,
+      "ipoGrade": "C"
     },
     {
       "name": "PLINTAS",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "STAIRCASE",
       "price": 0.9150000214576721,
@@ -6267,11 +6444,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.9256000113487244,
-      "sma200": 0.9526500022411346
+      "sma200": 0.9526500022411346,
+      "ipoGrade": "C"
     },
     {
       "name": "ZANTAT",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.17000000178813934,
@@ -6283,7 +6461,7 @@
       "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.29499998688697815,
       "pullback": 42.37,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Premium IPO Deep Pullback",
       "closeTightness": 12.9,
       "lowTightness": 13.33,
       "touchCount": 2,
@@ -6292,11 +6470,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.1647000002861023,
-      "sma200": 0.2063499993085861
+      "sma200": 0.2063499993085861,
+      "ipoGrade": "B"
     },
     {
       "name": "VOLCANO",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.3050000071525574,
@@ -6308,7 +6487,7 @@
       "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.5550000071525574,
       "pullback": 45.05,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Premium IPO Deep Pullback",
       "closeTightness": 5.17,
       "lowTightness": 3.51,
       "touchCount": 7,
@@ -6317,11 +6496,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2884999996423721,
-      "sma200": 0.36024999774992467
+      "sma200": 0.36024999774992467,
+      "ipoGrade": "B"
     },
     {
       "name": "HPPHB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.2849999964237213,
@@ -6330,10 +6510,10 @@
       "turnover": 2849.999964237213,
       "volume": 10000,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.36000001430511475,
       "pullback": 20.83,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 5.26,
       "lowTightness": 5.26,
       "touchCount": 3,
@@ -6342,11 +6522,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.30280000269412993,
-      "sma200": 0.310725000500679
+      "sma200": 0.310725000500679,
+      "ipoGrade": "B"
     },
     {
       "name": "RL",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.19499999284744263,
@@ -6367,11 +6548,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.19879999727010728,
-      "sma200": 0.23464999884366988
+      "sma200": 0.23464999884366988,
+      "ipoGrade": "C"
     },
     {
       "name": "COLFORM",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.2549999952316284,
@@ -6392,11 +6574,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2506999975442886,
-      "sma200": 0.2866749982535839
+      "sma200": 0.2866749982535839,
+      "ipoGrade": "B"
     },
     {
       "name": "HAWK",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.1850000023841858,
@@ -6417,11 +6600,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.20039999902248382,
-      "sma200": 0.26172499783337116
+      "sma200": 0.26172499783337116,
+      "ipoGrade": "B"
     },
     {
       "name": "ORGABIO",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.3050000071525574,
@@ -6442,11 +6626,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.29640000224113466,
-      "sma200": 0.2955750004947186
+      "sma200": 0.2955750004947186,
+      "ipoGrade": "B"
     },
     {
       "name": "SPRING",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.10000000149011612,
@@ -6458,7 +6643,7 @@
       "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.20000000298023224,
       "pullback": 50,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Premium IPO Deep Pullback",
       "closeTightness": 5.26,
       "lowTightness": 5.26,
       "touchCount": 2,
@@ -6467,11 +6652,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.11300000086426736,
-      "sma200": 0.1261000006645918
+      "sma200": 0.1261000006645918,
+      "ipoGrade": "B"
     },
     {
       "name": "PLYTEC",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.1899999976158142,
@@ -6492,7 +6678,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.17080000162124634,
-      "sma200": 0.168300000205636
+      "sma200": 0.168300000205636,
+      "ipoGrade": "C"
     },
     {
       "name": "KHJB",
@@ -6521,7 +6708,7 @@
     },
     {
       "name": "METRO",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.009999999776482582,
@@ -6542,11 +6729,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.007999999821186066,
-      "sma200": 0.009424999789334833
+      "sma200": 0.009424999789334833,
+      "ipoGrade": "C"
     },
     {
       "name": "XPB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.14000000059604645,
@@ -6558,7 +6746,7 @@
       "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.23999999463558197,
       "pullback": 41.67,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Premium IPO Deep Pullback",
       "closeTightness": 3.57,
       "lowTightness": 3.57,
       "touchCount": 7,
@@ -6567,11 +6755,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.144399998486042,
-      "sma200": 0.16329015513467046
+      "sma200": 0.16329015513467046,
+      "ipoGrade": "B"
     },
     {
       "name": "WTEC",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "EXPLOSIVE",
       "price": 0.11999999731779099,
@@ -6580,10 +6769,10 @@
       "turnover": 1199.9999731779099,
       "volume": 10000,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.20000000298023224,
       "pullback": 40,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 9.09,
       "lowTightness": 20,
       "touchCount": 1,
@@ -6592,11 +6781,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.11859999880194665,
-      "sma200": 0.1437500000745058
+      "sma200": 0.1437500000745058,
+      "ipoGrade": "B"
     },
     {
       "name": "PMIBHD",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.2150000035762787,
@@ -6617,11 +6807,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.22509999990463256,
-      "sma200": 0.2180999990552664
+      "sma200": 0.2180999990552664,
+      "ipoGrade": "C"
     },
     {
       "name": "SYNERGY",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.17499999701976776,
@@ -6642,11 +6833,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.1968000003695488,
-      "sma200": 0.27977500021457674
+      "sma200": 0.27977500021457674,
+      "ipoGrade": "C"
     },
     {
       "name": "SUPREME",
-      "sector": "Bursa",
+      "sector": "Consumer",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.20000000298023224,
@@ -6667,11 +6859,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.19879999935626982,
-      "sma200": 0.20789999850094318
+      "sma200": 0.20789999850094318,
+      "ipoGrade": "B"
     },
     {
       "name": "CREST",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.46000000834465027,
@@ -6680,10 +6873,10 @@
       "turnover": 920.0000166893005,
       "volume": 2000,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.6000000238418579,
       "pullback": 23.33,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": null,
       "lowTightness": null,
       "touchCount": 6,
@@ -6692,11 +6885,12 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.47199999809265136,
-      "sma200": 0.4933249978721142
+      "sma200": 0.4933249978721142,
+      "ipoGrade": "B"
     },
     {
       "name": "SINKUNG",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.07999999821186066,
@@ -6705,10 +6899,10 @@
       "turnover": 799.9999821186066,
       "volume": 10000,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.12999999523162842,
       "pullback": 38.46,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": null,
       "lowTightness": 6.67,
       "touchCount": 4,
@@ -6717,7 +6911,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.08019999921321869,
-      "sma200": 0.09225000005215406
+      "sma200": 0.09225000005215406,
+      "ipoGrade": "B"
     },
     {
       "name": "UMSINT",
@@ -6746,7 +6941,7 @@
     },
     {
       "name": "FPHB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.33000001311302185,
@@ -6767,11 +6962,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.32120000183582303,
-      "sma200": 0.37810000076889994
+      "sma200": 0.37810000076889994,
+      "ipoGrade": "B"
     },
     {
       "name": "TOPVISN",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.17000000178813934,
@@ -6780,10 +6976,10 @@
       "turnover": 527.000005543232,
       "volume": 3100,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.25999999046325684,
       "pullback": 34.62,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 3.03,
       "lowTightness": 9.68,
       "touchCount": 3,
@@ -6792,7 +6988,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.16330000072717665,
-      "sma200": 0.1778499998897314
+      "sma200": 0.1778499998897314,
+      "ipoGrade": "B"
     },
     {
       "name": "HONGSENG",
@@ -6821,7 +7018,7 @@
     },
     {
       "name": "ACO",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.1599999964237213,
@@ -6842,11 +7039,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.16240000009536742,
-      "sma200": 0.1810249987244606
+      "sma200": 0.1810249987244606,
+      "ipoGrade": "C"
     },
     {
       "name": "SCB",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.009999999776482582,
@@ -6867,11 +7065,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.009999999776482582,
-      "sma200": 0.009299999792128802
+      "sma200": 0.009299999792128802,
+      "ipoGrade": "B"
     },
     {
       "name": "SENFONG",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.6700000166893005,
@@ -6892,11 +7091,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.6726000142097474,
-      "sma200": 0.7018500027060509
+      "sma200": 0.7018500027060509,
+      "ipoGrade": "C"
     },
     {
       "name": "EFRAME",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.27000001072883606,
@@ -6908,7 +7108,7 @@
       "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.4650000035762787,
       "pullback": 41.94,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Premium IPO Deep Pullback",
       "closeTightness": 1.89,
       "lowTightness": 1.89,
       "touchCount": 10,
@@ -6917,11 +7117,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.26339999586343765,
-      "sma200": 0.3328999986499548
+      "sma200": 0.3328999986499548,
+      "ipoGrade": "B"
     },
     {
       "name": "PEOPLE",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.23499999940395355,
@@ -6942,7 +7143,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.241800000667572,
-      "sma200": 0.23082499958574773
+      "sma200": 0.23082499958574773,
+      "ipoGrade": "C"
     },
     {
       "name": "BURSA",
@@ -6971,7 +7173,7 @@
     },
     {
       "name": "MINOX",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.17000000178813934,
@@ -6980,10 +7182,10 @@
       "turnover": 0,
       "volume": 0,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.25,
       "pullback": 32,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": null,
       "lowTightness": 6.25,
       "touchCount": 3,
@@ -6992,11 +7194,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.1767000013589859,
-      "sma200": 0.1848750013113022
+      "sma200": 0.1848750013113022,
+      "ipoGrade": "B"
     },
     {
       "name": "ANEKA",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Penny / Spekulatif",
       "setupStyle": "SWING PLAY",
       "price": 0.10999999940395355,
@@ -7005,10 +7208,10 @@
       "turnover": 0,
       "volume": 0,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.16500000655651093,
       "pullback": 33.33,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": null,
       "lowTightness": 4.76,
       "touchCount": 2,
@@ -7017,11 +7220,12 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.11660000011324882,
-      "sma200": 0.12844999995082618
+      "sma200": 0.12844999995082618,
+      "ipoGrade": "B"
     },
     {
       "name": "TASHIN",
-      "sector": "Bursa",
+      "sector": "Industrial",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
       "price": 0.20000000298023224,
@@ -7030,10 +7234,10 @@
       "turnover": 0,
       "volume": 0,
       "signal": "avoid",
-      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
+      "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!) (Pullback Support)",
       "high52": 0.2549999952316284,
       "pullback": 21.57,
-      "setupName": "🧊 Downtrend / Avoid",
+      "setupName": "🔻 Buy Support / Deep Pullback",
       "closeTightness": 2.56,
       "lowTightness": 2.56,
       "touchCount": 6,
@@ -7042,7 +7246,8 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.20459999829530717,
-      "sma200": 0.21117499813437463
+      "sma200": 0.21117499813437463,
+      "ipoGrade": "B"
     },
     {
       "name": "YENHER",
@@ -7089,7 +7294,7 @@
       "turnover": 27065.999007225037,
       "high52": 0.17499999701976776,
       "pullback": 25.71,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🔻 Buy Support / Deep Pullback"
     },
     {
       "name": "VINVEST",
@@ -7109,7 +7314,7 @@
       "turnover": 10925.000198185444,
       "high52": 0.23499999940395355,
       "pullback": 51.06,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🔻 Premium IPO Deep Pullback"
     },
     {
       "name": "NEXGRAM",
@@ -7149,7 +7354,7 @@
       "turnover": 1199.9999731779099,
       "high52": 0.20000000298023224,
       "pullback": 40,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🔻 Buy Support / Deep Pullback"
     },
     {
       "name": "OHM",
@@ -7179,7 +7384,7 @@
       "turnover": 4200.000017881393,
       "high52": 0.2800000011920929,
       "pullback": 50,
-      "setupName": "🧊 Downtrend / Avoid"
+      "setupName": "🔻 Premium IPO Deep Pullback"
     },
     {
       "name": "VELESTO",

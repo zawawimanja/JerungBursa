@@ -8,14 +8,14 @@ const HEADERS = {
 };
 
 const IPO_DATA_PATH = '/home/awi/Desktop/ipohunterv2/data.json';
-const BACKTEST_HTML_PATH = path.join(__dirname, '../backtest.html');
+const HISTORY_DIR = path.join(__dirname, '../history');
 const MAPPINGS_PATH = path.join(__dirname, '../symbol_mappings.json');
 
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 async function fetchChart(symbol) {
     try {
-        await sleep(50);
+        await sleep(40);
         const url = `https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?interval=1d&range=3mo`;
         const res = await axios.get(url, { headers: HEADERS });
         if (!res.data || !res.data.chart || !res.data.chart.result || !res.data.chart.result[0]) return null;
@@ -40,9 +40,10 @@ async function fetchChart(symbol) {
     }
 }
 
-function calculateSmartScore(item) {
+// Score with Grade A/B Premium IPO Booster
+function calculateSmartScore(item, grade) {
     let score = 0;
-    const price = item.entryPrice || item.price;
+    const price = item.price;
     const floorLow = item.floorLow || (price * 0.95);
     const distToFloor = ((price - floorLow) / floorLow) * 100;
     const pullback = item.pullback ?? 0;
@@ -65,94 +66,143 @@ function calculateSmartScore(item) {
     if (item.sma200 && price >= item.sma200) score += 1;
     if (item.turnover >= 5000000) score += 1;
 
-    return score;
+    // Premium Booster
+    if (grade === 'A') score += 2;
+    else if (grade === 'B') score += 1;
+
+    return Math.min(15, score);
 }
 
-async function runHybridBacktest() {
-    console.log("========================================================================================");
-    console.log("🔬 SIMULASI HIBRID: GABUNGAN TEKNIKAL JERUNGBURSA & GRED IPO PROJEK");
-    console.log("========================================================================================");
-
-    // 1. Load IPO Grades database
-    if (!fs.existsSync(IPO_DATA_PATH)) {
-        console.error("❌ IPO data.json tidak ditemui!");
-        return;
-    }
+async function runComparison() {
+    // 1. Load IPO Grades
     const ipoList = JSON.parse(fs.readFileSync(IPO_DATA_PATH, 'utf8'));
     const ipoMap = {};
     ipoList.forEach(item => {
         if (item.symbol) {
-            ipoMap[item.symbol.toUpperCase().trim()] = {
-                grade: item.predictedGrade || 'Unrated',
-                sector: (item.sector || '').toLowerCase()
-            };
+            ipoMap[item.symbol.toUpperCase().trim()] = item.predictedGrade || 'Unrated';
         }
     });
-    console.log(`✅ Berjaya memuatkan ${Object.keys(ipoMap).length} kaunter gred IPO dari projek sebelah.`);
 
-    // 2. Load symbol mappings
+    // 2. Load mappings
     const mappings = JSON.parse(fs.readFileSync(MAPPINGS_PATH, 'utf8'));
 
-    // 3. Load candidate rows from backtest.html
-    const content = fs.readFileSync(BACKTEST_HTML_PATH, 'utf8');
-    const match = content.match(/const fullData = \[\s*([\s\S]*?)\s*\];/);
-    const rows = [];
-    match[1].split('\n').forEach(l => {
-        if (!l.trim()) return;
-        try {
-            let cleaned = l.trim().replace(/,$/, '');
-            rows.push(eval(`(${cleaned})`));
-        } catch(e) {}
-    });
+    // 3. Load all history files
+    const files = fs.readdirSync(HISTORY_DIR)
+        .filter(f => f.startsWith('data_') && f.endsWith('.json'))
+        .sort();
 
-    // Filter Top 3 candidates per day to represent the real diversified portfolio
-    const datesList = [...new Set(rows.map(r => r.date))].sort();
-    const portfolioTrades = [];
+    const dailyScans = [];
+    const allUniqueNames = new Set();
 
-    console.log(`⏳ Memuat turun carta data Yahoo Finance & simulasi trade untuk tempoh Jun - Julai...`);
-
-    const chartCache = {};
-
-    for (const d of datesList) {
-        let candidates = rows.filter(r => r.date === d && r.turnover >= 750000 && calculateSmartScore(r) >= 8);
+    files.forEach(file => {
+        const date = file.replace('data_', '').replace('.json', '');
+        const data = JSON.parse(fs.readFileSync(path.join(HISTORY_DIR, file), 'utf8'));
+        const topVolume = data.topVolume || [];
         
-        candidates.sort((a, b) => {
-            const scoreDiff = calculateSmartScore(b) - calculateSmartScore(a);
-            if (scoreDiff !== 0) return scoreDiff;
-            return b.turnover - a.turnover;
+        topVolume.forEach(item => {
+            allUniqueNames.add(item.name);
         });
 
-        // Select Top 3 for the day
+        dailyScans.push({ date, topVolume });
+    });
+
+    console.log(`Loaded ${dailyScans.length} daily history files. Unique stocks count: ${allUniqueNames.size}`);
+
+    // Download charts
+    console.log("Downloading charts...");
+    const chartCache = {};
+    for (const name of allUniqueNames) {
+        const symbol = mappings[name];
+        if (symbol && !chartCache[symbol]) {
+            chartCache[symbol] = await fetchChart(symbol);
+        }
+    }
+    console.log("Charts downloaded.\n");
+
+    // Run Strategy A (Strict)
+    console.log("=========================================");
+    console.log("🛡️ STRATEGY A (STRICT FILTERING)");
+    console.log("=========================================");
+    await runStrategySimulation(dailyScans, ipoMap, mappings, chartCache, false);
+
+    // Run Strategy B (Relaxed for Premium IPOs)
+    console.log("\n=========================================");
+    console.log("💎 STRATEGY B (RELAXED FOR PREMIUM IPOs)");
+    console.log("=========================================");
+    await runStrategySimulation(dailyScans, ipoMap, mappings, chartCache, true);
+}
+
+async function runStrategySimulation(dailyScans, ipoMap, mappings, chartCache, isStrategyB) {
+    const portfolioTrades = [];
+
+    dailyScans.forEach(scan => {
+        const d = scan.date;
+        let candidates = scan.topVolume.filter(r => {
+            if (!r.high52) return false;
+            
+            // Liquidity filter
+            const turnover = r.turnover || (r.price * r.volume);
+            if (turnover < 750000) return false;
+
+            // Price filter
+            if (r.price < 0.25 || r.price > 4.00) return false;
+
+            const grade = ipoMap[r.name.toUpperCase().trim()] || 'Non-IPO';
+            const isPremiumIpo = grade === 'A' || grade === 'B';
+            
+            // Check pullback and downtrend limits
+            const pullbackVal = r.pullback !== null && r.pullback !== undefined ? r.pullback : 0;
+            const isAboveSma200 = r.sma200 ? r.price >= r.sma200 : false;
+            const isSmaDowntrend = r.sma50 ? r.price < r.sma50 : false;
+
+            if (isStrategyB && isPremiumIpo) {
+                // Strategy B: Premium IPOs allowed up to 55% pullback, and exempt from SMA50 downtrend check
+                if (pullbackVal > 55.0) return false;
+            } else {
+                // Strategy A (or non-premium): standard limits
+                const maxPullbackLimit = isAboveSma200 ? 40.0 : 30.0;
+                if (pullbackVal > maxPullbackLimit) return false;
+                if (isSmaDowntrend) return false; // Avoid downtrend stocks
+            }
+
+            const score = calculateSmartScore(r, grade);
+            return score >= 12; // VVIP score threshold
+        });
+
+        // Sort candidates by score, then turnover descending
+        candidates.sort((a, b) => {
+            const gradeA = ipoMap[a.name.toUpperCase().trim()] || 'Non-IPO';
+            const gradeB = ipoMap[b.name.toUpperCase().trim()] || 'Non-IPO';
+            const scoreDiff = calculateSmartScore(b, gradeB) - calculateSmartScore(a, gradeA);
+            if (scoreDiff !== 0) return scoreDiff;
+            
+            const turnoverA = a.turnover || (a.price * a.volume);
+            const turnoverB = b.turnover || (b.price * b.volume);
+            return turnoverB - turnoverA;
+        });
+
+        // Select Top 3 daily
         const top3 = candidates.slice(0, 3);
 
         for (const c of top3) {
             const symbol = mappings[c.name];
             if (!symbol) continue;
 
-            if (!chartCache[symbol]) {
-                chartCache[symbol] = await fetchChart(symbol);
-            }
-
             const chart = chartCache[symbol];
             if (!chart) continue;
 
-            const startIdx = chart.findIndex(day => day.date === c.date);
+            const startIdx = chart.findIndex(day => day.date === d);
             if (startIdx === -1) continue;
 
-            // Cross-reference with IPO Grades
-            const ipoInfo = ipoMap[c.name.toUpperCase().trim()];
-            const isPremiumIpo = ipoInfo && 
-                (ipoInfo.grade === 'A' || ipoInfo.grade === 'B') && 
-                (ipoInfo.sector.includes('tech') || ipoInfo.sector.includes('semicon') || ipoInfo.sector.includes('energy') || ipoInfo.sector.includes('solar'));
+            const grade = ipoMap[c.name.toUpperCase().trim()] || 'Non-IPO';
+            const isPremiumIpo = grade === 'A' || grade === 'B';
 
-            const strategyUsed = isPremiumIpo ? 'VVIP SUPER TREND 💎' : 'TEKNIK C SWING 🛡️';
-            
             let pnl = 0;
             let exitReason = '';
-            const entryPrice = c.entryPrice;
+            const entryPrice = c.price;
 
             if (isPremiumIpo) {
-                // Run VVIP Super Trend simulation (Hold Lama with 10% Trailing Stop)
+                // Hold Lama with 10% Trailing Stop
                 let peakPrice = entryPrice;
                 let exitPrice = null;
                 let slHit = false;
@@ -180,7 +230,7 @@ async function runHybridBacktest() {
 
                 pnl = ((exitPrice - entryPrice) / entryPrice) * 100;
             } else {
-                // Run standard Technique C swing simulation (TP1 +10%, TP2 +20%, SL floor/10%, Time Stop 10 days)
+                // Technique C standard swing: TP1 +10%, TP2 +20%, SL floor/10%, Time Stop 10 days
                 const tp1 = entryPrice * 1.10;
                 const tp2 = entryPrice * 1.20;
                 const sl = Math.max(entryPrice * 0.90, c.floorLow * 0.97);
@@ -227,25 +277,14 @@ async function runHybridBacktest() {
 
             portfolioTrades.push({
                 name: c.name,
-                date: c.date,
-                strategy: strategyUsed,
-                grade: ipoInfo ? ipoInfo.grade : 'Non-IPO',
-                entryPrice,
+                date: d,
+                grade,
                 pnl,
                 exitReason
             });
         }
-    }
+    });
 
-    // Sort portfolio trades by date
-    portfolioTrades.sort((a, b) => a.date.localeCompare(b.date));
-
-    console.log(`\n========================================================================================`);
-    console.log(`📋 LOG TRANSAKSI PORTFOLIO HIBRID (GRED IPO + TEKNIKAL):`);
-    console.log(`========================================================================================`);
-    console.log(`Tarikh     | Saham      | Jenis Saham | Strategi Dijalan     | PnL%    | Sebab Exit`);
-    console.log(`----------------------------------------------------------------------------------------`);
-    
     let totalPnl = 0;
     let wins = 0;
     let slHits = 0;
@@ -254,19 +293,21 @@ async function runHybridBacktest() {
         totalPnl += t.pnl;
         if (t.pnl > 0) wins++;
         if (t.exitReason.includes('Stop Loss') || t.exitReason.includes('Trailing Stop')) slHits++;
-        const pnlStr = (t.pnl >= 0 ? '+' : '') + t.pnl.toFixed(2) + '%';
-        console.log(`${t.date} | ${t.name.padEnd(10)} | ${t.grade.padEnd(11)} | ${t.strategy.padEnd(21)} | ${pnlStr.padStart(7)} | ${t.exitReason}`);
+        
+        // Print individual trade results to show premium IPO plays
+        if (t.grade === 'A' || t.grade === 'B') {
+            console.log(`  [Trade] ${t.date} | ${t.name.padEnd(10)} | Grade: ${t.grade} | PnL: ${(t.pnl >= 0 ? '+' : '')}${t.pnl.toFixed(2)}% | Exit: ${t.exitReason}`);
+        }
     });
 
-    console.log(`----------------------------------------------------------------------------------------`);
-    console.log(`📊 PRESTASI PORTFOLIO HIBRID KESELURUHAN (TOP 3 SAHAJA):`);
+    console.log(`-----------------------------------------`);
+    console.log(`📊 PRESTASI PORTFOLIO KESELURUHAN:`);
     console.log(`  - Jumlah Transaksi  : ${portfolioTrades.length}`);
-    console.log(`  - Win Rate          : ${((wins / portfolioTrades.length) * 100).toFixed(1)}%`);
-    console.log(`  - SL / TS Hit Rate  : ${((slHits / portfolioTrades.length) * 100).toFixed(1)}%`);
-    console.log(`  - Purata PnL        : +${(totalPnl / portfolioTrades.length).toFixed(2)}% per trade`);
+    console.log(`  - Win Rate          : ${portfolioTrades.length > 0 ? ((wins / portfolioTrades.length) * 100).toFixed(1) : 0}%`);
+    console.log(`  - SL / TS Hit Rate  : ${portfolioTrades.length > 0 ? ((slHits / portfolioTrades.length) * 100).toFixed(1) : 0}%`);
+    console.log(`  - Purata PnL        : +${portfolioTrades.length > 0 ? (totalPnl / portfolioTrades.length).toFixed(2) : 0}% per trade`);
     console.log(`  - Kumulatif PnL     : +${totalPnl.toFixed(2)}%`);
-    console.log(`  - Anggaran Untung Modal (3-Slot): +${(totalPnl / 3).toFixed(2)}% sebulan 🚀`);
-    console.log(`========================================================================================\n`);
+    console.log(`  - Anggaran Untung Modal (3-Slot): +${portfolioTrades.length > 0 ? (totalPnl / 3).toFixed(2) : 0}% sebulan 🚀`);
 }
 
-runHybridBacktest();
+runComparison();

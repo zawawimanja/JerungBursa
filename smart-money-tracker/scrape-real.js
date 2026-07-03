@@ -449,6 +449,21 @@ async function main() {
     // ==========================================
     console.log('\n📊 Menganalisis Formula Smart Money...');
     
+    const ipoDataFilePath = '/home/awi/Desktop/ipohunterv2/data.json';
+    const ipoMap = {};
+    try {
+        if (fs.existsSync(ipoDataFilePath)) {
+            const ipoList = JSON.parse(fs.readFileSync(ipoDataFilePath, 'utf8'));
+            ipoList.forEach(ipo => {
+                if (ipo.symbol) {
+                    ipoMap[ipo.symbol.toUpperCase().trim()] = ipo.predictedGrade || 'Unrated';
+                }
+            });
+        }
+    } catch (err) {
+        console.error("Warning loading IPO grades:", err.message);
+    }
+
     const processedData = [];
     const topGainers = [];
     
@@ -469,6 +484,12 @@ async function main() {
 
     for (const stock of dedupedStocks.values()) {
         const name = stock.name;
+        // Associate IPO Grade early
+        const grade = ipoMap[name.toUpperCase().trim()];
+        if (grade) {
+            stock.ipoGrade = grade;
+        }
+
         const turnover = stock.price * stock.volume;
         // Kira peratus perubahan yang betul: (change / previous_price) * 100
         const previousPrice = stock.price - stock.change;
@@ -487,14 +508,16 @@ async function main() {
         let setupName = 'N/A';
         if (stock.high52) {
             pullback = parseFloat(((stock.high52 - stock.price) / stock.high52 * 100).toFixed(2));
+            const isPremiumIpo = stock.ipoGrade === 'A' || stock.ipoGrade === 'B';
             const isSmaDowntrend = (stock.sma50 && stock.hasEnoughSmaData) ? (stock.price < stock.sma50) : false;
             const isSma200Downtrend = stock.sma200 ? (stock.price < stock.sma200) : false;
             
             // Logik pintar: Pullback sehingga 40% dibenarkan jika harga di atas SMA200 (Long-term Bullish)
-            // Jika tidak, had pullback adalah 30%
-            const maxPullbackAllowed = (!isSma200Downtrend && stock.sma200) ? 40.0 : 30.0;
+            // Premium IPO dibenarkan pullback sehingga 55%
+            const maxPullbackAllowed = isPremiumIpo ? 55.0 : ((!isSma200Downtrend && stock.sma200) ? 40.0 : 30.0);
             
-            if (isSmaDowntrend || pullback > maxPullbackAllowed) {
+            // Premium IPO dikecualikan daripada isSmaDowntrend untuk mengelakkan penyingkiran semasa dip/pullback
+            if ((isSmaDowntrend && !isPremiumIpo) || pullback > maxPullbackAllowed) {
                 setupName = '🧊 Downtrend / Avoid';
             } else if (pullback <= 5.0) {
                 setupName = '🔥 RBS Retest / Near ATH';
@@ -502,6 +525,8 @@ async function main() {
                 setupName = '📉 Healthy Dip';
             } else if (pullback <= 40.0) {
                 setupName = '🔻 Buy Support / Deep Pullback';
+            } else {
+                setupName = '🔻 Premium IPO Deep Pullback';
             }
         }
         
@@ -677,7 +702,7 @@ async function main() {
     
     // Read IPO Grades from neighboring directory
     try {
-        const ipoDataPath = 'C:/Users/aaror/OneDrive - PERTUBUHAN KESELAMATAN SOSIAL/Desktop/ipo/data.json';
+        const ipoDataPath = '/home/awi/Desktop/ipohunterv2/data.json';
         if (fs.existsSync(ipoDataPath)) {
             const ipoList = JSON.parse(fs.readFileSync(ipoDataPath, 'utf8'));
             const ipoMap = {};
