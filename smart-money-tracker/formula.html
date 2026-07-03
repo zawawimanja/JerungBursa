@@ -310,7 +310,7 @@
                 Sesebuah kaunter hanya layak dicalonkan dan memaparkan lencana <strong>🔥 VVIP</strong> di dashboard sekiranya ia melepasi tapisan asas pangkalan data (Backend) dan berjaya mengumpul markah minimum pada dashboard (Frontend):
             </p>
             <div class="formula-box">
-                VVIP = (Aktif Semalam & Hari Ini) AND (Bukan Comb/Downtrend) AND (Smart Score &ge; 8)
+                VVIP = (Aktif Semalam & Hari Ini) AND (Bukan Comb/Downtrend) AND (Smart Score &ge; 12)
             </div>
             <p style="color: var(--text-muted); font-size: 0.85rem; text-align: center;">
                 *Formula ini menjamin kaunter mempunyai kecairan aktif, dalam fasa pullback/tapak tegar yang sihat, dan berada pada risiko minimum (SL 3%).
@@ -504,7 +504,7 @@
             <div class="calc-result">
                 <div>
                     <h4 style="font-size: 1.05rem; font-weight: 800; color: white; margin-bottom: 0.2rem;">Hasil Keputusan Simulasi:</h4>
-                    <p style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 0.6rem;">Status kelayakan VVIP (Perlu markah &ge; 8)</p>
+                    <p style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 0.6rem;">Status kelayakan VVIP (Perlu markah &ge; 12)</p>
                     <div id="verdictBadge" class="verdict-badge verdict-pending">Pending</div>
                 </div>
                 <div style="text-align: right;">
@@ -586,11 +586,11 @@
             document.getElementById('scoreVal').innerText = total;
 
             const verdict = document.getElementById('verdictBadge');
-            if (total >= 8) {
+            if (total >= 12) {
                 verdict.innerText = "🔥 VVIP Approved";
                 verdict.className = "verdict-badge verdict-approved";
             } else {
-                verdict.innerText = "⚠️ Under Scrutiny (Score < 8)";
+                verdict.innerText = "⚠️ Under Scrutiny (Score < 12)";
                 verdict.className = "verdict-badge verdict-pending";
             }
         }
