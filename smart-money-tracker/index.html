@@ -1378,7 +1378,7 @@
 
             const price = item.price;
             const floorPrice = item.floorLow || (price * 0.97);
-            const slPrice = floorPrice * 0.97; // 3% below floor
+            const slPrice = Math.max(price * 0.90, floorPrice * 0.97); // 3% below floor, capped at max -10% from entry
             
             const maxRiskPct = ((price - slPrice) / price) * 100;
             
@@ -1413,6 +1413,15 @@
             const hybridSection = document.getElementById('hybrid-recommendations-section');
             if (!hybridTbody || !hybridSection) return;
 
+            const getItemStyle = (item) => {
+                if (item.setupStyle) return item.setupStyle;
+                const pct = item.changePct !== undefined ? item.changePct : item.change;
+                const pb = item.pullback !== null ? item.pullback : 0;
+                return (pct >= 5.0 || (pct >= 3.5 && pb > 5.0)) ? 'EXPLOSIVE' : (
+                    (pb <= 10.0 && (item.isConsolidation || (item.lowTightness && item.lowTightness <= 8.0) || (item.touchCount && item.touchCount >= 2))) ? 'STAIRCASE' : 'SWING PLAY'
+                );
+            };
+
             // Filter items for Technique C (Trend Rider):
             let validPicks = currentData.filter(item => {
                 if (!item.high52) return false;
@@ -1444,17 +1453,11 @@
                     if (distToFloor > 12.0) return false;
                 }
 
-                const pct = item.changePct !== undefined ? item.changePct : item.change;
-                const pb = item.pullback !== null ? item.pullback : 0;
-                const style = item.setupStyle || (
-                    pct >= 5.0 || (pct >= 3.5 && pb > 5.0) ? 'EXPLOSIVE' : (
-                        pb <= 10.0 && (item.isConsolidation || (item.lowTightness && item.lowTightness <= 8.0) || (item.touchCount && item.touchCount >= 2)) ? 'STAIRCASE' : 'SWING PLAY'
-                    )
-                );
+                const style = getItemStyle(item);
                 return style === 'EXPLOSIVE' || style === 'STAIRCASE' || isPremiumIpo;
             });
 
-            // Sort by Category Rank (Fresh IPO -> Mature -> Non-IPO) and then by Distance to Floor ascending
+            // Sort by Category Rank (Fresh -> Mature -> Non-IPO), then Setup Style (EXPLOSIVE -> STAIRCASE -> SWING), and then by distToFloor ascending
             const renderSortFn = (a, b) => {
                 const getCategoryRank = (item) => {
                     const grade = item.ipoGrade || 'Unrated';
@@ -1470,6 +1473,16 @@
 
                 if (rankA !== rankB) {
                     return rankA - rankB; // Group by Category
+                }
+
+                // Group by Setup Style (EXPLOSIVE = 1, STAIRCASE = 2, SWING PLAY = 3)
+                const styleA = getItemStyle(a);
+                const styleB = getItemStyle(b);
+                const styleRankA = styleA === 'EXPLOSIVE' ? 1 : (styleA === 'STAIRCASE' ? 2 : 3);
+                const styleRankB = styleB === 'EXPLOSIVE' ? 1 : (styleB === 'STAIRCASE' ? 2 : 3);
+
+                if (styleRankA !== styleRankB) {
+                    return styleRankA - styleRankB; // Sort EXPLOSIVE to the top
                 }
 
                 const floorA = a.floorLow || (a.price * 0.95);
@@ -1494,7 +1507,7 @@
                 validPicks.forEach(item => {
                     const score = calculateSmartScore(item);
                     const floor = item.floorLow || (item.price * 0.97);
-                    const stopLoss = floor * 0.97;
+                    const stopLoss = Math.max(item.price * 0.90, floor * 0.97);
                     const turnoverM = (item.turnover / 1e6).toFixed(2);
                     const pct = item.changePct !== undefined ? item.changePct : item.change;
                     const changeClass = pct >= 0 ? 'success' : 'danger';
@@ -1505,12 +1518,7 @@
                     const isVvipRank = item.isVvip && score >= minScore;
                     const vvipCrown = isVvipRank ? `<span style="font-size: 0.72rem; background: linear-gradient(135deg, #f59e0b, #d97706); color: #0f172a; padding: 0.05rem 0.25rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(245,158,11,0.5); box-shadow: 0 0 8px rgba(245,158,11,0.4);" title="VVIP Gold Trend Rider">🏆 VVIP Gold</span>` : '';
 
-                    const pullbackVal = item.pullback !== null ? item.pullback : 0;
-                    const style = item.setupStyle || (
-                        pct >= 5.0 || (pct >= 3.5 && pullbackVal > 5.0) ? 'EXPLOSIVE' : (
-                            pullbackVal <= 10.0 && (item.isConsolidation || (item.lowTightness && item.lowTightness <= 8.0) || (item.touchCount && item.touchCount >= 2)) ? 'STAIRCASE' : 'SWING PLAY'
-                        )
-                    );
+                    const style = getItemStyle(item);
 
                     let styleBadge = '';
                     if (style === 'EXPLOSIVE') {
