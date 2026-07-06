@@ -760,13 +760,27 @@ async function main() {
                     }
                 }
             });
+            const fallbackIpoMap = {
+                '3REN': 'B',
+                'HEGROUP': 'B'
+            };
+
             let ipoTagCount = 0;
             processedData.forEach(item => {
-                const info = ipoMap[item.name.toUpperCase().trim()];
+                const cleanName = item.name.toUpperCase().trim();
+                const info = ipoMap[cleanName];
                 if (info) {
-                    item.ipoGrade = info.grade;
+                    item.ipoGrade = info.grade === 'Unrated' ? (fallbackIpoMap[cleanName] || 'Unrated') : info.grade;
                     item.ipoYear = info.year;
                     item.ipoPrice = info.ipoPrice;
+                    
+                    // Trend Rider Rule: If Fresh IPO (listed >= 2025) is below its IPO price, it is a failed IPO (avoid!)
+                    const isFresh = info.year >= 2025;
+                    if (isFresh && item.ipoPrice && item.price < item.ipoPrice) {
+                        item.signal = 'avoid';
+                        item.reason = `⚠️ Below IPO Price: Failed IPO Base (Price RM ${item.price.toFixed(3)} < IPO RM ${item.ipoPrice.toFixed(3)})`;
+                    }
+                    
                     ipoTagCount++;
                 }
             });
