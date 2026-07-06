@@ -11,6 +11,21 @@ const HEADERS = {
     'Accept-Language': 'en-US,en;q=0.5',
 };
 
+function getIpoDataPath() {
+    const candidatePaths = [
+        path.join(__dirname, '../../ipo/data.json'),
+        path.join(__dirname, '../../ipohunterv2/data.json'),
+        '/home/awi/Desktop/ipohunterv2/data.json',
+        'C:/Users/aaror/OneDrive - PERTUBUHAN KESELAMATAN SOSIAL/Desktop/ipo/data.json'
+    ];
+    for (const p of candidatePaths) {
+        if (fs.existsSync(p)) {
+            return p;
+        }
+    }
+    return candidatePaths[0];
+}
+
 const freshIpos = [
     'SKYECHIP', 'PENTECH', 'SUM', 'ELSA', 'AMBEST', 'AMS',
     'EIPOWER', 'ISF', 'KEEMING', 'TEAMSTR', 'MMCS', 'GDGROUP',
@@ -194,7 +209,7 @@ async function main() {
     const mappings = JSON.parse(fs.readFileSync(path.join(__dirname, 'symbol_mappings.json'), 'utf8'));
     
     // Load sectors from IPO data if available
-    const ipoDataPath = '/home/awi/Desktop/ipohunterv2/data.json';
+    const ipoDataPath = getIpoDataPath();
     const ipoSectors = {};
     if (fs.existsSync(ipoDataPath)) {
         try {
@@ -455,14 +470,19 @@ async function main() {
     // ==========================================
     console.log('\n📊 Menganalisis Formula Smart Money...');
     
-    const ipoDataFilePath = '/home/awi/Desktop/ipohunterv2/data.json';
+    const ipoDataFilePath = getIpoDataPath();
     const ipoMap = {};
     try {
         if (fs.existsSync(ipoDataFilePath)) {
             const ipoList = JSON.parse(fs.readFileSync(ipoDataFilePath, 'utf8'));
             ipoList.forEach(ipo => {
                 if (ipo.symbol) {
-                    ipoMap[ipo.symbol.toUpperCase().trim()] = ipo.predictedGrade || 'Unrated';
+                    const listingYear = parseInt(ipo.year) || (ipo.listingDate ? parseInt(ipo.listingDate.split('-')[2]) : 0);
+                    ipoMap[ipo.symbol.toUpperCase().trim()] = {
+                        grade: ipo.predictedGrade || 'Unrated',
+                        year: listingYear,
+                        ipoPrice: ipo.price
+                    };
                 }
             });
         }
@@ -491,9 +511,11 @@ async function main() {
     for (const stock of dedupedStocks.values()) {
         const name = stock.name;
         // Associate IPO Grade early
-        const grade = ipoMap[name.toUpperCase().trim()];
-        if (grade) {
-            stock.ipoGrade = grade;
+        const ipoInfo = ipoMap[name.toUpperCase().trim()];
+        if (ipoInfo) {
+            stock.ipoGrade = ipoInfo.grade;
+            stock.ipoYear = ipoInfo.year;
+            stock.ipoPrice = ipoInfo.ipoPrice;
         }
 
         const turnover = stock.price * stock.volume;
@@ -523,8 +545,8 @@ async function main() {
                 const normName = cleanStockName.replace(/[^A-Z0-9]/g, '');
                 return normName.startsWith(normKey);
             });
-            // Fresh IPO definition: has IPO grade, is in fresh IPO list, and is NOT in SMA downtrend
-            const isFreshIpo = (stock.ipoGrade === 'A' || stock.ipoGrade === 'B' || stock.ipoGrade === 'C') && isInFreshIpoList && !isSmaDowntrend;
+            // Fresh IPO definition: has IPO grade, year >= 2020 (listed after 2019) and has no SMA downtrend
+            const isFreshIpo = (stock.ipoGrade === 'A' || stock.ipoGrade === 'B' || stock.ipoGrade === 'C') && (stock.ipoYear && stock.ipoYear >= 2020) && !isSmaDowntrend;
 
             // Logik pintar: Pullback sehingga 40% dibenarkan jika harga di atas SMA200 (Long-term Bullish)
             // Fresh IPO dibenarkan pullback sehingga 55%
@@ -716,24 +738,29 @@ async function main() {
     
     // Read IPO Grades from neighboring directory
     try {
-        const ipoDataPath = '/home/awi/Desktop/ipohunterv2/data.json';
+        const ipoDataPath = getIpoDataPath();
         if (fs.existsSync(ipoDataPath)) {
             const ipoList = JSON.parse(fs.readFileSync(ipoDataPath, 'utf8'));
             const ipoMap = {};
             ipoList.forEach(ipo => {
                 if (ipo.symbol) {
-                    // Only treat as IPO if listing year is 2020 or later
                     const listingYear = parseInt(ipo.year) || (ipo.listingDate ? parseInt(ipo.listingDate.split('-')[2]) : 0);
-                    if (listingYear >= 2020) {
-                        ipoMap[ipo.symbol.toUpperCase().trim()] = ipo.predictedGrade || 'Unrated';
+                    if (listingYear >= 2000) {
+                        ipoMap[ipo.symbol.toUpperCase().trim()] = {
+                            grade: ipo.predictedGrade || 'Unrated',
+                            year: listingYear,
+                            ipoPrice: ipo.price
+                        };
                     }
                 }
             });
             let ipoTagCount = 0;
             processedData.forEach(item => {
-                const grade = ipoMap[item.name.toUpperCase().trim()];
-                if (grade) {
-                    item.ipoGrade = grade;
+                const info = ipoMap[item.name.toUpperCase().trim()];
+                if (info) {
+                    item.ipoGrade = info.grade;
+                    item.ipoYear = info.year;
+                    item.ipoPrice = info.ipoPrice;
                     ipoTagCount++;
                 }
             });

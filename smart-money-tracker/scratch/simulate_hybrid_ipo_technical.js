@@ -7,7 +7,19 @@ const HEADERS = {
     'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
 };
 
-const IPO_DATA_PATH = '/home/awi/Desktop/ipohunterv2/data.json';
+const getIpoDataPath = () => {
+    const candidatePaths = [
+        path.join(__dirname, '../../../ipo/data.json'),
+        path.join(__dirname, '../../../ipohunterv2/data.json'),
+        '/home/awi/Desktop/ipohunterv2/data.json',
+        'C:/Users/aaror/OneDrive - PERTUBUHAN KESELAMATAN SOSIAL/Desktop/ipo/data.json'
+    ];
+    for (const p of candidatePaths) {
+        if (fs.existsSync(p)) return p;
+    }
+    return candidatePaths[0];
+};
+const IPO_DATA_PATH = getIpoDataPath();
 const BACKTEST_HTML_PATH = path.join(__dirname, '../backtest.html');
 const MAPPINGS_PATH = path.join(__dirname, '../symbol_mappings.json');
 

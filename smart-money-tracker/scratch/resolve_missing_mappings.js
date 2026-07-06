@@ -3,7 +3,19 @@ const path = require('path');
 const axios = require('axios');
 
 const MAPPING_FILE = path.join(__dirname, '../symbol_mappings.json');
-const IPO_DATA_PATH = '/home/awi/Desktop/ipohunterv2/data.json';
+const getIpoDataPath = () => {
+    const candidatePaths = [
+        path.join(__dirname, '../../../ipo/data.json'),
+        path.join(__dirname, '../../../ipohunterv2/data.json'),
+        '/home/awi/Desktop/ipohunterv2/data.json',
+        'C:/Users/aaror/OneDrive - PERTUBUHAN KESELAMATAN SOSIAL/Desktop/ipo/data.json'
+    ];
+    for (const p of candidatePaths) {
+        if (fs.existsSync(p)) return p;
+    }
+    return candidatePaths[0];
+};
+const IPO_DATA_PATH = getIpoDataPath();
 
 const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 

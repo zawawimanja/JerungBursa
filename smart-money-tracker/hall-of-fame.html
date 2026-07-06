@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trend Rider Hall of Fame | Jerung Bursa</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --panel-bg: rgba(22, 28, 45, 0.6);
+            --panel-border: rgba(255, 255, 255, 0.08);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --gold: #f59e0b;
+            --gold-glow: rgba(245, 158, 11, 0.3);
+            --purple: #c084fc;
+            --purple-glow: rgba(192, 132, 252, 0.3);
+            --cyan: #22d3ee;
+            --cyan-glow: rgba(34, 211, 238, 0.3);
+            --success: #10b981;
+            --danger: #ef4444;
+            --accent: #6366f1;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(168, 85, 247, 0.12) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(16, 185, 129, 0.08) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            padding: 2.5rem 1.5rem;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Nav links styling */
+        .nav-links {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--panel-border);
+            padding-bottom: 1.25rem;
+        }
+
+        .btn-nav {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 700;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--panel-border);
+            padding: 0.6rem 1.2rem;
+            border-radius: 10px;
+            transition: all 0.25s ease;
+            cursor: pointer;
+        }
+
+        .btn-nav:hover {
+            color: white;
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+        }
+
+        /* Header design */
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        header h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3rem;
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            background: linear-gradient(135deg, #ffffff 30%, #a5b4fc 60%, #6366f1 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.75rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        /* Stats board banner */
+        .stats-banner {
+            background: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            border-radius: 20px;
+            padding: 1.5rem 2rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            backdrop-filter: blur(16px);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+        }
+
+        @media (max-width: 768px) {
+            .stats-banner {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            gap: 0.3rem;
+        }
+
+        .stat-val {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 900;
+            letter-spacing: -0.01em;
+        }
+
+        .stat-val.gold {
+            color: var(--gold);
+            text-shadow: 0 0 15px var(--gold-glow);
+        }
+
+        .stat-val.purple {
+            color: var(--purple);
+            text-shadow: 0 0 15px var(--purple-glow);
+        }
+
+        .stat-val.cyan {
+            color: var(--cyan);
+            text-shadow: 0 0 15px var(--cyan-glow);
+        }
+
+        .stat-lbl {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Filter & Search Bar */
+        .search-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .search-box {
+            position: relative;
+            flex: 1;
+            min-width: 280px;
+        }
+
+        .search-box input {
+            width: 100%;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--panel-border);
+            padding: 0.75rem 1.25rem;
+            padding-left: 2.5rem;
+            border-radius: 12px;
+            color: white;
+            font-size: 0.95rem;
+            outline: none;
+            transition: all 0.25s ease;
+        }
+
+        .search-box input:focus {
+            border-color: #6366f1;
+            box-shadow: 0 0 10px rgba(99, 102, 241, 0.2);
+        }
+
+        .search-box::before {
+            content: '🔍';
+            position: absolute;
+            left: 0.9rem;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.9rem;
+            opacity: 0.6;
+        }
+
+        /* Table wrapper & styling */
+        .table-panel {
+            background: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            border-radius: 16px;
+            padding: 1.25rem;
+            backdrop-filter: blur(16px);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            margin-bottom: 2rem;
+        }
+
+        .table-wrapper {
+            overflow-x: auto;
+            max-width: 100%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+
+        th {
+            font-family: 'Outfit', sans-serif;
+            color: #a5b4fc;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 1rem 0.75rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        td {
+            padding: 1.1rem 0.75rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.95rem;
+            vertical-align: middle;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr {
+            transition: background 0.2s ease;
+        }
+
+        tr:hover {
+            background: rgba(255, 255, 255, 0.02);
+        }
+
+        /* Tiers stylings in table */
+        .tr-legendary {
+            background: rgba(245, 158, 11, 0.015);
+        }
+        .tr-legendary:hover {
+            background: rgba(245, 158, 11, 0.03) !important;
+        }
+        .tr-epic {
+            background: rgba(192, 132, 252, 0.015);
+        }
+        .tr-epic:hover {
+            background: rgba(192, 132, 252, 0.03) !important;
+        }
+        .tr-rare {
+            background: rgba(34, 211, 238, 0.01);
+        }
+        .tr-rare:hover {
+            background: rgba(34, 211, 238, 0.02) !important;
+        }
+
+        /* Badge Tier styles */
+        .badge-tier {
+            font-size: 0.68rem;
+            font-weight: 800;
+            padding: 0.2rem 0.5rem;
+            border-radius: 5px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: inline-block;
+        }
+
+        .badge-tier.legendary { background: rgba(245, 158, 11, 0.15); color: var(--gold); border: 1px solid rgba(245, 158, 11, 0.3); }
+        .badge-tier.epic { background: rgba(192, 132, 252, 0.15); color: var(--purple); border: 1px solid rgba(192, 132, 252, 0.3); }
+        .badge-tier.rare { background: rgba(34, 211, 238, 0.15); color: var(--cyan); border: 1px solid rgba(34, 211, 238, 0.3); }
+
+        /* Glowing text elements */
+        .glow-gold { color: var(--gold) !important; text-shadow: 0 0 10px var(--gold-glow); font-weight: 900; }
+        .glow-purple { color: var(--purple) !important; text-shadow: 0 0 10px var(--purple-glow); font-weight: 900; }
+        .glow-cyan { color: var(--cyan) !important; text-shadow: 0 0 10px var(--cyan-glow); font-weight: 900; }
+
+        /* Styling columns */
+        .col-counter {
+            font-weight: 900;
+            font-size: 1.1rem;
+            color: white;
+        }
+        
+        .col-counter span {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            margin-top: 0.15rem;
+        }
+
+        .col-price {
+            font-weight: 700;
+            color: white;
+        }
+
+        .col-gain {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: var(--success);
+        }
+
+        .col-insight {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            max-width: 320px;
+            line-height: 1.45;
+        }
+
+        /* TradingView link */
+        .tv-link {
+            font-size: 0.85rem;
+            color: var(--cyan);
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            transition: color 0.2s;
+        }
+
+        .tv-link:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        /* Hide columns on mobile */
+        @media (max-width: 900px) {
+            .hide-tablet {
+                display: none !important;
+            }
+        }
+        @media (max-width: 600px) {
+            .hide-mobile {
+                display: none !important;
+            }
+            td, th {
+                padding: 0.8rem 0.5rem;
+                font-size: 0.85rem;
+            }
+            .col-counter {
+                font-size: 0.95rem;
+            }
+            .col-gain {
+                font-size: 1.05rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Navigation Bar -->
+        <div class="nav-links">
+            <a href="./index.html" class="btn-nav">
+                ⬅️ Kembali ke Dashboard
+            </a>
+            <a href="./sop.html" class="btn-nav">
+                📘 Baca Panduan SOP
+            </a>
+            <a href="./formula.html" class="btn-nav">
+                🔥 Formula VVIP
+            </a>
+        </div>
+
+        <!-- Header -->
+        <header>
+            <h1>Trend Rider Hall of Fame</h1>
+            <p>Monumen pencapaian kaunter-kaunter IPO lagenda yang meletup dan ditunggang trend (ride trend) menggunakan SOP Jerung Bursa sehingga melebihi 1,000%.</p>
+        </header>
+
+        <!-- Stats Board -->
+        <div class="stats-banner">
+            <div class="stat-item">
+                <span class="stat-val gold">+1,261.9%</span>
+                <span class="stat-lbl">Kenaikan Tertinggi (MNHLDG)</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-val purple">+288.7%</span>
+                <span class="stat-lbl">Purata Kenaikan Watchlist</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-val cyan">100.0%</span>
+                <span class="stat-lbl">Kadar Kejayaan (Tiada Kerugian)</span>
+            </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Cari kaunter..." oninput="filterTable()">
+            </div>
+            <div style="font-size: 0.85rem; color: var(--text-muted); font-weight: 600;">
+                Menunjukkan <span id="visible-count" style="color: white; font-weight: 800;">9</span> daripada 9 kaunter elit
+            </div>
+        </div>
+
+        <!-- Table Panel Container -->
+        <div class="table-panel">
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 50px; text-align: center;">No</th>
+                            <th style="text-align: left;">Kaunter</th>
+                            <th style="text-align: right;">Harga IPO</th>
+                            <th style="text-align: right;">Harga Terkini</th>
+                            <th style="text-align: right;">Keuntungan Mutlak</th>
+                            <th style="text-align: center;">Tier</th>
+                            <th style="text-align: center;" class="hide-tablet">Tarikh Listing</th>
+                            <th style="text-align: left;" class="hide-mobile">Analisis & Insight Trend Rider</th>
+                            <th style="text-align: center;">Carta</th>
+                        </tr>
+                    </thead>
+                    <tbody id="hallOfFameTbody">
+                        
+                        <!-- ROW 1: MNHLDG -->
+                        <tr class="tr-legendary" data-name="mnhldg">
+                            <td style="text-align: center; font-weight: bold; color: var(--gold);">1</td>
+                            <td class="col-counter">
+                                MNHLDG
+                                <span>MN Holdings Berhad (0245)</span>
+                            </td>
+                            <td class="col-price" style="text-align: right;">RM 0.210</td>
+                            <td class="col-price" style="text-align: right;">RM 2.860</td>
+                            <td class="col-gain" style="text-align: right;"><span class="glow-gold">+1,261.90%</span></td>
+                            <td style="text-align: center;"><span class="badge-tier legendary">LEGENDARY</span></td>
+                            <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted);" class="hide-tablet">28-Apr-2022</td>
+                            <td class="col-insight hide-mobile">Juara mutlak Trend Rider! Meletup lebih 12x ganda hasil sokongan institusi yang sangat agresif. Tapak sokongan dinaikkan bertingkat-tingkat tanpa patah trend.</td>
+                            <td style="text-align: center;">
+                                <a href="https://www.tradingview.com/chart/?symbol=MYX:MNHLDG&interval=D" target="_blank" class="tv-link">🔗 TV</a>
+                            </td>
+                        </tr>
+
+                        <!-- ROW 2: KEEMING -->
+                        <tr class="tr-legendary" data-name="keeming">
+                            <td style="text-align: center; font-weight: bold; color: var(--gold);">2</td>
+                            <td class="col-counter">
+                                KEEMING
+                                <span>Kian Meng Berhad (0392)</span>
+                            </td>
+                            <td class="col-price" style="text-align: right;">RM 0.380</td>
+                            <td class="col-price" style="text-align: right;">RM 1.810</td>
+                            <td class="col-gain" style="text-align: right;"><span class="glow-gold">+376.32%</span></td>
+                            <td style="text-align: center;"><span class="badge-tier legendary">LEGENDARY</span></td>
+                            <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted);" class="hide-tablet">12-Feb-2026</td>
+                            <td class="col-insight hide-mobile">Konsolidasi yang sangat padat di atas paras harga tawaran sebelum breakout meletup 3.7x ganda. Entry di RM1.050 memberikan pulangan optimum.</td>
+                            <td style="text-align: center;">
+                                <a href="https://www.tradingview.com/chart/?symbol=MYX:KEEMING&interval=D" target="_blank" class="tv-link">🔗 TV</a>
+                            </td>
+                        </tr>
+
+                        <!-- ROW 3: HKB -->
+                        <tr class="tr-epic" data-name="hkb">
+                            <td style="text-align: center; font-weight: bold; color: var(--purple);">3</td>
+                            <td class="col-counter">
+                                HKB
+                                <span>Hextar Kencana Berhad (0394)</span>
+                            </td>
+                            <td class="col-price" style="text-align: right;">RM 0.160</td>
+                            <td class="col-price" style="text-align: right;">RM 0.595</td>
+                            <td class="col-gain" style="text-align: right;"><span class="glow-purple">+271.88%</span></td>
+                            <td style="text-align: center;"><span class="badge-tier epic">EPIC</span></td>
+                            <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted);" class="hide-tablet">09-Jun-2025</td>
+                            <td class="col-insight hide-mobile">Merupakan 'Outlier' sejarah IPO dengan lonjakan berterusan. Tapisan pullback 15% membolehkan kita bertahan dan mengabaikan pembetulan kecil pasaran.</td>
+                            <td style="text-align: center;">
+                                <a href="https://www.tradingview.com/chart/?symbol=MYX:HKB&interval=D" target="_blank" class="tv-link">🔗 TV</a>
+                            </td>
+                        </tr>
+
+                        <!-- ROW 4: AMBEST -->
+                        <tr class="tr-epic" data-name="ambest">
+                            <td style="text-align: center; font-weight: bold; color: var(--purple);">4</td>
+                            <td class="col-counter">
+                                AMBEST
+                                <span>Ambest Holdings Berhad (0391)</span>
+                            </td>
+                            <td class="col-price" style="text-align: right;">RM 0.250</td>
+                            <td class="col-price" style="text-align: right;">RM 0.895</td>
+                            <td class="col-gain" style="text-align: right;"><span class="glow-purple">+258.00%</span></td>
+                            <td style="text-align: center;"><span class="badge-tier epic">EPIC</span></td>
+                            <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted);" class="hide-tablet">06-Feb-2026</td>
+                            <td class="col-insight hide-mobile">Pola pengumpulan lantai sokongan tegar yang sangat cantik. Breakout dari RM 0.720 meletup pantas dan menghasilkan keuntungan swing VVIP berkualiti tinggi.</td>
+                            <td style="text-align: center;">
+                                <a href="https://www.tradingview.com/chart/?symbol=MYX:AMBEST&interval=D" target="_blank" class="tv-link">🔗 TV</a>
+                            </td>
+                        </tr>
+
+                        <!-- ROW 5: ICENTS -->
+                        <tr class="tr-rare" data-name="icents">
+                            <td style="text-align: center; font-weight: bold; color: var(--cyan);">5</td>
+                            <td class="col-counter">
+                                ICENTS
+                                <span>iCents Group Holdings (0366)</span>
+                            </td>
+                            <td class="col-price" style="text-align: right;">RM 0.240</td>
+                            <td class="col-price" style="text-align: right;">RM 0.560</td>
+                            <td class="col-gain" style="text-align: right;"><span class="glow-cyan">+133.33%</span></td>
+                            <td style="text-align: center;"><span class="badge-tier rare">RARE</span></td>
+                            <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted);" class="hide-tablet">17-Jul-2025</td>
+                            <td class="col-insight hide-mobile">Mencatat kenaikan melebihi dua kali ganda. Membina zon 'Reclaim & Support' yang jelas pada paras RM 0.470 sebelum melonjak semula.</td>
+                            <td style="text-align: center;">
+                                <a href="https://www.tradingview.com/chart/?symbol=MYX:ICENTS&interval=D" target="_blank" class="tv-link">🔗 TV</a>
+                            </td>
+                        </tr>
+
+                        <!-- ROW 6: DNEX -->
+                        <tr class="tr-rare" data-name="dnex">
+                            <td style="text-align: center; font-weight: bold; color: var(--cyan);">6</td>
+                            <td class="col-counter">
+                                DNEX
+                                <span>Dagang NeXchange Berhad (4456)</span>
+                            </td>
+                            <td class="col-price" style="text-align: right;">RM 0.200</td>
+                            <td class="col-price" style="text-align: right;">RM 0.440</td>
+                            <td class="col-gain" style="text-align: right;"><span class="glow-cyan">+120.00%</span></td>
+                            <td style="text-align: center;"><span class="badge-tier rare">RARE</span></td>
+                            <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted);" class="hide-tablet">01-Jan-2000</td>
+                            <td class="col-insight hide-mobile">Kaunter IPO matang yang meletup semula hasil kitaran industri yang kuat. Membukti saham lama boleh ditunggang trend jika memenuhi SOP lantai VVIP.</td>
+                            <td style="text-align: center;">
+                                <a href="https://www.tradingview.com/chart/?symbol=MYX:DNEX&interval=D" target="_blank" class="tv-link">🔗 TV</a>
+                            </td>
+                        </tr>
+
+                        <!-- ROW 7: SUM -->
+                        <tr class="tr-rare" data-name="sum">
+                            <td style="text-align: center; font-weight: bold; color: var(--cyan);">7</td>
+                            <td class="col-counter">
+                                SUM
+                                <span>Sinar Usaha Mandiri Berhad (0398)</span>
+                            </td>
+                            <td class="col-price" style="text-align: right;">RM 0.280</td>
+                            <td class="col-price" style="text-align: right;">RM 0.540</td>
+                            <td class="col-gain" style="text-align: right;"><span class="glow-cyan">+92.86%</span></td>
+                            <td style="text-align: center;"><span class="badge-tier rare">RARE</span></td>
+                            <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted);" class="hide-tablet">18-Jun-2026</td>
+                            <td class="col-insight hide-mobile">Kaunter muda yang stabil membina harga tapak. Menghampiri keuntungan 2x ganda dari harga tawaran asal melalui kenaikan sihat bertingkat.</td>
+                            <td style="text-align: center;">
+                                <a href="https://www.tradingview.com/chart/?symbol=MYX:SUM&interval=D" target="_blank" class="tv-link">🔗 TV</a>
+                            </td>
+                        </tr>
+
+                        <!-- ROW 8: AMS -->
+                        <tr class="tr-rare" data-name="ams">
+                            <td style="text-align: center; font-weight: bold; color: var(--cyan);">8</td>
+                            <td class="col-counter">
+                                AMS
+                                <span>Advanced Materials Berhad (0388)</span>
+                            </td>
+                            <td class="col-price" style="text-align: right;">RM 0.290</td>
+                            <td class="col-price" style="text-align: right;">RM 0.460</td>
+                            <td class="col-gain" style="text-align: right;"><span class="glow-cyan">+58.62%</span></td>
+                            <td style="text-align: center;"><span class="badge-tier rare">RARE</span></td>
+                            <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted);" class="hide-tablet">23-Apr-2026</td>
+                            <td class="col-insight hide-mobile">Mendapat ranking volum turnover teratas. Reclaim harga IPO asal RM 0.290 dengan momentum padu, dan bertapak sihat di harga RM 0.460.</td>
+                            <td style="text-align: center;">
+                                <a href="https://www.tradingview.com/chart/?symbol=MYX:AMS&interval=D" target="_blank" class="tv-link">🔗 TV</a>
+                            </td>
+                        </tr>
+
+                        <!-- ROW 9: MMCS -->
+                        <tr class="tr-rare" data-name="mmcs">
+                            <td style="text-align: center; font-weight: bold; color: var(--cyan);">9</td>
+                            <td class="col-counter">
+                                MMCS
+                                <span>MMCS Holdings Berhad (0456)</span>
+                            </td>
+                            <td class="col-price" style="text-align: right;">RM 0.220</td>
+                            <td class="col-price" style="text-align: right;">RM 0.310</td>
+                            <td class="col-gain" style="text-align: right;"><span class="glow-cyan">+40.91%</span></td>
+                            <td style="text-align: center;"><span class="badge-tier rare">RARE</span></td>
+                            <td style="text-align: center; font-size: 0.82rem; color: var(--text-muted);" class="hide-tablet">11-Jun-2026</td>
+                            <td class="col-insight hide-mobile">Contoh klasik strategi 'IPO Reclaim'. Jatuh bawah IPO ke RM 0.215, kemudian reclaim dan bina tapak di RM 0.260. Melonjak ke RM 0.310 (+19.2% profit).</td>
+                            <td style="text-align: center;">
+                                <a href="https://www.tradingview.com/chart/?symbol=MYX:MMCS&interval=D" target="_blank" class="tv-link">🔗 TV</a>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function filterTable() {
+            const query = document.getElementById('searchInput').value.toLowerCase().trim();
+            const rows = document.querySelectorAll('#hallOfFameTbody tr');
+            let count = 0;
+
+            rows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                const name = row.getAttribute('data-name');
+                
+                if (name.includes(query) || text.includes(query)) {
+                    row.style.display = '';
+                    count++;
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+
+            document.getElementById('visible-count').textContent = count;
+        }
+    </script>
+</body>
+</html>

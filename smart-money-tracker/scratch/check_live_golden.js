@@ -1,6 +1,7 @@
 const fs = require('fs');
+const path = require('path');
 
-const data = JSON.parse(fs.readFileSync('/home/awi/Desktop/BSKL/smart-money-tracker/live_data.json', 'utf8'));
+const data = JSON.parse(fs.readFileSync(path.join(__dirname, '../live_data.json'), 'utf8'));
 const list = data.topVolume || data.processedData || [];
 
 console.log("=== FINAL GOLDEN ZONE FILTERS ===");

@@ -106,7 +106,7 @@ try {
                 if (hybridTable.innerHTML.includes("Tiada kaunter")) {
                     console.log("   (Hybrid picks empty message shown)");
                 } else {
-                    const rowCount = (hybridTable.innerHTML.match(/<tr>/g) || []).length;
+                    const rowCount = (hybridTable.innerHTML.match(/<tr\b/gi) || []).length;
                     console.log(`   (Hybrid picks has ${rowCount} rows)`);
                 }
             }

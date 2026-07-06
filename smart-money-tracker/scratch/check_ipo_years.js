@@ -1,7 +1,19 @@
 const fs = require('fs');
 const path = require('path');
 
-const ipoDataPath = '/home/awi/Desktop/ipohunterv2/data.json';
+const getIpoDataPath = () => {
+    const candidatePaths = [
+        path.join(__dirname, '../../../ipo/data.json'),
+        path.join(__dirname, '../../../ipohunterv2/data.json'),
+        '/home/awi/Desktop/ipohunterv2/data.json',
+        'C:/Users/aaror/OneDrive - PERTUBUHAN KESELAMATAN SOSIAL/Desktop/ipo/data.json'
+    ];
+    for (const p of candidatePaths) {
+        if (fs.existsSync(p)) return p;
+    }
+    return candidatePaths[0];
+};
+const ipoDataPath = getIpoDataPath();
 const freshIpos = [
     'SKYECHIP', 'PENTECH', 'SUM', 'ELSA', 'AMBEST', 'AMS',
     'EIPOWER', 'ISF', 'KEEMING', 'TEAMSTR', 'MMCS', 'GDGROUP',
