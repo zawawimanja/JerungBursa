@@ -1432,35 +1432,31 @@
                 return style === 'EXPLOSIVE' || style === 'STAIRCASE' || isPremiumIpo;
             });
 
-            // Sort function for ranking: Premium IPOs (Grade A/B) first, then VVIP, then by Smart Score descending, then by turnover (lightweight IPOs first, high volume non-IPOs first)
+            // Sort by Category Rank (Fresh IPO -> Mature -> Non-IPO) and then by Distance to Floor ascending
             const renderSortFn = (a, b) => {
-                const isPremiumIpoA = (a.ipoGrade === 'A' || a.ipoGrade === 'B') ? 1 : 0;
-                const isPremiumIpoB = (b.ipoGrade === 'A' || b.ipoGrade === 'B') ? 1 : 0;
+                const getCategoryRank = (item) => {
+                    const grade = item.ipoGrade || 'Unrated';
+                    const isIpo = grade === 'A' || grade === 'B' || grade === 'C';
+                    if (!isIpo) return 3; // Non-IPO
+                    
+                    const isFresh = isFreshIpo(item);
+                    return isFresh ? 1 : 2; // 1 = Fresh IPO, 2 = Mature IPO
+                };
 
-                if (isPremiumIpoB !== isPremiumIpoA) {
-                    return isPremiumIpoB - isPremiumIpoA; // Premium IPOs (A/B) first
+                const rankA = getCategoryRank(a);
+                const rankB = getCategoryRank(b);
+
+                if (rankA !== rankB) {
+                    return rankA - rankB; // Group by Category
                 }
 
-                const scoreA = calculateSmartScore(a);
-                const scoreB = calculateSmartScore(b);
-                const minScoreA = isPremiumIpoA ? 10 : 12;
-                const minScoreB = isPremiumIpoB ? 10 : 12;
-                const isVvipA = (a.isVvip && scoreA >= minScoreA) ? 1 : 0;
-                const isVvipB = (b.isVvip && scoreB >= minScoreB) ? 1 : 0;
+                const floorA = a.floorLow || (a.price * 0.95);
+                const distA = ((a.price - floorA) / floorA) * 100;
+                
+                const floorB = b.floorLow || (b.price * 0.95);
+                const distB = ((b.price - floorB) / floorB) * 100;
 
-                if (isVvipB !== isVvipA) {
-                    return isVvipB - isVvipA; // VVIP first
-                }
-                if (scoreB !== scoreA) {
-                    return scoreB - scoreA; // Highest score next
-                }
-
-                const isIpoA = a.ipoGrade === 'A' || a.ipoGrade === 'B' || a.ipoGrade === 'C';
-                const isIpoB = b.ipoGrade === 'A' || b.ipoGrade === 'B' || b.ipoGrade === 'C';
-                if (isIpoA && isIpoB) {
-                    return a.turnover - b.turnover; // Lightweight IPOs first
-                }
-                return b.turnover - a.turnover; // High volume non-IPOs first
+                return distA - distB;
             };
 
             validPicks.sort(renderSortFn);
