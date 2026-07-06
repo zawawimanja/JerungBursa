@@ -1237,15 +1237,29 @@
                     }
 
                     const isFresh = isFreshIpo(item);
-                    const gradeStr = item.ipoGrade ? `Gred ${item.ipoGrade}` : '';
-                    const freshStr = item.ipoGrade ? (isFresh ? 'Fresh' : 'Mature') : '';
-                    const statusMeta = [gradeStr, freshStr].filter(Boolean).join(' • ');
+                    const scoreColor = score >= 12 ? '#10b981' : (score >= 9 ? '#6366f1' : '#94a3b8');
+                    const scoreSpan = `<span style="color: ${scoreColor}; font-weight: 800; background: rgba(255,255,255,0.03); padding: 0.05rem 0.3rem; border-radius: 3px; border: 1px solid rgba(255,255,255,0.05);">Skor: ${score}/15</span>`;
+
+                    let gradeSpan = '';
+                    if (item.ipoGrade) {
+                        let gColor = '#94a3b8';
+                        if (item.ipoGrade === 'A') gColor = '#10b981';
+                        else if (item.ipoGrade === 'B') gColor = '#a855f7';
+                        else if (item.ipoGrade === 'C') gColor = '#f59e0b';
+                        gradeSpan = ` • Gred <span style="color: ${gColor}; font-weight: 800;">${item.ipoGrade}</span>`;
+                    }
+
+                    const freshSpan = item.ipoGrade ? (isFresh 
+                        ? ` • <span style="color: #10b981; font-weight: 800; background: rgba(16, 185, 129, 0.08); padding: 0.05rem 0.3rem; border-radius: 3px; border: 1px solid rgba(16, 185, 129, 0.15);">Fresh</span>` 
+                        : ` • <span style="color: #94a3b8; font-weight: 600;">Mature</span>`) : '';
 
                     let ipoPriceStr = '';
                     if (item.ipoPrice) {
                         const dist = ((item.price - item.ipoPrice) / item.ipoPrice) * 100;
                         const distSign = dist >= 0 ? '+' : '';
-                        ipoPriceStr = ` • IPO RM ${item.ipoPrice.toFixed(3)} (${distSign}${dist.toFixed(1)}%)`;
+                        const distColor = dist >= 0 ? '#10b981' : '#ef4444';
+                        const distGlow = dist >= 50 ? 'text-shadow: 0 0 8px rgba(16, 185, 129, 0.35);' : '';
+                        ipoPriceStr = ` • IPO RM ${item.ipoPrice.toFixed(3)} (<span style="color: ${distColor}; font-weight: 800; ${distGlow}">${distSign}${dist.toFixed(1)}%</span>)`;
                     }
 
                     const crownEmoji = isVvipRank ? '🏆 ' : '';
@@ -1259,8 +1273,8 @@
                                         ${crownEmoji}${item.name} <span style="font-size: 0.75rem; color: var(--accent);">🔗</span>
                                     </a>
                                 </div>
-                                <div style="font-size: 0.72rem; color: var(--text-muted); font-weight: 600; margin-top: 0.25rem;">
-                                    Skor: ${score}/15 • ${statusMeta}${ipoPriceStr}
+                                <div style="font-size: 0.76rem; color: var(--text-muted); font-weight: 600; margin-top: 0.3rem; letter-spacing: 0.2px;">
+                                    ${scoreSpan}${gradeSpan}${freshSpan}${ipoPriceStr}
                                 </div>
                             </td>
                             <td style="text-align: center;">${styleBadge}</td>
