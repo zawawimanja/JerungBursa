@@ -215,8 +215,8 @@ async function main() {
         try {
             const ipos = JSON.parse(fs.readFileSync(ipoDataPath, 'utf8'));
             ipos.forEach(ipo => {
-                const sym = ipo.symbol ? ipo.symbol.toUpperCase().trim() : '';
-                const name = ipo.companyName ? ipo.companyName.toUpperCase().trim() : '';
+                const sym = ipo.symbol ? ipo.symbol.replace(/\[.*?\]/g, '').toUpperCase().trim() : '';
+                const name = ipo.companyName ? ipo.companyName.replace(/\[.*?\]/g, '').toUpperCase().trim() : '';
                 const sec = ipo.sector ? ipo.sector.split(' ')[0] : 'IPO';
                 if (sym) ipoSectors[sym] = sec;
                 if (name) ipoSectors[name] = sec;
@@ -477,8 +477,9 @@ async function main() {
             const ipoList = JSON.parse(fs.readFileSync(ipoDataFilePath, 'utf8'));
             ipoList.forEach(ipo => {
                 if (ipo.symbol) {
+                    const cleanSymbol = ipo.symbol.replace(/\[.*?\]/g, '').toUpperCase().trim();
                     const listingYear = parseInt(ipo.year) || (ipo.listingDate ? parseInt(ipo.listingDate.split('-')[2]) : 0);
-                    ipoMap[ipo.symbol.toUpperCase().trim()] = {
+                    ipoMap[cleanSymbol] = {
                         grade: ipo.predictedGrade || 'Unrated',
                         year: listingYear,
                         ipoPrice: ipo.price
@@ -744,9 +745,10 @@ async function main() {
             const ipoMap = {};
             ipoList.forEach(ipo => {
                 if (ipo.symbol) {
+                    const cleanSymbol = ipo.symbol.replace(/\[.*?\]/g, '').toUpperCase().trim();
                     const listingYear = parseInt(ipo.year) || (ipo.listingDate ? parseInt(ipo.listingDate.split('-')[2]) : 0);
                     if (listingYear >= 2019) {
-                        ipoMap[ipo.symbol.toUpperCase().trim()] = {
+                        ipoMap[cleanSymbol] = {
                             grade: ipo.predictedGrade || 'Unrated',
                             year: listingYear,
                             ipoPrice: ipo.price

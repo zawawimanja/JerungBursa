@@ -443,13 +443,13 @@
         </div>
         <header>
             <h1>Laporan Pengesahan Prestasi Backtest Hibrid VVIP</h1>
-            <p>Penyata bukti telus dan data empirikal prestasi setup Hibrid VVIP (Teknik C) diuji pada pasaran sebenar (3 Jun - Kini).</p>
+            <p>Penyata bukti telus dan data empirikal prestasi setup Hibrid VVIP (Trend Rider) diuji pada pasaran sebenar (3 Jun - Kini).</p>
         </header>
 
         <!-- Metrics Display -->
         <div style="margin-bottom: 2rem;">
             <div class="stat-card seven-day" style="max-width: 100%;">
-                <h2 id="seven-day-title" style="margin-bottom: 1.25rem;">📈 Ringkasan Prestasi Hibrid VVIP (Teknik C)</h2>
+                <h2 id="seven-day-title" style="margin-bottom: 1.25rem;">📈 Ringkasan Prestasi Hibrid VVIP (Trend Rider)</h2>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
                     <div class="stat-row" style="margin-bottom: 0; padding-bottom: 0; border-bottom: none; display: flex; flex-direction: column; align-items: flex-start; gap: 0.25rem;">
                         <span class="stat-label">Kadar Kemenangan Swing</span>
@@ -471,11 +471,11 @@
         <div class="panel" style="margin-bottom: 2rem; background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 2px solid #3b82f6; box-shadow: 0 0 20px rgba(59, 130, 246, 0.15); padding: 1.5rem; border-radius: 16px;">
             <div class="panel-header" style="border-bottom: 1px solid var(--panel-border); padding-bottom: 0.75rem; margin-bottom: 1rem;">
                 <div class="panel-title" style="color: #3b82f6; display: flex; align-items: center; gap: 0.6rem; font-size: 1.25rem; font-weight: 800;">
-                    🏆 Rumusan Strategi Hibrid Premium (Teknik C)
+                    🏆 Rumusan Strategi Hibrid Premium (Trend Rider)
                 </div>
             </div>
             <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem; line-height: 1.6;">
-                Strategi Teknik C menggunakan sistem **VVIP Trend Rider (5-Slot Beli & Peram)** di mana kita membeli kaunter VVIP Premium IPO peringkat teratas dan memegangnya selagi harga bertahan di atas Support Floor (Stop Loss 3%). Tiada sasaran Take Profit yang kaku untuk memaksimumkan keuntungan trend menaik.
+                Strategi Trend Rider menggunakan sistem **VVIP Trend Rider (5-Slot Beli & Peram)** di mana kita membeli kaunter VVIP Premium IPO peringkat teratas dan memegangnya selagi harga bertahan di atas Support Floor (Stop Loss 3%). Tiada sasaran Take Profit yang kaku untuk memaksimumkan keuntungan trend menaik.
             </p>
             <!-- Stats Comparison Grid -->
             <div style="margin-top: 1rem;">
@@ -566,7 +566,7 @@
         <!-- Log Sejarah Transaksi Penuh (Hibrid VVIP) -->
         <div id="panel-hybrid" class="panel">
             <div class="panel-header">
-                <div class="panel-title" style="color: #3b82f6;">Log Sejarah Transaksi Penuh Hibrid VVIP (Teknik C)</div>
+                <div class="panel-title" style="color: #3b82f6;">Log Sejarah Transaksi Penuh Hibrid VVIP (Trend Rider)</div>
             </div>
             <div class="table-container" style="max-height: 550px; overflow-y: auto;">
                 <table>
@@ -592,7 +592,7 @@
 
         <div class="info-footer">
             <strong>💡 Rumusan Pengesahan Kebolehpercayaan Hibrid VVIP:</strong>
-            Sistem backtest ini menggunakan **data arkib pasaran Bursa Malaysia sebenar**. Stop Loss (SL) dikira secara disiplin pada 3% di bawah support floor. Keputusan ini membuktikan bahawa menapis keluar saham bukan-Teknik C dan menumpukan 100% pada hibrid **`🚀 EXPLOSIVE`** dan **`🪜 STAIRCASE`** memberikan kawalan risiko yang mantap dengan kadar kemenangan swing yang konsisten tinggi.
+            Sistem backtest ini menggunakan **data arkib pasaran Bursa Malaysia sebenar**. Stop Loss (SL) dikira secara disiplin pada 3% di bawah support floor. Keputusan ini membuktikan bahawa menapis keluar saham bukan-Trend Rider dan menumpukan 100% pada hibrid **`🚀 EXPLOSIVE`** dan **`🪜 STAIRCASE`** memberikan kawalan risiko yang mantap dengan kadar kemenangan swing yang konsisten tinggi.
         </div>
     </div>
 
@@ -918,7 +918,7 @@
                 'SKYECHIP': 'A', 'PENTECH': 'A', 'ECOSHOP': 'A', 'EMPIRE': 'A', 'SRKK': 'A',
                 'SUM': 'B', 'ELSA': 'B', 'NE': 'B', 'AMBEST': 'B', 'AMS': 'B',
                 'EIPOWER': 'B', 'ISF': 'B', 'KEEMING': 'B', 'TEAMSTR': 'B', 'CBHB': 'B',
-                'HEGROUP': 'B', 'MNHLDG': 'B', 'TMK': 'B', 'YEWLEE': 'B', 'HKB': 'B', 'UUE': 'B',
+                'HEGROUP': 'B', 'MNHLDG': 'B', 'TMK': 'B', 'YEWLEE': 'B', 'HKB': 'B', 'UUE': 'B', '3REN': 'B',
                 'MMCS': 'C', 'GDGROUP': 'C', 'GOLDLI': 'C', 'HOCKSOON': 'C', 'OGX': 'C', 'SBS': 'C'
             };
 
@@ -985,7 +985,7 @@
             if (limitSelect) limitVal = limitSelect.value;
             if (turnoverSelect) minTurnover = parseFloat(turnoverSelect.value);
 
-            // Compute Option C Hybrid Premium stats dynamically
+            // Compute Trend Rider Hybrid Premium stats dynamically
             const hybridTrades = [];
             const datesList = [...new Set(fullData.map(r => r.date))].sort();
             
