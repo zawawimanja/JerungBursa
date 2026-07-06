@@ -693,7 +693,7 @@
                 <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
 
                     <button onclick="copyHybridWatchlist()" style="background: #3b82f6; color: white; border: none; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 800; font-size: 0.82rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: transform 0.2s; box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                        📋 Copy Hybrid (TV)
+                        📋 Copy Watchlist (TV)
                     </button>
                 </div>
             </div>
@@ -1296,7 +1296,7 @@
             });
             
             if (listToCopy.length === 0) {
-                alert("Tiada kaunter Hybrid hari ini untuk disalin.");
+                alert("Tiada kaunter Trend Rider hari ini untuk disalin.");
                 return;
             }
             
@@ -1304,7 +1304,7 @@
             navigator.clipboard.writeText(tvList).then(() => {
                 const btn = document.querySelector('button[onclick="copyHybridWatchlist()"]');
                 const origText = btn.innerHTML;
-                btn.innerHTML = '✅ Copied Hybrid!';
+                btn.innerHTML = '✅ Copied Watchlist!';
                 btn.style.background = '#10b981';
                 btn.style.color = '#0f172a';
                 setTimeout(() => {
@@ -1313,7 +1313,7 @@
                     btn.style.color = 'white';
                 }, 2000);
             }).catch(err => {
-                alert('Failed to copy Hybrid: ' + err);
+                alert('Failed to copy Watchlist: ' + err);
             });
         }
 
