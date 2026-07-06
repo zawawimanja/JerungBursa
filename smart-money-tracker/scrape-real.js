@@ -577,15 +577,19 @@ async function main() {
         }
         
         // Determine signal based on formulas
+        const distToFloor = stock.floorLow ? (((stock.price - stock.floorLow) / stock.floorLow) * 100) : 0;
         let signal = 'avoid';
         let reason = 'Selling Pressure / Flat';
-        
+
         if (stock.isCombStock) {
             signal = 'avoid';
             reason = '⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)';
         } else if (setupName === '🧊 Downtrend / Avoid') {
             signal = 'avoid';
             reason = '🧊 Downtrend Stock: Avoid Trading!';
+        } else if (stock.floorLow && distToFloor > 15.0) {
+            signal = 'avoid';
+            reason = `⚠️ Overextended: Jauh dari Lantai Sokongan (+${distToFloor.toFixed(1)}% dari floor)`;
         } else if (stock.isConsolidation) {
             if (turnover < 250000) {
                 signal = 'avoid';

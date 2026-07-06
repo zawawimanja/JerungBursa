@@ -849,21 +849,23 @@
             });
         }
 
-        // Helper to identify comb stocks (saham tidur), illiquid stocks, or downtrend/avoid stocks
         function isSleepingOrAvoidStock(item) {
             if (!item) return false;
             
+            // Overextended or illiquid stocks are ALWAYS avoided, even for Fresh IPOs!
+            if (item.isCombStock) return true;
+            
+            const reason = (item.reason || '').toUpperCase();
+            if (reason.includes('OVEREXTENDED') || reason.includes('ILLIQUID')) return true;
+
             // Only fresh IPOs are exempt from downtrend / avoid filtering, allowing multiple entry setups on pullback!
             // Mature IPOs (and non-IPOs) must still follow the downtrend / avoid filtering.
             if (isFreshIpo(item)) return false;
 
-            if (item.isCombStock) return true;
-            
             const setup = (item.setupName || '').toUpperCase();
             if (setup.includes('DOWNTREND') || setup.includes('AVOID') || setup === 'N/A') return true;
             
-            const reason = (item.reason || '').toUpperCase();
-            if (reason.includes('COMB') || reason.includes('AVOID') || reason.includes('ILLIQUID')) return true;
+            if (reason.includes('COMB') || reason.includes('AVOID')) return true;
             
             return false;
         }
