@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JerungBursa - Formula & Kriteria VVIP</title>
+    <title>JerungBursa - Formula & Kriteria VVIP IPO Trend Rider</title>
     <!-- Inter Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -297,20 +297,20 @@
             <a href="./sop.html" class="btn-nav">📘 Panduan SOP</a>
         </div>
         <header>
-            <h1>Formula & Kriteria VVIP</h1>
-            <p>SOP Penyaringan Hibrid Pintar untuk Swing Trading Berketepatan Tinggi</p>
+            <h1>Formula & Kriteria VVIP IPO Trend Rider</h1>
+            <p>SOP Penapisan Pintar untuk Menunggang Trend Saham IPO Premium Berketepatan Tinggi</p>
         </header>
 
         <!-- Core Formula Panel -->
         <div class="panel" style="border-color: rgba(245, 158, 11, 0.3); box-shadow: 0 0 25px rgba(245, 158, 11, 0.08);">
             <div class="panel-title" style="color: var(--vvip-color); border-color: rgba(245, 158, 11, 0.2);">
-                <span>🔥</span> Formula Utama VVIP
+                <span>🔥</span> Formula Utama VVIP IPO Trend Rider
             </div>
             <p style="color: var(--text-secondary); font-size: 0.98rem; line-height: 1.6;">
                 Sesebuah kaunter hanya layak dicalonkan dan memaparkan lencana <strong>🔥 VVIP</strong> di dashboard sekiranya ia melepasi tapisan asas pangkalan data (Backend) dan berjaya mengumpul markah minimum pada dashboard (Frontend):
             </p>
             <div class="formula-box">
-                VVIP = (Aktif Semalam & Hari Ini) AND (Bukan Comb/Downtrend) AND (Smart Score &ge; 12)
+                VVIP IPO = (Turnover ≥ RM 400k) AND (Bukan Comb) AND (Exempted from Downtrend if Fresh) AND (Score ≥ 10 for Grade A/B, 11 for Grade C, 12 for Mature)
             </div>
             <p style="color: var(--text-muted); font-size: 0.85rem; text-align: center;">
                 *Formula ini menjamin kaunter mempunyai kecairan aktif, dalam fasa pullback/tapak tegar yang sihat, dan berada pada risiko minimum (SL 3%).
@@ -402,9 +402,19 @@
             <div class="panel-title" style="color: var(--accent); border-color: rgba(59, 130, 246, 0.15);">
                 <span>🧮</span> Kalkulator Simulasi Smart Score
             </div>
-            <p style="font-size: 0.92rem; color: var(--text-secondary);">
+            <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1rem;">
                 Pilih kriteria teknikal saham pilihan abang untuk melihat simulasi pemarkahan dan keputusan kelayakan VVIP:
             </p>
+            
+            <div style="margin-bottom: 1.5rem; background: rgba(15, 23, 42, 0.4); padding: 1rem; border-radius: 8px; border: 1px solid var(--panel-border);">
+                <label style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 0.5rem; display: block;">Pilih Gred IPO untuk Had Kelayakan VVIP:</label>
+                <select id="calcGrade" onchange="calculateScore()" style="background: rgba(15, 23, 42, 0.8); border: 1px solid var(--panel-border); padding: 0.5rem 1rem; border-radius: 6px; color: white; font-weight: 700; outline: none; font-family: inherit; cursor: pointer; width: 100%; max-width: 320px;">
+                    <option value="A">Grade A (Kelayakan VVIP ≥ 10 Mata)</option>
+                    <option value="B">Grade B (Kelayakan VVIP ≥ 10 Mata)</option>
+                    <option value="C">Grade C (Kelayakan VVIP ≥ 11 Mata)</option>
+                    <option value="Mature">Mature / Lain-lain (Kelayakan VVIP ≥ 12 Mata)</option>
+                </select>
+            </div>
 
             <div class="calc-grid">
                 <!-- Group 1: Jarak Lantai -->
@@ -585,12 +595,15 @@
 
             document.getElementById('scoreVal').innerText = total;
 
+            const grade = document.getElementById('calcGrade').value;
+            const minRequired = (grade === 'A' || grade === 'B') ? 10 : (grade === 'C' ? 11 : 12);
+
             const verdict = document.getElementById('verdictBadge');
-            if (total >= 12) {
-                verdict.innerText = "🔥 VVIP Approved";
+            if (total >= minRequired) {
+                verdict.innerText = `🔥 VVIP Approved (Min: ${minRequired})`;
                 verdict.className = "verdict-badge verdict-approved";
             } else {
-                verdict.innerText = "⚠️ Under Scrutiny (Score < 12)";
+                verdict.innerText = `⚠️ Under Scrutiny (Score < ${minRequired})`;
                 verdict.className = "verdict-badge verdict-pending";
             }
         }
