@@ -678,8 +678,11 @@
 
     <!-- KAMPUS IPO: DEFINISI FRESH, MATURE & NON-IPO -->
     <div class="guide-board" style="margin-top: 1.5rem; margin-bottom: 2rem;">
-        <h3>🎓 Kamus Kategori Saham (Kriteria Umur IPO)</h3>
-        <div class="guide-grid">
+        <h3 onclick="toggleKamus()" style="cursor: pointer; display: flex; align-items: center; justify-content: space-between; margin: 0; padding: 0.2rem 0; user-select: none;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+            <span>🎓 Kamus Kategori Saham (Kriteria Umur IPO)</span>
+            <span id="kamus-toggle-icon" style="font-size: 0.85rem; color: #3b82f6;">▼</span>
+        </h3>
+        <div id="kamus-content" class="guide-grid" style="display: none; margin-top: 1rem;">
             <div class="guide-item" style="border-left-color: #34d399;">
                 <h4>✨ Fresh IPO (Listing 2025 - 2026)</h4>
                 <p>Kaunter hangat yang baru tersenarai di pasaran (kurang 2 tahun). Kartanya masih baru dan harga bergerak cergas berdasarkan minat pasaran semasa (Minima Skor &ge; 10).</p>
@@ -805,6 +808,19 @@
 
 
     <script>
+        // Toggle function for Kamus Kategori Saham (hidden by default)
+        function toggleKamus() {
+            const content = document.getElementById('kamus-content');
+            const icon = document.getElementById('kamus-toggle-icon');
+            if (content.style.display === 'none') {
+                content.style.display = 'grid';
+                icon.textContent = '▲';
+            } else {
+                content.style.display = 'none';
+                icon.textContent = '▼';
+            }
+        }
+
         // Global variables
         let currentData = [];
         let currentSortColumn = 'turnover';
