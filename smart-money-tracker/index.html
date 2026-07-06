@@ -1485,6 +1485,13 @@
                     return styleRankA - styleRankB; // Sort EXPLOSIVE to the top
                 }
 
+                // Sort by Smart Score descending (Highest Score first)
+                const scoreA = calculateSmartScore(a);
+                const scoreB = calculateSmartScore(b);
+                if (scoreA !== scoreB) {
+                    return scoreB - scoreA;
+                }
+
                 const floorA = a.floorLow || (a.price * 0.95);
                 const distA = ((a.price - floorA) / floorA) * 100;
                 
