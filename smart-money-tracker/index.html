@@ -663,10 +663,14 @@
             <div class="ipo-filter-container" style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.45rem 0.8rem; border-radius: 8px; border: 1px solid rgba(96, 165, 250, 0.35); transition: all 0.2s ease-in-out;">
                 <label for="ipoAgeFilter" style="color: #60a5fa; font-size: 0.85rem; font-weight: 800; display: flex; align-items: center; gap: 0.25rem; cursor: pointer; user-select: none;">✨ IPO Status:</label>
                 <select id="ipoAgeFilter" style="background: rgba(15, 23, 42, 0.9); color: white; border: 1px solid rgba(96, 165, 250, 0.5); border-radius: 6px; padding: 0.2rem 0.5rem; font-size: 0.8rem; font-weight: 700; cursor: pointer; outline: none; font-family: inherit;">
-                    <option value="ALL_IPO" selected>💎 All IPOs (Fresh + Mature)</option>
-                    <option value="FRESH">✨ Fresh IPOs Only</option>
+                    <option value="FRESH" selected>✨ Fresh IPOs Only</option>
                     <option value="MATURE">🧱 Mature IPOs Only</option>
+                    <option value="NON_IPO">🏢 Non-IPOs Only</option>
                 </select>
+            </div>
+            <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.45rem 0.8rem; border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.35);">
+                <input type="checkbox" id="strictEntryFilter" style="cursor: pointer; width: 16px; height: 16px;">
+                <label for="strictEntryFilter" style="color: #34d399; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none;">🎯 Hanya Entry Baru (Floor ≤ 5%)</label>
             </div>
             <button id="refreshBtn" class="btn">🔄 Refresh Live</button>
         </div>
@@ -845,11 +849,12 @@
             return false;
         }
 
-        // Helper to match IPO age filter (All, Fresh, Mature, All IPO)
+        // Helper to match IPO age filter (All, Fresh, Mature, All IPO, Non-IPO)
         function matchesIpoAgeFilter(item, filterValue) {
             if (!filterValue || filterValue === 'ALL') return true;
             
             const isIpo = !!item.ipoGrade;
+            if (filterValue === 'NON_IPO') return !isIpo;
             if (filterValue === 'ALL_IPO') return isIpo;
             if (!isIpo) return false;
             
@@ -1155,6 +1160,14 @@
                 const ipoAgeFilterVal = document.getElementById('ipoAgeFilter') ? document.getElementById('ipoAgeFilter').value : 'ALL_IPO';
                 if (!matchesIpoAgeFilter(item, ipoAgeFilterVal)) return false;
 
+                // Strict risk management: If checked, price must not be > 5% away from support floor
+                const strictEntryVal = document.getElementById('strictEntryFilter') ? document.getElementById('strictEntryFilter').checked : false;
+                if (strictEntryVal) {
+                    const floor = item.floorLow || (item.price * 0.95);
+                    const distToFloor = ((item.price - floor) / floor) * 100;
+                    if (distToFloor > 5.0) return false;
+                }
+
                 const pct = item.changePct !== undefined ? item.changePct : item.change;
                 const pb = item.pullback !== null ? item.pullback : 0;
                 const style = item.setupStyle || (
@@ -1342,6 +1355,10 @@
             fetchLiveData();
 
             document.getElementById('ipoAgeFilter').addEventListener('change', function() {
+                applyFilters();
+            });
+
+            document.getElementById('strictEntryFilter').addEventListener('change', function() {
                 applyFilters();
             });
 

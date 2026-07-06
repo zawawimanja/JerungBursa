@@ -745,7 +745,7 @@ async function main() {
             ipoList.forEach(ipo => {
                 if (ipo.symbol) {
                     const listingYear = parseInt(ipo.year) || (ipo.listingDate ? parseInt(ipo.listingDate.split('-')[2]) : 0);
-                    if (listingYear >= 2000) {
+                    if (listingYear >= 2019) {
                         ipoMap[ipo.symbol.toUpperCase().trim()] = {
                             grade: ipo.predictedGrade || 'Unrated',
                             year: listingYear,
