@@ -66,17 +66,6 @@
     "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)"
   },
   {
-    "name": "SUNWAY",
-    "sector": "Auto-Scanned",
-    "category": "Swing / Mid-Cap",
-    "price": 5.3,
-    "change": 1.2,
-    "turnover": 47579690,
-    "volume": 8977300,
-    "signal": "buy",
-    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)"
-  },
-  {
     "name": "MPI",
     "sector": "Auto-Scanned",
     "category": "Swing / Mid-Cap",
@@ -107,7 +96,11 @@
     "turnover": 35718236,
     "volume": 13327700,
     "signal": "buy",
-    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)"
+    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)",
+    "ipoGrade": "C",
+    "ipoYear": 2019,
+    "ipoPrice": 0.61,
+    "shariah": true
   },
   {
     "name": "KGB",
@@ -151,7 +144,11 @@
     "turnover": 21021520,
     "volume": 3624400,
     "signal": "avoid",
-    "reason": "⚠️ Jerung Buang Barang / Markup"
+    "reason": "⚠️ Jerung Buang Barang / Markup",
+    "ipoGrade": "A",
+    "ipoYear": 2019,
+    "ipoPrice": 0.82,
+    "shariah": true
   },
   {
     "name": "MI",
@@ -173,7 +170,11 @@
     "turnover": 17810068,
     "volume": 23434300,
     "signal": "buy",
-    "reason": "⚡ Momentum Kuat (Harga Sedang Mencanak Naik Laju)"
+    "reason": "⚡ Momentum Kuat (Harga Sedang Mencanak Naik Laju)",
+    "ipoGrade": "B",
+    "ipoYear": 2023,
+    "ipoPrice": 0.38,
+    "shariah": true
   },
   {
     "name": "PENTA",

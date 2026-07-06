@@ -44,17 +44,6 @@
     "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)"
   },
   {
-    "name": "SUNWAY",
-    "sector": "Auto-Scanned",
-    "category": "Swing / Mid-Cap",
-    "price": 5.4,
-    "change": 1.9,
-    "turnover": 137636820,
-    "volume": 25488300,
-    "signal": "buy",
-    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)"
-  },
-  {
     "name": "NATGATE",
     "sector": "Auto-Scanned",
     "category": "Intraday / Momentum",
@@ -63,7 +52,11 @@
     "turnover": 131761168,
     "volume": 149728600,
     "signal": "buy",
-    "reason": "🚨 OVERBOUGHT (Dah Terbang, Awas Kena Dump)"
+    "reason": "🚨 OVERBOUGHT (Dah Terbang, Awas Kena Dump)",
+    "ipoGrade": "B",
+    "ipoYear": 2023,
+    "ipoPrice": 0.38,
+    "shariah": true
   },
   {
     "name": "IJM",
@@ -140,7 +133,11 @@
     "turnover": 41461967,
     "volume": 6991900,
     "signal": "buy",
-    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)"
+    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)",
+    "ipoGrade": "A",
+    "ipoYear": 2019,
+    "ipoPrice": 0.82,
+    "shariah": true
   },
   {
     "name": "MPI",
@@ -184,7 +181,11 @@
     "turnover": 32852163,
     "volume": 12212700,
     "signal": "buy",
-    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)"
+    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)",
+    "ipoGrade": "C",
+    "ipoYear": 2019,
+    "ipoPrice": 0.61,
+    "shariah": true
   },
   {
     "name": "PENTA",

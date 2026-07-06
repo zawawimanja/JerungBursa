@@ -358,32 +358,6 @@
       "isVvip": true
     },
     {
-      "name": "YTLPOWR",
-      "sector": "Bursa",
-      "category": "Swing / Bluechip",
-      "setupStyle": "STAIRCASE",
-      "price": 4.119999885559082,
-      "change": -0.07999992370605469,
-      "changePct": -1.9,
-      "turnover": 34469155.04255295,
-      "volume": 8366300,
-      "signal": "buy",
-      "reason": "🔒 Tapak Tegar (7x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold)",
-      "high52": 4.420000076293945,
-      "pullback": 6.79,
-      "setupName": "📉 Healthy Dip",
-      "closeTightness": 1.94,
-      "lowTightness": 0.98,
-      "touchCount": 7,
-      "isConsolidation": true,
-      "floorLow": 4.099999904632568,
-      "hasLowerWickRejection": false,
-      "isCombStock": false,
-      "sma50": 4.019599995613098,
-      "sma200": 3.6390999937057495,
-      "isVvip": true
-    },
-    {
       "name": "MPI",
       "sector": "Bursa",
       "category": "Swing / Bluechip",
@@ -537,7 +511,11 @@
       "isCombStock": false,
       "sma50": 5.445599956512451,
       "sma200": 4.353750005960465,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "A",
+      "ipoYear": 2019,
+      "ipoPrice": 0.82,
+      "shariah": true
     },
     {
       "name": "JPG",
@@ -562,7 +540,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 1.760400002002716,
-      "sma200": 1.5991999953985214
+      "sma200": 1.5991999953985214,
+      "ipoGrade": "C",
+      "ipoYear": 2024,
+      "ipoPrice": 0.84,
+      "shariah": true
     },
     {
       "name": "SUNMED",
@@ -587,32 +569,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 1.8313999962806702,
-      "sma200": 1.8768181746656245
-    },
-    {
-      "name": "SUNWAY",
-      "sector": "Bursa",
-      "category": "Swing / Bluechip",
-      "setupStyle": "SWING PLAY",
-      "price": 1.8200000524520874,
-      "change": -0.019999980926513672,
-      "changePct": -1.09,
-      "turnover": 25774112.74280548,
-      "volume": 14161600,
-      "signal": "avoid",
-      "reason": "🧊 Saham Downtrend: Elak Trading!",
-      "high52": 2.4600000381469727,
-      "pullback": 26.02,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 2.79,
-      "lowTightness": 1.7,
-      "touchCount": 10,
-      "isConsolidation": false,
-      "floorLow": 1.7599999904632568,
-      "hasLowerWickRejection": true,
-      "isCombStock": false,
-      "sma50": 1.8313999962806702,
-      "sma200": 1.8768181746656245
+      "sma200": 1.8768181746656245,
+      "ipoGrade": "A",
+      "ipoYear": 2026,
+      "ipoPrice": 1.45,
+      "shariah": true
     },
     {
       "name": "SUNCON",
@@ -714,7 +675,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 2.4762000131607054,
-      "sma200": 2.0291499972343443
+      "sma200": 2.0291499972343443,
+      "ipoGrade": "C",
+      "ipoYear": 2019,
+      "ipoPrice": 0.61,
+      "shariah": true
     },
     {
       "name": "MI",
@@ -887,7 +852,11 @@
       "isCombStock": false,
       "sma50": 0.31333333253860474,
       "sma200": 0.31333333253860474,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "A",
+      "ipoYear": 2026,
+      "ipoPrice": 0.2,
+      "shariah": true
     },
     {
       "name": "MCEMENT",
@@ -913,32 +882,6 @@
       "isCombStock": false,
       "sma50": 6.950199985504151,
       "sma200": 7.045099995136261
-    },
-    {
-      "name": "SKYECHIP",
-      "sector": "Technology",
-      "category": "Swing / Bluechip",
-      "setupStyle": "SWING PLAY",
-      "price": 3.5999999046325684,
-      "change": 0.019999980926513672,
-      "changePct": 0.56,
-      "turnover": 12765959.66181755,
-      "volume": 3546100,
-      "signal": "buy",
-      "reason": "🔒 Tapak Tegar (5x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold)",
-      "high52": 4.150000095367432,
-      "pullback": 13.25,
-      "setupName": "📉 Healthy Dip",
-      "closeTightness": 0.84,
-      "lowTightness": 7.85,
-      "touchCount": 5,
-      "isConsolidation": true,
-      "floorLow": 3.309999942779541,
-      "hasLowerWickRejection": true,
-      "isCombStock": false,
-      "sma50": 3.421999983787537,
-      "sma200": 3.3870500004291535,
-      "isVvip": true
     },
     {
       "name": "SKYCHIP",
@@ -1016,7 +959,11 @@
       "isCombStock": false,
       "sma50": 1.6278000092506408,
       "sma200": 1.6343500006198883,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "C",
+      "ipoYear": 2020,
+      "ipoPrice": 1.6,
+      "shariah": true
     },
     {
       "name": "MNHLDG",
@@ -1042,7 +989,11 @@
       "isCombStock": false,
       "sma50": 2.340800018310547,
       "sma200": 1.8726500058174134,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B",
+      "ipoYear": 2022,
+      "ipoPrice": 0.21,
+      "shariah": true
     },
     {
       "name": "NATGATE",
@@ -1067,7 +1018,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.7770000004768371,
-      "sma200": 0.9511249992251396
+      "sma200": 0.9511249992251396,
+      "ipoGrade": "B",
+      "ipoYear": 2023,
+      "ipoPrice": 0.38,
+      "shariah": true
     },
     {
       "name": "VSTECS",
@@ -1143,7 +1098,11 @@
       "isCombStock": false,
       "sma50": 2.0591999816894533,
       "sma200": 2.0939499813318254,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "C",
+      "ipoYear": 2020,
+      "ipoPrice": 0.34,
+      "shariah": true
     },
     {
       "name": "OPPSTAR",
@@ -1168,7 +1127,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.5151000028848648,
-      "sma200": 0.4088500000536442
+      "sma200": 0.4088500000536442,
+      "ipoGrade": "B",
+      "ipoYear": 2023,
+      "ipoPrice": 0.63,
+      "shariah": true
     },
     {
       "name": "CBHB",
@@ -1194,7 +1157,11 @@
       "isCombStock": false,
       "sma50": 0.6062000024318696,
       "sma200": 0.519474999755621,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B",
+      "ipoYear": 2025,
+      "ipoPrice": 0.28,
+      "shariah": true
     },
     {
       "name": "QL",
@@ -1246,7 +1213,11 @@
       "isCombStock": false,
       "sma50": 1.448900010585785,
       "sma200": 1.1082727280530063,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B",
+      "ipoYear": 2025,
+      "ipoPrice": 0.31,
+      "shariah": true
     },
     {
       "name": "TANCO",
@@ -1297,7 +1268,11 @@
       "isCombStock": false,
       "sma50": 1.262599995136261,
       "sma200": 1.4045500028133393,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "A",
+      "ipoYear": 2025,
+      "ipoPrice": 1.13,
+      "shariah": true
     },
     {
       "name": "PPB",
@@ -1325,32 +1300,6 @@
       "sma200": 10.826800050735473
     },
     {
-      "name": "SOLARVEST HOLDINGS BERHAD",
-      "sector": "Bursa",
-      "category": "Swing / Bluechip",
-      "setupStyle": "SWING PLAY",
-      "price": 2.930000066757202,
-      "change": -0.08999991416931152,
-      "changePct": -2.98,
-      "turnover": 6394139.145684242,
-      "volume": 2182300,
-      "signal": "buy",
-      "reason": "🔒 Tapak Tegar (4x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold)",
-      "high52": 3.390000104904175,
-      "pullback": 13.57,
-      "setupName": "📉 Healthy Dip",
-      "closeTightness": 3.41,
-      "lowTightness": 4.21,
-      "touchCount": 4,
-      "isConsolidation": true,
-      "floorLow": 2.8499999046325684,
-      "hasLowerWickRejection": false,
-      "isCombStock": false,
-      "sma50": 2.8171999883651733,
-      "sma200": 2.7574999994039535,
-      "isVvip": true
-    },
-    {
       "name": "SLVEST",
       "sector": "Bursa",
       "category": "Swing / Bluechip",
@@ -1374,7 +1323,11 @@
       "isCombStock": false,
       "sma50": 2.8171999883651733,
       "sma200": 2.7574999994039535,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B",
+      "ipoYear": 2019,
+      "ipoPrice": 0.35,
+      "shariah": true
     },
     {
       "name": "NESTLE",
@@ -1425,7 +1378,11 @@
       "isCombStock": false,
       "sma50": 1.0353999984264375,
       "sma200": 0.9123295430432666,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B",
+      "ipoYear": 2026,
+      "ipoPrice": 0.38,
+      "shariah": true
     },
     {
       "name": "AMS",
@@ -1451,33 +1408,11 @@
       "isCombStock": false,
       "sma50": 0.3619512225069651,
       "sma200": 0.3619512225069651,
-      "isVvip": true
-    },
-    {
-      "name": "AMS ADVANCED MATERIAL BERHAD",
-      "sector": "Bursa",
-      "category": "Intraday / Momentum",
-      "setupStyle": "SWING PLAY",
-      "price": 0.3700000047683716,
-      "change": -0.030000001192092896,
-      "changePct": -7.5,
-      "turnover": 5792424.074649811,
-      "volume": 15655200,
-      "signal": "avoid",
-      "reason": "VIP Sideway / Pullback (Pantau Peluang)",
-      "high52": 0.42500001192092896,
-      "pullback": 12.94,
-      "setupName": "📉 Healthy Dip",
-      "closeTightness": 8.11,
-      "lowTightness": 9.72,
-      "touchCount": 3,
-      "isConsolidation": false,
-      "floorLow": 0.36000001430511475,
-      "hasLowerWickRejection": false,
-      "isCombStock": false,
-      "sma50": 0.3619512225069651,
-      "sma200": 0.3619512225069651,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B",
+      "ipoYear": 2026,
+      "ipoPrice": 0.29,
+      "shariah": true
     },
     {
       "name": "CTOS",
@@ -1502,7 +1437,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.6740000009536743,
-      "sma200": 0.7976499980688095
+      "sma200": 0.7976499980688095,
+      "ipoGrade": "A",
+      "ipoYear": 2021,
+      "ipoPrice": 1.1,
+      "shariah": true
     },
     {
       "name": "ITMAX",
@@ -1527,7 +1466,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 4.805799999237061,
-      "sma200": 4.702649986743927
+      "sma200": 4.702649986743927,
+      "ipoGrade": "A",
+      "ipoYear": 2022,
+      "ipoPrice": 1.07,
+      "shariah": true
     },
     {
       "name": "EIPOWER",
@@ -1553,59 +1496,11 @@
       "isCombStock": false,
       "sma50": 0.6120454587719657,
       "sma200": 0.6120454587719657,
-      "isVvip": true
-    },
-    {
-      "name": "EI POWER BERHAD [S]",
-      "sector": "Bursa",
-      "category": "Intraday / Momentum",
-      "setupStyle": "SWING PLAY",
-      "price": 0.6600000262260437,
-      "change": -0.029999971389770508,
-      "changePct": -4.35,
-      "turnover": 5237628.208124638,
-      "volume": 7935800,
-      "signal": "buy",
-      "reason": "🔒 Tapak Tegar (2x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold)",
-      "high52": 0.7350000143051147,
-      "pullback": 10.2,
-      "setupName": "📉 Healthy Dip",
-      "closeTightness": 4.55,
-      "lowTightness": 5.38,
-      "touchCount": 2,
-      "isConsolidation": true,
-      "floorLow": 0.6499999761581421,
-      "hasLowerWickRejection": false,
-      "isCombStock": false,
-      "sma50": 0.6120454587719657,
-      "sma200": 0.6120454587719657,
-      "isVvip": true
-    },
-    {
-      "name": "EMPIRE PREMIUM FOOD BERHAD",
-      "sector": "Bursa",
-      "category": "Intraday / Momentum",
-      "setupStyle": "SWING PLAY",
-      "price": 1.0499999523162842,
-      "change": 0,
-      "changePct": 0,
-      "turnover": 5102054.768300056,
-      "volume": 4859100,
-      "signal": "buy",
-      "reason": "🔒 Tapak Tegar (8x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold)",
-      "high52": 1.2100000381469727,
-      "pullback": 13.22,
-      "setupName": "📉 Healthy Dip",
-      "closeTightness": 0.95,
-      "lowTightness": 2.94,
-      "touchCount": 8,
-      "isConsolidation": true,
-      "floorLow": 1.0199999809265137,
-      "hasLowerWickRejection": true,
-      "isCombStock": false,
-      "sma50": 1.0028888795110915,
-      "sma200": 1.0028888795110915,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B",
+      "ipoYear": 2026,
+      "ipoPrice": 0.48,
+      "shariah": true
     },
     {
       "name": "EMPIRE",
@@ -1631,7 +1526,11 @@
       "isCombStock": false,
       "sma50": 1.0028888795110915,
       "sma200": 1.0028888795110915,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "A",
+      "ipoYear": 2026,
+      "ipoPrice": 0.7,
+      "shariah": true
     },
     {
       "name": "VS",
@@ -1681,7 +1580,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.8607000005245209,
-      "sma200": 0.9251750001311302
+      "sma200": 0.9251750001311302,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.29,
+      "shariah": true
     },
     {
       "name": "PWRWELL",
@@ -1707,7 +1610,11 @@
       "isCombStock": false,
       "sma50": 0.7582999992370606,
       "sma200": 0.640874997973442,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "C",
+      "ipoYear": 2020,
+      "ipoPrice": 0.25,
+      "shariah": true
     },
     {
       "name": "RAMSSOL",
@@ -1732,7 +1639,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.7241000056266784,
-      "sma200": 0.8911499962210655
+      "sma200": 0.8911499962210655,
+      "ipoGrade": "B",
+      "ipoYear": 2021,
+      "ipoPrice": 0.45,
+      "shariah": true
     },
     {
       "name": "HEGROUP",
@@ -1758,7 +1669,10 @@
       "isCombStock": false,
       "sma50": 0.40190000176429747,
       "sma200": 0.36597500056028365,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.28
     },
     {
       "name": "CORAZA",
@@ -1784,7 +1698,11 @@
       "isCombStock": false,
       "sma50": 0.8826999926567077,
       "sma200": 0.6580249997973442,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B",
+      "ipoYear": 2022,
+      "ipoPrice": 0.28,
+      "shariah": true
     },
     {
       "name": "NE",
@@ -1810,33 +1728,11 @@
       "isCombStock": false,
       "sma50": 0.9292999947071076,
       "sma200": 0.7682499986886978,
-      "isVvip": true
-    },
-    {
-      "name": "NORTHEAST GROUP BERHAD",
-      "sector": "Bursa",
-      "category": "Intraday / Momentum",
-      "setupStyle": "STAIRCASE",
-      "price": 1.0199999809265137,
-      "change": -0.039999961853027344,
-      "changePct": -3.77,
-      "turnover": 3955151.9260406494,
-      "volume": 3877600,
-      "signal": "avoid",
-      "reason": "VIP Sideway / Pullback (Pantau Peluang)",
-      "high52": 1.1299999952316284,
-      "pullback": 9.73,
-      "setupName": "📉 Healthy Dip",
-      "closeTightness": 6.86,
-      "lowTightness": 5.53,
-      "touchCount": 4,
-      "isConsolidation": false,
-      "floorLow": 0.9950000047683716,
-      "hasLowerWickRejection": true,
-      "isCombStock": false,
-      "sma50": 0.9292999947071076,
-      "sma200": 0.7682499986886978,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "A",
+      "ipoYear": 2024,
+      "ipoPrice": 0.5,
+      "shariah": true
     },
     {
       "name": "CARLSBG",
@@ -1912,7 +1808,11 @@
       "isCombStock": false,
       "sma50": 0.20439999803900719,
       "sma200": 0.15589999940246344,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B",
+      "ipoYear": 2022,
+      "ipoPrice": 0.3,
+      "shariah": true
     },
     {
       "name": "SAMAIDEN",
@@ -1938,7 +1838,11 @@
       "isCombStock": false,
       "sma50": 1.2792000007629394,
       "sma200": 1.2763750025629996,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B",
+      "ipoYear": 2020,
+      "ipoPrice": 0.48,
+      "shariah": true
     },
     {
       "name": "ISF",
@@ -1963,7 +1867,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.5212999951839447,
-      "sma200": 0.4815306088754109
+      "sma200": 0.4815306088754109,
+      "ipoGrade": "B",
+      "ipoYear": 2026,
+      "ipoPrice": 0.33,
+      "shariah": true
     },
     {
       "name": "KOPI",
@@ -1988,32 +1896,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 1.0443999993801116,
-      "sma200": 1.232799998819828
-    },
-    {
-      "name": "ORIENTAL KOPI HOLDINGS",
-      "sector": "Bursa",
-      "category": "Intraday / Momentum",
-      "setupStyle": "SWING PLAY",
-      "price": 0.9549999833106995,
-      "change": 0.004999995231628418,
-      "changePct": 0.53,
-      "turnover": 3376020.4410016537,
-      "volume": 3535100,
-      "signal": "avoid",
-      "reason": "🧊 Saham Downtrend: Elak Trading!",
-      "high52": 1.6100000143051147,
-      "pullback": 40.68,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 2.11,
-      "lowTightness": 3.23,
-      "touchCount": 3,
-      "isConsolidation": false,
-      "floorLow": 0.9300000071525574,
-      "hasLowerWickRejection": true,
-      "isCombStock": false,
-      "sma50": 1.0443999993801116,
-      "sma200": 1.232799998819828
+      "sma200": 1.232799998819828,
+      "ipoGrade": "B",
+      "ipoYear": 2025,
+      "ipoPrice": 0.44,
+      "shariah": true
     },
     {
       "name": "SENHENG",
@@ -2038,7 +1925,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.17460000202059744,
-      "sma200": 0.18062500078231097
+      "sma200": 0.18062500078231097,
+      "ipoGrade": "C",
+      "ipoYear": 2022,
+      "ipoPrice": 1.07,
+      "shariah": true
     },
     {
       "name": "YEWLEE",
@@ -2064,33 +1955,11 @@
       "isCombStock": false,
       "sma50": 0.5631999981403351,
       "sma200": 0.46862499877810476,
-      "isVvip": true
-    },
-    {
-      "name": "MTT SHIPPING AND LOGISTICS BHD",
-      "sector": "Bursa",
-      "category": "Intraday / Momentum",
-      "setupStyle": "SWING PLAY",
-      "price": 0.9449999928474426,
-      "change": -0.009999990463256836,
-      "changePct": -1.05,
-      "turnover": 3142597.4762141705,
-      "volume": 3325500,
-      "signal": "buy",
-      "reason": "🔒 Tapak Tegar (6x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold)",
-      "high52": 1.0800000429153442,
-      "pullback": 12.5,
-      "setupName": "📉 Healthy Dip",
-      "closeTightness": 1.06,
-      "lowTightness": 1.07,
-      "touchCount": 6,
-      "isConsolidation": true,
-      "floorLow": 0.9350000023841858,
-      "hasLowerWickRejection": true,
-      "isCombStock": false,
-      "sma50": 0.9331395334975664,
-      "sma200": 0.9331395334975664,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "C",
+      "ipoYear": 2022,
+      "ipoPrice": 0.28,
+      "shariah": true
     },
     {
       "name": "MTTSL",
@@ -2102,8 +1971,8 @@
       "changePct": -1.05,
       "turnover": 3142597.4762141705,
       "volume": 3325500,
-      "signal": "buy",
-      "reason": "🔒 Tapak Tegar (6x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold)",
+      "signal": "avoid",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.945 < IPO RM 1.030)",
       "high52": 1.0800000429153442,
       "pullback": 12.5,
       "setupName": "📉 Healthy Dip",
@@ -2116,7 +1985,11 @@
       "isCombStock": false,
       "sma50": 0.9331395334975664,
       "sma200": 0.9331395334975664,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B",
+      "ipoYear": 2026,
+      "ipoPrice": 1.03,
+      "shariah": true
     },
     {
       "name": "TMK",
@@ -2142,7 +2015,11 @@
       "isCombStock": false,
       "sma50": 1.871599988937378,
       "sma200": 1.4730499970912934,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "A",
+      "ipoYear": 2024,
+      "ipoPrice": 1.75,
+      "shariah": true
     },
     {
       "name": "ECA",
@@ -2168,7 +2045,11 @@
       "isCombStock": false,
       "sma50": 0.20030000001192094,
       "sma200": 0.18420000046491622,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B",
+      "ipoYear": 2022,
+      "ipoPrice": 0.17,
+      "shariah": true
     },
     {
       "name": "SNS",
@@ -2193,7 +2074,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.48919999778270723,
-      "sma200": 0.5437999986112118
+      "sma200": 0.5437999986112118,
+      "ipoGrade": "B",
+      "ipoYear": 2022,
+      "ipoPrice": 0.25,
+      "shariah": true
     },
     {
       "name": "LSH",
@@ -2218,32 +2103,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 1.7661999821662904,
-      "sma200": 1.908899990916252
-    },
-    {
-      "name": "UUE HOLDINGS BERHAD",
-      "sector": "Bursa",
-      "category": "Intraday / Momentum",
-      "setupStyle": "SWING PLAY",
-      "price": 0.4399999976158142,
-      "change": 0.009999990463256836,
-      "changePct": 2.33,
-      "turnover": 2860615.9844994545,
-      "volume": 6501400,
-      "signal": "avoid",
-      "reason": "🧊 Saham Downtrend: Elak Trading!",
-      "high52": 0.6299999952316284,
-      "pullback": 30.16,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 17.33,
-      "lowTightness": 13.51,
-      "touchCount": 4,
-      "isConsolidation": false,
-      "floorLow": 0.3700000047683716,
-      "hasLowerWickRejection": true,
-      "isCombStock": false,
-      "sma50": 0.40820000171661375,
-      "sma200": 0.4810916167497635
+      "sma200": 1.908899990916252,
+      "ipoGrade": "C",
+      "ipoYear": 2025,
+      "ipoPrice": 0.88,
+      "shariah": true
     },
     {
       "name": "UUE",
@@ -2268,7 +2132,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.40820000171661375,
-      "sma200": 0.4810916167497635
+      "sma200": 0.4810916167497635,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.24,
+      "shariah": true
     },
     {
       "name": "AMBEST",
@@ -2294,7 +2162,11 @@
       "isCombStock": false,
       "sma50": 0.6635000020265579,
       "sma200": 0.5048913051900656,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B",
+      "ipoYear": 2026,
+      "ipoPrice": 0.25,
+      "shariah": true
     },
     {
       "name": "FFB",
@@ -2319,7 +2191,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 2.3109999895095825,
-      "sma200": 2.493199992775917
+      "sma200": 2.493199992775917,
+      "ipoGrade": "A",
+      "ipoYear": 2022,
+      "ipoPrice": 1.35,
+      "shariah": true
     },
     {
       "name": "MMCS",
@@ -2345,7 +2221,11 @@
       "isCombStock": false,
       "sma50": 0.24437499791383743,
       "sma200": 0.24437499791383743,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "C",
+      "ipoYear": 2026,
+      "ipoPrice": 0.22,
+      "shariah": true
     },
     {
       "name": "ENPRO",
@@ -2358,7 +2238,7 @@
       "turnover": 2424000.0361204147,
       "volume": 12120000,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.200 < IPO RM 0.240)",
       "high52": 0.3050000071525574,
       "pullback": 34.43,
       "setupName": "🧊 Downtrend / Avoid",
@@ -2370,7 +2250,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.21339999824762346,
-      "sma200": 0.22282499924302102
+      "sma200": 0.22282499924302102,
+      "ipoGrade": "B",
+      "ipoYear": 2025,
+      "ipoPrice": 0.24,
+      "shariah": true
     },
     {
       "name": "HHRG",
@@ -2422,33 +2306,10 @@
       "isCombStock": false,
       "sma50": 0.385,
       "sma200": 0.3768000003695488,
-      "isVvip": true
-    },
-    {
-      "name": "MEGA FORTRIS BERHAD",
-      "sector": "Bursa",
-      "category": "Swing / Bluechip",
-      "setupStyle": "STAIRCASE",
-      "price": 1.7300000190734863,
-      "change": 0.039999961853027344,
-      "changePct": 2.37,
-      "turnover": 2228586.024570465,
-      "volume": 1288200,
-      "signal": "buy",
-      "reason": "🔒 Tapak Tegar (4x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold)",
-      "high52": 1.75,
-      "pullback": 1.14,
-      "setupName": "🔥 RBS Retest / Near ATH",
-      "closeTightness": 2.37,
-      "lowTightness": 2.42,
-      "touchCount": 4,
-      "isConsolidation": true,
-      "floorLow": 1.649999976158142,
-      "hasLowerWickRejection": true,
-      "isCombStock": false,
-      "sma50": 1.4938000082969665,
-      "sma200": 1.0050250029563903,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.28
     },
     {
       "name": "MEGAFB",
@@ -2474,33 +2335,10 @@
       "isCombStock": false,
       "sma50": 1.4938000082969665,
       "sma200": 1.0050250029563903,
-      "isVvip": true
-    },
-    {
-      "name": "MEGA FORTRIS",
-      "sector": "Bursa",
-      "category": "Swing / Bluechip",
-      "setupStyle": "STAIRCASE",
-      "price": 1.7300000190734863,
-      "change": 0.039999961853027344,
-      "changePct": 2.37,
-      "turnover": 2228586.024570465,
-      "volume": 1288200,
-      "signal": "buy",
-      "reason": "🔒 Tapak Tegar (4x) | 🔥 Golden Hold: Tapak Tegar Selesa (Sesuai Swing/Hold)",
-      "high52": 1.75,
-      "pullback": 1.14,
-      "setupName": "🔥 RBS Retest / Near ATH",
-      "closeTightness": 2.37,
-      "lowTightness": 2.42,
-      "touchCount": 4,
-      "isConsolidation": true,
-      "floorLow": 1.649999976158142,
-      "hasLowerWickRejection": true,
-      "isCombStock": false,
-      "sma50": 1.4938000082969665,
-      "sma200": 1.0050250029563903,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2024,
+      "ipoPrice": 0.67
     },
     {
       "name": "CEB",
@@ -2525,7 +2363,10 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.28299999952316285,
-      "sma200": 0.2878499993681908
+      "sma200": 0.2878499993681908,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2023,
+      "ipoPrice": 0.9
     },
     {
       "name": "MCLEAN",
@@ -2577,7 +2418,11 @@
       "isCombStock": false,
       "sma50": 0.3613999980688095,
       "sma200": 0.3379999986716679,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "C",
+      "ipoYear": 2026,
+      "ipoPrice": 0.35,
+      "shariah": true
     },
     {
       "name": "HEIM",
@@ -2628,7 +2473,11 @@
       "isCombStock": false,
       "sma50": 0.38339999824762344,
       "sma200": 0.22467500053346157,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B",
+      "ipoYear": 2025,
+      "ipoPrice": 0.16,
+      "shariah": true
     },
     {
       "name": "PEKAT",
@@ -2654,7 +2503,11 @@
       "isCombStock": false,
       "sma50": 1.5990000009536742,
       "sma200": 1.5652000004053115,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B",
+      "ipoYear": 2021,
+      "ipoPrice": 0.32,
+      "shariah": true
     },
     {
       "name": "AQUAWALK",
@@ -2667,7 +2520,7 @@
       "turnover": 1675274.9714702368,
       "volume": 9573000,
       "signal": "avoid",
-      "reason": "🧊 Saham Downtrend: Elak Trading!",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.175 < IPO RM 0.310)",
       "high52": 0.44999998807907104,
       "pullback": 61.11,
       "setupName": "🧊 Downtrend / Avoid",
@@ -2679,7 +2532,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.19259999990463256,
-      "sma200": 0.29071917864557817
+      "sma200": 0.29071917864557817,
+      "ipoGrade": "C",
+      "ipoYear": 2025,
+      "ipoPrice": 0.31,
+      "shariah": true
     },
     {
       "name": "SUNVIEW",
@@ -2704,7 +2561,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.3661000061035156,
-      "sma200": 0.3682750000059605
+      "sma200": 0.3682750000059605,
+      "ipoGrade": "B",
+      "ipoYear": 2022,
+      "ipoPrice": 0.29,
+      "shariah": true
     },
     {
       "name": "DXN",
@@ -2730,7 +2591,11 @@
       "isCombStock": false,
       "sma50": 0.46050000071525576,
       "sma200": 0.49299999460577965,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "C",
+      "ipoYear": 2023,
+      "ipoPrice": 0.7,
+      "shariah": true
     },
     {
       "name": "SDCG",
@@ -2756,7 +2621,11 @@
       "isCombStock": false,
       "sma50": 0.677600005865097,
       "sma200": 0.6019000017642975,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.38,
+      "shariah": true
     },
     {
       "name": "SOP",
@@ -2785,31 +2654,6 @@
       "isVvip": true
     },
     {
-      "name": "GOLD LI HOLDINGS BERHAD",
-      "sector": "Bursa",
-      "category": "Penny / Spekulatif",
-      "setupStyle": "SWING PLAY",
-      "price": 0.10000000149011612,
-      "change": -0.015000000596046448,
-      "changePct": -13.04,
-      "turnover": 1308620.0194999576,
-      "volume": 13086200,
-      "signal": "avoid",
-      "reason": "🧊 Saham Downtrend: Elak Trading!",
-      "high52": 0.12999999523162842,
-      "pullback": 23.08,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 15,
-      "lowTightness": 5,
-      "touchCount": 1,
-      "isConsolidation": false,
-      "floorLow": 0.10000000149011612,
-      "hasLowerWickRejection": false,
-      "isCombStock": false,
-      "sma50": 0.10999999940395355,
-      "sma200": 0.10999999940395355
-    },
-    {
       "name": "GOLDLI",
       "sector": "Bursa",
       "category": "Penny / Spekulatif",
@@ -2820,7 +2664,7 @@
       "turnover": 1308620.0194999576,
       "volume": 13086200,
       "signal": "avoid",
-      "reason": "🧊 Saham Downtrend: Elak Trading!",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.100 < IPO RM 0.130)",
       "high52": 0.12999999523162842,
       "pullback": 23.08,
       "setupName": "🧊 Downtrend / Avoid",
@@ -2832,7 +2676,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.10999999940395355,
-      "sma200": 0.10999999940395355
+      "sma200": 0.10999999940395355,
+      "ipoGrade": "C",
+      "ipoYear": 2026,
+      "ipoPrice": 0.13,
+      "shariah": true
     },
     {
       "name": "LHI",
@@ -2844,8 +2692,8 @@
       "changePct": -0.67,
       "turnover": 1304122.5083470345,
       "volume": 1750500,
-      "signal": "buy",
-      "reason": "🔒 Tapak Tegar (6x) | 🔥 Golden Entry: Tapak Tegar Selesa (Sesuai Swing/Hold)",
+      "signal": "avoid",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.745 < IPO RM 1.220)",
       "high52": 0.8349999785423279,
       "pullback": 10.78,
       "setupName": "📉 Healthy Dip",
@@ -2858,7 +2706,11 @@
       "isCombStock": false,
       "sma50": 0.7341000056266784,
       "sma200": 0.7131000024080276,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "C",
+      "ipoYear": 2025,
+      "ipoPrice": 1.22,
+      "shariah": false
     },
     {
       "name": "GENERGY",
@@ -2871,7 +2723,7 @@
       "turnover": 1223270.990741253,
       "volume": 3883400,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.315 < IPO RM 1.000)",
       "high52": 0.9800000190734863,
       "pullback": 67.86,
       "setupName": "🧊 Downtrend / Avoid",
@@ -2883,7 +2735,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.5475999927520752,
-      "sma200": 0.6413846084704766
+      "sma200": 0.6413846084704766,
+      "ipoGrade": "C",
+      "ipoYear": 2025,
+      "ipoPrice": 1,
+      "shariah": true
     },
     {
       "name": "MESTRON",
@@ -2908,7 +2764,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.13510000035166742,
-      "sma200": 0.16950000043958424
+      "sma200": 0.16950000043958424,
+      "ipoGrade": "B",
+      "ipoYear": 2019,
+      "ipoPrice": 0.16,
+      "shariah": true
     },
     {
       "name": "TEAMSTR",
@@ -2921,7 +2781,7 @@
       "turnover": 1184111.9735330343,
       "volume": 4933800,
       "signal": "avoid",
-      "reason": "🧊 Saham Downtrend: Elak Trading!",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.240 < IPO RM 0.260)",
       "high52": 0.27000001072883606,
       "pullback": 11.11,
       "setupName": "🧊 Downtrend / Avoid",
@@ -2933,7 +2793,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.24949999958276747,
-      "sma200": 0.24580246835579106
+      "sma200": 0.24580246835579106,
+      "ipoGrade": "B",
+      "ipoYear": 2026,
+      "ipoPrice": 0.26,
+      "shariah": true
     },
     {
       "name": "IAB",
@@ -2958,7 +2822,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 1.3988000059127808,
-      "sma200": 1.336288345006346
+      "sma200": 1.336288345006346,
+      "ipoGrade": "B",
+      "ipoYear": 2025,
+      "ipoPrice": 0.36,
+      "shariah": true
     },
     {
       "name": "CHB",
@@ -2984,7 +2852,11 @@
       "isCombStock": false,
       "sma50": 0.8936999940872192,
       "sma200": 0.8678499981760979,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B",
+      "ipoYear": 2023,
+      "ipoPrice": 0.35,
+      "shariah": true
     },
     {
       "name": "ECOMATE",
@@ -3009,7 +2881,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.853700020313263,
-      "sma200": 0.8237250152230263
+      "sma200": 0.8237250152230263,
+      "ipoGrade": "B",
+      "ipoYear": 2021,
+      "ipoPrice": 0.33,
+      "shariah": true
     },
     {
       "name": "INFOM",
@@ -3034,7 +2910,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 1.11260000705719,
-      "sma200": 1.2622000044584274
+      "sma200": 1.2622000044584274,
+      "ipoGrade": "B",
+      "ipoYear": 2022,
+      "ipoPrice": 0.4,
+      "shariah": true
     },
     {
       "name": "LWSABAH",
@@ -3060,7 +2940,11 @@
       "isCombStock": false,
       "sma50": 1.3298000001907349,
       "sma200": 1.274224999845028,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "A",
+      "ipoYear": 2024,
+      "ipoPrice": 0.65,
+      "shariah": true
     },
     {
       "name": "OXB",
@@ -3085,7 +2969,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.33680000245571134,
-      "sma200": 0.305375000089407
+      "sma200": 0.305375000089407,
+      "ipoGrade": "B",
+      "ipoYear": 2025,
+      "ipoPrice": 0.29,
+      "shariah": true
     },
     {
       "name": "BUSCAP",
@@ -3110,7 +2998,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.2557142823934555,
-      "sma200": 0.2557142823934555
+      "sma200": 0.2557142823934555,
+      "ipoGrade": "C",
+      "ipoYear": 2026,
+      "ipoPrice": 0.23,
+      "shariah": true
     },
     {
       "name": "KTI",
@@ -3135,7 +3027,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.5400000011920929,
-      "sma200": 0.44147499948740004
+      "sma200": 0.44147499948740004,
+      "ipoGrade": "C",
+      "ipoYear": 2024,
+      "ipoPrice": 0.3,
+      "shariah": true
     },
     {
       "name": "SDS",
@@ -3160,7 +3056,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.4447000002861023,
-      "sma200": 0.6179000025987625
+      "sma200": 0.6179000025987625,
+      "ipoGrade": "B",
+      "ipoYear": 2019,
+      "ipoPrice": 0.23,
+      "shariah": true
     },
     {
       "name": "TTVHB",
@@ -3185,7 +3085,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.2485999995470047,
-      "sma200": 0.260774999409914
+      "sma200": 0.260774999409914,
+      "ipoGrade": "B",
+      "ipoYear": 2023,
+      "ipoPrice": 0.34,
+      "shariah": true
     },
     {
       "name": "F&N",
@@ -3235,33 +3139,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.6859000086784363,
-      "sma200": 0.7421306862749837
-    },
-    {
-      "name": "GOLDEN DESTINATIONS GROUP BERHAD",
-      "sector": "Bursa",
-      "category": "Intraday / Momentum",
-      "setupStyle": "SWING PLAY",
-      "price": 0.38499999046325684,
-      "change": -0.015000015497207642,
-      "changePct": -3.75,
-      "turnover": 685107.4830293655,
-      "volume": 1779500,
-      "signal": "avoid",
-      "reason": "VIP Sideway / Pullback (Pantau Peluang)",
-      "high52": 0.4950000047683716,
-      "pullback": 22.22,
-      "setupName": "🔻 Buy Support / Deep Pullback",
-      "closeTightness": 5.26,
-      "lowTightness": 6.85,
-      "touchCount": 1,
-      "isConsolidation": false,
-      "floorLow": 0.36500000953674316,
-      "hasLowerWickRejection": false,
-      "isCombStock": false,
-      "sma50": 0.3534782613101213,
-      "sma200": 0.3534782613101213,
-      "isVvip": true
+      "sma200": 0.7421306862749837,
+      "ipoGrade": "B",
+      "ipoYear": 2025,
+      "ipoPrice": 0.36,
+      "shariah": true
     },
     {
       "name": "GDGROUP",
@@ -3274,7 +3156,7 @@
       "turnover": 685107.4830293655,
       "volume": 1779500,
       "signal": "avoid",
-      "reason": "VIP Sideway / Pullback (Pantau Peluang)",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.385 < IPO RM 0.450)",
       "high52": 0.4950000047683716,
       "pullback": 22.22,
       "setupName": "🔻 Buy Support / Deep Pullback",
@@ -3287,32 +3169,11 @@
       "isCombStock": false,
       "sma50": 0.3534782613101213,
       "sma200": 0.3534782613101213,
-      "isVvip": true
-    },
-    {
-      "name": "5E RESOURCES BERHAD",
-      "sector": "Bursa",
-      "category": "Intraday / Momentum",
-      "setupStyle": "SWING PLAY",
-      "price": 0.23999999463558197,
-      "change": -0.005000010132789612,
-      "changePct": -2.04,
-      "turnover": 661151.9852221012,
-      "volume": 2754800,
-      "signal": "avoid",
-      "reason": "🧊 Saham Downtrend: Elak Trading!",
-      "high52": 0.30000001192092896,
-      "pullback": 20,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 2.08,
-      "lowTightness": 4.26,
-      "touchCount": 2,
-      "isConsolidation": false,
-      "floorLow": 0.23499999940395355,
-      "hasLowerWickRejection": true,
-      "isCombStock": false,
-      "sma50": 0.2540425502873482,
-      "sma200": 0.2540425502873482
+      "isVvip": true,
+      "ipoGrade": "C",
+      "ipoYear": 2026,
+      "ipoPrice": 0.45,
+      "shariah": true
     },
     {
       "name": "5ER",
@@ -3325,7 +3186,7 @@
       "turnover": 661151.9852221012,
       "volume": 2754800,
       "signal": "avoid",
-      "reason": "🧊 Saham Downtrend: Elak Trading!",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.240 < IPO RM 0.260)",
       "high52": 0.30000001192092896,
       "pullback": 20,
       "setupName": "🧊 Downtrend / Avoid",
@@ -3337,7 +3198,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.2540425502873482,
-      "sma200": 0.2540425502873482
+      "sma200": 0.2540425502873482,
+      "ipoGrade": "B",
+      "ipoYear": 2026,
+      "ipoPrice": 0.26,
+      "shariah": true
     },
     {
       "name": "TOPMIX",
@@ -3362,32 +3227,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.4566999989748001,
-      "sma200": 0.46715000078082086
-    },
-    {
-      "name": "MKH OIL PALM (EAST KALIMANTAN)",
-      "sector": "Bursa",
-      "category": "Intraday / Momentum",
-      "setupStyle": "SWING PLAY",
-      "price": 0.6200000047683716,
-      "change": 0,
-      "changePct": 0,
-      "turnover": 597494.0045952797,
-      "volume": 963700,
-      "signal": "avoid",
-      "reason": "🔒 Tapak Tegar (10x) | 🧊 Saham Downtrend: Elak Trading!",
-      "high52": 0.7200000286102295,
-      "pullback": 13.89,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 0,
-      "lowTightness": 0.81,
-      "touchCount": 10,
-      "isConsolidation": true,
-      "floorLow": 0.6150000095367432,
-      "hasLowerWickRejection": true,
-      "isCombStock": false,
-      "sma50": 0.6215000081062317,
-      "sma200": 0.6189250060915947
+      "sma200": 0.46715000078082086,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.31,
+      "shariah": true
     },
     {
       "name": "MKHOP",
@@ -3412,7 +3256,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.6215000081062317,
-      "sma200": 0.6189250060915947
+      "sma200": 0.6189250060915947,
+      "ipoGrade": "C",
+      "ipoYear": 2024,
+      "ipoPrice": 0.62,
+      "shariah": true
     },
     {
       "name": "WELLS",
@@ -3437,7 +3285,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.6147999966144562,
-      "sma200": 0.6509500005841256
+      "sma200": 0.6509500005841256,
+      "ipoGrade": "B",
+      "ipoYear": 2023,
+      "ipoPrice": 0.23,
+      "shariah": true
     },
     {
       "name": "HOCKSOON",
@@ -3450,7 +3302,7 @@
       "turnover": 591135.9867870808,
       "volume": 1847300,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.320 < IPO RM 0.600)",
       "high52": 0.5600000023841858,
       "pullback": 42.86,
       "setupName": "🧊 Downtrend / Avoid",
@@ -3462,7 +3314,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.35199999928474424,
-      "sma200": 0.37574712572426633
+      "sma200": 0.37574712572426633,
+      "ipoGrade": "C",
+      "ipoYear": 2026,
+      "ipoPrice": 0.6,
+      "shariah": true
     },
     {
       "name": "LGMS",
@@ -3487,7 +3343,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.5193999952077866,
-      "sma200": 0.5905499975383282
+      "sma200": 0.5905499975383282,
+      "ipoGrade": "B",
+      "ipoYear": 2022,
+      "ipoPrice": 0.5,
+      "shariah": true
     },
     {
       "name": "ELSA",
@@ -3500,7 +3360,7 @@
       "turnover": 577349.9847054482,
       "volume": 2566000,
       "signal": "avoid",
-      "reason": "VIP Sideway / Pullback (Pantau Peluang)",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.225 < IPO RM 0.230)",
       "high52": 0.2849999964237213,
       "pullback": 21.05,
       "setupName": "🔻 Buy Support / Deep Pullback",
@@ -3512,7 +3372,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.24999999701976777,
-      "sma200": 0.24999999701976777
+      "sma200": 0.24999999701976777,
+      "ipoGrade": "B",
+      "ipoYear": 2026,
+      "ipoPrice": 0.23,
+      "shariah": true
     },
     {
       "name": "HLIND",
@@ -3551,7 +3415,7 @@
       "turnover": 567206.9928824902,
       "volume": 2985300,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.190 < IPO RM 0.280)",
       "high52": 0.32499998807907104,
       "pullback": 41.54,
       "setupName": "🧊 Downtrend / Avoid",
@@ -3563,7 +3427,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.1721000012755394,
-      "sma200": 0.1946500001847744
+      "sma200": 0.1946500001847744,
+      "ipoGrade": "B",
+      "ipoYear": 2025,
+      "ipoPrice": 0.28,
+      "shariah": true
     },
     {
       "name": "ICENTS",
@@ -3589,7 +3457,11 @@
       "isCombStock": false,
       "sma50": 0.4304999977350235,
       "sma200": 0.4223499992489815,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B",
+      "ipoYear": 2025,
+      "ipoPrice": 0.24,
+      "shariah": true
     },
     {
       "name": "SAG",
@@ -3614,7 +3486,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.7193000090122222,
-      "sma200": 0.7813750040531159
+      "sma200": 0.7813750040531159,
+      "ipoGrade": "B",
+      "ipoYear": 2025,
+      "ipoPrice": 0.62,
+      "shariah": true
     },
     {
       "name": "ATECH",
@@ -3639,7 +3515,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.7221000015735626,
-      "sma200": 0.8349999967217445
+      "sma200": 0.8349999967217445,
+      "ipoGrade": "C",
+      "ipoYear": 2021,
+      "ipoPrice": 1.36,
+      "shariah": true
     },
     {
       "name": "CNERGEN",
@@ -3665,7 +3545,11 @@
       "isCombStock": false,
       "sma50": 0.46660000205039975,
       "sma200": 0.4439499999582768,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B",
+      "ipoYear": 2022,
+      "ipoPrice": 0.58,
+      "shariah": true
     },
     {
       "name": "REACHTEN",
@@ -3678,7 +3562,7 @@
       "turnover": 485519.98484134674,
       "volume": 1156000,
       "signal": "avoid",
-      "reason": "🧊 Saham Downtrend: Elak Trading!",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.420 < IPO RM 0.520)",
       "high52": 0.5450000166893005,
       "pullback": 22.94,
       "setupName": "🧊 Downtrend / Avoid",
@@ -3690,7 +3574,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.42139999628067015,
-      "sma200": 0.46149999886751175
+      "sma200": 0.46149999886751175,
+      "ipoGrade": "C",
+      "ipoYear": 2025,
+      "ipoPrice": 0.52,
+      "shariah": true
     },
     {
       "name": "EXSIMHB",
@@ -3741,7 +3629,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.08150000050663948,
-      "sma200": 0.08397500023245812
+      "sma200": 0.08397500023245812,
+      "ipoGrade": "B",
+      "ipoYear": 2019,
+      "ipoPrice": 0.16,
+      "shariah": true
     },
     {
       "name": "ADNEX",
@@ -3766,7 +3658,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.3032000005245209,
-      "sma200": 0.28768656703073586
+      "sma200": 0.28768656703073586,
+      "ipoGrade": "B",
+      "ipoYear": 2026,
+      "ipoPrice": 0.2,
+      "shariah": true
     },
     {
       "name": "EDELTEQ",
@@ -3791,32 +3687,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.355799999833107,
-      "sma200": 0.417775000333786
-    },
-    {
-      "name": "DESTINI BERHAD",
-      "sector": "Bursa",
-      "category": "Intraday / Momentum",
-      "setupStyle": "SWING PLAY",
-      "price": 0.30000001192092896,
-      "change": 0.005000025033950806,
-      "changePct": 1.69,
-      "turnover": 396960.0157737732,
-      "volume": 1323200,
-      "signal": "avoid",
-      "reason": "🧊 Saham Downtrend: Elak Trading!",
-      "high52": 0.5099999904632568,
-      "pullback": 41.18,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 1.69,
-      "lowTightness": 7.02,
-      "touchCount": 3,
-      "isConsolidation": false,
-      "floorLow": 0.2849999964237213,
-      "hasLowerWickRejection": true,
-      "isCombStock": false,
-      "sma50": 0.3103000020980835,
-      "sma200": 0.3384250009059906
+      "sma200": 0.417775000333786,
+      "ipoGrade": "B",
+      "ipoYear": 2023,
+      "ipoPrice": 0.24,
+      "shariah": true
     },
     {
       "name": "DESTINI",
@@ -3891,7 +3766,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.5612999999523163,
-      "sma200": 0.4934500007331371
+      "sma200": 0.4934500007331371,
+      "ipoGrade": "B",
+      "ipoYear": 2023,
+      "ipoPrice": 0.33,
+      "shariah": true
     },
     {
       "name": "KJTS",
@@ -3916,7 +3795,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.8147000002861023,
-      "sma200": 1.131149999499321
+      "sma200": 1.131149999499321,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.27,
+      "shariah": true
     },
     {
       "name": "ICTZONE",
@@ -3929,7 +3812,7 @@
       "turnover": 346356.0137629509,
       "volume": 1924200,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.180 < IPO RM 0.200)",
       "high52": 0.2150000035762787,
       "pullback": 16.28,
       "setupName": "🧊 Downtrend / Avoid",
@@ -3941,7 +3824,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.18020000338554382,
-      "sma200": 0.17772500231862068
+      "sma200": 0.17772500231862068,
+      "ipoGrade": "C",
+      "ipoYear": 2025,
+      "ipoPrice": 0.2,
+      "shariah": true
     },
     {
       "name": "CPETECH",
@@ -3966,7 +3853,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.7686999940872192,
-      "sma200": 0.6406499981880188
+      "sma200": 0.6406499981880188,
+      "ipoGrade": "C",
+      "ipoYear": 2023,
+      "ipoPrice": 1.07,
+      "shariah": true
     },
     {
       "name": "CLOUDPT",
@@ -3991,7 +3882,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.5041000002622604,
-      "sma200": 0.6222999985516071
+      "sma200": 0.6222999985516071,
+      "ipoGrade": "B",
+      "ipoYear": 2023,
+      "ipoPrice": 0.38,
+      "shariah": true
     },
     {
       "name": "PLINTAS",
@@ -4016,7 +3911,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.9297000074386597,
-      "sma200": 0.9549750018119813
+      "sma200": 0.9549750018119813,
+      "ipoGrade": "C",
+      "ipoYear": 2024,
+      "ipoPrice": 0.95,
+      "shariah": true
     },
     {
       "name": "OHM",
@@ -4041,7 +3940,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.3518000042438507,
-      "sma200": 0.3264000003039837
+      "sma200": 0.3264000003039837,
+      "ipoGrade": "C",
+      "ipoYear": 2025,
+      "ipoPrice": 0.28,
+      "shariah": true
     },
     {
       "name": "UNIQUE",
@@ -4066,7 +3969,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.39289999604225156,
-      "sma200": 0.4235999996960163
+      "sma200": 0.4235999996960163,
+      "ipoGrade": "C",
+      "ipoYear": 2022,
+      "ipoPrice": 0.26,
+      "shariah": true
     },
     {
       "name": "VINVEST",
@@ -4116,7 +4023,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.5118000000715256,
-      "sma200": 0.6077250026166439
+      "sma200": 0.6077250026166439,
+      "ipoGrade": "B",
+      "ipoYear": 2023,
+      "ipoPrice": 0.27,
+      "shariah": true
     },
     {
       "name": "PMCK",
@@ -4129,7 +4040,7 @@
       "turnover": 292441.4892733097,
       "volume": 1499700,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.195 < IPO RM 0.220)",
       "high52": 0.23999999463558197,
       "pullback": 18.75,
       "setupName": "🧊 Downtrend / Avoid",
@@ -4141,7 +4052,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.19979999870061874,
-      "sma200": 0.2050999990105629
+      "sma200": 0.2050999990105629,
+      "ipoGrade": "C",
+      "ipoYear": 2025,
+      "ipoPrice": 0.22,
+      "shariah": true
     },
     {
       "name": "SKYWLD",
@@ -4167,33 +4082,11 @@
       "isCombStock": false,
       "sma50": 0.41379999577999116,
       "sma200": 0.4725500002503395,
-      "isVvip": true
-    },
-    {
-      "name": "SKYWORLD DEVELOPMENT",
-      "sector": "Bursa",
-      "category": "Intraday / Momentum",
-      "setupStyle": "SWING PLAY",
-      "price": 0.41499999165534973,
-      "change": 0,
-      "changePct": 0,
-      "turnover": 283195.99430561066,
-      "volume": 682400,
-      "signal": "avoid",
-      "reason": "VIP Sideway / Pullback (Pantau Peluang)",
-      "high52": 0.5899999737739563,
-      "pullback": 29.66,
-      "setupName": "🔻 Buy Support / Deep Pullback",
-      "closeTightness": 1.2,
-      "lowTightness": 3.7,
-      "touchCount": 5,
-      "isConsolidation": false,
-      "floorLow": 0.4050000011920929,
-      "hasLowerWickRejection": true,
-      "isCombStock": false,
-      "sma50": 0.41379999577999116,
-      "sma200": 0.4725500002503395,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "C",
+      "ipoYear": 2023,
+      "ipoPrice": 0.8,
+      "shariah": true
     },
     {
       "name": "MERSEC",
@@ -4218,7 +4111,10 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2664999955892563,
-      "sma200": 0.3036999987065792
+      "sma200": 0.3036999987065792,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2023,
+      "ipoPrice": 0.25
     },
     {
       "name": "FEYTECH",
@@ -4243,7 +4139,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.22929999828338624,
-      "sma200": 0.26894999884068965
+      "sma200": 0.26894999884068965,
+      "ipoGrade": "A",
+      "ipoYear": 2024,
+      "ipoPrice": 0.8,
+      "shariah": true
     },
     {
       "name": "TAGHILL",
@@ -4268,7 +4168,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.05939999893307686,
-      "sma200": 0.06192499877884984
+      "sma200": 0.06192499877884984,
+      "ipoGrade": "C",
+      "ipoYear": 2022,
+      "ipoPrice": 0.3,
+      "shariah": true
     },
     {
       "name": "SSF",
@@ -4293,7 +4197,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.38629999160766604,
-      "sma200": 0.3940999974310398
+      "sma200": 0.3940999974310398,
+      "ipoGrade": "B",
+      "ipoYear": 2023,
+      "ipoPrice": 0.25,
+      "shariah": true
     },
     {
       "name": "KENERGY",
@@ -4318,32 +4226,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.5373999977111816,
-      "sma200": 0.5910249990224838
-    },
-    {
-      "name": "MANFORCE GROUP BERHAD",
-      "sector": "Bursa",
-      "category": "Intraday / Momentum",
-      "setupStyle": "SWING PLAY",
-      "price": 0.28999999165534973,
-      "change": 0,
-      "changePct": 0,
-      "turnover": 216687.99376487732,
-      "volume": 747200,
-      "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
-      "high52": 0.3799999952316284,
-      "pullback": 23.68,
-      "setupName": "🔻 Buy Support / Deep Pullback",
-      "closeTightness": 1.75,
-      "lowTightness": 1.75,
-      "touchCount": 8,
-      "isConsolidation": false,
-      "floorLow": 0.2849999964237213,
-      "hasLowerWickRejection": true,
-      "isCombStock": true,
-      "sma50": 0.28489999800920485,
-      "sma200": 0.2512249954789877
+      "sma200": 0.5910249990224838,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.3,
+      "shariah": true
     },
     {
       "name": "MFGROUP",
@@ -4356,7 +4243,7 @@
       "turnover": 216687.99376487732,
       "volume": 747200,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.290 < IPO RM 0.380)",
       "high52": 0.3799999952316284,
       "pullback": 23.68,
       "setupName": "🔻 Buy Support / Deep Pullback",
@@ -4368,7 +4255,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.28489999800920485,
-      "sma200": 0.2512249954789877
+      "sma200": 0.2512249954789877,
+      "ipoGrade": "B",
+      "ipoYear": 2026,
+      "ipoPrice": 0.38,
+      "shariah": true
     },
     {
       "name": "LACMED",
@@ -4381,7 +4272,7 @@
       "turnover": 211889.9963915348,
       "volume": 302700,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.700 < IPO RM 0.750)",
       "high52": 1.340000033378601,
       "pullback": 47.76,
       "setupName": "🧊 Downtrend / Avoid",
@@ -4393,7 +4284,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.7995999991893769,
-      "sma200": 0.8977099220261319
+      "sma200": 0.8977099220261319,
+      "ipoGrade": "C",
+      "ipoYear": 2025,
+      "ipoPrice": 0.75,
+      "shariah": true
     },
     {
       "name": "GOHUB",
@@ -4419,7 +4314,11 @@
       "isCombStock": false,
       "sma50": 1.1532999992370605,
       "sma200": 0.8505749994516373,
-      "isVvip": true
+      "isVvip": true,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.35,
+      "shariah": true
     },
     {
       "name": "FOODIE",
@@ -4444,7 +4343,10 @@
       "hasLowerWickRejection": true,
       "isCombStock": false,
       "sma50": 0.32869999945163725,
-      "sma200": 0.3814388479260232
+      "sma200": 0.3814388479260232,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2025,
+      "ipoPrice": 0.3
     },
     {
       "name": "ORKIM",
@@ -4457,7 +4359,7 @@
       "turnover": 180003.00098657608,
       "volume": 206900,
       "signal": "avoid",
-      "reason": "🧊 Saham Downtrend: Elak Trading!",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.870 < IPO RM 0.920)",
       "high52": 1.2100000381469727,
       "pullback": 28.1,
       "setupName": "🧊 Downtrend / Avoid",
@@ -4469,7 +4371,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.9097999942302704,
-      "sma200": 0.9817424181735876
+      "sma200": 0.9817424181735876,
+      "ipoGrade": "A",
+      "ipoYear": 2025,
+      "ipoPrice": 0.92,
+      "shariah": true
     },
     {
       "name": "TELADAN",
@@ -4494,7 +4400,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.7888000082969665,
-      "sma200": 0.8389249977469444
+      "sma200": 0.8389249977469444,
+      "ipoGrade": "B",
+      "ipoYear": 2021,
+      "ipoPrice": 0.48,
+      "shariah": true
     },
     {
       "name": "BETA",
@@ -4519,7 +4429,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.6056000030040741,
-      "sma200": 0.5189499986171723
+      "sma200": 0.5189499986171723,
+      "ipoGrade": "B",
+      "ipoYear": 2022,
+      "ipoPrice": 0.5,
+      "shariah": true
     },
     {
       "name": "OPTIMAX",
@@ -4544,7 +4458,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.538699996471405,
-      "sma200": 0.5861499962210656
+      "sma200": 0.5861499962210656,
+      "ipoGrade": "B",
+      "ipoYear": 2020,
+      "ipoPrice": 0.3,
+      "shariah": true
     },
     {
       "name": "AJI",
@@ -4582,7 +4500,7 @@
       "turnover": 146217.99579262733,
       "volume": 1008400,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.145 < IPO RM 0.220)",
       "high52": 0.2150000035762787,
       "pullback": 32.56,
       "setupName": "🧊 Downtrend / Avoid",
@@ -4594,7 +4512,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.1506000018119812,
-      "sma200": 0.165413535851285
+      "sma200": 0.165413535851285,
+      "ipoGrade": "C",
+      "ipoYear": 2025,
+      "ipoPrice": 0.22,
+      "shariah": true
     },
     {
       "name": "PPJACK",
@@ -4619,7 +4541,10 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.9167000114917755,
-      "sma200": 0.9190499997138977
+      "sma200": 0.9190499997138977,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2022,
+      "ipoPrice": 0.3
     },
     {
       "name": "FAMIERA",
@@ -4632,7 +4557,7 @@
       "turnover": 132986.0024124384,
       "volume": 578200,
       "signal": "avoid",
-      "reason": "🔒 Tapak Tegar (9x) | ⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.230 < IPO RM 0.250)",
       "high52": 0.25999999046325684,
       "pullback": 11.54,
       "setupName": "📉 Healthy Dip",
@@ -4644,7 +4569,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.21289999783039093,
-      "sma200": 0.21473509773908073
+      "sma200": 0.21473509773908073,
+      "ipoGrade": "C",
+      "ipoYear": 2025,
+      "ipoPrice": 0.25,
+      "shariah": true
     },
     {
       "name": "OVH",
@@ -4669,7 +4598,10 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.20319999873638153,
-      "sma200": 0.16275000013411045
+      "sma200": 0.16275000013411045,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2020,
+      "ipoPrice": 0.26
     },
     {
       "name": "CENGILD",
@@ -4694,7 +4626,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.20959999710321425,
-      "sma200": 0.22054999858140945
+      "sma200": 0.22054999858140945,
+      "ipoGrade": "B",
+      "ipoYear": 2022,
+      "ipoPrice": 0.33,
+      "shariah": true
     },
     {
       "name": "KEYFIELD",
@@ -4719,7 +4655,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 1.6104000067710877,
-      "sma200": 1.534649999141693
+      "sma200": 1.534649999141693,
+      "ipoGrade": "A",
+      "ipoYear": 2024,
+      "ipoPrice": 0.9,
+      "shariah": true
     },
     {
       "name": "PARADIGM",
@@ -4732,7 +4672,7 @@
       "turnover": 114061.49913668633,
       "volume": 120700,
       "signal": "avoid",
-      "reason": "🔒 Tapak Tegar (10x) | ⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.945 < IPO RM 1.000)",
       "high52": 1.059999942779541,
       "pullback": 10.85,
       "setupName": "🧊 Downtrend / Avoid",
@@ -4744,7 +4684,10 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.96799999833107,
-      "sma200": 0.9772999951243401
+      "sma200": 0.9772999951243401,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2025,
+      "ipoPrice": 1
     },
     {
       "name": "SBS",
@@ -4757,7 +4700,7 @@
       "turnover": 110037.5,
       "volume": 880300,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.125 < IPO RM 0.250)",
       "high52": 0.25999999046325684,
       "pullback": 51.92,
       "setupName": "🧊 Downtrend / Avoid",
@@ -4769,7 +4712,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.12219999879598617,
-      "sma200": 0.1368749994211472
+      "sma200": 0.1368749994211472,
+      "ipoGrade": "C",
+      "ipoYear": 2026,
+      "ipoPrice": 0.25,
+      "shariah": true
     },
     {
       "name": "MSB",
@@ -4782,7 +4729,7 @@
       "turnover": 106488.00112009048,
       "volume": 1252800,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.085 < IPO RM 0.200)",
       "high52": 0.1599999964237213,
       "pullback": 46.87,
       "setupName": "🧊 Downtrend / Avoid",
@@ -4794,7 +4741,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.07600000098347665,
-      "sma200": 0.09725000061094762
+      "sma200": 0.09725000061094762,
+      "ipoGrade": "C",
+      "ipoYear": 2025,
+      "ipoPrice": 0.2,
+      "shariah": true
     },
     {
       "name": "RADIUM",
@@ -4819,7 +4770,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.49990000009536745,
-      "sma200": 0.5002999997138977
+      "sma200": 0.5002999997138977,
+      "ipoGrade": "C",
+      "ipoYear": 2023,
+      "ipoPrice": 0.5,
+      "shariah": true
     },
     {
       "name": "DLADY",
@@ -4869,32 +4824,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.2083999991416931,
-      "sma200": 0.2103499986231327
-    },
-    {
-      "name": "RTECH",
-      "sector": "Bursa",
-      "category": "Penny / Spekulatif",
-      "setupStyle": "SWING PLAY",
-      "price": 0.18000000715255737,
-      "change": 0.005000010132789612,
-      "changePct": 2.86,
-      "turnover": 89262.0035469532,
-      "volume": 495900,
-      "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
-      "high52": 0.25,
-      "pullback": 28,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 2.86,
-      "lowTightness": 2.94,
-      "touchCount": 2,
-      "isConsolidation": false,
-      "floorLow": 0.17000000178813934,
-      "hasLowerWickRejection": false,
-      "isCombStock": true,
-      "sma50": 0.1845000022649765,
-      "sma200": 0.19295000046491623
+      "sma200": 0.2103499986231327,
+      "ipoGrade": "B",
+      "ipoYear": 2023,
+      "ipoPrice": 0.19,
+      "shariah": true
     },
     {
       "name": "RT",
@@ -4919,7 +4853,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.1845000022649765,
-      "sma200": 0.19295000046491623
+      "sma200": 0.19295000046491623,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2026,
+      "ipoPrice": 0.18,
+      "shariah": false
     },
     {
       "name": "DENGKIL",
@@ -4932,7 +4870,7 @@
       "turnover": 89100,
       "volume": 712800,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.125 < IPO RM 0.250)",
       "high52": 0.27000001072883606,
       "pullback": 53.7,
       "setupName": "🧊 Downtrend / Avoid",
@@ -4944,32 +4882,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.13920000016689302,
-      "sma200": 0.17707500025629996
-    },
-    {
-      "name": "WAWASAN DENGKIL HOLDINGS",
-      "sector": "Bursa",
-      "category": "Penny / Spekulatif",
-      "setupStyle": "SWING PLAY",
-      "price": 0.125,
-      "change": -0.01000000536441803,
-      "changePct": -7.41,
-      "turnover": 89100,
-      "volume": 712800,
-      "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
-      "high52": 0.27000001072883606,
-      "pullback": 53.7,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 8,
-      "lowTightness": 8,
-      "touchCount": 3,
-      "isConsolidation": false,
-      "floorLow": 0.125,
-      "hasLowerWickRejection": false,
-      "isCombStock": true,
-      "sma50": 0.13920000016689302,
-      "sma200": 0.17707500025629996
+      "sma200": 0.17707500025629996,
+      "ipoGrade": "B",
+      "ipoYear": 2025,
+      "ipoPrice": 0.25,
+      "shariah": true
     },
     {
       "name": "CLITE",
@@ -4982,7 +4899,7 @@
       "turnover": 88375.49922913313,
       "volume": 431100,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.205 < IPO RM 0.250)",
       "high52": 0.28999999165534973,
       "pullback": 29.31,
       "setupName": "🧊 Downtrend / Avoid",
@@ -4994,32 +4911,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.2167999991774559,
-      "sma200": 0.23439999915659426
-    },
-    {
-      "name": "WENTEL ENGINEERING",
-      "sector": "Bursa",
-      "category": "Intraday / Momentum",
-      "setupStyle": "SWING PLAY",
-      "price": 0.2549999952316284,
-      "change": -0.009999990463256836,
-      "changePct": -3.77,
-      "turnover": 83333.99844169617,
-      "volume": 326800,
-      "signal": "avoid",
-      "reason": "🧊 Saham Downtrend: Elak Trading!",
-      "high52": 0.36000001430511475,
-      "pullback": 29.17,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 5.88,
-      "lowTightness": 3.92,
-      "touchCount": 4,
-      "isConsolidation": false,
-      "floorLow": 0.2549999952316284,
-      "hasLowerWickRejection": false,
-      "isCombStock": false,
-      "sma50": 0.2595999985933304,
-      "sma200": 0.2796999986469746
+      "sma200": 0.23439999915659426,
+      "ipoGrade": "C",
+      "ipoYear": 2025,
+      "ipoPrice": 0.25,
+      "shariah": true
     },
     {
       "name": "WENTEL",
@@ -5044,7 +4940,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": false,
       "sma50": 0.2595999985933304,
-      "sma200": 0.2796999986469746
+      "sma200": 0.2796999986469746,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.26,
+      "shariah": true
     },
     {
       "name": "UMC",
@@ -5069,7 +4969,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 5.8851999664306645,
-      "sma200": 5.805250012874604
+      "sma200": 5.805250012874604,
+      "ipoGrade": "B",
+      "ipoYear": 2022,
+      "ipoPrice": 0.32,
+      "shariah": true
     },
     {
       "name": "OGM",
@@ -5082,7 +4986,7 @@
       "turnover": 79674.00033921003,
       "volume": 569100,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.140 < IPO RM 0.250)",
       "high52": 0.23999999463558197,
       "pullback": 41.67,
       "setupName": "🧊 Downtrend / Avoid",
@@ -5094,7 +4998,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.13149999797344208,
-      "sma200": 0.13823232250382203
+      "sma200": 0.13823232250382203,
+      "ipoGrade": "C",
+      "ipoYear": 2026,
+      "ipoPrice": 0.25,
+      "shariah": true
     },
     {
       "name": "MSTGOLF",
@@ -5119,7 +5027,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.15680000096559524,
-      "sma200": 0.18269999973475934
+      "sma200": 0.18269999973475934,
+      "ipoGrade": "C",
+      "ipoYear": 2023,
+      "ipoPrice": 0.81,
+      "shariah": true
     },
     {
       "name": "NADIBHD",
@@ -5144,32 +5056,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.35879999995231626,
-      "sma200": 0.3998499996960163
-    },
-    {
-      "name": "SWIFT HAULAGE BERHAD",
-      "sector": "Bursa",
-      "category": "Intraday / Momentum",
-      "setupStyle": "SWING PLAY",
-      "price": 0.38999998569488525,
-      "change": -0.005000025033950806,
-      "changePct": -1.27,
-      "turnover": 77219.99716758728,
-      "volume": 198000,
-      "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
-      "high52": 0.4749999940395355,
-      "pullback": 17.89,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 2.6,
-      "lowTightness": 1.3,
-      "touchCount": 10,
-      "isConsolidation": false,
-      "floorLow": 0.38499999046325684,
-      "hasLowerWickRejection": true,
-      "isCombStock": true,
-      "sma50": 0.421700000166893,
-      "sma200": 0.3988499990105629
+      "sma200": 0.3998499996960163,
+      "ipoGrade": "B",
+      "ipoYear": 2019,
+      "ipoPrice": 0.3,
+      "shariah": true
     },
     {
       "name": "SWIFT",
@@ -5194,7 +5085,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.421700000166893,
-      "sma200": 0.3988499990105629
+      "sma200": 0.3988499990105629,
+      "ipoGrade": "C",
+      "ipoYear": 2021,
+      "ipoPrice": 1.03,
+      "shariah": true
     },
     {
       "name": "ORGABIO",
@@ -5219,7 +5114,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2957000029087067,
-      "sma200": 0.2961500008404255
+      "sma200": 0.2961500008404255,
+      "ipoGrade": "B",
+      "ipoYear": 2022,
+      "ipoPrice": 0.31,
+      "shariah": true
     },
     {
       "name": "JSSOLAR",
@@ -5232,7 +5131,7 @@
       "turnover": 76127.9972076416,
       "volume": 390400,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.195 < IPO RM 0.310)",
       "high52": 0.42500001192092896,
       "pullback": 54.12,
       "setupName": "🧊 Downtrend / Avoid",
@@ -5244,7 +5143,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.20819999784231186,
-      "sma200": 0.2544892467958953
+      "sma200": 0.2544892467958953,
+      "ipoGrade": "B",
+      "ipoYear": 2025,
+      "ipoPrice": 0.31,
+      "shariah": true
     },
     {
       "name": "CRPMATE",
@@ -5269,7 +5172,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.19279999941587447,
-      "sma200": 0.18119999967515468
+      "sma200": 0.18119999967515468,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.2,
+      "shariah": true
     },
     {
       "name": "POLYMER",
@@ -5282,7 +5189,7 @@
       "turnover": 75109.99783873558,
       "volume": 518000,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.145 < IPO RM 0.250)",
       "high52": 0.26499998569488525,
       "pullback": 45.28,
       "setupName": "🧊 Downtrend / Avoid",
@@ -5294,7 +5201,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.13640000104904174,
-      "sma200": 0.16397887415869136
+      "sma200": 0.16397887415869136,
+      "ipoGrade": "C",
+      "ipoYear": 2025,
+      "ipoPrice": 0.25,
+      "shariah": true
     },
     {
       "name": "HONGSENG",
@@ -5322,31 +5233,6 @@
       "sma200": 0.008024999820627272
     },
     {
-      "name": "SALIRAN GROUP BERHAD",
-      "sector": "Bursa",
-      "category": "Penny / Spekulatif",
-      "setupStyle": "SWING PLAY",
-      "price": 0.1899999976158142,
-      "change": 0,
-      "changePct": 0,
-      "turnover": 66404.99916672707,
-      "volume": 349500,
-      "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
-      "high52": 0.24500000476837158,
-      "pullback": 22.45,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 5.26,
-      "lowTightness": 5.26,
-      "touchCount": 2,
-      "isConsolidation": false,
-      "floorLow": 0.1899999976158142,
-      "hasLowerWickRejection": true,
-      "isCombStock": true,
-      "sma50": 0.21370000004768372,
-      "sma200": 0.21617499887943267
-    },
-    {
       "name": "SALIRAN",
       "sector": "Bursa",
       "category": "Penny / Spekulatif",
@@ -5357,7 +5243,7 @@
       "turnover": 66404.99916672707,
       "volume": 349500,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.190 < IPO RM 0.450)",
       "high52": 0.24500000476837158,
       "pullback": 22.45,
       "setupName": "🧊 Downtrend / Avoid",
@@ -5369,7 +5255,10 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.21370000004768372,
-      "sma200": 0.21617499887943267
+      "sma200": 0.21617499887943267,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2025,
+      "ipoPrice": 0.45
     },
     {
       "name": "WINSTAR",
@@ -5394,7 +5283,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.554300000667572,
-      "sma200": 0.5364249959588051
+      "sma200": 0.5364249959588051,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.35,
+      "shariah": true
     },
     {
       "name": "PGLOBAL",
@@ -5407,7 +5300,7 @@
       "turnover": 60515.001744031906,
       "volume": 133000,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.455 < IPO RM 0.680)",
       "high52": 0.574999988079071,
       "pullback": 20.87,
       "setupName": "🧊 Downtrend / Avoid",
@@ -5419,7 +5312,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.4716999995708466,
-      "sma200": 0.4682499988377094
+      "sma200": 0.4682499988377094,
+      "ipoGrade": "C",
+      "ipoYear": 2025,
+      "ipoPrice": 0.68,
+      "shariah": true
     },
     {
       "name": "DCHCARE",
@@ -5444,32 +5341,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.10979999959468842,
-      "sma200": 0.12049999967217445
-    },
-    {
-      "name": "INSPACE CREATION BERHAD",
-      "sector": "Bursa",
-      "category": "Intraday / Momentum",
-      "setupStyle": "SWING PLAY",
-      "price": 0.22499999403953552,
-      "change": 0.004999995231628418,
-      "changePct": 2.27,
-      "turnover": 58342.49845445156,
-      "volume": 259300,
-      "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
-      "high52": 0.28999999165534973,
-      "pullback": 22.41,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 2.27,
-      "lowTightness": 0,
-      "touchCount": 10,
-      "isConsolidation": false,
-      "floorLow": 0.2199999988079071,
-      "hasLowerWickRejection": false,
-      "isCombStock": true,
-      "sma50": 0.22774193219600186,
-      "sma200": 0.22774193219600186
+      "sma200": 0.12049999967217445,
+      "ipoGrade": "B",
+      "ipoYear": 2023,
+      "ipoPrice": 0.25,
+      "shariah": true
     },
     {
       "name": "INSPACE",
@@ -5482,7 +5358,7 @@
       "turnover": 58342.49845445156,
       "volume": 259300,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.225 < IPO RM 0.250)",
       "high52": 0.28999999165534973,
       "pullback": 22.41,
       "setupName": "🧊 Downtrend / Avoid",
@@ -5494,32 +5370,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.22774193219600186,
-      "sma200": 0.22774193219600186
-    },
-    {
-      "name": "MASTER TEC GROUP BERHAD",
-      "sector": "Bursa",
-      "category": "Intraday / Momentum",
-      "setupStyle": "SWING PLAY",
-      "price": 0.9900000095367432,
-      "change": 0,
-      "changePct": 0,
-      "turnover": 57717.00055599213,
-      "volume": 58300,
-      "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
-      "high52": 1.2000000476837158,
-      "pullback": 17.5,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 1.01,
-      "lowTightness": 4.12,
-      "touchCount": 6,
-      "isConsolidation": false,
-      "floorLow": 0.9700000286102295,
-      "hasLowerWickRejection": true,
-      "isCombStock": true,
-      "sma50": 1.0197999811172485,
-      "sma200": 1.0861499971151352
+      "sma200": 0.22774193219600186,
+      "ipoGrade": "B",
+      "ipoYear": 2026,
+      "ipoPrice": 0.25,
+      "shariah": true
     },
     {
       "name": "MTEC",
@@ -5544,32 +5399,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 1.0197999811172485,
-      "sma200": 1.0861499971151352
-    },
-    {
-      "name": "MASTER TEC GROUP",
-      "sector": "Bursa",
-      "category": "Intraday / Momentum",
-      "setupStyle": "SWING PLAY",
-      "price": 0.9900000095367432,
-      "change": 0,
-      "changePct": 0,
-      "turnover": 57717.00055599213,
-      "volume": 58300,
-      "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
-      "high52": 1.2000000476837158,
-      "pullback": 17.5,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 1.01,
-      "lowTightness": 4.12,
-      "touchCount": 6,
-      "isConsolidation": false,
-      "floorLow": 0.9700000286102295,
-      "hasLowerWickRejection": true,
-      "isCombStock": true,
-      "sma50": 1.0197999811172485,
-      "sma200": 1.0861499971151352
+      "sma200": 1.0861499971151352,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.39,
+      "shariah": true
     },
     {
       "name": "EMCC",
@@ -5594,7 +5428,10 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.32639999747276305,
-      "sma200": 0.3508249989151955
+      "sma200": 0.3508249989151955,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2023,
+      "ipoPrice": 0.24
     },
     {
       "name": "TECHSTORE",
@@ -5607,7 +5444,7 @@
       "turnover": 55407.500714063644,
       "volume": 299500,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.185 < IPO RM 0.200)",
       "high52": 0.3449999988079071,
       "pullback": 46.38,
       "setupName": "🧊 Downtrend / Avoid",
@@ -5619,7 +5456,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.2256999984383583,
-      "sma200": 0.2618499971181154
+      "sma200": 0.2618499971181154,
+      "ipoGrade": "B",
+      "ipoYear": 2025,
+      "ipoPrice": 0.2,
+      "shariah": true
     },
     {
       "name": "AGMO",
@@ -5644,32 +5485,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.3500999999046326,
-      "sma200": 0.3634999993443489
-    },
-    {
-      "name": "UNITRADE INDUSTRIES",
-      "sector": "Bursa",
-      "category": "Intraday / Momentum",
-      "setupStyle": "EXPLOSIVE",
-      "price": 0.24500000476837158,
-      "change": 0.01000000536441803,
-      "changePct": 4.26,
-      "turnover": 54439.001059532166,
-      "volume": 222200,
-      "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
-      "high52": 0.2750000059604645,
-      "pullback": 10.91,
-      "setupName": "📉 Healthy Dip",
-      "closeTightness": 4.26,
-      "lowTightness": 4.44,
-      "touchCount": 1,
-      "isConsolidation": false,
-      "floorLow": 0.22499999403953552,
-      "hasLowerWickRejection": true,
-      "isCombStock": true,
-      "sma50": 0.23939999848604201,
-      "sma200": 0.24659999825060366
+      "sma200": 0.3634999993443489,
+      "ipoGrade": "B",
+      "ipoYear": 2022,
+      "ipoPrice": 0.26,
+      "shariah": true
     },
     {
       "name": "UNITRAD",
@@ -5694,7 +5514,10 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.23939999848604201,
-      "sma200": 0.24659999825060366
+      "sma200": 0.24659999825060366,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2022,
+      "ipoPrice": 0.32
     },
     {
       "name": "SUMI",
@@ -5707,7 +5530,7 @@
       "turnover": 43164.00171518326,
       "volume": 479600,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.090 < IPO RM 0.240)",
       "high52": 0.1899999976158142,
       "pullback": 52.63,
       "setupName": "🧊 Downtrend / Avoid",
@@ -5719,7 +5542,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.09730000033974648,
-      "sma200": 0.10777499996125699
+      "sma200": 0.10777499996125699,
+      "ipoGrade": "C",
+      "ipoYear": 2025,
+      "ipoPrice": 0.24,
+      "shariah": true
     },
     {
       "name": "SYNERGY",
@@ -5744,7 +5571,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2018999993801117,
-      "sma200": 0.28735000021755697
+      "sma200": 0.28735000021755697,
+      "ipoGrade": "C",
+      "ipoYear": 2023,
+      "ipoPrice": 0.43,
+      "shariah": true
     },
     {
       "name": "INFOTEC",
@@ -5769,7 +5600,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.36339999973773957,
-      "sma200": 0.387575000077486
+      "sma200": 0.387575000077486,
+      "ipoGrade": "C",
+      "ipoYear": 2022,
+      "ipoPrice": 0.32,
+      "shariah": true
     },
     {
       "name": "ADB",
@@ -5794,57 +5629,10 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.6457000017166138,
-      "sma200": 0.7944749996066094
-    },
-    {
-      "name": "ALPHA IVF GROUP",
-      "sector": "Bursa",
-      "category": "Penny / Spekulatif",
-      "setupStyle": "SWING PLAY",
-      "price": 0.0949999988079071,
-      "change": -0.005000002682209015,
-      "changePct": -5,
-      "turnover": 38474.99951720238,
-      "volume": 405000,
-      "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
-      "high52": 0.1550000011920929,
-      "pullback": 38.71,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 5.26,
-      "lowTightness": 5.26,
-      "touchCount": 5,
-      "isConsolidation": false,
-      "floorLow": 0.0949999988079071,
-      "hasLowerWickRejection": true,
-      "isCombStock": true,
-      "sma50": 0.1019999997317791,
-      "sma200": 0.10229999985545873
-    },
-    {
-      "name": "L&PBHD",
-      "sector": "Bursa",
-      "category": "Penny / Spekulatif",
-      "setupStyle": "SWING PLAY",
-      "price": 0.0949999988079071,
-      "change": -0.005000002682209015,
-      "changePct": -5,
-      "turnover": 38474.99951720238,
-      "volume": 405000,
-      "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
-      "high52": 0.1550000011920929,
-      "pullback": 38.71,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 5.26,
-      "lowTightness": 5.26,
-      "touchCount": 5,
-      "isConsolidation": false,
-      "floorLow": 0.0949999988079071,
-      "hasLowerWickRejection": true,
-      "isCombStock": true,
-      "sma50": 0.1019999997317791,
-      "sma200": 0.10229999985545873
+      "sma200": 0.7944749996066094,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2023,
+      "ipoPrice": 0.33
     },
     {
       "name": "ALPHA",
@@ -5869,7 +5657,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.1019999997317791,
-      "sma200": 0.10229999985545873
+      "sma200": 0.10229999985545873,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2024,
+      "ipoPrice": 0.32,
+      "shariah": true
     },
     {
       "name": "VTC",
@@ -5894,7 +5686,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.23749999731779098,
-      "sma200": 0.2414249987155199
+      "sma200": 0.2414249987155199,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.25,
+      "shariah": true
     },
     {
       "name": "BWYS",
@@ -5919,7 +5715,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.17070000141859054,
-      "sma200": 0.19727499939501286
+      "sma200": 0.19727499939501286,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.22,
+      "shariah": true
     },
     {
       "name": "FIBRO",
@@ -5944,7 +5744,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.8482000005245208,
-      "sma200": 0.7483999991416931
+      "sma200": 0.7483999991416931,
+      "ipoGrade": "C",
+      "ipoYear": 2025,
+      "ipoPrice": 0.55,
+      "shariah": true
     },
     {
       "name": "MOBILIA",
@@ -5969,7 +5773,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.09070000156760216,
-      "sma200": 0.09560000032186508
+      "sma200": 0.09560000032186508,
+      "ipoGrade": "B",
+      "ipoYear": 2021,
+      "ipoPrice": 0.23,
+      "shariah": true
     },
     {
       "name": "HPMT",
@@ -5994,7 +5802,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.1732000008225441,
-      "sma200": 0.19184999875724315
+      "sma200": 0.19184999875724315,
+      "ipoGrade": "C",
+      "ipoYear": 2019,
+      "ipoPrice": 0.56,
+      "shariah": true
     },
     {
       "name": "EFRAME",
@@ -6019,7 +5831,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.26789999634027484,
-      "sma200": 0.3379499987512827
+      "sma200": 0.3379499987512827,
+      "ipoGrade": "B",
+      "ipoYear": 2020,
+      "ipoPrice": 0.28,
+      "shariah": true
     },
     {
       "name": "ACO",
@@ -6044,7 +5860,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.16240000009536742,
-      "sma200": 0.18297499872744083
+      "sma200": 0.18297499872744083,
+      "ipoGrade": "C",
+      "ipoYear": 2020,
+      "ipoPrice": 0.28,
+      "shariah": true
     },
     {
       "name": "PMIBHD",
@@ -6057,7 +5877,7 @@
       "turnover": 29068.00048351288,
       "volume": 135200,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.215 < IPO RM 0.270)",
       "high52": 0.26499998569488525,
       "pullback": 18.87,
       "setupName": "🧊 Downtrend / Avoid",
@@ -6069,7 +5889,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2255999994277954,
-      "sma200": 0.21764999888837339
+      "sma200": 0.21764999888837339,
+      "ipoGrade": "C",
+      "ipoYear": 2025,
+      "ipoPrice": 0.27,
+      "shariah": true
     },
     {
       "name": "LEFORM",
@@ -6094,7 +5918,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.16860000282526016,
-      "sma200": 0.16490000136196614
+      "sma200": 0.16490000136196614,
+      "ipoGrade": "C",
+      "ipoYear": 2022,
+      "ipoPrice": 0.23,
+      "shariah": true
     },
     {
       "name": "WTEC",
@@ -6107,7 +5935,7 @@
       "turnover": 26939.999397844076,
       "volume": 224500,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.120 < IPO RM 0.250)",
       "high52": 0.20000000298023224,
       "pullback": 40,
       "setupName": "🧊 Downtrend / Avoid",
@@ -6119,7 +5947,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.1199999988079071,
-      "sma200": 0.14602500025182963
+      "sma200": 0.14602500025182963,
+      "ipoGrade": "B",
+      "ipoYear": 2025,
+      "ipoPrice": 0.25,
+      "shariah": true
     },
     {
       "name": "MTAG",
@@ -6144,7 +5976,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.23489999920129775,
-      "sma200": 0.25262499928474424
+      "sma200": 0.25262499928474424,
+      "ipoGrade": "B",
+      "ipoYear": 2019,
+      "ipoPrice": 0.53,
+      "shariah": true
     },
     {
       "name": "DSS",
@@ -6169,7 +6005,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.2545999962091446,
-      "sma200": 0.25137499764561655
+      "sma200": 0.25137499764561655,
+      "ipoGrade": "B",
+      "ipoYear": 2023,
+      "ipoPrice": 0.55,
+      "shariah": true
     },
     {
       "name": "GEOHAN",
@@ -6182,7 +6022,7 @@
       "turnover": 21659.99972820282,
       "volume": 76000,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.285 < IPO RM 0.550)",
       "high52": 0.550000011920929,
       "pullback": 48.18,
       "setupName": "🧊 Downtrend / Avoid",
@@ -6194,7 +6034,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.3081999969482422,
-      "sma200": 0.3569776097785181
+      "sma200": 0.3569776097785181,
+      "ipoGrade": "C",
+      "ipoYear": 2025,
+      "ipoPrice": 0.55,
+      "shariah": true
     },
     {
       "name": "CAMAROE",
@@ -6207,7 +6051,7 @@
       "turnover": 20423.999543488026,
       "volume": 255300,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.080 < IPO RM 0.140)",
       "high52": 0.16500000655651093,
       "pullback": 51.52,
       "setupName": "🧊 Downtrend / Avoid",
@@ -6219,7 +6063,10 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.07640000149607658,
-      "sma200": 0.10416201144123877
+      "sma200": 0.10416201144123877,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2025,
+      "ipoPrice": 0.14
     },
     {
       "name": "A1AKK",
@@ -6232,7 +6079,7 @@
       "turnover": 20150.000154972076,
       "volume": 130000,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.155 < IPO RM 0.250)",
       "high52": 0.2549999952316284,
       "pullback": 39.22,
       "setupName": "🧊 Downtrend / Avoid",
@@ -6244,7 +6091,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.1664000016450882,
-      "sma200": 0.20400000020861625
+      "sma200": 0.20400000020861625,
+      "ipoGrade": "B",
+      "ipoYear": 2025,
+      "ipoPrice": 0.25,
+      "shariah": true
     },
     {
       "name": "EPB",
@@ -6269,7 +6120,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2834000009298325,
-      "sma200": 0.3549250005185604
+      "sma200": 0.3549250005185604,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.56,
+      "shariah": true
     },
     {
       "name": "VANZO",
@@ -6294,7 +6149,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.12899999767541886,
-      "sma200": 0.14137500025331973
+      "sma200": 0.14137500025331973,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.15,
+      "shariah": true
     },
     {
       "name": "PSP",
@@ -6307,7 +6166,7 @@
       "turnover": 14323.500569164753,
       "volume": 106100,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.135 < IPO RM 0.160)",
       "high52": 0.17000000178813934,
       "pullback": 20.59,
       "setupName": "🔻 Buy Support / Deep Pullback",
@@ -6319,7 +6178,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.13029999941587447,
-      "sma200": 0.1313703699796288
+      "sma200": 0.1313703699796288,
+      "ipoGrade": "C",
+      "ipoYear": 2025,
+      "ipoPrice": 0.16,
+      "shariah": true
     },
     {
       "name": "YENHER",
@@ -6344,7 +6207,10 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.7717999958992005,
-      "sma200": 0.7931999987363816
+      "sma200": 0.7931999987363816,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2021,
+      "ipoPrice": 0.95
     },
     {
       "name": "CKI",
@@ -6357,7 +6223,7 @@
       "turnover": 13896.00055217743,
       "volume": 38600,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.360 < IPO RM 1.080)",
       "high52": 1.1100000143051147,
       "pullback": 67.57,
       "setupName": "🧊 Downtrend / Avoid",
@@ -6369,7 +6235,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.41640000164508817,
-      "sma200": 0.5768249998986721
+      "sma200": 0.5768249998986721,
+      "ipoGrade": "C",
+      "ipoYear": 2025,
+      "ipoPrice": 1.08,
+      "shariah": true
     },
     {
       "name": "CEKD",
@@ -6394,7 +6264,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.28819999933242796,
-      "sma200": 0.31377500101923944
+      "sma200": 0.31377500101923944,
+      "ipoGrade": "B",
+      "ipoYear": 2021,
+      "ipoPrice": 0.48,
+      "shariah": true
     },
     {
       "name": "ZANTAT",
@@ -6419,32 +6293,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.1672000002861023,
-      "sma200": 0.20934999905526638
-    },
-    {
-      "name": "SUPREME CONSOLIDATED RESOURCES BERHAD",
-      "sector": "Bursa",
-      "category": "Intraday / Momentum",
-      "setupStyle": "SWING PLAY",
-      "price": 0.20000000298023224,
-      "change": 0,
-      "changePct": 0,
-      "turnover": 10820.000161230564,
-      "volume": 54100,
-      "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
-      "high52": 0.26499998569488525,
-      "pullback": 24.53,
-      "setupName": "🔻 Buy Support / Deep Pullback",
-      "closeTightness": 0,
-      "lowTightness": 2.56,
-      "touchCount": 3,
-      "isConsolidation": false,
-      "floorLow": 0.19499999284744263,
-      "hasLowerWickRejection": false,
-      "isCombStock": true,
-      "sma50": 0.19849999904632568,
-      "sma200": 0.2085999985039234
+      "sma200": 0.20934999905526638,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.25,
+      "shariah": true
     },
     {
       "name": "SUPREME",
@@ -6469,7 +6322,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.19849999904632568,
-      "sma200": 0.2085999985039234
+      "sma200": 0.2085999985039234,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.25,
+      "shariah": true
     },
     {
       "name": "SORENTO",
@@ -6494,32 +6351,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.6502999937534333,
-      "sma200": 0.5452499958872795
-    },
-    {
-      "name": "CARLORINO",
-      "sector": "Bursa",
-      "category": "Penny / Spekulatif",
-      "setupStyle": "SWING PLAY",
-      "price": 0.19499999284744263,
-      "change": 0,
-      "changePct": 0,
-      "turnover": 9593.999648094177,
-      "volume": 49200,
-      "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
-      "high52": 0.3199999928474426,
-      "pullback": 39.06,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 0,
-      "lowTightness": 0,
-      "touchCount": 8,
-      "isConsolidation": false,
-      "floorLow": 0.1899999976158142,
-      "hasLowerWickRejection": false,
-      "isCombStock": true,
-      "sma50": 0.20289999812841417,
-      "sma200": 0.2376499991118908
+      "sma200": 0.5452499958872795,
+      "ipoGrade": "C",
+      "ipoYear": 2024,
+      "ipoPrice": 0.37,
+      "shariah": true
     },
     {
       "name": "RL",
@@ -6544,7 +6380,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.20289999812841417,
-      "sma200": 0.2376499991118908
+      "sma200": 0.2376499991118908,
+      "ipoGrade": "C",
+      "ipoYear": 2024,
+      "ipoPrice": 0.27,
+      "shariah": true
     },
     {
       "name": "DPIH",
@@ -6569,7 +6409,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.10409999847412109,
-      "sma200": 0.10597499884665013
+      "sma200": 0.10597499884665013,
+      "ipoGrade": "B",
+      "ipoYear": 2019,
+      "ipoPrice": 0.25,
+      "shariah": true
     },
     {
       "name": "PTRB",
@@ -6594,7 +6438,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.29740000069141387,
-      "sma200": 0.29542500227689744
+      "sma200": 0.29542500227689744,
+      "ipoGrade": "C",
+      "ipoYear": 2022,
+      "ipoPrice": 0.36,
+      "shariah": true
     },
     {
       "name": "COLFORM",
@@ -6607,7 +6455,7 @@
       "turnover": 8650,
       "volume": 34600,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.250 < IPO RM 0.360)",
       "high52": 0.3499999940395355,
       "pullback": 28.57,
       "setupName": "🧊 Downtrend / Avoid",
@@ -6619,7 +6467,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.2520999974012375,
-      "sma200": 0.28992499858140947
+      "sma200": 0.28992499858140947,
+      "ipoGrade": "B",
+      "ipoYear": 2025,
+      "ipoPrice": 0.36,
+      "shariah": true
     },
     {
       "name": "KHJB",
@@ -6644,7 +6496,10 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.10309999883174896,
-      "sma200": 0.11669999901205301
+      "sma200": 0.11669999901205301,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2019,
+      "ipoPrice": 0.43
     },
     {
       "name": "VERDANT",
@@ -6657,7 +6512,7 @@
       "turnover": 7067.000091075897,
       "volume": 38200,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.185 < IPO RM 0.310)",
       "high52": 0.38499999046325684,
       "pullback": 51.95,
       "setupName": "🧊 Downtrend / Avoid",
@@ -6669,7 +6524,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.20229999840259552,
-      "sma200": 0.2339759028281074
+      "sma200": 0.2339759028281074,
+      "ipoGrade": "B",
+      "ipoYear": 2025,
+      "ipoPrice": 0.31,
+      "shariah": true
     },
     {
       "name": "EIB",
@@ -6694,7 +6553,10 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.15680000096559524,
-      "sma200": 0.15485000018030404
+      "sma200": 0.15485000018030404,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2022,
+      "ipoPrice": 0.3
     },
     {
       "name": "SENFONG",
@@ -6719,7 +6581,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.6733000135421753,
-      "sma200": 0.7055000016093254
+      "sma200": 0.7055000016093254,
+      "ipoGrade": "C",
+      "ipoYear": 2022,
+      "ipoPrice": 0.75,
+      "shariah": true
     },
     {
       "name": "KUCINGKO",
@@ -6744,7 +6610,10 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.07900000065565109,
-      "sma200": 0.09359999973326921
+      "sma200": 0.09359999973326921,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2024,
+      "ipoPrice": 0.3
     },
     {
       "name": "VOLCANO",
@@ -6769,7 +6638,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.27919999957084657,
-      "sma200": 0.3683999977260828
+      "sma200": 0.3683999977260828,
+      "ipoGrade": "B",
+      "ipoYear": 2021,
+      "ipoPrice": 0.35,
+      "shariah": true
     },
     {
       "name": "YXPM",
@@ -6794,7 +6667,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.2115999972820282,
-      "sma200": 0.22079999886453153
+      "sma200": 0.22079999886453153,
+      "ipoGrade": "B",
+      "ipoYear": 2022,
+      "ipoPrice": 0.28,
+      "shariah": true
     },
     {
       "name": "FPHB",
@@ -6819,32 +6696,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.3241999989748001,
-      "sma200": 0.3798750002682209
-    },
-    {
-      "name": "FARM PRICE",
-      "sector": "Bursa",
-      "category": "Intraday / Momentum",
-      "setupStyle": "SWING PLAY",
-      "price": 0.33500000834465027,
-      "change": 0.010000020265579224,
-      "changePct": 3.08,
-      "turnover": 4020.000100135803,
-      "volume": 12000,
-      "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
-      "high52": 0.4950000047683716,
-      "pullback": 32.32,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 3.08,
-      "lowTightness": 8.2,
-      "touchCount": 4,
-      "isConsolidation": false,
-      "floorLow": 0.3050000071525574,
-      "hasLowerWickRejection": false,
-      "isCombStock": true,
-      "sma50": 0.3241999989748001,
-      "sma200": 0.3798750002682209
+      "sma200": 0.3798750002682209,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.24,
+      "shariah": true
     },
     {
       "name": "MBN",
@@ -6869,7 +6725,10 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.09560000047087669,
-      "sma200": 0.10499999891966581
+      "sma200": 0.10499999891966581,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2023,
+      "ipoPrice": 0.21
     },
     {
       "name": "SUNLOGY",
@@ -6882,7 +6741,7 @@
       "turnover": 3418.49981546402,
       "volume": 12900,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.265 < IPO RM 0.300)",
       "high52": 0.4650000035762787,
       "pullback": 43.01,
       "setupName": "🧊 Downtrend / Avoid",
@@ -6894,7 +6753,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2684999984502792,
-      "sma200": 0.2854999979585409
+      "sma200": 0.2854999979585409,
+      "ipoGrade": "C",
+      "ipoYear": 2025,
+      "ipoPrice": 0.3,
+      "shariah": true
     },
     {
       "name": "KHB",
@@ -6919,7 +6782,10 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.08620000079274177,
-      "sma200": 0.09960000015795231
+      "sma200": 0.09960000015795231,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2024,
+      "ipoPrice": 0.2
     },
     {
       "name": "FLEXI",
@@ -6944,32 +6810,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.1321999990940094,
-      "sma200": 0.13282499771565198
-    },
-    {
-      "name": "AZAM JAYA BERHAD",
-      "sector": "Bursa",
-      "category": "Intraday / Momentum",
-      "setupStyle": "SWING PLAY",
-      "price": 1,
-      "change": 0,
-      "changePct": 0,
-      "turnover": 3000,
-      "volume": 3000,
-      "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
-      "high52": 1.2000000476837158,
-      "pullback": 16.67,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 0,
-      "lowTightness": 0.51,
-      "touchCount": 10,
-      "isConsolidation": false,
-      "floorLow": 0.9900000095367432,
-      "hasLowerWickRejection": true,
-      "isCombStock": true,
-      "sma50": 1.0155999851226807,
-      "sma200": 1.0347749835252762
+      "sma200": 0.13282499771565198,
+      "ipoGrade": "B",
+      "ipoYear": 2021,
+      "ipoPrice": 0.2,
+      "shariah": true
     },
     {
       "name": "AZAMJAYA",
@@ -6994,7 +6839,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 1.0155999851226807,
-      "sma200": 1.0347749835252762
+      "sma200": 1.0347749835252762,
+      "ipoGrade": "A",
+      "ipoYear": 2024,
+      "ipoPrice": 0.78,
+      "shariah": true
     },
     {
       "name": "KGW",
@@ -7019,7 +6868,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.10289999902248383,
-      "sma200": 0.13247500028461218
+      "sma200": 0.13247500028461218,
+      "ipoGrade": "B",
+      "ipoYear": 2023,
+      "ipoPrice": 0.21,
+      "shariah": true
     },
     {
       "name": "AGRICOR",
@@ -7044,7 +6897,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.3901999992132187,
-      "sma200": 0.43214999973773954
+      "sma200": 0.43214999973773954,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.5,
+      "shariah": true
     },
     {
       "name": "NESTCON",
@@ -7069,7 +6926,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.35020000219345093,
-      "sma200": 0.32415000200271604
+      "sma200": 0.32415000200271604,
+      "ipoGrade": "B",
+      "ipoYear": 2021,
+      "ipoPrice": 0.28,
+      "shariah": true
     },
     {
       "name": "AMEREIT",
@@ -7094,7 +6955,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 1.609199993610382,
-      "sma200": 1.6188499987125398
+      "sma200": 1.6188499987125398,
+      "ipoGrade": "C",
+      "ipoYear": 2022,
+      "ipoPrice": 1.13,
+      "shariah": true
     },
     {
       "name": "HAWK",
@@ -7119,57 +6984,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.20959999918937683,
-      "sma200": 0.26942499794065955
-    },
-    {
-      "name": "STEEL HAWK BERHAD",
-      "sector": "Bursa",
-      "category": "Penny / Spekulatif",
-      "setupStyle": "SWING PLAY",
-      "price": 0.1899999976158142,
-      "change": 0,
-      "changePct": 0,
-      "turnover": 2279.9999713897705,
-      "volume": 12000,
-      "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
-      "high52": 0.5849999785423279,
-      "pullback": 67.52,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 2.7,
-      "lowTightness": 2.78,
-      "touchCount": 3,
-      "isConsolidation": false,
-      "floorLow": 0.18000000715255737,
-      "hasLowerWickRejection": true,
-      "isCombStock": true,
-      "sma50": 0.20959999918937683,
-      "sma200": 0.26942499794065955
-    },
-    {
-      "name": "STEEL HAWK",
-      "sector": "Bursa",
-      "category": "Penny / Spekulatif",
-      "setupStyle": "SWING PLAY",
-      "price": 0.1899999976158142,
-      "change": 0,
-      "changePct": 0,
-      "turnover": 2279.9999713897705,
-      "volume": 12000,
-      "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
-      "high52": 0.5849999785423279,
-      "pullback": 67.52,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 2.7,
-      "lowTightness": 2.78,
-      "touchCount": 3,
-      "isConsolidation": false,
-      "floorLow": 0.18000000715255737,
-      "hasLowerWickRejection": true,
-      "isCombStock": true,
-      "sma50": 0.20959999918937683,
-      "sma200": 0.26942499794065955
+      "sma200": 0.26942499794065955,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.15,
+      "shariah": true
     },
     {
       "name": "GIIB",
@@ -7207,7 +7026,7 @@
       "turnover": 2221.9999879598618,
       "volume": 10100,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.220 < IPO RM 0.390)",
       "high52": 0.30000001192092896,
       "pullback": 26.67,
       "setupName": "🔻 Buy Support / Deep Pullback",
@@ -7219,7 +7038,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2136999985575676,
-      "sma200": 0.21837499924004078
+      "sma200": 0.21837499924004078,
+      "ipoGrade": "C",
+      "ipoYear": 2025,
+      "ipoPrice": 0.39,
+      "shariah": true
     },
     {
       "name": "PANDA",
@@ -7244,7 +7067,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.20069999754428863,
-      "sma200": 0.22652499809861182
+      "sma200": 0.22652499809861182,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2023,
+      "ipoPrice": 0.16,
+      "shariah": false
     },
     {
       "name": "TOPVISN",
@@ -7269,7 +7096,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.1614000007510185,
-      "sma200": 0.18024999976158143
+      "sma200": 0.18024999976158143,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.33,
+      "shariah": true
     },
     {
       "name": "CREST",
@@ -7294,7 +7125,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.47559999823570254,
-      "sma200": 0.49597499683499335
+      "sma200": 0.49597499683499335,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.35,
+      "shariah": true
     },
     {
       "name": "SPRING",
@@ -7319,7 +7154,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.11650000035762786,
-      "sma200": 0.1281500006094575
+      "sma200": 0.1281500006094575,
+      "ipoGrade": "B",
+      "ipoYear": 2019,
+      "ipoPrice": 0.25,
+      "shariah": true
     },
     {
       "name": "XPB",
@@ -7332,7 +7171,7 @@
       "turnover": 1609.499953687191,
       "volume": 11100,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.145 < IPO RM 0.200)",
       "high52": 0.23999999463558197,
       "pullback": 39.58,
       "setupName": "🧊 Downtrend / Avoid",
@@ -7344,7 +7183,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.14519999891519547,
-      "sma200": 0.16413513494504464
+      "sma200": 0.16413513494504464,
+      "ipoGrade": "B",
+      "ipoYear": 2025,
+      "ipoPrice": 0.2,
+      "shariah": true
     },
     {
       "name": "METRO",
@@ -7369,7 +7212,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.008099999818950892,
-      "sma200": 0.009599999785423278
+      "sma200": 0.009599999785423278,
+      "ipoGrade": "C",
+      "ipoYear": 2024,
+      "ipoPrice": 0.25,
+      "shariah": true
     },
     {
       "name": "TCS",
@@ -7394,7 +7241,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.08670000120997429,
-      "sma200": 0.10474999986588955
+      "sma200": 0.10474999986588955,
+      "ipoGrade": "B",
+      "ipoYear": 2020,
+      "ipoPrice": 0.23,
+      "shariah": true
     },
     {
       "name": "SCB",
@@ -7419,7 +7270,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.009999999776482582,
-      "sma200": 0.009224999793805182
+      "sma200": 0.009224999793805182,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.27,
+      "shariah": true
     },
     {
       "name": "MINOX",
@@ -7444,7 +7299,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.1783000013232231,
-      "sma200": 0.1871750012040138
+      "sma200": 0.1871750012040138,
+      "ipoGrade": "B",
+      "ipoYear": 2023,
+      "ipoPrice": 0.25,
+      "shariah": true
     },
     {
       "name": "DAY3",
@@ -7469,7 +7328,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.12579999908804892,
-      "sma200": 0.15502500142902137
+      "sma200": 0.15502500142902137,
+      "ipoGrade": "B",
+      "ipoYear": 2023,
+      "ipoPrice": 0.3,
+      "shariah": true
     },
     {
       "name": "TASHIN",
@@ -7494,32 +7357,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2067999991774559,
-      "sma200": 0.21134999826550482
-    },
-    {
-      "name": "OCEAN FRESH BERHAD",
-      "sector": "Bursa",
-      "category": "Penny / Spekulatif",
-      "setupStyle": "SWING PLAY",
-      "price": 0.125,
-      "change": 0,
-      "changePct": 0,
-      "turnover": 150,
-      "volume": 1200,
-      "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
-      "high52": 0.2800000011920929,
-      "pullback": 55.36,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 0,
-      "lowTightness": 0,
-      "touchCount": 5,
-      "isConsolidation": false,
-      "floorLow": 0.125,
-      "hasLowerWickRejection": true,
-      "isCombStock": true,
-      "sma50": 0.14659999996423723,
-      "sma200": 0.192549998909235
+      "sma200": 0.21134999826550482,
+      "ipoGrade": "B",
+      "ipoYear": 2019,
+      "ipoPrice": 0.58,
+      "shariah": true
     },
     {
       "name": "OFB",
@@ -7544,32 +7386,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.14659999996423723,
-      "sma200": 0.192549998909235
-    },
-    {
-      "name": "OCEAN FRESH",
-      "sector": "Bursa",
-      "category": "Penny / Spekulatif",
-      "setupStyle": "SWING PLAY",
-      "price": 0.125,
-      "change": 0,
-      "changePct": 0,
-      "turnover": 150,
-      "volume": 1200,
-      "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
-      "high52": 0.2800000011920929,
-      "pullback": 55.36,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 0,
-      "lowTightness": 0,
-      "touchCount": 5,
-      "isConsolidation": false,
-      "floorLow": 0.125,
-      "hasLowerWickRejection": true,
-      "isCombStock": true,
-      "sma50": 0.14659999996423723,
-      "sma200": 0.192549998909235
+      "sma200": 0.192549998909235,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.28,
+      "shariah": true
     },
     {
       "name": "AGX",
@@ -7594,7 +7415,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.4200000035762787,
-      "sma200": 0.4726999978721142
+      "sma200": 0.4726999978721142,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.35,
+      "shariah": true
     },
     {
       "name": "UMSINT",
@@ -7632,7 +7457,7 @@
       "turnover": 0,
       "volume": 0,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.260 < IPO RM 0.340)",
       "high52": 0.36500000953674316,
       "pullback": 28.77,
       "setupName": "🧊 Downtrend / Avoid",
@@ -7644,32 +7469,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2668999969959259,
-      "sma200": 0.28493197039276563
-    },
-    {
-      "name": "NORTHERN SOLAR HOLDINGS",
-      "sector": "Bursa",
-      "category": "Intraday / Momentum",
-      "setupStyle": "SWING PLAY",
-      "price": 0.6399999856948853,
-      "change": 0,
-      "changePct": 0,
-      "turnover": 0,
-      "volume": 0,
-      "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
-      "high52": 0.8100000023841858,
-      "pullback": 20.99,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 1.59,
-      "lowTightness": 1.59,
-      "touchCount": 9,
-      "isConsolidation": false,
-      "floorLow": 0.6299999952316284,
-      "hasLowerWickRejection": false,
-      "isCombStock": true,
-      "sma50": 0.6430999994277954,
-      "sma200": 0.638325001746416
+      "sma200": 0.28493197039276563,
+      "ipoGrade": "C",
+      "ipoYear": 2025,
+      "ipoPrice": 0.34,
+      "shariah": true
     },
     {
       "name": "PEOPLE",
@@ -7682,7 +7486,7 @@
       "turnover": 0,
       "volume": 0,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.245 < IPO RM 0.250)",
       "high52": 0.2800000011920929,
       "pullback": 12.5,
       "setupName": "📉 Healthy Dip",
@@ -7694,7 +7498,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.24310000091791154,
-      "sma200": 0.23067499950528145
+      "sma200": 0.23067499950528145,
+      "ipoGrade": "C",
+      "ipoYear": 2025,
+      "ipoPrice": 0.25,
+      "shariah": true
     },
     {
       "name": "OBHB",
@@ -7719,7 +7527,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.20879999905824662,
-      "sma200": 0.17752500124275683
+      "sma200": 0.17752500124275683,
+      "ipoGrade": "C",
+      "ipoYear": 2024,
+      "ipoPrice": 0.24,
+      "shariah": true
     },
     {
       "name": "SINKUNG",
@@ -7744,7 +7556,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.0810999995470047,
-      "sma200": 0.09375000011175871
+      "sma200": 0.09375000011175871,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.13,
+      "shariah": true
     },
     {
       "name": "SBH",
@@ -7769,7 +7585,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.15019999861717223,
-      "sma200": 0.17954999886453152
+      "sma200": 0.17954999886453152,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.22,
+      "shariah": true
     },
     {
       "name": "TSA",
@@ -7794,7 +7614,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.8578000116348267,
-      "sma200": 0.7945000076293945
+      "sma200": 0.7945000076293945,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.55,
+      "shariah": true
     },
     {
       "name": "KITACON",
@@ -7819,7 +7643,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.6820000052452088,
-      "sma200": 0.7086500054597855
+      "sma200": 0.7086500054597855,
+      "ipoGrade": "A",
+      "ipoYear": 2023,
+      "ipoPrice": 0.68,
+      "shariah": true
     },
     {
       "name": "PLYTEC",
@@ -7844,7 +7672,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.16860000193119049,
-      "sma200": 0.17177500024437906
+      "sma200": 0.17177500024437906,
+      "ipoGrade": "C",
+      "ipoYear": 2023,
+      "ipoPrice": 0.35,
+      "shariah": true
     },
     {
       "name": "HAILY",
@@ -7869,7 +7701,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.19259999841451644,
-      "sma200": 0.2074999985843897
+      "sma200": 0.2074999985843897,
+      "ipoGrade": "B",
+      "ipoYear": 2021,
+      "ipoPrice": 0.68,
+      "shariah": true
     },
     {
       "name": "HPPHB",
@@ -7894,7 +7730,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.3006000018119812,
-      "sma200": 0.3103250001370907
+      "sma200": 0.3103250001370907,
+      "ipoGrade": "B",
+      "ipoYear": 2021,
+      "ipoPrice": 0.36,
+      "shariah": true
     },
     {
       "name": "TJSETIA",
@@ -7919,7 +7759,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2061999973654747,
-      "sma200": 0.20327499866485596
+      "sma200": 0.20327499866485596,
+      "ipoGrade": "A",
+      "ipoYear": 2021,
+      "ipoPrice": 0.7,
+      "shariah": true
     },
     {
       "name": "ANEKA",
@@ -7944,7 +7788,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.11810000032186509,
-      "sma200": 0.12979999996721744
+      "sma200": 0.12979999996721744,
+      "ipoGrade": "B",
+      "ipoYear": 2020,
+      "ipoPrice": 0.33,
+      "shariah": true
     },
     {
       "name": "NORTHERN",
@@ -7969,7 +7817,10 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.6430999994277954,
-      "sma200": 0.638325001746416
+      "sma200": 0.638325001746416,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2025,
+      "ipoPrice": 0.63
     },
     {
       "name": "INNATURE",
@@ -7994,7 +7845,10 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.17680000334978105,
-      "sma200": 0.17810000211000443
+      "sma200": 0.17810000211000443,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2020,
+      "ipoPrice": 0.64
     }
   ],
   "topGainers": [

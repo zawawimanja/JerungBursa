@@ -206,7 +206,20 @@ async function main() {
     // ==========================================
     // CUSTOM VIP WATCHLIST (YAHOO FINANCE)
     // ==========================================
-    const mappings = JSON.parse(fs.readFileSync(path.join(__dirname, 'symbol_mappings.json'), 'utf8'));
+    const rawMappings = JSON.parse(fs.readFileSync(path.join(__dirname, 'symbol_mappings.json'), 'utf8'));
+    
+    // Deduplicate mappings: if multiple names map to the same symbol, keep only the shortest name (ticker symbol)
+    const mappings = {};
+    const symToNames = {};
+    for (const [name, sym] of Object.entries(rawMappings)) {
+        if (!symToNames[sym]) symToNames[sym] = [];
+        symToNames[sym].push(name);
+    }
+    for (const [sym, names] of Object.entries(symToNames)) {
+        names.sort((a, b) => a.length - b.length);
+        const shortestName = names[0];
+        mappings[shortestName] = sym;
+    }
     
     // Load sectors from IPO data if available
     const ipoDataPath = getIpoDataPath();

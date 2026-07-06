@@ -11,17 +11,6 @@
     "reason": "🚨 OVERBOUGHT (Dah Terbang, Awas Kena Dump)"
   },
   {
-    "name": "SKYECHIP",
-    "sector": "Auto-Scanned",
-    "category": "Swing / Mid-Cap",
-    "price": 2.83,
-    "change": -3.0821917808219133,
-    "turnover": 87112494,
-    "volume": 30781800,
-    "signal": "avoid",
-    "reason": "⚠️ Jerung Buang Barang / Markup"
-  },
-  {
     "name": "GREATEC",
     "sector": "Auto-Scanned",
     "category": "Swing / Mid-Cap",
@@ -30,7 +19,11 @@
     "turnover": 59052266,
     "volume": 22200100,
     "signal": "avoid",
-    "reason": "⚠️ Jerung Buang Barang / Markup"
+    "reason": "⚠️ Jerung Buang Barang / Markup",
+    "ipoGrade": "C",
+    "ipoYear": 2019,
+    "ipoPrice": 0.61,
+    "shariah": true
   },
   {
     "name": "ZETRIX",
@@ -173,7 +166,11 @@
     "turnover": 22722910,
     "volume": 32461300,
     "signal": "buy",
-    "reason": "🚨 OVERBOUGHT (Dah Terbang, Awas Kena Dump)"
+    "reason": "🚨 OVERBOUGHT (Dah Terbang, Awas Kena Dump)",
+    "ipoGrade": "B",
+    "ipoYear": 2023,
+    "ipoPrice": 0.63,
+    "shariah": true
   },
   {
     "name": "AAX",
@@ -217,7 +214,11 @@
     "turnover": 14154075,
     "volume": 2419500,
     "signal": "avoid",
-    "reason": "⚠️ Jerung Buang Barang / Markup"
+    "reason": "⚠️ Jerung Buang Barang / Markup",
+    "ipoGrade": "A",
+    "ipoYear": 2019,
+    "ipoPrice": 0.82,
+    "shariah": true
   },
   {
     "name": "NATGATE",
@@ -228,7 +229,11 @@
     "turnover": 13436550,
     "volume": 18157500,
     "signal": "avoid",
-    "reason": "⚠️ Jerung Buang Barang / Markup"
+    "reason": "⚠️ Jerung Buang Barang / Markup",
+    "ipoGrade": "B",
+    "ipoYear": 2023,
+    "ipoPrice": 0.38,
+    "shariah": true
   },
   {
     "name": "GAMUDA",
@@ -284,17 +289,6 @@
     "volume": 20763400,
     "signal": "avoid",
     "reason": "⚠️ Jerung Buang Barang / Markup"
-  },
-  {
-    "name": "SUNWAY",
-    "sector": "Auto-Scanned",
-    "category": "Swing / Mid-Cap",
-    "price": 5.38,
-    "change": -0.18552875695732443,
-    "turnover": 3652482,
-    "volume": 678900,
-    "signal": "avoid",
-    "reason": "Kaunter Lemau / Sikat"
   },
   {
     "name": "VSTECS",

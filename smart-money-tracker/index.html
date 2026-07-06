@@ -672,7 +672,7 @@
             </div>
             <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.45rem 0.8rem; border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.35);">
                 <input type="checkbox" id="strictEntryFilter" style="cursor: pointer; width: 16px; height: 16px;" checked>
-                <label for="strictEntryFilter" style="color: #34d399; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none;">🎯 Hanya Entry Baru (Floor ≤ 5%)</label>
+                <label for="strictEntryFilter" style="color: #34d399; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none;">🎯 Hanya Entry Baru (Floor ≤ 12%)</label>
             </div>
             <button id="refreshBtn" class="btn">🔄 Refresh Live</button>
         </div>
@@ -1436,12 +1436,12 @@
                 const ipoAgeFilterVal = document.getElementById('ipoAgeFilter') ? document.getElementById('ipoAgeFilter').value : 'ALL_IPO';
                 if (!matchesIpoAgeFilter(item, ipoAgeFilterVal)) return false;
 
-                // Strict risk management: If checked, price must not be > 5% away from support floor
+                // Strict risk management: If checked, price must not be > 12% away from support floor
                 const strictEntryVal = document.getElementById('strictEntryFilter') ? document.getElementById('strictEntryFilter').checked : false;
                 if (strictEntryVal) {
                     const floor = item.floorLow || (item.price * 0.95);
                     const distToFloor = ((item.price - floor) / floor) * 100;
-                    if (distToFloor > 5.0) return false;
+                    if (distToFloor > 12.0) return false;
                 }
 
                 const pct = item.changePct !== undefined ? item.changePct : item.change;

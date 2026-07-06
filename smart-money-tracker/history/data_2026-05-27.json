@@ -52,7 +52,11 @@
     "turnover": 91488070,
     "volume": 34523800,
     "signal": "avoid",
-    "reason": "⚠️ Jerung Buang Barang / Markup"
+    "reason": "⚠️ Jerung Buang Barang / Markup",
+    "ipoGrade": "C",
+    "ipoYear": 2019,
+    "ipoPrice": 0.61,
+    "shariah": true
   },
   {
     "name": "MYEG",
@@ -140,18 +144,11 @@
     "turnover": 32343168,
     "volume": 5491200,
     "signal": "buy",
-    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)"
-  },
-  {
-    "name": "SUNWAY",
-    "sector": "Auto-Scanned",
-    "category": "Swing / Mid-Cap",
-    "price": 5.24,
-    "change": -2.8,
-    "turnover": 24431500,
-    "volume": 4662500,
-    "signal": "avoid",
-    "reason": "⚠️ Jerung Buang Barang / Markup"
+    "reason": "🔥 GOLDEN ENTRY (Stabil - Gergasi / Peram Santai)",
+    "ipoGrade": "A",
+    "ipoYear": 2019,
+    "ipoPrice": 0.82,
+    "shariah": true
   },
   {
     "name": "FRONTKN",
@@ -184,7 +181,11 @@
     "turnover": 17193520,
     "volume": 23715200,
     "signal": "avoid",
-    "reason": "⚠️ Jerung Buang Barang / Markup"
+    "reason": "⚠️ Jerung Buang Barang / Markup",
+    "ipoGrade": "B",
+    "ipoYear": 2023,
+    "ipoPrice": 0.38,
+    "shariah": true
   },
   {
     "name": "VSTECS",

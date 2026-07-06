@@ -26,7 +26,7 @@
       "turnover": 0,
       "volume": 0,
       "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
+      "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.260 < IPO RM 0.360)",
       "high52": 0.3499999940395355,
       "pullback": 25.71,
       "setupName": "🔻 Buy Support / Deep Pullback",
@@ -38,32 +38,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2529999968409538,
-      "sma200": 0.2917749986797571
-    },
-    {
-      "name": "SUPREME CONSOLIDATED RESOURCES BERHAD",
-      "sector": "Bursa",
-      "category": "Intraday / Momentum",
-      "setupStyle": "SWING PLAY",
-      "price": 0.20000000298023224,
-      "change": 0,
-      "changePct": 0,
-      "turnover": 0,
-      "volume": 0,
-      "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
-      "high52": 0.26499998569488525,
-      "pullback": 24.53,
-      "setupName": "🔻 Buy Support / Deep Pullback",
-      "closeTightness": 0,
-      "lowTightness": 5.26,
-      "touchCount": 2,
-      "isConsolidation": false,
-      "floorLow": 0.1899999976158142,
-      "hasLowerWickRejection": false,
-      "isCombStock": true,
-      "sma50": 0.19849999904632568,
-      "sma200": 0.2090499983727932
+      "sma200": 0.2917749986797571,
+      "ipoGrade": "B",
+      "ipoYear": 2025,
+      "ipoPrice": 0.36,
+      "shariah": true
     },
     {
       "name": "AGRICOR",
@@ -88,7 +67,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.38909999787807464,
-      "sma200": 0.43402499973773956
+      "sma200": 0.43402499973773956,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.5,
+      "shariah": true
     },
     {
       "name": "SBH",
@@ -113,7 +96,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.15139999866485596,
-      "sma200": 0.18079999886453152
+      "sma200": 0.18079999886453152,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.22,
+      "shariah": true
     },
     {
       "name": "GLXT",
@@ -138,7 +125,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.20809999942779542,
-      "sma200": 0.21014999859035016
+      "sma200": 0.21014999859035016,
+      "ipoGrade": "B",
+      "ipoYear": 2023,
+      "ipoPrice": 0.19,
+      "shariah": true
     },
     {
       "name": "KGW",
@@ -163,7 +154,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.10349999904632569,
-      "sma200": 0.1331000002846122
+      "sma200": 0.1331000002846122,
+      "ipoGrade": "B",
+      "ipoYear": 2023,
+      "ipoPrice": 0.21,
+      "shariah": true
     },
     {
       "name": "KITACON",
@@ -188,7 +183,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.6832000041007995,
-      "sma200": 0.7098500055074691
+      "sma200": 0.7098500055074691,
+      "ipoGrade": "A",
+      "ipoYear": 2023,
+      "ipoPrice": 0.68,
+      "shariah": true
     },
     {
       "name": "SSF",
@@ -213,7 +212,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.38609999120235444,
-      "sma200": 0.3939999973773956
+      "sma200": 0.3939999973773956,
+      "ipoGrade": "B",
+      "ipoYear": 2023,
+      "ipoPrice": 0.25,
+      "shariah": true
     },
     {
       "name": "ORGABIO",
@@ -238,7 +241,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.29520000219345094,
-      "sma200": 0.29652500078082084
+      "sma200": 0.29652500078082084,
+      "ipoGrade": "B",
+      "ipoYear": 2022,
+      "ipoPrice": 0.31,
+      "shariah": true
     },
     {
       "name": "HPPHB",
@@ -263,7 +270,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.2976000016927719,
-      "sma200": 0.30969999998807907
+      "sma200": 0.30969999998807907,
+      "ipoGrade": "B",
+      "ipoYear": 2021,
+      "ipoPrice": 0.36,
+      "shariah": true
     },
     {
       "name": "HPMT",
@@ -288,7 +299,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.17220000058412552,
-      "sma200": 0.19259999871253966
+      "sma200": 0.19259999871253966,
+      "ipoGrade": "C",
+      "ipoYear": 2019,
+      "ipoPrice": 0.56,
+      "shariah": true
     },
     {
       "name": "SUPREME",
@@ -313,7 +328,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.19849999904632568,
-      "sma200": 0.2090499983727932
+      "sma200": 0.2090499983727932,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.25,
+      "shariah": true
     },
     {
       "name": "MBN",
@@ -338,7 +357,10 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.09700000017881394,
-      "sma200": 0.10512499891221523
+      "sma200": 0.10512499891221523,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2023,
+      "ipoPrice": 0.21
     },
     {
       "name": "EIB",
@@ -363,7 +385,10 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.15970000147819519,
-      "sma200": 0.1551000001654029
+      "sma200": 0.1551000001654029,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2022,
+      "ipoPrice": 0.3
     },
     {
       "name": "KHJB",
@@ -388,7 +413,10 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.10369999870657921,
-      "sma200": 0.11727499891072511
+      "sma200": 0.11727499891072511,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2019,
+      "ipoPrice": 0.43
     },
     {
       "name": "YENHER",
@@ -413,7 +441,10 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.7717999958992005,
-      "sma200": 0.7929749986529351
+      "sma200": 0.7929749986529351,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2021,
+      "ipoPrice": 0.95
     }
   ],
   "topGainers": []

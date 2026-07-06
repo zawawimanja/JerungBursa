@@ -1,16 +1,5 @@
 [
   {
-    "name": "SKYECHIP",
-    "sector": "Auto-Scanned",
-    "category": "Swing / Mid-Cap",
-    "price": 2.92,
-    "change": 8.15,
-    "turnover": 188770000,
-    "volume": 64650000,
-    "signal": "buy",
-    "reason": "🚨 OVERBOUGHT (Dah Terbang, Awas Kena Dump)"
-  },
-  {
     "name": "YTL",
     "sector": "Auto-Scanned",
     "category": "Swing / Mid-Cap",
@@ -107,7 +96,11 @@
     "turnover": 44630000,
     "volume": 16290000,
     "signal": "buy",
-    "reason": "⚡ Momentum Kuat (Harga Sedang Mencanak Naik Laju)"
+    "reason": "⚡ Momentum Kuat (Harga Sedang Mencanak Naik Laju)",
+    "ipoGrade": "C",
+    "ipoYear": 2019,
+    "ipoPrice": 0.61,
+    "shariah": true
   },
   {
     "name": "TENAGA",

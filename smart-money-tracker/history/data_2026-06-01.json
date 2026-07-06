@@ -77,31 +77,6 @@
       "sma200": 1.4563163495063782
     },
     {
-      "name": "MASTER TEC GROUP BERHAD",
-      "sector": "Bursa",
-      "category": "Intraday / Momentum",
-      "setupStyle": "SWING PLAY",
-      "price": 1.0199999809265137,
-      "change": 0,
-      "changePct": 0,
-      "turnover": 0,
-      "volume": 0,
-      "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
-      "high52": 1.2000000476837158,
-      "pullback": 15,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 0,
-      "lowTightness": 2,
-      "touchCount": 9,
-      "isConsolidation": false,
-      "floorLow": 1,
-      "hasLowerWickRejection": false,
-      "isCombStock": true,
-      "sma50": 1.0343999767303467,
-      "sma200": 1.0950999975204467
-    },
-    {
       "name": "MTEC",
       "sector": "Bursa",
       "category": "Intraday / Momentum",
@@ -124,7 +99,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 1.0343999767303467,
-      "sma200": 1.0950999975204467
+      "sma200": 1.0950999975204467,
+      "ipoGrade": "B",
+      "ipoYear": 2024,
+      "ipoPrice": 0.39,
+      "shariah": true
     },
     {
       "name": "MINOX",
@@ -149,7 +128,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.17320000171661376,
-      "sma200": 0.1915250011533499
+      "sma200": 0.1915250011533499,
+      "ipoGrade": "B",
+      "ipoYear": 2023,
+      "ipoPrice": 0.25,
+      "shariah": true
     },
     {
       "name": "MSTGOLF",
@@ -174,7 +157,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.16430000126361846,
-      "sma200": 0.18804999984800816
+      "sma200": 0.18804999984800816,
+      "ipoGrade": "C",
+      "ipoYear": 2023,
+      "ipoPrice": 0.81,
+      "shariah": true
     },
     {
       "name": "SSF",
@@ -199,7 +186,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.38689999282360077,
-      "sma200": 0.3940749970078468
+      "sma200": 0.3940749970078468,
+      "ipoGrade": "B",
+      "ipoYear": 2023,
+      "ipoPrice": 0.25,
+      "shariah": true
     },
     {
       "name": "VLB",
@@ -224,7 +215,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.5551000028848648,
-      "sma200": 0.4865250009298325
+      "sma200": 0.4865250009298325,
+      "ipoGrade": "B",
+      "ipoYear": 2023,
+      "ipoPrice": 0.33,
+      "shariah": true
     },
     {
       "name": "PTRB",
@@ -249,32 +244,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.308199999332428,
-      "sma200": 0.29687500223517416
-    },
-    {
-      "name": "UNITRADE INDUSTRIES",
-      "sector": "Bursa",
-      "category": "Intraday / Momentum",
-      "setupStyle": "SWING PLAY",
-      "price": 0.23999999463558197,
-      "change": 0,
-      "changePct": 0,
-      "turnover": 0,
-      "volume": 0,
-      "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
-      "high52": 0.2750000059604645,
-      "pullback": 12.73,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 0,
-      "lowTightness": 4.35,
-      "touchCount": 1,
-      "isConsolidation": false,
-      "floorLow": 0.23000000417232513,
-      "hasLowerWickRejection": false,
-      "isCombStock": true,
-      "sma50": 0.24079999923706055,
-      "sma200": 0.24894999839365484
+      "sma200": 0.29687500223517416,
+      "ipoGrade": "C",
+      "ipoYear": 2022,
+      "ipoPrice": 0.36,
+      "shariah": true
     },
     {
       "name": "UMC",
@@ -299,7 +273,11 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 5.872199954986573,
-      "sma200": 5.761400017738342
+      "sma200": 5.761400017738342,
+      "ipoGrade": "B",
+      "ipoYear": 2022,
+      "ipoPrice": 0.32,
+      "shariah": true
     },
     {
       "name": "FLEXI",
@@ -324,7 +302,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.1316999973356724,
-      "sma200": 0.13377499777823687
+      "sma200": 0.13377499777823687,
+      "ipoGrade": "B",
+      "ipoYear": 2021,
+      "ipoPrice": 0.2,
+      "shariah": true
     },
     {
       "name": "MOBILIA",
@@ -349,7 +331,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.08820000231266022,
-      "sma200": 0.09747500021010637
+      "sma200": 0.09747500021010637,
+      "ipoGrade": "B",
+      "ipoYear": 2021,
+      "ipoPrice": 0.23,
+      "shariah": true
     },
     {
       "name": "ANEKA",
@@ -374,32 +360,11 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.11799999997019768,
-      "sma200": 0.1316499999165535
-    },
-    {
-      "name": "MASTER TEC GROUP",
-      "sector": "Bursa",
-      "category": "Intraday / Momentum",
-      "setupStyle": "SWING PLAY",
-      "price": 1.0199999809265137,
-      "change": 0,
-      "changePct": 0,
-      "turnover": 0,
-      "volume": 0,
-      "signal": "avoid",
-      "reason": "⚠️ Saham Sikat / Tak Aktif",
-      "high52": 1.2000000476837158,
-      "pullback": 15,
-      "setupName": "🧊 Downtrend / Avoid",
-      "closeTightness": 0,
-      "lowTightness": 2,
-      "touchCount": 9,
-      "isConsolidation": false,
-      "floorLow": 1,
-      "hasLowerWickRejection": false,
-      "isCombStock": true,
-      "sma50": 1.0343999767303467,
-      "sma200": 1.0950999975204467
+      "sma200": 0.1316499999165535,
+      "ipoGrade": "B",
+      "ipoYear": 2020,
+      "ipoPrice": 0.33,
+      "shariah": true
     },
     {
       "name": "UNITRAD",
@@ -424,7 +389,10 @@
       "hasLowerWickRejection": false,
       "isCombStock": true,
       "sma50": 0.24079999923706055,
-      "sma200": 0.24894999839365484
+      "sma200": 0.24894999839365484,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2022,
+      "ipoPrice": 0.32
     },
     {
       "name": "KHJB",
@@ -449,7 +417,10 @@
       "hasLowerWickRejection": true,
       "isCombStock": true,
       "sma50": 0.1057999986410141,
-      "sma200": 0.11977499894797802
+      "sma200": 0.11977499894797802,
+      "ipoGrade": "Unrated",
+      "ipoYear": 2019,
+      "ipoPrice": 0.43
     }
   ],
   "topGainers": []
