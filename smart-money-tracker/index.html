@@ -812,9 +812,9 @@
             const reason = (item.reason || '').toUpperCase();
             if (reason.includes('AVOID')) return false;
 
-            // If we have listing year in item, use it (Fresh IPO is listed after 2019, i.e. >= 2020)
+            // If we have listing year in item, use it (Fresh IPO is listed after 2024, i.e. >= 2025)
             if (item.ipoYear !== undefined) {
-                return item.ipoYear >= 2020;
+                return item.ipoYear >= 2025;
             }
 
             const cleanName = item.name.toUpperCase().trim();

@@ -545,8 +545,8 @@ async function main() {
                 const normName = cleanStockName.replace(/[^A-Z0-9]/g, '');
                 return normName.startsWith(normKey);
             });
-            // Fresh IPO definition: has IPO grade, year >= 2020 (listed after 2019) and has no SMA downtrend
-            const isFreshIpo = (stock.ipoGrade === 'A' || stock.ipoGrade === 'B' || stock.ipoGrade === 'C') && (stock.ipoYear && stock.ipoYear >= 2020) && !isSmaDowntrend;
+            // Fresh IPO definition: has IPO grade, year >= 2025 (listed after 2024) and has no SMA downtrend
+            const isFreshIpo = (stock.ipoGrade === 'A' || stock.ipoGrade === 'B' || stock.ipoGrade === 'C') && (stock.ipoYear && stock.ipoYear >= 2025) && !isSmaDowntrend;
 
             // Logik pintar: Pullback sehingga 40% dibenarkan jika harga di atas SMA200 (Long-term Bullish)
             // Fresh IPO dibenarkan pullback sehingga 55%
