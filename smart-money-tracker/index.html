@@ -1086,6 +1086,12 @@
                 score += 2;
             }
             
+            // 9. Explosive Momentum Booster (For breakout / active buying setups - Fresh IPOs Only)
+            const isFresh = isFreshIpo(item);
+            if (isFresh && (item.setupStyle === 'EXPLOSIVE' || (item.setupName && item.setupName.toUpperCase().includes('EXPLOSIVE')))) {
+                score += 2;
+            }
+            
             return Math.min(15, score);
         }
 

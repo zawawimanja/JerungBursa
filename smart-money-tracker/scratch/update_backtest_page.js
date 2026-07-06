@@ -77,7 +77,15 @@ const newStatsLogic = `            // Calculate dynamic Smart Score for ranking
                 // 6. High volume spike confirmation (Liquidity score booster)
                 if (item.turnover >= 5000000) score += 1;
                 
-                return score;
+                // 9. Explosive Momentum Booster (For breakout / active buying setups - Fresh IPOs Only)
+                const isFresh = item.ipoYear !== undefined && item.ipoYear >= 2025;
+                const style = item.style || item.setupStyle || '';
+                const setupName = item.setupName || '';
+                if (isFresh && (style === 'EXPLOSIVE' || setupName.toUpperCase().includes('EXPLOSIVE'))) {
+                    score += 2;
+                }
+                
+                return Math.min(15, score);
             }
 
             // Compute Option C Hybrid Premium stats dynamically
