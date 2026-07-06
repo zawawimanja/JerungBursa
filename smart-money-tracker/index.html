@@ -1096,6 +1096,9 @@
         function isSleepingOrAvoidStock(item) {
             if (!item) return false;
             
+            // If the backend explicitly marked it as avoid, we ALWAYS avoid it!
+            if (item.signal === 'avoid') return true;
+            
             // Overextended or illiquid stocks are ALWAYS avoided, even for Fresh IPOs!
             if (item.isCombStock) return true;
             
