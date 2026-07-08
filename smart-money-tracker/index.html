@@ -643,6 +643,10 @@
                 <input type="checkbox" id="strictEntryFilter" style="cursor: pointer; width: 16px; height: 16px;" checked>
                 <label for="strictEntryFilter" style="color: #34d399; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none;">🔥 Ultra-Strict Entry (Floor ≤ 6%/11%, Skor ≥ 11/12, PB ≤ 20%)</label>
             </div>
+            <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.45rem 0.8rem; border-radius: 8px; border: 1px solid rgba(96, 165, 250, 0.35);">
+                <input type="checkbox" id="premiumHypeFilter" style="cursor: pointer; width: 16px; height: 16px;" checked>
+                <label for="premiumHypeFilter" style="color: #60a5fa; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none;">🚀 Premium Hype Only (OS ≥ 50x / Outlier)</label>
+            </div>
             <button id="refreshBtn" class="btn">🔄 Refresh Live</button>
         </div>
     </header>
@@ -1441,6 +1445,14 @@
 
                 const style = getItemStyle(item);
 
+                // Premium Hype Filter: If checked, apply to Fresh IPOs
+                const premiumHypeVal = document.getElementById('premiumHypeFilter') ? document.getElementById('premiumHypeFilter').checked : false;
+                if (premiumHypeVal && isFreshIpo(item)) {
+                    const osVal = item.os || 0;
+                    const isOutlier = item.outlier === true || item.outlier === 'true';
+                    if (osVal < 50 && !isOutlier) return false;
+                }
+
                 // Strict risk management: If checked, apply ultra-strict criteria to filter out duds
                 const strictEntryVal = document.getElementById('strictEntryFilter') ? document.getElementById('strictEntryFilter').checked : false;
                 if (strictEntryVal) {
@@ -1783,6 +1795,10 @@
             });
 
             document.getElementById('strictEntryFilter').addEventListener('change', function() {
+                applyFilters();
+            });
+
+            document.getElementById('premiumHypeFilter').addEventListener('change', function() {
                 applyFilters();
             });
 

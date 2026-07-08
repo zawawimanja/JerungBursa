@@ -537,7 +537,9 @@ async function main() {
                         year: listingYear,
                         ipoPrice: ipo.price,
                         openPrice: ipo.openPrice,
-                        listingDate: ipo.listingDate
+                        listingDate: ipo.listingDate,
+                        os: ipo.os || 0,
+                        outlier: ipo.outlier || false
                     };
                 }
             });
@@ -572,6 +574,8 @@ async function main() {
             stock.ipoGrade = ipoInfo.grade;
             stock.ipoYear = ipoInfo.year;
             stock.ipoPrice = ipoInfo.ipoPrice;
+            stock.os = ipoInfo.os || 0;
+            stock.outlier = ipoInfo.outlier || false;
         }
 
         const turnover = stock.price * stock.volume;
@@ -814,6 +818,8 @@ async function main() {
                 item.ipoPrice = info.ipoPrice;
                 item.openPrice = info.openPrice;
                 item.listingDate = info.listingDate;
+                item.os = info.os || 0;
+                item.outlier = info.outlier || false;
                 
                 // Trend Rider Rule: If Fresh IPO (listed >= 2025) is below its IPO price, it is a failed IPO (avoid!)
                 const isFresh = info.year >= 2025;
