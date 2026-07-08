@@ -11,7 +11,7 @@ const HEADERS = {
     'Accept-Language': 'en-US,en;q=0.5',
 };
 
-function getIpoDataPath() {
+async function getIpoList() {
     const candidatePaths = [
         path.join(__dirname, '../../ipo/data.json'),
         path.join(__dirname, '../../ipohunterv2/data.json'),
@@ -20,10 +20,27 @@ function getIpoDataPath() {
     ];
     for (const p of candidatePaths) {
         if (fs.existsSync(p)) {
-            return p;
+            try {
+                console.log(`📂 Loading local IPO database from: ${p}`);
+                return JSON.parse(fs.readFileSync(p, 'utf8'));
+            } catch (err) {
+                console.warn(`⚠️ Failed to parse local IPO database at ${p}:`, err.message);
+            }
         }
     }
-    return candidatePaths[0];
+    // Fallback to fetching online from GitHub if local file is not found (e.g. on GitHub Actions)
+    const githubUrl = 'https://raw.githubusercontent.com/zawawimanja/ipobursa/main/data.json';
+    try {
+        console.log(`🌐 Local IPO database not found. Fetching online from: ${githubUrl}`);
+        const res = await axios.get(githubUrl, { headers: HEADERS });
+        if (res.status === 200 && Array.isArray(res.data)) {
+            console.log(`✅ Loaded ${res.data.length} IPO records from GitHub.`);
+            return res.data;
+        }
+    } catch (err) {
+        console.error(`❌ Failed to fetch IPO database from GitHub:`, err.message);
+    }
+    return [];
 }
 
 const freshIpos = [
@@ -168,6 +185,9 @@ async function main() {
     console.log('🚀 Jerung Bursa Scraper v3.1 (Sumber: i3investor / Fallback: Bursa Malaysia)');
     console.log('='.repeat(55));
     
+    // Load IPO database (local or online raw fallback)
+    const ipoList = await getIpoList();
+    
     let allRawStocks = new Map();
     
     // 1. Ambil data pasaran utama
@@ -222,12 +242,10 @@ async function main() {
     }
     
     // Load sectors from IPO data if available
-    const ipoDataPath = getIpoDataPath();
     const ipoSectors = {};
-    if (fs.existsSync(ipoDataPath)) {
+    if (ipoList && ipoList.length > 0) {
         try {
-            const ipos = JSON.parse(fs.readFileSync(ipoDataPath, 'utf8'));
-            ipos.forEach(ipo => {
+            ipoList.forEach(ipo => {
                 const sym = ipo.symbol ? ipo.symbol.replace(/\[.*?\]/g, '').toUpperCase().trim() : '';
                 const name = ipo.companyName ? ipo.companyName.replace(/\[.*?\]/g, '').toUpperCase().trim() : '';
                 const sec = ipo.sector ? ipo.sector.split(' ')[0] : 'IPO';
@@ -499,11 +517,9 @@ async function main() {
     // ==========================================
     console.log('\n📊 Menganalisis Formula Smart Money...');
     
-    const ipoDataFilePath = getIpoDataPath();
     const ipoMap = {};
     try {
-        if (fs.existsSync(ipoDataFilePath)) {
-            const ipoList = JSON.parse(fs.readFileSync(ipoDataFilePath, 'utf8'));
+        if (ipoList && ipoList.length > 0) {
             ipoList.forEach(ipo => {
                 if (ipo.symbol) {
                     const cleanSymbol = ipo.symbol.replace(/\[.*?\]/g, '').toUpperCase().trim();
@@ -772,49 +788,31 @@ async function main() {
     
     // Read IPO Grades from neighboring directory
     try {
-        const ipoDataPath = getIpoDataPath();
-        if (fs.existsSync(ipoDataPath)) {
-            const ipoList = JSON.parse(fs.readFileSync(ipoDataPath, 'utf8'));
-            const ipoMap = {};
-            ipoList.forEach(ipo => {
-                if (ipo.symbol) {
-                    const cleanSymbol = ipo.symbol.replace(/\[.*?\]/g, '').toUpperCase().trim();
-                    const listingYear = parseInt(ipo.year) || (ipo.listingDate ? parseInt(ipo.listingDate.split('-')[2]) : 0);
-                    if (listingYear >= 2019) {
-                        ipoMap[cleanSymbol] = {
-                            grade: ipo.predictedGrade || 'Unrated',
-                            year: listingYear,
-                            ipoPrice: ipo.price
-                        };
-                    }
-                }
-            });
-            const fallbackIpoMap = {
-                '3REN': 'B',
-                'HEGROUP': 'B'
-            };
+        const fallbackIpoMap = {
+            '3REN': 'B',
+            'HEGROUP': 'B'
+        };
 
-            let ipoTagCount = 0;
-            processedData.forEach(item => {
-                const cleanName = item.name.toUpperCase().trim();
-                const info = ipoMap[cleanName];
-                if (info) {
-                    item.ipoGrade = info.grade === 'Unrated' ? (fallbackIpoMap[cleanName] || 'Unrated') : info.grade;
-                    item.ipoYear = info.year;
-                    item.ipoPrice = info.ipoPrice;
-                    
-                    // Trend Rider Rule: If Fresh IPO (listed >= 2025) is below its IPO price, it is a failed IPO (avoid!)
-                    const isFresh = info.year >= 2025;
-                    if (isFresh && item.ipoPrice && item.price < item.ipoPrice) {
-                        item.signal = 'avoid';
-                        item.reason = `⚠️ Below IPO Price: Failed IPO Base (Price RM ${item.price.toFixed(3)} < IPO RM ${item.ipoPrice.toFixed(3)})`;
-                    }
-                    
-                    ipoTagCount++;
+        let ipoTagCount = 0;
+        processedData.forEach(item => {
+            const cleanName = item.name.toUpperCase().trim();
+            const info = ipoMap[cleanName];
+            if (info) {
+                item.ipoGrade = info.grade === 'Unrated' ? (fallbackIpoMap[cleanName] || 'Unrated') : info.grade;
+                item.ipoYear = info.year;
+                item.ipoPrice = info.ipoPrice;
+                
+                // Trend Rider Rule: If Fresh IPO (listed >= 2025) is below its IPO price, it is a failed IPO (avoid!)
+                const isFresh = info.year >= 2025;
+                if (isFresh && item.ipoPrice && item.price < item.ipoPrice) {
+                    item.signal = 'avoid';
+                    item.reason = `⚠️ Below IPO Price: Failed IPO Base (Price RM ${item.price.toFixed(3)} < IPO RM ${item.ipoPrice.toFixed(3)})`;
                 }
-            });
-            console.log(`✅ Berjaya memadankan ${ipoTagCount} kaunter dengan Gred IPO dari projek sebelah.`);
-        }
+                
+                ipoTagCount++;
+            }
+        });
+        console.log(`✅ Berjaya memadankan ${ipoTagCount} kaunter dengan Gred IPO dari projek sebelah.`);
     } catch (err) {
         console.error("Warning loading IPO grades:", err.message);
     }
