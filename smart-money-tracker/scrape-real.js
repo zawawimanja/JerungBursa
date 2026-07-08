@@ -468,20 +468,28 @@ async function main() {
                     const maxLow = Math.max(...(validDays.length < 25 ? lows5 : (minLow === floor5 ? lows5 : lows10)));
                     const lowTightness = ((maxLow - minLow) / minLow) * 100;
 
-                    // Hitung Lower Wick Rejection harian (Ekor di bawah)
+                    // Hitung Candlestick Rejection dengan syarat ketat (Pinbar / Hammer / Shooting Star)
                     const dailyBody = Math.abs(lastDay.close - lastDay.open);
                     const dailyLowerShadow = Math.min(lastDay.open, lastDay.close) - lastDay.low;
+                    const dailyUpperShadow = lastDay.high - Math.max(lastDay.open, lastDay.close);
                     const dailyTotalRange = lastDay.high - lastDay.low;
                     
                     const isDojiConsolidation = (dailyBody / currentPrice <= 0.015) && (floorDist <= 1.5);
                     
+                    // Reject Bawah: Ekor bawah mesti sekurang-kurangnya 45% daripada julat harian DAN lebih panjang dari badan lilin
                     const hasLowerWickRejection = (dailyTotalRange > 0 && (
-                         (dailyLowerShadow / dailyTotalRange >= 0.20) || 
-                         (dailyBody > 0 && dailyLowerShadow / dailyBody >= 0.40) ||
-                         (dailyBody === 0 && dailyLowerShadow > 0)
+                         (dailyLowerShadow / dailyTotalRange >= 0.45) && 
+                         (dailyLowerShadow > dailyBody)
                     )) || isDojiConsolidation;
 
                     stock.hasLowerWickRejection = hasLowerWickRejection;
+                    
+                    // Reject Atas: Ekor atas mesti sekurang-kurangnya 45% daripada julat harian DAN lebih panjang dari badan lilin
+                    const hasUpperWickRejection = dailyTotalRange > 0 && (
+                         (dailyUpperShadow / dailyTotalRange >= 0.45) && 
+                         (dailyUpperShadow > dailyBody)
+                    );
+                    stock.hasUpperWickRejection = hasUpperWickRejection;
                     
                     const closesDaily = validDays.map(d => d.close).filter(c => c !== null && c !== undefined);
                     const sma50 = closesDaily.length >= 50
@@ -704,6 +712,7 @@ async function main() {
             isConsolidation: stock.isConsolidation || false,
             floorLow: stock.floorLow || null,
             hasLowerWickRejection: stock.hasLowerWickRejection || false,
+            hasUpperWickRejection: stock.hasUpperWickRejection || false,
             isCombStock: stock.isCombStock || false,
             sma50: stock.sma50 || null,
             sma200: stock.sma200 || null
