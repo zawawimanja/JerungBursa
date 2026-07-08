@@ -512,48 +512,7 @@
             text-decoration: underline;
         }
 
-        /* Quick Info Board */
-        .guide-board {
-            background: var(--panel-bg);
-            border: 1px solid var(--panel-border);
-            border-radius: 16px;
-            padding: 1.8rem;
-            margin-bottom: 2rem;
-        }
 
-        .guide-board h3 {
-            font-family: 'Outfit', sans-serif;
-            color: #a5b4fc;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-            font-weight: 700;
-        }
-
-        .guide-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .guide-item {
-            background: rgba(15, 23, 42, 0.4);
-            padding: 1rem;
-            border-radius: 10px;
-            border-left: 3px solid var(--accent);
-        }
-
-        .guide-item h4 {
-            font-weight: 700;
-            font-size: 0.95rem;
-            color: white;
-            margin-bottom: 0.4rem;
-        }
-
-        .guide-item p {
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            line-height: 1.5;
-        }
 
         /* Top control panel */
         .controls {
@@ -688,27 +647,7 @@
         </div>
     </header>
 
-    <!-- KAMPUS IPO: DEFINISI FRESH, MATURE & NON-IPO -->
-    <div class="guide-board" style="margin-top: 1.5rem; margin-bottom: 2rem;">
-        <h3 onclick="toggleKamus()" style="cursor: pointer; display: flex; align-items: center; justify-content: space-between; margin: 0; padding: 0.2rem 0; user-select: none;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
-            <span>🎓 Kamus Kategori Saham (Kriteria Umur IPO)</span>
-            <span id="kamus-toggle-icon" style="font-size: 0.85rem; color: #3b82f6;">▼</span>
-        </h3>
-        <div id="kamus-content" class="guide-grid" style="display: none; margin-top: 1rem;">
-            <div class="guide-item" style="border-left-color: #34d399;">
-                <h4>✨ Fresh IPO (Listing 2025 - 2026)</h4>
-                <p>Kaunter hangat yang baru tersenarai di pasaran (kurang 2 tahun). Kartanya masih baru dan harga bergerak cergas berdasarkan minat pasaran semasa (Minima Skor &ge; 10).</p>
-            </div>
-            <div class="guide-item" style="border-left-color: #a78bfa;">
-                <h4>🧱 Mature IPO (Listing 2019 - 2024)</h4>
-                <p>Kaunter IPO matang yang sudah stabil (2-7 tahun lepas). Kartanya lengkap dan masih dipadankan dengan Gred Premium asal untuk tujuan pemarkahan (Minima Skor &ge; 11/12).</p>
-            </div>
-            <div class="guide-item" style="border-left-color: #f59e0b;">
-                <h4>🏢 Non-IPO (Listing Sebelum 2019)</h4>
-                <p>Syarikat lama yang sudah tersenarai melebihi 7 tahun. Dinilai secara tulen 100% menggunakan kriteria teknikal & volum Smart Money semasa tanpa sebarang booster IPO (Minima Skor &ge; 12).</p>
-            </div>
-        </div>
-    </div>
+
 
     <!-- PREMIUM HYBRID (Trend Rider) RECOMMENDED PICKS BOX -->
     <div id="hybrid-recommendations-section" style="margin-bottom: 2rem; display: none;">
@@ -863,18 +802,7 @@
 
 
     <script>
-        // Toggle function for Kamus Kategori Saham (hidden by default)
-        function toggleKamus() {
-            const content = document.getElementById('kamus-content');
-            const icon = document.getElementById('kamus-toggle-icon');
-            if (content.style.display === 'none') {
-                content.style.display = 'grid';
-                icon.textContent = '▲';
-            } else {
-                content.style.display = 'none';
-                icon.textContent = '▼';
-            }
-        }
+
 
         // Global variables
         let currentData = [];
