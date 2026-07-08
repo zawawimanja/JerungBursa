@@ -1719,13 +1719,13 @@
             if (!reclaimTbody || !reclaimSection) return;
 
             // Filter for Open Reclaim candidates:
-            // 1. Fresh IPO (listed >= 2025)
+            // 1. Fresh IPO (listed >= 2026 for super fresh)
             // 2. Open Price > 0
             // 3. Current Price < Open Price
             // 4. Turnover >= 100,000 (minimum liquidity)
             let validPicks = currentData.filter(item => {
                 const isIpo = item.ipoGrade === 'A' || item.ipoGrade === 'B' || item.ipoGrade === 'C';
-                const isFresh = item.ipoYear && item.ipoYear >= 2025;
+                const isFresh = item.ipoYear && item.ipoYear >= 2026;
                 if (!isIpo || !isFresh) return false;
                 if (!item.openPrice || item.openPrice <= 0) return false;
                 if (item.price >= item.openPrice) return false;
