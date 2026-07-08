@@ -527,7 +527,9 @@ async function main() {
                     ipoMap[cleanSymbol] = {
                         grade: ipo.predictedGrade || 'Unrated',
                         year: listingYear,
-                        ipoPrice: ipo.price
+                        ipoPrice: ipo.price,
+                        openPrice: ipo.openPrice,
+                        listingDate: ipo.listingDate
                     };
                 }
             });
@@ -801,6 +803,8 @@ async function main() {
                 item.ipoGrade = info.grade === 'Unrated' ? (fallbackIpoMap[cleanName] || 'Unrated') : info.grade;
                 item.ipoYear = info.year;
                 item.ipoPrice = info.ipoPrice;
+                item.openPrice = info.openPrice;
+                item.listingDate = info.listingDate;
                 
                 // Trend Rider Rule: If Fresh IPO (listed >= 2025) is below its IPO price, it is a failed IPO (avoid!)
                 const isFresh = info.year >= 2025;
