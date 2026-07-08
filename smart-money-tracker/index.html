@@ -645,7 +645,7 @@
             </div>
             <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.45rem 0.8rem; border-radius: 8px; border: 1px solid rgba(96, 165, 250, 0.35);">
                 <input type="checkbox" id="premiumHypeFilter" style="cursor: pointer; width: 16px; height: 16px;" checked>
-                <label for="premiumHypeFilter" style="color: #60a5fa; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none;">🚀 Premium Hype Only (OS ≥ 50x / Outlier)</label>
+                <label for="premiumHypeFilter" style="color: #60a5fa; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none;">🚀 Premium Hype Only (Gred A / OS ≥ 50x / Outlier)</label>
             </div>
             <button id="refreshBtn" class="btn">🔄 Refresh Live</button>
         </div>
@@ -1184,7 +1184,7 @@
             // Fallback to GitHub if local load failed
             if (!loadedLocal) {
                 try {
-                    const res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/live_data.json?t=${cacheBuster}`);
+                    const res = await fetch(`https://raw.githubusercontent.com/zawawimanja/BSKL/main/smart-money-tracker/live_data.json?t=${cacheBuster}`);
                     if (res.ok) {
                         raw = await res.json();
                     }
@@ -1450,7 +1450,8 @@
                 if (premiumHypeVal && isFreshIpo(item)) {
                     const osVal = item.os || 0;
                     const isOutlier = item.outlier === true || item.outlier === 'true';
-                    if (osVal < 50 && !isOutlier) return false;
+                    // Allow Grade A OR stocks with OS >= 50x OR Outlier status
+                    if (item.ipoGrade !== 'A' && osVal < 50 && !isOutlier) return false;
                 }
 
                 // Strict risk management: If checked, apply ultra-strict criteria to filter out duds
@@ -1855,7 +1856,7 @@
                     }
                     
                     if (!res || !res.ok) {
-                        res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/history/data_${dateVal}.json?t=${cacheBuster}`);
+                        res = await fetch(`https://raw.githubusercontent.com/zawawimanja/BSKL/main/smart-money-tracker/history/data_${dateVal}.json?t=${cacheBuster}`);
                     }
                     
                     if (res.ok) {
