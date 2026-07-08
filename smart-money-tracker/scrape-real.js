@@ -669,6 +669,7 @@ async function main() {
                 }
             }
         } else if (stock.isVip && stock.change <= 0) {
+            signal = 'buy';
             reason = 'VIP Sideway / Pullback (Monitor for Opportunities)';
         }
         

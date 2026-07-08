@@ -742,6 +742,51 @@
     </div>
 
 
+    <!-- VVIP WATCHLIST (NEAR MISS / MONITOR) SECTION -->
+    <div id="vvip-watchlist-section" style="margin-bottom: 2rem; display: none;">
+        <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 2px dashed #f59e0b; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15); position: relative; overflow: hidden;">
+            <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(245, 158, 11, 0.15); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(245, 158, 11, 0.2); padding-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1; min-width: 300px;">
+                    <span style="font-size: 1.8rem;">⚠️</span>
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                            <h2 style="margin: 0; font-size: 1.3rem; color: #f59e0b; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem;">VVIP Watchlist / Hampir Lepas (Monitor)</h2>
+                            <span style="font-size: 0.7rem; background: rgba(245, 158, 11, 0.2); color: #f59e0b; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(245, 158, 11, 0.3); white-space: nowrap;">👀 MONITOR ONLY</span>
+                        </div>
+                        <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
+                            Kaunter VVIP berpotensi tinggi dengan **Skor 8 atau 9** yang hampir melepasi tapisan utama. Sesuai untuk diletakkan dalam *Watchlist* peribadi anda bagi mencari peluang kemasukan apabila harga mula merosot rapat dengan sokongan.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="table-wrapper" style="margin-top: 1rem; margin-bottom: 0; overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse;">
+                    <thead>
+                        <tr>
+                            <th style="width: 50px; text-align: center; color: #f59e0b;">No</th>
+                            <th style="color: #f59e0b; text-align: left;">Counter</th>
+                            <th style="text-align: center; color: #f59e0b;">Kategori Setup</th>
+                            <th style="text-align: right; color: #f59e0b;">Price</th>
+                            <th style="text-align: right; color: #f59e0b;">Change</th>
+                            <th style="text-align: right; color: #f59e0b;">Support Floor</th>
+                            <th style="text-align: right; color: #f59e0b;">Jarak Lantai</th>
+                            <th style="text-align: right; color: #f59e0b;">Volatiliti</th>
+                            <th style="text-align: right; color: #f59e0b;">Stop Loss (3%)</th>
+                            <th style="text-align: right; color: #f59e0b;">Turnover</th>
+                        </tr>
+                    </thead>
+                    <tbody id="vvipWatchlistTableBody">
+                        <!-- Dynamically populated watchlist rows -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
         <!-- Kalkulator -->
         <div class="calc-card" style="margin-top: 2rem;">
             <div class="calc-header">
@@ -1042,13 +1087,31 @@
             'YENHER': 'B',
             'YEWLEE': 'B',
             'YXPM': 'B',
-            'ZANTAT': 'B'
+            'ZANTAT': 'B',
+            'CBHB': 'B',
+            'HEGROUP': 'B',
+            'SDCG': 'B',
+            'ADNEX': 'B',
+            'EXSIMHB': 'B',
+            'EIPOWER': 'B',
+            'ISF': 'B',
+            'KEEMING': 'B',
+            'SUM': 'B',
+            'PENTECH': 'B',
+            'SKYECHIP': 'B',
+            'AMS': 'B',
+            'EMPIRE': 'B',
+            'GDGROUP': 'B',
+            'MMCS': 'B',
+            'ELSA': 'B',
+            'NE': 'B'
         };
 
         const freshIpos = [
             'SKYECHIP', 'PENTECH', 'SUM', 'ELSA', 'AMBEST', 'AMS',
             'EIPOWER', 'ISF', 'KEEMING', 'TEAMSTR', 'MMCS', 'GDGROUP',
-            'GOLDLI', 'HOCKSOON', 'OGX', 'SBS', 'SRKK', 'EMPIRE'
+            'GOLDLI', 'HOCKSOON', 'OGX', 'SBS', 'SRKK', 'EMPIRE',
+            'CBHB', 'HEGROUP', 'SDCG', 'ADNEX', 'EXSIMHB', 'NE'
         ];
 
         // Helper to check if a stock is a fresh IPO
@@ -1248,6 +1311,7 @@
             updateSentiment(currentData);
             renderTrendRiders();
             renderReclaimRadar();
+            renderVvipWatchlist();
         }
 
         // Populate Calculator Dropdown with all matched scanner tickers
@@ -1297,7 +1361,7 @@
             // 1. Proximity to Floor (Safer Entry)
             if (distToFloor <= 1.5) score += 4;
             else if (distToFloor <= 3.0) score += 2;
-            else if (distToFloor <= 5.0) score += 1;
+            else if (distToFloor <= 7.0) score += 1;
             
             // 2. Floor Strength (Support touches)
             if (item.touchCount >= 5) score += 3;
@@ -1726,6 +1790,124 @@
                 reclaimTbody.innerHTML = html;
             } else {
                 reclaimSection.style.display = 'none';
+            }
+        }
+
+        // Render VVIP Watchlist (Score 8-9) Table
+        function renderVvipWatchlist() {
+            const watchlistTbody = document.getElementById('vvipWatchlistTableBody');
+            const watchlistSection = document.getElementById('vvip-watchlist-section');
+            if (!watchlistTbody || !watchlistSection) return;
+
+            // Filter for Watchlist candidates:
+            // 1. Score must be exactly 8 or 9
+            // 2. Not marked as avoid (but we bypass downtrend filters for Fresh IPOs)
+            let validPicks = currentData.filter(item => {
+                if (isSleepingOrAvoidStock(item)) return false;
+                if (item.price < 0.25 || item.price > 4.00) return false;
+                
+                const score = calculateSmartScore(item);
+                if (score !== 8 && score !== 9) return false;
+
+                const ipoAgeFilterVal = document.getElementById('ipoAgeFilter') ? document.getElementById('ipoAgeFilter').value : 'ALL_IPO';
+                if (!matchesIpoAgeFilter(item, ipoAgeFilterVal)) return false;
+
+                return true;
+            });
+
+            // Sort by score descending, then by turnover descending
+            validPicks.sort((a, b) => {
+                const scoreA = calculateSmartScore(a);
+                const scoreB = calculateSmartScore(b);
+                if (scoreA !== scoreB) return scoreB - scoreA;
+                return b.turnover - a.turnover;
+            });
+
+            if (validPicks.length > 0) {
+                watchlistSection.style.display = 'block';
+                let html = '';
+                let rankCount = 1;
+
+                validPicks.forEach(item => {
+                    const score = calculateSmartScore(item);
+                    const floor = item.floorLow || (item.price * 0.97);
+                    const stopLoss = Math.max(item.price * 0.90, floor * 0.97);
+                    const turnoverM = (item.turnover / 1e6).toFixed(2);
+                    const pct = item.changePct !== undefined ? item.changePct : item.change;
+                    const changeClass = pct >= 0 ? 'success' : 'danger';
+                    const changeSign = pct > 0 ? '+' : '';
+                    
+                    const isPremiumIpo = item.ipoGrade === 'A' || item.ipoGrade === 'B';
+                    const style = getItemStyle(item);
+
+                    let styleBadge = '';
+                    if (style === 'EXPLOSIVE') {
+                        styleBadge = `<span style="background: rgba(244, 63, 94, 0.18); color: #fb7185; font-size: 0.65rem; font-weight: 900; padding: 0.15rem 0.4rem; border-radius: 4px; border: 1px solid rgba(244, 63, 94, 0.3); white-space: nowrap;">🚀 EXPLOSIVE</span>`;
+                    } else if (style === 'STAIRCASE') {
+                        styleBadge = `<span style="background: rgba(6, 182, 212, 0.18); color: #22d3ee; font-size: 0.65rem; font-weight: 900; padding: 0.15rem 0.4rem; border-radius: 4px; border: 1px solid rgba(6, 182, 212, 0.3); white-space: nowrap;">🪜 STAIRCASE</span>`;
+                    } else {
+                        styleBadge = `<span style="background: rgba(99, 102, 241, 0.12); color: #a5b4fc; font-size: 0.65rem; font-weight: 900; padding: 0.15rem 0.4rem; border-radius: 4px; border: 1px solid rgba(99, 102, 241, 0.22); white-space: nowrap;">🔄 SWING PLAY</span>`;
+                    }
+
+                    const scoreColor = '#f59e0b';
+                    const scoreSpan = `<span style="color: ${scoreColor}; font-weight: 800; background: rgba(255,255,255,0.03); padding: 0.05rem 0.3rem; border-radius: 3px; border: 1px solid rgba(255,255,255,0.05);">Skor: ${score}/15</span>`;
+
+                    let gradeSpan = '';
+                    if (item.ipoGrade) {
+                        let gColor = '#94a3b8';
+                        if (item.ipoGrade === 'A') gColor = '#10b981';
+                        else if (item.ipoGrade === 'B') gColor = '#a855f7';
+                        else if (item.ipoGrade === 'C') gColor = '#f59e0b';
+                        gradeSpan = ` • Gred <span style="color: ${gColor}; font-weight: 800;">${item.ipoGrade}</span>`;
+                    }
+
+                    const isFresh = isFreshIpo(item);
+                    const freshSpan = item.ipoGrade ? (isFresh 
+                        ? ` • <span style="color: #10b981; font-weight: 800; background: rgba(16, 185, 129, 0.08); padding: 0.05rem 0.3rem; border-radius: 3px; border: 1px solid rgba(16, 185, 129, 0.15);">Fresh</span>` 
+                        : ` • <span style="color: #94a3b8; font-weight: 600;">Mature</span>`) : '';
+
+                    let ipoPriceStr = '';
+                    if (item.ipoPrice) {
+                        const dist = ((item.price - item.ipoPrice) / item.ipoPrice) * 100;
+                        const distSign = dist >= 0 ? '+' : '';
+                        const distColor = dist >= 0 ? '#10b981' : '#ef4444';
+                        ipoPriceStr = ` • IPO RM ${item.ipoPrice.toFixed(3)} (<span style="color: ${distColor}; font-weight: 800;">${distSign}${dist.toFixed(1)}%</span>)`;
+                    }
+
+                    const distToFloor = ((item.price - floor) / floor) * 100;
+                    const volatility = item.lowTightness !== null ? item.lowTightness : (item.pullback || 0);
+                    let volColor = '#94a3b8';
+                    if (volatility >= 4.5) volColor = '#fb7185';
+                    else if (volatility >= 1.5) volColor = '#f59e0b';
+
+                    html += `
+                        <tr>
+                            <td style="text-align: center; font-weight: 800; color: #f59e0b;">#${rankCount++}</td>
+                            <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
+                                <div style="display: flex; align-items: center; gap: 0.4rem;">
+                                    <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
+                                        ${item.name} <span style="font-size: 0.75rem; color: var(--accent);">🔗</span>
+                                    </a>
+                                </div>
+                                <div style="font-size: 0.76rem; color: var(--text-muted); font-weight: 600; margin-top: 0.3rem; letter-spacing: 0.2px;">
+                                    ${scoreSpan}${gradeSpan}${freshSpan}${ipoPriceStr}
+                                </div>
+                            </td>
+                            <td style="text-align: center;">${styleBadge}</td>
+                            <td style="text-align: right; font-weight: bold; color: white;">RM ${item.price.toFixed(3)}</td>
+                            <td style="text-align: right; font-weight: bold; color: var(--${changeClass});">${changeSign}${pct.toFixed(2)}%</td>
+                            <td style="text-align: right; color: #10b981; font-weight: 700;">RM ${floor.toFixed(3)}</td>
+                            <td style="text-align: right; color: #38bdf8; font-weight: 700;">+${distToFloor.toFixed(1)}%</td>
+                            <td style="text-align: right; color: ${volColor}; font-weight: 700;">${volatility.toFixed(1)}%</td>
+                            <td style="text-align: right; color: #ef4444; font-weight: 700;">RM ${stopLoss.toFixed(3)}</td>
+                            <td style="text-align: right; color: #f59e0b; font-weight: 700;">RM ${turnoverM}M</td>
+                        </tr>
+                    `;
+                });
+
+                watchlistTbody.innerHTML = html;
+            } else {
+                watchlistSection.style.display = 'none';
             }
         }
 
