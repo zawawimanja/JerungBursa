@@ -344,7 +344,14 @@ async function main() {
                         if (d.volume > 0) {
                             activeDays30++;
                             sumTurnover30 += d.close * d.volume;
-                            if (d.high === d.low) {
+                            // Round prices to 4 decimal places to fix floating-point comparison inaccuracies from Yahoo Finance
+                            const roundedHigh = parseFloat(d.high.toFixed(4));
+                            const roundedLow = parseFloat(d.low.toFixed(4));
+                            const dailyRangePct = roundedLow > 0 ? ((roundedHigh - roundedLow) / roundedLow) * 100 : 0;
+
+                            // Comb candle: either flat (high === low) OR has extremely narrow range (<= 2% range for penny stocks < 0.50, or <= 1% for others)
+                            const isFlatOrPin = (roundedHigh === roundedLow) || (dailyRangePct <= 2.0 && d.close < 0.50) || (dailyRangePct <= 1.0);
+                            if (isFlatOrPin) {
                                 flatDays30++;
                             }
                         }
@@ -353,8 +360,17 @@ async function main() {
                     const avgTurnover30 = activeDays30 > 0 ? (sumTurnover30 / activeDays30) : 0;
                     const flatPct30 = activeDays30 > 0 ? ((flatDays30 / activeDays30) * 100) : 0;
 
-                    // Exclude if average daily turnover over 30 days < 500k (sekat saham tidur) OR has high percentage of flat candles (>= 10%)
-                    const isCombStock = (flatPct30 >= 10.0) || (avgTurnover30 < 500000);
+                    // For fresh IPOs (listed <= 15 days), listing day volume distorts average turnover.
+                    // We calculate average turnover using only the last 3 days to get a realistic picture of current liquidity.
+                    let realAvgTurnover = avgTurnover30;
+                    if (activeDays30 > 0 && activeDays30 <= 15) {
+                        const recentDays = last30.slice(-3);
+                        const recentSum = recentDays.reduce((acc, curr) => acc + (curr.close * curr.volume), 0);
+                        realAvgTurnover = recentSum / Math.min(3, recentDays.length);
+                    }
+
+                    // Exclude if average turnover < 400k (sekat saham tidur) OR flat/comb candle percentage >= 15%
+                    const isCombStock = (flatPct30 >= 15.0) || (realAvgTurnover < 400000);
                     stock.isCombStock = isCombStock;
                     stock.avgTurnover20 = avgTurnover30;
                     

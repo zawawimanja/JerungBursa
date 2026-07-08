@@ -672,7 +672,7 @@
             </div>
             <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.45rem 0.8rem; border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.35);">
                 <input type="checkbox" id="strictEntryFilter" style="cursor: pointer; width: 16px; height: 16px;" checked>
-                <label for="strictEntryFilter" style="color: #34d399; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none;">🎯 Hanya Entry Baru (Floor ≤ 12%)</label>
+                <label for="strictEntryFilter" style="color: #34d399; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none;">🔥 Ultra-Strict Entry (Floor ≤ 6%/11%, Skor ≥ 11/12, PB ≤ 20%)</label>
             </div>
             <button id="refreshBtn" class="btn">🔄 Refresh Live</button>
         </div>
@@ -1213,7 +1213,19 @@
                 if (Array.isArray(raw)) {
                     data = raw;
                 } else if (raw && raw.topVolume && Array.isArray(raw.topVolume)) {
-                    data = raw.topVolume;
+                    // Combine topVolume and topGainers, removing duplicates
+                    const volList = raw.topVolume;
+                    const gainerList = raw.topGainers || [];
+                    const combined = [...volList, ...gainerList];
+                    const unique = [];
+                    const seen = new Set();
+                    combined.forEach(item => {
+                        if (item && item.name && !seen.has(item.name)) {
+                            seen.add(item.name);
+                            unique.push(item);
+                        }
+                    });
+                    data = unique;
                     if (raw.lastUpdated) {
                         const d = new Date(raw.lastUpdated);
                         const timeStr = d.toLocaleString('en-US', { timeZone: 'Asia/Kuala_Lumpur', hour12: false });
@@ -1445,15 +1457,29 @@
                 const ipoAgeFilterVal = document.getElementById('ipoAgeFilter') ? document.getElementById('ipoAgeFilter').value : 'ALL_IPO';
                 if (!matchesIpoAgeFilter(item, ipoAgeFilterVal)) return false;
 
-                // Strict risk management: If checked, price must not be > 12% away from support floor
+                const style = getItemStyle(item);
+
+                // Strict risk management: If checked, apply ultra-strict criteria to filter out duds
                 const strictEntryVal = document.getElementById('strictEntryFilter') ? document.getElementById('strictEntryFilter').checked : false;
                 if (strictEntryVal) {
                     const floor = item.floorLow || (item.price * 0.95);
                     const distToFloor = ((item.price - floor) / floor) * 100;
-                    if (distToFloor > 12.0) return false;
+                    
+                    // 1. Must be very close to Support Floor (Dynamic: <= 11.0% for cheap stocks < RM0.50, <= 6.0% for expensive stocks >= RM0.50)
+                    const maxDist = item.price < 0.50 ? 11.0 : 6.0;
+                    if (distToFloor > maxDist) return false;
+                    
+                    // 2. Avoid downtrends & deep pullbacks (Pullback must be <= 20.0% from ATH to keep momentum intact)
+                    if (pullbackVal > 20.0) return false;
+                    
+                    // 3. Must be high scoring (Score >= 10 for cheap Premium, >= 11 for expensive Premium, >= 11/12 for Grade C/Mature)
+                    const minScoreStrict = isPremiumIpo ? (item.price < 0.50 ? 10 : 11) : (item.price < 0.50 ? 11 : 12);
+                    if (calculateSmartScore(item) < minScoreStrict) return false;
+                    
+                    // 4. Must be EXPLOSIVE or STAIRCASE style (high momentum breakouts only, skip weak SWING plays)
+                    if (style !== 'EXPLOSIVE' && style !== 'STAIRCASE') return false;
                 }
 
-                const style = getItemStyle(item);
                 return style === 'EXPLOSIVE' || style === 'STAIRCASE' || isPremiumIpo;
             });
 
@@ -1661,7 +1687,24 @@
 
             // History Archive check
             document.getElementById('loadHistoryBtn').addEventListener('click', async function() {
-                const dateVal = document.getElementById('historyDate').value;
+                let dateVal = document.getElementById('historyDate').value;
+                if (dateVal) {
+                    dateVal = dateVal.trim();
+                    // Convert DD/MM/YYYY to YYYY-MM-DD
+                    if (dateVal.includes('/')) {
+                        const parts = dateVal.split('/');
+                        if (parts[2] && parts[2].length === 4) {
+                            dateVal = `${parts[2]}-${parts[1].padStart(2, '0')}-${parts[0].padStart(2, '0')}`;
+                        } else if (parts[0] && parts[0].length === 4) {
+                            dateVal = `${parts[0]}-${parts[1].padStart(2, '0')}-${parts[2].padStart(2, '0')}`;
+                        }
+                    } else if (dateVal.includes('-')) {
+                        const parts = dateVal.split('-');
+                        if (parts[2] && parts[2].length === 4) {
+                            dateVal = `${parts[2]}-${parts[1].padStart(2, '0')}-${parts[0].padStart(2, '0')}`;
+                        }
+                    }
+                }
                 const btn = this;
                 const originalText = btn.innerHTML;
 
@@ -1680,13 +1723,36 @@
                 btn.innerHTML = '⏳ Loading...';
                 try {
                     const cacheBuster = new Date().getTime();
-                    let res = await fetch(`history/data_${dateVal}.json?t=${cacheBuster}`);
-                    if (!res.ok) {
+                    let res = null;
+                    try {
+                        res = await fetch(`history/data_${dateVal}.json?t=${cacheBuster}`);
+                    } catch (fetchErr) {
+                        console.warn("Local history fetch failed (CORS), trying GitHub raw fallback...", fetchErr);
+                    }
+                    
+                    if (!res || !res.ok) {
                         res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/history/data_${dateVal}.json?t=${cacheBuster}`);
                     }
+                    
                     if (res.ok) {
                         const raw = await res.json();
-                        const data = Array.isArray(raw) ? raw : (raw.topVolume || []);
+                        let data = [];
+                        if (Array.isArray(raw)) {
+                            data = raw;
+                        } else {
+                            const volList = raw.topVolume || [];
+                            const gainerList = raw.topGainers || [];
+                            const combined = [...volList, ...gainerList];
+                            const unique = [];
+                            const seen = new Set();
+                            combined.forEach(item => {
+                                if (item && item.name && !seen.has(item.name)) {
+                                    seen.add(item.name);
+                                    unique.push(item);
+                                }
+                            });
+                            data = unique;
+                        }
                         if (data && data.length > 0) {
                             currentData = data;
                             document.getElementById('dashboardSubtitle').innerHTML = `📂 Historical Archive: <strong>${dateVal}</strong>`;
