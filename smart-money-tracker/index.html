@@ -670,6 +670,16 @@
                     <option value="ALL">🌐 All Stocks (IPOs & Non-IPOs)</option>
                 </select>
             </div>
+
+            <div class="ipo-filter-container" style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.45rem 0.8rem; border-radius: 8px; border: 1px solid rgba(244, 63, 94, 0.35); transition: all 0.2s ease-in-out;">
+                <label for="sortByFilter" style="color: #fb7185; font-size: 0.85rem; font-weight: 800; display: flex; align-items: center; gap: 0.25rem; cursor: pointer; user-select: none;">⚡ Susunan (Sort):</label>
+                <select id="sortByFilter" style="background: rgba(15, 23, 42, 0.9); color: white; border: 1px solid rgba(244, 63, 94, 0.5); border-radius: 6px; padding: 0.2rem 0.5rem; font-size: 0.8rem; font-weight: 700; cursor: pointer; outline: none; font-family: inherit;">
+                    <option value="SAFE" selected>🛡️ Paling Selamat (Jarak Lantai Rapat)</option>
+                    <option value="VOLATILE">⚡ Volatiliti Tinggi (Julat Swing Luas)</option>
+                    <option value="TURNOVER">💵 Paling Aktif (Turnover Tinggi)</option>
+                    <option value="SCORE">🏆 Skor Pintar (Smart Score Tinggi)</option>
+                </select>
+            </div>
             <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.45rem 0.8rem; border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.35);">
                 <input type="checkbox" id="strictEntryFilter" style="cursor: pointer; width: 16px; height: 16px;" checked>
                 <label for="strictEntryFilter" style="color: #34d399; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none;">🔥 Ultra-Strict Entry (Floor ≤ 6%/11%, Skor ≥ 11/12, PB ≤ 20%)</label>
@@ -1483,8 +1493,32 @@
                 return style === 'EXPLOSIVE' || style === 'STAIRCASE' || isPremiumIpo;
             });
 
-            // Sort by Category Rank (Fresh -> Mature -> Non-IPO), then Setup Style (EXPLOSIVE -> STAIRCASE -> SWING), and then by distToFloor ascending
+            const sortByVal = document.getElementById('sortByFilter') ? document.getElementById('sortByFilter').value : 'SAFE';
+
+            // Sort by user preference
             const renderSortFn = (a, b) => {
+                if (sortByVal === 'TURNOVER') {
+                    return b.turnover - a.turnover; // Highest Turnover first
+                }
+                
+                if (sortByVal === 'VOLATILE') {
+                    // Volatility measured by lowTightness (swing range) descending. If null, fallback to pullback
+                    const volA = a.lowTightness !== null ? a.lowTightness : (a.pullback || 0);
+                    const volB = b.lowTightness !== null ? b.lowTightness : (b.pullback || 0);
+                    if (volA !== volB) {
+                        return volB - volA; // Highest Volatility first
+                    }
+                }
+                
+                if (sortByVal === 'SCORE') {
+                    const scoreA = calculateSmartScore(a);
+                    const scoreB = calculateSmartScore(b);
+                    if (scoreA !== scoreB) {
+                        return scoreB - scoreA; // Highest Smart Score first
+                    }
+                }
+
+                // Default / Safe Mode Sorting (Category -> Setup Style -> Smart Score -> Floor Distance)
                 const getCategoryRank = (item) => {
                     const grade = item.ipoGrade || 'Unrated';
                     const isIpo = grade === 'A' || grade === 'B' || grade === 'C';
@@ -1498,7 +1532,7 @@
                 const rankB = getCategoryRank(b);
 
                 if (rankA !== rankB) {
-                    return rankA - rankB; // Group by Category
+                    return rankA - rankB; // Group by Category (Fresh first)
                 }
 
                 // Group by Setup Style (EXPLOSIVE = 1, STAIRCASE = 2, SWING PLAY = 3)
@@ -1671,6 +1705,10 @@
             fetchLiveData();
 
             document.getElementById('ipoAgeFilter').addEventListener('change', function() {
+                applyFilters();
+            });
+
+            document.getElementById('sortByFilter').addEventListener('change', function() {
                 applyFilters();
             });
 
