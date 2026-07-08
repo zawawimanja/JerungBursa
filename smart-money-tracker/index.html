@@ -1745,7 +1745,7 @@
                 let html = '';
                 let rankCount = 1;
 
-                validPicks.forEach(item => {
+                validPicks.slice(0, 5).forEach(item => {
                     const openPrice = item.openPrice;
                     const price = item.price;
                     const distToTrigger = ((price - openPrice) / openPrice) * 100;
