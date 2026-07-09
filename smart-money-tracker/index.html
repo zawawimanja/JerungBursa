@@ -1700,8 +1700,8 @@
                 
                 const dist = ((item.price - item.openPrice) / item.openPrice) * 100;
                 if (item.price >= item.openPrice) {
-                    // Jika dah pecah open price (Reclaimed), hadkan setakat +20% sahaja (Zon Entry)
-                    if (dist > 20.0) return false;
+                    // Jika dah pecah open price (Reclaimed), hadkan setakat +5% sahaja (Zon Entry Terdekat)
+                    if (dist > 5.0) return false;
                 } else {
                     // Jika underwater, hadkan setakat -7% sahaja (Zon Sedia Trigger)
                     if (dist < -7.0) return false;
