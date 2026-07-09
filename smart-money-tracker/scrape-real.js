@@ -191,6 +191,29 @@ async function main() {
     // Load IPO database (local or online raw fallback)
     const ipoList = await getIpoList();
     
+    const ipoMap = {};
+    try {
+        if (ipoList && ipoList.length > 0) {
+            ipoList.forEach(ipo => {
+                if (ipo.symbol) {
+                    const cleanSymbol = ipo.symbol.replace(/\[.*?\]/g, '').toUpperCase().trim();
+                    const listingYear = parseInt(ipo.year) || (ipo.listingDate ? parseInt(ipo.listingDate.split('-')[2]) : 0);
+                    ipoMap[cleanSymbol] = {
+                        grade: ipo.predictedGrade || 'Unrated',
+                        year: listingYear,
+                        ipoPrice: ipo.price,
+                        openPrice: ipo.openPrice,
+                        listingDate: ipo.listingDate,
+                        os: ipo.os || 0,
+                        outlier: ipo.outlier || false
+                    };
+                }
+            });
+        }
+    } catch (err) {
+        console.error("Warning loading IPO grades:", err.message);
+    }
+    
     let allRawStocks = new Map();
     
     // 1. Ambil data pasaran utama
@@ -243,6 +266,26 @@ async function main() {
         const shortestName = names[0];
         mappings[shortestName] = sym;
     }
+
+    function resolveCodeAndSymbol(name) {
+        const cleanName = name.toUpperCase().trim();
+        let symbol = mappings[cleanName];
+        if (!symbol) {
+            const foundKey = Object.keys(mappings).find(key => {
+                const normKey = key.replace(/[^A-Z0-9]/g, '');
+                const normName = cleanName.replace(/[^A-Z0-9]/g, '');
+                return normName.startsWith(normKey) || normKey.startsWith(normName);
+            });
+            if (foundKey) {
+                symbol = mappings[foundKey];
+            }
+        }
+        if (symbol) {
+            const code = symbol.split('.')[0];
+            return { symbol, code };
+        }
+        return { symbol: name + '.KL', code: '' };
+    }
     
     // Load sectors from IPO data if available
     const ipoSectors = {};
@@ -283,8 +326,19 @@ async function main() {
 
     console.log('\n🔍 Mendaftarkan Custom VIP Watchlist dari symbol_mappings.json...');
     for (const s of customWatchlist) {
-        // Hanya tambah jika belum wujud dari i3investor / Bursa Malaysia
-        if (!allRawStocks.has(s.name)) {
+        // Cari padanan nama secara fuzzy untuk mengelakkan nama pendua (cth: SRKK vs SRKKAI)
+        let existingKey = null;
+        if (allRawStocks.has(s.name)) {
+            existingKey = s.name;
+        } else {
+            existingKey = [...allRawStocks.keys()].find(k => {
+                const normK = k.replace(/[^A-Z0-9]/g, '').toUpperCase();
+                const normS = s.name.replace(/[^A-Z0-9]/g, '').toUpperCase();
+                return normK.startsWith(normS) || normS.startsWith(normK);
+            });
+        }
+        
+        if (!existingKey) {
             allRawStocks.set(s.name, {
                 name: s.name,
                 price: 0,
@@ -295,7 +349,7 @@ async function main() {
                 code: s.code
             });
         } else {
-            const existing = allRawStocks.get(s.name);
+            const existing = allRawStocks.get(existingKey);
             existing.isVip = true;
             existing.sector = s.sector;
             existing.code = s.code;
@@ -309,8 +363,17 @@ async function main() {
     const candidates = [];
     for (const [name, stock] of allRawStocks.entries()) {
         if (name.includes('-')) continue; // Skip warrants
+        
+        // Resolve code and symbol dynamically if not already set
+        if (!stock.code) {
+            const resolved = resolveCodeAndSymbol(stock.name);
+            if (resolved.code) {
+                stock.code = resolved.code;
+            }
+        }
+        
         const turnover = stock.price * stock.volume;
-        if (stock.isVip || turnover >= 250000) {
+        if (stock.isVip || turnover >= 250000 || stock.code) {
             candidates.push(stock);
         }
     }
@@ -348,7 +411,7 @@ async function main() {
                      }
                  }
                 
-                if (validDays.length >= 2) {
+                if (validDays.length >= 1) {
                     let high52 = 0;
                     validDays.forEach(d => {
                         if (d.high > high52) high52 = d.high;
@@ -405,6 +468,38 @@ async function main() {
                     stock.price = currentPrice;
                     stock.change = currentPrice - prevClose;
                     stock.volume = lastDay.volume || result.meta.regularMarketVolume || 0;
+
+                    // Resolve openPrice and check wentUnderwater status
+                    const cleanStockName = stock.name.toUpperCase().trim();
+                    let ipoInfo = ipoMap[cleanStockName];
+                    if (!ipoInfo) {
+                        const foundKey = Object.keys(ipoMap).find(key => {
+                            const normKey = key.replace(/[^A-Z0-9]/g, '');
+                            const normName = cleanStockName.replace(/[^A-Z0-9]/g, '');
+                            return normName.startsWith(normKey) || normKey.startsWith(normName);
+                        });
+                        if (foundKey) {
+                            ipoInfo = ipoMap[foundKey];
+                        }
+                    }
+                    let openPrice = (ipoInfo && ipoInfo.openPrice) || (validDays[0] ? validDays[0].open : null);
+                    // Fallback for Yahoo Finance bug on listing day (where open is returned as 0)
+                    if ((openPrice === null || openPrice === 0 || openPrice === undefined) && validDays[0]) {
+                        if (validDays[0].open > 0) {
+                            openPrice = validDays[0].open;
+                        } else if (validDays[0].high > 0 && validDays[0].low > 0) {
+                            openPrice = (validDays[0].high + validDays[0].low) / 2;
+                        }
+                    }
+                    let wentUnderwater = false;
+                    if (openPrice && openPrice > 0) {
+                        wentUnderwater = validDays.some(d => d.low < openPrice);
+                    }
+                    stock.openPrice = openPrice;
+                    stock.wentUnderwater = wentUnderwater;
+                    if (validDays.length > 0) {
+                        stock.firstDayOpenPrice = validDays[0].open || openPrice;
+                    }
                     
                     const closes = lastDays.map(d => d.close);
                     const maxClose = Math.max(...closes);
@@ -527,42 +622,32 @@ async function main() {
     // ANALISIS FORMULA SMART MONEY
     // ==========================================
     console.log('\n📊 Menganalisis Formula Smart Money...');
-    
-    const ipoMap = {};
-    try {
-        if (ipoList && ipoList.length > 0) {
-            ipoList.forEach(ipo => {
-                if (ipo.symbol) {
-                    const cleanSymbol = ipo.symbol.replace(/\[.*?\]/g, '').toUpperCase().trim();
-                    const listingYear = parseInt(ipo.year) || (ipo.listingDate ? parseInt(ipo.listingDate.split('-')[2]) : 0);
-                    ipoMap[cleanSymbol] = {
-                        grade: ipo.predictedGrade || 'Unrated',
-                        year: listingYear,
-                        ipoPrice: ipo.price,
-                        openPrice: ipo.openPrice,
-                        listingDate: ipo.listingDate,
-                        os: ipo.os || 0,
-                        outlier: ipo.outlier || false
-                    };
-                }
-            });
-        }
-    } catch (err) {
-        console.error("Warning loading IPO grades:", err.message);
-    }
 
     const processedData = [];
     const topGainers = [];
     
-    // De-duplicate raw stocks by Yahoo symbol, keeping the one with the shorter name
+    // De-duplicate raw stocks by Yahoo symbol, keeping the active one, or the one with shorter name if both active/inactive.
     const dedupedStocks = new Map();
     for (const [name, stock] of allRawStocks.entries()) {
         if (name.includes('-')) continue;
-        const symbol = mappings[name] || name + '.KL';
+        const symbol = resolveCodeAndSymbol(name).symbol;
         if (dedupedStocks.has(symbol)) {
             const existing = dedupedStocks.get(symbol);
-            if (name.length < existing.name.length) {
+            const incomingActive = stock.price > 0 || stock.volume > 0;
+            const existingActive = existing.price > 0 || existing.volume > 0;
+            
+            if (incomingActive && !existingActive) {
+                if (existing.isVip) stock.isVip = true;
                 dedupedStocks.set(symbol, stock);
+            } else if (!incomingActive && existingActive) {
+                if (stock.isVip) existing.isVip = true;
+            } else {
+                if (name.length < existing.name.length) {
+                    if (existing.isVip) stock.isVip = true;
+                    dedupedStocks.set(symbol, stock);
+                } else {
+                    if (stock.isVip) existing.isVip = true;
+                }
             }
         } else {
             dedupedStocks.set(symbol, stock);
@@ -571,8 +656,18 @@ async function main() {
 
     for (const stock of dedupedStocks.values()) {
         const name = stock.name;
-        // Associate IPO Grade early
-        const ipoInfo = ipoMap[name.toUpperCase().trim()];
+        // Associate IPO Grade early using fuzzy match
+        let ipoInfo = ipoMap[name.toUpperCase().trim()];
+        if (!ipoInfo) {
+            const foundKey = Object.keys(ipoMap).find(key => {
+                const normKey = key.replace(/[^A-Z0-9]/g, '');
+                const normName = name.toUpperCase().trim().replace(/[^A-Z0-9]/g, '');
+                return normName.startsWith(normKey) || normKey.startsWith(normName);
+            });
+            if (foundKey) {
+                ipoInfo = ipoMap[foundKey];
+            }
+        }
         if (ipoInfo) {
             stock.ipoGrade = ipoInfo.grade;
             stock.ipoYear = ipoInfo.year;
@@ -723,7 +818,10 @@ async function main() {
             hasUpperWickRejection: stock.hasUpperWickRejection || false,
             isCombStock: stock.isCombStock || false,
             sma50: stock.sma50 || null,
-            sma200: stock.sma200 || null
+            sma200: stock.sma200 || null,
+            openPrice: stock.openPrice || null,
+            wentUnderwater: stock.wentUnderwater || false,
+            firstDayOpenPrice: stock.firstDayOpenPrice || null
         };
         
         // Top Volume Scan: Simpan semua saham yang mempunyai turnover >= RM 3,000,000 ATAU ianya saham VIP
@@ -830,7 +928,7 @@ async function main() {
                 item.ipoGrade = info.grade === 'Unrated' ? (fallbackIpoMap[cleanName] || 'Unrated') : info.grade;
                 item.ipoYear = info.year;
                 item.ipoPrice = info.ipoPrice;
-                item.openPrice = info.openPrice;
+                item.openPrice = info.openPrice || item.openPrice || item.firstDayOpenPrice;
                 item.listingDate = info.listingDate;
                 item.os = info.os || 0;
                 item.outlier = info.outlier || false;

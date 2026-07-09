@@ -717,7 +717,7 @@
                             <span style="font-size: 0.7rem; background: rgba(251, 113, 133, 0.2); color: #fb7185; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(251, 113, 133, 0.3); white-space: nowrap;">🎯 RECLAIM ONLY</span>
                         </div>
                         <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
-                            SOP Reclaim: IPO Baharu (2026) yang didagangkan di bawah harga pembukaan hari pertama (underwater). <strong style="color: #fb7185;">Pencetus Beli: Apabila harga memotong naik melebihi garisan Open Price (TRIGGER)!</strong>
+                            SOP Reclaim: IPO Baharu (2025 - 2026) yang didagangkan di bawah harga pembukaan hari pertama (underwater). <strong style="color: #fb7185;">Pencetus Beli: Apabila harga memotong naik melebihi garisan Open Price (TRIGGER)!</strong>
                         </p>
                     </div>
                 </div>
@@ -1683,29 +1683,48 @@
             if (!reclaimTbody || !reclaimSection) return;
 
             // Filter for Open Reclaim candidates:
-            // 1. Fresh IPO (listed >= 2026 for super fresh)
+            // 1. Fresh IPO (listed >= 2025 for 2025-2026 IPOs)
             // 2. Open Price > 0
-            // 3. Current Price < Open Price
+            // 3. Went underwater in its history (wentUnderwater === true)
+            // 4. Current price is either below open price OR has broken above it within 20%
             let validPicks = currentData.filter(item => {
                 const isIpo = item.ipoGrade === 'A' || item.ipoGrade === 'B' || item.ipoGrade === 'C';
-                const isFresh = item.ipoYear && item.ipoYear >= 2026;
+                const isFresh = item.ipoYear && item.ipoYear >= 2025;
                 if (!isIpo || !isFresh) return false;
                 if (!item.openPrice || item.openPrice <= 0) return false;
                 if (!item.price || item.price <= 0) return false;
-                if (item.price >= item.openPrice) return false;
                 
-                // Exclude downtrend & comb (sikat) stocks
+                // Check if it went underwater (fallback if property not present in older data files)
+                const wentUnderwater = item.wentUnderwater !== undefined ? item.wentUnderwater : (item.price < item.openPrice);
+                if (!wentUnderwater) return false;
+                
+                // Allow current price to be below open price OR up to 20% above open price (reclaimed)
+                if (item.price > item.openPrice * 1.20) return false;
+                
+                // Exclude comb (sikat) stocks
                 if (item.isCombStock) return false;
-                if (item.setupName && item.setupName.includes('Downtrend')) return false;
                 
                 return true;
             });
 
-            // Sort by distance to trigger descending (closest to 0% trigger first)
+            // Sort logic:
+            // - Triggered/Reclaimed (price >= openPrice) gets priority, sorted by distance ascending (closest to 0% first)
+            // - Underwater (price < openPrice) gets next priority, sorted by distance descending (closest to 0% first, e.g. -1% before -10%)
             validPicks.sort((a, b) => {
+                const aTriggered = a.price >= a.openPrice;
+                const bTriggered = b.price >= b.openPrice;
+                
+                if (aTriggered && !bTriggered) return -1;
+                if (!aTriggered && bTriggered) return 1;
+                
                 const distA = ((a.price - a.openPrice) / a.openPrice) * 100;
                 const distB = ((b.price - b.openPrice) / b.openPrice) * 100;
-                return distB - distA; // Closest to 0% first (e.g. -3.4% > -18.2%)
+                
+                if (aTriggered && bTriggered) {
+                    return distA - distB; // smaller positive first
+                } else {
+                    return distB - distA; // larger negative first (closer to 0)
+                }
             });
 
             if (validPicks.length > 0) {
@@ -1713,7 +1732,7 @@
                 let html = '';
                 let rankCount = 1;
 
-                validPicks.slice(0, 6).forEach(item => {
+                validPicks.slice(0, 10).forEach(item => {
                     const openPrice = item.openPrice;
                     const price = item.price;
                     const distToTrigger = ((price - openPrice) / openPrice) * 100;
@@ -1739,15 +1758,24 @@
                     }
 
                     const listingDateStr = item.listingDate ? ` • Listed: ${item.listingDate}` : '';
+                    
+                    const isTriggered = price >= openPrice;
+                    const statusBadge = isTriggered
+                        ? `<span style="background: rgba(16, 185, 129, 0.15); color: #10b981; padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.65rem; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.3);">🔥 RECLAIMED</span>`
+                        : `<span style="background: rgba(244, 63, 94, 0.15); color: #f43f5e; padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.65rem; font-weight: 800; border: 1px solid rgba(244, 63, 94, 0.3);">⏳ UNDERWATER</span>`;
+                    
+                    const distColor = isTriggered ? '#10b981' : '#fb7185';
+                    const distSign = distToTrigger >= 0 ? '+' : '';
 
                     html += `
                         <tr>
                             <td style="text-align: center; font-weight: 800; color: #fb7185;">#${rankCount++}</td>
                             <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
-                                <div style="display: flex; align-items: center; gap: 0.4rem;">
+                                <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
                                     <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
                                         ${item.name} <span style="font-size: 0.75rem; color: var(--accent);">🔗</span>
                                     </a>
+                                    ${statusBadge}
                                 </div>
                                 <div style="font-size: 0.76rem; color: var(--text-muted); font-weight: 600; margin-top: 0.3rem; letter-spacing: 0.2px;">
                                     ${scoreSpan}${gradeSpan}${listingDateStr}
@@ -1756,7 +1784,7 @@
                             <td style="text-align: right; color: #94a3b8; font-weight: 600;">${item.listingDate || 'N/A'}</td>
                             <td style="text-align: right; color: #f43f5e; font-weight: 800; font-size: 1rem;">RM ${openPrice.toFixed(3)}</td>
                             <td style="text-align: right; font-weight: bold; color: white;">RM ${price.toFixed(3)}</td>
-                            <td style="text-align: right; color: #fb7185; font-weight: 800;">${distToTrigger.toFixed(1)}%</td>
+                            <td style="text-align: right; color: ${distColor}; font-weight: 800;">${distSign}${distToTrigger.toFixed(1)}%</td>
                             <td style="text-align: right; color: ${volColor}; font-weight: 700;">${volatility.toFixed(1)}%</td>
                             <td style="text-align: right; color: #f59e0b; font-weight: 700;">RM ${turnoverM}M</td>
                         </tr>
