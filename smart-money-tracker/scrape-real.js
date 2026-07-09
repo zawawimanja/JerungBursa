@@ -101,11 +101,14 @@ async function scrapeBursaMalaysia() {
     let browser;
     const stocks = [];
     try {
-        browser = await puppeteer.launch({
+        const launchOptions = {
             headless: true,
-            executablePath: '/usr/bin/google-chrome',
             args: ['--no-sandbox', '--disable-setuid-sandbox']
-        });
+        };
+        if (process.platform === 'linux') {
+            launchOptions.executablePath = '/usr/bin/google-chrome';
+        }
+        browser = await puppeteer.launch(launchOptions);
         const page = await browser.newPage();
         await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
         
@@ -812,7 +815,17 @@ async function main() {
         let ipoTagCount = 0;
         processedData.forEach(item => {
             const cleanName = item.name.toUpperCase().trim();
-            const info = ipoMap[cleanName];
+            let info = ipoMap[cleanName];
+            if (!info) {
+                const foundKey = Object.keys(ipoMap).find(key => {
+                    const normKey = key.replace(/[^A-Z0-9]/g, '');
+                    const normName = cleanName.replace(/[^A-Z0-9]/g, '');
+                    return normName.startsWith(normKey) || normKey.startsWith(normName);
+                });
+                if (foundKey) {
+                    info = ipoMap[foundKey];
+                }
+            }
             if (info) {
                 item.ipoGrade = info.grade === 'Unrated' ? (fallbackIpoMap[cleanName] || 'Unrated') : info.grade;
                 item.ipoYear = info.year;
@@ -824,7 +837,7 @@ async function main() {
                 
                 // Trend Rider Rule: If Fresh IPO (listed >= 2025) is below its IPO price, it is a failed IPO (avoid!)
                 const isFresh = info.year >= 2025;
-                if (isFresh && item.ipoPrice && item.price < item.ipoPrice) {
+                if (isFresh && item.ipoPrice && item.price > 0 && item.price < item.ipoPrice) {
                     item.signal = 'avoid';
                     item.reason = `⚠️ Below IPO Price: Failed IPO Base (Price RM ${item.price.toFixed(3)} < IPO RM ${item.ipoPrice.toFixed(3)})`;
                 }
