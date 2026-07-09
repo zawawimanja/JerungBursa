@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-09T09:19:27.770Z",
+  "lastUpdated": "2026-07-09T11:26:00.239Z",
   "source": "klse.i3investor.com",
   "topVolume": [
     {
@@ -109,7 +109,6 @@
       "ipoGrade": "A",
       "ipoYear": 2026,
       "ipoPrice": 0.32,
-      "openPrice": 0.6,
       "listingDate": "09-Jul-2026",
       "os": 312.3,
       "outlier": false
@@ -8796,7 +8795,6 @@
       "ipoGrade": "A",
       "ipoYear": 2026,
       "ipoPrice": 0.32,
-      "openPrice": 0.6,
       "listingDate": "09-Jul-2026",
       "os": 312.3,
       "outlier": false
