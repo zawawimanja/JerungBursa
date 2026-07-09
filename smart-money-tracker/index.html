@@ -1729,14 +1729,17 @@
             // 1. Fresh IPO (listed >= 2026 for super fresh)
             // 2. Open Price > 0
             // 3. Current Price < Open Price
-            // 4. Turnover >= 100,000 (minimum liquidity)
             let validPicks = currentData.filter(item => {
                 const isIpo = item.ipoGrade === 'A' || item.ipoGrade === 'B' || item.ipoGrade === 'C';
                 const isFresh = item.ipoYear && item.ipoYear >= 2026;
                 if (!isIpo || !isFresh) return false;
                 if (!item.openPrice || item.openPrice <= 0) return false;
                 if (item.price >= item.openPrice) return false;
-                if (item.turnover < 100000) return false;
+                
+                // Exclude downtrend & comb (sikat) stocks
+                if (item.isCombStock) return false;
+                if (item.setupName && item.setupName.includes('Downtrend')) return false;
+                
                 return true;
             });
 
@@ -1783,12 +1786,10 @@
                         <tr>
                             <td style="text-align: center; font-weight: 800; color: #fb7185;">#${rankCount++}</td>
                             <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
-                                <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
+                                <div style="display: flex; align-items: center; gap: 0.4rem;">
                                     <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
                                         ${item.name} <span style="font-size: 0.75rem; color: var(--accent);">🔗</span>
                                     </a>
-                                    ${item.hasLowerWickRejection ? `<span style="font-size: 0.68rem; background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.25); white-space: nowrap;" title="Jerung pertahankan lantai sokongan (Lower Wick Rejection)">🟢 Reject Bawah</span>` : ''}
-                                    ${item.hasUpperWickRejection ? `<span style="font-size: 0.68rem; background: rgba(239, 68, 68, 0.15); color: #f87171; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(239, 68, 68, 0.25); white-space: nowrap;" title="Tekanan jualan tinggi di atas (Upper Wick Rejection)">🔴 Reject Atas</span>` : ''}
                                 </div>
                                 <div style="font-size: 0.76rem; color: var(--text-muted); font-weight: 600; margin-top: 0.3rem; letter-spacing: 0.2px;">
                                     ${scoreSpan}${gradeSpan}${listingDateStr}
