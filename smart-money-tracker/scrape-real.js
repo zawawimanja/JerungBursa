@@ -286,6 +286,74 @@ async function main() {
         }
         return { symbol: name + '.KL', code: '' };
     }
+
+    const dynamicCodeCache = {};
+    async function fetchDynamicCode(name) {
+        const cleanName = name.replace(/[^A-Z0-9]/g, '').trim().toUpperCase();
+        if (dynamicCodeCache[cleanName]) return dynamicCodeCache[cleanName];
+        
+        try {
+            const url = `https://klse.i3investor.com/web/stock/overview/${cleanName}`;
+            const res = await axios.get(url, { headers: HEADERS, timeout: 5000 });
+            const html = res.data;
+            const cheerio = require('cheerio');
+            const $ = cheerio.load(html);
+            
+            let code = '';
+            $('a').each((i, el) => {
+                const href = $(el).attr('href');
+                if (href) {
+                    const match = href.match(/\/overview\/(\d+)$/);
+                    if (match) {
+                        code = match[1];
+                        return false;
+                    }
+                }
+            });
+            
+            if (!code) {
+                $('script').each((i, el) => {
+                    const text = $(el).html();
+                    if (text) {
+                        const match = text.match(/"stockCode"\s*:\s*"(\d+)"/);
+                        if (match) {
+                            code = match[1];
+                            return false;
+                        }
+                    }
+                });
+            }
+            
+            if (code) {
+                // Verify if the page title contains the requested stock symbol name (to avoid matching other trending stocks on false redirects)
+                const title = $('title').text().trim().toUpperCase();
+                if (!title.includes(cleanName)) {
+                    return null;
+                }
+
+                const symbol = `${code}.KL`;
+                dynamicCodeCache[cleanName] = { symbol, code };
+                
+                // Auto-append to symbol_mappings.json to avoid repeating lookups
+                try {
+                    const mappingsPath = path.join(__dirname, 'symbol_mappings.json');
+                    const raw = JSON.parse(fs.readFileSync(mappingsPath, 'utf8'));
+                    if (!raw[cleanName]) {
+                        raw[cleanName] = symbol;
+                        fs.writeFileSync(mappingsPath, JSON.stringify(raw, null, 2), 'utf8');
+                        console.log(`   -> [Auto-Mapping] Added new mapping: "${cleanName}": "${symbol}" to symbol_mappings.json`);
+                    }
+                } catch (err) {
+                    console.error("Failed to auto-write mapping:", err.message);
+                }
+                
+                return { symbol, code };
+            }
+        } catch (e) {
+            // Ignored
+        }
+        return null;
+    }
     
     // Load sectors from IPO data if available
     const ipoSectors = {};
@@ -356,15 +424,56 @@ async function main() {
         }
     }
 
+    // Auto-register ALL fresh IPOs (listed >= 2025) from data.json to ensure they are never missed!
+    console.log('\n🔍 Mendaftarkan Fresh IPOs (2025-2026) dari data.json...');
+    const freshIposFromDb = ipoList.filter(ipo => ipo.year >= 2025);
+    for (const ipo of freshIposFromDb) {
+        let cleanSym = ipo.symbol ? ipo.symbol.replace(/\[.*?\]/g, '').trim().toUpperCase() : '';
+        if (!cleanSym) continue;
+        
+        let existingKey = null;
+        if (allRawStocks.has(cleanSym)) {
+            existingKey = cleanSym;
+        } else {
+            existingKey = [...allRawStocks.keys()].find(k => {
+                const normK = k.replace(/[^A-Z0-9]/g, '').toUpperCase();
+                const normS = cleanSym.replace(/[^A-Z0-9]/g, '').toUpperCase();
+                return normK.startsWith(normS) || normS.startsWith(normK);
+            });
+        }
+        
+        let ipoSec = ipo.sector || 'IPO';
+        if (ipoSec.includes('(')) ipoSec = ipoSec.split('(')[0].trim();
+        
+        if (!existingKey) {
+            allRawStocks.set(cleanSym, {
+                name: cleanSym,
+                price: 0,
+                change: 0,
+                volume: 0,
+                isVip: true,
+                sector: ipoSec,
+                code: '' // To be resolved dynamically
+            });
+            console.log(`   -> Registered new fresh IPO candidate: ${cleanSym}`);
+        } else {
+            const existing = allRawStocks.get(existingKey);
+            existing.isVip = true;
+            if (!existing.sector || existing.sector === 'Bursa') {
+                existing.sector = ipoSec;
+            }
+        }
+    }
+
     // ==========================================
     // YAHOO FINANCE 52W HIGH SCANNER
     // ==========================================
     console.log('\n🔍 Menarik data 52W High dari Yahoo Finance untuk tapisan Pullback...');
-    const candidates = [];
+    // Resolve any missing codes dynamically using i3investor overview lookup
     for (const [name, stock] of allRawStocks.entries()) {
         if (name.includes('-')) continue; // Skip warrants
         
-        // Resolve code and symbol dynamically if not already set
+        // First try the synchronous symbol mappings
         if (!stock.code) {
             const resolved = resolveCodeAndSymbol(stock.name);
             if (resolved.code) {
@@ -372,8 +481,24 @@ async function main() {
             }
         }
         
+        // If still no code and it is a fresh IPO/VIP, fetch dynamically!
+        if (!stock.code && stock.isVip) {
+            console.log(`   -> [Auto-Resolve] Attempting to find Bursa code for fresh candidate: ${stock.name}...`);
+            const dynamicResolved = await fetchDynamicCode(stock.name);
+            if (dynamicResolved && dynamicResolved.code) {
+                stock.code = dynamicResolved.code;
+                console.log(`   -> [Auto-Resolve] Successfully mapped ${stock.name} to ${dynamicResolved.code}`);
+            } else {
+                console.log(`   -> [Auto-Resolve] Failed to map ${stock.name}. Skipping Yahoo fetch.`);
+            }
+        }
+    }
+
+    const candidates = [];
+    for (const [name, stock] of allRawStocks.entries()) {
+        if (name.includes('-')) continue; // Skip warrants
         const turnover = stock.price * stock.volume;
-        if (stock.isVip || turnover >= 250000 || stock.code) {
+        if (stock.code && (stock.isVip || turnover >= 250000)) {
             candidates.push(stock);
         }
     }

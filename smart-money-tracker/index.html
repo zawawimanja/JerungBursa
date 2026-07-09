@@ -1694,12 +1694,18 @@
                 if (!item.openPrice || item.openPrice <= 0) return false;
                 if (!item.price || item.price <= 0) return false;
                 
-                // Check if it went underwater (fallback if property not present in older data files)
-                const wentUnderwater = item.wentUnderwater !== undefined ? item.wentUnderwater : (item.price < item.openPrice);
+                // Mesti pernah jatuh (wentUnderwater)
+                const wentUnderwater = item.wentUnderwater !== undefined ? item.wentUnderwater : true;
                 if (!wentUnderwater) return false;
                 
-                // Allow current price to be below open price OR up to 20% above open price (reclaimed)
-                if (item.price > item.openPrice * 1.20) return false;
+                const dist = ((item.price - item.openPrice) / item.openPrice) * 100;
+                if (item.price >= item.openPrice) {
+                    // Jika dah pecah open price (Reclaimed), hadkan setakat +20% sahaja (Zon Entry)
+                    if (dist > 20.0) return false;
+                } else {
+                    // Jika underwater, hadkan setakat -7% sahaja (Zon Sedia Trigger)
+                    if (dist < -7.0) return false;
+                }
                 
                 // Exclude comb (sikat) stocks
                 if (item.isCombStock) return false;
@@ -1707,9 +1713,9 @@
                 return true;
             });
 
-            // Sort logic:
-            // - Triggered/Reclaimed (price >= openPrice) gets priority, sorted by distance ascending (closest to 0% first)
-            // - Underwater (price < openPrice) gets next priority, sorted by distance descending (closest to 0% first, e.g. -1% before -10%)
+            // Susun:
+            // 1. Yang dah trigger/reclaimed di atas sekali (paling dekat dengan 0% didahulukan)
+            // 2. Yang underwater di bawah (paling dekat dengan 0% didahulukan, cth: -1.0% vs -5.0%)
             validPicks.sort((a, b) => {
                 const aTriggered = a.price >= a.openPrice;
                 const bTriggered = b.price >= b.openPrice;
@@ -1721,9 +1727,9 @@
                 const distB = ((b.price - b.openPrice) / b.openPrice) * 100;
                 
                 if (aTriggered && bTriggered) {
-                    return distA - distB; // smaller positive first
+                    return distA - distB; // yang baru lepas breakout dulu
                 } else {
-                    return distB - distA; // larger negative first (closer to 0)
+                    return distB - distA; // yang underwater paling hampir dulu
                 }
             });
 
