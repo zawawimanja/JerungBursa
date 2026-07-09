@@ -12,6 +12,18 @@ const HEADERS = {
 };
 
 async function getIpoList() {
+    const githubUrl = 'https://raw.githubusercontent.com/zawawimanja/ipobursa/main/data.json';
+    try {
+        console.log(`🌐 Attempting to fetch latest IPO database online from: ${githubUrl}`);
+        const res = await axios.get(githubUrl, { headers: HEADERS, timeout: 5000 });
+        if (res.status === 200 && Array.isArray(res.data)) {
+            console.log(`✅ Successfully loaded ${res.data.length} IPO records dynamically from GitHub!`);
+            return res.data;
+        }
+    } catch (err) {
+        console.warn(`⚠️ Online fetch failed (${err.message}). Falling back to local database files...`);
+    }
+
     const candidatePaths = [
         path.join(__dirname, '../../ipo/data.json'),
         path.join(__dirname, '../../ipohunterv2/data.json'),
@@ -21,24 +33,12 @@ async function getIpoList() {
     for (const p of candidatePaths) {
         if (fs.existsSync(p)) {
             try {
-                console.log(`📂 Loading local IPO database from: ${p}`);
+                console.log(`📂 Loading local fallback IPO database from: ${p}`);
                 return JSON.parse(fs.readFileSync(p, 'utf8'));
             } catch (err) {
                 console.warn(`⚠️ Failed to parse local IPO database at ${p}:`, err.message);
             }
         }
-    }
-    // Fallback to fetching online from GitHub if local file is not found (e.g. on GitHub Actions)
-    const githubUrl = 'https://raw.githubusercontent.com/zawawimanja/ipobursa/main/data.json';
-    try {
-        console.log(`🌐 Local IPO database not found. Fetching online from: ${githubUrl}`);
-        const res = await axios.get(githubUrl, { headers: HEADERS });
-        if (res.status === 200 && Array.isArray(res.data)) {
-            console.log(`✅ Loaded ${res.data.length} IPO records from GitHub.`);
-            return res.data;
-        }
-    } catch (err) {
-        console.error(`❌ Failed to fetch IPO database from GitHub:`, err.message);
     }
     return [];
 }
@@ -269,15 +269,15 @@ async function main() {
 
     function resolveCodeAndSymbol(name) {
         const cleanName = name.toUpperCase().trim();
-        let symbol = mappings[cleanName];
+        let symbol = rawMappings[cleanName] || mappings[cleanName];
         if (!symbol) {
-            const foundKey = Object.keys(mappings).find(key => {
+            const foundKey = Object.keys(rawMappings).find(key => {
                 const normKey = key.replace(/[^A-Z0-9]/g, '');
                 const normName = cleanName.replace(/[^A-Z0-9]/g, '');
                 return normName.startsWith(normKey) || normKey.startsWith(normName);
             });
             if (foundKey) {
-                symbol = mappings[foundKey];
+                symbol = rawMappings[foundKey];
             }
         }
         if (symbol) {
@@ -285,6 +285,63 @@ async function main() {
             return { symbol, code };
         }
         return { symbol: name + '.KL', code: '' };
+    }
+
+    function resolveIpoInfo(cleanName) {
+        if (!cleanName) return null;
+        const upperName = cleanName.toUpperCase().trim();
+        const matches = [];
+        
+        // 1. Direct match
+        if (ipoMap[upperName]) {
+            matches.push(ipoMap[upperName]);
+        }
+        
+        // 2. Look for other entries sharing the same Bursa code or having similar normalized names
+        const codeA = resolveCodeAndSymbol(upperName).code;
+        Object.entries(ipoMap).forEach(([key, val]) => {
+            if (key.toUpperCase().trim() === upperName) return; // already added
+            const normKey = key.replace(/[^A-Z0-9]/g, '').toUpperCase();
+            const normName = upperName.replace(/[^A-Z0-9]/g, '');
+            if (normName.startsWith(normKey) || normKey.startsWith(normName)) {
+                matches.push(val);
+                return;
+            }
+            const codeB = resolveCodeAndSymbol(key).code;
+            if (codeA && codeB && codeA === codeB) {
+                matches.push(val);
+            }
+        });
+        
+        if (matches.length === 0) return null;
+        
+        // Merge matches: prioritize non-Unrated grades, positive OS, and true outliers
+        const merged = { ...matches[0] };
+        for (let i = 1; i < matches.length; i++) {
+            const m = matches[i];
+            if ((!merged.grade || merged.grade === 'Unrated') && m.grade && m.grade !== 'Unrated') {
+                merged.grade = m.grade;
+            }
+            if (!merged.os && m.os) {
+                merged.os = m.os;
+            }
+            if (!merged.outlier && m.outlier) {
+                merged.outlier = m.outlier;
+            }
+            if (m.ipoPrice && !merged.ipoPrice) {
+                merged.ipoPrice = m.ipoPrice;
+            }
+            if (m.openPrice && !merged.openPrice) {
+                merged.openPrice = m.openPrice;
+            }
+            // Prefer human listingDate (e.g. '07-Jul-2026') over standard date if available
+            if (m.listingDate && (!merged.listingDate || (merged.listingDate.includes('-') && !merged.listingDate.match(/[a-zA-Z]/)))) {
+                if (m.listingDate.match(/[a-zA-Z]/)) {
+                    merged.listingDate = m.listingDate;
+                }
+            }
+        }
+        return merged;
     }
 
     const dynamicCodeCache = {};
@@ -596,17 +653,7 @@ async function main() {
 
                     // Resolve openPrice and check wentUnderwater status
                     const cleanStockName = stock.name.toUpperCase().trim();
-                    let ipoInfo = ipoMap[cleanStockName];
-                    if (!ipoInfo) {
-                        const foundKey = Object.keys(ipoMap).find(key => {
-                            const normKey = key.replace(/[^A-Z0-9]/g, '');
-                            const normName = cleanStockName.replace(/[^A-Z0-9]/g, '');
-                            return normName.startsWith(normKey) || normKey.startsWith(normName);
-                        });
-                        if (foundKey) {
-                            ipoInfo = ipoMap[foundKey];
-                        }
-                    }
+                    let ipoInfo = resolveIpoInfo(cleanStockName);
                     let openPrice = (ipoInfo && ipoInfo.openPrice) || (validDays[0] ? validDays[0].open : null);
                     // Fallback for Yahoo Finance bug on listing day (where open is returned as 0)
                     if ((openPrice === null || openPrice === 0 || openPrice === undefined) && validDays[0]) {
@@ -782,17 +829,7 @@ async function main() {
     for (const stock of dedupedStocks.values()) {
         const name = stock.name;
         // Associate IPO Grade early using fuzzy match
-        let ipoInfo = ipoMap[name.toUpperCase().trim()];
-        if (!ipoInfo) {
-            const foundKey = Object.keys(ipoMap).find(key => {
-                const normKey = key.replace(/[^A-Z0-9]/g, '');
-                const normName = name.toUpperCase().trim().replace(/[^A-Z0-9]/g, '');
-                return normName.startsWith(normKey) || normKey.startsWith(normName);
-            });
-            if (foundKey) {
-                ipoInfo = ipoMap[foundKey];
-            }
-        }
+        let ipoInfo = resolveIpoInfo(name);
         if (ipoInfo) {
             stock.ipoGrade = ipoInfo.grade;
             stock.ipoYear = ipoInfo.year;
@@ -1038,17 +1075,7 @@ async function main() {
         let ipoTagCount = 0;
         processedData.forEach(item => {
             const cleanName = item.name.toUpperCase().trim();
-            let info = ipoMap[cleanName];
-            if (!info) {
-                const foundKey = Object.keys(ipoMap).find(key => {
-                    const normKey = key.replace(/[^A-Z0-9]/g, '');
-                    const normName = cleanName.replace(/[^A-Z0-9]/g, '');
-                    return normName.startsWith(normKey) || normKey.startsWith(normName);
-                });
-                if (foundKey) {
-                    info = ipoMap[foundKey];
-                }
-            }
+            let info = resolveIpoInfo(cleanName);
             if (info) {
                 item.ipoGrade = info.grade === 'Unrated' ? (fallbackIpoMap[cleanName] || 'Unrated') : info.grade;
                 item.ipoYear = info.year;
