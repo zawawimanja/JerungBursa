@@ -643,6 +643,10 @@
                 <input type="checkbox" id="strictEntryFilter" style="cursor: pointer; width: 16px; height: 16px;" checked>
                 <label for="strictEntryFilter" style="color: #34d399; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none;">🔥 Ultra-Strict Entry (Floor ≤ 6%/11%, Skor ≥ 11/12, PB ≤ 20%)</label>
             </div>
+            <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.45rem 0.8rem; border-radius: 8px; border: 1px solid rgba(96, 165, 250, 0.35);">
+                <input type="checkbox" id="premiumHypeFilter" style="cursor: pointer; width: 16px; height: 16px;" checked>
+                <label for="premiumHypeFilter" style="color: #60a5fa; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none;">🚀 Premium Hype Only (Gred A / OS ≥ 50x / Outlier)</label>
+            </div>
             <button id="refreshBtn" class="btn">🔄 Refresh Live</button>
         </div>
     </header>
@@ -1243,7 +1247,7 @@
             // Fallback to GitHub if local load failed
             if (!loadedLocal) {
                 try {
-                    const res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/live_data.json?t=${cacheBuster}`);
+                    const res = await fetch(`https://raw.githubusercontent.com/zawawimanja/BSKL/main/smart-money-tracker/live_data.json?t=${cacheBuster}`);
                     if (res.ok) {
                         raw = await res.json();
                     }
@@ -1505,6 +1509,15 @@
 
                 const style = getItemStyle(item);
 
+                // Premium Hype Filter: If checked, apply to Fresh IPOs
+                const premiumHypeVal = document.getElementById('premiumHypeFilter') ? document.getElementById('premiumHypeFilter').checked : false;
+                if (premiumHypeVal && isFreshIpo(item)) {
+                    const osVal = item.os || 0;
+                    const isOutlier = item.outlier === true || item.outlier === 'true';
+                    // Allow Grade A OR stocks with OS >= 50x OR Outlier status
+                    if (item.ipoGrade !== 'A' && osVal < 50 && !isOutlier) return false;
+                }
+
                 // Strict risk management: If checked, apply ultra-strict criteria to filter out duds
                 const strictEntryVal = document.getElementById('strictEntryFilter') ? document.getElementById('strictEntryFilter').checked : false;
                 if (strictEntryVal) {
@@ -1670,10 +1683,12 @@
                         <tr style="${isVvipRank ? 'background: rgba(245, 158, 11, 0.02);' : ''}">
                             <td style="text-align: center; font-weight: 800; color: ${isVvipRank ? '#f59e0b' : 'var(--accent)'};">#${rankCount++}</td>
                             <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
-                                <div style="display: flex; align-items: center; gap: 0.4rem;">
+                                <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
                                     <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
                                         ${crownEmoji}${item.name} <span style="font-size: 0.75rem; color: var(--accent);">🔗</span>
                                     </a>
+                                    ${item.hasLowerWickRejection ? `<span style="font-size: 0.68rem; background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.25); white-space: nowrap;" title="Jerung pertahankan lantai sokongan (Lower Wick Rejection)">🟢 Reject Bawah</span>` : ''}
+                                    ${item.hasUpperWickRejection ? `<span style="font-size: 0.68rem; background: rgba(239, 68, 68, 0.15); color: #f87171; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(239, 68, 68, 0.25); white-space: nowrap;" title="Tekanan jualan tinggi di atas (Upper Wick Rejection)">🔴 Reject Atas</span>` : ''}
                                 </div>
                                 <div style="font-size: 0.76rem; color: var(--text-muted); font-weight: 600; margin-top: 0.3rem; letter-spacing: 0.2px;">
                                     ${scoreSpan}${gradeSpan}${freshSpan}${ipoPriceStr}
@@ -1768,10 +1783,12 @@
                         <tr>
                             <td style="text-align: center; font-weight: 800; color: #fb7185;">#${rankCount++}</td>
                             <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
-                                <div style="display: flex; align-items: center; gap: 0.4rem;">
+                                <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
                                     <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
                                         ${item.name} <span style="font-size: 0.75rem; color: var(--accent);">🔗</span>
                                     </a>
+                                    ${item.hasLowerWickRejection ? `<span style="font-size: 0.68rem; background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.25); white-space: nowrap;" title="Jerung pertahankan lantai sokongan (Lower Wick Rejection)">🟢 Reject Bawah</span>` : ''}
+                                    ${item.hasUpperWickRejection ? `<span style="font-size: 0.68rem; background: rgba(239, 68, 68, 0.15); color: #f87171; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(239, 68, 68, 0.25); white-space: nowrap;" title="Tekanan jualan tinggi di atas (Upper Wick Rejection)">🔴 Reject Atas</span>` : ''}
                                 </div>
                                 <div style="font-size: 0.76rem; color: var(--text-muted); font-weight: 600; margin-top: 0.3rem; letter-spacing: 0.2px;">
                                     ${scoreSpan}${gradeSpan}${listingDateStr}
@@ -1964,6 +1981,10 @@
                 applyFilters();
             });
 
+            document.getElementById('premiumHypeFilter').addEventListener('change', function() {
+                applyFilters();
+            });
+
             document.getElementById('refreshBtn').addEventListener('click', async function() {
                 const text = this.textContent;
                 this.textContent = '⏳ Loading...';
@@ -2017,7 +2038,7 @@
                     }
                     
                     if (!res || !res.ok) {
-                        res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/history/data_${dateVal}.json?t=${cacheBuster}`);
+                        res = await fetch(`https://raw.githubusercontent.com/zawawimanja/BSKL/main/smart-money-tracker/history/data_${dateVal}.json?t=${cacheBuster}`);
                     }
                     
                     if (res.ok) {

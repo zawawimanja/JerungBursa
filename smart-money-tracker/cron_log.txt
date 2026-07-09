@@ -1,0 +1,6 @@
+🏁 Memulakan analisis harian JerungBursa...
+
+[1/2] Menjalankan imbasan pasaran semasa (scrape-real.js)...
+/bin/sh: 1: node: not found
+
+❌ Ralat berlaku semasa menjalankan proses: Command failed: node scrape-real.js
