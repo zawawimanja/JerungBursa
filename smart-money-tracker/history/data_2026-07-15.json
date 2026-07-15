@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-15T05:51:44.725Z",
+  "lastUpdated": "2026-07-15T06:17:41.872Z",
   "source": "klse.i3investor.com",
   "topVolume": [
     {
@@ -632,7 +632,8 @@
       "sma200": 3.5020500004291533,
       "openPrice": 2.25,
       "wentUnderwater": true,
-      "firstDayOpenPrice": 2.25
+      "firstDayOpenPrice": 2.25,
+      "isVvip": true
     },
     {
       "name": "DUFU",
@@ -2030,7 +2031,6 @@
       "openPrice": 0.12,
       "wentUnderwater": true,
       "firstDayOpenPrice": 0.11999999731779099,
-      "isVvip": true,
       "ipoGrade": "D",
       "ipoYear": 2026,
       "ipoPrice": 0.12,
@@ -2202,7 +2202,6 @@
       "openPrice": 0.255,
       "wentUnderwater": false,
       "firstDayOpenPrice": 0.5299999713897705,
-      "isVvip": true,
       "ipoGrade": "C",
       "ipoYear": 2020,
       "ipoPrice": 0.25,
@@ -2703,7 +2702,6 @@
       "openPrice": 0.6,
       "wentUnderwater": true,
       "firstDayOpenPrice": 0.3050000071525574,
-      "isVvip": true,
       "ipoGrade": "B",
       "ipoYear": 2022,
       "ipoPrice": 0.52,
@@ -3016,6 +3014,7 @@
       "openPrice": 1.08,
       "wentUnderwater": true,
       "firstDayOpenPrice": 1.0800000429153442,
+      "isVvip": true,
       "ipoGrade": "B",
       "ipoYear": 2026,
       "ipoPrice": 1.03,
@@ -3364,7 +3363,6 @@
       "openPrice": 0.5,
       "wentUnderwater": true,
       "firstDayOpenPrice": 0.5,
-      "isVvip": true,
       "ipoGrade": "B",
       "ipoYear": 2026,
       "ipoPrice": 0.53,
@@ -3959,6 +3957,7 @@
       "openPrice": 0.8499840000000001,
       "wentUnderwater": false,
       "firstDayOpenPrice": 1.5199999809265137,
+      "isVvip": true,
       "ipoGrade": "B",
       "ipoYear": 2021,
       "ipoPrice": 0.32,
@@ -4129,6 +4128,7 @@
       "openPrice": 0.360006,
       "wentUnderwater": true,
       "firstDayOpenPrice": 0.36000001430511475,
+      "isVvip": true,
       "ipoGrade": "B",
       "ipoYear": 2025,
       "ipoPrice": 0.29,
@@ -4678,6 +4678,7 @@
       "openPrice": 0.6499950000000001,
       "wentUnderwater": true,
       "firstDayOpenPrice": 0.1550000011920929,
+      "isVvip": true,
       "ipoGrade": "B",
       "ipoYear": 2022,
       "ipoPrice": 0.17,
@@ -6363,6 +6364,7 @@
       "openPrice": 0.176,
       "wentUnderwater": true,
       "firstDayOpenPrice": 0.18000000715255737,
+      "isVvip": true,
       "ipoGrade": "C",
       "ipoYear": 2026,
       "ipoPrice": 0.18,
