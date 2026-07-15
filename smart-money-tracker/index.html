@@ -1651,7 +1651,17 @@
                     }
                 }
 
-                // Default / Safe Mode Sorting (Category -> Setup Style -> Smart Score -> Floor Distance)
+                // Default / Safe Mode Sorting (Floor Distance -> Category -> Smart Score -> Setup Style)
+                const floorA = a.floorLow || (a.price * 0.95);
+                const distA = ((a.price - floorA) / floorA) * 100;
+                
+                const floorB = b.floorLow || (b.price * 0.95);
+                const distB = ((b.price - floorB) / floorB) * 100;
+
+                if (Math.abs(distA - distB) > 0.01) {
+                    return distA - distB; // Sort by Floor Distance ascending (closest first)
+                }
+
                 const getCategoryRank = (item) => {
                     const grade = item.ipoGrade || 'Unrated';
                     const isIpo = grade === 'A' || grade === 'B' || grade === 'C';
@@ -1668,30 +1678,18 @@
                     return rankA - rankB; // Group by Category (Fresh first)
                 }
 
-                // Group by Setup Style (EXPLOSIVE = 1, STAIRCASE = 2, SWING PLAY = 3)
+                const scoreA = calculateSmartScore(a);
+                const scoreB = calculateSmartScore(b);
+                if (scoreA !== scoreB) {
+                    return scoreB - scoreA; // Highest Smart Score first
+                }
+
                 const styleA = getItemStyle(a);
                 const styleB = getItemStyle(b);
                 const styleRankA = styleA === 'EXPLOSIVE' ? 1 : (styleA === 'STAIRCASE' ? 2 : 3);
                 const styleRankB = styleB === 'EXPLOSIVE' ? 1 : (styleB === 'STAIRCASE' ? 2 : 3);
 
-                if (styleRankA !== styleRankB) {
-                    return styleRankA - styleRankB; // Sort EXPLOSIVE to the top
-                }
-
-                // Sort by Smart Score descending (Highest Score first)
-                const scoreA = calculateSmartScore(a);
-                const scoreB = calculateSmartScore(b);
-                if (scoreA !== scoreB) {
-                    return scoreB - scoreA;
-                }
-
-                const floorA = a.floorLow || (a.price * 0.95);
-                const distA = ((a.price - floorA) / floorA) * 100;
-                
-                const floorB = b.floorLow || (b.price * 0.95);
-                const distB = ((b.price - floorB) / floorB) * 100;
-
-                return distA - distB;
+                return styleRankA - styleRankB;
             };
 
             validPicks.sort(renderSortFn);
