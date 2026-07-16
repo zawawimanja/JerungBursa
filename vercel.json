@@ -1,11 +1,11 @@
 {
   "version": 2,
-  "outputDirectory": "smart-money-tracker",
   "builds": [
-    { "src": "api/chat.js", "use": "@vercel/node" }
+    { "src": "smart-money-tracker/api/chat.js", "use": "@vercel/node" },
+    { "src": "smart-money-tracker/**", "use": "@vercel/static" }
   ],
   "routes": [
-    { "src": "/api/chat", "dest": "/api/chat.js" },
-    { "src": "/(.*)", "dest": "/$1" }
+    { "src": "/api/chat", "dest": "/smart-money-tracker/api/chat.js" },
+    { "src": "/(.*)", "dest": "/smart-money-tracker/$1" }
   ]
 }
