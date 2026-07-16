@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "outputDirectory": "smart-money-tracker",
+  "builds": [
+    { "src": "api/chat.js", "use": "@vercel/node" }
+  ],
+  "routes": [
+    { "src": "/api/chat", "dest": "/api/chat.js" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}
