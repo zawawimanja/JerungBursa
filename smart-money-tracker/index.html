@@ -1036,28 +1036,48 @@
         // API key is stored in Vercel Environment Variables — NEVER exposed to the browser.
         async function callGroqWithFallback(primaryModel, fallbackModel, systemPrompt, userPrompt) {
             const tryModel = async (model) => {
-                const res = await fetch('/api/chat', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        prompt: userPrompt,
-                        systemPrompt: systemPrompt,
-                        model: model,
-                        max_tokens: 1024,
-                        temperature: 0.5
-                    })
-                });
-                const d = await res.json();
-                if (!res.ok) throw new Error(d?.error || 'Proxy error');
+                let res;
+                try {
+                    res = await fetch('/api/chat', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({
+                            prompt: userPrompt,
+                            systemPrompt: systemPrompt,
+                            model: model,
+                            max_tokens: 1024,
+                            temperature: 0.5
+                        })
+                    });
+                } catch (fetchErr) {
+                    throw new Error('Tidak dapat sambung ke pelayan AI. Pastikan laman ini dibuka melalui Vercel (bukan file://).');
+                }
+
+                // Safe JSON parse — handle empty or HTML error responses
+                let d = {};
+                try {
+                    d = await res.json();
+                } catch (jsonErr) {
+                    const status = res.status;
+                    if (status === 404) throw new Error('Fungsi /api/chat tidak dijumpai. Pastikan Vercel sudah deploy terbaru.');
+                    if (status === 500) throw new Error('Ralat pelayan. Semak sama ada GROQ_API_KEY sudah diset dalam Vercel Environment Variables.');
+                    throw new Error(`Respons tidak sah dari pelayan (HTTP ${status}).`);
+                }
+
+                if (!res.ok) throw new Error(d?.error || `Ralat pelayan (HTTP ${res.status})`);
                 return d?.text || '';
             };
 
             try {
                 const result = await tryModel(primaryModel);
                 if (result) return { text: result, model: primaryModel };
-                throw new Error('Empty response');
+                throw new Error('Respons kosong dari AI.');
             } catch (e) {
-                console.warn(`[AI] ${primaryModel} failed: ${e.message}. Falling back to ${fallbackModel}...`);
+                console.warn(`[AI] ${primaryModel} gagal: ${e.message}. Cuba fallback ${fallbackModel}...`);
+                // On fallback, propagate the same error if it's a config/infra issue
+                if (e.message.includes('Vercel') || e.message.includes('GROQ_API_KEY') || e.message.includes('file://')) {
+                    throw e;
+                }
                 const result = await tryModel(fallbackModel);
                 return { text: result, model: fallbackModel };
             }
