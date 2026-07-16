@@ -1341,6 +1341,15 @@ Sila tentukan teknik mana yang paling sesuai untuk saham ini dan bandingkan deng
                 verdictBox.innerHTML = `
                     <div style="width: 100%; text-align: left; line-height: 1.5; font-size: 0.82rem;">
                         ${formattedText}
+                        
+                        <!-- Peringatan Keras Alert Box -->
+                        <div style="background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 8px; padding: 0.75rem; margin-top: 1rem; font-size: 0.75rem; color: #f87171; line-height: 1.45; text-align: left; display: flex; align-items: start; gap: 0.4rem;">
+                            <span style="font-size: 0.9rem; line-height: 1;">⚠️</span>
+                            <div>
+                                <strong>Peringatan Tegar Jerung:</strong> Keputusan AI ini adalah sebagai rujukan sokongan data sahaja. <strong>TIDAK semestinya AI suruh BUY anda terus BUY. Dan jika AI tidak suruh BUY (e.g. AVOID/HOLD), sila JANGAN gatal tangan nak pergi BUY!</strong> Sentiasa utamakan kajian chart anda sendiri.
+                            </div>
+                        </div>
+
                         <div style="margin-top: 1.5rem; text-align: center; border-top: 1px dashed rgba(255,255,255,0.05); padding-top: 0.75rem;">
                             <button onclick="resetAIAnalysis()" class="btn" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: #94a3b8; padding: 0.35rem 0.9rem; border-radius: 6px; font-size: 0.75rem; font-weight: 700; cursor: pointer;">
                                 🔄 Generate Semula
@@ -1497,7 +1506,17 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     .replace(/^- (.*?)\n/gm, '<div style="margin-left: 0.75rem; position: relative; padding-left: 0.75rem; color: #94a3b8; margin-bottom: 0.25rem;"><span style="position: absolute; left: 0; color: #a78bfa;">•</span>$1</div>')
                     .replace(/\n/g, '<br>');
 
-                bodyEl.innerHTML = formattedText;
+                bodyEl.innerHTML = `
+                    ${formattedText}
+                    
+                    <!-- Peringatan Keras Alert Box -->
+                    <div style="background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.2); border-radius: 8px; padding: 0.75rem; margin-top: 1.25rem; font-size: 0.75rem; color: #f87171; line-height: 1.45; text-align: left; display: flex; align-items: start; gap: 0.4rem;">
+                        <span style="font-size: 0.9rem; line-height: 1;">⚠️</span>
+                        <div>
+                            <strong>Peringatan Tegar Jerung:</strong> Keputusan AI ini adalah sebagai rujukan sokongan data sahaja. <strong>TIDAK semestinya AI suruh BUY anda terus BUY. Dan jika AI tidak suruh BUY (e.g. AVOID/HOLD), sila JANGAN gatal tangan nak pergi BUY!</strong> Sentiasa utamakan kajian chart anda sendiri.
+                        </div>
+                    </div>
+                `;
             } catch (err) {
                 const isInvalidKey = err.message.toLowerCase().includes('api key') || err.message.toLowerCase().includes('unauthorized') || err.message.toLowerCase().includes('forbidden') || err.message.toLowerCase().includes('key not found');
                 bodyEl.innerHTML = `
