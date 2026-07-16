@@ -1032,6 +1032,56 @@
             return localStorage.getItem('gadisai_groq_key') || '';
         }
 
+        function showAPIKeyPrompt(containerId, ticker, technique, type) {
+            const container = document.getElementById(containerId);
+            if (!container) return;
+            
+            window._pendingAIRequest = { type, ticker, technique };
+            
+            container.innerHTML = `
+                <div style="text-align: center; padding: 1.5rem; color: #cbd5e1;">
+                    <span style="font-size: 1.8rem;">🔑</span>
+                    <h4 style="margin: 0.5rem 0; color: #a78bfa; font-weight: 800; font-size: 1rem;">Sila Masukkan Groq API Key</h4>
+                    <p style="font-size: 0.78rem; color: var(--text-muted); margin-bottom: 1.2rem; max-width: 320px; margin-left: auto; margin-right: auto; line-height: 1.4;">
+                        API Key diperlukan untuk membuat panggilan terus ke Groq Llama 3. Ia disimpan dengan selamat di dalam pelayar anda.
+                    </p>
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 0.6rem;">
+                        <input type="password" id="inputGroqKey" placeholder="gsk_..." style="background: rgba(15,23,42,0.8); border: 1px solid rgba(167, 139, 250, 0.4); color: white; padding: 0.5rem; border-radius: 8px; font-size: 0.82rem; width: 85%; max-width: 300px; text-align: center; outline: none; transition: border-color 0.2s;" onfocus="this.style.borderColor='#a78bfa'">
+                        <button onclick="saveUserGroqKey()" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.5rem 1.5rem; border-radius: 8px; font-weight: 800; cursor: pointer; font-size: 0.82rem; margin-top: 0.25rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
+                            💾 Simpan & Teruskan Analisis
+                        </button>
+                    </div>
+                </div>
+            `;
+        }
+
+        function saveUserGroqKey() {
+            const key = document.getElementById('inputGroqKey').value.trim();
+            if (!key) {
+                alert("Sila masukkan API Key Groq yang sah.");
+                return;
+            }
+            localStorage.setItem('gadisai_groq_key', key);
+            
+            const pending = window._pendingAIRequest;
+            if (pending) {
+                if (pending.type === 'calculator') {
+                    generateAIAnalysis();
+                } else if (pending.type === 'modal') {
+                    triggerAIAnalysisModal(pending.ticker, pending.technique);
+                }
+            }
+        }
+
+        function promptResetGroqKey(ticker, technique, type = 'modal') {
+            localStorage.removeItem('gadisai_groq_key');
+            if (type === 'calculator') {
+                showAPIKeyPrompt('ai-verdict-box', ticker, technique, 'calculator');
+            } else {
+                showAPIKeyPrompt('aiModalBody', ticker, technique, 'modal');
+            }
+        }
+
         // Helper: call Groq with auto-fallback (70b → 8b-instant)
         async function callGroqWithFallback(primaryModel, fallbackModel, systemPrompt, userPrompt, savedKey) {
             const tryModel = async (model) => {
@@ -1075,6 +1125,12 @@
                 return;
             }
             if (!verdictBox) return;
+
+            const savedKey = getGroqKey();
+            if (!savedKey) {
+                showAPIKeyPrompt('ai-verdict-box', ticker, 'Calculator', 'calculator');
+                return;
+            }
 
             // Rate Limit Cooldown (5 seconds)
             const now = Date.now();
@@ -1188,10 +1244,16 @@ Sila bandingkan dengan data sejarah backtest kita sejak 1 Jun 2026:
                     </div>
                 `;
             } catch (err) {
+                const isInvalidKey = err.message.toLowerCase().includes('api key') || err.message.toLowerCase().includes('unauthorized') || err.message.toLowerCase().includes('forbidden') || err.message.toLowerCase().includes('key not found');
                 verdictBox.innerHTML = `
                     <div style="color: #f87171; text-align: center; font-size: 0.8rem; padding: 1rem 0;">
-                        ⚠️ Ralat AI: ${err.message}<br>
-                        <button onclick="resetAIAnalysis()" class="btn" style="margin-top: 0.75rem; background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); color: #f87171; padding: 0.35rem 0.9rem; border-radius: 6px; font-size: 0.75rem; font-weight: 700; cursor: pointer;">
+                        ⚠️ Ralat AI: ${err.message}<br><br>
+                        ${isInvalidKey ? `
+                        <button onclick="promptResetGroqKey('${ticker}', 'Calculator', 'calculator')" class="btn" style="background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); color: #f87171; padding: 0.35rem 0.9rem; border-radius: 6px; font-size: 0.75rem; font-weight: 700; cursor: pointer; margin-right: 0.5rem;">
+                            🔑 Tukar API Key
+                        </button>
+                        ` : ''}
+                        <button onclick="generateAIAnalysis()" class="btn" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #cbd5e1; padding: 0.35rem 0.9rem; border-radius: 6px; font-size: 0.75rem; font-weight: 700; cursor: pointer;">
                             🔄 Cuba Semula
                         </button>
                     </div>
@@ -1221,6 +1283,14 @@ Sila bandingkan dengan data sejarah backtest kita sejak 1 Jun 2026:
             const bodyEl = document.getElementById('aiModalBody');
             
             if (!modal || !titleEl || !bodyEl) return;
+
+            const savedKey = getGroqKey();
+            if (!savedKey) {
+                modal.style.display = 'flex';
+                titleEl.innerHTML = `✨ Groq AI Smart Analysis: ${ticker} (${technique})`;
+                showAPIKeyPrompt('aiModalBody', ticker, technique, 'modal');
+                return;
+            }
             
             modal.style.display = 'flex';
             titleEl.innerHTML = `✨ Groq AI Smart Analysis: ${ticker} (${technique})`;
@@ -1315,10 +1385,16 @@ Sila bandingkan dengan data sejarah backtest kita sejak 1 Jun 2026:
 
                 bodyEl.innerHTML = formattedText;
             } catch (err) {
+                const isInvalidKey = err.message.toLowerCase().includes('api key') || err.message.toLowerCase().includes('unauthorized') || err.message.toLowerCase().includes('forbidden') || err.message.toLowerCase().includes('key not found');
                 bodyEl.innerHTML = `
                     <div style="color: #f87171; text-align: center; font-size: 0.85rem; padding: 1.5rem 0;">
                         ⚠️ Ralat AI: ${err.message}<br><br>
-                        <button onclick="triggerAIAnalysisModal('${ticker}', '${technique}')" class="btn" style="background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); color: #f87171; padding: 0.45rem 1.2rem; border-radius: 8px; font-weight: 700; cursor: pointer;">
+                        ${isInvalidKey ? `
+                        <button onclick="promptResetGroqKey('${ticker}', '${technique}', 'modal')" class="btn" style="background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); color: #f87171; padding: 0.45rem 1.2rem; border-radius: 8px; font-weight: 700; cursor: pointer; margin-right: 0.5rem;">
+                            🔑 Tukar API Key
+                        </button>
+                        ` : ''}
+                        <button onclick="triggerAIAnalysisModal('${ticker}', '${technique}')" class="btn" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #cbd5e1; padding: 0.45rem 1.2rem; border-radius: 8px; font-weight: 700; cursor: pointer;">
                             🔄 Cuba Semula
                         </button>
                     </div>
