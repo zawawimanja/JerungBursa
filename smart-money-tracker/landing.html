@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodologi Kuantitatif & Model Analisis Tren IPO | JerungBursa</title>
+    <meta name="description" content="Kaji metodologi kuantitatif, formula penyaringan pintar, VSA (Volume Spread Analysis), dan pengurusan risiko sains dalam pelaburan saham IPO Bursa Malaysia.">
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --panel-bg: rgba(17, 24, 39, 0.75);
+            --panel-border: rgba(255, 255, 255, 0.08);
+            --accent: #3b82f6;
+            --success: #10b981;
+            --danger: #ef4444;
+            --warning: #f59e0b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.1) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.06) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(245, 158, 11, 0.05) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text-primary);
+            min-height: 100vh;
+            padding: 2rem 1.5rem;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        /* Navigation Style */
+        .nav-links {
+            display: flex;
+            gap: 0.8rem;
+            justify-content: flex-start;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--panel-border);
+            padding-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-nav {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--panel-border);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-nav:hover {
+            color: white;
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.15);
+        }
+
+        /* Header Style */
+        header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+            position: relative;
+        }
+
+        header::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--success), var(--warning));
+            margin: 1.5rem auto 0 auto;
+            border-radius: 2px;
+        }
+
+        header h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            letter-spacing: -0.025em;
+            background: linear-gradient(135deg, #ffffff 40%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.75rem;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        /* Content Panel Layout */
+        .panel {
+            background: var(--panel-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid var(--panel-border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .panel-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            border-bottom: 1px solid var(--panel-border);
+            padding-bottom: 0.75rem;
+            color: white;
+        }
+
+        .panel-title span {
+            color: var(--accent);
+        }
+
+        p {
+            margin-bottom: 1.5rem;
+            color: #cbd5e1;
+        }
+
+        strong {
+            color: white;
+            font-weight: 600;
+        }
+
+        ul, ol {
+            margin-bottom: 1.5rem;
+            padding-left: 1.5rem;
+            color: #cbd5e1;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: rgba(59, 130, 246, 0.05);
+            border-left: 4px solid var(--accent);
+            padding: 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            font-style: italic;
+            color: #94a3b8;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--accent) 0%, #1d4ed8 100%);
+            color: white;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border-radius: 12px;
+            font-weight: 800;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(59, 130, 246, 0.4);
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 5rem;
+            padding: 2.5rem 1.5rem;
+            border-top: 1px solid var(--panel-border);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem 1rem;
+            }
+            header h1 {
+                font-size: 1.85rem;
+            }
+            header p {
+                font-size: 0.95rem;
+            }
+            .panel {
+                padding: 1.5rem;
+            }
+            .panel-title {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Links -->
+        <div class="nav-links" id="landingNav">
+            <a href="./index.html" class="btn-nav">🏠 Utama</a>
+            <a href="./landing.html" class="btn-nav" style="color: white; border-color: rgba(255,255,255,0.15); background: rgba(255,255,255,0.06);">💡 Metodologi (SEO)</a>
+            <a href="./backtest.html" class="btn-nav">📊 Bukti Backtest</a>
+            <a href="./sop.html" class="btn-nav">📘 Panduan SOP</a>
+            <a href="./hall-of-fame.html" class="btn-nav">🏆 Hall of Fame</a>
+            <a href="./formula.html" class="btn-nav">🔥 Formula VVIP</a>
+        </div>
+
+        <header>
+            <h1>Metodologi & Reka Bentuk Kuantitatif JerungBursa</h1>
+            <p>Satu kajian mendalam tentang cara algoritma kami menyaring pasaran saham Bursa Malaysia, mengira support floor, dan merumuskan model pelaburan VVIP Trend Rider secara saintifik.</p>
+        </header>
+
+        <main>
+            <!-- SECTION 1: INTRODUCTION -->
+            <section class="panel" id="sec-intro">
+                <h2 class="panel-title"><span>01.</span> Pengenalan Kepada Landskap IPO Bursa Malaysia</h2>
+                <p>
+                    Pasaran tawaran awam permulaan (IPO) di Bursa Malaysia—terutamanya dalam Pasaran ACE dan Pasaran Utama—merupakan antara segmen pasaran saham tempatan yang paling dinamik dan menawarkan potensi pertumbuhan tinggi. Sejak beberapa tahun kebelakangan ini, minat terhadap syarikat baharu yang disenaraikan telah meningkat dengan mendadak, didorong oleh penyertaan aktif pelabur runcit serta sokongan institusi tempatan.
+                </p>
+                <p>
+                    Walau bagaimanapun, pelaburan dalam saham IPO yang baru disenaraikan mempunyai cabaran yang unik. Oleh kerana syarikat baharu ini tidak mempunyai rekod sejarah harga jangka panjang di bursa, kaedah analisis teknikal konvensional (seperti penunjuk purata bergerak jangka panjang atau pengayun momentum) sering kali gagal atau memberikan isyarat palsu. Ramai pelabur mengalami kerugian besar akibat mengejar harga di puncak (chasing momentum) atau gagal mengenal pasti zon pengumpulan institusi yang selamat.
+                </p>
+                <p>
+                    <strong>JerungBursa</strong> dibina sebagai sebuah konsol penyelidikan kuantitatif untuk menangani jurang maklumat ini. Kami percaya bahawa di sebalik pergerakan harga yang kelihatan rawak, terdapat jejak kemasukan wang besar (Smart Money atau "Jerung") yang boleh dikesan menggunakan analisis gabungan data volum, struktur sokongan harga, dan pemodelan statistik yang disiplin.
+                </p>
+            </section>
+
+            <!-- SECTION 2: THE TREND RIDER STRATEGY -->
+            <section class="panel" id="sec-trend-rider">
+                <h2 class="panel-title"><span>02.</span> Strategi Hibrid "Trend Rider" & Konsep Lantai Sokongan</h2>
+                <p>
+                    Teras utama kepada dashboard JerungBursa ialah model strategi hibrid yang dikenali sebagai <strong>VVIP Trend Rider (Teknik C)</strong>. Strategi ini merupakan hasil gabungan antara pelaburan momentum trend menaik (Trend Following) dan pengurusan risiko yang tegar berdasarkan paras sokongan lantai (Support Floor).
+                </p>
+                <div class="highlight-box">
+                    <p>
+                        "Matlamat utama strategi Trend Rider bukan untuk meramal harga saham secara tepat, tetapi untuk menunggang trend menaik yang disokong oleh volum Jerung selagi harga bertahan di atas tapak sokongan empirikal."
+                    </p>
+                </div>
+                <p>
+                    Berikut merupakan komponen-komponen kritikal dalam model Trend Rider kami:
+                </p>
+                <ul>
+                    <li>
+                        <strong>Lantai Sokongan (Support Floor):</strong> Ini adalah paras harga terendah dalam struktur konsolidasi harian di mana aktiviti belian institusi dikesan paling padat. Kami mengira lantai ini secara dinamik berdasarkan interaksi harga terendah (Low) dan pengumpulan volum terkumpul.
+                    </li>
+                    <li>
+                        <strong>Penapis Volatiliti Jarak Lantai:</strong> Kami mengutamakan saham yang berdagang berhampiran dengan Support Floor mereka (contohnya, dalam julat ≤ 6% untuk saham IPO segar, dan ≤ 11% untuk saham matang). Ini memastikan nisbah ganjaran-risiko (Risk-Reward Ratio) berada pada tahap optimum.
+                    </li>
+                    <li>
+                        <strong>Stop Loss Disiplin (SL 3%):</strong> Berbanding menggunakan peratusan stop loss yang rawak, kami meletakkan Stop Loss secara matematik pada paras 3% di bawah Support Floor. Sekiranya lantai ini ditembus, ia menunjukkan struktur sokongan pengumpulan Jerung telah rosak dan kedudukan swing wajib ditutup serta-merta demi memelihara modal.
+                    </li>
+                    <li>
+                        <strong>Menunggang Trend Tanpa TP Kaku:</strong> Saham yang melepasi fasa pengumpulan institusi berpotensi meledak tinggi. Strategi Trend Rider tidak meletakkan sasaran Take Profit (TP) yang kaku untuk membenarkan keuntungan berkembang secara maksimum (Ride the Trend) selagi garisan trend sokongan utama tidak ditembus.
+                    </li>
+                </ul>
+            </section>
+
+            <!-- SECTION 3: SCRAPER & DATA CLEANING -->
+            <section class="panel" id="sec-scraper">
+                <h2 class="panel-title"><span>03.</span> Mekanisme Penyaringan Data & Pembersihan Volum</h2>
+                <p>
+                    Data yang dipaparkan di dashboard dikemas kini secara berkala melalui skrip scraper automatik kami (`scrape-real.js`). Proses penyaringan kuantitatif ini terbahagi kepada dua fasa utama untuk memastikan hanya data berkualiti tinggi disajikan kepada pengguna.
+                </p>
+                <p>
+                    <strong>Fasa 1: Audit Data Asas Pasaran.</strong> Algoritma kami menolak saham yang diklasifikasikan sebagai "Saham Sikat" (Comb Stocks). Saham sikat ialah kaunter yang mempunyai volum dagangan yang sangat tipis dan carta harga mendatar tik-tik-tik yang menggambarkan kecairan tidak sihat. Dagangan dalam saham jenis ini mendedahkan pelabur kepada risiko modal tersangkut (illiquidity risk) di mana posisi sukar dijual semula di pasaran terbuka.
+                </p>
+                <p>
+                    <strong>Fasa 2: Pemodelan Skor Pintar (Smart Score).</strong> Setiap kaunter yang melepasi audit asas akan diberikan markah kuantitatif (Smart Score) sehingga maksimum 15 mata berdasarkan kriteria berikut:
+                </p>
+                <ol>
+                    <li>Jarak ke Support Floor harian (Maksimum 4 mata).</li>
+                    <li>Bilangan retest lantai sokongan tanpa pecah (Touch Count - Maksimum 3 mata).</li>
+                    <li>Status penggabungan harga (Consolidation - Maksimum 2 mata).</li>
+                    <li>Kedudukan harga berbanding purata bergerak SMA 50 & SMA 200 (Maksimum 3 mata).</li>
+                    <li>Analisis kecairan harian atau purata Turnover pasaran (Maksimum 3 mata).</li>
+                </ol>
+            </section>
+
+            <!-- SECTION 4: RISK MANAGEMENT -->
+            <section class="panel" id="sec-risk-management">
+                <h2 class="panel-title"><span>04.</span> Pengurusan Risiko & Had Simulasi Portfolio</h2>
+                <p>
+                    Kami menegaskan bahawa pengiraan teknikal dan formula di JerungBursa direka semata-mata untuk mengurangkan ralat emosi manusia semasa berdagang. Alat seperti <strong>Trading Base Calculator</strong> membolehkan pelabur menentukan saiz kedudukan lot secara tepat berdasarkan jumlah modal bebas dan tahap toleransi risiko individu sebelum sebarang transaksi berlaku.
+                </p>
+                <p>
+                    Mengikut disiplin pengurusan portfolio hibrid yang diuji dalam sistem kami, peruntukan modal yang disyorkan ialah pecahan portfolio kepada had maksimum <strong>5 kaunter serentak</strong> (Portfolio Split). Ini bermakna, sekiranya seorang pelabur mempunyai modal dagangan RM 10,000, modal yang diperuntukkan bagi setiap kedudukan swing VVIP dihadkan kepada RM 2,000 sahaja. Pendekatan ini melindungi portfolio secara menyeluruh sekiranya salah satu kedudukan mengalami pembatalan isyarat dan menyentuh had Stop Loss 3%.
+                </p>
+            </section>
+
+            <!-- SECTION 5: TRANSPARENCY & DATA ACCURACY -->
+            <section class="panel" id="sec-transparency">
+                <h2 class="panel-title"><span>05.</span> Ketelusan Data & Pengesahan Bukti Empirikal</h2>
+                <p>
+                    Sebagai sebahagian daripada tanggungjawab integriti maklumat kami, dashboard ini menyediakan halaman <strong>Laporan Prestasi Backtest Hibrid VVIP</strong>. Sejarah transaksi terkumpul dikira menggunakan data harga penutupan pasaran harian Bursa Malaysia yang sebenar sejak 3 Jun 2026. Laporan ini memberikan gambaran statistik telus mengenai prestasi kadar kemenangan (Win Rate), purata pulangan bersih (Average Net Return), dan jumlah Stop Loss yang tercetus secara sejarah.
+                </p>
+                <p>
+                    Penyediaan data empirikal ini bertujuan untuk membimbing pengguna agar melihat strategi pelaburan melalui lensa kebarangkalian jangka panjang, dan bukannya melalui emosi atau spekulasi liar.
+                </p>
+            </section>
+
+            <!-- CTA SECTION -->
+            <section class="cta-section">
+                <a href="./index.html" class="btn-cta">🚀 Buka Dashboard Live & Mula Scanner</a>
+            </section>
+        </main>
+
+        <!-- Global Footer with Legal Policies & Disclaimers -->
+        <footer style="margin-top: 4rem; padding: 2rem 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.08); background: rgba(15, 23, 45, 0.6); backdrop-filter: blur(8px); text-align: center; font-size: 0.85rem; color: var(--text-secondary); border-radius: 12px; margin-bottom: 2rem;">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <p style="margin-bottom: 1rem; color: #cbd5e1; line-height: 1.6;">
+                    <strong>⚠️ Penafian Kewangan & Risiko:</strong> Semua data, zon harga (Watchlist/Support Floor), formula, skor pintas, dan maklumat kuantitatif yang dipaparkan di JerungBursa adalah hasil pemodelan matematik dan simulasi algoritma untuk tujuan penyelidikan dan pembelajaran sahaja. Kami <strong>BUKAN</strong> penasihat kewangan berlesen. Melabur dalam pasaran saham Bursa Malaysia melibatkan risiko kerugian modal yang tinggi. Sila lakukan penyelidikan sendiri (DYOR) atau berunding dengan penasihat kewangan yang bertauliah sebelum membuat keputusan pelaburan sebenar.
+                </p>
+                <p style="margin-bottom: 1rem;">
+                    &copy; 2026 JerungBursa (Bursa IPO Trend Rider Console). Hak cipta terpelihara.
+                </p>
+                <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 0.5rem;">
+                    <a href="./privacy-policy.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-secondary)'">Dasar Privasi</a>
+                    <a href="./terms.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-secondary)'">Syarat Perkhidmatan</a>
+                    <a href="./about.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-secondary)'">Mengenai Kami</a>
+                    <a href="./contact.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-secondary)'">Hubungi Kami</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

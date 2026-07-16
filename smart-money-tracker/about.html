@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mengenai Kami | JerungBursa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --panel-bg: rgba(22, 28, 45, 0.7);
+            --panel-border: rgba(51, 65, 85, 0.5);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #6366f1;
+            --success: #10b981;
+            --danger: #ef4444;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.08) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text-main);
+            padding: 2rem 1.5rem;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 2.5rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(51, 65, 85, 0.3);
+            padding-bottom: 1.5rem;
+        }
+
+        header h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #a5b4fc 0%, #6366f1 50%, #34d399 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.8rem;
+            justify-content: flex-start;
+            margin-bottom: 2rem;
+        }
+
+        .btn-nav {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--panel-border);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-nav:hover {
+            color: white;
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.15);
+        }
+
+        .glass-card {
+            background: var(--panel-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--panel-border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            color: white;
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: #cbd5e1;
+            margin-bottom: 1.25rem;
+        }
+
+        .feature-box {
+            background: rgba(99, 102, 241, 0.05);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-box h3 {
+            color: #a5b4fc;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(51, 65, 85, 0.3);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 0.75rem;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-links">
+            <a href="index.html" class="btn-nav">
+                ← Tracker Utama
+            </a>
+        </div>
+
+        <header>
+            <h1>Mengenai JerungBursa</h1>
+            <p style="color: var(--text-muted); margin-top: 0.5rem;">Sistem Penjejak Aliran Tunai & Volum Pasaran Bursa Malaysia</p>
+        </header>
+
+        <main class="glass-card">
+            <h2>Misi Kami</h2>
+            <p>Di JerungBursa, kami bertekad untuk mendemokrasikan analisis data pasaran saham untuk pelabur runcit. Kami membina formula berasaskan matematik dan sains volum (Volume Spread Analysis - VSA) untuk membantu menjejaki arah pergerakan dana institusi (Smart Money atau "Jerung") di Bursa Malaysia, terutamanya pada kaunter-kaunter IPO yang baharu disenaraikan.</p>
+
+            <h2>Apa Yang Kami Lakukan</h2>
+            <p>Kami menyediakan konsol penapis masa nyata (Live Market Scanner) yang mengkategorikan kaunter saham mengikut strategi teknikal yang kukuh:</p>
+            
+            <div class="feature-box">
+                <h3>📈 Trend Rider Strategy</h3>
+                <p style="margin-bottom: 0;">Mengenal pasti kaunter yang berada di dalam fasa *breakout* dengan sokongan lantai yang rapat untuk menunggang trend menaik secara optimum.</p>
+            </div>
+
+            <div class="feature-box">
+                <h3>🌱 Early Spring (Wyckoff Spring)</h3>
+                <p style="margin-bottom: 0;">Mengesan kaunter yang sedang membina pengumpulan dasar lantai pasca pembetulan harga dan mula memotong naik melepasi harga pembukaan hari pertama.</p>
+            </div>
+
+            <div class="feature-box">
+                <h3>🎣 Bottom Fishing</h3>
+                <p style="margin-bottom: 0;">Mencari kaunter yang mengalami pembetulan ekstrem tetapi mula menunjukkan aktiviti kemasukan semula dana jerung di paras sokongan kritikal.</p>
+            </div>
+
+            <h2>Latar Belakang & E-E-A-T</h2>
+            <p>JerungBursa dibangunkan oleh komuniti peminat analisis kuantitatif dan pelabur runcit aktif di Bursa Malaysia. Kami percaya bahawa disiplin, kawalan emosi, pengurusan risiko (DCA yang terancang), dan analisis data yang objektif adalah kunci utama kelangsungan portfolio saham.</p>
+            <p>Sila ambil perhatian bahawa laman web ini tidak menyediakan nasihat kewangan peribadi. Semua data adalah untuk tujuan kajian pasaran dan pengujian sejarah (backtesting).</p>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 JerungBursa. All rights reserved.</p>
+            <div style="margin-top: 1rem;">
+                <a href="privacy-policy.html">Dasar Privasi</a>
+                <a href="terms.html">Syarat Perkhidmatan</a>
+                <a href="about.html" style="color: white; font-weight: 600;">Mengenai Kami</a>
+                <a href="contact.html">Hubungi Kami</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

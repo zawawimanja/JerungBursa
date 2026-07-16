@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasar Privasi | JerungBursa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --panel-bg: rgba(22, 28, 45, 0.7);
+            --panel-border: rgba(51, 65, 85, 0.5);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #6366f1;
+            --success: #10b981;
+            --danger: #ef4444;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.08) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text-main);
+            padding: 2rem 1.5rem;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 2.5rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(51, 65, 85, 0.3);
+            padding-bottom: 1.5rem;
+        }
+
+        header h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #a5b4fc 0%, #6366f1 50%, #34d399 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.8rem;
+            justify-content: flex-start;
+            margin-bottom: 2rem;
+        }
+
+        .btn-nav {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--panel-border);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-nav:hover {
+            color: white;
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.15);
+        }
+
+        .glass-card {
+            background: var(--panel-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--panel-border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            color: white;
+            font-size: 1.5rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: #cbd5e1;
+            margin-bottom: 1.25rem;
+        }
+
+        ul {
+            color: #cbd5e1;
+            padding-left: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(51, 65, 85, 0.3);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 0.75rem;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-links">
+            <a href="index.html" class="btn-nav">
+                ← Tracker Utama
+            </a>
+        </div>
+
+        <header>
+            <h1>Dasar Privasi</h1>
+            <p style="color: var(--text-muted); margin-top: 0.5rem;">Terakhir dikemas kini: 17 Julai 2026</p>
+        </header>
+
+        <main class="glass-card">
+            <p>Di JerungBursa (Bursa IPO Trend Rider Console), kami sangat menghormati privasi anda. Halaman Dasar Privasi ini menerangkan jenis maklumat yang dikumpul, direkodkan dan bagaimana kami menggunakannya.</p>
+
+            <h2>1. Persetujuan</h2>
+            <p>Dengan menggunakan laman web kami, anda dengan ini bersetuju dengan Dasar Privasi kami dan bersetuju dengan syarat-syaratnya.</p>
+
+            <h2>2. Maklumat yang Kami Kumpul</h2>
+            <p>JerungBursa direka sebagai konsol utiliti data pasaran saham. Kami tidak memerlukan sebarang pendaftaran akaun, butiran kad kredit atau pengumpulan maklumat peribadi sensitif secara langsung untuk menggunakan tracker utama kami.</p>
+
+            <h2>3. Log Fail (Log Files)</h2>
+            <p>JerungBursa mengikuti prosedur standard menggunakan log fail. Fail ini log pelawat apabila mereka melawat laman web. Maklumat yang dikumpul oleh log fail termasuk alamat protokol internet (IP), jenis pelayar, Penyedia Perkhidmatan Internet (ISP), cap tarikh dan masa, halaman merujuk/keluar, dan mungkin bilangan klik. Maklumat ini digunakan untuk menganalisis trend, mentadbir tapak, mengesan pergerakan pengguna, dan mengumpul maklumat demografi.</p>
+
+            <h2>4. Kuki dan Web Beacon</h2>
+            <p>Seperti mana-mana laman web lain, JerungBursa menggunakan 'kuki' (cookies). Kuki ini digunakan untuk menyimpan maklumat termasuk pilihan pelawat, dan halaman pada laman web yang diakses atau dilawati oleh pelawat. Maklumat tersebut digunakan untuk mengoptimumkan pengalaman pengguna dengan menyesuaikan kandungan halaman web kami berdasarkan jenis pelayar pelawat dan/atau maklumat lain.</p>
+
+            <h2>5. Kuki DART Google DoubleClick & AdSense</h2>
+            <p>Google adalah salah satu vendor pihak ketiga di laman web kami. Ia juga menggunakan kuki, yang dikenali sebagai kuki DART, untuk menyiarkan iklan kepada pelawat tapak kami berdasarkan lawatan mereka ke laman web kami dan tapak lain di internet. Pelawat boleh memilih untuk menolak penggunaan kuki DART dengan melawat Dasar Privasi iklan Google di URL berikut – <a href="https://policies.google.com/technologies/ads" target="_blank" style="color: #6366f1;">https://policies.google.com/technologies/ads</a>.</p>
+
+            <h2>6. Dasar Privasi Pihak Ketiga</h2>
+            <p>Dasar Privasi JerungBursa tidak terpakai kepada pengiklan atau laman web lain. Oleh itu, kami menasihatkan anda untuk merujuk kepada Dasar Privasi pihak ketiga bagi mendapatkan maklumat lanjut. Ia mungkin merangkumi amalan mereka dan arahan tentang cara memilih keluar daripada pilihan tertentu.</p>
+
+            <h2>7. Hak Perlindungan Data GDPR & CCPA</h2>
+            <p>Kami ingin memastikan anda menyedari sepenuhnya semua hak perlindungan data anda. Setiap pengguna berhak mendapat akses, pembetulan, pemadaman, sekatan pemprosesan, dan pemindahan data. Sekiranya anda ingin menggunakan mana-mana hak ini, sila hubungi kami.</p>
+        </main>
+
+        <footer>
+            <p>&copy; 2026 JerungBursa. All rights reserved.</p>
+            <div style="margin-top: 1rem;">
+                <a href="privacy-policy.html" style="color: white; font-weight: 600;">Dasar Privasi</a>
+                <a href="terms.html">Syarat Perkhidmatan</a>
+                <a href="about.html">Mengenai Kami</a>
+                <a href="contact.html">Hubungi Kami</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

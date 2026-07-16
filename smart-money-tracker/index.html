@@ -621,8 +621,10 @@
 
         <div class="controls">
 
+            <a href="./landing.html" class="btn" style="background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; box-shadow: 0 4px 15px rgba(13, 148, 136, 0.25);">💡 Metodologi (SEO)</a>
+            <a href="./backtest.html" class="btn" style="background: linear-gradient(135deg, #475569 0%, #334155 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; box-shadow: 0 4px 15px rgba(71, 85, 105, 0.25);">📊 Bukti Backtest</a>
             <a href="./sop.html" class="btn" style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.25);">📘 Panduan SOP</a>
-            <a href="./hall-of-fame.html" class="btn" style="background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 800; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.25);">🏆 Hall of Fame</a>
+            <a href="./hall-of-fame.html" class="btn" style="background: inline-flex; align-items: center; gap: 0.4rem; background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%); color: white; text-decoration: none; font-weight: 800; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.25);">🏆 Hall of Fame</a>
             <a href="./formula.html" class="btn" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: #0f172a; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 800; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.25);">🔥 Formula VVIP</a>
             <div class="history-input">
                 <label for="historyDate" style="color: #a5b4fc; font-size: 0.8rem; font-weight: 700; cursor: pointer;">Historical Archive:</label>
@@ -947,7 +949,7 @@
                 🧮 Trading Base Calculator
             </div>
             <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem; line-height: 1.4;">
-                Select a stock in the <strong>BUY ZONE</strong> to mathematically plan your capital sizing, position lot sizes, and stop loss risks.
+                Select a stock in the <strong>WATCHLIST/SUPPORT ZONE</strong> to mathematically plan your capital sizing, position lot sizes, and stop loss risks.
             </p>
             
             <div class="calc-grid">
@@ -3147,7 +3149,25 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             });
         });
     </script>
-    
+
+    <!-- Global Footer with Legal Policies & Disclaimers -->
+    <footer style="margin-top: 4rem; padding: 2rem 1.5rem; border-top: 1px solid rgba(51, 65, 85, 0.3); background: rgba(15, 23, 45, 0.6); backdrop-filter: blur(8px); text-align: center; font-size: 0.85rem; color: var(--text-muted); border-radius: 12px; margin-bottom: 2rem;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <p style="margin-bottom: 1rem; color: #cbd5e1; line-height: 1.6;">
+                <strong>⚠️ Penafian Kewangan & Risiko:</strong> Semua data, zon harga (Watchlist/Support Floor), formula, skor pintas, dan maklumat kuantitatif yang dipaparkan di JerungBursa adalah hasil pemodelan matematik dan simulasi algoritma untuk tujuan penyelidikan dan pembelajaran sahaja. Kami <strong>BUKAN</strong> penasihat kewangan berlesen. Melabur dalam pasaran saham Bursa Malaysia melibatkan risiko kerugian modal yang tinggi. Sila lakukan penyelidikan sendiri (DYOR) atau berunding dengan penasihat kewangan yang bertauliah sebelum membuat keputusan pelaburan sebenar.
+            </p>
+            <p style="margin-bottom: 1rem;">
+                &copy; 2026 JerungBursa (Bursa IPO Trend Rider Console). Hak cipta terpelihara.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 0.5rem;">
+                <a href="./privacy-policy.html" style="color: var(--text-muted); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-muted)'">Dasar Privasi</a>
+                <a href="./terms.html" style="color: var(--text-muted); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-muted)'">Syarat Perkhidmatan</a>
+                <a href="./about.html" style="color: var(--text-muted); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-muted)'">Mengenai Kami</a>
+                <a href="./contact.html" style="color: var(--text-muted); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-muted)'">Hubungi Kami</a>
+            </div>
+        </div>
+    </footer>
+
     <!-- AI Analysis Modal -->
     <div id="aiModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(8px); z-index: 1000; justify-content: center; align-items: center; padding: 1.5rem;">
         <div style="background: #1e293b; border: 1px solid rgba(167, 139, 250, 0.3); border-radius: 16px; width: 100%; max-width: 650px; display: flex; flex-direction: column; max-height: 90vh; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4); animation: modalFadeIn 0.25s ease-out;">
