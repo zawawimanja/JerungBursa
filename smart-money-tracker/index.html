@@ -662,172 +662,263 @@
         </div>
     </header>
 
-
-
-    <!-- PREMIUM HYBRID (Trend Rider) RECOMMENDED PICKS BOX -->
-    <div id="hybrid-recommendations-section" style="margin-bottom: 2rem; display: none;">
-        <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 2px dashed #3b82f6; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15); position: relative; overflow: hidden;">
-            <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(59, 130, 246, 0.15); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
-            
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(59, 130, 246, 0.2); padding-bottom: 0.75rem;">
-                <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1; min-width: 300px;">
-                    <span style="font-size: 1.8rem;">🎯</span>
-                    <div>
-                        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-                            <h2 style="margin: 0; font-size: 1.3rem; color: #3b82f6; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem;">Pilihan Utama: VVIP IPO Trend Rider (Trend Rider)</h2>
-                            <span style="font-size: 0.7rem; background: rgba(16, 185, 129, 0.2); color: #10b981; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(16, 185, 129, 0.3); white-space: nowrap;">📈 SWING ONLY</span>
-                        </div>
-                        <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
-                            SOP Terunggul (Optimasi): <strong style="color: #34d399;">VVIP Trend Rider (5-Slot Beli & Peram)</strong>. Peram selagi di atas Support Floor (SL -3%). <strong style="color: #60a5fa;">Gaya: RIDE THE TREND (Tanpa TP Kaku)!</strong>
-                        </p>
-                    </div>
-                </div>
-                <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
-
-                    <button onclick="copyHybridWatchlist()" style="background: #3b82f6; color: white; border: none; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 800; font-size: 0.82rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: transform 0.2s; box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                        📋 Copy Watchlist (TV)
-                    </button>
-                </div>
-            </div>
-            
-            <div class="table-wrapper" style="margin-top: 1rem; margin-bottom: 0; overflow-x: auto;">
-                <table style="width: 100%; border-collapse: collapse;">
-                    <thead>
-                        <tr>
-                            <th style="width: 50px; text-align: center; color: #3b82f6;">No</th>
-                            <th style="color: #3b82f6; text-align: left;">Counter</th>
-                            <th style="text-align: center; color: #3b82f6;">Kategori Setup</th>
-                            <th style="text-align: right; color: #3b82f6;">Price</th>
-                            <th style="text-align: right; color: #3b82f6;">Change</th>
-                            <th style="text-align: right; color: #3b82f6;">Support Floor</th>
-                            <th style="text-align: right; color: #3b82f6;">Jarak Lantai</th>
-                            <th style="text-align: right; color: #3b82f6;">Volatiliti</th>
-                            <th style="text-align: right; color: #3b82f6;">Stop Loss (3%)</th>
-                            <th style="text-align: right; color: #3b82f6;">Turnover</th>
-                        </tr>
-                    </thead>
-                    <tbody id="hybridPicksTableBody">
-                        <!-- Dynamically populated pick rows -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
+    <!-- Tab Navigation -->
+    <div class="tabs-nav" style="margin-bottom: 2rem; margin-top: 0.5rem;">
+        <button class="tab-btn active" id="tab-trend" onclick="switchTab('trend')">📈 Trend Rider</button>
+        <button class="tab-btn" id="tab-spring" onclick="switchTab('spring')">🌱 Early Spring</button>
+        <button class="tab-btn" id="tab-fishing" onclick="switchTab('fishing')">🎣 Bottom Fishing</button>
+        <button class="tab-btn" id="tab-calculator" onclick="switchTab('calculator')">🧮 Kalkulator Posisi</button>
     </div>
 
-    <!-- PREMIUM OPEN RECLAIM (Wyckoff Spring) RADAR -->
-    <div id="reclaim-radar-section" style="margin-bottom: 2rem; display: none;">
-        <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 2px dashed #fb7185; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(251, 113, 133, 0.15); position: relative; overflow: hidden;">
+    <!-- TAB 1: TREND RIDER -->
+    <div id="view-trend">
+        <!-- PREMIUM HYBRID (Trend Rider) RECOMMENDED PICKS BOX -->
+        <div id="hybrid-recommendations-section" style="margin-bottom: 2rem; display: none;">
+            <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 2px dashed #3b82f6; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15); position: relative; overflow: hidden;">
+                <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(59, 130, 246, 0.15); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
+                
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(59, 130, 246, 0.2); padding-bottom: 0.75rem;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1; min-width: 300px;">
+                        <span style="font-size: 1.8rem;">🎯</span>
+                        <div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                                <h2 style="margin: 0; font-size: 1.3rem; color: #3b82f6; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem;">Pilihan Utama: VVIP IPO Trend Rider (Trend Rider)</h2>
+                                <span style="font-size: 0.7rem; background: rgba(16, 185, 129, 0.2); color: #10b981; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(16, 185, 129, 0.3); white-space: nowrap;">📈 SWING ONLY</span>
+                            </div>
+                            <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
+                                SOP Terunggul (Optimasi): <strong style="color: #34d399;">VVIP Trend Rider (5-Slot Beli & Peram)</strong>. Peram selagi di atas Support Floor (SL -3%). <strong style="color: #60a5fa;">Gaya: RIDE THE TREND (Tanpa TP Kaku)!</strong>
+                            </p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
+                        <button onclick="copyHybridWatchlist()" style="background: #3b82f6; color: white; border: none; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 800; font-size: 0.82rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: transform 0.2s; box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                            📋 Copy Watchlist (TV)
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="table-wrapper" style="margin-top: 1rem; margin-bottom: 0; overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr>
+                                <th style="width: 50px; text-align: center; color: #3b82f6;">No</th>
+                                <th style="color: #3b82f6; text-align: left;">Counter</th>
+                                <th style="text-align: center; color: #3b82f6;">Kategori Setup</th>
+                                <th style="text-align: right; color: #3b82f6;">Price</th>
+                                <th style="text-align: right; color: #3b82f6;">Change</th>
+                                <th style="text-align: right; color: #3b82f6;">Support Floor</th>
+                                <th style="text-align: right; color: #3b82f6;">Jarak Lantai</th>
+                                <th style="text-align: right; color: #3b82f6;">Volatiliti</th>
+                                <th style="text-align: right; color: #3b82f6;">Stop Loss (3%)</th>
+                                <th style="text-align: right; color: #3b82f6;">Turnover</th>
+                            </tr>
+                        </thead>
+                        <tbody id="hybridPicksTableBody">
+                            <!-- Dynamically populated pick rows -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- PANDUAN STRATEGI: TREND RIDER -->
+        <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 2px solid rgba(99, 102, 241, 0.4); border-radius: 16px; padding: 1.5rem; box-shadow: 0 10px 30px rgba(99, 102, 241, 0.15); position: relative; overflow: hidden; margin-top: 2rem;">
+            <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(99, 102, 241, 0.15); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
+            
+            <div style="display: flex; align-items: center; gap: 0.75rem; border-bottom: 1px solid rgba(99, 102, 241, 0.2); padding-bottom: 0.75rem; margin-bottom: 1rem;">
+                <span style="font-size: 1.8rem;">🎓</span>
+                <div>
+                    <h2 style="margin: 0; font-size: 1.3rem; color: #a5b4fc; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;">Panduan Strategi: Trend Rider</h2>
+                    <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">Fahami cara menunggang trend menaik menumpang kemasukan Smart Money.</p>
+                </div>
+            </div>
+
+            <div style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(59, 130, 246, 0.25); border-radius: 12px; padding: 1.25rem; display: flex; flex-direction: column; gap: 1rem;">
+                <p style="margin: 0; font-size: 0.85rem; color: #94a3b8; line-height: 1.5;">
+                    Membeli kaunter berkualiti tinggi (Gred A/B) yang mempunyai momentum menaik kuat. Kita masuk pada zon selamat (rapat dengan <strong style="color: #34d399;">Support Floor</strong>) dan memegangnya selagi harga bertahan di atas garisan ini untuk memaksimumkan keuntungan tanpa sasaran TP yang kaku.
+                </p>
+                <!-- Carta Visual -->
+                <div style="width: 100%; max-width: 800px; margin: 0.5rem auto; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.08); background: #000;">
+                    <img src="mnhldg_backtest_chart.png" alt="Trend Rider Strategy Chart" style="width: 100%; display: block; object-fit: contain;">
+                </div>
+                <!-- Contoh Sejarah Sebenar -->
+                <div style="background: rgba(30, 41, 59, 0.3); border-radius: 8px; padding: 0.75rem; font-size: 0.8rem;">
+                    <div style="font-weight: 800; color: #3b82f6; margin-bottom: 0.35rem; display: flex; justify-content: space-between;">
+                        <span>🏆 Contoh Sebenar: MNHLDG (0245)</span>
+                        <span style="color: #34d399; font-weight: 800;">+1,261.9%</span>
+                    </div>
+                    <div style="color: #f8fafc; line-height: 1.4;">
+                        MNHLDG disenaraikan pada harga <strong>RM0.210</strong> dan memulakan trend menaik bertangga yang kukuh sehingga mencapai harga kemuncak <strong>RM2.860</strong> tanpa membolosi garisan trend utama harian. MNHLDG juga terbukti dalam backtest terbaharu dari 1 Jun dengan pulangan <strong>+10.65%</strong> (menepati sasaran profit SOP).
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End of view-trend -->
+
+    <!-- TAB 2: EARLY SPRING -->
+    <div id="view-spring" style="display: none;">
+        <!-- PREMIUM OPEN RECLAIM (Wyckoff Spring) RADAR -->
+        <div id="reclaim-radar-section" style="margin-bottom: 2rem; display: none;">
+            <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 2px dashed #fb7185; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(251, 113, 133, 0.15); position: relative; overflow: hidden;">
+                <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(251, 113, 133, 0.15); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
+                
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(251, 113, 133, 0.2); padding-bottom: 0.75rem;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1; min-width: 300px;">
+                        <span style="font-size: 1.8rem;">⚡</span>
+                        <div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                                <h2 style="margin: 0; font-size: 1.3rem; color: #fb7185; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem;">Pilihan Utama: VVIP IPO Open Reclaim Radar (Early Spring)</h2>
+                                <span style="font-size: 0.7rem; background: rgba(251, 113, 133, 0.2); color: #fb7185; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(251, 113, 133, 0.3); white-space: nowrap;">🎯 RECLAIM ONLY</span>
+                            </div>
+                            <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
+                                SOP Reclaim: IPO Baharu (2025 - 2026) yang didagangkan di bawah harga pembukaan hari pertama (underwater). <strong style="color: #fb7185;">Pencetus Beli: Apabila harga memotong naik melebihi garisan Open Price (TRIGGER)!</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="table-wrapper" style="margin-top: 1rem; margin-bottom: 0; overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr>
+                                <th style="width: 50px; text-align: center; color: #fb7185;">No</th>
+                                <th style="color: #fb7185; text-align: left;">Counter</th>
+                                <th style="text-align: center; color: #fb7185;">Kategori Setup</th>
+                                <th style="text-align: right; color: #fb7185;">Price</th>
+                                <th style="text-align: right; color: #fb7185;">Change</th>
+                                <th style="text-align: right; color: #fb7185;">Open Price (Trigger)</th>
+                                <th style="text-align: right; color: #fb7185;">Jarak Trigger</th>
+                                <th style="text-align: right; color: #fb7185;">Volatiliti</th>
+                                <th style="text-align: right; color: #fb7185;">Support Floor</th>
+                                <th style="text-align: right; color: #fb7185;">Turnover</th>
+                            </tr>
+                        </thead>
+                        <tbody id="reclaimRadarTableBody">
+                            <!-- Dynamically populated open reclaim rows -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- PANDUAN STRATEGI: EARLY SPRING -->
+        <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 2px solid rgba(251, 113, 133, 0.4); border-radius: 16px; padding: 1.5rem; box-shadow: 0 10px 30px rgba(251, 113, 133, 0.15); position: relative; overflow: hidden; margin-top: 2rem;">
             <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(251, 113, 133, 0.15); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
             
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(251, 113, 133, 0.2); padding-bottom: 0.75rem;">
-                <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1; min-width: 300px;">
-                    <span style="font-size: 1.8rem;">⚡</span>
-                    <div>
-                        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-                            <h2 style="margin: 0; font-size: 1.3rem; color: #fb7185; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem;">Pilihan Utama: VVIP IPO Open Reclaim Radar (Early Spring)</h2>
-                            <span style="font-size: 0.7rem; background: rgba(251, 113, 133, 0.2); color: #fb7185; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(251, 113, 133, 0.3); white-space: nowrap;">🎯 RECLAIM ONLY</span>
-                        </div>
-                        <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
-                            SOP Reclaim: IPO Baharu (2025 - 2026) yang didagangkan di bawah harga pembukaan hari pertama (underwater). <strong style="color: #fb7185;">Pencetus Beli: Apabila harga memotong naik melebihi garisan Open Price (TRIGGER)!</strong>
-                        </p>
+            <div style="display: flex; align-items: center; gap: 0.75rem; border-bottom: 1px solid rgba(251, 113, 133, 0.2); padding-bottom: 0.75rem; margin-bottom: 1rem;">
+                <span style="font-size: 1.8rem;">🎓</span>
+                <div>
+                    <h2 style="margin: 0; font-size: 1.3rem; color: #fb7185; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;">Panduan Strategi: Early Spring (Open Reclaim)</h2>
+                    <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">Fahami cara memanfaatkan kemasukan semula Smart Money selepas kejatuhan harga IPO.</p>
+                </div>
+            </div>
+
+            <div style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(251, 113, 133, 0.25); border-radius: 12px; padding: 1.25rem; display: flex; flex-direction: column; gap: 1rem;">
+                <p style="margin: 0; font-size: 0.85rem; color: #94a3b8; line-height: 1.5;">
+                    Mengesan kaunter IPO baharu yang mengalami kejatuhan di bawah harga hari pertama (underwater). Isyarat beli tercetus apabila harga semasa menembusi semula dan memotong naik ke atas <strong style="color: #fb7185;">Open Price (Harga Pembukaan)</strong>.
+                </p>
+                <!-- Carta Visual -->
+                <div style="width: 100%; max-width: 800px; margin: 0.5rem auto; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.08); background: #000;">
+                    <img src="mmcs_backtest_chart.png" alt="Early Spring Strategy Chart" style="width: 100%; display: block; object-fit: contain;">
+                </div>
+                <!-- Contoh Sejarah Sebenar -->
+                <div style="background: rgba(30, 41, 59, 0.3); border-radius: 8px; padding: 0.75rem; font-size: 0.8rem;">
+                    <div style="font-weight: 800; color: #fb7185; margin-bottom: 0.35rem; display: flex; justify-content: space-between;">
+                        <span>🏆 Contoh Sebenar: MMCS (0456)</span>
+                        <span style="color: #34d399; font-weight: 800;">+40.9%</span>
+                    </div>
+                    <div style="color: #f8fafc; line-height: 1.4;">
+                        MMCS jatuh di bawah harga IPO sebelum kembali memotong naik (reclaim) harga pembukaan asal <strong>RM0.220</strong>, membina lantai baharu di RM0.260 dan melonjak ke RM0.310. MMCS merupakan contoh klasik strategi Early Spring yang berjaya melonjak naik selepas isyarat reclaim dalam backtest.
                     </div>
                 </div>
             </div>
-            
-            <div class="table-wrapper" style="margin-top: 1rem; margin-bottom: 0; overflow-x: auto;">
-                <table style="width: 100%; border-collapse: collapse;">
-                    <thead>
-                        <tr>
-                            <th style="width: 50px; text-align: center; color: #fb7185;">No</th>
-                            <th style="color: #fb7185; text-align: left;">Counter</th>
-                            <th style="text-align: center; color: #fb7185;">Kategori Setup</th>
-                            <th style="text-align: right; color: #fb7185;">Price</th>
-                            <th style="text-align: right; color: #fb7185;">Change</th>
-                            <th style="text-align: right; color: #fb7185;">Open Price (Trigger)</th>
-                            <th style="text-align: right; color: #fb7185;">Jarak Trigger</th>
-                            <th style="text-align: right; color: #fb7185;">Volatiliti</th>
-                            <th style="text-align: right; color: #fb7185;">Support Floor</th>
-                            <th style="text-align: right; color: #fb7185;">Turnover</th>
-                        </tr>
-                    </thead>
-                    <tbody id="reclaimRadarTableBody">
-                        <!-- Dynamically populated open reclaim rows -->
-                    </tbody>
-                </table>
+        </div>
+    </div> <!-- End of view-spring -->
+
+    <!-- TAB 3: BOTTOM FISHING -->
+    <div id="view-fishing" style="display: none;">
+        <!-- PREMIUM BOTTOM FISHING (Floor Accumulation) RADAR -->
+        <div id="bottom-fishing-section" style="margin-bottom: 2rem; display: none;">
+            <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 2px dashed #f59e0b; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15); position: relative; overflow: hidden;">
+                <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(245, 158, 11, 0.15); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
+                
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(245, 158, 11, 0.2); padding-bottom: 0.75rem;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1; min-width: 300px;">
+                        <span style="font-size: 1.8rem;">🎣</span>
+                        <div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                                <h2 style="margin: 0; font-size: 1.3rem; color: #f59e0b; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem;">Pilihan Utama: VVIP IPO Bottom Fishing Radar (Floor Accumulation)</h2>
+                                <span style="font-size: 0.7rem; background: rgba(245, 158, 11, 0.2); color: #f59e0b; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(245, 158, 11, 0.3); white-space: nowrap;">🎣 BOTTOM FISHING</span>
+                            </div>
+                            <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
+                                SOP Bottom Fishing: Mengesan kaunter berkualiti yang telah jatuh teruk dari puncak (<strong style="color: #fb7185;">Pullback ≥ 35%</strong>) dan sedang membina lantai pengumpulan kukuh (<strong style="color: #34d399;">Rapat dengan Lantai ≤ 5.0%, Sentuhan ≥ 3x</strong>).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="table-wrapper" style="margin-top: 1rem; margin-bottom: 0; overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr>
+                                <th style="width: 50px; text-align: center; color: #f59e0b;">No</th>
+                                <th style="color: #f59e0b; text-align: left;">Counter</th>
+                                <th style="text-align: center; color: #f59e0b;">Kategori Setup</th>
+                                <th style="text-align: right; color: #f59e0b;">Price</th>
+                                <th style="text-align: right; color: #f59e0b;">Change</th>
+                                <th style="text-align: right; color: #f59e0b;">Support Floor</th>
+                                <th style="text-align: right; color: #f59e0b;">Jarak Lantai</th>
+                                <th style="text-align: right; color: #f59e0b;">Volatiliti</th>
+                                <th style="text-align: right; color: #f59e0b;">Kejatuhan (Pullback)</th>
+                                <th style="text-align: right; color: #f59e0b;">Turnover</th>
+                            </tr>
+                        </thead>
+                        <tbody id="bottomFishingTableBody">
+                            <!-- Dynamically populated bottom fishing rows -->
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- PREMIUM BOTTOM FISHING (Floor Accumulation) RADAR -->
-    <div id="bottom-fishing-section" style="margin-bottom: 2rem; display: none;">
-        <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 2px dashed #f59e0b; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15); position: relative; overflow: hidden;">
+        <!-- PANDUAN STRATEGI: BOTTOM FISHING -->
+        <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 2px solid rgba(245, 158, 11, 0.4); border-radius: 16px; padding: 1.5rem; box-shadow: 0 10px 30px rgba(245, 158, 11, 0.15); position: relative; overflow: hidden; margin-top: 2rem;">
             <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(245, 158, 11, 0.15); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
             
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(245, 158, 11, 0.2); padding-bottom: 0.75rem;">
-                <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1; min-width: 300px;">
-                    <span style="font-size: 1.8rem;">🎣</span>
-                    <div>
-                        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-                            <h2 style="margin: 0; font-size: 1.3rem; color: #f59e0b; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem;">Pilihan Utama: VVIP IPO Bottom Fishing Radar (Floor Accumulation)</h2>
-                            <span style="font-size: 0.7rem; background: rgba(245, 158, 11, 0.2); color: #f59e0b; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(245, 158, 11, 0.3); white-space: nowrap;">🎣 BOTTOM FISHING</span>
-                        </div>
-                        <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
-                            SOP Bottom Fishing: Mengesan kaunter berkualiti yang telah jatuh teruk dari puncak (<strong style="color: #fb7185;">Pullback ≥ 35%</strong>) dan sedang membina lantai pengumpulan kukuh (<strong style="color: #34d399;">Rapat dengan Lantai ≤ 5.0%, Sentuhan ≥ 3x</strong>).
-                        </p>
+            <div style="display: flex; align-items: center; gap: 0.75rem; border-bottom: 1px solid rgba(245, 158, 11, 0.2); padding-bottom: 0.75rem; margin-bottom: 1rem;">
+                <span style="font-size: 1.8rem;">🎓</span>
+                <div>
+                    <h2 style="margin: 0; font-size: 1.3rem; color: #f59e0b; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;">Panduan Strategi: Bottom Fishing (Floor Accumulation)</h2>
+                    <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">Fahami cara mengesan pengumpulan lantai sokongan kukuh selepas kejatuhan teruk.</p>
+                </div>
+            </div>
+
+            <div style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: 12px; padding: 1.25rem; display: flex; flex-direction: column; gap: 1rem;">
+                <p style="margin: 0; font-size: 0.85rem; color: #94a3b8; line-height: 1.5;">
+                    Mengesan kaunter berkualiti yang telah jatuh teruk dari puncak (<strong style="color: #fb7185;">Pullback ≥ 35%</strong>) dan sedang membina lantai pengumpulan yang sangat kukuh (<strong style="color: #34d399;">Rapat dengan Lantai ≤ 5.0%, Sentuhan ≥ 3x</strong>).
+                </p>
+                <!-- Carta Visual -->
+                <div style="width: 100%; max-width: 800px; margin: 0.5rem auto; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.08); background: #000;">
+                    <img src="bottom_fishing_backtest_chart.png" alt="Bottom Fishing Strategy Chart" style="width: 100%; display: block; object-fit: contain;">
+                </div>
+                <!-- Contoh Sejarah Sebenar -->
+                <div style="background: rgba(30, 41, 59, 0.3); border-radius: 8px; padding: 0.75rem; font-size: 0.8rem;">
+                    <div style="font-weight: 800; color: #f59e0b; margin-bottom: 0.35rem; display: flex; justify-content: space-between;">
+                        <span>🏆 Contoh Sebenar: UUE (0310)</span>
+                        <span style="color: #34d399; font-weight: 800;">+27.4%</span>
+                    </div>
+                    <div style="color: #f8fafc; line-height: 1.4;">
+                        UUE mengalami kejatuhan teruk dari puncak (<strong style="color: #fb7185;">Pullback -42.1%</strong>) ke paras lantai sokongan <strong>RM0.365</strong>. Selepas menguji lantai sokongan sebanyak <strong>7 kali (7x touches)</strong> dalam backtest terbaharu dari 1 Jun, ia membina tapak akumulasi yang kuat sebelum memulakan lonjakan ke <strong>RM0.465</strong>.
                     </div>
                 </div>
             </div>
-            
-            <div class="table-wrapper" style="margin-top: 1rem; margin-bottom: 0; overflow-x: auto;">
-                <table style="width: 100%; border-collapse: collapse;">
-                    <thead>
-                        <tr>
-                            <th style="width: 50px; text-align: center; color: #f59e0b;">No</th>
-                            <th style="color: #f59e0b; text-align: left;">Counter</th>
-                            <th style="text-align: center; color: #f59e0b;">Kategori Setup</th>
-                            <th style="text-align: right; color: #f59e0b;">Price</th>
-                            <th style="text-align: right; color: #f59e0b;">Change</th>
-                            <th style="text-align: right; color: #f59e0b;">Support Floor</th>
-                            <th style="text-align: right; color: #f59e0b;">Jarak Lantai</th>
-                            <th style="text-align: right; color: #f59e0b;">Volatiliti</th>
-                            <th style="text-align: right; color: #f59e0b;">Kejatuhan (Pullback)</th>
-                            <th style="text-align: right; color: #f59e0b;">Turnover</th>
-                        </tr>
-                    </thead>
-                    <tbody id="bottomFishingTableBody">
-                        <!-- Dynamically populated bottom fishing rows -->
-                    </tbody>
-                </table>
-            </div>
         </div>
-    </div>    <!-- SEKSYEN PENGESAN KATALIS & TEMA PASARAN -->
-    <div id="theme-tracker-section" style="margin-bottom: 2rem;">
-        <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 2px dashed #a855f7; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(168, 85, 247, 0.15); position: relative; overflow: hidden;">
-            <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(168, 85, 247, 0.15); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
-            
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(168, 85, 247, 0.2); padding-bottom: 0.75rem;">
-                <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1; min-width: 300px;">
-                    <span style="font-size: 1.8rem;">🔥</span>
-                    <div>
-                        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-                            <h2 style="margin: 0; font-size: 1.3rem; color: #c084fc; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem;">Pengesan Katalis & Tema Pasaran Semasa</h2>
-                            <span style="font-size: 0.7rem; background: rgba(168, 85, 247, 0.2); color: #c084fc; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(168, 85, 247, 0.3); white-space: nowrap;">📊 THEME PLAY</span>
-                        </div>
-                        <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
-                            Memantau status kaunter-kaunter Bursa Malaysia mengikut sektor pemacu ekonomi (Data Center, Solar, Johor, Semikonduktor).
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Grid untuk kad-kad tema -->
-            <div id="themeCardsContainer" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem;">
-                <!-- Dynamically populated theme cards -->
-            </div>
-        </div>
-    </div>
+    </div> <!-- End of view-fishing -->
+
+    <!-- TAB 4: CALCULATOR -->
+    <div id="view-calculator" style="display: none;">
         <!-- Kalkulator -->
-        <div class="calc-card" style="margin-top: 2rem;">
+        <div class="calc-card" style="margin-top: 2rem; margin-bottom: 2rem;">
             <div class="calc-header">
                 🧮 Trading Base Calculator
             </div>
@@ -883,9 +974,48 @@
                 </div>
             </div>
         </div>
-
+    </div> <!-- End of view-calculator -->
 
     <script>
+        // Tab switching logic
+        function switchTab(tabId) {
+            const viewTrend = document.getElementById('view-trend');
+            const viewSpring = document.getElementById('view-spring');
+            const viewFishing = document.getElementById('view-fishing');
+            const viewCalculator = document.getElementById('view-calculator');
+            
+            const tabTrend = document.getElementById('tab-trend');
+            const tabSpring = document.getElementById('tab-spring');
+            const tabFishing = document.getElementById('tab-fishing');
+            const tabCalculator = document.getElementById('tab-calculator');
+            
+            // Hide all views
+            viewTrend.style.display = 'none';
+            viewSpring.style.display = 'none';
+            viewFishing.style.display = 'none';
+            viewCalculator.style.display = 'none';
+            
+            // Remove active class from all tabs
+            tabTrend.classList.remove('active');
+            tabSpring.classList.remove('active');
+            tabFishing.classList.remove('active');
+            tabCalculator.classList.remove('active');
+            
+            // Show selected view & set active class
+            if (tabId === 'trend') {
+                viewTrend.style.display = 'block';
+                tabTrend.classList.add('active');
+            } else if (tabId === 'spring') {
+                viewSpring.style.display = 'block';
+                tabSpring.classList.add('active');
+            } else if (tabId === 'fishing') {
+                viewFishing.style.display = 'block';
+                tabFishing.classList.add('active');
+            } else if (tabId === 'calculator') {
+                viewCalculator.style.display = 'block';
+                tabCalculator.classList.add('active');
+            }
+        }
 
 
         // Global variables
@@ -1351,7 +1481,6 @@
             renderTrendRiders();
             renderReclaimRadar();
             renderBottomFishing();
-            renderThemeTracker();
         }
 
         // Populate Calculator Dropdown with all matched scanner tickers
@@ -1951,7 +2080,14 @@
 
                 reclaimTbody.innerHTML = html;
             } else {
-                reclaimSection.style.display = 'none';
+                reclaimSection.style.display = 'block';
+                reclaimTbody.innerHTML = `
+                    <tr>
+                        <td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
+                            ⏳ Tiada kaunter Early Spring premium hari ini.
+                        </td>
+                    </tr>
+                `;
             }
         }
 
@@ -2062,138 +2198,17 @@
 
                 bfTbody.innerHTML = html;
             } else {
-                bfSection.style.display = 'none';
+                bfSection.style.display = 'block';
+                bfTbody.innerHTML = `
+                    <tr>
+                        <td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
+                            ⏳ Tiada kaunter Bottom Fishing premium hari ini.
+                        </td>
+                    </tr>
+                `;
             }
         }
 
-        // Render Catalyst & Theme Tracker
-        function renderThemeTracker() {
-            const container = document.getElementById('themeCardsContainer');
-            if (!container) return;
-
-            // Define our themes
-            const themes = [
-                {
-                    title: "⚡ Data Center & AI Boom",
-                    desc: "Bekalan kuasa, utiliti, kabel dan infrastruktur pusat data termaju.",
-                    symbols: ["TENAGA", "YTL", "YTLPOWR", "MNHLDG", "SCGBHD", "AME"],
-                    milestone: "Pentauliahan fasa pertama DC Google/Nvidia pada Q3/Q4 2026."
-                },
-                {
-                    title: "🌴 Johor SEZ & RTS Link",
-                    desc: "Pembangunan zon ekonomi khas Johor-Singapura dan infrastruktur selatan.",
-                    symbols: ["UEMS", "IWCITY", "EKOWEST", "AME", "SUNCON"],
-                    milestone: "Perjanjian dua hala JS-SEZ bakal dimeterai tidak lama lagi."
-                },
-                {
-                    title: "☀️ Solar & Renewable Energy",
-                    desc: "Katalis kuota solar LSS5 dan Corporate Green Power Programme (CGPP).",
-                    symbols: ["SLVEST", "SAMAIDEN", "SUNVIEW"],
-                    milestone: "Pengumuman rasmi anugerah kuota solar LSS5 oleh Suruhanjaya Tenaga."
-                },
-                {
-                    title: "🔌 Penang Semiconductor Hub",
-                    desc: "Pemindahan rantaian bekalan cip global ke Malaysia (OSAT & ATE).",
-                    symbols: ["INARI", "FRONTKN", "GREATECH", "SFPTECH"],
-                    milestone: "Pelancaran fasa pembinaan Penang LRT & pelaburan kilang cip baharu."
-                }
-            ];
-
-            let html = '';
-
-            themes.forEach(theme => {
-                let stocksHtml = '';
-                theme.symbols.forEach(sym => {
-                    const match = currentData.find(item => {
-                        const cleanItemName = item.name.replace(/[^A-Z0-9]/g, '').toUpperCase();
-                        const cleanSym = sym.replace(/[^A-Z0-9]/g, '').toUpperCase();
-                        return cleanItemName === cleanSym;
-                    });
-
-                    if (match) {
-                        const pct = match.changePct !== undefined ? match.changePct : match.change;
-                        const changeClass = pct >= 0 ? 'success' : 'danger';
-                        const changeSign = pct > 0 ? '+' : '';
-                        const sScore = calculateSmartScore(match);
-                        
-                        // Check active setups
-                        const isTrendRider = (match.high52 && (getItemStyle(match) === 'EXPLOSIVE' || getItemStyle(match) === 'STAIRCASE' || match.ipoGrade === 'A' || match.ipoGrade === 'B'));
-                        const isReclaim = (match.openPrice && match.openPrice > 0 && (match.wentUnderwater !== undefined ? match.wentUnderwater : true));
-                        
-                        let signalBadge = '';
-                        if (isTrendRider && sScore >= 9) {
-                            signalBadge = `<span style="background: rgba(59, 130, 246, 0.15); color: #3b82f6; font-size: 0.6rem; font-weight: 800; padding: 0.1rem 0.35rem; border-radius: 4px; border: 1px solid rgba(59, 130, 246, 0.25);" title="Trend Rider Swing setup active">📈 Trend</span>`;
-                        } else if (isReclaim) {
-                            signalBadge = `<span style="background: rgba(251, 113, 133, 0.15); color: #fb7185; font-size: 0.6rem; font-weight: 800; padding: 0.1rem 0.35rem; border-radius: 4px; border: 1px solid rgba(251, 113, 133, 0.25);" title="Early Spring Open Reclaim setup active">🌱 Reclaim</span>`;
-                        } else {
-                            signalBadge = `<span style="background: rgba(148, 163, 184, 0.1); color: #94a3b8; font-size: 0.6rem; font-weight: 700; padding: 0.1rem 0.35rem; border-radius: 4px;">⏳ Watch</span>`;
-                        }
-
-                        const hof = getHofBadge(match);
-                        const hofStr = hof ? `<div style="margin-top: 0.2rem;">${hof}</div>` : '';
-
-                        stocksHtml += `
-                            <div style="background: rgba(15, 23, 42, 0.4); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; padding: 0.5rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.25rem;">
-                                <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.4rem;">
-                                    <a href="https://www.tradingview.com/chart/?symbol=MYX:${match.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 0.9rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.15rem;" title="Buka Carta TV">
-                                        ${match.name} <span style="font-size: 0.65rem; color: var(--accent);">🔗</span>
-                                    </a>
-                                    <span style="font-weight: 800; color: var(--${changeClass}); font-size: 0.8rem;">${changeSign}${pct.toFixed(2)}%</span>
-                                </div>
-                                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; color: var(--text-muted);">
-                                    <span>RM ${match.price.toFixed(3)}</span>
-                                    <span>Skor: ${sScore}/15</span>
-                                </div>
-                                <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.25rem; margin-top: 0.1rem; flex-wrap: wrap;">
-                                    ${signalBadge}
-                                    ${hofStr}
-                                </div>
-                            </div>
-                        `;
-                    } else {
-                        // Stock not active in currentData today
-                        stocksHtml += `
-                            <div style="background: rgba(15, 23, 42, 0.15); border: 1px solid rgba(255,255,255,0.02); border-radius: 8px; padding: 0.5rem; display: flex; flex-direction: column; justify-content: space-between; gap: 0.25rem; opacity: 0.55;">
-                                <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 0.4rem;">
-                                    <a href="https://www.tradingview.com/chart/?symbol=MYX:${sym}&interval=D" target="_blank" style="color: #94a3b8; text-decoration: none; font-size: 0.9rem; font-weight: 700; display: inline-flex; align-items: center; gap: 0.15rem;" title="Buka Carta TV">
-                                        ${sym} <span style="font-size: 0.65rem; color: #64748b;">🔗</span>
-                                    </a>
-                                    <span style="font-weight: 700; color: #64748b; font-size: 0.8rem;">--</span>
-                                </div>
-                                <div style="display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; color: #64748b;">
-                                    <span>RM --</span>
-                                    <span>Skor: --</span>
-                                </div>
-                                <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.25rem; margin-top: 0.1rem;">
-                                    <span style="background: rgba(148, 163, 184, 0.05); color: #64748b; font-size: 0.6rem; font-weight: 700; padding: 0.1rem 0.35rem; border-radius: 4px;">😴 Sleep</span>
-                                    <span></span>
-                                </div>
-                            </div>
-                        `;
-                    }
-                });
-
-                html += `
-                    <div style="background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(168, 85, 247, 0.15); border-radius: 12px; padding: 1rem; display: flex; flex-direction: column; gap: 0.75rem; box-shadow: 0 4px 12px rgba(0,0,0,0.15); transition: border-color 0.2s;" onmouseover="this.style.borderColor='rgba(168, 85, 247, 0.4)'" onmouseout="this.style.borderColor='rgba(168, 85, 247, 0.15)'">
-                        <div>
-                            <h3 style="margin: 0; font-size: 1.05rem; color: #c084fc; font-weight: 800;">${theme.title}</h3>
-                            <p style="margin: 0.2rem 0 0 0; font-size: 0.75rem; color: var(--text-muted); line-height: 1.3;">${theme.desc}</p>
-                        </div>
-                        
-                        <!-- List of stocks in theme -->
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 0.5rem;">
-                            ${stocksHtml}
-                        </div>
-                        
-                        <div style="margin-top: auto; border-top: 1px solid rgba(255,255,255,0.05); padding-top: 0.5rem; font-size: 0.7rem; color: #a5b4fc; font-weight: 700; display: flex; align-items: center; gap: 0.25rem;">
-                            🔔 Milestone: <span style="color: white; font-weight: 600;">${theme.milestone}</span>
-                        </div>
-                    </div>
-                `;
-            });
-
-            container.innerHTML = html;
-        }
 
 
         // Copy all hybrid watchlist for TradingView
