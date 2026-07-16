@@ -1796,7 +1796,7 @@ Sila bandingkan dengan data sejarah backtest kita sejak 1 Jun 2026:
             // Fallback to GitHub if local load failed
             if (!loadedLocal) {
                 try {
-                    const res = await fetch(`https://raw.githubusercontent.com/zawawimanja/BSKL/main/smart-money-tracker/live_data.json?t=${cacheBuster}`);
+                    const res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/live_data.json?t=${cacheBuster}`);
                     if (res.ok) {
                         raw = await res.json();
                     }
@@ -2724,7 +2724,7 @@ Sila bandingkan dengan data sejarah backtest kita sejak 1 Jun 2026:
                     }
                     
                     if (!res || !res.ok) {
-                        res = await fetch(`https://raw.githubusercontent.com/zawawimanja/BSKL/main/smart-money-tracker/history/data_${dateVal}.json?t=${cacheBuster}`);
+                        res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/history/data_${dateVal}.json?t=${cacheBuster}`);
                     }
                     
                     if (res.ok) {
