@@ -565,6 +565,13 @@
             box-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
         }
 
+        .btn-ex-trend:hover, .btn-ex-spring:hover, .btn-ex-fishing:hover {
+            border-color: rgba(99, 102, 241, 0.5) !important;
+            background: rgba(99, 102, 241, 0.12) !important;
+            color: white !important;
+            transform: translateY(-1px);
+        }
+
         .btn-history {
             background: #a78bfa;
         }
@@ -737,17 +744,25 @@
                 <p style="margin: 0; font-size: 0.82rem; color: #94a3b8; line-height: 1.45;">
                     Membeli kaunter berkualiti tinggi (Gred A/B) yang mempunyai momentum menaik kuat. Kita masuk pada zon selamat (rapat dengan <strong style="color: #34d399;">Support Floor</strong>) dan memegangnya selagi harga bertahan di atas garisan ini untuk memaksimumkan keuntungan tanpa sasaran TP yang kaku.
                 </p>
+                
+                <!-- Tab Selector Contoh Sebenar -->
+                <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.25rem;">
+                    <button class="btn-ex-trend active" onclick="switchExample('trend', 1)" style="background: rgba(99, 102, 241, 0.2); border: 1px solid rgba(99, 102, 241, 0.6); color: white; padding: 0.35rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;">1. MNHLDG (+1261.9%)</button>
+                    <button class="btn-ex-trend" onclick="switchExample('trend', 2)" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); color: #cbd5e1; padding: 0.35rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;">2. KEEMING (+378.9%)</button>
+                    <button class="btn-ex-trend" onclick="switchExample('trend', 3)" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); color: #cbd5e1; padding: 0.35rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;">3. HKB (+275.0%)</button>
+                </div>
+
                 <!-- Carta Visual -->
                 <div style="width: 100%; max-width: 800px; margin: 0.25rem auto; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.08); background: #000;">
-                    <img src="mnhldg_backtest_chart.png" alt="Trend Rider Strategy Chart" style="width: 100%; display: block; object-fit: contain;">
+                    <img id="trend-ex-img" src="mnhldg_backtest_chart.png" alt="Trend Rider Strategy Chart" style="width: 100%; display: block; object-fit: contain; min-height: 250px;">
                 </div>
                 <!-- Contoh Sejarah Sebenar -->
                 <div style="background: rgba(30, 41, 59, 0.3); border-radius: 8px; padding: 0.6rem; font-size: 0.75rem; border: 1px solid rgba(255, 255, 255, 0.03);">
                     <div style="font-weight: 800; color: #3b82f6; margin-bottom: 0.25rem; display: flex; justify-content: space-between;">
-                        <span>🏆 Contoh Sebenar: MNHLDG (0245)</span>
-                        <span style="color: #34d399; font-weight: 800;">+1,261.9%</span>
+                        <span id="trend-ex-title">🏆 Contoh Sebenar: MNHLDG (0245)</span>
+                        <span id="trend-ex-gain" style="color: #34d399; font-weight: 800;">+1,261.9%</span>
                     </div>
-                    <div style="color: #cbd5e1; line-height: 1.3;">
+                    <div id="trend-ex-desc" style="color: #cbd5e1; line-height: 1.3;">
                         MNHLDG disenaraikan pada harga <strong>RM0.210</strong> dan memulakan trend menaik bertangga yang kukuh sehingga mencapai harga kemuncak <strong>RM2.860</strong> tanpa membolosi garisan trend utama harian. MNHLDG juga terbukti dalam backtest terbaharu dari 1 Jun dengan pulangan <strong>+10.65%</strong>.
                     </div>
                 </div>
@@ -813,17 +828,25 @@
                 <p style="margin: 0; font-size: 0.82rem; color: #94a3b8; line-height: 1.45;">
                     Mengesan kaunter IPO baharu yang mengalami kejatuhan di bawah harga hari pertama (underwater). Isyarat beli tercetus apabila harga semasa menembusi semula dan memotong naik ke atas <strong style="color: #fb7185;">Open Price (Harga Pembukaan)</strong>.
                 </p>
+
+                <!-- Tab Selector Contoh Sebenar -->
+                <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.25rem;">
+                    <button class="btn-ex-spring active" onclick="switchExample('spring', 1)" style="background: rgba(99, 102, 241, 0.2); border: 1px solid rgba(99, 102, 241, 0.6); color: white; padding: 0.35rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;">1. MMCS (+40.9%)</button>
+                    <button class="btn-ex-spring" onclick="switchExample('spring', 2)" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); color: #cbd5e1; padding: 0.35rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;">2. AMBEST (+254.0%)</button>
+                    <button class="btn-ex-spring" onclick="switchExample('spring', 3)" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); color: #cbd5e1; padding: 0.35rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;">3. ADNEX (+10.65%)</button>
+                </div>
+
                 <!-- Carta Visual -->
                 <div style="width: 100%; max-width: 800px; margin: 0.25rem auto; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.08); background: #000;">
-                    <img src="mmcs_backtest_chart.png" alt="Early Spring Strategy Chart" style="width: 100%; display: block; object-fit: contain;">
+                    <img id="spring-ex-img" src="mmcs_backtest_chart.png" alt="Early Spring Strategy Chart" style="width: 100%; display: block; object-fit: contain; min-height: 250px;">
                 </div>
                 <!-- Contoh Sejarah Sebenar -->
                 <div style="background: rgba(30, 41, 59, 0.3); border-radius: 8px; padding: 0.6rem; font-size: 0.75rem; border: 1px solid rgba(255, 255, 255, 0.03);">
                     <div style="font-weight: 800; color: #fb7185; margin-bottom: 0.25rem; display: flex; justify-content: space-between;">
-                        <span>🏆 Contoh Sebenar: MMCS (0456)</span>
-                        <span style="color: #34d399; font-weight: 800;">+40.9%</span>
+                        <span id="spring-ex-title">🏆 Contoh Sebenar: MMCS (0456)</span>
+                        <span id="spring-ex-gain" style="color: #34d399; font-weight: 800;">+40.9%</span>
                     </div>
-                    <div style="color: #cbd5e1; line-height: 1.3;">
+                    <div id="spring-ex-desc" style="color: #cbd5e1; line-height: 1.3;">
                         MMCS jatuh di bawah harga IPO sebelum kembali memotong naik (reclaim) harga pembukaan asal <strong>RM0.220</strong>, membina lantai baharu di RM0.260 dan melonjak ke RM0.310. MMCS merupakan contoh klasik strategi Early Spring yang berjaya melonjak naik selepas isyarat reclaim dalam backtest.
                     </div>
                 </div>
@@ -887,19 +910,27 @@
             
             <div style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px; padding: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
                 <p style="margin: 0; font-size: 0.82rem; color: #94a3b8; line-height: 1.45;">
-                    Mengesan kaunter berkualiti yang telah jatuh teruk dari puncak (<strong style="color: #fb7185;">Pullback ≥ 35%</strong>) and sedang membina lantai pengumpulan yang sangat kukuh (<strong style="color: #34d399;">Rapat dengan Lantai ≤ 5.0%, Sentuhan ≥ 3x</strong>).
+                    Mengesan kaunter berkualiti yang telah jatuh teruk dari puncak (<strong style="color: #fb7185;">Pullback ≥ 35%</strong>) dan sedang membina lantai pengumpulan yang sangat kukuh (<strong style="color: #34d399;">Rapat dengan Lantai ≤ 5.0%, Sentuhan ≥ 3x</strong>).
                 </p>
+
+                <!-- Tab Selector Contoh Sebenar -->
+                <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.25rem;">
+                    <button class="btn-ex-fishing active" onclick="switchExample('fishing', 1)" style="background: rgba(99, 102, 241, 0.2); border: 1px solid rgba(99, 102, 241, 0.6); color: white; padding: 0.35rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;">1. UUE (+27.4%)</button>
+                    <button class="btn-ex-fishing" onclick="switchExample('fishing', 2)" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); color: #cbd5e1; padding: 0.35rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;">2. MCLEAN (+23.2%)</button>
+                    <button class="btn-ex-fishing" onclick="switchExample('fishing', 3)" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); color: #cbd5e1; padding: 0.35rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;">3. TMK (+63.7%)</button>
+                </div>
+
                 <!-- Carta Visual -->
                 <div style="width: 100%; max-width: 800px; margin: 0.25rem auto; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.08); background: #000;">
-                    <img src="bottom_fishing_backtest_chart.png" alt="Bottom Fishing Strategy Chart" style="width: 100%; display: block; object-fit: contain;">
+                    <img id="fishing-ex-img" src="bottom_fishing_backtest_chart.png" alt="Bottom Fishing Strategy Chart" style="width: 100%; display: block; object-fit: contain; min-height: 250px;">
                 </div>
                 <!-- Contoh Sejarah Sebenar -->
                 <div style="background: rgba(30, 41, 59, 0.3); border-radius: 8px; padding: 0.6rem; font-size: 0.75rem; border: 1px solid rgba(255, 255, 255, 0.03);">
                     <div style="font-weight: 800; color: #f59e0b; margin-bottom: 0.25rem; display: flex; justify-content: space-between;">
-                        <span>🏆 Contoh Sebenar: UUE (0310)</span>
-                        <span style="color: #34d399; font-weight: 800;">+27.4%</span>
+                        <span id="fishing-ex-title">🏆 Contoh Sebenar: UUE (0310)</span>
+                        <span id="fishing-ex-gain" style="color: #34d399; font-weight: 800;">+27.4%</span>
                     </div>
-                    <div style="color: #cbd5e1; line-height: 1.3;">
+                    <div id="fishing-ex-desc" style="color: #cbd5e1; line-height: 1.3;">
                         UUE mengalami kejatuhan teruk dari puncak (<strong style="color: #fb7185;">Pullback -42.1%</strong>) ke paras lantai sokongan <strong>RM0.365</strong>. Selepas menguji lantai sokongan sebanyak <strong>7 kali (7x touches)</strong> dalam backtest terbaharu dari 1 Jun, ia membina tapak akumulasi yang kuat sebelum memulakan lonjakan ke <strong>RM0.465</strong>.
                     </div>
                 </div>
@@ -981,9 +1012,106 @@
         </div>
     </div> <!-- End of view-calculator -->
 
-    <script>
+        // Interactive Example Selector logic for strategy guides
+        function switchExample(type, number) {
+            const imgEl = document.getElementById(type + '-ex-img');
+            const titleEl = document.getElementById(type + '-ex-title');
+            const gainEl = document.getElementById(type + '-ex-gain');
+            const descEl = document.getElementById(type + '-ex-desc');
+            
+            if (!imgEl || !titleEl || !gainEl || !descEl) return;
+
+            const data = {
+                trend: {
+                    1: {
+                        src: 'mnhldg_backtest_chart.png',
+                        title: '🏆 Contoh Sebenar: MNHLDG (0245)',
+                        gain: '+1,261.9%',
+                        desc: 'MNHLDG disenaraikan pada harga <strong>RM0.210</strong> dan memulakan trend menaik bertangga yang kukuh sehingga mencapai harga kemuncak <strong>RM2.860</strong> tanpa membolosi garisan trend utama harian. MNHLDG juga terbukti dalam backtest terbaharu dari 1 Jun dengan pulangan <strong>+10.65%</strong>.'
+                    },
+                    2: {
+                        src: 'keeming_backtest_chart.png',
+                        title: '🏆 Contoh Sebenar: KEEMING (0392)',
+                        gain: '+378.9%',
+                        desc: 'KEEMING disenaraikan pada harga <strong>RM0.380</strong> dan melonjak sehingga <strong>RM1.820</strong> didorong oleh kemasukan volum pembelian Jerung yang amat dahsyat serta konsolidasi tapak yang sangat stabil sepanjang kenaikan. Mencatat keuntungan <strong>+18.81%</strong> dalam backtest Jun.'
+                    },
+                    3: {
+                        src: 'hkb_backtest_chart.png',
+                        title: '🏆 Contoh Sebenar: HKB (0394)',
+                        gain: '+275.0%',
+                        desc: 'HKB memulakan kenaikan kukuh dari tapak sokongan rendah <strong>RM0.160</strong> sehingga menyentuh <strong>RM0.600</strong>. Smart Money kekal bertahan menyokong harga di zon selamat tanpa fasa pembetulan dalam, dan merebut kembali (reclaim) zon breakout secara agresif.'
+                    }
+                },
+                spring: {
+                    1: {
+                        src: 'mmcs_backtest_chart.png',
+                        title: '🏆 Contoh Sebenar: MMCS (0456)',
+                        gain: '+40.9%',
+                        desc: 'MMCS jatuh di bawah harga IPO sebelum kembali memotong naik (reclaim) harga pembukaan asal <strong>RM0.220</strong>, membina lantai baharu di RM0.260 dan melonjak ke RM0.310. MMCS merupakan contoh klasik strategi Early Spring yang berjaya melonjak naik selepas isyarat reclaim.'
+                    },
+                    2: {
+                        src: 'ambest_backtest_chart.png',
+                        title: '🏆 Contoh Sebenar: AMBEST (0391)',
+                        gain: '+254.0%',
+                        desc: 'AMBEST disenaraikan pada harga <strong>RM0.250</strong>, sempat mengalami konsolidasi bertangga di zon selesa sebelum bertindak agresif merebut semula paras harga asal dan melonjak tinggi sehingga <strong>RM0.885</strong>.'
+                    },
+                    3: {
+                        src: 'adnex_backtest_chart.png',
+                        title: '🏆 Contoh Sebenar: ADNEX (0396)',
+                        gain: '+10.65%',
+                        desc: 'ADNEX mempamerkan setup reclaim yang ideal pada harga <strong>RM0.290</strong> dengan CloseTightness 5.17%, sentuhan lantai kukuh sebanyak 8 kali, dan jarak lantai 0.00% yang menghasilkan pulangan swing cepat <strong>+10.65%</strong> dalam tempoh singkat.'
+                    }
+                },
+                fishing: {
+                    1: {
+                        src: 'bottom_fishing_backtest_chart.png',
+                        title: '🏆 Contoh Sebenar: UUE (0310)',
+                        gain: '+27.4%',
+                        desc: 'UUE mengalami kejatuhan teruk dari puncak (<strong style="color: #fb7185;">Pullback -42.1%</strong>) ke paras lantai sokongan <strong>RM0.365</strong>. Selepas menguji lantai sokongan sebanyak <strong>7 kali (7x touches)</strong>, ia membina tapak akumulasi yang kuat sebelum memulakan lonjakan ke <strong>RM0.465</strong>.'
+                    },
+                    2: {
+                        src: 'mclean_backtest_chart.png',
+                        title: '🏆 Contoh Sebenar: MCLEAN (0167)',
+                        gain: '+23.2%',
+                        desc: 'MCLEAN membina tapak pengumpulan yang amat rapat di atas lantai <strong>RM0.580</strong> dengan CloseTightness ultra-ketat <strong>4.31%</strong> dan 3x sentuhan lantai. Hanya mengambil masa 2 hari untuk memulakan rali breakout sehingga <strong>RM0.715</strong> (+23.2%).'
+                    },
+                    3: {
+                        src: 'tmk_backtest_chart.png',
+                        title: '🏆 Contoh Sebenar: TMK (5330)',
+                        gain: '+63.7%',
+                        desc: 'TMK membina tapak tangga baharu menggunakan formula <strong>Dual-Window Floor</strong> dengan 8x sentuhan sokongan pada lantai 5-hari <strong>RM1.640</strong>. Retest lantai ini berjaya memacu lonjakan gergasi sehingga <strong>RM2.750</strong> (+63.7%).'
+                    }
+                }
+            };
+
+            const selected = data[type][number];
+            if (selected) {
+                imgEl.src = selected.src;
+                titleEl.innerHTML = selected.title;
+                gainEl.innerHTML = selected.gain;
+                descEl.innerHTML = selected.desc;
+                
+                // Toggle active button class
+                const buttons = document.querySelectorAll('.btn-ex-' + type);
+                buttons.forEach((btn, idx) => {
+                    if (idx === (number - 1)) {
+                        btn.classList.add('active');
+                        btn.style.background = 'rgba(99, 102, 241, 0.25)';
+                        btn.style.borderColor = 'rgba(99, 102, 241, 0.6)';
+                        btn.style.color = '#white';
+                    } else {
+                        btn.classList.remove('active');
+                        btn.style.background = 'rgba(255, 255, 255, 0.03)';
+                        btn.style.borderColor = 'rgba(255, 255, 255, 0.08)';
+                        btn.style.color = '#cbd5e1';
+                    }
+                });
+            }
+        }
+
         // Tab switching logic
         function switchTab(tabId) {
+
             const viewTrend = document.getElementById('view-trend');
             const viewSpring = document.getElementById('view-spring');
             const viewFishing = document.getElementById('view-fishing');
