@@ -1113,12 +1113,21 @@ Fokus kepada dua perkara utama:
 1. Penyelarasan Backtest: Bandingkan parameter saham semasa dengan contoh sejarah yang berjaya (seperti MNHLDG, MMCS, UUE, VS, MCLEAN, TMK) untuk mengukur kebarangkalian kejayaan.
 2. Amaran False Breakout / Risiko Jatuh (Breakdown): Nilai risiko harga bocor ke bawah lantai sokongan berdasarkan tanda-tanda kelemahan (volatiliti tinggi, reject atas, volum kering).
 
+Peraturan Penting 80% (Kelonggaran Penilaian):
+Jangan terlalu kaku (rigid) melabelkan setup sebagai AVOID hanya disebabkan ia tidak sama 100% dengan sejarah lepas.
+Gunakan "Peraturan 80%": Jika kaunter memenuhi sekurang-kurangnya 4 daripada 5 kriteria teknikal utama berikut, ia dianggap setup yang sangat matang untuk BUY / HOLD (Low Risk Entry):
+- Jarak ke Lantai Sokongan adalah rapat (<= 5.0%).
+- Lantai Sokongan mempunyai sentuhan kukuh (Touches >= 3x).
+- Tiada tekanan jualan terlampau di puncak (Tiada Upper Wick Rejection yang ketara).
+- Volatiliti tapak menguncup rapat (Low Tightness atau Pullback <= 5.0%).
+- Volum dagangan kering semasa harga menghampiri lantai (tiada panik selling).
+
 Format jawapan anda dalam bahasa Melayu santai (sembang trader/Manglish) secara ringkas dan padat. Gunakan format Markdown berikut:
 ### 📊 AI Verdict: [BUY / HOLD / AVOID]
-[Verdict satu ayat sahaja yang jelas sama ada setup ini matang atau berisiko tinggi]
+[Verdict satu ayat sahaja yang jelas sama ada setup ini matang atau berisiko tinggi berdasarkan pemenuhan Peraturan 80%]
 
 ### ⚡ Perbandingan Backtest Sebenar
-[Adakah saham ini mempunyai setup serupa dengan pemenang lepas seperti MNHLDG/MMCS/UUE/TMK/MCLEAN? Berikan ulasan perbandingan parameter teknikal]
+[Adakah saham ini mempunyai setup serupa dengan pemenang lepas seperti MNHLDG/MMCS/UUE/TMK/MCLEAN? Berikan ulasan perbandingan parameter teknikal dan peratusan padanannya]
 
 ### ⚠️ Amaran Risiko & False Breakout
 [Analisis risiko breakdown. Adakah terdapat Reject Atas (upper wick rejection), CloseTightness yang longgar, atau volum yang tidak mencukupi?]
@@ -1241,12 +1250,21 @@ Fokus kepada dua perkara utama:
 1. Penyelarasan Backtest: Bandingkan parameter saham semasa dengan contoh sejarah yang berjaya bagi teknik ${technique} untuk mengukur kebarangkalian kejayaan.
 2. Amaran False Breakout / Risiko Jatuh (Breakdown): Nilai risiko harga bocor ke bawah lantai sokongan berdasarkan tanda-tanda kelemahan (volatiliti tinggi, reject atas, volum kering).
 
+Peraturan Penting 80% (Kelonggaran Penilaian):
+Jangan terlalu kaku (rigid) melabelkan setup sebagai AVOID hanya disebabkan ia tidak sama 100% dengan sejarah lepas.
+Gunakan "Peraturan 80%": Jika kaunter memenuhi sekurang-kurangnya 4 daripada 5 kriteria teknikal utama berikut bagi teknik ${technique}, ia dianggap setup yang sangat matang untuk BUY / HOLD (Low Risk Entry):
+- Jarak ke Lantai Sokongan adalah rapat (<= 5.0%).
+- Lantai Sokongan mempunyai sentuhan kukuh (Touches >= 3x).
+- Tiada tekanan jualan terlampau di puncak (Tiada Upper Wick Rejection yang ketara).
+- Volatiliti tapak menguncup rapat (Low Tightness atau Pullback <= 5.0%).
+- Volum dagangan kering semasa harga menghampiri lantai (tiada panik selling).
+
 Format jawapan anda dalam bahasa Melayu santai (sembang trader/Manglish) secara ringkas dan padat. Gunakan format Markdown berikut:
 ### 📊 AI Verdict: [BUY / HOLD / AVOID]
-[Verdict satu ayat sahaja yang jelas sama ada setup ini matang atau berisiko tinggi]
+[Verdict satu ayat sahaja yang jelas sama ada setup ini matang atau berisiko tinggi berdasarkan pemenuhan Peraturan 80%]
 
 ### ⚡ Perbandingan Backtest Sebenar
-[Adakah saham ini mempunyai setup serupa dengan pemenang lepas bagi teknik ${technique}? Berikan ulasan perbandingan parameter teknikal]
+[Adakah saham ini mempunyai setup serupa dengan pemenang lepas bagi teknik ${technique}? Berikan ulasan perbandingan parameter teknikal dan peratusan padanannya]
 
 ### ⚠️ Amaran Risiko & False Breakout
 [Analisis risiko breakdown. Adakah terdapat Reject Atas (upper wick rejection), CloseTightness yang longgar, atau volum yang tidak mencukupi?]
