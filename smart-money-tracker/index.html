@@ -1126,14 +1126,14 @@
             `;
 
             const systemPrompt = `Anda adalah "JerungBursa AI Advisor", penasihat dagangan saham VVIP profesional untuk Bursa Malaysia.
-Tugas anda adalah membuat ulasan ringkas mengenai saham pilihan menggunakan data teknikal dan sejarah backtest yang disediakan.
+Tugas anda adalah membuat ulasan ringkas mengenai saham pilihan menggunakan data teknikal dan sejarah backtest SEBENAR yang disediakan.
 Fokus kepada dua perkara utama:
-1. Penyelarasan Backtest: Bandingkan parameter saham semasa dengan contoh sejarah yang berjaya (seperti MNHLDG, MMCS, UUE, VS, MCLEAN, TMK) untuk mengukur kebarangkalian kejayaan.
-2. Amaran False Breakout / Risiko Jatuh (Breakdown): Nilai risiko harga bocor ke bawah lantai sokongan berdasarkan tanda-tanda kelemahan (volatiliti tinggi, reject atas, volum kering).
+1. Penyelarasan Backtest: Bandingkan parameter saham semasa dengan 3 contoh sejarah pemenang daripada SETIAP teknik untuk mengukur kebarangkalian kejayaan.
+2. Amaran False Breakout / Risiko Jatuh (Breakdown): Nilai risiko harga bocor ke bawah lantai sokongan.
 
 Peraturan Penting 80% (Kelonggaran Penilaian):
 Jangan terlalu kaku (rigid) melabelkan setup sebagai AVOID hanya disebabkan ia tidak sama 100% dengan sejarah lepas.
-Gunakan "Peraturan 80%": Jika kaunter memenuhi sekurang-kurangnya 4 daripada 5 kriteria teknikal utama berikut, ia dianggap setup yang sangat matang untuk BUY / HOLD (Low Risk Entry):
+Gunakan "Peraturan 80%": Jika kaunter memenuhi sekurang-kurangnya 4 daripada 5 kriteria teknikal utama berikut, ia dianggap setup yang sangat matang untuk BUY / HOLD:
 - Jarak ke Lantai Sokongan adalah rapat (<= 5.0%).
 - Lantai Sokongan mempunyai sentuhan kukuh (Touches >= 3x).
 - Tiada tekanan jualan terlampau di puncak (Tiada Upper Wick Rejection yang ketara).
@@ -1142,16 +1142,16 @@ Gunakan "Peraturan 80%": Jika kaunter memenuhi sekurang-kurangnya 4 daripada 5 k
 
 Format jawapan anda dalam bahasa Melayu santai (sembang trader/Manglish) secara ringkas dan padat. Gunakan format Markdown berikut:
 ### 📊 AI Verdict: [BUY / HOLD / AVOID]
-[Verdict satu ayat sahaja yang jelas sama ada setup ini matang atau berisiko tinggi berdasarkan pemenuhan Peraturan 80%]
+[Verdict satu ayat sahaja yang jelas sama ada setup ini matang atau berisiko tinggi]
 
 ### ⚡ Perbandingan Backtest Sebenar
-[Adakah saham ini mempunyai setup serupa dengan pemenang lepas seperti MNHLDG/MMCS/UUE/TMK/MCLEAN? Berikan ulasan perbandingan parameter teknikal dan peratusan padanannya]
+[Bandingkan dengan 3 contoh pemenang yang paling relevan. Berikan % padanan dan sebab kenapa serupa atau berbeza]
 
 ### ⚠️ Amaran Risiko & False Breakout
-[Analisis risiko breakdown. Adakah terdapat Reject Atas (upper wick rejection), CloseTightness yang longgar, atau volum yang tidak mencukupi?]
+[Analisis risiko breakdown berdasarkan data yang diberikan]
 
 ### ⚓ Cadangan Posisi & Pelan Stop Loss
-[Cadangan cara bertindak, lot sizing (agresif/sederhana/defensif), dan kepentingan Stop Loss di bawah lantai]`;
+[Cadangan lot sizing dan Stop Loss]`;
 
             const userPrompt = `Sila buat analisis teknikal & risiko bagi kaunter berikut:
 - Nama Saham: ${item.name}
@@ -1170,12 +1170,25 @@ Format jawapan anda dalam bahasa Melayu santai (sembang trader/Manglish) secara 
 - Reject Atas (Upper Wick Rejection): ${item.hasUpperWickRejection ? 'Ya (Tekanan penjualan tinggi di atas)' : 'Tidak'}
 - Is Comb Stock (Carta Sikat): ${item.isCombStock ? 'Ya (Elakkan)' : 'Tidak'}
 
-Sila bandingkan dengan data sejarah backtest kita sejak 1 Jun 2026:
-- Purata Win Rate Strategi Swing: ~40.5% (TP 10%, SL -3% harian).
-- Contoh Kejayaan:
-  * Trend Rider: MNHLDG (0245) - Kenaikan +1,261.9% sejarah / +10.65% dalam backtest.
-  * Early Spring: MMCS (0456) - Kenaikan +40.9% selepas isyarat reclaim open price RM0.220.
-  * Bottom Fishing: UUE (0310) - UUE naik +27.4% selepas menguji lantai 7 kali. MCLEAN naik +23.2% selepas tapak ketat (CloseTightness 4.31%). TMK naik +63.7% menggunakan Dual-Window Floor.`;
+Data Backtest Sebenar JerungBursa (Jun 2026) - WIN RATE KESELURUHAN: ~40.5% (TP 10%, SL -3%):
+
+🏄 TREND RIDER — 3 Pemenang Terbaik (Saham Uptrend Tangga):
+  1. MNHLDG (0245) — Beli RM 0.210 (IPO) → Puncak RM 2.860 = +1,261.9% | Backtest Jun: +10.65% | Ciri: Uptrend tanpa sebarang downtrend structural, sokongan institusi tegar, staircase bersih.
+  2. KEEMING (0392) — Beli RM 0.380 (IPO) → RM 1.820 = +378.9% | Backtest Jun: +18.81% (TP10 berjaya) | Ciri: Trend menaik paling kukuh, volum pembelian Jerung dahsyat, tiada fasa downtrend.
+  3. HKB (0394) — Beli RM 0.160 (IPO) → RM 0.600 = +275.0% | Ciri: Tapak sokongan rendah, Smart Money stabil, reclaim zon breakout dengan pantas.
+
+🌸 EARLY SPRING — 3 Pemenang Terbaik (Reclaim & Rebound):
+  1. MMCS (0456) — Beli RM 0.220 (open price) → RM 0.310 = +40.9% | Ciri: Jatuh bawah harga IPO kemudian reclaim & bina tapak kukuh di RM 0.260. Sentuhan lantai 5x dalam 5 hari.
+  2. AMBEST (0391) — Beli RM 0.250 (IPO) → RM 0.885 = +254.0% | Ciri: Konsolidasi bertangga di zon selesa, reclaim lantai sokongan tanpa gagal mengekalkan garisan trend utama.
+  3. ADNEX (0396) — Beli RM 0.290 → +10.65% (TP10 berjaya) | Ciri: CloseTightness 5.17%, Sentuhan 8x, Jarak ke Lantai 0.00% (tepat di lantai).
+
+🎣 BOTTOM FISHING — 3 Pemenang Terbaik (Tapak Tegar Golden Zone):
+  1. UUE (0310) — +27.4% | Ciri: 7x sentuhan lantai, volum mengering rapat lantai, tiada upper wick rejection, breakout bersih.
+  2. MCLEAN (0167) — Beli RM 0.580 → Puncak RM 0.715 = +23.2% | Ciri: CloseTightness 4.31% (bawah 5.5%), Sentuhan 3x, Jarak ke Lantai 1.75%, rally dalam 2 hari sahaja.
+  3. TMK (5330) — Beli RM 1.680 → Puncak RM 2.750 = +63.7% | Ciri: Dual-Window Floor, Sentuhan 8x, Kerapatan 0.60%, Jarak ke Lantai 2.44% menggunakan lantai 5-hari.
+
+Sila tentukan teknik mana yang paling sesuai untuk saham ini dan bandingkan dengan 3 contoh teknik tersebut.`;
+
 
             try {
                 const { text: resText, model: usedModel } = await callGroqWithFallback(
@@ -1266,16 +1279,33 @@ Sila bandingkan dengan data sejarah backtest kita sejak 1 Jun 2026:
             const pullbackVal = item.pullback !== null ? item.pullback : 0;
             const pct = item.changePct !== undefined ? item.changePct : item.change;
 
+            // Technique-specific backtest examples
+            const backtestByTechnique = {
+                'Trend Rider': `🏄 TREND RIDER — 3 Pemenang Terbaik (Saham Uptrend Tangga):
+  1. MNHLDG (0245) — Beli RM 0.210 (IPO) → Puncak RM 2.860 = +1,261.9% | Backtest Jun: +10.65% | Ciri: Uptrend tanpa sebarang downtrend structural, sokongan institusi tegar, pullback hanya 2.0% dari ATH semasa beli.
+  2. KEEMING (0392) — Beli RM 0.380 (IPO) → RM 1.820 = +378.9% | Backtest Jun: +18.81% (TP10 berjaya) | Ciri: Trend menaik paling kukuh, volum pembelian Jerung dahsyat, tiada fasa downtrend, pullback hanya 5.4%.
+  3. HKB (0394) — Beli RM 0.160 (IPO) → RM 0.600 = +275.0% | Ciri: Tapak sokongan rendah kukuh, Smart Money stabil berterusan, reclaim zon breakout dengan pantas.`,
+                'Early Spring': `🌸 EARLY SPRING — 3 Pemenang Terbaik (IPO Reclaim & Rebound):
+  1. MMCS (0456) — Beli RM 0.220 (open price) → RM 0.310 = +40.9% | Ciri: Jatuh bawah harga IPO RM 0.255 kemudian reclaim & bina tapak kukuh di RM 0.260. Sentuhan lantai 5x, Jarak ke Lantai 1.96%, breakout +7.55% pada hari isyarat.
+  2. AMBEST (0391) — Beli RM 0.250 (IPO) → RM 0.885 = +254.0% | Ciri: Konsolidasi bertangga di zon selesa selepas reclaim, lantai sokongan ditahan tanpa gagal, garisan trend utama dijaga ketat.
+  3. ADNEX (0396) — Beli RM 0.290 → +10.65% (TP10 berjaya Jun backtest) | Ciri: CloseTightness 5.17%, Sentuhan Lantai 8x, Jarak ke Lantai 0.00% (tepat di lantai), tiada upper wick rejection.`,
+                'Bottom Fishing': `🎣 BOTTOM FISHING — 3 Pemenang Terbaik (Tapak Tegar Golden Zone):
+  1. UUE (0310) — +27.4% | Ciri: 7x sentuhan lantai (paling banyak), volum mengering rapat lantai, tiada upper wick rejection, breakout bersih dan berterusan.
+  2. MCLEAN (0167) — Beli RM 0.580 → Puncak RM 0.715 = +23.2% dalam 8 hari | Ciri: CloseTightness 4.31% (bawah had 5.5%), Sentuhan 3x, Jarak ke Lantai 1.75%, rally +6.9% pada hari pertama.
+  3. TMK (5330) — Beli RM 1.680 → Puncak RM 2.750 = +63.7% dalam 41 hari | Ciri: Dual-Window Floor (lantai 5-hari RM 1.640), Sentuhan 8x, Kerapatan 0.60%, Jarak ke Lantai 2.44%.`
+            };
+            const techniqueExamples = backtestByTechnique[technique] || Object.values(backtestByTechnique).join('\n\n');
+
             const systemPrompt = `Anda adalah "JerungBursa AI Advisor", penasihat dagangan saham VVIP profesional untuk Bursa Malaysia.
-Tugas anda adalah membuat ulasan ringkas mengenai saham pilihan menggunakan data teknikal dan sejarah backtest yang disediakan.
-Analisis kaunter ini secara spesifik berdasarkan kriteria dan SOP bagi teknik: ${technique}.
+Tugas anda adalah membuat ulasan ringkas mengenai saham pilihan menggunakan data teknikal dan sejarah backtest SEBENAR yang disediakan.
+Analisis kaunter ini secara SPESIFIK berdasarkan kriteria dan SOP bagi teknik: ${technique}.
 Fokus kepada dua perkara utama:
-1. Penyelarasan Backtest: Bandingkan parameter saham semasa dengan contoh sejarah yang berjaya bagi teknik ${technique} untuk mengukur kebarangkalian kejayaan.
-2. Amaran False Breakout / Risiko Jatuh (Breakdown): Nilai risiko harga bocor ke bawah lantai sokongan berdasarkan tanda-tanda kelemahan (volatiliti tinggi, reject atas, volum kering).
+1. Penyelarasan Backtest: Bandingkan parameter saham semasa dengan 3 contoh pemenang SEBENAR bagi teknik ${technique} untuk mengukur kebarangkalian kejayaan.
+2. Amaran False Breakout / Risiko Jatuh (Breakdown): Nilai risiko harga bocor ke bawah lantai sokongan.
 
 Peraturan Penting 80% (Kelonggaran Penilaian):
 Jangan terlalu kaku (rigid) melabelkan setup sebagai AVOID hanya disebabkan ia tidak sama 100% dengan sejarah lepas.
-Gunakan "Peraturan 80%": Jika kaunter memenuhi sekurang-kurangnya 4 daripada 5 kriteria teknikal utama berikut bagi teknik ${technique}, ia dianggap setup yang sangat matang untuk BUY / HOLD (Low Risk Entry):
+Gunakan "Peraturan 80%": Jika kaunter memenuhi sekurang-kurangnya 4 daripada 5 kriteria teknikal utama berikut bagi teknik ${technique}, ia dianggap setup yang sangat matang untuk BUY / HOLD:
 - Jarak ke Lantai Sokongan adalah rapat (<= 5.0%).
 - Lantai Sokongan mempunyai sentuhan kukuh (Touches >= 3x).
 - Tiada tekanan jualan terlampau di puncak (Tiada Upper Wick Rejection yang ketara).
@@ -1284,20 +1314,20 @@ Gunakan "Peraturan 80%": Jika kaunter memenuhi sekurang-kurangnya 4 daripada 5 k
 
 Format jawapan anda dalam bahasa Melayu santai (sembang trader/Manglish) secara ringkas dan padat. Gunakan format Markdown berikut:
 ### 📊 AI Verdict: [BUY / HOLD / AVOID]
-[Verdict satu ayat sahaja yang jelas sama ada setup ini matang atau berisiko tinggi berdasarkan pemenuhan Peraturan 80%]
+[Verdict satu ayat sahaja yang jelas sama ada setup ini matang atau berisiko tinggi]
 
-### ⚡ Perbandingan Backtest Sebenar
-[Adakah saham ini mempunyai setup serupa dengan pemenang lepas bagi teknik ${technique}? Berikan ulasan perbandingan parameter teknikal dan peratusan padanannya]
+### ⚡ Perbandingan Backtest Sebenar (${technique})
+[Bandingkan dengan 3 pemenang teknik ${technique}. Berikan % padanan dan sebab kenapa serupa atau berbeza dengan setiap contoh]
 
 ### ⚠️ Amaran Risiko & False Breakout
-[Analisis risiko breakdown. Adakah terdapat Reject Atas (upper wick rejection), CloseTightness yang longgar, atau volum yang tidak mencukupi?]
+[Analisis risiko breakdown berdasarkan data yang diberikan]
 
 ### ⚓ Cadangan Posisi & Pelan Stop Loss
-[Cadangan cara bertindak, lot sizing (agresif/sederhana/defensif), dan kepentingan Stop Loss di bawah lantai]`;
+[Cadangan lot sizing dan Stop Loss di bawah lantai]`;
 
-            const userPrompt = `Sila buat analisis teknikal & risiko bagi kaunter berikut:
+            const userPrompt = `Sila buat analisis teknikal & risiko bagi kaunter berikut menggunakan teknik ${technique}:
 - Nama Saham: ${item.name}
-- Teknik Dagangan Diterapkan: ${technique}
+- Teknik Dagangan: ${technique}
 - Harga Semasa: RM ${item.price.toFixed(3)}
 - Lantai Sokongan: RM ${floorPrice.toFixed(3)}
 - Jarak ke Lantai Sokongan: ${distToFloor.toFixed(1)}%
@@ -1313,12 +1343,10 @@ Format jawapan anda dalam bahasa Melayu santai (sembang trader/Manglish) secara 
 - Reject Atas (Upper Wick Rejection): ${item.hasUpperWickRejection ? 'Ya (Tekanan penjualan tinggi di atas)' : 'Tidak'}
 - Is Comb Stock (Carta Sikat): ${item.isCombStock ? 'Ya (Elakkan)' : 'Tidak'}
 
-Sila bandingkan dengan data sejarah backtest kita sejak 1 Jun 2026:
-- Purata Win Rate Strategi Swing: ~40.5% (TP 10%, SL -3% harian).
-- Contoh Kejayaan:
-  * Trend Rider: MNHLDG (0245) - Kenaikan +1,261.9% sejarah / +10.65% dalam backtest.
-  * Early Spring: MMCS (0456) - Kenaikan +40.9% selepas isyarat reclaim open price RM0.220.
-  * Bottom Fishing: UUE (0310) - UUE naik +27.4% selepas menguji lantai 7 kali. MCLEAN naik +23.2% selepas tapak ketat (CloseTightness 4.31%). TMK naik +63.7% menggunakan Dual-Window Floor.`;
+Data Backtest Sebenar JerungBursa — WIN RATE KESELURUHAN: ~40.5% (TP 10%, SL -3%):
+${techniqueExamples}
+
+Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas.`;
 
             try {
                 const { text: resText, model: usedModel } = await callGroqWithFallback(
