@@ -674,11 +674,12 @@
     </header>
 
     <!-- Tab Navigation -->
-    <div class="tabs-nav" style="margin-bottom: 1rem; margin-top: 0.5rem;">
-        <button class="tab-btn active" id="tab-trend" onclick="switchTab('trend')">📈 Trend Rider</button>
-        <button class="tab-btn" id="tab-spring" onclick="switchTab('spring')">🌱 Early Spring</button>
-        <button class="tab-btn" id="tab-fishing" onclick="switchTab('fishing')">🎣 Bottom Fishing</button>
-        <button class="tab-btn" id="tab-calculator" onclick="switchTab('calculator')">🧮 Kalkulator Posisi</button>
+    <div class="tabs-nav" style="margin-bottom: 1rem; margin-top: 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
+        <button class="tab-btn active" id="tab-trend" onclick="switchTab('trend')" style="flex: 1; min-width: 120px; white-space: nowrap;">📈 Trend Rider</button>
+        <button class="tab-btn" id="tab-spring" onclick="switchTab('spring')" style="flex: 1; min-width: 120px; white-space: nowrap;">🌱 Early Spring</button>
+        <button class="tab-btn" id="tab-fishing" onclick="switchTab('fishing')" style="flex: 1; min-width: 130px; white-space: nowrap;">🎣 Bottom Fishing</button>
+        <button class="tab-btn" id="tab-calculator" onclick="switchTab('calculator')" style="flex: 1; min-width: 150px; white-space: nowrap;">🧮 Kalkulator Posisi</button>
+        <button class="tab-btn" id="tab-info" onclick="switchTab('info')" style="flex: 1; min-width: 150px; white-space: nowrap;">📖 Glosari & Panduan</button>
     </div>
 
     <!-- TAB 1: TREND RIDER -->
@@ -1012,6 +1013,136 @@
         </div>
     </div> <!-- End of view-calculator -->
 
+    <!-- TAB 5: GLOSARI & PANDUAN -->
+    <div id="view-info" style="display: none;">
+        <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.8)); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 1.5rem; box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); backdrop-filter: blur(8px); margin-bottom: 2rem;">
+            
+            <div style="text-align: center; margin-bottom: 1.5rem;">
+                <h3 style="margin: 0; font-size: 1.3rem; color: #a78bfa; font-weight: 800; text-shadow: 0 0 10px rgba(167, 139, 250, 0.3);">📖 Glosari & Panduan Sistem JerungBursa</h3>
+                <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">Panduan lengkap memahami setiap istilah, lencana, lajur data, dan fungsi tapisan (filter) di dalam web.</p>
+            </div>
+
+            <!-- SECTION 1: LENCANA PADANAN BACKTEST (TARGET KHAS) -->
+            <div style="margin-bottom: 1.50rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 1rem;">
+                <h4 style="color: #38bdf8; margin-top: 0; margin-bottom: 0.75rem; font-size: 0.95rem; font-weight: 800; display: flex; align-items: center; gap: 0.3rem;">
+                     🎯 Lencana Padanan Pemenang (Backtest Match Badges)
+                </h4>
+                <p style="margin: 0 0 0.75rem 0; font-size: 0.76rem; color: #94a3b8; line-height: 1.4;">
+                    Lencana ini terpapar secara automatik apabila sistem mengesan parameter kaunter live adalah <strong>sepadan dengan "DNA teknikal"</strong> yang dimiliki oleh 3 pemenang sejarah terbaik dalam ujian backtest.
+                </p>
+                <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+                    <div style="background: rgba(16, 185, 129, 0.05); border: 1px solid rgba(16, 185, 129, 0.2); border-radius: 8px; padding: 0.6rem; display: flex; align-items: start; gap: 0.5rem;">
+                        <span style="font-size: 0.7rem; background: rgba(16, 185, 129, 0.15); color: #10b981; padding: 0.15rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.3); white-space: nowrap;">🎯 Match: TR</span>
+                        <div style="font-size: 0.75rem; color: #cbd5e1; line-height: 1.4;">
+                            <strong>Trend Rider Match:</strong> Menepati kriteria pemenang <strong>MNHLDG / KEEMING / HKB</strong>. Ciri-ciri: Jarak ke lantai $\le 5\%$, bilangan sentuhan sokongan lantai $\ge 3x$, pullback puncak $\le 20\%$, dan tiada corak carta sikat (non-comb).
+                        </div>
+                    </div>
+                    <div style="background: rgba(251, 113, 133, 0.05); border: 1px solid rgba(251, 113, 133, 0.2); border-radius: 8px; padding: 0.6rem; display: flex; align-items: start; gap: 0.5rem;">
+                        <span style="font-size: 0.7rem; background: rgba(251, 113, 133, 0.15); color: #fb7185; padding: 0.15rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(251, 113, 133, 0.3); white-space: nowrap;">🎯 Match: ES</span>
+                        <div style="font-size: 0.75rem; color: #cbd5e1; line-height: 1.4;">
+                            <strong>Early Spring Match:</strong> Menepati kriteria pemenang <strong>MMCS / AMBEST / ADNEX</strong>. Ciri-ciri: IPO baharu yang pernah underwater, telah berjaya memotong naik semula harga pembukaan hari pertama (Reclaimed) dan berada dalam zon selamat belian $\le +5\%$ dari trigger.
+                        </div>
+                    </div>
+                    <div style="background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.2); border-radius: 8px; padding: 0.6rem; display: flex; align-items: start; gap: 0.5rem;">
+                        <span style="font-size: 0.7rem; background: rgba(245, 158, 11, 0.15); color: #f59e0b; padding: 0.15rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.3); white-space: nowrap;">🎯 Match: BF</span>
+                        <div style="font-size: 0.75rem; color: #cbd5e1; line-height: 1.4;">
+                            <strong>Bottom Fishing Match:</strong> Menepati kriteria pemenang <strong>UUE / MCLEAN / TMK</strong>. Ciri-ciri: Mengalami kejatuhan parah dari puncak $\ge 35\%$, berada rapat dengan lantai dasar $\le 5\%$, dan lantai tersebut telah diuji sebanyak $\ge 3x$ sentuhan.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 2: LAIN-LAIN LENCANA STATUS (STATUS BADGES) -->
+            <div style="margin-bottom: 1.50rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 1rem;">
+                <h4 style="color: #38bdf8; margin-top: 0; margin-bottom: 0.75rem; font-size: 0.95rem; font-weight: 800;">
+                     🏆 Lencana Status Khusus (Status Badges)
+                </h4>
+                <div style="display: grid; grid-template-columns: 1fr; gap: 0.6rem;">
+                    <!-- VVIP Gold -->
+                    <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; padding: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="font-size: 0.68rem; background: linear-gradient(135deg, #f59e0b, #d97706); color: #0f172a; padding: 0.1rem 0.3rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(245,158,11,0.5); white-space: nowrap;">🏆 VVIP Gold</span>
+                        <div style="font-size: 0.75rem; color: #cbd5e1;">Gred gergasi yang terpilih secara manual berdasarkan gabungan Skor Pintar yang tinggi ($\ge 10$) dan kemasukan volum luar biasa.</div>
+                    </div>
+                    <!-- HOF Potential -->
+                    <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; padding: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <span style="font-size: 0.68rem; background: rgba(245, 158, 11, 0.15); color: #f59e0b; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(245,158,11,0.3); white-space: nowrap;">👑 HOF: HIGH / MED / SPEC</span>
+                        <div style="font-size: 0.75rem; color: #cbd5e1;"><strong>Hall of Fame Potential:</strong> Menunjukkan potensi kekuatan kaunter IPO berdasarkan nilai langganan bumiputera (OS), gred penaja, dan status Outlier. HIGH bermaksud peluang rali debut adalah amat tinggi.</div>
+                    </div>
+                    <!-- Setup Style Badges -->
+                    <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; padding: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <div style="display: flex; gap: 0.2rem; flex-wrap: wrap; width: 140px;">
+                            <span style="background: rgba(244, 63, 94, 0.15); color: #fb7185; font-size: 0.6rem; font-weight: 900; padding: 0.1rem 0.3rem; border-radius: 4px; border: 1px solid rgba(244, 63, 94, 0.25);">🚀 EXPLOSIVE</span>
+                            <span style="background: rgba(6, 182, 212, 0.15); color: #22d3ee; font-size: 0.6rem; font-weight: 900; padding: 0.1rem 0.3rem; border-radius: 4px; border: 1px solid rgba(6, 182, 212, 0.25);">🪜 STAIRCASE</span>
+                        </div>
+                        <div style="font-size: 0.75rem; color: #cbd5e1;"><strong>Gaya Pergerakan:</strong> EXPLOSIVE menandakan saham rali deras secara menegak. STAIRCASE menandakan saham rali bertangga secara berstruktur dengan RBS retest.</div>
+                    </div>
+                    <!-- Rejection badges -->
+                    <div style="background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; padding: 0.5rem; display: flex; align-items: center; gap: 0.5rem;">
+                        <div style="display: flex; gap: 0.2rem; flex-wrap: wrap; width: 140px;">
+                            <span style="font-size: 0.62rem; background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 0.1rem 0.3rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.2); white-space: nowrap;">🟢 Reject Bawah</span>
+                            <span style="font-size: 0.62rem; background: rgba(239, 68, 68, 0.15); color: #f87171; padding: 0.1rem 0.3rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(239, 68, 68, 0.25); white-space: nowrap;">🔴 Reject Atas</span>
+                        </div>
+                        <div style="font-size: 0.75rem; color: #cbd5e1;"><strong>Lower/Upper Wick Rejection:</strong> Reject Bawah bermakna pembeli menolak harga naik semula setiap kali ia menyentuh lantai (bagus). Reject Atas bermakna penjual mula membuang saham di atas (kurang bagus).</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 3: ISTILAH LAJUR DATA (COLUMNS) -->
+            <div style="margin-bottom: 1.50rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 1rem;">
+                <h4 style="color: #38bdf8; margin-top: 0; margin-bottom: 0.75rem; font-size: 0.95rem; font-weight: 800;">
+                     📊 Istilah Lajur Data (Terminology)
+                </h4>
+                <div style="display: grid; grid-template-columns: 1fr; gap: 0.6rem; font-size: 0.75rem;">
+                    <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.03); padding-bottom: 0.35rem;">
+                        <strong style="color: #a78bfa; width: 140px; flex-shrink: 0;">Lantai Sokongan:</strong>
+                        <span style="color: #cbd5e1; flex-grow: 1;">Harga lantai dasar (Floor Low) terdekat yang dikesan melalui kluster data sejarah. Ia adalah garisan pertahanan Jerung/Smart Money.</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.03); padding-bottom: 0.35rem;">
+                        <strong style="color: #a78bfa; width: 140px; flex-shrink: 0;">Jarak ke Lantai:</strong>
+                        <span style="color: #cbd5e1; flex-grow: 1;">Jurang peratusan (%) di antara harga semasa dengan Lantai Sokongan. Had maksimum entry zon manis yang disyorkan adalah <strong>$\le 5.0\%$</strong>.</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.03); padding-bottom: 0.35rem;">
+                        <strong style="color: #a78bfa; width: 140px; flex-shrink: 0;">Volatiliti (Low Tight):</strong>
+                        <span style="color: #cbd5e1; flex-grow: 1;">Kadar kelebaran turun naik harga. Peratusan yang lebih rendah (cth: bawah 5.5%) menandakan harga sedang mendatar ketat (Close Tightness), tanda Jerung sedang mengumpul saham secara senyap tanpa panik.</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.03); padding-bottom: 0.35rem;">
+                        <strong style="color: #a78bfa; width: 140px; flex-shrink: 0;">Bilangan Sentuhan:</strong>
+                        <span style="color: #cbd5e1; flex-grow: 1;">Berapa kali lilin harga harian telah menyentuh dan disokong oleh Lantai Sokongan. Semakin banyak sentuhan (Touches $\ge 3x$), semakin kebal dan kuat lantai pertahanan tersebut.</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.03); padding-bottom: 0.35rem;">
+                        <strong style="color: #a78bfa; width: 140px; flex-shrink: 0;">Skor Pintar:</strong>
+                        <span style="color: #cbd5e1; flex-grow: 1;">Skor automatik berasaskan merit (maksimum 15 markah) yang menilai kualiti IPO, sentuhan lantai, volatiliti sempit, dan isyarat rejection. Skor $\ge 11$ dikategorikan sebagai sangat baik.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECTION 4: PENAPIS UTAMA (FILTERS) -->
+            <div>
+                <h4 style="color: #38bdf8; margin-top: 0; margin-bottom: 0.75rem; font-size: 0.95rem; font-weight: 800;">
+                     ⚙️ Panduan Fungsi Tapisan (Filters)
+                </h4>
+                <div style="display: grid; grid-template-columns: 1fr; gap: 0.6rem; font-size: 0.75rem;">
+                    <div style="background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255,255,255,0.03); border-radius: 8px; padding: 0.6rem;">
+                        <strong style="color: #fb7185; display: block; margin-bottom: 0.2rem;">🔒 Gunakan SOP Masuk Ketat (Strict Risk Entry):</strong>
+                        <span style="color: #94a3b8; line-height: 1.4; display: block;">
+                            Apabila diaktifkan, sistem akan membuang kesemua kaunter yang "kurang sedia" dan hanya memaparkan kaunter yang:
+                            <br>• Jarak ke lantai sokongan $\le 5\%$ (RM0.50+), $\le 11\%$ (Bawah RM0.50).
+                            <br>• Pullback dari puncak $\le 20\%$ (mengelakkan saham downtrend teruk).
+                            <br>• Hanya memaparkan kaunter bergaya <strong>STAIRCASE & EXPLOSIVE</strong> sahaja (menyingkirkan swing play yang lembap).
+                        </span>
+                    </div>
+                    <div style="background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255,255,255,0.03); border-radius: 8px; padding: 0.6rem;">
+                        <strong style="color: #34d399; display: block; margin-bottom: 0.2rem;">🔥 Hype Premium Sahaja (Premium Hype Filter):</strong>
+                        <span style="color: #94a3b8; line-height: 1.4; display: block;">
+                            Hanya memaparkan kaunter IPO yang mendapat permintaan gila-gila dari pasaran. Ia akan menapis kaunter Fresh IPO dan memaparkan yang mempunyai Gred IPO A/B, Kadar Langganan (OS) $\ge 50x$, atau mempunyai status Outlier sahaja.
+                        </span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div> <!-- End of view-info -->
+
     <script>
         // Interactive Example Selector logic for strategy guides
         function switchExample(type, number) {
@@ -1117,23 +1248,27 @@
             const viewSpring = document.getElementById('view-spring');
             const viewFishing = document.getElementById('view-fishing');
             const viewCalculator = document.getElementById('view-calculator');
+            const viewInfo = document.getElementById('view-info');
             
             const tabTrend = document.getElementById('tab-trend');
             const tabSpring = document.getElementById('tab-spring');
             const tabFishing = document.getElementById('tab-fishing');
             const tabCalculator = document.getElementById('tab-calculator');
+            const tabInfo = document.getElementById('tab-info');
             
             // Hide all views
             viewTrend.style.display = 'none';
             viewSpring.style.display = 'none';
             viewFishing.style.display = 'none';
             viewCalculator.style.display = 'none';
+            if (viewInfo) viewInfo.style.display = 'none';
             
             // Remove active class from all tabs
             tabTrend.classList.remove('active');
             tabSpring.classList.remove('active');
             tabFishing.classList.remove('active');
             tabCalculator.classList.remove('active');
+            if (tabInfo) tabInfo.classList.remove('active');
             
             // Show selected view & set active class
             if (tabId === 'trend') {
@@ -1148,6 +1283,9 @@
             } else if (tabId === 'calculator') {
                 viewCalculator.style.display = 'block';
                 tabCalculator.classList.add('active');
+            } else if (tabId === 'info') {
+                if (viewInfo) viewInfo.style.display = 'block';
+                if (tabInfo) tabInfo.classList.add('active');
             }
         }
 
