@@ -813,9 +813,20 @@
                             </tr>
                         </thead>
                         <tbody id="reclaimRadarTableBody">
-                            <!-- Dynamically populated open reclaim rows -->
                         </tbody>
                     </table>
+                </div>
+
+                <!-- WARNING ALERT FOR EARLY SPRING -->
+                <div style="margin-top: 1rem; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 10px; padding: 0.8rem 1rem; display: flex; align-items: flex-start; gap: 0.75rem;">
+                    <span style="font-size: 1.2rem; filter: drop-shadow(0 0 5px rgba(239,68,68,0.5));">🚨</span>
+                    <div>
+                        <h4 style="margin: 0 0 0.25rem 0; color: #f87171; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px;">Nota Risiko & Disiplin Keluar (Stop Loss)</h4>
+                        <p style="margin: 0; font-size: 0.78rem; color: #cbd5e1; line-height: 1.4;">
+                            Teknik <strong>Early Spring</strong> ialah strategi momentum breakout. Kaunter yang melepasi Open Price berpotensi meluncur naik tinggi, namun terdedah kepada risiko <strong>False Breakout</strong> (Breakout Palsu). 
+                            <br><span style="color: #f87171; font-weight: 700;">SOP Ketat:</span> Sekiranya harga jatuh semula di bawah <strong>Open Price (Trigger)</strong>, abang wajib <strong>CUT LOSS sertamerta</strong>. Disiplin ini mengehadkan kerugian kepada <span style="color: #f87171; font-weight: 700;">-2% hingga -3% sahaja</span> berbanding membiarkan kaunter junam seperti kes SRKK.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2032,6 +2043,20 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             return isPremium && distToFloor <= 4.0 && item.touchCount >= 2 && item.turnover >= 1000000;
         }
 
+        // Helper to check if an Early Spring (Open Reclaim) stock is a High-Conviction setup
+        function isEarlySpringHighConviction(item) {
+            if (!item || !item.openPrice || item.openPrice <= 0) return false;
+            const isPremium = item.ipoGrade === 'A' || item.ipoGrade === 'B' || item.outlier === true || item.outlier === 'true';
+            const distToOpen = ((item.price - item.openPrice) / item.openPrice) * 100;
+            
+            // Criteria:
+            // 1. Premium Grade (A/B or Outlier)
+            // 2. Dah RECLAIMED (price >= openPrice) tapi tak terlepas jauh (distToOpen <= 4.0%)
+            // 3. Turnover >= RM 1,000,000 (volum aktif, Jerung masuk)
+            // 4. Touch count >= 1 (ada base dibina)
+            return isPremium && (item.price >= item.openPrice) && distToOpen <= 4.0 && item.turnover >= 1000000 && (item.touchCount >= 1);
+        }
+
         function isSleepingOrAvoidStock(item) {
             if (!item) return false;
             
@@ -2752,9 +2777,15 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             });
 
             // Susun:
-            // 1. Yang dah trigger/reclaimed di atas sekali (paling dekat dengan 0% didahulukan)
-            // 2. Yang underwater di bawah (paling dekat dengan 0% didahulukan, cth: -1.0% vs -5.0%)
+            // 1. High Conviction (Entry Padu) di atas sekali
+            // 2. Yang dah trigger/reclaimed di atas sekali (paling dekat dengan 0% didahulukan)
+            // 3. Yang underwater di bawah (paling dekat dengan 0% didahulukan, cth: -1.0% vs -5.0%)
             validPicks.sort((a, b) => {
+                const hcA = isEarlySpringHighConviction(a);
+                const hcB = isEarlySpringHighConviction(b);
+                if (hcA && !hcB) return -1;
+                if (!hcA && hcB) return 1;
+
                 const aTriggered = a.price >= a.openPrice;
                 const bTriggered = b.price >= b.openPrice;
                 
@@ -2828,15 +2859,17 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
                     const hofBadge = getHofBadge(item);
                     const matchBadge = getBacktestMatchBadge(item, 'spring');
+                    const isHc = isEarlySpringHighConviction(item);
 
                     html += `
-                        <tr>
-                            <td style="text-align: center; font-weight: 800; color: #fb7185;">#${rankCount++}</td>
+                        <tr style="${isHc ? 'background: rgba(16, 185, 129, 0.03);' : ''}">
+                            <td style="text-align: center; font-weight: 800; color: ${isHc ? '#10b981' : '#fb7185'}; ${isHc ? 'border-left: 4px solid #10b981;' : ''}">#${rankCount++}</td>
                             <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
                                 <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
                                     <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
                                         ${item.name} <span style="font-size: 0.75rem; color: var(--accent);">🔗</span>
                                     </a>
+                                    ${isHc ? `<span style="font-size: 0.68rem; background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.25); white-space: nowrap; box-shadow: 0 0 8px rgba(16, 185, 129, 0.3);" title="High-Conviction Setup: Gred Premium + Dah Reclaimed + Dekat Open Price (<=4%) + Kecairan Tinggi (>=RM1M)">🎯 Entry Padu</span>` : ''}
                                     ${matchBadge}
                                     ${statusBadge}
                                     ${hofBadge}
