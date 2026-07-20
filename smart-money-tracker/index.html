@@ -3456,12 +3456,12 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 return aFloor - bFloor;
             });
 
-            const picks = candidates.slice(0, 4);
+            const picks = candidates;
             let positiveCount = 0;
 
             if (picks.length === 0) {
-                wrapper.innerHTML = '<div style="text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.85rem;">Tiada saham memenuhi 4 lapisan tapisan hari ini.</div>';
-                if (progress) progress.textContent = '0/4';
+                wrapper.innerHTML = '<div style="text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.85rem;">Tiada saham memenuhi tapisan hari ini.</div>';
+                if (progress) progress.textContent = '0';
                 return;
             }
 
