@@ -3437,7 +3437,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             const candidates = (live.topVolume || []).filter(s => {
                 if (s.price >= 1.0) return false;
                 if (s.signal !== 'buy') return false;
-                if (!['STAIRCASE', 'EXPLOSIVE', 'SWING PLAY'].includes(s.setupStyle)) return false;
+                if (!['STAIRCASE', 'EXPLOSIVE'].includes(s.setupStyle)) return false;
                 const floorDist = s.floorLow ? ((s.price - s.floorLow) / s.floorLow * 100) : null;
                 if (floorDist === null || floorDist > 6) return false;
                 const upside = s.high52 ? ((s.high52 - s.price) / s.price * 100) : null;
