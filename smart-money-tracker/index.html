@@ -1226,7 +1226,7 @@
                     <div style="display: flex; align-items: center; gap: 0.6rem;">
                         <span style="font-size: 1.4rem;">🎯</span>
                         <span style="font-weight: 800; font-size: 1rem; color: #f59e0b;">JerungBursa Picks</span>
-                        <span style="font-size: 0.7rem; background: rgba(245, 158, 11, 0.12); color: #f59e0b; padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 700;">OGX · EIPOWER · CBHB · HEGROUP</span>
+                        <span style="font-size: 0.7rem; background: rgba(245, 158, 11, 0.12); color: #f59e0b; padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 700;">Signal BUY · Momentum · Lantai ≤6% · ATH ≥5%</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 0.5rem;">
                         <span id="jbpicks-progress" style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">0/4</span>
@@ -3436,7 +3436,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
             const candidates = (live.topVolume || []).filter(s => {
                 if (s.signal !== 'buy') return false;
-                if (!['STAIRCASE', 'EXPLOSIVE'].includes(s.setupStyle)) return false;
+                if (!['STAIRCASE', 'EXPLOSIVE', 'SWING PLAY'].includes(s.setupStyle)) return false;
                 const floorDist = s.floorLow ? ((s.price - s.floorLow) / s.floorLow * 100) : null;
                 if (floorDist === null || floorDist > 6) return false;
                 const upside = s.high52 ? ((s.high52 - s.price) / s.price * 100) : null;
