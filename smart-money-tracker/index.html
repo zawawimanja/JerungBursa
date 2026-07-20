@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script src="live_data.js"></script>
+    <script src="tracker_data.js"></script>
     <style>
         @keyframes spin {
             0% { transform: rotate(0deg); }
@@ -680,6 +681,7 @@
         <button class="tab-btn" id="tab-fishing" onclick="switchTab('fishing')" style="flex: 1; min-width: 130px; white-space: nowrap;">🎣 Bottom Fishing</button>
         <button class="tab-btn" id="tab-calculator" onclick="switchTab('calculator')" style="flex: 1; min-width: 150px; white-space: nowrap;">🧮 Kalkulator Posisi</button>
         <button class="tab-btn" id="tab-info" onclick="switchTab('info')" style="flex: 1; min-width: 150px; white-space: nowrap;">📖 Glosari & Panduan</button>
+        <button class="tab-btn" id="tab-tracker" onclick="switchTab('tracker')" style="flex: 1; min-width: 150px; white-space: nowrap;">📈 Tracker Bawah RM1</button>
     </div>
 
     <!-- TAB 1: TREND RIDER -->
@@ -1195,6 +1197,65 @@
         </div>
     </div> <!-- End of view-info -->
 
+    <!-- TAB 6: TRACKER BAWAH RM1 -->
+    <div id="view-tracker" style="display: none;">
+        <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 1px solid var(--panel-border); border-radius: 12px; padding: 1.5rem; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.75rem; margin-bottom: 1rem;">
+                <span style="font-size: 1.5rem;">📈</span>
+                <h3 style="margin: 0; font-size: 1.2rem; color: #a78bfa; font-weight: 800; text-transform: uppercase;">Matriks Prestasi Harian Saham Bawah RM 1.00 (Trend Rider & Staircase)</h3>
+            </div>
+            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5; margin-bottom: 1.5rem;">
+                Menjejaki prestasi peratusan (%) kaunter selepas hari isyarat belian (BUY) dikesan. Peratusan menunjukkan P&L terkini berbanding harga belian asal bagi setiap hari berikutnya (+1 hingga +10 hari dagangan).
+            </p>
+            
+            <!-- Filter Options Container -->
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.25rem; align-items: center;">
+                <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid var(--panel-border);">
+                    <label for="trackerSetupFilter" style="color: #a78bfa; font-size: 0.85rem; font-weight: 800; display: flex; align-items: center; gap: 0.25rem; cursor: pointer; user-select: none;">🎯 Penapis Teknik:</label>
+                    <select id="trackerSetupFilter" onchange="renderTracker()" style="background: rgba(15, 23, 42, 0.9); color: white; border: 1px solid rgba(167, 139, 250, 0.5); border-radius: 6px; padding: 0.25rem 0.6rem; font-size: 0.85rem; font-weight: 700; cursor: pointer; outline: none; font-family: inherit;">
+                        <option value="ALL" selected>🌐 Semua Teknik (Staircase, Explosive, Swing)</option>
+                        <option value="STAIRCASE">🧱 Hanya STAIRCASE (Jackpot)</option>
+                        <option value="EXPLOSIVE">⚡ Hanya EXPLOSIVE (Breakout)</option>
+                        <option value="SWING PLAY">🏄 Hanya SWING PLAY</option>
+                    </select>
+                </div>
+                <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid rgba(245, 158, 11, 0.35);">
+                    <input type="checkbox" id="trackerGoldFilter" onchange="renderTracker()" style="cursor: pointer; width: 16px; height: 16px;" checked>
+                    <label for="trackerGoldFilter" style="color: #f59e0b; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none; display: flex; align-items: center; gap: 0.25rem;">👑 Hanya Gred A+ Pilihan (Skor ≥ 11 + Volum)</label>
+                </div>
+            </div>
+            
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr style="border-bottom: 1px solid var(--panel-border);">
+                            <th style="width: 50px; text-align: center; color: #a78bfa;">Bil</th>
+                            <th style="color: #a78bfa;">Kaunter</th>
+                            <th style="color: #a78bfa;">Setup</th>
+                            <th style="color: #a78bfa; text-align: center;">Tarikh Trigger</th>
+                            <th style="color: #a78bfa; text-align: right;">Harga Trigger</th>
+                            <th style="color: #f59e0b; text-align: right;">Harga Semasa</th>
+                            <th onclick="toggleTrackerSort()" style="color: #f59e0b; text-align: center; cursor: pointer; user-select: none;" title="Klik untuk susun ikut P&L">P&L Semasa <span id="sort-arrow">↕️</span></th>
+                            <th style="color: #34d399; text-align: center;">Hari +1</th>
+                            <th style="color: #34d399; text-align: center;">Hari +2</th>
+                            <th style="color: #34d399; text-align: center;">Hari +3</th>
+                            <th style="color: #34d399; text-align: center;">Hari +4</th>
+                            <th style="color: #34d399; text-align: center;">Hari +5</th>
+                            <th style="color: #34d399; text-align: center;">Hari +6</th>
+                            <th style="color: #34d399; text-align: center;">Hari +7</th>
+                            <th style="color: #34d399; text-align: center;">Hari +8</th>
+                            <th style="color: #34d399; text-align: center;">Hari +9</th>
+                            <th style="color: #34d399; text-align: center;">Hari +10</th>
+                        </tr>
+                    </thead>
+                    <tbody id="trackerTableBody">
+                        <!-- Dynamically populated from window.TRACKER_DATA -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
     <script>
         // Interactive Example Selector logic for strategy guides
         function switchExample(type, number) {
@@ -1301,12 +1362,14 @@
             const viewFishing = document.getElementById('view-fishing');
             const viewCalculator = document.getElementById('view-calculator');
             const viewInfo = document.getElementById('view-info');
+            const viewTracker = document.getElementById('view-tracker');
             
             const tabTrend = document.getElementById('tab-trend');
             const tabSpring = document.getElementById('tab-spring');
             const tabFishing = document.getElementById('tab-fishing');
             const tabCalculator = document.getElementById('tab-calculator');
             const tabInfo = document.getElementById('tab-info');
+            const tabTracker = document.getElementById('tab-tracker');
             
             // Hide all views
             viewTrend.style.display = 'none';
@@ -1314,6 +1377,7 @@
             viewFishing.style.display = 'none';
             viewCalculator.style.display = 'none';
             if (viewInfo) viewInfo.style.display = 'none';
+            if (viewTracker) viewTracker.style.display = 'none';
             
             // Remove active class from all tabs
             tabTrend.classList.remove('active');
@@ -1321,6 +1385,7 @@
             tabFishing.classList.remove('active');
             tabCalculator.classList.remove('active');
             if (tabInfo) tabInfo.classList.remove('active');
+            if (tabTracker) tabTracker.classList.remove('active');
             
             // Show selected view & set active class
             if (tabId === 'trend') {
@@ -1338,6 +1403,12 @@
             } else if (tabId === 'info') {
                 if (viewInfo) viewInfo.style.display = 'block';
                 if (tabInfo) tabInfo.classList.add('active');
+            } else if (tabId === 'tracker') {
+                if (viewTracker) {
+                    viewTracker.style.display = 'block';
+                    renderTracker();
+                }
+                if (tabTracker) tabTracker.classList.add('active');
             }
         }
 
@@ -3146,6 +3217,121 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 }
             });
         });
+
+        let trackerSortMode = 'desc'; // 'default', 'asc', 'desc'
+
+        function toggleTrackerSort() {
+            if (trackerSortMode === 'default') {
+                trackerSortMode = 'desc';
+            } else if (trackerSortMode === 'desc') {
+                trackerSortMode = 'asc';
+            } else {
+                trackerSortMode = 'default';
+            }
+            renderTracker();
+        }
+        window.toggleTrackerSort = toggleTrackerSort;
+
+        function renderTracker() {
+            const tbody = document.getElementById('trackerTableBody');
+            if (!tbody) return;
+            
+            const filterEl = document.getElementById('trackerSetupFilter');
+            const selectedFilter = filterEl ? filterEl.value : 'ALL';
+            
+            const goldFilterEl = document.getElementById('trackerGoldFilter');
+            const onlyGold = goldFilterEl ? goldFilterEl.checked : false;
+            
+            // Update sort indicator arrow
+            const arrowEl = document.getElementById('sort-arrow');
+            if (arrowEl) {
+                if (trackerSortMode === 'desc') arrowEl.innerText = ' 🔽';
+                else if (trackerSortMode === 'asc') arrowEl.innerText = ' 🔼';
+                else arrowEl.innerText = ' ↕️';
+            }
+
+            const rawData = window.TRACKER_DATA || [];
+            
+            // 1. Filter Data
+            let filteredData = rawData.filter(tr => {
+                if (selectedFilter !== 'ALL' && tr.setup.toUpperCase() !== selectedFilter) {
+                    return false;
+                }
+                if (onlyGold && !tr.isGold) {
+                    return false;
+                }
+                return true;
+            });
+            
+            // 2. Sort Data by currentDiff
+            if (trackerSortMode === 'desc') {
+                filteredData.sort((a, b) => {
+                    const diffA = a.currentDiff !== null ? a.currentDiff : -9999;
+                    const diffB = b.currentDiff !== null ? b.currentDiff : -9999;
+                    return diffB - diffA;
+                });
+            } else if (trackerSortMode === 'asc') {
+                filteredData.sort((a, b) => {
+                    const diffA = a.currentDiff !== null ? a.currentDiff : 9999;
+                    const diffB = b.currentDiff !== null ? b.currentDiff : 9999;
+                    return diffA - diffB;
+                });
+            }
+
+            // 3. Render Data Rows
+            let html = '';
+            let filteredIdx = 1;
+            
+            filteredData.forEach((tr) => {
+                const goldBadge = tr.isGold ? `<span style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; font-size: 0.65rem; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.3); margin-left: 0.35rem; display: inline-flex; align-items: center; gap: 0.15rem">👑 Gred A+</span>` : '';
+                
+                html += `<tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05)">`;
+                html += `<td style="text-align: center; color: var(--text-muted); font-size: 0.82rem; padding: 0.75rem">${filteredIdx++}</td>`;
+                html += `<td style="font-weight: 700; color: white; font-size: 0.85rem; padding: 0.75rem; white-space: nowrap;">${tr.name}${goldBadge}</td>`;
+                html += `<td style="font-size: 0.8rem; color: var(--text-muted); padding: 0.75rem; white-space: nowrap;"><span style="background: rgba(6, 182, 212, 0.1); color: #22d3ee; padding: 0.15rem 0.45rem; border-radius: 4px; border: 1px solid rgba(6, 182, 212, 0.2)">${tr.setup}</span> <span style="color: #94a3b8; font-weight: 600; margin-left: 0.25rem">${tr.score}/15</span></td>`;
+                html += `<td style="text-align: center; color: var(--text-secondary); font-size: 0.82rem; padding: 0.75rem">${tr.date}</td>`;
+                html += `<td style="text-align: right; font-weight: 700; color: var(--info); font-size: 0.85rem; padding: 0.75rem">RM ${tr.triggerPrice.toFixed(3)}</td>`;
+                
+                // Current Price Column
+                if (tr.currentPrice !== null) {
+                    html += `<td style="text-align: right; font-weight: 700; color: #f59e0b; font-size: 0.85rem; padding: 0.75rem">RM ${tr.currentPrice.toFixed(3)}</td>`;
+                } else {
+                    html += `<td style="text-align: right; color: #555; font-size: 0.82rem; padding: 0.75rem">-</td>`;
+                }
+                
+                // Current P&L Column
+                if (tr.currentDiff !== null) {
+                    const cSign = tr.currentDiff > 0 ? '+' : '';
+                    const cBg = tr.currentDiff > 0 ? 'rgba(16, 185, 129, 0.12)' : (tr.currentDiff < 0 ? 'rgba(239, 68, 68, 0.12)' : 'transparent');
+                    const cColor = tr.currentDiff > 0 ? 'var(--success)' : (tr.currentDiff < 0 ? 'var(--danger)' : 'var(--text-muted)');
+                    html += `<td style="text-align: center; background: ${cBg}; color: ${cColor}; font-weight: 700; font-size: 0.82rem; padding: 0.75rem">${cSign}${tr.currentDiff.toFixed(1)}%</td>`;
+                } else {
+                    html += `<td style="text-align: center; color: #555; font-size: 0.82rem; padding: 0.75rem">-</td>`;
+                }
+                
+                tr.diffs.forEach(diff => {
+                    if (diff === null) {
+                        html += `<td style="text-align: center; color: #444; font-size: 0.82rem; padding: 0.75rem">-</td>`;
+                    } else if (diff === "N/A") {
+                        html += `<td style="text-align: center; color: #555; font-size: 0.82rem; padding: 0.75rem">N/A</td>`;
+                    } else {
+                        const sign = diff > 0 ? '+' : '';
+                        const bg = diff > 0 ? 'rgba(16, 185, 129, 0.12)' : (diff < 0 ? 'rgba(239, 68, 68, 0.12)' : 'transparent');
+                        const color = diff > 0 ? 'var(--success)' : (diff < 0 ? 'var(--danger)' : 'var(--text-muted)');
+                        html += `<td style="text-align: center; background: ${bg}; color: ${color}; font-weight: 700; font-size: 0.82rem; padding: 0.75rem">${sign}${diff.toFixed(1)}%</td>`;
+                    }
+                });
+                
+                html += `</tr>`;
+            });
+            
+            if (filteredIdx === 1) {
+                html = `<tr><td colspan="17" style="text-align: center; color: var(--text-muted); padding: 3rem 0;">Tiada kaunter di bawah teknik ini dikesan.</td></tr>`;
+            }
+            
+            tbody.innerHTML = html;
+        }
+        window.renderTracker = renderTracker;
     </script>
     
     <!-- AI Analysis Modal -->
