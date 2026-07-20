@@ -3457,7 +3457,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 return aFloor - bFloor;
             });
 
-            const picks = candidates;
+            const picks = candidates.slice(0, 3);
             let positiveCount = 0;
 
             if (picks.length === 0) {
