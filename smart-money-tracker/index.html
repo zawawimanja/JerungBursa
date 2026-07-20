@@ -622,8 +622,10 @@
 
         <div class="controls">
 
+            <a href="./landing.html" class="btn" style="background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; box-shadow: 0 4px 15px rgba(13, 148, 136, 0.25);">💡 Metodologi (SEO)</a>
+            <a href="./backtest.html" class="btn" style="background: linear-gradient(135deg, #475569 0%, #334155 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; box-shadow: 0 4px 15px rgba(71, 85, 105, 0.25);">📊 Bukti Backtest</a>
             <a href="./sop.html" class="btn" style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.25);">📘 Panduan SOP</a>
-            <a href="./hall-of-fame.html" class="btn" style="background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 800; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.25);">🏆 Hall of Fame</a>
+            <a href="./hall-of-fame.html" class="btn" style="background: inline-flex; align-items: center; gap: 0.4rem; background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%); color: white; text-decoration: none; font-weight: 800; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.25);">🏆 Hall of Fame</a>
             <a href="./formula.html" class="btn" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: #0f172a; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 800; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.25);">🔥 Formula VVIP</a>
             <div class="history-input">
                 <label for="historyDate" style="color: #a5b4fc; font-size: 0.8rem; font-weight: 700; cursor: pointer;">Historical Archive:</label>
@@ -813,9 +815,20 @@
                             </tr>
                         </thead>
                         <tbody id="reclaimRadarTableBody">
-                            <!-- Dynamically populated open reclaim rows -->
                         </tbody>
                     </table>
+                </div>
+
+                <!-- WARNING ALERT FOR EARLY SPRING -->
+                <div style="margin-top: 1rem; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 10px; padding: 0.8rem 1rem; display: flex; align-items: flex-start; gap: 0.75rem;">
+                    <span style="font-size: 1.2rem; filter: drop-shadow(0 0 5px rgba(239,68,68,0.5));">🚨</span>
+                    <div>
+                        <h4 style="margin: 0 0 0.25rem 0; color: #f87171; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px;">Nota Risiko & Disiplin Keluar (Stop Loss)</h4>
+                        <p style="margin: 0; font-size: 0.78rem; color: #cbd5e1; line-height: 1.4;">
+                            Teknik <strong>Early Spring</strong> ialah strategi momentum breakout. Kaunter yang melepasi Open Price berpotensi meluncur naik tinggi, namun terdedah kepada risiko <strong>False Breakout</strong> (Breakout Palsu). 
+                            <br><span style="color: #f87171; font-weight: 700;">SOP Ketat:</span> Sekiranya harga jatuh semula di bawah <strong>Open Price (Trigger)</strong>, abang wajib <strong>CUT LOSS sertamerta</strong>. Disiplin ini mengehadkan kerugian kepada <span style="color: #f87171; font-weight: 700;">-2% hingga -3% sahaja</span> berbanding membiarkan kaunter junam seperti kes SRKK.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -949,7 +962,7 @@
                 🧮 Trading Base Calculator
             </div>
             <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem; line-height: 1.4;">
-                Select a stock in the <strong>BUY ZONE</strong> to mathematically plan your capital sizing, position lot sizes, and stop loss risks.
+                Select a stock in the <strong>WATCHLIST/SUPPORT ZONE</strong> to mathematically plan your capital sizing, position lot sizes, and stop loss risks.
             </p>
             
             <div class="calc-grid">
@@ -2086,6 +2099,35 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             });
         }
 
+        // Helper to check if a stock is a High-Conviction / High-Probability setup
+        function isHighConviction(item) {
+            if (!item || !item.high52) return false;
+            const floor = item.floorLow || (item.price * 0.95);
+            const distToFloor = ((item.price - floor) / floor) * 100;
+            const isPremium = item.ipoGrade === 'A' || item.ipoGrade === 'B' || item.outlier === true || item.outlier === 'true';
+            
+            // Criteria:
+            // 1. Premium Grade (A/B or Outlier)
+            // 2. Floor distance <= 4.0% (sangat dekat dengan Stop Loss)
+            // 3. Touch count >= 2 (lantai sokongan terbukti)
+            // 4. Turnover >= RM 1,000,000 (kecairan tinggi, Jerung aktif)
+            return isPremium && distToFloor <= 4.0 && item.touchCount >= 2 && item.turnover >= 1000000;
+        }
+
+        // Helper to check if an Early Spring (Open Reclaim) stock is a High-Conviction setup
+        function isEarlySpringHighConviction(item) {
+            if (!item || !item.openPrice || item.openPrice <= 0) return false;
+            const isPremium = item.ipoGrade === 'A' || item.ipoGrade === 'B' || item.outlier === true || item.outlier === 'true';
+            const distToOpen = ((item.price - item.openPrice) / item.openPrice) * 100;
+            
+            // Criteria:
+            // 1. Premium Grade (A/B or Outlier)
+            // 2. Dah RECLAIMED (price >= openPrice) tapi tak terlepas jauh (distToOpen <= 4.0%)
+            // 3. Turnover >= RM 1,000,000 (volum aktif, Jerung masuk)
+            // 4. Touch count >= 1 (ada base dibina)
+            return isPremium && (item.price >= item.openPrice) && distToOpen <= 4.0 && item.turnover >= 1000000 && (item.touchCount >= 1);
+        }
+
         function isSleepingOrAvoidStock(item) {
             if (!item) return false;
             
@@ -2565,8 +2607,8 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     const minScoreStrict = isPremiumIpo ? (item.price < 0.50 ? 10 : 11) : (item.price < 0.50 ? 11 : 12);
                     if (calculateSmartScore(item) < minScoreStrict) return false;
                     
-                    // 4. Must be EXPLOSIVE or STAIRCASE style (high momentum breakouts only, skip weak SWING plays)
-                    if (style !== 'EXPLOSIVE' && style !== 'STAIRCASE') return false;
+                    // 4. Must be EXPLOSIVE or STAIRCASE style, OR a Premium IPO (Grade A/B) in SWING PLAY style (high momentum breakouts or high conviction premium consolidations)
+                    if (style !== 'EXPLOSIVE' && style !== 'STAIRCASE' && !isPremiumIpo) return false;
                 }
 
                 return style === 'EXPLOSIVE' || style === 'STAIRCASE' || isPremiumIpo;
@@ -2576,6 +2618,11 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
             // Sort by user preference
             const renderSortFn = (a, b) => {
+                const hcA = isHighConviction(a);
+                const hcB = isHighConviction(b);
+                if (hcA && !hcB) return -1;
+                if (!hcA && hcB) return 1;
+
                 if (sortByVal === 'TURNOVER') {
                     return b.turnover - a.turnover; // Highest Turnover first
                 }
@@ -2660,6 +2707,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     const isPremiumIpo = item.ipoGrade === 'A' || item.ipoGrade === 'B';
                     const minScore = isPremiumIpo ? 10 : (item.ipoGrade === 'C' ? 11 : 12);
                     const isVvipRank = item.isVvip && score >= minScore;
+                    const isHc = isHighConviction(item);
                     const vvipCrown = isVvipRank ? `<span style="font-size: 0.72rem; background: linear-gradient(135deg, #f59e0b, #d97706); color: #0f172a; padding: 0.05rem 0.25rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(245,158,11,0.5); box-shadow: 0 0 8px rgba(245,158,11,0.4);" title="VVIP Gold Trend Rider">🏆 VVIP Gold</span>` : '';
 
                     const style = getItemStyle(item);
@@ -2711,13 +2759,14 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     const matchBadge = getBacktestMatchBadge(item, 'trend');
 
                     hybridHtml += `
-                        <tr style="${isVvipRank ? 'background: rgba(245, 158, 11, 0.02);' : ''}">
-                            <td style="text-align: center; font-weight: 800; color: ${isVvipRank ? '#f59e0b' : 'var(--accent)'};">#${rankCount++}</td>
+                        <tr style="${isHc ? 'background: rgba(16, 185, 129, 0.03);' : (isVvipRank ? 'background: rgba(245, 158, 11, 0.02);' : '')}">
+                            <td style="text-align: center; font-weight: 800; color: ${isHc ? '#10b981' : (isVvipRank ? '#f59e0b' : 'var(--accent)')}; ${isHc ? 'border-left: 4px solid #10b981;' : ''}">#${rankCount++}</td>
                             <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
                                 <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
                                     <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
                                         ${crownEmoji}${item.name} <span style="font-size: 0.75rem; color: var(--accent);">🔗</span>
                                     </a>
+                                    ${isHc ? `<span style="font-size: 0.68rem; background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.25); white-space: nowrap; box-shadow: 0 0 8px rgba(16, 185, 129, 0.3);" title="High-Conviction Setup: Gred Premium + Lantai Sangat Rapat (<=4%) + Kecairan Tinggi (>=RM1M)">🎯 Entry Padu</span>` : ''}
                                     ${matchBadge}
                                     ${hofBadge}
                                     ${item.hasLowerWickRejection ? `<span style="font-size: 0.68rem; background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.25); white-space: nowrap;" title="Jerung pertahankan lantai sokongan (Lower Wick Rejection)">🟢 Reject Bawah</span>` : ''}
@@ -2799,9 +2848,15 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             });
 
             // Susun:
-            // 1. Yang dah trigger/reclaimed di atas sekali (paling dekat dengan 0% didahulukan)
-            // 2. Yang underwater di bawah (paling dekat dengan 0% didahulukan, cth: -1.0% vs -5.0%)
+            // 1. High Conviction (Entry Padu) di atas sekali
+            // 2. Yang dah trigger/reclaimed di atas sekali (paling dekat dengan 0% didahulukan)
+            // 3. Yang underwater di bawah (paling dekat dengan 0% didahulukan, cth: -1.0% vs -5.0%)
             validPicks.sort((a, b) => {
+                const hcA = isEarlySpringHighConviction(a);
+                const hcB = isEarlySpringHighConviction(b);
+                if (hcA && !hcB) return -1;
+                if (!hcA && hcB) return 1;
+
                 const aTriggered = a.price >= a.openPrice;
                 const bTriggered = b.price >= b.openPrice;
                 
@@ -2875,15 +2930,17 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
                     const hofBadge = getHofBadge(item);
                     const matchBadge = getBacktestMatchBadge(item, 'spring');
+                    const isHc = isEarlySpringHighConviction(item);
 
                     html += `
-                        <tr>
-                            <td style="text-align: center; font-weight: 800; color: #fb7185;">#${rankCount++}</td>
+                        <tr style="${isHc ? 'background: rgba(16, 185, 129, 0.03);' : ''}">
+                            <td style="text-align: center; font-weight: 800; color: ${isHc ? '#10b981' : '#fb7185'}; ${isHc ? 'border-left: 4px solid #10b981;' : ''}">#${rankCount++}</td>
                             <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
                                 <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
                                     <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
                                         ${item.name} <span style="font-size: 0.75rem; color: var(--accent);">🔗</span>
                                     </a>
+                                    ${isHc ? `<span style="font-size: 0.68rem; background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.25); white-space: nowrap; box-shadow: 0 0 8px rgba(16, 185, 129, 0.3);" title="High-Conviction Setup: Gred Premium + Dah Reclaimed + Dekat Open Price (<=4%) + Kecairan Tinggi (>=RM1M)">🎯 Entry Padu</span>` : ''}
                                     ${matchBadge}
                                     ${statusBadge}
                                     ${hofBadge}
@@ -3333,7 +3390,25 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
         }
         window.renderTracker = renderTracker;
     </script>
-    
+
+    <!-- Global Footer with Legal Policies & Disclaimers -->
+    <footer style="margin-top: 4rem; padding: 2rem 1.5rem; border-top: 1px solid rgba(51, 65, 85, 0.3); background: rgba(15, 23, 45, 0.6); backdrop-filter: blur(8px); text-align: center; font-size: 0.85rem; color: var(--text-muted); border-radius: 12px; margin-bottom: 2rem;">
+        <div style="max-width: 800px; margin: 0 auto;">
+            <p style="margin-bottom: 1rem; color: #cbd5e1; line-height: 1.6;">
+                <strong>⚠️ Penafian Kewangan & Risiko:</strong> Semua data, zon harga (Watchlist/Support Floor), formula, skor pintas, dan maklumat kuantitatif yang dipaparkan di JerungBursa adalah hasil pemodelan matematik dan simulasi algoritma untuk tujuan penyelidikan dan pembelajaran sahaja. Kami <strong>BUKAN</strong> penasihat kewangan berlesen. Melabur dalam pasaran saham Bursa Malaysia melibatkan risiko kerugian modal yang tinggi. Sila lakukan penyelidikan sendiri (DYOR) atau berunding dengan penasihat kewangan yang bertauliah sebelum membuat keputusan pelaburan sebenar.
+            </p>
+            <p style="margin-bottom: 1rem;">
+                &copy; 2026 JerungBursa (Bursa IPO Trend Rider Console). Hak cipta terpelihara.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 0.5rem;">
+                <a href="./privacy-policy.html" style="color: var(--text-muted); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-muted)'">Dasar Privasi</a>
+                <a href="./terms.html" style="color: var(--text-muted); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-muted)'">Syarat Perkhidmatan</a>
+                <a href="./about.html" style="color: var(--text-muted); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-muted)'">Mengenai Kami</a>
+                <a href="./contact.html" style="color: var(--text-muted); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-muted)'">Hubungi Kami</a>
+            </div>
+        </div>
+    </footer>
+
     <!-- AI Analysis Modal -->
     <div id="aiModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(8px); z-index: 1000; justify-content: center; align-items: center; padding: 1.5rem;">
         <div style="background: #1e293b; border: 1px solid rgba(167, 139, 250, 0.3); border-radius: 16px; width: 100%; max-width: 650px; display: flex; flex-direction: column; max-height: 90vh; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4); animation: modalFadeIn 0.25s ease-out;">
