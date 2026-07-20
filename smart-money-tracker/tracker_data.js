@@ -1,16 +1,16 @@
 window.TRACKER_DATA = [
   {
     "name": "JTGROUP",
-    "date": "2026-07-20",
+    "date": "2026-07-17",
     "triggerPrice": 0.6449999809265137,
     "setup": "SWING PLAY",
     "score": 11,
-    "turnover": 153896.99544906616,
+    "turnover": 624875.9815216064,
     "isGold": false,
     "currentPrice": 0.6449999809265137,
     "currentDiff": 0,
     "diffs": [
-      null,
+      0,
       null,
       null,
       null,
@@ -24,16 +24,16 @@ window.TRACKER_DATA = [
   },
   {
     "name": "HKB",
-    "date": "2026-07-20",
-    "triggerPrice": 0.6050000190734863,
+    "date": "2026-07-17",
+    "triggerPrice": 0.6449999809265137,
     "setup": "SWING PLAY",
     "score": 10,
-    "turnover": 647834.0204238892,
+    "turnover": 753940.4777050018,
     "isGold": false,
     "currentPrice": 0.6050000190734863,
-    "currentDiff": 0,
+    "currentDiff": -6.2,
     "diffs": [
-      null,
+      -6.2,
       null,
       null,
       null,
@@ -47,62 +47,39 @@ window.TRACKER_DATA = [
   },
   {
     "name": "CPETECH",
-    "date": "2026-07-20",
-    "triggerPrice": 0.9850000143051147,
-    "setup": "STAIRCASE",
-    "score": 7,
-    "turnover": 1167126.5169501305,
-    "isGold": false,
-    "currentPrice": 0.9850000143051147,
-    "currentDiff": 0,
-    "diffs": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ]
-  },
-  {
-    "name": "EIPOWER",
-    "date": "2026-07-20",
-    "triggerPrice": 0.6700000166893005,
-    "setup": "SWING PLAY",
-    "score": 10,
-    "turnover": 1400367.034882307,
-    "isGold": false,
-    "currentPrice": 0.6700000166893005,
-    "currentDiff": 0,
-    "diffs": [
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
-    ]
-  },
-  {
-    "name": "MMCS",
-    "date": "2026-07-20",
-    "triggerPrice": 0.4000000059604645,
+    "date": "2026-07-17",
+    "triggerPrice": 0.9599999785423279,
     "setup": "STAIRCASE",
     "score": 8,
-    "turnover": 2035880.030336976,
+    "turnover": 1833695.9590137005,
     "isGold": false,
-    "currentPrice": 0.4000000059604645,
-    "currentDiff": 0,
+    "currentPrice": 0.9850000143051147,
+    "currentDiff": 2.6,
     "diffs": [
+      2.6,
       null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "OGX",
+    "date": "2026-07-17",
+    "triggerPrice": 0.4399999976158142,
+    "setup": "SWING PLAY",
+    "score": 10,
+    "turnover": 1907267.9896652699,
+    "isGold": false,
+    "currentPrice": 0.46000000834465027,
+    "currentDiff": 4.5,
+    "diffs": [
+      4.5,
       null,
       null,
       null,
@@ -116,16 +93,62 @@ window.TRACKER_DATA = [
   },
   {
     "name": "ISF",
-    "date": "2026-07-20",
-    "triggerPrice": 0.6299999952316284,
-    "setup": "EXPLOSIVE",
-    "score": 14,
-    "turnover": 8611973.934817314,
-    "isGold": true,
+    "date": "2026-07-17",
+    "triggerPrice": 0.5649999976158142,
+    "setup": "STAIRCASE",
+    "score": 7,
+    "turnover": 2028688.9914393425,
+    "isGold": false,
     "currentPrice": 0.6299999952316284,
-    "currentDiff": 0,
+    "currentDiff": 11.5,
     "diffs": [
+      11.5,
       null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "EIPOWER",
+    "date": "2026-07-17",
+    "triggerPrice": 0.6549999713897705,
+    "setup": "SWING PLAY",
+    "score": 11,
+    "turnover": 4229138.315272331,
+    "isGold": false,
+    "currentPrice": 0.6700000166893005,
+    "currentDiff": 2.3,
+    "diffs": [
+      2.3,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "MMCS",
+    "date": "2026-07-17",
+    "triggerPrice": 0.39500001072883606,
+    "setup": "STAIRCASE",
+    "score": 9,
+    "turnover": 7187222.6952165365,
+    "isGold": false,
+    "currentPrice": 0.4000000059604645,
+    "currentDiff": 1.3,
+    "diffs": [
+      1.3,
       null,
       null,
       null,
@@ -143,13 +166,13 @@ window.TRACKER_DATA = [
     "triggerPrice": 0.14000000059604645,
     "setup": "STAIRCASE",
     "score": 6,
-    "turnover": 753270.0032070279,
+    "turnover": 757470.0032249093,
     "isGold": false,
     "currentPrice": 0.13500000536441803,
     "currentDiff": -3.6,
     "diffs": [
+      0,
       -3.6,
-      null,
       null,
       null,
       null,
@@ -166,13 +189,13 @@ window.TRACKER_DATA = [
     "triggerPrice": 0.8149999976158142,
     "setup": "STAIRCASE",
     "score": 12,
-    "turnover": 1756976.9948601723,
+    "turnover": 1766675.4948318005,
     "isGold": true,
     "currentPrice": 0.800000011920929,
     "currentDiff": -1.8,
     "diffs": [
       -1.8,
-      null,
+      -1.8,
       null,
       null,
       null,
@@ -186,16 +209,16 @@ window.TRACKER_DATA = [
   {
     "name": "ICENTS",
     "date": "2026-07-16",
-    "triggerPrice": 0.6499999761581421,
+    "triggerPrice": 0.6549999713897705,
     "setup": "STAIRCASE",
     "score": 8,
-    "turnover": 2435809.9106550217,
+    "turnover": 2495942.8909778595,
     "isGold": false,
     "currentPrice": 0.625,
-    "currentDiff": -3.8,
+    "currentDiff": -4.6,
     "diffs": [
-      -3.8,
-      null,
+      -4.6,
+      -4.6,
       null,
       null,
       null,
@@ -212,13 +235,13 @@ window.TRACKER_DATA = [
     "triggerPrice": 0.4650000035762787,
     "setup": "STAIRCASE",
     "score": 11,
-    "turnover": 29508807.22694993,
+    "turnover": 30244995.232611895,
     "isGold": true,
     "currentPrice": 0.4350000023841858,
     "currentDiff": -6.5,
     "diffs": [
+      -5.4,
       -6.5,
-      null,
       null,
       null,
       null,
@@ -240,9 +263,9 @@ window.TRACKER_DATA = [
     "currentPrice": 0.3100000023841858,
     "currentDiff": -1.6,
     "diffs": [
-      1.6,
+      3.2,
+      0,
       -1.6,
-      null,
       null,
       null,
       null,
@@ -264,8 +287,8 @@ window.TRACKER_DATA = [
     "currentDiff": 4,
     "diffs": [
       1,
+      3,
       4,
-      null,
       null,
       null,
       null,
@@ -287,8 +310,8 @@ window.TRACKER_DATA = [
     "currentDiff": -3.3,
     "diffs": [
       -0.8,
+      -6.6,
       -3.3,
-      null,
       null,
       null,
       null,
@@ -311,8 +334,8 @@ window.TRACKER_DATA = [
     "diffs": [
       5.2,
       2.9,
+      -4.6,
       -1.7,
-      null,
       null,
       null,
       null,
@@ -333,9 +356,9 @@ window.TRACKER_DATA = [
     "currentDiff": -4,
     "diffs": [
       -8,
+      -8,
       -4,
       -4,
-      null,
       null,
       null,
       null,
@@ -356,9 +379,9 @@ window.TRACKER_DATA = [
     "currentDiff": 0,
     "diffs": [
       0.9,
-      -0.9,
       0,
-      null,
+      -3.4,
+      0,
       null,
       null,
       null,
@@ -379,9 +402,9 @@ window.TRACKER_DATA = [
     "currentDiff": -2.4,
     "diffs": [
       -2.4,
-      0,
       -2.4,
-      null,
+      -2.4,
+      -2.4,
       null,
       null,
       null,
@@ -403,8 +426,8 @@ window.TRACKER_DATA = [
     "diffs": [
       -1.4,
       -3.4,
+      -6.2,
       -4.1,
-      null,
       null,
       null,
       null,
@@ -426,9 +449,9 @@ window.TRACKER_DATA = [
     "diffs": [
       -2.3,
       2.3,
-      -1.2,
+      0,
       -3.5,
-      null,
+      -3.5,
       null,
       null,
       null,
@@ -449,9 +472,9 @@ window.TRACKER_DATA = [
     "diffs": [
       -4.3,
       -4.3,
-      -5.2,
+      -6,
+      -11.2,
       -12.9,
-      null,
       null,
       null,
       null,
@@ -473,9 +496,9 @@ window.TRACKER_DATA = [
       1.1,
       5.8,
       19.6,
-      17.5,
+      16.4,
+      11.1,
       12.2,
-      null,
       null,
       null,
       null,
@@ -497,9 +520,9 @@ window.TRACKER_DATA = [
       0.8,
       0,
       -2.3,
-      0,
+      0.8,
       -1.5,
-      null,
+      -1.5,
       null,
       null,
       null
@@ -520,9 +543,9 @@ window.TRACKER_DATA = [
       12.3,
       12.3,
       20,
+      20,
       21.5,
       23.1,
-      null,
       null,
       null,
       null
@@ -543,9 +566,9 @@ window.TRACKER_DATA = [
       -9,
       -6.7,
       -2.2,
+      -3,
       -3.7,
       -9.7,
-      null,
       null,
       null,
       null
@@ -566,9 +589,9 @@ window.TRACKER_DATA = [
       2.8,
       1.7,
       12.7,
-      13.8,
+      14.9,
+      6.1,
       8.8,
-      null,
       null,
       null,
       null
@@ -590,8 +613,8 @@ window.TRACKER_DATA = [
       -6.1,
       -1.7,
       -1.7,
+      -1.7,
       9.6,
-      null,
       null,
       null,
       null
@@ -613,8 +636,8 @@ window.TRACKER_DATA = [
       -5.6,
       -3.5,
       -4.9,
+      -9,
       -6.9,
-      null,
       null,
       null,
       null
@@ -637,7 +660,7 @@ window.TRACKER_DATA = [
       "N/A",
       "N/A",
       "N/A",
-      null,
+      "N/A",
       null,
       null,
       null
@@ -661,7 +684,7 @@ window.TRACKER_DATA = [
       2.5,
       0.6,
       -1.2,
-      null,
+      -1.2,
       null,
       null
     ]
@@ -683,8 +706,8 @@ window.TRACKER_DATA = [
       0,
       3.5,
       8.1,
+      2.3,
       1.2,
-      null,
       null,
       null
     ]
@@ -706,9 +729,9 @@ window.TRACKER_DATA = [
       -6,
       -7.5,
       -6,
-      -4.5,
+      -3,
+      -6,
       -7.5,
-      null,
       null
     ]
   },
@@ -729,9 +752,9 @@ window.TRACKER_DATA = [
       -2.5,
       -3.8,
       -1.2,
+      1.2,
+      -1.2,
       0,
-      0,
-      null,
       null
     ]
   },
@@ -752,9 +775,9 @@ window.TRACKER_DATA = [
       -2.1,
       -3.1,
       -2.1,
-      -1,
+      -3.1,
+      -9.3,
       -5.2,
-      null,
       null
     ]
   },
@@ -776,8 +799,8 @@ window.TRACKER_DATA = [
       -1.7,
       3.4,
       17.2,
+      10.3,
       13.8,
-      null,
       null
     ]
   },
@@ -800,8 +823,8 @@ window.TRACKER_DATA = [
       -1.6,
       -0.8,
       -1.6,
-      -4.1,
-      null
+      -7.3,
+      -4.1
     ]
   },
   {
@@ -822,9 +845,9 @@ window.TRACKER_DATA = [
       8.8,
       12.3,
       12.3,
-      14,
+      14.9,
       9.6,
-      null
+      9.6
     ]
   },
   {
@@ -847,7 +870,7 @@ window.TRACKER_DATA = [
       -1.9,
       -1.3,
       -1.9,
-      null
+      -1.9
     ]
   },
   {
@@ -870,7 +893,7 @@ window.TRACKER_DATA = [
       0,
       0,
       0,
-      null
+      0
     ]
   },
   {
@@ -892,8 +915,8 @@ window.TRACKER_DATA = [
       -1.7,
       3.4,
       1.1,
-      -3.4,
-      null
+      -6.3,
+      -3.4
     ]
   },
   {
@@ -915,8 +938,8 @@ window.TRACKER_DATA = [
       -0.7,
       3.9,
       0.7,
-      -3.9,
-      null
+      -4.6,
+      -3.9
     ]
   },
   {
@@ -937,9 +960,9 @@ window.TRACKER_DATA = [
       6.4,
       6.4,
       7.3,
-      5.5,
       6.4,
-      null
+      2.8,
+      6.4
     ]
   },
   {
@@ -960,9 +983,9 @@ window.TRACKER_DATA = [
       -2.1,
       -2.1,
       -1.6,
-      -1,
-      0,
-      null
+      -0.5,
+      -1.6,
+      0
     ]
   },
   {
@@ -984,8 +1007,8 @@ window.TRACKER_DATA = [
       0.9,
       0,
       -4.3,
-      -3.4,
-      null
+      -4.3,
+      -3.4
     ]
   },
   {
@@ -1007,8 +1030,8 @@ window.TRACKER_DATA = [
       3.6,
       2.1,
       0,
-      -0.7,
-      null
+      -2.9,
+      -0.7
     ]
   },
   {
@@ -1031,7 +1054,7 @@ window.TRACKER_DATA = [
       0,
       0,
       0,
-      3.2
+      0.8
     ]
   },
   {
@@ -1053,7 +1076,7 @@ window.TRACKER_DATA = [
       -83.2,
       -82.2,
       -82.2,
-      -83.2,
+      -82.2,
       -83.2
     ]
   },
@@ -1077,7 +1100,7 @@ window.TRACKER_DATA = [
       -3,
       1.5,
       14.7,
-      12.7
+      11.7
     ]
   },
   {
