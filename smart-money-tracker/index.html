@@ -1233,7 +1233,7 @@
                         <span id="jbpicks-lastupdate" style="font-size: 0.65rem; color: var(--text-muted);"></span>
                     </div>
                 </div>
-                <div class="cards-grid" id="jbpicks-cards"></div>
+                <div id="jbpicks-table-wrapper" style="overflow-x: auto;"></div>
                 <div style="margin-top: 0.6rem; font-size: 0.65rem; color: rgba(245, 158, 11, 0.5); text-align: center; border-top: 1px solid rgba(245, 158, 11, 0.1); padding-top: 0.5rem;">
                     Pilihan harian berdasarkan Signal BUY + Golden Entry/Momentum + Jarak Lantai ≤6% + Ruang ATH ≥5%
                 </div>
@@ -3423,18 +3423,17 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
         function renderJBPicks() {
             const live = window.liveData || {};
             const track = window.TRACKER_DATA || [];
-            const container = document.getElementById('jbpicks-cards');
+            const wrapper = document.getElementById('jbpicks-table-wrapper');
             const progress = document.getElementById('jbpicks-progress');
             const updateEl = document.getElementById('jbpicks-lastupdate');
 
-            if (!container) return;
+            if (!wrapper) return;
 
             if (live.lastUpdated) {
                 const d = new Date(live.lastUpdated);
                 updateEl.textContent = 'Dikemas kini: ' + d.toLocaleString('ms-MY', { timeZone: 'Asia/Kuala_Lumpur' });
             }
 
-            // Filter live data: Signal BUY + momentum setup (STAIRCASE/EXPLOSIVE) + floor ≤6% + upside ATH ≥5%
             const candidates = (live.topVolume || []).filter(s => {
                 if (s.signal !== 'buy') return false;
                 if (!['STAIRCASE', 'EXPLOSIVE'].includes(s.setupStyle)) return false;
@@ -3445,7 +3444,6 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 return true;
             });
 
-            // Sort by Gold tracker status desc, then by upside ATH desc, then by floor distance asc
             candidates.sort((a, b) => {
                 const aGold = track.filter(t => t.name === a.name).some(t => t.isGold) ? 1 : 0;
                 const bGold = track.filter(t => t.name === b.name).some(t => t.isGold) ? 1 : 0;
@@ -3459,84 +3457,78 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             });
 
             const picks = candidates.slice(0, 4);
-
             let positiveCount = 0;
-            let html = '';
 
             if (picks.length === 0) {
-                html = '<div style="grid-column: 1/-1; text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.85rem; background: rgba(15,23,42,0.5); border-radius: 10px;">Tiada saham memenuhi 4 lapisan tapisan hari ini.</div>';
-            } else {
-                picks.forEach((liveItem, idx) => {
-                    const name = liveItem.name;
-                    const trackItem = track.filter(t => t.name === name).sort((a, b) => b.date.localeCompare(a.date))[0] || null;
-
-                    const price = liveItem.price;
-                    const signal = liveItem.signal;
-                    const setup = liveItem.setupStyle;
-                    const turnover = liveItem.turnover;
-                    const floor = liveItem.floorLow;
-                    const high52 = liveItem.high52;
-                    const changePct = liveItem.changePct || 0;
-                    const pnl = trackItem ? trackItem.currentDiff : null;
-
-                    const floorDist = (price && floor) ? ((price - floor) / floor * 100) : null;
-                    const upsideAth = (price && high52) ? ((high52 - price) / price * 100) : null;
-                    const isGold = trackItem ? trackItem.isGold : false;
-
-                    if (pnl !== null && pnl > 0) positiveCount++;
-
-                    const signalColor = '#34d399';
-                    const pnlColor = pnl !== null ? (pnl > 0 ? '#34d399' : (pnl < 0 ? '#f87171' : '#94a3b8')) : '#94a3b8';
-                    const pnlArrow = pnl !== null ? (pnl > 0 ? '▲' : (pnl < 0 ? '▼' : '—')) : '—';
-                    const changeArrow = changePct > 0 ? '▲' : (changePct < 0 ? '▼' : '—');
-                    const changeColor = changePct > 0 ? '#34d399' : (changePct < 0 ? '#f87171' : '#94a3b8');
-
-                    const bgColors = ['rgba(59, 130, 246, 0.08)', 'rgba(139, 92, 246, 0.08)', 'rgba(16, 185, 129, 0.08)', 'rgba(245, 158, 11, 0.08)'];
-                    const borderColors = ['rgba(59, 130, 246, 0.2)', 'rgba(139, 92, 246, 0.2)', 'rgba(16, 185, 129, 0.2)', 'rgba(245, 158, 11, 0.2)'];
-                    const accentColors = ['#3b82f6', '#8b5cf6', '#10b981', '#f59e0b'];
-
-                    html += `
-                    <div style="background: ${bgColors[idx]}; border: 1px solid ${borderColors[idx]}; border-radius: 14px; padding: 1.2rem; position: relative; overflow: hidden; min-width: 240px; flex: 1;">
-                        ${isGold ? '<div style="position: absolute; top: 8px; right: 8px; background: linear-gradient(135deg, #f59e0b, #d97706); color: #0f172a; font-size: 0.6rem; font-weight: 900; padding: 0.2rem 0.5rem; border-radius: 6px; letter-spacing: 0.5px;">GOLD</div>' : ''}
-                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
-                            <h3 style="margin: 0; font-size: 1.1rem; font-weight: 900; color: ${accentColors[idx]}; letter-spacing: 0.3px;">${name}</h3>
-                            <span style="font-size: 0.65rem; font-weight: 700; color: ${signalColor}; background: rgba(255,255,255,0.05); padding: 0.2rem 0.6rem; border-radius: 6px; border: 1px solid ${signalColor}30; text-transform: uppercase;">${signal}</span>
-                        </div>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
-                            <div>
-                                <span style="font-size: 0.65rem; color: var(--text-muted); display: block;">Harga</span>
-                                <span style="font-size: 1.1rem; font-weight: 800; color: white;">${typeof price === 'number' ? 'RM ' + price.toFixed(3) : price}</span>
-                                <span style="font-size: 0.7rem; color: ${changeColor}; margin-left: 0.3rem;">${changeArrow} ${Math.abs(changePct).toFixed(2)}%</span>
-                            </div>
-                            <div>
-                                <span style="font-size: 0.65rem; color: var(--text-muted); display: block;">P&L Tracker</span>
-                                <span style="font-size: 1.1rem; font-weight: 800; color: ${pnlColor};">${pnlArrow} ${pnl !== null ? (pnl > 0 ? '+' : '') + pnl.toFixed(2) + '%' : 'N/A'}</span>
-                            </div>
-                            <div>
-                                <span style="font-size: 0.65rem; color: var(--text-muted); display: block;">Setup</span>
-                                <span style="font-size: 0.75rem; font-weight: 600; color: #e2e8f0;">${setup || '—'}</span>
-                            </div>
-                            <div>
-                                <span style="font-size: 0.65rem; color: var(--text-muted); display: block;">Jarak Lantai</span>
-                                <span style="font-size: 0.85rem; font-weight: 700; color: ${floorDist !== null ? (floorDist <= 6 ? '#34d399' : '#f87171') : '#94a3b8'};">${floorDist !== null ? floorDist.toFixed(1) + '%' : '—'}</span>
-                            </div>
-                            <div>
-                                <span style="font-size: 0.65rem; color: var(--text-muted); display: block;">Ruang ATH</span>
-                                <span style="font-size: 0.85rem; font-weight: 700; color: ${upsideAth !== null ? (upsideAth >= 5 ? '#34d399' : (upsideAth >= 3 ? '#f59e0b' : '#f87171')) : '#94a3b8'};">${upsideAth !== null ? upsideAth.toFixed(1) + '%' : '—'}</span>
-                            </div>
-                            <div>
-                                <span style="font-size: 0.65rem; color: var(--text-muted); display: block;">Tunover</span>
-                                <span style="font-size: 0.75rem; font-weight: 600; color: #e2e8f0;">${turnover > 0 ? 'RM ' + (turnover / 1000000).toFixed(2) + 'j' : '—'}</span>
-                            </div>
-                        </div>
-                        <div style="margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.05); font-size: 0.7rem; color: var(--text-muted);">
-                            ${liveItem.reason || ''}
-                        </div>
-                    </div>`;
-                });
+                wrapper.innerHTML = '<div style="text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.85rem;">Tiada saham memenuhi 4 lapisan tapisan hari ini.</div>';
+                if (progress) progress.textContent = '0/4';
+                return;
             }
 
-            container.innerHTML = html;
+            const cellStyle = 'padding: 0.6rem 0.8rem; font-size: 0.78rem; white-space: nowrap;';
+            const headerStyle = cellStyle + 'color: #f59e0b; font-weight: 800; text-transform: uppercase; letter-spacing: 0.3px; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);';
+
+            let t = `<table style="width: 100%; border-collapse: collapse; min-width: 900px;">
+                <thead><tr>
+                    <th style="${headerStyle}text-align: left;">#</th>
+                    <th style="${headerStyle}text-align: left;">Saham</th>
+                    <th style="${headerStyle}text-align: right;">Harga</th>
+                    <th style="${headerStyle}text-align: center;">Signal</th>
+                    <th style="${headerStyle}text-align: center;">% Hari</th>
+                    <th style="${headerStyle}text-align: left;">Setup</th>
+                    <th style="${headerStyle}text-align: right;">Lantai</th>
+                    <th style="${headerStyle}text-align: right;">Jarak Lantai</th>
+                    <th style="${headerStyle}text-align: right;">Ruang ATH</th>
+                    <th style="${headerStyle}text-align: right;">Tunover (j)</th>
+                    <th style="${headerStyle}text-align: center;">P&L Tracker</th>
+                    <th style="${headerStyle}text-align: left;">Alasan</th>
+                </tr></thead><tbody>`;
+
+            picks.forEach((liveItem, idx) => {
+                const name = liveItem.name;
+                const trackItem = track.filter(t => t.name === name).sort((a, b) => b.date.localeCompare(a.date))[0] || null;
+
+                const price = liveItem.price;
+                const signal = liveItem.signal;
+                const setup = liveItem.setupStyle;
+                const turnover = liveItem.turnover;
+                const floor = liveItem.floorLow;
+                const high52 = liveItem.high52;
+                const changePct = liveItem.changePct || 0;
+                const pnl = trackItem ? trackItem.currentDiff : null;
+
+                const floorDist = (price && floor) ? ((price - floor) / floor * 100) : null;
+                const upsideAth = (price && high52) ? ((high52 - price) / price * 100) : null;
+                const isGold = trackItem ? trackItem.isGold : false;
+
+                if (pnl !== null && pnl > 0) positiveCount++;
+
+                const goldBadge = isGold ? '<span style="background: linear-gradient(135deg, #f59e0b, #d97706); color: #0f172a; font-size: 0.55rem; font-weight: 900; padding: 0.1rem 0.4rem; border-radius: 4px; letter-spacing: 0.5px; margin-left: 0.3rem;">GOLD</span>' : '';
+                const changeArrow = changePct > 0 ? '▲' : (changePct < 0 ? '▼' : '—');
+                const changeColor = changePct > 0 ? '#34d399' : (changePct < 0 ? '#f87171' : '#94a3b8');
+                const pnlColor = pnl !== null ? (pnl > 0 ? '#34d399' : (pnl < 0 ? '#f87171' : '#94a3b8')) : '#94a3b8';
+                const pnlArrow = pnl !== null ? (pnl > 0 ? '▲' : (pnl < 0 ? '▼' : '—')) : '—';
+
+                const rowBg = idx % 2 === 0 ? 'background: rgba(255,255,255,0.02);' : '';
+
+                t += `<tr style="${rowBg}">
+                    <td style="${cellStyle}text-align: left; color: var(--text-muted);">${idx + 1}</td>
+                    <td style="${cellStyle}text-align: left; font-weight: 800; color: #e2e8f0;">${name}${goldBadge}</td>
+                    <td style="${cellStyle}text-align: right; font-weight: 700; color: white;">RM ${typeof price === 'number' ? price.toFixed(3) : price}</td>
+                    <td style="${cellStyle}text-align: center;"><span style="color: #34d399; font-weight: 700; background: rgba(52, 211, 153, 0.1); padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem;">${signal}</span></td>
+                    <td style="${cellStyle}text-align: center; font-weight: 700; color: ${changeColor};">${changeArrow} ${Math.abs(changePct).toFixed(2)}%</td>
+                    <td style="${cellStyle}text-align: left; color: #94a3b8;">${setup || '—'}</td>
+                    <td style="${cellStyle}text-align: right; color: #94a3b8;">${floor ? 'RM ' + floor.toFixed(3) : '—'}</td>
+                    <td style="${cellStyle}text-align: right; font-weight: 700; color: ${floorDist !== null ? (floorDist <= 6 ? '#34d399' : '#f87171') : '#94a3b8'};">${floorDist !== null ? floorDist.toFixed(1) + '%' : '—'}</td>
+                    <td style="${cellStyle}text-align: right; font-weight: 700; color: ${upsideAth !== null ? (upsideAth >= 5 ? '#34d399' : (upsideAth >= 3 ? '#f59e0b' : '#f87171')) : '#94a3b8'};">${upsideAth !== null ? upsideAth.toFixed(1) + '%' : '—'}</td>
+                    <td style="${cellStyle}text-align: right; color: #94a3b8;">${turnover > 0 ? (turnover / 1000000).toFixed(2) : '—'}</td>
+                    <td style="${cellStyle}text-align: center; font-weight: 700; color: ${pnlColor};">${pnlArrow} ${pnl !== null ? (pnl > 0 ? '+' : '') + pnl.toFixed(2) + '%' : 'N/A'}</td>
+                    <td style="${cellStyle}text-align: left; color: var(--text-muted); font-size: 0.7rem; max-width: 200px; overflow: hidden; text-overflow: ellipsis;">${liveItem.reason || ''}</td>
+                </tr>`;
+            });
+
+            t += '</tbody></table>';
+            wrapper.innerHTML = t;
             if (progress) progress.textContent = picks.length > 0 ? `${positiveCount}/${picks.length} positif` : '0/4';
         }
         window.renderJBPicks = renderJBPicks;
