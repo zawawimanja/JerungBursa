@@ -636,10 +636,10 @@
             <div class="ipo-filter-container" style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.45rem 0.8rem; border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.35); transition: all 0.2s ease-in-out;">
                 <label for="priceMaxFilter" style="color: #34d399; font-size: 0.85rem; font-weight: 800; display: flex; align-items: center; gap: 0.25rem; cursor: pointer; user-select: none;">💰 Harga Maks (RM):</label>
                 <select id="priceMaxFilter" style="background: rgba(15, 23, 42, 0.9); color: white; border: 1px solid rgba(16, 185, 129, 0.5); border-radius: 6px; padding: 0.2rem 0.5rem; font-size: 0.8rem; font-weight: 700; cursor: pointer; outline: none; font-family: inherit;">
-                    <option value="ALL" selected>🌐 Semua Harga</option>
-                    <option value="0.30">🪙 ≤ RM 0.30 (Penny)</option>
+                    <option value="ALL">🌐 Semua Harga</option>
+                    <option value="0.30">🪙 ≤ RM 0.30 (Super Penny)</option>
                     <option value="0.50">💵 ≤ RM 0.50 (Murah)</option>
-                    <option value="1.00">💵 ≤ RM 1.00</option>
+                    <option value="1.00" selected>🚀 ≤ RM 1.00 (Sub-RM1 Roket)</option>
                     <option value="2.00">💵 ≤ RM 2.00</option>
                 </select>
             </div>
@@ -647,11 +647,11 @@
             <div class="ipo-filter-container" style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.45rem 0.8rem; border-radius: 8px; border: 1px solid rgba(96, 165, 250, 0.35); transition: all 0.2s ease-in-out;">
                 <label for="ipoAgeFilter" style="color: #60a5fa; font-size: 0.85rem; font-weight: 800; display: flex; align-items: center; gap: 0.25rem; cursor: pointer; user-select: none;">✨ IPO Status:</label>
                 <select id="ipoAgeFilter" style="background: rgba(15, 23, 42, 0.9); color: white; border: 1px solid rgba(96, 165, 250, 0.5); border-radius: 6px; padding: 0.2rem 0.5rem; font-size: 0.8rem; font-weight: 700; cursor: pointer; outline: none; font-family: inherit;">
-                    <option value="FRESH">✨ Fresh IPOs Only (2025 - 2026)</option>
+                    <option value="FRESH" selected>✨ Fresh IPOs Only (2025 - 2026)</option>
                     <option value="MATURE">🧱 Mature IPOs Only (2019 - 2024)</option>
                     <option value="ALL_IPO">🚀 All IPOs (2019 - 2026)</option>
                     <option value="NON_IPO">🏢 Non-IPOs Only</option>
-                    <option value="ALL" selected>🌐 All Stocks (IPOs & Non-IPOs)</option>
+                    <option value="ALL">🌐 All Stocks (IPOs & Non-IPOs)</option>
                 </select>
             </div>
 
@@ -2475,6 +2475,18 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             }
         }
 
+        // Sub-RM1 Price Tag Badge
+        function getSub1Badge(item) {
+            if (!item || item.price >= 1.00) return '';
+            if (item.price <= 0.30) {
+                return `<span style="font-size: 0.65rem; background: rgba(245, 158, 11, 0.18); color: #f59e0b; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.3); white-space: nowrap;" title="Saham Super Penny (≤ RM 0.30)">🪙 ≤ RM0.30</span>`;
+            } else if (item.price <= 0.50) {
+                return `<span style="font-size: 0.65rem; background: rgba(52, 211, 153, 0.18); color: #34d399; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(52, 211, 153, 0.3); white-space: nowrap;" title="Saham Murah (≤ RM 0.50)">💵 ≤ RM0.50</span>`;
+            } else {
+                return `<span style="font-size: 0.65rem; background: rgba(99, 102, 241, 0.18); color: #a5b4fc; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(99, 102, 241, 0.3); white-space: nowrap;" title="Saham Bawah RM 1.00">🚀 < RM1.00</span>`;
+            }
+        }
+
         // Programmatic Backtest Match Indicator based on the 3 Winner criteria per technique
         function getBacktestMatchBadge(item, technique) {
             if (!item) return '';
@@ -2795,6 +2807,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                                     <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
                                         ${crownEmoji}${item.name} <span style="font-size: 0.75rem; color: var(--accent);">🔗</span>
                                     </a>
+                                    ${getSub1Badge(item)}
                                     ${isHc ? `<span style="font-size: 0.68rem; background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.25); white-space: nowrap; box-shadow: 0 0 8px rgba(16, 185, 129, 0.3);" title="High-Conviction Setup: Gred Premium + Lantai Sangat Rapat (<=4%) + Kecairan Tinggi (>=RM1M)">🎯 Entry Padu</span>` : ''}
                                     ${matchBadge}
                                     ${hofBadge}
@@ -2907,7 +2920,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 let html = '';
                 let rankCount = 1;
 
-                validPicks.slice(0, 10).forEach(item => {
+                validPicks.forEach(item => {
                     const openPrice = item.openPrice;
                     const price = item.price;
                     const distToTrigger = ((price - openPrice) / openPrice) * 100;
@@ -2969,6 +2982,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                                     <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
                                         ${item.name} <span style="font-size: 0.75rem; color: var(--accent);">🔗</span>
                                     </a>
+                                    ${getSub1Badge(item)}
                                     ${isHc ? `<span style="font-size: 0.68rem; background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.25); white-space: nowrap; box-shadow: 0 0 8px rgba(16, 185, 129, 0.3);" title="High-Conviction Setup: Gred Premium + Dah Reclaimed + Dekat Open Price (<=4%) + Kecairan Tinggi (>=RM1M)">🎯 Entry Padu</span>` : ''}
                                     ${matchBadge}
                                     ${statusBadge}
@@ -3094,6 +3108,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                                     <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
                                         ${item.name} <span style="font-size: 0.75rem; color: var(--accent);">🔗</span>
                                     </a>
+                                    ${getSub1Badge(item)}
                                     ${matchBadge}
                                     ${hofBadge}
                                     ${item.hasLowerWickRejection ? `<span style="font-size: 0.68rem; background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.25); white-space: nowrap;">🟢 Reject Bawah</span>` : ''}
@@ -3434,14 +3449,14 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 updateEl.textContent = 'Dikemas kini: ' + d.toLocaleString('ms-MY', { timeZone: 'Asia/Kuala_Lumpur' });
             }
 
+            const ipoAgeFilterVal = document.getElementById('ipoAgeFilter') ? document.getElementById('ipoAgeFilter').value : 'FRESH';
             const candidates = (live.topVolume || []).filter(s => {
-                if (s.price >= 1.0) return false;
+                if (!s.price || s.price >= 1.0) return false;
                 if (s.signal !== 'buy') return false;
-                if (!['STAIRCASE', 'EXPLOSIVE'].includes(s.setupStyle)) return false;
+                if (!['STAIRCASE', 'EXPLOSIVE', 'SWING PLAY'].includes(s.setupStyle)) return false;
                 const floorDist = s.floorLow ? ((s.price - s.floorLow) / s.floorLow * 100) : null;
-                if (floorDist === null || floorDist > 6) return false;
-                const upside = s.high52 ? ((s.high52 - s.price) / s.price * 100) : null;
-                if (upside === null || upside < 5) return false;
+                if (floorDist !== null && floorDist > 10.0) return false;
+                if (!matchesIpoAgeFilter(s, ipoAgeFilterVal)) return false;
                 return true;
             });
 
@@ -3457,7 +3472,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 return aFloor - bFloor;
             });
 
-            const picks = candidates.slice(0, 3);
+            const picks = candidates;
             let positiveCount = 0;
 
             if (picks.length === 0) {
