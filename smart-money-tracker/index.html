@@ -1223,10 +1223,11 @@
             <!-- JB Picks: 4 saham pilihan -->
             <div id="jbpicks-section" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.06), rgba(217, 119, 6, 0.03)); border: 1.5px solid rgba(245, 158, 11, 0.25); border-radius: 14px; padding: 1.2rem; margin-bottom: 1.5rem;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                    <div style="display: flex; align-items: center; gap: 0.6rem;">
+                    <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
                         <span style="font-size: 1.4rem;">🎯</span>
                         <span style="font-weight: 800; font-size: 1rem; color: #f59e0b;">JerungBursa Picks</span>
-                        <span style="font-size: 0.7rem; background: rgba(245, 158, 11, 0.12); color: #f59e0b; padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 700;">Signal BUY · Momentum · Lantai ≤6% · ATH ≥5%</span>
+                        <span style="font-size: 0.7rem; background: rgba(245, 158, 11, 0.15); color: #f59e0b; padding: 0.15rem 0.6rem; border-radius: 6px; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.3);">3 TEKNIK TERBAIK (STAIRCASE · EXPLOSIVE · SWING PLAY)</span>
+                        <span style="font-size: 0.7rem; background: rgba(255, 255, 255, 0.05); color: #94a3b8; padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 600;">Signal BUY · Jarak Lantai ≤6% · ATH ≥5%</span>
                     </div>
                     <div style="display: flex; align-items: center; gap: 0.5rem;">
                         <span id="jbpicks-progress" style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">0/4</span>
@@ -1234,8 +1235,8 @@
                     </div>
                 </div>
                 <div id="jbpicks-table-wrapper" style="overflow-x: auto;"></div>
-                <div style="margin-top: 0.6rem; font-size: 0.65rem; color: rgba(245, 158, 11, 0.5); text-align: center; border-top: 1px solid rgba(245, 158, 11, 0.1); padding-top: 0.5rem;">
-                    Pilihan harian berdasarkan Signal BUY + Golden Entry/Momentum + Jarak Lantai ≤6% + Ruang ATH ≥5%
+                <div style="margin-top: 0.6rem; font-size: 0.65rem; color: rgba(245, 158, 11, 0.6); text-align: center; border-top: 1px solid rgba(245, 158, 11, 0.1); padding-top: 0.5rem;">
+                    Pilihan Harian Automatik: Gabungan 4 Saham Paling Ideal Merangkumi STAIRCASE, EXPLOSIVE & SWING PLAY
                 </div>
             </div>
 
@@ -1262,7 +1263,11 @@
                 </div>
                 <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid rgba(245, 158, 11, 0.35);">
                     <input type="checkbox" id="trackerGoldFilter" onchange="renderTracker()" style="cursor: pointer; width: 16px; height: 16px;" checked>
-                    <label for="trackerGoldFilter" style="color: #f59e0b; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none; display: flex; align-items: center; gap: 0.25rem;">👑 Hanya Gred A+ Pilihan (Skor ≥ 11 + Volum)</label>
+                    <label for="trackerGoldFilter" style="color: #f59e0b; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none; display: flex; align-items: center; gap: 0.25rem;">👑 Hanya Gred A+ Pilihan (Skor ≥ 10 + Volum)</label>
+                </div>
+                <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid rgba(6, 182, 212, 0.35);">
+                    <input type="checkbox" id="trackerUniqueFilter" onchange="renderTracker()" style="cursor: pointer; width: 16px; height: 16px;" checked>
+                    <label for="trackerUniqueFilter" style="color: #22d3ee; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none; display: flex; align-items: center; gap: 0.25rem;">🧹 Kunci Kaunter Unik (1 Kaunter 1 Baris)</label>
                 </div>
             </div>
             
@@ -1276,6 +1281,7 @@
                             <th style="color: #a78bfa; text-align: center;">Tarikh Trigger</th>
                             <th style="color: #a78bfa; text-align: right;">Harga Trigger</th>
                             <th style="color: #f59e0b; text-align: right;">Harga Semasa</th>
+                            <th onclick="toggleFloorSort()" style="color: #38bdf8; text-align: center; font-weight: 800; cursor: pointer; user-select: none;" title="Klik untuk susun ikut Jarak Lantai (Paling Rapat Lantai)">Jarak Lantai <span id="floor-sort-arrow">🔽</span></th>
                             <th onclick="toggleTrackerSort()" style="color: #f59e0b; text-align: center; cursor: pointer; user-select: none;" title="Klik untuk susun ikut P&L">P&L Semasa <span id="sort-arrow">↕️</span></th>
                             <th style="color: #34d399; text-align: center;">Hari +1</th>
                             <th style="color: #34d399; text-align: center;">Hari +2</th>
@@ -3319,15 +3325,26 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             });
         });
 
-        let trackerSortMode = 'desc'; // 'default', 'asc', 'desc'
+        let trackerSortKey = 'floorDist'; // 'floorDist' by default!
+        let trackerSortDir = 'asc';       // Smallest floor distance first (0.0% -> 1.7% -> 2.5%)
+
+        function toggleFloorSort() {
+            if (trackerSortKey === 'floorDist') {
+                trackerSortDir = trackerSortDir === 'asc' ? 'desc' : 'asc';
+            } else {
+                trackerSortKey = 'floorDist';
+                trackerSortDir = 'asc';
+            }
+            renderTracker();
+        }
+        window.toggleFloorSort = toggleFloorSort;
 
         function toggleTrackerSort() {
-            if (trackerSortMode === 'default') {
-                trackerSortMode = 'desc';
-            } else if (trackerSortMode === 'desc') {
-                trackerSortMode = 'asc';
+            if (trackerSortKey === 'pnl') {
+                trackerSortDir = trackerSortDir === 'desc' ? 'asc' : 'desc';
             } else {
-                trackerSortMode = 'default';
+                trackerSortKey = 'pnl';
+                trackerSortDir = 'desc';
             }
             renderTracker();
         }
@@ -3343,15 +3360,31 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             const goldFilterEl = document.getElementById('trackerGoldFilter');
             const onlyGold = goldFilterEl ? goldFilterEl.checked : false;
             
-            // Update sort indicator arrow
+            // Update sort indicator arrows
             const arrowEl = document.getElementById('sort-arrow');
+            const floorArrowEl = document.getElementById('floor-sort-arrow');
+
             if (arrowEl) {
-                if (trackerSortMode === 'desc') arrowEl.innerText = ' 🔽';
-                else if (trackerSortMode === 'asc') arrowEl.innerText = ' 🔼';
-                else arrowEl.innerText = ' ↕️';
+                if (trackerSortKey === 'pnl') {
+                    arrowEl.innerText = trackerSortDir === 'desc' ? ' 🔽' : ' 🔼';
+                } else {
+                    arrowEl.innerText = ' ↕️';
+                }
+            }
+
+            if (floorArrowEl) {
+                if (trackerSortKey === 'floorDist') {
+                    floorArrowEl.innerText = trackerSortDir === 'asc' ? ' 🔼' : ' 🔽';
+                } else {
+                    floorArrowEl.innerText = ' ↕️';
+                }
             }
 
             const rawData = window.TRACKER_DATA || [];
+            const liveVolume = (window.liveData && window.liveData.topVolume) || [];
+            
+            const uniqueFilterEl = document.getElementById('trackerUniqueFilter');
+            const onlyUnique = uniqueFilterEl ? uniqueFilterEl.checked : true;
             
             // 1. Filter Data
             let filteredData = rawData.filter(tr => {
@@ -3363,21 +3396,35 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 }
                 return true;
             });
-            
-            // 2. Sort Data by currentDiff
-            if (trackerSortMode === 'desc') {
-                filteredData.sort((a, b) => {
-                    const diffA = a.currentDiff !== null ? a.currentDiff : -9999;
-                    const diffB = b.currentDiff !== null ? b.currentDiff : -9999;
-                    return diffB - diffA;
+
+            // 1b. Deduplicate by Stock Name if "Kunci Kaunter Unik" is checked
+            if (onlyUnique) {
+                const uniqueStockMap = new Map();
+                filteredData.forEach(tr => {
+                    if (!uniqueStockMap.has(tr.name) || tr.date > uniqueStockMap.get(tr.name).date) {
+                        uniqueStockMap.set(tr.name, tr);
+                    }
                 });
-            } else if (trackerSortMode === 'asc') {
-                filteredData.sort((a, b) => {
-                    const diffA = a.currentDiff !== null ? a.currentDiff : 9999;
-                    const diffB = b.currentDiff !== null ? b.currentDiff : 9999;
-                    return diffA - diffB;
-                });
+                filteredData = Array.from(uniqueStockMap.values());
             }
+            
+            // 2. Sort Data
+            filteredData.sort((a, b) => {
+                if (trackerSortKey === 'floorDist') {
+                    const liveA = liveVolume.find(l => l.name === a.name);
+                    const liveB = liveVolume.find(l => l.name === b.name);
+                    const priceA = (liveA && typeof liveA.price === 'number') ? liveA.price : a.currentPrice;
+                    const priceB = (liveB && typeof liveB.price === 'number') ? liveB.price : b.currentPrice;
+                    const distA = (priceA && liveA && liveA.floorLow) ? ((priceA - liveA.floorLow) / liveA.floorLow * 100) : 999;
+                    const distB = (priceB && liveB && liveB.floorLow) ? ((priceB - liveB.floorLow) / liveB.floorLow * 100) : 999;
+                    return trackerSortDir === 'asc' ? distA - distB : distB - distA;
+                } else if (trackerSortKey === 'pnl') {
+                    const diffA = a.currentDiff !== null ? a.currentDiff : (trackerSortDir === 'desc' ? -9999 : 9999);
+                    const diffB = b.currentDiff !== null ? b.currentDiff : (trackerSortDir === 'desc' ? -9999 : 9999);
+                    return trackerSortDir === 'desc' ? diffB - diffA : diffA - diffB;
+                }
+                return 0;
+            });
 
             // 3. Render Data Rows
             let html = '';
@@ -3398,6 +3445,19 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     html += `<td style="text-align: right; font-weight: 700; color: #f59e0b; font-size: 0.85rem; padding: 0.75rem">RM ${tr.currentPrice.toFixed(3)}</td>`;
                 } else {
                     html += `<td style="text-align: right; color: #555; font-size: 0.82rem; padding: 0.75rem">-</td>`;
+                }
+
+                // Jarak Lantai Column (Using Live Price)
+                const liveItem = ((window.liveData && window.liveData.topVolume) || []).find(l => l.name === tr.name);
+                const floorLow = liveItem ? liveItem.floorLow : null;
+                const curPrice = (liveItem && typeof liveItem.price === 'number') ? liveItem.price : tr.currentPrice;
+                const floorDist = (curPrice && floorLow) ? ((curPrice - floorLow) / floorLow * 100) : null;
+                
+                if (floorDist !== null) {
+                    const fColor = floorDist <= 5 ? '#34d399' : (floorDist <= 8 ? '#f59e0b' : '#fb7185');
+                    html += `<td style="text-align: center; font-weight: 800; color: ${fColor}; font-size: 0.82rem; padding: 0.75rem">+${floorDist.toFixed(1)}%</td>`;
+                } else {
+                    html += `<td style="text-align: center; color: #555; font-size: 0.82rem; padding: 0.75rem">-</td>`;
                 }
                 
                 // Current P&L Column
@@ -3427,7 +3487,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             });
             
             if (filteredIdx === 1) {
-                html = `<tr><td colspan="17" style="text-align: center; color: var(--text-muted); padding: 3rem 0;">Tiada kaunter di bawah teknik ini dikesan.</td></tr>`;
+                html = `<tr><td colspan="18" style="text-align: center; color: var(--text-muted); padding: 3rem 0;">Tiada kaunter di bawah teknik ini dikesan.</td></tr>`;
             }
             
             tbody.innerHTML = html;
@@ -3472,7 +3532,31 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 return aFloor - bFloor;
             });
 
-            const picks = candidates;
+            // 🎯 Rule: Select Top picks from all 3 setup styles (STAIRCASE, EXPLOSIVE, SWING PLAY)
+            const staircaseList = candidates.filter(s => s.setupStyle === 'STAIRCASE');
+            const explosiveList = candidates.filter(s => s.setupStyle === 'EXPLOSIVE');
+            const swingList = candidates.filter(s => s.setupStyle === 'SWING PLAY');
+
+            let picks = [];
+            
+            // Take up to 2 Staircase
+            if (staircaseList.length > 0) picks.push(...staircaseList.slice(0, 2));
+
+            // Take up to 1 Explosive
+            if (explosiveList.length > 0) picks.push(...explosiveList.slice(0, 1));
+
+            // Take up to 1 Swing Play
+            if (swingList.length > 0) picks.push(...swingList.slice(0, 1));
+
+            // If we don't have 4 yet, fill remaining from leftover candidates
+            if (picks.length < 4) {
+                const pickedNames = new Set(picks.map(p => p.name));
+                const remaining = candidates.filter(c => !pickedNames.has(c.name));
+                for (let r of remaining) {
+                    if (picks.length >= 4) break;
+                    picks.push(r);
+                }
+            }
             let positiveCount = 0;
 
             if (picks.length === 0) {
@@ -3527,13 +3611,20 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
                 const rowBg = idx % 2 === 0 ? 'background: rgba(255,255,255,0.02);' : '';
 
+                let setupBadge = '<span style="background: rgba(6, 182, 212, 0.15); color: #22d3ee; padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(6, 182, 212, 0.3); font-size: 0.7rem;">🧱 STAIRCASE</span>';
+                if (setup === 'EXPLOSIVE') {
+                    setupBadge = '<span style="background: rgba(244, 63, 94, 0.15); color: #fb7185; padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(244, 63, 94, 0.3); font-size: 0.7rem;">⚡ EXPLOSIVE</span>';
+                } else if (setup === 'SWING PLAY') {
+                    setupBadge = '<span style="background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.3); font-size: 0.7rem;">🏄 SWING PLAY</span>';
+                }
+
                 t += `<tr style="${rowBg}">
                     <td style="${cellStyle}text-align: left; color: var(--text-muted);">${idx + 1}</td>
                     <td style="${cellStyle}text-align: left; font-weight: 800; color: #e2e8f0;">${name}${goldBadge}</td>
                     <td style="${cellStyle}text-align: right; font-weight: 700; color: white;">RM ${typeof price === 'number' ? price.toFixed(3) : price}</td>
                     <td style="${cellStyle}text-align: center;"><span style="color: #34d399; font-weight: 700; background: rgba(52, 211, 153, 0.1); padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem;">${signal}</span></td>
                     <td style="${cellStyle}text-align: center; font-weight: 700; color: ${changeColor};">${changeArrow} ${Math.abs(changePct).toFixed(2)}%</td>
-                    <td style="${cellStyle}text-align: left; color: #94a3b8;">${setup || '—'}</td>
+                    <td style="${cellStyle}text-align: left;">${setupBadge}</td>
                     <td style="${cellStyle}text-align: right; color: #94a3b8;">${floor ? 'RM ' + floor.toFixed(3) : '—'}</td>
                     <td style="${cellStyle}text-align: right; font-weight: 700; color: ${floorDist !== null ? (floorDist <= 6 ? '#34d399' : '#f87171') : '#94a3b8'};">${floorDist !== null ? floorDist.toFixed(1) + '%' : '—'}</td>
                     <td style="${cellStyle}text-align: right; font-weight: 700; color: ${upsideAth !== null ? (upsideAth >= 5 ? '#34d399' : (upsideAth >= 3 ? '#f59e0b' : '#f87171')) : '#94a3b8'};">${upsideAth !== null ? upsideAth.toFixed(1) + '%' : '—'}</td>

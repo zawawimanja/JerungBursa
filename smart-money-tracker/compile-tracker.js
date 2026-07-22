@@ -152,9 +152,9 @@ const output = triggers.map(tr => {
     }
   }
   
-  // Gold Criteria: Score >= 11, STAIRCASE or EXPLOSIVE setup, and Turnover >= RM 750,000
-  const isGold = tr.score >= 11 && 
-                 (tr.setup === 'STAIRCASE' || tr.setup === 'EXPLOSIVE') && 
+  // Gold Criteria: Score >= 10, Valid setup (STAIRCASE, EXPLOSIVE, SWING PLAY), and Turnover >= RM 750,000
+  const isGold = tr.score >= 10 && 
+                 ['STAIRCASE', 'EXPLOSIVE', 'SWING PLAY'].includes(tr.setup.toUpperCase()) && 
                  tr.turnover >= 750000;
   
   return {
