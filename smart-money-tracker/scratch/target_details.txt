@@ -1,0 +1,39 @@
+=== Target Stocks ===
+
+Ticker: EIPOWER
+- Price: RM 0.6850000023841858
+- Signal: buy
+- Pullback: 11.04%
+- Setup: 📉 Healthy Dip
+- TouchCount: 3
+- CloseTightness: 4.58%
+- Reason: 🔒 Solid Base (3x) | 🔥 Golden Entry: Solid Consolidation Base (Suitable for Swing/Hold) (Healthy Dip)
+
+Ticker: MMCS
+- Price: RM 0.41499999165534973
+- Signal: buy
+- Pullback: 0%
+- Setup: 🔥 RBS Retest / Near ATH
+- TouchCount: 3
+- CloseTightness: 5.06%
+- Reason: 🔒 Solid Base (3x) | 🔥 Golden Entry: Solid Consolidation Base (Suitable for Swing/Hold) (Near ATH)
+
+Ticker: SRKK
+- Price: RM 0.5400000214576721
+- Signal: buy
+- Pullback: 14.96%
+- Setup: 📉 Healthy Dip
+- TouchCount: 1
+- CloseTightness: 6.93%
+- Reason: ⚡ Strong Momentum: Smart Money Buying (Suitable for Intraday/Swing) (Healthy Dip)
+
+Ticker: STRATUS
+- Price: RM 2.069999933242798
+- Signal: buy
+- Pullback: 8.41%
+- Setup: 📉 Healthy Dip
+- TouchCount: 1
+- CloseTightness: 1.93%
+- Reason: VIP Sideway / Pullback (Monitor for Opportunities) (Healthy Dip)
+
+Not found: RTECH

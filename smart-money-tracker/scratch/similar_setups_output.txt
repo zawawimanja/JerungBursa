@@ -1,0 +1,77 @@
+=== Technology & Selected Target Stocks under RM 1.00 ===
+- ZETRIX (Technology) | Price: RM 0.715 | Signal: avoid | Pullback: 24.74% | TouchCount: 5 | CloseTightness: 4.2% | Setup: 🧊 Downtrend / Avoid
+- DNEX (Technology) | Price: RM 0.470 | Signal: buy | Pullback: 3.09% | TouchCount: 5 | CloseTightness: 6.82% | Setup: 🔥 RBS Retest / Near ATH
+- SRKK (Technology) | Price: RM 0.540 | Signal: buy | Pullback: 14.96% | TouchCount: 1 | CloseTightness: 6.93% | Setup: 📉 Healthy Dip
+- ICTZONE (Technology) | Price: RM 0.230 | Signal: avoid | Pullback: 2.13% | TouchCount: 3 | CloseTightness: 15% | Setup: 🔥 RBS Retest / Near ATH
+- OPPSTAR (Technology) | Price: RM 0.605 | Signal: avoid | Pullback: 42.92% | TouchCount: 6 | CloseTightness: 3.31% | Setup: 🧊 Downtrend / Avoid
+- EIPOWER (Industrial) | Price: RM 0.685 | Signal: buy | Pullback: 11.04% | TouchCount: 3 | CloseTightness: 4.58% | Setup: 📉 Healthy Dip
+- MMCS (Technology) | Price: RM 0.415 | Signal: buy | Pullback: 0% | TouchCount: 3 | CloseTightness: 5.06% | Setup: 🔥 RBS Retest / Near ATH
+- ADNEX (Technology) | Price: RM 0.390 | Signal: avoid | Pullback: 6.02% | TouchCount: 5 | CloseTightness: 4% | Setup: 📉 Healthy Dip
+- HKB (Technology) | Price: RM 0.610 | Signal: buy | Pullback: 18.67% | TouchCount: 5 | CloseTightness: 9.32% | Setup: 🔻 Buy Support / Deep Pullback
+- ELSA (Technology) | Price: RM 0.220 | Signal: avoid | Pullback: 22.81% | TouchCount: 1 | CloseTightness: 9.09% | Setup: 🧊 Downtrend / Avoid
+- CLOUDPT (Technology) | Price: RM 0.445 | Signal: avoid | Pullback: 51.1% | TouchCount: 5 | CloseTightness: 4.71% | Setup: 🧊 Downtrend / Avoid
+- LGMS (Technology) | Price: RM 0.490 | Signal: avoid | Pullback: 48.42% | TouchCount: 3 | CloseTightness: 3.16% | Setup: 🧊 Downtrend / Avoid
+- TFP (Technology) | Price: RM 0.090 | Signal: avoid | Pullback: 28% | TouchCount: 1 | CloseTightness: 20% | Setup: 🔻 Buy Support / Deep Pullback
+- CNERGEN (Technology) | Price: RM 0.610 | Signal: buy | Pullback: 6.15% | TouchCount: 2 | CloseTightness: 8.77% | Setup: 📉 Healthy Dip
+- OGM (Technology) | Price: RM 0.140 | Signal: avoid | Pullback: 41.67% | TouchCount: 7 | CloseTightness: 3.7% | Setup: 🔻 Premium IPO Deep Pullback
+- SBS (Technology) | Price: RM 0.120 | Signal: avoid | Pullback: 53.85% | TouchCount: 1 | CloseTightness: 4.35% | Setup: 🔻 Premium IPO Deep Pullback
+- ECOSYS (Technology) | Price: RM 0.000 | Signal: buy | Pullback: null% | TouchCount: 0 | CloseTightness: null% | Setup: N/A
+- TTL HOLDINGS BERHAD (Technology) | Price: RM 0.000 | Signal: buy | Pullback: null% | TouchCount: 0 | CloseTightness: null% | Setup: N/A
+- EVOCOM BERHAD (Technology) | Price: RM 0.000 | Signal: buy | Pullback: null% | TouchCount: 0 | CloseTightness: null% | Setup: N/A
+- ETA WORLD GROUP BERHAD (Technology) | Price: RM 0.000 | Signal: buy | Pullback: null% | TouchCount: 0 | CloseTightness: null% | Setup: N/A
+- QUBE INTERNATIONAL BERHAD (Technology) | Price: RM 0.000 | Signal: buy | Pullback: null% | TouchCount: 0 | CloseTightness: null% | Setup: N/A
+- MYDCD BERHAD (Technology) | Price: RM 0.000 | Signal: buy | Pullback: null% | TouchCount: 0 | CloseTightness: null% | Setup: N/A
+- REDPLANET BERHAD (Technology) | Price: RM 0.000 | Signal: buy | Pullback: null% | TouchCount: 0 | CloseTightness: null% | Setup: N/A
+- EMITS BERHAD (Technology) | Price: RM 0.000 | Signal: buy | Pullback: null% | TouchCount: 0 | CloseTightness: null% | Setup: N/A
+- SQ ADVANCED INTERCONNECT BERHAD (Technology) | Price: RM 0.000 | Signal: buy | Pullback: null% | TouchCount: 0 | CloseTightness: null% | Setup: N/A
+- SCA SOLUTIONS BERHAD (Technology) | Price: RM 0.000 | Signal: buy | Pullback: null% | TouchCount: 0 | CloseTightness: null% | Setup: N/A
+
+=== All Buy Stocks under RM 1.00 (Excluding price 0/null) ===
+- DNEX (Technology) | Price: RM 0.470 | Pullback: 3.09% | TouchCount: 5 | CloseTightness: 6.82% | Setup: 🔥 RBS Retest / Near ATH | Style: STAIRCASE
+  Reason: 🔥 Golden Entry: Smart Money Accumulating (Suitable for Swing/Hold) (Near ATH)
+- SRKK (Technology) | Price: RM 0.540 | Pullback: 14.96% | TouchCount: 1 | CloseTightness: 6.93% | Setup: 📉 Healthy Dip | Style: EXPLOSIVE
+  Reason: ⚡ Strong Momentum: Smart Money Buying (Suitable for Intraday/Swing) (Healthy Dip)
+- RAMSSOL (Industrial) | Price: RM 0.770 | Pullback: 29.36% | TouchCount: 6 | CloseTightness: 5.19% | Setup: 🔻 Buy Support / Deep Pullback | Style: SWING PLAY
+  Reason: VIP Sideway / Pullback (Monitor for Opportunities) (Pullback Support)
+- EIPOWER (Industrial) | Price: RM 0.685 | Pullback: 11.04% | TouchCount: 3 | CloseTightness: 4.58% | Setup: 📉 Healthy Dip | Style: SWING PLAY
+  Reason: 🔒 Solid Base (3x) | 🔥 Golden Entry: Solid Consolidation Base (Suitable for Swing/Hold) (Healthy Dip)
+- CBHB (Property) | Price: RM 0.705 | Pullback: 5.37% | TouchCount: 3 | CloseTightness: 5.15% | Setup: 📉 Healthy Dip | Style: STAIRCASE
+  Reason: 🔒 Solid Base (3x) | 🔥 Golden Entry: Solid Consolidation Base (Suitable for Swing/Hold) (Healthy Dip)
+- MMCS (Technology) | Price: RM 0.415 | Pullback: 0% | TouchCount: 3 | CloseTightness: 5.06% | Setup: 🔥 RBS Retest / Near ATH | Style: STAIRCASE
+  Reason: 🔒 Solid Base (3x) | 🔥 Golden Entry: Solid Consolidation Base (Suitable for Swing/Hold) (Near ATH)
+- ISF (Consumer) | Price: RM 0.610 | Pullback: 5.43% | TouchCount: 6 | CloseTightness: 12.39% | Setup: 📉 Healthy Dip | Style: STAIRCASE
+  Reason: VIP Sideway / Pullback (Monitor for Opportunities) (Healthy Dip)
+- AMS (Industrial) | Price: RM 0.430 | Pullback: 15.69% | TouchCount: 2 | CloseTightness: 4.82% | Setup: 🔻 Buy Support / Deep Pullback | Style: SWING PLAY
+  Reason: VIP Sideway / Pullback (Monitor for Opportunities) (Pullback Support)
+- OXB (Industrial) | Price: RM 0.375 | Pullback: 25% | TouchCount: 6 | CloseTightness: 7.14% | Setup: 🔻 Buy Support / Deep Pullback | Style: EXPLOSIVE
+  Reason: ⚡ Strong Momentum: Smart Money Buying (Suitable for Intraday/Swing) (Pullback Support)
+- AMBEST (Consumer) | Price: RM 0.835 | Pullback: 11.64% | TouchCount: 5 | CloseTightness: 3.64% | Setup: 📉 Healthy Dip | Style: SWING PLAY
+  Reason: 🔒 Solid Base (5x) | 🔥 Golden Entry: Solid Consolidation Base (Suitable for Swing/Hold) (Healthy Dip)
+- BUSCAP (Industrial) | Price: RM 0.255 | Pullback: 30.14% | TouchCount: 3 | CloseTightness: 4.08% | Setup: 🔻 Buy Support / Deep Pullback | Style: SWING PLAY
+  Reason: 🔥 Golden Entry: Smart Money Accumulating (Suitable for Swing/Hold) (Pullback Support)
+- MCLEAN (Industrial) | Price: RM 0.740 | Pullback: 9.2% | TouchCount: 3 | CloseTightness: 4.14% | Setup: 📉 Healthy Dip | Style: STAIRCASE
+  Reason: 🔒 Solid Base (3x) | 🔥 Golden Entry: Solid Consolidation Base (Suitable for Swing/Hold) (Healthy Dip)
+- ICENTS (Industrial) | Price: RM 0.645 | Pullback: 5.15% | TouchCount: 5 | CloseTightness: 3.2% | Setup: 📉 Healthy Dip | Style: STAIRCASE
+  Reason: 🔒 Solid Base (5x) | 🔥 Golden Entry: Solid Consolidation Base (Suitable for Swing/Hold) (Healthy Dip)
+- PWRWELL (Industrial) | Price: RM 0.820 | Pullback: 8.38% | TouchCount: 7 | CloseTightness: 4.37% | Setup: 📉 Healthy Dip | Style: STAIRCASE
+  Reason: 🔒 Solid Base (7x) | 🔥 Golden Entry: Solid Consolidation Base (Suitable for Swing/Hold) (Healthy Dip)
+- UUE (Utilities) | Price: RM 0.545 | Pullback: 13.49% | TouchCount: 2 | CloseTightness: 4.81% | Setup: 📉 Healthy Dip | Style: SWING PLAY
+  Reason: VIP Sideway / Pullback (Monitor for Opportunities) (Healthy Dip)
+- JTGROUP (Industrial) | Price: RM 0.665 | Pullback: 13.64% | TouchCount: 6 | CloseTightness: 3.1% | Setup: 📉 Healthy Dip | Style: SWING PLAY
+  Reason: 🔒 Solid Base (6x) | 🔥 Golden Entry: Solid Consolidation Base (Suitable for Swing/Hold) (Healthy Dip)
+- CPETECH (Industrial) | Price: RM 0.985 | Pullback: 6.19% | TouchCount: 3 | CloseTightness: 3.65% | Setup: 📉 Healthy Dip | Style: STAIRCASE
+  Reason: 🔒 Solid Base (3x) | 🔥 Golden Entry: Solid Consolidation Base (Suitable for Swing/Hold) (Healthy Dip)
+- RESTNGO (IPO) | Price: RM 0.135 | Pullback: 12.9% | TouchCount: 4 | CloseTightness: 3.7% | Setup: 📉 Healthy Dip | Style: SWING PLAY
+  Reason: 🔒 Solid Base (4x) | ⚠️ Pump & Dump Penny: Consolidation Base (Intraday Only, Avoid Hold!) (Healthy Dip)
+- HEGROUP (Utilities) | Price: RM 0.575 | Pullback: 4.17% | TouchCount: 7 | CloseTightness: 4.46% | Setup: 🔥 RBS Retest / Near ATH | Style: STAIRCASE
+  Reason: 🔒 Solid Base (7x) | 🔥 Golden Entry: Solid Consolidation Base (Suitable for Swing/Hold) (Near ATH)
+- OGX (Industrial) | Price: RM 0.475 | Pullback: 10.38% | TouchCount: 3 | CloseTightness: 10.23% | Setup: 📉 Healthy Dip | Style: SWING PLAY
+  Reason: VIP Sideway / Pullback (Monitor for Opportunities) (Healthy Dip)
+- 3REN (IPO) | Price: RM 0.410 | Pullback: 14.58% | TouchCount: 6 | CloseTightness: 6.33% | Setup: 📉 Healthy Dip | Style: SWING PLAY
+  Reason: VIP Sideway / Pullback (Monitor for Opportunities) (Healthy Dip)
+- HKB (Technology) | Price: RM 0.610 | Pullback: 18.67% | TouchCount: 5 | CloseTightness: 9.32% | Setup: 🔻 Buy Support / Deep Pullback | Style: SWING PLAY
+  Reason: VIP Sideway / Pullback (Monitor for Opportunities) (Pullback Support)
+- ECA (Industrial) | Price: RM 0.320 | Pullback: 4.48% | TouchCount: 5 | CloseTightness: 4.92% | Setup: 🔥 RBS Retest / Near ATH | Style: STAIRCASE
+  Reason: 🔒 Solid Base (5x) | 🔥 Golden Entry: Solid Consolidation Base (Suitable for Swing/Hold) (Near ATH)
+- CNERGEN (Technology) | Price: RM 0.610 | Pullback: 6.15% | TouchCount: 2 | CloseTightness: 8.77% | Setup: 📉 Healthy Dip | Style: STAIRCASE
+  Reason: VIP Sideway / Pullback (Monitor for Opportunities) (Healthy Dip)
