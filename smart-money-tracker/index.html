@@ -684,6 +684,7 @@
         <button class="tab-btn" id="tab-calculator" onclick="switchTab('calculator')" style="flex: 1; min-width: 150px; white-space: nowrap;">🧮 Kalkulator Posisi</button>
         <button class="tab-btn" id="tab-info" onclick="switchTab('info')" style="flex: 1; min-width: 150px; white-space: nowrap;">📖 Glosari & Panduan</button>
         <button class="tab-btn" id="tab-tracker" onclick="switchTab('tracker')" style="flex: 1; min-width: 150px; white-space: nowrap;">📈 Tracker Bawah RM1</button>
+        <button class="tab-btn" id="tab-portfolio" onclick="switchTab('portfolio')" style="flex: 1; min-width: 150px; white-space: nowrap; background: linear-gradient(135deg, rgba(167, 139, 250, 0.25), rgba(139, 92, 246, 0.15)); border: 1.5px solid rgba(167, 139, 250, 0.4); color: #c084fc;">💼 Portfolio Saya</button>
     </div>
 
     <!-- TAB 1: TREND RIDER -->
@@ -1423,6 +1424,43 @@
         </div>
     </div>
 
+    <!-- TAB 7: PORTFOLIO SAYA -->
+    <div id="view-portfolio" style="display: none;">
+        <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 1px solid rgba(167, 139, 250, 0.25); border-radius: 12px; padding: 1.5rem; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); margin-bottom: 2rem;">
+            <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.75rem; margin-bottom: 1.2rem; flex-wrap: wrap; gap: 1rem;">
+                <div style="display: flex; align-items: center; gap: 0.6rem;">
+                    <span style="font-size: 1.6rem;">💼</span>
+                    <div>
+                        <h3 style="margin: 0; font-size: 1.25rem; color: #a78bfa; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">Portfolio Dagangan Peram Saya</h3>
+                        <span style="font-size: 0.7rem; color: var(--text-muted); font-weight: 600;">Kemas kini harga semasa secara langsung merentasi 4 akaun berbeza</span>
+                    </div>
+                </div>
+                <div style="background: rgba(167, 139, 250, 0.1); border: 1px solid rgba(167, 139, 250, 0.25); border-radius: 8px; padding: 0.4rem 0.8rem; font-weight: 700; font-size: 0.85rem; color: #a78bfa;">
+                    Total Valuation: <span id="portfolio-total-val" style="color: white; font-weight: 800;">Calculated Live...</span>
+                </div>
+            </div>
+            
+            <div style="overflow-x: auto;">
+                <table class="history-table" style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.85rem;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">
+                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800;">Saham</th>
+                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Harga Beli</th>
+                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Harga Semasa</th>
+                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Harga Stop Loss (SL)</th>
+                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Jarak Ke SL</th>
+                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Prestasi P&amp;L</th>
+                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Status Perlindungan</th>
+                        </tr>
+                    </thead>
+                    <tbody id="portfolioTableBody">
+                        <!-- Dynamically populated from JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
     <script>
         // Interactive Example Selector logic for strategy guides
         function switchExample(type, number) {
@@ -1530,6 +1568,7 @@
             const viewCalculator = document.getElementById('view-calculator');
             const viewInfo = document.getElementById('view-info');
             const viewTracker = document.getElementById('view-tracker');
+            const viewPortfolio = document.getElementById('view-portfolio');
             
             const tabTrend = document.getElementById('tab-trend');
             const tabSpring = document.getElementById('tab-spring');
@@ -1537,6 +1576,7 @@
             const tabCalculator = document.getElementById('tab-calculator');
             const tabInfo = document.getElementById('tab-info');
             const tabTracker = document.getElementById('tab-tracker');
+            const tabPortfolio = document.getElementById('tab-portfolio');
             
             // Hide all views
             viewTrend.style.display = 'none';
@@ -1545,6 +1585,7 @@
             viewCalculator.style.display = 'none';
             if (viewInfo) viewInfo.style.display = 'none';
             if (viewTracker) viewTracker.style.display = 'none';
+            if (viewPortfolio) viewPortfolio.style.display = 'none';
             
             // Remove active class from all tabs
             tabTrend.classList.remove('active');
@@ -1553,6 +1594,7 @@
             tabCalculator.classList.remove('active');
             if (tabInfo) tabInfo.classList.remove('active');
             if (tabTracker) tabTracker.classList.remove('active');
+            if (tabPortfolio) tabPortfolio.classList.remove('active');
             
             // Show selected view & set active class
             if (tabId === 'trend') {
@@ -1577,6 +1619,12 @@
                     renderJBPicks();
                 }
                 if (tabTracker) tabTracker.classList.add('active');
+            } else if (tabId === 'portfolio') {
+                if (viewPortfolio) {
+                    viewPortfolio.style.display = 'block';
+                    renderPortfolio();
+                }
+                if (tabPortfolio) tabPortfolio.classList.add('active');
             }
         }
 
@@ -2457,6 +2505,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             renderReclaimRadar();
             renderBottomFishing();
             updateSpecialPicks();
+            renderPortfolio();
         }
 
         // Update the custom MMCS and Stratus watchlist price and change percentage dynamically
@@ -3915,6 +3964,81 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             if (progress) progress.textContent = picks.length > 0 ? `${positiveCount}/${picks.length} positif` : '0/4';
         }
         window.renderJBPicks = renderJBPicks;
+
+        function renderPortfolio() {
+            const list = currentData || [];
+            const portfolio = [
+                { name: 'SDCG', buyPrice: 0.725, slPrice: 0.700, allocation: 2000 },
+                { name: 'SRKKAI', buyPrice: 0.545, slPrice: 0.490, allocation: 2000 },
+                { name: 'EIPOWER', buyPrice: 0.685, slPrice: 0.630, allocation: 2000 },
+                { name: 'RESTNGO', buyPrice: 0.135, slPrice: 0.125, allocation: 2000 }
+            ];
+            
+            const tbody = document.getElementById('portfolioTableBody');
+            if (!tbody) return;
+            tbody.innerHTML = '';
+            
+            let totalCost = 0;
+            let totalVal = 0;
+            
+            portfolio.forEach(p => {
+                // Find current price from currentData
+                // Ticker name in currentData might have suffix like .KL, e.g. SDCG.KL
+                const found = list.find(s => s.name.toUpperCase().trim() === p.name || s.name.toUpperCase().trim().startsWith(p.name));
+                const currentPrice = found ? found.price : p.buyPrice;
+                
+                const units = Math.floor(p.allocation / p.buyPrice);
+                const cost = units * p.buyPrice;
+                const valuation = units * currentPrice;
+                
+                totalCost += cost;
+                totalVal += valuation;
+                
+                const pnlPct = ((currentPrice - p.buyPrice) / p.buyPrice) * 100;
+                const pnlVal = valuation - cost;
+                
+                const pnlColor = pnlPct > 0 ? '#34d399' : (pnlPct < 0 ? '#f87171' : '#94a3b8');
+                const pnlArrow = pnlPct > 0 ? '▲' : (pnlPct < 0 ? '▼' : '—');
+                
+                const distToSl = ((currentPrice - p.slPrice) / currentPrice) * 100;
+                const slColor = distToSl <= 2.0 ? '#fb7185' : (distToSl <= 5.0 ? '#fbbf24' : '#34d399');
+                
+                const statusHtml = currentPrice <= p.slPrice 
+                    ? `<span style="background: rgba(244, 63, 94, 0.15); color: #fb7185; border: 1px solid rgba(244, 63, 94, 0.25); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 800; font-size: 0.7rem; white-space: nowrap;">🚨 BOCOR SL (SELL)</span>`
+                    : `<span style="background: rgba(52, 211, 153, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.25); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 800; font-size: 0.7rem; white-space: nowrap;">🛡️ SELAMAT</span>`;
+                
+                tbody.innerHTML += `
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.02)'" onmouseout="this.style.background='none'">
+                        <td style="padding: 0.8rem 0.75rem; font-weight: 800; color: white; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            ${p.name}
+                            <span style="font-size: 0.65rem; color: var(--text-muted); display: block; font-weight: 400; margin-top: 0.1rem;">PEGANGAN: ${units.toLocaleString()} unit (${(units/100).toFixed(0)} Lot)</span>
+                        </td>
+                        <td style="padding: 0.8rem 0.75rem; text-align: center; font-weight: 700; color: #a5b4fc; border-bottom: 1px solid rgba(255,255,255,0.05);">RM ${p.buyPrice.toFixed(3)}</td>
+                        <td style="padding: 0.8rem 0.75rem; text-align: center; font-weight: 800; color: white; border-bottom: 1px solid rgba(255,255,255,0.05);">RM ${currentPrice.toFixed(3)}</td>
+                        <td style="padding: 0.8rem 0.75rem; text-align: center; font-weight: 700; color: #f87171; border-bottom: 1px solid rgba(255,255,255,0.05);">RM ${p.slPrice.toFixed(3)}</td>
+                        <td style="padding: 0.8rem 0.75rem; text-align: center; font-weight: 700; color: ${slColor}; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            ${distToSl > 0 ? `+${distToSl.toFixed(1)}%` : `${distToSl.toFixed(1)}%`}
+                            <span style="font-size: 0.65rem; color: var(--text-muted); display: block; font-weight: 400; margin-top: 0.1rem;">dari Lantai SL</span>
+                        </td>
+                        <td style="padding: 0.8rem 0.75rem; text-align: center; font-weight: 800; color: ${pnlColor}; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            ${pnlArrow} ${Math.abs(pnlPct).toFixed(2)}%
+                            <span style="font-size: 0.65rem; color: ${pnlColor}; display: block; font-weight: 600; margin-top: 0.1rem;">${pnlVal >= 0 ? '+' : ''}RM ${pnlVal.toFixed(2)}</span>
+                        </td>
+                        <td style="padding: 0.8rem 0.75rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">${statusHtml}</td>
+                    </tr>
+                `;
+            });
+            
+            const totalPnlVal = totalVal - totalCost;
+            const totalPnlPct = totalCost > 0 ? (totalPnlVal / totalCost) * 100 : 0;
+            const totalColor = totalPnlVal >= 0 ? '#34d399' : '#f87171';
+            
+            const totalValEl = document.getElementById('portfolio-total-val');
+            if (totalValEl) {
+                totalValEl.innerHTML = `RM ${totalVal.toFixed(2)} <span style="font-size: 0.75rem; color: ${totalColor}; margin-left: 0.4rem; font-weight: 700;">(${totalPnlVal >= 0 ? '+' : ''}RM ${totalPnlVal.toFixed(2)} / ${totalPnlVal >= 0 ? '+' : ''}${totalPnlPct.toFixed(2)}%)</span>`;
+            }
+        }
+        window.renderPortfolio = renderPortfolio;
     </script>
 
     <!-- Global Footer with Legal Policies & Disclaimers -->
