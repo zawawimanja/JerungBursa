@@ -3969,7 +3969,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             const list = currentData || [];
             const portfolio = [
                 { name: 'SDCG', buyPrice: 0.725, slPrice: 0.700, allocation: 2000 },
-                { name: 'SRKKAI', buyPrice: 0.545, slPrice: 0.490, allocation: 2000 },
+                { name: 'SRKK', buyPrice: 0.545, slPrice: 0.490, allocation: 2000 },
                 { name: 'EIPOWER', buyPrice: 0.685, slPrice: 0.630, allocation: 2000 },
                 { name: 'RESTNGO', buyPrice: 0.135, slPrice: 0.125, allocation: 2000 }
             ];
@@ -3984,7 +3984,11 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             portfolio.forEach(p => {
                 // Find current price from currentData
                 // Ticker name in currentData might have suffix like .KL, e.g. SDCG.KL
-                const found = list.find(s => s.name.toUpperCase().trim() === p.name || s.name.toUpperCase().trim().startsWith(p.name));
+                const found = list.find(s => {
+                    const sName = s.name.toUpperCase().trim();
+                    const pName = p.name.toUpperCase().trim();
+                    return sName === pName || sName.startsWith(pName) || pName.startsWith(sName);
+                });
                 const currentPrice = found ? found.price : p.buyPrice;
                 
                 const units = Math.floor(p.allocation / p.buyPrice);
