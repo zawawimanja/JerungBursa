@@ -4268,19 +4268,8 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     }
                     
                     // Default SAFE / Garis Merah:
-                    // 1. Reclaimed (distPct >= 0) at top, ordered closest to Garis Merah (+0.1% first)
-                    // 2. Underwater (distPct < 0) below, ordered closest to Garis Merah (-0.1% first)
-                    const aReclaimed = a.distPct >= 0;
-                    const bReclaimed = b.distPct >= 0;
-
-                    if (aReclaimed && !bReclaimed) return -1;
-                    if (!aReclaimed && bReclaimed) return 1;
-
-                    if (aReclaimed && bReclaimed) {
-                        return a.distPct - b.distPct; // +0.5% comes before +3.0%
-                    } else {
-                        return b.distPct - a.distPct; // -0.5% comes before -3.0%
-                    }
+                    // Sort descending from highest positive (+ve) down through 0% to negative (-ve)
+                    return b.distPct - a.distPct;
                 });
             }
 
