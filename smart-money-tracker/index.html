@@ -680,6 +680,7 @@
     <div class="tabs-nav" style="margin-bottom: 1rem; margin-top: 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
         <button class="tab-btn active" id="tab-trend" onclick="switchTab('trend')" style="flex: 1; min-width: 120px; white-space: nowrap;">📈 Trend Rider</button>
         <button class="tab-btn" id="tab-spring" onclick="switchTab('spring')" style="flex: 1; min-width: 120px; white-space: nowrap;">🌱 Early Spring</button>
+        <button class="tab-btn" id="tab-phoenix" onclick="switchTab('phoenix')" style="flex: 1; min-width: 130px; white-space: nowrap;">🔥 Phoenix Spring</button>
         <button class="tab-btn" id="tab-fishing" onclick="switchTab('fishing')" style="flex: 1; min-width: 130px; white-space: nowrap;">🎣 Bottom Fishing</button>
         <button class="tab-btn" id="tab-calculator" onclick="switchTab('calculator')" style="flex: 1; min-width: 150px; white-space: nowrap;">🧮 Kalkulator Posisi</button>
         <button class="tab-btn" id="tab-info" onclick="switchTab('info')" style="flex: 1; min-width: 150px; white-space: nowrap;">📖 Glosari & Panduan</button>
@@ -864,12 +865,100 @@
                         <span id="spring-ex-gain" style="color: #34d399; font-weight: 800;">+40.9%</span>
                     </div>
                     <div id="spring-ex-desc" style="color: #cbd5e1; line-height: 1.3;">
-                        MMCS jatuh di bawah harga IPO sebelum kembali memotong naik (reclaim) harga pembukaan asal <strong>RM0.220</strong>, membina lantai baharu di RM0.260 dan melonjak ke RM0.310. MMCS merupakan contoh klasik strategi Early Spring yang berjaya melonjak naik selepas isyarat reclaim dalam backtest.
+                        MMCS jatuh di bawah harga IPO sebelum kembali memotong naik (reclaim) harga pembukaan asal <strong>RM0.220</strong>, membina lantai baharu di RM0.260 dan melonjak ke RM0.310. MMCS merupakan contoh klasik strategi Early Spring yang berjaya melonjak naik selepas isyarat r    <!-- TAB 4: PHOENIX SPRING -->
+    <div id="view-phoenix" style="display: none;">
+        <!-- PREMIUM PHOENIX SPRING RADAR BOX -->
+        <div id="phoenix-spring-section" style="margin-bottom: 1.25rem;">
+            <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 2px dashed #ef4444; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(239, 68, 68, 0.15); position: relative; overflow: hidden;">
+                <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(239, 68, 68, 0.15); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
+                
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(239, 68, 68, 0.2); padding-bottom: 0.75rem;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1; min-width: 300px;">
+                        <span style="font-size: 1.8rem;">🔥</span>
+                        <div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                                <h2 style="margin: 0; font-size: 1.3rem; color: #ef4444; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem;">Pilihan Utama: VVIP Phoenix Spring Radar (1st Day Close Reclaim)</h2>
+                                <span style="font-size: 0.7rem; background: rgba(239, 68, 68, 0.2); color: #ef4444; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(239, 68, 68, 0.3); white-space: nowrap;">🔥 PHOENIX RECLAIM</span>
+                            </div>
+                            <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
+                                SOP Phoenix Spring: IPO Baharu yang didagangkan di bawah harga penutup hari pertama (underwater). <strong style="color: #ef4444;">Pencetus Beli: Apabila harga memotong naik melebihi Garis Merah Penutup Hari Pertama (TRIGGER)!</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="table-wrapper" style="margin-top: 1rem; margin-bottom: 0; overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr>
+                                <th style="width: 50px; text-align: center; color: #ef4444;">No</th>
+                                <th style="color: #ef4444; text-align: left;">Kaunter</th>
+                                <th style="text-align: center; color: #ef4444;">Kategori Setup</th>
+                                <th style="text-align: right; color: #ef4444;">Harga Semasa</th>
+                                <th style="text-align: right; color: #ef4444;">Perubahan</th>
+                                <th style="text-align: right; color: #ef4444;">Penutup Hari 1 (Merah)</th>
+                                <th style="text-align: right; color: #ef4444;">Jarak Garis Merah</th>
+                                <th style="text-align: right; color: #ef4444;">Floor Touch</th>
+                                <th style="text-align: right; color: #ef4444;">Turnover</th>
+                                <th style="text-align: center; color: #ef4444;">Status Setup</th>
+                                <th style="text-align: center; color: #ef4444;">AI Analysis</th>
+                            </tr>
+                        </thead>
+                        <tbody id="phoenixTableBody">
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- WARNING ALERT FOR PHOENIX SPRING -->
+                <div style="margin-top: 1rem; background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 10px; padding: 0.8rem 1rem; display: flex; align-items: flex-start; gap: 0.75rem;">
+                    <span style="font-size: 1.2rem; filter: drop-shadow(0 0 5px rgba(239,68,68,0.5));">🚨</span>
+                    <div>
+                        <h4 style="margin: 0 0 0.25rem 0; color: #f87171; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px;">Nota Risiko & Disiplin Keluar (Stop Loss)</h4>
+                        <p style="margin: 0; font-size: 0.78rem; color: #cbd5e1; line-height: 1.4;">
+                            Teknik <strong>Phoenix Spring</strong> ialah strategi penebusan momentum (*reclaim breakout*). Kaunter yang memintas semula <strong>Garis Merah Penutup Hari Pertama</strong> berpotensi meluncur naik tinggi ke puncak ATH gelombang ke-2.
+                            <br><span style="color: #f87171; font-weight: 700;">SOP Ketat:</span> Sekiranya harga jatuh semula di bawah <strong>Garis Merah Penutup Hari Pertama (RM0.98 × 1st Day Close)</strong>, abang wajib <strong>CUT LOSS serta-merta</strong>. Disiplin ini mengehadkan kerugian kepada <span style="color: #f87171; font-weight: 700;">-2% hingga -3% sahaja</span>.
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
-    </div> <!-- End of view-spring -->
+
+        <!-- PANDUAN STRATEGI: PHOENIX SPRING -->
+        <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 12px; padding: 1rem; box-shadow: 0 8px 24px rgba(239, 68, 68, 0.1); margin-top: 1rem; position: relative; overflow: hidden;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid rgba(239, 68, 68, 0.15); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">
+                <span style="font-size: 1.3rem;">🎓</span>
+                <h3 style="margin: 0; font-size: 1.1rem; color: #ef4444; font-weight: 800; text-transform: uppercase;">Panduan Strategi: Phoenix Spring (1st Day Close Reclaim)</h3>
+            </div>
+            
+            <div style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px; padding: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+                <p style="margin: 0; font-size: 0.82rem; color: #94a3b8; line-height: 1.45;">
+                    Mengesan kaunter IPO baharu yang mengalami kejatuhan di bawah <strong style="color: #ef4444;">Harga Penutup Hari Pertama (Garis Merah / 1st Day Close Price)</strong>. Isyarat beli tercetus apabila lilin hijau memintas semula ke atas harga penutup asal (Reclaim) atau membina pantulan tapak spring di Garis Merah dengan risiko ultra-ketat (SL &le; 3%).
+                </p>
+
+                <!-- Tab Selector Contoh Sebenar -->
+                <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.25rem;">
+                    <button class="btn-ex-phoenix active" onclick="switchExample('phoenix', 1)" style="background: rgba(239, 68, 68, 0.25); border: 1px solid rgba(239, 68, 68, 0.6); color: white; padding: 0.35rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;">1. OGX (+38.0%)</button>
+                    <button class="btn-ex-phoenix" onclick="switchExample('phoenix', 2)" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); color: #cbd5e1; padding: 0.35rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;">2. PENTECH (Floor Rejection)</button>
+                </div>
+
+                <!-- Carta Visual -->
+                <div style="width: 100%; max-width: 800px; margin: 0.25rem auto; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.08); background: #000;">
+                    <img id="phoenix-ex-img" src="phoenix_spring_example.png" alt="Phoenix Spring Strategy Chart" style="width: 100%; display: block; object-fit: contain; min-height: 250px;">
+                </div>
+
+                <!-- Contoh Sejarah Sebenar -->
+                <div style="background: rgba(30, 41, 59, 0.3); border-radius: 8px; padding: 0.6rem; font-size: 0.75rem; border: 1px solid rgba(255, 255, 255, 0.03);">
+                    <div style="font-weight: 800; color: #ef4444; margin-bottom: 0.25rem; display: flex; justify-content: space-between;">
+                        <span id="phoenix-ex-title">🔥 Contoh Sebenar: OGX (0338)</span>
+                        <span id="phoenix-ex-gain" style="color: #34d399; font-weight: 800;">+38.0%</span>
+                    </div>
+                    <div id="phoenix-ex-desc" style="color: #cbd5e1; line-height: 1.3;">
+                        OGX jatuh lemas di bawah harga penutup hari pertama <strong>RM 0.320</strong>, membina tapak U-shape di zon murah, kemudian meletupkan lilin hijau padat memintas semula (reclaim) Garis Merah Penutup Hari Pertama. Menghasilkan rali gelombang ke-2 melepasi RM 0.440.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End of view-phoenix -->
 
     <!-- TAB 3: BOTTOM FISHING -->
     <div id="view-fishing" style="display: none;">
@@ -1513,6 +1602,20 @@
                         desc: 'ADNEX mempamerkan setup reclaim yang ideal pada harga <strong>RM0.290</strong> dengan CloseTightness 5.17%, sentuhan lantai kukuh sebanyak 8 kali, dan jarak lantai 0.00% yang menghasilkan pulangan swing cepat <strong>+10.65%</strong> dalam tempoh singkat.'
                     }
                 },
+                phoenix: {
+                    1: {
+                        src: 'phoenix_spring_example.png',
+                        title: '🔥 Contoh Sebenar: OGX (0338)',
+                        gain: '+38.0%',
+                        desc: 'OGX jatuh lemas di bawah harga IPO asal <strong>RM 0.320</strong>, membina tapak U-shape di zon murah, kemudian meletupkan lilin hijau padat memintas semula (reclaim) Garis Merah IPO. Menghasilkan rali gelombang ke-2 melepasi RM 0.440.'
+                    },
+                    2: {
+                        src: 'phoenix_spring_example.png',
+                        title: '🔥 Contoh Sebenar: PENTECH (0353)',
+                        gain: 'Floor Rejection',
+                        desc: 'PENTECH membuat kejatuhan menguji Garis Merah IPO asal. Lilin hijau membina rejection spring di atas lantai harga IPO dengan risiko ultra-ketat di bawah Garis Merah.'
+                    }
+                },
                 fishing: {
                     1: {
                         src: 'bottom_fishing_backtest_chart.png',
@@ -1565,6 +1668,7 @@
 
             const viewTrend = document.getElementById('view-trend');
             const viewSpring = document.getElementById('view-spring');
+            const viewPhoenix = document.getElementById('view-phoenix');
             const viewFishing = document.getElementById('view-fishing');
             const viewCalculator = document.getElementById('view-calculator');
             const viewInfo = document.getElementById('view-info');
@@ -1573,6 +1677,7 @@
             
             const tabTrend = document.getElementById('tab-trend');
             const tabSpring = document.getElementById('tab-spring');
+            const tabPhoenix = document.getElementById('tab-phoenix');
             const tabFishing = document.getElementById('tab-fishing');
             const tabCalculator = document.getElementById('tab-calculator');
             const tabInfo = document.getElementById('tab-info');
@@ -1582,6 +1687,7 @@
             // Hide all views
             viewTrend.style.display = 'none';
             viewSpring.style.display = 'none';
+            if (viewPhoenix) viewPhoenix.style.display = 'none';
             viewFishing.style.display = 'none';
             viewCalculator.style.display = 'none';
             if (viewInfo) viewInfo.style.display = 'none';
@@ -1591,6 +1697,7 @@
             // Remove active class from all tabs
             tabTrend.classList.remove('active');
             tabSpring.classList.remove('active');
+            if (tabPhoenix) tabPhoenix.classList.remove('active');
             tabFishing.classList.remove('active');
             tabCalculator.classList.remove('active');
             if (tabInfo) tabInfo.classList.remove('active');
@@ -1604,6 +1711,12 @@
             } else if (tabId === 'spring') {
                 viewSpring.style.display = 'block';
                 tabSpring.classList.add('active');
+            } else if (tabId === 'phoenix') {
+                if (viewPhoenix) {
+                    viewPhoenix.style.display = 'block';
+                    renderPhoenixSpring();
+                }
+                if (tabPhoenix) tabPhoenix.classList.add('active');
             } else if (tabId === 'fishing') {
                 viewFishing.style.display = 'block';
                 tabFishing.classList.add('active');
@@ -2505,6 +2618,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             renderTrendRiders();
             renderReclaimRadar();
             renderBottomFishing();
+            renderPhoenixSpring();
             updateSpecialPicks();
             renderPortfolio();
         }
@@ -2661,6 +2775,10 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     });
                 }
                 vcpContainer.innerHTML = vcpHtml;
+            }
+
+            if (typeof window.renderPhoenixSpring === 'function') {
+                window.renderPhoenixSpring();
             }
         }
 
@@ -3522,6 +3640,12 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
         // Page setup and event listeners
         window.addEventListener('DOMContentLoaded', () => {
             fetchLiveData();
+            renderPhoenixSpring();
+
+            const hash = window.location.hash.replace('#', '');
+            if (hash && ['trend', 'spring', 'phoenix', 'fishing', 'calculator', 'info', 'tracker', 'portfolio'].includes(hash)) {
+                switchTab(hash);
+            }
 
             document.getElementById('priceMaxFilter').addEventListener('change', function() {
                 applyFilters();
@@ -4052,6 +4176,110 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             }
         }
         window.renderPortfolio = renderPortfolio;
+
+        function renderPhoenixSpring() {
+            const tbody = document.getElementById('phoenixTableBody');
+            if (!tbody) return;
+
+            const liveList = (typeof currentData !== 'undefined' && Array.isArray(currentData) && currentData.length > 0) 
+                ? currentData 
+                : ((window.liveData && Array.isArray(window.liveData.topVolume)) ? window.liveData.topVolume : []);
+            let phoenixCandidates = [];
+
+            if (liveList.length > 0) {
+                phoenixCandidates = liveList.filter(s => {
+                    if (!s.price || s.price > 1.5) return false;
+                    const isIpo = s.sector === 'IPO' || !!s.ipoGrade || (s.ipoYear && s.ipoYear >= 2024) || (s.price < 1.0);
+                    if (!isIpo) return false;
+                    
+                    const fdClose = s.firstDayClosePrice || s.openPrice || s.ipoPrice;
+                    if (!fdClose) return false;
+                    
+                    const distPct = ((s.price - fdClose) / fdClose * 100);
+                    return distPct >= -25.0 && distPct <= 15.0;
+                }).map(s => {
+                    const fdClose = s.firstDayClosePrice || s.openPrice || s.ipoPrice;
+                    const distPct = ((s.price - fdClose) / fdClose * 100);
+                    const change = s.changePct !== undefined ? s.changePct : 0;
+                    
+                    let status = '🟡 TESTING FLOOR SPRING';
+                    let setup = '🛡️ PHOENIX FLOOR';
+                    if (distPct >= 0 && distPct <= 10) {
+                        status = '🟢 FRESH RECLAIM';
+                        setup = '🔥 PHOENIX RECLAIM';
+                    } else if (distPct > 10) {
+                        status = '🚀 RUNNING RALLY';
+                        setup = '⚡ PHOENIX RALLY';
+                    } else if (distPct < -10) {
+                        status = '🛡️ DEEP UNDERWATER BASE';
+                        setup = '🎯 DEEP BASE';
+                    }
+
+                    return {
+                        name: s.name,
+                        code: s.symbol || (s.name + '.KL'),
+                        price: s.price,
+                        change: change,
+                        close1st: fdClose,
+                        distPct: distPct,
+                        touches: s.floorTouches || 1,
+                        turnover: s.turnover ? ('RM ' + (s.turnover >= 1000000 ? (s.turnover/1000000).toFixed(2) + 'M 🔥' : (s.turnover/1000).toFixed(0) + 'k')) : '—',
+                        status: status,
+                        setup: setup
+                    };
+                });
+
+                phoenixCandidates.sort((a, b) => Math.abs(a.distPct) - Math.abs(b.distPct));
+            }
+
+            // Fallback if liveList is empty
+            if (phoenixCandidates.length === 0) {
+                phoenixCandidates = [
+                    { name: 'ECKEM', code: '0348.KL', price: 0.120, change: 0.0, close1st: 0.120, distPct: 0.0, touches: 8, turnover: 'RM 317k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR' },
+                    { name: 'RESTNGO', code: '0465.KL', price: 0.130, change: -3.7, close1st: 0.130, distPct: 0.0, touches: 5, turnover: 'RM 271k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR' },
+                    { name: 'WENTEL', code: '0298.KL', price: 0.260, change: 0.0, close1st: 0.260, distPct: 0.0, touches: 4, turnover: 'RM 216k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR' },
+                    { name: 'BUSCAP', code: '0342.KL', price: 0.265, change: 1.92, close1st: 0.260, distPct: 1.92, touches: 3, turnover: 'RM 382k', status: '🟢 FRESH RECLAIM', setup: '🔥 PHOENIX RECLAIM' },
+                    { name: 'SAG', code: '0336.KL', price: 0.695, change: 2.2, close1st: 0.680, distPct: 2.2, touches: 2, turnover: 'RM 30k', status: '🟢 FRESH RECLAIM', setup: '🔥 PHOENIX RECLAIM' },
+                    { name: 'MKHOP', code: '0303.KL', price: 0.645, change: 2.38, close1st: 0.630, distPct: 2.38, touches: 5, turnover: 'RM 2.55M 🔥', status: '🟢 FRESH RECLAIM', setup: '🔥 PHOENIX RECLAIM' },
+                    { name: 'CNERGEN', code: '0246.KL', price: 0.620, change: 1.6, close1st: 0.600, distPct: 3.33, touches: 4, turnover: 'RM 154k', status: '🟢 FRESH RECLAIM', setup: '🔥 PHOENIX RECLAIM' },
+                    { name: 'FOODIE', code: '0355.KL', price: 0.340, change: -1.2, close1st: 0.355, distPct: -4.22, touches: 3, turnover: 'RM 157k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR' },
+                    { name: 'PENTECH', code: '0350.KL', price: 0.275, change: -1.8, close1st: 0.290, distPct: -5.17, touches: 6, turnover: 'RM 1.52M', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR' },
+                    { name: 'STRATUS', code: '0349.KL', price: 2.050, change: 4.59, close1st: 1.960, distPct: 4.59, touches: 1, turnover: 'RM 19.7M 🔥', status: '🟢 FRESH RECLAIM', setup: '🔥 PHOENIX RECLAIM' }
+                ];
+            }
+
+            let html = '';
+            phoenixCandidates.forEach((m, idx) => {
+                const distText = (m.distPct >= 0 ? '+' : '') + m.distPct.toFixed(2) + '%';
+                const distColor = m.distPct > 0 ? '#34d399' : (m.distPct < 0 ? '#f87171' : '#fbbf24');
+                const changeColor = m.change > 0 ? '#34d399' : (m.change < 0 ? '#f87171' : '#94a3b8');
+                const changeSign = m.change > 0 ? '+' : '';
+                const badgeColor = m.status.includes('FRESH') || m.status.includes('RUNNING')
+                    ? 'background: rgba(52, 211, 153, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.3);' 
+                    : 'background: rgba(251, 191, 36, 0.15); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.3);';
+
+                html += `
+                    <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.02)'" onmouseout="this.style.background='none'">
+                        <td style="padding: 0.75rem; text-align: center; font-weight: 800; color: #ef4444; font-size: 0.82rem;">${idx + 1}</td>
+                        <td style="padding: 0.75rem; font-weight: 800; color: white; font-size: 0.85rem; white-space: nowrap;">${m.name} <span style="font-size: 0.65rem; color: #94a3b8; display: block; font-weight: 400;">${m.code}</span></td>
+                        <td style="padding: 0.75rem; text-align: center; white-space: nowrap;"><span style="background: rgba(239, 68, 68, 0.15); color: #ef4444; padding: 0.15rem 0.45rem; border-radius: 4px; border: 1px solid rgba(239, 68, 68, 0.3); font-size: 0.7rem; font-weight: 800;">${m.setup}</span></td>
+                        <td style="padding: 0.75rem; text-align: right; font-weight: 700; color: white; font-size: 0.85rem;">RM ${m.price.toFixed(3)}</td>
+                        <td style="padding: 0.75rem; text-align: right; font-weight: 700; color: ${changeColor}; font-size: 0.82rem;">${changeSign}${m.change.toFixed(2)}%</td>
+                        <td style="padding: 0.75rem; text-align: right; font-weight: 700; color: #ef4444; font-size: 0.85rem;">RM ${m.close1st.toFixed(3)}</td>
+                        <td style="padding: 0.75rem; text-align: right; font-weight: 800; color: ${distColor}; font-size: 0.82rem;">${distText}</td>
+                        <td style="padding: 0.75rem; text-align: right; font-weight: 700; color: #a5b4fc; font-size: 0.82rem;">${m.touches}x Touch ${m.touches >= 4 ? '🛡️' : ''}</td>
+                        <td style="padding: 0.75rem; text-align: right; font-weight: 700; color: #cbd5e1; font-size: 0.82rem;">${m.turnover}</td>
+                        <td style="padding: 0.75rem; text-align: center; white-space: nowrap;"><span style="${badgeColor} padding: 0.2rem 0.6rem; border-radius: 4px; font-weight: 800; font-size: 0.7rem;">${m.status}</span></td>
+                        <td style="padding: 0.75rem; text-align: center; white-space: nowrap;">
+                            <button onclick="triggerAIAnalysisModal('${m.name}', 'Phoenix Spring (1st Day Close Reclaim)')" class="btn" style="background: linear-gradient(135deg, #ef4444, #f97316); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">✨ AI Analysis</button>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            tbody.innerHTML = html;
+        }
+        window.renderPhoenixSpring = renderPhoenixSpring;
     </script>
 
     <!-- Global Footer with Legal Policies & Disclaimers -->
