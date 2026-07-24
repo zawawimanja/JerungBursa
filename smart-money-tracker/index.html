@@ -1445,6 +1445,7 @@
                     <thead>
                         <tr style="border-bottom: 2px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">
                             <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800;">Saham</th>
+                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Teknik &amp; Disiplin</th>
                             <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Harga Beli</th>
                             <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Harga Semasa</th>
                             <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Harga Stop Loss (SL)</th>
@@ -3968,10 +3969,10 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
         function renderPortfolio() {
             const list = currentData || [];
             const portfolio = [
-                { name: 'SDCG', buyPrice: 0.725, slPrice: 0.700, allocation: 2000 },
-                { name: 'SRKK', buyPrice: 0.545, slPrice: 0.490, allocation: 2000 },
-                { name: 'EIPOWER', buyPrice: 0.685, slPrice: 0.630, allocation: 2000 },
-                { name: 'RESTNGO', buyPrice: 0.135, slPrice: 0.125, allocation: 2000 }
+                { name: 'SDCG', buyPrice: 0.725, slPrice: 0.700, allocation: 2000, technique: 'VCP / Staircase', isKental: true },
+                { name: 'SRKK', buyPrice: 0.545, slPrice: 0.490, allocation: 2000, technique: 'Deep Pullback Swing', isKental: false },
+                { name: 'EIPOWER', buyPrice: 0.685, slPrice: 0.630, allocation: 2000, technique: 'Trend Rider Pullback', isKental: true },
+                { name: 'RESTNGO', buyPrice: 0.135, slPrice: 0.125, allocation: 2000, technique: 'Early Spring', isKental: false }
             ];
             
             const tbody = document.getElementById('portfolioTableBody');
@@ -4011,11 +4012,19 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     ? `<span style="background: rgba(244, 63, 94, 0.15); color: #fb7185; border: 1px solid rgba(244, 63, 94, 0.25); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 800; font-size: 0.7rem; white-space: nowrap;">🚨 BOCOR SL (SELL)</span>`
                     : `<span style="background: rgba(52, 211, 153, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.25); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 800; font-size: 0.7rem; white-space: nowrap;">🛡️ SELAMAT</span>`;
                 
+                const disciplineHtml = p.isKental 
+                    ? `<span style="background: rgba(167, 139, 250, 0.15); color: #c084fc; border: 1px solid rgba(167, 139, 250, 0.25); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 800; font-size: 0.65rem; white-space: nowrap;">💎 HOLD KENTAL</span>`
+                    : `<span style="background: rgba(248, 113, 113, 0.15); color: #f87171; border: 1px solid rgba(248, 113, 113, 0.25); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 800; font-size: 0.65rem; white-space: nowrap;">🛡️ STRICT SL</span>`;
+
                 tbody.innerHTML += `
                     <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.02)'" onmouseout="this.style.background='none'">
                         <td style="padding: 0.8rem 0.75rem; font-weight: 800; color: white; border-bottom: 1px solid rgba(255,255,255,0.05);">
                             ${p.name}
                             <span style="font-size: 0.65rem; color: var(--text-muted); display: block; font-weight: 400; margin-top: 0.1rem;">PEGANGAN: ${units.toLocaleString()} unit (${(units/100).toFixed(0)} Lot)</span>
+                        </td>
+                        <td style="padding: 0.8rem 0.75rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            <span style="font-weight: 700; color: #e2e8f0; font-size: 0.75rem; display: block; text-transform: uppercase;">${p.technique}</span>
+                            <span style="display: inline-block; margin-top: 0.25rem;">${disciplineHtml}</span>
                         </td>
                         <td style="padding: 0.8rem 0.75rem; text-align: center; font-weight: 700; color: #a5b4fc; border-bottom: 1px solid rgba(255,255,255,0.05);">RM ${p.buyPrice.toFixed(3)}</td>
                         <td style="padding: 0.8rem 0.75rem; text-align: center; font-weight: 800; color: white; border-bottom: 1px solid rgba(255,255,255,0.05);">RM ${currentPrice.toFixed(3)}</td>
