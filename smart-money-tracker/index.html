@@ -4250,7 +4250,9 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                         setup: setup,
                         ipoGrade: s.ipoGrade || '',
                         ipoYear: s.ipoYear || 0,
-                        ipoPrice: s.ipoPrice || 0
+                        ipoPrice: s.ipoPrice || 0,
+                        score: calculateSmartScore(s),
+                        rawObj: s
                     };
                 });
 
@@ -4264,7 +4266,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                         return Math.abs(b.distPct) - Math.abs(a.distPct);
                     }
                     if (phoenixSortVal === 'SCORE') {
-                        return (b.touches || 0) - (a.touches || 0);
+                        return (b.score || 0) - (a.score || 0);
                     }
                     
                     // Default SAFE / Garis Merah:
@@ -4276,16 +4278,16 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             // Fallback if liveList is empty
             if (phoenixCandidates.length === 0) {
                 phoenixCandidates = [
-                    { name: 'ECKEM', code: '0348.KL', price: 0.120, change: 0.0, close1st: 0.120, distPct: 0.0, touches: 8, turnover: 'RM 317k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR' },
-                    { name: 'RESTNGO', code: '0465.KL', price: 0.130, change: -3.7, close1st: 0.130, distPct: 0.0, touches: 5, turnover: 'RM 271k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR' },
-                    { name: 'WENTEL', code: '0298.KL', price: 0.260, change: 0.0, close1st: 0.260, distPct: 0.0, touches: 4, turnover: 'RM 216k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR' },
-                    { name: 'BUSCAP', code: '0342.KL', price: 0.265, change: 1.92, close1st: 0.260, distPct: 1.92, touches: 3, turnover: 'RM 382k', status: '🟢 FRESH RECLAIM', setup: '🔥 PHOENIX RECLAIM' },
-                    { name: 'SAG', code: '0336.KL', price: 0.695, change: 2.2, close1st: 0.680, distPct: 2.2, touches: 2, turnover: 'RM 30k', status: '🟢 FRESH RECLAIM', setup: '🔥 PHOENIX RECLAIM' },
-                    { name: 'MKHOP', code: '0303.KL', price: 0.645, change: 2.38, close1st: 0.630, distPct: 2.38, touches: 5, turnover: 'RM 2.55M 🔥', status: '🟢 FRESH RECLAIM', setup: '🔥 PHOENIX RECLAIM' },
-                    { name: 'CNERGEN', code: '0246.KL', price: 0.620, change: 1.6, close1st: 0.600, distPct: 3.33, touches: 4, turnover: 'RM 154k', status: '🟢 FRESH RECLAIM', setup: '🔥 PHOENIX RECLAIM' },
-                    { name: 'FOODIE', code: '0355.KL', price: 0.340, change: -1.2, close1st: 0.355, distPct: -4.22, touches: 3, turnover: 'RM 157k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR' },
-                    { name: 'PENTECH', code: '0350.KL', price: 0.275, change: -1.8, close1st: 0.290, distPct: -5.17, touches: 6, turnover: 'RM 1.52M', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR' },
-                    { name: 'STRATUS', code: '0349.KL', price: 2.050, change: 4.59, close1st: 1.960, distPct: 4.59, touches: 1, turnover: 'RM 19.7M 🔥', status: '🟢 FRESH RECLAIM', setup: '🔥 PHOENIX RECLAIM' }
+                    { name: 'ECKEM', code: '0348.KL', price: 0.120, change: 0.0, close1st: 0.120, distPct: 0.0, touches: 8, turnover: 'RM 317k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 11 },
+                    { name: 'RESTNGO', code: '0465.KL', price: 0.130, change: -3.7, close1st: 0.130, distPct: 0.0, touches: 5, turnover: 'RM 271k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 10 },
+                    { name: 'WENTEL', code: '0298.KL', price: 0.260, change: 0.0, close1st: 0.260, distPct: 0.0, touches: 4, turnover: 'RM 216k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 9 },
+                    { name: 'BUSCAP', code: '0342.KL', price: 0.265, change: 1.92, close1st: 0.260, distPct: 1.92, touches: 3, turnover: 'RM 382k', status: '🟢 FRESH RECLAIM', setup: '🔥 PHOENIX RECLAIM', score: 12 },
+                    { name: 'SAG', code: '0336.KL', price: 0.695, change: 2.2, close1st: 0.680, distPct: 2.2, touches: 2, turnover: 'RM 30k', status: '🟢 FRESH RECLAIM', setup: '🔥 PHOENIX RECLAIM', score: 8 },
+                    { name: 'MKHOP', code: '0303.KL', price: 0.645, change: 2.38, close1st: 0.630, distPct: 2.38, touches: 5, turnover: 'RM 2.55M 🔥', status: '🟢 FRESH RECLAIM', setup: '🔥 PHOENIX RECLAIM', score: 13 },
+                    { name: 'CNERGEN', code: '0246.KL', price: 0.620, change: 1.6, close1st: 0.600, distPct: 3.33, touches: 4, turnover: 'RM 154k', status: '🟢 FRESH RECLAIM', setup: '🔥 PHOENIX RECLAIM', score: 10 },
+                    { name: 'FOODIE', code: '0355.KL', price: 0.340, change: -1.2, close1st: 0.355, distPct: -4.22, touches: 3, turnover: 'RM 157k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 9 },
+                    { name: 'PENTECH', code: '0350.KL', price: 0.275, change: -1.8, close1st: 0.290, distPct: -5.17, touches: 6, turnover: 'RM 1.52M', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 11 },
+                    { name: 'STRATUS', code: '0349.KL', price: 2.050, change: 4.59, close1st: 1.960, distPct: 4.59, touches: 1, turnover: 'RM 19.7M 🔥', status: '🟢 FRESH RECLAIM', setup: '🔥 PHOENIX RECLAIM', score: 14 }
                 ];
             }
 
@@ -4295,6 +4297,11 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 const distColor = m.distPct >= 0 ? '#34d399' : '#f87171';
                 const changeColor = m.change > 0 ? '#34d399' : (m.change < 0 ? '#f87171' : '#94a3b8');
                 const changeSign = m.change > 0 ? '+' : '';
+
+                // Smart Score badge
+                const score = m.score !== undefined ? m.score : (m.rawObj ? calculateSmartScore(m.rawObj) : 10);
+                const scoreColor = score >= 12 ? '#10b981' : (score >= 9 ? '#6366f1' : '#94a3b8');
+                const scoreSpan = `<span style="color: ${scoreColor}; font-weight: 800; background: rgba(255,255,255,0.03); padding: 0.05rem 0.35rem; border-radius: 3px; border: 1px solid rgba(255,255,255,0.05);">Skor: ${score}/15</span>`;
 
                 // Setup badge color
                 let setupStyle = 'background: rgba(251,191,36,0.15); color: #fbbf24; border: 1px solid rgba(251,191,36,0.3);';
@@ -4362,7 +4369,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                                 ${isReclaim ? `<span style="font-size:0.68rem; background:linear-gradient(135deg,#34d399,#059669); color:white; padding:0.1rem 0.35rem; border-radius:4px; font-weight:800; box-shadow:0 0 8px rgba(52,211,153,0.3);">🔥 Reclaim</span>` : ''}
                             </div>
                             <div style="font-size: 0.76rem; color: var(--text-muted); font-weight: 600; margin-top: 0.3rem;">
-                                Garis Merah: <span style="color:#f97316; font-weight:800;">RM ${m.close1st.toFixed(3)}</span>${gradeSpan}${freshSpan}${ipoPriceStr}
+                                ${scoreSpan} • Garis Merah: <span style="color:#f97316; font-weight:800;">RM ${m.close1st.toFixed(3)}</span>${gradeSpan}${freshSpan}${ipoPriceStr}
                             </div>
                         </td>
                         <td style="text-align: center; white-space: nowrap; padding: 0.75rem;">
