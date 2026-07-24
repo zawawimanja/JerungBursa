@@ -4206,9 +4206,12 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
             if (liveList.length > 0) {
                 phoenixCandidates = liveList.filter(s => {
-                    if (!s.price || s.price > 1.5) return false;
-                    const isIpo = s.sector === 'IPO' || !!s.ipoGrade || (s.ipoYear && s.ipoYear >= 2024) || (s.price < 1.0);
-                    if (!isIpo) return false;
+                    // Must be a genuine IPO (listed 2024-2026, or tagged with IPO grade/fresh IPO)
+                    const isIpoCandidate = s.sector === 'IPO' || !!s.ipoGrade || (s.ipoYear && s.ipoYear >= 2024) || isFreshIpo(s);
+                    if (!isIpoCandidate) return false;
+
+                    const ipoAgeFilterVal = document.getElementById('ipoAgeFilter') ? document.getElementById('ipoAgeFilter').value : 'ALL';
+                    if (!matchesIpoAgeFilter(s, ipoAgeFilterVal)) return false;
                     
                     const fdClose = s.firstDayClosePrice || s.openPrice || s.ipoPrice;
                     if (!fdClose) return false;
