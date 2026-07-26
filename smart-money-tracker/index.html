@@ -672,20 +672,21 @@
                 <input type="checkbox" id="premiumHypeFilter" style="cursor: pointer; width: 16px; height: 16px;" checked>
                 <label for="premiumHypeFilter" style="color: #60a5fa; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none;">🚀 Premium Hype Only (Gred A / OS ≥ 50x / Outlier)</label>
             </div>
-            <button id="refreshBtn" class="btn">🔄 Refresh Live</button>
+            <button id="refreshBtn" class="btn">🔄 Refresh</button>
         </div>
     </header>
 
     <!-- Tab Navigation -->
-    <div class="tabs-nav" style="margin-bottom: 1rem; margin-top: 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-        <button class="tab-btn active" id="tab-trend" onclick="switchTab('trend')" style="flex: 1; min-width: 120px; white-space: nowrap;">📈 Trend Rider</button>
-        <button class="tab-btn" id="tab-spring" onclick="switchTab('spring')" style="flex: 1; min-width: 120px; white-space: nowrap;">🌱 Early Spring</button>
-        <button class="tab-btn" id="tab-phoenix" onclick="switchTab('phoenix')" style="flex: 1; min-width: 130px; white-space: nowrap;">🔥 Phoenix Spring</button>
-        <button class="tab-btn" id="tab-fishing" onclick="switchTab('fishing')" style="flex: 1; min-width: 130px; white-space: nowrap;">🎣 Bottom Fishing</button>
-        <button class="tab-btn" id="tab-calculator" onclick="switchTab('calculator')" style="flex: 1; min-width: 150px; white-space: nowrap;">🧮 Kalkulator Posisi</button>
-        <button class="tab-btn" id="tab-info" onclick="switchTab('info')" style="flex: 1; min-width: 150px; white-space: nowrap;">📖 Glosari & Panduan</button>
-        <button class="tab-btn" id="tab-tracker" onclick="switchTab('tracker')" style="flex: 1; min-width: 150px; white-space: nowrap;">📈 Trend Rider &lt; RM1</button>
-        <button class="tab-btn" id="tab-portfolio" onclick="switchTab('portfolio')" style="flex: 1; min-width: 150px; white-space: nowrap;">💼 Portfolio Saya</button>
+    <div class="tabs-nav" style="margin-bottom: 1rem; margin-top: 0.5rem; display: flex; gap: 0.4rem; flex-wrap: wrap;">
+        <button class="tab-btn active" id="tab-trend" onclick="switchTab('trend')" style="flex: 1; min-width: 100px; white-space: nowrap;">📈 Trend Rider</button>
+        <button class="tab-btn" id="tab-spring" onclick="switchTab('spring')" style="flex: 1; min-width: 100px; white-space: nowrap;">🌱 Early Spring</button>
+        <button class="tab-btn" id="tab-phoenix" onclick="switchTab('phoenix')" style="flex: 1; min-width: 90px; white-space: nowrap;">🔥 Phoenix</button>
+        <button class="tab-btn" id="tab-fishing" onclick="switchTab('fishing')" style="flex: 1; min-width: 85px; white-space: nowrap;">🎣 Bottom</button>
+        <button class="tab-btn" id="tab-weekly" onclick="switchTab('weekly')" style="flex: 1; min-width: 120px; white-space: nowrap; background: linear-gradient(135deg, rgba(245, 158, 11, 0.25), rgba(217, 119, 6, 0.35)); border: 1px solid #f59e0b; color: #fbbf24; font-weight: 800;">🗓️ Weekly Top 5</button>
+        <button class="tab-btn" id="tab-calculator" onclick="switchTab('calculator')" style="flex: 1; min-width: 100px; white-space: nowrap;">🧮 Kalkulator</button>
+        <button class="tab-btn" id="tab-info" onclick="switchTab('info')" style="flex: 1; min-width: 90px; white-space: nowrap;">📖 Panduan</button>
+        <button class="tab-btn" id="tab-tracker" onclick="switchTab('tracker')" style="flex: 1; min-width: 95px; white-space: nowrap;">📈 &lt; RM1</button>
+        <button class="tab-btn" id="tab-portfolio" onclick="switchTab('portfolio')" style="flex: 1; min-width: 90px; white-space: nowrap;">💼 Portfolio</button>
     </div>
 
     <!-- TAB 1: TREND RIDER -->
@@ -1050,6 +1051,103 @@
             </div>
         </div>
     </div> <!-- End of view-fishing -->
+
+    <!-- TAB 5: WEEKLY HOMEWORK (TOP 5 SWING) -->
+    <div id="view-weekly" style="display: none;">
+        <!-- WEEKLY HOMEWORK HERO SECTION -->
+        <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 2px solid #f59e0b; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(245, 158, 11, 0.2); position: relative; overflow: hidden; margin-bottom: 1.25rem;">
+            <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(245, 158, 11, 0.15); filter: blur(60px); border-radius: 50%; pointer-events: none;"></div>
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(245, 158, 11, 0.25); padding-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1; min-width: 300px;">
+                    <span style="font-size: 2rem;">🗓️</span>
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                            <h2 style="margin: 0; font-size: 1.35rem; color: #fbbf24; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;">Weekly Homework: JerungBursa Top 5 Swing</h2>
+                            <span style="font-size: 0.75rem; background: rgba(245, 158, 11, 0.2); color: #fbbf24; padding: 0.2rem 0.6rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.4);">🔥 HOLD 5 HARI - 3 MINGGU</span>
+                        </div>
+                        <p style="margin: 0.35rem 0 0 0; font-size: 0.85rem; color: #cbd5e1; line-height: 1.4;">
+                            Hasil tapisan automatik daripada beratus kaunter — mengecilkan carian ke <strong style="color: #fbbf24;">Top 5 Kaunter High-Conviction</strong> mengikut 4 Teknik Utama: <strong style="color: #38bdf8;">Trend Rider</strong>, <strong style="color: #4ade80;">Early Spring</strong>, <strong style="color: #fb7185;">Phoenix</strong>, & <strong style="color: #f59e0b;">Bottom</strong>.
+                        </p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
+                    <button onclick="copyWeeklyWatchlist()" style="background: linear-gradient(135deg, #d97706, #f59e0b); color: white; border: none; padding: 0.55rem 1.1rem; border-radius: 8px; font-weight: 800; font-size: 0.83rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: transform 0.2s; box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                        📋 Copy TV Watchlist (Top 5)
+                    </button>
+                </div>
+            </div>
+
+            <!-- KPI SUMMARY CARDS -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-bottom: 1.25rem;">
+                <div style="background: rgba(15, 23, 42, 0.6); padding: 0.75rem; border-radius: 10px; border: 1px solid rgba(51, 65, 85, 0.5);">
+                    <div style="font-size: 0.75rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">🔍 Kaunter Disemak</div>
+                    <div style="font-size: 1.4rem; font-weight: 900; color: #f8fafc; margin-top: 0.2rem;" id="weeklyScannedCount">0</div>
+                </div>
+                <div style="background: rgba(15, 23, 42, 0.6); padding: 0.75rem; border-radius: 10px; border: 1px solid rgba(245, 158, 11, 0.3);">
+                    <div style="font-size: 0.75rem; color: #fbbf24; font-weight: 700; text-transform: uppercase;">🎯 Conviction Picks</div>
+                    <div style="font-size: 1.4rem; font-weight: 900; color: #fbbf24; margin-top: 0.2rem;" id="weeklyPickCount">5 / 5</div>
+                </div>
+                <div style="background: rgba(15, 23, 42, 0.6); padding: 0.75rem; border-radius: 10px; border: 1px solid rgba(16, 185, 129, 0.3);">
+                    <div style="font-size: 0.75rem; color: #34d399; font-weight: 700; text-transform: uppercase;">🛡️ Max Floor Risk</div>
+                    <div style="font-size: 1.4rem; font-weight: 900; color: #34d399; margin-top: 0.2rem;">&le; 5.0%</div>
+                </div>
+                <div style="background: rgba(15, 23, 42, 0.6); padding: 0.75rem; border-radius: 10px; border: 1px solid rgba(99, 102, 241, 0.3);">
+                    <div style="font-size: 0.75rem; color: #818cf8; font-weight: 700; text-transform: uppercase;">🦈 Min Jerung Turnover</div>
+                    <div style="font-size: 1.4rem; font-weight: 900; color: #818cf8; margin-top: 0.2rem;">&ge; RM 500k</div>
+                </div>
+            </div>
+
+            <!-- TABLE WRAPPER -->
+            <div class="table-wrapper" style="margin-top: 0.5rem; margin-bottom: 0; overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; min-width: 950px;">
+                    <thead>
+                        <tr>
+                            <th style="width: 45px; text-align: center; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">No</th>
+                            <th style="color: #fbbf24; text-align: left; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Counter</th>
+                            <th style="text-align: center; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Teknik Setup</th>
+                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Price (RM)</th>
+                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Change %</th>
+                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Support Floor</th>
+                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Jarak Risk</th>
+                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Turnover</th>
+                            <th style="text-align: left; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Actionable Trading Plan</th>
+                            <th style="text-align: center; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="weeklyHomeworkTableBody">
+                        <!-- Populated dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- PANDUAN WEEKLY SWING -->
+        <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 12px; padding: 1rem; box-shadow: 0 8px 24px rgba(245, 158, 11, 0.1); margin-top: 1rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid rgba(245, 158, 11, 0.15); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">
+                <span style="font-size: 1.3rem;">🎓</span>
+                <h3 style="margin: 0; font-size: 1.1rem; color: #fbbf24; font-weight: 800; text-transform: uppercase;">Panduan SOP Weekly Homework Swing</h3>
+            </div>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; font-size: 0.82rem; color: #cbd5e1;">
+                <div style="background: rgba(15, 23, 42, 0.4); padding: 0.75rem; border-radius: 8px; border-left: 3px solid #38bdf8;">
+                    <strong style="color: #38bdf8;">1. Trend Rider</strong><br>
+                    Kaunter uptrend di atas SMA50 & SMA200. Beli sewaktu pullback rendah ke garisan lantai support dan tahan selagi trend masih utuh.
+                </div>
+                <div style="background: rgba(15, 23, 42, 0.4); padding: 0.75rem; border-radius: 8px; border-left: 3px solid #4ade80;">
+                    <strong style="color: #4ade80;">2. Early Spring</strong><br>
+                    Peringkat awal pembinaan VCP / Reclaim Open Price di mana isi padu dagangan (volume) mengering menandakan bekalan penjual dah kering.
+                </div>
+                <div style="background: rgba(15, 23, 42, 0.4); padding: 0.75rem; border-radius: 8px; border-left: 3px solid #fb7185;">
+                    <strong style="color: #fb7185;">3. Phoenix</strong><br>
+                    Strategi penebusan momentum (RBS / Reclaim 1st Day Close). Pengesahan breakout dengan garisan penutup hari pertama yang kini berfungsi sebagai lantai baru.
+                </div>
+                <div style="background: rgba(15, 23, 42, 0.4); padding: 0.75rem; border-radius: 8px; border-left: 3px solid #f59e0b;">
+                    <strong style="color: #f59e0b;">4. Bottom</strong><br>
+                    Terkumpul rapat di garisan sokongan lantai padu (lantai disentuh &ge; 4x). Membolehkan pesanan Stop Loss dipasang rapat dengan Stop Loss &le; 5%.
+                </div>
+            </div>
+        </div>
+    </div> <!-- End of view-weekly -->
 
     <!-- TAB 4: CALCULATOR -->
     <div id="view-calculator" style="display: none;">
@@ -1677,6 +1775,7 @@
             const viewSpring = document.getElementById('view-spring');
             const viewPhoenix = document.getElementById('view-phoenix');
             const viewFishing = document.getElementById('view-fishing');
+            const viewWeekly = document.getElementById('view-weekly');
             const viewCalculator = document.getElementById('view-calculator');
             const viewInfo = document.getElementById('view-info');
             const viewTracker = document.getElementById('view-tracker');
@@ -1686,6 +1785,7 @@
             const tabSpring = document.getElementById('tab-spring');
             const tabPhoenix = document.getElementById('tab-phoenix');
             const tabFishing = document.getElementById('tab-fishing');
+            const tabWeekly = document.getElementById('tab-weekly');
             const tabCalculator = document.getElementById('tab-calculator');
             const tabInfo = document.getElementById('tab-info');
             const tabTracker = document.getElementById('tab-tracker');
@@ -1696,6 +1796,7 @@
             viewSpring.style.display = 'none';
             if (viewPhoenix) viewPhoenix.style.display = 'none';
             viewFishing.style.display = 'none';
+            if (viewWeekly) viewWeekly.style.display = 'none';
             viewCalculator.style.display = 'none';
             if (viewInfo) viewInfo.style.display = 'none';
             if (viewTracker) viewTracker.style.display = 'none';
@@ -1706,6 +1807,7 @@
             tabSpring.classList.remove('active');
             if (tabPhoenix) tabPhoenix.classList.remove('active');
             tabFishing.classList.remove('active');
+            if (tabWeekly) tabWeekly.classList.remove('active');
             tabCalculator.classList.remove('active');
             if (tabInfo) tabInfo.classList.remove('active');
             if (tabTracker) tabTracker.classList.remove('active');
@@ -1727,6 +1829,12 @@
             } else if (tabId === 'fishing') {
                 viewFishing.style.display = 'block';
                 tabFishing.classList.add('active');
+            } else if (tabId === 'weekly') {
+                if (viewWeekly) {
+                    viewWeekly.style.display = 'block';
+                    renderWeeklyHomework();
+                }
+                if (tabWeekly) tabWeekly.classList.add('active');
             } else if (tabId === 'calculator') {
                 viewCalculator.style.display = 'block';
                 tabCalculator.classList.add('active');
@@ -2626,6 +2734,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             renderReclaimRadar();
             renderBottomFishing();
             renderPhoenixSpring();
+            renderWeeklyHomework();
             updateSpecialPicks();
             renderPortfolio();
         }
@@ -4394,6 +4503,139 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             tbody.innerHTML = html || `<tr><td colspan="11" style="text-align:center; color:var(--text-muted); padding:1.5rem;">⏳ Tiada kaunter Phoenix Spring hari ini.</td></tr>`;
         }
         window.renderPhoenixSpring = renderPhoenixSpring;
+
+        // Render Weekly Homework (Top 5 High Conviction Swing Picks)
+        function renderWeeklyHomework() {
+            const live = window.liveData || {};
+            const list = live.topVolume || (currentData || []);
+            const scannedEl = document.getElementById('weeklyScannedCount');
+            const pickEl = document.getElementById('weeklyPickCount');
+            const tbody = document.getElementById('weeklyHomeworkTableBody');
+
+            if (!tbody) return;
+
+            if (scannedEl) scannedEl.textContent = list.length || 0;
+
+            // Filter for weekly swing candidates
+            const candidates = list.filter(s => {
+                if (!s.price || s.price >= 1.0) return false; // Focus < RM1.00
+                if (s.signal === 'sell') return false; // Avoid downtrend/sell stocks
+                const turnover = s.turnover || 0;
+                if (turnover < 250000) return false; // Jerung turnover filter
+                return true;
+            });
+
+            // Score candidates for weekly swing suitability
+            candidates.forEach(s => {
+                let score = 0;
+                const floorDist = s.floorLow ? Math.abs((s.price - s.floorLow) / s.floorLow * 100) : 999;
+                
+                // Reward tight risk to floor
+                if (floorDist <= 2.5) score += 40;
+                else if (floorDist <= 4.5) score += 30;
+                else if (floorDist <= 6.5) score += 20;
+
+                // Reward jerung turnover
+                const turnover = s.turnover || 0;
+                if (turnover >= 2000000) score += 35;
+                else if (turnover >= 1000000) score += 25;
+                else if (turnover >= 500000) score += 15;
+
+                // Reward buy signals and setup styles
+                if (s.signal === 'buy') score += 20;
+                if (s.setupStyle === 'STAIRCASE') score += 15;
+                if (s.setupStyle === 'EXPLOSIVE') score += 10;
+                if (s.isConsolidation) score += 10;
+
+                s._weeklyScore = score;
+                s._floorDist = floorDist;
+            });
+
+            candidates.sort((a, b) => b._weeklyScore - a._weeklyScore);
+
+            // Pick top 5
+            const top5 = candidates.slice(0, 5);
+            window._weeklyTop5Picks = top5;
+
+            if (pickEl) pickEl.textContent = `${top5.length} / 5`;
+
+            if (top5.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="10" style="text-align: center; color: var(--text-muted); padding: 1.5rem;">Tiada kaunter memenuhi kriteria Weekly Homework hari ini.</td></tr>`;
+                return;
+            }
+
+            let html = '';
+            top5.forEach((item, idx) => {
+                const price = item.price ? item.price.toFixed(3) : '0.000';
+                const chg = item.changePct !== undefined ? item.changePct.toFixed(2) : '0.00';
+                const chgColor = item.changePct >= 0 ? '#34d399' : '#ef4444';
+                const chgSign = item.changePct >= 0 ? '+' : '';
+                const floor = item.floorLow ? item.floorLow.toFixed(3) : '-';
+                const floorDist = item._floorDist !== 999 ? item._floorDist.toFixed(1) + '%' : '-';
+                const turnoverFormatted = item.turnover ? 'RM ' + (item.turnover / 1000).toFixed(0) + 'k' : '-';
+
+                // Map technique badge to 4 user techniques
+                let techniqueBadge = '';
+                let techniqueName = 'Trend Rider';
+                if (item.setupStyle === 'STAIRCASE' || item.setupName?.includes('RBS')) {
+                    techniqueBadge = '<span style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.72rem;">🚀 Trend Rider</span>';
+                    techniqueName = 'Trend Rider';
+                } else if (item.closeTightness <= 5 || item.setupName?.includes('Reclaim')) {
+                    techniqueBadge = '<span style="background: rgba(74, 222, 128, 0.15); color: #4ade80; border: 1px solid rgba(74, 222, 128, 0.3); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.72rem;">🌱 Early Spring</span>';
+                    techniqueName = 'Early Spring';
+                } else if (item.setupName?.includes('ATH') || item.setupStyle === 'EXPLOSIVE') {
+                    techniqueBadge = '<span style="background: rgba(251, 113, 133, 0.15); color: #fb7185; border: 1px solid rgba(251, 113, 133, 0.3); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.72rem;">🔥 Phoenix</span>';
+                    techniqueName = 'Phoenix';
+                } else {
+                    techniqueBadge = '<span style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.72rem;">🧱 Bottom</span>';
+                    techniqueName = 'Bottom Support';
+                }
+
+                // Actionable plan text
+                let planText = '';
+                if (item.floorLow) {
+                    const slPrice = (item.floorLow * 0.97).toFixed(3);
+                    planText = `Tunggu Entry rapat support <strong style="color: #60a5fa;">RM ${floor}</strong> | SL <strong style="color: #ef4444;">RM ${slPrice}</strong> (&le; 5%)`;
+                } else {
+                    planText = `Rujuk chart daily untuk entry tight risk`;
+                }
+
+                html += `
+                <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3); transition: background 0.2s;" onmouseover="this.style.background='rgba(30, 41, 59, 0.5)'" onmouseout="this.style.background='transparent'">
+                    <td style="padding: 0.65rem 0.8rem; font-size: 0.8rem; text-align: center; color: #fbbf24; font-weight: 800;">${idx + 1}</td>
+                    <td style="padding: 0.65rem 0.8rem; font-size: 0.85rem; font-weight: 800; color: #f8fafc;">
+                        ${item.name} <span style="font-size: 0.7rem; color: #94a3b8; font-weight: 400;">(${item.sector || 'Bursa'})</span>
+                    </td>
+                    <td style="padding: 0.65rem 0.8rem; text-align: center;">${techniqueBadge}</td>
+                    <td style="padding: 0.65rem 0.8rem; font-size: 0.85rem; text-align: right; font-weight: 800; color: #f8fafc;">RM ${price}</td>
+                    <td style="padding: 0.65rem 0.8rem; font-size: 0.82rem; text-align: right; font-weight: 800; color: ${chgColor};">${chgSign}${chg}%</td>
+                    <td style="padding: 0.65rem 0.8rem; font-size: 0.82rem; text-align: right; font-weight: 700; color: #60a5fa;">RM ${floor}</td>
+                    <td style="padding: 0.65rem 0.8rem; font-size: 0.82rem; text-align: right; font-weight: 800; color: #34d399;">${floorDist}</td>
+                    <td style="padding: 0.65rem 0.8rem; font-size: 0.82rem; text-align: right; font-weight: 700; color: #cbd5e1;">${turnoverFormatted}</td>
+                    <td style="padding: 0.65rem 0.8rem; font-size: 0.78rem; color: #cbd5e1;">${planText}</td>
+                    <td style="padding: 0.65rem 0.8rem; text-align: center;">
+                        <button onclick="triggerAIAnalysisModal('${item.name}', 'Weekly Homework: ${techniqueName}')" class="btn" style="background: linear-gradient(135deg, #f59e0b, #d97706); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">✨ AI Plan</button>
+                    </td>
+                </tr>`;
+            });
+
+            tbody.innerHTML = html;
+        }
+
+        function copyWeeklyWatchlist() {
+            const picks = window._weeklyTop5Picks || [];
+            if (picks.length === 0) {
+                alert('Tiada kaunter untuk disalin.');
+                return;
+            }
+            const tickers = picks.map(p => `MYX:${p.name}`).join(',');
+            navigator.clipboard.writeText(tickers).then(() => {
+                alert('Watchlist Weekly Top 5 berjaya disalin!\n' + tickers + '\n\nBoleh paste terus dalam TradingView.');
+            }).catch(err => {
+                console.error('Failure copying: ', err);
+            });
+        }
+        window.renderWeeklyHomework = renderWeeklyHomework;
     </script>
 
     <!-- Global Footer with Legal Policies & Disclaimers -->
