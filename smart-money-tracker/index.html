@@ -670,9 +670,9 @@
             </div>
             <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.45rem 0.8rem; border-radius: 8px; border: 1px solid rgba(96, 165, 250, 0.35);">
                 <input type="checkbox" id="premiumHypeFilter" style="cursor: pointer; width: 16px; height: 16px;" checked>
-                <label for="premiumHypeFilter" style="color: #60a5fa; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none;">🚀 Premium Hype Only (Gred A / OS ≥ 50x / Outlier)</label>
+                <label for="premiumHypeFilter" style="color: #60a5fa; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none;">🚀 Hanya Premium Hype (Gred A / OS ≥ 50x / Outlier)</label>
             </div>
-            <button id="refreshBtn" class="btn">🔄 Refresh</button>
+            <button id="refreshBtn" class="btn">🔄 Kemas Kini</button>
         </div>
     </header>
 
@@ -682,7 +682,7 @@
         <button class="tab-btn" id="tab-spring" onclick="switchTab('spring')" style="flex: 1; min-width: 100px; white-space: nowrap;">🌱 Early Spring</button>
         <button class="tab-btn" id="tab-phoenix" onclick="switchTab('phoenix')" style="flex: 1; min-width: 90px; white-space: nowrap;">🔥 Phoenix</button>
         <button class="tab-btn" id="tab-fishing" onclick="switchTab('fishing')" style="flex: 1; min-width: 85px; white-space: nowrap;">🎣 Bottom</button>
-        <button class="tab-btn" id="tab-weekly" onclick="switchTab('weekly')" style="flex: 1; min-width: 120px; white-space: nowrap; background: linear-gradient(135deg, rgba(245, 158, 11, 0.25), rgba(217, 119, 6, 0.35)); border: 1px solid #f59e0b; color: #fbbf24; font-weight: 800;">🗓️ Weekly Top 5</button>
+        <button class="tab-btn" id="tab-weekly" onclick="switchTab('weekly')" style="flex: 1; min-width: 125px; white-space: nowrap;">🗓️ Weekly Top 5</button>
         <button class="tab-btn" id="tab-calculator" onclick="switchTab('calculator')" style="flex: 1; min-width: 100px; white-space: nowrap;">🧮 Kalkulator</button>
         <button class="tab-btn" id="tab-info" onclick="switchTab('info')" style="flex: 1; min-width: 90px; white-space: nowrap;">📖 Panduan</button>
         <button class="tab-btn" id="tab-tracker" onclick="switchTab('tracker')" style="flex: 1; min-width: 95px; white-space: nowrap;">📈 &lt; RM1</button>
@@ -711,7 +711,7 @@
                     </div>
                     <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
                         <button onclick="copyHybridWatchlist()" style="background: #3b82f6; color: white; border: none; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 800; font-size: 0.82rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: transform 0.2s; box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                            📋 Copy Watchlist (TV)
+                            📋 Salin Watchlist (TV)
                         </button>
                     </div>
                 </div>
@@ -721,16 +721,16 @@
                         <thead>
                             <tr>
                                 <th style="width: 50px; text-align: center; color: #3b82f6;">No</th>
-                                <th style="color: #3b82f6; text-align: left;">Counter</th>
+                                <th style="color: #3b82f6; text-align: left;">Kaunter</th>
                                 <th style="text-align: center; color: #3b82f6;">Kategori Setup</th>
-                                <th style="text-align: right; color: #3b82f6;">Price</th>
-                                <th style="text-align: right; color: #3b82f6;">Change</th>
-                                <th style="text-align: right; color: #3b82f6;">Support Floor</th>
+                                <th style="text-align: right; color: #3b82f6;">Harga Semasa</th>
+                                <th style="text-align: right; color: #3b82f6;">Perubahan</th>
+                                <th style="text-align: right; color: #3b82f6;">Lantai Sokongan</th>
                                 <th style="text-align: right; color: #3b82f6;">Jarak Lantai</th>
                                 <th style="text-align: right; color: #3b82f6;">Volatiliti</th>
                                 <th style="text-align: right; color: #3b82f6;">Stop Loss (3%)</th>
                                 <th style="text-align: right; color: #3b82f6;">Turnover</th>
-                                <th style="text-align: center; color: #3b82f6;">AI Analysis</th>
+                                <th style="text-align: center; color: #3b82f6;">Analisis AI</th>
                             </tr>
                         </thead>
                         <tbody id="hybridPicksTableBody">
@@ -805,16 +805,16 @@
                         <thead>
                             <tr>
                                 <th style="width: 50px; text-align: center; color: #fb7185;">No</th>
-                                <th style="color: #fb7185; text-align: left;">Counter</th>
+                                <th style="color: #fb7185; text-align: left;">Kaunter</th>
                                 <th style="text-align: center; color: #fb7185;">Kategori Setup</th>
-                                <th style="text-align: right; color: #fb7185;">Price</th>
-                                <th style="text-align: right; color: #fb7185;">Change</th>
+                                <th style="text-align: right; color: #fb7185;">Harga Semasa</th>
+                                <th style="text-align: right; color: #fb7185;">Perubahan</th>
                                 <th style="text-align: right; color: #fb7185;">Open Price (Trigger)</th>
                                 <th style="text-align: right; color: #fb7185;">Jarak Trigger</th>
                                 <th style="text-align: right; color: #fb7185;">Volatiliti</th>
-                                <th style="text-align: right; color: #fb7185;">Support Floor</th>
+                                <th style="text-align: right; color: #fb7185;">Lantai Sokongan</th>
                                 <th style="text-align: right; color: #fb7185;">Turnover</th>
-                                <th style="text-align: center; color: #fb7185;">AI Analysis</th>
+                                <th style="text-align: center; color: #fb7185;">Analisis AI</th>
                             </tr>
                         </thead>
                         <tbody id="reclaimRadarTableBody">
@@ -995,16 +995,16 @@
                         <thead>
                             <tr>
                                 <th style="width: 50px; text-align: center; color: #f59e0b;">No</th>
-                                <th style="color: #f59e0b; text-align: left;">Counter</th>
+                                <th style="color: #f59e0b; text-align: left;">Kaunter</th>
                                 <th style="text-align: center; color: #f59e0b;">Kategori Setup</th>
-                                <th style="text-align: right; color: #f59e0b;">Price</th>
-                                <th style="text-align: right; color: #f59e0b;">Change</th>
-                                <th style="text-align: right; color: #f59e0b;">Support Floor</th>
+                                <th style="text-align: right; color: #f59e0b;">Harga Semasa</th>
+                                <th style="text-align: right; color: #f59e0b;">Perubahan</th>
+                                <th style="text-align: right; color: #f59e0b;">Lantai Sokongan</th>
                                 <th style="text-align: right; color: #f59e0b;">Jarak Lantai</th>
                                 <th style="text-align: right; color: #f59e0b;">Volatiliti</th>
                                 <th style="text-align: right; color: #f59e0b;">Kejatuhan (Pullback)</th>
                                 <th style="text-align: right; color: #f59e0b;">Turnover</th>
-                                <th style="text-align: center; color: #f59e0b;">AI Analysis</th>
+                                <th style="text-align: center; color: #f59e0b;">Analisis AI</th>
                             </tr>
                         </thead>
                         <tbody id="bottomFishingTableBody">
@@ -1063,17 +1063,17 @@
                     <span style="font-size: 2rem;">🗓️</span>
                     <div>
                         <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-                            <h2 style="margin: 0; font-size: 1.35rem; color: #fbbf24; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;">Weekly Homework: JerungBursa Top 5 Swing</h2>
-                            <span style="font-size: 0.75rem; background: rgba(245, 158, 11, 0.2); color: #fbbf24; padding: 0.2rem 0.6rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.4);">🔥 HOLD 5 HARI - 3 MINGGU</span>
+                            <h2 style="margin: 0; font-size: 1.35rem; color: #fbbf24; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;">Kerja Rumah Mingguan: JerungBursa Top 5 Swing</h2>
+                            <span style="font-size: 0.75rem; background: rgba(245, 158, 11, 0.2); color: #fbbf24; padding: 0.2rem 0.6rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.4);">🔥 PEGANG 5 HARI - 3 MINGGU</span>
                         </div>
                         <p style="margin: 0.35rem 0 0 0; font-size: 0.85rem; color: #cbd5e1; line-height: 1.4;">
-                            Hasil tapisan automatik daripada beratus kaunter — mengecilkan carian ke <strong style="color: #fbbf24;">Top 5 Kaunter High-Conviction</strong> mengikut 4 Teknik Utama: <strong style="color: #38bdf8;">Trend Rider</strong>, <strong style="color: #4ade80;">Early Spring</strong>, <strong style="color: #fb7185;">Phoenix</strong>, & <strong style="color: #f59e0b;">Bottom</strong>.
+                            Hasil tapisan automatik daripada beratus kaunter — mengecilkan carian ke <strong style="color: #fbbf24;">Top 5 Kaunter Pilihan Utama</strong> mengikut 4 Teknik Utama: <strong style="color: #38bdf8;">Trend Rider</strong>, <strong style="color: #4ade80;">Early Spring</strong>, <strong style="color: #fb7185;">Phoenix</strong>, & <strong style="color: #f59e0b;">Bottom</strong>.
                         </p>
                     </div>
                 </div>
                 <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
                     <button onclick="copyWeeklyWatchlist()" style="background: linear-gradient(135deg, #d97706, #f59e0b); color: white; border: none; padding: 0.55rem 1.1rem; border-radius: 8px; font-weight: 800; font-size: 0.83rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: transform 0.2s; box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                        📋 Copy TV Watchlist (Top 5)
+                        📋 Salin TV Watchlist (Top 5)
                     </button>
                 </div>
             </div>
@@ -1085,15 +1085,15 @@
                     <div style="font-size: 1.4rem; font-weight: 900; color: #f8fafc; margin-top: 0.2rem;" id="weeklyScannedCount">0</div>
                 </div>
                 <div style="background: rgba(15, 23, 42, 0.6); padding: 0.75rem; border-radius: 10px; border: 1px solid rgba(245, 158, 11, 0.3);">
-                    <div style="font-size: 0.75rem; color: #fbbf24; font-weight: 700; text-transform: uppercase;">🎯 Conviction Picks</div>
+                    <div style="font-size: 0.75rem; color: #fbbf24; font-weight: 700; text-transform: uppercase;">🎯 Pilihan Utama</div>
                     <div style="font-size: 1.4rem; font-weight: 900; color: #fbbf24; margin-top: 0.2rem;" id="weeklyPickCount">5 / 5</div>
                 </div>
                 <div style="background: rgba(15, 23, 42, 0.6); padding: 0.75rem; border-radius: 10px; border: 1px solid rgba(16, 185, 129, 0.3);">
-                    <div style="font-size: 0.75rem; color: #34d399; font-weight: 700; text-transform: uppercase;">🛡️ Max Floor Risk</div>
+                    <div style="font-size: 0.75rem; color: #34d399; font-weight: 700; text-transform: uppercase;">🛡️ Risiko Maksimum</div>
                     <div style="font-size: 1.4rem; font-weight: 900; color: #34d399; margin-top: 0.2rem;">&le; 5.0%</div>
                 </div>
                 <div style="background: rgba(15, 23, 42, 0.6); padding: 0.75rem; border-radius: 10px; border: 1px solid rgba(99, 102, 241, 0.3);">
-                    <div style="font-size: 0.75rem; color: #818cf8; font-weight: 700; text-transform: uppercase;">🦈 Min Jerung Turnover</div>
+                    <div style="font-size: 0.75rem; color: #818cf8; font-weight: 700; text-transform: uppercase;">🦈 Min Turnover Jerung</div>
                     <div style="font-size: 1.4rem; font-weight: 900; color: #818cf8; margin-top: 0.2rem;">&ge; RM 500k</div>
                 </div>
             </div>
@@ -1104,15 +1104,15 @@
                     <thead>
                         <tr>
                             <th style="width: 45px; text-align: center; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">No</th>
-                            <th style="color: #fbbf24; text-align: left; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Counter</th>
+                            <th style="color: #fbbf24; text-align: left; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Kaunter</th>
                             <th style="text-align: center; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Teknik Setup</th>
-                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Price (RM)</th>
-                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Change %</th>
-                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Support Floor</th>
-                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Jarak Risk</th>
-                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Turnover</th>
-                            <th style="text-align: left; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Actionable Trading Plan</th>
-                            <th style="text-align: center; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Action</th>
+                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Harga Semasa (RM)</th>
+                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Perubahan %</th>
+                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Lantai Sokongan</th>
+                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Jarak Risiko</th>
+                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Turnover Jerung</th>
+                            <th style="text-align: left; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Pelan Dagangan SOP</th>
+                            <th style="text-align: center; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Tindakan</th>
                         </tr>
                     </thead>
                     <tbody id="weeklyHomeworkTableBody">
@@ -1154,57 +1154,57 @@
         <!-- Kalkulator -->
         <div class="calc-card" style="margin-top: 2rem; margin-bottom: 2rem;">
             <div class="calc-header">
-                🧮 Trading Base Calculator
+                🧮 Kalkulator Perancangan Dagangan
             </div>
             <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem; line-height: 1.4;">
-                Select a stock in the <strong>WATCHLIST/SUPPORT ZONE</strong> to mathematically plan your capital sizing, position lot sizes, and stop loss risks.
+                Pilih kaunter daripada <strong>SENARAI HAJAT / ZON SOKONGAN</strong> untuk merancang saiz modal, saiz lot posisi, dan risiko hentian rugi (Stop Loss) secara matematik.
             </p>
             
             <div class="calc-grid">
                 <div class="calc-group">
-                    <label>Select Stock</label>
+                    <label>Pilih Kaunter</label>
                     <select id="calcTicker" onchange="calculatePlan()">
                         <!-- Options populated dynamically -->
                     </select>
                 </div>
                 <div class="calc-group">
-                    <label>Your Capital (RM)</label>
+                    <label>Modal Anda (RM)</label>
                     <input type="number" id="calcCapital" value="5000" min="500" step="500" oninput="calculatePlan()">
                 </div>
             </div>
 
             <div class="calc-results">
                 <div class="result-row">
-                    <span class="result-label">Current Price</span>
+                    <span class="result-label">Harga Semasa</span>
                     <span class="result-value" id="calcCurrentPrice">RM 0.000</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">Support Floor</span>
+                    <span class="result-label">Lantai Sokongan</span>
                     <span class="result-value" style="color: #60a5fa;" id="calcFloorPrice">RM 0.000</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">Stop Loss (SL) (-3.0%)</span>
+                    <span class="result-label">Hentian Rugi (SL) (-3.0%)</span>
                     <span class="result-value danger" id="calcSlPrice">RM 0.000</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">Purchasable Lot Size</span>
-                    <span class="result-value" id="calcLots">0 Lots (0 units)</span>
+                    <span class="result-label">Jumlah Lot Boleh Dibeli</span>
+                    <span class="result-value" id="calcLots">0 Lot (0 unit)</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">Actual Capital Invested</span>
+                    <span class="result-label">Modal Sebenar Dilaburkan</span>
                     <span class="result-value" id="calcActualCapital">RM 0.00</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">Maximum Loss (If SL Hit)</span>
+                    <span class="result-label">Kerugian Maksimum (Jika Kena SL)</span>
                     <span class="result-value danger" id="calcMaxRisk">RM 0.00 (0.00%)</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">Target Profit 1 (TP1) (+10.0%)</span>
-                    <span class="result-value success" id="calcTp1">RM 0.00 (Profit RM 0.00)</span>
+                    <span class="result-label">Sasaran Untung 1 (TP1) (+10.0%)</span>
+                    <span class="result-value success" id="calcTp1">RM 0.00 (Untung RM 0.00)</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">Target Profit 2 (TP2) (+20.0%)</span>
-                    <span class="result-value success" style="color: #a78bfa;" id="calcTp2">RM 0.00 (Profit RM 0.00)</span>
+                    <span class="result-label">Sasaran Untung 2 (TP2) (+20.0%)</span>
+                    <span class="result-value success" style="color: #a78bfa;" id="calcTp2">RM 0.00 (Untung RM 0.00)</span>
                 </div>
             </div>
         </div>
@@ -1212,11 +1212,11 @@
         <!-- AI Decision Section -->
         <div style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(167, 139, 250, 0.25); border-radius: 12px; padding: 1.25rem; margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
             <h4 style="margin: 0; display: flex; align-items: center; gap: 0.4rem; color: #a78bfa; font-size: 0.95rem; font-weight: 800;">
-                ✨ Groq AI Smart Analysis
+                ✨ Analisis Pintar Groq AI
             </h4>
             <div id="ai-verdict-box" style="background: rgba(30, 41, 59, 0.3); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 8px; padding: 1rem; min-height: 80px; display: flex; flex-direction: column; justify-content: center; align-items: center; font-size: 0.85rem; line-height: 1.5; color: #e2e8f0;">
                 <button onclick="generateAIAnalysis()" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.5rem 1.2rem; border-radius: 8px; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-                    ⚡ Generate AI Verdict (Backtest & Risk Review)
+                    ⚡ Jana Keputusan AI (Semakan Risiko & Backtest)
                 </button>
                 <div style="font-size: 0.7rem; color: var(--text-muted); margin-top: 0.5rem; text-align: center;">Menggunakan Groq Llama 3 untuk mengukur risiko breakdown & kadar kemenangan sejarah.</div>
             </div>
@@ -1630,7 +1630,7 @@
                     </div>
                 </div>
                 <div style="background: rgba(167, 139, 250, 0.1); border: 1px solid rgba(167, 139, 250, 0.25); border-radius: 8px; padding: 0.4rem 0.8rem; font-weight: 700; font-size: 0.85rem; color: #a78bfa;">
-                    Total Valuation: <span id="portfolio-total-val" style="color: white; font-weight: 800;">Calculated Live...</span>
+                    Jumlah Nilaian Portfolio: <span id="portfolio-total-val" style="color: white; font-weight: 800;">Dikira Secara Langsung...</span>
                 </div>
             </div>
             
@@ -4504,10 +4504,9 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
         }
         window.renderPhoenixSpring = renderPhoenixSpring;
 
-        // Render Weekly Homework (Top 5 High Conviction Swing Picks)
+        // Render Weekly Homework (Top 5 High Conviction Swing Picks - LIST BARU < RM3.00)
         function renderWeeklyHomework() {
-            const live = window.liveData || {};
-            const list = live.topVolume || (currentData || []);
+            const list = (currentData && currentData.length > 0) ? currentData : ((window.liveData && window.liveData.topVolume) || []);
             const scannedEl = document.getElementById('weeklyScannedCount');
             const pickEl = document.getElementById('weeklyPickCount');
             const tbody = document.getElementById('weeklyHomeworkTableBody');
@@ -4516,36 +4515,50 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
             if (scannedEl) scannedEl.textContent = list.length || 0;
 
-            // Filter for weekly swing candidates
+            // Filter for weekly swing candidates (Focus < RM3.00 for High Conviction Swing)
             const candidates = list.filter(s => {
-                if (!s.price || s.price >= 1.0) return false; // Focus < RM1.00
+                const itemPrice = s.price || s.close || s.last || 0;
+                if (!itemPrice || itemPrice >= 3.0) return false; // Expand to < RM3.00 so TMK/KEEMING/MNHLDG are captured
                 if (s.signal === 'sell') return false; // Avoid downtrend/sell stocks
-                const turnover = s.turnover || 0;
+                const turnover = s.turnover || (s.volume ? s.volume * itemPrice : 500000);
                 if (turnover < 250000) return false; // Jerung turnover filter
                 return true;
             });
 
-            // Score candidates for weekly swing suitability
+            // Score candidates for weekly swing suitability (All-in-One Multi-Technique Scoring)
             candidates.forEach(s => {
                 let score = 0;
-                const floorDist = s.floorLow ? Math.abs((s.price - s.floorLow) / s.floorLow * 100) : 999;
-                
+                const itemPrice = s.price || s.close || s.last || 0;
+                const floorDist = s.floorLow ? Math.abs((itemPrice - s.floorLow) / s.floorLow * 100) : 999;
+
                 // Reward tight risk to floor
                 if (floorDist <= 2.5) score += 40;
                 else if (floorDist <= 4.5) score += 30;
                 else if (floorDist <= 6.5) score += 20;
 
+                // Reward solid floor base (4x-10x touches)
+                const touches = s.touchCount || 0;
+                if (touches >= 6) score += 20;
+                else if (touches >= 4) score += 15;
+                else if (touches >= 3) score += 10;
+
+                // Reward tight VCP contraction
+                const tightness = s.closeTightness || 99;
+                if (tightness <= 3.0) score += 20;
+                else if (tightness <= 5.0) score += 15;
+                else if (tightness <= 8.0) score += 10;
+
                 // Reward jerung turnover
-                const turnover = s.turnover || 0;
+                const turnover = s.turnover || (s.volume ? s.volume * itemPrice : 500000);
                 if (turnover >= 2000000) score += 35;
                 else if (turnover >= 1000000) score += 25;
                 else if (turnover >= 500000) score += 15;
 
                 // Reward buy signals and setup styles
                 if (s.signal === 'buy') score += 20;
-                if (s.setupStyle === 'STAIRCASE') score += 15;
+                if (s.setupStyle === 'STAIRCASE' || s.setupStyle === 'SWING PLAY') score += 15;
                 if (s.setupStyle === 'EXPLOSIVE') score += 10;
-                if (s.isConsolidation) score += 10;
+                if (s.isConsolidation || s.setupName?.includes('Reclaim')) score += 15;
 
                 s._weeklyScore = score;
                 s._floorDist = floorDist;
@@ -4566,7 +4579,8 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
             let html = '';
             top5.forEach((item, idx) => {
-                const price = item.price ? item.price.toFixed(3) : '0.000';
+                const itemPrice = item.price || item.close || item.last || 0;
+                const price = itemPrice ? itemPrice.toFixed(3) : '0.000';
                 const chg = item.changePct !== undefined ? item.changePct.toFixed(2) : '0.00';
                 const chgColor = item.changePct >= 0 ? '#34d399' : '#ef4444';
                 const chgSign = item.changePct >= 0 ? '+' : '';
@@ -4595,9 +4609,9 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 let planText = '';
                 if (item.floorLow) {
                     const slPrice = (item.floorLow * 0.97).toFixed(3);
-                    planText = `Tunggu Entry rapat support <strong style="color: #60a5fa;">RM ${floor}</strong> | SL <strong style="color: #ef4444;">RM ${slPrice}</strong> (&le; 5%)`;
+                    planText = `Tunggu Entry rapat sokongan <strong style="color: #60a5fa;">RM ${floor}</strong> | SL <strong style="color: #ef4444;">RM ${slPrice}</strong> (&le; 5%)`;
                 } else {
-                    planText = `Rujuk chart daily untuk entry tight risk`;
+                    planText = `Rujuk carta harian untuk entry risiko ketat`;
                 }
 
                 html += `
@@ -4614,7 +4628,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     <td style="padding: 0.65rem 0.8rem; font-size: 0.82rem; text-align: right; font-weight: 700; color: #cbd5e1;">${turnoverFormatted}</td>
                     <td style="padding: 0.65rem 0.8rem; font-size: 0.78rem; color: #cbd5e1;">${planText}</td>
                     <td style="padding: 0.65rem 0.8rem; text-align: center;">
-                        <button onclick="triggerAIAnalysisModal('${item.name}', 'Weekly Homework: ${techniqueName}')" class="btn" style="background: linear-gradient(135deg, #f59e0b, #d97706); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">✨ AI Plan</button>
+                        <button onclick="triggerAIAnalysisModal('${item.name}', 'Weekly Homework: ${techniqueName}')" class="btn" style="background: linear-gradient(135deg, #f59e0b, #d97706); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">✨ Plan AI</button>
                     </td>
                 </tr>`;
             });
