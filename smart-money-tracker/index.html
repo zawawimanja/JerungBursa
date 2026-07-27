@@ -678,19 +678,19 @@
 
     <!-- Tab Navigation -->
     <div class="tabs-nav" style="margin-bottom: 1rem; margin-top: 0.5rem; display: flex; gap: 0.4rem; flex-wrap: wrap;">
-        <button class="tab-btn active" id="tab-trend" onclick="switchTab('trend')" style="flex: 1; min-width: 100px; white-space: nowrap;">📈 Trend Rider</button>
+        <button class="tab-btn active" id="tab-weekly" onclick="switchTab('weekly')" style="flex: 1; min-width: 125px; white-space: nowrap;">🗓️ Weekly Top 5</button>
+        <button class="tab-btn" id="tab-trend" onclick="switchTab('trend')" style="flex: 1; min-width: 100px; white-space: nowrap;">📈 Trend Rider</button>
         <button class="tab-btn" id="tab-spring" onclick="switchTab('spring')" style="flex: 1; min-width: 100px; white-space: nowrap;">🌱 Early Spring</button>
         <button class="tab-btn" id="tab-phoenix" onclick="switchTab('phoenix')" style="flex: 1; min-width: 90px; white-space: nowrap;">🔥 Phoenix</button>
         <button class="tab-btn" id="tab-fishing" onclick="switchTab('fishing')" style="flex: 1; min-width: 85px; white-space: nowrap;">🎣 Bottom</button>
-        <button class="tab-btn" id="tab-weekly" onclick="switchTab('weekly')" style="flex: 1; min-width: 125px; white-space: nowrap;">🗓️ Weekly Top 5</button>
-        <button class="tab-btn" id="tab-calculator" onclick="switchTab('calculator')" style="flex: 1; min-width: 100px; white-space: nowrap;">🧮 Kalkulator</button>
+        <button class="tab-btn" id="tab-portfolio" onclick="switchTab('portfolio')" style="flex: 1; min-width: 90px; white-space: nowrap;">💼 Portfolio</button>
         <button class="tab-btn" id="tab-info" onclick="switchTab('info')" style="flex: 1; min-width: 90px; white-space: nowrap;">📖 Panduan</button>
         <button class="tab-btn" id="tab-tracker" onclick="switchTab('tracker')" style="flex: 1; min-width: 95px; white-space: nowrap;">📈 &lt; RM1</button>
-        <button class="tab-btn" id="tab-portfolio" onclick="switchTab('portfolio')" style="flex: 1; min-width: 90px; white-space: nowrap;">💼 Portfolio</button>
+        <button class="tab-btn" id="tab-calculator" onclick="switchTab('calculator')" style="flex: 1; min-width: 100px; white-space: nowrap;">🧮 Kalkulator</button>
     </div>
 
     <!-- TAB 1: TREND RIDER -->
-    <div id="view-trend">
+    <div id="view-trend" style="display: none;">
         <!-- PREMIUM HYBRID (Trend Rider) RECOMMENDED PICKS BOX -->
         <div id="hybrid-recommendations-section" style="margin-bottom: 1.25rem; display: none;">
             <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 2px dashed #3b82f6; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15); position: relative; overflow: hidden;">
@@ -1052,8 +1052,8 @@
         </div>
     </div> <!-- End of view-fishing -->
 
-    <!-- TAB 5: WEEKLY HOMEWORK (TOP 5 SWING) -->
-    <div id="view-weekly" style="display: none;">
+    <!-- TAB 1: WEEKLY HOMEWORK (TOP 5 SWING - PRIMARY DEFAULT TAB) -->
+    <div id="view-weekly" style="display: block;">
         <!-- WEEKLY HOMEWORK HERO SECTION -->
         <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 2px solid #f59e0b; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(245, 158, 11, 0.2); position: relative; overflow: hidden; margin-bottom: 1.25rem;">
             <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(245, 158, 11, 0.15); filter: blur(60px); border-radius: 50%; pointer-events: none;"></div>
