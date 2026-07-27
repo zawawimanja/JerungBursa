@@ -1157,13 +1157,7 @@
                 <div style="background: rgba(15, 23, 42, 0.6); padding: 0.9rem; border-radius: 10px; border-left: 4px solid #fbbf24; border-top: 1px solid rgba(251, 191, 36, 0.2);">
                     <div style="display: flex; align-items: center; gap: 0.4rem; font-weight: 800; color: #fbbf24; font-size: 0.9rem; margin-bottom: 0.4rem;">
                         <span>4. Tempoh Peram (Hold Rule)</span>
-                    </div>
-                    Tahan pegangan **2 hingga 4 minggu** selagi harga ditutup hijau di atas lantai. Jual kaunter mendatar (sideway 2 minggu) untuk tukar kaunter baharu.
-                </div>
-            </div>
-        </div>
-
-        <!-- LOG REKOD BACKTEST REKOD MINGGUAN (LIVE DYNAMIC LOG) -->
+                    </        <!-- LOG REKOD BACKTEST REKOD MINGGUAN (LIVE DYNAMIC LOG) -->
         <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 12px; padding: 1.25rem; box-shadow: 0 8px 24px rgba(56, 189, 248, 0.1); margin-top: 1.25rem;">
             <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; border-bottom: 1px solid rgba(56, 189, 248, 0.2); padding-bottom: 0.75rem; margin-bottom: 1rem;">
                 <div style="display: flex; align-items: center; gap: 0.5rem;">
@@ -1173,109 +1167,118 @@
                         <p style="margin: 0.2rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">Menunjukkan kaunter Top 5 yang dipilih dari minggu ke minggu (Jun – Julai 2026) dan status pulangan meletupnya.</p>
                     </div>
                 </div>
-                <div style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.3); padding: 0.4rem 0.8rem; border-radius: 8px; font-size: 0.8rem; font-weight: 800; color: #38bdf8;">
-                    🏆 Pertumbuhan Modal Akaun (2 Bulan): <span style="color: #34d399;">+49.6% Net Capital Growth</span> <span style="color: #94a3b8; font-size: 0.75rem;">(+5.0% / trade)</span>
+                <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
+                    <div style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.3); padding: 0.4rem 0.8rem; border-radius: 8px; font-size: 0.8rem; font-weight: 800; color: #38bdf8;">
+                        🏆 Pertumbuhan Modal Akaun: <span style="color: #34d399;">+49.6% Net Capital Growth</span> <span style="color: #94a3b8; font-size: 0.75rem;">(+5.0% / trade)</span>
+                    </div>
+                    <button id="btn-toggle-backtest" onclick="toggleBacktestSection()" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.4rem 0.8rem; border-radius: 8px; font-weight: 800; font-size: 0.8rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.3rem; transition: background 0.2s;" onmouseover="this.style.background='rgba(56, 189, 248, 0.25)'" onmouseout="this.style.background='rgba(56, 189, 248, 0.15)'">
+                        <span>▼</span> Sembunyi / Papar Rekod
+                    </button>
                 </div>
             </div>
 
-            <!-- BACKTEST SUMMARY TABLE -->
-            <div class="table-wrapper" style="margin-top: 0.5rem; margin-bottom: 0; overflow-x: auto;">
-                <table style="width: 100%; border-collapse: collapse; min-width: 900px; font-size: 0.82rem;">
-                    <thead>
-                        <tr style="background: rgba(56, 189, 248, 0.08); border-bottom: 2px solid rgba(56, 189, 248, 0.3);">
-                            <th style="padding: 0.6rem 0.8rem; text-align: left; color: #38bdf8; font-weight: 800;">Minggu / Tarikh</th>
-                            <th style="padding: 0.6rem 0.8rem; text-align: left; color: #38bdf8; font-weight: 800;">Top 5 Pilihan Utama</th>
-                            <th style="padding: 0.6rem 0.8rem; text-align: right; color: #38bdf8; font-weight: 800;">Purata Kenaikan Puncak</th>
-                            <th style="padding: 0.6rem 0.8rem; text-align: right; color: #34d399; font-weight: 800;">Formula Net PnL (Untung - Rugi)</th>
-                            <th style="padding: 0.6rem 0.8rem; text-align: center; color: #38bdf8; font-weight: 800;">Kaunter Meletup Terunggul</th>
-                            <th style="padding: 0.6rem 0.8rem; text-align: center; color: #38bdf8; font-weight: 800;">Status Prestasi</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);">
-                            <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Minggu 1 (2 Jun)</td>
-                            <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">TMK, AMBEST, SDCG, YEWLEE, ECOMATE</td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+16.6%</td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399;">+108.7% - 0.0% = <strong>+108.7%</strong></td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">🚀 TMK (+63.7%) & AMBEST (+27.1%)</span></td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 5 Win</span> / <span style="color: #94a3b8;">0 Loss</span></td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);">
-                            <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Minggu 2 (9 Jun)</td>
-                            <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">TMK (#2), SDCG (#1), YEWLEE, TOPGLOV, SUNVIEW</td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+9.3%</td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399;">+40.2% - 10.6% = <strong>+29.6%</strong></td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">🚀 TMK (+32.9%)</span></td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 4 Win</span> / <span style="color: #ef4444;">🔴 1 Loss (TOPGLOV -6.5%)</span></td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);">
-                            <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Minggu 3 (16 Jun)</td>
-                            <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">JPG, RADIUM, EXSIMHB, ECOMATE, KTI</td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+8.9%</td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399;">+37.4% - 5.5% = <strong>+31.9%</strong></td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">JPG (+22.2%) & RADIUM (+12.1%)</span></td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 3 Win</span> / <span style="color: #ef4444;">🔴 2 Loss (ECOMATE -0.6%, YEWLEE -0.9%)</span></td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);">
-                            <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Minggu 4 (23 Jun)</td>
-                            <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">MNHLDG, PWRWELL, YEWLEE, SDCG, EMPIRE</td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+4.8%</td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399;">+31.8% - 5.3% = <strong>+26.5%</strong></td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">MNHLDG (+13.0%)</span></td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 2 Win</span> / <span style="color: #ef4444;">🔴 3 Loss (PWRWELL -5.3%, AMBEST -4.1%)</span></td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);">
-                            <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Minggu 5 (30 Jun)</td>
-                            <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">JPG (#1), SDCG, YEWLEE, ECOMATE, SUNVIEW</td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+4.3%</td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399;">+28.5% - 9.7% = <strong>+18.9%</strong></td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">JPG (+14.6%)</span></td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 3 Win</span> / <span style="color: #ef4444;">🔴 2 Loss (YEWLEE -5.4%, ECOMATE -0.6%)</span></td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);">
-                            <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Minggu 6 (7 Julai)</td>
-                            <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">MEGAFB, MNHLDG (#1), DUFU, PWRWELL, SCGBHD</td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+5.3%</td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399;">+19.6% - 11.0% = <strong>+8.5%</strong></td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">MEGAFB (+14.9%)</span></td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 3 Win</span> / <span style="color: #ef4444;">🔴 2 Loss (MCLEAN -4.0%, YEWLEE -2.5%)</span></td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);">
-                            <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Minggu 7 (14 Julai)</td>
-                            <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">MEGAFB (#1), PEKAT, SEMICO, ECOMATE, ECOSHOP</td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+4.4%</td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #ef4444;">+6.1% - 7.2% = <strong>-1.1%</strong></td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">MEGAFB (+15.6%)</span></td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 3 Win</span> / <span style="color: #ef4444;">🔴 2 Loss (AMBEST -5.8%, ECOMATE -0.6%)</span></td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);">
-                            <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Minggu 8 (21 Julai)</td>
-                            <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">JPG, MNHLDG, ECOSHOP, MRDIY, ECOMATE</td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+0.6%</td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #ef4444;">+0.5% - 5.8% = <strong>-5.3%</strong></td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">MNHLDG & JPG</span></td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 3 Win</span> / <span style="color: #ef4444;">🔴 2 Loss (HEGROUP -1.7%, TEAMSTR -2.0%)</span></td>
-                        </tr>
-                        <tr style="background: rgba(52, 211, 153, 0.08); border-top: 2px solid rgba(52, 211, 153, 0.3);">
-                            <td style="padding: 0.65rem 0.8rem; font-weight: 900; color: #34d399;">Minggu 9 (27 Julai - Semasa)</td>
-                            <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #34d399;">ECOSHOP, MNHLDG, CBHB, DNEX, JPG</td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">🔥 AKTIF HASIL</td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399;">🔥 AKTIF</td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(52, 211, 153, 0.2); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">ECOSHOP & MNHLDG</span></td>
-                            <td style="padding: 0.65rem 0.8rem; text-align: center; color: #34d399; font-weight: 900;">🚀 AKTIF DIBELI (ISNIN)</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(16, 185, 129, 0.2)); border-top: 2px solid #f59e0b; border-bottom: 2px solid #f59e0b;">
-                            <td style="padding: 0.75rem 0.8rem; font-weight: 900; color: #fbbf24; font-size: 0.88rem;">🏆 JUMLAH KESELURUHAN (8 MINGGU)</td>
-                            <td style="padding: 0.75rem 0.8rem; font-weight: 800; color: #f8fafc;">40 Trade Terpilih</td>
-                            <td style="padding: 0.75rem 0.8rem; text-align: right; font-weight: 900; color: #34d399;">+6.8% Purata</td>
-                            <td style="padding: 0.75rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; font-size: 0.88rem;">+274.1% - 56.4% = <span style="background: rgba(16, 185, 129, 0.3); color: #34d399; padding: 0.2rem 0.5rem; border-radius: 6px; border: 1px solid #10b981;">+217.7% Net PnL</span></td>
-                            <td style="padding: 0.75rem 0.8rem; text-align: center; font-weight: 900; color: #fbbf24;">🚀 16 Kaunter Meletup</td>
-                            <td style="padding: 0.75rem 0.8rem; text-align: center; font-weight: 900;"><span style="color: #34d399;">🟢 26 Win</span> / <span style="color: #ef4444;">🔴 14 Loss (65% Win Rate)</span></td>
-                        </tr>
-                    </tfoot>
-                </table>
+            <!-- BACKTEST SUMMARY TABLE COLLAPSIBLE WRAPPER -->
+            <div id="backtest-collapsible-wrapper" style="display: block; transition: all 0.3s ease;">
+                <div class="table-wrapper" style="margin-top: 0.5rem; margin-bottom: 0; overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; min-width: 950px; font-size: 0.82rem;">
+                        <thead>
+                            <tr style="background: rgba(56, 189, 248, 0.08); border-bottom: 2px solid rgba(56, 189, 248, 0.3);">
+                                <th style="padding: 0.6rem 0.8rem; text-align: left; color: #38bdf8; font-weight: 800;">Minggu / Tarikh</th>
+                                <th style="padding: 0.6rem 0.8rem; text-align: left; color: #38bdf8; font-weight: 800;">Top 5 Pilihan Utama</th>
+                                <th style="padding: 0.6rem 0.8rem; text-align: right; color: #38bdf8; font-weight: 800;">Purata Kenaikan Puncak</th>
+                                <th style="padding: 0.6rem 0.8rem; text-align: right; color: #34d399; font-weight: 800;">Formula Net PnL (Untung - Rugi)</th>
+                                <th style="padding: 0.6rem 0.8rem; text-align: center; color: #38bdf8; font-weight: 800;">Kaunter Meletup Terunggul</th>
+                                <th style="padding: 0.6rem 0.8rem; text-align: center; color: #38bdf8; font-weight: 800;">Status Prestasi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="backtest-summary-tbody">
+                            <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);">
+                                <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Minggu 1 (2 Jun)</td>
+                                <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">TMK, AMBEST, SDCG, YEWLEE, ECOMATE</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+16.6%</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; white-space: nowrap;">+108.7% - 0.0% = <strong>+108.7%</strong></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">🚀 TMK (+63.7%) & AMBEST (+27.1%)</span></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 5 Win</span> / <span style="color: #94a3b8;">0 Loss</span></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);">
+                                <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Minggu 2 (9 Jun)</td>
+                                <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">TMK (#2), SDCG (#1), YEWLEE, TOPGLOV, SUNVIEW</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+9.3%</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; white-space: nowrap;">+40.2% - 10.6% = <strong>+29.6%</strong></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">🚀 TMK (+32.9%)</span></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 4 Win</span> / <span style="color: #ef4444;">🔴 1 Loss (TOPGLOV -6.5%)</span></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);">
+                                <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Minggu 3 (16 Jun)</td>
+                                <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">JPG, RADIUM, EXSIMHB, ECOMATE, KTI</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+8.9%</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; white-space: nowrap;">+37.4% - 5.5% = <strong>+31.9%</strong></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">JPG (+22.2%) & RADIUM (+12.1%)</span></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 3 Win</span> / <span style="color: #ef4444;">🔴 2 Loss (ECOMATE -0.6%, YEWLEE -0.9%)</span></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);">
+                                <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Minggu 4 (23 Jun)</td>
+                                <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">MNHLDG, PWRWELL, YEWLEE, SDCG, EMPIRE</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+4.8%</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; white-space: nowrap;">+31.8% - 5.3% = <strong>+26.5%</strong></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">MNHLDG (+13.0%)</span></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 2 Win</span> / <span style="color: #ef4444;">🔴 3 Loss (PWRWELL -5.3%, AMBEST -4.1%)</span></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);">
+                                <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Minggu 5 (30 Jun)</td>
+                                <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">JPG (#1), SDCG, YEWLEE, ECOMATE, SUNVIEW</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+4.3%</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; white-space: nowrap;">+28.5% - 9.7% = <strong>+18.9%</strong></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">JPG (+14.6%)</span></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 3 Win</span> / <span style="color: #ef4444;">🔴 2 Loss (YEWLEE -5.4%, ECOMATE -0.6%)</span></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);">
+                                <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Minggu 6 (7 Julai)</td>
+                                <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">MEGAFB, MNHLDG (#1), DUFU, PWRWELL, SCGBHD</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+5.3%</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; white-space: nowrap;">+19.6% - 11.0% = <strong>+8.5%</strong></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">MEGAFB (+14.9%)</span></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 3 Win</span> / <span style="color: #ef4444;">🔴 2 Loss (MCLEAN -4.0%, YEWLEE -2.5%)</span></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);">
+                                <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Minggu 7 (14 Julai)</td>
+                                <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">MEGAFB (#1), PEKAT, SEMICO, ECOMATE, ECOSHOP</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+4.4%</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #ef4444; white-space: nowrap;">+6.1% - 7.2% = <strong>-1.1%</strong></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">MEGAFB (+15.6%)</span></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 3 Win</span> / <span style="color: #ef4444;">🔴 2 Loss (AMBEST -5.8%, ECOMATE -0.6%)</span></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);">
+                                <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Minggu 8 (21 Julai)</td>
+                                <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">JPG, MNHLDG, ECOSHOP, MRDIY, ECOMATE</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+0.6%</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #ef4444; white-space: nowrap;">+0.5% - 5.8% = <strong>-5.3%</strong></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">MNHLDG & JPG</span></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 3 Win</span> / <span style="color: #ef4444;">🔴 2 Loss (HEGROUP -1.7%, TEAMSTR -2.0%)</span></td>
+                            </tr>
+                            <tr style="background: rgba(52, 211, 153, 0.08); border-top: 2px solid rgba(52, 211, 153, 0.3);">
+                                <td style="padding: 0.65rem 0.8rem; font-weight: 900; color: #34d399;">Minggu 9 (27 Julai - Semasa)</td>
+                                <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #34d399;">ECOSHOP, MNHLDG, CBHB, DNEX, JPG</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">🔥 AKTIF HASIL</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; white-space: nowrap;">🔥 AKTIF (ISNIN)</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(52, 211, 153, 0.2); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">ECOSHOP & MNHLDG</span></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center; color: #34d399; font-weight: 900;">🚀 AKTIF DIBELI (ISNIN)</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(16, 185, 129, 0.2)); border-top: 2px solid #f59e0b; border-bottom: 2px solid #f59e0b;">
+                                <td id="tfoot-backtest-label" style="padding: 0.75rem 0.8rem; font-weight: 900; color: #fbbf24; font-size: 0.88rem; white-space: nowrap;">🏆 JUMLAH KESELURUHAN (8 MINGGU)</td>
+                                <td id="tfoot-backtest-trades" style="padding: 0.75rem 0.8rem; font-weight: 800; color: #f8fafc; white-space: nowrap;">40 Trade Terpilih</td>
+                                <td id="tfoot-backtest-avg-peak" style="padding: 0.75rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; white-space: nowrap;">+6.8% Purata</td>
+                                <td id="tfoot-backtest-net-formula" style="padding: 0.75rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; font-size: 0.82rem; white-space: nowrap;">
+                                    +274.1% - 56.4% = <span style="display: inline-block; background: rgba(16, 185, 129, 0.25); color: #34d399; padding: 0.15rem 0.45rem; border-radius: 6px; border: 1px solid #10b981; margin-left: 0.3rem;">+217.7% Net PnL</span>
+                                </td>
+                                <td id="tfoot-backtest-meletup" style="padding: 0.75rem 0.8rem; text-align: center; font-weight: 900; color: #fbbf24; white-space: nowrap;">🚀 16 Kaunter Meletup</td>
+                                <td id="tfoot-backtest-winloss" style="padding: 0.75rem 0.8rem; text-align: center; font-weight: 900;"><span style="color: #34d399;">🟢 26 Win</span> / <span style="color: #ef4444;">🔴 14 Loss (65% Win Rate)</span></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
             </div>
         </div>
     </div> <!-- End of view-weekly -->
@@ -4765,7 +4768,79 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             });
 
             tbody.innerHTML = html;
+            updateDynamicBacktestTotals();
         }
+
+        // Toggle Backtest Section Collapse/Expand
+        function toggleBacktestSection() {
+            const wrapper = document.getElementById('backtest-collapsible-wrapper');
+            const btn = document.getElementById('btn-toggle-backtest');
+            if (!wrapper || !btn) return;
+            if (wrapper.style.display === 'none') {
+                wrapper.style.display = 'block';
+                btn.innerHTML = '<span>▲</span> Sembunyikan Rekod';
+            } else {
+                wrapper.style.display = 'none';
+                btn.innerHTML = '<span>▼</span> Buka Rekod Backtest';
+            }
+        }
+        window.toggleBacktestSection = toggleBacktestSection;
+
+        // Dynamic Calculation of Backtest Footer Totals
+        function updateDynamicBacktestTotals() {
+            const tbody = document.getElementById('backtest-summary-tbody');
+            if (!tbody) return;
+            
+            const rows = tbody.querySelectorAll('tr');
+            let totalWin = 0;
+            let totalLoss = 0;
+            let winCount = 0;
+            let lossCount = 0;
+            let weekCount = 0;
+
+            rows.forEach(r => {
+                const cells = r.querySelectorAll('td');
+                if (cells.length < 6) return;
+                
+                const formulaText = cells[3].textContent || '';
+                const winLossText = cells[5].textContent || '';
+
+                if (formulaText.includes('AKTIF')) return;
+
+                weekCount++;
+
+                const match = formulaText.match(/\+([\d\.]+)\%\s*-\s*([\d\.]+)\%/);
+                if (match) {
+                    totalWin += parseFloat(match[1]) || 0;
+                    totalLoss += parseFloat(match[2]) || 0;
+                }
+
+                const wMatch = winLossText.match(/(\d+)\s*Win/i);
+                const lMatch = winLossText.match(/(\d+)\s*Loss/i);
+                if (wMatch) winCount += parseInt(wMatch[1], 10);
+                if (lMatch) lossCount += parseInt(lMatch[1], 10);
+            });
+
+            const totalNet = totalWin - totalLoss;
+            const totalTrades = weekCount * 5;
+            const totalWinsLosses = winCount + lossCount;
+            const winRate = totalWinsLosses > 0 ? Math.round((winCount / totalWinsLosses) * 100) : 0;
+
+            const labelEl = document.getElementById('tfoot-backtest-label');
+            const tradesEl = document.getElementById('tfoot-backtest-trades');
+            const formulaEl = document.getElementById('tfoot-backtest-net-formula');
+            const winLossEl = document.getElementById('tfoot-backtest-winloss');
+
+            if (labelEl) labelEl.textContent = `🏆 JUMLAH KESELURUHAN (${weekCount} MINGGU)`;
+            if (tradesEl) tradesEl.textContent = `${totalTrades} Trade Terpilih`;
+            if (formulaEl) {
+                formulaEl.innerHTML = `+${totalWin.toFixed(1)}% - ${totalLoss.toFixed(1)}% = <span style="display: inline-block; background: rgba(16, 185, 129, 0.25); color: #34d399; padding: 0.15rem 0.45rem; border-radius: 6px; border: 1px solid #10b981; margin-left: 0.3rem;">+${totalNet.toFixed(1)}% Net PnL</span>`;
+            }
+            if (winLossEl) {
+                winLossEl.innerHTML = `<span style="color: #34d399;">🟢 ${winCount} Win</span> / <span style="color: #ef4444;">🔴 ${lossCount} Loss (${winRate}% Win Rate)</span>`;
+            }
+        }
+        window.updateDynamicBacktestTotals = updateDynamicBacktestTotals;
 
         function copyWeeklyWatchlist() {
             const picks = window._weeklyTop5Picks || [];
