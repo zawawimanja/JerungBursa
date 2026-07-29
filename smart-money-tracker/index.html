@@ -1064,7 +1064,7 @@
                     <div>
                         <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
                             <h2 style="margin: 0; font-size: 1.35rem; color: #fbbf24; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;">Kerja Rumah Mingguan: JerungBursa Top 5 Swing</h2>
-                            <span style="font-size: 0.75rem; background: rgba(245, 158, 11, 0.2); color: #fbbf24; padding: 0.2rem 0.6rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.4);">🔥 PEGANG 5 HARI - 3 MINGGU</span>
+                            <span id="weeklyLockBadge" style="font-size: 0.75rem; background: rgba(245, 158, 11, 0.2); color: #fbbf24; padding: 0.2rem 0.6rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.4);">🔒 TERKUNCI: SNAPSHOT ISNIN</span>
                         </div>
                         <p style="margin: 0.35rem 0 0 0; font-size: 0.85rem; color: #cbd5e1; line-height: 1.4;">
                             Hasil tapisan automatik daripada beratus kaunter — mengecilkan carian ke <strong style="color: #fbbf24;">Top 5 Kaunter Pilihan Utama</strong> mengikut 4 Teknik Utama: <strong style="color: #38bdf8;">Trend Rider</strong>, <strong style="color: #4ade80;">Early Spring</strong>, <strong style="color: #fb7185;">Phoenix</strong>, & <strong style="color: #f59e0b;">Bottom</strong>.
@@ -1106,8 +1106,9 @@
                             <th style="width: 45px; text-align: center; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">No</th>
                             <th style="color: #fbbf24; text-align: left; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Kaunter</th>
                             <th style="text-align: center; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Teknik Setup</th>
-                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Harga Semasa (RM)</th>
-                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Perubahan %</th>
+                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Harga Base Weekend</th>
+                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Harga Terkini</th>
+                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Prestasi Minggu Ini %</th>
                             <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Lantai Sokongan</th>
                             <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Jarak Risiko</th>
                             <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Turnover Jerung</th>
@@ -4648,57 +4649,105 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
         }
         window.renderPhoenixSpring = renderPhoenixSpring;
 
-        // Render Weekly Homework (Top 5 High Conviction Swing Picks - LIST BARU < RM3.00)
-        function renderWeeklyHomework() {
-            const list = (currentData && currentData.length > 0) ? currentData : ((window.liveData && window.liveData.topVolume) || []);
+        let _weekendSnapshotCache = {};
+
+        async function getWeekendSnapshotList(targetDateStr) {
+            let refDate = new Date();
+            if (targetDateStr) {
+                const parts = targetDateStr.split('-');
+                if (parts.length === 3) {
+                    refDate = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
+                }
+            }
+            const day = refDate.getDay(); // 0: Sun, 1: Mon, ..., 5: Fri, 6: Sat
+            let diffToFriday = 5 - day;
+            if (day < 5) {
+                diffToFriday = -2 - day; // Go back to previous Friday close
+            }
+            const fridayDate = new Date(refDate.setDate(refDate.getDate() + diffToFriday));
+            const yyyy = fridayDate.getFullYear();
+            const mm = String(fridayDate.getMonth() + 1).padStart(2, '0');
+            const dd = String(fridayDate.getDate()).padStart(2, '0');
+            const fridayStr = `${yyyy}-${mm}-${dd}`;
+
+            if (_weekendSnapshotCache[fridayStr]) {
+                return { fridayStr, list: _weekendSnapshotCache[fridayStr] };
+            }
+
+            try {
+                const cacheBuster = new Date().getTime();
+                let res = await fetch(`history/data_${fridayStr}.json?t=${cacheBuster}`);
+                if (!res || !res.ok) {
+                    res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/history/data_${fridayStr}.json?t=${cacheBuster}`);
+                }
+                if (res && res.ok) {
+                    const raw = await res.json();
+                    const list = Array.isArray(raw) ? raw : (raw.topVolume || []);
+                    _weekendSnapshotCache[fridayStr] = list;
+                    return { fridayStr, list };
+                }
+            } catch (e) {
+                console.warn("Local Weekend Friday fetch failed", e);
+            }
+            return { fridayStr, list: null };
+        }
+
+        // Render Weekly Homework (Top 5 High Conviction Swing Picks - LOCKED TO WEEKEND SNAPSHOT)
+        async function renderWeeklyHomework() {
+            const liveList = (currentData && currentData.length > 0) ? currentData : ((window.liveData && window.liveData.topVolume) || []);
             const scannedEl = document.getElementById('weeklyScannedCount');
             const pickEl = document.getElementById('weeklyPickCount');
             const tbody = document.getElementById('weeklyHomeworkTableBody');
 
             if (!tbody) return;
 
-            if (scannedEl) scannedEl.textContent = list.length || 0;
+            const activeDateVal = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || '';
+            const { fridayStr, list: weekendList } = await getWeekendSnapshotList(activeDateVal);
 
-            // Filter for weekly swing candidates (Focus < RM3.00 for High Conviction Swing)
-            const candidates = list.filter(s => {
+            // Use Weekend (Friday Close) snapshot list to lock the Weekly Top 5 picks
+            const sourceList = (weekendList && weekendList.length > 0) ? weekendList : liveList;
+
+            if (scannedEl) scannedEl.textContent = sourceList.length || 0;
+
+            const badgeEl = document.getElementById('weeklyLockBadge');
+            if (badgeEl) {
+                badgeEl.textContent = `🔒 TERKUNCI: HOMEWORK WEEKEND (${fridayStr})`;
+            }
+
+            // Filter Weekend list for weekly swing candidates (< RM3.00, non-sell, turnover >= 250k)
+            const candidates = sourceList.filter(s => {
                 const itemPrice = s.price || s.close || s.last || 0;
-                if (!itemPrice || itemPrice >= 3.0) return false; // Expand to < RM3.00 so TMK/KEEMING/MNHLDG are captured
-                if (s.signal === 'sell') return false; // Avoid downtrend/sell stocks
+                if (!itemPrice || itemPrice >= 3.0) return false;
+                if (s.signal === 'sell') return false;
                 const turnover = s.turnover || (s.volume ? s.volume * itemPrice : 500000);
-                if (turnover < 250000) return false; // Jerung turnover filter
+                if (turnover < 250000) return false;
                 return true;
             });
 
-            // Score candidates for weekly swing suitability (All-in-One Multi-Technique Scoring)
             candidates.forEach(s => {
                 let score = 0;
                 const itemPrice = s.price || s.close || s.last || 0;
                 const floorDist = s.floorLow ? Math.abs((itemPrice - s.floorLow) / s.floorLow * 100) : 999;
 
-                // Reward tight risk to floor
                 if (floorDist <= 2.5) score += 40;
                 else if (floorDist <= 4.5) score += 30;
                 else if (floorDist <= 6.5) score += 20;
 
-                // Reward solid floor base (4x-10x touches)
                 const touches = s.touchCount || 0;
                 if (touches >= 6) score += 20;
                 else if (touches >= 4) score += 15;
                 else if (touches >= 3) score += 10;
 
-                // Reward tight VCP contraction
                 const tightness = s.closeTightness || 99;
                 if (tightness <= 3.0) score += 20;
                 else if (tightness <= 5.0) score += 15;
                 else if (tightness <= 8.0) score += 10;
 
-                // Reward jerung turnover
                 const turnover = s.turnover || (s.volume ? s.volume * itemPrice : 500000);
                 if (turnover >= 2000000) score += 35;
                 else if (turnover >= 1000000) score += 25;
                 else if (turnover >= 500000) score += 15;
 
-                // Reward buy signals and setup styles
                 if (s.signal === 'buy') score += 20;
                 if (s.setupStyle === 'STAIRCASE' || s.setupStyle === 'SWING PLAY') score += 15;
                 if (s.setupStyle === 'EXPLOSIVE') score += 10;
@@ -4710,38 +4759,43 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
             candidates.sort((a, b) => b._weeklyScore - a._weeklyScore);
 
-            // Pick top 5
             const top5 = candidates.slice(0, 5);
             window._weeklyTop5Picks = top5;
 
             if (pickEl) pickEl.textContent = `${top5.length} / 5`;
 
             if (top5.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="10" style="text-align: center; color: var(--text-muted); padding: 1.5rem;">Tiada kaunter memenuhi kriteria Weekly Homework hari ini.</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="11" style="text-align: center; color: var(--text-muted); padding: 1.5rem;">Tiada kaunter memenuhi kriteria Weekly Homework.</td></tr>`;
                 return;
             }
 
             let html = '';
-            top5.forEach((item, idx) => {
-                const itemPrice = item.price || item.close || item.last || 0;
-                const price = itemPrice ? itemPrice.toFixed(3) : '0.000';
-                const chg = item.changePct !== undefined ? item.changePct.toFixed(2) : '0.00';
-                const chgColor = item.changePct >= 0 ? '#34d399' : '#ef4444';
-                const chgSign = item.changePct >= 0 ? '+' : '';
-                const floor = item.floorLow ? item.floorLow.toFixed(3) : '-';
-                const floorDist = item._floorDist !== 999 ? item._floorDist.toFixed(1) + '%' : '-';
-                const turnoverFormatted = item.turnover ? 'RM ' + (item.turnover / 1000).toFixed(0) + 'k' : '-';
+            top5.forEach((mItem, idx) => {
+                const liveMatch = liveList.find(x => x.name === mItem.name) || mItem;
+                const mPrice = mItem.price || mItem.close || 0;
+                const curPrice = liveMatch.price || liveMatch.close || mPrice;
+                const perfPct = mPrice > 0 ? ((curPrice - mPrice) / mPrice * 100) : 0;
 
-                // Map technique badge to 4 user techniques
+                const entryPriceStr = mPrice ? mPrice.toFixed(3) : '0.000';
+                const curPriceStr = curPrice ? curPrice.toFixed(3) : '0.000';
+
+                const perfColor = perfPct >= 0 ? '#34d399' : '#ef4444';
+                const perfSign = perfPct >= 0 ? '+' : '';
+                const perfStr = `${perfSign}${perfPct.toFixed(2)}%`;
+
+                const floor = mItem.floorLow ? mItem.floorLow.toFixed(3) : '-';
+                const floorDist = mItem._floorDist !== 999 ? mItem._floorDist.toFixed(1) + '%' : '-';
+                const turnoverFormatted = mItem.turnover ? 'RM ' + (mItem.turnover / 1000).toFixed(0) + 'k' : '-';
+
                 let techniqueBadge = '';
                 let techniqueName = 'Trend Rider';
-                if (item.setupStyle === 'STAIRCASE' || item.setupName?.includes('RBS')) {
+                if (mItem.setupStyle === 'STAIRCASE' || mItem.setupName?.includes('RBS')) {
                     techniqueBadge = '<span style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.72rem;">🚀 Trend Rider</span>';
                     techniqueName = 'Trend Rider';
-                } else if (item.closeTightness <= 5 || item.setupName?.includes('Reclaim')) {
+                } else if (mItem.closeTightness <= 5 || mItem.setupName?.includes('Reclaim')) {
                     techniqueBadge = '<span style="background: rgba(74, 222, 128, 0.15); color: #4ade80; border: 1px solid rgba(74, 222, 128, 0.3); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.72rem;">🌱 Early Spring</span>';
                     techniqueName = 'Early Spring';
-                } else if (item.setupName?.includes('ATH') || item.setupStyle === 'EXPLOSIVE') {
+                } else if (mItem.setupName?.includes('ATH') || mItem.setupStyle === 'EXPLOSIVE') {
                     techniqueBadge = '<span style="background: rgba(251, 113, 133, 0.15); color: #fb7185; border: 1px solid rgba(251, 113, 133, 0.3); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.72rem;">🔥 Phoenix</span>';
                     techniqueName = 'Phoenix';
                 } else {
@@ -4749,11 +4803,10 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     techniqueName = 'Bottom Support';
                 }
 
-                // Actionable plan text
                 let planText = '';
-                if (item.floorLow) {
-                    const slPrice = (item.floorLow * 0.97).toFixed(3);
-                    planText = `Tunggu Entry rapat sokongan <strong style="color: #60a5fa;">RM ${floor}</strong> | SL <strong style="color: #ef4444;">RM ${slPrice}</strong> (&le; 5%)`;
+                if (mItem.floorLow) {
+                    const slPrice = (mItem.floorLow * 0.97).toFixed(3);
+                    planText = `Entry Isnin <strong style="color: #fbbf24;">RM ${entryPriceStr}</strong> | SL <strong style="color: #ef4444;">RM ${slPrice}</strong> (&le; 5%)`;
                 } else {
                     planText = `Rujuk carta harian untuk entry risiko ketat`;
                 }
@@ -4762,21 +4815,22 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3); transition: background 0.2s;" onmouseover="this.style.background='rgba(30, 41, 59, 0.5)'" onmouseout="this.style.background='transparent'">
                     <td style="padding: 0.65rem 0.8rem; font-size: 0.8rem; text-align: center; color: #fbbf24; font-weight: 800;">${idx + 1}</td>
                     <td style="padding: 0.65rem 0.8rem; font-size: 0.85rem; font-weight: 800; color: #f8fafc;">
-                        <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: #f8fafc; text-decoration: none; display: inline-flex; align-items: center; gap: 0.3rem;" title="Buka Carta TradingView">
-                            ${item.name} <span style="font-size: 0.75rem;">📈</span>
+                        <a href="https://www.tradingview.com/chart/?symbol=MYX:${mItem.name}&interval=D" target="_blank" style="color: #f8fafc; text-decoration: none; display: inline-flex; align-items: center; gap: 0.3rem;" title="Buka Carta TradingView">
+                            ${mItem.name} <span style="font-size: 0.75rem;">📈</span>
                         </a>
-                        <span style="font-size: 0.7rem; color: #94a3b8; font-weight: 400;">(${item.sector || 'Bursa'})</span>
+                        <span style="font-size: 0.7rem; color: #94a3b8; font-weight: 400;">(${mItem.sector || 'Bursa'})</span>
                     </td>
                     <td style="padding: 0.65rem 0.8rem; text-align: center;">${techniqueBadge}</td>
-                    <td style="padding: 0.65rem 0.8rem; font-size: 0.85rem; text-align: right; font-weight: 800; color: #f8fafc;">RM ${price}</td>
-                    <td style="padding: 0.65rem 0.8rem; font-size: 0.82rem; text-align: right; font-weight: 800; color: ${chgColor};">${chgSign}${chg}%</td>
+                    <td style="padding: 0.65rem 0.8rem; font-size: 0.85rem; text-align: right; font-weight: 800; color: #fbbf24;">RM ${entryPriceStr}</td>
+                    <td style="padding: 0.65rem 0.8rem; font-size: 0.85rem; text-align: right; font-weight: 800; color: #f8fafc;">RM ${curPriceStr}</td>
+                    <td style="padding: 0.65rem 0.8rem; font-size: 0.82rem; text-align: right; font-weight: 800; color: ${perfColor};">${perfStr}</td>
                     <td style="padding: 0.65rem 0.8rem; font-size: 0.82rem; text-align: right; font-weight: 700; color: #60a5fa;">RM ${floor}</td>
                     <td style="padding: 0.65rem 0.8rem; font-size: 0.82rem; text-align: right; font-weight: 800; color: #34d399;">${floorDist}</td>
                     <td style="padding: 0.65rem 0.8rem; font-size: 0.82rem; text-align: right; font-weight: 700; color: #cbd5e1;">${turnoverFormatted}</td>
                     <td style="padding: 0.65rem 0.8rem; font-size: 0.78rem; color: #cbd5e1;">${planText}</td>
                     <td style="padding: 0.65rem 0.8rem; text-align: center; display: flex; gap: 0.4rem; justify-content: center; align-items: center;">
-                        <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" class="btn" style="background: rgba(56, 189, 248, 0.2); border: 1px solid rgba(56, 189, 248, 0.5); color: #38bdf8; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📈 TV</a>
-                        <button onclick="triggerAIAnalysisModal('${item.name}', 'Weekly Homework: ${techniqueName}')" class="btn" style="background: linear-gradient(135deg, #f59e0b, #d97706); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">✨ Plan AI</button>
+                        <a href="https://www.tradingview.com/chart/?symbol=MYX:${mItem.name}&interval=D" target="_blank" class="btn" style="background: rgba(56, 189, 248, 0.2); border: 1px solid rgba(56, 189, 248, 0.5); color: #38bdf8; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📈 TV</a>
+                        <button onclick="triggerAIAnalysisModal('${mItem.name}', 'Weekly Homework: ${techniqueName}')" class="btn" style="background: linear-gradient(135deg, #f59e0b, #d97706); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">✨ Plan AI</button>
                     </td>
                 </tr>`;
             });
