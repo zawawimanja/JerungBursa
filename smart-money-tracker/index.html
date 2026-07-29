@@ -4762,7 +4762,10 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3); transition: background 0.2s;" onmouseover="this.style.background='rgba(30, 41, 59, 0.5)'" onmouseout="this.style.background='transparent'">
                     <td style="padding: 0.65rem 0.8rem; font-size: 0.8rem; text-align: center; color: #fbbf24; font-weight: 800;">${idx + 1}</td>
                     <td style="padding: 0.65rem 0.8rem; font-size: 0.85rem; font-weight: 800; color: #f8fafc;">
-                        ${item.name} <span style="font-size: 0.7rem; color: #94a3b8; font-weight: 400;">(${item.sector || 'Bursa'})</span>
+                        <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: #f8fafc; text-decoration: none; display: inline-flex; align-items: center; gap: 0.3rem;" title="Buka Carta TradingView">
+                            ${item.name} <span style="font-size: 0.75rem;">📈</span>
+                        </a>
+                        <span style="font-size: 0.7rem; color: #94a3b8; font-weight: 400;">(${item.sector || 'Bursa'})</span>
                     </td>
                     <td style="padding: 0.65rem 0.8rem; text-align: center;">${techniqueBadge}</td>
                     <td style="padding: 0.65rem 0.8rem; font-size: 0.85rem; text-align: right; font-weight: 800; color: #f8fafc;">RM ${price}</td>
@@ -4771,8 +4774,9 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     <td style="padding: 0.65rem 0.8rem; font-size: 0.82rem; text-align: right; font-weight: 800; color: #34d399;">${floorDist}</td>
                     <td style="padding: 0.65rem 0.8rem; font-size: 0.82rem; text-align: right; font-weight: 700; color: #cbd5e1;">${turnoverFormatted}</td>
                     <td style="padding: 0.65rem 0.8rem; font-size: 0.78rem; color: #cbd5e1;">${planText}</td>
-                    <td style="padding: 0.65rem 0.8rem; text-align: center;">
-                        <button onclick="triggerAIAnalysisModal('${item.name}', 'Weekly Homework: ${techniqueName}')" class="btn" style="background: linear-gradient(135deg, #f59e0b, #d97706); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">✨ Plan AI</button>
+                    <td style="padding: 0.65rem 0.8rem; text-align: center; display: flex; gap: 0.4rem; justify-content: center; align-items: center;">
+                        <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" class="btn" style="background: rgba(56, 189, 248, 0.2); border: 1px solid rgba(56, 189, 248, 0.5); color: #38bdf8; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📈 TV</a>
+                        <button onclick="triggerAIAnalysisModal('${item.name}', 'Weekly Homework: ${techniqueName}')" class="btn" style="background: linear-gradient(135deg, #f59e0b, #d97706); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">✨ Plan AI</button>
                     </td>
                 </tr>`;
             });
