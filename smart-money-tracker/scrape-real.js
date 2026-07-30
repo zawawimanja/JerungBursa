@@ -651,6 +651,24 @@ async function main() {
                     stock.change = currentPrice - prevClose;
                     stock.volume = lastDay.volume || result.meta.regularMarketVolume || 0;
 
+                    // ==========================================
+                    // IMPROVEMENT 1: VOLUME SPIKE FILTER
+                    // ==========================================
+                    // Kira purata volume 20 hari lepas (tidak termasuk hari ini)
+                    const last20Days = validDays.slice(-21, -1); // 20 hari sebelum hari ini
+                    const avgVolume20 = last20Days.length > 0
+                        ? last20Days.reduce((sum, d) => sum + (d.volume || 0), 0) / last20Days.length
+                        : 0;
+                    // Volume spike ratio: berapa kali ganda volume hari ini berbanding purata
+                    const volumeSpike = (avgVolume20 > 0 && stock.volume > 0)
+                        ? parseFloat((stock.volume / avgVolume20).toFixed(2))
+                        : 0;
+                    // hasVolumeSpike = true jika volume hari ini >= 1.5x purata (jejak masuk Smart Money)
+                    const hasVolumeSpike = volumeSpike >= 1.5;
+                    stock.avgVolume20 = Math.round(avgVolume20);
+                    stock.volumeSpike = volumeSpike;
+                    stock.hasVolumeSpike = hasVolumeSpike;
+
                     // Resolve openPrice and check wentUnderwater status
                     const cleanStockName = stock.name.toUpperCase().trim();
                     let ipoInfo = resolveIpoInfo(cleanStockName);
@@ -894,6 +912,32 @@ async function main() {
                 setupStyle = 'STAIRCASE';
             }
         }
+
+        // ==========================================
+        // IMPROVEMENT 2: STAIRCASE + IPO AGE COMBO
+        // ==========================================
+        // Kira umur IPO dalam hari dari tarikh listing
+        let ipoAge = null;
+        if (stock.ipoYear) {
+            // Gunakan listingDate jika ada, fallback ke 1 Jan tahun IPO
+            let listingTs = null;
+            if (stock.listingDate) {
+                const parsedDate = new Date(stock.listingDate);
+                if (!isNaN(parsedDate.getTime())) listingTs = parsedDate;
+            }
+            if (!listingTs) {
+                listingTs = new Date(`${stock.ipoYear}-01-01`);
+            }
+            const today = new Date();
+            ipoAge = Math.floor((today - listingTs) / (1000 * 60 * 60 * 24)); // dalam hari
+        }
+        // Fresh IPO: listed dalam <= 3 tahun (1095 hari) dan bukan downtrend
+        const isIpoFreshForCombo = ipoAge !== null && ipoAge <= 1095 && setupName !== '🧊 Downtrend / Avoid';
+        const isStaircaseIpo = setupStyle === 'STAIRCASE' && isIpoFreshForCombo;
+        // Upgrade setupStyle jika STAIRCASE + Fresh IPO combo
+        if (isStaircaseIpo) {
+            setupStyle = 'STAIRCASE + IPO';
+        }
         
         // Determine signal based on formulas
         const distToFloor = stock.floorLow ? (((stock.price - stock.floorLow) / stock.floorLow) * 100) : 0;
@@ -955,7 +999,86 @@ async function main() {
                 reason += ' (Pullback Support)';
             }
         }
-        
+
+        // ==========================================
+        // IMPROVEMENT 3: CONFIDENCE SCORE v2 (0-100)
+        // Data-driven berdasarkan backtest 134 trades sebenar
+        // ==========================================
+        let confScore = 0;
+
+        // ── A) SETUP STYLE ──────────────────────────────────────────
+        // Backtest: STAIRCASE avg +6.4% (42% win), SWING +5.7% (41%), EXPLOSIVE +4.3% (36%)
+        // STAIRCASE+IPO adalah setup terbaik dari segi potensi breakout
+        if (setupStyle === 'STAIRCASE + IPO') confScore += 32;
+        else if (setupStyle === 'STAIRCASE')   confScore += 25;
+        else if (setupStyle === 'SWING PLAY')  confScore += 12;
+        else if (setupStyle === 'EXPLOSIVE')   confScore += 8; // Sering terlambat masuk
+
+        // ── B) VOLUME SPIKE — PREDICTOR #1 ─────────────────────────
+        // MMCS +34.6%, HKB +36.4%, ECA +29.4% semua ada volume spike sebelum naik
+        // Ini adalah jejak PALING PENTING yang Jerung/Smart Money tinggalkan
+        if (stock.hasVolumeSpike && stock.volumeSpike >= 3.0) confScore += 25; // 3x+ = Jerung masuk besar
+        else if (stock.hasVolumeSpike && stock.volumeSpike >= 2.0) confScore += 20; // 2x = Significant
+        else if (stock.hasVolumeSpike) confScore += 14; // 1.5x-2x = Early accumulation
+
+        // ── C) FLOOR SOLIDITY (touchCount) ─────────────────────────
+        // Dikurangkan dari formula lama — touchCount tinggi TIDAK CUKUP jika tiada momentum
+        // SDCG (score lama 19, touchCount tinggi) = miss berturut-turut
+        if (stock.touchCount >= 8) confScore += 12; // Solid floor tapi jangan terlalu yakin
+        else if (stock.touchCount >= 4) confScore += 8;
+        else if (stock.touchCount >= 2) confScore += 4;
+
+        // ── D) TREND ALIGNMENT (SMA) ────────────────────────────────
+        // SMA adalah penapis downtrend — MESTI di atas kedua-dua untuk pengesahan trend
+        const aboveSma50  = stock.sma50  && stock.price > stock.sma50;
+        const aboveSma200 = stock.sma200 && stock.price > stock.sma200;
+        if (aboveSma50 && aboveSma200) confScore += 12; // Trend uptrend sepenuhnya
+        else if (aboveSma50)           confScore += 5;  // Uptrend jangka pendek sahaja
+        // Jika di bawah SMA50 → PENALTI (saham dalam tekanan jual)
+        if (stock.sma50 && stock.hasEnoughSmaData && stock.price < stock.sma50) confScore -= 10;
+
+        // ── E) IPO FRESHNESS ────────────────────────────────────────
+        // Fresh IPO tiada overhead resistance = lebih mudah breakout ke ATH baru
+        if (stock.ipoYear >= 2025) confScore += 10; // Ultra fresh < 2 tahun
+        else if (stock.ipoYear >= 2023) confScore += 6; // Fresh < 4 tahun
+
+        // ── F) ENTRY TIGHTNESS (jarak dari floor) ──────────────────
+        // Semakin dekat floor = risk lebih kecil, Stop Loss lebih ketat
+        if (distToFloor <= 2.0)      confScore += 12; // Ultra tight: SL < 3%
+        else if (distToFloor <= 4.0) confScore += 8;  // Tight: SL < 5%
+        else if (distToFloor > 10.0) confScore -= 8;  // PENALTI: terlalu jauh dari floor
+
+        // ── G) SIGNAL & MOMENTUM ───────────────────────────────────
+        if (signal === 'buy') confScore += 5;
+        if (stock.isConsolidation)       confScore += 5; // Sedang membina tapak
+        if (stock.hasLowerWickRejection) confScore += 5; // Penolakan harga pada sokongan
+        // Momentum positif hari ini = lebih kuat
+        if (changePct > 0 && changePct <= 5.0) confScore += 4;  // Naik sihat
+        if (changePct > 5.0) confScore -= 3; // Terlambat masuk jika sudah meletup
+
+        // ── H) NEAR ATH ─────────────────────────────────────────────
+        if (pullback !== null && pullback <= 5.0)  confScore += 8; // RBS / Near ATH runner
+        else if (pullback !== null && pullback <= 10.0) confScore += 4;
+
+        // ── I) TURNOVER SWEET SPOT ──────────────────────────────────
+        // Data backtest: Turnover <3M avg +6.6% vs Turnover >3M avg +5.0%
+        // Sweet spot: cukup liquid tapi belum terlalu ramai yang tahu
+        if (turnover >= 500000 && turnover < 3000000) confScore += 6;
+        else if (turnover >= 3000000) confScore += 2; // Dah viral = sering terlambat
+
+        // ── J) PENALTI AVOID SIGNAL ────────────────────────────────
+        if (signal === 'avoid') confScore -= 20;
+
+        // Cap pada 0-100
+        const confidenceScore = Math.min(100, Math.max(0, confScore));
+
+        // Tier Label
+        let confidenceTier = '❌ AVOID';
+        if (confidenceScore >= 90) confidenceTier = '🔥🔥 ULTRA STRONG';
+        else if (confidenceScore >= 75) confidenceTier = '🔥 STRONG';
+        else if (confidenceScore >= 60) confidenceTier = '✅ MODERATE';
+        else if (confidenceScore >= 40) confidenceTier = '⚠️ WEAK';
+
         const dataObj = {
             name: stock.name,
             sector: stock.sector || 'Bursa',
@@ -983,7 +1106,17 @@ async function main() {
             sma200: stock.sma200 || null,
             openPrice: stock.openPrice || null,
             wentUnderwater: stock.wentUnderwater || false,
-            firstDayOpenPrice: stock.firstDayOpenPrice || null
+            firstDayOpenPrice: stock.firstDayOpenPrice || null,
+            // Improvement 1: Volume Spike
+            avgVolume20: stock.avgVolume20 || 0,
+            volumeSpike: stock.volumeSpike || 0,
+            hasVolumeSpike: stock.hasVolumeSpike || false,
+            // Improvement 2: STAIRCASE + IPO Age
+            ipoAge: ipoAge,
+            isStaircaseIpo: isStaircaseIpo || false,
+            // Improvement 3: Confidence Score
+            confidenceScore,
+            confidenceTier
         };
         
         // Top Volume Scan: Simpan semua saham yang mempunyai turnover >= RM 3,000,000 ATAU ianya saham VIP
@@ -1006,8 +1139,11 @@ async function main() {
         }
     }
     
-    // Susun processedData mengikut turnover tertinggi
-    processedData.sort((a, b) => b.turnover - a.turnover);
+    // Susun processedData mengikut Confidence Score tertinggi, kemudian Turnover sebagai tiebreaker
+    processedData.sort((a, b) => {
+        if (b.confidenceScore !== a.confidenceScore) return b.confidenceScore - a.confidenceScore;
+        return b.turnover - a.turnover;
+    });
     
     // Susun topGainers mengikut peratus kenaikan tertinggi
     topGainers.sort((a, b) => b.changePct - a.changePct);
