@@ -791,6 +791,62 @@ async function main() {
                         : (closesDaily.reduce((a, b) => a + b, 0) / closesDaily.length);
                     stock.sma200 = sma200;
 
+                    // ==========================================
+                    // TEKNIK MAMAT: EMA25 + EMA50 (Pullback Entry)
+                    // ==========================================
+                    // Formula EMA: EMA_today = price * k + EMA_prev * (1-k), k = 2/(period+1)
+                    function calcEMA(closes, period) {
+                        if (closes.length === 0) return null;
+                        const k = 2 / (period + 1);
+                        let ema = closes[0]; // seed dengan harga pertama
+                        for (let i = 1; i < closes.length; i++) {
+                            ema = closes[i] * k + ema * (1 - k);
+                        }
+                        return parseFloat(ema.toFixed(4));
+                    }
+
+                    const ema25 = closesDaily.length >= 10 ? calcEMA(closesDaily, 25) : null;
+                    const ema50 = closesDaily.length >= 10 ? calcEMA(closesDaily, 50) : null;
+                    stock.ema25 = ema25;
+                    stock.ema50 = ema50;
+
+                    // EMA25 di atas EMA50 = trend jangka pendek sihat (Pullback Entry valid)
+                    stock.ema25AboveEma50 = (ema25 !== null && ema50 !== null) ? ema25 > ema50 : false;
+
+                    // Harga dekat/sentuh EMA25 = zona pullback entry padu
+                    // Definisi: harga dalam julat -3% hingga +5% dari EMA25
+                    stock.nearEma25 = (ema25 !== null && currentPrice > 0)
+                        ? (currentPrice >= ema25 * 0.97 && currentPrice <= ema25 * 1.05)
+                        : false;
+
+                    // ==========================================
+                    // TEKNIK MAMAT: MA50/200 GOLDEN CROSS (Trend & VCP)
+                    // ==========================================
+                    // Golden Cross = MA50 baru lepas cross atas MA200 (dalam 50 hari terakhir)
+                    // Cara detect: SMA50 > SMA200 sekarang, tapi pada suatu titik dalam 50 hari lepas ia masih bawah
+                    let isGoldenCross = false;
+                    let goldenCrossAge = null; // berapa hari lepas cross berlaku
+                    if (closesDaily.length >= 55 && sma50 > sma200) {
+                        // Semak 50 titik sejarah untuk cari bila cross berlaku
+                        const lookbackGC = Math.min(50, closesDaily.length - 50);
+                        for (let gi = 1; gi <= lookbackGC; gi++) {
+                            const pastCloses = closesDaily.slice(0, closesDaily.length - gi);
+                            const pastSma50 = pastCloses.length >= 50
+                                ? pastCloses.slice(-50).reduce((a, b) => a + b, 0) / 50
+                                : null;
+                            const pastSma200 = pastCloses.length >= 200
+                                ? pastCloses.slice(-200).reduce((a, b) => a + b, 0) / 200
+                                : null;
+                            if (pastSma50 !== null && pastSma200 !== null && pastSma50 <= pastSma200) {
+                                isGoldenCross = true;
+                                goldenCrossAge = gi; // cross berlaku gi hari yang lepas
+                                break;
+                            }
+                        }
+                    }
+                    stock.isGoldenCross = isGoldenCross;
+                    stock.goldenCrossAge = goldenCrossAge; // null = tiada cross / cross lama
+
                     stock.closeTightness = parseFloat(closeTightness.toFixed(2));
                     stock.lowTightness = parseFloat(lowTightness.toFixed(2));
                     stock.touchCount = touchCount;
@@ -1037,6 +1093,28 @@ async function main() {
         // Jika di bawah SMA50 → PENALTI (saham dalam tekanan jual)
         if (stock.sma50 && stock.hasEnoughSmaData && stock.price < stock.sma50) confScore -= 10;
 
+        // ── D2) TEKNIK MAMAT: EMA25/50 PULLBACK ENTRY ──────────────
+        // EMA25 > EMA50 = trend jangka pendek sihat
+        // Harga dekat EMA25 = zona pullback entry yang tepat (risiko rendah)
+        if (stock.ema25AboveEma50 && stock.nearEma25) {
+            confScore += 15; // COMBO: Pullback ke EMA25 dalam uptrend = setup paling ideal
+        } else if (stock.ema25AboveEma50) {
+            confScore += 7;  // Trend EMA baik tapi belum pullback ke EMA25
+        } else if (stock.nearEma25) {
+            confScore += 3;  // Dekat EMA25 tapi trend EMA lemah
+        }
+
+        // ── D3) TEKNIK MAMAT: MA50/200 GOLDEN CROSS (VCP Trend) ────
+        // Golden Cross = MA50 baru cross atas MA200 = permulaan trend baru yang paling kuat
+        // Makin muda cross, makin banyak "runway" untuk VCP setup
+        if (stock.isGoldenCross && stock.goldenCrossAge !== null) {
+            if (stock.goldenCrossAge <= 10) confScore += 20;      // Cross baru (< 2 minggu) = SANGAT FRESH
+            else if (stock.goldenCrossAge <= 30) confScore += 15; // Cross kurang sebulan = Fresh
+            else if (stock.goldenCrossAge <= 50) confScore += 10; // Cross dalam 2 bulan = Masih valid
+        } else if (aboveSma50 && aboveSma200 && !stock.isGoldenCross) {
+            confScore += 3; // Dah lama di atas kedua-dua MA = stabil tapi bukan fresh cross
+        }
+
         // ── E) IPO FRESHNESS ────────────────────────────────────────
         // Fresh IPO tiada overhead resistance = lebih mudah breakout ke ATH baru
         if (stock.ipoYear >= 2025) confScore += 10; // Ultra fresh < 2 tahun
@@ -1116,7 +1194,14 @@ async function main() {
             isStaircaseIpo: isStaircaseIpo || false,
             // Improvement 3: Confidence Score
             confidenceScore,
-            confidenceTier
+            confidenceTier,
+            // Teknik Mamat: EMA25/50 Pullback Entry + MA50/200 Golden Cross VCP
+            ema25: stock.ema25 || null,
+            ema50: stock.ema50 || null,
+            ema25AboveEma50: stock.ema25AboveEma50 || false,
+            nearEma25: stock.nearEma25 || false,
+            isGoldenCross: stock.isGoldenCross || false,
+            goldenCrossAge: stock.goldenCrossAge || null
         };
         
         // Top Volume Scan: Simpan semua saham yang mempunyai turnover >= RM 3,000,000 ATAU ianya saham VIP

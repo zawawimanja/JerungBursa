@@ -3199,6 +3199,40 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             }
         }
 
+        // Teknik Mamat: MA50/200 Golden Cross Badge
+        function getGoldenCrossBadge(item) {
+            if (!item || !item.isGoldenCross) return '';
+            const age = item.goldenCrossAge;
+            if (age === null || age === undefined) return '';
+            let label, color, bg, border, glow;
+            if (age <= 10) {
+                label = `✨ Golden Cross (${age}h)`;
+                color = '#fbbf24'; bg = 'rgba(251,191,36,0.18)'; border = 'rgba(251,191,36,0.4)';
+                glow = 'box-shadow: 0 0 8px rgba(251,191,36,0.35);';
+            } else if (age <= 30) {
+                label = `⭐ Golden Cross (${age}h)`;
+                color = '#f59e0b'; bg = 'rgba(245,158,11,0.15)'; border = 'rgba(245,158,11,0.35)';
+                glow = 'box-shadow: 0 0 5px rgba(245,158,11,0.2);';
+            } else {
+                label = `🌟 Golden Cross (${age}h)`;
+                color = '#d97706'; bg = 'rgba(217,119,6,0.12)'; border = 'rgba(217,119,6,0.3)';
+                glow = '';
+            }
+            return `<span style="font-size: 0.65rem; background: ${bg}; color: ${color}; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid ${border}; white-space: nowrap; ${glow}" title="MA50 telah cross atas MA200 ${age} hari yang lepas — permulaan trend baru (Teknik Mamat: MA50/200 Golden Cross VCP)">${label}</span>`;
+        }
+
+        // Teknik Mamat: EMA25/50 Pullback Entry Badge
+        function getEmaPullbackBadge(item) {
+            if (!item) return '';
+            if (item.ema25AboveEma50 && item.nearEma25) {
+                return `<span style="font-size: 0.65rem; background: rgba(56,189,248,0.18); color: #38bdf8; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(56,189,248,0.4); white-space: nowrap; box-shadow: 0 0 8px rgba(56,189,248,0.25);" title="Harga pullback ke EMA25 dan EMA25 > EMA50 — zona entry paling ideal (Teknik Mamat: EMA25/50 Pullback Entry)">📐 EMA Pullback</span>`;
+            } else if (item.ema25AboveEma50) {
+                return `<span style="font-size: 0.65rem; background: rgba(56,189,248,0.1); color: #7dd3fc; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(56,189,248,0.25); white-space: nowrap;" title="EMA25 > EMA50 — trend jangka pendek sihat, tunggu pullback ke EMA25 untuk entry (Teknik Mamat)">📈 EMA Trend OK</span>`;
+            }
+            return '';
+        }
+
+
         // Programmatic Backtest Match Indicator based on the 3 Winner criteria per technique
         function getBacktestMatchBadge(item, technique) {
             if (!item) return '';
@@ -3523,6 +3557,8 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                                     ${isHc ? `<span style="font-size: 0.68rem; background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.25); white-space: nowrap; box-shadow: 0 0 8px rgba(16, 185, 129, 0.3);" title="High-Conviction Setup: Gred Premium + Lantai Sangat Rapat (<=4%) + Kecairan Tinggi (>=RM1M)">🎯 Entry Padu</span>` : ''}
                                     ${matchBadge}
                                     ${hofBadge}
+                                    ${getGoldenCrossBadge(item)}
+                                    ${getEmaPullbackBadge(item)}
                                     ${item.hasLowerWickRejection ? `<span style="font-size: 0.68rem; background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.25); white-space: nowrap;" title="Jerung pertahankan lantai sokongan (Lower Wick Rejection)">🟢 Reject Bawah</span>` : ''}
                                     ${item.hasUpperWickRejection ? `<span style="font-size: 0.68rem; background: rgba(239, 68, 68, 0.15); color: #f87171; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(239, 68, 68, 0.25); white-space: nowrap;" title="Tekanan jualan tinggi di atas (Upper Wick Rejection)">🔴 Reject Atas</span>` : ''}
                                 </div>
@@ -3701,6 +3737,8 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                                     ${matchBadge}
                                     ${statusBadge}
                                     ${hofBadge}
+                                    ${getGoldenCrossBadge(item)}
+                                    ${getEmaPullbackBadge(item)}
                                 </div>
                                 <div style="font-size: 0.76rem; color: var(--text-muted); font-weight: 600; margin-top: 0.3rem; letter-spacing: 0.2px;">
                                     ${scoreSpan}${gradeSpan}${listingDateStr}
@@ -3834,6 +3872,8 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                                     ${getSub1Badge(item)}
                                     ${matchBadge}
                                     ${hofBadge}
+                                    ${getGoldenCrossBadge(item)}
+                                    ${getEmaPullbackBadge(item)}
                                     ${item.hasLowerWickRejection ? `<span style="font-size: 0.68rem; background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.25); white-space: nowrap;">🟢 Reject Bawah</span>` : ''}
                                     ${item.hasUpperWickRejection ? `<span style="font-size: 0.68rem; background: rgba(239, 68, 68, 0.15); color: #f87171; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(239, 68, 68, 0.25); white-space: nowrap;">🔴 Reject Atas</span>` : ''}
                                 </div>
