@@ -1791,6 +1791,7 @@
                             <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Jarak Ke SL</th>
                             <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Prestasi P&amp;L</th>
                             <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Status Perlindungan</th>
+                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Carta</th>
                         </tr>
                     </thead>
                     <tbody id="portfolioTableBody">
@@ -4415,7 +4416,9 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 tbody.innerHTML += `
                     <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.02)'" onmouseout="this.style.background='none'">
                         <td style="padding: 0.8rem 0.75rem; font-weight: 800; color: white; border-bottom: 1px solid rgba(255,255,255,0.05);">
-                            ${p.name}
+                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${p.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 0.95rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.3rem;" title="Buka Carta TradingView (${p.name})">
+                                ${p.name} <span style="font-size: 0.75rem; color: #38bdf8;">🔗</span>
+                            </a>
                             <span style="font-size: 0.65rem; color: var(--text-muted); display: block; font-weight: 400; margin-top: 0.1rem;">PEGANGAN: ${units.toLocaleString()} unit (${(units/100).toFixed(0)} Lot)</span>
                         </td>
                         <td style="padding: 0.8rem 0.75rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
@@ -4434,6 +4437,9 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                             <span style="font-size: 0.65rem; color: ${pnlColor}; display: block; font-weight: 600; margin-top: 0.1rem;">${pnlVal >= 0 ? '+' : ''}RM ${pnlVal.toFixed(2)}</span>
                         </td>
                         <td style="padding: 0.8rem 0.75rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">${statusHtml}</td>
+                        <td style="padding: 0.8rem 0.75rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${p.name}&interval=D" target="_blank" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 0.25rem; transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'; this.style.background='rgba(56, 189, 248, 0.25)';" onmouseout="this.style.transform='scale(1)'; this.style.background='rgba(56, 189, 248, 0.15)';" title="Buka Carta TradingView">📈 TV</a>
+                        </td>
                     </tr>
                 `;
             });
