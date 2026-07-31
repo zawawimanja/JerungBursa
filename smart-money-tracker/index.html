@@ -679,6 +679,7 @@
     <!-- Tab Navigation -->
     <div class="tabs-nav" style="margin-bottom: 1rem; margin-top: 0.5rem; display: flex; gap: 0.4rem; flex-wrap: wrap;">
         <button class="tab-btn active" id="tab-weekly" onclick="switchTab('weekly')" style="flex: 1; min-width: 125px; white-space: nowrap;">🗓️ Weekly Top 5</button>
+        <button class="tab-btn" id="tab-vcp" onclick="switchTab('vcp')" style="flex: 1; min-width: 110px; white-space: nowrap; background: rgba(6, 182, 212, 0.15); border: 1px solid rgba(6, 182, 212, 0.4); color: #22d3ee; font-weight: 800;">🪜 VCP Staircase</button>
         <button class="tab-btn" id="tab-trend" onclick="switchTab('trend')" style="flex: 1; min-width: 100px; white-space: nowrap;">📈 Trend Rider</button>
         <button class="tab-btn" id="tab-spring" onclick="switchTab('spring')" style="flex: 1; min-width: 100px; white-space: nowrap;">🌱 Early Spring</button>
         <button class="tab-btn" id="tab-phoenix" onclick="switchTab('phoenix')" style="flex: 1; min-width: 90px; white-space: nowrap;">🔥 Phoenix</button>
@@ -688,6 +689,57 @@
         <button class="tab-btn" id="tab-tracker" onclick="switchTab('tracker')" style="flex: 1; min-width: 95px; white-space: nowrap;">📈 &lt; RM1</button>
         <button class="tab-btn" id="tab-calculator" onclick="switchTab('calculator')" style="flex: 1; min-width: 100px; white-space: nowrap;">🧮 Kalkulator</button>
     </div>
+
+    <!-- TAB: VCP STAIRCASE -->
+    <div id="view-vcp" style="display: none;">
+        <div id="vcp-recommendations-section" style="margin-bottom: 1.25rem;">
+            <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(6, 182, 212, 0.08)); border: 2px dashed #22d3ee; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(6, 182, 212, 0.15); position: relative; overflow: hidden;">
+                <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(6, 182, 212, 0.15); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
+                
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(6, 182, 212, 0.2); padding-bottom: 0.75rem;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1; min-width: 300px;">
+                        <span style="font-size: 1.8rem;">🪜</span>
+                        <div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                                <h2 style="margin: 0; font-size: 1.3rem; color: #22d3ee; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem;">Radar VCP Staircase + Golden Cross (Teknik Mamat)</h2>
+                                <span style="font-size: 0.7rem; background: rgba(6, 182, 212, 0.2); color: #22d3ee; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(6, 182, 212, 0.3); white-space: nowrap;">👑 WIN RATE #1 (42.8%)</span>
+                            </div>
+                            <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
+                                Formula Minervini + Mamat: <strong style="color: #38bdf8;">Contraction C1 ➔ C2 ➔ C3</strong> + MA50 > MA200 & Pullback EMA25. Risiko SL amat rapat (≤3%-5%), Potensi Breakout Maksimum!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th style="text-align: center; width: 45px;">No</th>
+                                <th>Kaunter</th>
+                                <th style="text-align: center;">Kategori Setup</th>
+                                <th style="text-align: right;">Harga Semasa</th>
+                                <th style="text-align: right;">Perubahan</th>
+                                <th style="text-align: right;">Lantai Sokongan</th>
+                                <th style="text-align: right;">Jarak Lantai</th>
+                                <th style="text-align: right;">Volatiliti</th>
+                                <th style="text-align: right;">Stop Loss (SL)</th>
+                                <th style="text-align: right;">Turnover</th>
+                                <th style="text-align: center;">Analisis AI</th>
+                            </tr>
+                        </thead>
+                        <tbody id="vcpPicksTableBody">
+                            <tr>
+                                <td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
+                                    ⏳ Memuatkan kaunter VCP Staircase...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End of view-vcp -->
 
     <!-- TAB 1: TREND RIDER -->
     <div id="view-trend" style="display: none;">
@@ -1917,6 +1969,7 @@
         // Tab switching logic
         function switchTab(tabId) {
 
+            const viewVcp = document.getElementById('view-vcp');
             const viewTrend = document.getElementById('view-trend');
             const viewSpring = document.getElementById('view-spring');
             const viewPhoenix = document.getElementById('view-phoenix');
@@ -1927,6 +1980,7 @@
             const viewTracker = document.getElementById('view-tracker');
             const viewPortfolio = document.getElementById('view-portfolio');
             
+            const tabVcp = document.getElementById('tab-vcp');
             const tabTrend = document.getElementById('tab-trend');
             const tabSpring = document.getElementById('tab-spring');
             const tabPhoenix = document.getElementById('tab-phoenix');
@@ -1938,6 +1992,7 @@
             const tabPortfolio = document.getElementById('tab-portfolio');
             
             // Hide all views
+            if (viewVcp) viewVcp.style.display = 'none';
             viewTrend.style.display = 'none';
             viewSpring.style.display = 'none';
             if (viewPhoenix) viewPhoenix.style.display = 'none';
@@ -1949,6 +2004,7 @@
             if (viewPortfolio) viewPortfolio.style.display = 'none';
             
             // Remove active class from all tabs
+            if (tabVcp) tabVcp.classList.remove('active');
             tabTrend.classList.remove('active');
             tabSpring.classList.remove('active');
             if (tabPhoenix) tabPhoenix.classList.remove('active');
@@ -1960,7 +2016,13 @@
             if (tabPortfolio) tabPortfolio.classList.remove('active');
             
             // Show selected view & set active class
-            if (tabId === 'trend') {
+            if (tabId === 'vcp') {
+                if (viewVcp) {
+                    viewVcp.style.display = 'block';
+                    renderVcpStaircase();
+                }
+                if (tabVcp) tabVcp.classList.add('active');
+            } else if (tabId === 'trend') {
                 viewTrend.style.display = 'block';
                 tabTrend.classList.add('active');
             } else if (tabId === 'spring') {
@@ -2876,6 +2938,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             }
 
             updateSentiment(currentData);
+            renderVcpStaircase();
             renderTrendRiders();
             renderReclaimRadar();
             renderBottomFishing();
@@ -2883,6 +2946,150 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             renderWeeklyHomework();
             updateSpecialPicks();
             renderPortfolio();
+        }
+
+        // Render VCP Staircase Strategy Table (Teknik Minervini + Mamat)
+        function renderVcpStaircase() {
+            const vcpTbody = document.getElementById('vcpPicksTableBody');
+            if (!vcpTbody) return;
+
+            // Filter items for VCP / Staircase setup:
+            let validPicks = currentData.filter(item => {
+                if (!item || !item.price || item.price <= 0) return false;
+                
+                // Max Price Filter
+                const priceMaxVal = document.getElementById('priceMaxFilter') ? document.getElementById('priceMaxFilter').value : 'ALL';
+                if (priceMaxVal !== 'ALL' && item.price > parseFloat(priceMaxVal)) return false;
+
+                if (isSleepingOrAvoidStock(item)) return false;
+
+                const style = getItemStyle(item);
+                const isVcpStyle = style === 'STAIRCASE' || style === 'STAIRCASE + IPO' || item.isConsolidation === true || style.includes('STAIRCASE');
+                if (!isVcpStyle) return false;
+
+                const minTurnover = (item.ipoGrade && item.ipoGrade !== 'Unrated') ? 350000 : 500000;
+                if (item.turnover < minTurnover) return false;
+
+                const ipoAgeFilterVal = document.getElementById('ipoAgeFilter') ? document.getElementById('ipoAgeFilter').value : 'ALL';
+                if (!matchesIpoAgeFilter(item, ipoAgeFilterVal)) return false;
+
+                // Strict risk management filter if enabled
+                const strictEntryVal = document.getElementById('strictEntryFilter') ? document.getElementById('strictEntryFilter').checked : false;
+                if (strictEntryVal) {
+                    const floor = item.floorLow || (item.price * 0.95);
+                    const distToFloor = ((item.price - floor) / floor) * 100;
+                    const maxDist = item.price < 0.50 ? 11.0 : 8.0;
+                    if (distToFloor > maxDist) return false;
+                }
+
+                return true;
+            });
+
+            const sortByVal = document.getElementById('sortByFilter') ? document.getElementById('sortByFilter').value : 'SAFE';
+
+            // Sort by user preference (default: closest to floor first)
+            validPicks.sort((a, b) => {
+                if (sortByVal === 'TURNOVER') return b.turnover - a.turnover;
+                if (sortByVal === 'VOLATILE') {
+                    const volA = a.lowTightness !== null ? a.lowTightness : (a.pullback || 0);
+                    const volB = b.lowTightness !== null ? b.lowTightness : (b.pullback || 0);
+                    return volB - volA;
+                }
+                if (sortByVal === 'SCORE') return calculateSmartScore(b) - calculateSmartScore(a);
+                // Default SAFE: closest to support floor first
+                const floorA = a.floorLow || (a.price * 0.95);
+                const distA = ((a.price - floorA) / floorA) * 100;
+                const floorB = b.floorLow || (b.price * 0.95);
+                const distB = ((b.price - floorB) / floorB) * 100;
+                return distA - distB;
+            });
+
+            if (validPicks.length > 0) {
+                let vcpHtml = '';
+                let rankCount = 1;
+
+                validPicks.forEach(item => {
+                    const score = calculateSmartScore(item);
+                    const floor = item.floorLow || (item.price * 0.97);
+                    const stopLoss = Math.max(item.price * 0.90, floor * 0.97);
+                    const turnoverM = (item.turnover / 1e6).toFixed(2);
+                    const pct = item.changePct !== undefined ? item.changePct : item.change;
+                    const changeClass = pct >= 0 ? 'success' : 'danger';
+                    const changeSign = pct > 0 ? '+' : '';
+                    
+                    const isFresh = isFreshIpo(item);
+                    const scoreColor = score >= 12 ? '#10b981' : (score >= 9 ? '#6366f1' : '#94a3b8');
+                    const scoreSpan = `<span style="color: ${scoreColor}; font-weight: 800; background: rgba(255,255,255,0.03); padding: 0.05rem 0.3rem; border-radius: 3px; border: 1px solid rgba(255,255,255,0.05);">Skor: ${score}/15</span>`;
+
+                    let gradeSpan = '';
+                    if (item.ipoGrade) {
+                        let gColor = '#94a3b8';
+                        if (item.ipoGrade === 'A') gColor = '#10b981';
+                        else if (item.ipoGrade === 'B') gColor = '#a855f7';
+                        else if (item.ipoGrade === 'C') gColor = '#f59e0b';
+                        gradeSpan = ` • Gred <span style="color: ${gColor}; font-weight: 800;">${item.ipoGrade}</span>`;
+                    }
+
+                    const freshSpan = item.ipoGrade ? (isFresh 
+                        ? ` • <span style="color: #10b981; font-weight: 800; background: rgba(16, 185, 129, 0.08); padding: 0.05rem 0.3rem; border-radius: 3px; border: 1px solid rgba(16, 185, 129, 0.15);">Fresh</span>` 
+                        : ` • <span style="color: #94a3b8; font-weight: 600;">Mature</span>`) : '';
+
+                    const distToFloor = ((item.price - floor) / floor) * 100;
+                    const volatility = item.lowTightness !== null ? item.lowTightness : (item.pullback || 0);
+                    let volColor = '#94a3b8';
+                    if (volatility >= 4.5) volColor = '#fb7185';
+                    else if (volatility >= 1.5) volColor = '#f59e0b';
+
+                    const hofBadge = getHofBadge(item);
+                    const matchBadge = getBacktestMatchBadge(item, 'trend');
+                    const styleBadge = `<span style="background: rgba(6, 182, 212, 0.18); color: #22d3ee; font-size: 0.65rem; font-weight: 900; padding: 0.15rem 0.4rem; border-radius: 4px; border: 1px solid rgba(6, 182, 212, 0.3); white-space: nowrap;">🪜 STAIRCASE VCP</span>`;
+
+                    vcpHtml += `
+                        <tr>
+                            <td style="text-align: center; font-weight: 800; color: #22d3ee;">#${rankCount++}</td>
+                            <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
+                                <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
+                                    <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
+                                        ${item.name} <span style="font-size: 0.75rem; color: #22d3ee;">🔗</span>
+                                    </a>
+                                    ${getSub1Badge(item)}
+                                    ${matchBadge}
+                                    ${hofBadge}
+                                    ${getGoldenCrossBadge(item)}
+                                    ${getEmaPullbackBadge(item)}
+                                    ${item.hasLowerWickRejection ? `<span style="font-size: 0.68rem; background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.25); white-space: nowrap;" title="Jerung pertahankan lantai sokongan">🟢 Reject Bawah</span>` : ''}
+                                </div>
+                                <div style="font-size: 0.76rem; color: var(--text-muted); font-weight: 600; margin-top: 0.3rem; letter-spacing: 0.2px;">
+                                    ${scoreSpan}${gradeSpan}${freshSpan}
+                                </div>
+                            </td>
+                            <td style="text-align: center;">${styleBadge}</td>
+                            <td style="text-align: right; font-weight: bold; color: white;">RM ${item.price.toFixed(3)}</td>
+                            <td style="text-align: right; font-weight: bold; color: var(--${changeClass});">${changeSign}${pct.toFixed(2)}%</td>
+                            <td style="text-align: right; color: #10b981; font-weight: 700;">RM ${floor.toFixed(3)}</td>
+                            <td style="text-align: right; color: #38bdf8; font-weight: 700;">+${distToFloor.toFixed(1)}%</td>
+                            <td style="text-align: right; color: ${volColor}; font-weight: 700;">${volatility.toFixed(1)}%</td>
+                            <td style="text-align: right; color: #ef4444; font-weight: 700;">RM ${stopLoss.toFixed(3)}</td>
+                            <td style="text-align: right; color: #f59e0b; font-weight: 700;">RM ${turnoverM}M</td>
+                            <td style="text-align: center;">
+                                <button onclick="triggerAIAnalysisModal('${item.name}', 'VCP Staircase (Teknik Minervini + Mamat)')" class="btn" style="background: linear-gradient(135deg, #06b6d4, #0891b2); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                    ✨ Tanya AI
+                                </button>
+                            </td>
+                        </tr>
+                    `;
+                });
+
+                vcpTbody.innerHTML = vcpHtml;
+            } else {
+                vcpTbody.innerHTML = `
+                    <tr>
+                        <td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
+                            ⏳ Tiada kaunter VCP Staircase memenuhi tapisan pada masa ini.
+                        </td>
+                    </tr>
+                `;
+            }
         }
 
         // Update the custom MMCS and Stratus watchlist price and change percentage dynamically
@@ -3956,7 +4163,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             renderPhoenixSpring();
 
             const hash = window.location.hash.replace('#', '');
-            if (hash && ['trend', 'spring', 'phoenix', 'fishing', 'calculator', 'info', 'tracker', 'portfolio'].includes(hash)) {
+            if (hash && ['vcp', 'trend', 'spring', 'phoenix', 'fishing', 'calculator', 'info', 'tracker', 'portfolio'].includes(hash)) {
                 switchTab(hash);
             }
 
