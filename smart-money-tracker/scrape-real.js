@@ -669,6 +669,38 @@ async function main() {
                     stock.volumeSpike = volumeSpike;
                     stock.hasVolumeSpike = hasVolumeSpike;
 
+                    // ==========================================
+                    // MULTI-PERIOD VCP CONTRACTION ANALYSIS
+                    // Teknik Mamat: Detect aktif pengecilan julat harga
+                    // (5 hari terkini MESTI lebih ketat dari 20 hari lepas)
+                    // ==========================================
+                    const vcpPeriod20 = validDays.slice(-20);
+                    const vcpPeriod5  = validDays.slice(-5);
+                    const vcpCloses20 = vcpPeriod20.map(d => d.close);
+                    const vcpCloses5  = vcpPeriod5.map(d => d.close);
+
+                    const vcpTightness20 = vcpCloses20.length >= 10
+                        ? ((Math.max(...vcpCloses20) - Math.min(...vcpCloses20)) / Math.min(...vcpCloses20)) * 100
+                        : null;
+                    const vcpTightness5 = vcpCloses5.length >= 3
+                        ? ((Math.max(...vcpCloses5) - Math.min(...vcpCloses5)) / Math.min(...vcpCloses5)) * 100
+                        : null;
+
+                    // isContracting = true jika 5d range sekurang-kurangnya 30% lebih ketat dari 20d range
+                    // (hallmark utama VCP: volatiliti menguncup secara progresif)
+                    const isContracting = (vcpTightness20 !== null && vcpTightness5 !== null)
+                        ? (vcpTightness5 < vcpTightness20 * 0.70)
+                        : false;
+
+                    // Volume declining during consolidation (quiet accumulation, bukan breakout)
+                    const avg5Vol = vcpPeriod5.reduce((s, d) => s + (d.volume || 0), 0) / Math.max(vcpPeriod5.length, 1);
+                    const volumeDecline = avgVolume20 > 0 ? (avg5Vol < avgVolume20 * 0.85) : false;
+
+                    stock.vcpTightness20 = vcpTightness20 !== null ? parseFloat(vcpTightness20.toFixed(2)) : null;
+                    stock.vcpTightness5  = vcpTightness5  !== null ? parseFloat(vcpTightness5.toFixed(2))  : null;
+                    stock.isContracting  = isContracting;
+                    stock.volumeDecline  = volumeDecline;
+
                     // Resolve openPrice and check wentUnderwater status
                     const cleanStockName = stock.name.toUpperCase().trim();
                     let ipoInfo = resolveIpoInfo(cleanStockName);
@@ -857,6 +889,23 @@ async function main() {
                     const minTouchCountRequired = (validDays.length < 25 || minLow === floor5) ? 2 : 3;
                     let isConsolidation = (pullback <= 15.0 && closeTightness <= 5.5 && touchCount >= minTouchCountRequired);
                     stock.isConsolidation = isConsolidation;
+
+                    // Teknik Mamat: VCP Contraction Stage (C1, C2, C3)
+                    // Berdasarkan DARJAH penguncupan progresif (bukan sekadar jarak ke lantai)
+                    const distToMinLow = ((currentPrice - minLow) / minLow) * 100;
+                    let vcpStage = null;
+                    if (pullback >= 3.0 && pullback <= 22.0 && isContracting) {
+                        const t5 = stock.vcpTightness5;
+                        const t20 = stock.vcpTightness20;
+                        if (t5 !== null && t5 <= 3.5 && distToMinLow <= 3.5 && touchCount >= 3) {
+                            vcpStage = 'C3'; // Micro-contraction terakhir: ideal pre-breakout entry!
+                        } else if (t5 !== null && t5 <= 6.0 && distToMinLow <= 5.0 && touchCount >= 2) {
+                            vcpStage = 'C2'; // Pengecilan kedua: tapak semakin matang
+                        } else if (pullback >= 4.0) {
+                            vcpStage = 'C1'; // Binaan tapak pertama
+                        }
+                    }
+                    stock.vcpStage = vcpStage;
                 }
             }
         } catch (e) {
@@ -962,9 +1011,20 @@ async function main() {
         
         let setupStyle = 'SWING PLAY';
         if (pullback !== null) {
+            const floorP = stock.floorLow || (stock.price * 0.95);
+            const distToFloorP = stock.price > 0 ? (((stock.price - floorP) / floorP) * 100) : 0;
             if (changePct >= 5.0 || (changePct >= 3.5 && pullback > 5.0)) {
                 setupStyle = 'EXPLOSIVE';
-            } else if (pullback <= 10.0 && (stock.isConsolidation || stock.lowTightness <= 8.0 || stock.touchCount >= 2)) {
+            } else if (
+                pullback >= 4.0 &&           // Mesti dah tarik balik dari high (bukan AT ATH / post-breakout)
+                pullback <= 22.0 &&           // Bukan deep pullback yang terlalu jauh
+                stock.isContracting &&        // WAJIB: volatiliti sedang menguncup secara progresif (ciri VCP)
+                distToFloorP <= 5.0 &&        // Rapat di atas lantai sokongan
+                changePct < 3.0 &&            // Tiada breakout hari ini
+                !stock.hasVolumeSpike &&      // Volume senyap (bukan breakout volume)
+                stock.touchCount >= 3 &&      // Lantai sokongan kukuh (3+ sentuhan)
+                stock.price > (stock.sma50 || 0) // Uptrend context: harga di atas SMA50
+            ) {
                 setupStyle = 'STAIRCASE';
             }
         }
@@ -1176,6 +1236,11 @@ async function main() {
             lowTightness: stock.lowTightness || null,
             touchCount: stock.touchCount || 0,
             isConsolidation: stock.isConsolidation || false,
+            vcpStage: stock.vcpStage || null,
+            vcpTightness20: stock.vcpTightness20 || null,
+            vcpTightness5: stock.vcpTightness5 || null,
+            isContracting: stock.isContracting || false,
+            volumeDecline: stock.volumeDecline || false,
             floorLow: stock.floorLow || null,
             hasLowerWickRejection: stock.hasLowerWickRejection || false,
             hasUpperWickRejection: stock.hasUpperWickRejection || false,
