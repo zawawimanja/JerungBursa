@@ -2914,6 +2914,47 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             applyFilters();
         }
 
+        function passesGlobalFilters(item) {
+            if (!item || !item.price || item.price <= 0) return false;
+            if (isSleepingOrAvoidStock(item)) return false;
+
+            // 1. Max Price Filter
+            const priceMaxVal = document.getElementById('priceMaxFilter') ? document.getElementById('priceMaxFilter').value : 'ALL';
+            if (priceMaxVal !== 'ALL' && item.price > parseFloat(priceMaxVal)) return false;
+
+            // 2. IPO Age Filter
+            const ipoAgeFilterVal = document.getElementById('ipoAgeFilter') ? document.getElementById('ipoAgeFilter').value : 'ALL';
+            if (!matchesIpoAgeFilter(item, ipoAgeFilterVal)) return false;
+
+            return true;
+        }
+
+        function applyGlobalSort(candidates) {
+            const sortByVal = document.getElementById('sortByFilter') ? document.getElementById('sortByFilter').value : 'SAFE';
+            candidates.sort((a, b) => {
+                if (a.isReboundHijau !== undefined && b.isReboundHijau !== undefined && a.isReboundHijau !== b.isReboundHijau) {
+                    return a.isReboundHijau ? -1 : 1;
+                }
+                if (a.is2ndRetestJackpot !== undefined && b.is2ndRetestJackpot !== undefined && a.is2ndRetestJackpot !== b.is2ndRetestJackpot) {
+                    return a.is2ndRetestJackpot ? -1 : 1;
+                }
+                if (sortByVal === 'TURNOVER') {
+                    return (b.rawTurnover || b.turnover || 0) - (a.rawTurnover || a.turnover || 0);
+                }
+                if (sortByVal === 'VOLATILE') {
+                    const volA = Math.abs(a.distPct !== undefined ? a.distPct : (a.pullback || 0));
+                    const volB = Math.abs(b.distPct !== undefined ? b.distPct : (b.pullback || 0));
+                    return volB - volA;
+                }
+                if (sortByVal === 'SCORE') {
+                    const scoreA = a.score !== undefined ? a.score : (a.rawObj ? calculateSmartScore(a.rawObj) : calculateSmartScore(a));
+                    const scoreB = b.score !== undefined ? b.score : (b.rawObj ? calculateSmartScore(b.rawObj) : calculateSmartScore(b));
+                    return scoreB - scoreA;
+                }
+                return (b.rawTurnover || b.turnover || 0) - (a.rawTurnover || a.turnover || 0);
+            });
+        }
+
         // Apply filters and render UI elements
         function applyFilters() {
             if (currentData && Array.isArray(currentData)) {
@@ -2955,12 +2996,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
             // Filter items for VCP / Staircase setup:
             let validPicks = currentData.filter(item => {
-                if (!item || !item.price || item.price <= 0) return false;
-                
-                // Max Price Filter
-                const priceMaxVal = document.getElementById('priceMaxFilter') ? document.getElementById('priceMaxFilter').value : 'ALL';
-                if (priceMaxVal !== 'ALL' && item.price > parseFloat(priceMaxVal)) return false;
-
+                if (!passesGlobalFilters(item)) return false;
                 if (isSleepingOrAvoidStock(item)) return false;
 
                 const style = getItemStyle(item);
@@ -2995,9 +3031,6 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 const minTurnover = (item.ipoGrade && item.ipoGrade !== 'Unrated') ? 350000 : 500000;
                 if (item.turnover < minTurnover) return false;
 
-                const ipoAgeFilterVal = document.getElementById('ipoAgeFilter') ? document.getElementById('ipoAgeFilter').value : 'ALL';
-                if (!matchesIpoAgeFilter(item, ipoAgeFilterVal)) return false;
-
                 // Strict risk management filter if enabled
                 const strictEntryVal = document.getElementById('strictEntryFilter') ? document.getElementById('strictEntryFilter').checked : false;
                 if (strictEntryVal) {
@@ -3010,24 +3043,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 return true;
             });
 
-            const sortByVal = document.getElementById('sortByFilter') ? document.getElementById('sortByFilter').value : 'SAFE';
-
-            // Sort by user preference (default: closest to floor first)
-            validPicks.sort((a, b) => {
-                if (sortByVal === 'TURNOVER') return b.turnover - a.turnover;
-                if (sortByVal === 'VOLATILE') {
-                    const volA = a.lowTightness !== null ? a.lowTightness : (a.pullback || 0);
-                    const volB = b.lowTightness !== null ? b.lowTightness : (b.pullback || 0);
-                    return volB - volA;
-                }
-                if (sortByVal === 'SCORE') return calculateSmartScore(b) - calculateSmartScore(a);
-                // Default SAFE: closest to support floor first
-                const floorA = a.floorLow || (a.price * 0.95);
-                const distA = ((a.price - floorA) / floorA) * 100;
-                const floorB = b.floorLow || (b.price * 0.95);
-                const distB = ((b.price - floorB) / floorB) * 100;
-                return distA - distB;
-            });
+            applyGlobalSort(validPicks);
 
             if (validPicks.length > 0) {
                 let vcpHtml = '';
@@ -3599,10 +3615,8 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             // Filter items for Technique C (Trend Rider):
             let validPicks = currentData.filter(item => {
                 if (!item.high52) return false;
-                
-                // Max Price Filter
-                const priceMaxVal = document.getElementById('priceMaxFilter') ? document.getElementById('priceMaxFilter').value : 'ALL';
-                if (priceMaxVal !== 'ALL' && item.price > parseFloat(priceMaxVal)) return false;
+                if (!passesGlobalFilters(item)) return false;
+
                 const pullbackVal = item.pullback !== null ? item.pullback : 0;
                 const isAboveSma200 = item.sma200 ? item.price >= item.sma200 : false;
                 const isIpo = item.ipoGrade === 'A' || item.ipoGrade === 'B' || item.ipoGrade === 'C';
@@ -3612,16 +3626,12 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 if (!hasPullback) return false;
 
                 if (isSleepingOrAvoidStock(item)) return false;
-                if (item.price < 0.25 || item.price > 4.00) return false;
                 
                 const minTurnover = isIpo ? 400000 : 750000;
                 if (item.turnover < minTurnover) return false;
                 
                 const minScore = isPremiumIpo ? 10 : (item.ipoGrade === 'C' ? 11 : 12);
                 if (calculateSmartScore(item) < minScore) return false;
-
-                const ipoAgeFilterVal = document.getElementById('ipoAgeFilter') ? document.getElementById('ipoAgeFilter').value : 'ALL_IPO';
-                if (!matchesIpoAgeFilter(item, ipoAgeFilterVal)) return false;
 
                 const style = getItemStyle(item);
 
@@ -4038,12 +4048,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             if (!bfTbody || !bfSection) return;
 
             let validPicks = currentData.filter(item => {
-                if (!item) return false;
-                
-                // Max Price Filter
-                const priceMaxVal = document.getElementById('priceMaxFilter') ? document.getElementById('priceMaxFilter').value : 'ALL';
-                if (priceMaxVal !== 'ALL' && item.price > parseFloat(priceMaxVal)) return false;
-                if (item.price < 0.10 || item.price > 3.00) return false;
+                if (!passesGlobalFilters(item)) return false;
                 if (item.isCombStock) return false;
                 
                 const pullback = item.pullback !== null ? item.pullback : 0;
@@ -4062,23 +4067,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 return true;
             });
 
-            // Sort — respects global sortByFilter
-            const bfSortVal = document.getElementById('sortByFilter') ? document.getElementById('sortByFilter').value : 'SAFE';
-            validPicks.sort((a, b) => {
-                if (bfSortVal === 'TURNOVER') return b.turnover - a.turnover;
-                if (bfSortVal === 'VOLATILE') {
-                    const volA = a.lowTightness !== null ? a.lowTightness : (a.pullback || 0);
-                    const volB = b.lowTightness !== null ? b.lowTightness : (b.pullback || 0);
-                    return volB - volA;
-                }
-                if (bfSortVal === 'SCORE') return calculateSmartScore(b) - calculateSmartScore(a);
-                // Default SAFE: closest to floor first
-                const floorA = a.floorLow || (a.price * 0.95);
-                const distA = ((a.price - floorA) / floorA) * 100;
-                const floorB = b.floorLow || (b.price * 0.95);
-                const distB = ((b.price - floorB) / floorB) * 100;
-                return distA - distB;
-            });
+            applyGlobalSort(validPicks);
 
             if (validPicks.length > 0) {
                 bfSection.style.display = 'block';
@@ -4529,16 +4518,16 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 updateEl.textContent = 'Dikemas kini: ' + d.toLocaleString('ms-MY', { timeZone: 'Asia/Kuala_Lumpur' });
             }
 
-            const ipoAgeFilterVal = document.getElementById('ipoAgeFilter') ? document.getElementById('ipoAgeFilter').value : 'FRESH';
             const candidates = (live.topVolume || []).filter(s => {
-                if (!s.price || s.price >= 1.0) return false;
+                if (!passesGlobalFilters(s)) return false;
                 if (s.signal !== 'buy') return false;
                 if (!['STAIRCASE', 'EXPLOSIVE', 'SWING PLAY'].includes(s.setupStyle)) return false;
                 const floorDist = s.floorLow ? ((s.price - s.floorLow) / s.floorLow * 100) : null;
                 if (floorDist !== null && floorDist > 10.0) return false;
-                if (!matchesIpoAgeFilter(s, ipoAgeFilterVal)) return false;
                 return true;
             });
+
+            applyGlobalSort(candidates);
 
             candidates.sort((a, b) => {
                 const aGold = track.filter(t => t.name === a.name).some(t => t.isGold) ? 1 : 0;
@@ -4663,7 +4652,6 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
         function renderPortfolio() {
             const list = currentData || [];
             const portfolio = [
-                { name: 'SDCG', buyPrice: 0.725, slPrice: 0.700, allocation: 2000, technique: 'VCP / Staircase', isKental: true },
                 { name: 'SRKK', buyPrice: 0.545, slPrice: 0.490, allocation: 2000, technique: 'Deep Pullback Swing', isKental: false },
                 { name: 'EIPOWER', buyPrice: 0.685, slPrice: 0.630, allocation: 2000, technique: 'Trend Rider Pullback', isKental: true },
                 { name: 'RESTNGO', buyPrice: 0.135, slPrice: 0.125, allocation: 2000, technique: 'Early Spring', isKental: false }
@@ -4763,26 +4751,38 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
             if (liveList.length > 0) {
                 phoenixCandidates = liveList.filter(s => {
+                    if (!passesGlobalFilters(s)) return false;
+
                     // Must be a genuine IPO (listed 2024-2026, or tagged with IPO grade/fresh IPO)
                     const isIpoCandidate = s.sector === 'IPO' || !!s.ipoGrade || (s.ipoYear && s.ipoYear >= 2024) || isFreshIpo(s);
                     if (!isIpoCandidate) return false;
-
-                    const ipoAgeFilterVal = document.getElementById('ipoAgeFilter') ? document.getElementById('ipoAgeFilter').value : 'ALL';
-                    if (!matchesIpoAgeFilter(s, ipoAgeFilterVal)) return false;
                     
                     const fdClose = s.firstDayClosePrice || s.openPrice || s.ipoPrice;
                     if (!fdClose) return false;
                     
                     const distPct = ((s.price - fdClose) / fdClose * 100);
-                    return distPct >= -25.0 && distPct <= 15.0;
+                    return distPct >= -60.0 && distPct <= 30.0;
                 }).map(s => {
                     const fdClose = s.firstDayClosePrice || s.openPrice || s.ipoPrice;
                     const distPct = ((s.price - fdClose) / fdClose * 100);
                     const change = s.changePct !== undefined ? s.changePct : 0;
                     
+                    const touches = s.touchCount || s.floorTouches || 1;
+                    const isCsHijau = change > 0;
                     let status = '🟡 TESTING FLOOR SPRING';
                     let setup = '🛡️ PHOENIX FLOOR';
-                    if (distPct >= 0 && distPct <= 10) {
+                    let is2ndRetestJackpot = false;
+
+                    if (touches >= 2 && distPct <= 30 && distPct >= -60) {
+                        is2ndRetestJackpot = true;
+                        if (isCsHijau) {
+                            status = '🟢 2ND RETEST REBOUND (CS HIJAU)';
+                            setup = '🎯 PHOENIX REBOUND (SRKK DNA)';
+                        } else {
+                            status = '🟡 2ND RETEST FLOOR HOLD (PINBAR/DOJI)';
+                            setup = '🛡️ PHOENIX 2ND TOUCH (SRKK DNA)';
+                        }
+                    } else if (distPct >= 0 && distPct <= 10) {
                         status = '🟢 FRESH RECLAIM';
                         setup = '🔥 PHOENIX RECLAIM';
                     } else if (distPct > 10) {
@@ -4800,11 +4800,13 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                         change: change,
                         close1st: fdClose,
                         distPct: distPct,
-                        touches: s.touchCount || s.floorTouches || 1,
+                        touches: touches,
                         turnover: s.turnover ? ('RM ' + (s.turnover >= 1000000 ? (s.turnover/1000000).toFixed(2) + 'M 🔥' : (s.turnover/1000).toFixed(0) + 'k')) : '—',
                         rawTurnover: s.turnover || 0,
                         status: status,
                         setup: setup,
+                        is2ndRetestJackpot: is2ndRetestJackpot,
+                        isReboundHijau: (is2ndRetestJackpot && isCsHijau),
                         ipoGrade: s.ipoGrade || '',
                         ipoYear: s.ipoYear || 0,
                         ipoPrice: s.ipoPrice || 0,
@@ -4813,38 +4815,23 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     };
                 });
 
-                // Sort — respects global sortByFilter (default: Jarak Garis Merah Rapat Pertama)
-                const phoenixSortVal = document.getElementById('sortByFilter') ? document.getElementById('sortByFilter').value : 'SAFE';
-                phoenixCandidates.sort((a, b) => {
-                    if (phoenixSortVal === 'TURNOVER') {
-                        return (b.rawTurnover || 0) - (a.rawTurnover || 0);
-                    }
-                    if (phoenixSortVal === 'VOLATILE') {
-                        return Math.abs(b.distPct) - Math.abs(a.distPct);
-                    }
-                    if (phoenixSortVal === 'SCORE') {
-                        return (b.score || 0) - (a.score || 0);
-                    }
-                    
-                    // Default SAFE / Garis Merah:
-                    // Sort descending from highest positive (+ve) down through 0% to negative (-ve)
-                    return b.distPct - a.distPct;
-                });
+                applyGlobalSort(phoenixCandidates);
             }
 
             // Fallback if liveList is empty
             if (phoenixCandidates.length === 0) {
                 phoenixCandidates = [
-                    { name: 'ECKEM', code: '0348.KL', price: 0.120, change: 0.0, close1st: 0.120, distPct: 0.0, touches: 8, turnover: 'RM 317k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 11 },
-                    { name: 'RESTNGO', code: '0465.KL', price: 0.130, change: -3.7, close1st: 0.130, distPct: 0.0, touches: 5, turnover: 'RM 271k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 10 },
-                    { name: 'WENTEL', code: '0298.KL', price: 0.260, change: 0.0, close1st: 0.260, distPct: 0.0, touches: 4, turnover: 'RM 216k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 9 },
-                    { name: 'BUSCAP', code: '0342.KL', price: 0.265, change: 1.92, close1st: 0.260, distPct: 1.92, touches: 3, turnover: 'RM 382k', status: '🟢 FRESH RECLAIM', setup: '🔥 PHOENIX RECLAIM', score: 12 },
-                    { name: 'SAG', code: '0336.KL', price: 0.695, change: 2.2, close1st: 0.680, distPct: 2.2, touches: 2, turnover: 'RM 30k', status: '🟢 FRESH RECLAIM', setup: '🔥 PHOENIX RECLAIM', score: 8 },
-                    { name: 'MKHOP', code: '0303.KL', price: 0.645, change: 2.38, close1st: 0.630, distPct: 2.38, touches: 5, turnover: 'RM 2.55M 🔥', status: '🟢 FRESH RECLAIM', setup: '🔥 PHOENIX RECLAIM', score: 13 },
-                    { name: 'CNERGEN', code: '0246.KL', price: 0.620, change: 1.6, close1st: 0.600, distPct: 3.33, touches: 4, turnover: 'RM 154k', status: '🟢 FRESH RECLAIM', setup: '🔥 PHOENIX RECLAIM', score: 10 },
-                    { name: 'FOODIE', code: '0355.KL', price: 0.340, change: -1.2, close1st: 0.355, distPct: -4.22, touches: 3, turnover: 'RM 157k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 9 },
-                    { name: 'PENTECH', code: '0350.KL', price: 0.275, change: -1.8, close1st: 0.290, distPct: -5.17, touches: 6, turnover: 'RM 1.52M', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 11 },
-                    { name: 'STRATUS', code: '0349.KL', price: 2.050, change: 4.59, close1st: 1.960, distPct: 4.59, touches: 1, turnover: 'RM 19.7M 🔥', status: '🟢 FRESH RECLAIM', setup: '🔥 PHOENIX RECLAIM', score: 14 }
+                    { name: 'SRKK', code: '0466.KL', price: 0.545, change: 5.83, close1st: 0.555, distPct: -1.8, touches: 2, turnover: 'RM 7.26M 🔥', status: '🎯 2ND RETEST CS HIJAU', setup: '🔥 PHOENIX REBOUND (SRKK DNA)', score: 14, is2ndRetestJackpot: true },
+                    { name: 'ECKEM', code: '0348.KL', price: 0.120, change: 0.0, close1st: 0.120, distPct: 0.0, touches: 8, turnover: 'RM 317k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 11, is2ndRetestJackpot: false },
+                    { name: 'RESTNGO', code: '0465.KL', price: 0.130, change: -3.7, close1st: 0.130, distPct: 0.0, touches: 5, turnover: 'RM 271k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 10, is2ndRetestJackpot: false },
+                    { name: 'WENTEL', code: '0298.KL', price: 0.260, change: 0.0, close1st: 0.260, distPct: 0.0, touches: 4, turnover: 'RM 216k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 9, is2ndRetestJackpot: false },
+                    { name: 'BUSCAP', code: '0342.KL', price: 0.265, change: 1.92, close1st: 0.260, distPct: 1.92, touches: 3, turnover: 'RM 382k', status: '🎯 2ND RETEST CS HIJAU', setup: '🔥 PHOENIX REBOUND (SRKK DNA)', score: 12, is2ndRetestJackpot: true },
+                    { name: 'SAG', code: '0336.KL', price: 0.695, change: 2.2, close1st: 0.680, distPct: 2.2, touches: 2, turnover: 'RM 30k', status: '🎯 2ND RETEST CS HIJAU', setup: '🔥 PHOENIX REBOUND (SRKK DNA)', score: 8, is2ndRetestJackpot: true },
+                    { name: 'MKHOP', code: '0303.KL', price: 0.645, change: 2.38, close1st: 0.630, distPct: 2.38, touches: 5, turnover: 'RM 2.55M 🔥', status: '🎯 2ND RETEST CS HIJAU', setup: '🔥 PHOENIX REBOUND (SRKK DNA)', score: 13, is2ndRetestJackpot: true },
+                    { name: 'CNERGEN', code: '0246.KL', price: 0.620, change: 1.6, close1st: 0.600, distPct: 3.33, touches: 4, turnover: 'RM 154k', status: '🎯 2ND RETEST CS HIJAU', setup: '🔥 PHOENIX REBOUND (SRKK DNA)', score: 10, is2ndRetestJackpot: true },
+                    { name: 'FOODIE', code: '0355.KL', price: 0.340, change: -1.2, close1st: 0.355, distPct: -4.22, touches: 3, turnover: 'RM 157k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 9, is2ndRetestJackpot: false },
+                    { name: 'PENTECH', code: '0350.KL', price: 0.275, change: -1.8, close1st: 0.290, distPct: -5.17, touches: 6, turnover: 'RM 1.52M', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 11, is2ndRetestJackpot: false },
+                    { name: 'STRATUS', code: '0349.KL', price: 2.050, change: 4.59, close1st: 1.960, distPct: 4.59, touches: 1, turnover: 'RM 19.7M 🔥', status: '🟢 FRESH RECLAIM', setup: '🔥 PHOENIX RECLAIM', score: 14, is2ndRetestJackpot: false }
                 ];
             }
 
@@ -4862,7 +4849,9 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
                 // Setup badge color
                 let setupStyle = 'background: rgba(251,191,36,0.15); color: #fbbf24; border: 1px solid rgba(251,191,36,0.3);';
-                if (m.setup.includes('RECLAIM')) {
+                if (m.setup.includes('SRKK DNA') || m.setup.includes('2ND RETEST')) {
+                    setupStyle = 'background: linear-gradient(135deg, rgba(249,115,22,0.25), rgba(239,68,68,0.25)); color: #ffedd5; border: 1px solid #f97316; font-weight: 800; text-shadow: 0 0 5px rgba(249,115,22,0.5);';
+                } else if (m.setup.includes('RECLAIM')) {
                     setupStyle = 'background: rgba(52,211,153,0.15); color: #34d399; border: 1px solid rgba(52,211,153,0.3);';
                 } else if (m.setup.includes('RALLY')) {
                     setupStyle = 'background: rgba(99,102,241,0.15); color: #a5b4fc; border: 1px solid rgba(99,102,241,0.3);';
@@ -4872,7 +4861,9 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
                 // Status badge color
                 let statusStyle = 'background: rgba(251,191,36,0.15); color: #fbbf24; border: 1px solid rgba(251,191,36,0.3);';
-                if (m.status.includes('FRESH') || m.status.includes('RUNNING')) {
+                if (m.status.includes('2ND RETEST')) {
+                    statusStyle = 'background: rgba(52,211,153,0.2); color: #34d399; border: 1px solid #34d399; font-weight: 800; box-shadow: 0 0 8px rgba(52,211,153,0.25);';
+                } else if (m.status.includes('FRESH') || m.status.includes('RUNNING')) {
                     statusStyle = 'background: rgba(52,211,153,0.15); color: #34d399; border: 1px solid rgba(52,211,153,0.3);';
                 } else if (m.status.includes('DEEP')) {
                     statusStyle = 'background: rgba(239,68,68,0.12); color: #f87171; border: 1px solid rgba(239,68,68,0.25);';
@@ -5017,11 +5008,11 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 badgeEl.textContent = `🔒 TERKUNCI: HOMEWORK WEEKEND (${fridayStr})`;
             }
 
-            // Filter Weekend list for weekly swing candidates (< RM3.00, non-sell, turnover >= 250k)
+            // Filter Weekend list for weekly swing candidates using global filters (Price Max & IPO Status)
             const candidates = sourceList.filter(s => {
-                const itemPrice = s.price || s.close || s.last || 0;
-                if (!itemPrice || itemPrice >= 3.0) return false;
+                if (!passesGlobalFilters(s)) return false;
                 if (s.signal === 'sell') return false;
+                const itemPrice = s.price || s.close || s.last || 0;
                 const turnover = s.turnover || (s.volume ? s.volume * itemPrice : 500000);
                 if (turnover < 250000) return false;
                 return true;
