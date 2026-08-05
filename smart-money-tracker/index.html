@@ -2883,6 +2883,46 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             'ICTZONE': 'B'
         };
 
+        function isFreshIpo(item) {
+            if (!item) return false;
+            if (item.ipoAge != null && item.ipoAge <= 730) return true;
+            if (item.ipoYear != null && item.ipoYear >= 2024) return true;
+            if (item.listingDate && item.ipoGrade && item.ipoGrade !== 'Unrated') {
+                const yearMatch = item.listingDate.match(/\d{4}/);
+                if (yearMatch) return parseInt(yearMatch[0]) >= 2024;
+            }
+            const cleanName = typeof item === 'string' ? item.toUpperCase().trim() : (item.name ? item.name.toUpperCase().trim() : '');
+            return freshIpos.includes(cleanName);
+        }
+
+        function getTradingViewSymbol(rawName) {
+            if (!rawName) return '';
+            const clean = typeof rawName === 'string' ? rawName.toUpperCase().trim() : (rawName.name ? rawName.name.toUpperCase().trim() : '');
+            const map = {
+                'SKYCHIP': 'SKYECHIP',
+                '99 SPEED MART RETAIL': '99SMART',
+                '99 SPEED MART': '99SMART',
+                'ECOSYS': 'ECOSHOP',
+                'GO_HUB': 'GOHUB',
+                'KLAREC': 'KLARECO'
+            };
+            return map[clean] || clean;
+        }
+
+        function getDisplayName(rawName) {
+            if (!rawName) return '';
+            const clean = typeof rawName === 'string' ? rawName.toUpperCase().trim() : (rawName.name ? rawName.name.toUpperCase().trim() : '');
+            const map = {
+                'SKYCHIP': 'SKYECHIP',
+                '99 SPEED MART RETAIL': '99SMART',
+                '99 SPEED MART': '99SMART',
+                'ECOSYS': 'ECOSHOP',
+                'GO_HUB': 'GOHUB',
+                'KLAREC': 'KLARECO'
+            };
+            return map[clean] || clean;
+        }
+
         const freshIpos = [
             'SKYECHIP', 'SKYCHIP', 'PENTECH', 'SUM', 'ELSA', 'AMBEST', 'AMS',
             'EIPOWER', 'ISF', 'KEEMING', 'TEAMSTR', 'MMCS', 'GDGROUP',
@@ -3993,15 +4033,15 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     ? `<span style="font-size: 0.62rem; background: rgba(139, 92, 246, 0.15); color: #a78bfa; padding: 0.08rem 0.3rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(139, 92, 246, 0.3); white-space: nowrap;">🏗️ DEEP BASE</span>`
                     : `<span style="font-size: 0.62rem; background: rgba(59, 130, 246, 0.15); color: #60a5fa; padding: 0.08rem 0.3rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(59, 130, 246, 0.3); white-space: nowrap;">📉 HEALTHY DIP</span>`;
 
-                const tierColor = item.confidenceScore >= 90 ? '#a855f7' : (item.confidenceScore >= 75 ? '#38bdf8' : (item.confidenceScore >= 60 ? '#10b981' : '#f59e0b'));
-                const confidenceText = item.confidenceScore !== undefined ? `${item.confidenceScore}/100` : 'N/A';
+                const displayName = getDisplayName(item.name);
+                const tvSymbol = getTradingViewSymbol(item.name);
 
                 html += `
                     <tr>
                         <td style="text-align: center; font-weight: 800; color: #0ea5e9;">#${idx + 1}</td>
                         <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
-                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
-                                ${item.name} <span style="font-size: 0.75rem; color: #0ea5e9;">🔗</span>
+                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${tvSymbol}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView (${tvSymbol})">
+                                ${displayName} <span style="font-size: 0.75rem; color: #0ea5e9;">🔗</span>
                             </a>
                             <div style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.35rem; flex-wrap: wrap;">${athBadge}</div>
                         </td>
@@ -4186,12 +4226,15 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 const tierColor = item.confidenceScore >= 90 ? '#a855f7' : (item.confidenceScore >= 75 ? '#38bdf8' : (item.confidenceScore >= 60 ? '#10b981' : '#f59e0b'));
                 const confidenceText = item.confidenceScore !== undefined ? `${item.confidenceScore}/100` : 'N/A';
 
+                const displayName = getDisplayName(item.name);
+                const tvSymbol = getTradingViewSymbol(item.name);
+
                 html += `
                     <tr>
                         <td style="text-align: center; font-weight: 800; color: #fde047;">#${idx + 1}</td>
                         <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
-                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
-                                ${item.name} <span style="font-size: 0.75rem; color: #fde047;">🔗</span>
+                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${tvSymbol}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView (${tvSymbol})">
+                                ${displayName} <span style="font-size: 0.75rem; color: #fde047;">🔗</span>
                             </a>
                             <div style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.35rem; flex-wrap: wrap;">${freshBadge}</div>
                         </td>
@@ -4406,16 +4449,16 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     if (volatility >= 4.5) volColor = '#fb7185';
                     else if (volatility >= 1.5) volColor = '#f59e0b';
 
-                    const hofBadge = getHofBadge(item);
-                    const matchBadge = getBacktestMatchBadge(item, 'trend');
+                    const displayName = getDisplayName(item.name);
+                    const tvSymbol = getTradingViewSymbol(item.name);
 
                     hybridHtml += `
                         <tr style="${isHc ? 'background: rgba(16, 185, 129, 0.03);' : (isVvipRank ? 'background: rgba(245, 158, 11, 0.02);' : '')}">
                             <td style="text-align: center; font-weight: 800; color: ${isHc ? '#10b981' : (isVvipRank ? '#f59e0b' : 'var(--accent)')}; ${isHc ? 'border-left: 4px solid #10b981;' : ''}">#${rankCount++}</td>
                             <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
                                 <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
-                                    <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
-                                        ${crownEmoji}${item.name} <span style="font-size: 0.75rem; color: var(--accent);">🔗</span>
+                                    <a href="https://www.tradingview.com/chart/?symbol=MYX:${tvSymbol}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView (${tvSymbol})">
+                                        ${crownEmoji}${displayName} <span style="font-size: 0.75rem; color: var(--accent);">🔗</span>
                                     </a>
                                     ${getSub1Badge(item)}
                                     ${isHc ? `<span style="font-size: 0.68rem; background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.25); white-space: nowrap; box-shadow: 0 0 8px rgba(16, 185, 129, 0.3);" title="High-Conviction Setup: Gred Premium + Lantai Sangat Rapat (<=4%) + Kecairan Tinggi (>=RM1M)">🎯 Entry Padu</span>` : ''}
