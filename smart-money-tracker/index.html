@@ -678,9 +678,9 @@
 
     <!-- Tab Navigation -->
     <div class="tabs-nav" style="margin-bottom: 1rem; margin-top: 0.5rem; display: flex; gap: 0.4rem; flex-wrap: wrap;">
-        <button class="tab-btn active" id="tab-weekly" onclick="switchTab('weekly')" style="flex: 1; min-width: 125px; white-space: nowrap;">🗓️ Weekly Top 5</button>
+        <button class="tab-btn active" id="tab-jerung" onclick="switchTab('jerung')" style="flex: 1; min-width: 110px; white-space: nowrap;">🦈 Jerung Radar</button>
+        <button class="tab-btn" id="tab-weekly" onclick="switchTab('weekly')" style="flex: 1; min-width: 125px; white-space: nowrap;">🗓️ Weekly Top 5</button>
         <button class="tab-btn" id="tab-vcp" onclick="switchTab('vcp')" style="flex: 1; min-width: 110px; white-space: nowrap;">🪜 VCP Staircase</button>
-        <button class="tab-btn" id="tab-jerung" onclick="switchTab('jerung')" style="flex: 1; min-width: 110px; white-space: nowrap;">🦈 Jerung Radar</button>
         <button class="tab-btn" id="tab-trend" onclick="switchTab('trend')" style="flex: 1; min-width: 100px; white-space: nowrap;">📈 Trend Rider</button>
         <button class="tab-btn" id="tab-spring" onclick="switchTab('spring')" style="flex: 1; min-width: 100px; white-space: nowrap;">🌱 Early Spring</button>
         <button class="tab-btn" id="tab-phoenix" onclick="switchTab('phoenix')" style="flex: 1; min-width: 90px; white-space: nowrap;">🔥 Phoenix</button>
@@ -720,13 +720,13 @@
                                 <th>Kaunter</th>
                                 <th style="text-align: center;">Kategori Setup</th>
                                 <th style="text-align: right;">Harga Semasa</th>
-                                <th style="text-align: right;">Perubahan</th>
-                                <th style="text-align: right;">Lantai Sokongan</th>
+                                <th style="text-align: right;">Perubahan %</th>
+                                <th style="text-align: right;">Lantai Sokongan @ Harga</th>
                                 <th style="text-align: right;">Jarak Lantai</th>
                                 <th style="text-align: right;">Volatiliti</th>
                                 <th style="text-align: right;">Stop Loss (SL)</th>
                                 <th style="text-align: right;">Turnover</th>
-                                <th style="text-align: center;">Analisis AI</th>
+                                <th style="text-align: center;">Analisis AI (Skor)</th>
                             </tr>
                         </thead>
                         <tbody id="vcpPicksTableBody">
@@ -743,7 +743,7 @@
     </div> <!-- End of view-vcp -->
 
     <!-- TAB: JERUNG RADAR (QUIET ACCUMULATION) -->
-    <div id="view-jerung" style="display: none;">
+    <div id="view-jerung" style="display: block;">
         <div id="jerung-radar-section" style="margin-bottom: 1.25rem;">
             <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(34, 211, 238, 0.08)); border: 2px dashed #0ea5e9; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(14, 165, 233, 0.15); position: relative; overflow: hidden;">
                 <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(14, 165, 233, 0.15); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
@@ -757,8 +757,21 @@
                                 <span style="font-size: 0.7rem; background: rgba(14, 165, 233, 0.2); color: #38bdf8; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(14, 165, 233, 0.3); white-space: nowrap;">⚡ DETECT SEBELUM BOOM</span>
                             </div>
                             <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
-                                Pattern jerung masuk <strong style="color: #38bdf8;">diam-diam sebelum breakout</strong>: Volume SENYAP (bukan spike) + touch lantai naik progresif + close makin ketat + dekat ATH. Contoh: Stratus sebelum +10% (4 Ogos).
+                                Pattern jerung masuk <strong style="color: #38bdf8;">diam-diam sebelum breakout</strong>: Volume SENYAP + touch lantai progresif + close makin ketat. Kini termasuk <strong style="color: #a78bfa;">🏗️ Secondary Base</strong> — saham yang dah pullback dalam tapi bina base baru ketat (contoh: SKYCHIP).
                             </p>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+                        <div style="display: flex; gap: 0.3rem; align-items: center; background: rgba(15,23,42,0.6); padding: 0.2rem; border-radius: 8px; border: 1px solid rgba(14,165,233,0.3);">
+                            <span style="font-size: 0.72rem; color: #64748b; font-weight: 600; padding: 0 0.3rem;">Fokus:</span>
+                            <button id="jerungFilterFresh" onclick="setJerungFilter('fresh_only')" style="background: rgba(16,185,129,0.25); color: #34d399; border: 1px solid rgba(16,185,129,0.5); padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer;">🌟 Fresh IPO Sahaja</button>
+                            <button id="jerungFilterAll" onclick="setJerungFilter('all')" style="background: transparent; color: #64748b; border: 1px solid transparent; padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">🌐 Semua Saham</button>
+                        </div>
+                        <div style="display: flex; gap: 0.3rem; align-items: center; background: rgba(15,23,42,0.6); padding: 0.2rem; border-radius: 8px; border: 1px solid rgba(14,165,233,0.3);">
+                            <span style="font-size: 0.72rem; color: #64748b; font-weight: 600; padding: 0 0.3rem;">Susun:</span>
+                            <button id="jerungSortActive" onclick="setJerungSort('active')" style="background: rgba(14,165,233,0.25); color: #38bdf8; border: 1px solid rgba(14,165,233,0.5); padding: 0.3rem 0.7rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer;">🦈 Jerung Aktif</button>
+                            <button id="jerungSortTurnover" onclick="setJerungSort('turnover')" style="background: transparent; color: #64748b; border: 1px solid transparent; padding: 0.3rem 0.7rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">🔥 Turnover</button>
+                            <button id="jerungSortDefault" onclick="setJerungSort('default')" style="background: transparent; color: #64748b; border: 1px solid transparent; padding: 0.3rem 0.7rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">🏆 Skor</button>
                         </div>
                     </div>
                 </div>
@@ -770,14 +783,15 @@
                                 <th style="text-align: center; width: 45px;">No</th>
                                 <th>Kaunter</th>
                                 <th style="text-align: center;">Tier</th>
-                                <th style="text-align: center;">Setup Style</th>
-                                <th style="text-align: right;">Harga</th>
+                                <th style="text-align: center;">Kategori Setup</th>
+                                <th style="text-align: right;">Harga Semasa</th>
                                 <th style="text-align: right;">Pullback ATH</th>
-                                <th style="text-align: right;">Floor Touch</th>
+                                <th style="text-align: right;">Lantai Sokongan @ Harga</th>
                                 <th style="text-align: right;">Close Ketat</th>
-                                <th style="text-align: center;">Volume</th>
-                                <th style="text-align: center;">Signal</th>
-                                <th style="text-align: center;">Confidence</th>
+                                <th style="text-align: right;">Turnover</th>
+                                <th style="text-align: center;">Status Volume</th>
+                                <th style="text-align: center;">Perubahan %</th>
+                                <th style="text-align: center;">Analisis AI (Skor)</th>
                             </tr>
                         </thead>
                         <tbody id="jerungRadarTableBody">
@@ -793,8 +807,11 @@
                 <!-- NOTA TEKNIK -->
                 <div style="margin-top: 1rem; background: rgba(14, 165, 233, 0.08); border: 1px solid rgba(14, 165, 233, 0.25); border-radius: 10px; padding: 0.8rem 1rem;">
                     <h4 style="margin: 0 0 0.25rem 0; color: #38bdf8; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px;">⚡ Cara Baca Radar Ini</h4>
-                    <p style="margin: 0; font-size: 0.78rem; color: #cbd5e1; line-height: 1.5;">
-                        <strong style="color: #38bdf8;">Kriteria Stratus 3 Ogos:</strong> (1) <span style="color: #34d399;">Volume SENYAP</span> (volumeDecline) — jerung kumpul diam-diam, <strong>bukan</strong> volume spike (spike = dah breakout/lambat); (2) Touch lantai tinggi & progresif (3x → 5x → 8x → 9x); (3) Close ketat (&lt; 3%); (4) Dekat ATH (pullback &le; 15%). Entry: dekat floorLow, SL -3% di bawah lantai. <strong style="color: #f87171;">Ingat: 100% sama pun tak menjamin boom — SL kena ada.</strong>
+                    <p style="margin: 0; font-size: 0.78rem; color: #cbd5e1; line-height: 1.6;">
+                        <strong style="color: #34d399;">🔇 Tier 1 QUIET ACCUM</strong>: Volume senyap + isConsolidation + close ≤5% + pullback ≤15%. Paling awal, belum ramai nampak.<br>
+                        <strong style="color: #fbbf24;">🦈 Tier 2 JERUNG MASUK</strong>: Volume spike awal (<3x) TAPI belum breakout + close ≤10% + pullback ≤15%. Jerung mula masuk.<br>
+                        <strong style="color: #a78bfa;">🏗️ Tier 3 SECOND BASE</strong>: Pullback dalam (15-30%) dari ATH TAPI <em>bina base baru ketat</em> — closeTightness ≤5%, touch ≥5x, masih atas SMA50. Jerung kumpul diam-diam dalam base baru (contoh: SKYCHIP).
+                        <br><strong style="color: #f87171;">Ingat: SL kena ada walau pattern selengkap mana pun.</strong>
                     </p>
                 </div>
             </div>
@@ -836,13 +853,13 @@
                                 <th style="color: #3b82f6; text-align: left;">Kaunter</th>
                                 <th style="text-align: center; color: #3b82f6;">Kategori Setup</th>
                                 <th style="text-align: right; color: #3b82f6;">Harga Semasa</th>
-                                <th style="text-align: right; color: #3b82f6;">Perubahan</th>
-                                <th style="text-align: right; color: #3b82f6;">Lantai Sokongan</th>
+                                <th style="text-align: right; color: #3b82f6;">Perubahan %</th>
+                                <th style="text-align: right; color: #3b82f6;">Lantai Sokongan @ Harga</th>
                                 <th style="text-align: right; color: #3b82f6;">Jarak Lantai</th>
                                 <th style="text-align: right; color: #3b82f6;">Volatiliti</th>
-                                <th style="text-align: right; color: #3b82f6;">Stop Loss (3%)</th>
+                                <th style="text-align: right; color: #3b82f6;">Stop Loss (SL)</th>
                                 <th style="text-align: right; color: #3b82f6;">Turnover</th>
-                                <th style="text-align: center; color: #3b82f6;">Analisis AI</th>
+                                <th style="text-align: center; color: #3b82f6;">Analisis AI (Skor)</th>
                             </tr>
                         </thead>
                         <tbody id="hybridPicksTableBody">
@@ -920,13 +937,13 @@
                                 <th style="color: #fb7185; text-align: left;">Kaunter</th>
                                 <th style="text-align: center; color: #fb7185;">Kategori Setup</th>
                                 <th style="text-align: right; color: #fb7185;">Harga Semasa</th>
-                                <th style="text-align: right; color: #fb7185;">Perubahan</th>
+                                <th style="text-align: right; color: #fb7185;">Perubahan %</th>
                                 <th style="text-align: right; color: #fb7185;">Open Price (Trigger)</th>
                                 <th style="text-align: right; color: #fb7185;">Jarak Trigger</th>
                                 <th style="text-align: right; color: #fb7185;">Volatiliti</th>
-                                <th style="text-align: right; color: #fb7185;">Lantai Sokongan</th>
+                                <th style="text-align: right; color: #fb7185;">Lantai Sokongan @ Harga</th>
                                 <th style="text-align: right; color: #fb7185;">Turnover</th>
-                                <th style="text-align: center; color: #fb7185;">Analisis AI</th>
+                                <th style="text-align: center; color: #fb7185;">Analisis AI (Skor)</th>
                             </tr>
                         </thead>
                         <tbody id="reclaimRadarTableBody">
@@ -1015,13 +1032,13 @@
                                 <th style="color: #f97316; text-align: left;">Kaunter</th>
                                 <th style="text-align: center; color: #f97316;">Kategori Setup</th>
                                 <th style="text-align: right; color: #f97316;">Harga Semasa</th>
-                                <th style="text-align: right; color: #94a3b8;">Perubahan</th>
+                                <th style="text-align: right; color: #94a3b8;">Perubahan %</th>
                                 <th style="text-align: right; color: #f97316;">Penutup Hari 1 (🔴 Garis Merah)</th>
                                 <th style="text-align: right; color: #f97316;">Jarak Garis Merah</th>
-                                <th style="text-align: right; color: #f97316;">Floor Touch</th>
+                                <th style="text-align: right; color: #f97316;">Lantai Sokongan @ Harga</th>
                                 <th style="text-align: right; color: #f59e0b;">Turnover</th>
                                 <th style="text-align: center; color: #f97316;">Status Setup</th>
-                                <th style="text-align: center; color: #f97316;">AI Analysis</th>
+                                <th style="text-align: center; color: #f97316;">Analisis AI (Skor)</th>
                             </tr>
                         </thead>
                         <tbody id="phoenixTableBody">
@@ -1110,13 +1127,13 @@
                                 <th style="color: #f59e0b; text-align: left;">Kaunter</th>
                                 <th style="text-align: center; color: #f59e0b;">Kategori Setup</th>
                                 <th style="text-align: right; color: #f59e0b;">Harga Semasa</th>
-                                <th style="text-align: right; color: #f59e0b;">Perubahan</th>
-                                <th style="text-align: right; color: #f59e0b;">Lantai Sokongan</th>
+                                <th style="text-align: right; color: #f59e0b;">Perubahan %</th>
+                                <th style="text-align: right; color: #f59e0b;">Lantai Sokongan @ Harga</th>
                                 <th style="text-align: right; color: #f59e0b;">Jarak Lantai</th>
                                 <th style="text-align: right; color: #f59e0b;">Volatiliti</th>
                                 <th style="text-align: right; color: #f59e0b;">Kejatuhan (Pullback)</th>
                                 <th style="text-align: right; color: #f59e0b;">Turnover</th>
-                                <th style="text-align: center; color: #f59e0b;">Analisis AI</th>
+                                <th style="text-align: center; color: #f59e0b;">Analisis AI (Skor)</th>
                             </tr>
                         </thead>
                         <tbody id="bottomFishingTableBody">
@@ -1165,7 +1182,7 @@
     </div> <!-- End of view-fishing -->
 
     <!-- TAB 1: WEEKLY HOMEWORK (TOP 5 SWING - PRIMARY DEFAULT TAB) -->
-    <div id="view-weekly" style="display: block;">
+    <div id="view-weekly" style="display: none;">
         <!-- WEEKLY HOMEWORK HERO SECTION -->
         <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 2px solid #f59e0b; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(245, 158, 11, 0.2); position: relative; overflow: hidden; margin-bottom: 1.25rem;">
             <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(245, 158, 11, 0.15); filter: blur(60px); border-radius: 50%; pointer-events: none;"></div>
@@ -2788,29 +2805,17 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             'CBHB', 'HEGROUP', 'SDCG', 'ADNEX', 'EXSIMHB', 'NE'
         ];
 
-        // Helper to check if a stock is a fresh IPO
         function isFreshIpo(item) {
             if (!item) return false;
-            
-            // Primary: use listingDate year + must have a valid IPO grade (not Unrated)
+            if (item.ipoAge != null && item.ipoAge <= 730) return true;
+            if (item.ipoYear != null && item.ipoYear >= 2024) return true;
             if (item.listingDate && item.ipoGrade && item.ipoGrade !== 'Unrated') {
                 const yearMatch = item.listingDate.match(/\d{4}/);
-                if (yearMatch) return parseInt(yearMatch[0]) >= 2025;
+                if (yearMatch) return parseInt(yearMatch[0]) >= 2024;
             }
-
-            // Secondary: use ipoYear field if available
-            if (item.ipoYear !== undefined) return item.ipoYear >= 2025;
-
-            // Fallback: only continue if has IPO grade
-            if (!item.ipoGrade) return false;
-
-            // If it is in a downtrend / avoid, it is not fresh anymore
+            if (!item.ipoGrade || item.ipoGrade === 'Unrated') return false;
             const setup = (item.setupName || '').toUpperCase();
             if (setup.includes('DOWNTREND') || setup.includes('AVOID') || setup === 'N/A') return false;
-            
-            const reason = (item.reason || '').toUpperCase();
-            if (reason.includes('AVOID')) return false;
-
             const cleanName = item.name.toUpperCase().trim();
             return freshIpos.includes(cleanName) || Object.keys(ipoMap).some(key => {
                 if (!freshIpos.includes(key)) return false;
@@ -3060,6 +3065,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             }
 
             updateSentiment(currentData);
+            renderJerungRadar();
             renderVcpStaircase();
             renderTrendRiders();
             renderReclaimRadar();
@@ -3691,14 +3697,73 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
         // NOTE: matchesIpoAgeFilter, isFreshIpo, isHighConviction defined at lines 2286-2376 above. No duplicates here.
 
         // Render Jerung Radar (Quiet Accumulation - Stratus Pre-Breakout)
+        function setJerungFilter(mode) {
+            window._jerungFilterMode = mode;
+            const btnFresh = document.getElementById('jerungFilterFresh');
+            const btnAll = document.getElementById('jerungFilterAll');
+            if (btnFresh && btnAll) {
+                if (mode === 'fresh_only') {
+                    btnFresh.style.background = 'rgba(16,185,129,0.25)';
+                    btnFresh.style.color = '#34d399';
+                    btnFresh.style.border = '1px solid rgba(16,185,129,0.5)';
+                    btnFresh.style.fontWeight = '800';
+                    btnAll.style.background = 'transparent';
+                    btnAll.style.color = '#64748b';
+                    btnAll.style.border = '1px solid transparent';
+                    btnAll.style.fontWeight = '700';
+                } else {
+                    btnAll.style.background = 'rgba(14,165,233,0.25)';
+                    btnAll.style.color = '#38bdf8';
+                    btnAll.style.border = '1px solid rgba(14,165,233,0.5)';
+                    btnAll.style.fontWeight = '800';
+                    btnFresh.style.background = 'transparent';
+                    btnFresh.style.color = '#64748b';
+                    btnFresh.style.border = '1px solid transparent';
+                    btnFresh.style.fontWeight = '700';
+                }
+            }
+            renderJerungRadar();
+        }
+
+        function setJerungSort(mode) {
+            window._jerungSortMode = mode;
+            // Update button styles
+            const btns = { default: 'jerungSortDefault', active: 'jerungSortActive', turnover: 'jerungSortTurnover' };
+            Object.entries(btns).forEach(([k, id]) => {
+                const btn = document.getElementById(id);
+                if (!btn) return;
+                if (k === mode) {
+                    btn.style.background = 'rgba(14,165,233,0.25)';
+                    btn.style.color = '#38bdf8';
+                    btn.style.border = '1px solid rgba(14,165,233,0.5)';
+                    btn.style.fontWeight = '800';
+                } else {
+                    btn.style.background = 'transparent';
+                    btn.style.color = '#64748b';
+                    btn.style.border = '1px solid transparent';
+                    btn.style.fontWeight = '700';
+                }
+            });
+            renderJerungRadar();
+        }
+
         function renderJerungRadar() {
             const tbody = document.getElementById('jerungRadarTableBody');
             if (!tbody) return;
 
+            const jerungFilterMode = window._jerungFilterMode || 'fresh_only';
+
             let validPicks = currentData.filter(item => {
                 if (!item || !item.name || !item.price || item.price <= 0) return false;
+                if (!passesGlobalFilters(item)) return false;
                 if (isSleepingOrAvoidStock(item)) return false;
                 if (item.isCombStock) return false;
+
+                // Max price cap for swing trading (RM10.00) to exclude mega heavy bluechips
+                if (item.price > 10.00) return false;
+
+                // === FOKUS FRESH IPO (Default ON) ===
+                if (jerungFilterMode === 'fresh_only' && !isFreshIpo(item)) return false;
 
                 // === JERUNG RADAR: QUIET ACCUMULATION (Stratus 3 Ogos signature) ===
 
@@ -3709,43 +3774,80 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 const changeVal = item.changePct !== undefined ? item.changePct : item.change;
                 if (changeVal > 5.0) return false;
 
-                // 2. Dekat ATH / pullback sihat (<= 15%)
+                // 2. Pullback check — dua laluan:
+                //    (a) Laluan biasa: pullback <= 15% (near ATH)
+                //    (b) Laluan Secondary Base: pullback 15-30% TAPI harga bina base baru yang ketat
                 const pullback = item.pullback;
-                if (pullback === null || pullback === undefined || pullback > 15.0) return false;
+                if (pullback === null || pullback === undefined) return false;
+                const closeTight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
+                const touches = item.touchCount || 0;
+                const isNearAthPath = pullback <= 15.0;
+                // Tier 3 Secondary Base: pullback lebih dalam TAPI closeTightness sangat ketat + base matang
+                const isSecondaryBasePath = pullback > 15.0
+                    && pullback <= 30.0
+                    && closeTight <= 5.0
+                    && touches >= 5
+                    && changeVal < 3.0
+                    && (item.sma50 ? item.price >= item.sma50 : true);
+                if (!isNearAthPath && !isSecondaryBasePath) return false;
 
-                // 3. Uptrend context (di atas SMA50 jika ada)
-                if (item.sma50 && item.price < item.sma50) return false;
+                // 3. Uptrend context (di atas SMA50 jika ada) — untuk laluan biasa sahaja
+                //    Secondary Base sudah handle SMA50 dalam syaratnya
+                if (isNearAthPath && item.sma50 && item.price < item.sma50) return false;
 
                 // 4. Liquidity minimum
                 if ((item.turnover || 0) < 300000) return false;
 
-                // 5. Lantai mesti ada sentuhan (>= 2)
-                const touches = item.touchCount || 0;
-                if (touches < 2) return false;
+                // 5. Lantai mesti ada sentuhan (>= 2) untuk laluan biasa
+                if (isNearAthPath && touches < 2) return false;
 
-                // ============================================
-                // TIER DUA JALUR (Fix: jangan buang semua spike):
-                // Tier 1 QUIET = volume senyap + consolidation + close ketat
-                // Tier 2 MASUK = volume spike AWAL (1.5-2.5x) TAPI belum breakout
-                // ============================================
-                const closeTight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
-                const isTier1Quiet = !item.hasVolumeSpike
+                // ============================================================
+                // TIGA JALUR TIER:
+                // Tier 1 QUIET       = volume senyap + consolidation + close ketat
+                // Tier 2 MASUK       = volume spike AWAL (1.5-2.5x) TAPI belum breakout
+                // Tier 3 SECOND BASE = pullback dalam (15-30%) tapi bina base baru ketat
+                // ============================================================
+                const isTier1Quiet = isNearAthPath
+                    && !item.hasVolumeSpike
                     && item.isConsolidation === true
                     && touches >= 3
                     && closeTight <= 5.0;
-                const isTier2Early = item.hasVolumeSpike
+                const isTier2Early = isNearAthPath
+                    && item.hasVolumeSpike
                     && (item.volumeSpike || 0) < 3.0
                     && changeVal < 3.5
                     && closeTight <= 10.0;
-                if (!isTier1Quiet && !isTier2Early) return false;
+                const isTier3SecondBase = isSecondaryBasePath;
+
+                if (!isTier1Quiet && !isTier2Early && !isTier3SecondBase) return false;
 
                 // Storan tier untuk render
-                item._jerungTier = isTier1Quiet ? 1 : 2;
+                item._jerungTier = isTier1Quiet ? 1 : (isTier2Early ? 2 : 3);
                 return true;
             });
 
-            // Sort: tier 1 dahulu (quiet paling awal), kemudian confidence, touch, dekat ATH
+            // Sort logic — ikut mode yang dipilih (Utamakan Fresh IPO dahulu dalam semua mode)
+            const jerungSortMode = window._jerungSortMode || 'active';
+
             validPicks.sort((a, b) => {
+                // Keutamaan 1: Fresh IPO sentiasa di atas untuk semua susunan
+                const freshA = isFreshIpo(a) ? 1 : 0;
+                const freshB = isFreshIpo(b) ? 1 : 0;
+                if (freshA !== freshB) return freshB - freshA;
+
+                // === JERUNG AKTIF: Composite score — Turnover tinggi + 🔇 senyap bonus ===
+                if (jerungSortMode === 'active') {
+                    const quietBonusA = (a.volumeDecline === true && !a.hasVolumeSpike) ? 1.3 : (!a.hasVolumeSpike ? 1.15 : 1.0);
+                    const quietBonusB = (b.volumeDecline === true && !b.hasVolumeSpike) ? 1.3 : (!b.hasVolumeSpike ? 1.15 : 1.0);
+                    const scoreA = (a.turnover || 0) * quietBonusA;
+                    const scoreB = (b.turnover || 0) * quietBonusB;
+                    return scoreB - scoreA;
+                }
+                // === TURNOVER: paling tinggi atas ===
+                if (jerungSortMode === 'turnover') {
+                    return (b.turnover || 0) - (a.turnover || 0);
+                }
+                // === DEFAULT: tier → confidence → touch → pullback ===
                 const tierA = a._jerungTier || 2;
                 const tierB = b._jerungTier || 2;
                 if (tierA !== tierB) return tierA - tierB;
@@ -3755,6 +3857,11 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 const tA = a.touchCount || 0;
                 const tB = b.touchCount || 0;
                 if (tA !== tB) return tB - tA;
+                if (tierA === 3 && tierB === 3) {
+                    const ctA = typeof a.closeTightness === 'number' ? a.closeTightness : 99;
+                    const ctB = typeof b.closeTightness === 'number' ? b.closeTightness : 99;
+                    return ctA - ctB;
+                }
                 const pA = a.pullback !== null ? a.pullback : 99;
                 const pB = b.pullback !== null ? b.pullback : 99;
                 return pA - pB;
@@ -3769,6 +3876,8 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             validPicks.forEach((item, idx) => {
                 const pullback = item.pullback !== null ? item.pullback.toFixed(1) + '%' : 'N/A';
                 const touches = item.touchCount || 0;
+                const floorPrice = item.floorLow ? 'RM ' + item.floorLow.toFixed(3) : '—';
+                const floorDist = item.floorLow ? ((item.price - item.floorLow) / item.floorLow * 100).toFixed(1) + '%' : '—';
                 const closeTight = typeof item.closeTightness === 'number' ? item.closeTightness.toFixed(2) + '%' : 'N/A';
                 const volumeQuiet = item.volumeDecline === true ? '🔇 SENYAP' : '📢 Bunyi';
                 const volumeQuietColor = item.volumeDecline === true ? '#34d399' : '#f59e0b';
@@ -3776,13 +3885,19 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 const changeClass = changeVal >= 0 ? 'success' : 'danger';
                 const changeSign = changeVal > 0 ? '+' : '';
                 const style = item.setupStyle || 'SWING PLAY';
-                const tier = item._jerungTier === 1 ? 'Tier 1' : 'Tier 2';
-                const tierBadge = tier === 'Tier 1'
+                const tierNum = item._jerungTier || 2;
+                const tierBadge = tierNum === 1
                     ? `<span style="font-size: 0.62rem; background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(16, 185, 129, 0.35); white-space: nowrap;">🔇 QUIET ACCUM</span>`
-                    : `<span style="font-size: 0.62rem; background: rgba(245, 158, 11, 0.15); color: #fbbf24; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(245, 158, 11, 0.35); white-space: nowrap;">🦈 JERUNG MASUK</span>`;
-                const isNearAth = pullback !== 'N/A' && parseFloat(pullback) <= 5.0;
+                    : tierNum === 2
+                    ? `<span style="font-size: 0.62rem; background: rgba(245, 158, 11, 0.15); color: #fbbf24; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(245, 158, 11, 0.35); white-space: nowrap;">🦈 JERUNG MASUK</span>`
+                    : `<span style="font-size: 0.62rem; background: rgba(139, 92, 246, 0.15); color: #a78bfa; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(139, 92, 246, 0.35); white-space: nowrap;">🏗️ SECOND BASE</span>`;
+                const pullbackNum = typeof item.pullback === 'number' ? item.pullback : null;
+                const isNearAth = pullbackNum !== null && pullbackNum <= 5.0;
+                const isDeepBase = pullbackNum !== null && pullbackNum > 15.0;
                 const athBadge = isNearAth
                     ? `<span style="font-size: 0.62rem; background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 0.08rem 0.3rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.3); white-space: nowrap;">🏔️ NEAR ATH</span>`
+                    : isDeepBase
+                    ? `<span style="font-size: 0.62rem; background: rgba(139, 92, 246, 0.15); color: #a78bfa; padding: 0.08rem 0.3rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(139, 92, 246, 0.3); white-space: nowrap;">🏗️ DEEP BASE</span>`
                     : `<span style="font-size: 0.62rem; background: rgba(59, 130, 246, 0.15); color: #60a5fa; padding: 0.08rem 0.3rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(59, 130, 246, 0.3); white-space: nowrap;">📉 HEALTHY DIP</span>`;
 
                 const tierColor = item.confidenceScore >= 90 ? '#a855f7' : (item.confidenceScore >= 75 ? '#38bdf8' : (item.confidenceScore >= 60 ? '#10b981' : '#f59e0b'));
@@ -3803,8 +3918,14 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                         </td>
                         <td style="text-align: right; font-weight: bold; color: white;">RM ${item.price.toFixed(3)}</td>
                         <td style="text-align: right; color: #38bdf8; font-weight: 700;">${pullback}</td>
-                        <td style="text-align: right; color: #34d399; font-weight: 800;">${touches}x</td>
+                        <td style="text-align: right;">
+                            <span style="color: #34d399; font-weight: 800; font-size: 0.95rem;">${touches}x</span>
+                            <div style="font-size: 0.78rem; color: #94a3b8; font-weight: 600; margin-top: 0.2rem;">${floorPrice} <span style="color: #60a5fa;">+${floorDist}</span></div>
+                        </td>
                         <td style="text-align: right; color: #94a3b8;">${closeTight}</td>
+                        <td style="text-align: right;">
+                            <span style="color: ${(item.turnover||0) >= 2000000 ? '#f59e0b' : (item.turnover||0) >= 500000 ? '#34d399' : '#94a3b8'}; font-weight: 700; font-size: 0.82rem;">${(item.turnover||0) >= 1000000 ? 'RM ' + ((item.turnover||0)/1000000).toFixed(2) + 'M' : 'RM ' + ((item.turnover||0)/1000).toFixed(0) + 'k'}${(item.turnover||0) >= 2000000 ? ' 🔥' : ''}</span>
+                        </td>
                         <td style="text-align: center;"><span style="color: ${volumeQuietColor}; font-weight: 800; font-size: 0.75rem;">${volumeQuiet}</span></td>
                         <td style="text-align: center; color: var(--${changeClass}); font-weight: 800;">${changeSign}${changeVal !== undefined ? changeVal.toFixed(2) : '0.00'}%</td>
                         <td style="text-align: center;"><span style="color: ${tierColor}; font-weight: 800;">${confidenceText}</span></td>
@@ -4391,8 +4512,10 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             renderPhoenixSpring();
 
             const hash = window.location.hash.replace('#', '');
-            if (hash && ['vcp', 'trend', 'spring', 'phoenix', 'fishing', 'calculator', 'info', 'tracker', 'portfolio'].includes(hash)) {
+            if (hash && ['vcp', 'trend', 'spring', 'phoenix', 'fishing', 'calculator', 'info', 'tracker', 'portfolio', 'weekly', 'jerung'].includes(hash)) {
                 switchTab(hash);
+            } else {
+                switchTab('jerung');
             }
 
             document.getElementById('priceMaxFilter').addEventListener('change', function() {
