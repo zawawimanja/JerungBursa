@@ -2607,8 +2607,30 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             }
         }
 
+        function extractInitialData() {
+            if (typeof window !== 'undefined' && window.liveData) {
+                const raw = window.liveData;
+                if (Array.isArray(raw)) return raw;
+                if (raw && raw.topVolume && Array.isArray(raw.topVolume)) {
+                    const volList = raw.topVolume;
+                    const gainerList = raw.topGainers || [];
+                    const combined = [...volList, ...gainerList];
+                    const unique = [];
+                    const seen = new Set();
+                    combined.forEach(item => {
+                        if (item && item.name && !seen.has(item.name)) {
+                            seen.add(item.name);
+                            unique.push(item);
+                        }
+                    });
+                    return unique;
+                }
+            }
+            return [];
+        }
+
         // Global variables
-        let currentData = [];
+        let currentData = extractInitialData();
         let currentSortColumn = 'turnover';
         let currentSortDesc = true;
 
@@ -3052,45 +3074,15 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
         // Fetch Live Data
         async function fetchLiveData() {
             const cacheBuster = new Date().getTime();
-            let raw = null;
-            let loadedLocal = false;
+            let raw = (typeof window !== 'undefined' && window.liveData) ? window.liveData : null;
 
-            // Try to load local file if not on file:// protocol
-            if (window.location.protocol !== 'file:') {
-                try {
-                    const res = await fetch(`live_data.json?t=${cacheBuster}`);
-                    if (res.ok) {
-                        raw = await res.json();
-                        loadedLocal = true;
-                    }
-                } catch (e) {
-                    console.log("Failed to fetch local data, will try fallback.", e);
+            try {
+                const res = await fetch(`live_data.json?t=${cacheBuster}`);
+                if (res.ok) {
+                    raw = await res.json();
                 }
-            } else {
-                // For file:// protocol, we can bypass CORS by reading window.liveData pre-loaded from live_data.js script tag!
-                if (window.liveData) {
-                    raw = window.liveData;
-                    loadedLocal = true;
-                    console.log("Loaded local data from live_data.js script successfully.");
-                } else {
-                    console.warn("Running under file:// protocol and live_data.js not loaded. Falling back to GitHub raw storage.");
-                    const notice = document.getElementById('dashboardSubtitle');
-                    if (notice) {
-                        notice.innerHTML = `<span class="pulse" style="background: #f59e0b;"></span> Running via file:// (CORS Restricted) • Loading from GitHub Online...`;
-                    }
-                }
-            }
-
-            // Fallback to GitHub if local load failed
-            if (!loadedLocal) {
-                try {
-                    const res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/live_data.json?t=${cacheBuster}`);
-                    if (res.ok) {
-                        raw = await res.json();
-                    }
-                } catch (e) {
-                    console.error("Failed to fetch online fallback data.", e);
-                }
+            } catch (e) {
+                console.log("Using pre-loaded window.liveData fallback.", e);
             }
 
             if (raw) {
@@ -3098,7 +3090,6 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 if (Array.isArray(raw)) {
                     data = raw;
                 } else if (raw && raw.topVolume && Array.isArray(raw.topVolume)) {
-                    // Combine topVolume and topGainers, removing duplicates
                     const volList = raw.topVolume;
                     const gainerList = raw.topGainers || [];
                     const combined = [...volList, ...gainerList];
@@ -3114,13 +3105,15 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     if (raw.lastUpdated) {
                         const d = new Date(raw.lastUpdated);
                         const timeStr = d.toLocaleString('en-US', { timeZone: 'Asia/Kuala_Lumpur', hour12: false });
-                        document.getElementById('dashboardSubtitle').innerHTML = `<span class="pulse"></span> Live Market Scanner • Source: ${raw.source || 'i3investor'} • Last Updated: ${timeStr}`;
+                        const notice = document.getElementById('dashboardSubtitle');
+                        if (notice) {
+                            notice.innerHTML = `<span class="pulse"></span> Live Market Scanner • Source: ${raw.source || 'i3investor'} • Last Updated: ${timeStr}`;
+                        }
                     }
                 }
                 
                 if (data && data.length > 0) {
                     currentData = data;
-                    console.log(`Loaded ${data.length} counters successfully.`);
                 }
             }
             applyFilters();
@@ -4834,9 +4827,11 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
         }
 
         // Page setup and event listeners
-        window.addEventListener('DOMContentLoaded', async () => {
-            await fetchLiveData();
-            renderPhoenixSpring();
+        window.addEventListener('DOMContentLoaded', () => {
+            if (currentData && currentData.length > 0) {
+                applyFilters();
+            }
+            fetchLiveData();
 
             const hash = window.location.hash.replace('#', '');
             if (hash && ['vcp', 'trend', 'spring', 'phoenix', 'fishing', 'calculator', 'info', 'tracker', 'portfolio', 'weekly', 'jerung', 'confluence'].includes(hash)) {
