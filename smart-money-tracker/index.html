@@ -2883,6 +2883,17 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             'ICTZONE': 'B'
         };
 
+        const freshIpos = [
+            'SKYECHIP', 'SKYCHIP', 'PENTECH', 'SUM', 'ELSA', 'AMBEST', 'AMS',
+            'EIPOWER', 'ISF', 'KEEMING', 'TEAMSTR', 'MMCS', 'GDGROUP',
+            'GOLDLI', 'HOCKSOON', 'OGX', 'SBS', 'SRKK', 'EMPIRE',
+            'CBHB', 'CREST', 'HEGROUP', 'SDCG', 'ADNEX', 'EXSIMHB', 'NE',
+            'UUE', 'GOHUB', 'GO_HUB', 'ECOSHOP', 'ECOSYS', 'AZAMJAYA', 'LWSABAH',
+            '99 SPEED MART RETAIL', '99 SPEED MART', '99SMART', 'KLARECO', 'KLAREC',
+            'PANDA', 'MINOX', 'KGW', 'JTGROUP', 'SORENTO', 'ICTZONE', 'OXB',
+            'MEGAFB', 'STRATUS', 'AMIC'
+        ];
+
         function isFreshIpo(item) {
             if (!item) return false;
             if (item.ipoAge != null && item.ipoAge <= 730) return true;
@@ -2922,17 +2933,6 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             };
             return map[clean] || clean;
         }
-
-        const freshIpos = [
-            'SKYECHIP', 'SKYCHIP', 'PENTECH', 'SUM', 'ELSA', 'AMBEST', 'AMS',
-            'EIPOWER', 'ISF', 'KEEMING', 'TEAMSTR', 'MMCS', 'GDGROUP',
-            'GOLDLI', 'HOCKSOON', 'OGX', 'SBS', 'SRKK', 'EMPIRE',
-            'CBHB', 'CREST', 'HEGROUP', 'SDCG', 'ADNEX', 'EXSIMHB', 'NE',
-            'UUE', 'GOHUB', 'GO_HUB', 'ECOSHOP', 'ECOSYS', 'AZAMJAYA', 'LWSABAH',
-            '99 SPEED MART RETAIL', '99 SPEED MART', '99SMART', 'KLARECO', 'KLAREC',
-            'PANDA', 'MINOX', 'KGW', 'JTGROUP', 'SORENTO', 'ICTZONE', 'OXB',
-            'MEGAFB', 'STRATUS', 'AMIC'
-        ];
 
         function isFreshIpo(item) {
             if (!item) return false;
