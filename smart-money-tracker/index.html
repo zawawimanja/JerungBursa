@@ -4185,8 +4185,14 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                         <td style="text-align: right;">
                             <span style="color: ${(item.turnover||0) >= 2000000 ? '#f59e0b' : (item.turnover||0) >= 500000 ? '#34d399' : '#94a3b8'}; font-weight: 700; font-size: 0.82rem;">${(item.turnover||0) >= 1000000 ? 'RM ' + ((item.turnover||0)/1000000).toFixed(2) + 'M' : 'RM ' + ((item.turnover||0)/1000).toFixed(0) + 'k'}${(item.turnover||0) >= 2000000 ? ' 🔥' : ''}</span>
                         </td>
-                        <td style="text-align: center; color: var(--${changeClass}); font-weight: 800;">${changeSign}${changeVal !== undefined ? changeVal.toFixed(2) : '0.00'}%</td>
-                        <td style="text-align: center;"><span style="color: ${tierColor}; font-weight: 800;">${confidenceText}</span></td>
+                        <td style="text-align: center;">
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.25rem;">
+                                <span style="color: ${tierColor}; font-weight: 800; font-size: 0.78rem;">${confidenceText}</span>
+                                <button onclick="triggerAIAnalysisModal('${item.name}', 'Confluence VVIP')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.2rem 0.55rem; border-radius: 6px; font-size: 0.7rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                    ✨ Tanya AI
+                                </button>
+                            </div>
+                        </td>
                     </tr>`;
             });
 
