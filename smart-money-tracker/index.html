@@ -2936,16 +2936,16 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
         function isFreshIpo(item) {
             if (!item) return false;
-            if (item.ipoAge != null && item.ipoAge <= 730) return true;
-            if (item.ipoYear != null && item.ipoYear >= 2024) return true;
-            if (item.listingDate && item.ipoGrade && item.ipoGrade !== 'Unrated') {
-                const yearMatch = item.listingDate.match(/\d{4}/);
-                if (yearMatch) return parseInt(yearMatch[0]) >= 2024;
+            if (typeof item === 'object') {
+                if (item.ipoAge != null && item.ipoAge <= 730) return true;
+                if (item.ipoYear != null && item.ipoYear >= 2024) return true;
+                if (item.listingDate && item.ipoGrade && item.ipoGrade !== 'Unrated') {
+                    const yearMatch = item.listingDate.match(/\d{4}/);
+                    if (yearMatch) return parseInt(yearMatch[0]) >= 2024;
+                }
             }
-            if (!item.ipoGrade || item.ipoGrade === 'Unrated') return false;
-            const setup = (item.setupName || '').toUpperCase();
-            if (setup.includes('DOWNTREND') || setup.includes('AVOID') || setup === 'N/A') return false;
-            const cleanName = item.name.toUpperCase().trim();
+            const cleanName = typeof item === 'string' ? item.toUpperCase().trim() : (item && item.name ? item.name.toUpperCase().trim() : '');
+            if (!cleanName) return false;
             return freshIpos.includes(cleanName) || Object.keys(ipoMap).some(key => {
                 if (!freshIpos.includes(key)) return false;
                 const normKey = key.replace(/[^A-Z0-9]/g, '');
