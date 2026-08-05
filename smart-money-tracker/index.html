@@ -2800,6 +2800,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             'SFPTECH': 'B',
             'SINKUNG': 'B',
             'SKYECHIP': 'A',
+            'SKYCHIP': 'A',
             'SKYWLD': 'C',
             'SLVEST': 'B',
             'SMART': 'B',
@@ -2869,7 +2870,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
         };
 
         const freshIpos = [
-            'SKYECHIP', 'PENTECH', 'SUM', 'ELSA', 'AMBEST', 'AMS',
+            'SKYECHIP', 'SKYCHIP', 'PENTECH', 'SUM', 'ELSA', 'AMBEST', 'AMS',
             'EIPOWER', 'ISF', 'KEEMING', 'TEAMSTR', 'MMCS', 'GDGROUP',
             'GOLDLI', 'HOCKSOON', 'OGX', 'SBS', 'SRKK', 'EMPIRE',
             'CBHB', 'HEGROUP', 'SDCG', 'ADNEX', 'EXSIMHB', 'NE'
@@ -3307,7 +3308,10 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             
             Object.keys(targets).forEach(ticker => {
                 const elId = targets[ticker];
-                const found = list.find(s => s.name.toUpperCase().trim() === ticker);
+                const found = list.find(s => {
+                    const name = s.name.toUpperCase().trim();
+                    return name === ticker || (ticker === 'SKYECHIP' && name === 'SKYCHIP') || (ticker === 'SKYCHIP' && name === 'SKYECHIP');
+                });
                 const el = document.getElementById(elId);
                 if (el && found) {
                     const price = found.price;
