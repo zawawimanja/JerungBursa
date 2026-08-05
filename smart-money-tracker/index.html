@@ -678,7 +678,8 @@
 
     <!-- Tab Navigation -->
     <div class="tabs-nav" style="margin-bottom: 1rem; margin-top: 0.5rem; display: flex; gap: 0.4rem; flex-wrap: wrap;">
-        <button class="tab-btn active" id="tab-jerung" onclick="switchTab('jerung')" style="flex: 1; min-width: 110px; white-space: nowrap;">🦈 Jerung Radar</button>
+        <button class="tab-btn active" id="tab-confluence" onclick="switchTab('confluence')" style="flex: 1; min-width: 140px; white-space: nowrap; background: linear-gradient(135deg, rgba(234, 179, 8, 0.25), rgba(249, 115, 22, 0.25)); border: 1px solid #eab308; color: #fde047; font-weight: 800;">🎯 Confluence (VVIP)</button>
+        <button class="tab-btn" id="tab-jerung" onclick="switchTab('jerung')" style="flex: 1; min-width: 110px; white-space: nowrap;">🦈 Jerung Radar</button>
         <button class="tab-btn" id="tab-weekly" onclick="switchTab('weekly')" style="flex: 1; min-width: 125px; white-space: nowrap;">🗓️ Weekly Top 5</button>
         <button class="tab-btn" id="tab-vcp" onclick="switchTab('vcp')" style="flex: 1; min-width: 110px; white-space: nowrap;">🪜 VCP Staircase</button>
         <button class="tab-btn" id="tab-trend" onclick="switchTab('trend')" style="flex: 1; min-width: 100px; white-space: nowrap;">📈 Trend Rider</button>
@@ -743,7 +744,7 @@
     </div> <!-- End of view-vcp -->
 
     <!-- TAB: JERUNG RADAR (QUIET ACCUMULATION) -->
-    <div id="view-jerung" style="display: block;">
+    <div id="view-jerung" style="display: none;">
         <div id="jerung-radar-section" style="margin-bottom: 1.25rem;">
             <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(34, 211, 238, 0.08)); border: 2px dashed #0ea5e9; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(14, 165, 233, 0.15); position: relative; overflow: hidden;">
                 <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(14, 165, 233, 0.15); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
@@ -817,6 +818,55 @@
             </div>
         </div>
     </div> <!-- End of view-jerung -->
+
+    <!-- TAB: VVIP CONFLUENCE RADAR -->
+    <div id="view-confluence" style="display: block;">
+        <div id="confluence-radar-section" style="margin-bottom: 1.25rem;">
+            <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(234, 179, 8, 0.08)); border: 2px dashed #eab308; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(234, 179, 8, 0.15); position: relative; overflow: hidden;">
+                <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(234, 179, 8, 0.15); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
+                
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(234, 179, 8, 0.25); padding-bottom: 0.75rem;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1; min-width: 300px;">
+                        <span style="font-size: 1.8rem;">🎯</span>
+                        <div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                                <h2 style="margin: 0; font-size: 1.3rem; color: #fde047; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem;">VVIP Confluence Radar: Double & Triple Confluence</h2>
+                                <span style="font-size: 0.7rem; background: rgba(234, 179, 8, 0.2); color: #fde047; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(234, 179, 8, 0.3); white-space: nowrap;">🔥 TOP PICK DARIPADA TOP PICKS</span>
+                            </div>
+                            <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
+                                Mengesan saham yang bertembung <strong style="color: #fde047;">dalam 2 atau 3 strategi serentak</strong> (Jerung Radar + VCP Staircase + Trend Rider). Peratusan keantian (Win Rate) & Expectancy PnL adalah paling tinggi.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th style="text-align: center; width: 45px;">No</th>
+                                <th>Kaunter</th>
+                                <th style="text-align: center;">Taraf Confluence</th>
+                                <th style="text-align: center;">Strategi Bertembung</th>
+                                <th style="text-align: right;">Harga Semasa</th>
+                                <th style="text-align: right;">Lantai Sokongan @ Harga</th>
+                                <th style="text-align: right;">Turnover</th>
+                                <th style="text-align: center;">Perubahan %</th>
+                                <th style="text-align: center;">Analisis AI (Skor)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="confluenceRadarTableBody">
+                            <tr>
+                                <td colspan="9" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
+                                    ⏳ Memuatkan Confluence Radar...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- TAB 1: TREND RIDER -->
     <div id="view-trend" style="display: none;">
@@ -2052,6 +2102,7 @@
 
             const viewVcp = document.getElementById('view-vcp');
             const viewJerung = document.getElementById('view-jerung');
+            const viewConfluence = document.getElementById('view-confluence');
             const viewTrend = document.getElementById('view-trend');
             const viewSpring = document.getElementById('view-spring');
             const viewPhoenix = document.getElementById('view-phoenix');
@@ -2064,6 +2115,7 @@
             
             const tabVcp = document.getElementById('tab-vcp');
             const tabJerung = document.getElementById('tab-jerung');
+            const tabConfluence = document.getElementById('tab-confluence');
             const tabTrend = document.getElementById('tab-trend');
             const tabSpring = document.getElementById('tab-spring');
             const tabPhoenix = document.getElementById('tab-phoenix');
@@ -2077,6 +2129,7 @@
             // Hide all views
             if (viewVcp) viewVcp.style.display = 'none';
             if (viewJerung) viewJerung.style.display = 'none';
+            if (viewConfluence) viewConfluence.style.display = 'none';
             viewTrend.style.display = 'none';
             viewSpring.style.display = 'none';
             if (viewPhoenix) viewPhoenix.style.display = 'none';
@@ -2090,6 +2143,7 @@
             // Remove active class from all tabs
             if (tabVcp) tabVcp.classList.remove('active');
             if (tabJerung) tabJerung.classList.remove('active');
+            if (tabConfluence) tabConfluence.classList.remove('active');
             tabTrend.classList.remove('active');
             tabSpring.classList.remove('active');
             if (tabPhoenix) tabPhoenix.classList.remove('active');
@@ -2116,6 +2170,12 @@
                     renderJerungRadar();
                 }
                 if (tabJerung) tabJerung.classList.add('active');
+            } else if (tabId === 'confluence') {
+                if (viewConfluence) {
+                    viewConfluence.style.display = 'block';
+                    renderConfluenceRadar();
+                }
+                if (tabConfluence) tabConfluence.classList.add('active');
             } else if (tabId === 'spring') {
                 viewSpring.style.display = 'block';
                 tabSpring.classList.add('active');
@@ -3066,6 +3126,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
             updateSentiment(currentData);
             renderJerungRadar();
+            renderConfluenceRadar();
             renderVcpStaircase();
             renderTrendRiders();
             renderReclaimRadar();
@@ -3935,6 +3996,154 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             tbody.innerHTML = html;
         }
 
+        // Helper strategy matchers for Confluence Radar
+        function passesJerungRadar(item) {
+            if (!item || !item.name || !item.price || item.price <= 0 || item.price > 10.0) return false;
+            if (isSleepingOrAvoidStock(item) || item.isCombStock || item.signal === 'avoid') return false;
+            const changeVal = item.changePct !== undefined ? item.changePct : item.change;
+            if (changeVal > 5.0) return false;
+            const pullback = item.pullback;
+            if (pullback === null || pullback === undefined) return false;
+            const closeTight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
+            const touches = item.touchCount || 0;
+            const isNearAthPath = pullback <= 15.0;
+            const isSecondaryBasePath = pullback > 15.0 && pullback <= 30.0 && closeTight <= 5.0 && touches >= 5 && changeVal < 3.0 && (item.sma50 ? item.price >= item.sma50 : true);
+            if (!isNearAthPath && !isSecondaryBasePath) return false;
+            if (isNearAthPath && item.sma50 && item.price < item.sma50) return false;
+            if ((item.turnover || 0) < 300000) return false;
+            if (isNearAthPath && touches < 2) return false;
+            const isTier1Quiet = isNearAthPath && !item.hasVolumeSpike && item.isConsolidation === true && touches >= 3 && closeTight <= 5.0;
+            const isTier2Early = isNearAthPath && item.hasVolumeSpike && (item.volumeSpike || 0) < 3.0 && changeVal < 3.5 && closeTight <= 10.0;
+            const isTier3SecondBase = isSecondaryBasePath;
+            return isTier1Quiet || isTier2Early || isTier3SecondBase;
+        }
+
+        function passesVcpStaircase(item) {
+            if (!item || !item.price || item.price <= 0 || item.price > 10.0) return false;
+            if (isSleepingOrAvoidStock(item) || item.isCombStock || item.signal === 'avoid') return false;
+            if (item.sma50 && item.price < item.sma50) return false;
+            const pb = item.pullback !== null && item.pullback !== undefined ? item.pullback : 99;
+            if (pb > 25.0) return false;
+            if (!item.isConsolidation && (item.touchCount || 0) < 3) return false;
+            return true;
+        }
+
+        function passesTrendRiders(item) {
+            if (!item || !item.price || item.price <= 0 || item.price > 10.0) return false;
+            if (isSleepingOrAvoidStock(item) || item.isCombStock || item.signal === 'avoid') return false;
+            if (item.sma50 && item.price < item.sma50) return false;
+            if ((item.turnover || 0) < 300000) return false;
+            return true;
+        }
+
+        function passesEarlySpring(item) {
+            if (!item || !item.openPrice || item.openPrice <= 0) return false;
+            if (isSleepingOrAvoidStock(item) || item.isCombStock || item.signal === 'avoid') return false;
+            const distToOpen = ((item.price - item.openPrice) / item.openPrice) * 100;
+            return distToOpen >= 0 && distToOpen <= 5.0 && item.price <= 10.0;
+        }
+
+        function passesBottomFishing(item) {
+            if (!item || !item.price || item.price <= 0 || item.price > 10.0) return false;
+            if (isSleepingOrAvoidStock(item) || item.isCombStock || item.signal === 'avoid') return false;
+            const pb = item.pullback !== null && item.pullback !== undefined ? item.pullback : 0;
+            const touches = item.touchCount || 0;
+            const distFloor = item.floorLow ? ((item.price - item.floorLow) / item.floorLow * 100) : 99;
+            return pb >= 35.0 && touches >= 3 && distFloor <= 5.0;
+        }
+
+        // Render VVIP Confluence Radar (Double & Triple Confluence)
+        function renderConfluenceRadar() {
+            const tbody = document.getElementById('confluenceRadarTableBody');
+            if (!tbody) return;
+
+            const confluencePicks = [];
+            const list = currentData || [];
+
+            for (const item of list) {
+                if (!item || !item.name || item.price <= 0 || item.price > 10.0) continue;
+                if (!passesGlobalFilters(item)) continue;
+                if (isSleepingOrAvoidStock(item) || item.isCombStock) continue;
+
+                const matches = [];
+                if (passesJerungRadar(item)) matches.push('🦈 Jerung Radar');
+                if (passesVcpStaircase(item)) matches.push('🪜 VCP Staircase');
+                if (passesTrendRiders(item)) matches.push('📈 Trend Rider');
+                if (passesEarlySpring(item)) matches.push('🌱 Early Spring');
+                if (passesBottomFishing(item)) matches.push('🎣 Bottom Fishing');
+
+                if (matches.length >= 2) {
+                    confluencePicks.push({
+                        item,
+                        fresh: isFreshIpo(item),
+                        count: matches.length,
+                        matches
+                    });
+                }
+            }
+
+            confluencePicks.sort((a,b) => {
+                if (a.count !== b.count) return b.count - a.count;
+                const fA = a.fresh ? 1 : 0, fB = b.fresh ? 1 : 0;
+                if (fA !== fB) return fB - fA;
+                return (b.item.turnover || 0) - (a.item.turnover || 0);
+            });
+
+            if (confluencePicks.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="9" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">🎯 Tiada kaunter bertembung (Confluence) hari ini.</td></tr>`;
+                return;
+            }
+
+            let html = '';
+            confluencePicks.forEach(({ item, fresh, count, matches }, idx) => {
+                const floorPrice = item.floorLow ? 'RM ' + item.floorLow.toFixed(3) : '—';
+                const floorDist = item.floorLow ? ((item.price - item.floorLow) / item.floorLow * 100).toFixed(1) + '%' : '—';
+                const changeVal = item.changePct !== undefined ? item.changePct : item.change;
+                const changeClass = changeVal >= 0 ? 'success' : 'danger';
+                const changeSign = changeVal > 0 ? '+' : '';
+                
+                const confBadge = count >= 3
+                    ? `<span style="font-size: 0.65rem; background: rgba(234, 179, 8, 0.2); color: #fde047; padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(234, 179, 8, 0.4); white-space: nowrap;">🔥 TRIPLE CONFLUENCE</span>`
+                    : `<span style="font-size: 0.65rem; background: rgba(14, 165, 233, 0.2); color: #38bdf8; padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(14, 165, 233, 0.4); white-space: nowrap;">⚡ DOUBLE CONFLUENCE</span>`;
+
+                const freshBadge = fresh
+                    ? `<span style="font-size: 0.62rem; background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 0.08rem 0.3rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.3); white-space: nowrap;">🌟 FRESH IPO</span>`
+                    : `<span style="font-size: 0.62rem; background: rgba(148, 163, 184, 0.15); color: #94a3b8; padding: 0.08rem 0.3rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(148, 163, 184, 0.3); white-space: nowrap;">🏛️ MATURE</span>`;
+
+                const matchesHtml = matches.map(m => `<span style="font-size: 0.65rem; background: rgba(15, 23, 42, 0.6); color: #cbd5e1; padding: 0.1rem 0.4rem; border-radius: 4px; border: 1px solid rgba(255, 255, 255, 0.1); font-weight: 700;">${m}</span>`).join(' ');
+
+                const tierColor = item.confidenceScore >= 90 ? '#a855f7' : (item.confidenceScore >= 75 ? '#38bdf8' : (item.confidenceScore >= 60 ? '#10b981' : '#f59e0b'));
+                const confidenceText = item.confidenceScore !== undefined ? `${item.confidenceScore}/100` : 'N/A';
+
+                html += `
+                    <tr>
+                        <td style="text-align: center; font-weight: 800; color: #fde047;">#${idx + 1}</td>
+                        <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
+                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
+                                ${item.name} <span style="font-size: 0.75rem; color: #fde047;">🔗</span>
+                            </a>
+                            <div style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.35rem; flex-wrap: wrap;">${freshBadge}</div>
+                        </td>
+                        <td style="text-align: center;">${confBadge}</td>
+                        <td style="text-align: center; padding: 0.5rem;">
+                            <div style="display: flex; gap: 0.3rem; justify-content: center; flex-wrap: wrap;">${matchesHtml}</div>
+                        </td>
+                        <td style="text-align: right; font-weight: bold; color: white;">RM ${item.price.toFixed(3)}</td>
+                        <td style="text-align: right;">
+                            <span style="color: #34d399; font-weight: 800; font-size: 0.95rem;">${item.touchCount || 0}x</span>
+                            <div style="font-size: 0.78rem; color: #94a3b8; font-weight: 600; margin-top: 0.2rem;">${floorPrice} <span style="color: #60a5fa;">+${floorDist}</span></div>
+                        </td>
+                        <td style="text-align: right;">
+                            <span style="color: ${(item.turnover||0) >= 2000000 ? '#f59e0b' : (item.turnover||0) >= 500000 ? '#34d399' : '#94a3b8'}; font-weight: 700; font-size: 0.82rem;">${(item.turnover||0) >= 1000000 ? 'RM ' + ((item.turnover||0)/1000000).toFixed(2) + 'M' : 'RM ' + ((item.turnover||0)/1000).toFixed(0) + 'k'}${(item.turnover||0) >= 2000000 ? ' 🔥' : ''}</span>
+                        </td>
+                        <td style="text-align: center; color: var(--${changeClass}); font-weight: 800;">${changeSign}${changeVal !== undefined ? changeVal.toFixed(2) : '0.00'}%</td>
+                        <td style="text-align: center;"><span style="color: ${tierColor}; font-weight: 800;">${confidenceText}</span></td>
+                    </tr>`;
+            });
+
+            tbody.innerHTML = html;
+        }
+
         // Render VVIP IPO Trend Rider Table
         function renderTrendRiders() {
             const hybridTbody = document.getElementById('hybridPicksTableBody');
@@ -4512,10 +4721,10 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             renderPhoenixSpring();
 
             const hash = window.location.hash.replace('#', '');
-            if (hash && ['vcp', 'trend', 'spring', 'phoenix', 'fishing', 'calculator', 'info', 'tracker', 'portfolio', 'weekly', 'jerung'].includes(hash)) {
+            if (hash && ['vcp', 'trend', 'spring', 'phoenix', 'fishing', 'calculator', 'info', 'tracker', 'portfolio', 'weekly', 'jerung', 'confluence'].includes(hash)) {
                 switchTab(hash);
             } else {
-                switchTab('jerung');
+                switchTab('confluence');
             }
 
             document.getElementById('priceMaxFilter').addEventListener('change', function() {
