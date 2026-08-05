@@ -2172,32 +2172,29 @@
                 }
                 if (tabVcp) tabVcp.classList.add('active');
             } else if (tabId === 'trend') {
-                viewTrend.style.display = 'block';
-                tabTrend.classList.add('active');
+                if (viewTrend) viewTrend.style.display = 'block';
+                renderTrendRiders();
+                if (tabTrend) tabTrend.classList.add('active');
             } else if (tabId === 'jerung') {
-                if (viewJerung) {
-                    viewJerung.style.display = 'block';
-                    renderJerungRadar();
-                }
+                if (viewJerung) viewJerung.style.display = 'block';
+                renderJerungRadar();
                 if (tabJerung) tabJerung.classList.add('active');
             } else if (tabId === 'confluence') {
-                if (viewConfluence) {
-                    viewConfluence.style.display = 'block';
-                    renderConfluenceRadar();
-                }
+                if (viewConfluence) viewConfluence.style.display = 'block';
+                renderConfluenceRadar();
                 if (tabConfluence) tabConfluence.classList.add('active');
             } else if (tabId === 'spring') {
-                viewSpring.style.display = 'block';
-                tabSpring.classList.add('active');
+                if (viewSpring) viewSpring.style.display = 'block';
+                renderReclaimRadar();
+                if (tabSpring) tabSpring.classList.add('active');
             } else if (tabId === 'phoenix') {
-                if (viewPhoenix) {
-                    viewPhoenix.style.display = 'block';
-                    renderPhoenixSpring();
-                }
+                if (viewPhoenix) viewPhoenix.style.display = 'block';
+                renderPhoenixSpring();
                 if (tabPhoenix) tabPhoenix.classList.add('active');
             } else if (tabId === 'fishing') {
-                viewFishing.style.display = 'block';
-                tabFishing.classList.add('active');
+                if (viewFishing) viewFishing.style.display = 'block';
+                renderBottomFishing();
+                if (tabFishing) tabFishing.classList.add('active');
             } else if (tabId === 'weekly') {
                 if (viewWeekly) {
                     viewWeekly.style.display = 'block';
@@ -4837,8 +4834,8 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
         }
 
         // Page setup and event listeners
-        window.addEventListener('DOMContentLoaded', () => {
-            fetchLiveData();
+        window.addEventListener('DOMContentLoaded', async () => {
+            await fetchLiveData();
             renderPhoenixSpring();
 
             const hash = window.location.hash.replace('#', '');
