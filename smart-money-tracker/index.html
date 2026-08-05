@@ -672,23 +672,77 @@
                 <input type="checkbox" id="premiumHypeFilter" style="cursor: pointer; width: 16px; height: 16px;">
                 <label for="premiumHypeFilter" style="color: #60a5fa; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none;">🚀 Premium Hype Only (Gred A / OS ≥ 50x / Outlier)</label>
             </div>
-            <button id="refreshBtn" class="btn">🔄 Refresh Live</button>
+            <button id="refreshBtn" class="btn">🔄 Kemas Kini</button>
         </div>
     </header>
 
     <!-- Tab Navigation -->
-    <div class="tabs-nav" style="margin-bottom: 1rem; margin-top: 0.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap;">
-        <button class="tab-btn active" id="tab-trend" onclick="switchTab('trend')" style="flex: 1; min-width: 120px; white-space: nowrap;">📈 Trend Rider</button>
-        <button class="tab-btn" id="tab-spring" onclick="switchTab('spring')" style="flex: 1; min-width: 120px; white-space: nowrap;">🌱 Early Spring</button>
-        <button class="tab-btn" id="tab-fishing" onclick="switchTab('fishing')" style="flex: 1; min-width: 130px; white-space: nowrap;">🎣 Bottom Fishing</button>
-        <button class="tab-btn" id="tab-calculator" onclick="switchTab('calculator')" style="flex: 1; min-width: 150px; white-space: nowrap;">🧮 Kalkulator Posisi</button>
-        <button class="tab-btn" id="tab-info" onclick="switchTab('info')" style="flex: 1; min-width: 150px; white-space: nowrap;">📖 Glosari & Panduan</button>
-        <button class="tab-btn" id="tab-tracker" onclick="switchTab('tracker')" style="flex: 1; min-width: 150px; white-space: nowrap;">📈 Trend Rider &lt; RM1</button>
-        <button class="tab-btn" id="tab-portfolio" onclick="switchTab('portfolio')" style="flex: 1; min-width: 150px; white-space: nowrap;">💼 Portfolio Saya</button>
+    <div class="tabs-nav" style="margin-bottom: 1rem; margin-top: 0.5rem; display: flex; gap: 0.4rem; flex-wrap: wrap;">
+        <button class="tab-btn active" id="tab-weekly" onclick="switchTab('weekly')" style="flex: 1; min-width: 125px; white-space: nowrap;">🗓️ Weekly Top 5</button>
+        <button class="tab-btn" id="tab-vcp" onclick="switchTab('vcp')" style="flex: 1; min-width: 110px; white-space: nowrap;">🪜 VCP Staircase</button>
+        <button class="tab-btn" id="tab-trend" onclick="switchTab('trend')" style="flex: 1; min-width: 100px; white-space: nowrap;">📈 Trend Rider</button>
+        <button class="tab-btn" id="tab-spring" onclick="switchTab('spring')" style="flex: 1; min-width: 100px; white-space: nowrap;">🌱 Early Spring</button>
+        <button class="tab-btn" id="tab-phoenix" onclick="switchTab('phoenix')" style="flex: 1; min-width: 90px; white-space: nowrap;">🔥 Phoenix</button>
+        <button class="tab-btn" id="tab-fishing" onclick="switchTab('fishing')" style="flex: 1; min-width: 85px; white-space: nowrap;">🎣 Bottom</button>
+        <button class="tab-btn" id="tab-portfolio" onclick="switchTab('portfolio')" style="flex: 1; min-width: 90px; white-space: nowrap;">💼 Portfolio</button>
+        <button class="tab-btn" id="tab-info" onclick="switchTab('info')" style="flex: 1; min-width: 90px; white-space: nowrap;">📖 Panduan</button>
+        <button class="tab-btn" id="tab-tracker" onclick="switchTab('tracker')" style="flex: 1; min-width: 95px; white-space: nowrap;">📈 &lt; RM1</button>
+        <button class="tab-btn" id="tab-calculator" onclick="switchTab('calculator')" style="flex: 1; min-width: 100px; white-space: nowrap;">🧮 Kalkulator</button>
     </div>
 
+    <!-- TAB: VCP STAIRCASE -->
+    <div id="view-vcp" style="display: none;">
+        <div id="vcp-recommendations-section" style="margin-bottom: 1.25rem;">
+            <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(6, 182, 212, 0.08)); border: 2px dashed #22d3ee; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(6, 182, 212, 0.15); position: relative; overflow: hidden;">
+                <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(6, 182, 212, 0.15); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
+                
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(6, 182, 212, 0.2); padding-bottom: 0.75rem;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1; min-width: 300px;">
+                        <span style="font-size: 1.8rem;">🪜</span>
+                        <div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                                <h2 style="margin: 0; font-size: 1.3rem; color: #22d3ee; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem;">Radar VCP Staircase + Golden Cross (Teknik Mamat)</h2>
+                                <span style="font-size: 0.7rem; background: rgba(6, 182, 212, 0.2); color: #22d3ee; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(6, 182, 212, 0.3); white-space: nowrap;">👑 WIN RATE #1 (42.8%)</span>
+                            </div>
+                            <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
+                                Formula Minervini + Mamat: <strong style="color: #38bdf8;">Contraction C1 ➔ C2 ➔ C3</strong> + MA50 > MA200 & Pullback EMA25. Risiko SL amat rapat (≤3%-5%), Potensi Breakout Maksimum!
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th style="text-align: center; width: 45px;">No</th>
+                                <th>Kaunter</th>
+                                <th style="text-align: center;">Kategori Setup</th>
+                                <th style="text-align: right;">Harga Semasa</th>
+                                <th style="text-align: right;">Perubahan</th>
+                                <th style="text-align: right;">Lantai Sokongan</th>
+                                <th style="text-align: right;">Jarak Lantai</th>
+                                <th style="text-align: right;">Volatiliti</th>
+                                <th style="text-align: right;">Stop Loss (SL)</th>
+                                <th style="text-align: right;">Turnover</th>
+                                <th style="text-align: center;">Analisis AI</th>
+                            </tr>
+                        </thead>
+                        <tbody id="vcpPicksTableBody">
+                            <tr>
+                                <td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
+                                    ⏳ Memuatkan kaunter VCP Staircase...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End of view-vcp -->
+
     <!-- TAB 1: TREND RIDER -->
-    <div id="view-trend">
+    <div id="view-trend" style="display: none;">
         <!-- PREMIUM HYBRID (Trend Rider) RECOMMENDED PICKS BOX -->
         <div id="hybrid-recommendations-section" style="margin-bottom: 1.25rem; display: none;">
             <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 2px dashed #3b82f6; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(59, 130, 246, 0.15); position: relative; overflow: hidden;">
@@ -709,7 +763,7 @@
                     </div>
                     <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
                         <button onclick="copyHybridWatchlist()" style="background: #3b82f6; color: white; border: none; padding: 0.5rem 1rem; border-radius: 8px; font-weight: 800; font-size: 0.82rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: transform 0.2s; box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                            📋 Copy Watchlist (TV)
+                            📋 Salin Watchlist (TV)
                         </button>
                     </div>
                 </div>
@@ -719,16 +773,16 @@
                         <thead>
                             <tr>
                                 <th style="width: 50px; text-align: center; color: #3b82f6;">No</th>
-                                <th style="color: #3b82f6; text-align: left;">Counter</th>
+                                <th style="color: #3b82f6; text-align: left;">Kaunter</th>
                                 <th style="text-align: center; color: #3b82f6;">Kategori Setup</th>
-                                <th style="text-align: right; color: #3b82f6;">Price</th>
-                                <th style="text-align: right; color: #3b82f6;">Change</th>
-                                <th style="text-align: right; color: #3b82f6;">Support Floor</th>
+                                <th style="text-align: right; color: #3b82f6;">Harga Semasa</th>
+                                <th style="text-align: right; color: #3b82f6;">Perubahan</th>
+                                <th style="text-align: right; color: #3b82f6;">Lantai Sokongan</th>
                                 <th style="text-align: right; color: #3b82f6;">Jarak Lantai</th>
                                 <th style="text-align: right; color: #3b82f6;">Volatiliti</th>
                                 <th style="text-align: right; color: #3b82f6;">Stop Loss (3%)</th>
                                 <th style="text-align: right; color: #3b82f6;">Turnover</th>
-                                <th style="text-align: center; color: #3b82f6;">AI Analysis</th>
+                                <th style="text-align: center; color: #3b82f6;">Analisis AI</th>
                             </tr>
                         </thead>
                         <tbody id="hybridPicksTableBody">
@@ -803,16 +857,16 @@
                         <thead>
                             <tr>
                                 <th style="width: 50px; text-align: center; color: #fb7185;">No</th>
-                                <th style="color: #fb7185; text-align: left;">Counter</th>
+                                <th style="color: #fb7185; text-align: left;">Kaunter</th>
                                 <th style="text-align: center; color: #fb7185;">Kategori Setup</th>
-                                <th style="text-align: right; color: #fb7185;">Price</th>
-                                <th style="text-align: right; color: #fb7185;">Change</th>
+                                <th style="text-align: right; color: #fb7185;">Harga Semasa</th>
+                                <th style="text-align: right; color: #fb7185;">Perubahan</th>
                                 <th style="text-align: right; color: #fb7185;">Open Price (Trigger)</th>
                                 <th style="text-align: right; color: #fb7185;">Jarak Trigger</th>
                                 <th style="text-align: right; color: #fb7185;">Volatiliti</th>
-                                <th style="text-align: right; color: #fb7185;">Support Floor</th>
+                                <th style="text-align: right; color: #fb7185;">Lantai Sokongan</th>
                                 <th style="text-align: right; color: #fb7185;">Turnover</th>
-                                <th style="text-align: center; color: #fb7185;">AI Analysis</th>
+                                <th style="text-align: center; color: #fb7185;">Analisis AI</th>
                             </tr>
                         </thead>
                         <tbody id="reclaimRadarTableBody">
@@ -864,12 +918,107 @@
                         <span id="spring-ex-gain" style="color: #34d399; font-weight: 800;">+40.9%</span>
                     </div>
                     <div id="spring-ex-desc" style="color: #cbd5e1; line-height: 1.3;">
-                        MMCS jatuh di bawah harga IPO sebelum kembali memotong naik (reclaim) harga pembukaan asal <strong>RM0.220</strong>, membina lantai baharu di RM0.260 dan melonjak ke RM0.310. MMCS merupakan contoh klasik strategi Early Spring yang berjaya melonjak naik selepas isyarat reclaim dalam backtest.
+                        MMCS jatuh di bawah harga IPO sebelum kembali memotong naik (reclaim) harga pembukaan asal <strong>RM0.220</strong>, membina lantai baharu di RM0.260 dan melonjak ke RM0.310. MMCS merupakan contoh klasik strategi Early Spring yang berjaya melonjak naik selepas isyarat reclaim.
                     </div>
                 </div>
             </div>
         </div>
     </div> <!-- End of view-spring -->
+
+    <!-- TAB 4: PHOENIX SPRING -->
+    <div id="view-phoenix" style="display: none;">
+        <!-- PREMIUM PHOENIX SPRING RADAR BOX -->
+        <div id="phoenix-spring-section" style="margin-bottom: 1.25rem;">
+            <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 2px dashed #f97316; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(249, 115, 22, 0.15); position: relative; overflow: hidden;">
+                <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(249, 115, 22, 0.15); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
+                
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(249, 115, 22, 0.2); padding-bottom: 0.75rem;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1; min-width: 300px;">
+                        <span style="font-size: 1.8rem;">🔥</span>
+                        <div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                                <h2 style="margin: 0; font-size: 1.3rem; color: #f97316; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem;">Pilihan Utama: VVIP Phoenix Spring Radar (1st Day Close Reclaim)</h2>
+                                <span style="font-size: 0.7rem; background: rgba(249, 115, 22, 0.2); color: #fbbf24; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(249, 115, 22, 0.4); white-space: nowrap;">🔥 PHOENIX RECLAIM</span>
+                            </div>
+                            <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #cbd5e1;">
+                                SOP Phoenix Spring: IPO Baharu yang didagangkan di bawah harga penutup hari pertama (underwater). <strong style="color: #f59e0b;">Pencetus Beli: Apabila harga memotong naik melebihi Garis Merah Penutup Hari Pertama (TRIGGER)!</strong>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="table-wrapper" style="margin-top: 1rem; margin-bottom: 0; overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse;">
+                        <thead>
+                            <tr>
+                                <th style="width: 50px; text-align: center; color: #f97316;">No</th>
+                                <th style="color: #f97316; text-align: left;">Kaunter</th>
+                                <th style="text-align: center; color: #f97316;">Kategori Setup</th>
+                                <th style="text-align: right; color: #f97316;">Harga Semasa</th>
+                                <th style="text-align: right; color: #94a3b8;">Perubahan</th>
+                                <th style="text-align: right; color: #f97316;">Penutup Hari 1 (🔴 Garis Merah)</th>
+                                <th style="text-align: right; color: #f97316;">Jarak Garis Merah</th>
+                                <th style="text-align: right; color: #f97316;">Floor Touch</th>
+                                <th style="text-align: right; color: #f59e0b;">Turnover</th>
+                                <th style="text-align: center; color: #f97316;">Status Setup</th>
+                                <th style="text-align: center; color: #f97316;">AI Analysis</th>
+                            </tr>
+                        </thead>
+                        <tbody id="phoenixTableBody">
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- WARNING ALERT FOR PHOENIX SPRING -->
+                <div style="margin-top: 1rem; background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 10px; padding: 0.8rem 1rem; display: flex; align-items: flex-start; gap: 0.75rem;">
+                    <span style="font-size: 1.2rem; filter: drop-shadow(0 0 5px rgba(245,158,11,0.5));">🚨</span>
+                    <div>
+                        <h4 style="margin: 0 0 0.25rem 0; color: #fbbf24; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px;">Nota Risiko & Disiplin Keluar (Stop Loss)</h4>
+                        <p style="margin: 0; font-size: 0.78rem; color: #cbd5e1; line-height: 1.4;">
+                            Teknik <strong>Phoenix Spring</strong> ialah strategi penebusan momentum (*reclaim breakout*). Kaunter yang memintas semula <strong>Garis Merah Penutup Hari Pertama</strong> berpotensi meluncur naik tinggi ke puncak ATH gelombang ke-2.
+                            <br><span style="color: #fbbf24; font-weight: 700;">SOP Ketat:</span> Sekiranya harga jatuh semula di bawah <strong>Garis Merah Penutup Hari Pertama (RM0.98 × 1st Day Close)</strong>, abang wajib <strong>CUT LOSS serta-merta</strong>. Disiplin ini mengehadkan kerugian kepada <span style="color: #f87171; font-weight: 700;">-2% hingga -3% sahaja</span>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PANDUAN STRATEGI: PHOENIX SPRING -->
+        <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 1px solid rgba(249, 115, 22, 0.3); border-radius: 12px; padding: 1rem; box-shadow: 0 8px 24px rgba(249, 115, 22, 0.1); margin-top: 1rem; position: relative; overflow: hidden;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid rgba(249, 115, 22, 0.15); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">
+                <span style="font-size: 1.3rem;">🎓</span>
+                <h3 style="margin: 0; font-size: 1.1rem; color: #f97316; font-weight: 800; text-transform: uppercase;">Panduan Strategi: Phoenix Spring (1st Day Close Reclaim)</h3>
+            </div>
+            
+            <div style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px; padding: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
+                <p style="margin: 0; font-size: 0.82rem; color: #cbd5e1; line-height: 1.45;">
+                    Mengesan kaunter IPO baharu yang mengalami kejatuhan di bawah <strong style="color: #f97316;">Harga Penutup Hari Pertama (Garis Merah / 1st Day Close Price)</strong>. Isyarat beli tercetus apabila lilin hijau memintas semula ke atas harga penutup asal (Reclaim) atau membina pantulan tapak spring di Garis Merah dengan risiko ultra-ketat (SL &le; 3%).
+                </p>
+
+                <!-- Tab Selector Contoh Sebenar -->
+                <div style="display: flex; gap: 0.4rem; flex-wrap: wrap; margin-top: 0.25rem;">
+                    <button class="btn-ex-phoenix active" onclick="switchExample('phoenix', 1)" style="background: rgba(249, 115, 22, 0.25); border: 1px solid rgba(249, 115, 22, 0.6); color: white; padding: 0.35rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;">1. OGX (+38.0%)</button>
+                    <button class="btn-ex-phoenix" onclick="switchExample('phoenix', 2)" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); color: #cbd5e1; padding: 0.35rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;">2. PENTECH (Floor Rejection)</button>
+                </div>
+
+                <!-- Carta Visual -->
+                <div style="width: 100%; max-width: 800px; margin: 0.25rem auto; border-radius: 8px; overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.08); background: #000;">
+                    <img id="phoenix-ex-img" src="phoenix_spring_example.png" alt="Phoenix Spring Strategy Chart" style="width: 100%; display: block; object-fit: contain; min-height: 250px;">
+                </div>
+
+                <!-- Contoh Sejarah Sebenar -->
+                <div style="background: rgba(30, 41, 59, 0.3); border-radius: 8px; padding: 0.6rem; font-size: 0.75rem; border: 1px solid rgba(255, 255, 255, 0.03);">
+                    <div style="font-weight: 800; color: #f97316; margin-bottom: 0.25rem; display: flex; justify-content: space-between;">
+                        <span id="phoenix-ex-title">🔥 Contoh Sebenar: OGX (0338)</span>
+                        <span id="phoenix-ex-gain" style="color: #34d399; font-weight: 800;">+38.0%</span>
+                    </div>
+                    <div id="phoenix-ex-desc" style="color: #cbd5e1; line-height: 1.3;">
+                        OGX jatuh lemas di bawah harga penutup hari pertama <strong>RM 0.320</strong>, membina tapak U-shape di zon murah, kemudian meletupkan lilin hijau padat memintas semula (reclaim) Garis Merah Penutup Hari Pertama. Menghasilkan rali gelombang ke-2 melepasi RM 0.440.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End of view-phoenix -->
 
     <!-- TAB 3: BOTTOM FISHING -->
     <div id="view-fishing" style="display: none;">
@@ -898,16 +1047,16 @@
                         <thead>
                             <tr>
                                 <th style="width: 50px; text-align: center; color: #f59e0b;">No</th>
-                                <th style="color: #f59e0b; text-align: left;">Counter</th>
+                                <th style="color: #f59e0b; text-align: left;">Kaunter</th>
                                 <th style="text-align: center; color: #f59e0b;">Kategori Setup</th>
-                                <th style="text-align: right; color: #f59e0b;">Price</th>
-                                <th style="text-align: right; color: #f59e0b;">Change</th>
-                                <th style="text-align: right; color: #f59e0b;">Support Floor</th>
+                                <th style="text-align: right; color: #f59e0b;">Harga Semasa</th>
+                                <th style="text-align: right; color: #f59e0b;">Perubahan</th>
+                                <th style="text-align: right; color: #f59e0b;">Lantai Sokongan</th>
                                 <th style="text-align: right; color: #f59e0b;">Jarak Lantai</th>
                                 <th style="text-align: right; color: #f59e0b;">Volatiliti</th>
                                 <th style="text-align: right; color: #f59e0b;">Kejatuhan (Pullback)</th>
                                 <th style="text-align: right; color: #f59e0b;">Turnover</th>
-                                <th style="text-align: center; color: #f59e0b;">AI Analysis</th>
+                                <th style="text-align: center; color: #f59e0b;">Analisis AI</th>
                             </tr>
                         </thead>
                         <tbody id="bottomFishingTableBody">
@@ -955,62 +1104,304 @@
         </div>
     </div> <!-- End of view-fishing -->
 
+    <!-- TAB 1: WEEKLY HOMEWORK (TOP 5 SWING - PRIMARY DEFAULT TAB) -->
+    <div id="view-weekly" style="display: block;">
+        <!-- WEEKLY HOMEWORK HERO SECTION -->
+        <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 2px solid #f59e0b; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(245, 158, 11, 0.2); position: relative; overflow: hidden; margin-bottom: 1.25rem;">
+            <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(245, 158, 11, 0.15); filter: blur(60px); border-radius: 50%; pointer-events: none;"></div>
+            
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(245, 158, 11, 0.25); padding-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1; min-width: 300px;">
+                    <span style="font-size: 2rem;">🗓️</span>
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                            <h2 style="margin: 0; font-size: 1.35rem; color: #fbbf24; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;">Kerja Rumah Mingguan: JerungBursa Top 5 Swing</h2>
+                            <span id="weeklyLockBadge" style="font-size: 0.75rem; background: rgba(245, 158, 11, 0.2); color: #fbbf24; padding: 0.2rem 0.6rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.4);">🔒 TERKUNCI: SNAPSHOT ISNIN</span>
+                        </div>
+                        <p style="margin: 0.35rem 0 0 0; font-size: 0.85rem; color: #cbd5e1; line-height: 1.4;">
+                            Hasil tapisan automatik daripada beratus kaunter — mengecilkan carian ke <strong style="color: #fbbf24;">Top 5 Kaunter Pilihan Utama</strong> mengikut 4 Teknik Utama: <strong style="color: #38bdf8;">Trend Rider</strong>, <strong style="color: #4ade80;">Early Spring</strong>, <strong style="color: #fb7185;">Phoenix</strong>, & <strong style="color: #f59e0b;">Bottom</strong>.
+                        </p>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
+                    <button onclick="copyWeeklyWatchlist()" style="background: linear-gradient(135deg, #d97706, #f59e0b); color: white; border: none; padding: 0.55rem 1.1rem; border-radius: 8px; font-weight: 800; font-size: 0.83rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: transform 0.2s; box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                        📋 Salin TV Watchlist (Top 5)
+                    </button>
+                </div>
+            </div>
+
+            <!-- KPI SUMMARY CARDS -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-bottom: 1.25rem;">
+                <div style="background: rgba(15, 23, 42, 0.6); padding: 0.75rem; border-radius: 10px; border: 1px solid rgba(51, 65, 85, 0.5);">
+                    <div style="font-size: 0.75rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">🔍 Kaunter Disemak</div>
+                    <div style="font-size: 1.4rem; font-weight: 900; color: #f8fafc; margin-top: 0.2rem;" id="weeklyScannedCount">0</div>
+                </div>
+                <div style="background: rgba(15, 23, 42, 0.6); padding: 0.75rem; border-radius: 10px; border: 1px solid rgba(245, 158, 11, 0.3);">
+                    <div style="font-size: 0.75rem; color: #fbbf24; font-weight: 700; text-transform: uppercase;">🎯 Pilihan Utama</div>
+                    <div style="font-size: 1.4rem; font-weight: 900; color: #fbbf24; margin-top: 0.2rem;" id="weeklyPickCount">5 / 5</div>
+                </div>
+                <div style="background: rgba(15, 23, 42, 0.6); padding: 0.75rem; border-radius: 10px; border: 1px solid rgba(16, 185, 129, 0.3);">
+                    <div style="font-size: 0.75rem; color: #34d399; font-weight: 700; text-transform: uppercase;">🛡️ Risiko Maksimum</div>
+                    <div style="font-size: 1.4rem; font-weight: 900; color: #34d399; margin-top: 0.2rem;">&le; 5.0%</div>
+                </div>
+                <div style="background: rgba(15, 23, 42, 0.6); padding: 0.75rem; border-radius: 10px; border: 1px solid rgba(99, 102, 241, 0.3);">
+                    <div style="font-size: 0.75rem; color: #818cf8; font-weight: 700; text-transform: uppercase;">🦈 Min Turnover Jerung</div>
+                    <div style="font-size: 1.4rem; font-weight: 900; color: #818cf8; margin-top: 0.2rem;">&ge; RM 500k</div>
+                </div>
+            </div>
+
+            <!-- TABLE WRAPPER -->
+            <div class="table-wrapper" style="margin-top: 0.5rem; margin-bottom: 0; overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; min-width: 950px;">
+                    <thead>
+                        <tr>
+                            <th style="width: 45px; text-align: center; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">No</th>
+                            <th style="color: #fbbf24; text-align: left; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Kaunter</th>
+                            <th style="text-align: center; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Teknik Setup</th>
+                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Harga Base Weekend</th>
+                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Harga Terkini</th>
+                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Prestasi Minggu Ini %</th>
+                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Lantai Sokongan</th>
+                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Jarak Risiko</th>
+                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Turnover Jerung</th>
+                            <th style="text-align: left; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Pelan Dagangan SOP</th>
+                            <th style="text-align: center; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Tindakan</th>
+                        </tr>
+                    </thead>
+                    <tbody id="weeklyHomeworkTableBody">
+                        <!-- Populated dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- PANDUAN SOP RASMI WEEKLY SWING -->
+        <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 1px solid rgba(245, 158, 11, 0.4); border-radius: 12px; padding: 1.25rem; box-shadow: 0 8px 24px rgba(245, 158, 11, 0.15); margin-top: 1.25rem;">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; border-bottom: 1px solid rgba(245, 158, 11, 0.2); padding-bottom: 0.75rem; margin-bottom: 1rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <span style="font-size: 1.5rem;">🎓</span>
+                    <h3 style="margin: 0; font-size: 1.15rem; color: #fbbf24; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px;">SOP Rasmi Dagangan Weekly Swing (JerungBursa Rulebook)</h3>
+                </div>
+                <span style="font-size: 0.75rem; background: rgba(52, 211, 153, 0.15); color: #34d399; padding: 0.25rem 0.75rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(52, 211, 153, 0.3);">🛡️ RISIKO KETAT ≤ 5%</span>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; font-size: 0.83rem; color: #cbd5e1;">
+                <div style="background: rgba(15, 23, 42, 0.6); padding: 0.9rem; border-radius: 10px; border-left: 4px solid #38bdf8; border-top: 1px solid rgba(56, 189, 248, 0.2);">
+                    <div style="display: flex; align-items: center; gap: 0.4rem; font-weight: 800; color: #38bdf8; font-size: 0.9rem; margin-bottom: 0.4rem;">
+                        <span>1. Masa Entry (Isnin Pagi)</span>
+                    </div>
+                    Beli 2 hingga 3 kaunter pilihan teratas pada pagi Isnin yang bertapak rapat di atas **Lantai Sokongan (Jarak Risiko &le; 2.5%)**.
+                </div>
+
+                <div style="background: rgba(15, 23, 42, 0.6); padding: 0.9rem; border-radius: 10px; border-left: 4px solid #ef4444; border-top: 1px solid rgba(239, 68, 68, 0.2);">
+                    <div style="display: flex; align-items: center; gap: 0.4rem; font-weight: 800; color: #ef4444; font-size: 0.9rem; margin-bottom: 0.4rem;">
+                        <span>2. Stop Loss (Disiplin Ketat)</span>
+                    </div>
+                    Tetapkan pesanan Stop Loss automatik **-3% di bawah Lantai Sokongan**. Jika harga bocor lantai, **JUAL SERTA-MERTA** tanpa ragu-ragu.
+                </div>
+
+                <div style="background: rgba(15, 23, 42, 0.6); padding: 0.9rem; border-radius: 10px; border-left: 4px solid #4ade80; border-top: 1px solid rgba(74, 222, 128, 0.2);">
+                    <div style="display: flex; align-items: center; gap: 0.4rem; font-weight: 800; color: #4ade80; font-size: 0.9rem; margin-bottom: 0.4rem;">
+                        <span>3. Target Profit (TP1 & TP2)</span>
+                    </div>
+                    Ambil 50% untung pada **TP1 (+10%)**, dan biarkan baki 50% berlari (*Ride The Trend*) sehingga **TP2 (+20% - +40%)** atau trailing stop tersentuh.
+                </div>
+
+                <div style="background: rgba(15, 23, 42, 0.6); padding: 0.9rem; border-radius: 10px; border-left: 4px solid #fbbf24; border-top: 1px solid rgba(251, 191, 36, 0.2);">
+                    <div style="display: flex; align-items: center; gap: 0.4rem; font-weight: 800; color: #fbbf24; font-size: 0.9rem; margin-bottom: 0.4rem;">
+                        <span>4. Tempoh Peram (Hold Rule)</span>
+                    </div>
+                    Tahan pegangan <strong>2 hingga 4 minggu</strong> selagi harga ditutup hijau di atas lantai. Jual kaunter mendatar (sideway 2 minggu) untuk tukar kaunter baharu.
+                </div>
+            </div>
+        </div>
+
+        <!-- LOG REKOD BACKTEST REKOD MINGGUAN (LIVE DYNAMIC LOG) -->
+        <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 12px; padding: 1.25rem; box-shadow: 0 8px 24px rgba(56, 189, 248, 0.1); margin-top: 1.25rem;">
+            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; border-bottom: 1px solid rgba(56, 189, 248, 0.2); padding-bottom: 0.75rem; margin-bottom: 1rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem;">
+                    <span style="font-size: 1.5rem;">📊</span>
+                    <div>
+                        <h3 style="margin: 0; font-size: 1.15rem; color: #38bdf8; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px;">Rekod Prestasi & Backtest Sebenar 8-Minggu</h3>
+                        <p style="margin: 0.2rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">Menunjukkan kaunter Top 5 yang dipilih dari minggu ke minggu (Jun – Julai 2026) dan status pulangan meletupnya.</p>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
+                    <select id="backtest-year-filter" onchange="filterBacktestByYear()" style="background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.4rem 0.75rem; border-radius: 8px; font-weight: 800; font-size: 0.8rem; cursor: pointer; outline: none;">
+                        <option value="ALL">📅 Semua Tahun (2026+)</option>
+                        <option value="2026" selected>📅 Tahun 2026</option>
+                    </select>
+                    <div style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.3); padding: 0.4rem 0.8rem; border-radius: 8px; font-size: 0.8rem; font-weight: 800; color: #38bdf8;">
+                        🏆 Pertumbuhan Modal Akaun: <span style="color: #34d399;">+49.6% Net Capital Growth</span> <span style="color: #94a3b8; font-size: 0.75rem;">(+5.0% / trade)</span>
+                    </div>
+                    <button id="btn-toggle-backtest" onclick="toggleBacktestSection()" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.4rem 0.8rem; border-radius: 8px; font-weight: 800; font-size: 0.8rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.3rem; transition: background 0.2s;" onmouseover="this.style.background='rgba(56, 189, 248, 0.25)'" onmouseout="this.style.background='rgba(56, 189, 248, 0.15)'">
+                        <span>▼</span> Sembunyi / Papar Rekod
+                    </button>
+                </div>
+            </div>
+
+            <!-- BACKTEST SUMMARY TABLE COLLAPSIBLE WRAPPER -->
+            <div id="backtest-collapsible-wrapper" style="display: block; transition: all 0.3s ease;">
+                <div class="table-wrapper" style="margin-top: 0.5rem; margin-bottom: 0; overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; min-width: 950px; font-size: 0.82rem;">
+                        <thead style="position: sticky; top: 0; z-index: 10; background: rgba(15, 23, 42, 0.98);">
+                            <tr style="background: rgba(56, 189, 248, 0.08); border-bottom: 2px solid rgba(56, 189, 248, 0.3);">
+                                <th style="padding: 0.6rem 0.8rem; text-align: left; color: #38bdf8; font-weight: 800;">Minggu / Tarikh</th>
+                                <th style="padding: 0.6rem 0.8rem; text-align: left; color: #38bdf8; font-weight: 800;">Top 5 Pilihan Utama</th>
+                                <th style="padding: 0.6rem 0.8rem; text-align: right; color: #38bdf8; font-weight: 800;">Purata Kenaikan Puncak</th>
+                                <th style="padding: 0.6rem 0.8rem; text-align: right; color: #34d399; font-weight: 800;">Formula Net PnL (Untung - Rugi)</th>
+                                <th style="padding: 0.6rem 0.8rem; text-align: center; color: #38bdf8; font-weight: 800;">Kaunter Meletup Terunggul</th>
+                                <th style="padding: 0.6rem 0.8rem; text-align: center; color: #38bdf8; font-weight: 800;">Status Prestasi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="backtest-summary-tbody">
+                            <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);" data-year="2026">
+                                <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Minggu 1 (2 Jun 2026)</td>
+                                <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">TMK, AMBEST, SDCG, YEWLEE, ECOMATE</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+16.6%</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; white-space: nowrap;">+108.7% - 0.0% = <strong>+108.7%</strong></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">🚀 TMK (+63.7%) & AMBEST (+27.1%)</span></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 5 Win</span> / <span style="color: #94a3b8;">0 Loss</span></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);" data-year="2026">
+                                <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Minggu 2 (9 Jun 2026)</td>
+                                <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">TMK (#2), SDCG (#1), YEWLEE, TOPGLOV, SUNVIEW</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+9.3%</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; white-space: nowrap;">+40.2% - 10.6% = <strong>+29.6%</strong></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">🚀 TMK (+32.9%)</span></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 4 Win</span> / <span style="color: #ef4444;">🔴 1 Loss (TOPGLOV -6.5%)</span></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);" data-year="2026">
+                                <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Minggu 3 (16 Jun 2026)</td>
+                                <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">JPG, RADIUM, EXSIMHB, ECOMATE, KTI</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+8.9%</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; white-space: nowrap;">+37.4% - 5.5% = <strong>+31.9%</strong></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">JPG (+22.2%) & RADIUM (+12.1%)</span></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 3 Win</span> / <span style="color: #ef4444;">🔴 2 Loss (ECOMATE -0.6%, YEWLEE -0.9%)</span></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);" data-year="2026">
+                                <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Minggu 4 (23 Jun 2026)</td>
+                                <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">MNHLDG, PWRWELL, YEWLEE, SDCG, EMPIRE</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+4.8%</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; white-space: nowrap;">+31.8% - 5.3% = <strong>+26.5%</strong></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">MNHLDG (+13.0%)</span></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 2 Win</span> / <span style="color: #ef4444;">🔴 3 Loss (PWRWELL -5.3%, AMBEST -4.1%)</span></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);" data-year="2026">
+                                <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Minggu 5 (30 Jun 2026)</td>
+                                <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">JPG (#1), SDCG, YEWLEE, ECOMATE, SUNVIEW</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+4.3%</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; white-space: nowrap;">+28.5% - 9.7% = <strong>+18.9%</strong></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">JPG (+14.6%)</span></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 3 Win</span> / <span style="color: #ef4444;">🔴 2 Loss (YEWLEE -5.4%, ECOMATE -0.6%)</span></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);" data-year="2026">
+                                <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Minggu 6 (7 Julai 2026)</td>
+                                <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">MEGAFB, MNHLDG (#1), DUFU, PWRWELL, SCGBHD</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+5.3%</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; white-space: nowrap;">+19.6% - 11.0% = <strong>+8.5%</strong></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">MEGAFB (+14.9%)</span></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 3 Win</span> / <span style="color: #ef4444;">🔴 2 Loss (MCLEAN -4.0%, YEWLEE -2.5%)</span></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);" data-year="2026">
+                                <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Minggu 7 (14 Julai 2026)</td>
+                                <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">MEGAFB (#1), PEKAT, SEMICO, ECOMATE, ECOSHOP</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+4.4%</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #ef4444; white-space: nowrap;">+6.1% - 7.2% = <strong>-1.1%</strong></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">MEGAFB (+15.6%)</span></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 3 Win</span> / <span style="color: #ef4444;">🔴 2 Loss (AMBEST -5.8%, ECOMATE -0.6%)</span></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);" data-year="2026">
+                                <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Minggu 8 (21 Julai 2026)</td>
+                                <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">JPG, MNHLDG, ECOSHOP, MRDIY, ECOMATE</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+0.6%</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #ef4444; white-space: nowrap;">+0.5% - 5.8% = <strong>-5.3%</strong></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">MNHLDG & JPG</span></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 3 Win</span> / <span style="color: #ef4444;">🔴 2 Loss (HEGROUP -1.7%, TEAMSTR -2.0%)</span></td>
+                            </tr>
+                            <tr style="background: rgba(52, 211, 153, 0.08); border-top: 2px solid rgba(52, 211, 153, 0.3);" data-year="2026">
+                                <td style="padding: 0.65rem 0.8rem; font-weight: 900; color: #34d399;">Minggu 9 (27 Julai 2026 - Semasa)</td>
+                                <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #34d399;">ECOSHOP, MNHLDG, CBHB, DNEX, JPG</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">🔥 AKTIF HASIL</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; white-space: nowrap;">🔥 AKTIF (ISNIN)</td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(52, 211, 153, 0.2); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">ECOSHOP & MNHLDG</span></td>
+                                <td style="padding: 0.65rem 0.8rem; text-align: center; color: #34d399; font-weight: 900;">🚀 AKTIF DIBELI (ISNIN)</td>
+                            </tr>
+                        </tbody>
+                        <tfoot style="position: sticky; bottom: 0; z-index: 10; background: rgba(15, 23, 42, 0.98);">
+                            <tr style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(16, 185, 129, 0.2)); border-top: 2px solid #f59e0b; border-bottom: 2px solid #f59e0b;">
+                                <td id="tfoot-backtest-label" style="padding: 0.75rem 0.8rem; font-weight: 900; color: #fbbf24; font-size: 0.88rem; white-space: nowrap;">🏆 JUMLAH KESELURUHAN (8 MINGGU)</td>
+                                <td id="tfoot-backtest-trades" style="padding: 0.75rem 0.8rem; font-weight: 800; color: #f8fafc; white-space: nowrap;">40 Trade Terpilih</td>
+                                <td id="tfoot-backtest-avg-peak" style="padding: 0.75rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; white-space: nowrap;">+6.8% Purata</td>
+                                <td id="tfoot-backtest-net-formula" style="padding: 0.75rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; font-size: 0.82rem; white-space: nowrap;">
+                                    +274.1% - 56.4% = <span style="display: inline-block; background: rgba(16, 185, 129, 0.25); color: #34d399; padding: 0.15rem 0.45rem; border-radius: 6px; border: 1px solid #10b981; margin-left: 0.3rem;">+217.7% Net PnL</span>
+                                </td>
+                                <td id="tfoot-backtest-meletup" style="padding: 0.75rem 0.8rem; text-align: center; font-weight: 900; color: #fbbf24; white-space: nowrap;">🚀 16 Kaunter Meletup</td>
+                                <td id="tfoot-backtest-winloss" style="padding: 0.75rem 0.8rem; text-align: center; font-weight: 900; white-space: nowrap;"><span style="color: #34d399;">🟢 26 Win</span> / <span style="color: #ef4444;">🔴 14 Loss (65% Win Rate)</span></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div> <!-- End of view-weekly -->
+
     <!-- TAB 4: CALCULATOR -->
     <div id="view-calculator" style="display: none;">
         <!-- Kalkulator -->
         <div class="calc-card" style="margin-top: 2rem; margin-bottom: 2rem;">
             <div class="calc-header">
-                🧮 Trading Base Calculator
+                🧮 Kalkulator Perancangan Dagangan
             </div>
             <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1.2rem; line-height: 1.4;">
-                Select a stock in the <strong>WATCHLIST/SUPPORT ZONE</strong> to mathematically plan your capital sizing, position lot sizes, and stop loss risks.
+                Pilih kaunter daripada <strong>SENARAI HAJAT / ZON SOKONGAN</strong> untuk merancang saiz modal, saiz lot posisi, dan risiko hentian rugi (Stop Loss) secara matematik.
             </p>
             
             <div class="calc-grid">
                 <div class="calc-group">
-                    <label>Select Stock</label>
+                    <label>Pilih Kaunter</label>
                     <select id="calcTicker" onchange="calculatePlan()">
                         <!-- Options populated dynamically -->
                     </select>
                 </div>
                 <div class="calc-group">
-                    <label>Your Capital (RM)</label>
+                    <label>Modal Anda (RM)</label>
                     <input type="number" id="calcCapital" value="5000" min="500" step="500" oninput="calculatePlan()">
                 </div>
             </div>
 
             <div class="calc-results">
                 <div class="result-row">
-                    <span class="result-label">Current Price</span>
+                    <span class="result-label">Harga Semasa</span>
                     <span class="result-value" id="calcCurrentPrice">RM 0.000</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">Support Floor</span>
+                    <span class="result-label">Lantai Sokongan</span>
                     <span class="result-value" style="color: #60a5fa;" id="calcFloorPrice">RM 0.000</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">Stop Loss (SL) (-3.0%)</span>
+                    <span class="result-label">Hentian Rugi (SL) (-3.0%)</span>
                     <span class="result-value danger" id="calcSlPrice">RM 0.000</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">Purchasable Lot Size</span>
-                    <span class="result-value" id="calcLots">0 Lots (0 units)</span>
+                    <span class="result-label">Jumlah Lot Boleh Dibeli</span>
+                    <span class="result-value" id="calcLots">0 Lot (0 unit)</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">Actual Capital Invested</span>
+                    <span class="result-label">Modal Sebenar Dilaburkan</span>
                     <span class="result-value" id="calcActualCapital">RM 0.00</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">Maximum Loss (If SL Hit)</span>
+                    <span class="result-label">Kerugian Maksimum (Jika Kena SL)</span>
                     <span class="result-value danger" id="calcMaxRisk">RM 0.00 (0.00%)</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">Target Profit 1 (TP1) (+10.0%)</span>
-                    <span class="result-value success" id="calcTp1">RM 0.00 (Profit RM 0.00)</span>
+                    <span class="result-label">Sasaran Untung 1 (TP1) (+10.0%)</span>
+                    <span class="result-value success" id="calcTp1">RM 0.00 (Untung RM 0.00)</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">Target Profit 2 (TP2) (+20.0%)</span>
-                    <span class="result-value success" style="color: #a78bfa;" id="calcTp2">RM 0.00 (Profit RM 0.00)</span>
+                    <span class="result-label">Sasaran Untung 2 (TP2) (+20.0%)</span>
+                    <span class="result-value success" style="color: #a78bfa;" id="calcTp2">RM 0.00 (Untung RM 0.00)</span>
                 </div>
             </div>
         </div>
@@ -1018,11 +1409,11 @@
         <!-- AI Decision Section -->
         <div style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(167, 139, 250, 0.25); border-radius: 12px; padding: 1.25rem; margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
             <h4 style="margin: 0; display: flex; align-items: center; gap: 0.4rem; color: #a78bfa; font-size: 0.95rem; font-weight: 800;">
-                ✨ Groq AI Smart Analysis
+                ✨ Analisis Pintar Groq AI
             </h4>
             <div id="ai-verdict-box" style="background: rgba(30, 41, 59, 0.3); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 8px; padding: 1rem; min-height: 80px; display: flex; flex-direction: column; justify-content: center; align-items: center; font-size: 0.85rem; line-height: 1.5; color: #e2e8f0;">
                 <button onclick="generateAIAnalysis()" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.5rem 1.2rem; border-radius: 8px; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-                    ⚡ Generate AI Verdict (Backtest & Risk Review)
+                    ⚡ Jana Keputusan AI (Semakan Risiko & Backtest)
                 </button>
                 <div style="font-size: 0.7rem; color: var(--text-muted); margin-top: 0.5rem; text-align: center;">Menggunakan Groq Llama 3 untuk mengukur risiko breakdown & kadar kemenangan sejarah.</div>
             </div>
@@ -1440,7 +1831,7 @@
                     </div>
                 </div>
                 <div style="background: rgba(167, 139, 250, 0.1); border: 1px solid rgba(167, 139, 250, 0.25); border-radius: 8px; padding: 0.4rem 0.8rem; font-weight: 700; font-size: 0.85rem; color: #a78bfa;">
-                    Total Valuation: <span id="portfolio-total-val" style="color: white; font-weight: 800;">Calculated Live...</span>
+                    Jumlah Nilaian Portfolio: <span id="portfolio-total-val" style="color: white; font-weight: 800;">Dikira Secara Langsung...</span>
                 </div>
             </div>
             
@@ -1456,6 +1847,7 @@
                             <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Jarak Ke SL</th>
                             <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Prestasi P&amp;L</th>
                             <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Status Perlindungan</th>
+                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Carta</th>
                         </tr>
                     </thead>
                     <tbody id="portfolioTableBody">
@@ -1517,6 +1909,20 @@
                         desc: 'ADNEX mempamerkan setup reclaim yang ideal pada harga <strong>RM0.290</strong> dengan CloseTightness 5.17%, sentuhan lantai kukuh sebanyak 8 kali, dan jarak lantai 0.00% yang menghasilkan pulangan swing cepat <strong>+10.65%</strong> dalam tempoh singkat.'
                     }
                 },
+                phoenix: {
+                    1: {
+                        src: 'phoenix_spring_example.png',
+                        title: '🔥 Contoh Sebenar: OGX (0338)',
+                        gain: '+38.0%',
+                        desc: 'OGX jatuh lemas di bawah harga IPO asal <strong>RM 0.320</strong>, membina tapak U-shape di zon murah, kemudian meletupkan lilin hijau padat memintas semula (reclaim) Garis Merah IPO. Menghasilkan rali gelombang ke-2 melepasi RM 0.440.'
+                    },
+                    2: {
+                        src: 'phoenix_spring_example.png',
+                        title: '🔥 Contoh Sebenar: PENTECH (0353)',
+                        gain: 'Floor Rejection',
+                        desc: 'PENTECH membuat kejatuhan menguji Garis Merah IPO asal. Lilin hijau membina rejection spring di atas lantai harga IPO dengan risiko ultra-ketat di bawah Garis Merah.'
+                    }
+                },
                 fishing: {
                     1: {
                         src: 'bottom_fishing_backtest_chart.png',
@@ -1567,50 +1973,80 @@
         // Tab switching logic
         function switchTab(tabId) {
 
+            const viewVcp = document.getElementById('view-vcp');
             const viewTrend = document.getElementById('view-trend');
             const viewSpring = document.getElementById('view-spring');
+            const viewPhoenix = document.getElementById('view-phoenix');
             const viewFishing = document.getElementById('view-fishing');
+            const viewWeekly = document.getElementById('view-weekly');
             const viewCalculator = document.getElementById('view-calculator');
             const viewInfo = document.getElementById('view-info');
             const viewTracker = document.getElementById('view-tracker');
             const viewPortfolio = document.getElementById('view-portfolio');
             
+            const tabVcp = document.getElementById('tab-vcp');
             const tabTrend = document.getElementById('tab-trend');
             const tabSpring = document.getElementById('tab-spring');
+            const tabPhoenix = document.getElementById('tab-phoenix');
             const tabFishing = document.getElementById('tab-fishing');
+            const tabWeekly = document.getElementById('tab-weekly');
             const tabCalculator = document.getElementById('tab-calculator');
             const tabInfo = document.getElementById('tab-info');
             const tabTracker = document.getElementById('tab-tracker');
             const tabPortfolio = document.getElementById('tab-portfolio');
             
             // Hide all views
+            if (viewVcp) viewVcp.style.display = 'none';
             viewTrend.style.display = 'none';
             viewSpring.style.display = 'none';
+            if (viewPhoenix) viewPhoenix.style.display = 'none';
             viewFishing.style.display = 'none';
+            if (viewWeekly) viewWeekly.style.display = 'none';
             viewCalculator.style.display = 'none';
             if (viewInfo) viewInfo.style.display = 'none';
             if (viewTracker) viewTracker.style.display = 'none';
             if (viewPortfolio) viewPortfolio.style.display = 'none';
             
             // Remove active class from all tabs
+            if (tabVcp) tabVcp.classList.remove('active');
             tabTrend.classList.remove('active');
             tabSpring.classList.remove('active');
+            if (tabPhoenix) tabPhoenix.classList.remove('active');
             tabFishing.classList.remove('active');
+            if (tabWeekly) tabWeekly.classList.remove('active');
             tabCalculator.classList.remove('active');
             if (tabInfo) tabInfo.classList.remove('active');
             if (tabTracker) tabTracker.classList.remove('active');
             if (tabPortfolio) tabPortfolio.classList.remove('active');
             
             // Show selected view & set active class
-            if (tabId === 'trend') {
+            if (tabId === 'vcp') {
+                if (viewVcp) {
+                    viewVcp.style.display = 'block';
+                    renderVcpStaircase();
+                }
+                if (tabVcp) tabVcp.classList.add('active');
+            } else if (tabId === 'trend') {
                 viewTrend.style.display = 'block';
                 tabTrend.classList.add('active');
             } else if (tabId === 'spring') {
                 viewSpring.style.display = 'block';
                 tabSpring.classList.add('active');
+            } else if (tabId === 'phoenix') {
+                if (viewPhoenix) {
+                    viewPhoenix.style.display = 'block';
+                    renderPhoenixSpring();
+                }
+                if (tabPhoenix) tabPhoenix.classList.add('active');
             } else if (tabId === 'fishing') {
                 viewFishing.style.display = 'block';
                 tabFishing.classList.add('active');
+            } else if (tabId === 'weekly') {
+                if (viewWeekly) {
+                    viewWeekly.style.display = 'block';
+                    renderWeeklyHomework();
+                }
+                if (tabWeekly) tabWeekly.classList.add('active');
             } else if (tabId === 'calculator') {
                 viewCalculator.style.display = 'block';
                 tabCalculator.classList.add('active');
@@ -2489,6 +2925,47 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             applyFilters();
         }
 
+        function passesGlobalFilters(item) {
+            if (!item || !item.price || item.price <= 0) return false;
+            if (isSleepingOrAvoidStock(item)) return false;
+
+            // 1. Max Price Filter
+            const priceMaxVal = document.getElementById('priceMaxFilter') ? document.getElementById('priceMaxFilter').value : 'ALL';
+            if (priceMaxVal !== 'ALL' && item.price > parseFloat(priceMaxVal)) return false;
+
+            // 2. IPO Age Filter
+            const ipoAgeFilterVal = document.getElementById('ipoAgeFilter') ? document.getElementById('ipoAgeFilter').value : 'ALL';
+            if (!matchesIpoAgeFilter(item, ipoAgeFilterVal)) return false;
+
+            return true;
+        }
+
+        function applyGlobalSort(candidates) {
+            const sortByVal = document.getElementById('sortByFilter') ? document.getElementById('sortByFilter').value : 'SAFE';
+            candidates.sort((a, b) => {
+                if (a.isReboundHijau !== undefined && b.isReboundHijau !== undefined && a.isReboundHijau !== b.isReboundHijau) {
+                    return a.isReboundHijau ? -1 : 1;
+                }
+                if (a.is2ndRetestJackpot !== undefined && b.is2ndRetestJackpot !== undefined && a.is2ndRetestJackpot !== b.is2ndRetestJackpot) {
+                    return a.is2ndRetestJackpot ? -1 : 1;
+                }
+                if (sortByVal === 'TURNOVER') {
+                    return (b.rawTurnover || b.turnover || 0) - (a.rawTurnover || a.turnover || 0);
+                }
+                if (sortByVal === 'VOLATILE') {
+                    const volA = Math.abs(a.distPct !== undefined ? a.distPct : (a.pullback || 0));
+                    const volB = Math.abs(b.distPct !== undefined ? b.distPct : (b.pullback || 0));
+                    return volB - volA;
+                }
+                if (sortByVal === 'SCORE') {
+                    const scoreA = a.score !== undefined ? a.score : (a.rawObj ? calculateSmartScore(a.rawObj) : calculateSmartScore(a));
+                    const scoreB = b.score !== undefined ? b.score : (b.rawObj ? calculateSmartScore(b.rawObj) : calculateSmartScore(b));
+                    return scoreB - scoreA;
+                }
+                return (b.rawTurnover || b.turnover || 0) - (a.rawTurnover || a.turnover || 0);
+            });
+        }
+
         // Apply filters and render UI elements
         function applyFilters() {
             if (currentData && Array.isArray(currentData)) {
@@ -2513,11 +2990,159 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             }
 
             updateSentiment(currentData);
+            renderVcpStaircase();
             renderTrendRiders();
             renderReclaimRadar();
             renderBottomFishing();
+            renderPhoenixSpring();
+            renderWeeklyHomework();
             updateSpecialPicks();
             renderPortfolio();
+        }
+
+        // Render VCP Staircase Strategy Table (Teknik Minervini + Mamat)
+        function renderVcpStaircase() {
+            const vcpTbody = document.getElementById('vcpPicksTableBody');
+            if (!vcpTbody) return;
+
+            // Filter items for VCP / Staircase setup:
+            let validPicks = currentData.filter(item => {
+                if (!passesGlobalFilters(item)) return false;
+                if (isSleepingOrAvoidStock(item)) return false;
+
+                const style = getItemStyle(item);
+                // Hanya terima STAIRCASE/STAIRCASE+IPO style (buang isConsolidation sahaja tanpa kontraksi)
+                const isVcpStyle = style === 'STAIRCASE' || style === 'STAIRCASE + IPO' || style.includes('STAIRCASE');
+                if (!isVcpStyle) return false;
+
+                // === TEKNIK MAMAT VCP PRE-BREAKOUT CRITERIA ===
+
+                // 1. Mesti AKTIF menguncup — 5d range lebih ketat dari 20d range
+                if (!item.isContracting) return false;
+
+                // 2. Mesti ada pullback dari high (bukan dah breakout / AT ATH)
+                const pullbackVal = item.pullback || 0;
+                if (pullbackVal < 4.0) return false;   // Terlalu dekat ATH — belum pullback masuk box
+
+                // 3. Uptrend context — harga mesti di atas SMA50
+                if (item.sma50 && item.price < item.sma50) return false;
+
+                // 4. Volume mesti senyap (bukan hari breakout)
+                if (item.hasVolumeSpike) return false;
+
+                // 5. Tiada lonjakan harga hari ini (belum breakout)
+                const changePctVal = item.changePct !== undefined ? item.changePct : (item.change || 0);
+                if (changePctVal >= 3.0) return false;
+
+                // 6. Masih rapat dengan lantai sokongan
+                const floor = item.floorLow || (item.price * 0.95);
+                const distToFloor = ((item.price - floor) / floor) * 100;
+                if (distToFloor > 5.0) return false;
+
+                const minTurnover = (item.ipoGrade && item.ipoGrade !== 'Unrated') ? 350000 : 500000;
+                if (item.turnover < minTurnover) return false;
+
+                // Strict risk management filter if enabled
+                const strictEntryVal = document.getElementById('strictEntryFilter') ? document.getElementById('strictEntryFilter').checked : false;
+                if (strictEntryVal) {
+                    const floor = item.floorLow || (item.price * 0.95);
+                    const distToFloor = ((item.price - floor) / floor) * 100;
+                    const maxDist = item.price < 0.50 ? 11.0 : 8.0;
+                    if (distToFloor > maxDist) return false;
+                }
+
+                return true;
+            });
+
+            applyGlobalSort(validPicks);
+
+            if (validPicks.length > 0) {
+                let vcpHtml = '';
+                let rankCount = 1;
+
+                validPicks.forEach(item => {
+                    const score = calculateSmartScore(item);
+                    const floor = item.floorLow || (item.price * 0.97);
+                    const stopLoss = Math.max(item.price * 0.90, floor * 0.97);
+                    const turnoverM = (item.turnover / 1e6).toFixed(2);
+                    const pct = item.changePct !== undefined ? item.changePct : item.change;
+                    const changeClass = pct >= 0 ? 'success' : 'danger';
+                    const changeSign = pct > 0 ? '+' : '';
+                    
+                    const isFresh = isFreshIpo(item);
+                    const scoreColor = score >= 12 ? '#10b981' : (score >= 9 ? '#6366f1' : '#94a3b8');
+                    const scoreSpan = `<span style="color: ${scoreColor}; font-weight: 800; background: rgba(255,255,255,0.03); padding: 0.05rem 0.3rem; border-radius: 3px; border: 1px solid rgba(255,255,255,0.05);">Skor: ${score}/15</span>`;
+
+                    let gradeSpan = '';
+                    if (item.ipoGrade) {
+                        let gColor = '#94a3b8';
+                        if (item.ipoGrade === 'A') gColor = '#10b981';
+                        else if (item.ipoGrade === 'B') gColor = '#a855f7';
+                        else if (item.ipoGrade === 'C') gColor = '#f59e0b';
+                        gradeSpan = ` • Gred <span style="color: ${gColor}; font-weight: 800;">${item.ipoGrade}</span>`;
+                    }
+
+                    const freshSpan = item.ipoGrade ? (isFresh 
+                        ? ` • <span style="color: #10b981; font-weight: 800; background: rgba(16, 185, 129, 0.08); padding: 0.05rem 0.3rem; border-radius: 3px; border: 1px solid rgba(16, 185, 129, 0.15);">Fresh</span>` 
+                        : ` • <span style="color: #94a3b8; font-weight: 600;">Mature</span>`) : '';
+
+                    const distToFloor = ((item.price - floor) / floor) * 100;
+                    const volatility = item.lowTightness !== null ? item.lowTightness : (item.pullback || 0);
+                    let volColor = '#94a3b8';
+                    if (volatility >= 4.5) volColor = '#fb7185';
+                    else if (volatility >= 1.5) volColor = '#f59e0b';
+
+                    const hofBadge = getHofBadge(item);
+                    const matchBadge = getBacktestMatchBadge(item, 'trend');
+                    const styleBadge = `<span style="background: rgba(6, 182, 212, 0.18); color: #22d3ee; font-size: 0.65rem; font-weight: 900; padding: 0.15rem 0.4rem; border-radius: 4px; border: 1px solid rgba(6, 182, 212, 0.3); white-space: nowrap;">🪜 STAIRCASE VCP</span>`;
+
+                    vcpHtml += `
+                        <tr>
+                            <td style="text-align: center; font-weight: 800; color: #22d3ee;">#${rankCount++}</td>
+                            <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
+                                <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
+                                    <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
+                                        ${item.name} <span style="font-size: 0.75rem; color: #22d3ee;">🔗</span>
+                                    </a>
+                                    ${getSub1Badge(item)}
+                                    ${matchBadge}
+                                    ${hofBadge}
+                                    ${getVcpStageBadge(item)}
+                                    ${getGoldenCrossBadge(item)}
+                                    ${getEmaPullbackBadge(item)}
+                                    ${item.hasLowerWickRejection ? `<span style="font-size: 0.68rem; background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.25); white-space: nowrap;" title="Jerung pertahankan lantai sokongan">🟢 Reject Bawah</span>` : ''}
+                                </div>
+                                <div style="font-size: 0.76rem; color: var(--text-muted); font-weight: 600; margin-top: 0.3rem; letter-spacing: 0.2px;">
+                                    ${scoreSpan}${gradeSpan}${freshSpan}
+                                </div>
+                            </td>
+                            <td style="text-align: center;">${styleBadge}</td>
+                            <td style="text-align: right; font-weight: bold; color: white;">RM ${item.price.toFixed(3)}</td>
+                            <td style="text-align: right; font-weight: bold; color: var(--${changeClass});">${changeSign}${pct.toFixed(2)}%</td>
+                            <td style="text-align: right; color: #10b981; font-weight: 700;">RM ${floor.toFixed(3)}</td>
+                            <td style="text-align: right; color: #38bdf8; font-weight: 700;">+${distToFloor.toFixed(1)}%</td>
+                            <td style="text-align: right; color: ${volColor}; font-weight: 700;">${volatility.toFixed(1)}%</td>
+                            <td style="text-align: right; color: #ef4444; font-weight: 700;">RM ${stopLoss.toFixed(3)}</td>
+                            <td style="text-align: right; color: #f59e0b; font-weight: 700;">RM ${turnoverM}M</td>
+                            <td style="text-align: center;">
+                                <button onclick="triggerAIAnalysisModal('${item.name}', 'VCP Staircase (Teknik Minervini + Mamat)')" class="btn" style="background: linear-gradient(135deg, #06b6d4, #0891b2); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                    ✨ Tanya AI
+                                </button>
+                            </td>
+                        </tr>
+                    `;
+                });
+
+                vcpTbody.innerHTML = vcpHtml;
+            } else {
+                vcpTbody.innerHTML = `
+                    <tr>
+                        <td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
+                            ⏳ Tiada kaunter VCP Staircase memenuhi tapisan pada masa ini.
+                        </td>
+                    </tr>
+                `;
+            }
         }
 
         // Update the custom MMCS and Stratus watchlist price and change percentage dynamically
@@ -2673,6 +3298,10 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     });
                 }
                 vcpContainer.innerHTML = vcpHtml;
+            }
+
+            if (typeof window.renderPhoenixSpring === 'function') {
+                window.renderPhoenixSpring();
             }
         }
 
@@ -2831,6 +3460,64 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             }
         }
 
+        // Teknik Mamat: MA50/200 Golden Cross Badge
+        function getGoldenCrossBadge(item) {
+            if (!item || !item.isGoldenCross) return '';
+            const age = item.goldenCrossAge;
+            if (age === null || age === undefined) return '';
+            let label, color, bg, border, glow;
+            if (age <= 10) {
+                label = `✨ Golden Cross (${age}h)`;
+                color = '#fbbf24'; bg = 'rgba(251,191,36,0.18)'; border = 'rgba(251,191,36,0.4)';
+                glow = 'box-shadow: 0 0 8px rgba(251,191,36,0.35);';
+            } else if (age <= 30) {
+                label = `⭐ Golden Cross (${age}h)`;
+                color = '#f59e0b'; bg = 'rgba(245,158,11,0.15)'; border = 'rgba(245,158,11,0.35)';
+                glow = 'box-shadow: 0 0 5px rgba(245,158,11,0.2);';
+            } else {
+                label = `🌟 Golden Cross (${age}h)`;
+                color = '#d97706'; bg = 'rgba(217,119,6,0.12)'; border = 'rgba(217,119,6,0.3)';
+                glow = '';
+            }
+            return `<span style="font-size: 0.65rem; background: ${bg}; color: ${color}; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid ${border}; white-space: nowrap; ${glow}" title="MA50 telah cross atas MA200 ${age} hari yang lepas — permulaan trend baru (Teknik Mamat: MA50/200 Golden Cross VCP)">${label}</span>`;
+        }
+
+        // Teknik Mamat: EMA25/50 Pullback Entry Badge
+        function getEmaPullbackBadge(item) {
+            if (!item) return '';
+            if (item.ema25AboveEma50 && item.nearEma25) {
+                return `<span style="font-size: 0.65rem; background: rgba(56,189,248,0.18); color: #38bdf8; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(56,189,248,0.4); white-space: nowrap; box-shadow: 0 0 8px rgba(56,189,248,0.25);" title="Harga pullback ke EMA25 dan EMA25 > EMA50 — zona entry paling ideal (Teknik Mamat: EMA25/50 Pullback Entry)">📐 EMA Pullback</span>`;
+            } else if (item.ema25AboveEma50) {
+                return `<span style="font-size: 0.65rem; background: rgba(56,189,248,0.1); color: #7dd3fc; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(56,189,248,0.25); white-space: nowrap;" title="EMA25 > EMA50 — trend jangka pendek sihat, tunggu pullback ke EMA25 untuk entry (Teknik Mamat)">📈 EMA Trend OK</span>`;
+            }
+            return '';
+        }
+
+        // Teknik Mamat: VCP Contraction Stage (C1, C2, C3) Badge
+        function getVcpStageBadge(item) {
+            if (!item) return '';
+            const floor = item.floorLow || (item.price * 0.95);
+            const dist = ((item.price - floor) / floor) * 100;
+            const tightness = item.lowTightness !== null ? item.lowTightness : (item.closeTightness !== null ? item.closeTightness : 5.0);
+            
+            let stage = item.vcpStage;
+            if (!stage) {
+                if (tightness <= 3.5 && dist <= 3.0) stage = 'C3';
+                else if (tightness <= 6.0 && dist <= 4.5) stage = 'C2';
+                else if (dist <= 5.0) stage = 'C1';
+            }
+            
+            if (stage === 'C3') {
+                return `<span style="font-size: 0.65rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(6, 182, 212, 0.25)); color: #34d399; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(52, 211, 153, 0.5); white-space: nowrap; box-shadow: 0 0 10px rgba(52, 211, 153, 0.3);" title="Teknik Mamat: VCP C3 (Pengecilan Terakhir / Micro-Contraction) — Zon Entry Pre-Breakout Ideal!">🔥 VCP C3 (Entry Pre-Breakout)</span>`;
+            } else if (stage === 'C2') {
+                return `<span style="font-size: 0.65rem; background: rgba(56, 189, 248, 0.15); color: #38bdf8; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(56, 189, 248, 0.35); white-space: nowrap;" title="Teknik Mamat: VCP C2 (Pengecilan Kedua / Tapak Menguncup)">🧱 VCP C2</span>`;
+            } else if (stage === 'C1') {
+                return `<span style="font-size: 0.65rem; background: rgba(148, 163, 184, 0.12); color: #cbd5e1; padding: 0.1rem 0.4rem; border-radius: 7px; font-weight: 700; border: 1px solid rgba(148, 163, 184, 0.25); white-space: nowrap;" title="Teknik Mamat: VCP C1 (Binaan Tapak Pertama)">🌊 VCP C1</span>`;
+            }
+            return '';
+        }
+
+
         // Programmatic Backtest Match Indicator based on the 3 Winner criteria per technique
         function getBacktestMatchBadge(item, technique) {
             if (!item) return '';
@@ -2964,6 +3651,14 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
                 const ipoAgeFilterVal = document.getElementById('ipoAgeFilter') ? document.getElementById('ipoAgeFilter').value : 'ALL';
                 if (!matchesIpoAgeFilter(item, ipoAgeFilterVal)) return false;
+
+                // Premium Hype Filter: If checked, apply to Fresh IPOs
+                const premiumHypeVal = document.getElementById('premiumHypeFilter') ? document.getElementById('premiumHypeFilter').checked : false;
+                if (premiumHypeVal && isFreshIpo(item)) {
+                    const osVal = item.os || 0;
+                    const isOutlier = item.outlier === true || item.outlier === 'true';
+                    if (item.ipoGrade !== 'A' && osVal < 50 && !isOutlier) return false;
+                }
 
                 // Strict risk management filter (only when explicitly checked by user)
                 const strictEntryVal = document.getElementById('strictEntryFilter') ? document.getElementById('strictEntryFilter').checked : false;
@@ -3124,6 +3819,8 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                                     ${isHc ? `<span style="font-size: 0.68rem; background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.25); white-space: nowrap; box-shadow: 0 0 8px rgba(16, 185, 129, 0.3);" title="High-Conviction Setup: Gred Premium + Lantai Sangat Rapat (<=4%) + Kecairan Tinggi (>=RM1M)">🎯 Entry Padu</span>` : ''}
                                     ${matchBadge}
                                     ${hofBadge}
+                                    ${getGoldenCrossBadge(item)}
+                                    ${getEmaPullbackBadge(item)}
                                     ${item.hasLowerWickRejection ? `<span style="font-size: 0.68rem; background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.25); white-space: nowrap;" title="Jerung pertahankan lantai sokongan (Lower Wick Rejection)">🟢 Reject Bawah</span>` : ''}
                                     ${item.hasUpperWickRejection ? `<span style="font-size: 0.68rem; background: rgba(239, 68, 68, 0.15); color: #f87171; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(239, 68, 68, 0.25); white-space: nowrap;" title="Tekanan jualan tinggi di atas (Upper Wick Rejection)">🔴 Reject Atas</span>` : ''}
                                 </div>
@@ -3202,30 +3899,32 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 return true;
             });
 
-            // Susun:
-            // 1. High Conviction (Entry Padu) di atas sekali
-            // 2. Yang dah trigger/reclaimed di atas sekali (paling dekat dengan 0% didahulukan)
-            // 3. Yang underwater di bawah (paling dekat dengan 0% didahulukan, cth: -1.0% vs -5.0%)
+            // Sort — respects global sortByFilter
+            const esSortVal = document.getElementById('sortByFilter') ? document.getElementById('sortByFilter').value : 'SAFE';
             validPicks.sort((a, b) => {
                 const hcA = isEarlySpringHighConviction(a);
                 const hcB = isEarlySpringHighConviction(b);
                 if (hcA && !hcB) return -1;
                 if (!hcA && hcB) return 1;
 
+                if (esSortVal === 'TURNOVER') return b.turnover - a.turnover;
+                if (esSortVal === 'VOLATILE') {
+                    const volA = a.lowTightness !== null ? a.lowTightness : (a.pullback || 0);
+                    const volB = b.lowTightness !== null ? b.lowTightness : (b.pullback || 0);
+                    return volB - volA;
+                }
+                if (esSortVal === 'SCORE') {
+                    return calculateSmartScore(b) - calculateSmartScore(a);
+                }
+
+                // Default SAFE: reclaimed first, then closest to trigger
                 const aTriggered = a.price >= a.openPrice;
                 const bTriggered = b.price >= b.openPrice;
-                
                 if (aTriggered && !bTriggered) return -1;
                 if (!aTriggered && bTriggered) return 1;
-                
                 const distA = ((a.price - a.openPrice) / a.openPrice) * 100;
                 const distB = ((b.price - b.openPrice) / b.openPrice) * 100;
-                
-                if (aTriggered && bTriggered) {
-                    return distA - distB; // yang baru lepas breakout dulu
-                } else {
-                    return distB - distA; // yang underwater paling hampir dulu
-                }
+                return aTriggered ? distA - distB : distB - distA;
             });
 
             if (validPicks.length > 0) {
@@ -3300,6 +3999,8 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                                     ${matchBadge}
                                     ${statusBadge}
                                     ${hofBadge}
+                                    ${getGoldenCrossBadge(item)}
+                                    ${getEmaPullbackBadge(item)}
                                 </div>
                                 <div style="font-size: 0.76rem; color: var(--text-muted); font-weight: 600; margin-top: 0.3rem; letter-spacing: 0.2px;">
                                     ${scoreSpan}${gradeSpan}${listingDateStr}
@@ -3342,12 +4043,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             if (!bfTbody || !bfSection) return;
 
             let validPicks = currentData.filter(item => {
-                if (!item) return false;
-                
-                // Max Price Filter
-                const priceMaxVal = document.getElementById('priceMaxFilter') ? document.getElementById('priceMaxFilter').value : 'ALL';
-                if (priceMaxVal !== 'ALL' && item.price > parseFloat(priceMaxVal)) return false;
-                if (item.price < 0.10 || item.price > 3.00) return false;
+                if (!passesGlobalFilters(item)) return false;
                 if (item.isCombStock) return false;
                 
                 const pullback = item.pullback !== null ? item.pullback : 0;
@@ -3366,14 +4062,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 return true;
             });
 
-            // Sort: Safest first (distance to floor ascending)
-            validPicks.sort((a, b) => {
-                const floorA = a.floorLow || (a.price * 0.95);
-                const distA = ((a.price - floorA) / floorA) * 100;
-                const floorB = b.floorLow || (b.price * 0.95);
-                const distB = ((b.price - floorB) / floorB) * 100;
-                return distA - distB;
-            });
+            applyGlobalSort(validPicks);
 
             if (validPicks.length > 0) {
                 bfSection.style.display = 'block';
@@ -3424,6 +4113,8 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                                     ${getSub1Badge(item)}
                                     ${matchBadge}
                                     ${hofBadge}
+                                    ${getGoldenCrossBadge(item)}
+                                    ${getEmaPullbackBadge(item)}
                                     ${item.hasLowerWickRejection ? `<span style="font-size: 0.68rem; background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.25); white-space: nowrap;">🟢 Reject Bawah</span>` : ''}
                                     ${item.hasUpperWickRejection ? `<span style="font-size: 0.68rem; background: rgba(239, 68, 68, 0.15); color: #f87171; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(239, 68, 68, 0.25); white-space: nowrap;">🔴 Reject Atas</span>` : ''}
                                 </div>
@@ -3503,6 +4194,12 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
         // Page setup and event listeners
         window.addEventListener('DOMContentLoaded', () => {
             fetchLiveData();
+            renderPhoenixSpring();
+
+            const hash = window.location.hash.replace('#', '');
+            if (hash && ['vcp', 'trend', 'spring', 'phoenix', 'fishing', 'calculator', 'info', 'tracker', 'portfolio'].includes(hash)) {
+                switchTab(hash);
+            }
 
             document.getElementById('priceMaxFilter').addEventListener('change', function() {
                 applyFilters();
@@ -3816,16 +4513,16 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 updateEl.textContent = 'Dikemas kini: ' + d.toLocaleString('ms-MY', { timeZone: 'Asia/Kuala_Lumpur' });
             }
 
-            const ipoAgeFilterVal = document.getElementById('ipoAgeFilter') ? document.getElementById('ipoAgeFilter').value : 'FRESH';
             const candidates = (live.topVolume || []).filter(s => {
-                if (!s.price || s.price >= 1.0) return false;
+                if (!passesGlobalFilters(s)) return false;
                 if (s.signal !== 'buy') return false;
                 if (!['STAIRCASE', 'EXPLOSIVE', 'SWING PLAY'].includes(s.setupStyle)) return false;
                 const floorDist = s.floorLow ? ((s.price - s.floorLow) / s.floorLow * 100) : null;
                 if (floorDist !== null && floorDist > 10.0) return false;
-                if (!matchesIpoAgeFilter(s, ipoAgeFilterVal)) return false;
                 return true;
             });
+
+            applyGlobalSort(candidates);
 
             candidates.sort((a, b) => {
                 const aGold = track.filter(t => t.name === a.name).some(t => t.isGold) ? 1 : 0;
@@ -3950,7 +4647,6 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
         function renderPortfolio() {
             const list = currentData || [];
             const portfolio = [
-                { name: 'SDCG', buyPrice: 0.725, slPrice: 0.700, allocation: 2000, technique: 'VCP / Staircase', isKental: true },
                 { name: 'SRKK', buyPrice: 0.545, slPrice: 0.490, allocation: 2000, technique: 'Deep Pullback Swing', isKental: false },
                 { name: 'EIPOWER', buyPrice: 0.685, slPrice: 0.630, allocation: 2000, technique: 'Trend Rider Pullback', isKental: true },
                 { name: 'RESTNGO', buyPrice: 0.135, slPrice: 0.125, allocation: 2000, technique: 'Early Spring', isKental: false }
@@ -4000,7 +4696,9 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 tbody.innerHTML += `
                     <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.02)'" onmouseout="this.style.background='none'">
                         <td style="padding: 0.8rem 0.75rem; font-weight: 800; color: white; border-bottom: 1px solid rgba(255,255,255,0.05);">
-                            ${p.name}
+                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${p.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 0.95rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.3rem;" title="Buka Carta TradingView (${p.name})">
+                                ${p.name} <span style="font-size: 0.75rem; color: #38bdf8;">🔗</span>
+                            </a>
                             <span style="font-size: 0.65rem; color: var(--text-muted); display: block; font-weight: 400; margin-top: 0.1rem;">PEGANGAN: ${units.toLocaleString()} unit (${(units/100).toFixed(0)} Lot)</span>
                         </td>
                         <td style="padding: 0.8rem 0.75rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
@@ -4019,6 +4717,9 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                             <span style="font-size: 0.65rem; color: ${pnlColor}; display: block; font-weight: 600; margin-top: 0.1rem;">${pnlVal >= 0 ? '+' : ''}RM ${pnlVal.toFixed(2)}</span>
                         </td>
                         <td style="padding: 0.8rem 0.75rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">${statusHtml}</td>
+                        <td style="padding: 0.8rem 0.75rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
+                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${p.name}&interval=D" target="_blank" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 0.25rem; transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'; this.style.background='rgba(56, 189, 248, 0.25)';" onmouseout="this.style.transform='scale(1)'; this.style.background='rgba(56, 189, 248, 0.15)';" title="Buka Carta TradingView">📈 TV</a>
+                        </td>
                     </tr>
                 `;
             });
@@ -4033,6 +4734,512 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             }
         }
         window.renderPortfolio = renderPortfolio;
+
+        function renderPhoenixSpring() {
+            const tbody = document.getElementById('phoenixTableBody');
+            if (!tbody) return;
+
+            const liveList = (typeof currentData !== 'undefined' && Array.isArray(currentData) && currentData.length > 0) 
+                ? currentData 
+                : ((window.liveData && Array.isArray(window.liveData.topVolume)) ? window.liveData.topVolume : []);
+            let phoenixCandidates = [];
+
+            if (liveList.length > 0) {
+                phoenixCandidates = liveList.filter(s => {
+                    if (!passesGlobalFilters(s)) return false;
+
+                    // Must be a genuine IPO (listed 2024-2026, or tagged with IPO grade/fresh IPO)
+                    const isIpoCandidate = s.sector === 'IPO' || !!s.ipoGrade || (s.ipoYear && s.ipoYear >= 2024) || isFreshIpo(s);
+                    if (!isIpoCandidate) return false;
+                    
+                    const fdClose = s.firstDayClosePrice || s.openPrice || s.ipoPrice;
+                    if (!fdClose) return false;
+                    
+                    const distPct = ((s.price - fdClose) / fdClose * 100);
+                    return distPct >= -60.0 && distPct <= 30.0;
+                }).map(s => {
+                    const fdClose = s.firstDayClosePrice || s.openPrice || s.ipoPrice;
+                    const distPct = ((s.price - fdClose) / fdClose * 100);
+                    const change = s.changePct !== undefined ? s.changePct : 0;
+                    
+                    const touches = s.touchCount || s.floorTouches || 1;
+                    const isCsHijau = change > 0;
+                    let status = '🟡 TESTING FLOOR SPRING';
+                    let setup = '🛡️ PHOENIX FLOOR';
+                    let is2ndRetestJackpot = false;
+
+                    if (touches >= 2 && distPct <= 30 && distPct >= -60) {
+                        is2ndRetestJackpot = true;
+                        if (isCsHijau) {
+                            status = '🟢 2ND RETEST REBOUND (CS HIJAU)';
+                            setup = '🎯 PHOENIX REBOUND (SRKK DNA)';
+                        } else {
+                            status = '🟡 2ND RETEST FLOOR HOLD (PINBAR/DOJI)';
+                            setup = '🛡️ PHOENIX 2ND TOUCH (SRKK DNA)';
+                        }
+                    } else if (distPct >= 0 && distPct <= 10) {
+                        status = '🟢 FRESH RECLAIM';
+                        setup = '🔥 PHOENIX RECLAIM';
+                    } else if (distPct > 10) {
+                        status = '🚀 RUNNING RALLY';
+                        setup = '⚡ PHOENIX RALLY';
+                    } else if (distPct < -10) {
+                        status = '🛡️ DEEP UNDERWATER BASE';
+                        setup = '🎯 DEEP BASE';
+                    }
+
+                    return {
+                        name: s.name,
+                        code: s.symbol || (s.name + '.KL'),
+                        price: s.price,
+                        change: change,
+                        close1st: fdClose,
+                        distPct: distPct,
+                        touches: touches,
+                        turnover: s.turnover ? ('RM ' + (s.turnover >= 1000000 ? (s.turnover/1000000).toFixed(2) + 'M 🔥' : (s.turnover/1000).toFixed(0) + 'k')) : '—',
+                        rawTurnover: s.turnover || 0,
+                        status: status,
+                        setup: setup,
+                        is2ndRetestJackpot: is2ndRetestJackpot,
+                        isReboundHijau: (is2ndRetestJackpot && isCsHijau),
+                        ipoGrade: s.ipoGrade || '',
+                        ipoYear: s.ipoYear || 0,
+                        ipoPrice: s.ipoPrice || 0,
+                        score: calculateSmartScore(s),
+                        rawObj: s
+                    };
+                });
+
+                applyGlobalSort(phoenixCandidates);
+            }
+
+            // Fallback if liveList is empty
+            if (phoenixCandidates.length === 0) {
+                phoenixCandidates = [
+                    { name: 'SRKK', code: '0466.KL', price: 0.545, change: 5.83, close1st: 0.555, distPct: -1.8, touches: 2, turnover: 'RM 7.26M 🔥', status: '🎯 2ND RETEST CS HIJAU', setup: '🔥 PHOENIX REBOUND (SRKK DNA)', score: 14, is2ndRetestJackpot: true },
+                    { name: 'ECKEM', code: '0348.KL', price: 0.120, change: 0.0, close1st: 0.120, distPct: 0.0, touches: 8, turnover: 'RM 317k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 11, is2ndRetestJackpot: false },
+                    { name: 'RESTNGO', code: '0465.KL', price: 0.130, change: -3.7, close1st: 0.130, distPct: 0.0, touches: 5, turnover: 'RM 271k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 10, is2ndRetestJackpot: false },
+                    { name: 'WENTEL', code: '0298.KL', price: 0.260, change: 0.0, close1st: 0.260, distPct: 0.0, touches: 4, turnover: 'RM 216k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 9, is2ndRetestJackpot: false },
+                    { name: 'BUSCAP', code: '0342.KL', price: 0.265, change: 1.92, close1st: 0.260, distPct: 1.92, touches: 3, turnover: 'RM 382k', status: '🎯 2ND RETEST CS HIJAU', setup: '🔥 PHOENIX REBOUND (SRKK DNA)', score: 12, is2ndRetestJackpot: true },
+                    { name: 'SAG', code: '0336.KL', price: 0.695, change: 2.2, close1st: 0.680, distPct: 2.2, touches: 2, turnover: 'RM 30k', status: '🎯 2ND RETEST CS HIJAU', setup: '🔥 PHOENIX REBOUND (SRKK DNA)', score: 8, is2ndRetestJackpot: true },
+                    { name: 'MKHOP', code: '0303.KL', price: 0.645, change: 2.38, close1st: 0.630, distPct: 2.38, touches: 5, turnover: 'RM 2.55M 🔥', status: '🎯 2ND RETEST CS HIJAU', setup: '🔥 PHOENIX REBOUND (SRKK DNA)', score: 13, is2ndRetestJackpot: true },
+                    { name: 'CNERGEN', code: '0246.KL', price: 0.620, change: 1.6, close1st: 0.600, distPct: 3.33, touches: 4, turnover: 'RM 154k', status: '🎯 2ND RETEST CS HIJAU', setup: '🔥 PHOENIX REBOUND (SRKK DNA)', score: 10, is2ndRetestJackpot: true },
+                    { name: 'FOODIE', code: '0355.KL', price: 0.340, change: -1.2, close1st: 0.355, distPct: -4.22, touches: 3, turnover: 'RM 157k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 9, is2ndRetestJackpot: false },
+                    { name: 'PENTECH', code: '0350.KL', price: 0.275, change: -1.8, close1st: 0.290, distPct: -5.17, touches: 6, turnover: 'RM 1.52M', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 11, is2ndRetestJackpot: false },
+                    { name: 'STRATUS', code: '0349.KL', price: 2.050, change: 4.59, close1st: 1.960, distPct: 4.59, touches: 1, turnover: 'RM 19.7M 🔥', status: '🟢 FRESH RECLAIM', setup: '🔥 PHOENIX RECLAIM', score: 14, is2ndRetestJackpot: false }
+                ];
+            }
+
+            let html = '';
+            phoenixCandidates.forEach((m, idx) => {
+                const distText = (m.distPct >= 0 ? '+' : '') + m.distPct.toFixed(1) + '%';
+                const distColor = m.distPct >= 0 ? '#34d399' : '#f87171';
+                const changeColor = m.change > 0 ? '#34d399' : (m.change < 0 ? '#f87171' : '#94a3b8');
+                const changeSign = m.change > 0 ? '+' : '';
+
+                // Smart Score badge
+                const score = m.score !== undefined ? m.score : (m.rawObj ? calculateSmartScore(m.rawObj) : 10);
+                const scoreColor = score >= 12 ? '#10b981' : (score >= 9 ? '#6366f1' : '#94a3b8');
+                const scoreSpan = `<span style="color: ${scoreColor}; font-weight: 800; background: rgba(255,255,255,0.03); padding: 0.05rem 0.35rem; border-radius: 3px; border: 1px solid rgba(255,255,255,0.05);">Skor: ${score}/15</span>`;
+
+                // Setup badge color
+                let setupStyle = 'background: rgba(251,191,36,0.15); color: #fbbf24; border: 1px solid rgba(251,191,36,0.3);';
+                if (m.setup.includes('SRKK DNA') || m.setup.includes('2ND RETEST')) {
+                    setupStyle = 'background: linear-gradient(135deg, rgba(249,115,22,0.25), rgba(239,68,68,0.25)); color: #ffedd5; border: 1px solid #f97316; font-weight: 800; text-shadow: 0 0 5px rgba(249,115,22,0.5);';
+                } else if (m.setup.includes('RECLAIM')) {
+                    setupStyle = 'background: rgba(52,211,153,0.15); color: #34d399; border: 1px solid rgba(52,211,153,0.3);';
+                } else if (m.setup.includes('RALLY')) {
+                    setupStyle = 'background: rgba(99,102,241,0.15); color: #a5b4fc; border: 1px solid rgba(99,102,241,0.3);';
+                } else if (m.setup.includes('DEEP')) {
+                    setupStyle = 'background: rgba(239,68,68,0.12); color: #f87171; border: 1px solid rgba(239,68,68,0.25);';
+                }
+
+                // Status badge color
+                let statusStyle = 'background: rgba(251,191,36,0.15); color: #fbbf24; border: 1px solid rgba(251,191,36,0.3);';
+                if (m.status.includes('2ND RETEST')) {
+                    statusStyle = 'background: rgba(52,211,153,0.2); color: #34d399; border: 1px solid #34d399; font-weight: 800; box-shadow: 0 0 8px rgba(52,211,153,0.25);';
+                } else if (m.status.includes('FRESH') || m.status.includes('RUNNING')) {
+                    statusStyle = 'background: rgba(52,211,153,0.15); color: #34d399; border: 1px solid rgba(52,211,153,0.3);';
+                } else if (m.status.includes('DEEP')) {
+                    statusStyle = 'background: rgba(239,68,68,0.12); color: #f87171; border: 1px solid rgba(239,68,68,0.25);';
+                }
+
+                // IPO Grade badge
+                const grade = m.ipoGrade || '';
+                let gradeSpan = '';
+                if (grade) {
+                    let gColor = grade === 'A' ? '#10b981' : (grade === 'B' ? '#a855f7' : '#f59e0b');
+                    gradeSpan = ` • Gred <span style="color:${gColor}; font-weight:800;">${grade}</span>`;
+                }
+
+                // Fresh/Mature badge
+                const ipoYear = m.ipoYear || 0;
+                const currentYear = new Date().getFullYear();
+                const isFresh = ipoYear >= (currentYear - 2);
+                const freshSpan = grade 
+                    ? (isFresh 
+                        ? ` • <span style="color:#10b981; font-weight:800; background:rgba(16,185,129,0.08); padding:0.05rem 0.3rem; border-radius:3px; border:1px solid rgba(16,185,129,0.15);">Fresh</span>` 
+                        : ` • <span style="color:#94a3b8; font-weight:600;">Mature</span>`) 
+                    : '';
+
+                // IPO Offer Price vs current
+                let ipoPriceStr = '';
+                if (m.ipoPrice && m.ipoPrice > 0) {
+                    const d = ((m.price - m.ipoPrice) / m.ipoPrice) * 100;
+                    const dSign = d >= 0 ? '+' : '';
+                    const dColor = d >= 0 ? '#10b981' : '#ef4444';
+                    ipoPriceStr = ` • IPO RM ${m.ipoPrice.toFixed(3)} (<span style="color:${dColor}; font-weight:800;">${dSign}${d.toFixed(1)}%</span>)`;
+                }
+
+                // Floor touches strength badge
+                const touchBadge = m.touches >= 8
+                    ? `<span style="font-size:0.65rem; background:rgba(16,185,129,0.15); color:#10b981; padding:0.1rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid rgba(16,185,129,0.25);">🏰 ${m.touches}x Solid</span>`
+                    : m.touches >= 4
+                    ? `<span style="font-size:0.65rem; background:rgba(99,102,241,0.12); color:#a5b4fc; padding:0.1rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid rgba(99,102,241,0.22);">🛡️ ${m.touches}x Touch</span>`
+                    : `<span style="font-size:0.65rem; background:rgba(148,163,184,0.08); color:#94a3b8; padding:0.1rem 0.35rem; border-radius:4px; font-weight:700; border:1px solid rgba(148,163,184,0.15);">${m.touches}x Touch</span>`;
+
+                const isReclaim = m.distPct >= 0 && m.distPct <= 10;
+                const rowBg = isReclaim ? 'background: rgba(52,211,153,0.02);' : '';
+
+                html += `
+                    <tr style="${rowBg}" onmouseover="this.style.background='rgba(255,255,255,0.03)'" onmouseout="this.style.background='${isReclaim ? 'rgba(52,211,153,0.02)' : 'transparent'}'">
+                        <td style="text-align: center; font-weight: 800; color: ${isReclaim ? '#34d399' : '#f97316'}; padding: 0.8rem 0.5rem; border-left: 3px solid ${isReclaim ? '#34d399' : 'transparent'};">#${idx + 1}</td>
+                        <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
+                            <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
+                                <a href="https://www.tradingview.com/chart/?symbol=MYX:${m.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
+                                    ${m.name} <span style="font-size: 0.75rem; color: #f97316;">🔗</span>
+                                </a>
+                                ${isReclaim ? `<span style="font-size:0.68rem; background:linear-gradient(135deg,#34d399,#059669); color:white; padding:0.1rem 0.35rem; border-radius:4px; font-weight:800; box-shadow:0 0 8px rgba(52,211,153,0.3);">🔥 Reclaim</span>` : ''}
+                            </div>
+                            <div style="font-size: 0.76rem; color: var(--text-muted); font-weight: 600; margin-top: 0.3rem;">
+                                ${scoreSpan} • Garis Merah: <span style="color:#f97316; font-weight:800;">RM ${m.close1st.toFixed(3)}</span>${gradeSpan}${freshSpan}${ipoPriceStr}
+                            </div>
+                        </td>
+                        <td style="text-align: center; white-space: nowrap; padding: 0.75rem;">
+                            <span style="${setupStyle} padding:0.15rem 0.45rem; border-radius:4px; font-size:0.7rem; font-weight:800;">${m.setup}</span>
+                        </td>
+                        <td style="text-align: right; font-weight: bold; color: white; padding: 0.75rem;">RM ${m.price.toFixed(3)}</td>
+                        <td style="text-align: right; font-weight: bold; color: ${changeColor}; padding: 0.75rem;">${changeSign}${m.change.toFixed(2)}%</td>
+                        <td style="text-align: right; font-weight: 700; color: #f97316; padding: 0.75rem;">RM ${m.close1st.toFixed(3)}</td>
+                        <td style="text-align: right; font-weight: 800; color: ${distColor}; padding: 0.75rem;">${distText}</td>
+                        <td style="text-align: right; padding: 0.75rem;">${touchBadge}</td>
+                        <td style="text-align: right; font-weight: 700; color: #f59e0b; padding: 0.75rem;">${m.turnover}</td>
+                        <td style="text-align: center; white-space: nowrap; padding: 0.75rem;">
+                            <span style="${statusStyle} padding:0.2rem 0.6rem; border-radius:4px; font-weight:800; font-size:0.7rem;">${m.status}</span>
+                        </td>
+                        <td style="text-align: center; white-space: nowrap; padding: 0.75rem;">
+                            <button onclick="triggerAIAnalysisModal('${m.name}', 'Phoenix Spring (1st Day Close Reclaim)')" class="btn" style="background: linear-gradient(135deg, #ef4444, #f97316); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s; white-space: nowrap;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">✨ Tanya AI</button>
+                        </td>
+                    </tr>
+                `;
+            });
+
+            tbody.innerHTML = html || `<tr><td colspan="11" style="text-align:center; color:var(--text-muted); padding:1.5rem;">⏳ Tiada kaunter Phoenix Spring hari ini.</td></tr>`;
+        }
+        window.renderPhoenixSpring = renderPhoenixSpring;
+
+        let _weekendSnapshotCache = {};
+
+        async function getWeekendSnapshotList(targetDateStr) {
+            let refDate = new Date();
+            if (targetDateStr) {
+                const parts = targetDateStr.split('-');
+                if (parts.length === 3) {
+                    refDate = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
+                }
+            }
+            const day = refDate.getDay(); // 0: Sun, 1: Mon, ..., 5: Fri, 6: Sat
+            let diffToFriday = 5 - day;
+            if (day < 5) {
+                diffToFriday = -2 - day; // Go back to previous Friday close
+            }
+            const fridayDate = new Date(refDate.setDate(refDate.getDate() + diffToFriday));
+            const yyyy = fridayDate.getFullYear();
+            const mm = String(fridayDate.getMonth() + 1).padStart(2, '0');
+            const dd = String(fridayDate.getDate()).padStart(2, '0');
+            const fridayStr = `${yyyy}-${mm}-${dd}`;
+
+            if (_weekendSnapshotCache[fridayStr]) {
+                return { fridayStr, list: _weekendSnapshotCache[fridayStr] };
+            }
+
+            try {
+                const cacheBuster = new Date().getTime();
+                let res = await fetch(`history/data_${fridayStr}.json?t=${cacheBuster}`);
+                if (!res || !res.ok) {
+                    res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/history/data_${fridayStr}.json?t=${cacheBuster}`);
+                }
+                if (res && res.ok) {
+                    const raw = await res.json();
+                    const list = Array.isArray(raw) ? raw : (raw.topVolume || []);
+                    _weekendSnapshotCache[fridayStr] = list;
+                    return { fridayStr, list };
+                }
+            } catch (e) {
+                console.warn("Local Weekend Friday fetch failed", e);
+            }
+            return { fridayStr, list: null };
+        }
+
+        // Render Weekly Homework (Top 5 High Conviction Swing Picks - LOCKED TO WEEKEND SNAPSHOT)
+        async function renderWeeklyHomework() {
+            const liveList = (currentData && currentData.length > 0) ? currentData : ((window.liveData && window.liveData.topVolume) || []);
+            const scannedEl = document.getElementById('weeklyScannedCount');
+            const pickEl = document.getElementById('weeklyPickCount');
+            const tbody = document.getElementById('weeklyHomeworkTableBody');
+
+            if (!tbody) return;
+
+            const activeDateVal = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || '';
+            const { fridayStr, list: weekendList } = await getWeekendSnapshotList(activeDateVal);
+
+            // Use Weekend (Friday Close) snapshot list to lock the Weekly Top 5 picks
+            const sourceList = (weekendList && weekendList.length > 0) ? weekendList : liveList;
+
+            if (scannedEl) scannedEl.textContent = sourceList.length || 0;
+
+            const badgeEl = document.getElementById('weeklyLockBadge');
+            if (badgeEl) {
+                badgeEl.textContent = `🔒 TERKUNCI: HOMEWORK WEEKEND (${fridayStr})`;
+            }
+
+            // Filter Weekend list for weekly swing candidates using global filters (Price Max & IPO Status)
+            const candidates = sourceList.filter(s => {
+                if (!passesGlobalFilters(s)) return false;
+                if (s.signal === 'sell') return false;
+                const itemPrice = s.price || s.close || s.last || 0;
+                const turnover = s.turnover || (s.volume ? s.volume * itemPrice : 500000);
+                if (turnover < 250000) return false;
+                return true;
+            });
+
+            candidates.forEach(s => {
+                let score = 0;
+                const itemPrice = s.price || s.close || s.last || 0;
+                const floorDist = s.floorLow ? Math.abs((itemPrice - s.floorLow) / s.floorLow * 100) : 999;
+
+                if (floorDist <= 2.5) score += 40;
+                else if (floorDist <= 4.5) score += 30;
+                else if (floorDist <= 6.5) score += 20;
+
+                const touches = s.touchCount || 0;
+                if (touches >= 6) score += 20;
+                else if (touches >= 4) score += 15;
+                else if (touches >= 3) score += 10;
+
+                const tightness = s.closeTightness || 99;
+                if (tightness <= 3.0) score += 20;
+                else if (tightness <= 5.0) score += 15;
+                else if (tightness <= 8.0) score += 10;
+
+                const turnover = s.turnover || (s.volume ? s.volume * itemPrice : 500000);
+                if (turnover >= 2000000) score += 35;
+                else if (turnover >= 1000000) score += 25;
+                else if (turnover >= 500000) score += 15;
+
+                if (s.signal === 'buy') score += 20;
+                if (s.setupStyle === 'STAIRCASE' || s.setupStyle === 'SWING PLAY') score += 15;
+                if (s.setupStyle === 'EXPLOSIVE') score += 10;
+                if (s.isConsolidation || s.setupName?.includes('Reclaim')) score += 15;
+
+                s._weeklyScore = score;
+                s._floorDist = floorDist;
+            });
+
+            candidates.sort((a, b) => b._weeklyScore - a._weeklyScore);
+
+            const top5 = candidates.slice(0, 5);
+            window._weeklyTop5Picks = top5;
+
+            if (pickEl) pickEl.textContent = `${top5.length} / 5`;
+
+            if (top5.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="11" style="text-align: center; color: var(--text-muted); padding: 1.5rem;">Tiada kaunter memenuhi kriteria Weekly Homework.</td></tr>`;
+                return;
+            }
+
+            let html = '';
+            top5.forEach((mItem, idx) => {
+                const liveMatch = liveList.find(x => x.name === mItem.name) || mItem;
+                const mPrice = mItem.price || mItem.close || 0;
+                const curPrice = liveMatch.price || liveMatch.close || mPrice;
+                const perfPct = mPrice > 0 ? ((curPrice - mPrice) / mPrice * 100) : 0;
+
+                const entryPriceStr = mPrice ? mPrice.toFixed(3) : '0.000';
+                const curPriceStr = curPrice ? curPrice.toFixed(3) : '0.000';
+
+                const perfColor = perfPct >= 0 ? '#34d399' : '#ef4444';
+                const perfSign = perfPct >= 0 ? '+' : '';
+                const perfStr = `${perfSign}${perfPct.toFixed(2)}%`;
+
+                const floor = mItem.floorLow ? mItem.floorLow.toFixed(3) : '-';
+                const floorDist = mItem._floorDist !== 999 ? mItem._floorDist.toFixed(1) + '%' : '-';
+                const turnoverFormatted = mItem.turnover ? 'RM ' + (mItem.turnover / 1000).toFixed(0) + 'k' : '-';
+
+                let techniqueBadge = '';
+                let techniqueName = 'Trend Rider';
+                if (mItem.setupStyle === 'STAIRCASE' || mItem.setupName?.includes('RBS')) {
+                    techniqueBadge = '<span style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.72rem;">🚀 Trend Rider</span>';
+                    techniqueName = 'Trend Rider';
+                } else if (mItem.closeTightness <= 5 || mItem.setupName?.includes('Reclaim')) {
+                    techniqueBadge = '<span style="background: rgba(74, 222, 128, 0.15); color: #4ade80; border: 1px solid rgba(74, 222, 128, 0.3); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.72rem;">🌱 Early Spring</span>';
+                    techniqueName = 'Early Spring';
+                } else if (mItem.setupName?.includes('ATH') || mItem.setupStyle === 'EXPLOSIVE') {
+                    techniqueBadge = '<span style="background: rgba(251, 113, 133, 0.15); color: #fb7185; border: 1px solid rgba(251, 113, 133, 0.3); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.72rem;">🔥 Phoenix</span>';
+                    techniqueName = 'Phoenix';
+                } else {
+                    techniqueBadge = '<span style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.72rem;">🧱 Bottom</span>';
+                    techniqueName = 'Bottom Support';
+                }
+
+                let planText = '';
+                if (mItem.floorLow) {
+                    const slPrice = (mItem.floorLow * 0.97).toFixed(3);
+                    planText = `Entry Isnin <strong style="color: #fbbf24;">RM ${entryPriceStr}</strong> | SL <strong style="color: #ef4444;">RM ${slPrice}</strong> (&le; 5%)`;
+                } else {
+                    planText = `Rujuk carta harian untuk entry risiko ketat`;
+                }
+
+                html += `
+                <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3); transition: background 0.2s;" onmouseover="this.style.background='rgba(30, 41, 59, 0.5)'" onmouseout="this.style.background='transparent'">
+                    <td style="padding: 0.65rem 0.8rem; font-size: 0.8rem; text-align: center; color: #fbbf24; font-weight: 800;">${idx + 1}</td>
+                    <td style="padding: 0.65rem 0.8rem; font-size: 0.85rem; font-weight: 800; color: #f8fafc;">
+                        <a href="https://www.tradingview.com/chart/?symbol=MYX:${mItem.name}&interval=D" target="_blank" style="color: #f8fafc; text-decoration: none; display: inline-flex; align-items: center; gap: 0.3rem;" title="Buka Carta TradingView">
+                            ${mItem.name} <span style="font-size: 0.75rem;">📈</span>
+                        </a>
+                        <span style="font-size: 0.7rem; color: #94a3b8; font-weight: 400;">(${mItem.sector || 'Bursa'})</span>
+                    </td>
+                    <td style="padding: 0.65rem 0.8rem; text-align: center;">${techniqueBadge}</td>
+                    <td style="padding: 0.65rem 0.8rem; font-size: 0.85rem; text-align: right; font-weight: 800; color: #fbbf24;">RM ${entryPriceStr}</td>
+                    <td style="padding: 0.65rem 0.8rem; font-size: 0.85rem; text-align: right; font-weight: 800; color: #f8fafc;">RM ${curPriceStr}</td>
+                    <td style="padding: 0.65rem 0.8rem; font-size: 0.82rem; text-align: right; font-weight: 800; color: ${perfColor};">${perfStr}</td>
+                    <td style="padding: 0.65rem 0.8rem; font-size: 0.82rem; text-align: right; font-weight: 700; color: #60a5fa;">RM ${floor}</td>
+                    <td style="padding: 0.65rem 0.8rem; font-size: 0.82rem; text-align: right; font-weight: 800; color: #34d399;">${floorDist}</td>
+                    <td style="padding: 0.65rem 0.8rem; font-size: 0.82rem; text-align: right; font-weight: 700; color: #cbd5e1;">${turnoverFormatted}</td>
+                    <td style="padding: 0.65rem 0.8rem; font-size: 0.78rem; color: #cbd5e1;">${planText}</td>
+                    <td style="padding: 0.65rem 0.8rem; text-align: center; display: flex; gap: 0.4rem; justify-content: center; align-items: center;">
+                        <a href="https://www.tradingview.com/chart/?symbol=MYX:${mItem.name}&interval=D" target="_blank" class="btn" style="background: rgba(56, 189, 248, 0.2); border: 1px solid rgba(56, 189, 248, 0.5); color: #38bdf8; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📈 TV</a>
+                        <button onclick="triggerAIAnalysisModal('${mItem.name}', 'Weekly Homework: ${techniqueName}')" class="btn" style="background: linear-gradient(135deg, #f59e0b, #d97706); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">✨ Plan AI</button>
+                    </td>
+                </tr>`;
+            });
+
+            tbody.innerHTML = html;
+            updateDynamicBacktestTotals();
+        }
+
+        // Toggle Backtest Section Collapse/Expand
+        function toggleBacktestSection() {
+            const wrapper = document.getElementById('backtest-collapsible-wrapper');
+            const btn = document.getElementById('btn-toggle-backtest');
+            if (!wrapper || !btn) return;
+            if (wrapper.style.display === 'none') {
+                wrapper.style.display = 'block';
+                btn.innerHTML = '<span>▲</span> Sembunyikan Rekod';
+            } else {
+                wrapper.style.display = 'none';
+                btn.innerHTML = '<span>▼</span> Buka Rekod Backtest';
+            }
+        }
+        window.toggleBacktestSection = toggleBacktestSection;
+
+        // Filter Backtest Rows By Year
+        function filterBacktestByYear() {
+            const filterEl = document.getElementById('backtest-year-filter');
+            const tbody = document.getElementById('backtest-summary-tbody');
+            if (!filterEl || !tbody) return;
+
+            const selectedYear = filterEl.value;
+            const rows = tbody.querySelectorAll('tr');
+
+            rows.forEach(r => {
+                const year = r.getAttribute('data-year');
+                if (selectedYear === 'ALL' || !year || year === selectedYear) {
+                    r.style.display = '';
+                } else {
+                    r.style.display = 'none';
+                }
+            });
+
+            updateDynamicBacktestTotals();
+        }
+        window.filterBacktestByYear = filterBacktestByYear;
+
+        // Dynamic Calculation of Backtest Footer Totals
+        function updateDynamicBacktestTotals() {
+            const tbody = document.getElementById('backtest-summary-tbody');
+            if (!tbody) return;
+            
+            const rows = tbody.querySelectorAll('tr');
+            let totalWin = 0;
+            let totalLoss = 0;
+            let winCount = 0;
+            let lossCount = 0;
+            let weekCount = 0;
+
+            rows.forEach(r => {
+                if (r.style.display === 'none') return;
+                const cells = r.querySelectorAll('td');
+                if (cells.length < 6) return;
+                
+                const formulaText = cells[3].textContent || '';
+                const winLossText = cells[5].textContent || '';
+
+                if (formulaText.includes('AKTIF')) return;
+
+                weekCount++;
+
+                const match = formulaText.match(/\+([\d\.]+)\%\s*-\s*([\d\.]+)\%/);
+                if (match) {
+                    totalWin += parseFloat(match[1]) || 0;
+                    totalLoss += parseFloat(match[2]) || 0;
+                }
+
+                const wMatch = winLossText.match(/(\d+)\s*Win/i);
+                const lMatch = winLossText.match(/(\d+)\s*Loss/i);
+                if (wMatch) winCount += parseInt(wMatch[1], 10);
+                if (lMatch) lossCount += parseInt(lMatch[1], 10);
+            });
+
+            const totalNet = totalWin - totalLoss;
+            const totalTrades = weekCount * 5;
+            const totalWinsLosses = winCount + lossCount;
+            const winRate = totalWinsLosses > 0 ? Math.round((winCount / totalWinsLosses) * 100) : 0;
+
+            const filterEl = document.getElementById('backtest-year-filter');
+            const selectedYearLabel = (filterEl && filterEl.value !== 'ALL') ? filterEl.value : '';
+            const yearSuffix = selectedYearLabel ? ` (${selectedYearLabel})` : '';
+
+            const labelEl = document.getElementById('tfoot-backtest-label');
+            const tradesEl = document.getElementById('tfoot-backtest-trades');
+            const formulaEl = document.getElementById('tfoot-backtest-net-formula');
+            const winLossEl = document.getElementById('tfoot-backtest-winloss');
+
+            if (labelEl) labelEl.textContent = `🏆 JUMLAH KESELURUHAN (${weekCount} MINGGU${yearSuffix})`;
+            if (tradesEl) tradesEl.textContent = `${totalTrades} Trade Terpilih`;
+            if (formulaEl) {
+                formulaEl.innerHTML = `+${totalWin.toFixed(1)}% - ${totalLoss.toFixed(1)}% = <span style="display: inline-block; background: rgba(16, 185, 129, 0.25); color: #34d399; padding: 0.15rem 0.45rem; border-radius: 6px; border: 1px solid #10b981; margin-left: 0.3rem;">+${totalNet.toFixed(1)}% Net PnL</span>`;
+            }
+            if (winLossEl) {
+                winLossEl.innerHTML = `<span style="color: #34d399;">🟢 ${winCount} Win</span> / <span style="color: #ef4444;">🔴 ${lossCount} Loss (${winRate}% Win Rate)</span>`;
+            }
+        }
+        window.updateDynamicBacktestTotals = updateDynamicBacktestTotals;
+
+        function copyWeeklyWatchlist() {
+            const picks = window._weeklyTop5Picks || [];
+            if (picks.length === 0) {
+                alert('Tiada kaunter untuk disalin.');
+                return;
+            }
+            const tickers = picks.map(p => `MYX:${p.name}`).join(',');
+            navigator.clipboard.writeText(tickers).then(() => {
+                alert('Watchlist Weekly Top 5 berjaya disalin!\n' + tickers + '\n\nBoleh paste terus dalam TradingView.');
+            }).catch(err => {
+                console.error('Failure copying: ', err);
+            });
+        }
+        window.renderWeeklyHomework = renderWeeklyHomework;
     </script>
 
     <!-- Global Footer with Legal Policies & Disclaimers -->

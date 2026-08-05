@@ -651,6 +651,56 @@ async function main() {
                     stock.change = currentPrice - prevClose;
                     stock.volume = lastDay.volume || result.meta.regularMarketVolume || 0;
 
+                    // ==========================================
+                    // IMPROVEMENT 1: VOLUME SPIKE FILTER
+                    // ==========================================
+                    // Kira purata volume 20 hari lepas (tidak termasuk hari ini)
+                    const last20Days = validDays.slice(-21, -1); // 20 hari sebelum hari ini
+                    const avgVolume20 = last20Days.length > 0
+                        ? last20Days.reduce((sum, d) => sum + (d.volume || 0), 0) / last20Days.length
+                        : 0;
+                    // Volume spike ratio: berapa kali ganda volume hari ini berbanding purata
+                    const volumeSpike = (avgVolume20 > 0 && stock.volume > 0)
+                        ? parseFloat((stock.volume / avgVolume20).toFixed(2))
+                        : 0;
+                    // hasVolumeSpike = true jika volume hari ini >= 1.5x purata (jejak masuk Smart Money)
+                    const hasVolumeSpike = volumeSpike >= 1.5;
+                    stock.avgVolume20 = Math.round(avgVolume20);
+                    stock.volumeSpike = volumeSpike;
+                    stock.hasVolumeSpike = hasVolumeSpike;
+
+                    // ==========================================
+                    // MULTI-PERIOD VCP CONTRACTION ANALYSIS
+                    // Teknik Mamat: Detect aktif pengecilan julat harga
+                    // (5 hari terkini MESTI lebih ketat dari 20 hari lepas)
+                    // ==========================================
+                    const vcpPeriod20 = validDays.slice(-20);
+                    const vcpPeriod5  = validDays.slice(-5);
+                    const vcpCloses20 = vcpPeriod20.map(d => d.close);
+                    const vcpCloses5  = vcpPeriod5.map(d => d.close);
+
+                    const vcpTightness20 = vcpCloses20.length >= 10
+                        ? ((Math.max(...vcpCloses20) - Math.min(...vcpCloses20)) / Math.min(...vcpCloses20)) * 100
+                        : null;
+                    const vcpTightness5 = vcpCloses5.length >= 3
+                        ? ((Math.max(...vcpCloses5) - Math.min(...vcpCloses5)) / Math.min(...vcpCloses5)) * 100
+                        : null;
+
+                    // isContracting = true jika 5d range sekurang-kurangnya 30% lebih ketat dari 20d range
+                    // (hallmark utama VCP: volatiliti menguncup secara progresif)
+                    const isContracting = (vcpTightness20 !== null && vcpTightness5 !== null)
+                        ? (vcpTightness5 < vcpTightness20 * 0.70)
+                        : false;
+
+                    // Volume declining during consolidation (quiet accumulation, bukan breakout)
+                    const avg5Vol = vcpPeriod5.reduce((s, d) => s + (d.volume || 0), 0) / Math.max(vcpPeriod5.length, 1);
+                    const volumeDecline = avgVolume20 > 0 ? (avg5Vol < avgVolume20 * 0.85) : false;
+
+                    stock.vcpTightness20 = vcpTightness20 !== null ? parseFloat(vcpTightness20.toFixed(2)) : null;
+                    stock.vcpTightness5  = vcpTightness5  !== null ? parseFloat(vcpTightness5.toFixed(2))  : null;
+                    stock.isContracting  = isContracting;
+                    stock.volumeDecline  = volumeDecline;
+
                     // Resolve openPrice and check wentUnderwater status
                     const cleanStockName = stock.name.toUpperCase().trim();
                     let ipoInfo = resolveIpoInfo(cleanStockName);
@@ -784,6 +834,62 @@ async function main() {
                         : (closesDaily.reduce((a, b) => a + b, 0) / closesDaily.length);
                     stock.sma200 = sma200;
 
+                    // ==========================================
+                    // TEKNIK MAMAT: EMA25 + EMA50 (Pullback Entry)
+                    // ==========================================
+                    // Formula EMA: EMA_today = price * k + EMA_prev * (1-k), k = 2/(period+1)
+                    function calcEMA(closes, period) {
+                        if (closes.length === 0) return null;
+                        const k = 2 / (period + 1);
+                        let ema = closes[0]; // seed dengan harga pertama
+                        for (let i = 1; i < closes.length; i++) {
+                            ema = closes[i] * k + ema * (1 - k);
+                        }
+                        return parseFloat(ema.toFixed(4));
+                    }
+
+                    const ema25 = closesDaily.length >= 10 ? calcEMA(closesDaily, 25) : null;
+                    const ema50 = closesDaily.length >= 10 ? calcEMA(closesDaily, 50) : null;
+                    stock.ema25 = ema25;
+                    stock.ema50 = ema50;
+
+                    // EMA25 di atas EMA50 = trend jangka pendek sihat (Pullback Entry valid)
+                    stock.ema25AboveEma50 = (ema25 !== null && ema50 !== null) ? ema25 > ema50 : false;
+
+                    // Harga dekat/sentuh EMA25 = zona pullback entry padu
+                    // Definisi: harga dalam julat -3% hingga +5% dari EMA25
+                    stock.nearEma25 = (ema25 !== null && currentPrice > 0)
+                        ? (currentPrice >= ema25 * 0.97 && currentPrice <= ema25 * 1.05)
+                        : false;
+
+                    // ==========================================
+                    // TEKNIK MAMAT: MA50/200 GOLDEN CROSS (Trend & VCP)
+                    // ==========================================
+                    // Golden Cross = MA50 baru lepas cross atas MA200 (dalam 50 hari terakhir)
+                    // Cara detect: SMA50 > SMA200 sekarang, tapi pada suatu titik dalam 50 hari lepas ia masih bawah
+                    let isGoldenCross = false;
+                    let goldenCrossAge = null; // berapa hari lepas cross berlaku
+                    if (closesDaily.length >= 55 && sma50 > sma200) {
+                        // Semak 50 titik sejarah untuk cari bila cross berlaku
+                        const lookbackGC = Math.min(50, closesDaily.length - 50);
+                        for (let gi = 1; gi <= lookbackGC; gi++) {
+                            const pastCloses = closesDaily.slice(0, closesDaily.length - gi);
+                            const pastSma50 = pastCloses.length >= 50
+                                ? pastCloses.slice(-50).reduce((a, b) => a + b, 0) / 50
+                                : null;
+                            const pastSma200 = pastCloses.length >= 200
+                                ? pastCloses.slice(-200).reduce((a, b) => a + b, 0) / 200
+                                : null;
+                            if (pastSma50 !== null && pastSma200 !== null && pastSma50 <= pastSma200) {
+                                isGoldenCross = true;
+                                goldenCrossAge = gi; // cross berlaku gi hari yang lepas
+                                break;
+                            }
+                        }
+                    }
+                    stock.isGoldenCross = isGoldenCross;
+                    stock.goldenCrossAge = goldenCrossAge; // null = tiada cross / cross lama
+
                     stock.closeTightness = parseFloat(closeTightness.toFixed(2));
                     stock.lowTightness = parseFloat(lowTightness.toFixed(2));
                     stock.touchCount = touchCount;
@@ -794,6 +900,23 @@ async function main() {
                     const minTouchCountRequired = (validDays.length < 25 || minLow === floor5) ? 2 : 3;
                     let isConsolidation = (pullback <= 15.0 && closeTightness <= 5.5 && touchCount >= minTouchCountRequired);
                     stock.isConsolidation = isConsolidation;
+
+                    // Teknik Mamat: VCP Contraction Stage (C1, C2, C3)
+                    // Berdasarkan DARJAH penguncupan progresif (bukan sekadar jarak ke lantai)
+                    const distToMinLow = ((currentPrice - minLow) / minLow) * 100;
+                    let vcpStage = null;
+                    if (pullback >= 3.0 && pullback <= 22.0 && isContracting) {
+                        const t5 = stock.vcpTightness5;
+                        const t20 = stock.vcpTightness20;
+                        if (t5 !== null && t5 <= 3.5 && distToMinLow <= 3.5 && touchCount >= 3) {
+                            vcpStage = 'C3'; // Micro-contraction terakhir: ideal pre-breakout entry!
+                        } else if (t5 !== null && t5 <= 6.0 && distToMinLow <= 5.0 && touchCount >= 2) {
+                            vcpStage = 'C2'; // Pengecilan kedua: tapak semakin matang
+                        } else if (pullback >= 4.0) {
+                            vcpStage = 'C1'; // Binaan tapak pertama
+                        }
+                    }
+                    stock.vcpStage = vcpStage;
                 }
             }
         } catch (e) {
@@ -899,11 +1022,48 @@ async function main() {
         
         let setupStyle = 'SWING PLAY';
         if (pullback !== null) {
+            const floorP = stock.floorLow || (stock.price * 0.95);
+            const distToFloorP = stock.price > 0 ? (((stock.price - floorP) / floorP) * 100) : 0;
             if (changePct >= 5.0 || (changePct >= 3.5 && pullback > 5.0)) {
                 setupStyle = 'EXPLOSIVE';
-            } else if (pullback <= 10.0 && (stock.isConsolidation || stock.lowTightness <= 8.0 || stock.touchCount >= 2)) {
+            } else if (
+                pullback >= 4.0 &&           // Mesti dah tarik balik dari high (bukan AT ATH / post-breakout)
+                pullback <= 22.0 &&           // Bukan deep pullback yang terlalu jauh
+                stock.isContracting &&        // WAJIB: volatiliti sedang menguncup secara progresif (ciri VCP)
+                distToFloorP <= 5.0 &&        // Rapat di atas lantai sokongan
+                changePct < 3.0 &&            // Tiada breakout hari ini
+                !stock.hasVolumeSpike &&      // Volume senyap (bukan breakout volume)
+                stock.touchCount >= 3 &&      // Lantai sokongan kukuh (3+ sentuhan)
+                stock.price > (stock.sma50 || 0) // Uptrend context: harga di atas SMA50
+            ) {
                 setupStyle = 'STAIRCASE';
             }
+        }
+
+        // ==========================================
+        // IMPROVEMENT 2: STAIRCASE + IPO AGE COMBO
+        // ==========================================
+        // Kira umur IPO dalam hari dari tarikh listing
+        let ipoAge = null;
+        if (stock.ipoYear) {
+            // Gunakan listingDate jika ada, fallback ke 1 Jan tahun IPO
+            let listingTs = null;
+            if (stock.listingDate) {
+                const parsedDate = new Date(stock.listingDate);
+                if (!isNaN(parsedDate.getTime())) listingTs = parsedDate;
+            }
+            if (!listingTs) {
+                listingTs = new Date(`${stock.ipoYear}-01-01`);
+            }
+            const today = new Date();
+            ipoAge = Math.floor((today - listingTs) / (1000 * 60 * 60 * 24)); // dalam hari
+        }
+        // Fresh IPO: listed dalam <= 3 tahun (1095 hari) dan bukan downtrend
+        const isIpoFreshForCombo = ipoAge !== null && ipoAge <= 1095 && setupName !== '🧊 Downtrend / Avoid';
+        const isStaircaseIpo = setupStyle === 'STAIRCASE' && isIpoFreshForCombo;
+        // Upgrade setupStyle jika STAIRCASE + Fresh IPO combo
+        if (isStaircaseIpo) {
+            setupStyle = 'STAIRCASE + IPO';
         }
         
         // Determine signal based on formulas
@@ -966,7 +1126,108 @@ async function main() {
                 reason += ' (Pullback Support)';
             }
         }
-        
+
+        // ==========================================
+        // IMPROVEMENT 3: CONFIDENCE SCORE v2 (0-100)
+        // Data-driven berdasarkan backtest 134 trades sebenar
+        // ==========================================
+        let confScore = 0;
+
+        // ── A) SETUP STYLE ──────────────────────────────────────────
+        // Backtest: STAIRCASE avg +6.4% (42% win), SWING +5.7% (41%), EXPLOSIVE +4.3% (36%)
+        // STAIRCASE+IPO adalah setup terbaik dari segi potensi breakout
+        if (setupStyle === 'STAIRCASE + IPO') confScore += 32;
+        else if (setupStyle === 'STAIRCASE')   confScore += 25;
+        else if (setupStyle === 'SWING PLAY')  confScore += 12;
+        else if (setupStyle === 'EXPLOSIVE')   confScore += 8; // Sering terlambat masuk
+
+        // ── B) VOLUME SPIKE — PREDICTOR #1 ─────────────────────────
+        // MMCS +34.6%, HKB +36.4%, ECA +29.4% semua ada volume spike sebelum naik
+        // Ini adalah jejak PALING PENTING yang Jerung/Smart Money tinggalkan
+        if (stock.hasVolumeSpike && stock.volumeSpike >= 3.0) confScore += 25; // 3x+ = Jerung masuk besar
+        else if (stock.hasVolumeSpike && stock.volumeSpike >= 2.0) confScore += 20; // 2x = Significant
+        else if (stock.hasVolumeSpike) confScore += 14; // 1.5x-2x = Early accumulation
+
+        // ── C) FLOOR SOLIDITY (touchCount) ─────────────────────────
+        // Dikurangkan dari formula lama — touchCount tinggi TIDAK CUKUP jika tiada momentum
+        // SDCG (score lama 19, touchCount tinggi) = miss berturut-turut
+        if (stock.touchCount >= 8) confScore += 12; // Solid floor tapi jangan terlalu yakin
+        else if (stock.touchCount >= 4) confScore += 8;
+        else if (stock.touchCount >= 2) confScore += 4;
+
+        // ── D) TREND ALIGNMENT (SMA) ────────────────────────────────
+        // SMA adalah penapis downtrend — MESTI di atas kedua-dua untuk pengesahan trend
+        const aboveSma50  = stock.sma50  && stock.price > stock.sma50;
+        const aboveSma200 = stock.sma200 && stock.price > stock.sma200;
+        if (aboveSma50 && aboveSma200) confScore += 12; // Trend uptrend sepenuhnya
+        else if (aboveSma50)           confScore += 5;  // Uptrend jangka pendek sahaja
+        // Jika di bawah SMA50 → PENALTI (saham dalam tekanan jual)
+        if (stock.sma50 && stock.hasEnoughSmaData && stock.price < stock.sma50) confScore -= 10;
+
+        // ── D2) TEKNIK MAMAT: EMA25/50 PULLBACK ENTRY ──────────────
+        // EMA25 > EMA50 = trend jangka pendek sihat
+        // Harga dekat EMA25 = zona pullback entry yang tepat (risiko rendah)
+        if (stock.ema25AboveEma50 && stock.nearEma25) {
+            confScore += 15; // COMBO: Pullback ke EMA25 dalam uptrend = setup paling ideal
+        } else if (stock.ema25AboveEma50) {
+            confScore += 7;  // Trend EMA baik tapi belum pullback ke EMA25
+        } else if (stock.nearEma25) {
+            confScore += 3;  // Dekat EMA25 tapi trend EMA lemah
+        }
+
+        // ── D3) TEKNIK MAMAT: MA50/200 GOLDEN CROSS (VCP Trend) ────
+        // Golden Cross = MA50 baru cross atas MA200 = permulaan trend baru yang paling kuat
+        // Makin muda cross, makin banyak "runway" untuk VCP setup
+        if (stock.isGoldenCross && stock.goldenCrossAge !== null) {
+            if (stock.goldenCrossAge <= 10) confScore += 20;      // Cross baru (< 2 minggu) = SANGAT FRESH
+            else if (stock.goldenCrossAge <= 30) confScore += 15; // Cross kurang sebulan = Fresh
+            else if (stock.goldenCrossAge <= 50) confScore += 10; // Cross dalam 2 bulan = Masih valid
+        } else if (aboveSma50 && aboveSma200 && !stock.isGoldenCross) {
+            confScore += 3; // Dah lama di atas kedua-dua MA = stabil tapi bukan fresh cross
+        }
+
+        // ── E) IPO FRESHNESS ────────────────────────────────────────
+        // Fresh IPO tiada overhead resistance = lebih mudah breakout ke ATH baru
+        if (stock.ipoYear >= 2025) confScore += 10; // Ultra fresh < 2 tahun
+        else if (stock.ipoYear >= 2023) confScore += 6; // Fresh < 4 tahun
+
+        // ── F) ENTRY TIGHTNESS (jarak dari floor) ──────────────────
+        // Semakin dekat floor = risk lebih kecil, Stop Loss lebih ketat
+        if (distToFloor <= 2.0)      confScore += 12; // Ultra tight: SL < 3%
+        else if (distToFloor <= 4.0) confScore += 8;  // Tight: SL < 5%
+        else if (distToFloor > 10.0) confScore -= 8;  // PENALTI: terlalu jauh dari floor
+
+        // ── G) SIGNAL & MOMENTUM ───────────────────────────────────
+        if (signal === 'buy') confScore += 5;
+        if (stock.isConsolidation)       confScore += 5; // Sedang membina tapak
+        if (stock.hasLowerWickRejection) confScore += 5; // Penolakan harga pada sokongan
+        // Momentum positif hari ini = lebih kuat
+        if (changePct > 0 && changePct <= 5.0) confScore += 4;  // Naik sihat
+        if (changePct > 5.0) confScore -= 3; // Terlambat masuk jika sudah meletup
+
+        // ── H) NEAR ATH ─────────────────────────────────────────────
+        if (pullback !== null && pullback <= 5.0)  confScore += 8; // RBS / Near ATH runner
+        else if (pullback !== null && pullback <= 10.0) confScore += 4;
+
+        // ── I) TURNOVER SWEET SPOT ──────────────────────────────────
+        // Data backtest: Turnover <3M avg +6.6% vs Turnover >3M avg +5.0%
+        // Sweet spot: cukup liquid tapi belum terlalu ramai yang tahu
+        if (turnover >= 500000 && turnover < 3000000) confScore += 6;
+        else if (turnover >= 3000000) confScore += 2; // Dah viral = sering terlambat
+
+        // ── J) PENALTI AVOID SIGNAL ────────────────────────────────
+        if (signal === 'avoid') confScore -= 20;
+
+        // Cap pada 0-100
+        const confidenceScore = Math.min(100, Math.max(0, confScore));
+
+        // Tier Label
+        let confidenceTier = '❌ AVOID';
+        if (confidenceScore >= 90) confidenceTier = '🔥🔥 ULTRA STRONG';
+        else if (confidenceScore >= 75) confidenceTier = '🔥 STRONG';
+        else if (confidenceScore >= 60) confidenceTier = '✅ MODERATE';
+        else if (confidenceScore >= 40) confidenceTier = '⚠️ WEAK';
+
         const dataObj = {
             name: stock.name,
             sector: stock.sector || 'Bursa',
@@ -986,6 +1247,11 @@ async function main() {
             lowTightness: stock.lowTightness || null,
             touchCount: stock.touchCount || 0,
             isConsolidation: stock.isConsolidation || false,
+            vcpStage: stock.vcpStage || null,
+            vcpTightness20: stock.vcpTightness20 || null,
+            vcpTightness5: stock.vcpTightness5 || null,
+            isContracting: stock.isContracting || false,
+            volumeDecline: stock.volumeDecline || false,
             floorLow: stock.floorLow || null,
             hasLowerWickRejection: stock.hasLowerWickRejection || false,
             hasUpperWickRejection: stock.hasUpperWickRejection || false,
@@ -994,7 +1260,24 @@ async function main() {
             sma200: stock.sma200 || null,
             openPrice: stock.openPrice || null,
             wentUnderwater: stock.wentUnderwater || false,
-            firstDayOpenPrice: stock.firstDayOpenPrice || null
+            firstDayOpenPrice: stock.firstDayOpenPrice || null,
+            // Improvement 1: Volume Spike
+            avgVolume20: stock.avgVolume20 || 0,
+            volumeSpike: stock.volumeSpike || 0,
+            hasVolumeSpike: stock.hasVolumeSpike || false,
+            // Improvement 2: STAIRCASE + IPO Age
+            ipoAge: ipoAge,
+            isStaircaseIpo: isStaircaseIpo || false,
+            // Improvement 3: Confidence Score
+            confidenceScore,
+            confidenceTier,
+            // Teknik Mamat: EMA25/50 Pullback Entry + MA50/200 Golden Cross VCP
+            ema25: stock.ema25 || null,
+            ema50: stock.ema50 || null,
+            ema25AboveEma50: stock.ema25AboveEma50 || false,
+            nearEma25: stock.nearEma25 || false,
+            isGoldenCross: stock.isGoldenCross || false,
+            goldenCrossAge: stock.goldenCrossAge || null
         };
         
         // Top Volume Scan: Simpan semua saham yang mempunyai turnover >= RM 3,000,000 ATAU ianya saham VIP
@@ -1017,8 +1300,11 @@ async function main() {
         }
     }
     
-    // Susun processedData mengikut turnover tertinggi
-    processedData.sort((a, b) => b.turnover - a.turnover);
+    // Susun processedData mengikut Confidence Score tertinggi, kemudian Turnover sebagai tiebreaker
+    processedData.sort((a, b) => {
+        if (b.confidenceScore !== a.confidenceScore) return b.confidenceScore - a.confidenceScore;
+        return b.turnover - a.turnover;
+    });
     
     // Susun topGainers mengikut peratus kenaikan tertinggi
     topGainers.sort((a, b) => b.changePct - a.changePct);
