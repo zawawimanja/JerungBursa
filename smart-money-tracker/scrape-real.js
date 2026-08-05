@@ -46,7 +46,7 @@ async function getIpoList() {
 const freshIpos = [
     'SKYECHIP', 'PENTECH', 'SUM', 'ELSA', 'AMBEST', 'AMS',
     'EIPOWER', 'ISF', 'KEEMING', 'TEAMSTR', 'MMCS', 'GDGROUP',
-    'GOLDLI', 'HOCKSOON', 'OGX', 'SBS', 'SRKK', 'EMPIRE'
+    'GOLDLI', 'HOCKSOON', 'OGX', 'SBS', 'SRKK', 'EMPIRE', 'STRATUS'
 ];
 
 // Fungsi pembantu untuk tapisan dan parsing setiap baris jadual di i3investor
@@ -679,10 +679,22 @@ async function main() {
                     const closeTightness = ((maxClose - minClose) / minClose) * 100;
                     
                     // --- DAILY FLOOR & TOUCHCOUNT LOGIC (TradingView 1D CS Match) ---
-                    // We calculate three potential floors: 10-day (standard), 5-day (recent), and 3-day (strong breakout/ATH runner).
+                    // We calculate three potential floors: 40-day (full accumulation), 20-day (recent), and 10-day (short-term)
+                    // Extended to 40 days to capture 2-month accumulation bases like SKYECHIP at RM2.91
                     const pullbackValForFloor = high52 ? (((high52 - currentPrice) / high52) * 100) : 0;
                     
-                    const lookback10 = Math.min(10, validDays.length);
+                    const lookback40 = Math.min(40, validDays.length);
+                    const dailyLookback40 = validDays.slice(-lookback40);
+                    const lows40 = dailyLookback40.map(d => d.low);
+                    const floor40 = Math.min(...lows40);
+                    const dist40 = ((currentPrice - floor40) / floor40) * 100;
+                    
+                    let touch40 = 0;
+                    dailyLookback40.forEach(d => {
+                        if (((d.low - floor40) / floor40) * 100 <= 2.0) touch40++;
+                    });
+
+                    const lookback10 = Math.min(20, validDays.length);
                     const dailyLookback10 = validDays.slice(-lookback10);
                     const lows10 = dailyLookback10.map(d => d.low);
                     const floor10 = Math.min(...lows10);
@@ -693,14 +705,14 @@ async function main() {
                         if (((d.low - floor10) / floor10) * 100 <= 2.0) touch10++;
                     });
                     
-                    const lookback5 = Math.min(5, validDays.length);
+                    const lookback5 = Math.min(10, validDays.length);
                     const dailyLookback5 = validDays.slice(-lookback5);
                     const lows5 = dailyLookback5.map(d => d.low);
                     const floor5 = Math.min(...lows5);
                     const dist5 = ((currentPrice - floor5) / floor5) * 100;
                     
                     let touch5 = 0;
-                    dailyLookback10.forEach(d => {
+                    dailyLookback40.forEach(d => {
                         if (Math.abs(((d.low - floor5) / floor5) * 100) <= 2.0) touch5++;
                     });
 
@@ -709,34 +721,33 @@ async function main() {
                     const lows3 = dailyLookback3.map(d => d.low);
                     const floor3 = Math.min(...lows3);
 
-                    // Determine which floor to use:
-                    let minLow = floor10;
-                    let touchCount = touch10;
+                    // Determine which floor to use: prefer the highest (most recent) stable floor cluster
+                    let minLow = floor40;
+                    let touchCount = touch40;
                     
-                    if (validDays.length < 25) {
-                        minLow = floor5;
-                        touchCount = touch5;
-                    } else if (pullbackValForFloor <= 5.0 && floor3 >= floor10 * 1.03) {
-                        // For strong ATH/breakout runners, we use the recent 3-day support floor
-                        minLow = floor3;
-                        let touch3 = 0;
-                        dailyLookback10.forEach(d => {
-                            if (Math.abs(((d.low - floor3) / floor3) * 100) <= 2.0) touch3++;
+                    // If recent 10-day floor is significantly higher (newer higher base), use it
+                    if (floor10 >= floor40 * 1.02) {
+                        minLow = floor10;
+                        let t10 = 0;
+                        dailyLookback40.forEach(d => {
+                            if (Math.abs(((d.low - floor10) / floor10) * 100) <= 2.5) t10++;
                         });
-                        touchCount = touch3;
-                    } else if (floor5 >= floor10 * 1.03) {
+                        touchCount = Math.max(t10, touch10);
+                    }
+                    // If even more recent floor5 is higher still, use it
+                    if (floor5 >= minLow * 1.02) {
                         minLow = floor5;
-                        touchCount = touch5;
-                    } else if (dist10 > 3.0) {
-                        if (dist5 <= 4.0 && (touch5 >= 2 || closeTightness <= 5.5)) {
-                            minLow = floor5;
-                            touchCount = Math.max(touch5, 2);
-                        }
+                        let t5 = 0;
+                        dailyLookback40.forEach(d => {
+                            if (Math.abs(((d.low - floor5) / floor5) * 100) <= 2.5) t5++;
+                        });
+                        touchCount = Math.max(t5, touch5);
                     }
                     
                     const floorDist = ((currentPrice - minLow) / minLow) * 100;
-                    const maxLow = Math.max(...(validDays.length < 25 ? lows5 : (minLow === floor5 ? lows5 : lows10)));
+                    const maxLow = Math.max(...lows10);
                     const lowTightness = ((maxLow - minLow) / minLow) * 100;
+
 
                     // Hitung Candlestick Rejection dengan syarat ketat (Pinbar / Hammer / Shooting Star)
                     const dailyBody = Math.abs(lastDay.close - lastDay.open);
@@ -906,11 +917,11 @@ async function main() {
         } else if (setupName === '🧊 Downtrend / Avoid') {
             signal = 'avoid';
             reason = '🧊 Downtrend Stock: Avoid Trading!';
-        } else if (stock.floorLow && distToFloor > 15.0) {
+        } else if (stock.floorLow && distToFloor > 25.0) {
             signal = 'avoid';
             reason = `⚠️ Overextended: Jauh dari Lantai Sokongan (+${distToFloor.toFixed(1)}% dari floor)`;
-        } else if (stock.isConsolidation) {
-            if (turnover < 250000) {
+        } else if (stock.isConsolidation || (stock.touchCount >= 2 && distToFloor <= 10.0)) {
+            if (turnover < 150000) {
                 signal = 'avoid';
                 reason = '⚠️ Low Liquidity / Comb Stock: Consolidation Base (Avoid Trading!)';
             } else {
@@ -923,7 +934,7 @@ async function main() {
                     reason = '🔥 Golden Entry: Solid Consolidation Base (Suitable for Swing/Hold)';
                 }
             }
-        } else if (stock.change > 0 && turnover >= 250000) {
+        } else if ((stock.change >= 0 || stock.touchCount >= 2 || stock.isVip) && turnover >= 150000) {
             signal = 'buy';
             if (stock.price < 0.20) {
                 reason = '⚠️ Pump & Dump Penny: High Volume Pump (Intraday Only, Avoid Hold!)';
@@ -940,7 +951,7 @@ async function main() {
                     reason = '⚡ Strong Momentum: Smart Money Buying (Suitable for Intraday/Swing)';
                 }
             }
-        } else if (stock.isVip && stock.change <= 0) {
+        } else if (stock.isVip) {
             signal = 'buy';
             reason = 'VIP Sideway / Pullback (Monitor for Opportunities)';
         }
