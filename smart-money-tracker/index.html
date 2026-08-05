@@ -4148,7 +4148,11 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             }
 
             picks.sort((a, b) => {
-                // Paling rapat dengan ATH & paling padat dahulu
+                // Utama: paling rapat dengan LANTAI (risk ke SL paling kecil) — setup entry paling selamat
+                const da = a.floorLow ? ((a.price - a.floorLow) / a.floorLow) : 99;
+                const db = b.floorLow ? ((b.price - b.floorLow) / b.floorLow) : 99;
+                if (da !== db) return da - db;
+                // Tie-break: pullback paling kecil (paling dekat ATH), kemudian paling padat
                 const pa = a.pullback !== null && a.pullback !== undefined ? a.pullback : 99;
                 const pbb = b.pullback !== null && b.pullback !== undefined ? b.pullback : 99;
                 if (pa !== pbb) return pa - pbb;
