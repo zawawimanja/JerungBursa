@@ -681,7 +681,7 @@
 
     <!-- Tab Navigation -->
     <div class="tabs-nav" style="margin-bottom: 1rem; margin-top: 0.5rem; display: flex; gap: 0.4rem; flex-wrap: wrap;">
-        <button class="tab-btn active" id="tab-confluence" onclick="switchTab('confluence')" style="background: linear-gradient(135deg, rgba(234, 179, 8, 0.25), rgba(249, 115, 22, 0.25)); border: 1px solid #eab308; color: #fde047; font-weight: 800;">🎯 Confluence VVIP</button>
+        <button class="tab-btn active" id="tab-confluence" onclick="switchTab('confluence')">🎯 Confluence</button>
         <button class="tab-btn" id="tab-jerung" onclick="switchTab('jerung')">🦈 Jerung Radar</button>
         <button class="tab-btn" id="tab-weekly" onclick="switchTab('weekly')">🗓️ Weekly Top 5</button>
         <button class="tab-btn" id="tab-vcp" onclick="switchTab('vcp')">🪜 VCP Staircase</button>
@@ -2172,29 +2172,32 @@
                 }
                 if (tabVcp) tabVcp.classList.add('active');
             } else if (tabId === 'trend') {
-                if (viewTrend) viewTrend.style.display = 'block';
-                renderTrendRiders();
-                if (tabTrend) tabTrend.classList.add('active');
+                viewTrend.style.display = 'block';
+                tabTrend.classList.add('active');
             } else if (tabId === 'jerung') {
-                if (viewJerung) viewJerung.style.display = 'block';
-                renderJerungRadar();
+                if (viewJerung) {
+                    viewJerung.style.display = 'block';
+                    renderJerungRadar();
+                }
                 if (tabJerung) tabJerung.classList.add('active');
             } else if (tabId === 'confluence') {
-                if (viewConfluence) viewConfluence.style.display = 'block';
-                renderConfluenceRadar();
+                if (viewConfluence) {
+                    viewConfluence.style.display = 'block';
+                    renderConfluenceRadar();
+                }
                 if (tabConfluence) tabConfluence.classList.add('active');
             } else if (tabId === 'spring') {
-                if (viewSpring) viewSpring.style.display = 'block';
-                renderReclaimRadar();
-                if (tabSpring) tabSpring.classList.add('active');
+                viewSpring.style.display = 'block';
+                tabSpring.classList.add('active');
             } else if (tabId === 'phoenix') {
-                if (viewPhoenix) viewPhoenix.style.display = 'block';
-                renderPhoenixSpring();
+                if (viewPhoenix) {
+                    viewPhoenix.style.display = 'block';
+                    renderPhoenixSpring();
+                }
                 if (tabPhoenix) tabPhoenix.classList.add('active');
             } else if (tabId === 'fishing') {
-                if (viewFishing) viewFishing.style.display = 'block';
-                renderBottomFishing();
-                if (tabFishing) tabFishing.classList.add('active');
+                viewFishing.style.display = 'block';
+                tabFishing.classList.add('active');
             } else if (tabId === 'weekly') {
                 if (viewWeekly) {
                     viewWeekly.style.display = 'block';
@@ -2607,30 +2610,8 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             }
         }
 
-        function extractInitialData() {
-            if (typeof window !== 'undefined' && window.liveData) {
-                const raw = window.liveData;
-                if (Array.isArray(raw)) return raw;
-                if (raw && raw.topVolume && Array.isArray(raw.topVolume)) {
-                    const volList = raw.topVolume;
-                    const gainerList = raw.topGainers || [];
-                    const combined = [...volList, ...gainerList];
-                    const unique = [];
-                    const seen = new Set();
-                    combined.forEach(item => {
-                        if (item && item.name && !seen.has(item.name)) {
-                            seen.add(item.name);
-                            unique.push(item);
-                        }
-                    });
-                    return unique;
-                }
-            }
-            return [];
-        }
-
         // Global variables
-        let currentData = extractInitialData();
+        let currentData = [];
         let currentSortColumn = 'turnover';
         let currentSortDesc = true;
 
@@ -2819,7 +2800,6 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             'SFPTECH': 'B',
             'SINKUNG': 'B',
             'SKYECHIP': 'A',
-            'SKYCHIP': 'A',
             'SKYWLD': 'C',
             'SLVEST': 'B',
             'SMART': 'B',
@@ -2885,32 +2865,14 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             'GDGROUP': 'B',
             'MMCS': 'B',
             'ELSA': 'B',
-            'NE': 'B',
-            '99 SPEED MART RETAIL': 'B',
-            '99 SPEED MART': 'B',
-            '99SMART': 'B',
-            'ECOSHOP': 'A',
-            'ECOSYS': 'A',
-            'UUE': 'B',
-            'GOHUB': 'A',
-            'GO_HUB': 'A',
-            'AZAMJAYA': 'A',
-            'CREST': 'B',
-            'STRATUS': 'A',
-            'MEGAFB': 'B',
-            'OXB': 'B',
-            'ICTZONE': 'B'
+            'NE': 'B'
         };
 
         const freshIpos = [
-            'SKYECHIP', 'SKYCHIP', 'PENTECH', 'SUM', 'ELSA', 'AMBEST', 'AMS',
+            'SKYECHIP', 'PENTECH', 'SUM', 'ELSA', 'AMBEST', 'AMS',
             'EIPOWER', 'ISF', 'KEEMING', 'TEAMSTR', 'MMCS', 'GDGROUP',
             'GOLDLI', 'HOCKSOON', 'OGX', 'SBS', 'SRKK', 'EMPIRE',
-            'CBHB', 'CREST', 'HEGROUP', 'SDCG', 'ADNEX', 'EXSIMHB', 'NE',
-            'UUE', 'GOHUB', 'GO_HUB', 'ECOSHOP', 'ECOSYS', 'AZAMJAYA', 'LWSABAH',
-            '99 SPEED MART RETAIL', '99 SPEED MART', '99SMART', 'KLARECO', 'KLAREC',
-            'PANDA', 'MINOX', 'KGW', 'JTGROUP', 'SORENTO', 'ICTZONE', 'OXB',
-            'MEGAFB', 'STRATUS', 'AMIC'
+            'CBHB', 'HEGROUP', 'SDCG', 'ADNEX', 'EXSIMHB', 'NE'
         ];
 
         function isFreshIpo(item) {
@@ -2921,50 +2883,10 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 const yearMatch = item.listingDate.match(/\d{4}/);
                 if (yearMatch) return parseInt(yearMatch[0]) >= 2024;
             }
-            const cleanName = typeof item === 'string' ? item.toUpperCase().trim() : (item.name ? item.name.toUpperCase().trim() : '');
-            return freshIpos.includes(cleanName);
-        }
-
-        function getTradingViewSymbol(rawName) {
-            if (!rawName) return '';
-            const clean = typeof rawName === 'string' ? rawName.toUpperCase().trim() : (rawName.name ? rawName.name.toUpperCase().trim() : '');
-            const map = {
-                'SKYCHIP': 'SKYECHIP',
-                '99 SPEED MART RETAIL': '99SMART',
-                '99 SPEED MART': '99SMART',
-                'ECOSYS': 'ECOSHOP',
-                'GO_HUB': 'GOHUB',
-                'KLAREC': 'KLARECO'
-            };
-            return map[clean] || clean;
-        }
-
-        function getDisplayName(rawName) {
-            if (!rawName) return '';
-            const clean = typeof rawName === 'string' ? rawName.toUpperCase().trim() : (rawName.name ? rawName.name.toUpperCase().trim() : '');
-            const map = {
-                'SKYCHIP': 'SKYECHIP',
-                '99 SPEED MART RETAIL': '99SMART',
-                '99 SPEED MART': '99SMART',
-                'ECOSYS': 'ECOSHOP',
-                'GO_HUB': 'GOHUB',
-                'KLAREC': 'KLARECO'
-            };
-            return map[clean] || clean;
-        }
-
-        function isFreshIpo(item) {
-            if (!item) return false;
-            if (typeof item === 'object') {
-                if (item.ipoAge != null && item.ipoAge <= 730) return true;
-                if (item.ipoYear != null && item.ipoYear >= 2024) return true;
-                if (item.listingDate && item.ipoGrade && item.ipoGrade !== 'Unrated') {
-                    const yearMatch = item.listingDate.match(/\d{4}/);
-                    if (yearMatch) return parseInt(yearMatch[0]) >= 2024;
-                }
-            }
-            const cleanName = typeof item === 'string' ? item.toUpperCase().trim() : (item && item.name ? item.name.toUpperCase().trim() : '');
-            if (!cleanName) return false;
+            if (!item.ipoGrade || item.ipoGrade === 'Unrated') return false;
+            const setup = (item.setupName || '').toUpperCase();
+            if (setup.includes('DOWNTREND') || setup.includes('AVOID') || setup === 'N/A') return false;
+            const cleanName = item.name.toUpperCase().trim();
             return freshIpos.includes(cleanName) || Object.keys(ipoMap).some(key => {
                 if (!freshIpos.includes(key)) return false;
                 const normKey = key.replace(/[^A-Z0-9]/g, '');
@@ -3074,15 +2996,45 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
         // Fetch Live Data
         async function fetchLiveData() {
             const cacheBuster = new Date().getTime();
-            let raw = (typeof window !== 'undefined' && window.liveData) ? window.liveData : null;
+            let raw = null;
+            let loadedLocal = false;
 
-            try {
-                const res = await fetch(`live_data.json?t=${cacheBuster}`);
-                if (res.ok) {
-                    raw = await res.json();
+            // Try to load local file if not on file:// protocol
+            if (window.location.protocol !== 'file:') {
+                try {
+                    const res = await fetch(`live_data.json?t=${cacheBuster}`);
+                    if (res.ok) {
+                        raw = await res.json();
+                        loadedLocal = true;
+                    }
+                } catch (e) {
+                    console.log("Failed to fetch local data, will try fallback.", e);
                 }
-            } catch (e) {
-                console.log("Using pre-loaded window.liveData fallback.", e);
+            } else {
+                // For file:// protocol, we can bypass CORS by reading window.liveData pre-loaded from live_data.js script tag!
+                if (window.liveData) {
+                    raw = window.liveData;
+                    loadedLocal = true;
+                    console.log("Loaded local data from live_data.js script successfully.");
+                } else {
+                    console.warn("Running under file:// protocol and live_data.js not loaded. Falling back to GitHub raw storage.");
+                    const notice = document.getElementById('dashboardSubtitle');
+                    if (notice) {
+                        notice.innerHTML = `<span class="pulse" style="background: #f59e0b;"></span> Running via file:// (CORS Restricted) • Loading from GitHub Online...`;
+                    }
+                }
+            }
+
+            // Fallback to GitHub if local load failed
+            if (!loadedLocal) {
+                try {
+                    const res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/live_data.json?t=${cacheBuster}`);
+                    if (res.ok) {
+                        raw = await res.json();
+                    }
+                } catch (e) {
+                    console.error("Failed to fetch online fallback data.", e);
+                }
             }
 
             if (raw) {
@@ -3090,6 +3042,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 if (Array.isArray(raw)) {
                     data = raw;
                 } else if (raw && raw.topVolume && Array.isArray(raw.topVolume)) {
+                    // Combine topVolume and topGainers, removing duplicates
                     const volList = raw.topVolume;
                     const gainerList = raw.topGainers || [];
                     const combined = [...volList, ...gainerList];
@@ -3105,15 +3058,13 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     if (raw.lastUpdated) {
                         const d = new Date(raw.lastUpdated);
                         const timeStr = d.toLocaleString('en-US', { timeZone: 'Asia/Kuala_Lumpur', hour12: false });
-                        const notice = document.getElementById('dashboardSubtitle');
-                        if (notice) {
-                            notice.innerHTML = `<span class="pulse"></span> Live Market Scanner • Source: ${raw.source || 'i3investor'} • Last Updated: ${timeStr}`;
-                        }
+                        document.getElementById('dashboardSubtitle').innerHTML = `<span class="pulse"></span> Live Market Scanner • Source: ${raw.source || 'i3investor'} • Last Updated: ${timeStr}`;
                     }
                 }
                 
                 if (data && data.length > 0) {
                     currentData = data;
+                    console.log(`Loaded ${data.length} counters successfully.`);
                 }
             }
             applyFilters();
@@ -3356,10 +3307,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             
             Object.keys(targets).forEach(ticker => {
                 const elId = targets[ticker];
-                const found = list.find(s => {
-                    const name = s.name.toUpperCase().trim();
-                    return name === ticker || (ticker === 'SKYECHIP' && name === 'SKYCHIP') || (ticker === 'SKYCHIP' && name === 'SKYECHIP');
-                });
+                const found = list.find(s => s.name.toUpperCase().trim() === ticker);
                 const el = document.getElementById(elId);
                 if (el && found) {
                     const price = found.price;
@@ -4023,15 +3971,15 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     ? `<span style="font-size: 0.62rem; background: rgba(139, 92, 246, 0.15); color: #a78bfa; padding: 0.08rem 0.3rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(139, 92, 246, 0.3); white-space: nowrap;">🏗️ DEEP BASE</span>`
                     : `<span style="font-size: 0.62rem; background: rgba(59, 130, 246, 0.15); color: #60a5fa; padding: 0.08rem 0.3rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(59, 130, 246, 0.3); white-space: nowrap;">📉 HEALTHY DIP</span>`;
 
-                const displayName = getDisplayName(item.name);
-                const tvSymbol = getTradingViewSymbol(item.name);
+                const tierColor = item.confidenceScore >= 90 ? '#a855f7' : (item.confidenceScore >= 75 ? '#38bdf8' : (item.confidenceScore >= 60 ? '#10b981' : '#f59e0b'));
+                const confidenceText = item.confidenceScore !== undefined ? `${item.confidenceScore}/100` : 'N/A';
 
                 html += `
                     <tr>
                         <td style="text-align: center; font-weight: 800; color: #0ea5e9;">#${idx + 1}</td>
                         <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
-                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${tvSymbol}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView (${tvSymbol})">
-                                ${displayName} <span style="font-size: 0.75rem; color: #0ea5e9;">🔗</span>
+                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
+                                ${item.name} <span style="font-size: 0.75rem; color: #0ea5e9;">🔗</span>
                             </a>
                             <div style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.35rem; flex-wrap: wrap;">${athBadge}</div>
                         </td>
@@ -4216,15 +4164,12 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 const tierColor = item.confidenceScore >= 90 ? '#a855f7' : (item.confidenceScore >= 75 ? '#38bdf8' : (item.confidenceScore >= 60 ? '#10b981' : '#f59e0b'));
                 const confidenceText = item.confidenceScore !== undefined ? `${item.confidenceScore}/100` : 'N/A';
 
-                const displayName = getDisplayName(item.name);
-                const tvSymbol = getTradingViewSymbol(item.name);
-
                 html += `
                     <tr>
                         <td style="text-align: center; font-weight: 800; color: #fde047;">#${idx + 1}</td>
                         <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
-                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${tvSymbol}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView (${tvSymbol})">
-                                ${displayName} <span style="font-size: 0.75rem; color: #fde047;">🔗</span>
+                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
+                                ${item.name} <span style="font-size: 0.75rem; color: #fde047;">🔗</span>
                             </a>
                             <div style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.35rem; flex-wrap: wrap;">${freshBadge}</div>
                         </td>
@@ -4439,16 +4384,16 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     if (volatility >= 4.5) volColor = '#fb7185';
                     else if (volatility >= 1.5) volColor = '#f59e0b';
 
-                    const displayName = getDisplayName(item.name);
-                    const tvSymbol = getTradingViewSymbol(item.name);
+                    const hofBadge = getHofBadge(item);
+                    const matchBadge = getBacktestMatchBadge(item, 'trend');
 
                     hybridHtml += `
                         <tr style="${isHc ? 'background: rgba(16, 185, 129, 0.03);' : (isVvipRank ? 'background: rgba(245, 158, 11, 0.02);' : '')}">
                             <td style="text-align: center; font-weight: 800; color: ${isHc ? '#10b981' : (isVvipRank ? '#f59e0b' : 'var(--accent)')}; ${isHc ? 'border-left: 4px solid #10b981;' : ''}">#${rankCount++}</td>
                             <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
                                 <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
-                                    <a href="https://www.tradingview.com/chart/?symbol=MYX:${tvSymbol}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView (${tvSymbol})">
-                                        ${crownEmoji}${displayName} <span style="font-size: 0.75rem; color: var(--accent);">🔗</span>
+                                    <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
+                                        ${crownEmoji}${item.name} <span style="font-size: 0.75rem; color: var(--accent);">🔗</span>
                                     </a>
                                     ${getSub1Badge(item)}
                                     ${isHc ? `<span style="font-size: 0.68rem; background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.25); white-space: nowrap; box-shadow: 0 0 8px rgba(16, 185, 129, 0.3);" title="High-Conviction Setup: Gred Premium + Lantai Sangat Rapat (<=4%) + Kecairan Tinggi (>=RM1M)">🎯 Entry Padu</span>` : ''}
@@ -4828,10 +4773,8 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
         // Page setup and event listeners
         window.addEventListener('DOMContentLoaded', () => {
-            if (currentData && currentData.length > 0) {
-                applyFilters();
-            }
             fetchLiveData();
+            renderPhoenixSpring();
 
             const hash = window.location.hash.replace('#', '');
             if (hash && ['vcp', 'trend', 'spring', 'phoenix', 'fishing', 'calculator', 'info', 'tracker', 'portfolio', 'weekly', 'jerung', 'confluence'].includes(hash)) {
