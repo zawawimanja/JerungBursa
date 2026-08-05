@@ -841,6 +841,13 @@
                             </p>
                         </div>
                     </div>
+                    <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
+                        <div style="display: flex; gap: 0.3rem; align-items: center; background: rgba(15,23,42,0.6); padding: 0.2rem; border-radius: 8px; border: 1px solid rgba(234,179,8,0.3);">
+                            <span style="font-size: 0.72rem; color: #64748b; font-weight: 600; padding: 0 0.3rem;">Fokus:</span>
+                            <button id="confluenceFilterFresh" onclick="setConfluenceFilter('fresh_only')" style="background: rgba(16,185,129,0.25); color: #34d399; border: 1px solid rgba(16,185,129,0.5); padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer;">🌟 Fresh IPO Sahaja</button>
+                            <button id="confluenceFilterAll" onclick="setConfluenceFilter('all')" style="background: transparent; color: #64748b; border: 1px solid transparent; padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">🌐 Semua Saham</button>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="table-responsive">
@@ -4055,11 +4062,40 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             return pb >= 35.0 && touches >= 3 && distFloor <= 5.0;
         }
 
+        function setConfluenceFilter(mode) {
+            window._confluenceFilterMode = mode;
+            const btnFresh = document.getElementById('confluenceFilterFresh');
+            const btnAll = document.getElementById('confluenceFilterAll');
+            if (btnFresh && btnAll) {
+                if (mode === 'fresh_only') {
+                    btnFresh.style.background = 'rgba(16,185,129,0.25)';
+                    btnFresh.style.color = '#34d399';
+                    btnFresh.style.borderColor = 'rgba(16,185,129,0.5)';
+                    btnFresh.style.fontWeight = '800';
+                    btnAll.style.background = 'transparent';
+                    btnAll.style.color = '#64748b';
+                    btnAll.style.borderColor = 'transparent';
+                    btnAll.style.fontWeight = '700';
+                } else {
+                    btnAll.style.background = 'rgba(234,179,8,0.25)';
+                    btnAll.style.color = '#fde047';
+                    btnAll.style.borderColor = 'rgba(234,179,8,0.5)';
+                    btnAll.style.fontWeight = '800';
+                    btnFresh.style.background = 'transparent';
+                    btnFresh.style.color = '#64748b';
+                    btnFresh.style.borderColor = 'transparent';
+                    btnFresh.style.fontWeight = '700';
+                }
+            }
+            renderConfluenceRadar();
+        }
+
         // Render VVIP Confluence Radar (Double & Triple Confluence)
         function renderConfluenceRadar() {
             const tbody = document.getElementById('confluenceRadarTableBody');
             if (!tbody) return;
 
+            const confluenceFilterMode = window._confluenceFilterMode || 'fresh_only';
             const confluencePicks = [];
             const list = currentData || [];
 
@@ -4067,6 +4103,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 if (!item || !item.name || item.price <= 0 || item.price > 10.0) continue;
                 if (!passesGlobalFilters(item)) continue;
                 if (isSleepingOrAvoidStock(item) || item.isCombStock) continue;
+                if (confluenceFilterMode === 'fresh_only' && !isFreshIpo(item)) continue;
 
                 const matches = [];
                 if (passesJerungRadar(item)) matches.push('🦈 Jerung Radar');
@@ -4089,7 +4126,9 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 if (a.count !== b.count) return b.count - a.count;
                 const fA = a.fresh ? 1 : 0, fB = b.fresh ? 1 : 0;
                 if (fA !== fB) return fB - fA;
-                return (b.item.turnover || 0) - (a.item.turnover || 0);
+                const volA = (a.item.volumeSpike || 1) * (a.item.turnover || 0);
+                const volB = (b.item.volumeSpike || 1) * (b.item.turnover || 0);
+                return volB - volA;
             });
 
             if (confluencePicks.length === 0) {
