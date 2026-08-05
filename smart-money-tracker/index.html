@@ -4123,12 +4123,19 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             }
 
             confluencePicks.sort((a,b) => {
-                if (a.count !== b.count) return b.count - a.count;
+                // 1. Triple/Quad Confluence (3+ matches) above Double Confluence (2 matches)
+                const catA = a.count >= 3 ? 1 : 0;
+                const catB = b.count >= 3 ? 1 : 0;
+                if (catA !== catB) return catB - catA;
+
+                // 2. Fresh IPO (2025-2026) above Mature
                 const fA = a.fresh ? 1 : 0, fB = b.fresh ? 1 : 0;
                 if (fA !== fB) return fB - fA;
-                const volA = (a.item.volumeSpike || 1) * (a.item.turnover || 0);
-                const volB = (b.item.volumeSpike || 1) * (b.item.turnover || 0);
-                return volB - volA;
+
+                // 3. Highest Turnover (Duit Jerung RM)
+                const toA = a.item.turnover || a.item.rawTurnover || 0;
+                const toB = b.item.turnover || b.item.rawTurnover || 0;
+                return toB - toA;
             });
 
             if (confluencePicks.length === 0) {
