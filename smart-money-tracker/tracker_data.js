@@ -1,13 +1,13 @@
 window.TRACKER_DATA = [
   {
-    "name": "PWRWELL",
+    "name": "PENTECH",
     "date": "2026-08-05",
-    "triggerPrice": 0.9350000023841858,
-    "setup": "STAIRCASE",
-    "score": 12,
-    "turnover": 893486.002278328,
+    "triggerPrice": 0.28999999165534973,
+    "setup": "EXPLOSIVE",
+    "score": 10,
+    "turnover": 1706185.9509050846,
     "isGold": true,
-    "currentPrice": 0.9350000023841858,
+    "currentPrice": 0.28999999165534973,
     "currentDiff": 0,
     "diffs": [
       null,
@@ -23,14 +23,14 @@ window.TRACKER_DATA = [
     ]
   },
   {
-    "name": "AMS",
+    "name": "SRKK",
     "date": "2026-08-05",
-    "triggerPrice": 0.45500001311302185,
+    "triggerPrice": 0.5400000214576721,
     "setup": "SWING PLAY",
-    "score": 13,
-    "turnover": 923286.0266089439,
+    "score": 11,
+    "turnover": 1426302.0566761494,
     "isGold": true,
-    "currentPrice": 0.45500001311302185,
+    "currentPrice": 0.5400000214576721,
     "currentDiff": 0,
     "diffs": [
       null,
@@ -46,17 +46,63 @@ window.TRACKER_DATA = [
     ]
   },
   {
-    "name": "ICENTS",
+    "name": "EIPOWER",
     "date": "2026-08-05",
-    "triggerPrice": 0.6399999856948853,
-    "setup": "STAIRCASE",
-    "score": 13,
-    "turnover": 1300287.9709362984,
+    "triggerPrice": 0.6949999928474426,
+    "setup": "SWING PLAY",
+    "score": 12,
+    "turnover": 3016577.96895504,
     "isGold": true,
-    "currentPrice": 0.6399999856948853,
+    "currentPrice": 0.6949999928474426,
     "currentDiff": 0,
     "diffs": [
       null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "BETA",
+    "date": "2026-08-04",
+    "triggerPrice": 0.7900000214576721,
+    "setup": "SWING PLAY",
+    "score": 11,
+    "turnover": 785892.0213460922,
+    "isGold": true,
+    "currentPrice": 0.7749999761581421,
+    "currentDiff": -1.9,
+    "diffs": [
+      -1.9,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "JTGROUP",
+    "date": "2026-08-04",
+    "triggerPrice": 0.7450000047683716,
+    "setup": "SWING PLAY",
+    "score": 12,
+    "turnover": 1870844.0119743347,
+    "isGold": true,
+    "currentPrice": 0.7599999904632568,
+    "currentDiff": 2,
+    "diffs": [
+      2,
       null,
       null,
       null,
@@ -70,17 +116,132 @@ window.TRACKER_DATA = [
   },
   {
     "name": "DNEX",
-    "date": "2026-08-05",
-    "triggerPrice": 0.45500001311302185,
-    "setup": "STAIRCASE",
-    "score": 12,
-    "turnover": 3136906.5904051065,
+    "date": "2026-08-04",
+    "triggerPrice": 0.4449999928474426,
+    "setup": "SWING PLAY",
+    "score": 13,
+    "turnover": 5890820.905315876,
     "isGold": true,
-    "currentPrice": 0.45500001311302185,
+    "currentPrice": 0.46000000834465027,
+    "currentDiff": 3.4,
+    "diffs": [
+      3.4,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "AMS",
+    "date": "2026-08-04",
+    "triggerPrice": 0.4650000035762787,
+    "setup": "SWING PLAY",
+    "score": 11,
+    "turnover": 1821312.0140075684,
+    "isGold": true,
+    "currentPrice": 0.46000000834465027,
+    "currentDiff": -1.1,
+    "diffs": [
+      -1.1,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "ISF",
+    "date": "2026-08-04",
+    "triggerPrice": 0.6349999904632568,
+    "setup": "SWING PLAY",
+    "score": 15,
+    "turnover": 1924557.9710960388,
+    "isGold": true,
+    "currentPrice": 0.6349999904632568,
     "currentDiff": 0,
     "diffs": [
+      0,
       null,
       null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "MMCS",
+    "date": "2026-08-04",
+    "triggerPrice": 0.4399999976158142,
+    "setup": "SWING PLAY",
+    "score": 17,
+    "turnover": 573803.9968907833,
+    "isGold": false,
+    "currentPrice": 0.4350000023841858,
+    "currentDiff": -1.1,
+    "diffs": [
+      -1.1,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "AIMFLEX",
+    "date": "2026-08-04",
+    "triggerPrice": 0.11500000208616257,
+    "setup": "STAIRCASE",
+    "score": 12,
+    "turnover": 1257433.0228105187,
+    "isGold": true,
+    "currentPrice": 0.11999999731779099,
+    "currentDiff": 4.3,
+    "diffs": [
+      4.3,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "CNERGEN",
+    "date": "2026-08-03",
+    "triggerPrice": 0.6449999809265137,
+    "setup": "SWING PLAY",
+    "score": 11,
+    "turnover": 430666.4872646332,
+    "isGold": false,
+    "currentPrice": 0.6600000262260437,
+    "currentDiff": 2.3,
+    "diffs": [
+      -1.6,
+      2.3,
       null,
       null,
       null,
@@ -93,17 +254,17 @@ window.TRACKER_DATA = [
   },
   {
     "name": "UUE",
-    "date": "2026-07-24",
-    "triggerPrice": 0.5350000262260437,
+    "date": "2026-08-03",
+    "triggerPrice": 0.5400000214576721,
     "setup": "SWING PLAY",
-    "score": 11,
-    "turnover": 641197.5314319134,
+    "score": 10,
+    "turnover": 615654.024463892,
     "isGold": false,
     "currentPrice": 0.5600000023841858,
-    "currentDiff": 4.7,
+    "currentDiff": 3.7,
     "diffs": [
-      4.7,
-      null,
+      1.9,
+      3.7,
       null,
       null,
       null,
@@ -115,25 +276,577 @@ window.TRACKER_DATA = [
     ]
   },
   {
-    "name": "HHRG",
-    "date": "2026-07-24",
-    "triggerPrice": 0.17499999701976776,
+    "name": "PWRWELL",
+    "date": "2026-08-03",
+    "triggerPrice": 0.9150000214576721,
+    "setup": "EXPLOSIVE",
+    "score": 13,
+    "turnover": 6465115.651613474,
+    "isGold": true,
+    "currentPrice": 0.9399999976158142,
+    "currentDiff": 2.7,
+    "diffs": [
+      0,
+      2.7,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "ICTZONE",
+    "date": "2026-08-03",
+    "triggerPrice": 0.24500000476837158,
+    "setup": "SWING PLAY",
+    "score": 13,
+    "turnover": 1263783.5245966911,
+    "isGold": true,
+    "currentPrice": 0.23499999940395355,
+    "currentDiff": -4.1,
+    "diffs": [
+      -4.1,
+      -4.1,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "ICENTS",
+    "date": "2026-08-03",
+    "triggerPrice": 0.6150000095367432,
+    "setup": "STAIRCASE + IPO",
+    "score": 14,
+    "turnover": 691198.5107183456,
+    "isGold": false,
+    "currentPrice": 0.6449999809265137,
+    "currentDiff": 4.9,
+    "diffs": [
+      3.3,
+      4.9,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "ECA",
+    "date": "2026-08-02",
+    "triggerPrice": 0.33000001311302185,
+    "setup": "EXPLOSIVE",
+    "score": 12,
+    "turnover": 1018710.0404798985,
+    "isGold": true,
+    "currentPrice": 0.32499998807907104,
+    "currentDiff": -1.5,
+    "diffs": [
+      1.5,
+      0,
+      -1.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "WTK",
+    "date": "2026-07-31",
+    "triggerPrice": 0.9150000214576721,
+    "setup": "STAIRCASE",
+    "score": 15,
+    "turnover": 627232.5147092342,
+    "isGold": false,
+    "currentPrice": 0.8999999761581421,
+    "currentDiff": -1.6,
+    "diffs": [
+      -2.7,
+      -2.7,
+      -1.1,
+      -1.6,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "SFPTECH",
+    "date": "2026-07-31",
+    "triggerPrice": 0.33500000834465027,
+    "setup": "STAIRCASE",
+    "score": 12,
+    "turnover": 1470281.5366238356,
+    "isGold": true,
+    "currentPrice": 0.3499999940395355,
+    "currentDiff": 4.5,
+    "diffs": [
+      4.5,
+      7.5,
+      4.5,
+      4.5,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "CBHB",
+    "date": "2026-07-31",
+    "triggerPrice": 0.675000011920929,
+    "setup": "STAIRCASE + IPO",
+    "score": 11,
+    "turnover": 2591392.5457656384,
+    "isGold": false,
+    "currentPrice": 0.699999988079071,
+    "currentDiff": 3.7,
+    "diffs": [
+      -1.5,
+      1.5,
+      3,
+      3.7,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "HEGROUP",
+    "date": "2026-07-31",
+    "triggerPrice": 0.5950000286102295,
+    "setup": "STAIRCASE + IPO",
+    "score": 13,
+    "turnover": 4504804.7166109085,
+    "isGold": false,
+    "currentPrice": 0.6399999856948853,
+    "currentDiff": 7.6,
+    "diffs": [
+      3.4,
+      2.5,
+      6.7,
+      7.6,
+      null,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "RAMSSOL",
+    "date": "2026-07-30",
+    "triggerPrice": 0.7649999856948853,
+    "setup": "SWING PLAY",
+    "score": 12,
+    "turnover": 5936552.888989449,
+    "isGold": true,
+    "currentPrice": 0.7699999809265137,
+    "currentDiff": 0.7,
+    "diffs": [
+      0,
+      1.3,
+      0.7,
+      0,
+      0.7,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "SNS",
+    "date": "2026-07-30",
+    "triggerPrice": 0.5299999713897705,
+    "setup": "SWING PLAY",
+    "score": 11,
+    "turnover": 8804783.52470398,
+    "isGold": true,
+    "currentPrice": 0.5699999928474426,
+    "currentDiff": 7.5,
+    "diffs": [
+      0,
+      2.8,
+      3.8,
+      4.7,
+      7.5,
+      null,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "OGX",
+    "date": "2026-07-29",
+    "triggerPrice": 0.46000000834465027,
+    "setup": "EXPLOSIVE",
+    "score": 10,
+    "turnover": 1653470.0299948454,
+    "isGold": true,
+    "currentPrice": 0.45500001311302185,
+    "currentDiff": -1.1,
+    "diffs": [
+      -2.2,
+      -2.2,
+      3.3,
+      2.2,
+      0,
+      -1.1,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "EIPOWER",
+    "date": "2026-07-29",
+    "triggerPrice": 0.6600000262260437,
+    "setup": "SWING PLAY",
+    "score": 10,
+    "turnover": 1878228.0746340752,
+    "isGold": true,
+    "currentPrice": 0.6949999928474426,
+    "currentDiff": 5.3,
+    "diffs": [
+      -2.3,
+      -2.3,
+      0,
+      1.5,
+      4.5,
+      5.3,
+      null,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "CPETECH",
+    "date": "2026-07-28",
+    "triggerPrice": 0.9700000286102295,
+    "setup": "STAIRCASE",
+    "score": 15,
+    "turnover": 312631.00922107697,
+    "isGold": false,
+    "currentPrice": 1.1299999952316284,
+    "currentDiff": 16.5,
+    "diffs": [
+      -1,
+      -1.5,
+      -1.5,
+      0.5,
+      11.3,
+      13.4,
+      16.5,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "JTGROUP",
+    "date": "2026-07-28",
+    "triggerPrice": 0.6600000262260437,
+    "setup": "SWING PLAY",
+    "score": 13,
+    "turnover": 553608.0219984055,
+    "isGold": false,
+    "currentPrice": 0.7599999904632568,
+    "currentDiff": 15.2,
+    "diffs": [
+      20.5,
+      13.6,
+      13.6,
+      12.1,
+      13.6,
+      12.9,
+      15.2,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "AMS",
+    "date": "2026-07-28",
+    "triggerPrice": 0.4449999928474426,
+    "setup": "SWING PLAY",
+    "score": 10,
+    "turnover": 1162651.4813125134,
+    "isGold": true,
+    "currentPrice": 0.46000000834465027,
+    "currentDiff": 3.4,
+    "diffs": [
+      6.7,
+      4.5,
+      4.5,
+      6.7,
+      5.6,
+      4.5,
+      3.4,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "SRKK",
+    "date": "2026-07-28",
+    "triggerPrice": 0.5,
+    "setup": "SWING PLAY",
+    "score": 10,
+    "turnover": 1230700,
+    "isGold": true,
+    "currentPrice": 0.5400000214576721,
+    "currentDiff": 8,
+    "diffs": [
+      2,
+      3,
+      3,
+      9,
+      8,
+      7,
+      8,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "MMCS",
+    "date": "2026-07-28",
+    "triggerPrice": 0.4050000011920929,
+    "setup": "STAIRCASE",
+    "score": 14,
+    "turnover": 1811686.5053325891,
+    "isGold": true,
+    "currentPrice": 0.4350000023841858,
+    "currentDiff": 7.4,
+    "diffs": [
+      2.5,
+      8.6,
+      8.6,
+      9.9,
+      9.9,
+      8.6,
+      7.4,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "ISF",
+    "date": "2026-07-28",
+    "triggerPrice": 0.6100000143051147,
+    "setup": "STAIRCASE",
+    "score": 14,
+    "turnover": 2356735.055267811,
+    "isGold": true,
+    "currentPrice": 0.6349999904632568,
+    "currentDiff": 4.1,
+    "diffs": [
+      3.3,
+      0.8,
+      0.8,
+      1.6,
+      5.7,
+      4.1,
+      4.1,
+      null,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "CNERGEN",
+    "date": "2026-07-27",
+    "triggerPrice": 0.6399999856948853,
+    "setup": "STAIRCASE",
+    "score": 15,
+    "turnover": 253695.99432945251,
+    "isGold": false,
+    "currentPrice": 0.6600000262260437,
+    "currentDiff": 3.1,
+    "diffs": [
+      -3.9,
+      -0.8,
+      2.3,
+      2.3,
+      2.3,
+      0.8,
+      -0.8,
+      3.1,
+      null,
+      null
+    ]
+  },
+  {
+    "name": "ICENTS",
+    "date": "2026-07-27",
+    "triggerPrice": 0.625,
     "setup": "STAIRCASE",
     "score": 9,
-    "turnover": 5599614.904639125,
+    "turnover": 1116000,
     "isGold": false,
-    "currentPrice": 0.11500000208616257,
-    "currentDiff": -34.3,
+    "currentPrice": 0.6449999809265137,
+    "currentDiff": 3.2,
     "diffs": [
-      -34.3,
+      -0.8,
+      -0.8,
+      -1.6,
+      -1.6,
+      -1.6,
+      -1.6,
+      1.6,
+      3.2,
       null,
+      null
+    ]
+  },
+  {
+    "name": "PWRWELL",
+    "date": "2026-07-27",
+    "triggerPrice": 0.8600000143051147,
+    "setup": "STAIRCASE",
+    "score": 13,
+    "turnover": 2452548.0407953262,
+    "isGold": true,
+    "currentPrice": 0.9399999976158142,
+    "currentDiff": 9.3,
+    "diffs": [
+      -0.6,
+      0,
+      -0.6,
+      -0.6,
+      0.6,
+      6.4,
+      6.4,
+      9.3,
       null,
+      null
+    ]
+  },
+  {
+    "name": "ICTZONE",
+    "date": "2026-07-27",
+    "triggerPrice": 0.24500000476837158,
+    "setup": "EXPLOSIVE",
+    "score": 10,
+    "turnover": 4580299.589145184,
+    "isGold": true,
+    "currentPrice": 0.23499999940395355,
+    "currentDiff": -4.1,
+    "diffs": [
+      -2,
+      0,
+      -4.1,
+      -4.1,
+      0,
+      0,
+      -4.1,
+      -4.1,
       null,
+      null
+    ]
+  },
+  {
+    "name": "DNEX",
+    "date": "2026-07-27",
+    "triggerPrice": 0.44999998807907104,
+    "setup": "STAIRCASE",
+    "score": 15,
+    "turnover": 7842824.79223609,
+    "isGold": true,
+    "currentPrice": 0.46000000834465027,
+    "currentDiff": 2.2,
+    "diffs": [
+      -4.4,
+      -4.4,
+      -4.4,
+      -4.4,
+      0,
+      "N/A",
+      -1.1,
+      2.2,
       null,
-      null,
-      null,
-      null,
-      null,
+      null
+    ]
+  },
+  {
+    "name": "ECA",
+    "date": "2026-07-24",
+    "triggerPrice": 0.32499998807907104,
+    "setup": "STAIRCASE",
+    "score": 15,
+    "turnover": 465204.9829363823,
+    "isGold": false,
+    "currentPrice": 0.32499998807907104,
+    "currentDiff": 0,
+    "diffs": [
+      3.1,
+      -3.1,
+      -1.5,
+      -6.2,
+      -6.2,
+      1.5,
+      3.1,
+      1.5,
+      0,
+      null
+    ]
+  },
+  {
+    "name": "UUE",
+    "date": "2026-07-24",
+    "triggerPrice": 0.5350000262260437,
+    "setup": "SWING PLAY",
+    "score": 11,
+    "turnover": 1056036.5517675877,
+    "isGold": true,
+    "currentPrice": 0.5600000023841858,
+    "currentDiff": 4.7,
+    "diffs": [
+      -0.9,
+      -3.7,
+      2.8,
+      1.9,
+      1.9,
+      0.9,
+      0.9,
+      2.8,
+      4.7,
       null
     ]
   },
@@ -145,19 +858,19 @@ window.TRACKER_DATA = [
     "score": 14,
     "turnover": 618872.4871695042,
     "isGold": false,
-    "currentPrice": 0.6299999952316284,
-    "currentDiff": 9.6,
+    "currentPrice": 0.6399999856948853,
+    "currentDiff": 11.3,
     "diffs": [
       -0.9,
-      9.6,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      -0.9,
+      -1.7,
+      0,
+      3.5,
+      3.5,
+      7,
+      6.1,
+      10.4,
+      11.3
     ]
   },
   {
@@ -171,16 +884,16 @@ window.TRACKER_DATA = [
     "currentPrice": 1,
     "currentDiff": 18.3,
     "diffs": [
-      -1.8,
-      18.3,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      -3.6,
+      -3,
+      -4.1,
+      -4.7,
+      -5.3,
+      -5.3,
+      0,
+      7.7,
+      15.4,
+      18.3
     ]
   },
   {
@@ -194,16 +907,16 @@ window.TRACKER_DATA = [
     "currentPrice": 0.8999999761581421,
     "currentDiff": 0.6,
     "diffs": [
-      2.8,
+      5,
+      3.4,
       0.6,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      2.8,
+      2.2,
+      2.2,
+      -0.6,
+      -0.6,
+      1.1,
+      0.6
     ]
   },
   {
@@ -214,19 +927,19 @@ window.TRACKER_DATA = [
     "score": 12,
     "turnover": 2218995.977163315,
     "isGold": true,
-    "currentPrice": 0.7049999833106995,
-    "currentDiff": 1.4,
+    "currentPrice": 0.699999988079071,
+    "currentDiff": 0.7,
     "diffs": [
+      -0.7,
       -1.4,
-      1.4,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      -4.3,
+      -4.3,
+      -2.9,
+      -2.9,
+      -4.3,
+      -1.4,
+      0,
+      0.7
     ]
   },
   {
@@ -237,19 +950,19 @@ window.TRACKER_DATA = [
     "score": 10,
     "turnover": 4076002.4859160185,
     "isGold": true,
-    "currentPrice": 0.3449999988079071,
-    "currentDiff": 0,
+    "currentPrice": 0.3499999940395355,
+    "currentDiff": 1.4,
     "diffs": [
-      -1.4,
       0,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      2.9,
+      -2.9,
+      -1.4,
+      -2.9,
+      -2.9,
+      1.4,
+      4.3,
+      1.4,
+      1.4
     ]
   },
   {
@@ -265,14 +978,14 @@ window.TRACKER_DATA = [
     "diffs": [
       0,
       0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
       1.3,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      1.3
     ]
   },
   {
@@ -283,19 +996,19 @@ window.TRACKER_DATA = [
     "score": 10,
     "turnover": 843156.0108661652,
     "isGold": true,
-    "currentPrice": 0.7250000238418579,
-    "currentDiff": -2,
+    "currentPrice": 0.7149999737739563,
+    "currentDiff": -3.4,
     "diffs": [
       0.7,
-      -1.4,
-      -2,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      -2.7,
+      -4.1,
+      -8.1,
+      -7.4,
+      -7.4,
+      -7.4,
+      -4.7,
+      -4.1,
+      -2
     ]
   },
   {
@@ -312,13 +1025,13 @@ window.TRACKER_DATA = [
       0,
       -2,
       -2,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      -2,
+      -2,
+      -4,
+      -4,
+      -2,
+      -2,
+      -2
     ]
   },
   {
@@ -333,15 +1046,15 @@ window.TRACKER_DATA = [
     "currentDiff": 0.6,
     "diffs": [
       -0.6,
+      0,
       -0.6,
+      0,
       0.6,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      0,
+      1.3,
+      0.6
     ]
   },
   {
@@ -352,19 +1065,19 @@ window.TRACKER_DATA = [
     "score": 11,
     "turnover": 1439286.0424518585,
     "isGold": true,
-    "currentPrice": 1.100000023841858,
-    "currentDiff": 13.4,
+    "currentPrice": 1.1100000143051147,
+    "currentDiff": 14.4,
     "diffs": [
       0.5,
-      0,
+      0.5,
+      4.1,
+      7.2,
+      8.2,
+      11.3,
+      11.3,
+      12.4,
       13.4,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      13.4
     ]
   },
   {
@@ -375,19 +1088,19 @@ window.TRACKER_DATA = [
     "score": 10,
     "turnover": 418176.0166168213,
     "isGold": false,
-    "currentPrice": 0.4099999964237213,
-    "currentDiff": 13.9,
+    "currentPrice": 0.41999998688697815,
+    "currentDiff": 16.7,
     "diffs": [
       4.2,
       11.1,
       8.3,
-      13.9,
-      null,
-      null,
-      null,
-      null,
-      null,
-      null
+      12.5,
+      8.3,
+      8.3,
+      15.3,
+      15.3,
+      12.5,
+      12.5
     ]
   },
   {
@@ -398,19 +1111,19 @@ window.TRACKER_DATA = [
     "score": 11,
     "turnover": 624875.9815216064,
     "isGold": false,
-    "currentPrice": 0.75,
-    "currentDiff": 16.3,
+    "currentPrice": 0.7599999904632568,
+    "currentDiff": 17.8,
     "diffs": [
       "N/A",
       3.1,
       4.7,
-      3.9,
+      5.4,
+      4.7,
+      2.3,
+      23.3,
       16.3,
-      null,
-      null,
-      null,
-      null,
-      null
+      16.3,
+      14.7
     ]
   },
   {
@@ -421,19 +1134,19 @@ window.TRACKER_DATA = [
     "score": 10,
     "turnover": 753940.4777050018,
     "isGold": true,
-    "currentPrice": 0.5849999785423279,
-    "currentDiff": -9.3,
+    "currentPrice": 0.5799999833106995,
+    "currentDiff": -10.1,
     "diffs": [
       -4.7,
       -5.4,
       -10.9,
-      -9.3,
-      -9.3,
-      null,
-      null,
-      null,
-      null,
-      null
+      -8.5,
+      -10.1,
+      -14,
+      -13.2,
+      -12.4,
+      -12.4,
+      -10.9
     ]
   },
   {
@@ -444,19 +1157,19 @@ window.TRACKER_DATA = [
     "score": 8,
     "turnover": 1833695.9590137005,
     "isGold": false,
-    "currentPrice": 1.1100000143051147,
-    "currentDiff": 15.6,
+    "currentPrice": 1.1299999952316284,
+    "currentDiff": 17.7,
     "diffs": [
       3.6,
       2.6,
       2.6,
-      0.5,
-      15.6,
-      null,
-      null,
-      null,
-      null,
-      null
+      5.2,
+      2.6,
+      1,
+      0,
+      -0.5,
+      -0.5,
+      1.6
     ]
   },
   {
@@ -474,12 +1187,12 @@ window.TRACKER_DATA = [
       8,
       5.7,
       2.3,
-      3.4,
-      null,
-      null,
-      null,
-      null,
-      null
+      0,
+      0,
+      4.5,
+      2.3,
+      2.3,
+      8
     ]
   },
   {
@@ -490,19 +1203,19 @@ window.TRACKER_DATA = [
     "score": 7,
     "turnover": 2028688.9914393425,
     "isGold": false,
-    "currentPrice": 0.6299999952316284,
-    "currentDiff": 11.5,
+    "currentPrice": 0.6349999904632568,
+    "currentDiff": 12.4,
     "diffs": [
       12.4,
       8,
       10.6,
-      7.1,
+      8.8,
       11.5,
-      null,
-      null,
-      null,
-      null,
-      null
+      8,
+      11.5,
+      8.8,
+      8.8,
+      9.7
     ]
   },
   {
@@ -513,19 +1226,19 @@ window.TRACKER_DATA = [
     "score": 11,
     "turnover": 4229138.315272331,
     "isGold": true,
-    "currentPrice": 0.699999988079071,
-    "currentDiff": 6.9,
+    "currentPrice": 0.6949999928474426,
+    "currentDiff": 6.1,
     "diffs": [
       3.8,
       4.6,
       4.6,
+      2.3,
       1.5,
-      6.9,
-      null,
-      null,
-      null,
-      null,
-      null
+      -1.5,
+      0.8,
+      -1.5,
+      -1.5,
+      0.8
     ]
   },
   {
@@ -536,19 +1249,19 @@ window.TRACKER_DATA = [
     "score": 9,
     "turnover": 7187222.6952165365,
     "isGold": false,
-    "currentPrice": 0.4399999976158142,
-    "currentDiff": 11.4,
+    "currentPrice": 0.4350000023841858,
+    "currentDiff": 10.1,
     "diffs": [
       2.5,
       5.1,
       5.1,
+      3.8,
+      1.3,
+      2.5,
       5.1,
       11.4,
-      null,
-      null,
-      null,
-      null,
-      null
+      11.4,
+      12.7
     ]
   },
   {
@@ -567,11 +1280,11 @@ window.TRACKER_DATA = [
       -3.6,
       -3.6,
       -7.1,
-      -10.7,
-      null,
-      null,
-      null,
-      null
+      -7.1,
+      -7.1,
+      -7.1,
+      -7.1,
+      -7.1
     ]
   },
   {
@@ -582,19 +1295,19 @@ window.TRACKER_DATA = [
     "score": 12,
     "turnover": 1766675.4948318005,
     "isGold": true,
-    "currentPrice": 0.9350000023841858,
-    "currentDiff": 14.7,
+    "currentPrice": 0.9399999976158142,
+    "currentDiff": 15.3,
     "diffs": [
       -1.8,
       "N/A",
       0.6,
       2.5,
       1.2,
-      14.7,
-      null,
-      null,
-      null,
-      null
+      5.5,
+      4.9,
+      5.5,
+      4.9,
+      4.9
     ]
   },
   {
@@ -605,19 +1318,19 @@ window.TRACKER_DATA = [
     "score": 8,
     "turnover": 2495942.8909778595,
     "isGold": false,
-    "currentPrice": 0.6399999856948853,
-    "currentDiff": -2.3,
+    "currentPrice": 0.6449999809265137,
+    "currentDiff": -1.5,
     "diffs": [
       -4.6,
       -2.3,
       -1.5,
       -1.5,
-      -3.8,
-      -2.3,
-      null,
-      null,
-      null,
-      null
+      -5.3,
+      -4.6,
+      -5.3,
+      -5.3,
+      -6.1,
+      -6.1
     ]
   },
   {
@@ -628,19 +1341,19 @@ window.TRACKER_DATA = [
     "score": 11,
     "turnover": 30244995.232611895,
     "isGold": true,
-    "currentPrice": 0.45500001311302185,
-    "currentDiff": -2.2,
+    "currentPrice": 0.46000000834465027,
+    "currentDiff": -1.1,
     "diffs": [
       -5.4,
       0,
       1.1,
       -2.2,
       -2.2,
-      -2.2,
-      null,
-      null,
-      null,
-      null
+      -3.2,
+      -7.5,
+      -7.5,
+      -7.5,
+      -7.5
     ]
   },
   {
@@ -651,19 +1364,19 @@ window.TRACKER_DATA = [
     "score": 8,
     "turnover": 360548.99727106094,
     "isGold": false,
-    "currentPrice": 0.33000001311302185,
-    "currentDiff": 4.8,
+    "currentPrice": 0.32499998807907104,
+    "currentDiff": 3.2,
     "diffs": [
       3.2,
       0,
       "N/A",
       1.6,
       3.2,
+      3.2,
+      6.3,
+      0,
       1.6,
-      4.8,
-      null,
-      null,
-      null
+      -3.2
     ]
   },
   {
@@ -683,10 +1396,10 @@ window.TRACKER_DATA = [
       7.9,
       7.9,
       5.9,
-      10.9,
-      null,
-      null,
-      null
+      5,
+      2,
+      8.9,
+      7.9
     ]
   },
   {
@@ -697,19 +1410,19 @@ window.TRACKER_DATA = [
     "score": 12,
     "turnover": 949099.022257328,
     "isGold": true,
-    "currentPrice": 0.6449999809265137,
-    "currentDiff": 5.7,
+    "currentPrice": 0.6600000262260437,
+    "currentDiff": 8.2,
     "diffs": [
       -0.8,
       -6.6,
       1.6,
       0,
       3.3,
-      3.3,
-      5.7,
-      null,
-      null,
-      null
+      1.6,
+      4.9,
+      0.8,
+      4.1,
+      7.4
     ]
   },
   {
@@ -729,10 +1442,10 @@ window.TRACKER_DATA = [
       -1.2,
       -3.5,
       -2.3,
-      -4,
-      15.6,
-      null,
-      null
+      -5.8,
+      -5.2,
+      -6.4,
+      -6.9
     ]
   },
   {
@@ -754,8 +1467,8 @@ window.TRACKER_DATA = [
       -4,
       -4,
       -4,
-      null,
-      null
+      -8,
+      -8
     ]
   },
   {
@@ -766,8 +1479,8 @@ window.TRACKER_DATA = [
     "score": 15,
     "turnover": 1699283.9511036873,
     "isGold": true,
-    "currentPrice": 0.6299999952316284,
-    "currentDiff": 8.6,
+    "currentPrice": 0.6399999856948853,
+    "currentDiff": 10.3,
     "diffs": [
       0.9,
       0,
@@ -776,9 +1489,9 @@ window.TRACKER_DATA = [
       -0.9,
       -0.9,
       -1.7,
-      8.6,
-      null,
-      null
+      -1.7,
+      -2.6,
+      -0.9
     ]
   },
   {
@@ -799,9 +1512,9 @@ window.TRACKER_DATA = [
       12.2,
       12.2,
       12.2,
-      14.6,
-      null,
-      null
+      19.5,
+      17.1,
+      19.5
     ]
   },
   {
@@ -812,8 +1525,8 @@ window.TRACKER_DATA = [
     "score": 15,
     "turnover": 6424732.711279392,
     "isGold": true,
-    "currentPrice": 0.7049999833106995,
-    "currentDiff": -2.8,
+    "currentPrice": 0.699999988079071,
+    "currentDiff": -3.4,
     "diffs": [
       -1.4,
       -3.4,
@@ -821,10 +1534,10 @@ window.TRACKER_DATA = [
       -1.4,
       -2.8,
       -4.1,
+      -4.8,
       -5.5,
-      -2.8,
-      null,
-      null
+      -8.3,
+      -8.3
     ]
   },
   {
@@ -835,8 +1548,8 @@ window.TRACKER_DATA = [
     "score": 11,
     "turnover": 3146740.052342415,
     "isGold": true,
-    "currentPrice": 0.45500001311302185,
-    "currentDiff": 5.8,
+    "currentPrice": 0.46000000834465027,
+    "currentDiff": 7,
     "diffs": [
       -2.3,
       2.3,
@@ -845,9 +1558,9 @@ window.TRACKER_DATA = [
       1.2,
       0,
       5.8,
-      4.7,
       5.8,
-      null
+      2.3,
+      3.5
     ]
   },
   {
@@ -858,8 +1571,8 @@ window.TRACKER_DATA = [
     "score": 6,
     "turnover": 4007683.884680271,
     "isGold": false,
-    "currentPrice": 0.5350000262260437,
-    "currentDiff": -7.8,
+    "currentPrice": 0.5400000214576721,
+    "currentDiff": -6.9,
     "diffs": [
       -4.3,
       -4.3,
@@ -868,9 +1581,9 @@ window.TRACKER_DATA = [
       -12.9,
       -6.9,
       -9.5,
-      -12.1,
-      -7.8,
-      null
+      -11.2,
+      -12.9,
+      -13.8
     ]
   },
   {
@@ -881,8 +1594,8 @@ window.TRACKER_DATA = [
     "score": 15,
     "turnover": 2927609.9778413773,
     "isGold": true,
-    "currentPrice": 1.159999966621399,
-    "currentDiff": 22.8,
+    "currentPrice": 1.149999976158142,
+    "currentDiff": 21.7,
     "diffs": [
       1.1,
       5.8,
@@ -892,8 +1605,8 @@ window.TRACKER_DATA = [
       "N/A",
       16.4,
       17.5,
-      14.3,
-      22.8
+      15.3,
+      16.4
     ]
   },
   {
@@ -904,8 +1617,8 @@ window.TRACKER_DATA = [
     "score": 10,
     "turnover": 797789.9651527405,
     "isGold": true,
-    "currentPrice": 0.75,
-    "currentDiff": 14.5,
+    "currentPrice": 0.7599999904632568,
+    "currentDiff": 16,
     "diffs": [
       -1.5,
       0.8,
@@ -916,7 +1629,7 @@ window.TRACKER_DATA = [
       "N/A",
       1.5,
       3.1,
-      2.3
+      3.8
     ]
   },
   {
@@ -927,8 +1640,8 @@ window.TRACKER_DATA = [
     "score": 12,
     "turnover": 967199.9645233154,
     "isGold": true,
-    "currentPrice": 0.4399999976158142,
-    "currentDiff": 35.4,
+    "currentPrice": 0.4350000023841858,
+    "currentDiff": 33.8,
     "diffs": [
       7.7,
       12.3,
@@ -939,7 +1652,7 @@ window.TRACKER_DATA = [
       24.6,
       27.7,
       27.7,
-      27.7
+      26.2
     ]
   },
   {
@@ -950,8 +1663,8 @@ window.TRACKER_DATA = [
     "score": 10,
     "turnover": 1157090.028822422,
     "isGold": true,
-    "currentPrice": 0.5849999785423279,
-    "currentDiff": -12.7,
+    "currentPrice": 0.5799999833106995,
+    "currentDiff": -13.4,
     "diffs": [
       -8.2,
       -9,
@@ -962,7 +1675,7 @@ window.TRACKER_DATA = [
       -8.2,
       -9,
       -14.2,
-      -12.7
+      -11.9
     ]
   },
   {
@@ -973,8 +1686,8 @@ window.TRACKER_DATA = [
     "score": 9,
     "turnover": 1361572.4569559097,
     "isGold": false,
-    "currentPrice": 1.1100000143051147,
-    "currentDiff": 22.7,
+    "currentPrice": 1.1299999952316284,
+    "currentDiff": 24.9,
     "diffs": [
       3.9,
       2.8,
@@ -985,7 +1698,7 @@ window.TRACKER_DATA = [
       9.9,
       8.8,
       8.8,
-      6.6
+      11.6
     ]
   },
   {
@@ -996,8 +1709,8 @@ window.TRACKER_DATA = [
     "score": 12,
     "turnover": 2682604.944384098,
     "isGold": true,
-    "currentPrice": 0.6299999952316284,
-    "currentDiff": 9.6,
+    "currentPrice": 0.6349999904632568,
+    "currentDiff": 10.4,
     "diffs": [
       -0.9,
       -3.5,
@@ -1008,7 +1721,7 @@ window.TRACKER_DATA = [
       10.4,
       6.1,
       8.7,
-      5.2
+      7
     ]
   },
   {
@@ -1019,8 +1732,8 @@ window.TRACKER_DATA = [
     "score": 12,
     "turnover": 3089160.1227521896,
     "isGold": true,
-    "currentPrice": 0.699999988079071,
-    "currentDiff": -2.8,
+    "currentPrice": 0.6949999928474426,
+    "currentDiff": -3.5,
     "diffs": [
       -2.8,
       -5.6,
@@ -1031,7 +1744,7 @@ window.TRACKER_DATA = [
       -5.6,
       -4.9,
       -4.9,
-      -7.6
+      -6.9
     ]
   },
   {
@@ -1065,8 +1778,8 @@ window.TRACKER_DATA = [
     "score": 15,
     "turnover": 1976157.005816698,
     "isGold": true,
-    "currentPrice": 0.9350000023841858,
-    "currentDiff": 15.4,
+    "currentPrice": 0.9399999976158142,
+    "currentDiff": 16,
     "diffs": [
       -1.9,
       -1.2,
@@ -1088,8 +1801,8 @@ window.TRACKER_DATA = [
     "score": 14,
     "turnover": 6912981.114989519,
     "isGold": true,
-    "currentPrice": 0.45500001311302185,
-    "currentDiff": 5.8,
+    "currentPrice": 0.46000000834465027,
+    "currentDiff": 7,
     "diffs": [
       2.3,
       1.2,
@@ -1111,8 +1824,8 @@ window.TRACKER_DATA = [
     "score": 14,
     "turnover": 677068.5168653727,
     "isGold": false,
-    "currentPrice": 0.33000001311302185,
-    "currentDiff": -1.5,
+    "currentPrice": 0.32499998807907104,
+    "currentDiff": -3,
     "diffs": [
       0,
       -4.5,
@@ -1134,8 +1847,8 @@ window.TRACKER_DATA = [
     "score": 11,
     "turnover": 1007160.0150078535,
     "isGold": true,
-    "currentPrice": 0.39500001072883606,
-    "currentDiff": -1.2,
+    "currentPrice": 0.4000000059604645,
+    "currentDiff": 0,
     "diffs": [
       0,
       2.5,
@@ -1180,8 +1893,8 @@ window.TRACKER_DATA = [
     "score": 13,
     "turnover": 2163950.937733054,
     "isGold": true,
-    "currentPrice": 0.3449999988079071,
-    "currentDiff": 19,
+    "currentPrice": 0.3499999940395355,
+    "currentDiff": 20.7,
     "diffs": [
       0,
       3.4,
@@ -1203,8 +1916,8 @@ window.TRACKER_DATA = [
     "score": 12,
     "turnover": 310390.5048131943,
     "isGold": false,
-    "currentPrice": 0.6449999809265137,
-    "currentDiff": 4.9,
+    "currentPrice": 0.6600000262260437,
+    "currentDiff": 7.3,
     "diffs": [
       -2.4,
       -2.4,
@@ -1226,8 +1939,8 @@ window.TRACKER_DATA = [
     "score": 10,
     "turnover": 562475.9929418564,
     "isGold": false,
-    "currentPrice": 0.6399999856948853,
-    "currentDiff": 12.3,
+    "currentPrice": 0.6449999809265137,
+    "currentDiff": 13.2,
     "diffs": [
       -2.6,
       -2.6,
@@ -1318,8 +2031,8 @@ window.TRACKER_DATA = [
     "score": 13,
     "turnover": 1214327.9847621918,
     "isGold": true,
-    "currentPrice": 0.7250000238418579,
-    "currentDiff": -4.6,
+    "currentPrice": 0.7149999737739563,
+    "currentDiff": -5.9,
     "diffs": [
       -1.3,
       -1.3,
@@ -1341,8 +2054,8 @@ window.TRACKER_DATA = [
     "score": 8,
     "turnover": 1446757.0443034172,
     "isGold": false,
-    "currentPrice": 0.6299999952316284,
-    "currentDiff": 15.6,
+    "currentPrice": 0.6399999856948853,
+    "currentDiff": 17.4,
     "diffs": [
       0,
       0,
@@ -1364,8 +2077,8 @@ window.TRACKER_DATA = [
     "score": 11,
     "turnover": 3558911.920452118,
     "isGold": true,
-    "currentPrice": 1.100000023841858,
-    "currentDiff": 14.6,
+    "currentPrice": 1.1100000143051147,
+    "currentDiff": 15.6,
     "diffs": [
       -0.5,
       -0.5,
@@ -1410,8 +2123,8 @@ window.TRACKER_DATA = [
     "score": 14,
     "turnover": 12242789.791506529,
     "isGold": true,
-    "currentPrice": 0.7049999833106995,
-    "currentDiff": 0.7,
+    "currentPrice": 0.699999988079071,
+    "currentDiff": 0,
     "diffs": [
       -0.7,
       -0.7,
@@ -1456,8 +2169,8 @@ window.TRACKER_DATA = [
     "score": 8,
     "turnover": 2419965.6186282635,
     "isGold": false,
-    "currentPrice": 0.09000000357627869,
-    "currentDiff": -83.2,
+    "currentPrice": 0.08500000089406967,
+    "currentDiff": -84.1,
     "diffs": [
       0,
       -6.5,
@@ -1479,8 +2192,8 @@ window.TRACKER_DATA = [
     "score": 12,
     "turnover": 2646596.538436413,
     "isGold": true,
-    "currentPrice": 1.159999966621399,
-    "currentDiff": 17.8,
+    "currentPrice": 1.149999976158142,
+    "currentDiff": 16.8,
     "diffs": [
       1.5,
       -2.5,
@@ -1502,8 +2215,8 @@ window.TRACKER_DATA = [
     "score": 11,
     "turnover": 925650.0200629234,
     "isGold": true,
-    "currentPrice": 0.6299999952316284,
-    "currentDiff": 14.5,
+    "currentPrice": 0.6349999904632568,
+    "currentDiff": 15.5,
     "diffs": [
       -2.7,
       -1.8,
@@ -1525,8 +2238,8 @@ window.TRACKER_DATA = [
     "score": 8,
     "turnover": 4451061.515492201,
     "isGold": false,
-    "currentPrice": 0.699999988079071,
-    "currentDiff": 2.2,
+    "currentPrice": 0.6949999928474426,
+    "currentDiff": 1.5,
     "diffs": [
       -2.9,
       4.4,
@@ -1548,8 +2261,8 @@ window.TRACKER_DATA = [
     "score": 10,
     "turnover": 2665946.49220109,
     "isGold": true,
-    "currentPrice": 0.9350000023841858,
-    "currentDiff": 14.7,
+    "currentPrice": 0.9399999976158142,
+    "currentDiff": 15.3,
     "diffs": [
       3.1,
       1.2,
@@ -1571,8 +2284,8 @@ window.TRACKER_DATA = [
     "score": 11,
     "turnover": 28805937.92078197,
     "isGold": true,
-    "currentPrice": 0.45500001311302185,
-    "currentDiff": 9.6,
+    "currentPrice": 0.46000000834465027,
+    "currentDiff": 10.8,
     "diffs": [
       8.4,
       6,
@@ -1594,8 +2307,8 @@ window.TRACKER_DATA = [
     "score": 12,
     "turnover": 618648.9946037531,
     "isGold": false,
-    "currentPrice": 0.39500001072883606,
-    "currentDiff": -3.7,
+    "currentPrice": 0.4000000059604645,
+    "currentDiff": -2.4,
     "diffs": [
       0,
       2.4,
@@ -1663,8 +2376,8 @@ window.TRACKER_DATA = [
     "score": 12,
     "turnover": 2749044.8991656303,
     "isGold": true,
-    "currentPrice": 0.33000001311302185,
-    "currentDiff": 1.5,
+    "currentPrice": 0.32499998807907104,
+    "currentDiff": 0,
     "diffs": [
       -1.5,
       1.5,
@@ -1686,8 +2399,8 @@ window.TRACKER_DATA = [
     "score": 11,
     "turnover": 3123076.3611763716,
     "isGold": true,
-    "currentPrice": 0.3449999988079071,
-    "currentDiff": 16.9,
+    "currentPrice": 0.3499999940395355,
+    "currentDiff": 18.6,
     "diffs": [
       0,
       0,
@@ -1732,8 +2445,8 @@ window.TRACKER_DATA = [
     "score": 9,
     "turnover": 149210.99336743355,
     "isGold": false,
-    "currentPrice": 0.6449999809265137,
-    "currentDiff": 9.3,
+    "currentPrice": 0.6600000262260437,
+    "currentDiff": 11.9,
     "diffs": [
       7.6,
       4.2,
@@ -1778,8 +2491,8 @@ window.TRACKER_DATA = [
     "score": 13,
     "turnover": 545895.979976654,
     "isGold": false,
-    "currentPrice": 0.4399999976158142,
-    "currentDiff": 69.2,
+    "currentPrice": 0.4350000023841858,
+    "currentDiff": 67.3,
     "diffs": [
       1.9,
       9.6,
@@ -1801,8 +2514,8 @@ window.TRACKER_DATA = [
     "score": 11,
     "turnover": 1412180.0274848938,
     "isGold": true,
-    "currentPrice": 0.6299999952316284,
-    "currentDiff": 28.6,
+    "currentPrice": 0.6399999856948853,
+    "currentDiff": 30.6,
     "diffs": [
       1,
       2,
@@ -1824,8 +2537,8 @@ window.TRACKER_DATA = [
     "score": 13,
     "turnover": 2391659.9292755127,
     "isGold": true,
-    "currentPrice": 0.7049999833106995,
-    "currentDiff": 9.3,
+    "currentPrice": 0.699999988079071,
+    "currentDiff": 8.5,
     "diffs": [
       0,
       3.9,
@@ -1870,8 +2583,8 @@ window.TRACKER_DATA = [
     "score": 19,
     "turnover": 3006222.469061613,
     "isGold": true,
-    "currentPrice": 0.7549999952316284,
-    "currentDiff": 8.6,
+    "currentPrice": 0.7450000047683716,
+    "currentDiff": 7.2,
     "diffs": [
       0.7,
       0.7,
@@ -1893,8 +2606,8 @@ window.TRACKER_DATA = [
     "score": 7,
     "turnover": 3742767.0728445053,
     "isGold": false,
-    "currentPrice": 0.7250000238418579,
-    "currentDiff": -1.4,
+    "currentPrice": 0.7149999737739563,
+    "currentDiff": -2.7,
     "diffs": [
       6.1,
       6.8,
@@ -1916,8 +2629,8 @@ window.TRACKER_DATA = [
     "score": 11,
     "turnover": 4109336.46119833,
     "isGold": true,
-    "currentPrice": 0.6399999856948853,
-    "currentDiff": 26.7,
+    "currentPrice": 0.6449999809265137,
+    "currentDiff": 27.7,
     "diffs": [
       4,
       3,
@@ -1962,8 +2675,8 @@ window.TRACKER_DATA = [
     "score": 12,
     "turnover": 3643596.0350990295,
     "isGold": true,
-    "currentPrice": 0.09000000357627869,
-    "currentDiff": -81.8,
+    "currentPrice": 0.08500000089406967,
+    "currentDiff": -82.8,
     "diffs": [
       -5.1,
       -1,
@@ -1985,8 +2698,8 @@ window.TRACKER_DATA = [
     "score": 11,
     "turnover": 1760062.5310838223,
     "isGold": true,
-    "currentPrice": 0.5849999785423279,
-    "currentDiff": -13.3,
+    "currentPrice": 0.5799999833106995,
+    "currentDiff": -14.1,
     "diffs": [
       2.2,
       3.7,
@@ -2008,8 +2721,8 @@ window.TRACKER_DATA = [
     "score": 12,
     "turnover": 4087017.9285764694,
     "isGold": true,
-    "currentPrice": 1.159999966621399,
-    "currentDiff": 21.5,
+    "currentPrice": 1.149999976158142,
+    "currentDiff": 20.4,
     "diffs": [
       3.7,
       6.8,
@@ -2031,8 +2744,8 @@ window.TRACKER_DATA = [
     "score": 13,
     "turnover": 5237628.208124638,
     "isGold": true,
-    "currentPrice": 0.699999988079071,
-    "currentDiff": 6.1,
+    "currentPrice": 0.6949999928474426,
+    "currentDiff": 5.3,
     "diffs": [
       3,
       2.3,
@@ -2054,8 +2767,8 @@ window.TRACKER_DATA = [
     "score": 13,
     "turnover": 1749457.420551777,
     "isGold": true,
-    "currentPrice": 0.6299999952316284,
-    "currentDiff": 20,
+    "currentPrice": 0.6349999904632568,
+    "currentDiff": 21,
     "diffs": [
       -5.7,
       -3.8,
@@ -2077,8 +2790,8 @@ window.TRACKER_DATA = [
     "score": 12,
     "turnover": 7748396.0815012455,
     "isGold": true,
-    "currentPrice": 0.2800000011920929,
-    "currentDiff": -17.6,
+    "currentPrice": 0.28999999165534973,
+    "currentDiff": -14.7,
     "diffs": [
       -2.9,
       -7.4,
@@ -2100,8 +2813,8 @@ window.TRACKER_DATA = [
     "score": 8,
     "turnover": 33964344.26121712,
     "isGold": false,
-    "currentPrice": 0.45500001311302185,
-    "currentDiff": -2.2,
+    "currentPrice": 0.46000000834465027,
+    "currentDiff": -1.1,
     "diffs": [
       -8.6,
       -5.4,
@@ -2146,8 +2859,8 @@ window.TRACKER_DATA = [
     "score": 12,
     "turnover": 614295.0160503387,
     "isGold": false,
-    "currentPrice": 0.4099999964237213,
-    "currentDiff": 12.3,
+    "currentPrice": 0.41999998688697815,
+    "currentDiff": 15.1,
     "diffs": [
       -1.4,
       -9.6,
@@ -2169,8 +2882,8 @@ window.TRACKER_DATA = [
     "score": 10,
     "turnover": 1697993.9682483673,
     "isGold": true,
-    "currentPrice": 0.33000001311302185,
-    "currentDiff": 29.4,
+    "currentPrice": 0.32499998807907104,
+    "currentDiff": 27.5,
     "diffs": [
       7.8,
       11.8,
@@ -2192,8 +2905,8 @@ window.TRACKER_DATA = [
     "score": 12,
     "turnover": 1940422.5544273853,
     "isGold": true,
-    "currentPrice": 0.39500001072883606,
-    "currentDiff": -7.1,
+    "currentPrice": 0.4000000059604645,
+    "currentDiff": -5.9,
     "diffs": [
       0,
       -8.2,
@@ -2238,8 +2951,8 @@ window.TRACKER_DATA = [
     "score": 9,
     "turnover": 286380.0113797188,
     "isGold": false,
-    "currentPrice": 0.6449999809265137,
-    "currentDiff": 7.5,
+    "currentPrice": 0.6600000262260437,
+    "currentDiff": 10,
     "diffs": [
       1.7,
       -3.3,
@@ -2261,8 +2974,8 @@ window.TRACKER_DATA = [
     "score": 16,
     "turnover": 677458.5052102804,
     "isGold": false,
-    "currentPrice": 0.6399999856948853,
-    "currentDiff": 37.6,
+    "currentPrice": 0.6449999809265137,
+    "currentDiff": 38.7,
     "diffs": [
       2.2,
       1.1,
@@ -2330,8 +3043,8 @@ window.TRACKER_DATA = [
     "score": 17,
     "turnover": 1231287.504285574,
     "isGold": true,
-    "currentPrice": 0.7549999952316284,
-    "currentDiff": 10.2,
+    "currentPrice": 0.7450000047683716,
+    "currentDiff": 8.8,
     "diffs": [
       0.7,
       0.7,
@@ -2353,8 +3066,8 @@ window.TRACKER_DATA = [
     "score": 10,
     "turnover": 2084860.9785437584,
     "isGold": true,
-    "currentPrice": 0.7250000238418579,
-    "currentDiff": 4.3,
+    "currentPrice": 0.7149999737739563,
+    "currentDiff": 2.9,
     "diffs": [
       5,
       4.3,
@@ -2422,8 +3135,8 @@ window.TRACKER_DATA = [
     "score": 11,
     "turnover": 3924365.110075474,
     "isGold": true,
-    "currentPrice": 0.9350000023841858,
-    "currentDiff": 10,
+    "currentPrice": 0.9399999976158142,
+    "currentDiff": 10.6,
     "diffs": [
       1.2,
       -0.6,
@@ -2445,8 +3158,8 @@ window.TRACKER_DATA = [
     "score": 12,
     "turnover": 4769496.189522743,
     "isGold": true,
-    "currentPrice": 0.6299999952316284,
-    "currentDiff": 16.7,
+    "currentPrice": 0.6399999856948853,
+    "currentDiff": 18.5,
     "diffs": [
       0.9,
       0,
@@ -2468,8 +3181,8 @@ window.TRACKER_DATA = [
     "score": 8,
     "turnover": 4805283.093523979,
     "isGold": false,
-    "currentPrice": 0.4399999976158142,
-    "currentDiff": 79.6,
+    "currentPrice": 0.4350000023841858,
+    "currentDiff": 77.6,
     "diffs": [
       8.2,
       6.1,
@@ -2491,8 +3204,8 @@ window.TRACKER_DATA = [
     "score": 9,
     "turnover": 4924465.133756399,
     "isGold": false,
-    "currentPrice": 0.45500001311302185,
-    "currentDiff": 15.2,
+    "currentPrice": 0.46000000834465027,
+    "currentDiff": 16.5,
     "diffs": [
       1.3,
       1.3,
@@ -2514,8 +3227,8 @@ window.TRACKER_DATA = [
     "score": 10,
     "turnover": 6955375.124537945,
     "isGold": true,
-    "currentPrice": 0.3449999988079071,
-    "currentDiff": 30.2,
+    "currentPrice": 0.3499999940395355,
+    "currentDiff": 32.1,
     "diffs": [
       5.7,
       1.9,
@@ -2537,8 +3250,8 @@ window.TRACKER_DATA = [
     "score": 11,
     "turnover": 7827409.194976091,
     "isGold": true,
-    "currentPrice": 0.7049999833106995,
-    "currentDiff": 5.2,
+    "currentPrice": 0.699999988079071,
+    "currentDiff": 4.5,
     "diffs": [
       0.7,
       -3,
@@ -2560,8 +3273,8 @@ window.TRACKER_DATA = [
     "score": 15,
     "turnover": 1572258.0770730972,
     "isGold": true,
-    "currentPrice": 0.5849999785423279,
-    "currentDiff": 9.3,
+    "currentPrice": 0.5799999833106995,
+    "currentDiff": 8.4,
     "diffs": [
       5.6,
       "N/A",
@@ -2583,8 +3296,8 @@ window.TRACKER_DATA = [
     "score": 11,
     "turnover": 24718638.914841413,
     "isGold": true,
-    "currentPrice": 0.699999988079071,
-    "currentDiff": -0.7,
+    "currentPrice": 0.6949999928474426,
+    "currentDiff": -1.4,
     "diffs": [
       -0.7,
       "N/A",
@@ -2606,8 +3319,8 @@ window.TRACKER_DATA = [
     "score": 10,
     "turnover": 1699844.9228048325,
     "isGold": true,
-    "currentPrice": 0.6299999952316284,
-    "currentDiff": 20,
+    "currentPrice": 0.6349999904632568,
+    "currentDiff": 21,
     "diffs": [
       4.8,
       3.8,
@@ -2629,8 +3342,8 @@ window.TRACKER_DATA = [
     "score": 11,
     "turnover": 13502844.536554813,
     "isGold": true,
-    "currentPrice": 0.45500001311302185,
-    "currentDiff": 26.4,
+    "currentPrice": 0.46000000834465027,
+    "currentDiff": 27.8,
     "diffs": [
       11.1,
       9.7,
@@ -2698,8 +3411,8 @@ window.TRACKER_DATA = [
     "score": 15,
     "turnover": 3751825.5836963654,
     "isGold": true,
-    "currentPrice": 0.8500000238418579,
-    "currentDiff": -0.6,
+    "currentPrice": 0.8550000190734863,
+    "currentDiff": 0,
     "diffs": [
       0,
       0,
@@ -2721,8 +3434,8 @@ window.TRACKER_DATA = [
     "score": 8,
     "turnover": 405557.01196193695,
     "isGold": false,
-    "currentPrice": 0.6399999856948853,
-    "currentDiff": 32,
+    "currentPrice": 0.6449999809265137,
+    "currentDiff": 33,
     "diffs": [
       -1,
       0,
@@ -2744,8 +3457,8 @@ window.TRACKER_DATA = [
     "score": 12,
     "turnover": 459913.9942288399,
     "isGold": false,
-    "currentPrice": 0.39500001072883606,
-    "currentDiff": 3.9,
+    "currentPrice": 0.4000000059604645,
+    "currentDiff": 5.3,
     "diffs": [
       2.6,
       2.6,
@@ -2813,8 +3526,8 @@ window.TRACKER_DATA = [
     "score": 13,
     "turnover": 1725750,
     "isGold": true,
-    "currentPrice": 0.6299999952316284,
-    "currentDiff": 26,
+    "currentPrice": 0.6399999856948853,
+    "currentDiff": 28,
     "diffs": [
       3,
       1,
@@ -2836,8 +3549,8 @@ window.TRACKER_DATA = [
     "score": 15,
     "turnover": 1787763.9844059944,
     "isGold": true,
-    "currentPrice": 0.9350000023841858,
-    "currentDiff": 14,
+    "currentPrice": 0.9399999976158142,
+    "currentDiff": 14.6,
     "diffs": [
       1.8,
       2.4,
@@ -2859,8 +3572,8 @@ window.TRACKER_DATA = [
     "score": 12,
     "turnover": 2014289.0526294708,
     "isGold": true,
-    "currentPrice": 0.45500001311302185,
-    "currentDiff": 24.7,
+    "currentPrice": 0.46000000834465027,
+    "currentDiff": 26,
     "diffs": [
       4.1,
       1.4,
@@ -2928,8 +3641,8 @@ window.TRACKER_DATA = [
     "score": 8,
     "turnover": 4434212.046641111,
     "isGold": false,
-    "currentPrice": 0.7250000238418579,
-    "currentDiff": 6.6,
+    "currentPrice": 0.7149999737739563,
+    "currentDiff": 5.1,
     "diffs": [
       -1.5,
       0.7,
@@ -2951,8 +3664,8 @@ window.TRACKER_DATA = [
     "score": 10,
     "turnover": 5020209.815859795,
     "isGold": true,
-    "currentPrice": 0.7049999833106995,
-    "currentDiff": 8.5,
+    "currentPrice": 0.699999988079071,
+    "currentDiff": 7.7,
     "diffs": [
       0.8,
       0,
@@ -2974,8 +3687,8 @@ window.TRACKER_DATA = [
     "score": 18,
     "turnover": 5630494.519597292,
     "isGold": true,
-    "currentPrice": 0.7549999952316284,
-    "currentDiff": 10.2,
+    "currentPrice": 0.7450000047683716,
+    "currentDiff": 8.8,
     "diffs": [
       -2.2,
       -0.7,
@@ -3020,8 +3733,8 @@ window.TRACKER_DATA = [
     "score": 10,
     "turnover": 11954490.475028753,
     "isGold": true,
-    "currentPrice": 0.3449999988079071,
-    "currentDiff": 15,
+    "currentPrice": 0.3499999940395355,
+    "currentDiff": 16.7,
     "diffs": [
       1.7,
       0,
@@ -3066,8 +3779,8 @@ window.TRACKER_DATA = [
     "score": 11,
     "turnover": 451444.0040111542,
     "isGold": false,
-    "currentPrice": 1.1100000143051147,
-    "currentDiff": 37.9,
+    "currentPrice": 1.1299999952316284,
+    "currentDiff": 40.4,
     "diffs": [
       -3.7,
       -3.1,
@@ -3089,8 +3802,8 @@ window.TRACKER_DATA = [
     "score": 11,
     "turnover": 3703664.831805229,
     "isGold": true,
-    "currentPrice": 0.5849999785423279,
-    "currentDiff": 11.4,
+    "currentPrice": 0.5799999833106995,
+    "currentDiff": 10.5,
     "diffs": [
       0,
       -1,
@@ -3112,8 +3825,8 @@ window.TRACKER_DATA = [
     "score": 12,
     "turnover": 763272.0303297043,
     "isGold": true,
-    "currentPrice": 0.4099999964237213,
-    "currentDiff": 13.9,
+    "currentPrice": 0.41999998688697815,
+    "currentDiff": 16.7,
     "diffs": [
       0,
       0,
@@ -3158,8 +3871,8 @@ window.TRACKER_DATA = [
     "score": 11,
     "turnover": 2385276.034641266,
     "isGold": true,
-    "currentPrice": 1.159999966621399,
-    "currentDiff": 17.8,
+    "currentPrice": 1.149999976158142,
+    "currentDiff": 16.8,
     "diffs": [
       -1,
       -0.5,
@@ -3181,8 +3894,8 @@ window.TRACKER_DATA = [
     "score": 10,
     "turnover": 4624483.464998007,
     "isGold": true,
-    "currentPrice": 0.45500001311302185,
-    "currentDiff": 44.4,
+    "currentPrice": 0.46000000834465027,
+    "currentDiff": 46,
     "diffs": [
       3.2,
       0,
@@ -3227,8 +3940,8 @@ window.TRACKER_DATA = [
     "score": 11,
     "turnover": 19781256.78603649,
     "isGold": true,
-    "currentPrice": 0.6100000143051147,
-    "currentDiff": -7.6,
+    "currentPrice": 0.6299999952316284,
+    "currentDiff": -4.5,
     "diffs": [
       -3.8,
       -6.1,
@@ -3250,8 +3963,8 @@ window.TRACKER_DATA = [
     "score": 13,
     "turnover": 0,
     "isGold": false,
-    "currentPrice": 0.39500001072883606,
-    "currentDiff": -2.5,
+    "currentPrice": 0.4000000059604645,
+    "currentDiff": -1.2,
     "diffs": [
       -2.5,
       -2.5,
@@ -3273,8 +3986,8 @@ window.TRACKER_DATA = [
     "score": 15,
     "turnover": 0,
     "isGold": false,
-    "currentPrice": 0.6299999952316284,
-    "currentDiff": 34,
+    "currentPrice": 0.6399999856948853,
+    "currentDiff": 36.2,
     "diffs": [
       -1.1,
       1.1,
@@ -3296,8 +4009,8 @@ window.TRACKER_DATA = [
     "score": 7,
     "turnover": 0,
     "isGold": false,
-    "currentPrice": 0.7250000238418579,
-    "currentDiff": 10.7,
+    "currentPrice": 0.7149999737739563,
+    "currentDiff": 9.2,
     "diffs": [
       0.8,
       2.3,
@@ -3319,8 +4032,8 @@ window.TRACKER_DATA = [
     "score": 15,
     "turnover": 0,
     "isGold": false,
-    "currentPrice": 0.9350000023841858,
-    "currentDiff": 14.7,
+    "currentPrice": 0.9399999976158142,
+    "currentDiff": 15.3,
     "diffs": [
       0,
       0.6,
@@ -3342,8 +4055,8 @@ window.TRACKER_DATA = [
     "score": 15,
     "turnover": 0,
     "isGold": false,
-    "currentPrice": 0.8500000238418579,
-    "currentDiff": -1.2,
+    "currentPrice": 0.8550000190734863,
+    "currentDiff": -0.6,
     "diffs": [
       -0.6,
       -0.6,
@@ -3411,8 +4124,8 @@ window.TRACKER_DATA = [
     "score": 19,
     "turnover": 0,
     "isGold": false,
-    "currentPrice": 0.7549999952316284,
-    "currentDiff": 11,
+    "currentPrice": 0.7450000047683716,
+    "currentDiff": 9.6,
     "diffs": [
       0,
       -0.7,
@@ -3457,8 +4170,8 @@ window.TRACKER_DATA = [
     "score": 12,
     "turnover": 0,
     "isGold": false,
-    "currentPrice": 0.6399999856948853,
-    "currentDiff": 34.7,
+    "currentPrice": 0.6449999809265137,
+    "currentDiff": 35.8,
     "diffs": [
       0,
       -1.1,
@@ -3480,8 +4193,8 @@ window.TRACKER_DATA = [
     "score": 13,
     "turnover": 0,
     "isGold": false,
-    "currentPrice": 0.6299999952316284,
-    "currentDiff": 11.5,
+    "currentPrice": 0.6349999904632568,
+    "currentDiff": 12.4,
     "diffs": [
       -1.8,
       4.4,
@@ -3526,8 +4239,8 @@ window.TRACKER_DATA = [
     "score": 10,
     "turnover": 0,
     "isGold": false,
-    "currentPrice": 0.3449999988079071,
-    "currentDiff": 25.5,
+    "currentPrice": 0.3499999940395355,
+    "currentDiff": 27.3,
     "diffs": [
       -3.6,
       -3.6,
@@ -3572,8 +4285,8 @@ window.TRACKER_DATA = [
     "score": 9,
     "turnover": 0,
     "isGold": false,
-    "currentPrice": 0.7049999833106995,
-    "currentDiff": 15.6,
+    "currentPrice": 0.699999988079071,
+    "currentDiff": 14.8,
     "diffs": [
       -3.3,
       1.6,
@@ -3595,8 +4308,8 @@ window.TRACKER_DATA = [
     "score": 12,
     "turnover": 0,
     "isGold": false,
-    "currentPrice": 0.45500001311302185,
-    "currentDiff": 18.2,
+    "currentPrice": 0.46000000834465027,
+    "currentDiff": 19.5,
     "diffs": [
       -1.3,
       6.5,
@@ -3618,8 +4331,8 @@ window.TRACKER_DATA = [
     "score": 13,
     "turnover": 0,
     "isGold": false,
-    "currentPrice": 0.699999988079071,
-    "currentDiff": 16.7,
+    "currentPrice": 0.6949999928474426,
+    "currentDiff": 15.8,
     "diffs": [
       -2.5,
       -0.8,
