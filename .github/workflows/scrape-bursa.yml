@@ -2,9 +2,9 @@ name: Bursa Live Data Scraper
 
 on:
   schedule:
-    # Run every 10 minutes during Bursa trading hours (01:00 to 09:00 UTC = 09:00 to 17:00 Malaysia Time)
+    # Run every 5 minutes during Bursa trading hours (01:00 to 09:00 UTC = 09:00 to 17:00 Malaysia Time)
     # This runs Monday to Friday
-    - cron: '*/10 1-9 * * 1-5'
+    - cron: '*/5 1-9 * * 1-5'
   workflow_dispatch: # Allows manual trigger from GitHub UI
 
 permissions:
