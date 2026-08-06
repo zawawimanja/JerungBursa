@@ -18,7 +18,7 @@ const TICKERS = [
     { name: 'FRONTKN', sector: 'Technology', basePrice: 4.20, category: 'Swing' },
     
     // --- Intraday / Momentum (Hit & Run) ---
-    { name: 'SKYCHIP', sector: 'Technology', basePrice: 1.45, category: 'Intraday' },
+    { name: 'SKYECHIP', sector: 'Technology', basePrice: 1.45, category: 'Intraday' },
     { name: 'NOTION', sector: 'Technology', basePrice: 1.85, category: 'Intraday' },
     { name: 'MRDIY', sector: 'Consumer', basePrice: 1.55, category: 'Intraday' },
     { name: 'INARI', sector: 'Technology', basePrice: 3.20, category: 'Intraday' },

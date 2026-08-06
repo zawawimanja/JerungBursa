@@ -8,8 +8,8 @@ const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 // Hardcoded mappings
 const HARDCODED_MAPPINGS = {
-    'SKYCHIP': '5326.KL',
-    'SKYECHIP': '5326.KL',
+    'SKYCHIP': '5357.KL',
+    'SKYECHIP': '5357.KL',
     'ZETRIX': '0138.KL',
     'NATGATE': '0270.KL',
     'GIIB': '7191.KL',

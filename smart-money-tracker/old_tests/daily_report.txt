@@ -10,7 +10,7 @@ Perbandingan Dengan Tarikh Lepas: 2026-06-22
   Harga Entry: RM 0.765 | Harga Kini: RM 0.755
   Untung/Rugi: -1.31% | Status: [RUNNING]
   Cut Loss: RM 0.727 | Benteng Last: RM 0.725
-* SKYCHIP (Swing)
+* SKYECHIP (Swing)
   Harga Entry: RM 3.380 | Harga Kini: RM 3.580
   Untung/Rugi: +5.92% | Status: [RUNNING]
   Cut Loss: RM 3.200 | Benteng Last: RM 3.180
