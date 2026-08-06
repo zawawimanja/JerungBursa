@@ -262,9 +262,14 @@ async function main() {
         symToNames[sym].push(name);
     }
     for (const [sym, names] of Object.entries(symToNames)) {
-        names.sort((a, b) => a.length - b.length);
-        const shortestName = names[0];
-        mappings[shortestName] = sym;
+        names.sort((a, b) => {
+            const aIsFresh = freshIpos.includes(a) ? -1 : 1;
+            const bIsFresh = freshIpos.includes(b) ? -1 : 1;
+            if (aIsFresh !== bIsFresh) return aIsFresh - bIsFresh;
+            return a.length - b.length;
+        });
+        const primaryName = names[0];
+        mappings[primaryName] = sym;
     }
 
     function resolveCodeAndSymbol(name) {
