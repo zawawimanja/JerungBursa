@@ -1,15 +1,22 @@
 const { exec } = require('child_process');
 const path = require('path');
 
-// Interval kemas kini: 1 jam (3,600,000 ms) - sangat ringan dan selamat
-const INTERVAL = 60 * 60 * 1000; 
+// Interval kemas kini: 5 minit (300,000 ms)
+const INTERVAL = 5 * 60 * 1000; 
+
+let isRunning = false;
 
 function runScraper() {
+    if (isRunning) {
+        console.log(`[${new Date().toLocaleTimeString()}] Pusingan imbasan terdahulu masih berjalan. Melepaskan pusingan ini...`);
+        return;
+    }
+    
     const now = new Date();
     const day = now.getDay();
     const hour = now.getHours();
     
-    // Hanya run pada hari bekerja (Isnin - Jumaat: 1 - 5) dan waktu pasaran dibuka (8:30 pagi - 5:30 petang)
+    // Hanya run pada hari bekerja (Isnin - Jumaat: 1 - 5) dan waktu pasaran dibuka (8:30 pagi - 5:30 petang MYT)
     const isWorkingDay = day >= 1 && day <= 5;
     const isMarketHours = (hour >= 8 && hour < 18);
     
@@ -18,33 +25,49 @@ function runScraper() {
         return;
     }
     
+    isRunning = true;
     console.log(`\n==================================================`);
-    console.log(`[${now.toLocaleString('en-MY', { timeZone: 'Asia/Kuala_Lumpur' })}] Memulakan kemas kini harga live...`);
+    console.log(`[${now.toLocaleString('en-MY', { timeZone: 'Asia/Kuala_Lumpur' })}] 🔄 Memulakan imbasan pasaran live (5-Minit Auto-Run)...`);
     console.log(`==================================================`);
     
     const scrapeScript = path.join(__dirname, 'scrape-real.js');
+    const projectRoot = path.join(__dirname, '..');
     
-    exec(`node "${scrapeScript}"`, (error, stdout, stderr) => {
+    exec(`node "${scrapeScript}"`, { cwd: __dirname }, (error, stdout, stderr) => {
         if (error) {
             console.error(`❌ Ralat semasa mengemas kini harga: ${error.message}`);
+            isRunning = false;
             return;
         }
-        if (stderr) {
-            console.warn(`⚠️ Warning: ${stderr}`);
-        }
-        console.log(stdout);
-        console.log(`✅ Kemas kini selesai secara automatik!`);
+        if (stdout) console.log(stdout);
+        
+        console.log(`📡 Memuat naik data terkini ke GitHub & Vercel...`);
+        
+        const gitCmd = `git add smart-money-tracker/live_data.json smart-money-tracker/live_data.js smart-money-tracker/history/ && git commit -m "Auto-update live market data (5-min bot) [skip ci]" && git push origin main`;
+        
+        exec(gitCmd, { cwd: projectRoot }, (gitErr, gitStdout, gitStderr) => {
+            isRunning = false;
+            if (gitErr) {
+                if (gitErr.message.includes('nothing to commit')) {
+                    console.log(`ℹ️ Tiada perubahan data dikesan.`);
+                } else {
+                    console.error(`⚠️ Git Status/Push: ${gitErr.message}`);
+                }
+            } else {
+                console.log(`✅ Berjaya push ke Vercel! Pasaran terkini sudah LIVE.`);
+            }
+        });
     });
 }
 
 // Jalankan terus sekali apabila mula
 runScraper();
 
-// Ulang setiap 1 jam secara berterusan
+// Ulang setiap 5 minit secara berterusan
 setInterval(runScraper, INTERVAL);
 
 console.log(`==================================================`);
 console.log(`🚀 Live Price Updater Berjalan di Latar Belakang!`);
-console.log(`⏳ Kekerapan: Setiap 1 jam sekali (Waktu Pasaran: 8.30 Pagi - 5.30 Petang)`);
+console.log(`⏳ Kekerapan: Setiap 5 minit sekali (Waktu Pasaran: 8.30 Pagi - 5.30 Petang)`);
 console.log(`📌 Tekan Ctrl + C untuk menamatkan program.`);
 console.log(`==================================================`);
