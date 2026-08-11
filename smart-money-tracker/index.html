@@ -2531,11 +2531,15 @@ Sila tentukan teknik mana yang paling sesuai untuk saham ini dan bandingkan deng
 
         async function triggerAIAnalysisModal(ticker, technique = 'Umum') {
             const modal = document.getElementById('aiModal');
+            const container = document.getElementById('aiModalContainer');
             const titleEl = document.getElementById('aiModalTitle');
             const bodyEl = document.getElementById('aiModalBody');
             
             if (!modal || !titleEl || !bodyEl) return;
 
+            if (container) {
+                container.style.maxWidth = '800px';
+            }
             
             modal.style.display = 'flex';
             titleEl.innerHTML = `✨ Groq AI Smart Analysis: ${ticker} (${technique})`;
@@ -2676,10 +2680,15 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
         
         async function triggerStockHistoryModal(ticker) {
             const modal = document.getElementById('aiModal');
+            const container = document.getElementById('aiModalContainer');
             const titleEl = document.getElementById('aiModalTitle');
             const bodyEl = document.getElementById('aiModalBody');
             
             if (!modal || !titleEl || !bodyEl) return;
+
+            if (container) {
+                container.style.maxWidth = '1100px';
+            }
 
             modal.style.display = 'flex';
             titleEl.innerHTML = `📜 Sejarah Pengumpulan Lantai: ${ticker}`;
@@ -2736,7 +2745,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 // Format Table
                 let html = `
                     <div class="table-responsive" style="margin-top: 1rem; overflow-x: auto; max-width: 100%;">
-                        <table style="width: 100%; border-collapse: collapse; font-size: 0.82rem; color: #cbd5e1; min-width: 550px;">
+                        <table style="width: 100%; border-collapse: collapse; font-size: 0.82rem; color: #cbd5e1; min-width: 850px;">
                             <thead>
                                 <tr style="border-bottom: 2px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02);">
                                     <th style="padding: 0.6rem 0.5rem; text-align: left; color: #a78bfa; font-weight: 800;">Tarikh</th>
@@ -2745,6 +2754,8 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                                     <th style="padding: 0.6rem 0.5rem; text-align: right; color: #a78bfa; font-weight: 800;">Jarak ke Lantai (%)</th>
                                     <th style="padding: 0.6rem 0.5rem; text-align: center; color: #a78bfa; font-weight: 800;">Bil. Sentuhan (Touches)</th>
                                     <th style="padding: 0.6rem 0.5rem; text-align: center; color: #a78bfa; font-weight: 800;">Isyarat</th>
+                                    <th style="padding: 0.6rem 0.5rem; text-align: center; color: #a78bfa; font-weight: 800;">Confluence?</th>
+                                    <th style="padding: 0.6rem 0.5rem; text-align: left; color: #a78bfa; font-weight: 800;">Strategi Bertembung</th>
                                     <th style="padding: 0.6rem 0.5rem; text-align: left; color: #a78bfa; font-weight: 800;">Ulasan Tracker / Setup</th>
                                 </tr>
                             </thead>
@@ -2770,6 +2781,23 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     
                     const reason = d.reason || d.setupName || '—';
 
+                    // Compute confluence matches dynamically inside the history modal
+                    const matches = [];
+                    if (typeof passesJerungRadar === 'function' && passesJerungRadar(d)) matches.push('🦈 Jerung');
+                    if (typeof passesVcpStaircase === 'function' && passesVcpStaircase(d)) matches.push('🪜 VCP');
+                    if (typeof passesTrendRiders === 'function' && passesTrendRiders(d)) matches.push('📈 Trend');
+                    if (typeof passesEarlySpring === 'function' && passesEarlySpring(d)) matches.push('🌱 Spring');
+                    if (typeof passesBottomFishing === 'function' && passesBottomFishing(d)) matches.push('🎣 Bottom');
+
+                    const isConf = matches.length >= 2;
+                    const confHtml = isConf
+                        ? `<span style="color: #34d399; font-weight: 800; background: rgba(52,211,153,0.1); padding: 0.15rem 0.45rem; border-radius: 4px; font-size: 0.72rem; border: 1px solid rgba(52,211,153,0.25); white-space: nowrap;">YES (${matches.length}x)</span>`
+                        : `<span style="color: #94a3b8; font-weight: 600; background: rgba(148,163,184,0.1); padding: 0.15rem 0.45rem; border-radius: 4px; font-size: 0.72rem; border: 1px solid rgba(148,163,184,0.2); white-space: nowrap;">NO</span>`;
+
+                    const matchesHtml = matches.length > 0
+                        ? matches.map(m => `<span style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.1); padding: 0.15rem 0.35rem; border-radius: 4px; font-size: 0.68rem; color: #cbd5e1; font-weight: 700; white-space: nowrap; margin-right: 0.15rem;">${m}</span>`).join('')
+                        : '—';
+
                     html += `
                         <tr style="border-bottom: 1px solid rgba(255,255,255,0.04); background: ${rowBg};">
                             <td style="padding: 0.6rem 0.5rem; font-weight: 700; color: white; white-space: nowrap;">${dateFormatted}</td>
@@ -2778,6 +2806,8 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                             <td style="padding: 0.6rem 0.5rem; text-align: right; font-weight: 800; color: ${distColor}; white-space: nowrap;">${distText}</td>
                             <td style="padding: 0.6rem 0.5rem; text-align: center; font-weight: 800; color: ${touchesColor};">${touches}</td>
                             <td style="padding: 0.6rem 0.5rem; text-align: center; white-space: nowrap;"><span style="color: ${sigColor}; font-weight: 800; background: ${signal === 'buy' ? 'rgba(52,211,153,0.1)' : 'rgba(251,113,133,0.1)'}; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.7rem;">${signal}</span></td>
+                            <td style="padding: 0.6rem 0.5rem; text-align: center; white-space: nowrap;">${confHtml}</td>
+                            <td style="padding: 0.6rem 0.5rem; white-space: nowrap;">${matchesHtml}</td>
                             <td style="padding: 0.6rem 0.5rem; font-size: 0.75rem; color: #cbd5e1; max-width: 250px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${reason}">${reason}</td>
                         </tr>
                     `;
@@ -6134,7 +6164,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
     <!-- AI Analysis Modal -->
     <div id="aiModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(8px); z-index: 1000; justify-content: center; align-items: center; padding: 1.5rem;">
-        <div style="background: #1e293b; border: 1px solid rgba(167, 139, 250, 0.3); border-radius: 16px; width: 100%; max-width: 650px; display: flex; flex-direction: column; max-height: 90vh; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4); animation: modalFadeIn 0.25s ease-out;">
+        <div id="aiModalContainer" style="background: #1e293b; border: 1px solid rgba(167, 139, 250, 0.3); border-radius: 16px; width: 100%; max-width: 650px; display: flex; flex-direction: column; max-height: 90vh; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.4); animation: modalFadeIn 0.25s ease-out;">
             <!-- Modal Header -->
             <div style="display: flex; justify-content: space-between; align-items: center; padding: 1.25rem 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
                 <h3 id="aiModalTitle" style="margin: 0; color: #a78bfa; font-size: 1.1rem; font-weight: 800; display: flex; align-items: center; gap: 0.5rem;">
