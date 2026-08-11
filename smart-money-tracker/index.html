@@ -681,8 +681,8 @@
 
     <!-- Tab Navigation -->
     <div class="tabs-nav" style="margin-bottom: 1rem; margin-top: 0.5rem; display: flex; gap: 0.4rem; flex-wrap: wrap;">
-        <button class="tab-btn active" id="tab-confluence" onclick="switchTab('confluence')">🔥 Fresh Rider</button>
-        <button class="tab-btn" id="tab-realconfluence" onclick="switchTab('realconfluence')">🎯 Confluence</button>
+        <button class="tab-btn active" id="tab-realconfluence" onclick="switchTab('realconfluence')">🎯 Confluence</button>
+        <button class="tab-btn" id="tab-confluence" onclick="switchTab('confluence')">🔥 Fresh Rider</button>
         <button class="tab-btn" id="tab-jerung" onclick="switchTab('jerung')">🦈 Jerung Radar</button>
         <button class="tab-btn" id="tab-weekly" onclick="switchTab('weekly')">🗓️ Weekly Top 5</button>
         <button class="tab-btn" id="tab-vcp" onclick="switchTab('vcp')">🪜 VCP Staircase</button>
@@ -796,6 +796,7 @@
                                 <th style="text-align: right;">Turnover</th>
                                 <th style="text-align: center;">Status Volume</th>
                                 <th style="text-align: center;">Perubahan %</th>
+                                <th style="text-align: center;">Sejarah</th>
                                 <th style="text-align: center;">Analisis AI (Skor)</th>
                             </tr>
                         </thead>
@@ -862,7 +863,7 @@
                         </thead>
                         <tbody id="confluenceRadarTableBody">
                             <tr>
-                                <td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
+                                <td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
                                     ⏳ Memuatkan Fresh VVIP Rider...
                                 </td>
                             </tr>
@@ -913,12 +914,13 @@
                                 <th style="text-align: right;">Lantai Sokongan @ Harga</th>
                                 <th style="text-align: right;">Turnover</th>
                                 <th style="text-align: center;">Perubahan %</th>
+                                <th style="text-align: center;">Sejarah</th>
                                 <th style="text-align: center;">Analisis AI (Skor)</th>
                             </tr>
                         </thead>
                         <tbody id="realConfluenceTableBody">
                             <tr>
-                                <td colspan="9" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
+                                <td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
                                     ⏳ Memuatkan Confluence Radar...
                                 </td>
                             </tr>
@@ -2671,6 +2673,128 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             }
         }
 
+        
+        async function triggerStockHistoryModal(ticker) {
+            const modal = document.getElementById('aiModal');
+            const titleEl = document.getElementById('aiModalTitle');
+            const bodyEl = document.getElementById('aiModalBody');
+            
+            if (!modal || !titleEl || !bodyEl) return;
+
+            modal.style.display = 'flex';
+            titleEl.innerHTML = `📜 Sejarah Pengumpulan Lantai: ${ticker}`;
+            bodyEl.innerHTML = `
+                <div style="display: flex; flex-direction: column; align-items: center; gap: 0.6rem; padding: 2rem 0; width: 100%;">
+                    <div style="width: 28px; height: 28px; border: 3px solid rgba(167, 139, 250, 0.2); border-top-color: #a78bfa; border-radius: 50%; animation: spin 1s linear infinite;"></div>
+                    <span style="font-size: 0.85rem; color: #a78bfa; font-weight: 800;">Memuatkan sejarah data pengumpulan (15 Hari)...</span>
+                </div>
+            `;
+
+            const activeDateVal = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || '';
+            const baseDate = activeDateVal ? new Date(activeDateVal) : new Date();
+            
+            const dates = [];
+            for (let i = 14; i >= 0; i--) {
+                const d = new Date(baseDate);
+                d.setDate(baseDate.getDate() - i);
+                const yyyy = d.getFullYear();
+                const mm = String(d.getMonth() + 1).padStart(2, '0');
+                const dd = String(d.getDate()).padStart(2, '0');
+                dates.push(`${yyyy}-${mm}-${dd}`);
+            }
+
+            const cacheBuster = new Date().getTime();
+            const promises = dates.map(async (dateStr) => {
+                try {
+                    let res = await fetch(`history/data_${dateStr}.json?t=${cacheBuster}`);
+                    if (!res || !res.ok) {
+                        res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/history/data_${dateStr}.json?t=${cacheBuster}`);
+                    }
+                    if (res && res.ok) {
+                        const raw = await res.json();
+                        const list = Array.isArray(raw) ? raw : (raw.topVolume || []);
+                        const found = list.find(x => x.name === ticker);
+                        if (found) {
+                            return { date: dateStr, data: found };
+                        }
+                    }
+                } catch (e) {
+                    console.warn(`Failed to fetch online history for ${dateStr}`, e);
+                }
+                return { date: dateStr, data: null };
+            });
+
+            try {
+                const results = await Promise.all(promises);
+                const validHistory = results.filter(r => r.data !== null);
+
+                if (validHistory.length === 0) {
+                    bodyEl.innerHTML = `<div style="text-align: center; padding: 2rem; color: #94a3b8;">Tiada sejarah pengumpulan dikesan dalam tempoh 15 hari lepas untuk kaunter ${ticker}.</div>`;
+                    return;
+                }
+
+                // Format Table
+                let html = `
+                    <div class="table-responsive" style="margin-top: 1rem; overflow-x: auto; max-width: 100%;">
+                        <table style="width: 100%; border-collapse: collapse; font-size: 0.82rem; color: #cbd5e1; min-width: 550px;">
+                            <thead>
+                                <tr style="border-bottom: 2px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02);">
+                                    <th style="padding: 0.6rem 0.5rem; text-align: left; color: #a78bfa; font-weight: 800;">Tarikh</th>
+                                    <th style="padding: 0.6rem 0.5rem; text-align: right; color: #a78bfa; font-weight: 800;">Harga Penutup</th>
+                                    <th style="padding: 0.6rem 0.5rem; text-align: right; color: #a78bfa; font-weight: 800;">Lantai Sokongan</th>
+                                    <th style="padding: 0.6rem 0.5rem; text-align: right; color: #a78bfa; font-weight: 800;">Jarak ke Lantai (%)</th>
+                                    <th style="padding: 0.6rem 0.5rem; text-align: center; color: #a78bfa; font-weight: 800;">Bil. Sentuhan (Touches)</th>
+                                    <th style="padding: 0.6rem 0.5rem; text-align: center; color: #a78bfa; font-weight: 800;">Isyarat</th>
+                                    <th style="padding: 0.6rem 0.5rem; text-align: left; color: #a78bfa; font-weight: 800;">Ulasan Tracker / Setup</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                `;
+
+                validHistory.forEach((h, idx) => {
+                    const d = h.data;
+                    const dateFormatted = h.date;
+                    const price = d.price ? 'RM ' + d.price.toFixed(3) : '—';
+                    const floor = d.floorLow ? 'RM ' + d.floorLow.toFixed(3) : '—';
+                    
+                    const floorDist = (d.price && d.floorLow) ? ((d.price - d.floorLow) / d.floorLow * 100) : null;
+                    const distText = floorDist !== null ? (floorDist <= 4 ? `${floorDist.toFixed(1)}% 🟢` : `${floorDist.toFixed(1)}%`) : '—';
+                    const distColor = floorDist !== null ? (floorDist <= 4 ? '#34d399' : (floorDist <= 8 ? '#f59e0b' : '#fb7185')) : '#cbd5e1';
+
+                    const touches = d.touchCount !== undefined ? `${d.touchCount}x` : '—';
+                    const touchesColor = (d.touchCount && d.touchCount >= 8) ? '#34d399' : ((d.touchCount && d.touchCount >= 4) ? '#38bdf8' : '#cbd5e1');
+                    const signal = d.signal || '—';
+                    const sigColor = signal === 'buy' ? '#34d399' : (signal === 'avoid' ? '#fb7185' : '#cbd5e1');
+                    
+                    const rowBg = idx % 2 === 0 ? 'rgba(255,255,255,0.01)' : 'transparent';
+                    
+                    const reason = d.reason || d.setupName || '—';
+
+                    html += `
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.04); background: ${rowBg};">
+                            <td style="padding: 0.6rem 0.5rem; font-weight: 700; color: white; white-space: nowrap;">${dateFormatted}</td>
+                            <td style="padding: 0.6rem 0.5rem; text-align: right; font-weight: 700; white-space: nowrap;">${price}</td>
+                            <td style="padding: 0.6rem 0.5rem; text-align: right; color: #94a3b8; white-space: nowrap;">${floor}</td>
+                            <td style="padding: 0.6rem 0.5rem; text-align: right; font-weight: 800; color: ${distColor}; white-space: nowrap;">${distText}</td>
+                            <td style="padding: 0.6rem 0.5rem; text-align: center; font-weight: 800; color: ${touchesColor};">${touches}</td>
+                            <td style="padding: 0.6rem 0.5rem; text-align: center; white-space: nowrap;"><span style="color: ${sigColor}; font-weight: 800; background: ${signal === 'buy' ? 'rgba(52,211,153,0.1)' : 'rgba(251,113,133,0.1)'}; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.7rem;">${signal}</span></td>
+                            <td style="padding: 0.6rem 0.5rem; font-size: 0.75rem; color: #cbd5e1; max-width: 250px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;" title="${reason}">${reason}</td>
+                        </tr>
+                    `;
+                });
+
+                html += `
+                            </tbody>
+                        </table>
+                    </div>
+                `;
+
+                bodyEl.innerHTML = html;
+            } catch (err) {
+                bodyEl.innerHTML = `<div style="color: #f87171; text-align: center; padding: 2rem;">⚠️ Gagal memuatkan sejarah: ${err.message}</div>`;
+            }
+        }
+
         // Global variables
         let currentData = [];
         let currentSortColumn = 'turnover';
@@ -3198,6 +3322,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             updateSentiment(currentData);
             renderJerungRadar();
             renderConfluenceRadar();
+            renderRealConfluenceRadar();
             renderVcpStaircase();
             renderTrendRiders();
             renderReclaimRadar();
@@ -4277,19 +4402,30 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 }
             }
 
-            confluencePicks.sort((a,b) => {
+            confluencePicks.sort((a, b) => {
+                // 1. Prioritize Triple Confluence over Double Confluence
                 const catA = a.count >= 3 ? 1 : 0;
                 const catB = b.count >= 3 ? 1 : 0;
                 if (catA !== catB) return catB - catA;
-                const fA = a.fresh ? 1 : 0, fB = b.fresh ? 1 : 0;
-                if (fA !== fB) return fB - fA;
+
+                // 2. Prioritize closeness to floor (smaller distance first)
+                const distA = a.item.floorLow ? ((a.item.price - a.item.floorLow) / a.item.floorLow) : 99;
+                const distB = b.item.floorLow ? ((b.item.price - b.item.floorLow) / b.item.floorLow) : 99;
+                if (distA !== distB) return distA - distB;
+
+                // 3. Prioritize higher touch count (more solid base)
+                const tA = a.item.touchCount || 0;
+                const tB = b.item.touchCount || 0;
+                if (tA !== tB) return tB - tA;
+
+                // 4. Fallback to Turnover (highest first)
                 const toA = a.item.turnover || a.item.rawTurnover || 0;
                 const toB = b.item.turnover || b.item.rawTurnover || 0;
                 return toB - toA;
             });
 
             if (confluencePicks.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="9" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">🎯 Tiada kaunter bertembung (Confluence) hari ini.</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">🎯 Tiada kaunter bertembung (Confluence) hari ini.</td></tr>`;
                 return;
             }
 
@@ -4315,8 +4451,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 const confidenceText = item.confidenceScore !== undefined ? `${item.confidenceScore}/100` : 'N/A';
 
                 html += `
-                    <tr>
-                        <td style="text-align: center; font-weight: 800; color: #38bdf8;">#${idx + 1}</td>
+                    <tr>                        <td style="text-align: center; font-weight: 800; color: #38bdf8;">#${idx + 1}</td>
                         <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
                             <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
                                 ${item.name} <span style="font-size: 0.75rem; color: #38bdf8;">🔗</span>
@@ -4337,9 +4472,14 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                         </td>
                         <td style="text-align: center; color: var(--${changeClass}); font-weight: 800;">${changeSign}${changeVal !== undefined ? changeVal.toFixed(2) : '0.00'}%</td>
                         <td style="text-align: center;">
+                            <button onclick="triggerStockHistoryModal('${item.name}')" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                📜 Sejarah
+                            </button>
+                        </td>
+                        <td style="text-align: center; padding: 0.5rem 0.2rem;">
                             <div style="display: flex; flex-direction: column; align-items: center; gap: 0.25rem;">
                                 <span style="color: ${tierColor}; font-weight: 800; font-size: 0.78rem;">${confidenceText}</span>
-                                <button onclick="triggerAIAnalysisModal('${item.name}', 'Confluence VVIP')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.2rem 0.55rem; border-radius: 6px; font-size: 0.7rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                <button onclick="triggerAIAnalysisModal('${item.name}', 'Confluence VVIP')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.7rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                                     ✨ Tanya AI
                                 </button>
                             </div>
@@ -4927,10 +5067,10 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             renderPhoenixSpring();
 
             const hash = window.location.hash.replace('#', '');
-            if (hash && ['vcp', 'trend', 'spring', 'phoenix', 'fishing', 'calculator', 'info', 'tracker', 'portfolio', 'weekly', 'jerung', 'confluence'].includes(hash)) {
+            if (hash && ['vcp', 'trend', 'spring', 'phoenix', 'fishing', 'calculator', 'info', 'tracker', 'portfolio', 'weekly', 'jerung', 'confluence', 'realconfluence'].includes(hash)) {
                 switchTab(hash);
             } else {
-                switchTab('confluence');
+                switchTab('realconfluence');
             }
 
             document.getElementById('priceMaxFilter').addEventListener('change', function() {
