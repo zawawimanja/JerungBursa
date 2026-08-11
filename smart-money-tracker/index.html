@@ -682,6 +682,10 @@
                 <input type="checkbox" id="premiumHypeFilter" style="cursor: pointer; width: 16px; height: 16px;">
                 <label for="premiumHypeFilter" style="color: #60a5fa; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none;">🚀 Premium Hype Only (Gred A / OS ≥ 50x / Outlier)</label>
             </div>
+            <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.45rem 0.8rem; border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.35);">
+                <input type="checkbox" id="earlyDetectFilter" style="cursor: pointer; width: 16px; height: 16px;">
+                <label for="earlyDetectFilter" style="color: #34d399; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none;">🚀 Detect Awal (Fresh IPO < RM1, Base Padat)</label>
+            </div>
             <button id="refreshBtn" class="btn">🔄 Muat Data Pasaran</button>
         </div>
     </header>
@@ -3245,6 +3249,10 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             const premiumHypeVal = document.getElementById('premiumHypeFilter') ? document.getElementById('premiumHypeFilter').checked : false;
             if (premiumHypeVal && !passesPremiumHype(item)) return false;
 
+            // 5. Detect Awal Filter (jika ditanda) — fresh IPO bawah RM1, base padat
+            const earlyDetectVal = document.getElementById('earlyDetectFilter') ? document.getElementById('earlyDetectFilter').checked : false;
+            if (earlyDetectVal && !passesEarlyDetect(item)) return false;
+
             return true;
         }
 
@@ -3271,6 +3279,19 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             if (item.ipoGrade === 'A') return true;
             if ((item.os || 0) >= 50) return true;
             return item.outlier === true || item.outlier === 'true';
+        }
+
+        // Detect Awal: Fresh IPO bawah RM1 yang baru keluar dari base rendah (calon run besar macam THMY)
+        function passesEarlyDetect(item) {
+            if (!isFreshIpo(item)) return false;
+            if (!item.price || item.price >= 1.00) return false;
+            if (item.isCombStock) return false;
+            const touches = item.touchCount || item.floorTouches || 0;
+            if (touches < 3) return false;
+            const floor = item.floorLow || (item.price * 0.95);
+            const dist = ((item.price - floor) / floor) * 100;
+            if (dist > 15) return false;
+            return true;
         }
 
         function applyGlobalSort(candidates) {
@@ -4263,8 +4284,19 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 picks.push(item);
             }
 
+            // Tanda calon breakout-ready: tight <= 2.5% + touch >= 4 + volume SENYAP
+            // (hasil kajian: tight <= 2.5% naikkan kadar breakout 25% -> 67%, tangkap 4/4 breakout)
+            for (const p of picks) {
+                const tight = typeof p.closeTightness === 'number' ? p.closeTightness : 99;
+                const touches = p.touchCount || 0;
+                const volQuiet = p.hasVolumeSpike !== true && (typeof p.volumeSpike !== 'number' || p.volumeSpike < 1.5);
+                p._breakoutReady = tight <= 2.5 && touches >= 4 && volQuiet;
+            }
+
             picks.sort((a, b) => {
-                // Utama: paling rapat dengan LANTAI (risk ke SL paling kecil) — setup entry paling selamat
+                // UTAMA: calon breakout-ready dahulu (kajian: tight<=2.5% + touch>=4 + volume senyap)
+                if (a._breakoutReady !== b._breakoutReady) return a._breakoutReady ? -1 : 1;
+                // Kemudian: paling rapat dengan LANTAI (risk ke SL paling kecil) — setup entry paling selamat
                 const da = a.floorLow ? ((a.price - a.floorLow) / a.floorLow) : 99;
                 const db = b.floorLow ? ((b.price - b.floorLow) / b.floorLow) : 99;
                 if (da !== db) return da - db;
@@ -4310,13 +4342,14 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
 
                 html += `
-                    <tr>
+                    <tr data-fr-name="${item.name}">
                         <td style="text-align: center; font-weight: 800; color: #fde047;">#${idx + 1}</td>
                         <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
                             ${getTradingViewAnchor(item.name)}
-                            <div style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.35rem; flex-wrap: wrap;">
+                            <div class="fr-badge-row" style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.35rem; flex-wrap: wrap;">
                                 <span style="font-size: 0.62rem; background: rgba(234,179,8,0.15); color: #fde047; padding: 0.08rem 0.3rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(234,179,8,0.3); white-space: nowrap;">🔥 VVIP</span>
                                 <span style="font-size: 0.62rem; background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 0.08rem 0.3rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.3); white-space: nowrap;">🌟 IPO ${item.ipoYear || ''}</span>
+                                ${item._breakoutReady ? `<span style="font-size: 0.62rem; background: rgba(16, 185, 129, 0.2); color: #34d399; padding: 0.08rem 0.3rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(16, 185, 129, 0.45); white-space: nowrap; animation: pulse 1.5s infinite;">🎯 BREAKOUT</span>` : ''}
                             </div>
                         </td>
                         <td style="text-align: center; color: #a5b4fc; font-weight: 800;">${grade}</td>
@@ -4349,6 +4382,93 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             });
 
             tbody.innerHTML = html;
+
+            // Tandai signal yang BARU qualify hari ini (tak qualify hari dagangan sebelumnya)
+            markFreshRiderNewBadges();
+        }
+
+        // Helper: adakah item qualify Fresh VVIP Rider? (logik sama seperti render di atas)
+        function qualifiesFreshRider(item) {
+            if (!item || !item.price || item.price <= 0) return false;
+            if (item.price < 0.10 || item.price > 50) return false;
+            if (item.isVvip !== true || item.signal === 'avoid' || item.isCombStock) return false;
+            if ((item.ipoYear || 0) < 2025) return false;
+            const pb = item.pullback !== null && item.pullback !== undefined ? item.pullback : 99;
+            if (pb > 10.0) return false;
+            const tight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
+            if (tight > 5.0) return false;
+            return true;
+        }
+
+        // Cari senarai hari dagangan terakhir sebelum tarikh rujukan (loop ke belakang sehingga jumpa fail wujud)
+        async function getPreviousTradingDayList(baseDateStr) {
+            let base = new Date();
+            if (baseDateStr) {
+                const p = baseDateStr.split('-');
+                if (p.length === 3) base = new Date(parseInt(p[0]), parseInt(p[1]) - 1, parseInt(p[2]));
+            }
+            for (let back = 1; back <= 15; back++) {
+                const d = new Date(base);
+                d.setDate(base.getDate() - back);
+                const yyyy = d.getFullYear();
+                const mm = String(d.getMonth() + 1).padStart(2, '0');
+                const dd = String(d.getDate()).padStart(2, '0');
+                const dateStr = `${yyyy}-${mm}-${dd}`;
+                try {
+                    const cacheBuster = new Date().getTime();
+                    let res = await fetch(`history/data_${dateStr}.json?t=${cacheBuster}`);
+                    if (!res || !res.ok) {
+                        res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/history/data_${dateStr}.json?t=${cacheBuster}`);
+                    }
+                    if (res && res.ok) {
+                        const raw = await res.json();
+                        const list = Array.isArray(raw) ? raw : (raw.topVolume || []);
+                        if (list.length > 0) return { dateStr, list };
+                    }
+                } catch (e) {
+                    console.warn(`Previous-day fetch failed for ${dateStr}`, e);
+                }
+            }
+            return null;
+        }
+
+        let _freshRiderPrevCache = null; // { key, set }
+
+        // Tandai signal yang baru qualify hari ini (tidak ada dalam senarai Fresh Rider hari sebelumnya)
+        async function markFreshRiderNewBadges() {
+            const tbody = document.getElementById('confluenceRadarTableBody');
+            if (!tbody) return;
+
+            const hd = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || '';
+            const key = hd || 'live';
+
+            if (!_freshRiderPrevCache || _freshRiderPrevCache.key !== key) {
+                const prev = await getPreviousTradingDayList(hd);
+                const set = new Set();
+                if (prev) {
+                    for (const it of prev.list) {
+                        if (qualifiesFreshRider(it)) set.add(it.name);
+                    }
+                }
+                _freshRiderPrevCache = { key, set };
+            }
+
+            const prevSet = _freshRiderPrevCache.set;
+
+            // Buang badge lama (elak duplicate bila re-render)
+            tbody.querySelectorAll('.fr-new-badge').forEach(el => el.remove());
+
+            tbody.querySelectorAll('tr[data-fr-name]').forEach(tr => {
+                const name = tr.getAttribute('data-fr-name');
+                if (!name || prevSet.has(name)) return;
+                const badgeRow = tr.querySelector('.fr-badge-row');
+                if (!badgeRow) return;
+                const badge = document.createElement('span');
+                badge.className = 'fr-new-badge';
+                badge.textContent = '🆕 BARU';
+                badge.style.cssText = 'font-size:0.62rem; background:rgba(245,158,11,0.2); color:#fbbf24; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(245,158,11,0.4); white-space:nowrap; animation: pulse 1.5s infinite;';
+                badgeRow.appendChild(badge);
+            });
         }
 
         // ===== CONFLUENCE ASAL (tab kedua) — dipulihkan =====
@@ -5075,6 +5195,10 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             });
 
             document.getElementById('premiumHypeFilter').addEventListener('change', function() {
+                applyFilters();
+            });
+
+            document.getElementById('earlyDetectFilter').addEventListener('change', function() {
                 applyFilters();
             });
 
