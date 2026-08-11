@@ -860,12 +860,13 @@
                                 <th style="text-align: center;">Perubahan %</th>
                                 <th style="text-align: center;">Confluence?</th>
                                 <th style="text-align: left;">Strategi Bertembung</th>
+                                <th style="text-align: center;">Sejarah</th>
                                 <th style="text-align: center;">Analisis AI (Skor)</th>
                             </tr>
                         </thead>
                         <tbody id="confluenceRadarTableBody">
                             <tr>
-                                <td colspan="12" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
+                                <td colspan="13" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
                                     ⏳ Memuatkan Fresh VVIP Rider...
                                 </td>
                             </tr>
@@ -4395,16 +4396,16 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                         <td style="text-align: center; padding: 0.8rem 0.5rem; white-space: nowrap;">${confHtml}</td>
                         <td style="text-align: left; padding: 0.8rem 0.5rem; white-space: nowrap;">${matchesHtml}</td>
                         <td style="text-align: center;">
+                            <button onclick="triggerStockHistoryModal('${item.name}')" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.25rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                📜 Sejarah
+                            </button>
+                        </td>
+                        <td style="text-align: center;">
                             <div style="display: flex; flex-direction: column; align-items: center; gap: 0.25rem;">
                                 <span style="color: ${tierColor}; font-weight: 800; font-size: 0.78rem;">${confidenceText}</span>
-                                <div style="display: flex; gap: 0.25rem; justify-content: center; align-items: center;">
-                                    <button onclick="triggerStockHistoryModal('${item.name}')" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.2rem 0.55rem; border-radius: 6px; font-size: 0.7rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                                        📜 Sejarah
-                                    </button>
-                                    <button onclick="triggerAIAnalysisModal('${item.name}', 'Fresh VVIP Rider')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.2rem 0.55rem; border-radius: 6px; font-size: 0.7rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                                        ✨ Tanya AI
-                                    </button>
-                                </div>
+                                <button onclick="triggerAIAnalysisModal('${item.name}', 'Fresh VVIP Rider')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.2rem 0.55rem; border-radius: 6px; font-size: 0.7rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                    ✨ Tanya AI
+                                </button>
                             </div>
                         </td>
                     </tr>`;
