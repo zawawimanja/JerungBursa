@@ -851,6 +851,9 @@
                             <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
                                 Fresh IPO (2025+) + VVIP + <strong style="color:#fde047;">pullback ≤ 10% dari ATH</strong> + harga padat (tight ≤ 5%). Backtest 58 hari (25 Mei–11 Ogos 2026): <strong style="color:#34d399;">Win Rate 81%, avg +19.2%/trade, rugi terburuk -7.4%</strong>. Exit: RIDE floor (SL = floor × 0.97, peram selagi di atas floor, tanpa TP kaku).
                             </p>
+                            <p style="margin: 0.5rem 0 0 0; font-size: 0.78rem; color: #fbbf24; background: rgba(245,158,11,0.08); border: 1px dashed rgba(245,158,11,0.35); border-radius: 8px; padding: 0.5rem 0.7rem; line-height: 1.5;">
+                                ⏰ <strong style="color:#fde047;">SOP: semak LEPAS CLOSE (5:00–6:00 petang)</strong>, bukan pagi — data ialah harga penutupan, semak pagi = dah lewat (breakout mungkin dah berlaku masa open). Entry hanya bila signal <strong style="color:#fde047;">🆕 BARU</strong> (tak pernah qualify 30 hari) keluar. Yang dah berhari-hari dalam senarai = <strong style="color:#f87171;">JANGAN kejar</strong>. 🎯 BREAKOUT = tight ≤ 2.5% + touch ≥ 4 + volume senyap (kajian: 67% breakout vs 25%).
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -4400,14 +4403,15 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             return true;
         }
 
-        // Cari senarai hari dagangan terakhir sebelum tarikh rujukan (loop ke belakang sehingga jumpa fail wujud)
-        async function getPreviousTradingDayList(baseDateStr) {
+        // Kumpul nama yang pernah qualify Fresh Rider dalam 30 hari dagangan terakhir (sebelum tarikh rujukan)
+        async function getRecentFreshRiderNames(baseDateStr) {
             let base = new Date();
             if (baseDateStr) {
                 const p = baseDateStr.split('-');
                 if (p.length === 3) base = new Date(parseInt(p[0]), parseInt(p[1]) - 1, parseInt(p[2]));
             }
-            for (let back = 1; back <= 15; back++) {
+            const names = new Set();
+            for (let back = 1; back <= 30; back++) {
                 const d = new Date(base);
                 d.setDate(base.getDate() - back);
                 const yyyy = d.getFullYear();
@@ -4423,18 +4427,21 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     if (res && res.ok) {
                         const raw = await res.json();
                         const list = Array.isArray(raw) ? raw : (raw.topVolume || []);
-                        if (list.length > 0) return { dateStr, list };
+                        for (const it of list) {
+                            if (qualifiesFreshRider(it)) names.add(it.name);
+                        }
                     }
                 } catch (e) {
-                    console.warn(`Previous-day fetch failed for ${dateStr}`, e);
+                    // skip — fail satu fail tak penting
                 }
             }
-            return null;
+            return names;
         }
 
         let _freshRiderPrevCache = null; // { key, set }
 
-        // Tandai signal yang baru qualify hari ini (tidak ada dalam senarai Fresh Rider hari sebelumnya)
+        // Tandai signal yang BENAR-BENAR baru: tak pernah qualify dalam 30 hari dagangan terakhir
+        // (bukan sekadar banding semalam — elak ECOSHOP yang qualify 13-Jul lalu dikira "baru")
         async function markFreshRiderNewBadges() {
             const tbody = document.getElementById('confluenceRadarTableBody');
             if (!tbody) return;
@@ -4443,14 +4450,8 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             const key = hd || 'live';
 
             if (!_freshRiderPrevCache || _freshRiderPrevCache.key !== key) {
-                const prev = await getPreviousTradingDayList(hd);
-                const set = new Set();
-                if (prev) {
-                    for (const it of prev.list) {
-                        if (qualifiesFreshRider(it)) set.add(it.name);
-                    }
-                }
-                _freshRiderPrevCache = { key, set };
+                const recentNames = await getRecentFreshRiderNames(hd);
+                _freshRiderPrevCache = { key, set: recentNames };
             }
 
             const prevSet = _freshRiderPrevCache.set;
