@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pusat Panduan & Artikel Strategi Saham | Jerung Bursa</title>
+    <meta name="description" content="Koleksi artikel dan panduan komprehensif analisis kuantitatif saham Bursa Malaysia: Strategi Trend Rider, VCP Staircase Teknik Mamat, Wyckoff Early Spring, Bottom Fishing, dan Pengurusan Risiko VVIP.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --panel-bg: rgba(22, 28, 45, 0.75);
+            --panel-border: rgba(51, 65, 85, 0.5);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #6366f1;
+            --accent-glow: rgba(99, 102, 241, 0.2);
+            --success: #10b981;
+            --cyan: #22d3ee;
+            --rose: #fb7185;
+            --amber: #f59e0b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(34, 211, 238, 0.1) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(16, 185, 129, 0.08) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text-main);
+            padding: 2rem 1.5rem;
+            min-height: 100vh;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 2.5rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(51, 65, 85, 0.4);
+            padding-bottom: 2rem;
+        }
+
+        header h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #a5b4fc 0%, #6366f1 50%, #34d399 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.75rem;
+            justify-content: flex-start;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-nav {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 600;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--panel-border);
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-nav:hover {
+            color: white;
+            background: rgba(99, 102, 241, 0.15);
+            border-color: var(--accent);
+        }
+
+        .toc-card {
+            background: rgba(15, 23, 42, 0.85);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            border-radius: 16px;
+            padding: 1.75rem;
+            margin-bottom: 3rem;
+            backdrop-filter: blur(12px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .toc-card h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            color: #a5b4fc;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .toc-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1rem;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(51, 65, 85, 0.4);
+            border-radius: 10px;
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+        .toc-item:hover {
+            background: rgba(99, 102, 241, 0.12);
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+
+        .article-card {
+            background: var(--panel-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--panel-border);
+            border-radius: 20px;
+            padding: 2.5rem;
+            margin-bottom: 3.5rem;
+            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+            position: relative;
+        }
+
+        .article-tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .tag-trend { background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.4); }
+        .tag-vcp { background: rgba(34, 211, 238, 0.2); color: #22d3ee; border: 1px solid rgba(34, 211, 238, 0.4); }
+        .tag-spring { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); }
+        .tag-bottom { background: rgba(251, 113, 133, 0.2); color: #fb7185; border: 1px solid rgba(251, 113, 133, 0.4); }
+        .tag-sop { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); }
+
+        .article-card h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .article-card h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.3rem;
+            color: #cbd5e1;
+            margin-top: 1.75rem;
+            margin-bottom: 0.75rem;
+            border-left: 4px solid var(--accent);
+            padding-left: 0.75rem;
+        }
+
+        .article-card p {
+            color: #cbd5e1;
+            margin-bottom: 1.25rem;
+            font-size: 1rem;
+        }
+
+        .article-card ul, .article-card ol {
+            color: #cbd5e1;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-card li {
+            margin-bottom: 0.6rem;
+        }
+
+        .highlight-box {
+            background: rgba(15, 23, 42, 0.9);
+            border-left: 4px solid var(--success);
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+            border-top: 1px solid rgba(51, 65, 85, 0.3);
+            border-right: 1px solid rgba(51, 65, 85, 0.3);
+            border-bottom: 1px solid rgba(51, 65, 85, 0.3);
+        }
+
+        .highlight-box strong {
+            color: #34d399;
+        }
+
+        .badge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .badge-card {
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(51, 65, 85, 0.5);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .badge-card .num {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 0.25rem;
+        }
+
+        .badge-card .title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(51, 65, 85, 0.4);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 0.75rem;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-links">
+            <a href="index.html" class="btn-nav">← Tracker Utama</a>
+            <a href="sop.html" class="btn-nav">📜 SOP VVIP</a>
+            <a href="formula.html" class="btn-nav">🧮 Formula & Indikator</a>
+            <a href="hall-of-fame.html" class="btn-nav">🏆 Hall of Fame</a>
+        </div>
+
+        <header>
+            <h1>Pusat Panduan & Artikel Strategi Jerung Bursa</h1>
+            <p>Edukasi Analisis Kuantitatif, Corak VCP, Wyckoff Accumulation & Pengurusan Risiko Saham Bursa Malaysia</p>
+        </header>
+
+        <!-- Table of Contents -->
+        <div class="toc-card" id="article-toc">
+            <h2>📚 Senarai Artikel Strategi Utama</h2>
+            <div class="toc-grid">
+                <a href="#art-trend-rider" class="toc-item"><span>📈</span> 1. Strategi Trend Rider < RM1.00</a>
+                <a href="#art-vcp-mamat" class="toc-item"><span>🪜</span> 2. VCP Staircase & Golden Cross</a>
+                <a href="#art-wyckoff-spring" class="toc-item"><span>🌱</span> 3. Wyckoff Early Spring Fresh IPO</a>
+                <a href="#art-bottom-fishing" class="toc-item"><span>🎣</span> 4. Bottom Fishing & Phoenix Recovery</a>
+                <a href="#art-risk-management" class="toc-item"><span>🧮</span> 5. Position Sizing & SOP VVIP</a>
+            </div>
+        </div>
+
+        <!-- ARTIKEL 1 -->
+        <article class="article-card" id="art-trend-rider">
+            <span class="article-tag tag-trend">Strategi Utama #1</span>
+            <h2>1. Panduan Strategi Trend Rider Saham Under RM1.00: Cara Menunggang Trend Institusi</h2>
+            <p>Strategi <strong>Trend Rider</strong> direka khas untuk menangkap pergerakan harga saham berharga bawah RM1.00 yang sedang berada di dalam fasa <em>uptrend</em> yang sihat. Pelabur runcit sering kecundang kerana membeli saham yang sedang merudum (downtrend). Strategi ini memastikan anda hanya berdagang bersama aliran dana institusi (Smart Money / Jerung).</p>
+            
+            <h3>3 Syarat Utama Trend Rider (Rule-Based Trading)</h3>
+            <ul>
+                <li><strong>Penjajaran Purata Bergerak (SMA Alignment):</strong> Harga semasa <u>wajib</u> didagangkan di atas Moving Average 50-hari (SMA50) dan Moving Average 200-hari (SMA200). Ini mengesahkan struktur aliran menaik jangka sederhana dan panjang.</li>
+                <li><strong>Jarak Sokongan Lantai Ultra-Rapat (Tight Support Floor):</strong> Jarak antara harga semasa dengan sokongan lantai mestilah amat ketat (sebaiknya ≤ 4%). Ini membolehkan paras <em>Stop Loss (SL)</em> diletakkan sangat dekat di bawah lantai untuk menghadkan risiko maksimum di bawah 5%.</li>
+                <li><strong>Tumpuan Fresh IPO & Lonjakan Turnover:</strong> Mengutamakan kaunter IPO yang disenaraikan dalam tempoh 2-3 tahun terkini kerana kurang bebanan rintangan sejarah (*overhead resistance*), disokong oleh lonjakan Turnover harian ≥ RM500,000.</li>
+            </ul>
+
+            <div class="highlight-box">
+                <p><strong>💡 Rumusan Strategi:</strong> Jangan sesekali membeli saham di bawah SMA50 walaupun ia mempunyai harga yang nampak murah. Trend Rider memastikan modal anda sentiasa bekerja di dalam kaunter yang disokong oleh dorongan momentum Jerung.</p>
+            </div>
+        </article>
+
+        <!-- ARTIKEL 2 -->
+        <article class="article-card" id="art-vcp-mamat">
+            <span class="article-tag tag-vcp">Strategi Utama #2</span>
+            <h2>2. Teknik VCP Staircase & Golden Cross: Formula Minervini + Mamat</h2>
+            <p>Corak <strong>Volatility Contraction Pattern (VCP)</strong> yang dipelopori oleh juara dagangan dunia Mark Minervini telah diadaptasi di dalam JerungBursa dengan gabungan pengesahan <em>Golden Cross</em>. Teknik ini mencapai Win Rate tertinggi di dalam simulasi kajian sejarah kami.</p>
+
+            <h3>Bagaimana VCP Staircase Berfungsi?</h3>
+            <p>VCP menggambarkan fasa di mana bekalan saham (*supply*) semakin berkurangan di pasaran. Setiap kali pembetulan harga berlaku, julat kedalaman pembetulan menjadi semakin menguncup:</p>
+
+            <div class="badge-grid">
+                <div class="badge-card">
+                    <div class="num">C1</div>
+                    <div class="title">Contraction 1 (Contoh: -15%)</div>
+                </div>
+                <div class="badge-card">
+                    <div class="num">C2</div>
+                    <div class="title">Contraction 2 (Contoh: -8%)</div>
+                </div>
+                <div class="badge-card">
+                    <div class="num">C3</div>
+                    <div class="title">Contraction 3 (Contoh: -3%)</div>
+                </div>
+            </div>
+
+            <p>Apabila julat kedalaman pembetulan menguncup sehingga tahap C3 (3%-4%), ini bermakna jualan panik sudah habis dan hanya pemegang saham berkredibiliti tinggi (*tight hands*) sahaja yang tinggal. Penembusan (*breakout*) di fasa ini disokong oleh julat risiko yang amat rapat dan nisbah Risk-to-Reward (R:R) yang melebihi 1:3.</p>
+        </article>
+
+        <!-- ARTIKEL 3 -->
+        <article class="article-card" id="art-wyckoff-spring">
+            <span class="article-tag tag-spring">Strategi Utama #3</span>
+            <h2>3. Analisis Wyckoff Early Spring & Rejection Wick Kaunter Fresh IPO</h2>
+            <p>Kajian menunjukkan bahawa kaunter Fresh IPO (disenaraikan dalam tempoh 2024–2026) sering melalui fasa ujian sokongan selepas lonjakan awal penyenaraian. Strategi <strong>Early Spring</strong> memfokuskan kepada pengesanan corak <em>Wyckoff Spring</em> di paras sokongan kritikal.</p>
+
+            <h3>Tanda-tanda Kemasukan Early Spring</h3>
+            <ol>
+                <li><strong>Lower Wick Rejection:</strong> Candlestick harian membentuk ekor bawah yang panjang (*lower wick*) pada zon sokongan lantai. Ini menandakan jerung membuang harga untuk menyapu habis stop-loss pelabur runcit sebelum melonjakkan semula harga penutupan.</li>
+                <li><strong>Potongan Harga Pembukaan Hari Pertama (Day 1 Open Breakout):</strong> Harga berjaya memotong naik semula melepasi garisan harga pembukaan penawaran awam awal (Day 1 IPO Open price).</li>
+                <li><strong>Penumpukan Volum Berfasa:</strong> Volum dagangan mengecil semasa pembetulan dan melonjak mendadak apabila ekor rejection terbentuk.</li>
+            </ol>
+        </article>
+
+        <!-- ARTIKEL 4 -->
+        <article class="article-card" id="art-bottom-fishing">
+            <span class="article-tag tag-bottom">Strategi Utama #4</span>
+            <h2>4. Strategi Bottom Fishing & Phoenix Recovery: Mengesan Rebound Kaunter Oversold</h2>
+            <p>Strategi <strong>Bottom Fishing</strong> dan <strong>Phoenix Recovery</strong> direka khas untuk mengesan kaunter yang telah mengalami kejatuhan harga mendadak tetapi mula menunjukkan tanda-tanda kebangkitan semula di zon penyerap hentakan (*support floor*).</p>
+
+            <h3>Kriteria Keselamatan Bottom Fishing</h3>
+            <p>Membeli saham semasa jatuh ibarat menangkap pisau jatuh (*falling knife*). Oleh itu, JerungBursa mengenakan tapisan ketat sebelum kaunter disenaraikan dalam tab ini:</p>
+            <ul>
+                <li><strong>Sentuhan Lantai Matang (Solid Floor Touches ≥ 4x hingga 10x):</strong> Paras sokongan mestilah telah diuji dan bertahan sekurang-kurangnya 4 kali dalam liputan sejarah.</li>
+                <li><strong>Keadaan Oversold Ekstrem:</strong> Indikator momentum RSI (14) berada di paras oversold (< 35) dan menunjukkan corak <em>Bullish Divergence</em>.</li>
+                <li><strong>Kawalan Stop Loss Ketat:</strong> Sebaik sahaja harga memotong di bawah lantai utama melebihi 3%, disiplin <em>Cut Loss</em> wajib dilaksanakan serta-merta tanpa emosi.</li>
+            </ul>
+        </article>
+
+        <!-- ARTIKEL 5 -->
+        <article class="article-card" id="art-risk-management">
+            <span class="article-tag tag-sop">Pengurusan Risiko & SOP VVIP</span>
+            <h2>5. Kalkulator Pengurusan Risiko & SOP Position Sizing JerungBursa</h2>
+            <p>Kejayaan jangka panjang di dalam dagangan saham pasaran Bursa Malaysia 80% bergantung kepada pengurusan risiko dan kawalan saiz posisi (*position sizing*), bukannya ramalan arah harga belaka.</p>
+
+            <h3>Formula Pengiraan Saiz Posisi (Position Sizing Rules)</h3>
+            <div class="highlight-box">
+                <p><strong>Nisbah Risiko Maksimum Per Trade:</strong> Jangan sesekali mempertaruhkan lebih daripada <strong>1% hingga 2%</strong> daripada keseluruhan modal akaun anda dalam satu-satu dagangan.</p>
+            </div>
+
+            <p>Contoh Pengiraan:</p>
+            <ul>
+                <li><strong>Jumlah Modal Akaun:</strong> RM10,000</li>
+                <li><strong>Risiko Maksimum Per Trade (2%):</strong> RM200</li>
+                <li><strong>Harga Entry Saham:</strong> RM0.50</li>
+                <li><strong>Harga Stop Loss (Floor -2%):</strong> RM0.48 (Risiko kerugian per unit = RM0.02)</li>
+                <li><strong>Jumlah Unit Saham Boleh Dibeli:</strong> RM200 / RM0.02 = 10,000 unit (100 lot)</li>
+            </ul>
+
+            <p>Dengan mematuhi kalkulator pengurusan risiko ini, walaupun anda mengalami 5 kali kerugian berturut-turut, akaun anda hanya susut 10%, yang mana sangat mudah untuk dipulihkan kembali berbanding kerugian tanpa kawalan.</p>
+        </article>
+
+        <footer>
+            <p>&copy; 2026 Jerung Bursa. Hak Cipta Terpelihara.</p>
+            <div style="margin-top: 1rem;">
+                <a href="index.html">Tracker Utama</a>
+                <a href="articles.html" style="color: white; font-weight: 600;">Koleksi Artikel</a>
+                <a href="sop.html">SOP VVIP</a>
+                <a href="formula.html">Formula & Indikator</a>
+                <a href="hall-of-fame.html">Hall of Fame</a>
+                <a href="privacy-policy.html">Dasar Privasi</a>
+                <a href="terms.html">Syarat Perkhidmatan</a>
+                <a href="about.html">Mengenai Kami</a>
+                <a href="contact.html">Hubungi Kami</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

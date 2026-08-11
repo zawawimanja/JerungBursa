@@ -5731,6 +5731,12 @@
     },
     {
       "name": "ADNEX",
+      "ipoGrade": "B",
+      "ipoYear": 2026,
+      "ipoPrice": 0.2,
+      "listingDate": "17-Mar-2026",
+      "os": 3.23,
+      "outlier": true,
       "sector": "Technology",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
@@ -6291,6 +6297,8 @@
     },
     {
       "name": "EXSIMHB",
+      "ipoGrade": "B",
+      "ipoYear": 2025,
       "sector": "Consumer",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",

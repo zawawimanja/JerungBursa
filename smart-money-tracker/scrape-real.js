@@ -214,6 +214,28 @@ async function main() {
         console.error("Warning loading IPO grades:", err.message);
     }
     
+    // ==========================================
+    // OVERRIDE TEMPATAN: metadata IPO utk kaunter yang tiada/salah dalam DB online (ipobursa)
+    // - ADNEX: rekod online ada symbol "NE" yang salah -> tak pernah dipadankan dgn kaunter ADNEX.
+    // - EXSIMHB: tiada langsung dalam DB online (bekas Pan Malaysia Holdings, senarai semula 2025).
+    // ==========================================
+    const LOCAL_IPO_OVERRIDES = {
+        'ADNEX': { symbol: 'ADNEX', year: 2026, predictedGrade: 'B', price: 0.20, openPrice: 0.25, listingDate: '17-Mar-2026', os: 3.23, outlier: true },
+        'EXSIMHB': { symbol: 'EXSIMHB', year: 2025, predictedGrade: 'B' }
+    };
+    Object.entries(LOCAL_IPO_OVERRIDES).forEach(([sym, ipo]) => {
+        ipoMap[sym] = {
+            grade: ipo.predictedGrade || 'Unrated',
+            year: ipo.year,
+            ipoPrice: ipo.price,
+            openPrice: ipo.openPrice,
+            listingDate: ipo.listingDate,
+            os: ipo.os || 0,
+            outlier: ipo.outlier || false
+        };
+        console.log(`📌 [Override IPO] ${sym}: gred ${ipo.predictedGrade || 'Unrated'}, tahun ${ipo.year}, listing ${ipo.listingDate || 'N/A'}`);
+    });
+    
     let allRawStocks = new Map();
     
     // 1. Ambil data pasaran utama

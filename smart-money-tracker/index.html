@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bursa IPO Trend Rider Console</title>
+    <title>Jerung Bursa - Scanner Live IPO & Trend Rider</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script src="live_data.js"></script>
-    <script src="tracker_data.js"></script>
-    <style>
+        <style>
         @keyframes spin {
             0% { transform: rotate(0deg); }
             100% { transform: rotate(360deg); }
@@ -593,6 +592,7 @@
             .brand { display: flex; flex-direction: column; align-items: center; }
             .subtitle { font-size: 0.82rem; text-align: center; }
             .controls { width: 100%; justify-content: center; gap: 0.6rem; }
+            .top-nav { justify-content: center; }
             .history-input { width: 100%; justify-content: center; }
             .hide-mobile { display: none !important; }
             th, td { padding: 0.6rem 0.5rem; font-size: 0.82rem; }
@@ -613,8 +613,9 @@
 <body>
 
     <header>
-        <div class="brand">
-            <h1>Bursa IPO Trend Rider Console</h1>
+        <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; width: 100%;">
+            <div class="brand">
+                <h1>Jerung Bursa</h1>
             <div class="subtitle" id="dashboardSubtitle">
                 <span class="pulse"></span> Live Market Scanner • Riding the Exploding IPO Trends & VSA
             </div>
@@ -623,13 +624,19 @@
             </div>
         </div>
 
+        <!-- Top Navigation (1 baris sama dengan title) -->
+        <div class="top-nav" style="display: flex; justify-content: flex-end; align-items: center; gap: 0.45rem; flex-wrap: wrap; max-width: 100%;">
+            <a href="./landing.html" class="btn" style="background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; box-shadow: 0 4px 15px rgba(13, 148, 136, 0.25); padding: 0.35rem 0.8rem; font-size: 0.82rem;">💡 Metodologi</a>
+            <a href="./backtest.html" class="btn" style="background: linear-gradient(135deg, #475569 0%, #334155 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; box-shadow: 0 4px 15px rgba(71, 85, 105, 0.25); padding: 0.35rem 0.8rem; font-size: 0.82rem;">📊 Bukti Backtest</a>
+            <a href="./sop.html" class="btn" style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.25); padding: 0.35rem 0.8rem; font-size: 0.82rem;">📘 Panduan SOP</a>
+            <a href="./hall-of-fame.html" class="btn" style="background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 800; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.25); padding: 0.35rem 0.8rem; font-size: 0.82rem;">🏆 Hall of Fame</a>
+            <a href="./formula.html" class="btn" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: #0f172a; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 800; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.25); padding: 0.35rem 0.8rem; font-size: 0.82rem;">🔥 Formula VVIP</a>
+            <a href="./articles.html" class="btn" style="background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; box-shadow: 0 4px 15px rgba(14, 165, 233, 0.25); padding: 0.35rem 0.8rem; font-size: 0.82rem;">📚 Artikel & Strategi</a>
+        </div>
+        </div>
+
         <div class="controls">
 
-            <a href="./landing.html" class="btn" style="background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; box-shadow: 0 4px 15px rgba(13, 148, 136, 0.25);">💡 Metodologi (SEO)</a>
-            <a href="./backtest.html" class="btn" style="background: linear-gradient(135deg, #475569 0%, #334155 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; box-shadow: 0 4px 15px rgba(71, 85, 105, 0.25);">📊 Bukti Backtest</a>
-            <a href="./sop.html" class="btn" style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.25);">📘 Panduan SOP</a>
-            <a href="./hall-of-fame.html" class="btn" style="background: inline-flex; align-items: center; gap: 0.4rem; background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%); color: white; text-decoration: none; font-weight: 800; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.25);">🏆 Hall of Fame</a>
-            <a href="./formula.html" class="btn" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: #0f172a; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 800; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.25);">🔥 Formula VVIP</a>
             <div class="history-input">
                 <label for="historyDate" style="color: #a5b4fc; font-size: 0.8rem; font-weight: 700; cursor: pointer;">Historical Archive:</label>
                 <input type="date" id="historyDate">
@@ -675,7 +682,7 @@
                 <input type="checkbox" id="premiumHypeFilter" style="cursor: pointer; width: 16px; height: 16px;">
                 <label for="premiumHypeFilter" style="color: #60a5fa; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none;">🚀 Premium Hype Only (Gred A / OS ≥ 50x / Outlier)</label>
             </div>
-            <button id="refreshBtn" class="btn">🔄 Kemas Kini</button>
+            <button id="refreshBtn" class="btn">🔄 Muat Data Pasaran</button>
         </div>
     </header>
 
@@ -692,7 +699,6 @@
         <button class="tab-btn" id="tab-fishing" onclick="switchTab('fishing')">🎣 Bottom</button>
         <button class="tab-btn" id="tab-portfolio" onclick="switchTab('portfolio')">💼 Portfolio</button>
         <button class="tab-btn" id="tab-info" onclick="switchTab('info')">📖 Panduan</button>
-        <button class="tab-btn" id="tab-tracker" onclick="switchTab('tracker')">📈 &lt; RM1</button>
         <button class="tab-btn" id="tab-calculator" onclick="switchTab('calculator')">🧮 Kalkulator</button>
     </div>
 
@@ -859,14 +865,13 @@
                                 <th style="text-align: right;">Turnover</th>
                                 <th style="text-align: center;">Perubahan %</th>
                                 <th style="text-align: center;">Confluence?</th>
-                                <th style="text-align: left;">Strategi Bertembung</th>
                                 <th style="text-align: center;">Sejarah</th>
                                 <th style="text-align: center;">Analisis AI (Skor)</th>
                             </tr>
                         </thead>
                         <tbody id="confluenceRadarTableBody">
                             <tr>
-                                <td colspan="13" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
+                                <td colspan="12" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
                                     ⏳ Memuatkan Fresh VVIP Rider...
                                 </td>
                             </tr>
@@ -944,7 +949,6 @@
                                 <th style="text-align: center; width: 45px;">No</th>
                                 <th>Kaunter</th>
                                 <th style="text-align: center;">Taraf Confluence</th>
-                                <th style="text-align: center;">Strategi Bertembung</th>
                                 <th style="text-align: center;">Fresh Rider?</th>
                                 <th style="text-align: right;">Harga Semasa</th>
                                 <th style="text-align: right;">Lantai Sokongan @ Harga</th>
@@ -956,7 +960,7 @@
                         </thead>
                         <tbody id="realConfluenceTableBody">
                             <tr>
-                                <td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
+                                <td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
                                     ⏳ Memuatkan Confluence Radar...
                                 </td>
                             </tr>
@@ -1894,223 +1898,6 @@
         </div>
     </div> <!-- End of view-info -->
 
-    <!-- TAB 6: TRACKER BAWAH RM1 -->
-    <div id="view-tracker" style="display: none;">
-        <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 1px solid var(--panel-border); border-radius: 12px; padding: 1.5rem; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); margin-bottom: 2rem;">
-            <div style="display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.75rem; margin-bottom: 1rem;">
-                <span style="font-size: 1.5rem;">📈</span>
-                <h3 style="margin: 0; font-size: 1.2rem; color: #a78bfa; font-weight: 800; text-transform: uppercase;">Matriks Prestasi Harian Saham Trend Rider &lt; RM1 (Trend Rider & Staircase)</h3>
-            </div>
-            <p style="color: var(--text-secondary); font-size: 0.85rem; line-height: 1.5; margin-bottom: 1rem;">
-                Menjejaki prestasi peratusan (%) kaunter selepas hari isyarat belian (BUY) dikesan. Peratusan menunjukkan P&L berbanding harga belian asal bagi setiap hari berikutnya (+1 hingga +10 hari dagangan).
-            </p>
-            <!-- JB Picks: 4 saham pilihan -->
-            <div id="jbpicks-section" style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.06), rgba(217, 119, 6, 0.03)); border: 1.5px solid rgba(245, 158, 11, 0.25); border-radius: 14px; padding: 1.2rem; margin-bottom: 1.5rem;">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                    <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
-                        <span style="font-size: 1.4rem;">🎯</span>
-                        <span style="font-weight: 800; font-size: 1rem; color: #f59e0b;">JerungBursa Picks</span>
-                        <span style="font-size: 0.7rem; background: rgba(245, 158, 11, 0.15); color: #f59e0b; padding: 0.15rem 0.6rem; border-radius: 6px; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.3);">3 TEKNIK TERBAIK (STAIRCASE · EXPLOSIVE · SWING PLAY)</span>
-                        <span style="font-size: 0.7rem; background: rgba(255, 255, 255, 0.05); color: #94a3b8; padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 600;">Signal BUY · Jarak Lantai ≤6% · ATH ≥5%</span>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 0.5rem;">
-                        <span id="jbpicks-progress" style="font-size: 0.75rem; font-weight: 700; color: var(--text-muted);">0/4</span>
-                        <span id="jbpicks-lastupdate" style="font-size: 0.65rem; color: var(--text-muted);"></span>
-                    </div>
-                </div>
-                <div id="jbpicks-table-wrapper" style="overflow-x: auto;"></div>
-                <div style="margin-top: 0.6rem; font-size: 0.65rem; color: rgba(245, 158, 11, 0.6); text-align: center; border-top: 1px solid rgba(245, 158, 11, 0.1); padding-top: 0.5rem;">
-                    Pilihan Harian Automatik: Gabungan 4 Saham Paling Ideal Merangkumi STAIRCASE, EXPLOSIVE & SWING PLAY
-                </div>
-            </div>
-
-            <!-- Rujukan Khas: Pilihan Acuan MMCS, Stratus & SKYECHIP -->
-            <div style="background: linear-gradient(135deg, rgba(167, 139, 250, 0.12), rgba(139, 92, 246, 0.04)); border: 1.5px solid rgba(167, 139, 250, 0.35); border-radius: 14px; padding: 1.2rem; margin-bottom: 1.5rem; box-shadow: 0 4px 20px rgba(139, 92, 246, 0.1);">
-                
-                <!-- SECTION 1: SWING PICKS -->
-                <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.75rem; flex-wrap: wrap;">
-                    <span style="font-size: 1.4rem;">🎯</span>
-                    <span style="font-weight: 800; font-size: 1.05rem; color: #a78bfa; letter-spacing: 0.3px;">Pilihan Swing Utama: Acuan MMCS, Stratus & SKYECHIP (Solid Base Accumulation)</span>
-                    <span style="font-size: 0.7rem; background: rgba(167, 139, 250, 0.2); color: #c4b5fd; padding: 0.15rem 0.6rem; border-radius: 6px; font-weight: 800; border: 1px solid rgba(167, 139, 250, 0.4);">FRESH IPO & MID-CAP</span>
-                </div>
-                <p style="color: var(--text-secondary); font-size: 0.82rem; line-height: 1.55; margin: 0 0 1.2rem 0;">
-                    Saranan kaunter Fresh IPO & Mid-Cap (Semua julat harga: bawah & atas RM1.00) yang membina <em>tapak pengumpulan selamat (Solid Base 3x–20x touches)</em> dengan risiko terhad (SL ~3%–5%):
-                </p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-bottom: 1.8rem;">
-                    <!-- Card 1: SKYECHIP & High Tier Mid-Cap Base -->
-                    <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(167, 139, 250, 0.25); border-radius: 10px; padding: 1rem; display: flex; flex-direction: column; justify-content: space-between;">
-                        <div>
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.4rem;">
-                                <strong style="color: #e2e8f0; font-size: 0.88rem;">💎 Mid-Cap / High Tier (Acuan SKYECHIP)</strong>
-                                <span style="font-size: 0.65rem; background: rgba(59, 130, 246, 0.15); color: #60a5fa; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(59, 130, 246, 0.25);">SOLID BASE</span>
-                            </div>
-                            <p style="color: var(--text-muted); font-size: 0.76rem; margin: 0 0 0.85rem 0; line-height: 1.45;">
-                                Saham gergasi > RM1.00 bertapak matang di garisan lantai sokongan (Floor Touches 10x-16x).
-                            </p>
-                            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                                <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.02); padding: 0.45rem 0.6rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.03);">
-                                    <span style="font-weight: 800; font-size: 0.8rem; color: #a78bfa;">SKYECHIP (5357.KL) <small style="color:#60a5fa; font-weight:600;">(Lantai: 16x)</small></span>
-                                    <span id="special-price-skyechip" style="font-size: 0.78rem; color: #60a5fa; font-weight: 800;">RM 3.010</span>
-                                </div>
-                                <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.02); padding: 0.45rem 0.6rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.03);">
-                                    <span style="font-weight: 800; font-size: 0.8rem; color: #a78bfa;">MNHLDG (0245.KL) <small style="color:#60a5fa; font-weight:600;">(Lantai: 10x)</small></span>
-                                    <span id="special-price-mnhldg" style="font-size: 0.78rem; color: #60a5fa; font-weight: 800;">RM 2.890</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Card 2: Stratus & Penny IPO Base -->
-                    <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(167, 139, 250, 0.25); border-radius: 10px; padding: 1rem; display: flex; flex-direction: column; justify-content: space-between;">
-                        <div>
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.4rem;">
-                                <strong style="color: #e2e8f0; font-size: 0.88rem;">🟢 Fresh IPO & Swing (Acuan Stratus & MMCS)</strong>
-                                <span style="font-size: 0.65rem; background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.25);">EARLY SPRING</span>
-                            </div>
-                            <p style="color: var(--text-muted); font-size: 0.76rem; margin: 0 0 0.85rem 0; line-height: 1.45;">
-                                Saham IPO segar bawah/sekitar RM1 yang sedang mengumpul kekuatan di garisan lantai sokongan.
-                            </p>
-                            <div style="display: flex; flex-direction: column; gap: 0.5rem;">
-                                <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.02); padding: 0.45rem 0.6rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.03);">
-                                    <span style="font-weight: 800; font-size: 0.8rem; color: #a78bfa;">GDGROUP (0398.KL) <small style="color:#34d399; font-weight:600;">(Lantai: 20x)</small></span>
-                                    <span id="special-price-gdgroup" style="font-size: 0.78rem; color: #34d399; font-weight: 800;">RM 0.395</span>
-                                </div>
-                                <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.02); padding: 0.45rem 0.6rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.03);">
-                                    <span style="font-weight: 800; font-size: 0.8rem; color: #a78bfa;">EIPOWER (0453.KL) <small style="color:#34d399; font-weight:600;">(Lantai: 6x)</small></span>
-                                    <span id="special-price-eipower" style="font-size: 0.78rem; color: #34d399; font-weight: 800;">RM 0.695</span>
-                                </div>
-                                <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.02); padding: 0.45rem 0.6rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.03);">
-                                    <span style="font-weight: 800; font-size: 0.8rem; color: #a78bfa;">MMCS (0246.KL) <small style="color:#34d399; font-weight:600;">(Lantai: 3x)</small></span>
-                                    <span id="special-price-mmcs" style="font-size: 0.78rem; color: #34d399; font-weight: 800;">RM 0.415</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- SECTION 2: DAILY SHARK ALERTS -->
-                <div style="display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.75rem; border-top: 1px solid rgba(167, 139, 250, 0.15); padding-top: 1.5rem; flex-wrap: wrap;">
-                    <span style="font-size: 1.4rem;">⚡</span>
-                    <span style="font-weight: 800; font-size: 1.05rem; color: #a78bfa; letter-spacing: 0.3px;">Isyarat Jerung Hari Ini (Volum & Momentum Alert)</span>
-                    <span style="font-size: 0.7rem; background: rgba(244, 63, 94, 0.15); color: #fb7185; padding: 0.15rem 0.6rem; border-radius: 6px; font-weight: 800; border: 1px solid rgba(244, 63, 94, 0.3);">DINAMIK HARIAN</span>
-                </div>
-                <p style="color: var(--text-secondary); font-size: 0.82rem; line-height: 1.55; margin: 0 0 1.2rem 0;">
-                    Kaunter bawah RM 1.00 berasaskan fasa tindakan Jerung (Volume Spikes pada saham tidur, dan Reclaim Open Price):
-                </p>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem;">
-                    <!-- Card 3: Sleeping Giants -->
-                    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(167, 139, 250, 0.15); border-radius: 10px; padding: 1rem; display: flex; flex-direction: column; justify-content: space-between;">
-                        <div>
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.4rem;">
-                                <strong style="color: #e2e8f0; font-size: 0.88rem;">🔴 Kategori A: Gergasi Tidur Terjaga</strong>
-                                <span style="font-size: 0.65rem; background: rgba(244, 63, 94, 0.15); color: #fb7185; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(244, 63, 94, 0.25);">VOLUME SPIKE</span>
-                            </div>
-                            <p style="color: var(--text-muted); font-size: 0.76rem; margin: 0 0 0.85rem 0; line-height: 1.45;">
-                                Saham tidur (Illiquid/Comb Stock) yang dikejutkan oleh lonjakan volum pusingan modal Jerung hari ini (Turnover &ge; RM500k).
-                            </p>
-                            <div id="dynamic-sleeping-giants" style="display: flex; flex-direction: column; gap: 0.5rem;">
-                                <div style="text-align: center; padding: 1rem; color: var(--text-muted); font-size: 0.75rem;">Mencari kaunter...</div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Card 4: Clean Early Spring -->
-                    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(167, 139, 250, 0.15); border-radius: 10px; padding: 1rem; display: flex; flex-direction: column; justify-content: space-between;">
-                        <div>
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.4rem;">
-                                <strong style="color: #e2e8f0; font-size: 0.88rem;">🔵 Kategori B: Clean Early Spring</strong>
-                                <span style="font-size: 0.65rem; background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.25);">EARLY SPRING</span>
-                            </div>
-                            <p style="color: var(--text-muted); font-size: 0.76rem; margin: 0 0 0.85rem 0; line-height: 1.45;">
-                                Kaunter aktif (bukan comb stock) yang menepati kriteria tepat MMCS/ADNEX iaitu melepasi harga pembukaan semula.
-                            </p>
-                            <div id="dynamic-clean-springs" style="display: flex; flex-direction: column; gap: 0.5rem;">
-                                <div style="text-align: center; padding: 1rem; color: var(--text-muted); font-size: 0.75rem;">Mencari kaunter...</div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Card 5: VCP / Staircase Base -->
-                    <div style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(167, 139, 250, 0.15); border-radius: 10px; padding: 1rem; display: flex; flex-direction: column; justify-content: space-between;">
-                        <div>
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.4rem;">
-                                <strong style="color: #e2e8f0; font-size: 0.88rem;">🧱 Kategori C: VCP / Staircase Base</strong>
-                                <span style="font-size: 0.65rem; background: rgba(167, 139, 250, 0.15); color: #a78bfa; padding: 0.15rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(167, 139, 250, 0.25);">TIGHT BASE</span>
-                            </div>
-                            <p style="color: var(--text-muted); font-size: 0.76rem; margin: 0 0 0.85rem 0; line-height: 1.45;">
-                                Kaunter dengan julat harga super menguncup (VCP) dan rapat di atas lantai sokongan (Lantai &ge; 4x sentuhan, Jarak &le; 4%).
-                            </p>
-                            <div id="dynamic-vcp-bases" style="display: flex; flex-direction: column; gap: 0.5rem;">
-                                <div style="text-align: center; padding: 1rem; color: var(--text-muted); font-size: 0.75rem;">Mencari kaunter...</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Nota Panduan Lajur -->
-            <div style="background: rgba(30, 41, 59, 0.4); border: 1px dashed rgba(167, 139, 250, 0.25); border-radius: 8px; padding: 0.75rem 1rem; margin-bottom: 1.5rem; font-size: 0.78rem; line-height: 1.45; color: var(--text-secondary);">
-                <div style="font-weight: 700; color: #a78bfa; margin-bottom: 0.25rem; display: flex; align-items: center; gap: 0.25rem;">ℹ️ Nota Panduan Lajur:</div>
-                <ul style="margin: 0; padding-left: 1.2rem; display: flex; flex-direction: column; gap: 0.25rem;">
-                    <li><strong style="color: #f59e0b;">Harga/P&L Semasa (Jingga):</strong> Prestasi harga **sebenar setakat hari ini (live/terkini)**. Sentiasa dikemas kini.</li>
-                    <li><strong style="color: #34d399;">Hari +1 hingga Hari +10 (Hijau):</strong> Prestasi tepat **10 hari dagangan pertama** selepas hari isyarat dikesan (sebagai rujukan sejarah rali). Lajur ini membantu anda mengkaji *holding period* terbaik.</li>
-                    <li><strong style="color: #94a3b8;">Simbol ⏳:</strong> Bermaksud hari tersebut berada di masa hadapan dan belum dilalui lagi. Lajur ini akan diisi secara automatik pada hari-hari seterusnya.</li>
-                </ul>
-            </div>
-            
-            <!-- Filter Options Container -->
-            <div style="display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.25rem; align-items: center;">
-                <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid var(--panel-border);">
-                    <label for="trackerSetupFilter" style="color: #a78bfa; font-size: 0.85rem; font-weight: 800; display: flex; align-items: center; gap: 0.25rem; cursor: pointer; user-select: none;">🎯 Penapis Teknik:</label>
-                    <select id="trackerSetupFilter" onchange="renderTracker()" style="background: rgba(15, 23, 42, 0.9); color: white; border: 1px solid rgba(167, 139, 250, 0.5); border-radius: 6px; padding: 0.25rem 0.6rem; font-size: 0.85rem; font-weight: 700; cursor: pointer; outline: none; font-family: inherit;">
-                        <option value="ALL" selected>🌐 Semua Teknik (Staircase, Explosive, Swing)</option>
-                        <option value="STAIRCASE">🧱 Hanya STAIRCASE (Jackpot)</option>
-                        <option value="EXPLOSIVE">⚡ Hanya EXPLOSIVE (Breakout)</option>
-                        <option value="SWING PLAY">🏄 Hanya SWING PLAY</option>
-                    </select>
-                </div>
-                <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid rgba(245, 158, 11, 0.35);">
-                    <input type="checkbox" id="trackerGoldFilter" onchange="renderTracker()" style="cursor: pointer; width: 16px; height: 16px;" checked>
-                    <label for="trackerGoldFilter" style="color: #f59e0b; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none; display: flex; align-items: center; gap: 0.25rem;">👑 Hanya Gred A+ Pilihan (Skor ≥ 10 + Volum)</label>
-                </div>
-                <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid rgba(6, 182, 212, 0.35);">
-                    <input type="checkbox" id="trackerUniqueFilter" onchange="renderTracker()" style="cursor: pointer; width: 16px; height: 16px;" checked>
-                    <label for="trackerUniqueFilter" style="color: #22d3ee; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none; display: flex; align-items: center; gap: 0.25rem;">🧹 Kunci Kaunter Unik (1 Kaunter 1 Baris)</label>
-                </div>
-            </div>
-            
-            <div class="table-wrapper">
-                <table>
-                    <thead>
-                        <tr style="border-bottom: 1px solid var(--panel-border);">
-                            <th style="width: 50px; text-align: center; color: #a78bfa;">Bil</th>
-                            <th style="color: #a78bfa;">Kaunter</th>
-                            <th style="color: #a78bfa;">Setup</th>
-                            <th style="color: #a78bfa; text-align: center;">Tarikh Trigger</th>
-                            <th style="color: #a78bfa; text-align: right;">Harga Trigger</th>
-                            <th style="color: #f59e0b; text-align: right;">Harga Semasa</th>
-                            <th onclick="toggleFloorSort()" style="color: #38bdf8; text-align: center; font-weight: 800; cursor: pointer; user-select: none;" title="Klik untuk susun ikut Jarak Lantai (Paling Rapat Lantai)">Jarak Lantai <span id="floor-sort-arrow">🔽</span></th>
-                            <th onclick="toggleTrackerSort()" style="color: #f59e0b; text-align: center; cursor: pointer; user-select: none;" title="Klik untuk susun ikut P&L">P&L Semasa <span id="sort-arrow">↕️</span></th>
-                            <th style="color: #34d399; text-align: center;">Hari +1</th>
-                            <th style="color: #34d399; text-align: center;">Hari +2</th>
-                            <th style="color: #34d399; text-align: center;">Hari +3</th>
-                            <th style="color: #34d399; text-align: center;">Hari +4</th>
-                            <th style="color: #34d399; text-align: center;">Hari +5</th>
-                            <th style="color: #34d399; text-align: center;">Hari +6</th>
-                            <th style="color: #34d399; text-align: center;">Hari +7</th>
-                            <th style="color: #34d399; text-align: center;">Hari +8</th>
-                            <th style="color: #34d399; text-align: center;">Hari +9</th>
-                            <th style="color: #34d399; text-align: center;">Hari +10</th>
-                        </tr>
-                    </thead>
-                    <tbody id="trackerTableBody">
-                        <!-- Dynamically populated from window.TRACKER_DATA -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-
     <!-- TAB 7: PORTFOLIO SAYA -->
     <div id="view-portfolio" style="display: none;">
         <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 1px solid rgba(167, 139, 250, 0.25); border-radius: 12px; padding: 1.5rem; box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2); margin-bottom: 2rem;">
@@ -2152,9 +1939,35 @@
 
     <script>
         // Helper to convert stock name to valid TradingView ticker symbol
+        // Pembetulan rasmi (disahkan Ogos 2026): nama paparan -> ticker TradingView sebenar
+        const TV_SYMBOL_OVERRIDES = {
+            '99 SPEED MART RETAIL': '99SMART',
+            'SRKK': 'SRKKAI',
+            'REDPLANET BERHAD': 'RPLANET'
+        };
+        // Kaunter yang BELUM wujud di TradingView (IPO ACE 2026 baharu, tiada data carta)
+        const TV_NOT_COVERED = new Set([
+            'ECOSYS', '1 DOC INTERNATIONAL BERHAD', 'SPB DEVELOPMENT BERHAD',
+            'READYCARE HOLDINGS BERHAD', 'TTL HOLDINGS BERHAD', 'CMGI BERHAD',
+            'MMC PORT HOLDINGS BERHAD', 'CUSTOM FOOD HOLDING BERHAD', 'WINTECH METAL BERHAD',
+            'LIKEI LOGISTIC SERVICES BERHAD', 'BUTTERFIELD FB BERHAD', 'EVOCOM BERHAD',
+            'SLGC BERHAD', 'KEB BERHAD', 'IMPACT CAPITAL HOLDINGS BERHAD', 'TUC HOLDINGS BERHAD',
+            'PARAGRENE LAND BERHAD', 'WASTECH RESOURCES BERHAD', 'ETA WORLD GROUP BERHAD',
+            'LEADER ENERGY HOLDING BERHAD', 'EPLAS GLOBAL BERHAD', 'LOOB BERHAD',
+            'GOLDFINCH GROUP BERHAD', 'UNIOLEO HOLDINGS BERHAD', 'CHUBB INSURANCE MALAYSIA BERHAD',
+            'UNIPAC', 'QUBE INTERNATIONAL BERHAD', 'PIONEER HEAT HOLDINGS BERHAD',
+            'JRK HOLDINGS BERHAD', 'MYDCD BERHAD', 'GB BOND HOLDINGS BERHAD',
+            'EMPG GROUP BERHAD', 'GTA HOLDINGS BERHAD', 'EMITS BERHAD',
+            'SQ ADVANCED INTERCONNECT BERHAD', 'SCA SOLUTIONS BERHAD', 'YES GROUP MANAGEMENT BERHAD',
+            'BIG CARING GROUP BHD', 'KK MART RETAIL BERHAD', 'SKA CAPITAL BERHAD',
+            'EGHI', 'HONGSENG', 'AAX'
+        ]);
+
         function getTradingViewSymbol(name) {
             if (!name) return '';
-            const cleanName = name.toUpperCase().trim();
+            const cleanName = name.toUpperCase().trim().replace(/\.KL$/i, '');
+            if (TV_SYMBOL_OVERRIDES[cleanName]) return TV_SYMBOL_OVERRIDES[cleanName];
+            if (TV_NOT_COVERED.has(cleanName)) return '';
             if (cleanName.includes('99 SPEED')) {
                 return '99SPEED';
             }
@@ -2165,6 +1978,25 @@
             // Strip remaining spaces
             symbol = symbol.replace(/\s+/g, '');
             return symbol.trim();
+        }
+
+        // Pautan carta TradingView — jika kaunter tak wujud di TradingView, papar nama sahaja (tiada pautan rosak)
+        function getTradingViewAnchor(name) {
+            const sym = getTradingViewSymbol(name);
+            if (!sym) return name;
+            return `<a href="https://www.tradingview.com/chart/?symbol=MYX:${sym}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">${name} <span style="font-size: 0.75rem; color: #22d3ee;">🔗</span></a>`;
+        }
+
+        function getTradingViewAnchorSmall(name) {
+            const sym = getTradingViewSymbol(name);
+            if (!sym) return name;
+            return `<a href="https://www.tradingview.com/chart/?symbol=MYX:${sym}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 0.95rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.3rem;" title="Buka Carta TradingView (${name})">${name} <span style="font-size: 0.75rem; color: #38bdf8;">🔗</span></a>`;
+        }
+
+        function getTradingViewButton(name) {
+            const sym = getTradingViewSymbol(name);
+            if (!sym) return '';
+            return `<a href="https://www.tradingview.com/chart/?symbol=MYX:${sym}&interval=D" target="_blank" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 0.25rem; transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'; this.style.background='rgba(56, 189, 248, 0.25)';" onmouseout="this.style.transform='scale(1)'; this.style.background='rgba(56, 189, 248, 0.15)';" title="Buka Carta TradingView">📈 TV</a>`;
         }
 
         // Interactive Example Selector logic for strategy guides
@@ -2291,7 +2123,6 @@
             const viewWeekly = document.getElementById('view-weekly');
             const viewCalculator = document.getElementById('view-calculator');
             const viewInfo = document.getElementById('view-info');
-            const viewTracker = document.getElementById('view-tracker');
             const viewPortfolio = document.getElementById('view-portfolio');
             const viewRealConfluence = document.getElementById('view-realconfluence');
 
@@ -2306,7 +2137,6 @@
             const tabWeekly = document.getElementById('tab-weekly');
             const tabCalculator = document.getElementById('tab-calculator');
             const tabInfo = document.getElementById('tab-info');
-            const tabTracker = document.getElementById('tab-tracker');
             const tabPortfolio = document.getElementById('tab-portfolio');
             
             // Hide all views
@@ -2320,7 +2150,6 @@
             if (viewWeekly) viewWeekly.style.display = 'none';
             viewCalculator.style.display = 'none';
             if (viewInfo) viewInfo.style.display = 'none';
-            if (viewTracker) viewTracker.style.display = 'none';
             if (viewPortfolio) viewPortfolio.style.display = 'none';
             if (viewRealConfluence) viewRealConfluence.style.display = 'none';
             
@@ -2336,7 +2165,6 @@
             if (tabWeekly) tabWeekly.classList.remove('active');
             tabCalculator.classList.remove('active');
             if (tabInfo) tabInfo.classList.remove('active');
-            if (tabTracker) tabTracker.classList.remove('active');
             if (tabPortfolio) tabPortfolio.classList.remove('active');
             
             // Show selected view & set active class
@@ -2391,13 +2219,6 @@
             } else if (tabId === 'info') {
                 if (viewInfo) viewInfo.style.display = 'block';
                 if (tabInfo) tabInfo.classList.add('active');
-            } else if (tabId === 'tracker') {
-                if (viewTracker) {
-                    viewTracker.style.display = 'block';
-                    renderTracker();
-                    renderJBPicks();
-                }
-                if (tabTracker) tabTracker.classList.add('active');
             } else if (tabId === 'portfolio') {
                 if (viewPortfolio) {
                     viewPortfolio.style.display = 'block';
@@ -3210,12 +3031,13 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
         function isFreshIpo(item) {
             if (!item) return false;
+            // Tahun dikenal pasti = keputusan muktamad: Fresh = 2025-2026 sahaja (selaras label dropdown)
+            const knownYear = item.ipoYear != null
+                ? item.ipoYear
+                : (item.listingDate ? (parseInt(String(item.listingDate).match(/\d{4}/)?.[0] || '0', 10) || null) : null);
+            if (knownYear != null) return knownYear >= 2025;
+            // Tiada maklumat tahun: fallback ipoAge (2 tahun) atau senarai kurasi nama
             if (item.ipoAge != null && item.ipoAge <= 730) return true;
-            if (item.ipoYear != null && item.ipoYear >= 2024) return true;
-            if (item.listingDate && item.ipoGrade && item.ipoGrade !== 'Unrated') {
-                const yearMatch = item.listingDate.match(/\d{4}/);
-                if (yearMatch) return parseInt(yearMatch[0]) >= 2024;
-            }
             if (!item.ipoGrade || item.ipoGrade === 'Unrated') return false;
             const setup = (item.setupName || '').toUpperCase();
             if (setup.includes('DOWNTREND') || setup.includes('AVOID') || setup === 'N/A') return false;
@@ -3415,7 +3237,40 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             const ipoAgeFilterVal = document.getElementById('ipoAgeFilter') ? document.getElementById('ipoAgeFilter').value : 'ALL';
             if (!matchesIpoAgeFilter(item, ipoAgeFilterVal)) return false;
 
+            // 3. Ultra-Strict Entry Filter (jika ditanda) — seragam untuk semua seksyen
+            const strictEntryVal = document.getElementById('strictEntryFilter') ? document.getElementById('strictEntryFilter').checked : false;
+            if (strictEntryVal && !passesStrictEntry(item)) return false;
+
+            // 4. Premium Hype Filter (jika ditanda) — hanya menapis Fresh IPO
+            const premiumHypeVal = document.getElementById('premiumHypeFilter') ? document.getElementById('premiumHypeFilter').checked : false;
+            if (premiumHypeVal && !passesPremiumHype(item)) return false;
+
             return true;
+        }
+
+        // Ultra-Strict Entry: Floor <= 6% (11% utk harga < RM0.50), Skor >= 12 (11 utk < RM0.50), Pullback <= 20%
+        function passesStrictEntry(item) {
+            const price = item.price || 0;
+            const floor = item.floorLow || (price * 0.95);
+            const distToFloor = ((price - floor) / floor) * 100;
+            const maxDist = price < 0.50 ? 11.0 : 6.0;
+            if (distToFloor > maxDist) return false;
+
+            const score = calculateSmartScore(item);
+            const minScore = price < 0.50 ? 11 : 12;
+            if (score < minScore) return false;
+
+            const pullback = item.pullback !== null && item.pullback !== undefined ? item.pullback : 0;
+            if (pullback > 20.0) return false;
+            return true;
+        }
+
+        // Premium Hype: Fresh IPO mesti Gred A / OS >= 50x / Outlier (bukan Fresh IPO tak terjejas)
+        function passesPremiumHype(item) {
+            if (!isFreshIpo(item)) return true;
+            if (item.ipoGrade === 'A') return true;
+            if ((item.os || 0) >= 50) return true;
+            return item.outlier === true || item.outlier === 'true';
         }
 
         function applyGlobalSort(candidates) {
@@ -3523,15 +3378,6 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 const minTurnover = (item.ipoGrade && item.ipoGrade !== 'Unrated') ? 350000 : 500000;
                 if (item.turnover < minTurnover) return false;
 
-                // Strict risk management filter if enabled
-                const strictEntryVal = document.getElementById('strictEntryFilter') ? document.getElementById('strictEntryFilter').checked : false;
-                if (strictEntryVal) {
-                    const floor = item.floorLow || (item.price * 0.95);
-                    const distToFloor = ((item.price - floor) / floor) * 100;
-                    const maxDist = item.price < 0.50 ? 11.0 : 8.0;
-                    if (distToFloor > maxDist) return false;
-                }
-
                 return true;
             });
 
@@ -3582,9 +3428,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                             <td style="text-align: center; font-weight: 800; color: #22d3ee;">#${rankCount++}</td>
                             <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
                                 <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
-                                    <a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(item.name)}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
-                                        ${item.name} <span style="font-size: 0.75rem; color: #22d3ee;">🔗</span>
-                                    </a>
+                                    ${getTradingViewAnchor(item.name)}
                                     ${getSub1Badge(item)}
                                     ${matchBadge}
                                     ${hofBadge}
@@ -4312,9 +4156,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     <tr>
                         <td style="text-align: center; font-weight: 800; color: #0ea5e9;">#${idx + 1}</td>
                         <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
-                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(item.name)}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
-                                ${item.name} <span style="font-size: 0.75rem; color: #0ea5e9;">🔗</span>
-                            </a>
+                            ${getTradingViewAnchor(item.name)}
                             <div style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.35rem; flex-wrap: wrap;">${athBadge}</div>
                         </td>
                         <td style="text-align: center;">${tierBadge}</td>
@@ -4408,6 +4250,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
             for (const item of list) {
                 if (!item || !item.name || item.price <= 0) continue;
+                if (!passesGlobalFilters(item)) continue;
                 if (item.price < 0.10 || item.price > 50) continue;
                 if (item.isVvip !== true) continue;
                 if (item.signal === 'avoid' || item.isCombStock) continue;
@@ -4464,17 +4307,13 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     ? `<span style="color: #34d399; font-weight: 800; background: rgba(52,211,153,0.1); padding: 0.15rem 0.45rem; border-radius: 4px; font-size: 0.72rem; border: 1px solid rgba(52,211,153,0.25); white-space: nowrap;">YES (${matches.length}x)</span>`
                     : `<span style="color: #94a3b8; font-weight: 600; background: rgba(148,163,184,0.1); padding: 0.15rem 0.45rem; border-radius: 4px; font-size: 0.72rem; border: 1px solid rgba(148,163,184,0.2); white-space: nowrap;">NO</span>`;
 
-                const matchesHtml = matches.length > 0
-                    ? matches.map(m => `<span style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.1); padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.68rem; color: #cbd5e1; font-weight: 700; white-space: nowrap; margin-right: 0.15rem;">${m}</span>`).join('')
-                    : '—';
+
 
                 html += `
                     <tr>
                         <td style="text-align: center; font-weight: 800; color: #fde047;">#${idx + 1}</td>
                         <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
-                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(item.name)}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
-                                ${item.name} <span style="font-size: 0.75rem; color: #fde047;">🔗</span>
-                            </a>
+                            ${getTradingViewAnchor(item.name)}
                             <div style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.35rem; flex-wrap: wrap;">
                                 <span style="font-size: 0.62rem; background: rgba(234,179,8,0.15); color: #fde047; padding: 0.08rem 0.3rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(234,179,8,0.3); white-space: nowrap;">🔥 VVIP</span>
                                 <span style="font-size: 0.62rem; background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 0.08rem 0.3rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.3); white-space: nowrap;">🌟 IPO ${item.ipoYear || ''}</span>
@@ -4493,7 +4332,6 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                         </td>
                         <td style="text-align: center; color: var(--${changeClass}); font-weight: 800;">${changeSign}${changeVal !== undefined ? changeVal.toFixed(2) : '0.00'}%</td>
                         <td style="text-align: center; padding: 0.8rem 0.5rem; white-space: nowrap;">${confHtml}</td>
-                        <td style="text-align: left; padding: 0.8rem 0.5rem; white-space: nowrap;">${matchesHtml}</td>
                         <td style="text-align: center;">
                             <button onclick="triggerStockHistoryModal('${item.name}')" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.25rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                                 📜 Sejarah
@@ -4607,7 +4445,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             });
 
             if (confluencePicks.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">🎯 Tiada kaunter bertembung (Confluence) hari ini.</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">🎯 Tiada kaunter bertembung (Confluence) hari ini.</td></tr>`;
                 return;
             }
 
@@ -4631,23 +4469,16 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     ? `<span style="font-size: 0.62rem; background: rgba(234, 179, 8, 0.2); color: #fde047; padding: 0.08rem 0.3rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(234, 179, 8, 0.35); white-space: nowrap;">🔥 FRESH RIDER</span>`
                     : `<span style="font-size: 0.62rem; color: #475569;">—</span>`;
 
-                const matchesHtml = matches.map(m => `<span style="font-size: 0.65rem; background: rgba(15, 23, 42, 0.6); color: #cbd5e1; padding: 0.1rem 0.4rem; border-radius: 4px; border: 1px solid rgba(255, 255, 255, 0.1); font-weight: 700;">${m}</span>`).join(' ');
-
                 const tierColor = item.confidenceScore >= 90 ? '#a855f7' : (item.confidenceScore >= 75 ? '#38bdf8' : (item.confidenceScore >= 60 ? '#10b981' : '#f59e0b'));
                 const confidenceText = item.confidenceScore !== undefined ? `${item.confidenceScore}/100` : 'N/A';
 
                 html += `
                     <tr>                        <td style="text-align: center; font-weight: 800; color: #38bdf8;">#${idx + 1}</td>
                         <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
-                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(item.name)}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
-                                ${item.name} <span style="font-size: 0.75rem; color: #38bdf8;">🔗</span>
-                            </a>
+                            ${getTradingViewAnchor(item.name)}
                             <div style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.35rem; flex-wrap: wrap;">${freshBadge}</div>
                         </td>
                         <td style="text-align: center;">${confBadge}</td>
-                        <td style="text-align: center; padding: 0.5rem;">
-                            <div style="display: flex; gap: 0.3rem; justify-content: center; flex-wrap: wrap;">${matchesHtml}</div>
-                        </td>
                         <td style="text-align: center; padding: 0.5rem;">${frBadge}</td>
                         <td style="text-align: right; font-weight: bold; color: white;">RM ${item.price.toFixed(3)}</td>
                         <td style="text-align: right;">
@@ -4686,45 +4517,19 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             // Filter items for Technique C (Trend Rider):
             let validPicks = currentData.filter(item => {
                 if (!item || !item.price || item.price <= 0) return false;
-                
-                // Max Price Filter
-                const priceMaxVal = document.getElementById('priceMaxFilter') ? document.getElementById('priceMaxFilter').value : 'ALL';
-                if (priceMaxVal !== 'ALL' && item.price > parseFloat(priceMaxVal)) return false;
-                
+                if (!passesGlobalFilters(item)) return false;
+
                 const pullbackVal = item.pullback !== null && item.pullback !== undefined ? item.pullback : 0;
                 const isIpo = isFreshIpo(item) || item.ipoGrade === 'A' || item.ipoGrade === 'B' || item.ipoGrade === 'C';
-                
+
                 // Allow pullbacks up to 55%
                 if (pullbackVal > 55.0) return false;
 
-                // Use isSleepingOrAvoidStock() — the definitive avoid check (includes signal=avoid, comb, downtrend, etc.)
-                if (isSleepingOrAvoidStock(item)) return false;
-                
                 // Price bounds: RM0.15 - RM10.00
                 if (item.price < 0.15 || item.price > 10.00) return false;
-                
+
                 // Minimum Turnover (RM 100k)
                 if (item.turnover !== undefined && item.turnover < 100000) return false;
-
-                const ipoAgeFilterVal = document.getElementById('ipoAgeFilter') ? document.getElementById('ipoAgeFilter').value : 'ALL';
-                if (!matchesIpoAgeFilter(item, ipoAgeFilterVal)) return false;
-
-                // Premium Hype Filter: If checked, apply to Fresh IPOs
-                const premiumHypeVal = document.getElementById('premiumHypeFilter') ? document.getElementById('premiumHypeFilter').checked : false;
-                if (premiumHypeVal && isFreshIpo(item)) {
-                    const osVal = item.os || 0;
-                    const isOutlier = item.outlier === true || item.outlier === 'true';
-                    if (item.ipoGrade !== 'A' && osVal < 50 && !isOutlier) return false;
-                }
-
-                // Strict risk management filter (only when explicitly checked by user)
-                const strictEntryVal = document.getElementById('strictEntryFilter') ? document.getElementById('strictEntryFilter').checked : false;
-                if (strictEntryVal) {
-                    const floor = item.floorLow || (item.price * 0.95);
-                    const distToFloor = ((item.price - floor) / floor) * 100;
-                    if (distToFloor > 12.0) return false;
-                    if (pullbackVal > 25.0) return false;
-                }
 
                 // Must have buy signal OR be a valid graded IPO (Grade A/B/C, not Unrated)
                 const isValidIpo = item.ipoGrade === 'A' || item.ipoGrade === 'B' || item.ipoGrade === 'C';
@@ -4869,9 +4674,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                             <td style="text-align: center; font-weight: 800; color: ${isHc ? '#10b981' : (isVvipRank ? '#f59e0b' : 'var(--accent)')}; ${isHc ? 'border-left: 4px solid #10b981;' : ''}">#${rankCount++}</td>
                             <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
                                 <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
-                                    <a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(item.name)}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
-                                        ${crownEmoji}${item.name} <span style="font-size: 0.75rem; color: var(--accent);">🔗</span>
-                                    </a>
+                                    ${crownEmoji}${getTradingViewAnchor(item.name)}
                                     ${getSub1Badge(item)}
                                     ${isHc ? `<span style="font-size: 0.68rem; background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.25); white-space: nowrap; box-shadow: 0 0 8px rgba(16, 185, 129, 0.3);" title="High-Conviction Setup: Gred Premium + Lantai Sangat Rapat (<=4%) + Kecairan Tinggi (>=RM1M)">🎯 Entry Padu</span>` : ''}
                                     ${matchBadge}
@@ -4927,9 +4730,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             // 3. Went underwater in its history (wentUnderwater === true)
             // 4. Current price is either below open price OR has broken above it within 20%
             let validPicks = currentData.filter(item => {
-                // Max Price Filter
-                const priceMaxVal = document.getElementById('priceMaxFilter') ? document.getElementById('priceMaxFilter').value : 'ALL';
-                if (priceMaxVal !== 'ALL' && item.price > parseFloat(priceMaxVal)) return false;
+                if (!passesGlobalFilters(item)) return false;
 
                 const isIpo = item.ipoGrade === 'A' || item.ipoGrade === 'B' || item.ipoGrade === 'C';
                 const isFresh = item.ipoYear && item.ipoYear >= 2025;
@@ -5048,9 +4849,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                             <td style="text-align: center; font-weight: 800; color: ${isHc ? '#10b981' : '#fb7185'}; ${isHc ? 'border-left: 4px solid #10b981;' : ''}">#${rankCount++}</td>
                             <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
                                 <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
-                                    <a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(item.name)}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
-                                        ${item.name} <span style="font-size: 0.75rem; color: var(--accent);">🔗</span>
-                                    </a>
+                                    ${getTradingViewAnchor(item.name)}
                                     ${getSub1Badge(item)}
                                     ${isHc ? `<span style="font-size: 0.68rem; background: linear-gradient(135deg, #10b981, #059669); color: white; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.25); white-space: nowrap; box-shadow: 0 0 8px rgba(16, 185, 129, 0.3);" title="High-Conviction Setup: Gred Premium + Dah Reclaimed + Dekat Open Price (<=4%) + Kecairan Tinggi (>=RM1M)">🎯 Entry Padu</span>` : ''}
                                     ${matchBadge}
@@ -5164,9 +4963,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                             <td style="text-align: center; font-weight: 800; color: #f59e0b;">#${rankCount++}</td>
                             <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
                                 <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
-                                    <a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(item.name)}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
-                                        ${item.name} <span style="font-size: 0.75rem; color: var(--accent);">🔗</span>
-                                    </a>
+                                    ${getTradingViewAnchor(item.name)}
                                     ${getSub1Badge(item)}
                                     ${matchBadge}
                                     ${hofBadge}
@@ -5221,7 +5018,8 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 if (nameCell) {
                     const name = nameCell.textContent.split('Score:')[0].replace('🔗', '').trim();
                     if (name && !name.includes("Tiada kaunter")) {
-                        listToCopy.push(`MYX:${name}`);
+                        const sym = getTradingViewSymbol(name);
+                        if (sym) listToCopy.push(`MYX:${sym}`);
                     }
                 }
             });
@@ -5254,7 +5052,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             renderPhoenixSpring();
 
             const hash = window.location.hash.replace('#', '');
-            if (hash && ['vcp', 'trend', 'spring', 'phoenix', 'fishing', 'calculator', 'info', 'tracker', 'portfolio', 'weekly', 'jerung', 'confluence', 'realconfluence'].includes(hash)) {
+            if (hash && ['vcp', 'trend', 'spring', 'phoenix', 'fishing', 'calculator', 'info', 'portfolio', 'weekly', 'jerung', 'confluence', 'realconfluence'].includes(hash)) {
                 switchTab(hash);
             } else {
                 switchTab('realconfluence');
@@ -5388,321 +5186,6 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             });
         });
 
-        let trackerSortKey = 'floorDist'; // 'floorDist' by default!
-        let trackerSortDir = 'asc';       // Smallest floor distance first (0.0% -> 1.7% -> 2.5%)
-
-        function toggleFloorSort() {
-            if (trackerSortKey === 'floorDist') {
-                trackerSortDir = trackerSortDir === 'asc' ? 'desc' : 'asc';
-            } else {
-                trackerSortKey = 'floorDist';
-                trackerSortDir = 'asc';
-            }
-            renderTracker();
-        }
-        window.toggleFloorSort = toggleFloorSort;
-
-        function toggleTrackerSort() {
-            if (trackerSortKey === 'pnl') {
-                trackerSortDir = trackerSortDir === 'desc' ? 'asc' : 'desc';
-            } else {
-                trackerSortKey = 'pnl';
-                trackerSortDir = 'desc';
-            }
-            renderTracker();
-        }
-        window.toggleTrackerSort = toggleTrackerSort;
-
-        function renderTracker() {
-            const tbody = document.getElementById('trackerTableBody');
-            if (!tbody) return;
-            
-            const filterEl = document.getElementById('trackerSetupFilter');
-            const selectedFilter = filterEl ? filterEl.value : 'ALL';
-            
-            const goldFilterEl = document.getElementById('trackerGoldFilter');
-            const onlyGold = goldFilterEl ? goldFilterEl.checked : false;
-            
-            // Update sort indicator arrows
-            const arrowEl = document.getElementById('sort-arrow');
-            const floorArrowEl = document.getElementById('floor-sort-arrow');
-
-            if (arrowEl) {
-                if (trackerSortKey === 'pnl') {
-                    arrowEl.innerText = trackerSortDir === 'desc' ? ' 🔽' : ' 🔼';
-                } else {
-                    arrowEl.innerText = ' ↕️';
-                }
-            }
-
-            if (floorArrowEl) {
-                if (trackerSortKey === 'floorDist') {
-                    floorArrowEl.innerText = trackerSortDir === 'asc' ? ' 🔼' : ' 🔽';
-                } else {
-                    floorArrowEl.innerText = ' ↕️';
-                }
-            }
-
-            const rawData = window.TRACKER_DATA || [];
-            const liveVolume = (window.liveData && window.liveData.topVolume) || [];
-            
-            const uniqueFilterEl = document.getElementById('trackerUniqueFilter');
-            const onlyUnique = uniqueFilterEl ? uniqueFilterEl.checked : true;
-            
-            // 1. Filter Data
-            let filteredData = rawData.filter(tr => {
-                if (selectedFilter !== 'ALL' && tr.setup.toUpperCase() !== selectedFilter) {
-                    return false;
-                }
-                if (onlyGold && !tr.isGold) {
-                    return false;
-                }
-                return true;
-            });
-
-            // 1b. Deduplicate by Stock Name if "Kunci Kaunter Unik" is checked
-            if (onlyUnique) {
-                const uniqueStockMap = new Map();
-                filteredData.forEach(tr => {
-                    if (!uniqueStockMap.has(tr.name) || tr.date > uniqueStockMap.get(tr.name).date) {
-                        uniqueStockMap.set(tr.name, tr);
-                    }
-                });
-                filteredData = Array.from(uniqueStockMap.values());
-            }
-            
-            // 2. Sort Data
-            filteredData.sort((a, b) => {
-                if (trackerSortKey === 'floorDist') {
-                    const liveA = liveVolume.find(l => l.name === a.name);
-                    const liveB = liveVolume.find(l => l.name === b.name);
-                    const priceA = (liveA && typeof liveA.price === 'number') ? liveA.price : a.currentPrice;
-                    const priceB = (liveB && typeof liveB.price === 'number') ? liveB.price : b.currentPrice;
-                    const distA = (priceA && liveA && liveA.floorLow) ? ((priceA - liveA.floorLow) / liveA.floorLow * 100) : 999;
-                    const distB = (priceB && liveB && liveB.floorLow) ? ((priceB - liveB.floorLow) / liveB.floorLow * 100) : 999;
-                    return trackerSortDir === 'asc' ? distA - distB : distB - distA;
-                } else if (trackerSortKey === 'pnl') {
-                    const diffA = a.currentDiff !== null ? a.currentDiff : (trackerSortDir === 'desc' ? -9999 : 9999);
-                    const diffB = b.currentDiff !== null ? b.currentDiff : (trackerSortDir === 'desc' ? -9999 : 9999);
-                    return trackerSortDir === 'desc' ? diffB - diffA : diffA - diffB;
-                }
-                return 0;
-            });
-
-            // 3. Render Data Rows
-            let html = '';
-            let filteredIdx = 1;
-            
-            filteredData.forEach((tr) => {
-                const goldBadge = tr.isGold ? `<span style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; font-size: 0.65rem; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.3); margin-left: 0.35rem; display: inline-flex; align-items: center; gap: 0.15rem">👑 Gred A+</span>` : '';
-                
-                html += `<tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05)">`;
-                html += `<td style="text-align: center; color: var(--text-muted); font-size: 0.82rem; padding: 0.75rem">${filteredIdx++}</td>`;
-                html += `<td style="font-weight: 700; color: white; font-size: 0.85rem; padding: 0.75rem; white-space: nowrap;">${tr.name}${goldBadge}</td>`;
-                html += `<td style="font-size: 0.8rem; color: var(--text-muted); padding: 0.75rem; white-space: nowrap;"><span style="background: rgba(6, 182, 212, 0.1); color: #22d3ee; padding: 0.15rem 0.45rem; border-radius: 4px; border: 1px solid rgba(6, 182, 212, 0.2)">${tr.setup}</span> <span style="color: #94a3b8; font-weight: 600; margin-left: 0.25rem">${tr.score}/15</span></td>`;
-                html += `<td style="text-align: center; color: var(--text-secondary); font-size: 0.82rem; padding: 0.75rem">${tr.date}</td>`;
-                html += `<td style="text-align: right; font-weight: 700; color: var(--info); font-size: 0.85rem; padding: 0.75rem">RM ${tr.triggerPrice.toFixed(3)}</td>`;
-                
-                // Current Price Column
-                if (tr.currentPrice !== null) {
-                    html += `<td style="text-align: right; font-weight: 700; color: #f59e0b; font-size: 0.85rem; padding: 0.75rem">RM ${tr.currentPrice.toFixed(3)}</td>`;
-                } else {
-                    html += `<td style="text-align: right; color: #555; font-size: 0.82rem; padding: 0.75rem">-</td>`;
-                }
-
-                // Jarak Lantai Column (Using Live Price)
-                const liveItem = ((window.liveData && window.liveData.topVolume) || []).find(l => l.name === tr.name);
-                const floorLow = liveItem ? liveItem.floorLow : null;
-                const curPrice = (liveItem && typeof liveItem.price === 'number') ? liveItem.price : tr.currentPrice;
-                const floorDist = (curPrice && floorLow) ? ((curPrice - floorLow) / floorLow * 100) : null;
-                
-                if (floorDist !== null) {
-                    const fColor = floorDist <= 5 ? '#34d399' : (floorDist <= 8 ? '#f59e0b' : '#fb7185');
-                    html += `<td style="text-align: center; font-weight: 800; color: ${fColor}; font-size: 0.82rem; padding: 0.75rem">+${floorDist.toFixed(1)}%</td>`;
-                } else {
-                    html += `<td style="text-align: center; color: #555; font-size: 0.82rem; padding: 0.75rem">-</td>`;
-                }
-                
-                // Current P&L Column
-                if (tr.currentDiff !== null) {
-                    const cSign = tr.currentDiff > 0 ? '+' : '';
-                    const cBg = tr.currentDiff > 0 ? 'rgba(16, 185, 129, 0.12)' : (tr.currentDiff < 0 ? 'rgba(239, 68, 68, 0.12)' : 'transparent');
-                    const cColor = tr.currentDiff > 0 ? 'var(--success)' : (tr.currentDiff < 0 ? 'var(--danger)' : 'var(--text-muted)');
-                    html += `<td style="text-align: center; background: ${cBg}; color: ${cColor}; font-weight: 700; font-size: 0.82rem; padding: 0.75rem">${cSign}${tr.currentDiff.toFixed(1)}%</td>`;
-                } else {
-                    html += `<td style="text-align: center; color: #555; font-size: 0.82rem; padding: 0.75rem">-</td>`;
-                }
-                
-                tr.diffs.forEach(diff => {
-                    if (diff === null) {
-                        html += `<td style="text-align: center; color: #444; font-size: 0.82rem; padding: 0.75rem">-</td>`;
-                    } else if (diff === "N/A") {
-                        html += `<td style="text-align: center; color: #555; font-size: 0.82rem; padding: 0.75rem">N/A</td>`;
-                    } else {
-                        const sign = diff > 0 ? '+' : '';
-                        const bg = diff > 0 ? 'rgba(16, 185, 129, 0.12)' : (diff < 0 ? 'rgba(239, 68, 68, 0.12)' : 'transparent');
-                        const color = diff > 0 ? 'var(--success)' : (diff < 0 ? 'var(--danger)' : 'var(--text-muted)');
-                        html += `<td style="text-align: center; background: ${bg}; color: ${color}; font-weight: 700; font-size: 0.82rem; padding: 0.75rem">${sign}${diff.toFixed(1)}%</td>`;
-                    }
-                });
-                
-                html += `</tr>`;
-            });
-            
-            if (filteredIdx === 1) {
-                html = `<tr><td colspan="18" style="text-align: center; color: var(--text-muted); padding: 3rem 0;">Tiada kaunter di bawah teknik ini dikesan.</td></tr>`;
-            }
-            
-            tbody.innerHTML = html;
-        }
-        window.renderTracker = renderTracker;
-
-        // ——— JB Picks Render ———
-        function renderJBPicks() {
-            const live = window.liveData || {};
-            const track = window.TRACKER_DATA || [];
-            const wrapper = document.getElementById('jbpicks-table-wrapper');
-            const progress = document.getElementById('jbpicks-progress');
-            const updateEl = document.getElementById('jbpicks-lastupdate');
-
-            if (!wrapper) return;
-
-            if (live.lastUpdated) {
-                const d = new Date(live.lastUpdated);
-                updateEl.textContent = 'Dikemas kini: ' + d.toLocaleString('ms-MY', { timeZone: 'Asia/Kuala_Lumpur' });
-            }
-
-            const candidates = (live.topVolume || []).filter(s => {
-                if (!passesGlobalFilters(s)) return false;
-                if (s.signal !== 'buy') return false;
-                if (!['STAIRCASE', 'EXPLOSIVE', 'SWING PLAY'].includes(s.setupStyle)) return false;
-                const floorDist = s.floorLow ? ((s.price - s.floorLow) / s.floorLow * 100) : null;
-                if (floorDist !== null && floorDist > 10.0) return false;
-                return true;
-            });
-
-            applyGlobalSort(candidates);
-
-            candidates.sort((a, b) => {
-                const aGold = track.filter(t => t.name === a.name).some(t => t.isGold) ? 1 : 0;
-                const bGold = track.filter(t => t.name === b.name).some(t => t.isGold) ? 1 : 0;
-                if (bGold !== aGold) return bGold - aGold;
-                const aUpside = a.high52 ? ((a.high52 - a.price) / a.price * 100) : 0;
-                const bUpside = b.high52 ? ((b.high52 - b.price) / b.price * 100) : 0;
-                if (bUpside !== aUpside) return bUpside - aUpside;
-                const aFloor = a.floorLow ? ((a.price - a.floorLow) / a.floorLow * 100) : 999;
-                const bFloor = b.floorLow ? ((b.price - b.floorLow) / b.floorLow * 100) : 999;
-                return aFloor - bFloor;
-            });
-
-            // 🎯 Rule: Select Top picks from all 3 setup styles (STAIRCASE, EXPLOSIVE, SWING PLAY)
-            const staircaseList = candidates.filter(s => s.setupStyle === 'STAIRCASE');
-            const explosiveList = candidates.filter(s => s.setupStyle === 'EXPLOSIVE');
-            const swingList = candidates.filter(s => s.setupStyle === 'SWING PLAY');
-
-            let picks = [];
-            
-            // Take up to 2 Staircase
-            if (staircaseList.length > 0) picks.push(...staircaseList.slice(0, 2));
-
-            // Take up to 1 Explosive
-            if (explosiveList.length > 0) picks.push(...explosiveList.slice(0, 1));
-
-            // Take up to 1 Swing Play
-            if (swingList.length > 0) picks.push(...swingList.slice(0, 1));
-
-            // If we don't have 4 yet, fill remaining from leftover candidates
-            if (picks.length < 4) {
-                const pickedNames = new Set(picks.map(p => p.name));
-                const remaining = candidates.filter(c => !pickedNames.has(c.name));
-                for (let r of remaining) {
-                    if (picks.length >= 4) break;
-                    picks.push(r);
-                }
-            }
-            let positiveCount = 0;
-
-            if (picks.length === 0) {
-                wrapper.innerHTML = '<div style="text-align: center; padding: 2rem; color: var(--text-muted); font-size: 0.85rem;">Tiada saham memenuhi tapisan hari ini.</div>';
-                if (progress) progress.textContent = '0';
-                return;
-            }
-
-            const cellStyle = 'padding: 0.6rem 0.8rem; font-size: 0.78rem; white-space: nowrap;';
-            const headerStyle = cellStyle + 'color: #f59e0b; font-weight: 800; text-transform: uppercase; letter-spacing: 0.3px; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);';
-
-            let t = `<table style="width: 100%; border-collapse: collapse; min-width: 900px;">
-                <thead><tr>
-                    <th style="${headerStyle}text-align: left;">#</th>
-                    <th style="${headerStyle}text-align: left;">Saham</th>
-                    <th style="${headerStyle}text-align: right;">Harga</th>
-                    <th style="${headerStyle}text-align: center;">Signal</th>
-                    <th style="${headerStyle}text-align: center;">% Hari</th>
-                    <th style="${headerStyle}text-align: left;">Setup</th>
-                    <th style="${headerStyle}text-align: right;">Lantai</th>
-                    <th style="${headerStyle}text-align: right;">Jarak Lantai</th>
-                    <th style="${headerStyle}text-align: right;">Ruang ATH</th>
-                    <th style="${headerStyle}text-align: right;">Tunover (j)</th>
-                    <th style="${headerStyle}text-align: center;">P&L Tracker</th>
-                    <th style="${headerStyle}text-align: left;">Alasan</th>
-                </tr></thead><tbody>`;
-
-            picks.forEach((liveItem, idx) => {
-                const name = liveItem.name;
-                const trackItem = track.filter(t => t.name === name).sort((a, b) => b.date.localeCompare(a.date))[0] || null;
-
-                const price = liveItem.price;
-                const signal = liveItem.signal;
-                const setup = liveItem.setupStyle;
-                const turnover = liveItem.turnover;
-                const floor = liveItem.floorLow;
-                const high52 = liveItem.high52;
-                const changePct = liveItem.changePct || 0;
-                const pnl = trackItem ? trackItem.currentDiff : null;
-
-                const floorDist = (price && floor) ? ((price - floor) / floor * 100) : null;
-                const upsideAth = (price && high52) ? ((high52 - price) / price * 100) : null;
-                const isGold = trackItem ? trackItem.isGold : false;
-
-                if (pnl !== null && pnl > 0) positiveCount++;
-
-                const goldBadge = isGold ? '<span style="background: linear-gradient(135deg, #f59e0b, #d97706); color: #0f172a; font-size: 0.55rem; font-weight: 900; padding: 0.1rem 0.4rem; border-radius: 4px; letter-spacing: 0.5px; margin-left: 0.3rem;">GOLD</span>' : '';
-                const changeArrow = changePct > 0 ? '▲' : (changePct < 0 ? '▼' : '—');
-                const changeColor = changePct > 0 ? '#34d399' : (changePct < 0 ? '#f87171' : '#94a3b8');
-                const pnlColor = pnl !== null ? (pnl > 0 ? '#34d399' : (pnl < 0 ? '#f87171' : '#94a3b8')) : '#94a3b8';
-                const pnlArrow = pnl !== null ? (pnl > 0 ? '▲' : (pnl < 0 ? '▼' : '—')) : '—';
-
-                const rowBg = idx % 2 === 0 ? 'background: rgba(255,255,255,0.02);' : '';
-
-                let setupBadge = '<span style="background: rgba(6, 182, 212, 0.15); color: #22d3ee; padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(6, 182, 212, 0.3); font-size: 0.7rem;">🧱 STAIRCASE</span>';
-                if (setup === 'EXPLOSIVE') {
-                    setupBadge = '<span style="background: rgba(244, 63, 94, 0.15); color: #fb7185; padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(244, 63, 94, 0.3); font-size: 0.7rem;">⚡ EXPLOSIVE</span>';
-                } else if (setup === 'SWING PLAY') {
-                    setupBadge = '<span style="background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.3); font-size: 0.7rem;">🏄 SWING PLAY</span>';
-                }
-
-                t += `<tr style="${rowBg}">
-                    <td style="${cellStyle}text-align: left; color: var(--text-muted);">${idx + 1}</td>
-                    <td style="${cellStyle}text-align: left; font-weight: 800; color: #e2e8f0;">${name}${goldBadge}</td>
-                    <td style="${cellStyle}text-align: right; font-weight: 700; color: white;">RM ${typeof price === 'number' ? price.toFixed(3) : price}</td>
-                    <td style="${cellStyle}text-align: center;"><span style="color: #34d399; font-weight: 700; background: rgba(52, 211, 153, 0.1); padding: 0.15rem 0.5rem; border-radius: 4px; font-size: 0.7rem;">${signal}</span></td>
-                    <td style="${cellStyle}text-align: center; font-weight: 700; color: ${changeColor};">${changeArrow} ${Math.abs(changePct).toFixed(2)}%</td>
-                    <td style="${cellStyle}text-align: left;">${setupBadge}</td>
-                    <td style="${cellStyle}text-align: right; color: #94a3b8;">${floor ? 'RM ' + floor.toFixed(3) : '—'}</td>
-                    <td style="${cellStyle}text-align: right; font-weight: 700; color: ${floorDist !== null ? (floorDist <= 6 ? '#34d399' : '#f87171') : '#94a3b8'};">${floorDist !== null ? floorDist.toFixed(1) + '%' : '—'}</td>
-                    <td style="${cellStyle}text-align: right; font-weight: 700; color: ${upsideAth !== null ? (upsideAth >= 5 ? '#34d399' : (upsideAth >= 3 ? '#f59e0b' : '#f87171')) : '#94a3b8'};">${upsideAth !== null ? upsideAth.toFixed(1) + '%' : '—'}</td>
-                    <td style="${cellStyle}text-align: right; color: #94a3b8;">${turnover > 0 ? (turnover / 1000000).toFixed(2) : '—'}</td>
-                    <td style="${cellStyle}text-align: center; font-weight: 700; color: ${pnlColor};">${pnlArrow} ${pnl !== null ? (pnl > 0 ? '+' : '') + pnl.toFixed(2) + '%' : 'N/A'}</td>
-                    <td style="${cellStyle}text-align: left; color: var(--text-muted); font-size: 0.7rem; max-width: 200px; overflow: hidden; text-overflow: ellipsis;">${liveItem.reason || ''}</td>
-                </tr>`;
-            });
-
-            t += '</tbody></table>';
-            wrapper.innerHTML = t;
-            if (progress) progress.textContent = picks.length > 0 ? `${positiveCount}/${picks.length} positif` : '0/4';
-        }
-        window.renderJBPicks = renderJBPicks;
-
         function renderPortfolio() {
             const list = currentData || [];
             const portfolio = [
@@ -5755,9 +5238,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 tbody.innerHTML += `
                     <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.02)'" onmouseout="this.style.background='none'">
                         <td style="padding: 0.8rem 0.75rem; font-weight: 800; color: white; border-bottom: 1px solid rgba(255,255,255,0.05);">
-                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(p.name)}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 0.95rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.3rem;" title="Buka Carta TradingView (${p.name})">
-                                ${p.name} <span style="font-size: 0.75rem; color: #38bdf8;">🔗</span>
-                            </a>
+                            ${getTradingViewAnchorSmall(p.name)}
                             <span style="font-size: 0.65rem; color: var(--text-muted); display: block; font-weight: 400; margin-top: 0.1rem;">PEGANGAN: ${units.toLocaleString()} unit (${(units/100).toFixed(0)} Lot)</span>
                         </td>
                         <td style="padding: 0.8rem 0.75rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
@@ -5777,7 +5258,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                         </td>
                         <td style="padding: 0.8rem 0.75rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">${statusHtml}</td>
                         <td style="padding: 0.8rem 0.75rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
-                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(p.name)}&interval=D" target="_blank" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 0.25rem; transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'; this.style.background='rgba(56, 189, 248, 0.25)';" onmouseout="this.style.transform='scale(1)'; this.style.background='rgba(56, 189, 248, 0.15)';" title="Buka Carta TradingView">📈 TV</a>
+                            ${getTradingViewButton(p.name)}
                         </td>
                     </tr>
                 `;
@@ -5965,9 +5446,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                         <td style="text-align: center; font-weight: 800; color: ${isReclaim ? '#34d399' : '#f97316'}; padding: 0.8rem 0.5rem; border-left: 3px solid ${isReclaim ? '#34d399' : 'transparent'};">#${idx + 1}</td>
                         <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
                             <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
-                                <a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(m.name)}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
-                                    ${m.name} <span style="font-size: 0.75rem; color: #f97316;">🔗</span>
-                                </a>
+                                ${getTradingViewSymbol(m.name) ? `<a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(m.name)}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">${m.name} <span style="font-size: 0.75rem; color: #f97316;">🔗</span></a>` : m.name}
                                 ${isReclaim ? `<span style="font-size:0.68rem; background:linear-gradient(135deg,#34d399,#059669); color:white; padding:0.1rem 0.35rem; border-radius:4px; font-weight:800; box-shadow:0 0 8px rgba(52,211,153,0.3);">🔥 Reclaim</span>` : ''}
                             </div>
                             <div style="font-size: 0.76rem; color: var(--text-muted); font-weight: 600; margin-top: 0.3rem;">
@@ -6163,9 +5642,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3); transition: background 0.2s;" onmouseover="this.style.background='rgba(30, 41, 59, 0.5)'" onmouseout="this.style.background='transparent'">
                     <td style="padding: 0.65rem 0.8rem; font-size: 0.8rem; text-align: center; color: #fbbf24; font-weight: 800;">${idx + 1}</td>
                     <td style="padding: 0.65rem 0.8rem; font-size: 0.85rem; font-weight: 800; color: #f8fafc;">
-                        <a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(mItem.name)}&interval=D" target="_blank" style="color: #f8fafc; text-decoration: none; display: inline-flex; align-items: center; gap: 0.3rem;" title="Buka Carta TradingView">
-                            ${mItem.name} <span style="font-size: 0.75rem;">📈</span>
-                        </a>
+                        ${getTradingViewSymbol(mItem.name) ? `<a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(mItem.name)}&interval=D" target="_blank" style="color: #f8fafc; text-decoration: none; display: inline-flex; align-items: center; gap: 0.3rem;" title="Buka Carta TradingView">${mItem.name} <span style="font-size: 0.75rem;">📈</span></a>` : mItem.name}
                         <span style="font-size: 0.7rem; color: #94a3b8; font-weight: 400;">(${mItem.sector || 'Bursa'})</span>
                     </td>
                     <td style="padding: 0.65rem 0.8rem; text-align: center;">${techniqueBadge}</td>
@@ -6177,7 +5654,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     <td style="padding: 0.65rem 0.8rem; font-size: 0.82rem; text-align: right; font-weight: 700; color: #cbd5e1;">${turnoverFormatted}</td>
                     <td style="padding: 0.65rem 0.8rem; font-size: 0.78rem; color: #cbd5e1;">${planText}</td>
                     <td style="padding: 0.65rem 0.8rem; text-align: center; display: flex; gap: 0.4rem; justify-content: center; align-items: center;">
-                        <a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(mItem.name)}&interval=D" target="_blank" class="btn" style="background: rgba(56, 189, 248, 0.2); border: 1px solid rgba(56, 189, 248, 0.5); color: #38bdf8; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📈 TV</a>
+                        ${getTradingViewSymbol(mItem.name) ? `<a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(mItem.name)}&interval=D" target="_blank" class="btn" style="background: rgba(56, 189, 248, 0.2); border: 1px solid rgba(56, 189, 248, 0.5); color: #38bdf8; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📈 TV</a>` : ''}
                         <button onclick="triggerAIAnalysisModal('${mItem.name}', 'Weekly Homework: ${techniqueName}')" class="btn" style="background: linear-gradient(135deg, #f59e0b, #d97706); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">✨ Plan AI</button>
                     </td>
                 </tr>`;
@@ -6291,7 +5768,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 alert('Tiada kaunter untuk disalin.');
                 return;
             }
-            const tickers = picks.map(p => `MYX:${p.name}`).join(',');
+            const tickers = picks.map(p => getTradingViewSymbol(p.name)).filter(Boolean).map(s => `MYX:${s}`).join(',');
             navigator.clipboard.writeText(tickers).then(() => {
                 alert('Watchlist Weekly Top 5 berjaya disalin!\n' + tickers + '\n\nBoleh paste terus dalam TradingView.');
             }).catch(err => {
@@ -6308,9 +5785,10 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 <strong>⚠️ Penafian Kewangan & Risiko:</strong> Semua data, zon harga (Watchlist/Support Floor), formula, skor pintas, dan maklumat kuantitatif yang dipaparkan di JerungBursa adalah hasil pemodelan matematik dan simulasi algoritma untuk tujuan penyelidikan dan pembelajaran sahaja. Kami <strong>BUKAN</strong> penasihat kewangan berlesen. Melabur dalam pasaran saham Bursa Malaysia melibatkan risiko kerugian modal yang tinggi. Sila lakukan penyelidikan sendiri (DYOR) atau berunding dengan penasihat kewangan yang bertauliah sebelum membuat keputusan pelaburan sebenar.
             </p>
             <p style="margin-bottom: 1rem;">
-                &copy; 2026 JerungBursa (Bursa IPO Trend Rider Console). Hak cipta terpelihara.
+                &copy; 2026 Jerung Bursa. Hak cipta terpelihara.
             </p>
             <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 0.5rem;">
+                <a href="./articles.html" style="color: var(--text-muted); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-muted)'">Koleksi Artikel</a>
                 <a href="./privacy-policy.html" style="color: var(--text-muted); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-muted)'">Dasar Privasi</a>
                 <a href="./terms.html" style="color: var(--text-muted); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-muted)'">Syarat Perkhidmatan</a>
                 <a href="./about.html" style="color: var(--text-muted); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-muted)'">Mengenai Kami</a>
