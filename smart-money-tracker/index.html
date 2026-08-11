@@ -4321,15 +4321,33 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 picks.push(item);
             }
 
+            const getConfCount = (item) => {
+                let count = 0;
+                if (typeof passesJerungRadar === 'function' && passesJerungRadar(item)) count++;
+                if (typeof passesVcpStaircase === 'function' && passesVcpStaircase(item)) count++;
+                if (typeof passesTrendRiders === 'function' && passesTrendRiders(item)) count++;
+                if (typeof passesEarlySpring === 'function' && passesEarlySpring(item)) count++;
+                if (typeof passesBottomFishing === 'function' && passesBottomFishing(item)) count++;
+                return count;
+            };
+
             picks.sort((a, b) => {
-                // Utama: paling rapat dengan LANTAI (risk ke SL paling kecil) — setup entry paling selamat
+                // Keutamaan 1: Jumlah Confluence (Strategi Bertembung) terbanyak dahulu
+                const ca = getConfCount(a);
+                const cb = getConfCount(b);
+                if (ca !== cb) return cb - ca;
+
+                // Keutamaan 2: Paling rapat dengan LANTAI (risk ke SL paling kecil)
                 const da = a.floorLow ? ((a.price - a.floorLow) / a.floorLow) : 99;
                 const db = b.floorLow ? ((b.price - b.floorLow) / b.floorLow) : 99;
                 if (da !== db) return da - db;
-                // Tie-break: pullback paling kecil (paling dekat ATH), kemudian paling padat
+
+                // Keutamaan 3: Pullback paling kecil (paling dekat ATH)
                 const pa = a.pullback !== null && a.pullback !== undefined ? a.pullback : 99;
                 const pbb = b.pullback !== null && b.pullback !== undefined ? b.pullback : 99;
                 if (pa !== pbb) return pa - pbb;
+
+                // Keutamaan 4: Paling padat (close tightness terkecil)
                 return (a.closeTightness || 99) - (b.closeTightness || 99);
             });
 
