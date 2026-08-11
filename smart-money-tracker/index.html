@@ -858,12 +858,14 @@
                                 <th style="text-align: right;">SL Trail (×0.97)</th>
                                 <th style="text-align: right;">Turnover</th>
                                 <th style="text-align: center;">Perubahan %</th>
+                                <th style="text-align: center;">Confluence?</th>
+                                <th style="text-align: left;">Strategi Bertembung</th>
                                 <th style="text-align: center;">Analisis AI (Skor)</th>
                             </tr>
                         </thead>
                         <tbody id="confluenceRadarTableBody">
                             <tr>
-                                <td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
+                                <td colspan="12" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
                                     ⏳ Memuatkan Fresh VVIP Rider...
                                 </td>
                             </tr>
@@ -2049,6 +2051,22 @@
     </div>
 
     <script>
+        // Helper to convert stock name to valid TradingView ticker symbol
+        function getTradingViewSymbol(name) {
+            if (!name) return '';
+            const cleanName = name.toUpperCase().trim();
+            if (cleanName.includes('99 SPEED')) {
+                return '99SPEED';
+            }
+            // Strip brackets like [S]
+            let symbol = cleanName.replace(/\[S\]/gi, '');
+            // Strip common corporate suffixes
+            symbol = symbol.replace(/(\s+BERHAD|\s+BHD|\s+RETAIL|\s+GROUP|\s+HOLDINGS|\s+HOLDING)/gi, '');
+            // Strip remaining spaces
+            symbol = symbol.replace(/\s+/g, '');
+            return symbol.trim();
+        }
+
         // Interactive Example Selector logic for strategy guides
         function switchExample(type, number) {
             const imgEl = document.getElementById(type + '-ex-img');
@@ -3464,7 +3482,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                             <td style="text-align: center; font-weight: 800; color: #22d3ee;">#${rankCount++}</td>
                             <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
                                 <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
-                                    <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
+                                    <a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(item.name)}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
                                         ${item.name} <span style="font-size: 0.75rem; color: #22d3ee;">🔗</span>
                                     </a>
                                     ${getSub1Badge(item)}
@@ -4194,7 +4212,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     <tr>
                         <td style="text-align: center; font-weight: 800; color: #0ea5e9;">#${idx + 1}</td>
                         <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
-                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
+                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(item.name)}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
                                 ${item.name} <span style="font-size: 0.75rem; color: #0ea5e9;">🔗</span>
                             </a>
                             <div style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.35rem; flex-wrap: wrap;">${athBadge}</div>
@@ -4315,7 +4333,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             });
 
             if (picks.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">🔥 Tiada setup Fresh VVIP Rider hari ini.</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="12" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">🔥 Tiada setup Fresh VVIP Rider hari ini.</td></tr>`;
                 return;
             }
 
@@ -4333,11 +4351,28 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 const tierColor = item.confidenceScore >= 90 ? '#a855f7' : (item.confidenceScore >= 75 ? '#38bdf8' : (item.confidenceScore >= 60 ? '#10b981' : '#f59e0b'));
                 const confidenceText = item.confidenceScore !== undefined ? `${item.confidenceScore}/100` : 'N/A';
 
+                // Calculate confluence matches dynamically
+                const matches = [];
+                if (typeof passesJerungRadar === 'function' && passesJerungRadar(item)) matches.push('🦈 Jerung');
+                if (typeof passesVcpStaircase === 'function' && passesVcpStaircase(item)) matches.push('🪜 VCP');
+                if (typeof passesTrendRiders === 'function' && passesTrendRiders(item)) matches.push('📈 Trend');
+                if (typeof passesEarlySpring === 'function' && passesEarlySpring(item)) matches.push('🌱 Spring');
+                if (typeof passesBottomFishing === 'function' && passesBottomFishing(item)) matches.push('🎣 Bottom');
+
+                const isConf = matches.length >= 2;
+                const confHtml = isConf
+                    ? `<span style="color: #34d399; font-weight: 800; background: rgba(52,211,153,0.1); padding: 0.15rem 0.45rem; border-radius: 4px; font-size: 0.72rem; border: 1px solid rgba(52,211,153,0.25); white-space: nowrap;">YES (${matches.length}x)</span>`
+                    : `<span style="color: #94a3b8; font-weight: 600; background: rgba(148,163,184,0.1); padding: 0.15rem 0.45rem; border-radius: 4px; font-size: 0.72rem; border: 1px solid rgba(148,163,184,0.2); white-space: nowrap;">NO</span>`;
+
+                const matchesHtml = matches.length > 0
+                    ? matches.map(m => `<span style="background: rgba(15, 23, 42, 0.6); border: 1px solid rgba(255, 255, 255, 0.1); padding: 0.1rem 0.35rem; border-radius: 4px; font-size: 0.68rem; color: #cbd5e1; font-weight: 700; white-space: nowrap; margin-right: 0.15rem;">${m}</span>`).join('')
+                    : '—';
+
                 html += `
                     <tr>
                         <td style="text-align: center; font-weight: 800; color: #fde047;">#${idx + 1}</td>
                         <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
-                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
+                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(item.name)}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
                                 ${item.name} <span style="font-size: 0.75rem; color: #fde047;">🔗</span>
                             </a>
                             <div style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.35rem; flex-wrap: wrap;">
@@ -4357,12 +4392,19 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                             <span style="color: ${(item.turnover||0) >= 2000000 ? '#f59e0b' : (item.turnover||0) >= 500000 ? '#34d399' : '#94a3b8'}; font-weight: 700; font-size: 0.82rem;">${(item.turnover||0) >= 1000000 ? 'RM ' + ((item.turnover||0)/1000000).toFixed(2) + 'M' : 'RM ' + ((item.turnover||0)/1000).toFixed(0) + 'k'}${(item.turnover||0) >= 2000000 ? ' 🔥' : ''}</span>
                         </td>
                         <td style="text-align: center; color: var(--${changeClass}); font-weight: 800;">${changeSign}${changeVal !== undefined ? changeVal.toFixed(2) : '0.00'}%</td>
+                        <td style="text-align: center; padding: 0.8rem 0.5rem; white-space: nowrap;">${confHtml}</td>
+                        <td style="text-align: left; padding: 0.8rem 0.5rem; white-space: nowrap;">${matchesHtml}</td>
                         <td style="text-align: center;">
                             <div style="display: flex; flex-direction: column; align-items: center; gap: 0.25rem;">
                                 <span style="color: ${tierColor}; font-weight: 800; font-size: 0.78rem;">${confidenceText}</span>
-                                <button onclick="triggerAIAnalysisModal('${item.name}', 'Fresh VVIP Rider')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.2rem 0.55rem; border-radius: 6px; font-size: 0.7rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                                    ✨ Tanya AI
-                                </button>
+                                <div style="display: flex; gap: 0.25rem; justify-content: center; align-items: center;">
+                                    <button onclick="triggerStockHistoryModal('${item.name}')" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.2rem 0.55rem; border-radius: 6px; font-size: 0.7rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                        📜 Sejarah
+                                    </button>
+                                    <button onclick="triggerAIAnalysisModal('${item.name}', 'Fresh VVIP Rider')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.2rem 0.55rem; border-radius: 6px; font-size: 0.7rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                        ✨ Tanya AI
+                                    </button>
+                                </div>
                             </div>
                         </td>
                     </tr>`;
@@ -4483,7 +4525,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 html += `
                     <tr>                        <td style="text-align: center; font-weight: 800; color: #38bdf8;">#${idx + 1}</td>
                         <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
-                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
+                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(item.name)}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
                                 ${item.name} <span style="font-size: 0.75rem; color: #38bdf8;">🔗</span>
                             </a>
                             <div style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.35rem; flex-wrap: wrap;">${freshBadge}</div>
@@ -4712,7 +4754,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                             <td style="text-align: center; font-weight: 800; color: ${isHc ? '#10b981' : (isVvipRank ? '#f59e0b' : 'var(--accent)')}; ${isHc ? 'border-left: 4px solid #10b981;' : ''}">#${rankCount++}</td>
                             <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
                                 <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
-                                    <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
+                                    <a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(item.name)}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
                                         ${crownEmoji}${item.name} <span style="font-size: 0.75rem; color: var(--accent);">🔗</span>
                                     </a>
                                     ${getSub1Badge(item)}
@@ -4891,7 +4933,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                             <td style="text-align: center; font-weight: 800; color: ${isHc ? '#10b981' : '#fb7185'}; ${isHc ? 'border-left: 4px solid #10b981;' : ''}">#${rankCount++}</td>
                             <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
                                 <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
-                                    <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
+                                    <a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(item.name)}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
                                         ${item.name} <span style="font-size: 0.75rem; color: var(--accent);">🔗</span>
                                     </a>
                                     ${getSub1Badge(item)}
@@ -5007,7 +5049,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                             <td style="text-align: center; font-weight: 800; color: #f59e0b;">#${rankCount++}</td>
                             <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
                                 <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
-                                    <a href="https://www.tradingview.com/chart/?symbol=MYX:${item.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
+                                    <a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(item.name)}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
                                         ${item.name} <span style="font-size: 0.75rem; color: var(--accent);">🔗</span>
                                     </a>
                                     ${getSub1Badge(item)}
@@ -5598,7 +5640,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 tbody.innerHTML += `
                     <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.02)'" onmouseout="this.style.background='none'">
                         <td style="padding: 0.8rem 0.75rem; font-weight: 800; color: white; border-bottom: 1px solid rgba(255,255,255,0.05);">
-                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${p.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 0.95rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.3rem;" title="Buka Carta TradingView (${p.name})">
+                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(p.name)}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 0.95rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.3rem;" title="Buka Carta TradingView (${p.name})">
                                 ${p.name} <span style="font-size: 0.75rem; color: #38bdf8;">🔗</span>
                             </a>
                             <span style="font-size: 0.65rem; color: var(--text-muted); display: block; font-weight: 400; margin-top: 0.1rem;">PEGANGAN: ${units.toLocaleString()} unit (${(units/100).toFixed(0)} Lot)</span>
@@ -5620,7 +5662,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                         </td>
                         <td style="padding: 0.8rem 0.75rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">${statusHtml}</td>
                         <td style="padding: 0.8rem 0.75rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
-                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${p.name}&interval=D" target="_blank" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 0.25rem; transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'; this.style.background='rgba(56, 189, 248, 0.25)';" onmouseout="this.style.transform='scale(1)'; this.style.background='rgba(56, 189, 248, 0.15)';" title="Buka Carta TradingView">📈 TV</a>
+                            <a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(p.name)}&interval=D" target="_blank" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 0.25rem; transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'; this.style.background='rgba(56, 189, 248, 0.25)';" onmouseout="this.style.transform='scale(1)'; this.style.background='rgba(56, 189, 248, 0.15)';" title="Buka Carta TradingView">📈 TV</a>
                         </td>
                     </tr>
                 `;
@@ -5808,7 +5850,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                         <td style="text-align: center; font-weight: 800; color: ${isReclaim ? '#34d399' : '#f97316'}; padding: 0.8rem 0.5rem; border-left: 3px solid ${isReclaim ? '#34d399' : 'transparent'};">#${idx + 1}</td>
                         <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
                             <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
-                                <a href="https://www.tradingview.com/chart/?symbol=MYX:${m.name}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
+                                <a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(m.name)}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Buka Carta TradingView">
                                     ${m.name} <span style="font-size: 0.75rem; color: #f97316;">🔗</span>
                                 </a>
                                 ${isReclaim ? `<span style="font-size:0.68rem; background:linear-gradient(135deg,#34d399,#059669); color:white; padding:0.1rem 0.35rem; border-radius:4px; font-weight:800; box-shadow:0 0 8px rgba(52,211,153,0.3);">🔥 Reclaim</span>` : ''}
@@ -6006,7 +6048,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3); transition: background 0.2s;" onmouseover="this.style.background='rgba(30, 41, 59, 0.5)'" onmouseout="this.style.background='transparent'">
                     <td style="padding: 0.65rem 0.8rem; font-size: 0.8rem; text-align: center; color: #fbbf24; font-weight: 800;">${idx + 1}</td>
                     <td style="padding: 0.65rem 0.8rem; font-size: 0.85rem; font-weight: 800; color: #f8fafc;">
-                        <a href="https://www.tradingview.com/chart/?symbol=MYX:${mItem.name}&interval=D" target="_blank" style="color: #f8fafc; text-decoration: none; display: inline-flex; align-items: center; gap: 0.3rem;" title="Buka Carta TradingView">
+                        <a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(mItem.name)}&interval=D" target="_blank" style="color: #f8fafc; text-decoration: none; display: inline-flex; align-items: center; gap: 0.3rem;" title="Buka Carta TradingView">
                             ${mItem.name} <span style="font-size: 0.75rem;">📈</span>
                         </a>
                         <span style="font-size: 0.7rem; color: #94a3b8; font-weight: 400;">(${mItem.sector || 'Bursa'})</span>
@@ -6020,7 +6062,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     <td style="padding: 0.65rem 0.8rem; font-size: 0.82rem; text-align: right; font-weight: 700; color: #cbd5e1;">${turnoverFormatted}</td>
                     <td style="padding: 0.65rem 0.8rem; font-size: 0.78rem; color: #cbd5e1;">${planText}</td>
                     <td style="padding: 0.65rem 0.8rem; text-align: center; display: flex; gap: 0.4rem; justify-content: center; align-items: center;">
-                        <a href="https://www.tradingview.com/chart/?symbol=MYX:${mItem.name}&interval=D" target="_blank" class="btn" style="background: rgba(56, 189, 248, 0.2); border: 1px solid rgba(56, 189, 248, 0.5); color: #38bdf8; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📈 TV</a>
+                        <a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(mItem.name)}&interval=D" target="_blank" class="btn" style="background: rgba(56, 189, 248, 0.2); border: 1px solid rgba(56, 189, 248, 0.5); color: #38bdf8; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📈 TV</a>
                         <button onclick="triggerAIAnalysisModal('${mItem.name}', 'Weekly Homework: ${techniqueName}')" class="btn" style="background: linear-gradient(135deg, #f59e0b, #d97706); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">✨ Plan AI</button>
                     </td>
                 </tr>`;
