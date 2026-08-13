@@ -693,6 +693,7 @@
     <!-- Tab Navigation -->
     <div class="tabs-nav" style="margin-bottom: 1rem; margin-top: 0.5rem; display: flex; gap: 0.4rem; flex-wrap: wrap;">
         <button class="tab-btn active" id="tab-realconfluence" onclick="switchTab('realconfluence')">🎯 Confluence</button>
+        <button class="tab-btn" id="tab-topgainers" onclick="switchTab('topgainers')">🚀 Top Gainers %</button>
         <button class="tab-btn" id="tab-confluence" onclick="switchTab('confluence')">🔥 Fresh Rider</button>
         <button class="tab-btn" id="tab-jerung" onclick="switchTab('jerung')">🦈 Jerung Radar</button>
         <button class="tab-btn" id="tab-weekly" onclick="switchTab('weekly')">🗓️ Weekly Top 5</button>
@@ -1041,6 +1042,102 @@
                 </table>
             </div>
             <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">* Setiap kaunter dikira sekali (hari pertama qualify). Jumlah PnL = pulangan terkumpul (bukan compounding). Triple = PnL tertinggi per trade; Double = menambah jumlah signal & jumlah PnL keseluruhan.</p>
+        </div>
+    </div>
+
+    <!-- TAB: TOP GAINERS % SCANNER -->
+    <div id="view-topgainers" style="display: none;">
+        <div style="margin-bottom: 1.25rem;">
+            <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(16, 185, 129, 0.08)); border: 2px dashed #10b981; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(16, 185, 129, 0.15); position: relative; overflow: hidden;">
+                <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(16, 185, 129, 0.15); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
+
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(16, 185, 129, 0.25); padding-bottom: 0.75rem;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1; min-width: 300px;">
+                        <span style="font-size: 1.8rem;">🚀</span>
+                        <div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                                <h2 style="margin: 0; font-size: 1.3rem; color: #34d399; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem;">Daily Top Gainers % Scanner</h2>
+                                <span style="font-size: 0.7rem; background: rgba(16, 185, 129, 0.2); color: #34d399; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.3); white-space: nowrap;">⚡ MOVERS PASARAN</span>
+                            </div>
+                            <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
+                                Senarai kedudukan kaunter dengan <strong style="color: #34d399;">kenaikan peratusan tertinggi (% Gain)</strong> selepas pasaran tutup. Disediakan paparan Top 30, Top 50, dan tapisan saham bawah RM1.00.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Filters for Top Gainers -->
+                    <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+                        <div style="display: flex; gap: 0.3rem; align-items: center; background: rgba(15,23,42,0.6); padding: 0.25rem; border-radius: 8px; border: 1px solid rgba(16,185,129,0.3);">
+                            <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; padding: 0 0.3rem;">Paparan:</span>
+                            <select id="topGainersLimitFilter" onchange="renderTopGainers()" style="background: rgba(15,23,42,0.9); color: #34d399; border: 1px solid rgba(16,185,129,0.4); padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.75rem; font-weight: 700; cursor: pointer;">
+                                <option value="30" selected>Top 30 Sahaja</option>
+                                <option value="50">Top 50</option>
+                                <option value="100">Top 100</option>
+                                <option value="ALL">Semua Kaunter</option>
+                            </select>
+                        </div>
+
+                        <div style="display: flex; gap: 0.3rem; align-items: center; background: rgba(15,23,42,0.6); padding: 0.25rem; border-radius: 8px; border: 1px solid rgba(16,185,129,0.3);">
+                            <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; padding: 0 0.3rem;">Harga:</span>
+                            <select id="topGainersPriceFilter" onchange="renderTopGainers()" style="background: rgba(15,23,42,0.9); color: #38bdf8; border: 1px solid rgba(56,189,248,0.4); padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.75rem; font-weight: 700; cursor: pointer;">
+                                <option value="ALL" selected>Semua Harga</option>
+                                <option value="SUB1">Bawah RM1.00 Sahaja (Penny)</option>
+                            </select>
+                        </div>
+
+                        <div style="display: flex; gap: 0.3rem; align-items: center; background: rgba(15,23,42,0.6); padding: 0.25rem; border-radius: 8px; border: 1px solid rgba(16,185,129,0.3);">
+                            <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; padding: 0 0.3rem;">Trend:</span>
+                            <select id="topGainersTrendFilter" onchange="renderTopGainers()" style="background: rgba(15,23,42,0.9); color: #a78bfa; border: 1px solid rgba(167,139,250,0.4); padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.75rem; font-weight: 700; cursor: pointer;">
+                                <option value="ALL" selected>Semua Trend</option>
+                                <option value="UPTREND">Di atas SMA50 (Uptrend)</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Stats summary grid -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-bottom: 1rem;">
+                    <div style="background: rgba(15,23,42,0.6); border: 1px solid rgba(16,185,129,0.25); border-radius: 10px; padding: 0.75rem; text-align: center;">
+                        <span style="font-size: 0.7rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">Top Gainer #1</span>
+                        <div id="statTopGainer1" style="font-size: 1.1rem; font-weight: 900; color: #34d399; margin-top: 0.2rem;">-</div>
+                    </div>
+                    <div style="background: rgba(15,23,42,0.6); border: 1px solid rgba(56,189,248,0.25); border-radius: 10px; padding: 0.75rem; text-align: center;">
+                        <span style="font-size: 0.7rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">Top Penny Gainer (&lt;RM1.00)</span>
+                        <div id="statTopPennyGainer" style="font-size: 1.1rem; font-weight: 900; color: #38bdf8; margin-top: 0.2rem;">-</div>
+                    </div>
+                    <div style="background: rgba(15,23,42,0.6); border: 1px solid rgba(245,158,11,0.25); border-radius: 10px; padding: 0.75rem; text-align: center;">
+                        <span style="font-size: 0.7rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">Purata Kenaikan % (Top 30)</span>
+                        <div id="statAvgGain" style="font-size: 1.1rem; font-weight: 900; color: #fbbf24; margin-top: 0.2rem;">-</div>
+                    </div>
+                    <div style="background: rgba(15,23,42,0.6); border: 1px solid rgba(168,85,247,0.25); border-radius: 10px; padding: 0.75rem; text-align: center;">
+                        <span style="font-size: 0.7rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">Jumlah Dipaparkan</span>
+                        <div id="statTotalGainersCount" style="font-size: 1.1rem; font-weight: 900; color: #c084fc; margin-top: 0.2rem;">-</div>
+                    </div>
+                </div>
+
+                <!-- Table for Top Gainers -->
+                <div style="overflow-x: auto;">
+                    <table class="data-table" style="width: 100%; border-collapse: separate; border-spacing: 0; margin-top: 0.5rem;">
+                        <thead>
+                            <tr style="background: rgba(15, 23, 42, 0.9);">
+                                <th style="padding: 0.6rem; text-align: center; font-size: 0.75rem; color: #64748b; border-bottom: 2px solid rgba(16,185,129,0.4);">Kedudukan</th>
+                                <th style="padding: 0.6rem; text-align: left; font-size: 0.75rem; color: #64748b; border-bottom: 2px solid rgba(16,185,129,0.4);">Kaunter &amp; Status</th>
+                                <th style="padding: 0.6rem; text-align: right; font-size: 0.75rem; color: #64748b; border-bottom: 2px solid rgba(16,185,129,0.4);">Harga Terkini</th>
+                                <th style="padding: 0.6rem; text-align: right; font-size: 0.75rem; color: #64748b; border-bottom: 2px solid rgba(16,185,129,0.4);">Perubahan (RM)</th>
+                                <th style="padding: 0.6rem; text-align: right; font-size: 0.75rem; color: #64748b; border-bottom: 2px solid rgba(16,185,129,0.4);">% Gain</th>
+                                <th style="padding: 0.6rem; text-align: right; font-size: 0.75rem; color: #64748b; border-bottom: 2px solid rgba(16,185,129,0.4);">Volume / Turnover</th>
+                                <th style="padding: 0.6rem; text-align: center; font-size: 0.75rem; color: #64748b; border-bottom: 2px solid rgba(16,185,129,0.4);">Penjajaran Trend</th>
+                                <th style="padding: 0.6rem; text-align: center; font-size: 0.75rem; color: #64748b; border-bottom: 2px solid rgba(16,185,129,0.4);">Carta</th>
+                            </tr>
+                        </thead>
+                        <tbody id="topGainersTableBody">
+                            <tr>
+                                <td colspan="8" style="text-align: center; padding: 2rem; color: #64748b;">Memuatkan data Top Gainers...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -2132,11 +2229,13 @@
             const viewInfo = document.getElementById('view-info');
             const viewPortfolio = document.getElementById('view-portfolio');
             const viewRealConfluence = document.getElementById('view-realconfluence');
+            const viewTopGainers = document.getElementById('view-topgainers');
 
             const tabVcp = document.getElementById('tab-vcp');
             const tabJerung = document.getElementById('tab-jerung');
             const tabConfluence = document.getElementById('tab-confluence');
             const tabRealConfluence = document.getElementById('tab-realconfluence');
+            const tabTopGainers = document.getElementById('tab-topgainers');
             const tabTrend = document.getElementById('tab-trend');
             const tabSpring = document.getElementById('tab-spring');
             const tabPhoenix = document.getElementById('tab-phoenix');
@@ -2159,12 +2258,14 @@
             if (viewInfo) viewInfo.style.display = 'none';
             if (viewPortfolio) viewPortfolio.style.display = 'none';
             if (viewRealConfluence) viewRealConfluence.style.display = 'none';
+            if (viewTopGainers) viewTopGainers.style.display = 'none';
             
             // Remove active class from all tabs
             if (tabVcp) tabVcp.classList.remove('active');
             if (tabJerung) tabJerung.classList.remove('active');
             if (tabConfluence) tabConfluence.classList.remove('active');
             if (tabRealConfluence) tabRealConfluence.classList.remove('active');
+            if (tabTopGainers) tabTopGainers.classList.remove('active');
             tabTrend.classList.remove('active');
             tabSpring.classList.remove('active');
             if (tabPhoenix) tabPhoenix.classList.remove('active');
@@ -2202,6 +2303,12 @@
                     renderRealConfluenceRadar();
                 }
                 if (tabRealConfluence) tabRealConfluence.classList.add('active');
+            } else if (tabId === 'topgainers') {
+                if (viewTopGainers) {
+                    viewTopGainers.style.display = 'block';
+                    renderTopGainers();
+                }
+                if (tabTopGainers) tabTopGainers.classList.add('active');
             } else if (tabId === 'spring') {
                 viewSpring.style.display = 'block';
                 tabSpring.classList.add('active');
@@ -3350,6 +3457,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             renderJerungRadar();
             renderConfluenceRadar();
             renderRealConfluenceRadar();
+            renderTopGainers();
             renderVcpStaircase();
             renderTrendRiders();
             renderReclaimRadar();
@@ -3358,6 +3466,161 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             renderWeeklyHomework();
             updateSpecialPicks();
             renderPortfolio();
+        }
+
+        // Render Daily Top Gainers % Table
+        function renderTopGainers() {
+            const tbody = document.getElementById('topGainersTableBody');
+            if (!tbody) return;
+
+            let list = [];
+            if (currentData && Array.isArray(currentData) && currentData.length > 0) {
+                list = [...currentData];
+            } else if (window.liveData && window.liveData.topGainers) {
+                list = [...window.liveData.topGainers];
+            }
+
+            if (!list || list.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="8" style="text-align: center; padding: 2rem; color: #64748b;">Tiada data pasaran dijumpai. Sila klik "Muat Data Pasaran".</td></tr>';
+                return;
+            }
+
+            // Sort by changePct descending
+            list.sort((a, b) => {
+                const pctA = typeof a.changePct === 'number' ? a.changePct : ((a.change && a.price) ? (a.change / (a.price - a.change)) * 100 : 0);
+                const pctB = typeof b.changePct === 'number' ? b.changePct : ((b.change && b.price) ? (b.change / (b.price - b.change)) * 100 : 0);
+                return pctB - pctA;
+            });
+
+            // Get filter values
+            const limitVal = document.getElementById('topGainersLimitFilter') ? document.getElementById('topGainersLimitFilter').value : '30';
+            const priceVal = document.getElementById('topGainersPriceFilter') ? document.getElementById('topGainersPriceFilter').value : 'ALL';
+            const trendVal = document.getElementById('topGainersTrendFilter') ? document.getElementById('topGainersTrendFilter').value : 'ALL';
+
+            // Apply Price filter
+            if (priceVal === 'SUB1') {
+                list = list.filter(item => item.price && item.price < 1.00);
+            }
+
+            // Apply Trend filter
+            if (trendVal === 'UPTREND') {
+                list = list.filter(item => item.sma50 && item.price >= item.sma50);
+            }
+
+            // Only positive gainers (% gain > 0)
+            let gainerList = list.filter(item => {
+                const pct = typeof item.changePct === 'number' ? item.changePct : ((item.change && item.price) ? (item.change / (item.price - item.change)) * 100 : 0);
+                return pct > 0 || (item.change && item.change > 0);
+            });
+
+            // Update Stats
+            const statTop1 = gainerList[0];
+            const pennyGainers = gainerList.filter(item => item.price && item.price < 1.00);
+            const statTopPenny = pennyGainers[0];
+
+            if (statTop1) {
+                const pct1 = (typeof statTop1.changePct === 'number' ? statTop1.changePct : ((statTop1.change / (statTop1.price - statTop1.change)) * 100)).toFixed(2);
+                document.getElementById('statTopGainer1').innerHTML = `${statTop1.name} <span style="font-size:0.8rem; color:#34d399;">(+${pct1}%)</span>`;
+            } else {
+                document.getElementById('statTopGainer1').innerText = '-';
+            }
+
+            if (statTopPenny) {
+                const pctP = (typeof statTopPenny.changePct === 'number' ? statTopPenny.changePct : ((statTopPenny.change / (statTopPenny.price - statTopPenny.change)) * 100)).toFixed(2);
+                document.getElementById('statTopPennyGainer').innerHTML = `${statTopPenny.name} <span style="font-size:0.8rem; color:#38bdf8;">(+${pctP}%)</span>`;
+            } else {
+                document.getElementById('statTopPennyGainer').innerText = '-';
+            }
+
+            // Limit list
+            let displayList = gainerList;
+            if (limitVal !== 'ALL') {
+                const limitNum = parseInt(limitVal, 10) || 30;
+                displayList = gainerList.slice(0, limitNum);
+            }
+
+            document.getElementById('statTotalGainersCount').innerText = `${displayList.length} kaunter`;
+
+            if (displayList.length > 0) {
+                let totalPct = 0;
+                displayList.forEach(item => {
+                    const pct = typeof item.changePct === 'number' ? item.changePct : ((item.change && item.price) ? (item.change / (item.price - item.change)) * 100 : 0);
+                    totalPct += pct;
+                });
+                const avgPct = (totalPct / displayList.length).toFixed(2);
+                document.getElementById('statAvgGain').innerText = `+${avgPct}%`;
+            } else {
+                document.getElementById('statAvgGain').innerText = '-';
+            }
+
+            if (displayList.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="8" style="text-align: center; padding: 2rem; color: #64748b;">Tiada kaunter Top Gainer yang melepasi penapis ini.</td></tr>';
+                return;
+            }
+
+            let html = '';
+            displayList.forEach((item, index) => {
+                const rank = index + 1;
+                let rankBadge = `<span style="font-weight: 800; color: #94a3b8;">#${rank}</span>`;
+                if (rank === 1) rankBadge = `<span style="background: linear-gradient(135deg, #f59e0b, #d97706); color: #0f172a; padding: 0.2rem 0.5rem; border-radius: 6px; font-weight: 900; font-size: 0.75rem;">🥇 #1</span>`;
+                else if (rank === 2) rankBadge = `<span style="background: linear-gradient(135deg, #94a3b8, #64748b); color: #0f172a; padding: 0.2rem 0.5rem; border-radius: 6px; font-weight: 900; font-size: 0.75rem;">🥈 #2</span>`;
+                else if (rank === 3) rankBadge = `<span style="background: linear-gradient(135deg, #b45309, #78350f); color: #fef3c7; padding: 0.2rem 0.5rem; border-radius: 6px; font-weight: 900; font-size: 0.75rem;">🥉 #3</span>`;
+
+                const price = item.price ? `RM ${item.price.toFixed(3)}` : '-';
+                const changeVal = typeof item.change === 'number' ? (item.change >= 0 ? `+${item.change.toFixed(3)}` : item.change.toFixed(3)) : '-';
+                
+                const pctVal = typeof item.changePct === 'number' 
+                    ? item.changePct 
+                    : ((item.change && item.price) ? (item.change / (item.price - item.change)) * 100 : 0);
+                const pctStr = `+${pctVal.toFixed(2)}%`;
+
+                const vol = item.volume ? item.volume.toLocaleString() : '-';
+                const turnover = item.turnover ? `RM ${(item.turnover / 1000).toFixed(0)}k` : '-';
+
+                // Tags
+                let tags = '';
+                if (item.price && item.price < 1.00) {
+                    tags += `<span style="font-size: 0.65rem; background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 700;">Sub-RM1</span> `;
+                }
+                if (item.ipoAge && item.ipoAge <= 3) {
+                    tags += `<span style="font-size: 0.65rem; background: rgba(168, 85, 247, 0.15); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.3); padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 700;">IPO</span> `;
+                }
+
+                // Trend status
+                let trendBadge = `<span style="color: #64748b; font-size: 0.72rem;">-</span>`;
+                if (item.sma50) {
+                    if (item.price >= item.sma50) {
+                        trendBadge = `<span style="background: rgba(16, 185, 129, 0.15); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.3); padding: 0.15rem 0.45rem; border-radius: 6px; font-size: 0.7rem; font-weight: 700;">🟢 Uptrend (&gt;SMA50)</span>`;
+                    } else {
+                        trendBadge = `<span style="background: rgba(239, 68, 68, 0.15); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.3); padding: 0.15rem 0.45rem; border-radius: 6px; font-size: 0.7rem; font-weight: 700;">🔴 Below SMA50</span>`;
+                    }
+                }
+
+                const tvBtn = renderTvButton(item.name);
+
+                html += `
+                    <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(16, 185, 129, 0.05)'" onmouseout="this.style.background='transparent'">
+                        <td style="padding: 0.65rem; text-align: center;">${rankBadge}</td>
+                        <td style="padding: 0.65rem; text-align: left;">
+                            <div style="font-weight: 800; color: #f8fafc; font-size: 0.85rem;">${item.name}</div>
+                            <div style="display: flex; gap: 0.3rem; margin-top: 0.2rem; align-items: center;">${tags}</div>
+                        </td>
+                        <td style="padding: 0.65rem; text-align: right; font-weight: 800; color: #e2e8f0; font-size: 0.85rem;">${price}</td>
+                        <td style="padding: 0.65rem; text-align: right; font-weight: 700; color: #34d399; font-size: 0.8rem;">${changeVal}</td>
+                        <td style="padding: 0.65rem; text-align: right;">
+                            <span style="background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); padding: 0.25rem 0.6rem; border-radius: 6px; font-weight: 900; font-size: 0.82rem; display: inline-block;">${pctStr}</span>
+                        </td>
+                        <td style="padding: 0.65rem; text-align: right;">
+                            <div style="font-size: 0.78rem; color: #cbd5e1; font-weight: 600;">${vol}</div>
+                            <div style="font-size: 0.68rem; color: #64748b;">${turnover}</div>
+                        </td>
+                        <td style="padding: 0.65rem; text-align: center;">${trendBadge}</td>
+                        <td style="padding: 0.65rem; text-align: center;">${tvBtn}</td>
+                    </tr>
+                `;
+            });
+
+            tbody.innerHTML = html;
         }
 
         // Render VCP Staircase Strategy Table (Teknik Minervini + Mamat)
