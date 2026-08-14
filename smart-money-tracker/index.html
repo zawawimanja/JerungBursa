@@ -701,9 +701,9 @@
 
     <!-- Tab Navigation -->
     <div class="tabs-nav" style="margin-bottom: 1rem; margin-top: 0.5rem; display: flex; gap: 0.4rem; flex-wrap: wrap;">
-        <button class="tab-btn active" id="tab-realconfluence" onclick="switchTab('realconfluence')">🎯 Confluence</button>
+        <button class="tab-btn active" id="tab-confluence" onclick="switchTab('confluence')">🔥 Fresh Rider</button>
+        <button class="tab-btn" id="tab-realconfluence" onclick="switchTab('realconfluence')">🎯 Confluence</button>
         <button class="tab-btn" id="tab-topgainers" onclick="switchTab('topgainers')">🚀 Top Gainers %</button>
-        <button class="tab-btn" id="tab-confluence" onclick="switchTab('confluence')">🔥 Fresh Rider</button>
         <button class="tab-btn" id="tab-jerung" onclick="switchTab('jerung')">🦈 Jerung Radar</button>
         <button class="tab-btn" id="tab-weekly" onclick="switchTab('weekly')">🗓️ Weekly Top 5</button>
         <button class="tab-btn" id="tab-vcp" onclick="switchTab('vcp')">🪜 VCP Staircase</button>
@@ -5607,7 +5607,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             if (hash && ['vcp', 'trend', 'spring', 'phoenix', 'fishing', 'calculator', 'info', 'portfolio', 'autotrack', 'weekly', 'jerung', 'confluence', 'realconfluence'].includes(hash)) {
                 switchTab(hash);
             } else {
-                switchTab('realconfluence');
+                switchTab('confluence'); // Default: Fresh Rider (tab kiri pertama)
             }
 
             document.getElementById('priceMaxFilter').addEventListener('change', function() {
