@@ -41,28 +41,28 @@ function runScraper() {
         }
         if (stdout) console.log(stdout);
 
-        // Jana semula tracker Fresh Rider (entry->exit) daripada history + live
+        // Jana semula tracker Fresh Rider DULU, baru push (supaya fail tracker terkini ikut sekali)
         const trackerScript = path.join(__dirname, 'generate_fresh_rider_tracker.js');
         exec(`node "${trackerScript}"`, { cwd: __dirname }, (tErr, tOut) => {
             if (tErr) console.error(`⚠️ Ralat jana tracker Fresh Rider: ${tErr.message}`);
             else if (tOut) console.log(tOut.split('\n')[0]);
-        });
 
-        console.log(`📡 Memuat naik data terkini ke GitHub & Vercel...`);
+            console.log(`📡 Memuat naik data terkini ke GitHub & Vercel...`);
 
-        const gitCmd = `git add smart-money-tracker/live_data.json smart-money-tracker/live_data.js smart-money-tracker/fresh_rider_tracker.js smart-money-tracker/history/ && git commit -m "Auto-update live market data (5-min bot) [skip ci]" && git push origin main`;
-        
-        exec(gitCmd, { cwd: projectRoot }, (gitErr, gitStdout, gitStderr) => {
-            isRunning = false;
-            if (gitErr) {
-                if (gitErr.message.includes('nothing to commit')) {
-                    console.log(`ℹ️ Tiada perubahan data dikesan.`);
+            const gitCmd = `git add smart-money-tracker/live_data.json smart-money-tracker/live_data.js smart-money-tracker/fresh_rider_tracker.js smart-money-tracker/history/ && git commit -m "Auto-update live market data (5-min bot) [skip ci]" && git push origin main`;
+
+            exec(gitCmd, { cwd: projectRoot }, (gitErr, gitStdout, gitStderr) => {
+                isRunning = false;
+                if (gitErr) {
+                    if (gitErr.message.includes('nothing to commit')) {
+                        console.log(`ℹ️ Tiada perubahan data dikesan.`);
+                    } else {
+                        console.error(`⚠️ Git Status/Push: ${gitErr.message}`);
+                    }
                 } else {
-                    console.error(`⚠️ Git Status/Push: ${gitErr.message}`);
+                    console.log(`✅ Berjaya push ke Vercel! Pasaran terkini sudah LIVE.`);
                 }
-            } else {
-                console.log(`✅ Berjaya push ke Vercel! Pasaran terkini sudah LIVE.`);
-            }
+            });
         });
     });
 }
