@@ -1312,8 +1312,10 @@ async function main() {
             processedData.push(dataObj);
         }
         
-        // Top Gainers Scan: Simpan semua saham yang mencatatkan kenaikan peratusan positif
-        if (stock.change > 0) {
+        // Top Gainers Scan: Simpan saham yang naik — tapis kaunter illiquid
+        // (harga < RM0.10 atau turnover < RM100k) supaya senarai setanding
+        // KLSE Screener — kaunter-kacang 1-2 sen yang "naik 100%" tak boleh trade.
+        if (stock.change > 0 && stock.price >= 0.10 && turnover >= 100000) {
             topGainers.push({
                 name: stock.name,
                 price: stock.price,

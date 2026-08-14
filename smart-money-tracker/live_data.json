@@ -17159,26 +17159,6 @@
   ],
   "topGainers": [
     {
-      "name": "SCB",
-      "price": 0.009999999776482582,
-      "changePct": 100,
-      "volume": 1485200,
-      "turnover": 14851.999668031931,
-      "high52": 0.014999999664723873,
-      "pullback": 33.33,
-      "setupName": "🔻 Buy Support / Deep Pullback"
-    },
-    {
-      "name": "VINVEST",
-      "price": 0.019999999552965164,
-      "changePct": 33.33,
-      "volume": 21100,
-      "turnover": 421.99999056756496,
-      "high52": 0.054999999701976776,
-      "pullback": 63.64,
-      "setupName": "🧊 Downtrend / Avoid"
-    },
-    {
       "name": "BUSCAP",
       "price": 0.32499998807907104,
       "changePct": 25,
@@ -17187,16 +17167,6 @@
       "high52": 0.36500000953674316,
       "pullback": 10.96,
       "setupName": "📉 Healthy Dip"
-    },
-    {
-      "name": "EIB",
-      "price": 0.12999999523162842,
-      "changePct": 23.81,
-      "volume": 11100,
-      "turnover": 1442.9999470710754,
-      "high52": 0.25,
-      "pullback": 48,
-      "setupName": "🧊 Downtrend / Avoid"
     },
     {
       "name": "KRONO",
@@ -17229,16 +17199,6 @@
       "setupName": "🔥 RBS Retest / Near ATH"
     },
     {
-      "name": "SINKUNG",
-      "price": 0.08500000089406967,
-      "changePct": 13.33,
-      "volume": 290500,
-      "turnover": 24692.50025972724,
-      "high52": 0.125,
-      "pullback": 32,
-      "setupName": "🧊 Downtrend / Avoid"
-    },
-    {
       "name": "RANHILL",
       "price": 2.6600000858306885,
       "changePct": 12.71,
@@ -17247,26 +17207,6 @@
       "high52": 2.680000066757202,
       "pullback": 0.75,
       "setupName": "🔥 RBS Retest / Near ATH"
-    },
-    {
-      "name": "AHB",
-      "price": 0.05000000074505806,
-      "changePct": 11.11,
-      "volume": 43290300,
-      "turnover": 2164515.032253787,
-      "high52": 0.05999999865889549,
-      "pullback": 16.67,
-      "setupName": "🔻 Buy Support / Deep Pullback"
-    },
-    {
-      "name": "ANEKA",
-      "price": 0.10999999940395355,
-      "changePct": 10,
-      "volume": 829100,
-      "turnover": 91200.99950581789,
-      "high52": 0.1599999964237213,
-      "pullback": 31.25,
-      "setupName": "🧊 Downtrend / Avoid"
     },
     {
       "name": "CHB",
@@ -17289,26 +17229,6 @@
       "setupName": "📉 Healthy Dip"
     },
     {
-      "name": "PMIBHD",
-      "price": 0.22499999403953552,
-      "changePct": 7.14,
-      "volume": 7000,
-      "turnover": 1574.9999582767487,
-      "high52": 0.26499998569488525,
-      "pullback": 15.09,
-      "setupName": "🔻 Buy Support / Deep Pullback"
-    },
-    {
-      "name": "TAGHILL",
-      "price": 0.07500000298023224,
-      "changePct": 7.14,
-      "volume": 2733600,
-      "turnover": 205020.00814676285,
-      "high52": 0.08500000089406967,
-      "pullback": 11.76,
-      "setupName": "📉 Healthy Dip"
-    },
-    {
       "name": "CRPMATE",
       "price": 0.23000000417232513,
       "changePct": 6.98,
@@ -17317,16 +17237,6 @@
       "high52": 0.25,
       "pullback": 8,
       "setupName": "📉 Healthy Dip"
-    },
-    {
-      "name": "TCS",
-      "price": 0.07999999821186066,
-      "changePct": 6.67,
-      "volume": 5000,
-      "turnover": 399.9999910593033,
-      "high52": 0.14000000059604645,
-      "pullback": 42.86,
-      "setupName": "🧊 Downtrend / Avoid"
     },
     {
       "name": "TANCO",
