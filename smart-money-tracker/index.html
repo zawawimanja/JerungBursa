@@ -11,6 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script src="live_data.js"></script>
+    <script src="fresh_rider_tracker.js"></script>
         <style>
         @keyframes spin {
             0% { transform: rotate(0deg); }
@@ -928,6 +929,38 @@
                 </div>
             </div>
             <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">* Setiap kaunter dikira sekali (hari pertama qualify). Jumlah PnL = pulangan terkumpul (bukan compounding). Data dari scratch/backtest_confluence_vs_fresh.js.</p>
+        </div>
+
+        <!-- LIVE TRACKER FRESH RIDER: setiap kaunter yang pernah qualify, track sampai exit -->
+        <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(16, 185, 129, 0.07)); border: 1px dashed rgba(16, 185, 129, 0.4); border-radius: 12px; padding: 0.9rem 1.1rem; margin-bottom: 1.25rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.7rem;">
+                <span style="font-size: 1rem;">📡</span>
+                <span style="font-size: 0.75rem; font-weight: 900; color: #34d399; letter-spacing: 0.5px; text-transform: uppercase;">Tracker Live Fresh Rider</span>
+                <span id="frTrackerMeta" style="font-size: 0.65rem; color: #94a3b8; font-weight: 600;">Dijana daripada data sejarah + live</span>
+            </div>
+            <div id="frTrackerStats" style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.7rem;"></div>
+            <div class="table-responsive">
+                <table class="data-table" style="font-size: 0.78rem;">
+                    <thead>
+                        <tr>
+                            <th style="text-align: left;">Kaunter</th>
+                            <th style="text-align: center;">Status</th>
+                            <th style="text-align: center;">Entry</th>
+                            <th style="text-align: right;">Harga Entry</th>
+                            <th style="text-align: right;">Harga Kini / Exit</th>
+                            <th style="text-align: right;">PnL Kini / Akhir</th>
+                            <th style="text-align: right;">Max Gain</th>
+                            <th style="text-align: center;">Hari Hold</th>
+                            <th style="text-align: center;">Masih Radar?</th>
+                            <th style="text-align: right;">SL Trail (×0.97)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="frTrackerTableBody">
+                        <tr><td colspan="9" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">⏳ Memuatkan tracker...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">* OPEN = masih dipegang (di atas lantai). CLOSED_SL = kena stop loss (harga ≤ lantai entry × 0.97). Max Gain = puncak tertinggi sejak entry. Auto-update setiap kali data live dikemas kini.</p>
         </div>
     </div>
 
@@ -4722,7 +4755,72 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
             // Tandai signal yang BARU qualify hari ini (tak qualify hari dagangan sebelumnya)
             markFreshRiderNewBadges();
+
+            // Render tracker live (entry->exit) setiap kali tab dibuka
+            renderFreshRiderTracker();
         }
+
+        // ===== LIVE TRACKER FRESH RIDER (auto-generated data: fresh_rider_tracker.js) =====
+        function renderFreshRiderTracker() {
+            const tbody = document.getElementById('frTrackerTableBody');
+            const statsEl = document.getElementById('frTrackerStats');
+            const metaEl = document.getElementById('frTrackerMeta');
+            if (!tbody) return;
+            const data = window.FRESH_RIDER_TRACKER;
+            if (!data || !Array.isArray(data.trades) || data.trades.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="9" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">Tiada data tracker lagi — akan dijana pada kemas kini data seterusnya.</td></tr>';
+                return;
+            }
+            const s = data.summary || {};
+            // Kaunter yang MASIH qualify hari ini (untuk lajur "Masih Radar?")
+            const liveList = (currentData && currentData.length > 0) ? currentData : ((window.liveData && window.liveData.topVolume) || []);
+            const stillQualifies = new Set(liveList.filter(it => {
+                try { return typeof qualifiesFreshRider === 'function' && qualifiesFreshRider(it); } catch (e) { return false; }
+            }).map(it => (it.name || '').toUpperCase()));
+            if (metaEl) metaEl.textContent = `${s.dataDays || '-'} hari data · Dijana ${new Date(s.generatedAt).toLocaleString('en-MY')}`;
+            if (statsEl) {
+                statsEl.innerHTML = [
+                    { label: 'Masih OPEN', val: s.openCount ?? 0, color: '#34d399' },
+                    { label: 'CLOSED', val: s.closedCount ?? 0, color: '#94a3b8' },
+                    { label: 'Win Rate (closed)', val: (s.closedWinRate ?? 0) + '%', color: '#fde047' },
+                    { label: 'Avg Gain (closed)', val: (s.closedAvgGain >= 0 ? '+' : '') + (s.closedAvgGain ?? 0) + '%', color: '#38bdf8' },
+                ].map(c => `<div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(16,185,129,0.25); border-radius: 8px; padding: 0.35rem 0.7rem; min-width: 95px; text-align: center; flex: 1;">
+                    <div style="font-size: 0.58rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">${c.label}</div>
+                    <div style="font-size: 1rem; color: ${c.color}; font-weight: 900;">${c.val}</div>
+                </div>`).join('');
+            }
+            tbody.innerHTML = data.trades.map(t => {
+                const isOpen = t.status === 'OPEN';
+                const pnl = t.finalGain || 0;
+                const pnlColor = pnl > 0 ? '#34d399' : (pnl < 0 ? '#f87171' : '#94a3b8');
+                const pnlStr = (pnl >= 0 ? '+' : '') + pnl.toFixed(1) + '%';
+                const maxStr = '+' + (t.maxGain || 0).toFixed(1) + '%';
+                const statusBadge = isOpen
+                    ? '<span style="font-size: 0.62rem; background: rgba(16,185,129,0.2); color: #34d399; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(16,185,129,0.4);">🟢 OPEN</span>'
+                    : '<span style="font-size: 0.62rem; background: rgba(148,163,184,0.15); color: #94a3b8; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(148,163,184,0.3);">⚪ ' + t.status.replace('CLOSED_', '') + '</span>';
+                const exitPx = isOpen ? t.currentPrice : t.exitPrice;
+                const slTrail = (t.entryFloor * 0.97).toFixed(3);
+                const stillRadar = isOpen
+                    ? (stillQualifies.has(t.name.toUpperCase())
+                        ? '<span style="font-size: 0.62rem; color: #34d399; font-weight: 800;">✅ YA</span>'
+                        : '<span style="font-size: 0.62rem; color: #64748b; font-weight: 700;" title="Dah tak qualify (pullback >10% selepas naik) — tapi masih pegang selagi atas lantai">➖ pegang</span>')
+                    : '<span style="font-size: 0.62rem; color: #475569;">—</span>';
+                return `<tr>
+                    <td style="font-weight: 800; color: white;">${t.name}<div style="font-size: 0.62rem; color: #64748b; font-weight: 600;">${t.sector || ''}</div></td>
+                    <td style="text-align: center;">${statusBadge}</td>
+                    <td style="text-align: center; color: #94a3b8; font-size: 0.72rem;">${t.entryDate.slice(5)}</td>
+                    <td style="text-align: right; color: white; font-weight: 700;">RM ${t.entry.toFixed(3)}</td>
+                    <td style="text-align: right; color: white; font-weight: 700;">RM ${(exitPx || 0).toFixed(3)}${isOpen ? '' : ' <span style="font-size:0.6rem;color:#64748b;">(' + t.exitDate.slice(5) + ')</span>'}</td>
+                    <td style="text-align: right; color: ${pnlColor}; font-weight: 900;">${pnlStr}</td>
+                    <td style="text-align: right; color: #38bdf8; font-weight: 700;">${maxStr}</td>
+                    <td style="text-align: center; color: #fde047; font-weight: 700;">${t.days}</td>
+                    <td style="text-align: center;">${stillRadar}</td>
+                    <td style="text-align: right; color: #f87171; font-weight: 700;">RM ${slTrail}</td>
+                </tr>`;
+            }).join('');
+        }
+        window.renderFreshRiderTracker = renderFreshRiderTracker;
+
 
         // Helper: adakah item qualify Fresh VVIP Rider? (logik sama seperti render di atas)
         function qualifiesFreshRider(item) {
@@ -4963,7 +5061,6 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             tbody.innerHTML = html;
         }
 
-        // Render VVIP IPO Trend Rider Table
         function renderTrendRiders() {
             const hybridTbody = document.getElementById('hybridPicksTableBody');
             const hybridSection = document.getElementById('hybrid-recommendations-section');
