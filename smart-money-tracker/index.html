@@ -952,7 +952,7 @@
                             <th style="text-align: right;">Max Gain</th>
                             <th style="text-align: center;">Hari Hold</th>
                             <th style="text-align: center;">Masih Radar?</th>
-                            <th style="text-align: right;">SL Trail (×0.97)</th>
+                            <th style="text-align: right;">SL Trail (High × 0.80)</th>
                         </tr>
                     </thead>
                     <tbody id="frTrackerTableBody">
@@ -960,7 +960,7 @@
                     </tbody>
                 </table>
             </div>
-            <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">* OPEN = masih dipegang (di atas lantai). CLOSED_SL = kena stop loss (harga ≤ lantai entry × 0.97). Max Gain = puncak tertinggi sejak entry. Auto-update setiap kali data live dikemas kini.</p>
+            <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">* OPEN = masih dipegang. CLOSED_SL = kena trailing stop (harga jatuh 20% dari puncak tertinggi — lock keuntungan sebelum runtuh). Max Gain = puncak sejak entry. SL Trail = 20% di bawah harga tertinggi (naik mengikut puncak, tak pernah turun). Auto-update setiap kemas kini data.</p>
         </div>
     </div>
 
@@ -4799,7 +4799,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     ? '<span style="font-size: 0.62rem; background: rgba(16,185,129,0.2); color: #34d399; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(16,185,129,0.4);">🟢 OPEN</span>'
                     : '<span style="font-size: 0.62rem; background: rgba(148,163,184,0.15); color: #94a3b8; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(148,163,184,0.3);">⚪ ' + t.status.replace('CLOSED_', '') + '</span>';
                 const exitPx = isOpen ? t.currentPrice : t.exitPrice;
-                const slTrail = (t.entryFloor * 0.97).toFixed(3);
+                const slTrail = (t.slTrail != null ? t.slTrail : (t.high || t.entry) * 0.80).toFixed(3);
                 const stillRadar = isOpen
                     ? (stillQualifies.has(t.name.toUpperCase())
                         ? '<span style="font-size: 0.62rem; color: #34d399; font-weight: 800;">✅ YA</span>'

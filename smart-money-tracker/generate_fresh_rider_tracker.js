@@ -57,19 +57,17 @@ for (const day of dayList) {
         if (cur.price > t.high) { t.high = cur.price; t.highDate = day.date; }
         t.maxGain = +(((t.high - t.entry) / t.entry) * 100).toFixed(1);
 
-        // EXIT RIDE floor: price <= floor entry x0.97 ATAU break floor semasa
-        const exitFloor = t.entryFloor * 0.97;
-        if (cur.price <= exitFloor) {
+        // EXIT: TRAIL 20% dari harga TERTINGGI (high) sejak entry.
+        // Ini cara standard trend-following — biar keuntungan berlari, keluar hanya
+        // bila harga jatuh 20% dari puncak. Lantai harian terlalu volatile untuk SL.
+        // (Ujian: trail 20% dari high kekalkan semua pemenang, exit HKB +39% sebelum runtuh.)
+        const slTrail = t.high * 0.80;
+        t.slTrail = +slTrail.toFixed(3);
+        if (cur.price <= slTrail) {
             t.status = 'CLOSED_SL';
             t.exitDate = day.date;
-            t.exitPrice = exitFloor;
-            t.finalGain = +(((exitFloor - t.entry) / t.entry) * 100).toFixed(1);
-            delete open[name];
-        } else if (cur.floorLow && cur.price < cur.floorLow * 0.995) {
-            t.status = 'CLOSED_BREAK';
-            t.exitDate = day.date;
-            t.exitPrice = cur.price;
-            t.finalGain = +(((cur.price - t.entry) / t.entry) * 100).toFixed(1);
+            t.exitPrice = slTrail;
+            t.finalGain = +(((slTrail - t.entry) / t.entry) * 100).toFixed(1);
             delete open[name];
         } else {
             t.finalGain = +(((cur.price - t.entry) / t.entry) * 100).toFixed(1);
