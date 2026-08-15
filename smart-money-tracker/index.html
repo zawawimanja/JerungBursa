@@ -647,55 +647,55 @@
         <div class="controls">
 
             <div class="history-input">
-                <label for="historyDate" style="color: #a5b4fc; font-size: 0.8rem; font-weight: 700; cursor: pointer;">Historical Archive:</label>
+                <label for="historyDate" style="color: #a5b4fc; font-size: 0.75rem; font-weight: 700; cursor: pointer;">Arkib:</label>
                 <input type="date" id="historyDate">
                 <button id="loadHistoryBtn" class="btn btn-history">📂 Load</button>
             </div>
 
-            <div class="ipo-filter-container" style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.45rem 0.8rem; border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.35); transition: all 0.2s ease-in-out;">
-                <label for="priceMaxFilter" style="color: #34d399; font-size: 0.85rem; font-weight: 800; display: flex; align-items: center; gap: 0.25rem; cursor: pointer; user-select: none;">💰 Harga Maks (RM):</label>
-                <select id="priceMaxFilter" style="background: rgba(15, 23, 42, 0.9); color: white; border: 1px solid rgba(16, 185, 129, 0.5); border-radius: 6px; padding: 0.2rem 0.5rem; font-size: 0.8rem; font-weight: 700; cursor: pointer; outline: none; font-family: inherit;">
-                    <option value="ALL" selected>🌐 Semua Harga (Termasuk > RM1.00)</option>
-                    <option value="0.30">🪙 ≤ RM 0.30 (Super Penny)</option>
-                    <option value="0.50">💵 ≤ RM 0.50 (Murah)</option>
-                    <option value="1.00">🚀 ≤ RM 1.00 (Sub-RM1 Roket)</option>
-                    <option value="2.00">💵 ≤ RM 2.00</option>
+            <div class="ipo-filter-container" style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(30, 41, 59, 0.8); padding: 0.35rem 0.6rem; border-radius: 8px; border: 1px solid rgba(148, 163, 184, 0.3); transition: all 0.2s ease-in-out;">
+                <label for="priceMaxFilter" style="color: #34d399; font-size: 0.75rem; font-weight: 800; display: flex; align-items: center; gap: 0.2rem; cursor: pointer; user-select: none;">💰 Harga:</label>
+                <select id="priceMaxFilter" style="background: rgba(15, 23, 42, 0.9); color: white; border: 1px solid rgba(16, 185, 129, 0.5); border-radius: 6px; padding: 0.2rem 0.4rem; font-size: 0.75rem; font-weight: 700; cursor: pointer; outline: none; font-family: inherit;">
+                    <option value="ALL" selected>Semua</option>
+                    <option value="0.30">≤ RM0.30</option>
+                    <option value="0.50">≤ RM0.50</option>
+                    <option value="1.00">≤ RM1.00</option>
+                    <option value="2.00">≤ RM2.00</option>
                 </select>
             </div>
 
-            <div class="ipo-filter-container" style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.45rem 0.8rem; border-radius: 8px; border: 1px solid rgba(96, 165, 250, 0.35); transition: all 0.2s ease-in-out;">
-                <label for="ipoAgeFilter" style="color: #60a5fa; font-size: 0.85rem; font-weight: 800; display: flex; align-items: center; gap: 0.25rem; cursor: pointer; user-select: none;">✨ IPO Status:</label>
-                <select id="ipoAgeFilter" style="background: rgba(15, 23, 42, 0.9); color: white; border: 1px solid rgba(96, 165, 250, 0.5); border-radius: 6px; padding: 0.2rem 0.5rem; font-size: 0.8rem; font-weight: 700; cursor: pointer; outline: none; font-family: inherit;">
-                    <option value="ALL" selected>🌐 Semua Saham (Fresh, Mature & Non-IPO)</option>
-                    <option value="FRESH">✨ Fresh IPOs Only (2025 - 2026)</option>
-                    <option value="MATURE">🧱 Mature IPOs Only (2019 - 2024)</option>
-                    <option value="ALL_IPO">🚀 All IPOs (2019 - 2026)</option>
-                    <option value="NON_IPO">🏢 Non-IPOs Only</option>
+            <div class="ipo-filter-container" style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(30, 41, 59, 0.8); padding: 0.35rem 0.6rem; border-radius: 8px; border: 1px solid rgba(148, 163, 184, 0.3); transition: all 0.2s ease-in-out;">
+                <label for="ipoAgeFilter" style="color: #60a5fa; font-size: 0.75rem; font-weight: 800; display: flex; align-items: center; gap: 0.2rem; cursor: pointer; user-select: none;">✨ IPO:</label>
+                <select id="ipoAgeFilter" style="background: rgba(15, 23, 42, 0.9); color: white; border: 1px solid rgba(96, 165, 250, 0.5); border-radius: 6px; padding: 0.2rem 0.4rem; font-size: 0.75rem; font-weight: 700; cursor: pointer; outline: none; font-family: inherit;">
+                    <option value="ALL" selected>Semua</option>
+                    <option value="FRESH">Fresh (2025+)</option>
+                    <option value="MATURE">Mature (2019-24)</option>
+                    <option value="ALL_IPO">Semua IPO</option>
+                    <option value="NON_IPO">Bukan IPO</option>
                 </select>
             </div>
 
-            <div class="ipo-filter-container" style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.45rem 0.8rem; border-radius: 8px; border: 1px solid rgba(244, 63, 94, 0.35); transition: all 0.2s ease-in-out;">
-                <label for="sortByFilter" style="color: #fb7185; font-size: 0.85rem; font-weight: 800; display: flex; align-items: center; gap: 0.25rem; cursor: pointer; user-select: none;">⚡ Susunan (Sort):</label>
-                <select id="sortByFilter" style="background: rgba(15, 23, 42, 0.9); color: white; border: 1px solid rgba(244, 63, 94, 0.5); border-radius: 6px; padding: 0.2rem 0.5rem; font-size: 0.8rem; font-weight: 700; cursor: pointer; outline: none; font-family: inherit;">
-                    <option value="SAFE" selected>🛡️ Susunan Pintar (Gred A / Fresh IPO & Solid Base)</option>
-                    <option value="VOLATILE">⚡ Volatiliti Tinggi (Julat Swing Luas)</option>
-                    <option value="TURNOVER">💵 Paling Aktif (Turnover Tinggi)</option>
-                    <option value="SCORE">🏆 Skor Pintar (Smart Score Tinggi)</option>
+            <div class="ipo-filter-container" style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(30, 41, 59, 0.8); padding: 0.35rem 0.6rem; border-radius: 8px; border: 1px solid rgba(148, 163, 184, 0.3); transition: all 0.2s ease-in-out;">
+                <label for="sortByFilter" style="color: #fb7185; font-size: 0.75rem; font-weight: 800; display: flex; align-items: center; gap: 0.2rem; cursor: pointer; user-select: none;">⚡ Susun:</label>
+                <select id="sortByFilter" style="background: rgba(15, 23, 42, 0.9); color: white; border: 1px solid rgba(244, 63, 94, 0.5); border-radius: 6px; padding: 0.2rem 0.4rem; font-size: 0.75rem; font-weight: 700; cursor: pointer; outline: none; font-family: inherit;">
+                    <option value="SAFE" selected>🛡️ Pintar</option>
+                    <option value="VOLATILE">⚡ Volatil</option>
+                    <option value="TURNOVER">💵 Aktif</option>
+                    <option value="SCORE">🏆 Skor</option>
                 </select>
             </div>
-            <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.45rem 0.8rem; border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.35);">
-                <input type="checkbox" id="strictEntryFilter" style="cursor: pointer; width: 16px; height: 16px;">
-                <label for="strictEntryFilter" style="color: #34d399; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none;">🔥 Ultra-Strict Entry (Floor ≤ 6%/11%, Skor ≥ 11/12, PB ≤ 20%)</label>
+            <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(30, 41, 59, 0.8); padding: 0.35rem 0.6rem; border-radius: 8px; border: 1px solid rgba(148, 163, 184, 0.3);">
+                <input type="checkbox" id="strictEntryFilter" style="cursor: pointer; width: 14px; height: 14px;">
+                <label for="strictEntryFilter" style="color: #34d399; font-size: 0.75rem; font-weight: 800; cursor: pointer; user-select: none;">🔥 Ultra-Strict</label>
             </div>
-            <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.45rem 0.8rem; border-radius: 8px; border: 1px solid rgba(96, 165, 250, 0.35);">
-                <input type="checkbox" id="premiumHypeFilter" style="cursor: pointer; width: 16px; height: 16px;">
-                <label for="premiumHypeFilter" style="color: #60a5fa; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none;">🚀 Premium Hype Only (Gred A / OS ≥ 50x / Outlier)</label>
+            <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(30, 41, 59, 0.8); padding: 0.35rem 0.6rem; border-radius: 8px; border: 1px solid rgba(148, 163, 184, 0.3);">
+                <input type="checkbox" id="premiumHypeFilter" style="cursor: pointer; width: 14px; height: 14px;">
+                <label for="premiumHypeFilter" style="color: #60a5fa; font-size: 0.75rem; font-weight: 800; cursor: pointer; user-select: none;">🚀 Premium Hype</label>
             </div>
-            <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(30, 41, 59, 0.8); padding: 0.45rem 0.8rem; border-radius: 8px; border: 1px solid rgba(16, 185, 129, 0.35);">
-                <input type="checkbox" id="earlyDetectFilter" style="cursor: pointer; width: 16px; height: 16px;">
-                <label for="earlyDetectFilter" style="color: #34d399; font-size: 0.85rem; font-weight: 800; cursor: pointer; user-select: none;">🚀 Detect Awal (Fresh IPO < RM1, Base Padat)</label>
+            <div style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(30, 41, 59, 0.8); padding: 0.35rem 0.6rem; border-radius: 8px; border: 1px solid rgba(148, 163, 184, 0.3);">
+                <input type="checkbox" id="earlyDetectFilter" style="cursor: pointer; width: 14px; height: 14px;">
+                <label for="earlyDetectFilter" style="color: #34d399; font-size: 0.75rem; font-weight: 800; cursor: pointer; user-select: none;">🔍 Detect Awal</label>
             </div>
-            <button id="refreshBtn" class="btn">🔄 Muat Data Pasaran</button>
+            <button id="refreshBtn" class="btn">🔄 Muat Data</button>
         </div>
     </header>
 
