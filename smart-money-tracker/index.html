@@ -951,7 +951,7 @@
                             <th style="text-align: right;">PnL Kini / Akhir</th>
                             <th style="text-align: right;">Max Gain</th>
                             <th style="text-align: center;">Hari Hold</th>
-                            <th style="text-align: center;">Masih Radar?</th>
+                            <th style="text-align: center;">Status Pegangan</th>
                             <th style="text-align: right;">SL Trail (High × 0.80)</th>
                         </tr>
                     </thead>
@@ -4818,7 +4818,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     ? (stillQualifies.has(t.name.toUpperCase())
                         ? '<span style="font-size: 0.62rem; color: #34d399; font-weight: 800;">✅ YA</span>'
                         : '<span style="font-size: 0.62rem; color: #64748b; font-weight: 700;" title="Dah tak qualify (pullback >10% selepas naik) — tapi masih pegang selagi atas lantai">➖ pegang</span>')
-                    : '<span style="font-size: 0.62rem; color: #475569;">—</span>';
+                    : '<span style="font-size: 0.62rem; color: #f87171; font-weight: 800;" title="Posisi dah ditutup (kena trailing stop)">🔒 CLOSED</span>';
                 return `<tr>
                     <td style="font-weight: 800; color: white;">${t.name}<div style="font-size: 0.62rem; color: #64748b; font-weight: 600;">${t.sector || ''}</div></td>
                     <td style="text-align: center;">${statusBadge}</td>
