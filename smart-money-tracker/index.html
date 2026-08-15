@@ -4796,6 +4796,8 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     { label: 'CLOSED', val: s.closedCount ?? 0, color: '#94a3b8' },
                     { label: 'Win Rate (closed)', val: (s.closedWinRate ?? 0) + '%', color: '#fde047' },
                     { label: 'Avg Gain (closed)', val: (s.closedAvgGain >= 0 ? '+' : '') + (s.closedAvgGain ?? 0) + '%', color: '#38bdf8' },
+                    { label: 'PnL OPEN (unrealized)', val: (s.openPnl >= 0 ? '+' : '') + (s.openPnl ?? 0) + '%', color: '#34d399' },
+                    { label: 'Total PnL Kini', val: (s.totalPnlNow >= 0 ? '+' : '') + (s.totalPnlNow ?? 0) + '%', color: '#fde047' },
                 ].map(c => `<div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(16,185,129,0.25); border-radius: 8px; padding: 0.35rem 0.7rem; min-width: 95px; text-align: center; flex: 1;">
                     <div style="font-size: 0.58rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">${c.label}</div>
                     <div style="font-size: 1rem; color: ${c.color}; font-weight: 900;">${c.val}</div>

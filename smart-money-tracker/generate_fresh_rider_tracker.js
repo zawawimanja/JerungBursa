@@ -109,6 +109,8 @@ const all = [...openTrades, ...closedTrades];
 
 // Statistik ringkas
 const wins = closedTrades.filter(t => t.finalGain > 0).length;
+const openPnl = openTrades.reduce((a, b) => a + (b.finalGain || 0), 0);
+const closedPnl = closedTrades.reduce((a, b) => a + (b.finalGain || 0), 0);
 const summary = {
     generatedAt: new Date().toISOString(),
     dataDays: dayList.length,
@@ -118,6 +120,9 @@ const summary = {
     closedWins: wins,
     closedWinRate: closedTrades.length ? Math.round(100 * wins / closedTrades.length) : 0,
     closedAvgGain: closedTrades.length ? +(closedTrades.reduce((a, b) => a + b.finalGain, 0) / closedTrades.length).toFixed(1) : 0,
+    openPnl: +openPnl.toFixed(1),
+    closedPnl: +closedPnl.toFixed(1),
+    totalPnlNow: +(openPnl + closedPnl).toFixed(1),
 };
 
 // =============================================================
