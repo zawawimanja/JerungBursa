@@ -4753,9 +4753,9 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 const slTrail = (t.slTrail != null ? t.slTrail : (t.high || t.entry) * 0.80).toFixed(3);
                 const stillRadar = isOpen
                     ? (stillQualifies.has(t.name.toUpperCase())
-                        ? '<span style="font-size: 0.62rem; color: #34d399; font-weight: 800;">✅ YA</span>'
-                        : '<span style="font-size: 0.62rem; color: #64748b; font-weight: 700;" title="Dah tak qualify (pullback >10% selepas naik) — tapi masih pegang selagi atas lantai">➖ pegang</span>')
-                    : '<span style="font-size: 0.62rem; color: #f87171; font-weight: 800;" title="Posisi dah ditutup (kena trailing stop)">🔒 CLOSED</span>';
+                        ? '<span style="font-size: 0.62rem; color: #34d399; font-weight: 800;" title="Masih qualify dalam senarai Fresh Rider hari ini — BOLEH masuk/beli sekarang">🟢 BOLEH ENTRY</span>'
+                        : '<span style="font-size: 0.62rem; color: #fbbf24; font-weight: 700;" title="Dah keluar dari senarai (harga lari >10% dari base) — JANGAN beli lagi, tapi yang dah beli terus HOLD selagi tak kena trailing stop">🟡 HOLD SAHAJA</span>')
+                    : '<span style="font-size: 0.62rem; color: #f87171; font-weight: 800;" title="Posisi dah ditutup (kena trailing stop)">🔒 DAH JUAL</span>';
                 return `<tr>
                     <td style="font-weight: 800; color: white;">${t.name}<div style="font-size: 0.62rem; color: #64748b; font-weight: 600;">${t.sector || ''}</div></td>
                     <td style="text-align: center;">${statusBadge}</td>
