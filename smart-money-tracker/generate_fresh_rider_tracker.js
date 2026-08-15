@@ -120,12 +120,67 @@ const summary = {
     closedAvgGain: closedTrades.length ? +(closedTrades.reduce((a, b) => a + b.finalGain, 0) / closedTrades.length).toFixed(1) : 0,
 };
 
-const js = `// AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual\nwindow.FRESH_RIDER_TRACKER = ${JSON.stringify({ summary, trades: all }, null, 1)};\n`;
+// =============================================================
+// BACKTEST 20-hari (exit paksa) — dikira semula setiap hari supaya
+// statistik sentiasa terkini (bukan kekal 11 Ogos).
+// =============================================================
+function rideFloor20(entry, floor, fut) {
+    for (const d of fut) {
+        const g = ((d.price - entry) / entry) * 100;
+        const f = d.floorLow || floor;
+        if (d.price <= floor * 0.97) return ((floor * 0.97 - entry) / entry) * 100;
+        if (d.price < f * 0.995) return g;
+    }
+    return ((fut[fut.length - 1].price - entry) / entry) * 100;
+}
+const dateMap = dayList.map(d => {
+    const m = {};
+    for (const it of d.rows) if (it && it.name && it.price > 0 && it.price < 500) m[it.name] = it;
+    return { date: d.date, map: m };
+});
+const btSeen = new Set();
+const btRets = [];
+for (let i = 0; i < dateMap.length - 3; i++) {
+    for (const [name, item] of Object.entries(dateMap[i].map)) {
+        if (btSeen.has(name) || item.price < 0.10) continue;
+        if (!isFreshRiderPick(item)) continue;
+        btSeen.add(name);
+        // kumpul 20 hari ke depan
+        const fut = [];
+        let prev = item.price;
+        let ok = true;
+        for (let j = i + 1; j < Math.min(dateMap.length, i + 1 + 20); j++) {
+            const m = dateMap[j].map[name];
+            if (m && m.price > 0) {
+                const r = m.price / prev;
+                if (r > 1.5 || r < 0.5) { ok = false; break; }
+                fut.push({ price: m.price, floorLow: m.floorLow });
+                prev = m.price;
+            }
+        }
+        if (!ok || !fut.length) continue;
+        btRets.push(rideFloor20(item.price, item.floorLow || item.price * 0.95, fut));
+    }
+}
+const btWins = btRets.filter(r => r > 0).length;
+const backtest = {
+    dataStart: dayList[0].date,
+    dataEnd: dayList[dayList.length - 1].date,
+    dataDays: dayList.length,
+    signals: btRets.length,
+    winRate: btRets.length ? Math.round(100 * btWins / btRets.length) : 0,
+    avgGain: btRets.length ? +(btRets.reduce((a, b) => a + b, 0) / btRets.length).toFixed(1) : 0,
+    totalPnl: btRets.length ? +btRets.reduce((a, b) => a + b, 0).toFixed(1) : 0,
+    worstLoss: btRets.length ? +Math.min(...btRets).toFixed(1) : 0,
+};
+
+const js = `// AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual\nwindow.FRESH_RIDER_TRACKER = ${JSON.stringify({ summary, backtest, trades: all }, null, 1)};\n`;
 fs.writeFileSync(OUT_FILE, js);
 
 console.log(`✅ Tracker dijana: ${OUT_FILE}`);
 console.log(`   Data: ${dayList.length} hari (${dayList[0].date} -> ${dayList[dayList.length - 1].date})`);
 console.log(`   Total: ${summary.totalTracked} | OPEN: ${summary.openCount} | CLOSED: ${summary.closedCount} (WR ${summary.closedWinRate}%, avg ${summary.closedAvgGain}%)`);
+console.log(`   Backtest 20h: ${backtest.signals} signal | WR ${backtest.winRate}% | avg ${backtest.avgGain}% | total ${backtest.totalPnl}% | worst ${backtest.worstLoss}%`);
 console.log('\n--- MASIH OPEN ---');
 openTrades.forEach(t => console.log(`   ${t.name.padEnd(12)} entry ${t.entryDate} @ RM${t.entry} | kini RM${t.currentPrice} (${t.finalGain >= 0 ? '+' : ''}${t.finalGain}%) | max +${t.maxGain}% | ${t.days} hari`));
 console.log('\n--- CLOSED ---');

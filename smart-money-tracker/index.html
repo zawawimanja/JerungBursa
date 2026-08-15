@@ -904,31 +904,31 @@
             <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.7rem;">
                 <span style="font-size: 1rem;">📊</span>
                 <span style="font-size: 0.75rem; font-weight: 900; color: #fde047; letter-spacing: 0.5px; text-transform: uppercase;">Data Backtest Fresh VVIP Rider</span>
-                <span style="font-size: 0.65rem; color: #94a3b8; font-weight: 600;">58 hari (25 Mei – 11 Ogos 2026) · Exit RIDE floor 20 hari</span>
+                <span id="frBacktestMeta" style="font-size: 0.65rem; color: #94a3b8; font-weight: 600;">Simulasi: tutup trade selepas 20 hari</span>
             </div>
             <div style="display: flex; flex-wrap: wrap; gap: 0.6rem;">
                 <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(234,179,8,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 105px; text-align: center; flex: 1;">
                     <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Signal (unik)</div>
-                    <div style="font-size: 1.05rem; color: #fde047; font-weight: 900;">16</div>
+                    <div id="frBtSignals" style="font-size: 1.05rem; color: #fde047; font-weight: 900;">16</div>
                 </div>
                 <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(234,179,8,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 105px; text-align: center; flex: 1;">
                     <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Win Rate</div>
-                    <div style="font-size: 1.05rem; color: #34d399; font-weight: 900;">81%</div>
+                    <div id="frBtWinRate" style="font-size: 1.05rem; color: #34d399; font-weight: 900;">81%</div>
                 </div>
                 <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(234,179,8,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 105px; text-align: center; flex: 1;">
                     <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Avg / Trade</div>
-                    <div style="font-size: 1.05rem; color: #34d399; font-weight: 900;">+19.3%</div>
+                    <div id="frBtAvg" style="font-size: 1.05rem; color: #34d399; font-weight: 900;">+19.3%</div>
                 </div>
                 <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(234,179,8,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 105px; text-align: center; flex: 1;">
                     <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Jumlah PnL</div>
-                    <div style="font-size: 1.05rem; color: #34d399; font-weight: 900;">+309.0%</div>
+                    <div id="frBtTotal" style="font-size: 1.05rem; color: #34d399; font-weight: 900;">+309.0%</div>
                 </div>
                 <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(234,179,8,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 105px; text-align: center; flex: 1;">
                     <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Rugi Terburuk</div>
-                    <div style="font-size: 1.05rem; color: #f87171; font-weight: 900;">−7.4%</div>
+                    <div id="frBtWorst" style="font-size: 1.05rem; color: #f87171; font-weight: 900;">−7.4%</div>
                 </div>
             </div>
-            <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">* Setiap kaunter dikira sekali (hari pertama qualify). Jumlah PnL = pulangan terkumpul (bukan compounding). Data dari scratch/backtest_confluence_vs_fresh.js.</p>
+            <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">* <strong style="color:#fbbf24;">SIMULASI</strong> — andaikan setiap trade ditutup selepas 20 hari (tak kira untung/rugi), untuk buktikan entry rule profitable. Setiap kaunter dikira sekali (hari pertama qualify). Dikira semula automatik setiap hari.</p>
         </div>
 
         <!-- LIVE TRACKER FRESH RIDER: setiap kaunter yang pernah qualify, track sampai exit -->
@@ -960,7 +960,7 @@
                     </tbody>
                 </table>
             </div>
-            <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">* OPEN = masih dipegang. CLOSED_SL = kena trailing stop (harga jatuh 20% dari puncak tertinggi — lock keuntungan sebelum runtuh). Max Gain = puncak sejak entry. SL Trail = 20% di bawah harga tertinggi (naik mengikut puncak, tak pernah turun). Auto-update setiap kemas kini data.</p>
+            <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">* <strong style="color:#34d399;">POSISI SEBENAR</strong> — pegang setiap kaunter dari hari qualify sehingga kena trailing stop (harga jatuh 20% dari puncak). CLOSED_SL = lock keuntungan/rugi. Ini rekod hold sebenar, BUKAN simulasi — contoh: backtest tutup KEEMING awal pada +65%, tracker hold sampai +117%. Auto-update setiap kemas kini data.</p>
         </div>
     </div>
 
@@ -4772,6 +4772,18 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 return;
             }
             const s = data.summary || {};
+            // Render statistik BACKTEST 20-hari (dinamik, dikira semula setiap hari)
+            const bt = data.backtest;
+            if (bt) {
+                const setT = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+                setT('frBtSignals', bt.signals ?? 16);
+                setT('frBtWinRate', (bt.winRate ?? 81) + '%');
+                setT('frBtAvg', (bt.avgGain >= 0 ? '+' : '') + (bt.avgGain ?? 19.3) + '%');
+                setT('frBtTotal', (bt.totalPnl >= 0 ? '+' : '') + (bt.totalPnl ?? 309) + '%');
+                setT('frBtWorst', (bt.worstLoss ?? -7.4) + '%');
+                const meta = document.getElementById('frBacktestMeta');
+                if (meta) meta.textContent = `${bt.dataDays || '-'} hari (${bt.dataStart || ''} – ${bt.dataEnd || ''}) · Simulasi: tutup trade selepas 20 hari`;
+            }
             // Kaunter yang MASIH qualify hari ini (untuk lajur "Masih Radar?")
             const liveList = (currentData && currentData.length > 0) ? currentData : ((window.liveData && window.liveData.topVolume) || []);
             const stillQualifies = new Set(liveList.filter(it => {

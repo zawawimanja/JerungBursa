@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual
 window.FRESH_RIDER_TRACKER = {
  "summary": {
-  "generatedAt": "2026-08-14T17:15:09.824Z",
+  "generatedAt": "2026-08-15T03:59:24.086Z",
   "dataDays": 53,
   "totalTracked": 18,
   "openCount": 17,
@@ -9,6 +9,16 @@ window.FRESH_RIDER_TRACKER = {
   "closedWins": 1,
   "closedWinRate": 100,
   "closedAvgGain": 31.2
+ },
+ "backtest": {
+  "dataStart": "2026-06-02",
+  "dataEnd": "2026-08-14",
+  "dataDays": 53,
+  "signals": 16,
+  "winRate": 81,
+  "avgGain": 18.1,
+  "totalPnl": 289.5,
+  "worstLoss": -7.4
  },
  "trades": [
   {
