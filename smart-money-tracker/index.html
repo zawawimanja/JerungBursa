@@ -4831,23 +4831,52 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 picks.push(item);
             }
 
-            // Tanda calon breakout-ready: tight <= 2.5% + touch >= 4 + volume SENYAP
-            // (hasil kajian: tight <= 2.5% naikkan kadar breakout 25% -> 67%, tangkap 4/4 breakout)
+            // Penalaan Ketepatan Tinggi: Kesan Jerung Sec 138, Volume Dry-Up (VDU), Reclaim, & Breakout-Ready
+            const jerungList = Array.isArray(window.jerungData) ? window.jerungData : [];
             for (const p of picks) {
                 const tight = typeof p.closeTightness === 'number' ? p.closeTightness : 99;
                 const touches = p.touchCount || 0;
-                const volQuiet = p.hasVolumeSpike !== true && (typeof p.volumeSpike !== 'number' || p.volumeSpike < 1.5);
-                p._breakoutReady = tight <= 2.5 && touches >= 4 && volQuiet;
+                const isVolQuiet = p.hasVolumeSpike !== true && (typeof p.volumeSpike !== 'number' || p.volumeSpike < 1.5);
+                const isVdu = (p.volumeDecline === true || (!p.hasVolumeSpike && (p.volumeSpike || 0) < 0.6)) && (p.turnover || 0) >= 200000;
+                
+                // Semak Sokongan Jerung Institusi (Seksyen 138)
+                const nameUpper = (p.name || '').toUpperCase();
+                const symUpper = (p.symbol || '').toUpperCase();
+                const codeStr = String(p.code || '');
+                const whaleMatches = jerungList.filter(j => {
+                    const jName = (j.stockName || '').toUpperCase();
+                    const jSym = (j.symbol || '').toUpperCase();
+                    const jCode = String(j.code || '');
+                    return (jName && (jName === nameUpper || nameUpper.includes(jName) || jName.includes(nameUpper))) ||
+                           (symUpper && jSym && symUpper === jSym) ||
+                           (codeStr && jCode && codeStr === jCode);
+                });
+
+                p._isWhaleBacked = whaleMatches.length > 0;
+                p._whaleInst = p._isWhaleBacked ? whaleMatches[0].institution : '';
+                p._isVdu = isVdu;
+                p._isReclaim = Boolean(p.openPrice && p.price >= p.openPrice && (((p.price - p.openPrice) / p.openPrice) * 100) <= 5.0 && touches >= 1);
+                
+                const osNum = p.os || p.oversubscription || 0;
+                p._isHighOs = osNum >= 25 || p.ipoGrade === 'A';
+                p._osVal = osNum;
+
+                p._breakoutReady = tight <= 2.5 && touches >= 4 && (isVolQuiet || isVdu);
+                p._tripleLock = p._isWhaleBacked && (p._breakoutReady || touches >= 3);
             }
 
             picks.sort((a, b) => {
-                // UTAMA: calon breakout-ready dahulu (kajian: tight<=2.5% + touch>=4 + volume senyap)
+                // 1. UTAMA: Calon TRIPLE LOCK (Jerung Sec 138 + Lantai Kukuh / Breakout Ready)
+                if (a._tripleLock !== b._tripleLock) return a._tripleLock ? -1 : 1;
+                // 2. Calon Breakout-Ready (Tight <= 2.5% + Touch >= 4 + Volume Senyap/VDU)
                 if (a._breakoutReady !== b._breakoutReady) return a._breakoutReady ? -1 : 1;
-                // Kemudian: paling rapat dengan LANTAI (risk ke SL paling kecil) — setup entry paling selamat
+                // 3. Calon disokong Jerung Institusi Seksyen 138
+                if (a._isWhaleBacked !== b._isWhaleBacked) return a._isWhaleBacked ? -1 : 1;
+                // 4. Paling rapat dengan LANTAI (Risk ke SL paling kecil)
                 const da = a.floorLow ? ((a.price - a.floorLow) / a.floorLow) : 99;
                 const db = b.floorLow ? ((b.price - b.floorLow) / b.floorLow) : 99;
                 if (da !== db) return da - db;
-                // Tie-break: pullback paling kecil (paling dekat ATH), kemudian paling padat
+                // 5. Pullback paling kecil (Paling dekat ATH), kemudian kepadatan lilin
                 const pa = a.pullback !== null && a.pullback !== undefined ? a.pullback : 99;
                 const pbb = b.pullback !== null && b.pullback !== undefined ? b.pullback : 99;
                 if (pa !== pbb) return pa - pbb;
@@ -4870,8 +4899,19 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 const pb = item.pullback !== null && item.pullback !== undefined ? item.pullback : null;
                 const pbColor = pb !== null && pb <= 5 ? '#34d399' : '#f59e0b';
                 const grade = item.ipoGrade && item.ipoGrade !== 'Unrated' ? item.ipoGrade : (item.ipoYear || '—');
-                const tierColor = item.confidenceScore >= 90 ? '#a855f7' : (item.confidenceScore >= 75 ? '#38bdf8' : (item.confidenceScore >= 60 ? '#10b981' : '#f59e0b'));
-                const confidenceText = item.confidenceScore !== undefined ? `${item.confidenceScore}/100` : 'N/A';
+
+                // Dynamic Precision Confidence Score
+                let sniperScore = item.confidenceScore || 72;
+                if (item._tripleLock) sniperScore += 18;
+                else if (item._isWhaleBacked) sniperScore += 12;
+                if (item._breakoutReady) sniperScore += 10;
+                if (item._isVdu) sniperScore += 6;
+                if (item._isReclaim) sniperScore += 5;
+                if (item._isHighOs) sniperScore += 5;
+                sniperScore = Math.min(99, sniperScore);
+
+                const tierColor = sniperScore >= 90 ? '#a855f7' : (sniperScore >= 80 ? '#38bdf8' : (sniperScore >= 65 ? '#10b981' : '#f59e0b'));
+                const confidenceText = `${sniperScore}/100`;
 
                 // Calculate confluence matches dynamically
                 const matches = [];
@@ -4886,7 +4926,27 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     ? `<span style="color: #34d399; font-weight: 800; background: rgba(52,211,153,0.1); padding: 0.15rem 0.45rem; border-radius: 4px; font-size: 0.72rem; border: 1px solid rgba(52,211,153,0.25); white-space: nowrap;">YES (${matches.length}x)</span>`
                     : `<span style="color: #94a3b8; font-weight: 600; background: rgba(148,163,184,0.1); padding: 0.15rem 0.45rem; border-radius: 4px; font-size: 0.72rem; border: 1px solid rgba(148,163,184,0.2); white-space: nowrap;">NO</span>`;
 
-
+                // Badges
+                let badgesHtml = '';
+                if (item._tripleLock) {
+                    badgesHtml += `<span style="font-size: 0.62rem; background: linear-gradient(135deg, rgba(168,85,247,0.3), rgba(16,185,129,0.3)); color: #fde047; padding: 0.08rem 0.35rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(253,224,71,0.6); white-space: nowrap; animation: pulse 1.5s infinite;" title="Triple Lock Signal: Pengumpulan Institusi (Sec 138) + Breakout Ready Base">🔒 TRIPLE LOCK</span>`;
+                }
+                if (item._isWhaleBacked && !item._tripleLock) {
+                    const shortWhale = item._whaleInst ? item._whaleInst.split(' ')[0] : 'JERUNG';
+                    badgesHtml += `<span style="font-size: 0.62rem; background: rgba(16, 185, 129, 0.22); color: #34d399; padding: 0.08rem 0.35rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(16, 185, 129, 0.45); white-space: nowrap;" title="Pemfailan Rasmi Seksyen 138: Disokong jerung ${item._whaleInst}">🏛️ ${shortWhale}</span>`;
+                }
+                if (item._breakoutReady && !item._tripleLock) {
+                    badgesHtml += `<span style="font-size: 0.62rem; background: rgba(234, 179, 8, 0.2); color: #fde047; padding: 0.08rem 0.32rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(234, 179, 8, 0.45); white-space: nowrap; animation: pulse 1.5s infinite;" title="Breakout Ready: Tapak rapat (≤2.5%) + Sentuhan Lantai ≥4x + Volum Senyap">🎯 BREAKOUT</span>`;
+                }
+                if (item._isVdu) {
+                    badgesHtml += `<span style="font-size: 0.62rem; background: rgba(56, 189, 248, 0.18); color: #38bdf8; padding: 0.08rem 0.32rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(56, 189, 248, 0.4); white-space: nowrap;" title="Volume Dry-Up (VDU): Jualan runcit kering, harga bertahan di lantai">🔇 VDU</span>`;
+                }
+                if (item._isReclaim) {
+                    badgesHtml += `<span style="font-size: 0.62rem; background: rgba(251, 113, 133, 0.18); color: #fb7185; padding: 0.08rem 0.32rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(251, 113, 133, 0.4); white-space: nowrap;" title="IPO Open Price Reclaim: Berjaya tebus semula harga pembukaan IPO">🌱 RECLAIM</span>`;
+                }
+                if (item._isHighOs && item._osVal > 0) {
+                    badgesHtml += `<span style="font-size: 0.62rem; background: rgba(168, 85, 247, 0.18); color: #c084fc; padding: 0.08rem 0.32rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(168, 85, 247, 0.35); white-space: nowrap;" title="Permintaan Langganan Tinggi (OS: ${item._osVal}x)">🔥 OS ${item._osVal}x</span>`;
+                }
 
                 html += `
                     <tr data-fr-name="${item.name}">
@@ -4894,7 +4954,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                         <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
                             ${getTradingViewAnchor(item.name)}
                             <div class="fr-badge-row" style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.35rem; flex-wrap: wrap;">
-                                ${item._breakoutReady ? `<span style="font-size: 0.62rem; background: rgba(16, 185, 129, 0.2); color: #34d399; padding: 0.08rem 0.3rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(16, 185, 129, 0.45); white-space: nowrap; animation: pulse 1.5s infinite;">🎯 BREAKOUT</span>` : ''}
+                                ${badgesHtml}
                             </div>
                         </td>
                         <td style="text-align: center; color: #a5b4fc; font-weight: 800;">${grade}</td>
