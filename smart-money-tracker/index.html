@@ -4833,32 +4833,34 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
             // Penalaan Ketepatan Tinggi: Kesan Jerung Sec 138, Volume Dry-Up (VDU), Reclaim, & Breakout-Ready
             const jerungList = Array.isArray(window.jerungData) ? window.jerungData : [];
+            // Bina lookup pantas: jerung symbol → entry (elak O(n²) filter)
+            const jerungBySymbol = {};
+            for (const j of jerungList) {
+                const sym = (j.symbol || '').toUpperCase();
+                if (sym && !jerungBySymbol[sym]) jerungBySymbol[sym] = j;
+            }
+
             for (const p of picks) {
                 const tight = typeof p.closeTightness === 'number' ? p.closeTightness : 99;
                 const touches = p.touchCount || 0;
                 const isVolQuiet = p.hasVolumeSpike !== true && (typeof p.volumeSpike !== 'number' || p.volumeSpike < 1.5);
-                const isVdu = (p.volumeDecline === true || (!p.hasVolumeSpike && (p.volumeSpike || 0) < 0.6)) && (p.turnover || 0) >= 200000;
+                // VDU: volumeDecline === true ATAU volumeSpike < 0.5 (jualan kering), MESTI ada kecairan minima
+                const isVdu = (p.volumeDecline === true || ((p.volumeSpike || 99) < 0.5)) && (p.turnover || 0) >= 200000;
                 
-                // Semak Sokongan Jerung Institusi (Seksyen 138)
-                const nameUpper = (p.name || '').toUpperCase();
-                const symUpper = (p.symbol || '').toUpperCase();
-                const codeStr = String(p.code || '');
-                const whaleMatches = jerungList.filter(j => {
-                    const jName = (j.stockName || '').toUpperCase();
-                    const jSym = (j.symbol || '').toUpperCase();
-                    const jCode = String(j.code || '');
-                    return (jName && (jName === nameUpper || nameUpper.includes(jName) || jName.includes(nameUpper))) ||
-                           (symUpper && jSym && symUpper === jSym) ||
-                           (codeStr && jCode && codeStr === jCode);
-                });
+                // Semak Sokongan Jerung Institusi (Seksyen 138) — padanan TEPAT guna symbol
+                const nameUpper = (p.name || '').toUpperCase().replace(/\s+/g, '');
+                const whaleMatch = jerungBySymbol[nameUpper] || null;
 
-                p._isWhaleBacked = whaleMatches.length > 0;
-                p._whaleInst = p._isWhaleBacked ? whaleMatches[0].institution : '';
+                p._isWhaleBacked = !!whaleMatch;
+                p._whaleInst = whaleMatch ? whaleMatch.institution : '';
                 p._isVdu = isVdu;
-                p._isReclaim = Boolean(p.openPrice && p.price >= p.openPrice && (((p.price - p.openPrice) / p.openPrice) * 100) <= 5.0 && touches >= 1);
+
+                // Reclaim: guna ipoPrice (harga IPO) sebagai anchor utama, fallback ke firstDayOpenPrice
+                const reclaimAnchor = p.ipoPrice || p.firstDayOpenPrice || 0;
+                p._isReclaim = Boolean(reclaimAnchor > 0 && p.wentUnderwater === true && p.price >= reclaimAnchor && (((p.price - reclaimAnchor) / reclaimAnchor) * 100) <= 15.0 && touches >= 1);
                 
-                const osNum = p.os || p.oversubscription || 0;
-                p._isHighOs = osNum >= 25 || p.ipoGrade === 'A';
+                const osNum = p.os || 0;
+                p._isHighOs = osNum >= 25;
                 p._osVal = osNum;
 
                 p._breakoutReady = tight <= 2.5 && touches >= 4 && (isVolQuiet || isVdu);
