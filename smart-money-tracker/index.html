@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script src="live_data.js"></script>
     <script src="fresh_rider_tracker.js"></script>
+    <script src="hot_theme_tracker.js"></script>
     <script src="jerung-data.js?v=1.0"></script>
         <style>
         @keyframes spin {
@@ -638,7 +639,6 @@
         <div class="top-nav" style="display: flex; justify-content: flex-end; align-items: center; gap: 0.45rem; flex-wrap: wrap; max-width: 100%;">
             <a href="https://ipobursa.vercel.app" target="_blank" class="btn" style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 800; box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3); padding: 0.35rem 0.8rem; font-size: 0.82rem;">📊 BursaIPO Portal ↗</a>
             <a href="./landing.html" class="btn" style="background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; box-shadow: 0 4px 15px rgba(13, 148, 136, 0.25); padding: 0.35rem 0.8rem; font-size: 0.82rem;">💡 Metodologi</a>
-            <a href="./backtest.html" class="btn" style="background: linear-gradient(135deg, #475569 0%, #334155 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; box-shadow: 0 4px 15px rgba(71, 85, 105, 0.25); padding: 0.35rem 0.8rem; font-size: 0.82rem;">📊 Bukti Backtest</a>
             <a href="./sop.html" class="btn" style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.25); padding: 0.35rem 0.8rem; font-size: 0.82rem;">📘 Panduan SOP</a>
             <a href="./hall-of-fame.html" class="btn" style="background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 800; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.25); padding: 0.35rem 0.8rem; font-size: 0.82rem;">🏆 Hall of Fame</a>
             <a href="./formula.html" class="btn" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: #0f172a; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 800; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.25); padding: 0.35rem 0.8rem; font-size: 0.82rem;">🔥 Formula VVIP</a>
@@ -704,6 +704,7 @@
     <!-- Tab Navigation -->
     <div class="tabs-nav" style="margin-bottom: 1rem; margin-top: 0.5rem; display: flex; gap: 0.2rem; flex-wrap: wrap;">
         <button class="tab-btn active" id="tab-confluence" onclick="switchTab('confluence')">🔥 Fresh Rider</button>
+        <button class="tab-btn" id="tab-hottheme" onclick="switchTab('hottheme')" style="border: 1px solid rgba(168, 85, 247, 0.4); color: #a78bfa; font-weight: 800;">⚡ Hot Theme</button>
         <button class="tab-btn" id="tab-jerung" onclick="switchTab('jerung')" style="border: 1px solid rgba(16, 185, 129, 0.4); color: #34d399; font-weight: 800;">🦈 Jerung</button>
         <button class="tab-btn" id="tab-realconfluence" onclick="switchTab('realconfluence')">🎯 Confluence</button>
         <button class="tab-btn" id="tab-topgainers" onclick="switchTab('topgainers')">🚀 Gainers</button>
@@ -989,7 +990,7 @@
                                 <span style="font-size: 0.7rem; background: rgba(234, 179, 8, 0.2); color: #fde047; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(234, 179, 8, 0.3); white-space: nowrap;">🏆 SWING PNL TERTINGGI (BACKTEST)</span>
                             </div>
                             <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
-                                Fresh IPO (2025+) + VVIP + <strong style="color:#fde047;">pullback ≤ 10% dari ATH</strong> + harga padat (tight ≤ 5%). Backtest 58 hari (25 Mei–11 Ogos 2026): <strong style="color:#34d399;">Win Rate 81%, avg +19.3%/trade, rugi terburuk -7.4%</strong>. Exit: RIDE floor (SL = floor × 0.97, peram selagi di atas floor, tanpa TP kaku).
+                                Fresh IPO (2025+) + VVIP + <strong style="color:#fde047;">pullback ≤ 10% dari ATH</strong> + harga padat (tight ≤ 5%). Backtest (53 hari, 02 Jun–14 Ogos 2026): <strong style="color:#34d399;">Win Rate 81%, avg +18.7%/trade, rugi terburuk -3.6%</strong>. Exit: TRAIL HIBRID — SL = high × 0.80 sebelum untung dikunci, ketat ke <strong style="color:#34d399;">high × 0.90 selepas +20% terkunci</strong> (kunci lebih profit, elak beri balik dari puncak). Angka terkini dikira automatik dalam kotak backtest di bawah.
                             </p>
                             <p style="margin: 0.5rem 0 0 0; font-size: 0.78rem; color: #fbbf24; background: rgba(245,158,11,0.08); border: 1px dashed rgba(245,158,11,0.35); border-radius: 8px; padding: 0.5rem 0.7rem; line-height: 1.5;">
                                 ⏰ <strong style="color:#fde047;">SOP: semak LEPAS CLOSE (5:00–6:00 petang)</strong>, bukan pagi — data ialah harga penutupan. <strong style="color:#34d399;">Entry SELAMAT selagi kaunter masih dalam senarai ini (masih qualify: base ketat dekat ATH)</strong> — kajian data: entry lewat ≤5 hari dari signal pertama masih 81-88% WR, avg +25-28% (contoh: KEEMING qualify 12/8, meletup esok). Yang <strong style="color:#f87171;">JANGAN kejar</strong>: kaunter dah <strong style="color:#f87171;">keluar dari senarai</strong> (dah lari >10% dari base, pullback besar) — entry window dah tutup. 🎯 BREAKOUT = tight ≤ 2.5% + touch ≥ 4 + volume senyap (kajian: 67% breakout vs 25%).
@@ -1046,15 +1047,15 @@
                 </div>
                 <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(234,179,8,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 105px; text-align: center; flex: 1;">
                     <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Avg / Trade</div>
-                    <div id="frBtAvg" style="font-size: 1.05rem; color: #34d399; font-weight: 900;">+19.3%</div>
+                    <div id="frBtAvg" style="font-size: 1.05rem; color: #34d399; font-weight: 900;">+18.7%</div>
                 </div>
                 <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(234,179,8,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 105px; text-align: center; flex: 1;">
                     <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Jumlah PnL</div>
-                    <div id="frBtTotal" style="font-size: 1.05rem; color: #34d399; font-weight: 900;">+309.0%</div>
+                    <div id="frBtTotal" style="font-size: 1.05rem; color: #34d399; font-weight: 900;">+298.6%</div>
                 </div>
                 <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(234,179,8,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 105px; text-align: center; flex: 1;">
                     <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Rugi Terburuk</div>
-                    <div id="frBtWorst" style="font-size: 1.05rem; color: #f87171; font-weight: 900;">−7.4%</div>
+                    <div id="frBtWorst" style="font-size: 1.05rem; color: #f87171; font-weight: 900;">−3.6%</div>
                 </div>
             </div>
             <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">* <strong style="color:#fbbf24;">SIMULASI</strong> — andaikan setiap trade ditutup selepas 20 hari (tak kira untung/rugi), untuk buktikan entry rule profitable. Setiap kaunter dikira sekali (hari pertama qualify). Dikira semula automatik setiap hari.</p>
@@ -1081,7 +1082,7 @@
                             <th style="text-align: right;">Max Gain</th>
                             <th style="text-align: center;">Hari Hold</th>
                             <th style="text-align: center;">Status Pegangan</th>
-                            <th style="text-align: right;">SL Trail (High × 0.80)</th>
+                            <th style="text-align: right;" title="Trail hibrid: 20% dari puncak sebelum untung dikunci, ketat ke 10% selepas +20% terkunci">SL Trail (Hibrid 20→10%)</th>
                         </tr>
                     </thead>
                     <tbody id="frTrackerTableBody">
@@ -1089,7 +1090,7 @@
                     </tbody>
                 </table>
             </div>
-            <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">* <strong style="color:#34d399;">POSISI SEBENAR</strong> — pegang setiap kaunter dari hari qualify sehingga kena trailing stop (harga jatuh 20% dari puncak). CLOSED_SL = lock keuntungan/rugi. Ini rekod hold sebenar, BUKAN simulasi — contoh: backtest tutup KEEMING awal pada +65%, tracker hold sampai +117%. Auto-update setiap kemas kini data.</p>
+            <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">* <strong style="color:#34d399;">POSISI SEBENAR</strong> — pegang setiap kaunter dari hari qualify sehingga kena trailing stop hibrid (SL = high × 0.80 sebelum untung dikunci, ketat ke high × 0.90 selepas +20% terkunci). CLOSED_SL = lock keuntungan/rugi. Ini rekod hold sebenar, BUKAN simulasi — contoh: backtest tutup KEEMING awal pada +65%, tracker hold sampai +117%. Auto-update setiap kemas kini data.</p>
         </div>
     </div>
 
@@ -1108,7 +1109,7 @@
                                 <span style="font-size: 0.7rem; background: rgba(14, 165, 233, 0.2); color: #38bdf8; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(14, 165, 233, 0.3); white-space: nowrap;">📊 LENSA PELBAGAI STRATEGI</span>
                             </div>
                             <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
-                                Kaunter yang bertembung <strong style="color: #38bdf8;">dalam 2+ strategi serentak</strong> (Jerung Radar + VCP + Trend Rider + Early Spring + Bottom Fishing). Backtest 58 hari (25 Mei–11 Ogos 2026): gabungan 2+ = <strong style="color:#34d399;">104 kaunter unik, WR 60%, avg +5.6%/trade, total +584.5%</strong>. TRIPLE (3+) 89 signal (WR 61%, +5.1%) ≈ DOUBLE (tepat 2) 92 signal (WR 60%, +5.3%) — kedua-dua setanding, Double sedikit lebih tinggi avg. Banding 🔥 Fresh Rider (16 signal): <strong style="color:#fde047;">WR 81%, avg +19.3%/trade</strong> — jauh lebih tepat per trade, tapi jumlah lebih kecil sebab sedikit signal.
+                                Kaunter yang bertembung <strong style="color: #38bdf8;">dalam 2+ strategi serentak</strong> (Jerung Radar + VCP + Trend Rider + Early Spring + Bottom Fishing). Backtest gabungan 2+ = <strong style="color:#34d399;">104 kaunter unik, WR 60%, avg +5.6%/trade, total +584.5%</strong> (kajian 58 hari, 25 Mei–11 Ogos 2026). TRIPLE (3+) 89 signal (WR 61%, +5.1%) ≈ DOUBLE (tepat 2) 92 signal (WR 60%, +5.3%) — kedua-dua setanding, Double sedikit lebih tinggi avg. Banding 🔥 Fresh Rider (16 signal): <strong style="color:#fde047;">WR 81%, avg +18.7%/trade, total +298.6%</strong> — jauh lebih tepat per trade, tapi jumlah lebih kecil sebab sedikit signal.
                             </p>
                         </div>
                     </div>
@@ -1215,6 +1216,151 @@
             <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">* Setiap kaunter dikira sekali (hari pertama qualify). Jumlah PnL = pulangan terkumpul (bukan compounding). Triple = PnL tertinggi per trade; Double = menambah jumlah signal & jumlah PnL keseluruhan.</p>
         </div>
     </div>
+
+    <!-- TAB: HOT THEME (Semiconductor & Solar — backtest 61 hari: 23 signal, WR 83%, avg +13.3%, total +305.7%) -->
+    <div id="view-hottheme" style="display: none;">
+        <div style="margin-bottom: 1.25rem;">
+            <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(168, 85, 247, 0.08)); border: 2px dashed #a855f7; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(168, 85, 247, 0.15); position: relative; overflow: hidden;">
+                <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(168, 85, 247, 0.15); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
+
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(168, 85, 247, 0.25); padding-bottom: 0.75rem;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1; min-width: 300px;">
+                        <span style="font-size: 1.8rem;">⚡</span>
+                        <div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                                <h2 style="margin: 0; font-size: 1.3rem; color: #c4b5fd; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem;">Hot Theme Rider: Semicon & Solar</h2>
+                                <span style="font-size: 0.7rem; background: rgba(168, 85, 247, 0.2); color: #c4b5fd; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(168, 85, 247, 0.3); white-space: nowrap;">🎯 BACKTEST: 23 signal | WR 83% | +13.3%/trade</span>
+                            </div>
+                            <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
+                                Kaunter <strong style="color:#c4b5fd;">Semiconductor & Solar/RE</strong> yang qualify <strong style="color:#38bdf8;">Confluence 2+ strategi</strong> (Jerung Radar / VCP / Trend Rider / Early Spring / Bottom Fishing). Backtest 61 hari: <strong style="color:#34d399;">23 signal, Win Rate 83%, avg +13.3%/trade, total +305.7%, rugi terburuk -5.3%</strong>.
+                            </p>
+                            <p style="margin: 0.5rem 0 0 0; font-size: 0.78rem; color: #fbbf24; background: rgba(245,158,11,0.08); border: 1px dashed rgba(245,158,11,0.35); border-radius: 8px; padding: 0.5rem 0.7rem; line-height: 1.5;">
+                                ⚡ <strong style="color:#c4b5fd;">SOP: semak LEPAS CLOSE (5:00–6:00 petang)</strong> — data ialah harga penutupan. Tema semasa (Ogos 2026): <strong style="color:#38bdf8;">Semicon (AI/Data Center boom) & Solar (RE push)</strong>. Semak semula tema setiap bulan — kalau kaunter tema baru dominate top volume, tambah dalam senarai.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-responsive">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th style="text-align: center; width: 45px;">No</th>
+                                <th>Kaunter</th>
+                                <th style="text-align: center;">Tema</th>
+                                <th style="text-align: center;">Confluence</th>
+                                <th style="text-align: right;">Harga Semasa</th>
+                                <th style="text-align: right;">Perubahan %</th>
+                                <th style="text-align: right;">Pullback</th>
+                                <th style="text-align: right;">Lantai Sokongan @ Harga</th>
+                                <th style="text-align: right;">Jarak Lantai</th>
+                                <th style="text-align: right;">Turnover</th>
+                                <th style="text-align: center;">Analisis AI (Skor)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="hotThemeTableBody">
+                            <tr>
+                                <td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
+                                    ⚡ Memuatkan Hot Theme Rider...
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- DATA BACKTEST HOT THEME -->
+        <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(168, 85, 247, 0.06)); border: 1px dashed rgba(168, 85, 247, 0.35); border-radius: 12px; padding: 0.9rem 1.1rem; margin-bottom: 1.25rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.7rem;">
+                <span style="font-size: 1rem;">📊</span>
+                <span style="font-size: 0.75rem; font-weight: 900; color: #c4b5fd; letter-spacing: 0.5px; text-transform: uppercase;">Data Backtest Hot Theme Rider</span>
+                <span id="htBacktestMeta" style="font-size: 0.65rem; color: #94a3b8; font-weight: 600;">Simulasi: tutup trade selepas 20 hari</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.6rem;">
+                <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(168,85,247,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 105px; text-align: center; flex: 1;">
+                    <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Signal (unik)</div>
+                    <div id="htBtSignals" style="font-size: 1.05rem; color: #c4b5fd; font-weight: 900;">—</div>
+                </div>
+                <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(168,85,247,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 105px; text-align: center; flex: 1;">
+                    <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Win Rate</div>
+                    <div id="htBtWinRate" style="font-size: 1.05rem; color: #34d399; font-weight: 900;">—</div>
+                </div>
+                <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(168,85,247,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 105px; text-align: center; flex: 1;">
+                    <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Avg / Trade</div>
+                    <div id="htBtAvg" style="font-size: 1.05rem; color: #34d399; font-weight: 900;">—</div>
+                </div>
+                <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(168,85,247,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 105px; text-align: center; flex: 1;">
+                    <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Jumlah PnL</div>
+                    <div id="htBtTotal" style="font-size: 1.05rem; color: #34d399; font-weight: 900;">—</div>
+                </div>
+                <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(168,85,247,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 105px; text-align: center; flex: 1;">
+                    <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Rugi Terburuk</div>
+                    <div id="htBtWorst" style="font-size: 1.05rem; color: #f87171; font-weight: 900;">—</div>
+                </div>
+            </div>
+            <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">* <strong style="color:#c4b5fd;">SIMULASI</strong> — andaikan setiap trade ditutup selepas 20 hari (tak kira untung/rugi), untuk buktikan entry rule profitable. Setiap kaunter dikira sekali (hari pertama qualify). Dikira semula automatik setiap hari.</p>
+        </div>
+
+        <!-- LIVE TRACKER HOT THEME -->
+        <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(16, 185, 129, 0.07)); border: 1px dashed rgba(16, 185, 129, 0.4); border-radius: 12px; padding: 0.9rem 1.1rem; margin-bottom: 1.25rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.7rem;">
+                <span style="font-size: 1rem;">📡</span>
+                <span style="font-size: 0.75rem; font-weight: 900; color: #34d399; letter-spacing: 0.5px; text-transform: uppercase;">Tracker Live Hot Theme</span>
+                <span id="htTrackerMeta" style="font-size: 0.65rem; color: #94a3b8; font-weight: 600;">Dijana daripada data sejarah + live</span>
+            </div>
+            <div id="htTrackerStats" style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.7rem;"></div>
+            <div class="table-responsive">
+                <table class="data-table" style="font-size: 0.78rem;">
+                    <thead>
+                        <tr>
+                            <th style="text-align: left;">Kaunter</th>
+                            <th style="text-align: center;">Tema</th>
+                            <th style="text-align: center;">Status</th>
+                            <th style="text-align: center;">Entry</th>
+                            <th style="text-align: right;">Harga Entry</th>
+                            <th style="text-align: right;">Harga Kini / Exit</th>
+                            <th style="text-align: right;">PnL Kini / Akhir</th>
+                            <th style="text-align: right;">Max Gain</th>
+                            <th style="text-align: center;">Hari Hold</th>
+                            <th style="text-align: right;" title="Trail 20% dari high (bila gain < +20%) / 6% dari high (bila gain >= +20%) / Hard stop -12% selepas 5 hari">SL Trail</th>
+                        </tr>
+                    </thead>
+                    <tbody id="htTrackerTableBody">
+                        <tr><td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">⏳ Memuatkan tracker...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- THEME ROTATION DETECTOR -->
+        <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(251, 191, 36, 0.07)); border: 1px dashed rgba(251, 191, 36, 0.4); border-radius: 12px; padding: 0.9rem 1.1rem; margin-bottom: 1.25rem;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.7rem;">
+                <span style="font-size: 1rem;">🔄</span>
+                <span style="font-size: 0.75rem; font-weight: 900; color: #fbbf24; letter-spacing: 0.5px; text-transform: uppercase;">Theme Rotation Detector</span>
+                <span id="htThemeMeta" style="font-size: 0.65rem; color: #94a3b8; font-weight: 600;">Kekuatan tema Semicon+Solar dalam pasaran</span>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.7rem;">
+                <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(251,191,36,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 120px; text-align: center; flex: 1;">
+                    <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Kekuatan Tema Kini</div>
+                    <div id="htThemeNow" style="font-size: 1.05rem; color: #fbbf24; font-weight: 900;">—</div>
+                </div>
+                <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(251,191,36,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 120px; text-align: center; flex: 1;">
+                    <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">5-Hari MA</div>
+                    <div id="htThemeMA5" style="font-size: 1.05rem; color: #fbbf24; font-weight: 900;">—</div>
+                </div>
+                <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(251,191,36,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 120px; text-align: center; flex: 1;">
+                    <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Trend</div>
+                    <div id="htThemeTrend" style="font-size: 1.05rem; font-weight: 900;">—</div>
+                </div>
+            </div>
+            <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">
+                💡 <strong style="color:#fbbf24;">Cara guna:</strong> Kekuatan tema = % dana dalam top volume yang mengalir ke kaunter Semicon+Solar. 
+                Kalau <strong style="color:#34d399;">trend RISING</strong> dan kekuatan > 20% — tema sedang panas, masa untuk entry. 
+                Kalau <strong style="color:#f87171;">trend FALLING</strong> atau kekuatan < 10% — tema sejuk, jangan entry walaupun ada signal.
+            </p>
+        </div>
+    </div> <!-- End of view-hottheme -->
 
     <!-- TAB: TOP GAINERS % SCANNER -->
     <div id="view-topgainers" style="display: none;">
@@ -2403,12 +2549,14 @@
             const viewPortfolio = document.getElementById('view-portfolio');
             const viewRealConfluence = document.getElementById('view-realconfluence');
             const viewTopGainers = document.getElementById('view-topgainers');
+            const viewHotTheme = document.getElementById('view-hottheme');
 
             const tabVcp = document.getElementById('tab-vcp');
             const tabJerung = document.getElementById('tab-jerung');
             const tabConfluence = document.getElementById('tab-confluence');
             const tabRealConfluence = document.getElementById('tab-realconfluence');
             const tabTopGainers = document.getElementById('tab-topgainers');
+            const tabHotTheme = document.getElementById('tab-hottheme');
             const tabTrend = document.getElementById('tab-trend');
             const tabSpring = document.getElementById('tab-spring');
             const tabPhoenix = document.getElementById('tab-phoenix');
@@ -2432,6 +2580,7 @@
             if (viewPortfolio) viewPortfolio.style.display = 'none';
             if (viewRealConfluence) viewRealConfluence.style.display = 'none';
             if (viewTopGainers) viewTopGainers.style.display = 'none';
+            if (viewHotTheme) viewHotTheme.style.display = 'none';
             
             // Remove active class from all tabs
             if (tabVcp) tabVcp.classList.remove('active');
@@ -2439,6 +2588,7 @@
             if (tabConfluence) tabConfluence.classList.remove('active');
             if (tabRealConfluence) tabRealConfluence.classList.remove('active');
             if (tabTopGainers) tabTopGainers.classList.remove('active');
+            if (tabHotTheme) tabHotTheme.classList.remove('active');
             tabTrend.classList.remove('active');
             tabSpring.classList.remove('active');
             if (tabPhoenix) tabPhoenix.classList.remove('active');
@@ -2482,6 +2632,13 @@
                     renderTopGainers();
                 }
                 if (tabTopGainers) tabTopGainers.classList.add('active');
+            } else if (tabId === 'hottheme') {
+                if (viewHotTheme) {
+                    viewHotTheme.style.display = 'block';
+                    renderHotTheme();
+                    renderHotThemeTracker();
+                }
+                if (tabHotTheme) tabHotTheme.classList.add('active');
             } else if (tabId === 'spring') {
                 viewSpring.style.display = 'block';
                 tabSpring.classList.add('active');
@@ -4808,7 +4965,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
         // Render Fresh VVIP Rider — setup swing PnL tertinggi hasil backtest 54 hari
         // Formula: isVvip + Fresh IPO (2025+) + pullback <= 10% + closeTightness <= 5.0
-        // Backtest: WR 81%, avg +16.3%/trade, worst -7.4% (exit RIDE floor)
+        // Backtest: WR 81%, avg +18.7%/trade, worst -3.6% (exit trail hibrid)
         function renderConfluenceRadar() {
             const tbody = document.getElementById('confluenceRadarTableBody');
             if (!tbody) return;
@@ -4948,8 +5105,13 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     ? `<span style="color: #34d399; font-weight: 800; background: rgba(52,211,153,0.1); padding: 0.15rem 0.45rem; border-radius: 4px; font-size: 0.72rem; border: 1px solid rgba(52,211,153,0.25); white-space: nowrap;">YES (${matches.length}x)</span>`
                     : `<span style="color: #94a3b8; font-weight: 600; background: rgba(148,163,184,0.1); padding: 0.15rem 0.45rem; border-radius: 4px; font-size: 0.72rem; border: 1px solid rgba(148,163,184,0.2); white-space: nowrap;">NO</span>`;
 
-                // Badges
-                let badgesHtml = '';
+                // FUSION badge: qualify Fresh Rider + Hot Theme (Semicon/Solar Conf2+)
+                const hotThemes = getHotThemes(item.name);
+                const isHotTheme = hotThemes.length > 0 && matches.length >= 2;
+                const isFusion = isFreshRiderPick(item) && isHotTheme;
+                if (isFusion) {
+                    badgesHtml += `<span style="font-size: 0.62rem; background: linear-gradient(135deg, rgba(234,179,8,0.35), rgba(168,85,247,0.35)); color: #fde047; padding: 0.08rem 0.35rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(253,224,71,0.7); white-space: nowrap; animation: pulse 1.5s infinite;" title="FUSION: Fresh VVIP Rider + Hot Theme (Semicon/Solar) — Signal paling kuat, entry agresif!">🔥⚡ FUSION</span>`;
+                }
                 if (item._tripleLock) {
                     badgesHtml += `<span style="font-size: 0.62rem; background: linear-gradient(135deg, rgba(168,85,247,0.3), rgba(16,185,129,0.3)); color: #fde047; padding: 0.08rem 0.35rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(253,224,71,0.6); white-space: nowrap; animation: pulse 1.5s infinite;" title="Triple Lock Signal: Pengumpulan Institusi (Sec 138) + Breakout Ready Base">🔒 TRIPLE LOCK</span>`;
                 }
@@ -5070,7 +5232,10 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     ? '<span style="font-size: 0.62rem; background: rgba(16,185,129,0.2); color: #34d399; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(16,185,129,0.4);">🟢 OPEN</span>'
                     : '<span style="font-size: 0.62rem; background: rgba(148,163,184,0.15); color: #94a3b8; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(148,163,184,0.3);">⚪ ' + t.status.replace('CLOSED_', '') + '</span>';
                 const exitPx = isOpen ? t.currentPrice : t.exitPrice;
-                const slTrail = (t.slTrail != null ? t.slTrail : (t.high || t.entry) * 0.80).toFixed(3);
+                const slTrail = (t.slTrail != null
+                    ? t.slTrail
+                    : (((((t.high || t.entry) - t.entry) / t.entry) * 100) >= 20 ? (t.high || t.entry) * 0.90 : (t.high || t.entry) * 0.80)
+                ).toFixed(3);
                 const stillRadar = isOpen
                     ? (stillQualifies.has(t.name.toUpperCase())
                         ? '<span style="font-size: 0.62rem; color: #34d399; font-weight: 800;" title="Masih qualify dalam senarai Fresh Rider hari ini — BOLEH masuk/beli sekarang">🟢 BOLEH ENTRY</span>'
@@ -5092,6 +5257,84 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
         }
         window.renderFreshRiderTracker = renderFreshRiderTracker;
 
+        // ===== LIVE TRACKER HOT THEME (auto-generated data: hot_theme_tracker.js) =====
+        function renderHotThemeTracker() {
+            const tbody = document.getElementById('htTrackerTableBody');
+            const statsEl = document.getElementById('htTrackerStats');
+            const metaEl = document.getElementById('htTrackerMeta');
+            if (!tbody) return;
+            const data = window.HOT_THEME_TRACKER;
+            if (!data || !Array.isArray(data.trades) || data.trades.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">Tiada data tracker lagi — akan dijana pada kemas kini data seterusnya.</td></tr>';
+                return;
+            }
+            const s = data.summary || {};
+            const bt = data.backtest || {};
+            // Render backtest stats
+            const setT = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
+            setT('htBtSignals', bt.signals ?? '—');
+            setT('htBtWinRate', (bt.winRate ?? '—') + '%');
+            setT('htBtAvg', (bt.avgGain >= 0 ? '+' : '') + (bt.avgGain ?? '—') + '%');
+            setT('htBtTotal', (bt.totalPnl >= 0 ? '+' : '') + (bt.totalPnl ?? '—') + '%');
+            setT('htBtWorst', (bt.worstLoss ?? '—') + '%');
+            const meta = document.getElementById('htBacktestMeta');
+            if (meta) meta.textContent = `${bt.dataDays || '-'} hari (${bt.dataStart || ''} – ${bt.dataEnd || ''}) · Simulasi: tutup trade selepas 20 hari`;
+            // Render theme rotation detector
+            if (data.themeStrength && data.themeStrength.length > 0) {
+                const latest = data.themeStrength[data.themeStrength.length - 1];
+                setT('htThemeNow', latest.themePct + '%');
+                setT('htThemeMA5', latest.ma5 + '%');
+                const trendEl = document.getElementById('htThemeTrend');
+                if (trendEl) {
+                    const isRising = data.themeTrend === 'RISING';
+                    trendEl.textContent = isRising ? '📈 RISING' : '📉 FLAT/FALLING';
+                    trendEl.style.color = isRising ? '#34d399' : '#f87171';
+                }
+            }
+            if (metaEl) metaEl.textContent = `${s.dataDays || '-'} hari data · Dijana ${new Date(s.generatedAt).toLocaleString('en-MY')}`;
+            if (statsEl) {
+                statsEl.innerHTML = [
+                    { label: 'Masih OPEN', val: s.openCount ?? 0, color: '#34d399' },
+                    { label: 'CLOSED', val: s.closedCount ?? 0, color: '#94a3b8' },
+                    { label: 'Win Rate (closed)', val: (s.closedWinRate ?? 0) + '%', color: '#fde047' },
+                    { label: 'Avg Gain (closed)', val: (s.closedAvgGain >= 0 ? '+' : '') + (s.closedAvgGain ?? 0) + '%', color: '#38bdf8' },
+                    { label: 'PnL OPEN (unrealized)', val: (s.openPnl >= 0 ? '+' : '') + (s.openPnl ?? 0) + '%', color: '#34d399' },
+                    { label: 'Total PnL Kini', val: (s.totalPnlNow >= 0 ? '+' : '') + (s.totalPnlNow ?? 0) + '%', color: '#fde047' },
+                ].map(c => `<div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(16,185,129,0.25); border-radius: 8px; padding: 0.35rem 0.7rem; min-width: 95px; text-align: center; flex: 1;">
+                    <div style="font-size: 0.58rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">${c.label}</div>
+                    <div style="font-size: 1rem; color: ${c.color}; font-weight: 900;">${c.val}</div>
+                </div>`).join('');
+            }
+            // Render trades table
+            tbody.innerHTML = data.trades.map(t => {
+                const isOpen = t.status === 'OPEN';
+                const pnl = t.finalGain || 0;
+                const pnlColor = pnl > 0 ? '#34d399' : (pnl < 0 ? '#f87171' : '#94a3b8');
+                const pnlStr = (pnl >= 0 ? '+' : '') + pnl.toFixed(1) + '%';
+                const maxStr = '+' + (t.maxGain || 0).toFixed(1) + '%';
+                const statusBadge = isOpen
+                    ? '<span style="font-size: 0.62rem; background: rgba(16,185,129,0.2); color: #34d399; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(16,185,129,0.4);">🟢 OPEN</span>'
+                    : '<span style="font-size: 0.62rem; background: rgba(148,163,184,0.15); color: #94a3b8; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(148,163,184,0.3);">⚪ ' + t.status.replace('CLOSED_', '') + '</span>';
+                const exitPx = isOpen ? t.currentPrice : t.exitPrice;
+                const slTrail = (t.slTrail != null ? t.slTrail : 0).toFixed(3);
+                const themeBadges = (t.themes || []).map(th => {
+                    const color = th === 'Semiconductor' ? '#a78bfa' : '#4ade80';
+                    return `<span style="font-size: 0.6rem; background: rgba(168,85,247,0.15); color: ${color}; padding: 0.05rem 0.25rem; border-radius: 3px; font-weight: 700;">${th === 'Semiconductor' ? '🔌' : '☀️'}</span>`;
+                }).join(' ');
+                return `<tr>
+                    <td style="font-weight: 800; color: white;">${t.name}<div style="font-size: 0.62rem; color: #64748b; font-weight: 600;">${themeBadges}</div></td>
+                    <td style="text-align: center;">${statusBadge}</td>
+                    <td style="text-align: center; color: #94a3b8; font-size: 0.72rem;">${t.entryDate.slice(5)}</td>
+                    <td style="text-align: right; color: white; font-weight: 700;">RM ${t.entry.toFixed(3)}</td>
+                    <td style="text-align: right; color: white; font-weight: 700;">RM ${(exitPx || 0).toFixed(3)}${isOpen ? '' : ' <span style="font-size:0.6rem;color:#64748b;">(' + t.exitDate.slice(5) + ')</span>'}</td>
+                    <td style="text-align: right; color: ${pnlColor}; font-weight: 900;">${pnlStr}</td>
+                    <td style="text-align: right; color: #38bdf8; font-weight: 700;">${maxStr}</td>
+                    <td style="text-align: center; color: #fde047; font-weight: 700;">${t.days}</td>
+                    <td style="text-align: right; color: #f87171; font-weight: 700;">RM ${slTrail}</td>
+                </tr>`;
+            }).join('');
+        }
+        window.renderHotThemeTracker = renderHotThemeTracker;
 
         // Helper: adakah item qualify Fresh VVIP Rider? (logik sama seperti render di atas)
         function qualifiesFreshRider(item) {
@@ -5322,6 +5565,121 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                             <div style="display: flex; flex-direction: column; align-items: center; gap: 0.25rem;">
                                 <span style="color: ${tierColor}; font-weight: 800; font-size: 0.78rem;">${confidenceText}</span>
                                 <button onclick="triggerAIAnalysisModal('${item.name}', 'Confluence VVIP')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.7rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                    ✨ Tanya AI
+                                </button>
+                            </div>
+                        </td>
+                    </tr>`;
+            });
+
+            tbody.innerHTML = html;
+        }
+
+        // =============================================================
+        // HOT THEME RIDER: Semicon & Solar (backtest 61 hari: 23 signal,
+        // WR 83%, avg +13.3%/trade, total +305.7%, worst -5.3%)
+        // =============================================================
+        const HOT_THEME_MAP = {
+            'Semiconductor': ['UNISEM','MI','VITROX','PENTA','UWC','KGB','NATGATE','FRONTKN','GREATEC','ELSOFT','ATE','PENTECH','KEEMING','HKB','ADNEX','ICENTS','AMS','MINOX','IFCAMSC','TEAMSTR','FAMIERA','SUMI','CRPMATE','PMIBHD','ECOMATE','ATECH','RAMSSOL','TOPMIX','SEMICO','MISC'],
+            'Solar/RE': ['SLVEST','JSSOLAR','VERDANT','SAM','GENERGY','SAMAIDEN','NE']
+        };
+        function getHotThemes(name) {
+            const n = (name || '').toUpperCase();
+            const hits = [];
+            for (const [theme, list] of Object.entries(HOT_THEME_MAP)) {
+                if (list.some(s => n.includes(s) || s.includes(n))) hits.push(theme);
+            }
+            return hits;
+        }
+        function renderHotTheme() {
+            const tbody = document.getElementById('hotThemeTableBody');
+            if (!tbody) return;
+
+            const picks = [];
+            const list = currentData || [];
+
+            for (const item of list) {
+                if (!item || !item.name || item.price <= 0 || item.price > 10.0) continue;
+                if (!passesGlobalFilters(item)) continue;
+                if (isSleepingOrAvoidStock(item) || item.isCombStock) continue;
+
+                const themes = getHotThemes(item.name);
+                if (themes.length === 0) continue;
+
+                const matches = [];
+                if (passesJerungRadar(item)) matches.push('🦈 Jerung Radar');
+                if (passesVcpStaircase(item)) matches.push('🪜 VCP Staircase');
+                if (passesTrendRiders(item)) matches.push('📈 Trend Rider');
+                if (passesEarlySpring(item)) matches.push('🌱 Early Spring');
+                if (passesBottomFishing(item)) matches.push('🎣 Bottom Fishing');
+
+                if (matches.length >= 2) {
+                    picks.push({ item, themes, count: matches.length, matches });
+                }
+            }
+
+            // Sort: Confluence count (tinggi dulu), kemudian dekat lantai, kemudian turnover
+            picks.sort((a, b) => {
+                if (a.count !== b.count) return b.count - a.count;
+                const distA = a.item.floorLow ? ((a.item.price - a.item.floorLow) / a.item.floorLow) : 99;
+                const distB = b.item.floorLow ? ((b.item.price - b.item.floorLow) / b.item.floorLow) : 99;
+                if (distA !== distB) return distA - distB;
+                const toA = a.item.turnover || 0;
+                const toB = b.item.turnover || 0;
+                return toB - toA;
+            });
+
+            if (picks.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">⚡ Tiada kaunter Semicon/Solar yang qualify Confluence 2+ hari ini.</td></tr>`;
+                return;
+            }
+
+            let html = '';
+            picks.forEach(({ item, themes, count, matches }, idx) => {
+                const floorPrice = item.floorLow ? 'RM ' + item.floorLow.toFixed(3) : '—';
+                const floorDist = item.floorLow ? ((item.price - item.floorLow) / item.floorLow * 100).toFixed(1) + '%' : '—';
+                const changeVal = item.changePct !== undefined ? item.changePct : item.change;
+                const changeClass = changeVal >= 0 ? 'success' : 'danger';
+                const changeSign = changeVal > 0 ? '+' : '';
+                const pb = item.pullback !== null && item.pullback !== undefined ? item.pullback : null;
+                const pbColor = pb !== null && pb <= 5 ? '#34d399' : '#f59e0b';
+
+                const themeBadge = themes.map(t => {
+                    const color = t === 'Semiconductor' ? '#a78bfa' : '#4ade80';
+                    return `<span style="font-size: 0.65rem; background: rgba(168,85,247,0.2); color: ${color}; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(168,85,247,0.4); white-space: nowrap; margin-right: 0.2rem;">${t === 'Semiconductor' ? '🔌' : '☀️'} ${t}</span>`;
+                }).join('');
+
+                const confBadge = count >= 3
+                    ? `<span style="font-size: 0.65rem; background: rgba(234, 179, 8, 0.2); color: #fde047; padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(234, 179, 8, 0.4); white-space: nowrap;">🔥 TRIPLE</span>`
+                    : `<span style="font-size: 0.65rem; background: rgba(14, 165, 233, 0.2); color: #38bdf8; padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(14, 165, 233, 0.4); white-space: nowrap;">⚡ DOUBLE</span>`;
+
+                const tierColor = item.confidenceScore >= 90 ? '#a855f7' : (item.confidenceScore >= 75 ? '#38bdf8' : (item.confidenceScore >= 60 ? '#10b981' : '#f59e0b'));
+                const confidenceText = item.confidenceScore !== undefined ? `${item.confidenceScore}/100` : 'N/A';
+
+                html += `
+                    <tr>
+                        <td style="text-align: center; font-weight: 800; color: #a78bfa;">#${idx + 1}</td>
+                        <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
+                            ${getTradingViewAnchor(item.name)}
+                            <div style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.35rem; flex-wrap: wrap;">${themeBadge}</div>
+                        </td>
+                        <td style="text-align: center;">${confBadge}</td>
+                        <td style="text-align: center; font-size: 0.7rem; color: #94a3b8;">${matches.join('<br>')}</td>
+                        <td style="text-align: right; font-weight: bold; color: white;">RM ${item.price.toFixed(3)}</td>
+                        <td style="text-align: center; color: var(--${changeClass}); font-weight: 800;">${changeSign}${changeVal !== undefined ? changeVal.toFixed(2) : '0.00'}%</td>
+                        <td style="text-align: right; color: ${pbColor}; font-weight: 700;">${pb !== null ? pb.toFixed(1) + '%' : '—'}</td>
+                        <td style="text-align: right;">
+                            <span style="color: #34d399; font-weight: 800; font-size: 0.95rem;">${item.touchCount || 0}x</span>
+                            <div style="font-size: 0.78rem; color: #94a3b8; font-weight: 600; margin-top: 0.2rem;">${floorPrice}</div>
+                        </td>
+                        <td style="text-align: right; color: #60a5fa; font-weight: 700;">${floorDist}</td>
+                        <td style="text-align: right;">
+                            <span style="color: ${(item.turnover||0) >= 2000000 ? '#f59e0b' : (item.turnover||0) >= 500000 ? '#34d399' : '#94a3b8'}; font-weight: 700; font-size: 0.82rem;">${(item.turnover||0) >= 1000000 ? 'RM ' + ((item.turnover||0)/1000000).toFixed(2) + 'M' : 'RM ' + ((item.turnover||0)/1000).toFixed(0) + 'k'}${(item.turnover||0) >= 2000000 ? ' 🔥' : ''}</span>
+                        </td>
+                        <td style="text-align: center; padding: 0.5rem 0.2rem;">
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.25rem;">
+                                <span style="color: ${tierColor}; font-weight: 800; font-size: 0.78rem;">${confidenceText}</span>
+                                <button onclick="triggerAIAnalysisModal('${item.name}', 'Hot Theme Rider')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.7rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                                     ✨ Tanya AI
                                 </button>
                             </div>
