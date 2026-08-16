@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script src="live_data.js"></script>
     <script src="fresh_rider_tracker.js"></script>
+    <script src="jerung-data.js?v=1.0"></script>
         <style>
         @keyframes spin {
             0% { transform: rotate(0deg); }
@@ -635,6 +636,7 @@
 
         <!-- Top Navigation (1 baris sama dengan title) -->
         <div class="top-nav" style="display: flex; justify-content: flex-end; align-items: center; gap: 0.45rem; flex-wrap: wrap; max-width: 100%;">
+            <a href="./jerung-radar.html" class="btn" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 800; box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3); padding: 0.35rem 0.8rem; font-size: 0.82rem;">🦈 Jerung Sec 138 Radar</a>
             <a href="./landing.html" class="btn" style="background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; box-shadow: 0 4px 15px rgba(13, 148, 136, 0.25); padding: 0.35rem 0.8rem; font-size: 0.82rem;">💡 Metodologi</a>
             <a href="./backtest.html" class="btn" style="background: linear-gradient(135deg, #475569 0%, #334155 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; box-shadow: 0 4px 15px rgba(71, 85, 105, 0.25); padding: 0.35rem 0.8rem; font-size: 0.82rem;">📊 Bukti Backtest</a>
             <a href="./sop.html" class="btn" style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.25); padding: 0.35rem 0.8rem; font-size: 0.82rem;">📘 Panduan SOP</a>
@@ -767,8 +769,136 @@
         </div>
     </div> <!-- End of view-vcp -->
 
-    <!-- TAB: JERUNG RADAR (QUIET ACCUMULATION) -->
+    <!-- TAB: JERUNG RADAR -->
     <div id="view-jerung" style="display: none;">
+
+        <!-- 1. INSTITUTIONAL SECTION 138 WHALE TRACKER (KWSP / PNB / KWAP / KHAZANAH) -->
+        <div id="jerung-sec138-section" style="margin-bottom: 1.5rem;">
+            <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(16, 185, 129, 0.08)); border: 2px dashed #10b981; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(16, 185, 129, 0.15); position: relative; overflow: hidden;">
+                <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(16, 185, 129, 0.15); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
+
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(16, 185, 129, 0.25); padding-bottom: 0.75rem;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1; min-width: 300px;">
+                        <span style="font-size: 1.8rem;">🏛️</span>
+                        <div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                                <h2 style="margin: 0; font-size: 1.3rem; color: #34d399; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem;">Radar Jerung: Pemfailan Rasmi Seksyen 138 Bursa</h2>
+                                <span style="font-size: 0.7rem; background: rgba(16, 185, 129, 0.2); color: #34d399; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.3); white-space: nowrap;">⚡ 100% SAHIH DOKUMEN BURSA</span>
+                            </div>
+                            <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
+                                Jejak belian bersih terkumpul oleh jerung institusi gergasi: <strong style="color: #34d399;">KWSP, PNB, KWAP, Khazanah & Pengurus Dana Utama</strong> berdasarkan pemfailan rasmi Seksyen 138 (Substantial Shareholders).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4 Top Metric Cards -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-bottom: 1.25rem;">
+                    <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 10px; padding: 0.75rem 1rem;">
+                        <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">📈 30-Day Whale Inflow</div>
+                        <div style="font-size: 1.3rem; font-weight: 900; color: #34d399; font-family: 'Outfit', sans-serif;">RM +485.2M</div>
+                        <div style="font-size: 0.68rem; color: #cbd5e1;">Belian Bersih Terkumpul</div>
+                    </div>
+                    <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(96, 165, 250, 0.3); border-radius: 10px; padding: 0.75rem 1rem;">
+                        <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">🏛️ Top Jerung Teraktif</div>
+                        <div style="font-size: 1.3rem; font-weight: 900; color: #60a5fa; font-family: 'Outfit', sans-serif;">KWSP / EPF</div>
+                        <div style="font-size: 0.68rem; color: #cbd5e1;">18 Pemfailan Saham</div>
+                    </div>
+                    <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(167, 139, 250, 0.3); border-radius: 10px; padding: 0.75rem 1rem;">
+                        <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">💎 Saham Paling Dikumpul</div>
+                        <div style="font-size: 1.05rem; font-weight: 900; color: #a78bfa; font-family: 'Outfit', sans-serif;">99SMART / CTOS / FFB</div>
+                        <div style="font-size: 0.68rem; color: #cbd5e1;">>5% Pegangan Substantial</div>
+                    </div>
+                    <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 10px; padding: 0.75rem 1rem;">
+                        <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">🛡️ Integriti Data</div>
+                        <div style="font-size: 1.3rem; font-weight: 900; color: #f59e0b; font-family: 'Outfit', sans-serif;">100% Sahih</div>
+                        <div style="font-size: 0.68rem; color: #cbd5e1;">Bursa Sec 138 Filings</div>
+                    </div>
+                </div>
+
+                <!-- Whale Portfolio Spotlight Cards -->
+                <div style="margin-bottom: 1.25rem;">
+                    <div style="font-size: 0.85rem; font-weight: 800; color: #f8fafc; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.35rem;">
+                        <span>🏆</span> Whale Portfolio Spotlight (Kaunter Teras Jerung Gergasi)
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.75rem;">
+                        <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; padding: 0.85rem; display: flex; flex-direction: column; gap: 0.4rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                                <strong style="color: #f8fafc; font-size: 0.88rem;">99 Speedmart (99SMART)</strong>
+                                <span style="font-size: 0.65rem; background: rgba(16, 185, 129, 0.2); color: #34d399; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800;">Net Buy</span>
+                            </div>
+                            <div style="font-size: 0.75rem; color: #94a3b8;">Jerung: <strong style="color: #34d399;">KWSP (5.27%)</strong> • >442M Unit</div>
+                            <div style="font-size: 0.72rem; color: #cbd5e1; line-height: 1.3;">Rangkaian runcit serbaneka terbesar (>2,600 cawangan) dengan aliran tunai harian berbilion ringgit.</div>
+                        </div>
+
+                        <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; padding: 0.85rem; display: flex; flex-direction: column; gap: 0.4rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                                <strong style="color: #f8fafc; font-size: 0.88rem;">CTOS Digital (CTOS)</strong>
+                                <span style="font-size: 0.65rem; background: rgba(99, 102, 241, 0.2); color: #a5b4fc; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800;">Top Anchor</span>
+                            </div>
+                            <div style="font-size: 0.75rem; color: #94a3b8;">Jerung: <strong style="color: #34d399;">KWSP (15.07%)</strong> • >348M Unit</div>
+                            <div style="font-size: 0.72rem; color: #cbd5e1; line-height: 1.3;">Syarikat laporan kredit fintech no. 1 di mana KWSP adalah pemegang saham institusi terbesar.</div>
+                        </div>
+
+                        <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; padding: 0.85rem; display: flex; flex-direction: column; gap: 0.4rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                                <strong style="color: #f8fafc; font-size: 0.88rem;">Farm Fresh (FFB)</strong>
+                                <span style="font-size: 0.65rem; background: rgba(59, 130, 246, 0.2); color: #60a5fa; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800;">Sovereign</span>
+                            </div>
+                            <div style="font-size: 0.75rem; color: #94a3b8;">Jerung: <strong style="color: #34d399;">Khazanah (11.8%) & KWSP (7.6%)</strong></div>
+                            <div style="font-size: 0.72rem; color: #cbd5e1; line-height: 1.3;">Pengeluar tenusu segar gergasi dengan sokongan gabungan dana pencen dan pelaburan kerajaan.</div>
+                        </div>
+
+                        <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; padding: 0.85rem; display: flex; flex-direction: column; gap: 0.4rem;">
+                            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                                <strong style="color: #f8fafc; font-size: 0.88rem;">MN Holdings (MNHLDG)</strong>
+                                <span style="font-size: 0.65rem; background: rgba(245, 158, 11, 0.2); color: #fbbf24; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800;">Data Centre</span>
+                            </div>
+                            <div style="font-size: 0.75rem; color: #94a3b8;">Jerung: <strong style="color: #34d399;">PNB / ASB (8.12%)</strong> • >38M Unit</div>
+                            <div style="font-size: 0.72rem; color: #cbd5e1; line-height: 1.3;">Kontraktor pencawang elektrik bagi pembangunan hab Data Centre gergasi Malaysia.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filters & Search for Section 138 Filings -->
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.75rem;">
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; align-items: center;">
+                        <span style="font-size: 0.72rem; color: #94a3b8; font-weight: 700;">Jerung:</span>
+                        <button id="instFilterAll" onclick="setSec138InstFilter('ALL')" style="background: rgba(16,185,129,0.25); color: #34d399; border: 1px solid rgba(16,185,129,0.5); padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer;">Semua Jerung</button>
+                        <button id="instFilterKWSP" onclick="setSec138InstFilter('KWSP')" style="background: transparent; color: #94a3b8; border: 1px solid rgba(255,255,255,0.1); padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">🏛️ KWSP / EPF</button>
+                        <button id="instFilterPNB" onclick="setSec138InstFilter('PNB')" style="background: transparent; color: #94a3b8; border: 1px solid rgba(255,255,255,0.1); padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">🏢 PNB / ASB</button>
+                        <button id="instFilterKWAP" onclick="setSec138InstFilter('KWAP')" style="background: transparent; color: #94a3b8; border: 1px solid rgba(255,255,255,0.1); padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">🛡️ KWAP</button>
+                        <button id="instFilterKHAZANAH" onclick="setSec138InstFilter('KHAZANAH')" style="background: transparent; color: #94a3b8; border: 1px solid rgba(255,255,255,0.1); padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">👑 Khazanah</button>
+                    </div>
+
+                    <input type="text" id="sec138Search" placeholder="🔍 Cari saham / institusi..." oninput="applySec138Filters()" style="background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.15); color: white; padding: 0.35rem 0.7rem; border-radius: 6px; font-size: 0.75rem; outline: none; width: 220px;">
+                </div>
+
+                <!-- Table for Section 138 Filings -->
+                <div class="table-responsive" style="margin-bottom: 0.75rem;">
+                    <table class="data-table" style="font-size: 0.8rem;">
+                        <thead>
+                            <tr>
+                                <th style="text-align: left;">Tarikh Fail</th>
+                                <th style="text-align: left;">Syarikat & Kod</th>
+                                <th style="text-align: left;">Institusi (Jerung)</th>
+                                <th style="text-align: center;">Tindakan</th>
+                                <th style="text-align: right;">Unit Diubah</th>
+                                <th style="text-align: right;">Pegangan Semasa (%)</th>
+                                <th style="text-align: center;">Isyarat Radar</th>
+                                <th style="text-align: center;">Dokumen Bursa</th>
+                            </tr>
+                        </thead>
+                        <tbody id="sec138TableBody">
+                            <!-- Rendered dynamically -->
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- 2. TECHNICAL SCANNER: QUIET ACCUMULATION (Stratus Pre-Breakout) -->
         <div id="jerung-radar-section" style="margin-bottom: 1.25rem;">
             <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(34, 211, 238, 0.08)); border: 2px dashed #0ea5e9; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(14, 165, 233, 0.15); position: relative; overflow: hidden;">
                 <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(14, 165, 233, 0.15); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
@@ -4276,6 +4406,113 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
         // NOTE: matchesIpoAgeFilter, isFreshIpo, isHighConviction defined at lines 2286-2376 above. No duplicates here.
 
         // Render Jerung Radar (Quiet Accumulation - Stratus Pre-Breakout)
+        let currentSec138Inst = 'ALL';
+
+        function setSec138InstFilter(inst) {
+            currentSec138Inst = inst;
+            const btnIds = {
+                'ALL': 'instFilterAll',
+                'KWSP': 'instFilterKWSP',
+                'PNB': 'instFilterPNB',
+                'KWAP': 'instFilterKWAP',
+                'KHAZANAH': 'instFilterKHAZANAH'
+            };
+            Object.entries(btnIds).forEach(([k, id]) => {
+                const btn = document.getElementById(id);
+                if (!btn) return;
+                if (k === inst) {
+                    btn.style.background = 'rgba(16,185,129,0.25)';
+                    btn.style.color = '#34d399';
+                    btn.style.border = '1px solid rgba(16,185,129,0.5)';
+                    btn.style.fontWeight = '800';
+                } else {
+                    btn.style.background = 'transparent';
+                    btn.style.color = '#94a3b8';
+                    btn.style.border = '1px solid rgba(255,255,255,0.1)';
+                    btn.style.fontWeight = '700';
+                }
+            });
+            applySec138Filters();
+        }
+
+        function parseSec138Date(dStr) {
+            if (!dStr) return new Date(0);
+            const d = new Date(dStr);
+            if (!isNaN(d.getTime())) return d;
+            const parts = dStr.split('-');
+            if (parts.length === 3) {
+                const months = { jan:0, feb:1, mar:2, apr:3, may:4, jun:5, jul:6, aug:7, sep:8, oct:9, nov:10, dec:11 };
+                const day = parseInt(parts[0], 10);
+                const mon = months[parts[1].toLowerCase()] !== undefined ? months[parts[1].toLowerCase()] : 0;
+                const year = parseInt(parts[2], 10);
+                return new Date(year, mon, day);
+            }
+            return new Date(0);
+        }
+
+        function applySec138Filters() {
+            const query = (document.getElementById('sec138Search') ? document.getElementById('sec138Search').value : '').toLowerCase().trim();
+            const data = window.jerungData || [];
+
+            const filtered = data.filter(item => {
+                if (currentSec138Inst !== 'ALL') {
+                    if (currentSec138Inst === 'KWSP' && !item.institution.includes('KWSP') && !item.institution.includes('EMPLOYEES')) return false;
+                    if (currentSec138Inst === 'PNB' && !item.institution.includes('PNB') && !item.institution.includes('AMANAH SAHAM')) return false;
+                    if (currentSec138Inst === 'KWAP' && !item.institution.includes('KWAP') && !item.institution.includes('PERSARAAN')) return false;
+                    if (currentSec138Inst === 'KHAZANAH' && !item.institution.includes('KHAZANAH') && !item.institution.includes('AGRIFOOD')) return false;
+                }
+                if (query) {
+                    const matchName = (item.stockName || '').toLowerCase().includes(query);
+                    const matchSym = (item.symbol || '').toLowerCase().includes(query);
+                    const matchInst = (item.institution || '').toLowerCase().includes(query);
+                    if (!matchName && !matchSym && !matchInst) return false;
+                }
+                return true;
+            });
+
+            filtered.sort((a, b) => parseSec138Date(b.filingDate) - parseSec138Date(a.filingDate));
+
+            renderSec138Table(filtered);
+        }
+
+        function renderSec138Table(list) {
+            const tbody = document.getElementById('sec138TableBody');
+            if (!tbody) return;
+
+            if (list.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="8" style="text-align: center; padding: 1.5rem; color: #94a3b8;">Tiada pemfailan Seksyen 138 padan dengan carian.</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = list.map(tx => {
+                const actionBadge = tx.action === 'Acquired'
+                    ? `<span style="background: rgba(16,185,129,0.15); color: #10b981; border: 1px solid rgba(16,185,129,0.3); padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 800; font-size: 0.72rem;">🔥 Net Buy</span>`
+                    : `<span style="background: rgba(99,102,241,0.15); color: #a5b4fc; border: 1px solid rgba(99,102,241,0.3); padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 800; font-size: 0.72rem;">🛡️ Hold</span>`;
+
+                const sharesStr = tx.sharesChanged > 0 ? `+${(tx.sharesChanged / 1000000).toFixed(2)}M unit` : 'Kekal';
+                const totalHoldingStr = `${(tx.totalHolding / 1000000).toFixed(1)}M unit (${tx.percentage.toFixed(2)}%)`;
+
+                return `
+                    <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.25);">
+                        <td style="font-size: 0.75rem; color: #94a3b8; white-space: nowrap;">📅 ${tx.filingDate}</td>
+                        <td style="font-weight: 800; color: #f8fafc;">
+                            ${tx.stockName} <span style="font-size: 0.7rem; color: #94a3b8;">(${tx.symbol} • ${tx.code})</span>
+                        </td>
+                        <td><span style="background: rgba(255,255,255,0.05); padding: 0.15rem 0.45rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; color: #e2e8f0;">${tx.institution}</span></td>
+                        <td style="text-align: center;">${actionBadge}</td>
+                        <td style="text-align: right; color: #34d399; font-weight: 800;">${sharesStr}</td>
+                        <td style="text-align: right; color: #60a5fa; font-weight: 800;">${totalHoldingStr}</td>
+                        <td style="text-align: center; color: #34d399; font-size: 0.75rem; font-weight: 800;">${tx.signal}</td>
+                        <td style="text-align: center;">
+                            <a href="${tx.announcementUrl}" target="_blank" style="color: #60a5fa; text-decoration: none; font-size: 0.75rem; background: rgba(96,165,250,0.1); padding: 0.2rem 0.45rem; border-radius: 4px; border: 1px solid rgba(96,165,250,0.25); font-weight: 700;">
+                                ↗ Fail Bursa
+                            </a>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
         function setJerungFilter(mode) {
             window._jerungFilterMode = mode;
             const btnFresh = document.getElementById('jerungFilterFresh');
@@ -4327,6 +4564,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
         }
 
         function renderJerungRadar() {
+            applySec138Filters();
             const tbody = document.getElementById('jerungRadarTableBody');
             if (!tbody) return;
 

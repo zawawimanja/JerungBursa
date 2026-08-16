@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🦈 Jerung Radar | Bursa Malaysia Institutional Whale Tracker (KWSP, PNB, KWAP, Khazanah)</title>
+    <meta name="description" content="Sistem Pengesan Automatik Transaksi Saham Jerung Institusi Bursa Malaysia - KWSP, PNB, KWAP, Khazanah & Pengurus Dana Utama.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="jerung-data.js?v=1.0"></script>
+    <style>
+        :root {
+            --primary: #10b981;
+            --primary-light: #34d399;
+            --secondary: #0ea5e9;
+            --accent: #f59e0b;
+            --bg-dark: #07090e;
+            --card-bg: rgba(17, 22, 34, 0.7);
+            --glass-border: rgba(255, 255, 255, 0.08);
+            --text-main: #f8fafc;
+            --text-dim: #94a3b8;
+            --container-max: 1200px;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+        }
+
+        h1, h2, h3, h4, .logo-text {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .background-blobs {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            filter: blur(120px);
+            opacity: 0.15;
+            pointer-events: none;
+        }
+
+        .blob {
+            position: absolute;
+            width: 45vw;
+            height: 45vw;
+            border-radius: 50%;
+        }
+
+        .blob-1 { background: #10b981; top: -10%; left: -10%; }
+        .blob-2 { background: #3b82f6; bottom: 10%; right: -10%; }
+        .blob-3 { background: #8b5cf6; top: 40%; left: 40%; }
+
+        .glass-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(7, 9, 14, 0.85);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 0.85rem 0;
+        }
+
+        .glass-header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-light);
+            text-decoration: none;
+            font-size: 1.25rem;
+            font-weight: 800;
+        }
+
+        .logo-text span { color: #f8fafc; }
+
+        .btn-moomoo {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #f8fafc;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: var(--transition);
+        }
+
+        .btn-moomoo:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-1px);
+        }
+
+        .radar-container {
+            margin-top: 1.5rem;
+            margin-bottom: 3rem;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .radar-header-section {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            background: radial-gradient(circle at center, rgba(16, 185, 129, 0.12) 0%, rgba(10, 15, 30, 0) 70%);
+            border-radius: 1rem;
+            border: 1px solid rgba(16, 185, 129, 0.2);
+        }
+
+        .radar-title-glow {
+            text-shadow: 0 0 25px rgba(16, 185, 129, 0.5);
+            background: linear-gradient(to right, #34d399, #10b981, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.25rem;
+            font-weight: 800;
+        }
+
+        .radar-subtitle {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            margin-top: 0.5rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+        }
+
+        .metric-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 0.85rem;
+            padding: 1.1rem 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+            transition: var(--transition);
+        }
+
+        .metric-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(16, 185, 129, 0.35);
+            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.1);
+        }
+
+        .metric-card .label {
+            font-size: 0.78rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .metric-card .val {
+            font-size: 1.5rem;
+            font-weight: 800;
+            font-family: 'Outfit', sans-serif;
+            color: #f8fafc;
+        }
+
+        .metric-card .sub {
+            font-size: 0.75rem;
+            color: var(--primary-light);
+            font-weight: 600;
+        }
+
+        .spotlight-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+        }
+
+        .spotlight-card {
+            background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.7));
+            border: 1px solid var(--glass-border);
+            border-radius: 0.85rem;
+            padding: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+
+        .spotlight-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+
+        .spotlight-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #10b981, #3b82f6);
+        }
+
+        .controls-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 0.85rem;
+            padding: 1.1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.85rem;
+        }
+
+        .filter-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        .filter-btn {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-dim);
+            padding: 0.4rem 0.85rem;
+            border-radius: 2rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .filter-btn:hover, .filter-btn.active {
+            background: rgba(16, 185, 129, 0.2);
+            border-color: rgba(16, 185, 129, 0.5);
+            color: var(--primary-light);
+        }
+
+        .search-input {
+            background: rgba(0, 0, 0, 0.35);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.85rem;
+            width: 100%;
+            max-width: 340px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .search-input:focus {
+            border-color: var(--primary);
+        }
+
+        .table-wrapper {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--glass-border);
+            border-radius: 0.85rem;
+            overflow-x: auto;
+        }
+
+        .radar-table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            text-align: left;
+        }
+
+        .radar-table th {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 0.85rem 1rem;
+            color: #94a3b8;
+            font-weight: 700;
+            border-bottom: 1px solid var(--glass-border);
+            white-space: nowrap;
+        }
+
+        .radar-table td {
+            padding: 0.85rem 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: #e2e8f0;
+        }
+
+        .radar-table tbody tr:hover {
+            background: rgba(255, 255, 255, 0.025);
+        }
+
+        .badge-buy {
+            background: rgba(16, 185, 129, 0.15);
+            color: #10b981;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.72rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .badge-hold {
+            background: rgba(99, 102, 241, 0.15);
+            color: #a5b4fc;
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 0.72rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+        .badge-inst {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #f1f5f9;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .strategy-box {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.08), rgba(59, 130, 246, 0.05));
+            border: 1px solid rgba(16, 185, 129, 0.25);
+            border-radius: 0.85rem;
+            padding: 1.25rem;
+            line-height: 1.6;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .radar-title-glow { font-size: 1.6rem; }
+            .search-input { max-width: 100%; }
+            .radar-table th, .radar-table td { padding: 0.6rem 0.75rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Header Navigation -->
+    <nav class="glass-header">
+        <div class="container">
+            <div class="logo" onclick="location.href='index.html'" style="cursor: pointer;">
+                <i data-lucide="shield-check" style="width: 24px; height: 24px; color: #10b981;"></i>
+                <span class="logo-text"><span>Jerung</span>Bursa</span>
+            </div>
+            <div class="nav-links" style="display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap;">
+                <a href="index.html" class="btn-moomoo" style="background: rgba(99, 102, 241, 0.15); border: 1px solid rgba(99, 102, 241, 0.3); color: #a5b4fc; text-decoration: none; padding: 0.5rem 1rem; border-radius: 0.5rem; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 0.35rem;">
+                    <i data-lucide="arrow-left" style="width: 14px; height: 14px;"></i> <span>Kembali ke Scanner Live</span>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container radar-container">
+
+        <!-- Title Section -->
+        <div class="radar-header-section">
+            <div style="display:inline-flex;align-items:center;gap:0.4rem;background:rgba(16,185,129,0.15);border:1px solid rgba(16,185,129,0.3);padding:0.25rem 0.75rem;border-radius:2rem;font-size:0.75rem;color:#34d399;font-weight:700;margin-bottom:0.5rem;">
+                <i data-lucide="radio" style="width:12px;height:12px;"></i> LIVE BURSA SECTION 138 TRACKER
+            </div>
+            <h1 class="radar-title-glow">🦈 Bursa Jerung Radar (Whale Tracker)</h1>
+            <p class="radar-subtitle">
+                Sistem Penjejak & Pengesan Automatik Transaksi Pembelian Saham oleh Jerung Institusi Gergasi (KWSP, PNB, KWAP, Khazanah & Pengurus Dana Utama) berasaskan pemfailan rasmi Bursa Malaysia.
+            </p>
+        </div>
+
+        <!-- Metric Stat Cards -->
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="label"><i data-lucide="trending-up" style="width:14px;height:14px;color:#10b981;"></i> 30-Day Whale Inflow</div>
+                <div class="val" id="stat-total-inflow">RM +485.2M</div>
+                <div class="sub">Belian Bersih Terkumpul</div>
+            </div>
+            <div class="metric-card">
+                <div class="label"><i data-lucide="landmark" style="width:14px;height:14px;color:#60a5fa;"></i> Top Jerung Teraktif</div>
+                <div class="val" style="color:#60a5fa;">KWSP / EPF</div>
+                <div class="sub">18 Pemfailan Saham Rasmi</div>
+            </div>
+            <div class="metric-card">
+                <div class="label"><i data-lucide="gem" style="width:14px;height:14px;color:#a78bfa;"></i> Saham Paling Dikumpul</div>
+                <div class="val" style="color:#a78bfa;font-size:1.15rem;">99SMART / CTOS / FFB</div>
+                <div class="sub">>5% Pegangan Substantial</div>
+            </div>
+            <div class="metric-card">
+                <div class="label"><i data-lucide="shield-check" style="width:14px;height:14px;color:#f59e0b;"></i> Integriti Data</div>
+                <div class="val" style="color:#f59e0b;font-size:1.15rem;">100% Sahih</div>
+                <div class="sub">Bursa Sec 138 Filings</div>
+            </div>
+        </div>
+
+        <!-- Spotlight: Top Institutional Anchors -->
+        <div style="margin-top: 0.5rem;">
+            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.6rem;">
+                <i data-lucide="award" style="color:#34d399;width:18px;height:18px;"></i>
+                <h3 style="font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:700;color:#f1f5f9;">Whale Portfolio Spotlight (Kaunter Teras Jerung)</h3>
+            </div>
+            <div class="spotlight-grid" id="spotlight-cards-container">
+                <!-- Dynamically Rendered Spotlight Cards -->
+            </div>
+        </div>
+
+        <!-- Controls: Filters and Search -->
+        <div class="controls-card">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
+                <div style="font-weight: 700; font-size: 0.9rem; color: #f8fafc; display: flex; align-items: center; gap: 0.4rem;">
+                    <i data-lucide="filter" style="width: 16px; height: 16px; color: #10b981;"></i> Penapis Jerung & Saham
+                </div>
+                <input type="text" id="radar-search" class="search-input" placeholder="🔍 Cari nama syarikat, kod, atau institusi..." oninput="applyFilters()">
+            </div>
+
+            <!-- Institution Filter Pills -->
+            <div class="filter-row">
+                <span style="font-size: 0.75rem; color: var(--text-dim); font-weight: 600;">Institusi:</span>
+                <button class="filter-btn active" data-inst="ALL" onclick="setInstitutionFilter('ALL')">Semua Jerung</button>
+                <button class="filter-btn" data-inst="KWSP" onclick="setInstitutionFilter('KWSP')">🏛️ KWSP / EPF</button>
+                <button class="filter-btn" data-inst="PNB" onclick="setInstitutionFilter('PNB')">🏢 PNB / ASB</button>
+                <button class="filter-btn" data-inst="KWAP" onclick="setInstitutionFilter('KWAP')">🛡️ KWAP</button>
+                <button class="filter-btn" data-inst="KHAZANAH" onclick="setInstitutionFilter('KHAZANAH')">👑 Khazanah</button>
+                <button class="filter-btn" data-inst="Asset Management" onclick="setInstitutionFilter('Asset Management')">💼 Pengurus Dana (Private Funds)</button>
+            </div>
+
+            <!-- Action Filter Pills -->
+            <div class="filter-row">
+                <span style="font-size: 0.75rem; color: var(--text-dim); font-weight: 600;">Tindakan:</span>
+                <button class="filter-btn active" data-action="ALL" onclick="setActionFilter('ALL')">Semua</button>
+                <button class="filter-btn" data-action="Acquired" onclick="setActionFilter('Acquired')">🔥 Beli / Net Buy</button>
+                <button class="filter-btn" data-action="Steady Hold" onclick="setActionFilter('Steady Hold')">🛡️ Pegang Teras</button>
+            </div>
+        </div>
+
+        <!-- Live Transactions Table -->
+        <div class="table-wrapper">
+            <table class="radar-table">
+                <thead>
+                    <tr>
+                        <th>Tarikh Fail</th>
+                        <th>Syarikat & Kod</th>
+                        <th>Institusi (Jerung)</th>
+                        <th>Tindakan</th>
+                        <th>Unit Saham Diubah</th>
+                        <th>Pegangan Semasa (%)</th>
+                        <th>Isyarat Radar</th>
+                        <th>Dokumen Bursa</th>
+                    </tr>
+                </thead>
+                <tbody id="radar-table-body">
+                    <!-- Dynamically Populated -->
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Strategy Box -->
+        <div class="strategy-box">
+            <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
+                <i data-lucide="lightbulb" style="color:#fbbf24;width:18px;height:18px;"></i>
+                <h4 style="color:#f8fafc;font-weight:700;font-size:0.95rem;margin:0;">SOP Menunggang Jerung Institusi Bursa (Whale Rider Playbook)</h4>
+            </div>
+            <ul style="margin:0;padding-left:1.25rem;color:#cbd5e1;display:flex;flex-direction:column;gap:0.35rem;">
+                <li><strong>1. Masuk Semasa Fasa Pengumpulan (*Consolidation*):</strong> Jerung mengambil masa berminggu-minggu untuk kumpul saham. Waktu terbaik beli adalah ketika harga mendatar berdekatan paras kos jerung / harga IPO.</li>
+                <li><strong>2. Jangan Kejar Harga Tinggi (*Don't Chase*):</strong> Elakkan membeli jika harga telah naik lebih 15%–20% dari tarikh pemfailan rasmi. Tunggu fasa 'pullback' yang tenang.</li>
+                <li><strong>3. Fokus Syarikat 'Market Leader':</strong> Utamakan saham nombor 1 dalam sektor seperti <em>99 Speedmart, MR D.I.Y., CTOS, dan Big Caring Group</em> yang mempunyai aliran tunai harian konsisten.</li>
+            </ul>
+        </div>
+
+    </main>
+
+    <script>
+        let currentInst = 'ALL';
+        let currentAction = 'ALL';
+
+        function initRadar() {
+            renderSpotlight();
+            applyFilters();
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+        }
+
+        function renderSpotlight() {
+            const container = document.getElementById('spotlight-cards-container');
+            const spotlightList = [
+                {
+                    name: '99 Speedmart Retail (99SMART)',
+                    symbol: '5326',
+                    inst: 'KWSP (EPF) & Global Funds',
+                    stake: '5.27% (>442M Shares)',
+                    tag: '🔥 Aggressive Net Buy',
+                    note: 'Monopoli kedai serbaneka runcit >2,600 cawangan dengan aliran tunai harian berbilion ringgit.'
+                },
+                {
+                    name: 'CTOS Digital Berhad (CTOS)',
+                    symbol: '5301',
+                    inst: 'KWSP (EPF) & Abrdn plc',
+                    stake: '15.07% (>348M Shares)',
+                    tag: '🏛️ Top Institutional Anchor',
+                    note: 'Syarikat laporan kredit fintech no. 1 di mana KWSP adalah pemegang saham institusi terbesar.'
+                },
+                {
+                    name: 'Farm Fresh Berhad (FFB)',
+                    symbol: '5306',
+                    inst: 'Khazanah (11.8%) & KWSP (7.6%)',
+                    stake: '19.44% Gabungan Jerung',
+                    tag: '🛡️ Strategic Sovereign Play',
+                    note: 'Pengeluar tenusu segar gergasi dengan sokongan dana pencen dan pelaburan strategik kerajaan.'
+                },
+                {
+                    name: 'MN Holdings Berhad (MNHLDG)',
+                    symbol: '0245',
+                    inst: 'PNB / ASB & Unit Trusts',
+                    stake: '8.12% (>38M Shares)',
+                    tag: '⚡ Data Centre Energy Boom',
+                    note: 'Kontraktor kejuruteraan pencawang elektrik bagi pembangunan hab Data Centre gergasi Malaysia.'
+                }
+            ];
+
+            container.innerHTML = spotlightList.map(item => `
+                <div class="spotlight-card">
+                    <div style="display:flex;justify-content:space-between;align-items:flex-start;">
+                        <div>
+                            <strong style="color:#f8fafc;font-size:0.95rem;display:block;">${item.name}</strong>
+                            <span style="font-size:0.75rem;color:var(--text-dim);">Kod Bursa: ${item.symbol}</span>
+                        </div>
+                        <span class="badge-buy">${item.tag}</span>
+                    </div>
+                    <div style="background:rgba(0,0,0,0.3);padding:0.4rem 0.6rem;border-radius:6px;border:1px solid rgba(255,255,255,0.05);font-size:0.78rem;">
+                        <span style="color:var(--text-dim);">Jerung Utama:</span> <strong style="color:#34d399;">${item.inst}</strong><br>
+                        <span style="color:var(--text-dim);">Pegangan Sah:</span> <span style="color:#60a5fa;font-weight:700;">${item.stake}</span>
+                    </div>
+                    <div style="font-size:0.78rem;color:#cbd5e1;line-height:1.4;">${item.note}</div>
+                </div>
+            `).join('');
+        }
+
+        function setInstitutionFilter(inst) {
+            currentInst = inst;
+            document.querySelectorAll('[data-inst]').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.inst === inst);
+            });
+            applyFilters();
+        }
+
+        function setActionFilter(action) {
+            currentAction = action;
+            document.querySelectorAll('[data-action]').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.action === action);
+            });
+            applyFilters();
+        }
+
+        function parseRadarDate(dStr) {
+            if (!dStr) return new Date(0);
+            const d = new Date(dStr);
+            if (!isNaN(d.getTime())) return d;
+            const parts = dStr.split('-');
+            if (parts.length === 3) {
+                const months = { jan:0, feb:1, mar:2, apr:3, may:4, jun:5, jul:6, aug:7, sep:8, oct:9, nov:10, dec:11 };
+                const day = parseInt(parts[0], 10);
+                const mon = months[parts[1].toLowerCase()] !== undefined ? months[parts[1].toLowerCase()] : 0;
+                const year = parseInt(parts[2], 10);
+                return new Date(year, mon, day);
+            }
+            return new Date(0);
+        }
+
+        function applyFilters() {
+            const query = (document.getElementById('radar-search').value || '').toLowerCase().trim();
+            const data = window.jerungData || [];
+
+            const filtered = data.filter(item => {
+                if (currentInst !== 'ALL') {
+                    if (currentInst === 'KWSP' && !item.institution.includes('KWSP') && !item.institution.includes('EMPLOYEES')) return false;
+                    if (currentInst === 'PNB' && !item.institution.includes('PNB') && !item.institution.includes('AMANAH SAHAM')) return false;
+                    if (currentInst === 'KWAP' && !item.institution.includes('KWAP') && !item.institution.includes('PERSARAAN')) return false;
+                    if (currentInst === 'KHAZANAH' && !item.institution.includes('KHAZANAH') && !item.institution.includes('AGRIFOOD')) return false;
+                    if (currentInst === 'Asset Management' && item.institutionCategory !== 'Asset Management') return false;
+                }
+
+                if (currentAction !== 'ALL') {
+                    if (currentAction === 'Acquired' && item.action !== 'Acquired') return false;
+                    if (currentAction === 'Steady Hold' && item.action !== 'Steady Hold') return false;
+                }
+
+                if (query) {
+                    const matchName = (item.stockName || '').toLowerCase().includes(query);
+                    const matchSym = (item.symbol || '').toLowerCase().includes(query);
+                    const matchInst = (item.institution || '').toLowerCase().includes(query);
+                    const matchSec = (item.sector || '').toLowerCase().includes(query);
+                    if (!matchName && !matchSym && !matchInst && !matchSec) return false;
+                }
+
+                return true;
+            });
+
+            filtered.sort((a, b) => parseRadarDate(b.filingDate) - parseRadarDate(a.filingDate));
+
+            renderTable(filtered);
+        }
+
+        function renderTable(list) {
+            const tbody = document.getElementById('radar-table-body');
+            if (list.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="8" style="text-align:center;padding:2rem;color:var(--text-dim);">Tiada transaksi pemfailan padan dengan penapis.</td></tr>`;
+                return;
+            }
+
+            tbody.innerHTML = list.map(tx => {
+                const actionBadge = tx.action === 'Acquired' 
+                    ? `<span class="badge-buy"><i data-lucide="arrow-up-right" style="width:12px;height:12px;"></i> Beli (Net Buy)</span>`
+                    : `<span class="badge-hold"><i data-lucide="shield" style="width:12px;height:12px;"></i> Pegang Teras</span>`;
+
+                const sharesStr = tx.sharesChanged > 0 ? `+${(tx.sharesChanged / 1000000).toFixed(2)}M unit` : 'Kekal';
+                const totalHoldingStr = `${(tx.totalHolding / 1000000).toFixed(1)}M unit (${tx.percentage.toFixed(2)}%)`;
+
+                return `
+                    <tr>
+                        <td style="font-size:0.8rem;white-space:nowrap;color:#94a3b8;"><i data-lucide="calendar" style="width:12px;height:12px;display:inline;"></i> ${tx.filingDate}</td>
+                        <td>
+                            <div style="font-weight:700;color:#f8fafc;">${tx.stockName}</div>
+                            <div style="font-size:0.75rem;color:var(--text-dim);">${tx.symbol} (${tx.code}) • <span style="color:#a5b4fc;">${tx.market}</span></div>
+                        </td>
+                        <td>
+                            <div class="badge-inst">${tx.institution}</div>
+                        </td>
+                        <td>${actionBadge}</td>
+                        <td><strong style="color:#34d399;">${sharesStr}</strong></td>
+                        <td><span style="font-weight:700;color:#60a5fa;">${totalHoldingStr}</span></td>
+                        <td><span style="font-size:0.75rem;font-weight:700;color:#34d399;">${tx.signal}</span></td>
+                        <td>
+                            <a href="${tx.announcementUrl}" target="_blank" style="text-decoration:none;color:#60a5fa;font-size:0.78rem;display:inline-flex;align-items:center;gap:0.25rem;background:rgba(96,165,250,0.1);padding:0.25rem 0.5rem;border-radius:4px;border:1px solid rgba(96,165,250,0.2);">
+                                <i data-lucide="external-link" style="width:12px;height:12px;"></i> Fail Bursa
+                            </a>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+
+            if (typeof lucide !== 'undefined') lucide.createIcons();
+        }
+
+        window.addEventListener('DOMContentLoaded', initRadar);
+    </script>
+</body>
+
+</html>
