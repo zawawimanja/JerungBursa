@@ -4839,6 +4839,17 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 const sym = (j.symbol || '').toUpperCase();
                 if (sym && !jerungBySymbol[sym]) jerungBySymbol[sym] = j;
             }
+            // Alias: Nama scanner yang panjang → symbol pendek jerung
+            const _S2J = {
+                '99SPEEDMARTRETAIL': '99SMART', '99SPEEDMART': '99SMART',
+                'FARMFRESHBERHAD': 'FFB', 'FARMFRESH': 'FFB',
+                'MRDIYGROUPM': 'MRDIY', 'MRDIYGROUP': 'MRDIY',
+                'CTOSDIGITAL': 'CTOS', 'KEYFIELDINTL': 'KEYFIELD', 'KEYFIELDINTERNATIONAL': 'KEYFIELD',
+                'SKYCHIPBERHAD': 'SKYECHIP', 'SRKKAIBER': 'SRKK', 'SRKKAI': 'SRKK',
+                'ELRIDGEENERGY': 'ELRIDGE', 'PENTECHBERHAD': 'PENTECH',
+                'MNHOLDINGS': 'MNHLDG', 'MNHOLDINGSBERHAD': 'MNHLDG',
+                'ISFGROUP': 'ISF', 'ISFGROUPBERHAD': 'ISF'
+            };
 
             for (const p of picks) {
                 const tight = typeof p.closeTightness === 'number' ? p.closeTightness : 99;
@@ -4847,9 +4858,18 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 // VDU: volumeDecline === true ATAU volumeSpike < 0.5 (jualan kering), MESTI ada kecairan minima
                 const isVdu = (p.volumeDecline === true || ((p.volumeSpike || 99) < 0.5)) && (p.turnover || 0) >= 200000;
                 
-                // Semak Sokongan Jerung Institusi (Seksyen 138) — padanan TEPAT guna symbol
-                const nameUpper = (p.name || '').toUpperCase().replace(/\s+/g, '');
-                const whaleMatch = jerungBySymbol[nameUpper] || null;
+                // Semak Sokongan Jerung Institusi (Seksyen 138) — padanan berlapis
+                const nameRaw = (p.name || '').toUpperCase().replace(/\s+/g, '');
+                const aliasKey = _S2J[nameRaw] || nameRaw;
+                let whaleMatch = jerungBySymbol[aliasKey] || jerungBySymbol[nameRaw] || null;
+                // Fallback: cari padanan separa guna stockId jerung
+                if (!whaleMatch) {
+                    const nameLower = nameRaw.toLowerCase();
+                    for (const j of jerungList) {
+                        const jSym = (j.symbol || '').toUpperCase();
+                        if (nameLower.includes(jSym.toLowerCase()) || jSym.toUpperCase() === nameRaw) { whaleMatch = j; break; }
+                    }
+                }
 
                 p._isWhaleBacked = !!whaleMatch;
                 p._whaleInst = whaleMatch ? whaleMatch.institution : '';
