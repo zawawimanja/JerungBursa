@@ -410,15 +410,15 @@ function buildMessage(now, out) {
         for (const s of fr.list) {
             const badge = s.badge ? s.badge + ' ' : '';
             const floorTxt = s.floorDist != null ? ` · lantai ${s.floorDist.toFixed(1)}%` : '';
-            const entryTxt = s.inTracker ? '📌 DAH TRACKED' : '🔵 ENTRY BARU';
+            const entryTxt = s.inTracker ? '🟢 MASIH LAYAK' : '🆕 SIGNAL BARU';
             lines.push(`   ${badge}${s.name} RM${fmtPrice(s.price)} (${fmtPct(s.changePct)}) · pullback ${fmtPlain(s.pullback)}${floorTxt} · SL RM${fmtPrice(s.sl)} ${entryTxt}`);
         }
     }
     if (fr.newCount > 0 || fr.reentryCount > 0) lines.push(`   ➕ ${fr.newCount} baru / ${fr.reentryCount} re-entry`);
     const frNew = fr.list.filter(s => !s.inTracker);
     lines.push(frNew.length
-        ? `   🔵 Akan direkod dalam live tracker: ${frNew.map(s => s.name).join(', ')}`
-        : '   📌 Semua dah dalam tracker — tiada entry tracker baru hari ini');
+        ? `   🆕 First time qualify hari ini: ${frNew.map(s => s.name).join(', ')}`
+        : '   🟢 Semua masih layak entry — tiada signal baru');
     lines.push('');
 
     // ---- Hot Theme ----
@@ -431,15 +431,15 @@ function buildMessage(now, out) {
             const badge = s.badge ? s.badge + ' ' : '';
             const triple = s.confluence >= 3 ? 'TRIPLE' : 'DOUBLE';
             const floorTxt = s.floorDist != null ? ` · lantai ${s.floorDist.toFixed(1)}%` : '';
-            const entryTxt = s.inTracker ? '📌 DAH TRACKED' : '🔵 ENTRY BARU';
+            const entryTxt = s.inTracker ? '🟢 MASIH LAYAK' : '🆕 SIGNAL BARU';
             lines.push(`   ${badge}${s.name} RM${fmtPrice(s.price)} (${fmtPct(s.changePct)}) · ${triple} (${s.confluence}) · pullback ${fmtPlain(s.pullback)}${floorTxt} · SL RM${fmtPrice(s.sl)} ${entryTxt}`);
         }
     }
     if (ht.newCount > 0 || ht.reentryCount > 0) lines.push(`   ➕ ${ht.newCount} baru / ${ht.reentryCount} re-entry`);
     const htNew = ht.list.filter(s => !s.inTracker);
     lines.push(htNew.length
-        ? `   🔵 Akan direkod dalam live tracker: ${htNew.map(s => s.name).join(', ')}`
-        : '   📌 Semua dah dalam tracker — tiada entry tracker baru hari ini');
+        ? `   🆕 First time qualify hari ini: ${htNew.map(s => s.name).join(', ')}`
+        : '   🟢 Semua masih layak entry — tiada signal baru');
     lines.push('');
 
     // ---- SL warning ----
@@ -452,6 +452,12 @@ function buildMessage(now, out) {
     }
 
     lines.push(`Trackers: FR ${out.frTracked} unik / HT ${out.htTracked} unik`);
+    lines.push('');
+    lines.push('📖 CARA BACA:');
+    lines.push('🆕 SIGNAL BARU — first time qualify hari ini. Tracker baru mula monitor. Peluang awal.');
+    lines.push('🟢 MASIH LAYAK — kaunter masih qualify (rules pass). Boleh entry bila-bila sebelum 5pm.');
+    lines.push('⚠️ SL WARNING — posisi bawah trailing stop. Pertimbang keluar.');
+    lines.push('');
     lines.push('Dijana oleh buy_alert.js · JerungBursa');
     return lines.join('\n');
 }
