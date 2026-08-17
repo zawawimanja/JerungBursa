@@ -4989,6 +4989,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 if (pb > 10.0) continue;
                 const tight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
                 if (tight > 5.0) continue;
+                if (!isCSMerah(item)) continue;
 
                 picks.push(item);
             }
@@ -5274,10 +5275,17 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
         window.renderFreshRiderTracker = renderFreshRiderTracker;
 
         // Helper: adakah item masih qualify Hot Theme Rider? (semak sama macam renderHotTheme)
+        // CS MERAH = squeeze ON (volum senyap, fasa accumulation sebelum breakout).
+        // CS HIJAU = volum spike >=1.5x (breakout/expansion). Gaya entry: beli masa CS MERAH sahaja.
+        function isCSMerah(item) {
+            return !(item && item.hasVolumeSpike === true && (item.volumeSpike || 0) >= 1.5);
+        }
+
         function qualifiesHotTheme(item) {
             if (!item || !item.name || item.price <= 0 || item.price > 10.0) return false;
             if (!passesGlobalFilters(item)) return false;
             if (isSleepingOrAvoidStock(item) || item.isCombStock) return false;
+            if (!isCSMerah(item)) return false;
             if (getHotThemes(item.name).length === 0) return false;
             let count = 0;
             if (passesJerungRadar(item)) count++;
@@ -5391,6 +5399,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             if (pb > 10.0) return false;
             const tight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
             if (tight > 5.0) return false;
+            if (!isCSMerah(item)) return false;
             return true;
         }
 
@@ -5508,7 +5517,8 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 && item.signal !== 'avoid' && !item.isCombStock
                 && (item.ipoYear || 0) >= 2025
                 && (item.pullback !== null && item.pullback !== undefined ? item.pullback : 99) <= 10
-                && (typeof item.closeTightness === 'number' ? item.closeTightness : 99) <= 5.0;
+                && (typeof item.closeTightness === 'number' ? item.closeTightness : 99) <= 5.0
+                && isCSMerah(item);
         }
 
         // Render VVIP Confluence Radar asal (Double & Triple Confluence, 2+ daripada 5 strategi)
@@ -5698,7 +5708,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 const htFilter = window._hotThemeFilterMode || 'all';
                 if (htFilter === 'triple_only' && matches.length < 3) continue;
 
-                if (matches.length >= 2) {
+                if (matches.length >= 2 && isCSMerah(item)) {
                     picks.push({ item, themes, count: matches.length, matches });
                 }
             }

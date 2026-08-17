@@ -34,7 +34,8 @@ function canonName(name) {
 function isFreshRiderPick(item) {
     return item.isVvip === true && item.signal !== 'avoid' && !item.isCombStock
         && (item.ipoYear || 0) >= 2025 && (item.pullback ?? 99) <= 10 && (item.closeTightness ?? 99) <= 5.0
-        && item.price >= 0.10 && item.price <= 50;
+        && item.price >= 0.10 && item.price <= 50
+        && item.hasVolumeSpike !== true; // CS MERAH sahaja — buang entry hari volum spike (breakout/expansion)
 }
 
 // ---- Hari dagangan sebenar (buang snapshot hujung minggu) ----

@@ -124,6 +124,7 @@ function isHotThemePick(item) {
     if (isSleepingOrAvoidStock(item) || item.isCombStock) return false;
     const themes = getHotThemes(item.name);
     if (themes.length === 0) return false;
+    if (item.hasVolumeSpike === true) return false; // CS MERAH sahaja — buang entry hari volum spike (breakout/expansion)
     return confluenceCount(item) >= 2;
 }
 

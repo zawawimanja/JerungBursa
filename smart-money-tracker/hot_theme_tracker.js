@@ -1,17 +1,17 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-08-17T09:04:09.508Z",
+  "generatedAt": "2026-08-17T09:09:33.892Z",
   "dataDays": 60,
-  "totalTracked": 27,
-  "openCount": 20,
+  "totalTracked": 24,
+  "openCount": 17,
   "closedCount": 7,
   "closedWins": 5,
   "closedWinRate": 71,
   "closedAvgGain": 22.1,
-  "openPnl": 234.9,
+  "openPnl": 232.1,
   "closedPnl": 154.4,
-  "totalPnlNow": 389.3
+  "totalPnlNow": 386.5
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -448,63 +448,24 @@ window.HOT_THEME_TRACKER = {
  "themeTrend": "FLAT/FALLING",
  "trades": [
   {
-   "name": "ATECH",
-   "entryDate": "2026-08-17",
-   "entry": 0.815,
-   "entryFloor": 0.7,
-   "currentFloor": 0.7,
-   "currentPrice": 0.815,
-   "high": 0.815,
-   "highDate": "2026-08-17",
-   "maxGain": 0,
-   "finalGain": 0,
-   "days": 1,
-   "lastDate": "2026-08-17",
-   "status": "OPEN",
-   "themes": [
-    "Semiconductor"
-   ],
-   "confluence": 2
-  },
-  {
-   "name": "CRPMATE",
-   "entryDate": "2026-08-14",
-   "entry": 0.23,
-   "entryFloor": 0.2,
-   "currentFloor": 0.20000000298023224,
-   "currentPrice": 0.23999999463558197,
-   "high": 0.23999999463558197,
-   "highDate": "2026-08-17",
-   "maxGain": 4.3,
-   "finalGain": 4.3,
-   "days": 2,
-   "lastDate": "2026-08-17",
-   "status": "OPEN",
-   "themes": [
-    "Semiconductor"
-   ],
-   "confluence": 2,
-   "slTrail": 0.194
-  },
-  {
-   "name": "MSC",
-   "entryDate": "2026-08-13",
-   "entry": 2.01,
-   "entryFloor": 1.93,
-   "currentFloor": 1.93,
-   "currentPrice": 1.98,
-   "high": 2.01,
+   "name": "PENTECH",
+   "entryDate": "2026-08-07",
+   "entry": 0.29,
+   "entryFloor": 0.26,
+   "currentFloor": 0.2750000059604645,
+   "currentPrice": 0.29499998688697815,
+   "high": 0.3100000023841858,
    "highDate": "2026-08-13",
-   "maxGain": 0,
-   "finalGain": -1.5,
-   "days": 3,
+   "maxGain": 6.9,
+   "finalGain": 1.7,
+   "days": 7,
    "lastDate": "2026-08-17",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 2,
-   "slTrail": 1.872
+   "slTrail": 0.267
   },
   {
    "name": "NEXGRAM",
@@ -525,26 +486,6 @@ window.HOT_THEME_TRACKER = {
    ],
    "confluence": 2,
    "slTrail": 0.96
-  },
-  {
-   "name": "PENTECH",
-   "entryDate": "2026-08-05",
-   "entry": 0.29,
-   "entryFloor": 0.26,
-   "currentFloor": 0.2750000059604645,
-   "currentPrice": 0.29499998688697815,
-   "high": 0.3100000023841858,
-   "highDate": "2026-08-13",
-   "maxGain": 6.9,
-   "finalGain": 1.7,
-   "days": 9,
-   "lastDate": "2026-08-17",
-   "status": "OPEN",
-   "themes": [
-    "Semiconductor"
-   ],
-   "confluence": 2,
-   "slTrail": 0.267
   },
   {
    "name": "FRONTKN",
