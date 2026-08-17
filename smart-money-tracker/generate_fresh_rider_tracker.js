@@ -37,9 +37,22 @@ function isFreshRiderPick(item) {
         && item.price >= 0.10 && item.price <= 50;
 }
 
+// ---- Hari dagangan sebenar (buang snapshot hujung minggu) ----
+// Snapshot Sabtu/Ahad wujud bila scraper jalan manual/luar waktu — ia cuma
+// data stale hari dagangan terakhir. Tanpa filter ini, entry direkod pada
+// hari pasaran tutup (cth. MTTSL "entry 2-Ogos-Ahad" sedangkan sepatutnya 3-Ogos-Isnin).
+function isTradingDay(dateStr) {
+    const d = new Date(dateStr);
+    if (isNaN(d.getTime())) return false;
+    const wd = d.getDay();
+    return wd !== 0 && wd !== 6; // bukan Ahad (0) / Sabtu (6)
+}
+
 // ---- Kumpul semua hari (history + live_data.json sebagai hari terkini) ----
 const files = fs.readdirSync(HIST_DIR).filter(f => /^data_.*\.json$/.test(f))
-    .filter(f => fs.statSync(path.join(HIST_DIR, f)).size > 100000).sort();
+    .filter(f => fs.statSync(path.join(HIST_DIR, f)).size > 100000)
+    .filter(f => isTradingDay(f.replace('data_', '').replace('.json', '')))
+    .sort();
 
 const dayList = [];
 for (const f of files) {
@@ -52,7 +65,7 @@ if (fs.existsSync(liveFile)) {
     try {
         const live = JSON.parse(fs.readFileSync(liveFile, 'utf8'));
         const today = (live.lastUpdated || '').slice(0, 10);
-        if (today && (!dayList.length || dayList[dayList.length - 1].date !== today)) {
+        if (today && isTradingDay(today) && (!dayList.length || dayList[dayList.length - 1].date !== today)) {
             dayList.push({ date: today, rows: live.topVolume || [], isLive: true });
         }
     } catch (e) { /* abaikan */ }

@@ -127,8 +127,21 @@ function isHotThemePick(item) {
     return confluenceCount(item) >= 2;
 }
 
+// ---- Hari dagangan sebenar (buang snapshot hujung minggu) ----
+// Snapshot Sabtu/Ahad wujud bila scraper jalan manual/luar waktu — ia cuma
+// data stale hari dagangan terakhir. Tanpa filter ini, entry direkod pada
+// hari pasaran tutup.
+function isTradingDay(dateStr) {
+    const d = new Date(dateStr);
+    if (isNaN(d.getTime())) return false;
+    const wd = d.getDay();
+    return wd !== 0 && wd !== 6; // bukan Ahad (0) / Sabtu (6)
+}
+
 // ---- Load history ----
-const files = fs.readdirSync(HIST_DIR).filter(f => /^data_.*\.json$/.test(f)).sort();
+const files = fs.readdirSync(HIST_DIR).filter(f => /^data_.*\.json$/.test(f))
+    .filter(f => isTradingDay(f.replace('data_', '').replace('.json', '')))
+    .sort();
 const allData = {};
 for (const f of files) {
     let d; try { d = JSON.parse(fs.readFileSync(path.join(HIST_DIR, f), 'utf8')); } catch (e) { continue; }
@@ -150,7 +163,7 @@ if (fs.existsSync(liveFile)) {
 const dayList = dates.map(d => ({ date: d, rows: Object.values(allData[d]) }));
 if (liveData && liveData.topVolume) {
     const today = (liveData.lastUpdated || '').slice(0, 10);
-    if (today && (!dayList.length || dayList[dayList.length - 1].date !== today)) {
+    if (today && isTradingDay(today) && (!dayList.length || dayList[dayList.length - 1].date !== today)) {
         dayList.push({ date: today, rows: liveData.topVolume, isLive: true });
     }
 }

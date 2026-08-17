@@ -1,8 +1,8 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-08-17T07:32:24.935Z",
-  "dataDays": 62,
+  "generatedAt": "2026-08-17T08:33:01.577Z",
+  "dataDays": 60,
   "totalTracked": 27,
   "openCount": 21,
   "closedCount": 6,
@@ -16,11 +16,11 @@ window.HOT_THEME_TRACKER = {
  "backtest": {
   "dataStart": "2026-05-25",
   "dataEnd": "2026-08-17",
-  "dataDays": 62,
+  "dataDays": 60,
   "signals": 23,
   "winRate": 83,
-  "avgGain": 11.9,
-  "totalPnl": 274.3,
+  "avgGain": 11.8,
+  "totalPnl": 271.2,
   "worstLoss": -12
  },
  "themeStrength": [
@@ -60,39 +60,32 @@ window.HOT_THEME_TRACKER = {
    "ma5": 16.9
   },
   {
-   "date": "2026-05-30",
-   "themePct": 0,
-   "themeCount": 0,
-   "totalCount": 2,
-   "ma5": 10.7
-  },
-  {
    "date": "2026-06-01",
    "themePct": 0,
    "themeCount": 2,
    "totalCount": 15,
-   "ma5": 6.7
+   "ma5": 10.7
   },
   {
    "date": "2026-06-02",
    "themePct": 0,
    "themeCount": 37,
    "totalCount": 273,
-   "ma5": 3.7
+   "ma5": 6.7
   },
   {
    "date": "2026-06-03",
    "themePct": 35.8,
    "themeCount": 38,
    "totalCount": 275,
-   "ma5": 8.9
+   "ma5": 10.8
   },
   {
    "date": "2026-06-04",
    "themePct": 38.2,
    "themeCount": 38,
    "totalCount": 275,
-   "ma5": 14.8
+   "ma5": 16.5
   },
   {
    "date": "2026-06-05",
@@ -375,39 +368,32 @@ window.HOT_THEME_TRACKER = {
    "ma5": 27.4
   },
   {
-   "date": "2026-08-02",
-   "themePct": 29.9,
-   "themeCount": 40,
-   "totalCount": 287,
-   "ma5": 29.8
-  },
-  {
    "date": "2026-08-03",
    "themePct": 32.8,
    "themeCount": 39,
    "totalCount": 285,
-   "ma5": 32.6
+   "ma5": 30.4
   },
   {
    "date": "2026-08-04",
    "themePct": 21.1,
    "themeCount": 38,
    "totalCount": 285,
-   "ma5": 29.8
+   "ma5": 30.8
   },
   {
    "date": "2026-08-05",
    "themePct": 28,
    "themeCount": 39,
    "totalCount": 284,
-   "ma5": 29.2
+   "ma5": 29.4
   },
   {
    "date": "2026-08-06",
    "themePct": 15.8,
    "themeCount": 40,
    "totalCount": 289,
-   "ma5": 25.5
+   "ma5": 26.4
   },
   {
    "date": "2026-08-07",
@@ -570,7 +556,7 @@ window.HOT_THEME_TRACKER = {
    "highDate": "2026-08-11",
    "maxGain": 6,
    "finalGain": 6,
-   "days": 4,
+   "days": 3,
    "lastDate": "2026-08-11",
    "status": "OPEN",
    "themes": [
@@ -590,7 +576,7 @@ window.HOT_THEME_TRACKER = {
    "highDate": "2026-07-21",
    "maxGain": 1.9,
    "finalGain": -1.3,
-   "days": 23,
+   "days": 22,
    "lastDate": "2026-08-17",
    "status": "OPEN",
    "themes": [
@@ -610,7 +596,7 @@ window.HOT_THEME_TRACKER = {
    "highDate": "2026-08-17",
    "maxGain": 26.8,
    "finalGain": 26.8,
-   "days": 25,
+   "days": 24,
    "lastDate": "2026-08-17",
    "status": "OPEN",
    "themes": [
@@ -630,7 +616,7 @@ window.HOT_THEME_TRACKER = {
    "highDate": "2026-07-06",
    "maxGain": 0,
    "finalGain": -4,
-   "days": 31,
+   "days": 30,
    "lastDate": "2026-08-17",
    "status": "OPEN",
    "themes": [
@@ -650,7 +636,7 @@ window.HOT_THEME_TRACKER = {
    "highDate": "2026-08-12",
    "maxGain": 12.4,
    "finalGain": 9.1,
-   "days": 39,
+   "days": 38,
    "lastDate": "2026-08-17",
    "status": "OPEN",
    "themes": [
@@ -731,7 +717,7 @@ window.HOT_THEME_TRACKER = {
    "highDate": "2026-08-06",
    "maxGain": 13.3,
    "finalGain": 9.3,
-   "days": 53,
+   "days": 52,
    "lastDate": "2026-08-17",
    "status": "OPEN",
    "themes": [
@@ -751,7 +737,7 @@ window.HOT_THEME_TRACKER = {
    "highDate": "2026-08-11",
    "maxGain": 40.1,
    "finalGain": 35.7,
-   "days": 53,
+   "days": 52,
    "lastDate": "2026-08-17",
    "status": "OPEN",
    "themes": [
@@ -771,7 +757,7 @@ window.HOT_THEME_TRACKER = {
    "highDate": "2026-08-17",
    "maxGain": 17.2,
    "finalGain": 17.2,
-   "days": 53,
+   "days": 52,
    "lastDate": "2026-08-17",
    "status": "OPEN",
    "themes": [
@@ -791,7 +777,7 @@ window.HOT_THEME_TRACKER = {
    "highDate": "2026-08-06",
    "maxGain": 26.6,
    "finalGain": 20.6,
-   "days": 53,
+   "days": 52,
    "lastDate": "2026-08-17",
    "status": "OPEN",
    "themes": [
@@ -811,7 +797,7 @@ window.HOT_THEME_TRACKER = {
    "highDate": "2026-08-13",
    "maxGain": 13.8,
    "finalGain": 11,
-   "days": 53,
+   "days": 52,
    "lastDate": "2026-08-17",
    "status": "OPEN",
    "themes": [
@@ -831,7 +817,7 @@ window.HOT_THEME_TRACKER = {
    "highDate": "2026-08-17",
    "maxGain": 5.7,
    "finalGain": 5.7,
-   "days": 53,
+   "days": 52,
    "lastDate": "2026-08-17",
    "status": "OPEN",
    "themes": [
@@ -851,7 +837,7 @@ window.HOT_THEME_TRACKER = {
    "highDate": "2026-07-09",
    "maxGain": 1.2,
    "finalGain": 0,
-   "days": 53,
+   "days": 52,
    "lastDate": "2026-08-17",
    "status": "OPEN",
    "themes": [
