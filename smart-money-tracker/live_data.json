@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-17T05:29:55.648Z",
+  "lastUpdated": "2026-08-17T06:02:16.489Z",
   "source": "klse.i3investor.com",
   "topVolume": [
     {
@@ -10166,8 +10166,8 @@
       "price": 0.20499999821186066,
       "change": -0.004999995231628418,
       "changePct": -2.38,
-      "turnover": 32820.49971371889,
-      "volume": 160100,
+      "turnover": 27059.999763965607,
+      "volume": 132000,
       "signal": "avoid",
       "reason": "⚠️ Below IPO Price: Failed IPO Base (Price RM 0.205 < IPO RM 0.250)",
       "high52": 0.26499998569488525,
@@ -10192,7 +10192,7 @@
       "wentUnderwater": true,
       "firstDayOpenPrice": 0.25,
       "avgVolume20": 1024110,
-      "volumeSpike": 0.16,
+      "volumeSpike": 0.13,
       "hasVolumeSpike": false,
       "ipoAge": 593,
       "isStaircaseIpo": false,
