@@ -5279,6 +5279,9 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             if (passesTrendRiders(item)) count++;
             if (passesEarlySpring(item)) count++;
             if (passesBottomFishing(item)) count++;
+            // Konsisten dengan list Hot Theme di atas: ikut toggle TRIPLE filter juga
+            const htFilter = window._hotThemeFilterMode || 'all';
+            if (htFilter === 'triple_only' && count < 3) return false;
             return count >= 2;
         }
 
