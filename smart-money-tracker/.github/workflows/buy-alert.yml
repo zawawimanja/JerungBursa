@@ -1,0 +1,39 @@
+name: BUY Alert 4:30 PM
+
+# Kirim senarai "saham patut beli" (Fresh Rider + Hot Theme) ke Telegram
+# setiap hari dagangan ~4:30 petang MYT — sebelum market tutup 5:00pm.
+#
+# Nota: GitHub Actions cron ada delay (biasanya 1-10 minit, boleh sampai 15).
+# 8:30 UTC = 4:30 PM MYT. Kalau nak sampai lebih awal sebelum closing call
+# auction (4:45pm), tukar ke '20 8 * * 1-5' (4:20 PM MYT).
+#
+# Setup Telegram (sekali sahaja, di repo Settings > Secrets and variables):
+#   TELEGRAM_BOT_TOKEN — token bot dari @BotFather
+#   TELEGRAM_CHAT_ID   — chat ID awak (cara dapat: mesej bot, then
+#                         https://api.telegram.org/bot<TOKEN>/getUpdates)
+# Tanpa dua secret ini, workflow tetap jalan tapi tiada notification
+# (mesej cuma dalam log Actions + buy_alert_latest.json).
+
+on:
+  schedule:
+    - cron: '30 8 * * 1-5'   # 8:30 UTC = 4:30 PM Malaysia, Isnin-Jumaat
+  workflow_dispatch:         # Butang 'Run workflow' di GitHub utk uji manual
+
+jobs:
+  alert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Run Buy Alert (harga live + list FR/HT + Telegram)
+        run: node buy_alert.js
+        working-directory: smart-money-tracker
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}

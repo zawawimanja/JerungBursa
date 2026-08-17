@@ -1,0 +1,4 @@
+# Kredential tempatan (Telegram token, chat id) — JANGAN commit
+.env
+# Output janaan buy_alert.js setiap run
+buy_alert_latest.json
