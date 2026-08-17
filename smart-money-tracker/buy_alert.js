@@ -224,29 +224,15 @@ function applyYahooBar(item, bars, prevClose) {
         item.change = +(item.price - prevClose).toFixed(4);
         item.changePct = +(((item.price - prevClose) / prevClose) * 100).toFixed(2);
     }
-    item.volume = last.volume || 0;
-    item.turnover = +(item.price * item.volume).toFixed(0);
 
-    // Volume spike vs purata 20 hari
-    const vols = bars.map(b => b.volume || 0);
-    const avgVol20 = vols.length >= 2 ? vols.slice(0, -1).reduce((a, b) => a + b, 0) / (vols.length - 1) : 0;
-    item.volumeSpike = avgVol20 > 0 ? +((item.volume / avgVol20).toFixed(2)) : 0;
-    item.hasVolumeSpike = item.volumeSpike >= 1.5;
-
-    // Pullback dari 52W high
+    // Pullback dari 52W high (price-driven — guna high52 scanner, bukan Yahoo)
     if (item.high52) item.pullback = +(((item.high52 - item.price) / item.high52) * 100).toFixed(2);
 
-    // Close tightness (4 hari terakhir, hari ini = harga live)
-    const closes = bars.map(b => b.close).filter(c => c != null && c > 0);
-    const last4 = closes.slice(-4);
-    if (last4.length >= 3) {
-        const mx = Math.max(...last4), mn = Math.min(...last4);
-        item.closeTightness = +(((mx - mn) / mn) * 100).toFixed(2);
-    }
-
-    // Jarak ke lantai (floor)
-    if (item.floorLow && item.floorLow > 0) item.floorDist = +(((item.price - item.floorLow) / item.floorLow) * 100).toFixed(2);
-
+    // NOTA: volumeSpike/closeTightness/floorDist TIDAK dikira semula dari Yahoo —
+    // Yahoo volum & close utk Bursa tak konsisten dengan scanner i3investor dan boleh
+    // flip CS MERAH/HIJAU + qualification (cth. MTTSL volSpike 2.1x scanner = CS HIJAU
+    // tapi Yahoo nampak no spike -> keluar dalam alert, tak dalam web). Kekal nilai
+    // scanner supaya alert konsisten dengan web.
     return true;
 }
 
@@ -558,16 +544,24 @@ function buildMessage(now, out) {
         if (y && y.dataTime > dataTime) dataTime = y.dataTime;
     }
 
+    // Tarikh snapshot (live_data.json) — elak Yahoo data LAGGING timpa harga yang lebih baru.
+    // Contoh: Yahoo chart utk sesetengah penny stock terhenti 14-Ogos, snapshot dah 17-Ogos —
+    // kalau diterapkan, alert guna harga lama dan list tak sama dengan web.
+    const snapDate = (live.lastUpdated || '').slice(0, 10);
     let updated = 0;
+    let skippedStale = 0;
     for (const stock of candidates) {
         const sym = symbolByStock.get(stock.name.toUpperCase());
         const y = sym ? yahooMap[sym] : null;
         const bars = y ? y.bars : null;
         if (!bars || bars.length < 2) continue;
+        // Yahoo lebih lama dari snapshot -> jangan guna (snapshot lebih baru)
+        const lastBarDate = bars[bars.length - 1].date;
+        if (snapDate && lastBarDate && lastBarDate < snapDate) { skippedStale++; continue; }
         const prevClose = bars[bars.length - 2].close;
         if (applyYahooBar(stock, bars, prevClose)) updated++;
     }
-    console.log(`✅ ${updated} kaunter dikemas kini harga intraday`);
+    console.log(`✅ ${updated} kaunter dikemas kini harga intraday${skippedStale ? ` (${skippedStale} skip — Yahoo lagging vs snapshot)` : ''}`);
 
     // 4b. Refresh struktur harian utk kaunter yang high52/floor stale
     let refreshed = 0;
