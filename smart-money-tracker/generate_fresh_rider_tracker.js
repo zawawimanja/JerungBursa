@@ -10,6 +10,26 @@ const path = require('path');
 const HIST_DIR = path.join(__dirname, 'history');
 const OUT_FILE = path.join(__dirname, 'fresh_rider_tracker.js');
 
+// ---- Kanonikalkan nama stok ikut symbol_mappings.json ----
+// Sebab: feed boleh guna nama berbeza untuk syarikat sama (cth. "SRKKAI" dulu, "SRKK" sekarang) —
+// tanpa ini satu saham boleh ditrack DUA kali (duplicate position + harga beku).
+const SYM_MAP = JSON.parse(fs.readFileSync(path.join(__dirname, 'symbol_mappings.json'), 'utf8'));
+const symNames = {};
+for (const [nm, sym] of Object.entries(SYM_MAP)) {
+    if (!symNames[sym]) symNames[sym] = [];
+    symNames[sym].push(nm);
+}
+const canonByName = {};
+for (const [sym, nms] of Object.entries(symNames)) {
+    nms.sort((a, b) => a.length - b.length);
+    const canon = nms[0];
+    for (const nm of nms) canonByName[nm.toUpperCase()] = canon;
+}
+function canonName(name) {
+    const up = (name || '').toUpperCase().trim();
+    return canonByName[up] || name;
+}
+
 // ---- Rule Fresh VVIP Rider (A5) — sama macam index.html ----
 function isFreshRiderPick(item) {
     return item.isVvip === true && item.signal !== 'avoid' && !item.isCombStock
@@ -44,7 +64,7 @@ const trades = []; // semua trade (open + closed)
 
 for (const day of dayList) {
     const map = {};
-    for (const it of day.rows) if (it && it.name && it.price > 0) map[it.name.toUpperCase()] = it;
+    for (const it of day.rows) if (it && it.name && it.price > 0) map[canonName(it.name).toUpperCase()] = it;
 
     // 1) Update trade OPEN: semak exit / rekod high
     for (const [name, t] of Object.entries(open)) {
@@ -77,11 +97,11 @@ for (const day of dayList) {
     // 2) Entry baru: qualify hari ini & belum pernah ditrack
     for (const it of day.rows) {
         if (!it || !it.name || it.price <= 0) continue;
-        const name = it.name.toUpperCase();
-        if (open[name] || trades.some(t => t.name === name)) continue; // dedup: satu kaunter satu trade
+        const name = canonName(it.name).toUpperCase();
+        if (open[name] || trades.some(t => t.name.toUpperCase() === name)) continue; // dedup: satu kaunter satu trade
         if (!isFreshRiderPick(it)) continue;
         const t = {
-            name: it.name,
+            name: canonName(it.name),
             entryDate: day.date,
             entry: +it.price.toFixed(3),
             entryFloor: +(it.floorLow || it.price * 0.95).toFixed(3),
@@ -140,7 +160,7 @@ function rideFloor20(entry, floor, fut) {
 }
 const dateMap = dayList.map(d => {
     const m = {};
-    for (const it of d.rows) if (it && it.name && it.price > 0 && it.price < 500) m[it.name] = it;
+    for (const it of d.rows) if (it && it.name && it.price > 0 && it.price < 500) m[canonName(it.name)] = it;
     return { date: d.date, map: m };
 });
 const btSeen = new Set();

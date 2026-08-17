@@ -11,6 +11,26 @@ const path = require('path');
 const HIST_DIR = path.join(__dirname, 'history');
 const OUT_FILE = path.join(__dirname, 'hot_theme_tracker.js');
 
+// ---- Kanonikalkan nama stok ikut symbol_mappings.json ----
+// Sebab: feed boleh guna nama berbeza untuk syarikat sama (cth. "SRKKAI" dulu, "SRKK" sekarang) —
+// tanpa ini satu saham boleh ditrack DUA kali (duplicate position + harga beku).
+const SYM_MAP = JSON.parse(fs.readFileSync(path.join(__dirname, 'symbol_mappings.json'), 'utf8'));
+const symNames = {};
+for (const [nm, sym] of Object.entries(SYM_MAP)) {
+    if (!symNames[sym]) symNames[sym] = [];
+    symNames[sym].push(nm);
+}
+const canonByName = {};
+for (const [sym, nms] of Object.entries(symNames)) {
+    nms.sort((a, b) => a.length - b.length);
+    const canon = nms[0];
+    for (const nm of nms) canonByName[nm.toUpperCase()] = canon;
+}
+function canonName(name) {
+    const up = (name || '').toUpperCase().trim();
+    return canonByName[up] || name;
+}
+
 // ---- Tema mapping ----
 const HOT_THEME_MAP = {
     'Semiconductor': ['UNISEM','MI','VITROX','PENTA','UWC','KGB','NATGATE','FRONTKN','GREATEC','ELSOFT','ATE','PENTECH','KEEMING','HKB','ADNEX','ICENTS','AMS','MINOX','IFCAMSC','TEAMSTR','FAMIERA','SUMI','CRPMATE','PMIBHD','ECOMATE','ATECH','RAMSSOL','TOPMIX','SEMICO','MISC'],
@@ -150,7 +170,7 @@ function hotThemeExit(t, price) {
 
 for (const day of dayList) {
     const map = {};
-    for (const it of day.rows) if (it && it.name && it.price > 0) map[it.name.toUpperCase()] = it;
+    for (const it of day.rows) if (it && it.name && it.price > 0) map[canonName(it.name).toUpperCase()] = it;
 
     // Update open trades
     for (const [name, t] of Object.entries(open)) {
@@ -182,11 +202,11 @@ for (const day of dayList) {
     // Entry baru
     for (const it of day.rows) {
         if (!it || !it.name || it.price <= 0) continue;
-        const name = it.name.toUpperCase();
-        if (open[name] || trades.some(t => t.name === name)) continue;
+        const name = canonName(it.name).toUpperCase();
+        if (open[name] || trades.some(t => t.name.toUpperCase() === name)) continue;
         if (!isHotThemePick(it)) continue;
         const t = {
-            name: it.name,
+            name: canonName(it.name),
             entryDate: day.date,
             entry: +it.price.toFixed(3),
             entryFloor: +(it.floorLow || it.price * 0.95).toFixed(3),
@@ -248,7 +268,7 @@ const btSeen = new Set();
 const btRets = [];
 for (let i = 0; i < dayList.length - 3; i++) {
     const dayMap = {};
-    for (const it of dayList[i].rows) if (it && it.name && it.price > 0 && it.price < 500) dayMap[it.name] = it;
+    for (const it of dayList[i].rows) if (it && it.name && it.price > 0 && it.price < 500) dayMap[canonName(it.name)] = it;
     for (const [name, item] of Object.entries(dayMap)) {
         if (btSeen.has(name) || item.price < 0.10) continue;
         if (!isHotThemePick(item)) continue;
@@ -256,7 +276,7 @@ for (let i = 0; i < dayList.length - 3; i++) {
         const fut = [];
         let prev = item.price, ok = true;
         for (let j = i + 1; j < Math.min(dayList.length, i + 1 + 20); j++) {
-            const m = dayList[j].rows.find(r => r && r.name === name && r.price > 0);
+            const m = dayList[j].rows.find(r => r && canonName(r.name) === name && r.price > 0);
             if (m) {
                 const r = m.price / prev;
                 if (r > 1.5 || r < 0.5) { ok = false; break; }

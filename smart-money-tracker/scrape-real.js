@@ -999,6 +999,9 @@ async function main() {
             stock.ipoPrice = ipoInfo.ipoPrice;
             stock.os = ipoInfo.os || 0;
             stock.outlier = ipoInfo.outlier || false;
+            // Attach listingDate AWAL supaya ipoAge (dikira di bawah) guna tarikh sebenar,
+            // bukan fallback 1-Jan (yang selalu bagi ipoAge = 228 hari untuk semua IPO 2026).
+            stock.listingDate = ipoInfo.listingDate;
         }
 
         const turnover = stock.price * stock.volume;
