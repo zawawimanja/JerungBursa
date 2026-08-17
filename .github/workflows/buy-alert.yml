@@ -1,11 +1,12 @@
 name: BUY Alert 4:30 PM
 
 # Kirim senarai "saham patut beli" (Fresh Rider + Hot Theme) ke Telegram
-# setiap hari dagangan ~4:30 petang MYT — sebelum market tutup 5:00pm.
+# setiap hari dagangan ~4:15 petang MYT — cukup masa nak queue order
+# (limit "harga murah") sebelum closing call auction 4:45pm.
 #
 # Nota: GitHub Actions cron ada delay (biasanya 1-10 minit, boleh sampai 15).
-# 8:30 UTC = 4:30 PM MYT. Kalau nak sampai lebih awal sebelum closing call
-# auction (4:45pm), tukar ke '20 8 * * 1-5' (4:20 PM MYT).
+# 8:15 UTC = 4:15 PM MYT -> mesej sampai ~4:15-4:30, masih sebelum 4:45.
+# Kalau nak lagi awal/lambat, tukar: '10 8' (4:10 PM) / '20 8' (4:20 PM).
 #
 # Setup Telegram (sekali sahaja, di repo Settings > Secrets and variables):
 #   TELEGRAM_BOT_TOKEN — token bot dari @BotFather
@@ -16,7 +17,7 @@ name: BUY Alert 4:30 PM
 
 on:
   schedule:
-    - cron: '30 8 * * 1-5'   # 8:30 UTC = 4:30 PM Malaysia, Isnin-Jumaat
+    - cron: '15 8 * * 1-5'   # 8:15 UTC = 4:15 PM Malaysia, Isnin-Jumaat
   workflow_dispatch:         # Butang 'Run workflow' di GitHub utk uji manual
 
 jobs:
