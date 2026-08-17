@@ -404,54 +404,76 @@ function buildMessage(now, out) {
     // ---- CS timing label (csHijau = breakout danger, csMerah = entry cantik) ----
     function csTimingLabel(changePct) {
         if (changePct === null || changePct === undefined) return '';
-        if (changePct >= 5.0) return ' 🔴 CS HIJAU — breakout, jangan kejar';
-        if (changePct >= 3.0) return ' 🟡 CS KUNING — hati-hati, harga dah lari';
-        if (changePct <= -3.0) return ' 🟢 CS MERAH — entry cantik, harga murah';
-        if (changePct <= -1.0) return ' 🟢 CS MERAH — entry selamat';
-        return ' ⚪ CS FLAT — neutral';
+        if (changePct >= 5.0) return '· 🔴 CS HIJAU — jgn kejar';
+        if (changePct >= 3.0) return '· 🟡 CS KUNING — dh lari';
+        if (changePct <= -3.0) return '· 🟢 CS MERAH — entry cantik';
+        if (changePct <= -1.0) return '· 🟢 CS MERAH';
+        return '· ⚪ CS FLAT';
+    }
+    // Rank utk susunan: MERAH(0) > FLAT(1) > KUNING(2) > HIJAU(3)
+    function csRank(changePct) {
+        if (changePct === null || changePct === undefined) return 1;
+        if (changePct <= -1.0) return 0;
+        if (changePct < 3.0) return 1;
+        if (changePct < 5.0) return 2;
+        return 3;
     }
 
     // ---- Fresh Rider ----
     const fr = out.freshRider;
+    // Susun ikut CS timing dulu (entry selamat atas), kemudian jarak lantai
+    fr.list.sort((a, b) => (csRank(a.changePct) - csRank(b.changePct)) || ((a.floorDist ?? 99) - (b.floorDist ?? 99)));
     lines.push(`🚀 FRESH RIDER (${fr.list.length})`);
     if (fr.list.length === 0) {
         lines.push('   Tiada setup hari ini.');
     } else {
-        for (const s of fr.list) {
+        let chaseShown = false;
+        fr.list.forEach((s, i) => {
+            if (csRank(s.changePct) === 3 && !chaseShown) {
+                lines.push('   ── 🔴 CS HIJAU: JANGAN KEJAR, tunggu pullback ──');
+                chaseShown = true;
+            }
             const badge = s.badge ? s.badge + ' ' : '';
             const floorTxt = s.floorDist != null ? ` · lantai ${s.floorDist.toFixed(1)}%` : '';
-            const entryTxt = s.inTracker ? '🟢 MASIH LAYAK' : '🆕 SIGNAL BARU';
+            const entryTxt = s.inTracker ? '🟢 LAYAK' : '🆕 BARU';
             const csTxt = csTimingLabel(s.changePct);
-            lines.push(`   ${badge}${s.name} RM${fmtPrice(s.price)} (${fmtPct(s.changePct)}) · pullback ${fmtPlain(s.pullback)}${floorTxt} · SL RM${fmtPrice(s.sl)} ${entryTxt}${csTxt}`);
-        }
+            lines.push(`${String(i + 1).padStart(2)}. ${badge}${s.name} RM${fmtPrice(s.price)} (${fmtPct(s.changePct)}) · pb ${fmtPlain(s.pullback)}${floorTxt} · SL RM${fmtPrice(s.sl)} ${entryTxt} ${csTxt}`);
+        });
     }
     if (fr.newCount > 0 || fr.reentryCount > 0) lines.push(`   ➕ ${fr.newCount} baru / ${fr.reentryCount} re-entry`);
     const frNew = fr.list.filter(s => !s.inTracker);
     lines.push(frNew.length
-        ? `   🆕 First time qualify hari ini: ${frNew.map(s => s.name).join(', ')}`
-        : '   🟢 Semua masih layak entry — tiada signal baru');
+        ? `   🆕 First time qualify: ${frNew.map(s => s.name).join(', ')}`
+        : '   🟢 Semua masih layak — tiada signal baru');
     lines.push('');
 
     // ---- Hot Theme ----
     const ht = out.hotTheme;
+    // Susun ikut CS timing dulu, kemudian confluence, kemudian jarak lantai
+    ht.list.sort((a, b) => (csRank(a.changePct) - csRank(b.changePct)) || (b.confluence - a.confluence) || ((a.floorDist ?? 99) - (b.floorDist ?? 99)));
     lines.push(`🔥 HOT THEME (${ht.list.length})`);
     if (ht.list.length === 0) {
         lines.push('   Tiada setup hari ini.');
     } else {
-        for (const s of ht.list) {
+        let chaseShown = false;
+        ht.list.forEach((s, i) => {
+            if (csRank(s.changePct) === 3 && !chaseShown) {
+                lines.push('   ── 🔴 CS HIJAU: JANGAN KEJAR, tunggu pullback ──');
+                chaseShown = true;
+            }
             const badge = s.badge ? s.badge + ' ' : '';
             const triple = s.confluence >= 3 ? 'TRIPLE' : 'DOUBLE';
             const floorTxt = s.floorDist != null ? ` · lantai ${s.floorDist.toFixed(1)}%` : '';
-            const entryTxt = s.inTracker ? '🟢 MASIH LAYAK' : '🆕 SIGNAL BARU';
+            const entryTxt = s.inTracker ? '🟢 LAYAK' : '🆕 BARU';
             const csTxt = csTimingLabel(s.changePct);
-            lines.push(`   ${badge}${s.name} RM${fmtPrice(s.price)} (${fmtPct(s.changePct)}) · ${triple} (${s.confluence}) · pullback ${fmtPlain(s.pullback)}${floorTxt} · SL RM${fmtPrice(s.sl)} ${entryTxt}${csTxt}`);
-        }
+            lines.push(`${String(i + 1).padStart(2)}. ${badge}${s.name} RM${fmtPrice(s.price)} (${fmtPct(s.changePct)}) · ${triple}(${s.confluence}) · pb ${fmtPlain(s.pullback)}${floorTxt} · SL RM${fmtPrice(s.sl)} ${entryTxt} ${csTxt}`);
+        });
     }
     if (ht.newCount > 0 || ht.reentryCount > 0) lines.push(`   ➕ ${ht.newCount} baru / ${ht.reentryCount} re-entry`);
     const htNew = ht.list.filter(s => !s.inTracker);
     lines.push(htNew.length
-        ? `   🆕 First time qualify hari ini: ${htNew.map(s => s.name).join(', ')}`
-        : '   🟢 Semua masih layak entry — tiada signal baru');
+        ? `   🆕 First time qualify: ${htNew.map(s => s.name).join(', ')}`
+        : '   🟢 Semua masih layak — tiada signal baru');
     lines.push('');
 
     // ---- SL warning ----
