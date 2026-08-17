@@ -401,6 +401,16 @@ function buildMessage(now, out) {
     lines.push(dataTxt);
     lines.push('');
 
+    // ---- CS timing label (csHijau = breakout danger, csMerah = entry cantik) ----
+    function csTimingLabel(changePct) {
+        if (changePct === null || changePct === undefined) return '';
+        if (changePct >= 5.0) return ' 🔴 CS HIJAU — breakout, jangan kejar';
+        if (changePct >= 3.0) return ' 🟡 CS KUNING — hati-hati, harga dah lari';
+        if (changePct <= -3.0) return ' 🟢 CS MERAH — entry cantik, harga murah';
+        if (changePct <= -1.0) return ' 🟢 CS MERAH — entry selamat';
+        return ' ⚪ CS FLAT — neutral';
+    }
+
     // ---- Fresh Rider ----
     const fr = out.freshRider;
     lines.push(`🚀 FRESH RIDER (${fr.list.length})`);
@@ -411,7 +421,8 @@ function buildMessage(now, out) {
             const badge = s.badge ? s.badge + ' ' : '';
             const floorTxt = s.floorDist != null ? ` · lantai ${s.floorDist.toFixed(1)}%` : '';
             const entryTxt = s.inTracker ? '🟢 MASIH LAYAK' : '🆕 SIGNAL BARU';
-            lines.push(`   ${badge}${s.name} RM${fmtPrice(s.price)} (${fmtPct(s.changePct)}) · pullback ${fmtPlain(s.pullback)}${floorTxt} · SL RM${fmtPrice(s.sl)} ${entryTxt}`);
+            const csTxt = csTimingLabel(s.changePct);
+            lines.push(`   ${badge}${s.name} RM${fmtPrice(s.price)} (${fmtPct(s.changePct)}) · pullback ${fmtPlain(s.pullback)}${floorTxt} · SL RM${fmtPrice(s.sl)} ${entryTxt}${csTxt}`);
         }
     }
     if (fr.newCount > 0 || fr.reentryCount > 0) lines.push(`   ➕ ${fr.newCount} baru / ${fr.reentryCount} re-entry`);
@@ -432,7 +443,8 @@ function buildMessage(now, out) {
             const triple = s.confluence >= 3 ? 'TRIPLE' : 'DOUBLE';
             const floorTxt = s.floorDist != null ? ` · lantai ${s.floorDist.toFixed(1)}%` : '';
             const entryTxt = s.inTracker ? '🟢 MASIH LAYAK' : '🆕 SIGNAL BARU';
-            lines.push(`   ${badge}${s.name} RM${fmtPrice(s.price)} (${fmtPct(s.changePct)}) · ${triple} (${s.confluence}) · pullback ${fmtPlain(s.pullback)}${floorTxt} · SL RM${fmtPrice(s.sl)} ${entryTxt}`);
+            const csTxt = csTimingLabel(s.changePct);
+            lines.push(`   ${badge}${s.name} RM${fmtPrice(s.price)} (${fmtPct(s.changePct)}) · ${triple} (${s.confluence}) · pullback ${fmtPlain(s.pullback)}${floorTxt} · SL RM${fmtPrice(s.sl)} ${entryTxt}${csTxt}`);
         }
     }
     if (ht.newCount > 0 || ht.reentryCount > 0) lines.push(`   ➕ ${ht.newCount} baru / ${ht.reentryCount} re-entry`);
@@ -454,9 +466,15 @@ function buildMessage(now, out) {
     lines.push(`Trackers: FR ${out.frTracked} unik / HT ${out.htTracked} unik`);
     lines.push('');
     lines.push('📖 CARA BACA:');
-    lines.push('🆕 SIGNAL BARU — first time qualify hari ini. Tracker baru mula monitor. Peluang awal.');
-    lines.push('🟢 MASIH LAYAK — kaunter masih qualify (rules pass). Boleh entry bila-bila sebelum 5pm.');
+    lines.push('🆕 SIGNAL BARU — first time qualify hari ini. Peluang awal.');
+    lines.push('🟢 MASIH LAYAK — kaunter masih qualify (rules pass).');
     lines.push('⚠️ SL WARNING — posisi bawah trailing stop. Pertimbang keluar.');
+    lines.push('');
+    lines.push('⏱️ CS TIMING (timing entry berdasarkan candle hari ini):');
+    lines.push('🟢 CS MERAH (change ≤ -1%) — harga turun/flat, entry cantik di base');
+    lines.push('⚪ CS FLAT (-1% hingga +3%) — neutral, boleh entry');
+    lines.push('🟡 CS KUNING (+3% hingga +5%) — harga dah lari, hati-hati');
+    lines.push('🔴 CS HIJAU (≥ +5%) — breakout, jangan kejar. Tunggu pullback.');
     lines.push('');
     lines.push('Dijana oleh buy_alert.js · JerungBursa');
     return lines.join('\n');
