@@ -91,7 +91,13 @@ async function scrapeBursaAnnouncements() {
                     const txId = `bursa-${stockCode}-${dateStr}-${matchedInst.key.toLowerCase().replace(/\s+/g, '-')}`;
                     if (!existingData.some(tx => tx.id === txId)) {
                         const isAcquired = title.includes('ACQUIRED') || title.includes('PURCHASE') || !title.includes('DISPOSED');
-                        
+                        // URL spesifik hanya bila API beri ID filing sebenar (ann_id) —
+                        // kalau tiada, biar kosong supaya radar fallback ke carian ikut syarikat.
+                        const annId = item.id || item.announcement_id || '';
+                        const announcementUrl = annId
+                            ? `https://www.bursamalaysia.com/market_information/announcements/company_announcement/announcement_details?ann_id=${annId}`
+                            : '';
+
                         existingData.unshift({
                             id: txId,
                             stockId: companyName.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
@@ -108,7 +114,7 @@ async function scrapeBursaAnnouncements() {
                             percentage: 5.0,
                             filingDate: dateStr,
                             signal: isAcquired ? '✅ Net Buy' : '⚠️ Rebalancing',
-                            announcementUrl: `https://www.bursamalaysia.com/market_information/announcements/company_announcement?ann_id=${item.id || ''}`,
+                            announcementUrl,
                             insight: `Pemfailan rasmi Seksyen 138 Bursa Malaysia oleh ${matchedInst.name}.`
                         });
                         newCount++;

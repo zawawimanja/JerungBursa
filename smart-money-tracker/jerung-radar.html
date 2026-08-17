@@ -424,24 +424,24 @@
         <!-- Metric Stat Cards -->
         <div class="metrics-grid">
             <div class="metric-card">
-                <div class="label"><i data-lucide="trending-up" style="width:14px;height:14px;color:#10b981;"></i> 30-Day Whale Inflow</div>
-                <div class="val" id="stat-total-inflow">RM +485.2M</div>
-                <div class="sub">Belian Bersih Terkumpul</div>
+                <div class="label"><i data-lucide="trending-up" style="width:14px;height:14px;color:#10b981;"></i> Whale Inflow (30 Hari)</div>
+                <div class="val" id="stat-total-inflow">—</div>
+                <div class="sub" id="stat-total-inflow-sub">Dikira dari pemfilan belian</div>
             </div>
             <div class="metric-card">
                 <div class="label"><i data-lucide="landmark" style="width:14px;height:14px;color:#60a5fa;"></i> Top Jerung Teraktif</div>
-                <div class="val" style="color:#60a5fa;">KWSP / EPF</div>
-                <div class="sub">18 Pemfailan Saham Rasmi</div>
+                <div class="val" id="stat-top-inst" style="color:#60a5fa;font-size:1.15rem;">—</div>
+                <div class="sub" id="stat-top-inst-sub">Pemfilan Saham Rasmi</div>
             </div>
             <div class="metric-card">
                 <div class="label"><i data-lucide="gem" style="width:14px;height:14px;color:#a78bfa;"></i> Saham Paling Dikumpul</div>
-                <div class="val" style="color:#a78bfa;font-size:1.15rem;">99SMART / CTOS / FFB</div>
-                <div class="sub">>5% Pegangan Substantial</div>
+                <div class="val" id="stat-top-stock" style="color:#a78bfa;font-size:1.15rem;">—</div>
+                <div class="sub" id="stat-top-stock-sub">Pegangan Substantial</div>
             </div>
             <div class="metric-card">
                 <div class="label"><i data-lucide="shield-check" style="width:14px;height:14px;color:#f59e0b;"></i> Integriti Data</div>
-                <div class="val" style="color:#f59e0b;font-size:1.15rem;">100% Sahih</div>
-                <div class="sub">Bursa Sec 138 Filings</div>
+                <div class="val" id="stat-integrity" style="color:#f59e0b;font-size:1.15rem;">—</div>
+                <div class="sub" id="stat-integrity-sub">Bursa Sec 138 Filings</div>
             </div>
         </div>
 
@@ -525,10 +525,103 @@
         let currentInst = 'ALL';
         let currentAction = 'ALL';
 
+        function setText(id, v) { const el = document.getElementById(id); if (el) el.textContent = v; }
+
         function initRadar() {
+            renderMetrics();
             renderSpotlight();
             applyFilters();
             if (typeof lucide !== 'undefined') lucide.createIcons();
+        }
+
+        // === METRIC CARDS — dikira automatik dari window.jerungData (bukan hardcode) ===
+        function fmtMoney(v) {
+            if (v >= 1e9) return 'RM +' + (v / 1e9).toFixed(2) + 'B';
+            if (v >= 1e6) return 'RM +' + (v / 1e6).toFixed(1) + 'M';
+            return 'RM +' + Math.round(v / 1e3).toLocaleString() + 'K';
+        }
+
+        function instShort(n) {
+            if (/EMPLOYEES|KWSP/.test(n)) return 'KWSP / EPF';
+            if (/AMANAH SAHAM|PERMODALAN|PNB/.test(n)) return 'PNB / ASB';
+            if (/PERSARAAN|KWAP/.test(n)) return 'KWAP';
+            if (/KHAZANAH|AGRIFOOD/.test(n)) return 'Khazanah';
+            if (/KENANGA/.test(n)) return 'Kenanga';
+            if (/PUBLIC/.test(n)) return 'Public Mutual';
+            if (/ARECA/.test(n)) return 'Areca';
+            if (/URUSHARTA/.test(n)) return 'Urusharta Jamaah';
+            if (/AHAM/.test(n)) return 'Aham Asset';
+            return n.length > 22 ? n.slice(0, 20) + '…' : n;
+        }
+
+        function renderMetrics() {
+            const data = window.jerungData || [];
+            if (!data.length) return;
+
+            // 1) Whale Inflow: nilai belian bersih 30 hari terakhir
+            const now = new Date();
+            const cutoff = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 30);
+            const buys = data.filter(tx => tx.action === 'Acquired' && (tx.totalValueMYR || 0) > 0);
+            const recentBuys = buys.filter(tx => parseRadarDate(tx.filingDate) >= cutoff);
+            const pool = recentBuys.length ? recentBuys : buys;
+            const inflow = pool.reduce((a, b) => a + (b.totalValueMYR || 0), 0);
+            setText('stat-total-inflow', fmtMoney(inflow));
+            setText('stat-total-inflow-sub', recentBuys.length
+                ? 'Belian bersih · ' + recentBuys.length + ' pemfilan (30 hari)'
+                : 'Belian bersih · ' + buys.length + ' pemfilan (semua data)');
+
+            // 2) Top Jerung Teraktif: institusi paling banyak pemfilan
+            const byInst = {};
+            data.forEach(tx => {
+                const key = (tx.institution || 'Lain-lain').split('/')[0].trim();
+                byInst[key] = byInst[key] || { count: 0, value: 0 };
+                byInst[key].count++;
+                if (tx.action === 'Acquired') byInst[key].value += tx.totalValueMYR || 0;
+            });
+            const instRank = Object.entries(byInst).sort((a, b) => b[1].count - a[1].count || b[1].value - a[1].value);
+            const topInst = instRank[0] || [];
+            setText('stat-top-inst', instShort(topInst[0] || ''));
+            setText('stat-top-inst-sub', (topInst[1] ? topInst[1].count : 0) + ' pemfilan rasmi · ' + fmtMoney(topInst[1] ? topInst[1].value : 0));
+
+            // 3) Saham Paling Dikumpul: kaunter dengan nilai belian tertinggi
+            const byStock = {};
+            data.forEach(tx => {
+                if (tx.action !== 'Acquired') return;
+                const key = tx.symbol || tx.stockName || '?';
+                byStock[key] = byStock[key] || { value: 0, pct: 0 };
+                byStock[key].value += tx.totalValueMYR || 0;
+                if ((tx.percentage || 0) > byStock[key].pct) byStock[key].pct = tx.percentage;
+            });
+            const stockRank = Object.entries(byStock).sort((a, b) => b[1].value - a[1].value);
+            const topStocks = stockRank.slice(0, 3);
+            const topPct = Math.max(0, ...topStocks.map(x => x[1].pct));
+            setText('stat-top-stock', topStocks.length ? topStocks.map(x => x[0]).join(' / ') : 'Tiada belian');
+            setText('stat-top-stock-sub', topPct > 0 ? 'Pegangan sehingga ' + topPct.toFixed(2) + '%' : 'Pegangan substantial');
+
+            // 4) Integriti Data: % rekod lengkap + tarikh kemas kini
+            const complete = data.filter(tx => tx.filingDate && tx.percentage && tx.institution && tx.symbol && tx.code);
+            const integrity = data.length ? Math.round(100 * complete.length / data.length) : 0;
+            const latest = data.map(tx => parseRadarDate(tx.filingDate)).sort((a, b) => b - a)[0];
+            const latestStr = latest && !isNaN(latest.getTime())
+                ? latest.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })
+                : '';
+            setText('stat-integrity', integrity + '% Sahih');
+            setText('stat-integrity-sub', data.length + ' pemfilan' + (latestStr ? ' · kemas kini ' + latestStr : ''));
+        }
+
+        // === LINK DOKUMEN BURSA — jujur: spesifik bila ada ann_id, kalau tak cari ikut syarikat ===
+        function getBursaLink(tx) {
+            const url = tx.announcementUrl || '';
+            const hasAnnId = /[?&]ann_id=[^&\s]/.test(url);
+            if (hasAnnId) {
+                return { href: url, label: '📄 Fail Bursa', specific: true };
+            }
+            const keyword = encodeURIComponent(tx.stockName || tx.symbol || '');
+            return {
+                href: 'https://www.bursamalaysia.com/market_information/announcements/company_announcement?keyword=' + keyword,
+                label: '🔍 Cari di Bursa',
+                specific: false
+            };
         }
 
         function renderSpotlight() {
@@ -681,9 +774,12 @@
                         <td><span style="font-weight:700;color:#60a5fa;">${totalHoldingStr}</span></td>
                         <td><span style="font-size:0.75rem;font-weight:700;color:#34d399;">${tx.signal}</span></td>
                         <td>
-                            <a href="${tx.announcementUrl}" target="_blank" style="text-decoration:none;color:#60a5fa;font-size:0.78rem;display:inline-flex;align-items:center;gap:0.25rem;background:rgba(96,165,250,0.1);padding:0.25rem 0.5rem;border-radius:4px;border:1px solid rgba(96,165,250,0.2);">
-                                <i data-lucide="external-link" style="width:12px;height:12px;"></i> Fail Bursa
-                            </a>
+                            ${(function() {
+                                const bl = getBursaLink(tx);
+                                return `<a href="${bl.href}" target="_blank" title="${bl.specific ? 'Buka pemfailan spesifik Bursa (Sec 138)' : 'Pemfailan spesifik belum dipetakan — buka carian Bursa ikut syarikat'}" style="text-decoration:none;color:#60a5fa;font-size:0.78rem;display:inline-flex;align-items:center;gap:0.25rem;background:rgba(96,165,250,0.1);padding:0.25rem 0.5rem;border-radius:4px;border:1px solid rgba(96,165,250,0.2);white-space:nowrap;">
+                                    <i data-lucide="external-link" style="width:12px;height:12px;"></i> ${bl.label}
+                                </a>`;
+                            })()}
                         </td>
                     </tr>
                 `;

@@ -5070,6 +5070,8 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
             if (picks.length === 0) {
                 tbody.innerHTML = `<tr><td colspan="12" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">🔥 Tiada setup Fresh VVIP Rider hari ini.</td></tr>`;
+                // Tracker tetap kena render walaupun list kosong — kalau tak, ia tersekat "Memuatkan tracker..."
+                renderFreshRiderTracker();
                 return;
             }
 
