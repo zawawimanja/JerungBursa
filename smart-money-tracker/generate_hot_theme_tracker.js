@@ -240,6 +240,15 @@ for (const day of dayList) {
     }
 }
 
+// ---- Backfill harga terkini untuk posisi beku (keluar dari top-volume) ----
+// Posisi OPEN hanya dikemas kini bila saham ADA dalam senarai top-volume harian.
+// Bila saham keluar dari senarai (cth. MI, SAM, NE, SAMAIDEN), harga "kini" beku
+// dan PnL jadi salah. Backfill harga dari Yahoo ikut symbol yang disahkan.
+const { backfillStaleTrades } = require('./backfill_stale.js');
+const latestDay = dayList.length ? dayList[dayList.length - 1].date : '';
+const backfilled = backfillStaleTrades(trades, latestDay, hotThemeExit);
+if (backfilled) console.log(`\n🔄 ${backfilled} posisi beku dikemas kini dari Yahoo`);
+
 // Susun: OPEN dulu, kemudian CLOSED
 const openTrades = trades.filter(t => t.status === 'OPEN').sort((a, b) => b.entryDate.localeCompare(a.entryDate));
 const closedTrades = trades.filter(t => t.status !== 'OPEN').sort((a, b) => b.exitDate.localeCompare(a.exitDate));
