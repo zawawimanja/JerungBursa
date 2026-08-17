@@ -433,18 +433,19 @@ function buildMessage(now, out) {
                 lines.push('   ── 🔴 CS HIJAU: JANGAN KEJAR, tunggu pullback ──');
                 chaseShown = true;
             }
-            const badge = s.badge ? s.badge + ' ' : '';
+            const label = s.label ? s.label + ' ' : '';
             const floorTxt = s.floorDist != null ? ` · lantai ${s.floorDist.toFixed(1)}%` : '';
-            const entryTxt = s.inTracker ? '🟢 LAYAK' : '🆕 BARU';
+            const tightTxt = s.tight != null ? ` · tight ${s.tight.toFixed(2)}%` : '';
             const csTxt = csTimingLabel(s.changePct);
-            lines.push(`${String(i + 1).padStart(2)}. ${badge}${s.name} RM${fmtPrice(s.price)} (${fmtPct(s.changePct)}) · pb ${fmtPlain(s.pullback)}${floorTxt} · SL RM${fmtPrice(s.sl)} ${entryTxt} ${csTxt}`);
+            lines.push(`${String(i + 1).padStart(2)}. ${label}${s.name} RM${fmtPrice(s.price)} (${fmtPct(s.changePct)}) · pb ${fmtPlain(s.pullback)}${floorTxt}${tightTxt} · SL RM${fmtPrice(s.sl)} ${csTxt}`);
         });
     }
-    if (fr.newCount > 0 || fr.reentryCount > 0) lines.push(`   ➕ ${fr.newCount} baru / ${fr.reentryCount} re-entry`);
-    const frNew = fr.list.filter(s => !s.inTracker);
+    const frAdd = fr.list.filter(s => s.label === '➕ ADD-ON');
+    const frNew = fr.list.filter(s => s.label === '🆕 BARU');
+    if (fr.addonCount > 0 || fr.newCount > 0 || fr.reentryCount > 0) lines.push(`   ➕ ${fr.addonCount} add-on / ${fr.newCount} baru / ${fr.reentryCount} re-entry`);
     lines.push(frNew.length
         ? `   🆕 First time qualify: ${frNew.map(s => s.name).join(', ')}`
-        : '   🟢 Semua masih layak — tiada signal baru');
+        : (frAdd.length ? `   ➕ ADD-ON hari ini: ${frAdd.map(s => s.name).join(', ')}` : '   🟢 Semua masih layak — tiada signal baru'));
     lines.push('');
 
     // ---- Hot Theme ----
@@ -461,19 +462,20 @@ function buildMessage(now, out) {
                 lines.push('   ── 🔴 CS HIJAU: JANGAN KEJAR, tunggu pullback ──');
                 chaseShown = true;
             }
-            const badge = s.badge ? s.badge + ' ' : '';
+            const label = s.label ? s.label + ' ' : '';
             const triple = s.confluence >= 3 ? 'TRIPLE' : 'DOUBLE';
             const floorTxt = s.floorDist != null ? ` · lantai ${s.floorDist.toFixed(1)}%` : '';
-            const entryTxt = s.inTracker ? '🟢 LAYAK' : '🆕 BARU';
+            const tightTxt = s.tight != null ? ` · tight ${s.tight.toFixed(2)}%` : '';
             const csTxt = csTimingLabel(s.changePct);
-            lines.push(`${String(i + 1).padStart(2)}. ${badge}${s.name} RM${fmtPrice(s.price)} (${fmtPct(s.changePct)}) · ${triple}(${s.confluence}) · pb ${fmtPlain(s.pullback)}${floorTxt} · SL RM${fmtPrice(s.sl)} ${entryTxt} ${csTxt}`);
+            lines.push(`${String(i + 1).padStart(2)}. ${label}${s.name} RM${fmtPrice(s.price)} (${fmtPct(s.changePct)}) · ${triple}(${s.confluence}) · pb ${fmtPlain(s.pullback)}${floorTxt}${tightTxt} · SL RM${fmtPrice(s.sl)} ${csTxt}`);
         });
     }
-    if (ht.newCount > 0 || ht.reentryCount > 0) lines.push(`   ➕ ${ht.newCount} baru / ${ht.reentryCount} re-entry`);
-    const htNew = ht.list.filter(s => !s.inTracker);
+    const htAdd = ht.list.filter(s => s.label === '➕ ADD-ON');
+    const htNew = ht.list.filter(s => s.label === '🆕 BARU');
+    if (ht.addonCount > 0 || ht.newCount > 0 || ht.reentryCount > 0) lines.push(`   ➕ ${ht.addonCount} add-on / ${ht.newCount} baru / ${ht.reentryCount} re-entry`);
     lines.push(htNew.length
         ? `   🆕 First time qualify: ${htNew.map(s => s.name).join(', ')}`
-        : '   🟢 Semua masih layak — tiada signal baru');
+        : (htAdd.length ? `   ➕ ADD-ON hari ini: ${htAdd.map(s => s.name).join(', ')}` : '   🟢 Semua masih layak — tiada signal baru'));
     lines.push('');
 
     // ---- SL warning ----
@@ -488,8 +490,9 @@ function buildMessage(now, out) {
     lines.push(`Trackers: FR ${out.frTracked} unik / HT ${out.htTracked} unik`);
     lines.push('');
     lines.push('📖 CARA BACA:');
-    lines.push('🆕 SIGNAL BARU — first time qualify hari ini. Peluang awal.');
-    lines.push('🟢 MASIH LAYAK — kaunter masih qualify (rules pass).');
+    lines.push('🆕 BARU — first time qualify hari ini. Entry penuh dari base.');
+    lines.push('➕ ADD-ON — masih kita pegang (OPEN dalam tracker) & qualify semula = peluang tambah posisi.');
+    lines.push('🟢 RE-ENTRY — pernah ditrack, dah tutup, qualify semula. Entry lewat, hati-hati.');
     lines.push('⚠️ SL WARNING — posisi bawah trailing stop. Pertimbang keluar.');
     lines.push('');
     lines.push('⏱️ CS TIMING (timing entry berdasarkan candle hari ini):');
@@ -519,8 +522,10 @@ function buildMessage(now, out) {
     // 2. Load trackers (untuk badge + SL warning)
     const frTrades = loadTrackerTrades(path.join(__dirname, 'fresh_rider_tracker.js'));
     const htTrades = loadTrackerTrades(path.join(__dirname, 'hot_theme_tracker.js'));
-    const frTrackedNames = new Set(frTrades.map(t => (t.name || '').toUpperCase()));
-    const htTrackedNames = new Set(htTrades.map(t => (t.name || '').toUpperCase()));
+    const frTrackedStatus = new Map(frTrades.map(t => [(t.name || '').toUpperCase(), t.status]));
+    const htTrackedStatus = new Map(htTrades.map(t => [(t.name || '').toUpperCase(), t.status]));
+    const frTrackedNames = new Set(frTrackedStatus.keys());
+    const htTrackedNames = new Set(htTrackedStatus.keys());
     const openFr = frTrades.filter(t => t.status === 'OPEN');
     const openHt = htTrades.filter(t => t.status === 'OPEN');
     console.log(`📡 Tracker: FR ${frTrades.length} unik (${openFr.length} OPEN) / HT ${htTrades.length} unik (${openHt.length} OPEN)`);
@@ -580,54 +585,66 @@ function buildMessage(now, out) {
     const frList = candidates.filter(isFreshRiderPick);
     const htList = candidates.filter(isHotThemePick);
 
-    // 6. Badge BARU / RE-ENTRY — scan 30 hari history (sebelum hari ini)
-    const todayStr = now.toISOString().slice(0, 10);
-    const recentFr = new Set(), recentHt = new Set();
-    const scanned = new Set();
-    for (let back = 1; back <= 30; back++) {
+    // 6. Lantai DINAMIK (sama macam list): selepas breakout, guna lantai BARU
+    // (min harga 5 hari dagangan terakhir) — bukan floorLow scanner yang ketinggalan.
+    const allCand = new Set([...frList, ...htList].map(s => canonName(s.name).toUpperCase()));
+    const recentFloor = new Map();
+    for (let back = 1; back <= 5; back++) {
         const d = new Date(now.getTime() - back * 24 * 3600 * 1000);
         const ds = d.toISOString().slice(0, 10);
         if (!isTradingDay(ds)) continue;
         const day = loadHistoryDay(ds);
         for (const it of day) {
-            if (!it || !it.name) continue;
+            if (!it || !it.name || !(it.price > 0)) continue;
             const up = canonName(it.name).toUpperCase();
-            if (isFreshRiderPick(it)) recentFr.add(up);
-            if (isHotThemePick(it)) recentHt.add(up);
+            if (!allCand.has(up)) continue;
+            const cur = recentFloor.get(up);
+            if (cur === undefined || it.price < cur) recentFloor.set(up, it.price);
         }
-        scanned.add(ds);
     }
-    console.log(`🕰️ Scan ${scanned.size} hari history utk badge BARU/RE-ENTRY`);
+    function effFloor(name, price, floorLow) {
+        const rf = recentFloor.get(canonName(name).toUpperCase());
+        const f = floorLow || 0;
+        if (f > 0 && rf > 0 && ((price - f) / f) > 0.10) return Math.max(f, rf);
+        return f || rf || 0;
+    }
 
-    function badgeFor(name, recentSet, trackedSet) {
+    // Label signal (sama macam list di index.html):
+    // ➕ ADD-ON = MASIH OPEN dalam tracker & qualify semula hari ini — peluang TAMBAH posisi
+    // 🟢 RE-ENTRY = pernah ditrack tapi dah tutup, qualify semula — entry lewat, berhati-hati
+    // 🆕 BARU = belum pernah ditrack — signal pertama kali, entry penuh dari base
+    function signalLabel(name, trackedStatus) {
         const up = (name || '').toUpperCase();
-        if (!recentSet.has(up)) {
-            return trackedSet.has(up) ? '🟢 RE-ENTRY' : '🆕 BARU';
-        }
-        return null;
+        const status = trackedStatus.get(up);
+        if (status === 'OPEN') return '➕ ADD-ON';
+        if (status) return '🟢 RE-ENTRY';
+        return '🆕 BARU';
     }
 
     const frOut = frList.map(s => {
-        const floor = s.floorLow || s.price * 0.95;
+        const effF = effFloor(s.name, s.price, s.floorLow || s.price * 0.95);
         return {
             name: s.name, price: s.price, changePct: s.changePct, pullback: s.pullback,
-            floorDist: s.floorDist, floor,
+            tight: typeof s.closeTightness === 'number' ? s.closeTightness : null,
+            floorDist: effF ? +(((s.price - effF) / effF) * 100).toFixed(2) : null, floor: effF,
             // Sama macam generator tracker: SL = trail 20% dari high (entry baru: high = harga).
             sl: +(s.price * 0.80).toFixed(3),
             inTracker: frTrackedNames.has(canonName(s.name).toUpperCase()),
-            badge: badgeFor(s.name, recentFr, frTrackedNames)
+            label: signalLabel(s.name, frTrackedStatus)
         };
     });
     const htOut = htList.map(s => {
-        const floor = s.floorLow || s.price * 0.95;
-        // Sama macam hotThemeExit() generator: max(lantai*0.97, trail high*0.80) utk entry baru.
-        const sl = Math.max(floor * 0.97, s.price * 0.80);
+        const effF = effFloor(s.name, s.price, s.floorLow || s.price * 0.95);
+        // Sama macam hotThemeExit() generator: max(lantai DINAMIK*0.97, trail high*0.80).
+        const sl = Math.max(effF * 0.97, s.price * 0.80);
         return {
             name: s.name, price: s.price, changePct: s.changePct, pullback: s.pullback,
-            floorDist: s.floorDist, floor, confluence: confluenceCount(s),
+            tight: typeof s.closeTightness === 'number' ? s.closeTightness : null,
+            floorDist: effF ? +(((s.price - effF) / effF) * 100).toFixed(2) : null, floor: effF,
+            confluence: confluenceCount(s),
             sl: +sl.toFixed(3),
             inTracker: htTrackedNames.has(canonName(s.name).toUpperCase()),
-            badge: badgeFor(s.name, recentHt, htTrackedNames)
+            label: signalLabel(s.name, htTrackedStatus)
         };
     });
     // Susun: FR ikut jarak ke lantai (risiko kecil dulu); HT ikut confluence desc, then floorDist asc
@@ -655,8 +672,8 @@ function buildMessage(now, out) {
     const out = {
         generatedAt: now.toISOString(),
         dataTime,
-        freshRider: { list: frOut, newCount: frOut.filter(s => s.badge === '🆕 BARU').length, reentryCount: frOut.filter(s => s.badge === '🟢 RE-ENTRY').length },
-        hotTheme: { list: htOut, newCount: htOut.filter(s => s.badge === '🆕 BARU').length, reentryCount: htOut.filter(s => s.badge === '🟢 RE-ENTRY').length },
+        freshRider: { list: frOut, newCount: frOut.filter(s => s.label === '🆕 BARU').length, reentryCount: frOut.filter(s => s.label === '🟢 RE-ENTRY').length, addonCount: frOut.filter(s => s.label === '➕ ADD-ON').length },
+        hotTheme: { list: htOut, newCount: htOut.filter(s => s.label === '🆕 BARU').length, reentryCount: htOut.filter(s => s.label === '🟢 RE-ENTRY').length, addonCount: htOut.filter(s => s.label === '➕ ADD-ON').length },
         slWarnings,
         frTracked: frTrades.length,
         htTracked: htTrades.length,
