@@ -173,6 +173,18 @@ if (liveData && liveData.topVolume) {
 const open = {};
 const trades = [];
 
+// Lantai dinamik (sama macam list di index.html): selepas breakout (>10% atas lantai asal),
+// guna lantai BARU = minimum harga 5 hari dagangan terakhir, bukan floorLow yang ketinggalan
+// jauh di bawah. Penting: hotThemeExit guna currentFloor untuk floorSL — lantai baru = SL lebih ketat.
+const recentByName = {}; // name -> harga beberapa hari sebelum hari semasa
+function dynamicFloor(name, price, floorLow) {
+    const rfArr = recentByName[name] || [];
+    const rf = rfArr.length ? Math.min(...rfArr) : 0;
+    const f = floorLow || 0;
+    if (f > 0 && rf > 0 && ((price - f) / f) > 0.10) return Math.max(f, rf);
+    return f || rf;
+}
+
 function hotThemeExit(t, price) {
     const floorSL = (t.currentFloor || t.entryFloor) * 0.97;
     const gain = ((t.high - t.entry) / t.entry) * 100;
@@ -196,7 +208,7 @@ for (const day of dayList) {
         t.days++;
         t.lastDate = day.date;
         t.currentPrice = cur.price;
-        if (cur.floorLow) t.currentFloor = cur.floorLow;
+        if (cur.floorLow) t.currentFloor = +dynamicFloor(name, cur.price, cur.floorLow).toFixed(3);
         if (cur.price > t.high) { t.high = cur.price; t.highDate = day.date; }
         t.maxGain = +(((t.high - t.entry) / t.entry) * 100).toFixed(1);
 
@@ -223,8 +235,8 @@ for (const day of dayList) {
             name: canonName(it.name),
             entryDate: day.date,
             entry: +it.price.toFixed(3),
-            entryFloor: +(it.floorLow || it.price * 0.95).toFixed(3),
-            currentFloor: +(it.floorLow || it.price * 0.95).toFixed(3),
+            entryFloor: +dynamicFloor(name, it.price, it.floorLow || it.price * 0.95).toFixed(3),
+            currentFloor: +dynamicFloor(name, it.price, it.floorLow || it.price * 0.95).toFixed(3),
             currentPrice: +it.price.toFixed(3),
             high: +it.price.toFixed(3),
             highDate: day.date,
@@ -238,6 +250,13 @@ for (const day of dayList) {
         };
         open[name] = t;
         trades.push(t);
+    }
+
+    // Rekod harga hari ini (untuk lantai dinamik hari seterusnya)
+    for (const [nm, it] of Object.entries(map)) {
+        if (!recentByName[nm]) recentByName[nm] = [];
+        recentByName[nm].push(it.price);
+        if (recentByName[nm].length > 5) recentByName[nm].shift();
     }
 }
 
