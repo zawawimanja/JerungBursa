@@ -302,6 +302,7 @@ async function fetchYahoo(symbol) {
         const r = await getJson(`https://query1.finance.yahoo.com/v8/finance/chart/${encodeURIComponent(symbol)}?interval=1d&range=1mo`);
         const res = r.chart && r.chart.result && r.chart.result[0];
         if (!res) return null;
+        const meta = res.meta || {};
         const ts = res.timestamp || [];
         const q = res.indicators.quote[0];
         const bars = [];
@@ -313,7 +314,10 @@ async function fetchYahoo(symbol) {
                 close: q.close[i], volume: q.volume[i] || 0
             });
         }
-        return bars;
+        // Masa last trade sebenar (meta.regularMarketTime) — penting utk
+        // sahkan harga yang digunakan betul-betul waktu 4:30 petang.
+        const dataTime = (meta.regularMarketTime || (ts.length ? ts[ts.length - 1] : 0)) * 1000;
+        return { bars, dataTime };
     } catch (e) { return null; }
 }
 
@@ -386,9 +390,15 @@ function buildMessage(now, out) {
     const dateStr = myt.toISOString().slice(0, 10);
     const timeStr = myt.toISOString().slice(11, 16);
 
+    let dataTxt = 'Harga: Yahoo live (last trade, sebelum tutup 5:00pm)';
+    if (out.dataTime) {
+        const dt = new Date(out.dataTime + 8 * 3600 * 1000);
+        dataTxt = `Harga: Yahoo live · last trade ${dt.toISOString().slice(11, 16)} MYT (${dt.toISOString().slice(0, 10)})`;
+    }
+
     const lines = [];
     lines.push(`📋 BUY LIST — ${dateStr} ${timeStr} MYT`);
-    lines.push(`Harga: Yahoo live (last trade, sebelum tutup 5:00pm)`);
+    lines.push(dataTxt);
     lines.push('');
 
     // ---- Fresh Rider ----
@@ -476,15 +486,22 @@ function buildMessage(now, out) {
     await pLimit(10, candidates, async (stock) => {
         const sym = symbolByStock.get(stock.name.toUpperCase());
         if (!sym) return;
-        const bars = await fetchYahoo(sym);
-        if (bars) yahooMap[sym] = bars;
+        const y = await fetchYahoo(sym);
+        if (y) yahooMap[sym] = y;
     });
     console.log(`✅ Harga live: ${Object.keys(yahooMap).length}/${candidates.length} simbol`);
+
+    // Masa last trade terkini (max regularMarketTime)
+    let dataTime = 0;
+    for (const y of Object.values(yahooMap)) {
+        if (y && y.dataTime > dataTime) dataTime = y.dataTime;
+    }
 
     let updated = 0;
     for (const stock of candidates) {
         const sym = symbolByStock.get(stock.name.toUpperCase());
-        const bars = sym ? yahooMap[sym] : null;
+        const y = sym ? yahooMap[sym] : null;
+        const bars = y ? y.bars : null;
         if (!bars || bars.length < 2) continue;
         const prevClose = bars[bars.length - 2].close;
         if (applyYahooBar(stock, bars, prevClose)) updated++;
@@ -552,8 +569,9 @@ function buildMessage(now, out) {
     for (const { t, tracker } of [...openFr.map(t => ({ t, tracker: 'FR' })), ...openHt.map(t => ({ t, tracker: 'HT' }))]) {
         const sym = symbolByStock.get((t.name || '').toUpperCase()) || resolveSymbol(t.name);
         let price = t.currentPrice;
-        if (sym && yahooMap[sym] && yahooMap[sym].length) {
-            const last = yahooMap[sym][yahooMap[sym].length - 1];
+        const y = sym ? yahooMap[sym] : null;
+        if (y && y.bars && y.bars.length) {
+            const last = y.bars[y.bars.length - 1];
             if (last.close > 0) price = last.close;
         }
         const sl = t.slTrail;
@@ -566,6 +584,7 @@ function buildMessage(now, out) {
     // 8. Format & hantar
     const out = {
         generatedAt: now.toISOString(),
+        dataTime,
         freshRider: { list: frOut, newCount: frOut.filter(s => s.badge === '🆕 BARU').length, reentryCount: frOut.filter(s => s.badge === '🟢 RE-ENTRY').length },
         hotTheme: { list: htOut, newCount: htOut.filter(s => s.badge === '🆕 BARU').length, reentryCount: htOut.filter(s => s.badge === '🟢 RE-ENTRY').length },
         slWarnings,
