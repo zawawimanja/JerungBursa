@@ -5211,8 +5211,12 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             }
             // Kaunter yang MASIH qualify hari ini (untuk lajur "Masih Radar?")
             const liveList = (currentData && currentData.length > 0) ? currentData : ((window.liveData && window.liveData.topVolume) || []);
+            // Pastikan konsisten dengan list Fresh VVIP Rider di atas: label BOLEH ENTRY
+            // mesti ikut global filter (harga max, umur IPO, strict, dll) juga — bukan
+            // sekadar rule Fresh Rider. Kalau tak, saham yang ditapis di atas tetap
+            // nampak BOLEH ENTRY di sini → keliru.
             const stillQualifies = new Set(liveList.filter(it => {
-                try { return typeof qualifiesFreshRider === 'function' && qualifiesFreshRider(it); } catch (e) { return false; }
+                try { return typeof qualifiesFreshRider === 'function' && qualifiesFreshRider(it) && passesGlobalFilters(it); } catch (e) { return false; }
             }).map(it => (it.name || '').toUpperCase()));
             if (metaEl) metaEl.textContent = `${s.dataDays || '-'} hari data · Dijana ${new Date(s.generatedAt).toLocaleString('en-MY')}`;
             if (statsEl) {
