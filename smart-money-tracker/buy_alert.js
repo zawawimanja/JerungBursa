@@ -406,9 +406,8 @@ function buildMessage(now, out) {
     }
 
     // ---- Fresh Rider ----
+    // (Susunan dah diset dalam main — pattern web: kesegaran → tightness → lantai → pullback → touch → turnover)
     const fr = out.freshRider;
-    // Susun ikut CS timing dulu (entry selamat atas), kemudian jarak lantai
-    fr.list.sort((a, b) => (csRank(a.changePct) - csRank(b.changePct)) || ((a.floorDist ?? 99) - (b.floorDist ?? 99)));
     lines.push(`🚀 FRESH RIDER (${fr.list.length})`);
     if (fr.list.length === 0) {
         lines.push('   Tiada setup hari ini.');
@@ -435,9 +434,8 @@ function buildMessage(now, out) {
     lines.push('');
 
     // ---- Hot Theme ----
+    // (Susunan dah diset dalam main — pattern web: kesegaran → tightness → lantai → pullback → confluence → touch → turnover)
     const ht = out.hotTheme;
-    // Susun ikut CS timing dulu, kemudian confluence, kemudian jarak lantai
-    ht.list.sort((a, b) => (csRank(a.changePct) - csRank(b.changePct)) || (b.confluence - a.confluence) || ((a.floorDist ?? 99) - (b.floorDist ?? 99)));
     lines.push(`🔥 HOT THEME (${ht.list.length})`);
     if (ht.list.length === 0) {
         lines.push('   Tiada setup hari ini.');
@@ -624,7 +622,9 @@ function buildMessage(now, out) {
             // Sama macam generator tracker: SL = trail 20% dari high (entry baru: high = harga).
             sl: +(s.price * 0.80).toFixed(3),
             inTracker: frTrackedNames.has(canonName(s.name).toUpperCase()),
-            label: signalLabel(s.name, frTrackedStatus)
+            label: signalLabel(s.name, frTrackedStatus),
+            touch: s.touchCount || 0,
+            turnover: s.rawTurnover || s.turnover || 0
         };
     });
     const htOut = htList.map(s => {
@@ -638,12 +638,24 @@ function buildMessage(now, out) {
             confluence: confluenceCount(s),
             sl: +sl.toFixed(3),
             inTracker: htTrackedNames.has(canonName(s.name).toUpperCase()),
-            label: signalLabel(s.name, htTrackedStatus)
+            label: signalLabel(s.name, htTrackedStatus),
+            touch: s.touchCount || 0,
+            turnover: s.rawTurnover || s.turnover || 0
         };
     });
-    // Susun: FR ikut jarak ke lantai (risiko kecil dulu); HT ikut confluence desc, then floorDist asc
-    frOut.sort((a, b) => (a.floorDist ?? 99) - (b.floorDist ?? 99));
-    htOut.sort((a, b) => (b.confluence - a.confluence) || ((a.floorDist ?? 99) - (b.floorDist ?? 99)));
+    // Susun ikut pattern WEB (KEEMING/STRATUS): kesegaran (BARU>ADD-ON>RE-ENTRY) →
+    // tightness (squeeze) → lantai dinamik → pullback → [HT: confluence] → touch → turnover.
+    // Supaya susunan Telegram SAMA dengan list di web — bukan CS timing lagi.
+    function freshnessRank(label) { return label === '🆕 BARU' ? 0 : (label === '➕ ADD-ON' ? 1 : 2); }
+    const tieTight = (a, b) => ((a.tight ?? 99) - (b.tight ?? 99));
+    const tieFloor = (a, b) => ((a.floorDist ?? 99) - (b.floorDist ?? 99));
+    const tiePb = (a, b) => ((a.pullback ?? 99) - (b.pullback ?? 99));
+    const tieTouch = (a, b) => (b.touch - a.touch);
+    const tieTurnover = (a, b) => (b.turnover - a.turnover);
+    frOut.sort((a, b) =>
+        (freshnessRank(a.label) - freshnessRank(b.label)) || tieTight(a, b) || tieFloor(a, b) || tiePb(a, b) || tieTouch(a, b) || tieTurnover(a, b));
+    htOut.sort((a, b) =>
+        (freshnessRank(a.label) - freshnessRank(b.label)) || tieTight(a, b) || tieFloor(a, b) || tiePb(a, b) || (b.confluence - a.confluence) || tieTouch(a, b) || tieTurnover(a, b));
 
     // 7. SL warning — posisi OPEN tracker bawah trailing stop
     const slWarnings = [];
