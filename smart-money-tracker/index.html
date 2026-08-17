@@ -1239,6 +1239,11 @@
                             </p>
                         </div>
                     </div>
+                    <div style="display: flex; gap: 0.3rem; align-items: center; background: rgba(15,23,42,0.6); padding: 0.2rem; border-radius: 8px; border: 1px solid rgba(168,85,247,0.3);">
+                        <span style="font-size: 0.72rem; color: #64748b; font-weight: 600; padding: 0 0.3rem;">Fokus:</span>
+                        <button id="htFilterTriple" onclick="setHotThemeFilter('triple_only')" style="background: transparent; color: #64748b; border: 1px solid transparent; padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">🔥 TRIPLE Sahaja</button>
+                        <button id="htFilterAll" onclick="setHotThemeFilter('all')" style="background: rgba(168,85,247,0.25); color: #c4b5fd; border: 1px solid rgba(168,85,247,0.5); padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer;">⚡ Semua (2+)</button>
+                    </div>
                 </div>
 
                 <div class="table-responsive">
@@ -1355,9 +1360,9 @@
                 </div>
             </div>
             <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">
-                💡 <strong style="color:#fbbf24;">Cara guna:</strong> Kekuatan tema = % dana dalam top volume yang mengalir ke kaunter Semicon+Solar. 
-                Kalau <strong style="color:#34d399;">trend RISING</strong> dan kekuatan > 20% — tema sedang panas, masa untuk entry. 
-                Kalau <strong style="color:#f87171;">trend FALLING</strong> atau kekuatan < 10% — tema sejuk, jangan entry walaupun ada signal.
+                💡 <strong style="color:#fbbf24;">Cara guna:</strong> Kekuatan tema = % dana dalam top volume yang mengalir ke kaunter Semicon+Solar.
+                Kajian data: signal masuk masa <strong style="color:#34d399;">RISING avg +10.7%</strong> vs <strong style="color:#fde047;">FALLING avg +12.5%</strong> — pemenang besar (KEEMING +70%, DNEX +38%, VITROX +36%) masuk masa falling, jadi <strong style="color:#34d399;">falling BUKAN sebab untuk batalkan entry</strong>.
+                Guna strength untuk <strong style="color:#fbbf24;">saiz posisi</strong>: kekuatan &gt; 20% = tema panas, entry saiz normal; 10–20% = sederhana, kecilkan saiz; &lt; 10% = benar-benar sejuk, kecilkan saiz separuh (atau hadkan kepada signal 🔥 TRIPLE sahaja).
             </p>
         </div>
     </div> <!-- End of view-hottheme -->
@@ -5618,6 +5623,34 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             }
             return hits;
         }
+        function setHotThemeFilter(mode) {
+            window._hotThemeFilterMode = mode;
+            const btnTriple = document.getElementById('htFilterTriple');
+            const btnAll = document.getElementById('htFilterAll');
+            if (btnTriple && btnAll) {
+                if (mode === 'triple_only') {
+                    btnTriple.style.background = 'rgba(234,179,8,0.25)';
+                    btnTriple.style.color = '#fde047';
+                    btnTriple.style.borderColor = 'rgba(234,179,8,0.5)';
+                    btnTriple.style.fontWeight = '800';
+                    btnAll.style.background = 'transparent';
+                    btnAll.style.color = '#64748b';
+                    btnAll.style.borderColor = 'transparent';
+                    btnAll.style.fontWeight = '700';
+                } else {
+                    btnAll.style.background = 'rgba(168,85,247,0.25)';
+                    btnAll.style.color = '#c4b5fd';
+                    btnAll.style.borderColor = 'rgba(168,85,247,0.5)';
+                    btnAll.style.fontWeight = '800';
+                    btnTriple.style.background = 'transparent';
+                    btnTriple.style.color = '#64748b';
+                    btnTriple.style.borderColor = 'transparent';
+                    btnTriple.style.fontWeight = '700';
+                }
+            }
+            renderHotTheme();
+        }
+
         function renderHotTheme() {
             const tbody = document.getElementById('hotThemeTableBody');
             if (!tbody) return;
@@ -5639,6 +5672,9 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 if (passesTrendRiders(item)) matches.push('📈 Trend Rider');
                 if (passesEarlySpring(item)) matches.push('🌱 Early Spring');
                 if (passesBottomFishing(item)) matches.push('🎣 Bottom Fishing');
+
+                const htFilter = window._hotThemeFilterMode || 'all';
+                if (htFilter === 'triple_only' && matches.length < 3) continue;
 
                 if (matches.length >= 2) {
                     picks.push({ item, themes, count: matches.length, matches });
