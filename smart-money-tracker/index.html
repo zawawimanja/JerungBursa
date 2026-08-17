@@ -4968,15 +4968,73 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             return pb >= 35.0 && touches >= 3 && distFloor <= 5.0;
         }
 
+        // Lantai sokongan DINAMIK: selepas breakout, floorLow scanner (lantai asal) ketinggalan —
+        // saham dah bina lantai BARU lebih tinggi (cth. AMBEST breakout 3-Ogos, kini base ~1.09,
+        // bukan 0.92 lagi). Rule: kalau harga dah >10% atas lantai asal (sudah breakout), guna
+        // lantai baru = minimum harga 5 hari dagangan terakhir. Kalau masih dalam base asal
+        // (<10%), kekal floorLow scanner — elak lantai palsu lebih tinggi dari harga (kes MMCS).
+        let _recentFloorCache = null; // { key, map: name -> min price (lantai baru) }
+        async function getRecentFloorMap(baseDateStr, lookbackDays = 5) {
+            let base = new Date();
+            if (baseDateStr) {
+                const p = baseDateStr.split('-');
+                if (p.length === 3) base = new Date(parseInt(p[0]), parseInt(p[1]) - 1, parseInt(p[2]));
+            }
+            const key = (baseDateStr || 'live') + '|' + lookbackDays;
+            if (_recentFloorCache && _recentFloorCache.key === key) return _recentFloorCache.map;
+            const minMap = new Map(); // name -> harga terendah dalam window
+            for (let back = 1; back <= lookbackDays; back++) {
+                const d = new Date(base);
+                d.setDate(base.getDate() - back);
+                const yyyy = d.getFullYear();
+                const mm = String(d.getMonth() + 1).padStart(2, '0');
+                const dd = String(d.getDate()).padStart(2, '0');
+                const dateStr = `${yyyy}-${mm}-${dd}`;
+                try {
+                    const cacheBuster = new Date().getTime();
+                    let res = await fetch(`history/data_${dateStr}.json?t=${cacheBuster}`);
+                    if (!res || !res.ok) {
+                        res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/history/data_${dateStr}.json?t=${cacheBuster}`);
+                    }
+                    if (res && res.ok) {
+                        const raw = await res.json();
+                        const list = Array.isArray(raw) ? raw : (raw.topVolume || []);
+                        for (const it of list) {
+                            if (!it || !it.name || !(it.price > 0)) continue;
+                            const nm = (it.name || '').toUpperCase();
+                            const cur = minMap.get(nm);
+                            if (cur === undefined || it.price < cur) minMap.set(nm, it.price);
+                        }
+                    }
+                } catch (e) {
+                    // skip — fail satu fail tak penting
+                }
+            }
+            _recentFloorCache = { key, map: minMap };
+            return minMap;
+        }
+
         // Render Fresh VVIP Rider — setup swing PnL tertinggi hasil backtest 54 hari
         // Formula: isVvip + Fresh IPO (2025+) + pullback <= 10% + closeTightness <= 5.0
         // Backtest: WR 81%, avg +18.7%/trade, worst -3.6% (exit trail hibrid)
-        function renderConfluenceRadar() {
+        async function renderConfluenceRadar() {
             const tbody = document.getElementById('confluenceRadarTableBody');
             if (!tbody) return;
 
             const picks = [];
             const list = currentData || [];
+
+            // Kira lantai dinamik (lantai baru selepas breakout) untuk semua kaunter dalam list
+            const hdFloor = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || '';
+            const recentFloorMap = await getRecentFloorMap(hdFloor, 5);
+            const effFloorOf = (item) => {
+                const rf = recentFloorMap.get((item.name || '').toUpperCase());
+                const f = item.floorLow || 0;
+                // Dah breakout (jauh dari lantai asal) => guna lantai BARU (recent low)
+                if (f > 0 && rf > 0 && ((item.price - f) / f) > 0.10) return Math.max(f, rf);
+                // Masih dalam base asal => kekal floorLow scanner
+                return f || rf || 0;
+            };
 
             for (const item of list) {
                 if (!item || !item.name || item.price <= 0) continue;
@@ -5050,22 +5108,41 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 p._tripleLock = p._isWhaleBacked && (p._breakoutReady || touches >= 3);
             }
 
+            // KESEGARAN: 0 = belum ditrack (BARU — entry penuh), 1 = OPEN dalam tracker (ADD-ON),
+            // 2 = CLOSED (RE-ENTRY — berhati-hati). Guna tracker untuk tahu siapa dah ditrack.
+            const frTrackStatus = new Map((window.FRESH_RIDER_TRACKER && Array.isArray(window.FRESH_RIDER_TRACKER.trades) ? window.FRESH_RIDER_TRACKER.trades : [])
+                .map(t => [(t.name || '').toUpperCase(), t.status === 'OPEN' ? 1 : 2]));
+            const frFreshness = (it) => frTrackStatus.get((it.name || '').toUpperCase()) ?? 0;
+
             picks.sort((a, b) => {
-                // 1. UTAMA: Calon TRIPLE LOCK (Jerung Sec 138 + Lantai Kukuh / Breakout Ready)
-                if (a._tripleLock !== b._tripleLock) return a._tripleLock ? -1 : 1;
-                // 2. Calon Breakout-Ready (Tight <= 2.5% + Touch >= 4 + Volume Senyap/VDU)
-                if (a._breakoutReady !== b._breakoutReady) return a._breakoutReady ? -1 : 1;
-                // 3. Calon disokong Jerung Institusi Seksyen 138
-                if (a._isWhaleBacked !== b._isWhaleBacked) return a._isWhaleBacked ? -1 : 1;
-                // 4. Paling rapat dengan LANTAI (Risk ke SL paling kecil)
-                const da = a.floorLow ? ((a.price - a.floorLow) / a.floorLow) : 99;
-                const db = b.floorLow ? ((b.price - b.floorLow) / b.floorLow) : 99;
+                // 0. KESEGARAN: BARU (belum ditrack) > ADD-ON (masih kita pegang) > RE-ENTRY (dah tutup)
+                const fa = frFreshness(a), fb = frFreshness(b);
+                if (fa !== fb) return fa - fb;
+                // 1. PATTERN KEEMING/STRATUS: TIGHTNESS paling kecil = squeeze paling rapat breakout
+                // (KEEMING 1.41% & STRATUS 2.44% -> breakout esok). Ini trigger utama pattern.
+                const ta = typeof a.closeTightness === 'number' ? a.closeTightness : 99;
+                const tb = typeof b.closeTightness === 'number' ? b.closeTightness : 99;
+                if (ta !== tb) return ta - tb;
+                // 2. Paling rapat LANTAI DINAMIK dulu (lantai baru selepas breakout — SL paling ketat, R:R terbaik)
+                const ea = effFloorOf(a), eb = effFloorOf(b);
+                // clamp >= 0: harga pecah lantai baru = isyarat bahaya, jangan naikkan ranking
+                const da = ea ? Math.max(0, (a.price - ea) / ea) : 99;
+                const db = eb ? Math.max(0, (b.price - eb) / eb) : 99;
                 if (da !== db) return da - db;
-                // 5. Pullback paling kecil (Paling dekat ATH), kemudian kepadatan lilin
+                // 3. Pullback paling kecil (paling dekat ATH — coiling untuk break, bukan extended)
                 const pa = a.pullback !== null && a.pullback !== undefined ? a.pullback : 99;
-                const pbb = b.pullback !== null && b.pullback !== undefined ? b.pullback : 99;
-                if (pa !== pbb) return pa - pbb;
-                return (a.closeTightness || 99) - (b.closeTightness || 99);
+                const pb = b.pullback !== null && b.pullback !== undefined ? b.pullback : 99;
+                if (pa !== pb) return pa - pb;
+                // 4. Sentuhan lantai paling banyak (base paling kukuh)
+                const ca = a.touchCount || 0, cb = b.touchCount || 0;
+                if (ca !== cb) return cb - ca;
+                // 5. Kualiti signal: Triple Lock > Jerung Sec 138 > biasa
+                if (a._tripleLock !== b._tripleLock) return a._tripleLock ? -1 : 1;
+                if (a._isWhaleBacked !== b._isWhaleBacked) return a._isWhaleBacked ? -1 : 1;
+                // 6. Kecairan (turnover tertinggi dulu)
+                const toA = a.turnover || a.rawTurnover || 0;
+                const toB = b.turnover || b.rawTurnover || 0;
+                return toB - toA;
             });
 
             if (picks.length === 0) {
@@ -5077,14 +5154,18 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
             let html = '';
             picks.forEach((item, idx) => {
-                const floorPrice = item.floorLow ? 'RM ' + item.floorLow.toFixed(3) : '—';
-                const floorDist = item.floorLow ? ((item.price - item.floorLow) / item.floorLow * 100).toFixed(1) + '%' : '—';
-                const slTrail = item.floorLow ? 'RM ' + (item.floorLow * 0.97).toFixed(3) : '—';
+                const effFloor = effFloorOf(item);
+                const floorPrice = effFloor ? 'RM ' + effFloor.toFixed(3) : '—';
+                const floorDist = effFloor ? ((item.price - effFloor) / effFloor * 100).toFixed(1) + '%' : '—';
+                const slTrail = effFloor ? 'RM ' + (effFloor * 0.97).toFixed(3) : '—';
                 const changeVal = item.changePct !== undefined ? item.changePct : item.change;
                 const changeClass = changeVal >= 0 ? 'success' : 'danger';
                 const changeSign = changeVal > 0 ? '+' : '';
                 const pb = item.pullback !== null && item.pullback !== undefined ? item.pullback : null;
                 const pbColor = pb !== null && pb <= 5 ? '#34d399' : '#f59e0b';
+                // Tightness (kepadatan lilin) — penunjuk utama pattern KEEMING/STRATUS: semakin kecil,
+                // semakin rapat breakout. Paparkan di sebelah pullback supaya nampak tanpa buka tooltip.
+                const tightVal = typeof item.closeTightness === 'number' ? item.closeTightness.toFixed(2) : '—';
                 const grade = item.ipoGrade && item.ipoGrade !== 'Unrated' ? item.ipoGrade : (item.ipoYear || '—');
 
                 // Dynamic Precision Confidence Score
@@ -5157,7 +5238,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                             </div>
                         </td>
                         <td style="text-align: center; color: #a5b4fc; font-weight: 800;">${grade}</td>
-                        <td style="text-align: center; color: ${pbColor}; font-weight: 800;">${pb !== null ? pb.toFixed(1) + '%' : '—'}</td>
+                        <td style="text-align: center; color: ${pbColor}; font-weight: 800;" title="Pullback: ${pb !== null ? pb.toFixed(1) : '—'}% dari ATH · Tightness: ${tightVal}% — semakin kecil tightness, semakin rapat breakout (pattern KEEMING/STRATUS)">${pb !== null ? pb.toFixed(1) + '%' : '—'}<span style="font-size: 0.58rem; color: #94a3b8; font-weight: 700;"> · tight ${tightVal}%</span></td>
                         <td style="text-align: right; font-weight: bold; color: white;">RM ${item.price.toFixed(3)}</td>
                         <td style="text-align: right;">
                             <span style="color: #34d399; font-weight: 800; font-size: 0.95rem;">${item.touchCount || 0}x</span>
@@ -5241,7 +5322,15 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     <div style="font-size: 1rem; color: ${c.color}; font-weight: 900;">${c.val}</div>
                 </div>`).join('');
             }
-            tbody.innerHTML = data.trades.map(t => {
+            // Susun: OPEN dulu, kemudian CLOSED; dalam setiap kumpulan entry TERKINI di atas.
+            // Sort di frontend (bukan bergantung pada urutan data file) supaya sentiasa betul.
+            const sortedTrades = [...data.trades].sort((a, b) => {
+                const aOpen = a.status === 'OPEN' ? 0 : 1;
+                const bOpen = b.status === 'OPEN' ? 0 : 1;
+                if (aOpen !== bOpen) return aOpen - bOpen;
+                return (b.entryDate || '').localeCompare(a.entryDate || '');
+            });
+            tbody.innerHTML = sortedTrades.map(t => {
                 const isOpen = t.status === 'OPEN';
                 const pnl = t.finalGain || 0;
                 const pnlColor = pnl > 0 ? '#34d399' : (pnl < 0 ? '#f87171' : '#94a3b8');
@@ -5355,7 +5444,15 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 </div>`).join('');
             }
             // Render trades table
-            tbody.innerHTML = data.trades.map(t => {
+            // Susun: OPEN dulu, kemudian CLOSED; dalam setiap kumpulan entry TERKINI di atas.
+            // Sort di frontend (bukan bergantung pada urutan data file) supaya sentiasa betul.
+            const sortedTrades = [...data.trades].sort((a, b) => {
+                const aOpen = a.status === 'OPEN' ? 0 : 1;
+                const bOpen = b.status === 'OPEN' ? 0 : 1;
+                if (aOpen !== bOpen) return aOpen - bOpen;
+                return (b.entryDate || '').localeCompare(a.entryDate || '');
+            });
+            tbody.innerHTML = sortedTrades.map(t => {
                 const isOpen = t.status === 'OPEN';
                 const pnl = t.finalGain || 0;
                 const pnlColor = pnl > 0 ? '#34d399' : (pnl < 0 ? '#f87171' : '#94a3b8');
@@ -5458,26 +5555,41 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             }
 
             const prevSet = _freshRiderPrevCache.set;
-            const trackedNames = new Set((window.FRESH_RIDER_TRACKER && Array.isArray(window.FRESH_RIDER_TRACKER.trades) ? window.FRESH_RIDER_TRACKER.trades : [])
-                .map(t => (t.name || '').toUpperCase()));
+            // name -> status (OPEN/CLOSED) — guna status, bukan sekadar nama, supaya boleh bezakan ADD-ON
+            const trackedStatus = new Map((window.FRESH_RIDER_TRACKER && Array.isArray(window.FRESH_RIDER_TRACKER.trades) ? window.FRESH_RIDER_TRACKER.trades : [])
+                .map(t => [(t.name || '').toUpperCase(), t.status]));
 
             // Buang badge lama (elak duplicate bila re-render)
             tbody.querySelectorAll('.fr-new-badge').forEach(el => el.remove());
 
             tbody.querySelectorAll('tr[data-fr-name]').forEach(tr => {
                 const name = tr.getAttribute('data-fr-name');
-                if (!name || prevSet.has(name)) return;
+                if (!name) return;
                 const badgeRow = tr.querySelector('.fr-badge-row');
                 if (!badgeRow) return;
+                // ➕ ADD-ON: MASIH OPEN dalam tracker & qualify semula hari ini = peluang TAMBAH posisi.
+                // (cth. KEEMING 12-Ogos — squeeze paling ketat 1.41% sebelum breakout 13-Ogos, tapi
+                // sebab dah kita pegang sejak Jun, dulu ia tak nampak sebagai signal.)
+                const st = trackedStatus.get(name.toUpperCase());
+                if (st === 'OPEN') {
+                    const badge = document.createElement('span');
+                    badge.className = 'fr-new-badge';
+                    badge.textContent = '➕ ADD-ON';
+                    badge.style.cssText = 'font-size:0.62rem; background:linear-gradient(135deg, rgba(16,185,129,0.3), rgba(56,189,248,0.3)); color:#6ee7b7; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(16,185,129,0.6); white-space:nowrap; animation: pulse 1.5s infinite;';
+                    badge.title = 'ADD-ON: MASIH kita pegang (OPEN dalam Tracker Live Fresh Rider) & qualify semula hari ini — peluang TAMBAH posisi sebelum breakout. BUKAN signal pertama; guna SL ikut harga belian AWAK sendiri, bukan SL tracker.';
+                    badgeRow.appendChild(badge);
+                    return;
+                }
+                if (prevSet.has(name)) return;
                 const badge = document.createElement('span');
                 badge.className = 'fr-new-badge';
-                const isReEntry = trackedNames.has(name);
+                const isReEntry = trackedStatus.has(name.toUpperCase());
                 badge.textContent = isReEntry ? '🟢 RE-ENTRY' : '🆕 BARU';
                 badge.style.cssText = isReEntry
                     ? 'font-size:0.62rem; background:rgba(16,185,129,0.15); color:#34d399; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(16,185,129,0.4); white-space:nowrap;'
                     : 'font-size:0.62rem; background:rgba(245,158,11,0.2); color:#fbbf24; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(245,158,11,0.4); white-space:nowrap; animation: pulse 1.5s infinite;';
                 badge.title = isReEntry
-                    ? 'RE-ENTRY: pernah ditrack sebelum ni (dah ada dalam Tracker Live Fresh Rider) — BUKAN signal pertama, entry lewat, berhati-hati'
+                    ? 'RE-ENTRY: pernah ditrack sebelum ni (dah CLOSED dalam Tracker Live Fresh Rider) & qualify semula — entry lewat, berhati-hati'
                     : 'BARU: belum pernah ditrack dalam Tracker Live Fresh Rider — signal pertama kali';
                 badgeRow.appendChild(badge);
             });
@@ -5536,26 +5648,39 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             }
 
             const prevSet = _hotThemePrevCache.set;
-            const trackedNames = new Set((window.HOT_THEME_TRACKER && Array.isArray(window.HOT_THEME_TRACKER.trades) ? window.HOT_THEME_TRACKER.trades : [])
-                .map(t => (t.name || '').toUpperCase()));
+            // name -> status (OPEN/CLOSED) — guna status, bukan sekadar nama, supaya boleh bezakan ADD-ON
+            const trackedStatus = new Map((window.HOT_THEME_TRACKER && Array.isArray(window.HOT_THEME_TRACKER.trades) ? window.HOT_THEME_TRACKER.trades : [])
+                .map(t => [(t.name || '').toUpperCase(), t.status]));
 
             // Buang badge lama (elak duplicate bila re-render)
             tbody.querySelectorAll('.ht-new-badge').forEach(el => el.remove());
 
             tbody.querySelectorAll('tr[data-ht-name]').forEach(tr => {
                 const name = tr.getAttribute('data-ht-name');
-                if (!name || prevSet.has(name)) return;
+                if (!name) return;
                 const badgeRow = tr.querySelector('.ht-badge-row');
                 if (!badgeRow) return;
+                // ➕ ADD-ON: MASIH OPEN dalam tracker & qualify semula hari ini = peluang TAMBAH posisi
+                const st = trackedStatus.get(name.toUpperCase());
+                if (st === 'OPEN') {
+                    const badge = document.createElement('span');
+                    badge.className = 'ht-new-badge';
+                    badge.textContent = '➕ ADD-ON';
+                    badge.style.cssText = 'font-size:0.62rem; background:linear-gradient(135deg, rgba(16,185,129,0.3), rgba(56,189,248,0.3)); color:#6ee7b7; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(16,185,129,0.6); white-space:nowrap; animation: pulse 1.5s infinite;';
+                    badge.title = 'ADD-ON: MASIH kita pegang (OPEN dalam Tracker Live Hot Theme) & qualify semula hari ini — peluang TAMBAH posisi sebelum breakout. BUKAN signal pertama; guna SL ikut harga belian AWAK sendiri, bukan SL tracker.';
+                    badgeRow.appendChild(badge);
+                    return;
+                }
+                if (prevSet.has(name)) return;
                 const badge = document.createElement('span');
                 badge.className = 'ht-new-badge';
-                const isReEntry = trackedNames.has(name);
+                const isReEntry = trackedStatus.has(name.toUpperCase());
                 badge.textContent = isReEntry ? '🟢 RE-ENTRY' : '🆕 BARU';
                 badge.style.cssText = isReEntry
                     ? 'font-size:0.62rem; background:rgba(16,185,129,0.15); color:#34d399; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(16,185,129,0.4); white-space:nowrap;'
                     : 'font-size:0.62rem; background:rgba(245,158,11,0.2); color:#fbbf24; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(245,158,11,0.4); white-space:nowrap; animation: pulse 1.5s infinite;';
                 badge.title = isReEntry
-                    ? 'RE-ENTRY: pernah ditrack sebelum ni (dah ada dalam Tracker Live Hot Theme) — BUKAN signal pertama, entry lewat, berhati-hati'
+                    ? 'RE-ENTRY: pernah ditrack sebelum ni (dah CLOSED dalam Tracker Live Hot Theme) & qualify semula — entry lewat, berhati-hati'
                     : 'BARU: belum pernah ditrack dalam Tracker Live Hot Theme — signal pertama kali';
                 badgeRow.appendChild(badge);
             });
@@ -5763,12 +5888,23 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             renderHotTheme();
         }
 
-        function renderHotTheme() {
+        async function renderHotTheme() {
             const tbody = document.getElementById('hotThemeTableBody');
             if (!tbody) return;
 
             const picks = [];
             const list = currentData || [];
+
+            // Lantai dinamik (sama macam Fresh Rider): selepas breakout, guna lantai BARU
+            // (min 5 hari dagangan terakhir) — bukan lantai asal yang ketinggalan jauh di bawah.
+            const hdHT = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || '';
+            const recentFloorMapHT = await getRecentFloorMap(hdHT, 5);
+            const effFloorOfHT = (item) => {
+                const rf = recentFloorMapHT.get((item.name || '').toUpperCase());
+                const f = item.floorLow || 0;
+                if (f > 0 && rf > 0 && ((item.price - f) / f) > 0.10) return Math.max(f, rf);
+                return f || rf || 0;
+            };
 
             for (const item of list) {
                 if (!item || !item.name || item.price <= 0 || item.price > 10.0) continue;
@@ -5793,12 +5929,29 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 }
             }
 
-            // Sort: Confluence count (tinggi dulu), kemudian dekat lantai, kemudian turnover
+            // KESEGARAN (sama macam Fresh Rider): 0 = belum ditrack (BARU), 1 = OPEN (ADD-ON), 2 = CLOSED (RE-ENTRY)
+            const htTrackStatus = new Map((window.HOT_THEME_TRACKER && Array.isArray(window.HOT_THEME_TRACKER.trades) ? window.HOT_THEME_TRACKER.trades : [])
+                .map(t => [(t.name || '').toUpperCase(), t.status === 'OPEN' ? 1 : 2]));
+            const htFreshness = (it) => htTrackStatus.get((it.name || '').toUpperCase()) ?? 0;
+
+            // Sort pattern (sama macam Fresh Rider): kesegaran -> tightness (squeeze) -> lantai
+            // dinamik -> pullback -> confluence count (TRIPLE > DOUBLE) -> touch -> turnover
             picks.sort((a, b) => {
-                if (a.count !== b.count) return b.count - a.count;
-                const distA = a.item.floorLow ? ((a.item.price - a.item.floorLow) / a.item.floorLow) : 99;
-                const distB = b.item.floorLow ? ((b.item.price - b.item.floorLow) / b.item.floorLow) : 99;
+                const fa = htFreshness(a.item), fb = htFreshness(b.item);
+                if (fa !== fb) return fa - fb;
+                const ta = typeof a.item.closeTightness === 'number' ? a.item.closeTightness : 99;
+                const tb = typeof b.item.closeTightness === 'number' ? b.item.closeTightness : 99;
+                if (ta !== tb) return ta - tb;
+                const ea = effFloorOfHT(a.item), eb = effFloorOfHT(b.item);
+                const distA = ea ? Math.max(0, (a.item.price - ea) / ea) : 99;
+                const distB = eb ? Math.max(0, (b.item.price - eb) / eb) : 99;
                 if (distA !== distB) return distA - distB;
+                const pa = a.item.pullback !== null && a.item.pullback !== undefined ? a.item.pullback : 99;
+                const pbb = b.item.pullback !== null && b.item.pullback !== undefined ? b.item.pullback : 99;
+                if (pa !== pbb) return pa - pbb;
+                if (a.count !== b.count) return b.count - a.count;
+                const ca = a.item.touchCount || 0, cb = b.item.touchCount || 0;
+                if (ca !== cb) return cb - ca;
                 const toA = a.item.turnover || 0;
                 const toB = b.item.turnover || 0;
                 return toB - toA;
@@ -5811,13 +5964,16 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
             let html = '';
             picks.forEach(({ item, themes, count, matches }, idx) => {
-                const floorPrice = item.floorLow ? 'RM ' + item.floorLow.toFixed(3) : '—';
-                const floorDist = item.floorLow ? ((item.price - item.floorLow) / item.floorLow * 100).toFixed(1) + '%' : '—';
+                const effFloorHT = effFloorOfHT(item);
+                const floorPrice = effFloorHT ? 'RM ' + effFloorHT.toFixed(3) : '—';
+                const floorDist = effFloorHT ? ((item.price - effFloorHT) / effFloorHT * 100).toFixed(1) + '%' : '—';
                 const changeVal = item.changePct !== undefined ? item.changePct : item.change;
                 const changeClass = changeVal >= 0 ? 'success' : 'danger';
                 const changeSign = changeVal > 0 ? '+' : '';
                 const pb = item.pullback !== null && item.pullback !== undefined ? item.pullback : null;
                 const pbColor = pb !== null && pb <= 5 ? '#34d399' : '#f59e0b';
+                // Tightness — penunjuk utama pattern KEEMING/STRATUS (sama macam list Fresh Rider)
+                const tightValHT = typeof item.closeTightness === 'number' ? item.closeTightness.toFixed(2) : '—';
 
                 const themeBadge = themes.map(t => {
                     const color = t === 'Semiconductor' ? '#a78bfa' : '#4ade80';
@@ -5848,7 +6004,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                         <td style="text-align: center; font-size: 0.7rem; color: #94a3b8;">${matches.join('<br>')}</td>
                         <td style="text-align: right; font-weight: bold; color: white;">RM ${item.price.toFixed(3)}</td>
                         <td style="text-align: center; color: var(--${changeClass}); font-weight: 800;">${changeSign}${changeVal !== undefined ? changeVal.toFixed(2) : '0.00'}%</td>
-                        <td style="text-align: right; color: ${pbColor}; font-weight: 700;">${pb !== null ? pb.toFixed(1) + '%' : '—'}</td>
+                        <td style="text-align: right; color: ${pbColor}; font-weight: 700;" title="Pullback: ${pb !== null ? pb.toFixed(1) : '—'}% dari ATH · Tightness: ${tightValHT}% — semakin kecil tightness, semakin rapat breakout (pattern KEEMING/STRATUS)">${pb !== null ? pb.toFixed(1) + '%' : '—'}<span style="font-size: 0.58rem; color: #94a3b8; font-weight: 700;"> · tight ${tightValHT}%</span></td>
                         <td style="text-align: right;">
                             <span style="color: #34d399; font-weight: 800; font-size: 0.95rem;">${item.touchCount || 0}x</span>
                             <div style="font-size: 0.78rem; color: #94a3b8; font-weight: 600; margin-top: 0.2rem;">${floorPrice}</div>
