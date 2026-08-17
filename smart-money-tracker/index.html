@@ -990,10 +990,10 @@
                                 <span style="font-size: 0.7rem; background: rgba(234, 179, 8, 0.2); color: #fde047; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(234, 179, 8, 0.3); white-space: nowrap;">🏆 SWING PNL TERTINGGI (BACKTEST)</span>
                             </div>
                             <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
-                                Fresh IPO (2025+) + VVIP + <strong style="color:#fde047;">pullback ≤ 10% dari ATH</strong> + harga padat (tight ≤ 5%). Backtest (53 hari, 02 Jun–14 Ogos 2026): <strong style="color:#34d399;">Win Rate 81%, avg +18.7%/trade, rugi terburuk -3.6%</strong>. Exit: TRAIL HIBRID — SL = high × 0.80 sebelum untung dikunci, ketat ke <strong style="color:#34d399;">high × 0.90 selepas +20% terkunci</strong> (kunci lebih profit, elak beri balik dari puncak). Angka terkini dikira automatik dalam kotak backtest di bawah.
+                                Fresh IPO (2025+) + VVIP + <strong style="color:#fde047;">pullback ≤ 10% dari ATH</strong> + harga padat (tight ≤ 5%). Backtest (<span id="frHeadBtDays">53</span> hari, <span id="frHeadBtRange">02 Jun – 17 Ogos 2026</span>): <strong style="color:#34d399;">Win Rate <span id="frHeadBtWr">76</span>%, avg <span id="frHeadBtAvg">+18.1</span>%/trade, rugi terburuk <span id="frHeadBtWorst">-10.3</span>%</strong>. Exit: TRAIL HIBRID — SL = high × 0.80 sebelum untung dikunci, ketat ke <strong style="color:#34d399;">high × 0.90 selepas +20% terkunci</strong> (kunci lebih profit, elak beri balik dari puncak). Angka dikira semula automatik setiap hari.
                             </p>
                             <p style="margin: 0.5rem 0 0 0; font-size: 0.78rem; color: #fbbf24; background: rgba(245,158,11,0.08); border: 1px dashed rgba(245,158,11,0.35); border-radius: 8px; padding: 0.5rem 0.7rem; line-height: 1.5;">
-                                ⏰ <strong style="color:#fde047;">SOP: semak LEPAS CLOSE (5:00–6:00 petang)</strong>, bukan pagi — data ialah harga penutupan. <strong style="color:#34d399;">Entry SELAMAT selagi kaunter masih dalam senarai ini (masih qualify: base ketat dekat ATH)</strong> — kajian data: entry lewat ≤5 hari dari signal pertama masih 81-88% WR, avg +25-28% (contoh: KEEMING qualify 12/8, meletup esok). Yang <strong style="color:#f87171;">JANGAN kejar</strong>: kaunter dah <strong style="color:#f87171;">keluar dari senarai</strong> (dah lari >10% dari base, pullback besar) — entry window dah tutup. 🎯 BREAKOUT = tight ≤ 2.5% + touch ≥ 4 + volume senyap (kajian: 67% breakout vs 25%).
+                                ⏰ <strong style="color:#fde047;">SOP: semak LEPAS CLOSE (5:00–6:00 petang)</strong>, bukan pagi — data ialah harga penutupan. <strong style="color:#34d399;">Entry SELAMAT selagi kaunter masih dalam senarai ini (masih qualify: base ketat dekat ATH)</strong> — kajian data: entry lewat ≤5 hari dari signal pertama masih 81-88% WR, avg +25-28% (contoh: KEEMING qualify 12/8, meletup esok). Yang <strong style="color:#f87171;">JANGAN kejar</strong>: kaunter dah <strong style="color:#f87171;">keluar dari senarai</strong> (tak qualify lagi: pullback >10% dari ATH / tightness >5% / dah breakout volum spike) — entry window dah tutup. 🎯 BREAKOUT = tight ≤ 2.5% + touch ≥ 4 + volume senyap (kajian: 67% breakout vs 25%).
                             </p>
                         </div>
                     </div>
@@ -5296,6 +5296,12 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 setT('frBtAvg', (bt.avgGain >= 0 ? '+' : '') + (bt.avgGain ?? 19.3) + '%');
                 setT('frBtTotal', (bt.totalPnl >= 0 ? '+' : '') + (bt.totalPnl ?? 309) + '%');
                 setT('frBtWorst', (bt.worstLoss ?? -7.4) + '%');
+                // Nombor backtest dalam header atas (dinamik — tak boleh stale)
+                setT('frHeadBtDays', bt.dataDays ?? 53);
+                setT('frHeadBtRange', `${bt.dataStart || '02 Jun'} – ${bt.dataEnd || '17 Ogos 2026'}`);
+                setT('frHeadBtWr', bt.winRate ?? 76);
+                setT('frHeadBtAvg', (bt.avgGain >= 0 ? '+' : '') + (bt.avgGain ?? 18.1));
+                setT('frHeadBtWorst', (bt.worstLoss >= 0 ? '+' : '') + (bt.worstLoss ?? -10.3));
                 const meta = document.getElementById('frBacktestMeta');
                 if (meta) meta.textContent = `${bt.dataDays || '-'} hari (${bt.dataStart || ''} – ${bt.dataEnd || ''}) · Simulasi: tutup trade selepas 20 hari`;
             }
