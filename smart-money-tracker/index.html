@@ -1315,7 +1315,6 @@
                     <thead>
                         <tr>
                             <th style="text-align: left;">Kaunter</th>
-                            <th style="text-align: center;">Tema</th>
                             <th style="text-align: center;">Status</th>
                             <th style="text-align: center;">Entry</th>
                             <th style="text-align: right;">Harga Entry</th>
@@ -1323,6 +1322,7 @@
                             <th style="text-align: right;">PnL Kini / Akhir</th>
                             <th style="text-align: right;">Max Gain</th>
                             <th style="text-align: center;">Hari Hold</th>
+                            <th style="text-align: center;">Status Pegangan</th>
                             <th style="text-align: right;" title="Trail 20% dari high (bila gain < +20%) / 6% dari high (bila gain >= +20%) / Hard stop -12% selepas 5 hari">SL Trail</th>
                         </tr>
                     </thead>
@@ -5258,6 +5258,21 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
         }
         window.renderFreshRiderTracker = renderFreshRiderTracker;
 
+        // Helper: adakah item masih qualify Hot Theme Rider? (semak sama macam renderHotTheme)
+        function qualifiesHotTheme(item) {
+            if (!item || !item.name || item.price <= 0 || item.price > 10.0) return false;
+            if (!passesGlobalFilters(item)) return false;
+            if (isSleepingOrAvoidStock(item) || item.isCombStock) return false;
+            if (getHotThemes(item.name).length === 0) return false;
+            let count = 0;
+            if (passesJerungRadar(item)) count++;
+            if (passesVcpStaircase(item)) count++;
+            if (passesTrendRiders(item)) count++;
+            if (passesEarlySpring(item)) count++;
+            if (passesBottomFishing(item)) count++;
+            return count >= 2;
+        }
+
         // ===== LIVE TRACKER HOT THEME (auto-generated data: hot_theme_tracker.js) =====
         function renderHotThemeTracker() {
             const tbody = document.getElementById('htTrackerTableBody');
@@ -5271,6 +5286,11 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             }
             const s = data.summary || {};
             const bt = data.backtest || {};
+            // Kaunter yang MASIH qualify hari ini (untuk lajur "Status Pegangan")
+            const htLiveList = (currentData && currentData.length > 0) ? currentData : ((window.liveData && window.liveData.topVolume) || []);
+            const stillQualifiesHT = new Set(htLiveList.filter(it => {
+                try { return qualifiesHotTheme(it); } catch (e) { return false; }
+            }).map(it => (it.name || '').toUpperCase()));
             // Render backtest stats
             const setT = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
             setT('htBtSignals', bt.signals ?? '—');
@@ -5322,6 +5342,11 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     const color = th === 'Semiconductor' ? '#a78bfa' : '#4ade80';
                     return `<span style="font-size: 0.6rem; background: rgba(168,85,247,0.15); color: ${color}; padding: 0.05rem 0.25rem; border-radius: 3px; font-weight: 700;">${th === 'Semiconductor' ? '🔌' : '☀️'}</span>`;
                 }).join(' ');
+                const stillRadar = isOpen
+                    ? (stillQualifiesHT.has(t.name.toUpperCase())
+                        ? '<span style="font-size: 0.62rem; color: #34d399; font-weight: 800;" title="Masih qualify dalam senarai Hot Theme hari ini — BOLEH masuk/beli sekarang">🟢 BOLEH ENTRY</span>'
+                        : '<span style="font-size: 0.62rem; color: #fbbf24; font-weight: 700;" title="Dah keluar dari senarai Hot Theme — JANGAN beli lagi, tapi yang dah beli terus HOLD selagi tak kena trailing stop">🟡 HOLD SAHAJA</span>')
+                    : '<span style="font-size: 0.62rem; color: #f87171; font-weight: 800;" title="Posisi dah ditutup (kena trailing stop)">🔒 DAH JUAL</span>';
                 return `<tr>
                     <td style="font-weight: 800; color: white;">${t.name}<div style="font-size: 0.62rem; color: #64748b; font-weight: 600;">${themeBadges}</div></td>
                     <td style="text-align: center;">${statusBadge}</td>
@@ -5331,6 +5356,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     <td style="text-align: right; color: ${pnlColor}; font-weight: 900;">${pnlStr}</td>
                     <td style="text-align: right; color: #38bdf8; font-weight: 700;">${maxStr}</td>
                     <td style="text-align: center; color: #fde047; font-weight: 700;">${t.days}</td>
+                    <td style="text-align: center;">${stillRadar}</td>
                     <td style="text-align: right; color: #f87171; font-weight: 700;">RM ${slTrail}</td>
                 </tr>`;
             }).join('');
