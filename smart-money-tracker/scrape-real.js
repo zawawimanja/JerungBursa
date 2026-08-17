@@ -509,8 +509,10 @@ async function main() {
     }
 
     // Auto-register ALL fresh IPOs (listed >= 2025) from data.json to ensure they are never missed!
-    console.log('\n🔍 Mendaftarkan Fresh IPOs (2025-2026) dari data.json...');
-    const freshIposFromDb = ipoList.filter(ipo => ipo.year >= 2025);
+    // IMPORTANT: Only register LISTED IPOs (stage 5 or has listingDate) — upcoming/draft IPOs (e.g. Big Caring,
+    // KK Mart) have no trading data yet and would otherwise produce fake price-0 "buy" signals in the tracker.
+    console.log('\n🔍 Mendaftarkan Fresh IPOs (2025-2026) dari data.json (listed sahaja)...');
+    const freshIposFromDb = ipoList.filter(ipo => ipo.year >= 2025 && (ipo.stage === 5 || ipo.listingDate));
     for (const ipo of freshIposFromDb) {
         let cleanSym = ipo.symbol ? ipo.symbol.replace(/\[.*?\]/g, '').trim().toUpperCase() : '';
         if (!cleanSym) continue;
@@ -1426,10 +1428,16 @@ async function main() {
         console.error("Warning loading IPO grades:", err.message);
     }
     
+    // Final safety net: drop stocks with no price data (unlisted, suspended or unresolvable).
+    // They have no trading data, so any signal generated for them is meaningless.
+    const cleanData = processedData.filter(item => item.price && item.price > 0);
+    const droppedCount = processedData.length - cleanData.length;
+    if (droppedCount > 0) console.log(`⚠️ Membuang ${droppedCount} kaunter tanpa harga (price 0) — tiada data dagangan sahih.`);
+
     const output = {
         lastUpdated: new Date().toISOString(),
         source: 'klse.i3investor.com',
-        topVolume: processedData,
+        topVolume: cleanData,
         topGainers: topGainers.slice(0, 20),
     };
     
