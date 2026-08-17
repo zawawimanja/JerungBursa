@@ -410,10 +410,15 @@ function buildMessage(now, out) {
         for (const s of fr.list) {
             const badge = s.badge ? s.badge + ' ' : '';
             const floorTxt = s.floorDist != null ? ` · lantai ${s.floorDist.toFixed(1)}%` : '';
-            lines.push(`   ${badge}${s.name} RM${fmtPrice(s.price)} (${fmtPct(s.changePct)}) · pullback ${fmtPlain(s.pullback)}${floorTxt}`);
+            const entryTxt = s.inTracker ? '📌 DAH TRACKED' : '🔵 ENTRY BARU';
+            lines.push(`   ${badge}${s.name} RM${fmtPrice(s.price)} (${fmtPct(s.changePct)}) · pullback ${fmtPlain(s.pullback)}${floorTxt} · SL RM${fmtPrice(s.sl)} ${entryTxt}`);
         }
     }
     if (fr.newCount > 0 || fr.reentryCount > 0) lines.push(`   ➕ ${fr.newCount} baru / ${fr.reentryCount} re-entry`);
+    const frNew = fr.list.filter(s => !s.inTracker);
+    lines.push(frNew.length
+        ? `   🔵 Akan direkod dalam live tracker: ${frNew.map(s => s.name).join(', ')}`
+        : '   📌 Semua dah dalam tracker — tiada entry tracker baru hari ini');
     lines.push('');
 
     // ---- Hot Theme ----
@@ -426,10 +431,15 @@ function buildMessage(now, out) {
             const badge = s.badge ? s.badge + ' ' : '';
             const triple = s.confluence >= 3 ? 'TRIPLE' : 'DOUBLE';
             const floorTxt = s.floorDist != null ? ` · lantai ${s.floorDist.toFixed(1)}%` : '';
-            lines.push(`   ${badge}${s.name} RM${fmtPrice(s.price)} (${fmtPct(s.changePct)}) · ${triple} (${s.confluence}) · pullback ${fmtPlain(s.pullback)}${floorTxt}`);
+            const entryTxt = s.inTracker ? '📌 DAH TRACKED' : '🔵 ENTRY BARU';
+            lines.push(`   ${badge}${s.name} RM${fmtPrice(s.price)} (${fmtPct(s.changePct)}) · ${triple} (${s.confluence}) · pullback ${fmtPlain(s.pullback)}${floorTxt} · SL RM${fmtPrice(s.sl)} ${entryTxt}`);
         }
     }
     if (ht.newCount > 0 || ht.reentryCount > 0) lines.push(`   ➕ ${ht.newCount} baru / ${ht.reentryCount} re-entry`);
+    const htNew = ht.list.filter(s => !s.inTracker);
+    lines.push(htNew.length
+        ? `   🔵 Akan direkod dalam live tracker: ${htNew.map(s => s.name).join(', ')}`
+        : '   📌 Semua dah dalam tracker — tiada entry tracker baru hari ini');
     lines.push('');
 
     // ---- SL warning ----
@@ -551,15 +561,29 @@ function buildMessage(now, out) {
         return null;
     }
 
-    const frOut = frList.map(s => ({
-        name: s.name, price: s.price, changePct: s.changePct, pullback: s.pullback,
-        floorDist: s.floorDist, badge: badgeFor(s.name, recentFr, frTrackedNames)
-    }));
-    const htOut = htList.map(s => ({
-        name: s.name, price: s.price, changePct: s.changePct, pullback: s.pullback,
-        floorDist: s.floorDist, confluence: confluenceCount(s),
-        badge: badgeFor(s.name, recentHt, htTrackedNames)
-    }));
+    const frOut = frList.map(s => {
+        const floor = s.floorLow || s.price * 0.95;
+        return {
+            name: s.name, price: s.price, changePct: s.changePct, pullback: s.pullback,
+            floorDist: s.floorDist, floor,
+            // Sama macam generator tracker: SL = trail 20% dari high (entry baru: high = harga).
+            sl: +(s.price * 0.80).toFixed(3),
+            inTracker: frTrackedNames.has(canonName(s.name).toUpperCase()),
+            badge: badgeFor(s.name, recentFr, frTrackedNames)
+        };
+    });
+    const htOut = htList.map(s => {
+        const floor = s.floorLow || s.price * 0.95;
+        // Sama macam hotThemeExit() generator: max(lantai*0.97, trail high*0.80) utk entry baru.
+        const sl = Math.max(floor * 0.97, s.price * 0.80);
+        return {
+            name: s.name, price: s.price, changePct: s.changePct, pullback: s.pullback,
+            floorDist: s.floorDist, floor, confluence: confluenceCount(s),
+            sl: +sl.toFixed(3),
+            inTracker: htTrackedNames.has(canonName(s.name).toUpperCase()),
+            badge: badgeFor(s.name, recentHt, htTrackedNames)
+        };
+    });
     // Susun: FR ikut jarak ke lantai (risiko kecil dulu); HT ikut confluence desc, then floorDist asc
     frOut.sort((a, b) => (a.floorDist ?? 99) - (b.floorDist ?? 99));
     htOut.sort((a, b) => (b.confluence - a.confluence) || ((a.floorDist ?? 99) - (b.floorDist ?? 99)));
