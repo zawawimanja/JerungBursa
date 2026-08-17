@@ -5418,8 +5418,9 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
         let _freshRiderPrevCache = null; // { key, set }
 
-        // Tandai signal yang BENAR-BENAR baru: tak pernah qualify dalam 30 hari dagangan terakhir
-        // (bukan sekadar banding semalam — elak ECOSHOP yang qualify 13-Jul lalu dikira "baru")
+        // Tandai signal: 🆕 BARU = tak pernah qualify dalam 30 hari terakhir DAN belum pernah
+        // ditrack dalam Tracker Live Fresh Rider. 🟢 RE-ENTRY = pernah ditrack sebelum ni
+        // (dah ada dalam tracker) tapi qualify semula selepas keluar 30+ hari.
         async function markFreshRiderNewBadges() {
             const tbody = document.getElementById('confluenceRadarTableBody');
             if (!tbody) return;
@@ -5433,6 +5434,8 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             }
 
             const prevSet = _freshRiderPrevCache.set;
+            const trackedNames = new Set((window.FRESH_RIDER_TRACKER && Array.isArray(window.FRESH_RIDER_TRACKER.trades) ? window.FRESH_RIDER_TRACKER.trades : [])
+                .map(t => (t.name || '').toUpperCase()));
 
             // Buang badge lama (elak duplicate bila re-render)
             tbody.querySelectorAll('.fr-new-badge').forEach(el => el.remove());
@@ -5444,8 +5447,14 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 if (!badgeRow) return;
                 const badge = document.createElement('span');
                 badge.className = 'fr-new-badge';
-                badge.textContent = '🆕 BARU';
-                badge.style.cssText = 'font-size:0.62rem; background:rgba(245,158,11,0.2); color:#fbbf24; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(245,158,11,0.4); white-space:nowrap; animation: pulse 1.5s infinite;';
+                const isReEntry = trackedNames.has(name);
+                badge.textContent = isReEntry ? '🟢 RE-ENTRY' : '🆕 BARU';
+                badge.style.cssText = isReEntry
+                    ? 'font-size:0.62rem; background:rgba(16,185,129,0.15); color:#34d399; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(16,185,129,0.4); white-space:nowrap;'
+                    : 'font-size:0.62rem; background:rgba(245,158,11,0.2); color:#fbbf24; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(245,158,11,0.4); white-space:nowrap; animation: pulse 1.5s infinite;';
+                badge.title = isReEntry
+                    ? 'RE-ENTRY: pernah ditrack sebelum ni (dah ada dalam Tracker Live Fresh Rider) — BUKAN signal pertama, entry lewat, berhati-hati'
+                    : 'BARU: belum pernah ditrack dalam Tracker Live Fresh Rider — signal pertama kali';
                 badgeRow.appendChild(badge);
             });
         }
