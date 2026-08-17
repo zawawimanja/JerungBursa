@@ -1450,10 +1450,18 @@ async function main() {
     console.log(`📂 Disimpan ke ${OUTPUT_FILE} dan live_data.js`);
     
     // Simpan rekod sejarah (history)
-    const dateStr = new Date().toISOString().split('T')[0];
-    const histDir = path.join(__dirname, 'history');
-    if (!fs.existsSync(histDir)) fs.mkdirSync(histDir);
-    fs.writeFileSync(path.join(histDir, `data_${dateStr}.json`), JSON.stringify(output, null, 2));
+    // Guard: skip pada hujung minggu MYT — run manual Sabtu/Ahad baca candle yang belum finalize
+    // (cth. Yahoo masih pulangkan candle Khamis pada 1:42am Sabtu) dan MENINDIH data tutup Jumaat yang betul,
+    // menyebabkan entry tracker direkod pada tarikh salah. live_data tetap dikemas kini.
+    const mytWeekday = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Kuala_Lumpur', weekday: 'short' }).format(new Date());
+    if (mytWeekday === 'Sat' || mytWeekday === 'Sun') {
+        console.log('🌙 Hujung minggu (MYT) — rekod sejarah diskip (elak data stale menindih hari dagangan).');
+    } else {
+        const dateStr = new Date().toISOString().split('T')[0];
+        const histDir = path.join(__dirname, 'history');
+        if (!fs.existsSync(histDir)) fs.mkdirSync(histDir);
+        fs.writeFileSync(path.join(histDir, `data_${dateStr}.json`), JSON.stringify(output, null, 2));
+    }
     
     // Paparan pratonton 5 terbaik
     console.log('\n📋 Top 5 (Turnover):');
