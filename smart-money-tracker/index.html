@@ -5481,6 +5481,84 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             });
         }
 
+        // ===== HOT THEME: label 🆕 BARU / 🟢 RE-ENTRY (sama macam Fresh Rider) =====
+        async function getRecentHotThemeNames(baseDateStr) {
+            let base = new Date();
+            if (baseDateStr) {
+                const p = baseDateStr.split('-');
+                if (p.length === 3) base = new Date(parseInt(p[0]), parseInt(p[1]) - 1, parseInt(p[2]));
+            }
+            const names = new Set();
+            for (let back = 1; back <= 30; back++) {
+                const d = new Date(base);
+                d.setDate(base.getDate() - back);
+                const yyyy = d.getFullYear();
+                const mm = String(d.getMonth() + 1).padStart(2, '0');
+                const dd = String(d.getDate()).padStart(2, '0');
+                const dateStr = `${yyyy}-${mm}-${dd}`;
+                try {
+                    const cacheBuster = new Date().getTime();
+                    let res = await fetch(`history/data_${dateStr}.json?t=${cacheBuster}`);
+                    if (!res || !res.ok) {
+                        res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/history/data_${dateStr}.json?t=${cacheBuster}`);
+                    }
+                    if (res && res.ok) {
+                        const raw = await res.json();
+                        const list = Array.isArray(raw) ? raw : (raw.topVolume || []);
+                        for (const it of list) {
+                            if (qualifiesHotTheme(it)) names.add(it.name);
+                        }
+                    }
+                } catch (e) {
+                    // skip — fail satu fail tak penting
+                }
+            }
+            return names;
+        }
+
+        let _hotThemePrevCache = null; // { key, set }
+
+        // Tandai signal: 🆕 BARU = tak pernah qualify dalam 30 hari terakhir DAN belum pernah
+        // ditrack dalam Tracker Live Hot Theme. 🟢 RE-ENTRY = pernah ditrack sebelum ni
+        // (dah ada dalam tracker) tapi qualify semula selepas keluar 30+ hari.
+        async function markHotThemeNewBadges() {
+            const tbody = document.getElementById('hotThemeTableBody');
+            if (!tbody) return;
+
+            const hd = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || '';
+            const key = hd || 'live';
+
+            if (!_hotThemePrevCache || _hotThemePrevCache.key !== key) {
+                const recentNames = await getRecentHotThemeNames(hd);
+                _hotThemePrevCache = { key, set: recentNames };
+            }
+
+            const prevSet = _hotThemePrevCache.set;
+            const trackedNames = new Set((window.HOT_THEME_TRACKER && Array.isArray(window.HOT_THEME_TRACKER.trades) ? window.HOT_THEME_TRACKER.trades : [])
+                .map(t => (t.name || '').toUpperCase()));
+
+            // Buang badge lama (elak duplicate bila re-render)
+            tbody.querySelectorAll('.ht-new-badge').forEach(el => el.remove());
+
+            tbody.querySelectorAll('tr[data-ht-name]').forEach(tr => {
+                const name = tr.getAttribute('data-ht-name');
+                if (!name || prevSet.has(name)) return;
+                const badgeRow = tr.querySelector('.ht-badge-row');
+                if (!badgeRow) return;
+                const badge = document.createElement('span');
+                badge.className = 'ht-new-badge';
+                const isReEntry = trackedNames.has(name);
+                badge.textContent = isReEntry ? '🟢 RE-ENTRY' : '🆕 BARU';
+                badge.style.cssText = isReEntry
+                    ? 'font-size:0.62rem; background:rgba(16,185,129,0.15); color:#34d399; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(16,185,129,0.4); white-space:nowrap;'
+                    : 'font-size:0.62rem; background:rgba(245,158,11,0.2); color:#fbbf24; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(245,158,11,0.4); white-space:nowrap; animation: pulse 1.5s infinite;';
+                badge.title = isReEntry
+                    ? 'RE-ENTRY: pernah ditrack sebelum ni (dah ada dalam Tracker Live Hot Theme) — BUKAN signal pertama, entry lewat, berhati-hati'
+                    : 'BARU: belum pernah ditrack dalam Tracker Live Hot Theme — signal pertama kali';
+                badgeRow.appendChild(badge);
+            });
+        }
+
         // ===== CONFLUENCE ASAL (tab kedua) — dipulihkan =====
         function setConfluenceFilter(mode) {
             window._confluenceFilterMode = mode;
@@ -5758,11 +5836,11 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 const confidenceText = item.confidenceScore !== undefined ? `${item.confidenceScore}/100` : 'N/A';
 
                 html += `
-                    <tr>
+                    <tr data-ht-name="${item.name}">
                         <td style="text-align: center; font-weight: 800; color: #a78bfa;">#${idx + 1}</td>
                         <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
                             ${getTradingViewAnchor(item.name)}
-                            <div style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.35rem; flex-wrap: wrap;">${csBadge}${themeBadge}</div>
+                            <div class="ht-badge-row" style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.35rem; flex-wrap: wrap;">${csBadge}${themeBadge}</div>
                         </td>
                         <td style="text-align: center;">${confBadge}</td>
                         <td style="text-align: center; font-size: 0.7rem; color: #94a3b8;">${matches.join('<br>')}</td>
@@ -5789,6 +5867,9 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             });
 
             tbody.innerHTML = html;
+
+            // Tandai signal yang BARU qualify hari ini (tak qualify hari dagangan sebelumnya)
+            markHotThemeNewBadges();
         }
 
         function renderTrendRiders() {
