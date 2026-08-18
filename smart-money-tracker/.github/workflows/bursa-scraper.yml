@@ -36,3 +36,10 @@ jobs:
           git add smart-money-tracker/history/
           git commit -m "🤖 Auto-update data Smart Money Bursa: $(date)" || exit 0
           git push
+
+      - name: 📢 Hantar Buy Alert ke Telegram
+        run: node buy_alert.js
+        working-directory: smart-money-tracker
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
