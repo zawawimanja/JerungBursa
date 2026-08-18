@@ -2,3 +2,7 @@
 .env
 # Output janaan buy_alert.js setiap run
 buy_alert_latest.json
+# Scratch / test scripts — local only
+scratch/
+# Node modules
+node_modules/
