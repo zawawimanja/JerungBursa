@@ -3221,6 +3221,10 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
         let currentSortColumn = 'turnover';
         let currentSortDesc = true;
 
+        // Auto-refresh senyap (5 minit) — flag kawalan
+        let _viewingArchive = false;   // user tengok arkib → jangan auto-refresh (elak ganti data arkib)
+        let _autoRefreshBusy = false;  // elak refresh bertindih bila fetch lambat
+
         // Dynamically map IPO Grades for live and historical data (in case JSON doesn't contain ipoGrade)
         const ipoMap = {
             '3REN': 'B',
@@ -3671,6 +3675,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 
                 if (data && data.length > 0) {
                     currentData = data;
+                    _viewingArchive = false; // balik ke data live — auto-refresh boleh jalan semula
                     console.log(`Loaded ${data.length} counters successfully.`);
                 }
             }
@@ -6654,6 +6659,21 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 this.textContent = text;
             });
 
+            // Auto-refresh senyap: tarik live_data.json baru setiap 5 minit & re-render semua tab
+            // (server-side bot memang update setiap 5 minit — page ni ikut sama tanpa perlu reload).
+            // Tak ganggu kalau: user tengok arkib / tab browser tak aktif / refresh lain sedang jalan.
+            setInterval(async () => {
+                if (_autoRefreshBusy || _viewingArchive || document.hidden) return;
+                _autoRefreshBusy = true;
+                try {
+                    await fetchLiveData();
+                } catch (e) {
+                    console.warn('Auto-refresh senyap gagal:', e);
+                } finally {
+                    _autoRefreshBusy = false;
+                }
+            }, 5 * 60 * 1000);
+
             // History Archive check
             document.getElementById('loadHistoryBtn').addEventListener('click', async function() {
                 let dateVal = document.getElementById('historyDate').value;
@@ -6724,6 +6744,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                         }
                         if (data && data.length > 0) {
                             currentData = data;
+                            _viewingArchive = true; // tengah tengok arkib — auto-refresh kena berhenti
                             document.getElementById('dashboardSubtitle').innerHTML = `📂 Historical Archive: <strong>${dateVal}</strong>`;
                             applyFilters();
                             
