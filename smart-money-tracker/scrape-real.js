@@ -194,9 +194,19 @@ async function main() {
     const ipoMap = {};
     try {
         if (ipoList && ipoList.length > 0) {
+            // Simbol yang ada entri sebenar (bukan "[NS]") — entri "[NS]" untuk simbol ini
+            // hanya placeholder (tiada gred/OS) dan menimpa entri sebenar (last-wins),
+            // cth "RT [NS]" menimpa "RT" (RT Pastry, os 59.96).
+            const realSymbols = new Set();
+            ipoList.forEach(ipo => {
+                if (ipo.symbol && !/\[NS\]/.test(ipo.symbol)) {
+                    realSymbols.add(ipo.symbol.replace(/\[.*?\]/g, '').toUpperCase().trim());
+                }
+            });
             ipoList.forEach(ipo => {
                 if (ipo.symbol) {
                     const cleanSymbol = ipo.symbol.replace(/\[.*?\]/g, '').toUpperCase().trim();
+                    if (/\[NS\]/.test(ipo.symbol) && realSymbols.has(cleanSymbol)) return;
                     const listingYear = parseInt(ipo.year) || (ipo.listingDate ? parseInt(ipo.listingDate.split('-')[2]) : 0);
                     ipoMap[cleanSymbol] = {
                         grade: ipo.predictedGrade || 'Unrated',
@@ -330,7 +340,9 @@ async function main() {
             if (key.toUpperCase().trim() === upperName) return; // already added
             const normKey = key.replace(/[^A-Z0-9]/g, '').toUpperCase();
             const normName = upperName.replace(/[^A-Z0-9]/g, '');
-            if (normName.startsWith(normKey) || normKey.startsWith(normName)) {
+            // Elak short ticker (cth "RT") mencuri gred kaunter lain (cth "RTECH" via prefix).
+            const minLen = Math.min(normName.length, normKey.length);
+            if (minLen >= 4 && (normName.startsWith(normKey) || normKey.startsWith(normName))) {
                 matches.push(val);
                 return;
             }
