@@ -990,11 +990,14 @@
                                 <span style="font-size: 0.7rem; background: rgba(234, 179, 8, 0.2); color: #fde047; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(234, 179, 8, 0.3); white-space: nowrap;">🏆 SWING PNL TERTINGGI (BACKTEST)</span>
                             </div>
                             <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
-                                Fresh IPO (2025+) + VVIP + <strong style="color:#fde047;">pullback ≤ 10% dari ATH</strong> + harga padat (tight ≤ 5%). Backtest (<span id="frHeadBtDays">53</span> hari, <span id="frHeadBtRange">02 Jun – 17 Ogos 2026</span>): <strong style="color:#34d399;">Win Rate <span id="frHeadBtWr">76</span>%, avg <span id="frHeadBtAvg">+18.1</span>%/trade, rugi terburuk <span id="frHeadBtWorst">-10.3</span>%</strong>. Exit: TRAIL HIBRID — SL = high × 0.80 sebelum untung dikunci, ketat ke <strong style="color:#34d399;">high × 0.90 selepas +20% terkunci</strong> (kunci lebih profit, elak beri balik dari puncak). Angka dikira semula automatik setiap hari.
+                                Fresh IPO (2025+) + VVIP + <strong style="color:#fde047;">pullback ≤ 10% dari ATH</strong> + harga padat (tight ≤ 5%). Backtest (<span id="frHeadBtDays">53</span> hari, <span id="frHeadBtRange">02 Jun – 17 Ogos 2026</span>): <strong style="color:#34d399;">WR <span id="frHeadBtWr">76</span>%, avg <span id="frHeadBtAvg">+18.1</span>%/trade, rugi terburuk <span id="frHeadBtWorst">-10.3</span>%</strong>. Exit: <strong style="color:#34d399;">TRAIL HIBRID</strong> — SL high × 0.80, ketat ke high × 0.90 selepas +20% terkunci. Dikira semula automatik setiap hari. 🔥 Contoh meletup: <span id="frHeadMovers">KEEMING +120% · MMCS +70% · AMBEST +66% · HKB +64% · HEGROUP +62% · ICENTS +52% · STRATUS +48%</span>
                             </p>
-                            <p style="margin: 0.5rem 0 0 0; font-size: 0.78rem; color: #fbbf24; background: rgba(245,158,11,0.08); border: 1px dashed rgba(245,158,11,0.35); border-radius: 8px; padding: 0.5rem 0.7rem; line-height: 1.5;">
-                                ⏰ <strong style="color:#fde047;">SOP: semak LEPAS CLOSE (5:00–6:00 petang)</strong>, bukan pagi — data ialah harga penutupan. <strong style="color:#34d399;">Entry SELAMAT selagi kaunter masih dalam senarai ini (masih qualify: base ketat dekat ATH)</strong> — kajian data: entry lewat ≤5 hari dari signal pertama masih 81-88% WR, avg +25-28% (contoh: KEEMING qualify 12/8, meletup esok). Yang <strong style="color:#f87171;">JANGAN kejar</strong>: kaunter dah <strong style="color:#f87171;">keluar dari senarai</strong> (tak qualify lagi: pullback >10% dari ATH / tightness >5% / dah breakout volum spike) — entry window dah tutup. 🎯 BREAKOUT = tight ≤ 2.5% + touch ≥ 4 + volume senyap (kajian: 67% breakout vs 25%).
-                            </p>
+                            <details style="margin: 0.5rem 0 0 0; font-size: 0.78rem; color: #fbbf24; background: rgba(245,158,11,0.08); border: 1px dashed rgba(245,158,11,0.35); border-radius: 8px; padding: 0.45rem 0.7rem; line-height: 1.5;">
+                                <summary style="cursor: pointer; font-weight: 800; color: #fde047; outline: none; user-select: none;">⏰ SOP & Cara Entry — klik untuk baca</summary>
+                                <div style="margin-top: 0.4rem;">
+                                    Semak <strong style="color:#fde047;">LEPAS CLOSE (5:00–6:00 petang)</strong> — data ialah harga penutupan. <strong style="color:#34d399;">Entry SELAMAT selagi kaunter masih dalam senarai (masih qualify: base ketat dekat ATH)</strong> — entry lewat ≤5 hari dari signal pertama masih 81–88% WR, avg +25–28%. Yang <strong style="color:#f87171;">JANGAN kejar</strong>: kaunter dah <strong style="color:#f87171;">keluar dari senarai</strong> (tak qualify lagi: pullback >10% dari ATH / tightness >5% / dah breakout volum spike) — entry window dah tutup. 🎯 BREAKOUT = tight ≤ 2.5% + touch ≥ 4 + volume senyap (kajian: 67% breakout vs 25%).
+                                </div>
+                            </details>
                         </div>
                     </div>
                 </div>
@@ -5017,9 +5020,15 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
         // Render Fresh VVIP Rider — setup swing PnL tertinggi hasil backtest 54 hari
         // Formula: isVvip + Fresh IPO (2025+) + pullback <= 10% + closeTightness <= 5.0
         // Backtest: WR 81%, avg +18.7%/trade, worst -3.6% (exit trail hibrid)
+        // PENJAGA RACE: renderConfluenceRadar dipanggil 2x semasa load (sekali dgn data kosong
+        // dari switchTab, sekali lagi lepas fetchLiveData siap). Dua-dua async + await lantai
+        // dinamik (fetch 5 fail sejarah) — yang siap LAMBAT akan overwrite. Kalau render kosong
+        // siap terakhir, list yang dah penuh jadi "Tiada setup". Guard: render lama bail out.
+        let _confluenceRenderSeq = 0;
         async function renderConfluenceRadar() {
             const tbody = document.getElementById('confluenceRadarTableBody');
             if (!tbody) return;
+            const seq = ++_confluenceRenderSeq;
 
             const picks = [];
             const list = currentData || [];
@@ -5027,6 +5036,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             // Kira lantai dinamik (lantai baru selepas breakout) untuk semua kaunter dalam list
             const hdFloor = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || '';
             const recentFloorMap = await getRecentFloorMap(hdFloor, 5);
+            if (seq !== _confluenceRenderSeq) return; // render lama (cth. data belum muat) — jangan overwrite
             const effFloorOf = (item) => {
                 const rf = recentFloorMap.get((item.name || '').toUpperCase());
                 const f = item.floorLow || 0;
@@ -5146,7 +5156,23 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             });
 
             if (picks.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="12" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">🔥 Tiada setup Fresh VVIP Rider hari ini.</td></tr>`;
+                // Bezakan sebab list kosong supaya pengguna tahu nak buat apa:
+                // (1) data belum muat, (2) filter global aktif, (3) memang tiada setup hari ini
+                let emptyMsg = '🔥 Tiada setup Fresh VVIP Rider hari ini.';
+                if (!currentData || currentData.length === 0) {
+                    emptyMsg = '⚠️ Data belum dimuat — klik butang <strong>🔄 Muat Data</strong> di atas.';
+                } else {
+                    const priceMaxVal = document.getElementById('priceMaxFilter') ? document.getElementById('priceMaxFilter').value : 'ALL';
+                    const ipoAgeFilterVal = document.getElementById('ipoAgeFilter') ? document.getElementById('ipoAgeFilter').value : 'ALL';
+                    const strictVal = document.getElementById('strictEntryFilter') ? document.getElementById('strictEntryFilter').checked : false;
+                    const premiumVal = document.getElementById('premiumHypeFilter') ? document.getElementById('premiumHypeFilter').checked : false;
+                    const earlyVal = document.getElementById('earlyDetectFilter') ? document.getElementById('earlyDetectFilter').checked : false;
+                    const filtersActive = priceMaxVal !== 'ALL' || ipoAgeFilterVal !== 'ALL' || strictVal || premiumVal || earlyVal;
+                    if (filtersActive) {
+                        emptyMsg = '⚠️ Tiada setup lulus <strong>filter global</strong> semasa (Harga / IPO / Ultra-Strict / Premium Hype / Detect Awal) — cuba longgarkan filter untuk lihat setup Fresh VVIP Rider.';
+                    }
+                }
+                tbody.innerHTML = `<tr><td colspan="12" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">${emptyMsg}</td></tr>`;
                 // Tracker tetap kena render walaupun list kosong — kalau tak, ia tersekat "Memuatkan tracker..."
                 renderFreshRiderTracker();
                 return;
@@ -5305,6 +5331,13 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 const meta = document.getElementById('frBacktestMeta');
                 if (meta) meta.textContent = `${bt.dataDays || '-'} hari (${bt.dataStart || ''} – ${bt.dataEnd || ''}) · Simulasi: tutup trade selepas 20 hari`;
             }
+            // Contoh kaunter yang MELEtUP dalam tracker live (maxGain >= 40%) — untuk description header
+            const movers = (data.trades || [])
+                .filter(t => (t.maxGain || 0) >= 40)
+                .sort((a, b) => (b.maxGain || 0) - (a.maxGain || 0))
+                .map(t => `${t.name} +${Math.round(t.maxGain)}%`);
+            const moversEl = document.getElementById('frHeadMovers');
+            if (moversEl) moversEl.textContent = movers.length ? movers.join(' · ') : '—';
             // Kaunter yang MASIH qualify hari ini (untuk lajur "Masih Radar?")
             const liveList = (currentData && currentData.length > 0) ? currentData : ((window.liveData && window.liveData.topVolume) || []);
             // Pastikan konsisten dengan list Fresh VVIP Rider di atas: label BOLEH ENTRY
@@ -5894,9 +5927,13 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             renderHotTheme();
         }
 
+        // Penjaga race sama macam renderConfluenceRadar (2x panggilan semasa load — yang kosong
+        // boleh overwrite yang penuh kalau siap lewat)
+        let _hotThemeRenderSeq = 0;
         async function renderHotTheme() {
             const tbody = document.getElementById('hotThemeTableBody');
             if (!tbody) return;
+            const seq = ++_hotThemeRenderSeq;
 
             const picks = [];
             const list = currentData || [];
@@ -5905,6 +5942,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             // (min 5 hari dagangan terakhir) — bukan lantai asal yang ketinggalan jauh di bawah.
             const hdHT = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || '';
             const recentFloorMapHT = await getRecentFloorMap(hdHT, 5);
+            if (seq !== _hotThemeRenderSeq) return; // render lama — jangan overwrite
             const effFloorOfHT = (item) => {
                 const rf = recentFloorMapHT.get((item.name || '').toUpperCase());
                 const f = item.floorLow || 0;
