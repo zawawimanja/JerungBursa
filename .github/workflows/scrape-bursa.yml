@@ -28,11 +28,12 @@ jobs:
           cd smart-money-tracker
           npm install
           
-      - name: Run API Scraper & Fresh Rider Tracker Generator
+      - name: Run API Scraper & Trackers Generator
         run: |
           cd smart-money-tracker
           node scrape-real.js
           node generate_fresh_rider_tracker.js
+          node generate_hot_theme_tracker.js
           
       - name: Commit and Push changes
         run: |
@@ -41,6 +42,7 @@ jobs:
           git add smart-money-tracker/live_data.json
           git add smart-money-tracker/live_data.js
           git add smart-money-tracker/fresh_rider_tracker.js
+          git add smart-money-tracker/hot_theme_tracker.js
           git add smart-money-tracker/history/
           # Only commit if there are changes
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update live_data.json/js & fresh_rider_tracker.js [skip ci]" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update live_data.json/js & trackers [skip ci]" && git push)
