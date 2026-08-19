@@ -882,7 +882,7 @@
                         <button id="instFilterKHAZANAH" onclick="setSec138InstFilter('KHAZANAH')" style="background: transparent; color: #94a3b8; border: 1px solid rgba(255,255,255,0.1); padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">👑 Khazanah</button>
                     </div>
 
-                    <input type="text" id="sec138Search" placeholder="🔍 Cari saham / institusi..." oninput="applySec138Filters()" style="background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.15); color: white; padding: 0.35rem 0.7rem; border-radius: 6px; font-size: 0.75rem; outline: none; width: 220px;">
+                    <input type="text" id="sec138Search" placeholder="🔍 Search stock / institution..." oninput="applySec138Filters()" style="background: rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.15); color: white; padding: 0.35rem 0.7rem; border-radius: 6px; font-size: 0.75rem; outline: none; width: 220px;">
                 </div>
 
                 <!-- Table for Section 138 Filings -->
@@ -1119,18 +1119,18 @@
                         <div>
                             <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
                                 <h2 style="margin: 0; font-size: 1.3rem; color: #38bdf8; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem;">VVIP Confluence Radar: Double & Triple Confluence</h2>
-                                <span style="font-size: 0.7rem; background: rgba(14, 165, 233, 0.2); color: #38bdf8; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(14, 165, 233, 0.3); white-space: nowrap;">📊 LENSA PELBAGAI STRATEGI</span>
+                                <span style="font-size: 0.7rem; background: rgba(14, 165, 233, 0.2); color: #38bdf8; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(14, 165, 233, 0.3); white-space: nowrap;">📊 MULTI-STRATEGY LENS</span>
                             </div>
                             <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
-                                Kaunter yang bertembung <strong style="color: #38bdf8;">dalam 2+ strategi serentak</strong> (Jerung Radar + VCP + Trend Rider + Early Spring + Bottom Fishing). Backtest gabungan 2+ = <strong style="color:#34d399;">104 kaunter unik, WR 60%, avg +5.6%/trade, total +584.5%</strong> (kajian 58 hari, 25 Mei–11 Ogos 2026). TRIPLE (3+) 89 signal (WR 61%, +5.1%) ≈ DOUBLE (tepat 2) 92 signal (WR 60%, +5.3%) — kedua-dua setanding, Double sedikit lebih tinggi avg. Banding 🔥 Fresh Rider (16 signal): <strong style="color:#fde047;">WR 81%, avg +18.7%/trade, total +298.6%</strong> — jauh lebih tepat per trade, tapi jumlah lebih kecil sebab sedikit signal.
+                                Counters overlapping <strong style="color: #38bdf8;">in 2+ strategies simultaneously</strong> (Jerung Radar + VCP + Trend Rider + Early Spring + Bottom Fishing). Combined 2+ backtest = <strong style="color:#34d399;">104 unique counters, WR 60%, avg +5.6%/trade, total +584.5%</strong> (58-day study, May 25 – Aug 11, 2026). TRIPLE (3+) 89 signals (WR 61%, +5.1%) ≈ DOUBLE (exact 2) 92 signals (WR 60%, +5.3%) — both comparable, Double slightly higher avg gain. Compare 🔥 Fresh Rider (16 signals): <strong style="color:#fde047;">WR 81%, avg +18.7%/trade, total +298.6%</strong> — higher win rate per trade with fewer total signals.
                             </p>
                         </div>
                     </div>
                     <div style="display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap;">
                         <div style="display: flex; gap: 0.3rem; align-items: center; background: rgba(15,23,42,0.6); padding: 0.2rem; border-radius: 8px; border: 1px solid rgba(14,165,233,0.3);">
-                            <span style="font-size: 0.72rem; color: #64748b; font-weight: 600; padding: 0 0.3rem;">Fokus:</span>
-                            <button id="confluenceFilterFresh" onclick="setConfluenceFilter('fresh_only')" style="background: rgba(16,185,129,0.25); color: #34d399; border: 1px solid rgba(16,185,129,0.5); padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer;">🌟 Fresh IPO Sahaja</button>
-                            <button id="confluenceFilterAll" onclick="setConfluenceFilter('all')" style="background: transparent; color: #64748b; border: 1px solid transparent; padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">🌐 Semua Saham</button>
+                            <span style="font-size: 0.72rem; color: #64748b; font-weight: 600; padding: 0 0.3rem;">Focus:</span>
+                            <button id="confluenceFilterFresh" onclick="setConfluenceFilter('fresh_only')" style="background: rgba(16,185,129,0.25); color: #34d399; border: 1px solid rgba(16,185,129,0.5); padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer;">🌟 Fresh IPO Only</button>
+                            <button id="confluenceFilterAll" onclick="setConfluenceFilter('all')" style="background: transparent; color: #64748b; border: 1px solid transparent; padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">🌐 All Equities</button>
                         </div>
                     </div>
                 </div>
@@ -1226,11 +1226,11 @@
                     </tbody>
                 </table>
             </div>
-            <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">* Setiap kaunter dikira sekali (hari pertama qualify). Jumlah PnL = pulangan terkumpul (bukan compounding). Triple = PnL tertinggi per trade; Double = menambah jumlah signal & jumlah PnL keseluruhan.</p>
+            <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">* Each counter counted once (first qualification date). Total PnL = cumulative return (non-compounded). Triple = highest PnL per trade; Double = increases signal frequency & overall cumulative PnL.</p>
         </div>
     </div>
 
-    <!-- TAB: HOT THEME (Semiconductor & Solar — backtest 61 hari: 23 signal, WR 83%, avg +13.3%, total +305.7%) -->
+    <!-- TAB: HOT THEME (Semiconductor & Solar — backtest 61 days: 23 signals, WR 83%, avg +13.3%, total +305.7%) -->
     <div id="view-hottheme" style="display: none;">
         <div style="margin-bottom: 1.25rem;">
             <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(168, 85, 247, 0.08)); border: 2px dashed #a855f7; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(168, 85, 247, 0.15); position: relative; overflow: hidden;">
@@ -1242,20 +1242,20 @@
                         <div>
                             <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
                                 <h2 style="margin: 0; font-size: 1.3rem; color: #c4b5fd; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem;">Hot Theme Rider: Semicon & Solar</h2>
-                                <span style="font-size: 0.7rem; background: rgba(168, 85, 247, 0.2); color: #c4b5fd; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(168, 85, 247, 0.3); white-space: nowrap;">🎯 BACKTEST: 23 signal | WR 83% | +13.3%/trade</span>
+                                <span style="font-size: 0.7rem; background: rgba(168, 85, 247, 0.2); color: #c4b5fd; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(168, 85, 247, 0.3); white-space: nowrap;">🎯 BACKTEST: 23 signals | WR 83% | +13.3%/trade</span>
                             </div>
                             <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
-                                Kaunter <strong style="color:#c4b5fd;">Semiconductor & Solar/RE</strong> yang qualify <strong style="color:#38bdf8;">Confluence 2+ strategi</strong> (Jerung Radar / VCP / Trend Rider / Early Spring / Bottom Fishing). Backtest 61 hari: <strong style="color:#34d399;">23 signal, Win Rate 83%, avg +13.3%/trade, total +305.7%, rugi terburuk -5.3%</strong>.
+                                <strong style="color:#c4b5fd;">Semiconductor & Solar/RE</strong> counters qualifying <strong style="color:#38bdf8;">Confluence 2+ strategies</strong> (Jerung Radar / VCP / Trend Rider / Early Spring / Bottom Fishing). 61-day backtest: <strong style="color:#34d399;">23 signals, Win Rate 83%, avg +13.3%/trade, total +305.7%, max loss -5.3%</strong>.
                             </p>
                             <p style="margin: 0.5rem 0 0 0; font-size: 0.78rem; color: #fbbf24; background: rgba(245,158,11,0.08); border: 1px dashed rgba(245,158,11,0.35); border-radius: 8px; padding: 0.5rem 0.7rem; line-height: 1.5;">
-                                ⚡ <strong style="color:#c4b5fd;">SOP: semak LEPAS CLOSE (5:00–6:00 petang)</strong> — data ialah harga penutupan. Tema semasa (Ogos 2026): <strong style="color:#38bdf8;">Semicon (AI/Data Center boom) & Solar (RE push)</strong>. Semak semula tema setiap bulan — kalau kaunter tema baru dominate top volume, tambah dalam senarai.
+                                ⚡ <strong style="color:#c4b5fd;">SOP: Check AFTER MARKET CLOSE (5:00–6:00 PM)</strong> — data reflects daily closing prices. Current active themes (Aug 2026): <strong style="color:#38bdf8;">Semicon (AI/Data Center boom) & Solar (RE push)</strong>. Review monthly — if new thematic stocks dominate top volume, add to watchlist.
                             </p>
                         </div>
                     </div>
                     <div style="display: flex; gap: 0.3rem; align-items: center; background: rgba(15,23,42,0.6); padding: 0.2rem; border-radius: 8px; border: 1px solid rgba(168,85,247,0.3);">
-                        <span style="font-size: 0.72rem; color: #64748b; font-weight: 600; padding: 0 0.3rem;">Fokus:</span>
-                        <button id="htFilterTriple" onclick="setHotThemeFilter('triple_only')" style="background: transparent; color: #64748b; border: 1px solid transparent; padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">🔥 TRIPLE Sahaja</button>
-                        <button id="htFilterAll" onclick="setHotThemeFilter('all')" style="background: rgba(168,85,247,0.25); color: #c4b5fd; border: 1px solid rgba(168,85,247,0.5); padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer;">⚡ Semua (2+)</button>
+                        <span style="font-size: 0.72rem; color: #64748b; font-weight: 600; padding: 0 0.3rem;">Focus:</span>
+                        <button id="htFilterTriple" onclick="setHotThemeFilter('triple_only')" style="background: transparent; color: #64748b; border: 1px solid transparent; padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">🔥 TRIPLE Only</button>
+                        <button id="htFilterAll" onclick="setHotThemeFilter('all')" style="background: rgba(168,85,247,0.25); color: #c4b5fd; border: 1px solid rgba(168,85,247,0.5); padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer;">⚡ All (2+)</button>
                     </div>
                 </div>
 
@@ -1292,12 +1292,12 @@
         <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(168, 85, 247, 0.06)); border: 1px dashed rgba(168, 85, 247, 0.35); border-radius: 12px; padding: 0.9rem 1.1rem; margin-bottom: 1.25rem;">
             <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.7rem;">
                 <span style="font-size: 1rem;">📊</span>
-                <span style="font-size: 0.75rem; font-weight: 900; color: #c4b5fd; letter-spacing: 0.5px; text-transform: uppercase;">Data Backtest Hot Theme Rider</span>
-                <span id="htBacktestMeta" style="font-size: 0.65rem; color: #94a3b8; font-weight: 600;">Simulasi: tutup trade selepas 20 hari</span>
+                <span style="font-size: 0.75rem; font-weight: 900; color: #c4b5fd; letter-spacing: 0.5px; text-transform: uppercase;">Hot Theme Rider Backtest Data</span>
+                <span id="htBacktestMeta" style="font-size: 0.65rem; color: #94a3b8; font-weight: 600;">Simulation: trades closed after 20 days</span>
             </div>
             <div style="display: flex; flex-wrap: wrap; gap: 0.6rem;">
                 <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(168,85,247,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 105px; text-align: center; flex: 1;">
-                    <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Signal (unik)</div>
+                    <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Signals (Unique)</div>
                     <div id="htBtSignals" style="font-size: 1.05rem; color: #c4b5fd; font-weight: 900;">—</div>
                 </div>
                 <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(168,85,247,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 105px; text-align: center; flex: 1;">
@@ -1309,23 +1309,23 @@
                     <div id="htBtAvg" style="font-size: 1.05rem; color: #34d399; font-weight: 900;">—</div>
                 </div>
                 <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(168,85,247,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 105px; text-align: center; flex: 1;">
-                    <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Jumlah PnL</div>
+                    <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Total PnL</div>
                     <div id="htBtTotal" style="font-size: 1.05rem; color: #34d399; font-weight: 900;">—</div>
                 </div>
                 <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(168,85,247,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 105px; text-align: center; flex: 1;">
-                    <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Rugi Terburuk</div>
+                    <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Max Drawdown</div>
                     <div id="htBtWorst" style="font-size: 1.05rem; color: #f87171; font-weight: 900;">—</div>
                 </div>
             </div>
-            <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">* <strong style="color:#c4b5fd;">SIMULASI</strong> — andaikan setiap trade ditutup selepas 20 hari (tak kira untung/rugi), untuk buktikan entry rule profitable. Setiap kaunter dikira sekali (hari pertama qualify). Dikira semula automatik setiap hari.</p>
+            <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">* <strong style="color:#c4b5fd;">SIMULATION</strong> — assumes every trade is closed after 20 holding days (regardless of PnL) to prove baseline entry edge. Each counter counted once on first qualification date. Automatically recalculated daily.</p>
         </div>
 
         <!-- LIVE TRACKER HOT THEME -->
         <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(16, 185, 129, 0.07)); border: 1px dashed rgba(16, 185, 129, 0.4); border-radius: 12px; padding: 0.9rem 1.1rem; margin-bottom: 1.25rem;">
             <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.7rem;">
                 <span style="font-size: 1rem;">📡</span>
-                <span style="font-size: 0.75rem; font-weight: 900; color: #34d399; letter-spacing: 0.5px; text-transform: uppercase;">Tracker Live Hot Theme</span>
-                <span id="htTrackerMeta" style="font-size: 0.65rem; color: #94a3b8; font-weight: 600;">Dijana daripada data sejarah + live</span>
+                <span style="font-size: 0.75rem; font-weight: 900; color: #34d399; letter-spacing: 0.5px; text-transform: uppercase;">Hot Theme Live Tracker</span>
+                <span id="htTrackerMeta" style="font-size: 0.65rem; color: #94a3b8; font-weight: 600;">Generated from historical + live data</span>
             </div>
             <div id="htTrackerStats" style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.7rem;"></div>
             <div class="table-responsive">
@@ -1360,11 +1360,11 @@
             </div>
             <div style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.7rem;">
                 <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(251,191,36,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 120px; text-align: center; flex: 1;">
-                    <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Kekuatan Tema Kini</div>
+                    <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Current Theme Strength</div>
                     <div id="htThemeNow" style="font-size: 1.05rem; color: #fbbf24; font-weight: 900;">—</div>
                 </div>
                 <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(251,191,36,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 120px; text-align: center; flex: 1;">
-                    <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">5-Hari MA</div>
+                    <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">5-Day MA</div>
                     <div id="htThemeMA5" style="font-size: 1.05rem; color: #fbbf24; font-weight: 900;">—</div>
                 </div>
                 <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(251,191,36,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 120px; text-align: center; flex: 1;">
@@ -1373,9 +1373,7 @@
                 </div>
             </div>
             <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">
-                💡 <strong style="color:#fbbf24;">Cara guna:</strong> Kekuatan tema = % dana dalam top volume yang mengalir ke kaunter Semicon+Solar.
-                Kajian data: signal masuk masa <strong style="color:#34d399;">RISING avg +10.7%</strong> vs <strong style="color:#fde047;">FALLING avg +12.5%</strong> — pemenang besar (KEEMING +70%, DNEX +38%, VITROX +36%) masuk masa falling, jadi <strong style="color:#34d399;">falling BUKAN sebab untuk batalkan entry</strong>.
-                Guna strength untuk <strong style="color:#fbbf24;">saiz posisi</strong>: kekuatan &gt; 20% = tema panas, entry saiz normal; 10–20% = sederhana, kecilkan saiz; &lt; 10% = benar-benar sejuk, kecilkan saiz separuh (atau hadkan kepada signal 🔥 TRIPLE sahaja).
+                💡 <strong style="color:#fbbf24;">Usage Guide:</strong> Theme Strength = % top volume turnover flowing into Semicon+Solar equities. Empirical study: signals entered during <strong style="color:#34d399;">RISING strength averaged +10.7%</strong> vs <strong style="color:#fde047;">FALLING strength +12.5%</strong> — major winners (KEEMING +70%, DNEX +38%, VITROX +36%) entered during falling strength, so <strong style="color:#34d399;">falling strength is NOT a disqualifier</strong>. Use strength to adjust <strong style="color:#fbbf24;">position sizing</strong>: strength &gt; 20% = hot theme, standard position size; 10–20% = moderate, reduce size; &lt; 10% = cool, halve position size (or restrict to 🔥 TRIPLE signals).
             </p>
         </div>
     </div> <!-- End of view-hottheme -->
