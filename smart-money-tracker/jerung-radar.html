@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🦈 Jerung Radar | Bursa Malaysia Institutional Whale Tracker (KWSP, PNB, KWAP, Khazanah)</title>
-    <meta name="description" content="Sistem Pengesan Automatik Transaksi Saham Jerung Institusi Bursa Malaysia - KWSP, PNB, KWAP, Khazanah & Pengurus Dana Utama.">
+    <title>🦈 Jerung Radar | Bursa Malaysia Institutional Whale Tracker (EPF, PNB, KWAP, Khazanah)</title>
+    <meta name="description" content="Automated Tracking System for Institutional Whale Equities Transactions on Bursa Malaysia - EPF, PNB, KWAP, Khazanah & Key Fund Managers.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
@@ -56,32 +56,31 @@
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
+            width: 100vw;
+            height: 100vh;
             z-index: -1;
-            filter: blur(120px);
-            opacity: 0.15;
+            overflow: hidden;
             pointer-events: none;
         }
 
         .blob {
             position: absolute;
-            width: 45vw;
-            height: 45vw;
             border-radius: 50%;
+            filter: blur(90px);
+            opacity: 0.15;
         }
 
-        .blob-1 { background: #10b981; top: -10%; left: -10%; }
-        .blob-2 { background: #3b82f6; bottom: 10%; right: -10%; }
-        .blob-3 { background: #8b5cf6; top: 40%; left: 40%; }
+        .blob-1 { top: -10%; left: 20%; width: 500px; height: 500px; background: #10b981; }
+        .blob-2 { bottom: 10%; right: -5%; width: 450px; height: 450px; background: #0ea5e9; }
+        .blob-3 { top: 40%; left: -10%; width: 350px; height: 350px; background: #6366f1; }
 
         .glass-header {
-            position: sticky;
-            top: 0;
-            z-index: 100;
             background: rgba(7, 9, 14, 0.85);
             backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--glass-border);
+            position: sticky;
+            top: 0;
+            z-index: 100;
             padding: 0.85rem 0;
         }
 
@@ -94,69 +93,44 @@
         .logo {
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            color: var(--primary-light);
-            text-decoration: none;
-            font-size: 1.25rem;
+            gap: 0.6rem;
+            font-size: 1.35rem;
             font-weight: 800;
-        }
-
-        .logo-text span { color: #f8fafc; }
-
-        .btn-moomoo {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            color: #f8fafc;
+            color: #fff;
             text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-            font-size: 0.85rem;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            transition: var(--transition);
         }
 
-        .btn-moomoo:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-1px);
+        .logo-text span {
+            color: var(--primary-light);
         }
 
         .radar-container {
-            margin-top: 1.5rem;
-            margin-bottom: 3rem;
+            padding-top: 2rem;
+            padding-bottom: 4rem;
             display: flex;
             flex-direction: column;
-            gap: 1.25rem;
+            gap: 2rem;
         }
 
         .radar-header-section {
             text-align: center;
-            padding: 1.5rem 1rem;
-            background: radial-gradient(circle at center, rgba(16, 185, 129, 0.12) 0%, rgba(10, 15, 30, 0) 70%);
-            border-radius: 1rem;
-            border: 1px solid rgba(16, 185, 129, 0.2);
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         .radar-title-glow {
-            text-shadow: 0 0 25px rgba(16, 185, 129, 0.5);
-            background: linear-gradient(to right, #34d399, #10b981, #60a5fa);
+            font-size: 2.3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff 0%, #34d399 50%, #3b82f6 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            font-size: 2.25rem;
-            font-weight: 800;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
         }
 
         .radar-subtitle {
             color: var(--text-dim);
             font-size: 0.95rem;
-            margin-top: 0.5rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            line-height: 1.6;
         }
 
         .metrics-grid {
@@ -170,33 +144,33 @@
             backdrop-filter: blur(12px);
             border: 1px solid var(--glass-border);
             border-radius: 0.85rem;
-            padding: 1.1rem 1.25rem;
+            padding: 1.1rem;
             display: flex;
             flex-direction: column;
-            gap: 0.35rem;
+            gap: 0.3rem;
             transition: var(--transition);
         }
 
         .metric-card:hover {
+            border-color: rgba(16, 185, 129, 0.3);
             transform: translateY(-2px);
-            border-color: rgba(16, 185, 129, 0.35);
-            box-shadow: 0 10px 25px rgba(16, 185, 129, 0.1);
         }
 
         .metric-card .label {
-            font-size: 0.78rem;
+            font-size: 0.8rem;
             color: var(--text-dim);
+            font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.5px;
             display: flex;
             align-items: center;
             gap: 0.4rem;
         }
 
         .metric-card .val {
+            font-family: 'Outfit', sans-serif;
             font-size: 1.5rem;
             font-weight: 800;
-            font-family: 'Outfit', sans-serif;
             color: #f8fafc;
         }
 
@@ -280,20 +254,21 @@
         }
 
         .search-input {
-            background: rgba(0, 0, 0, 0.35);
-            border: 1px solid rgba(255, 255, 255, 0.12);
-            color: white;
-            padding: 0.5rem 1rem;
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid var(--glass-border);
             border-radius: 0.5rem;
+            padding: 0.5rem 0.85rem;
+            color: #fff;
             font-size: 0.85rem;
-            width: 100%;
-            max-width: 340px;
             outline: none;
-            transition: border-color 0.2s;
+            width: 100%;
+            max-width: 320px;
+            transition: var(--transition);
         }
 
         .search-input:focus {
-            border-color: var(--primary);
+            border-color: var(--primary-light);
+            box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
         }
 
         .table-wrapper {
@@ -312,27 +287,29 @@
         }
 
         .radar-table th {
-            background: rgba(0, 0, 0, 0.4);
-            padding: 0.85rem 1rem;
-            color: #94a3b8;
+            background: rgba(15, 23, 42, 0.8);
+            color: var(--text-dim);
             font-weight: 700;
+            padding: 0.85rem 1rem;
             border-bottom: 1px solid var(--glass-border);
-            white-space: nowrap;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
         }
 
         .radar-table td {
             padding: 0.85rem 1rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            color: #e2e8f0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+            vertical-align: middle;
         }
 
-        .radar-table tbody tr:hover {
-            background: rgba(255, 255, 255, 0.025);
+        .radar-table tr:hover {
+            background: rgba(255, 255, 255, 0.02);
         }
 
         .badge-buy {
             background: rgba(16, 185, 129, 0.15);
-            color: #10b981;
+            color: #34d399;
             border: 1px solid rgba(16, 185, 129, 0.3);
             padding: 0.2rem 0.5rem;
             border-radius: 4px;
@@ -402,7 +379,7 @@
                     <i data-lucide="external-link" style="width: 14px; height: 14px;"></i> <span>📊 BursaIPO Portal ↗</span>
                 </a>
                 <a href="index.html" class="btn-moomoo" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #cbd5e1; text-decoration: none; padding: 0.5rem 1rem; border-radius: 0.5rem; font-size: 0.85rem; display: inline-flex; align-items: center; gap: 0.35rem;">
-                    <i data-lucide="arrow-left" style="width: 14px; height: 14px;"></i> <span>Kembali ke Scanner Live</span>
+                    <i data-lucide="arrow-left" style="width: 14px; height: 14px;"></i> <span>Back to Main Scanner</span>
                 </a>
             </div>
         </div>
@@ -417,29 +394,29 @@
             </div>
             <h1 class="radar-title-glow">🦈 Bursa Jerung Radar (Whale Tracker)</h1>
             <p class="radar-subtitle">
-                Sistem Penjejak & Pengesan Automatik Transaksi Pembelian Saham oleh Jerung Institusi Gergasi (KWSP, PNB, KWAP, Khazanah & Pengurus Dana Utama) berasaskan pemfailan rasmi Bursa Malaysia.
+                Automated System Tracking Institutional Share Transactions (EPF, PNB, KWAP, Khazanah & Key Asset Managers) based on official Bursa Malaysia regulatory filings.
             </p>
         </div>
 
         <!-- Metric Stat Cards -->
         <div class="metrics-grid">
             <div class="metric-card">
-                <div class="label"><i data-lucide="trending-up" style="width:14px;height:14px;color:#10b981;"></i> Whale Inflow (30 Hari)</div>
+                <div class="label"><i data-lucide="trending-up" style="width:14px;height:14px;color:#10b981;"></i> Whale Inflow (30 Days)</div>
                 <div class="val" id="stat-total-inflow">—</div>
-                <div class="sub" id="stat-total-inflow-sub">Dikira dari pemfilan belian</div>
+                <div class="sub" id="stat-total-inflow-sub">Calculated from net buy filings</div>
             </div>
             <div class="metric-card">
-                <div class="label"><i data-lucide="landmark" style="width:14px;height:14px;color:#60a5fa;"></i> Top Jerung Teraktif</div>
+                <div class="label"><i data-lucide="landmark" style="width:14px;height:14px;color:#60a5fa;"></i> Top Active Whale</div>
                 <div class="val" id="stat-top-inst" style="color:#60a5fa;font-size:1.15rem;">—</div>
-                <div class="sub" id="stat-top-inst-sub">Pemfilan Saham Rasmi</div>
+                <div class="sub" id="stat-top-inst-sub">Official Regulatory Filings</div>
             </div>
             <div class="metric-card">
-                <div class="label"><i data-lucide="gem" style="width:14px;height:14px;color:#a78bfa;"></i> Saham Paling Dikumpul</div>
+                <div class="label"><i data-lucide="gem" style="width:14px;height:14px;color:#a78bfa;"></i> Top Accumulated Stock</div>
                 <div class="val" id="stat-top-stock" style="color:#a78bfa;font-size:1.15rem;">—</div>
-                <div class="sub" id="stat-top-stock-sub">Pegangan Substantial</div>
+                <div class="sub" id="stat-top-stock-sub">Substantial Stake</div>
             </div>
             <div class="metric-card">
-                <div class="label"><i data-lucide="shield-check" style="width:14px;height:14px;color:#f59e0b;"></i> Integriti Data</div>
+                <div class="label"><i data-lucide="shield-check" style="width:14px;height:14px;color:#f59e0b;"></i> Data Integrity</div>
                 <div class="val" id="stat-integrity" style="color:#f59e0b;font-size:1.15rem;">—</div>
                 <div class="sub" id="stat-integrity-sub">Bursa Sec 138 Filings</div>
             </div>
@@ -449,7 +426,7 @@
         <div style="margin-top: 0.5rem;">
             <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.6rem;">
                 <i data-lucide="award" style="color:#34d399;width:18px;height:18px;"></i>
-                <h3 style="font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:700;color:#f1f5f9;">Whale Portfolio Spotlight (Kaunter Teras Jerung)</h3>
+                <h3 style="font-family:'Outfit',sans-serif;font-size:1.1rem;font-weight:700;color:#f1f5f9;">Whale Portfolio Spotlight (Institutional Core Holdings)</h3>
             </div>
             <div class="spotlight-grid" id="spotlight-cards-container">
                 <!-- Dynamically Rendered Spotlight Cards -->
@@ -460,28 +437,28 @@
         <div class="controls-card">
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;">
                 <div style="font-weight: 700; font-size: 0.9rem; color: #f8fafc; display: flex; align-items: center; gap: 0.4rem;">
-                    <i data-lucide="filter" style="width: 16px; height: 16px; color: #10b981;"></i> Penapis Jerung & Saham
+                    <i data-lucide="filter" style="width: 16px; height: 16px; color: #10b981;"></i> Filter Institution & Equities
                 </div>
-                <input type="text" id="radar-search" class="search-input" placeholder="🔍 Cari nama syarikat, kod, atau institusi..." oninput="applyFilters()">
+                <input type="text" id="radar-search" class="search-input" placeholder="🔍 Search company name, code, or institution..." oninput="applyFilters()">
             </div>
 
             <!-- Institution Filter Pills -->
             <div class="filter-row">
-                <span style="font-size: 0.75rem; color: var(--text-dim); font-weight: 600;">Institusi:</span>
-                <button class="filter-btn active" data-inst="ALL" onclick="setInstitutionFilter('ALL')">Semua Jerung</button>
-                <button class="filter-btn" data-inst="KWSP" onclick="setInstitutionFilter('KWSP')">🏛️ KWSP / EPF</button>
+                <span style="font-size: 0.75rem; color: var(--text-dim); font-weight: 600;">Institution:</span>
+                <button class="filter-btn active" data-inst="ALL" onclick="setInstitutionFilter('ALL')">All Whales</button>
+                <button class="filter-btn" data-inst="KWSP" onclick="setInstitutionFilter('KWSP')">🏛️ EPF / KWSP</button>
                 <button class="filter-btn" data-inst="PNB" onclick="setInstitutionFilter('PNB')">🏢 PNB / ASB</button>
                 <button class="filter-btn" data-inst="KWAP" onclick="setInstitutionFilter('KWAP')">🛡️ KWAP</button>
                 <button class="filter-btn" data-inst="KHAZANAH" onclick="setInstitutionFilter('KHAZANAH')">👑 Khazanah</button>
-                <button class="filter-btn" data-inst="Asset Management" onclick="setInstitutionFilter('Asset Management')">💼 Pengurus Dana (Private Funds)</button>
+                <button class="filter-btn" data-inst="Asset Management" onclick="setInstitutionFilter('Asset Management')">💼 Asset Managers (Private Funds)</button>
             </div>
 
             <!-- Action Filter Pills -->
             <div class="filter-row">
-                <span style="font-size: 0.75rem; color: var(--text-dim); font-weight: 600;">Tindakan:</span>
-                <button class="filter-btn active" data-action="ALL" onclick="setActionFilter('ALL')">Semua</button>
-                <button class="filter-btn" data-action="Acquired" onclick="setActionFilter('Acquired')">🔥 Beli / Net Buy</button>
-                <button class="filter-btn" data-action="Steady Hold" onclick="setActionFilter('Steady Hold')">🛡️ Pegang Teras</button>
+                <span style="font-size: 0.75rem; color: var(--text-dim); font-weight: 600;">Action:</span>
+                <button class="filter-btn active" data-action="ALL" onclick="setActionFilter('ALL')">All</button>
+                <button class="filter-btn" data-action="Acquired" onclick="setActionFilter('Acquired')">🔥 Net Buy</button>
+                <button class="filter-btn" data-action="Steady Hold" onclick="setActionFilter('Steady Hold')">🛡️ Core Hold</button>
             </div>
         </div>
 
@@ -490,14 +467,14 @@
             <table class="radar-table">
                 <thead>
                     <tr>
-                        <th>Tarikh Fail</th>
-                        <th>Syarikat & Kod</th>
-                        <th>Institusi (Jerung)</th>
-                        <th>Tindakan</th>
-                        <th>Unit Saham Diubah</th>
-                        <th>Pegangan Semasa (%)</th>
-                        <th>Isyarat Radar</th>
-                        <th>Dokumen Bursa</th>
+                        <th>Filing Date</th>
+                        <th>Company & Code</th>
+                        <th>Institution (Whale)</th>
+                        <th>Action</th>
+                        <th>Shares Transacted</th>
+                        <th>Current Stake (%)</th>
+                        <th>Radar Signal</th>
+                        <th>Bursa Document</th>
                     </tr>
                 </thead>
                 <tbody id="radar-table-body">
@@ -510,12 +487,12 @@
         <div class="strategy-box">
             <div style="display:flex;align-items:center;gap:0.5rem;margin-bottom:0.5rem;">
                 <i data-lucide="lightbulb" style="color:#fbbf24;width:18px;height:18px;"></i>
-                <h4 style="color:#f8fafc;font-weight:700;font-size:0.95rem;margin:0;">SOP Menunggang Jerung Institusi Bursa (Whale Rider Playbook)</h4>
+                <h4 style="color:#f8fafc;font-weight:700;font-size:0.95rem;margin:0;">Bursa Institutional Whale Riding SOP Playbook</h4>
             </div>
             <ul style="margin:0;padding-left:1.25rem;color:#cbd5e1;display:flex;flex-direction:column;gap:0.35rem;">
-                <li><strong>1. Masuk Semasa Fasa Pengumpulan (*Consolidation*):</strong> Jerung mengambil masa berminggu-minggu untuk kumpul saham. Waktu terbaik beli adalah ketika harga mendatar berdekatan paras kos jerung / harga IPO.</li>
-                <li><strong>2. Jangan Kejar Harga Tinggi (*Don't Chase*):</strong> Elakkan membeli jika harga telah naik lebih 15%–20% dari tarikh pemfailan rasmi. Tunggu fasa 'pullback' yang tenang.</li>
-                <li><strong>3. Fokus Syarikat 'Market Leader':</strong> Utamakan saham nombor 1 dalam sektor seperti <em>99 Speedmart, MR D.I.Y., CTOS, dan Big Caring Group</em> yang mempunyai aliran tunai harian konsisten.</li>
+                <li><strong>1. Enter During Accumulation Bases (Consolidation):</strong> Whales spend weeks building positions. Optimal entries occur when price consolidates near institutional average cost or IPO levels.</li>
+                <li><strong>2. Avoid Chasing Overextended Rallies:</strong> Do not buy if price has already surged over 15%–20% from the official filing date. Wait for healthy pullback consolidations.</li>
+                <li><strong>3. Focus on Industry Leaders:</strong> Prioritize top sector players such as <em>99 Speedmart, MR D.I.Y., CTOS, and Big Caring Group</em> exhibiting consistent daily cash flow.</li>
             </ul>
         </div>
 
@@ -534,7 +511,7 @@
             if (typeof lucide !== 'undefined') lucide.createIcons();
         }
 
-        // === METRIC CARDS — dikira automatik dari window.jerungData (bukan hardcode) ===
+        // === METRIC CARDS — calculated automatically from window.jerungData ===
         function fmtMoney(v) {
             if (v >= 1e9) return 'RM +' + (v / 1e9).toFixed(2) + 'B';
             if (v >= 1e6) return 'RM +' + (v / 1e6).toFixed(1) + 'M';
@@ -542,7 +519,7 @@
         }
 
         function instShort(n) {
-            if (/EMPLOYEES|KWSP/.test(n)) return 'KWSP / EPF';
+            if (/EMPLOYEES|KWSP/.test(n)) return 'EPF / KWSP';
             if (/AMANAH SAHAM|PERMODALAN|PNB/.test(n)) return 'PNB / ASB';
             if (/PERSARAAN|KWAP/.test(n)) return 'KWAP';
             if (/KHAZANAH|AGRIFOOD/.test(n)) return 'Khazanah';
@@ -558,7 +535,7 @@
             const data = window.jerungData || [];
             if (!data.length) return;
 
-            // 1) Whale Inflow: nilai belian bersih 30 hari terakhir
+            // 1) Whale Inflow: net buy value in last 30 days
             const now = new Date();
             const cutoff = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 30);
             const buys = data.filter(tx => tx.action === 'Acquired' && (tx.totalValueMYR || 0) > 0);
@@ -567,13 +544,13 @@
             const inflow = pool.reduce((a, b) => a + (b.totalValueMYR || 0), 0);
             setText('stat-total-inflow', fmtMoney(inflow));
             setText('stat-total-inflow-sub', recentBuys.length
-                ? 'Belian bersih · ' + recentBuys.length + ' pemfilan (30 hari)'
-                : 'Belian bersih · ' + buys.length + ' pemfilan (semua data)');
+                ? 'Net buy · ' + recentBuys.length + ' filings (30 days)'
+                : 'Net buy · ' + buys.length + ' filings (all data)');
 
-            // 2) Top Jerung Teraktif: institusi paling banyak pemfilan
+            // 2) Top Active Whale: institution with most filings
             const byInst = {};
             data.forEach(tx => {
-                const key = (tx.institution || 'Lain-lain').split('/')[0].trim();
+                const key = (tx.institution || 'Other').split('/')[0].trim();
                 byInst[key] = byInst[key] || { count: 0, value: 0 };
                 byInst[key].count++;
                 if (tx.action === 'Acquired') byInst[key].value += tx.totalValueMYR || 0;
@@ -581,9 +558,9 @@
             const instRank = Object.entries(byInst).sort((a, b) => b[1].count - a[1].count || b[1].value - a[1].value);
             const topInst = instRank[0] || [];
             setText('stat-top-inst', instShort(topInst[0] || ''));
-            setText('stat-top-inst-sub', (topInst[1] ? topInst[1].count : 0) + ' pemfilan rasmi · ' + fmtMoney(topInst[1] ? topInst[1].value : 0));
+            setText('stat-top-inst-sub', (topInst[1] ? topInst[1].count : 0) + ' official filings · ' + fmtMoney(topInst[1] ? topInst[1].value : 0));
 
-            // 3) Saham Paling Dikumpul: kaunter dengan nilai belian tertinggi
+            // 3) Top Accumulated Stock: stock with highest net buy value
             const byStock = {};
             data.forEach(tx => {
                 if (tx.action !== 'Acquired') return;
@@ -595,31 +572,30 @@
             const stockRank = Object.entries(byStock).sort((a, b) => b[1].value - a[1].value);
             const topStocks = stockRank.slice(0, 3);
             const topPct = Math.max(0, ...topStocks.map(x => x[1].pct));
-            setText('stat-top-stock', topStocks.length ? topStocks.map(x => x[0]).join(' / ') : 'Tiada belian');
-            setText('stat-top-stock-sub', topPct > 0 ? 'Pegangan sehingga ' + topPct.toFixed(2) + '%' : 'Pegangan substantial');
+            setText('stat-top-stock', topStocks.length ? topStocks.map(x => x[0]).join(' / ') : 'No purchases');
+            setText('stat-top-stock-sub', topPct > 0 ? 'Stake up to ' + topPct.toFixed(2) + '%' : 'Substantial Stake');
 
-            // 4) Integriti Data: % rekod lengkap + tarikh kemas kini
+            // 4) Data Integrity: % complete records + update date
             const complete = data.filter(tx => tx.filingDate && tx.percentage && tx.institution && tx.symbol && tx.code);
             const integrity = data.length ? Math.round(100 * complete.length / data.length) : 0;
             const latest = data.map(tx => parseRadarDate(tx.filingDate)).sort((a, b) => b - a)[0];
             const latestStr = latest && !isNaN(latest.getTime())
                 ? latest.toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })
                 : '';
-            setText('stat-integrity', integrity + '% Sahih');
-            setText('stat-integrity-sub', data.length + ' pemfilan' + (latestStr ? ' · kemas kini ' + latestStr : ''));
+            setText('stat-integrity', integrity + '% Verified');
+            setText('stat-integrity-sub', data.length + ' filings' + (latestStr ? ' · updated ' + latestStr : ''));
         }
 
-        // === LINK DOKUMEN BURSA — jujur: spesifik bila ada ann_id, kalau tak cari ikut syarikat ===
         function getBursaLink(tx) {
             const url = tx.announcementUrl || '';
             const hasAnnId = /[?&]ann_id=[^&\s]/.test(url);
             if (hasAnnId) {
-                return { href: url, label: '📄 Fail Bursa', specific: true };
+                return { href: url, label: '📄 Bursa Filing', specific: true };
             }
             const keyword = encodeURIComponent(tx.stockName || tx.symbol || '');
             return {
                 href: 'https://www.bursamalaysia.com/market_information/announcements/company_announcement?keyword=' + keyword,
-                label: '🔍 Cari di Bursa',
+                label: '🔍 Search Bursa',
                 specific: false
             };
         }
@@ -630,26 +606,26 @@
                 {
                     name: '99 Speedmart Retail (99SMART)',
                     symbol: '5326',
-                    inst: 'KWSP (EPF) & Global Funds',
+                    inst: 'EPF (KWSP) & Global Funds',
                     stake: '5.27% (>442M Shares)',
                     tag: '🔥 Aggressive Net Buy',
-                    note: 'Monopoli kedai serbaneka runcit >2,600 cawangan dengan aliran tunai harian berbilion ringgit.'
+                    note: 'Dominant retail convenience chain (>2,600 stores) generating billions in daily cash flow.'
                 },
                 {
                     name: 'CTOS Digital Berhad (CTOS)',
                     symbol: '5301',
-                    inst: 'KWSP (EPF) & Abrdn plc',
+                    inst: 'EPF (KWSP) & Abrdn plc',
                     stake: '15.07% (>348M Shares)',
                     tag: '🏛️ Top Institutional Anchor',
-                    note: 'Syarikat laporan kredit fintech no. 1 di mana KWSP adalah pemegang saham institusi terbesar.'
+                    note: '#1 fintech credit reporting agency with EPF holding a major institutional position.'
                 },
                 {
                     name: 'Farm Fresh Berhad (FFB)',
                     symbol: '5306',
-                    inst: 'Khazanah (11.8%) & KWSP (7.6%)',
-                    stake: '19.44% Gabungan Jerung',
+                    inst: 'Khazanah (11.8%) & EPF (7.6%)',
+                    stake: '19.44% Combined Whale Stake',
                     tag: '🛡️ Strategic Sovereign Play',
-                    note: 'Pengeluar tenusu segar gergasi dengan sokongan dana pencen dan pelaburan strategik kerajaan.'
+                    note: 'Leading fresh dairy producer backed by sovereign wealth and state pension funds.'
                 },
                 {
                     name: 'MN Holdings Berhad (MNHLDG)',
@@ -657,7 +633,7 @@
                     inst: 'PNB / ASB & Unit Trusts',
                     stake: '8.12% (>38M Shares)',
                     tag: '⚡ Data Centre Energy Boom',
-                    note: 'Kontraktor kejuruteraan pencawang elektrik bagi pembangunan hab Data Centre gergasi Malaysia.'
+                    note: 'Power substation engineering contractor riding Malaysia\'s mega Data Centre hub expansion.'
                 }
             ];
 
@@ -666,13 +642,13 @@
                     <div style="display:flex;justify-content:space-between;align-items:flex-start;">
                         <div>
                             <strong style="color:#f8fafc;font-size:0.95rem;display:block;">${item.name}</strong>
-                            <span style="font-size:0.75rem;color:var(--text-dim);">Kod Bursa: ${item.symbol}</span>
+                            <span style="font-size:0.75rem;color:var(--text-dim);">Bursa Code: ${item.symbol}</span>
                         </div>
                         <span class="badge-buy">${item.tag}</span>
                     </div>
                     <div style="background:rgba(0,0,0,0.3);padding:0.4rem 0.6rem;border-radius:6px;border:1px solid rgba(255,255,255,0.05);font-size:0.78rem;">
-                        <span style="color:var(--text-dim);">Jerung Utama:</span> <strong style="color:#34d399;">${item.inst}</strong><br>
-                        <span style="color:var(--text-dim);">Pegangan Sah:</span> <span style="color:#60a5fa;font-weight:700;">${item.stake}</span>
+                        <span style="color:var(--text-dim);">Lead Whale:</span> <strong style="color:#34d399;">${item.inst}</strong><br>
+                        <span style="color:var(--text-dim);">Total Stake:</span> <span style="color:#60a5fa;font-weight:700;">${item.stake}</span>
                     </div>
                     <div style="font-size:0.78rem;color:#cbd5e1;line-height:1.4;">${item.note}</div>
                 </div>
@@ -747,17 +723,17 @@
         function renderTable(list) {
             const tbody = document.getElementById('radar-table-body');
             if (list.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="8" style="text-align:center;padding:2rem;color:var(--text-dim);">Tiada transaksi pemfailan padan dengan penapis.</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="8" style="text-align:center;padding:2rem;color:var(--text-dim);">No transaction filings match the selected filters.</td></tr>`;
                 return;
             }
 
             tbody.innerHTML = list.map(tx => {
                 const actionBadge = tx.action === 'Acquired' 
-                    ? `<span class="badge-buy"><i data-lucide="arrow-up-right" style="width:12px;height:12px;"></i> Beli (Net Buy)</span>`
-                    : `<span class="badge-hold"><i data-lucide="shield" style="width:12px;height:12px;"></i> Pegang Teras</span>`;
+                    ? `<span class="badge-buy"><i data-lucide="arrow-up-right" style="width:12px;height:12px;"></i> Net Buy</span>`
+                    : `<span class="badge-hold"><i data-lucide="shield" style="width:12px;height:12px;"></i> Core Hold</span>`;
 
-                const sharesStr = tx.sharesChanged > 0 ? `+${(tx.sharesChanged / 1000000).toFixed(2)}M unit` : 'Kekal';
-                const totalHoldingStr = `${(tx.totalHolding / 1000000).toFixed(1)}M unit (${tx.percentage.toFixed(2)}%)`;
+                const sharesStr = tx.sharesChanged > 0 ? `+${(tx.sharesChanged / 1000000).toFixed(2)}M units` : 'Unchanged';
+                const totalHoldingStr = `${(tx.totalHolding / 1000000).toFixed(1)}M units (${tx.percentage.toFixed(2)}%)`;
 
                 return `
                     <tr>
@@ -776,7 +752,7 @@
                         <td>
                             ${(function() {
                                 const bl = getBursaLink(tx);
-                                return `<a href="${bl.href}" target="_blank" title="${bl.specific ? 'Buka pemfailan spesifik Bursa (Sec 138)' : 'Pemfailan spesifik belum dipetakan — buka carian Bursa ikut syarikat'}" style="text-decoration:none;color:#60a5fa;font-size:0.78rem;display:inline-flex;align-items:center;gap:0.25rem;background:rgba(96,165,250,0.1);padding:0.25rem 0.5rem;border-radius:4px;border:1px solid rgba(96,165,250,0.2);white-space:nowrap;">
+                                return `<a href="${bl.href}" target="_blank" title="${bl.specific ? 'Open specific Bursa filing (Sec 138)' : 'Search Bursa filings for this company'}" style="text-decoration:none;color:#60a5fa;font-size:0.78rem;display:inline-flex;align-items:center;gap:0.25rem;background:rgba(96,165,250,0.1);padding:0.25rem 0.5rem;border-radius:4px;border:1px solid rgba(96,165,250,0.2);white-space:nowrap;">
                                     <i data-lucide="external-link" style="width:12px;height:12px;"></i> ${bl.label}
                                 </a>`;
                             })()}

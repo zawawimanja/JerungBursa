@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Panduan SOP VVIP Candlestick Rejection & Hold DCA JerungBursa — langkah demi langkah entry, stop loss, dan pengurusan posisi swing trading.">
+    <meta name="description" content="SOP Guide for VVIP Candlestick Lower Wick Rejection & Hold DCA strategy on JerungBursa — step-by-step entry rules, stop loss execution, and swing trading position management.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.jerungbursa.my/sop.html">
-    <title>Jerung Bursa - Panduan SOP VVIP Candlestick Rejection & Hold DCA</title>
+    <title>Jerung Bursa - SOP Guide & Position Sizing Execution Rules</title>
     <!-- Inter Font from Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,45 +49,11 @@
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
-        /* Header Style */
-        header {
-            text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-
-        header::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--success), #3b82f6, var(--explosive-color));
-            margin: 1.5rem auto 0 auto;
-            border-radius: 2px;
-        }
-
-        header h1 {
-            font-size: 2.3rem;
-            font-weight: 900;
-            letter-spacing: -0.025em;
-            background: linear-gradient(135deg, #ffffff 40%, var(--success) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            font-size: 1.05rem;
-            color: var(--text-secondary);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Navigation Buttons */
+        /* Nav links */
         .nav-links {
             display: flex;
             gap: 0.8rem;
@@ -95,6 +61,7 @@
             margin-bottom: 2rem;
             border-bottom: 1px solid var(--panel-border);
             padding-bottom: 1rem;
+            flex-wrap: wrap;
         }
 
         .btn-nav {
@@ -118,85 +85,91 @@
             border-color: rgba(255,255,255,0.15);
         }
 
-        /* Stats Bar */
-        .stats-bar {
-            background: rgba(30, 41, 59, 0.4);
-            border: 1px solid var(--panel-border);
-            border-radius: 12px;
-            padding: 1.2rem 1.5rem;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1.5rem;
+        header {
             text-align: center;
             margin-bottom: 2.5rem;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
 
-        @media (max-width: 600px) {
-            .stats-bar {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #ffffff 40%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        header p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Stats bar */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2.5rem;
         }
 
         .stats-item {
-            display: flex;
-            flex-direction: column;
-            gap: 0.2rem;
+            background: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            border-radius: 12px;
+            padding: 1.25rem;
+            text-align: center;
         }
 
         .stats-val {
-            font-size: 1.6rem;
+            font-size: 1.8rem;
             font-weight: 900;
-            text-shadow: 0 0 10px rgba(16, 185, 129, 0.2);
+            display: block;
         }
 
         .stats-val.success { color: var(--success); }
-        .stats-val.accent { color: #60a5fa; }
-        .stats-val.danger { color: var(--explosive-color); }
+        .stats-val.accent { color: #38bdf8; }
+        .stats-val.danger { color: #fb7185; }
 
         .stats-lbl {
             font-size: 0.8rem;
             color: var(--text-secondary);
             font-weight: 600;
-            letter-spacing: 0.2px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 0.25rem;
+            display: block;
         }
 
-        /* Section Panels */
+        /* Section Panel */
         .section-panel {
             background: var(--panel-bg);
+            backdrop-filter: blur(12px);
             border: 1px solid var(--panel-border);
             border-radius: 16px;
             padding: 2rem;
             margin-bottom: 2rem;
-            backdrop-filter: blur(12px);
         }
 
         .panel-title {
             font-size: 1.35rem;
             font-weight: 800;
-            margin-bottom: 1.25rem;
-            color: white;
+            margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
-            gap: 0.6rem;
+            gap: 0.5rem;
             border-bottom: 1px solid var(--panel-border);
             padding-bottom: 0.75rem;
         }
 
-        /* Steps */
         .step-block {
+            background: rgba(15, 23, 42, 0.5);
             border-left: 4px solid var(--accent);
-            background: rgba(16, 185, 129, 0.02);
-            padding: 1.2rem 1.5rem;
             border-radius: 0 12px 12px 0;
-            margin-bottom: 1.5rem;
-            transition: all 0.2s ease;
-        }
-
-        .step-block:hover {
-            background: rgba(16, 185, 129, 0.04);
-            border-color: #34d399;
+            padding: 1.25rem;
+            margin-bottom: 1rem;
         }
 
         .step-title {
@@ -226,11 +199,6 @@
             margin-bottom: 0.4rem;
         }
 
-        /* Highlights */
-        .highlight-success { color: var(--success); font-weight: 800; }
-        .highlight-danger { color: var(--danger); font-weight: 800; }
-        .highlight-warning { color: var(--warning); font-weight: 800; }
-
         /* Calculator Styles */
         .calc-grid {
             display: grid;
@@ -258,19 +226,14 @@
 
         .form-group input, .form-group select {
             width: 100%;
-            background: rgba(15, 23, 42, 0.6);
+            background: rgba(15, 23, 42, 0.8);
             border: 1px solid var(--panel-border);
-            padding: 0.75rem 1rem;
-            border-radius: 8px;
             color: white;
-            font-size: 1rem;
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-size: 0.95rem;
             font-weight: 600;
             outline: none;
-            transition: border-color 0.2s ease;
-        }
-
-        .form-group input:focus {
-            border-color: var(--accent);
         }
 
         .calc-results {
@@ -365,7 +328,6 @@
         .case-step strong {
             color: white;
         }
-
     </style>
 </head>
 <body>
@@ -375,24 +337,24 @@
                 📊 BursaIPO Portal ↗
             </a>
             <a href="./index.html" class="btn-nav">
-                🏠 Utama
+                🏠 Main Dashboard
             </a>
             <a href="./landing.html" class="btn-nav">
-                💡 Metodologi
+                💡 Methodology
             </a>
             <a href="./formula.html" class="btn-nav">
-                🔥 Formula VVIP
+                🔥 VVIP Formula
             </a>
             <a href="./hall-of-fame.html" class="btn-nav">
                 🏆 Hall of Fame
             </a>
             <a href="./articles.html" class="btn-nav">
-                📚 Artikel & Strategi
+                📚 Articles & Strategy
             </a>
         </div>
         <header>
-            <h1>SOP Pelaburan VVIP: Candlestick Rejection & Hold DCA</h1>
-            <p>Panduan SOP rasmi untuk mengumpul kaunter berkualiti tinggi (VVIP & Fresh IPO) di dasar lantai pengumpulan Jerung untuk potensi letupan harga maksimum.</p>
+            <h1>VVIP Investment SOP: Lower Wick Rejection & Hold DCA</h1>
+            <p>Official execution guide to accumulate high-quality equities (VVIP & Fresh IPO) at institutional support floors for maximum profit explosion potential.</p>
         </header>
 
         <!-- Stats Bar -->
@@ -403,11 +365,11 @@
             </div>
             <div class="stats-item">
                 <span class="stats-val accent">-2.26%</span>
-                <span class="stats-lbl">Purata Max Drawdown (Downside)</span>
+                <span class="stats-lbl">Average Max Drawdown (Downside)</span>
             </div>
             <div class="stats-item">
                 <span class="stats-val danger">12.64%</span>
-                <span class="stats-lbl">Kadar Saham Meletup (&ge; 20% PnL)</span>
+                <span class="stats-lbl">Breakout Rate (&ge; 20% PnL)</span>
             </div>
         </div>
 
@@ -419,67 +381,67 @@
                 
                 <!-- Step 1 -->
                 <div class="step-block" style="border-left-color: #f59e0b; background: rgba(245, 158, 11, 0.015);">
-                    <h4 class="step-title" style="color: #f59e0b;">1. Tapisan Kaunter VVIP & Fresh IPO (Premium Hype Only)</h4>
+                    <h4 class="step-title" style="color: #f59e0b;">1. Counter Screening: VVIP & Fresh IPO (Premium Hype Only)</h4>
                     <p class="step-desc">
-                        Fokus utama hanya diberikan kepada kaunter bertaraf **VVIP** (Gred A/B) atau **Fresh IPO** (2025-2026) yang memiliki **Hype Tinggi (Oversubscription &ge; 50x atau bertaraf Outlier)**. Elakkan kaunter biasa, kaunter tidur (isCombStock), atau kaunter yang tiada minat institusi (seperti retail-hype overvalued dengan OS rendah) bagi memastikan kecekapan modal maksimum.
+                        Primary focus is reserved strictly for **VVIP** grade (Grade A/B) or **Fresh IPOs** (2025-2026) possessing **High Hype (Oversubscription &ge; 50x or Outlier Status)**. Avoid low-quality counters, illiquid comb stocks, or counters lacking institutional interest to maximize capital efficiency.
                     </p>
                 </div>
 
                 <!-- Step 2 -->
                 <div class="step-block" style="border-left-color: #10b981; background: rgba(16, 185, 129, 0.015);">
-                    <h4 class="step-title" style="color: #10b981;">2. Mengenal Pasti Isyarat Utama: Strict 45% Reject Bawah</h4>
+                    <h4 class="step-title" style="color: #10b981;">2. Identifying Key Signal: Strict 45% Lower Wick Rejection</h4>
                     <p class="step-desc">
-                        Beli hanya apabila kaunter memaparkan lencana 🟢 <strong>Reject Bawah</strong> (Lower Wick Rejection) di dashboard. Lencana ini dikira dengan formula ketat:
+                        Execute purchases only when the counter displays a 🟢 <strong>Lower Wick Rejection</strong> badge on the dashboard. This badge is computed using strict criteria:
                     </p>
                     <ul class="step-list">
-                        <li><strong>Lower Shadow:</strong> Mestilah mengambil sekurang-kurangnya <strong>45%</strong> daripada keseluruhan julat lilin harian harganya.</li>
-                        <li><strong>Panjang Shadow:</strong> Mestilah lebih panjang daripada panjang tubuh lilin (Shadow > Body).</li>
-                        <li>*Mengapa:* Ini menunjukkan Jerung atau pelabur institusi membeli dengan agresif di lantai sokongan sebelum sesi ditutup.</li>
+                        <li><strong>Lower Shadow:</strong> Must account for at least <strong>45%</strong> of the daily price candle range.</li>
+                        <li><strong>Shadow Length:</strong> Must be longer than the candle body (Shadow > Body).</li>
+                        <li>*Rationale:* Indicates aggressive buying support by Smart Money/institutions at the support floor before market close.</li>
                     </ul>
                 </div>
 
                 <!-- Step 3 -->
                 <div class="step-block" style="border-left-color: #60a5fa; background: rgba(96, 165, 250, 0.015);">
-                    <h4 class="step-title" style="color: #60a5fa;">3. Waktu Kemasukan Optimum (Pre-Closing / Pre-Open)</h4>
+                    <h4 class="step-title" style="color: #60a5fa;">3. Optimal Entry Windows (Pre-Closing / Pre-Open)</h4>
                     <p class="step-desc">
-                        Gunakan dua fasa waktu selamat berikut untuk mendapatkan harga terbaik:
+                        Utilize the following two safe execution windows to achieve optimal average entry prices:
                     </p>
                     <ul class="step-list">
-                        <li><strong>Pilihan Utama (Fasa Pre-Closing jam 4:45 PM - 4:50 PM):</strong> Buka dashboard jam 4:40 PM. Jika lencana 🟢 <strong>Reject Bawah</strong> kekal keluar, hantar limit order semasa pre-closing untuk mendapatkan harga penutup rasmi sesi.</li>
-                        <li><strong>Pilihan Alternatif (Pagi jam 9:01 AM):</strong> Jika terlepas sesi petang, semak senarai malam sebelumnya. Pagi esoknya jam 9:01 AM (tunggu 1 minit untuk mengelakkan pre-open gap), jika tiada gap-up besar (&gt; +1.5%), masuk terus pada harga semasa.</li>
+                        <li><strong>Primary Option (Pre-Closing Window 4:45 PM - 4:50 PM):</strong> Open dashboard at 4:40 PM. If 🟢 <strong>Lower Wick Rejection</strong> badge remains valid, submit limit order during pre-close to lock official closing price.</li>
+                        <li><strong>Alternative Option (Morning 9:01 AM):</strong> If afternoon session was missed, review previous evening watchlist. At 9:01 AM (wait 1 min to bypass pre-open volatility gap), if no major gap-up (&gt; +1.5%), enter at prevailing market price.</li>
                     </ul>
                 </div>
 
                 <!-- Step 4 -->
                 <div class="step-block" style="border-left-color: #a78bfa; background: rgba(167, 139, 250, 0.015);">
-                    <h4 class="step-title" style="color: #a78bfa;">4. Disiplin Memegang Posisi (Hold 15 - 20 Hari Dagangan)</h4>
+                    <h4 class="step-title" style="color: #a78bfa;">4. Position Holding Discipline (Hold 15 - 20 Trading Days)</h4>
                     <p class="step-desc">
-                        Teknik ini adalah untuk <strong>Hold & DCA</strong>, bukan scalping cepat!
+                        This framework is built for **Hold & DCA swing trading**, not quick scalping!
                     </p>
                     <ul class="step-list">
-                        <li>Peram kedudukan selama **15 hingga 20 hari dagangan (kira-kira 3-4 minggu)** untuk memberikan ruang yang cukup bagi momentum harga melonjak tinggi.</li>
-                        <li>Jangan gatal tangan untuk *take profit* awal pada +5%! Data sejarah membuktikan memegang selama 15 hari membolehkan ko menangkap kenaikan mega-boom sehingga **+68% (KEEMING)**, **+47% (CHB)**, dan **+17% (AMBEST)**.</li>
+                        <li>Maintain position for **15 to 20 trading days (approx. 3-4 calendar weeks)** to allow upside momentum adequate runway to explode.</li>
+                        <li>Avoid premature profit-taking at +5%! Historical evidence demonstrates holding for 15+ days captures mega-trend moves up to **+68% (KEEMING)**, **+47% (CHB)**, and **+17% (AMBEST)**.</li>
                     </ul>
                 </div>
 
                 <!-- Step 5 -->
                 <div class="step-block" style="border-left-color: #ef4444; background: rgba(239, 68, 68, 0.015);">
-                    <h4 class="step-title" style="color: #f87171;">5. Pengurusan Risiko & Hukum 'Terbang Tanpa Junam'</h4>
+                    <h4 class="step-title" style="color: #f87171;">5. Risk Management & "Fly Without Fall" Rule</h4>
                     <p class="step-desc">
-                        Gunakan kaedah had kerugian yang sangat khusus ini untuk meminimumkan risiko:
+                        Enforce specialized risk limits to protect trading capital:
                     </p>
                     <ul class="step-list">
-                        <li><strong>Hukum 0.00% Drawdown (Khas Fresh IPO):</strong> Bagi Fresh IPO yang sihat, apabila setup 45% Reject ini benar-benar valid, harga biasanya melonjak naik pada keesokan harinya **tanpa pernah jatuh di bawah harga entry semalam** (Drawdown = 0%).</li>
-                        <li>Jika harga didapati jatuh di bawah harga entry semalam pada hari berikutnya, ia bermakna lantai tersebut bocor. Hadkan DCA lanjut dan keluar (Stop Loss) pada <strong>2% di bawah lantai sokongan tegar</strong> (floorLow) yang dikesan oleh kalkulator.</li>
-                        <li>Purata kejatuhan maksimum (drawdown) bagi kaunter VVIP yang menggunakan teknik ini dihadkan keras pada purata **-2.2%** sahaja sebelum melantun naik.</li>
+                        <li><strong>0.00% Drawdown Rule (Fresh IPO Special):</strong> For healthy Fresh IPOs, when a 45% Reject setup is genuinely valid, price typically rallies the next day **without dipping below yesterday's entry price** (Drawdown = 0%).</li>
+                        <li>If price drops below yesterday's entry on the following day, the floor has failed. Halt DCA additions and exit (Stop Loss) at <strong>2% below support floor</strong> (floorLow) calculated by the model.</li>
+                        <li>Maximum average drawdown for VVIP counters under this strategy is hard-capped at **-2.2%** before rebounding.</li>
                     </ul>
                 </div>
 
                 <!-- Step 6 -->
                 <div class="step-block" style="border-left-color: #ec4899; background: rgba(236, 72, 153, 0.015);">
-                    <h4 class="step-title" style="color: #f472b6;">6. Pelan Akumulasi Dana (DCA)</h4>
+                    <h4 class="step-title" style="color: #f472b6;">6. Dollar-Cost Averaging (DCA) Allocation Plan</h4>
                     <p class="step-desc">
-                        Bahagikan modal ko kepada 2 slot kaunter terbaik (RM 2,500 + RM 2,500) daripada senarai VVIP/Fresh IPO yang trigger Reject Bawah. Masuk slot pertama dahulu. Hanya tambah unit (DCA) sekiranya harga kekal mendatar di zon lantai sokongan dengan volum rendah dan tidak memecahkan stop loss tegar.
+                        Divide capital into 2 equal position slots for top qualifying counters. Enter slot 1 initially. Only add position units (DCA) if price consolidates sideways at the support floor on low volume without breaching the hard Stop Loss limit.
                     </p>
                 </div>
 
@@ -488,28 +450,28 @@
 
         <!-- Position Sizer Calculator -->
         <div class="section-panel">
-            <div class="panel-title" style="color: var(--success);">🧮 Kalkulator Pengurusan Risiko & Saiz Posisi DCA</div>
+            <div class="panel-title" style="color: var(--success);">🧮 Position Sizing & DCA Risk Calculator</div>
             <div class="calc-grid">
                 <!-- Form Inputs -->
                 <div>
                     <div class="form-group">
-                        <label for="totalCapital">Jumlah Modal Dagangan (RM)</label>
+                        <label for="totalCapital">Total Trading Capital (RM)</label>
                         <input type="number" id="totalCapital" value="5000" oninput="calculateSizing()">
                     </div>
                     <div class="form-group">
-                        <label for="riskPct">Toleransi Risiko Maksimum per Trade (%)</label>
+                        <label for="riskPct">Max Risk Tolerance per Trade (%)</label>
                         <select id="riskPct" onchange="calculateSizing()">
-                            <option value="1">1% Risiko (Sangat Selamat)</option>
-                            <option value="1.5">1.5% Risiko (Sederhana)</option>
-                            <option value="2">2% Risiko (Agresif)</option>
+                            <option value="1">1% Account Risk (Conservative)</option>
+                            <option value="1.5">1.5% Account Risk (Moderate)</option>
+                            <option value="2">2% Account Risk (Aggressive)</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="entryPrice">Harga Kemasukan / Penutup Semasa (RM)</label>
+                        <label for="entryPrice">Current Entry / Closing Price (RM)</label>
                         <input type="number" id="entryPrice" value="0.500" step="0.005" oninput="calculateSizing()">
                     </div>
                     <div class="form-group">
-                        <label for="supportFloor">Lantai Sokongan / Support Floor (RM)</label>
+                        <label for="supportFloor">Support Floor Level (RM)</label>
                         <input type="number" id="supportFloor" value="0.480" step="0.005" oninput="calculateSizing()">
                     </div>
                 </div>
@@ -518,33 +480,33 @@
                 <div class="calc-results">
                     <div>
                         <div class="result-row">
-                            <span class="result-lbl">Harga Stop Loss (2% Bawah Support)</span>
+                            <span class="result-lbl">Stop Loss Price (2% Below Floor)</span>
                             <span class="result-val danger" id="valStopLoss">RM -</span>
                         </div>
                         <div class="result-row">
-                            <span class="result-lbl">Peratus Jarak Kerugian (%)</span>
+                            <span class="result-lbl">Risk Distance (%)</span>
                             <span class="result-val danger" id="valRiskDistance">-%</span>
                         </div>
                         <div class="result-row">
-                            <span class="result-lbl">Jumlah Risiko Maksimum (RM)</span>
+                            <span class="result-lbl">Max Loss Amount (RM)</span>
                             <span class="result-val danger" id="valRiskRM">RM -</span>
                         </div>
                         <div class="result-row">
-                            <span class="result-lbl">Had Kuantiti Beli (Units)</span>
+                            <span class="result-lbl">Max Share Quantity (Units)</span>
                             <span class="result-val highlight" id="valUnits">- units</span>
                         </div>
                         <div class="result-row">
-                            <span class="result-lbl">Had Kuantiti Beli (Lots)</span>
+                            <span class="result-lbl">Max Share Quantity (Lots)</span>
                             <span class="result-val highlight" id="valLots">- lots</span>
                         </div>
                     </div>
                     <div style="border-top: 1px solid var(--panel-border); padding-top: 1rem; margin-top: 1rem;">
                         <div class="result-row">
-                            <span class="result-lbl">Jumlah Modal Diperlukan</span>
+                            <span class="result-lbl">Required Capital</span>
                             <span class="result-val highlight" id="valCapitalRequired">RM -</span>
                         </div>
                         <div class="result-row">
-                            <span class="result-lbl">Peratusan Dedahan Portfolio (%)</span>
+                            <span class="result-lbl">Portfolio Exposure (%)</span>
                             <span class="result-val" id="valExposurePct">-%</span>
                         </div>
                     </div>
@@ -554,23 +516,23 @@
 
         <!-- Case Studies -->
         <div class="section-panel">
-            <div class="panel-title">📚 Contoh Kajian Kes Sebenar (Jun - Julai 2026)</div>
+            <div class="panel-title">📚 Empirical Case Studies (June - July 2026)</div>
             <div class="case-grid">
                 <!-- Case 1 -->
                 <div class="case-card">
                     <h3>KEEMING <span class="badge explosive">🚀 +68.47%</span></h3>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Kajian kes 15-day Hold & DCA:</p>
-                    <div class="case-step"><strong>10 Jun:</strong> Saham trigger 🟢 <strong>Reject Bawah</strong> (45%) pada harga RM 1.110.</div>
-                    <div class="case-step"><strong>11 Jun onwards:</strong> Melantun serta-merta tanpa sebarang kejatuhan di bawah entry (0.00% Drawdown).</div>
-                    <div class="case-step"><strong>1 Julai (Peak):</strong> Meroket tinggi mencapai harga puncak RM 1.870 (+68.47% keuntungan).</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem;">15-Day Hold & DCA Case Study:</p>
+                    <div class="case-step"><strong>Jun 10:</strong> Counter triggers 🟢 <strong>Lower Wick Rejection</strong> (45%) at RM 1.110.</div>
+                    <div class="case-step"><strong>Jun 11 onwards:</strong> Rallied immediately without any drawdown below entry (0.00% Drawdown).</div>
+                    <div class="case-step"><strong>Jul 1 (Peak):</strong> Surged to peak price of RM 1.870 (+68.47% net gain).</div>
                 </div>
                 <!-- Case 2 -->
                 <div class="case-card">
                     <h3>AMBEST <span class="badge explosive">🚀 +17.69%</span></h3>
-                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Kajian kes gandingan Fresh IPO:</p>
-                    <div class="case-step"><strong>10 Jun:</strong> Isyarat Reject Bawah dikesan pada harga RM 0.735.</div>
-                    <div class="case-step"><strong>11 Jun onwards:</strong> Meneruskan pendakian menaik tanpa mencatatkan kejatuhan di bawah entry (0.00% Drawdown).</div>
-                    <div class="case-step"><strong>16 Jun (Peak):</strong> Mencecah harga puncak RM 0.865 (+17.69% keuntungan) dalam masa 4 hari dagangan sahaja.</div>
+                    <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Fresh IPO Case Study:</p>
+                    <div class="case-step"><strong>Jun 10:</strong> Lower Wick Rejection signal detected at RM 0.735.</div>
+                    <div class="case-step"><strong>Jun 11 onwards:</strong> Maintained upward trend without dipping below entry price (0.00% Drawdown).</div>
+                    <div class="case-step"><strong>Jun 16 (Peak):</strong> Reached peak price of RM 0.865 (+17.69% gain) in 4 trading days.</div>
                 </div>
         </div>
 
@@ -578,17 +540,17 @@
         <footer style="margin-top: 4rem; padding: 2rem 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.08); background: rgba(15, 23, 45, 0.6); backdrop-filter: blur(8px); text-align: center; font-size: 0.85rem; color: var(--text-secondary); border-radius: 12px; margin-bottom: 2rem;">
             <div style="max-width: 800px; margin: 0 auto;">
                 <p style="margin-bottom: 1rem; color: #cbd5e1; line-height: 1.6;">
-                    <strong>⚠️ Penafian Kewangan & Risiko:</strong> Semua data, zon harga (Watchlist/Support Floor), formula, skor pintas, dan maklumat kuantitatif yang dipaparkan di JerungBursa adalah hasil pemodelan matematik dan simulasi algoritma untuk tujuan penyelidikan dan pembelajaran sahaja. Kami <strong>BUKAN</strong> penasihat kewangan berlesen. Melabur dalam pasaran saham Bursa Malaysia melibatkan risiko kerugian modal yang tinggi. Sila lakukan penyelidikan sendiri (DYOR) atau berunding dengan penasihat kewangan yang bertauliah sebelum membuat keputusan pelaburan sebenar.
+                    <strong>⚠️ Financial & Risk Disclaimer:</strong> All data, price zones (Watchlist/Support Floor), formulas, smart scores, and quantitative metrics displayed on JerungBursa are generated via mathematical modeling and algorithmic simulation for research and educational purposes only. We are <strong>NOT</strong> licensed financial advisors. Investing in Bursa Malaysia equities carries inherent capital risk. Always conduct your own independent research (DYOR) or consult a certified financial planner before making investment decisions.
                 </p>
                 <p style="margin-bottom: 1rem;">
-                    &copy; 2026 Jerung Bursa. Hak cipta terpelihara.
+                    &copy; 2026 Jerung Bursa. All rights reserved.
                 </p>
                 <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 0.5rem;">
-                    <a href="./articles.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-secondary)'">Koleksi Artikel</a>
-                    <a href="./privacy-policy.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-secondary)'">Dasar Privasi</a>
-                    <a href="./terms.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-secondary)'">Syarat Perkhidmatan</a>
-                    <a href="./about.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-secondary)'">Mengenai Kami</a>
-                    <a href="./contact.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-secondary)'">Hubungi Kami</a>
+                    <a href="./articles.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-secondary)'">Articles & Insights</a>
+                    <a href="./privacy-policy.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-secondary)'">Privacy Policy</a>
+                    <a href="./terms.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-secondary)'">Terms of Service</a>
+                    <a href="./about.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-secondary)'">About Us</a>
+                    <a href="./contact.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-secondary)'">Contact Us</a>
                 </div>
             </div>
         </footer>

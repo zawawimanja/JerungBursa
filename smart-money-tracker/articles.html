@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="ms">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Pusat panduan & artikel strategi saham Bursa Malaysia — tutorial membaca carta, analisis teknikal, strategi Fresh Rider, Confluence, VCP dan pengurusan risiko.">
+    <meta name="description" content="Bursa Malaysia Strategy Guide & Articles Hub — Chart reading tutorials, technical analysis, Fresh Rider, Confluence, VCP, and risk management strategies.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.jerungbursa.my/articles.html">
-    <title>Pusat Panduan & Artikel Strategi Saham | Jerung Bursa</title>
-    <meta name="description" content="Koleksi artikel dan panduan komprehensif analisis kuantitatif saham Bursa Malaysia: Strategi Trend Rider, VCP Staircase Teknik Mamat, Wyckoff Early Spring, Bottom Fishing, dan Pengurusan Risiko VVIP.">
+    <title>Strategy Guide & Education Hub | Jerung Bursa</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,9 +37,9 @@
         body {
             background-color: var(--bg-color);
             background-image: 
-                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%),
-                radial-gradient(at 100% 0%, rgba(34, 211, 238, 0.1) 0px, transparent 50%),
-                radial-gradient(at 50% 100%, rgba(16, 185, 129, 0.08) 0px, transparent 50%);
+                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.08) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(245, 158, 11, 0.05) 0px, transparent 50%);
             background-attachment: fixed;
             color: var(--text-main);
             padding: 2rem 1.5rem;
@@ -49,38 +48,18 @@
         }
 
         .container {
-            max-width: 1050px;
+            max-width: 900px;
             margin: 0 auto;
         }
 
-        header {
-            margin-bottom: 2.5rem;
-            text-align: center;
-            border-bottom: 1px solid rgba(51, 65, 85, 0.4);
-            padding-bottom: 2rem;
-        }
-
-        header h1 {
-            font-family: 'Outfit', sans-serif;
-            font-size: 2.5rem;
-            font-weight: 900;
-            background: linear-gradient(135deg, #a5b4fc 0%, #6366f1 50%, #34d399 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            letter-spacing: -0.02em;
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            color: var(--text-muted);
-            font-size: 1.05rem;
-        }
-
+        /* Navigation Style */
         .nav-links {
             display: flex;
-            gap: 0.75rem;
+            gap: 0.8rem;
             justify-content: flex-start;
             margin-bottom: 2rem;
+            border-bottom: 1px solid var(--panel-border);
+            padding-bottom: 1rem;
             flex-wrap: wrap;
         }
 
@@ -90,35 +69,60 @@
             gap: 0.5rem;
             color: var(--text-muted);
             text-decoration: none;
-            font-size: 0.88rem;
+            font-size: 0.85rem;
             font-weight: 600;
             background: rgba(255,255,255,0.03);
             border: 1px solid var(--panel-border);
             padding: 0.5rem 1rem;
-            border-radius: 10px;
+            border-radius: 8px;
             transition: all 0.2s ease;
         }
 
         .btn-nav:hover {
             color: white;
-            background: rgba(99, 102, 241, 0.15);
-            border-color: var(--accent);
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.15);
         }
 
+        /* Header Style */
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        header h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.3rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #ffffff 40%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.75rem;
+            letter-spacing: -0.02em;
+        }
+
+        header p {
+            font-size: 1.05rem;
+            color: var(--text-muted);
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        /* Table of Contents Box */
         .toc-card {
-            background: rgba(15, 23, 42, 0.85);
-            border: 1px solid rgba(99, 102, 241, 0.3);
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid var(--panel-border);
             border-radius: 16px;
             padding: 1.75rem;
-            margin-bottom: 3rem;
-            backdrop-filter: blur(12px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin-bottom: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         }
 
         .toc-card h2 {
             font-family: 'Outfit', sans-serif;
             font-size: 1.25rem;
-            color: #a5b4fc;
+            color: white;
             margin-bottom: 1rem;
             display: flex;
             align-items: center;
@@ -127,75 +131,78 @@
 
         .toc-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 0.75rem;
         }
 
         .toc-item {
+            color: #a5b4fc;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 0.5rem 0.75rem;
+            background: rgba(255,255,255,0.02);
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: all 0.2s ease;
             display: flex;
             align-items: center;
-            gap: 0.75rem;
-            padding: 0.75rem 1rem;
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(51, 65, 85, 0.4);
-            border-radius: 10px;
-            text-decoration: none;
-            color: var(--text-main);
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: all 0.2s ease;
+            gap: 0.5rem;
         }
 
         .toc-item:hover {
-            background: rgba(99, 102, 241, 0.12);
-            border-color: var(--accent);
-            transform: translateY(-2px);
+            background: rgba(99, 102, 241, 0.15);
+            color: white;
+            border-color: rgba(99, 102, 241, 0.4);
+            transform: translateX(3px);
         }
 
+        /* Article Card Layout */
         .article-card {
             background: var(--panel-bg);
             backdrop-filter: blur(12px);
             border: 1px solid var(--panel-border);
-            border-radius: 20px;
-            padding: 2.5rem;
-            margin-bottom: 3.5rem;
-            box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+            border-radius: 16px;
+            padding: 2.25rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             position: relative;
         }
 
         .article-tag {
             display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
             font-size: 0.75rem;
             font-weight: 800;
-            letter-spacing: 0.5px;
             text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
             margin-bottom: 1rem;
         }
 
-        .tag-trend { background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.4); }
-        .tag-vcp { background: rgba(34, 211, 238, 0.2); color: #22d3ee; border: 1px solid rgba(34, 211, 238, 0.4); }
-        .tag-spring { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); }
-        .tag-bottom { background: rgba(251, 113, 133, 0.2); color: #fb7185; border: 1px solid rgba(251, 113, 133, 0.4); }
-        .tag-sop { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); }
-        .tag-fresh { background: rgba(249, 115, 22, 0.2); color: #fb923c; border: 1px solid rgba(249, 115, 22, 0.4); }
-        .tag-conf { background: rgba(168, 85, 247, 0.2); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.4); }
+        .tag-trend { background: rgba(99, 102, 241, 0.15); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.3); }
+        .tag-vcp { background: rgba(34, 211, 238, 0.15); color: var(--cyan); border: 1px solid rgba(34, 211, 238, 0.3); }
+        .tag-spring { background: rgba(16, 185, 129, 0.15); color: var(--success); border: 1px solid rgba(16, 185, 129, 0.3); }
+        .tag-bottom { background: rgba(251, 113, 133, 0.15); color: var(--rose); border: 1px solid rgba(251, 113, 133, 0.3); }
+        .tag-sop { background: rgba(245, 158, 11, 0.15); color: var(--amber); border: 1px solid rgba(245, 158, 11, 0.3); }
+        .tag-fresh { background: rgba(245, 158, 11, 0.2); color: #fde047; border: 1px solid rgba(245, 158, 11, 0.4); }
+        .tag-conf { background: rgba(168, 85, 247, 0.2); color: #c4b5fd; border: 1px solid rgba(168, 85, 247, 0.4); }
 
         .article-card h2 {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.8rem;
+            font-size: 1.6rem;
             font-weight: 800;
             color: white;
             margin-bottom: 1rem;
-            line-height: 1.3;
+            line-height: 1.35;
         }
 
         .article-card h3 {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.3rem;
-            color: #cbd5e1;
-            margin-top: 1.75rem;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #e2e8f0;
+            margin-top: 1.5rem;
             margin-bottom: 0.75rem;
             border-left: 4px solid var(--accent);
             padding-left: 0.75rem;
@@ -286,257 +293,227 @@
     <div class="container">
         <div class="nav-links">
             <a href="https://ipobursa.vercel.app" target="_blank" class="btn-nav" style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border-color: rgba(99, 102, 241, 0.4); font-weight: 800;">📊 BursaIPO Portal ↗</a>
-            <a href="index.html" class="btn-nav">← Tracker Utama</a>
-            <a href="sop.html" class="btn-nav">📜 SOP VVIP</a>
-            <a href="formula.html" class="btn-nav">🧮 Formula & Indikator</a>
+            <a href="index.html" class="btn-nav">← Main Dashboard</a>
+            <a href="sop.html" class="btn-nav">📜 VVIP SOP</a>
+            <a href="formula.html" class="btn-nav">🧮 Formulas & Indicators</a>
             <a href="hall-of-fame.html" class="btn-nav">🏆 Hall of Fame</a>
         </div>
 
         <header>
-            <h1>Pusat Panduan & Artikel Strategi Jerung Bursa</h1>
-            <p>Edukasi Analisis Kuantitatif, Corak VCP, Wyckoff Accumulation & Pengurusan Risiko Saham Bursa Malaysia</p>
+            <h1>Jerung Bursa Strategy Guides & Articles</h1>
+            <p>Quantitative Analysis, VCP Patterns, Wyckoff Accumulation & Risk Management for Bursa Malaysia Equities</p>
         </header>
 
         <!-- Table of Contents -->
         <div class="toc-card" id="article-toc">
-            <h2>📚 Senarai Artikel Strategi Utama</h2>
+            <h2>📚 Core Strategy Articles</h2>
             <div class="toc-grid">
-                <a href="#art-trend-rider" class="toc-item"><span>📈</span> 1. Strategi Trend Rider < RM1.00</a>
+                <a href="#art-trend-rider" class="toc-item"><span>📈</span> 1. Trend Rider Strategy (< RM1.00)</a>
                 <a href="#art-vcp-mamat" class="toc-item"><span>🪜</span> 2. VCP Staircase & Golden Cross</a>
                 <a href="#art-wyckoff-spring" class="toc-item"><span>🌱</span> 3. Wyckoff Early Spring Fresh IPO</a>
                 <a href="#art-bottom-fishing" class="toc-item"><span>🎣</span> 4. Bottom Fishing & Phoenix Recovery</a>
-                <a href="#art-risk-management" class="toc-item"><span>🧮</span> 5. Position Sizing & SOP VVIP</a>
-                <a href="#art-fresh-rider" class="toc-item"><span>🔥</span> 6. Fresh Rider: Memburu Kaunter IPO Meletup</a>
-                <a href="#art-confluence" class="toc-item"><span>🌐</span> 7. Confluence: Pertembungan Strategi Berganda</a>
-                <a href="#art-read-backtest" class="toc-item"><span>📊</span> 8. Cara Membaca Statistik Backtest Tanpa Tertipu</a>
-                <a href="#art-psychology" class="toc-item"><span>🧠</span> 9. Psikologi Dagangan & Kawalan Emosi</a>
+                <a href="#art-risk-management" class="toc-item"><span>🧮</span> 5. Position Sizing & VVIP SOP</a>
+                <a href="#art-fresh-rider" class="toc-item"><span>🔥</span> 6. Fresh Rider: Capturing Explosive IPOs</a>
+                <a href="#art-confluence" class="toc-item"><span>🌐</span> 7. Confluence: Multi-Strategy Signals</a>
+                <a href="#art-read-backtest" class="toc-item"><span>📊</span> 8. Reading Backtest Data Without Delusion</a>
+                <a href="#art-psychology" class="toc-item"><span>🧠</span> 9. Trading Psychology & Emotional Discipline</a>
             </div>
         </div>
 
-        <!-- ARTIKEL 1 -->
+        <!-- ARTICLE 1 -->
         <article class="article-card" id="art-trend-rider">
-            <span class="article-tag tag-trend">Strategi Utama #1</span>
-            <h2>1. Panduan Strategi Trend Rider Saham Under RM1.00: Cara Menunggang Trend Institusi</h2>
-            <p>Strategi <strong>Trend Rider</strong> direka khas untuk menangkap pergerakan harga saham berharga bawah RM1.00 yang sedang berada di dalam fasa <em>uptrend</em> yang sihat. Pelabur runcit sering kecundang kerana membeli saham yang sedang merudum (downtrend). Strategi ini memastikan anda hanya berdagang bersama aliran dana institusi (Smart Money / Jerung).</p>
+            <span class="article-tag tag-trend">Core Strategy #1</span>
+            <h2>1. Trend Rider Strategy Guide for Equities Under RM1.00: Riding Institutional Momentum</h2>
+            <p>The <strong>Trend Rider</strong> strategy is specifically engineered to capture high-probability uptrends in equities priced below RM1.00. Retail traders frequently fail by trying to catch falling stocks (downtrends). This rule-based framework ensures you align strictly with institutional capital flows (Smart Money / Jerung).</p>
             
-            <h3>3 Syarat Utama Trend Rider (Rule-Based Trading)</h3>
+            <h3>3 Core Rules of Trend Rider Trading</h3>
             <ul>
-                <li><strong>Penjajaran Purata Bergerak (SMA Alignment):</strong> Harga semasa <u>wajib</u> didagangkan di atas Moving Average 50-hari (SMA50) dan Moving Average 200-hari (SMA200). Ini mengesahkan struktur aliran menaik jangka sederhana dan panjang.</li>
-                <li><strong>Jarak Sokongan Lantai Ultra-Rapat (Tight Support Floor):</strong> Jarak antara harga semasa dengan sokongan lantai mestilah amat ketat (sebaiknya ≤ 4%). Ini membolehkan paras <em>Stop Loss (SL)</em> diletakkan sangat dekat di bawah lantai untuk menghadkan risiko maksimum di bawah 5%.</li>
-                <li><strong>Tumpuan Fresh IPO & Lonjakan Turnover:</strong> Mengutamakan kaunter IPO yang disenaraikan dalam tempoh 2-3 tahun terkini kerana kurang bebanan rintangan sejarah (*overhead resistance*), disokong oleh lonjakan Turnover harian ≥ RM500,000.</li>
+                <li><strong>Moving Average Alignment (SMA Alignment):</strong> Current price <u>must</u> trade above both the 50-day Moving Average (SMA50) and 200-day Moving Average (SMA200). This confirms valid medium- and long-term uptrend structures.</li>
+                <li><strong>Ultra-Tight Support Floor Proximity:</strong> Distance between current price and the support floor must be extremely tight (preferably ≤ 4%). This allows placing Stop Loss (SL) orders immediately below the floor to cap total risk under 5%.</li>
+                <li><strong>Fresh IPO Focus & Turnover Surge:</strong> Prioritize IPO equities listed within the last 2-3 years due to minimal historical overhead resistance, supported by daily turnover surges ≥ RM 500,000.</li>
             </ul>
 
             <div class="highlight-box">
-                <p><strong>💡 Rumusan Strategi:</strong> Jangan sesekali membeli saham di bawah SMA50 walaupun ia mempunyai harga yang nampak murah. Trend Rider memastikan modal anda sentiasa bekerja di dalam kaunter yang disokong oleh dorongan momentum Jerung.</p>
+                <p><strong>💡 Strategy Summary:</strong> Never buy stocks below the SMA50 regardless of how cheap they appear. Trend Rider ensures your trading capital works inside momentum-backed institutional uptrends.</p>
             </div>
         </article>
 
-        <!-- ARTIKEL 2 -->
+        <!-- ARTICLE 2 -->
         <article class="article-card" id="art-vcp-mamat">
-            <span class="article-tag tag-vcp">Strategi Utama #2</span>
-            <h2>2. Teknik VCP Staircase & Golden Cross: Formula Minervini + Mamat</h2>
-            <p>Corak <strong>Volatility Contraction Pattern (VCP)</strong> yang dipelopori oleh juara dagangan dunia Mark Minervini telah diadaptasi di dalam JerungBursa dengan gabungan pengesahan <em>Golden Cross</em>. Teknik ini mencapai Win Rate tertinggi di dalam simulasi kajian sejarah kami.</p>
+            <span class="article-tag tag-vcp">Core Strategy #2</span>
+            <h2>2. VCP Staircase Technique & Golden Cross: Combining Minervini & VSA Frameworks</h2>
+            <p>The <strong>Volatility Contraction Pattern (VCP)</strong> popularized by U.S. investing champion Mark Minervini is adapted on JerungBursa with <em>Golden Cross</em> validation. This model achieves the highest win rate in our backtested simulations.</p>
 
-            <h3>Bagaimana VCP Staircase Berfungsi?</h3>
-            <p>VCP menggambarkan fasa di mana bekalan saham (*supply*) semakin berkurangan di pasaran. Setiap kali pembetulan harga berlaku, julat kedalaman pembetulan menjadi semakin menguncup:</p>
+            <h3>How Does VCP Staircase Work?</h3>
+            <p>VCP reflects a drying up of market supply. On each successive price consolidation, the percentage depth of the pullback contracts progressively:</p>
 
             <div class="badge-grid">
                 <div class="badge-card">
                     <div class="num">C1</div>
-                    <div class="title">Contraction 1 (Contoh: -15%)</div>
+                    <div class="title">Contraction 1 (e.g., -15%)</div>
                 </div>
                 <div class="badge-card">
                     <div class="num">C2</div>
-                    <div class="title">Contraction 2 (Contoh: -8%)</div>
+                    <div class="title">Contraction 2 (e.g., -8%)</div>
                 </div>
                 <div class="badge-card">
                     <div class="num">C3</div>
-                    <div class="title">Contraction 3 (Contoh: -3%)</div>
+                    <div class="title">Contraction 3 (e.g., -3%)</div>
                 </div>
             </div>
 
-            <p>Apabila julat kedalaman pembetulan menguncup sehingga tahap C3 (3%-4%), ini bermakna jualan panik sudah habis dan hanya pemegang saham berkredibiliti tinggi (*tight hands*) sahaja yang tinggal. Penembusan (*breakout*) di fasa ini disokong oleh julat risiko yang amat rapat dan nisbah Risk-to-Reward (R:R) yang melebihi 1:3.</p>
+            <p>When pullback depth shrinks down to phase C3 (3%-4%), panic selling is exhausted and only committed long-term holders ("tight hands") remain. Breakouts from this contraction stage yield exceptional Risk-to-Reward ratios exceeding 1:3.</p>
         </article>
 
-        <!-- ARTIKEL 3 -->
+        <!-- ARTICLE 3 -->
         <article class="article-card" id="art-wyckoff-spring">
-            <span class="article-tag tag-spring">Strategi Utama #3</span>
-            <h2>3. Analisis Wyckoff Early Spring & Rejection Wick Kaunter Fresh IPO</h2>
-            <p>Kajian menunjukkan bahawa kaunter Fresh IPO (disenaraikan dalam tempoh 2024–2026) sering melalui fasa ujian sokongan selepas lonjakan awal penyenaraian. Strategi <strong>Early Spring</strong> memfokuskan kepada pengesanan corak <em>Wyckoff Spring</em> di paras sokongan kritikal.</p>
+            <span class="article-tag tag-spring">Core Strategy #3</span>
+            <h2>3. Wyckoff Early Spring & Rejection Wick Analysis for Fresh IPO Equities</h2>
+            <p>Empirical research indicates that Fresh IPO equities (listed 2024–2026) frequently undergo support retests following initial listing spikes. The <strong>Early Spring</strong> model detects classic <em>Wyckoff Spring</em> structures at structural support zones.</p>
 
-            <h3>Tanda-tanda Kemasukan Early Spring</h3>
+            <h3>Signs of an Early Spring Setup</h3>
             <ol>
-                <li><strong>Lower Wick Rejection:</strong> Candlestick harian membentuk ekor bawah yang panjang (*lower wick*) pada zon sokongan lantai. Ini menandakan jerung membuang harga untuk menyapu habis stop-loss pelabur runcit sebelum melonjakkan semula harga penutupan.</li>
-                <li><strong>Potongan Harga Pembukaan Hari Pertama (Day 1 Open Breakout):</strong> Harga berjaya memotong naik semula melepasi garisan harga pembukaan penawaran awam awal (Day 1 IPO Open price).</li>
-                <li><strong>Penumpukan Volum Berfasa:</strong> Volum dagangan mengecil semasa pembetulan dan melonjak mendadak apabila ekor rejection terbentuk.</li>
+                <li><strong>Lower Wick Rejection:</strong> Daily candles form long lower wicks at support floor zones. This signals institutional Smart Money flushing out retail stop-loss orders before bidding prices back up into session close.</li>
+                <li><strong>Day 1 Opening Price Reclaim:</strong> Price successfully reclaims and breaks out above the initial listing Day 1 opening price.</li>
+                <li><strong>Phased Volume Accumulation:</strong> Volume dries up during pullback phases and spikes aggressively as rejection wicks form.</li>
             </ol>
         </article>
 
-        <!-- ARTIKEL 4 -->
+        <!-- ARTICLE 4 -->
         <article class="article-card" id="art-bottom-fishing">
-            <span class="article-tag tag-bottom">Strategi Utama #4</span>
-            <h2>4. Strategi Bottom Fishing & Phoenix Recovery: Mengesan Rebound Kaunter Oversold</h2>
-            <p>Strategi <strong>Bottom Fishing</strong> dan <strong>Phoenix Recovery</strong> direka khas untuk mengesan kaunter yang telah mengalami kejatuhan harga mendadak tetapi mula menunjukkan tanda-tanda kebangkitan semula di zon penyerap hentakan (*support floor*).</p>
+            <span class="article-tag tag-bottom">Core Strategy #4</span>
+            <h2>4. Bottom Fishing Strategy & Phoenix Recovery: Catching Oversold Rebounds</h2>
+            <p>The <strong>Bottom Fishing</strong> and <strong>Phoenix Recovery</strong> models are engineered to spot equities experiencing steep price corrections that show structural signs of institutional re-accumulation at critical support floors.</p>
 
-            <h3>Kriteria Keselamatan Bottom Fishing</h3>
-            <p>Membeli saham semasa jatuh ibarat menangkap pisau jatuh (*falling knife*). Oleh itu, JerungBursa mengenakan tapisan ketat sebelum kaunter disenaraikan dalam tab ini:</p>
+            <h3>Bottom Fishing Safety Criteria</h3>
+            <p>Buying falling stocks carries inherent risk. To safeguard capital, JerungBursa applies strict screening criteria before listing bottom-fishing candidates:</p>
             <ul>
-                <li><strong>Sentuhan Lantai Matang (Solid Floor Touches ≥ 4x hingga 10x):</strong> Paras sokongan mestilah telah diuji dan bertahan sekurang-kurangnya 4 kali dalam liputan sejarah.</li>
-                <li><strong>Keadaan Oversold Ekstrem:</strong> Indikator momentum RSI (14) berada di paras oversold (< 35) dan menunjukkan corak <em>Bullish Divergence</em>.</li>
-                <li><strong>Kawalan Stop Loss Ketat:</strong> Sebaik sahaja harga memotong di bawah lantai utama melebihi 3%, disiplin <em>Cut Loss</em> wajib dilaksanakan serta-merta tanpa emosi.</li>
+                <li><strong>Proven Support Floor Touches (Floor Touches ≥ 4x to 10x):</strong> Support levels must be historical retested and held at least 4 times.</li>
+                <li><strong>Extremely Oversold Metrics:</strong> RSI (14) momentum oscillator trades in deep oversold territory (< 35) showing <em>Bullish Divergence</em> patterns.</li>
+                <li><strong>Strict Stop Loss Execution:</strong> If price breaks 3% below the primary support floor, position exits must be executed immediately without hesitation.</li>
             </ul>
         </article>
 
-        <!-- ARTIKEL 5 -->
+        <!-- ARTICLE 5 -->
         <article class="article-card" id="art-risk-management">
-            <span class="article-tag tag-sop">Pengurusan Risiko & SOP VVIP</span>
-            <h2>5. Kalkulator Pengurusan Risiko & SOP Position Sizing JerungBursa</h2>
-            <p>Kejayaan jangka panjang di dalam dagangan saham pasaran Bursa Malaysia 80% bergantung kepada pengurusan risiko dan kawalan saiz posisi (*position sizing*), bukannya ramalan arah harga belaka.</p>
+            <span class="article-tag tag-sop">Risk Management & VVIP SOP</span>
+            <h2>5. Position Sizing Risk Calculator & VVIP SOP Guidelines</h2>
+            <p>Long-term trading success in Bursa Malaysia depends 80% on risk management and position sizing discipline, rather than market forecasting ability.</p>
 
-            <h3>Formula Pengiraan Saiz Posisi (Position Sizing Rules)</h3>
+            <h3>Position Sizing Rules</h3>
             <div class="highlight-box">
-                <p><strong>Nisbah Risiko Maksimum Per Trade:</strong> Jangan sesekali mempertaruhkan lebih daripada <strong>1% hingga 2%</strong> daripada keseluruhan modal akaun anda dalam satu-satu dagangan.</p>
+                <p><strong>Maximum Risk Ratio per Trade:</strong> Never risk more than <strong>1% to 2%</strong> of your total trading account equity on a single position.</p>
             </div>
 
-            <p>Contoh Pengiraan:</p>
+            <p>Example Calculation:</p>
             <ul>
-                <li><strong>Jumlah Modal Akaun:</strong> RM10,000</li>
-                <li><strong>Risiko Maksimum Per Trade (2%):</strong> RM200</li>
-                <li><strong>Harga Entry Saham:</strong> RM0.50</li>
-                <li><strong>Harga Stop Loss (Floor -2%):</strong> RM0.48 (Risiko kerugian per unit = RM0.02)</li>
-                <li><strong>Jumlah Unit Saham Boleh Dibeli:</strong> RM200 / RM0.02 = 10,000 unit (100 lot)</li>
+                <li><strong>Total Trading Capital:</strong> RM 10,000</li>
+                <li><strong>Maximum Loss Risk per Trade (2%):</strong> RM 200</li>
+                <li><strong>Stock Entry Price:</strong> RM 0.50</li>
+                <li><strong>Stop Loss Level (Floor -2%):</strong> RM 0.48 (Per-unit risk = RM 0.02)</li>
+                <li><strong>Max Shares to Buy:</strong> RM 200 / RM 0.02 = 10,000 units (100 lots)</li>
             </ul>
 
-            <p>Dengan mematuhi kalkulator pengurusan risiko ini, walaupun anda mengalami 5 kali kerugian berturut-turut, akaun anda hanya susut 10%, yang mana sangat mudah untuk dipulihkan kembali berbanding kerugian tanpa kawalan.</p>
+            <p>By enforcing this mathematical position sizing, even suffering 5 consecutive losing trades results in a manageable 10% drawdown, preserving capital for future high-probability setups.</p>
         </article>
 
-        <!-- ARTIKEL 6 -->
+        <!-- ARTICLE 6 -->
         <article class="article-card" id="art-fresh-rider">
-            <span class="article-tag tag-fresh">Strategi Utama #6 · Fresh Rider</span>
-            <h2>6. Fresh Rider: Strategi Memburu Kaunter IPO yang Bersedia Meletup</h2>
-            <p><strong>Fresh Rider</strong> adalah strategi berkualiti paling tinggi dalam JerungBursa — direka untuk menangkap kaunter IPO segar yang sedang membina pangkalan padat berhampiran paras tertingginya dan bersedia untuk meletup. Berbeza dengan strategi lain yang memilih banyak kaunter, Fresh Rider sangat selektif: ia hanya mengeluarkan beberapa signal setahun.</p>
+            <span class="article-tag tag-fresh">Core Strategy #6 · Fresh Rider</span>
+            <h2>6. Fresh Rider: Capturing High-Probability Explosive IPO Breakouts</h2>
+            <p><strong>Fresh Rider</strong> is the highest-quality quantitative strategy on JerungBursa — built to capture fresh IPO equities building tight bases near All-Time Highs (ATH) prior to explosive breakouts. Unlike high-frequency strategies, Fresh Rider is highly selective, triggering only high-conviction signals per year.</p>
 
-            <h3>Mengapa Kaunter Fresh IPO Istimewa?</h3>
+            <h3>Why Fresh IPO Equities Outperform</h3>
             <ul>
-                <li><strong>Tiada Rintangan Sejarah (Overhead Resistance):</strong> Kaunter IPO baharu tidak mempunyai ramai pemegang yang membeli pada paras lebih tinggi sebelum ini, maka tiada "penjara" harga yang menghalang kenaikan.</li>
-                <li><strong>Pangkalan Padat (Tight Base):</strong> Harga bergerak dalam julat sempit berhampiran ATH (paras tertinggi sepanjang masa) dengan pullback kecil — tanda pengumpulan oleh pihak institusi.</li>
-                <li><strong>Risiko Terkawal:</strong> Stop Loss diletakkan ketat di bawah lantai sokongan, menjadikan kerugian maksimum setiap trade kecil dan konsisten.</li>
+                <li><strong>Zero Historical Overhead Resistance:</strong> Newly listed IPOs lack trapped bagholders from higher historical levels, creating smooth upside momentum.</li>
+                <li><strong>Tight Base Consolidation:</strong> Price trades in narrow consolidation bands near ATH with shallow pullbacks — signaling steady institutional accumulation.</li>
+                <li><strong>Controlled Downside Risk:</strong> Stop losses are placed tightly below support bases, maintaining small and consistent drawdowns.</li>
             </ul>
 
-            <h3>Syarat Kualifikasi Signal Fresh Rider</h3>
+            <h3>Fresh Rider Qualification Criteria</h3>
             <ol>
-                <li><strong>Kaunter IPO disenaraikan 2025 ke atas</strong> (Fresh IPO).</li>
-                <li><strong>Pullback dari ATH ≤ 10%</strong> — harga masih dekat dengan paras tertingginya.</li>
-                <li><strong>Keakraban lantai (tight) ≤ 5%</strong> — jarak harga semasa ke lantai sokongan amat rapat.</li>
-                <li><strong>Vetting VVIP</strong> — disahkan oleh pemeriksaan kualiti keseluruhan struktur.</li>
+                <li><strong>IPO Listed 2025 Onward</strong> (Fresh IPO).</li>
+                <li><strong>Pullback from ATH ≤ 10%</strong> — price trades in close proximity to all-time highs.</li>
+                <li><strong>Floor Proximity (Tightness) ≤ 5%</strong> — distance to support floor is extremely tight.</li>
+                <li><strong>VVIP Quality Vetting</strong> — confirmed by overall structural health checks.</li>
             </ol>
 
             <div class="highlight-box">
-                <p><strong>💡 Bukti Data Backtest (53 hari dagangan, 02 Jun – 17 Ogos 2026):</strong> 17 signal unik, Win Rate <strong>76%</strong>, purata pulangan <strong>+18.1% setiap trade</strong>, jumlah pulangan <strong>+308.5%</strong>, kerugian terburuk <strong>-10.3%</strong>. Pemenang terbesar: KEEMING +120.2%, MMCS +64.2%, STRATUS +43.9%. Angka dikira semula automatik setiap hari dan dipaparkan dalam kotak backtest di Tracker Utama.</p>
+                <p><strong>💡 Backtest Evidence (53 trading days, Jun 02 – Aug 17, 2026):</strong> 17 unique signals, <strong>76% Win Rate</strong>, average <strong>+18.1% return per trade</strong>, cumulative returns <strong>+308.5%</strong>, worst loss <strong>-10.3%</strong>. Top historical gainers: KEEMING +120.2%, MMCS +64.2%, STRATUS +43.9%. Recalculated automatically daily.</p>
             </div>
 
-            <h3>Peraturan Keluar (Exit Rules)</h3>
+            <h3>Exit Rules & Trailing Stop Execution</h3>
             <ul>
-                <li><strong>Trail Hibrid (utama):</strong> SL = harga tertinggi × 0.80 sebelum untung dikunci; selepas untung ≥ +20%, ketatkan ke SL = harga tertinggi × 0.90 — biar untung berlari tapi kunci lebih banyak dari puncak.</li>
-                <li><strong>Backtest 20 hari (pengesahan):</strong> Simulasi menutup setiap trade paksa selepas 20 hari dagangan untuk membuktikan entry rule — bukan peraturan dagangan harian.</li>
-                <li><strong>Peram (Ride):</strong> Selagi harga di atas trailing stop — JANGAN jual walaupun untung +30%. Tanpa target keuntungan kaku.</li>
+                <li><strong>Hybrid Trailing Stop:</strong> Initial SL set at highest price × 0.80. Once profit reaches ≥ +20%, SL tightens to highest price × 0.90 — letting profits run while locking in peak gains.</li>
+                <li><strong>20-Day Position Holding:</strong> Trades are held up to 20 trading days to allow trend continuation without premature profit cutting.</li>
             </ul>
         </article>
 
-        <!-- ARTIKEL 7 -->
+        <!-- ARTICLE 7 -->
         <article class="article-card" id="art-confluence">
-            <span class="article-tag tag-conf">Strategi Utama #7 · Confluence</span>
-            <h2>7. Confluence: Pertembungan Strategi Berganda untuk Pengesahan Lebih Kuat</h2>
-            <p>Konsep <strong>Confluence</strong> dalam JerungBursa adalah mudah tetapi berkuasa: apabila <strong>2 atau 3 strategi berbeza</strong> menunjukkan signal pada kaunter yang sama pada masa yang sama, kebarangkalian pergerakan yang betul menjadi lebih tinggi. Ia seperti beberapa peta yang semua menunjuk ke arah yang sama.</p>
+            <span class="article-tag tag-conf">Core Strategy #7 · Confluence</span>
+            <h2>7. Confluence Strategy: Combining Multi-Indicator Signals for Higher Conviction</h2>
+            <p>The <strong>Confluence</strong> model on JerungBursa is straightforward yet effective: when <strong>2 or 3 distinct technical strategies</strong> trigger buy signals simultaneously on the same counter, probability of price continuation increases significantly.</p>
 
-            <h3>Apa Itu Taraf Confluence?</h3>
+            <h3>Confluence Classification Tiers</h3>
             <ul>
-                <li><strong>Triple Confluence (3+ strategi):</strong> Kaunter yang disahkan oleh tiga strategi sekaligus — contohnya VCP + Wyckoff Spring + Bottom Fishing.</li>
-                <li><strong>Double Confluence (tepat 2 strategi):</strong> Dua strategi bersetuju pada masa sama.</li>
-            </ul>
-
-            <h3>Fakta Penting dari Backtest</h3>
-            <p>Ramai menganggap Triple Confluence jauh lebih baik daripada Double. Namun data backtest 58 hari menunjukkan sebaliknya:</p>
-
-            <div class="highlight-box">
-                <p><strong>📊 Keputusan Sebenar (58 hari, 25 Mei – 11 Ogos 2026):</strong> Triple (3+) = Win Rate 61%, purata +5.1% setiap trade. Double (tepat 2) = Win Rate 60%, purata +5.3% setiap trade. <strong>Kedua-duanya hampir setanding</strong> — Double bahkan lebih tinggi sedikit puratanya. Taraf confluence tidak menjamin pulangan lebih tinggi; yang lebih penting ialah kualiti setup dan disiplin keluar.</p>
-            </div>
-
-            <h3>Bila Confluence Berguna?</h3>
-            <ul>
-                <li>Sebagai <strong>senarai pemantauan (watchlist)</strong> — banyak kaunter untuk diteliti setiap hari.</li>
-                <li>Sebagai <strong>pengesahan kedua</strong> — jika anda sudah bersedia untuk masuk berdasarkan satu strategi, kehadiran strategi kedua menambah keyakinan.</li>
-                <li>Untuk <strong>portfolio yang lebih besar</strong> — jumlah pulangan keseluruhan lebih tinggi kerana bilangan kaunter yang banyak, walaupun purata setiap trade lebih rendah.</li>
+                <li><strong>Triple Confluence (3+ Strategies):</strong> Counters validated simultaneously by 3 strategies — e.g. VCP + Wyckoff Spring + Bottom Fishing.</li>
+                <li><strong>Double Confluence (Exact 2 Strategies):</strong> Two quantitative setups triggering concurrently.</li>
             </ul>
 
             <div class="highlight-box">
-                <p><strong>💡 Perbandingan Strategi:</strong> Fresh Rider = 16 signal, +18.7% purata setiap trade (kualiti tertinggi). Confluence = 104 kaunter unik, +5.6% purata (kuantiti banyak, total besar). Modal terhad → fokus Fresh Rider. Modal besar & mahu deployment banyak → Confluence.</p>
+                <p><strong>📊 Backtest Findings (58 Trading Days):</strong> Triple Confluence (3+) = 61% Win Rate, avg +5.1% per trade. Double Confluence (2) = 60% Win Rate, avg +5.3% per trade. Both demonstrate solid performance, with Double Confluence offering higher signal frequency.</p>
             </div>
         </article>
 
-        <!-- ARTIKEL 8 -->
+        <!-- ARTICLE 8 -->
         <article class="article-card" id="art-read-backtest">
-            <span class="article-tag tag-conf">Edukasi Analisis Data</span>
-            <h2>8. Cara Membaca Statistik Backtest Tanpa Tertipu oleh Angka</h2>
-            <p>Backtest adalah alat yang sangat berguna, tetapi ia mudah disalah-fahami. Tiga nombor yang selalu dilihat — Win Rate, purata pulangan, dan jumlah pulangan — memberitahu cerita yang berbeza.</p>
+            <span class="article-tag tag-conf">Data Analysis & Education</span>
+            <h2>8. How to Read Backtest Performance Metrics Without Delusion</h2>
+            <p>Backtesting is an invaluable tool for quantitative trading, but stats can be misunderstood without proper context. Three key metrics — Win Rate, Average Return per Trade, and Cumulative Return — tell the complete statistical story.</p>
 
-            <h3>Tiga Metrik Utama dan Maknanya</h3>
+            <h3>Evaluating Key Backtest Metrics</h3>
             <ul>
-                <li><strong>Win Rate (WR%):</strong> Berapa banyak trade yang menang. WR 81% bermakna 13 dari 16 trade menang. WR tinggi sahaja tidak cukup — anda perlu tahu purata kemenangan vs purata kerugian.</li>
-                <li><strong>Purata Pulangan Setiap Trade (Avg/Trade):</strong> Metrik paling penting. Fresh Rider +18.7% setiap trade adalah luar biasa tinggi. Confluence +5.6% adalah baik tetapi 3.3 kali lebih rendah.</li>
-                <li><strong>Jumlah Pulangan (Total):</strong> Boleh mengelirukan! Total besar boleh datang daripada bilangan trade yang banyak, bukan kualiti. Confluence +584% kelihatan hebat, tetapi ia memerlukan 104 kaunter unik dan purata hanya +5.6% setiap trade.</li>
+                <li><strong>Win Rate (WR%):</strong> Percentage of profitable trades. An 81% WR means 13 out of 16 trades closed positive. Always evaluate Win Rate alongside average win vs. average loss sizes.</li>
+                <li><strong>Average Return per Trade (Avg/Trade):</strong> The single most reliable indicator of strategy expectancy. Fresh Rider's +18.1% avg/trade reflects strong statistical edge.</li>
+                <li><strong>Cumulative Return:</strong> Large total return figures can stem from high trade frequency rather than individual trade edge. Always review sample size alongside total PnL.</li>
             </ul>
 
-            <h3>Perangkap yang Perlu Diketahui</h3>
-            <ol>
-                <li><strong>Trade yang belum ditutup:</strong> Jika backtest berakhir di tengah-tengah uptrend, untung "di atas kertas" boleh hilang esok. Semak berapa banyak trade masih terbuka.</li>
-                <li><strong>Kaunter unik vs signal berulang:</strong> 104 kaunter unik bermakna 104 nama berbeza — bukan 104 trade pada kaunter sama. Semak definisi sebelum membandingkan.</li>
-                <li><strong>Tempoh data:</strong> 58 hari adalah satu fasa pasaran. Strategi yang hebat dalam uptrend mungkin berbeza dalam pasaran bear. Jangan generalisasi berlebihan.</li>
-            </ol>
-
             <div class="highlight-box">
-                <p><strong>💡 Kesimpulan:</strong> Angka terbaik untuk menilai strategi ialah <strong>purata pulangan setiap trade</strong> bersama-sama <strong>kerugian terburuk</strong>. Semua nombor lain hanyalah sokongan. Fresh Rider unggul kerana purata setiap trade tinggi DAN kerugian terburuk kecil (-3.6%).</p>
+                <p><strong>💡 Key Takeaway:</strong> Evaluate strategies primarily by <strong>Average Return per Trade</strong> and <strong>Worst Drawdown</strong>. High average returns paired with small maximum losses signal true quantitative edge.</p>
             </div>
         </article>
 
-        <!-- ARTIKEL 9 -->
+        <!-- ARTICLE 9 -->
         <article class="article-card" id="art-psychology">
-            <span class="article-tag tag-sop">Pengurusan Risiko & SOP VVIP</span>
-            <h2>9. Psikologi Dagangan: Kenapa Disiplin Mengalahkan Rasa Yakin</h2>
-            <p>Sebahagian besar kegagalan pedagang bukan kerana analisis yang salah — tetapi kerana <strong>emosi</strong>. Sistem terbaik di dunia tidak berguna jika anda tidak dapat mematuhinya ketika harga bergerak melawan anda.</p>
+            <span class="article-tag tag-sop">Risk & Mental Discipline</span>
+            <h2>9. Trading Psychology: Why Rules and Discipline Outperform Emotion</h2>
+            <p>The vast majority of trader losses result not from flawed technical analysis, but from <strong>emotional interference</strong>. The best system is ineffective if you violate your rules during market volatility.</p>
 
-            <h3>Tiga Musuh Psikologi Utama</h3>
+            <h3>Overcoming 3 Core Emotional Traps</h3>
             <ul>
-                <li><strong>Ketamakan (Greed):</strong> Ingin keluar hanya pada paras tertinggi. Akibatnya anda tidak pernah menjual dan untung berubah menjadi rugi. Penyelesaian: ikut peraturan keluar yang telah ditetapkan lebih awal.</li>
-                <li><strong>Ketakutan (Fear):</strong> Keluar terlalu awal kerana takut untung hilang. Anda ketinggalan KEEMING +117.4% kerana menjual pada +10%. Penyelesaian: percaya pada trailing stop hibrid dan biar untung berlari.</li>
-                <li><strong>Harapan (Hope):</strong> Menahan kerugian berharap harga akan kembali, apabila peraturan sudah jelas berkata "keluar". Penyelesaian: stop loss adalah undang-undang, bukan cadangan.</li>
+                <li><strong>Greed:</strong> Attempting to sell at exact price peaks. Result: Profits evaporate into drawdowns. Solution: Enforce predefined trailing stops.</li>
+                <li><strong>Fear:</strong> Exiting trades too early due to minor pullbacks. Solution: Trust systematic trailing stop levels to let winners compound.</li>
+                <li><strong>Hope:</strong> Holding losing positions hoping for a recovery. Solution: Stop losses are non-negotiable risk limits.</li>
             </ul>
 
-            <h3>SOP Mental yang Terbukti</h3>
-            <ol>
-                <li><strong>Tulis peraturan sebelum masuk:</strong> Entry, stop loss, paras keluar — semuanya ditetapkan sebelum anda membeli. Tiada keputusan emosi selepas itu.</li>
-                <li><strong>Peram selagi di atas trailing stop:</strong> Peraturan keluar hibrid wujud supaya anda tidak menjual terlalu awal. Keberanian memegang adalah sebahagian daripada strategi, bukan risiko.</li>
-                <li><strong>Terima kerugian kecil:</strong> Sebilangan kecil trade akan kena stop loss — itu normal. Kerugian terkawal (-3.6%) adalah harga untuk mengekalkan Win Rate 81%.</li>
-                <li><strong>Jangan mengejar:</strong> Jika anda terlepas signal, biarkan ia pergi. Ada signal lain akan datang. Mengejar kaunter yang sudah naik 30% adalah cara terpantas untuk rugi.</li>
-            </ol>
-
             <div class="highlight-box">
-                <p><strong>💡 Ingat:</strong> Pasaran memberi ganjaran kepada kesabaran dan disiplin, bukan kepada kepintaran. Dalam backtest 20-hari Fresh Rider, setiap trade ditutup mengikut peraturan — bukan kerana meneka titik keluar yang sempurna. Sistem itu yang bekerja, bukan emosi anda.</p>
+                <p><strong>💡 Remember:</strong> Financial markets reward patience and systematic execution over emotional impulse. Disciplined position management preserves capital through all market cycles.</p>
             </div>
         </article>
 
         <footer>
-            <p>&copy; 2026 Jerung Bursa. Hak Cipta Terpelihara.</p>
+            <p>&copy; 2026 Jerung Bursa. All rights reserved.</p>
             <div style="margin-top: 1rem;">
-                <a href="index.html">Tracker Utama</a>
-                <a href="articles.html" style="color: white; font-weight: 600;">Koleksi Artikel</a>
-                <a href="sop.html">SOP VVIP</a>
-                <a href="formula.html">Formula & Indikator</a>
+                <a href="index.html">Main Dashboard</a>
+                <a href="articles.html" style="color: white; font-weight: 600;">Articles & Insights</a>
+                <a href="sop.html">VVIP SOP</a>
+                <a href="formula.html">Formulas & Indicators</a>
                 <a href="hall-of-fame.html">Hall of Fame</a>
-                <a href="privacy-policy.html">Dasar Privasi</a>
-                <a href="terms.html">Syarat Perkhidmatan</a>
-                <a href="about.html">Mengenai Kami</a>
-                <a href="contact.html">Hubungi Kami</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
             </div>
         </footer>
     </div>

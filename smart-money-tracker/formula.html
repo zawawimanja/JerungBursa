@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Formula & kriteria VVIP IPO Trend Rider JerungBursa — syarat penuh isyarat beli, tapisan kualiti, dan parameter backtest strategi.">
+    <meta name="description" content="VVIP Formula & Technical Criteria for JerungBursa IPO Trend Rider — complete buy signal requirements, data screening rules, and backtest strategy parameters.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.jerungbursa.my/formula.html">
-    <title>Jerung Bursa - Formula & Kriteria VVIP IPO Trend Rider</title>
+    <title>Jerung Bursa - VVIP Formula & Technical Screening Criteria</title>
     <!-- Inter Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,40 +52,6 @@
             margin: 0 auto;
         }
 
-        header {
-            text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-
-        header::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background: linear-gradient(90deg, var(--success), var(--warning), var(--accent));
-            margin: 1.5rem auto 0 auto;
-            border-radius: 2px;
-        }
-
-        header h1 {
-            font-size: 2.3rem;
-            font-weight: 900;
-            letter-spacing: -0.025em;
-            background: linear-gradient(135deg, #ffffff 40%, var(--vvip-color) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 0.5rem;
-        }
-
-        header p {
-            font-size: 1.05rem;
-            color: var(--text-secondary);
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        /* Navigation */
         .nav-links {
             display: flex;
             gap: 0.8rem;
@@ -93,6 +59,7 @@
             margin-bottom: 2rem;
             border-bottom: 1px solid var(--panel-border);
             padding-bottom: 1rem;
+            flex-wrap: wrap;
         }
 
         .btn-nav {
@@ -116,61 +83,73 @@
             border-color: rgba(255,255,255,0.15);
         }
 
-        @media (max-width: 900px) {
-            .nav-links {
-                justify-content: center;
-            }
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
         }
 
-        /* Panels */
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, #ffffff 40%, var(--vvip-color) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        header p {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
         .panel {
             background: var(--panel-bg);
             backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
             border: 1px solid var(--panel-border);
             border-radius: 16px;
             padding: 2rem;
             margin-bottom: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
         .panel-title {
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             font-weight: 800;
             margin-bottom: 1.25rem;
             display: flex;
             align-items: center;
-            gap: 0.6rem;
+            gap: 0.5rem;
             border-bottom: 1px solid var(--panel-border);
             padding-bottom: 0.75rem;
         }
 
         .formula-box {
-            background: rgba(15, 23, 42, 0.6);
-            border: 1px dashed var(--vvip-color);
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(245, 158, 11, 0.4);
             border-radius: 12px;
             padding: 1.25rem;
-            margin: 1.5rem 0;
-            text-align: center;
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--vvip-color);
+            font-family: monospace;
+            font-size: 0.95rem;
+            color: #fde047;
+            margin: 1.25rem 0;
+            line-height: 1.6;
+            word-break: break-word;
         }
 
-        /* Lists */
         ul {
-            padding-left: 1.5rem;
+            padding-left: 1.2rem;
             margin-bottom: 1rem;
         }
 
         li {
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.6rem;
             color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.5;
+            font-size: 0.92rem;
         }
 
-        strong {
+        li strong {
             color: white;
         }
 
@@ -178,23 +157,23 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            margin: 1.5rem 0;
-            font-size: 0.9rem;
+            margin-top: 1rem;
+            font-size: 0.88rem;
         }
 
         th {
-            background: rgba(255,255,255,0.02);
-            border-bottom: 2px solid var(--panel-border);
-            padding: 0.75rem 1rem;
-            text-align: left;
-            color: var(--accent);
+            background: rgba(15, 23, 42, 0.8);
+            color: var(--text-secondary);
             font-weight: 700;
+            text-align: left;
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid var(--panel-border);
         }
 
         td {
-            border-bottom: 1px solid var(--panel-border);
-            padding: 0.75rem 1rem;
-            vertical-align: top;
+            padding: 0.85rem 1rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-secondary);
         }
 
         tr:hover td {
@@ -297,57 +276,57 @@
     <div class="container">
         <div class="nav-links">
             <a href="https://ipobursa.vercel.app" target="_blank" class="btn-nav" style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border-color: rgba(99, 102, 241, 0.4); font-weight: 800;">📊 BursaIPO Portal ↗</a>
-            <a href="./index.html" class="btn-nav">🏠 Utama</a>
-            <a href="./landing.html" class="btn-nav">💡 Metodologi</a>
-            <a href="./sop.html" class="btn-nav">📘 Panduan SOP</a>
+            <a href="./index.html" class="btn-nav">🏠 Main Dashboard</a>
+            <a href="./landing.html" class="btn-nav">💡 Methodology</a>
+            <a href="./sop.html" class="btn-nav">📘 SOP Guide</a>
             <a href="./hall-of-fame.html" class="btn-nav">🏆 Hall of Fame</a>
-            <a href="./articles.html" class="btn-nav">📚 Artikel & Strategi</a>
+            <a href="./articles.html" class="btn-nav">📚 Articles & Strategy</a>
         </div>
         <header>
-            <h1>Formula & Kriteria VVIP IPO Trend Rider</h1>
-            <p>SOP Penapisan Pintar untuk Menunggang Trend Saham IPO Premium Berketepatan Tinggi</p>
+            <h1>VVIP IPO Trend Rider Formula & Technical Criteria</h1>
+            <p>Quantitative Screening SOP to Ride Premium IPO Stock Trends with Precision Risk Management</p>
         </header>
 
         <!-- Core Formula Panel -->
         <div class="panel" style="border-color: rgba(245, 158, 11, 0.3); box-shadow: 0 0 25px rgba(245, 158, 11, 0.08);">
             <div class="panel-title" style="color: var(--vvip-color); border-color: rgba(245, 158, 11, 0.2);">
-                <span>🔥</span> Formula Utama VVIP IPO Trend Rider
+                <span>🔥</span> Primary VVIP IPO Trend Rider Formula
             </div>
             <p style="color: var(--text-secondary); font-size: 0.98rem; line-height: 1.6;">
-                Sesebuah kaunter hanya layak dicalonkan dan memaparkan lencana <strong>🔥 VVIP</strong> di dashboard sekiranya ia melepasi tapisan asas pangkalan data (Backend) dan berjaya mengumpul markah minimum pada dashboard (Frontend):
+                A counter qualifies for nomination and displays the <strong>🔥 VVIP</strong> badge on the dashboard only if it passes baseline database audits (Backend) and collects required minimum points on the live interface (Frontend):
             </p>
             <div class="formula-box">
-                VVIP IPO = (Turnover ≥ RM 400k) AND (Bukan Comb) AND (Exempted from Downtrend if Fresh) AND (Score ≥ 10 for Grade A/B, 11 for Grade C, 12 for Mature)
+                VVIP IPO = (Turnover ≥ RM 400k) AND (Non-Comb Stock) AND (Exempted from Downtrend if Fresh) AND (Score ≥ 10 for Grade A/B, 11 for Grade C, 12 for Mature)
             </div>
             <p style="color: var(--text-muted); font-size: 0.85rem; text-align: center;">
-                *Formula ini menjamin kaunter mempunyai kecairan aktif, dalam fasa pullback/tapak tegar yang sihat, dan berada pada risiko minimum (SL 3%).
+                *This formula guarantees that qualifying counters possess active liquidity, trade within healthy consolidation bases, and maintain minimal risk (SL 3%).
             </p>
         </div>
 
         <!-- Backend Filter Panel -->
         <div class="panel">
             <div class="panel-title" style="color: var(--success);">
-                <span>⚙️</span> Fasa 1: Tapisan Kelayakan Asas (Backend Scraper)
+                <span>⚙️</span> Phase 1: Baseline Qualification Audit (Backend Scraper)
             </div>
             <p style="margin-bottom: 1rem; font-size: 0.95rem;">
-                Setiap 10 minit semasa market berjalan, skrip scraper (`scrape-real.js`) melakukan audit terhadap data pasaran KLSE. Kaunter wajib memenuhi syarat-syarat berikut untuk mendapat status kelayakan VVIP:
+                Every 10 minutes during live market hours, data collection scripts (`scrape-real.js`) audit KLSE market activity. Counters must satisfy the following baseline parameters:
             </p>
             <ul>
                 <li>
-                    <strong>Kemunculan Berturut-turut (Continuous Momentum)</strong>: 
-                    Kaunter mesti tersenarai dalam pangkalan data <em>Top Volume</em> semalam dan hari ini. Kaunter naik sehari tanpa volum sambungan akan ditolak secara automatik.
+                    <strong>Continuous Momentum</strong>: 
+                    The counter must appear in the <em>Top Volume</em> database both yesterday and today. Single-day spikes lacking follow-through volume are automatically discarded.
                 </li>
                 <li>
-                    <strong>Bukan Saham Tidur (Anti-Comb Stock)</strong>: 
-                    Label `isCombStock` wajib bernilai <em>false</em>. Pergerakan harga jenis tik-tik-tik seperti sikat ditolak keras untuk mengelakkan risiko modal tersangkut.
+                    <strong>Non-Comb Stock Audit (Anti-Comb Stock)</strong>: 
+                    The `isCombStock` flag must evaluate to <em>false</em>. Illiquid, tick-by-tick comb price structures are strictly rejected to eliminate capital lockup risk.
                 </li>
                 <li>
-                    <strong>Bukan Saham Menurun (Anti-Downtrend)</strong>: 
-                    Harga semasa mesti di atas paras sokongan/trend asas. Status setup pasaran tidak boleh mengandungi perkataan <code>DOWNTREND</code>, <code>AVOID</code>, atau <code>N/A</code>.
+                    <strong>Anti-Downtrend Filter</strong>: 
+                    Current price must hold above baseline support trends. Market setup status must not contain <code>DOWNTREND</code>, <code>AVOID</code>, or <code>N/A</code> tags.
                 </li>
                 <li>
-                    <strong>Ulasan Selamat (Clean Metadata)</strong>: 
-                    Ulasan/ulasan automatik (reasoning metadata) tidak boleh mengandungi frasa amaran kecairan rendah atau mendatar seperti <code>COMB</code>, <code>AVOID</code>, atau <code>ILLIQUID</code>.
+                    <strong>Clean Metadata Reasoning</strong>: 
+                    System reasoning logs must be free of low-liquidity or flatline warnings such as <code>COMB</code>, <code>AVOID</code>, or <code>ILLIQUID</code>.
                 </li>
             </ul>
         </div>
@@ -355,50 +334,50 @@
         <!-- Smart Score Panel -->
         <div class="panel">
             <div class="panel-title" style="color: var(--accent);">
-                <span>📊</span> Fasa 2: Sistem Pemarkahan Pintar (Smart Score)
+                <span>📊</span> Phase 2: Quantitative Smart Score Evaluation
             </div>
             <p style="margin-bottom: 1rem; font-size: 0.95rem;">
-                Sekiranya lulus kelayakan asas di atas, status VVIP akan diputuskan berdasarkan pengiraan <strong>Smart Score</strong> harian. Markah ini menilai keselamatan kemasukan (entry safety) dan potensi lonjakan (bounce potential):
+                Upon passing baseline audits, VVIP status is calculated using daily <strong>Smart Score</strong> modeling. This system evaluates entry safety and bounce potential:
             </p>
 
             <table>
                 <thead>
                     <tr>
-                        <th>Kriteria Penilaian</th>
-                        <th>Kondisi Teknikal</th>
-                        <th style="text-align: center;">Markah</th>
+                        <th>Evaluation Criteria</th>
+                        <th>Technical Condition</th>
+                        <th style="text-align: center;">Points</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td><strong>1. Jarak ke Lantai (Risk Proximity)</strong><br><span style="font-size: 0.78rem; color: var(--text-muted);">Menilai saiz Stop Loss untuk kemasukan yang selamat</span></td>
-                        <td>Jarak harga semasa ke Support Floor ≤ 1.5%<br>Jarak harga semasa ke Support Floor ≤ 3.0%<br>Jarak harga semasa ke Support Floor ≤ 5.0%</td>
-                        <td style="text-align: center; font-weight: 700; color: var(--warning);">+4 Mata<br>+2 Mata<br>+1 Mata</td>
+                        <td><strong>1. Risk Proximity (Distance to Floor)</strong><br><span style="font-size: 0.78rem; color: var(--text-muted);">Evaluates Stop Loss distance for safe entry</span></td>
+                        <td>Current price to Support Floor ≤ 1.5%<br>Current price to Support Floor ≤ 3.0%<br>Current price to Support Floor ≤ 5.0%</td>
+                        <td style="text-align: center; font-weight: 700; color: var(--warning);">+4 Points<br>+2 Points<br>+1 Point</td>
                     </tr>
                     <tr>
-                        <td><strong>2. Kekuatan Lantai (Floor Strength)</strong><br><span style="font-size: 0.78rem; color: var(--text-muted);">Berapa kali harga harian melantun pada paras sokongan</span></td>
-                        <td>Sokongan Floor disentuh ≥ 5 kali<br>Sokongan Floor disentuh ≥ 3 kali<br>Sokongan Floor disentuh ≥ 2 kali</td>
-                        <td style="text-align: center; font-weight: 700; color: var(--warning);">+3 Mata<br>+2 Mata<br>+1 Mata</td>
+                        <td><strong>2. Support Floor Strength</strong><br><span style="font-size: 0.78rem; color: var(--text-muted);">Number of daily price bounces at the support level</span></td>
+                        <td>Support Floor touched ≥ 5 times<br>Support Floor touched ≥ 3 times<br>Support Floor touched ≥ 2 times</td>
+                        <td style="text-align: center; font-weight: 700; color: var(--warning);">+3 Points<br>+2 Points<br>+1 Point</td>
                     </tr>
                     <tr>
-                        <td><strong>3. Asas Sideway (Consolidation Base)</strong><br><span style="font-size: 0.78rem; color: var(--text-muted);">Kaunter berehat rapat dengan volum mengering</span></td>
-                        <td>Peringkat Konsolidasi dikesan (Consolidation = True)</td>
-                        <td style="text-align: center; font-weight: 700; color: var(--warning);">+2 Mata</td>
+                        <td><strong>3. Consolidation Base</strong><br><span style="font-size: 0.78rem; color: var(--text-muted);">Price resting tightly with drying volume</span></td>
+                        <td>Consolidation Phase Detected (Consolidation = True)</td>
+                        <td style="text-align: center; font-weight: 700; color: var(--warning);">+2 Points</td>
                     </tr>
                     <tr>
-                        <td><strong>4. Zon Emas Pullback</strong><br><span style="font-size: 0.78rem; color: var(--text-muted);">Kedudukan harga dari puncak 52-Minggu (ATH)</span></td>
-                        <td>Pullback ≤ 5.0% (Retest RBS / Near ATH)<br>Pullback ≤ 12.0% (Pullback Sihat / Dip)<br>Pullback ≤ 25.0% (Diskaun Selesa)</td>
-                        <td style="text-align: center; font-weight: 700; color: var(--warning);">+3 Mata<br>+2 Mata<br>+1 Mata</td>
+                        <td><strong>4. Pullback Golden Zone</strong><br><span style="font-size: 0.78rem; color: var(--text-muted);">Price positioning relative to 52-Week High (ATH)</span></td>
+                        <td>Pullback ≤ 5.0% (Retest RBS / Near ATH)<br>Pullback ≤ 12.0% (Healthy Dip)<br>Pullback ≤ 25.0% (Value Discount)</td>
+                        <td style="text-align: center; font-weight: 700; color: var(--warning);">+3 Points<br>+2 Points<br>+1 Point</td>
                     </tr>
                     <tr>
-                        <td><strong>5. Penjajaran Trend (Moving Average)</strong><br><span style="font-size: 0.78rem; color: var(--text-muted);">Pengesahan aliran menaik jangka sederhana & panjang</span></td>
-                        <td>Harga di atas garisan SMA 50<br>Harga di atas garisan SMA 200</td>
-                        <td style="text-align: center; font-weight: 700; color: var(--warning);">+2 Mata<br>+1 Mata</td>
+                        <td><strong>5. Moving Average Alignment</strong><br><span style="font-size: 0.78rem; color: var(--text-muted);">Medium & long-term uptrend confirmation</span></td>
+                        <td>Price holding above SMA 50<br>Price holding above SMA 200</td>
+                        <td style="text-align: center; font-weight: 700; color: var(--warning);">+2 Points<br>+1 Point</td>
                     </tr>
                     <tr>
-                        <td><strong>6. Volum Urus Niaga (Liquidity)</strong><br><span style="font-size: 0.78rem; color: var(--text-muted);">Pengesahan kemasukan dana jerung institusi</span></td>
-                        <td>Turnover harian ≥ RM 5,000,000</td>
-                        <td style="text-align: center; font-weight: 700; color: var(--warning);">+1 Mata</td>
+                        <td><strong>6. Trading Volume Depth (Liquidity)</strong><br><span style="font-size: 0.78rem; color: var(--text-muted);">Institutional Smart Money turnover validation</span></td>
+                        <td>Daily Turnover ≥ RM 5,000,000</td>
+                        <td style="text-align: center; font-weight: 700; color: var(--warning);">+1 Point</td>
                     </tr>
                 </tbody>
             </table>
@@ -407,31 +386,31 @@
         <!-- Candlestick Rejection Filter Panel -->
         <div class="panel" style="border-color: rgba(16, 185, 129, 0.25);">
             <div class="panel-title" style="color: var(--success); border-color: rgba(16, 185, 129, 0.15);">
-                <span>🟢</span> Fasa 3: Petunjuk Candlestick Rejection (Strict 45% Rule)
+                <span>🟢</span> Phase 3: Candlestick Rejection Indicator (Strict 45% Rule)
             </div>
             <p style="margin-bottom: 1rem; font-size: 0.95rem;">
-                Sebagai penapis tambahan berketepatan tinggi untuk mengelakkan "false breakouts" atau membeli di pertengahan kejatuhan pasaran, sistem menggunakan formula **Strict 45% Wick Rejection** untuk menanda kemasukan jerung di dasar sokongan:
+                As a high-precision secondary filter to prevent false breakouts or catching falling knives, the dashboard enforces the **Strict 45% Wick Rejection** formula:
             </p>
             <ul>
                 <li>
-                    <strong>Lencana Reject Bawah (🟢 Lower Wick Rejection)</strong>: 
-                    Berlaku apabila wujud tekanan beli yang kuat menolak harga naik semula di akhir sesi harian. Formulasi teknikal:
+                    <strong>Lower Wick Rejection (🟢 Lower Wick Rejection)</strong>: 
+                    Triggers when strong buying pressure drives price upward before session close. Technical formulation:
                     <code style="display: block; background: rgba(15, 23, 42, 0.6); padding: 0.5rem; border-radius: 6px; margin: 0.5rem 0; font-size: 0.85rem; border: 1px solid var(--panel-border); color: #34d399;">
-                        Lower Shadow ≥ 45% daripada Keseluruhan Julat Harian (High - Low)<br>
-                        DAN Lower Shadow > Panjang Tubuh Lilin (Body)
+                        Lower Shadow ≥ 45% of Daily Range (High - Low)<br>
+                        AND Lower Shadow > Candle Body Length
                     </code>
                 </li>
                 <li>
-                    <strong>Lencana Reject Atas (🔴 Upper Wick Rejection)</strong>: 
-                    Berlaku apabila wujud tekanan jualan yang besar menolak harga turun semula di akhir sesi. Formulasi teknikal:
+                    <strong>Upper Wick Rejection (🔴 Upper Wick Rejection)</strong>: 
+                    Triggers when selling pressure pushes price back down before close. Technical formulation:
                     <code style="display: block; background: rgba(15, 23, 42, 0.6); padding: 0.5rem; border-radius: 6px; margin: 0.5rem 0; font-size: 0.85rem; border: 1px solid var(--panel-border); color: #f87171;">
-                        Upper Shadow ≥ 45% daripada Keseluruhan Julat Harian (High - Low)<br>
-                        DAN Upper Shadow > Panjang Tubuh Lilin (Body)
+                        Upper Shadow ≥ 45% of Daily Range (High - Low)<br>
+                        AND Upper Shadow > Candle Body Length
                     </code>
                 </li>
                 <li>
-                    <strong>Kepentingan DCA & Hold:</strong> 
-                    Data backtest Bursa menunjukkan apabila lencana **🟢 Reject Bawah** keluar pada kaunter VVIP, purata kejatuhan maksimum selepas entry dihadkan keras pada **-2.2%** sahaja, manakala potensi kenaikan (max runup) dalam tempoh 15-20 hari dagangan boleh mencapai **+68.47%**.
+                    <strong>DCA & Hold Significance:</strong> 
+                    Historical backtests demonstrate that when a **🟢 Lower Wick Rejection** triggers on VVIP equities, average maximum drawdown is capped tightly at **-2.2%**, while max upside momentum over 15-20 trading days reaches up to **+68.47%**.
                 </li>
             </ul>
         </div>
@@ -439,19 +418,19 @@
         <!-- Interactive Calculator Panel -->
         <div class="panel" style="border-color: rgba(59, 130, 246, 0.25);">
             <div class="panel-title" style="color: var(--accent); border-color: rgba(59, 130, 246, 0.15);">
-                <span>🧮</span> Kalkulator Simulasi Smart Score
+                <span>🧮</span> Interactive Smart Score Simulator
             </div>
             <p style="font-size: 0.92rem; color: var(--text-secondary); margin-bottom: 1rem;">
-                Pilih kriteria teknikal saham pilihan abang untuk melihat simulasi pemarkahan dan keputusan kelayakan VVIP:
+                Select technical criteria to simulate Smart Score calculation and VVIP qualification verdicts:
             </p>
             
             <div style="margin-bottom: 1.5rem; background: rgba(15, 23, 42, 0.4); padding: 1rem; border-radius: 8px; border: 1px solid var(--panel-border);">
-                <label style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 0.5rem; display: block;">Pilih Gred IPO untuk Had Kelayakan VVIP:</label>
+                <label style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); margin-bottom: 0.5rem; display: block;">Select IPO Grade for VVIP Threshold:</label>
                 <select id="calcGrade" onchange="calculateScore()" style="background: rgba(15, 23, 42, 0.8); border: 1px solid var(--panel-border); padding: 0.5rem 1rem; border-radius: 6px; color: white; font-weight: 700; outline: none; font-family: inherit; cursor: pointer; width: 100%; max-width: 320px;">
-                    <option value="A">Grade A (Kelayakan VVIP ≥ 10 Mata)</option>
-                    <option value="B">Grade B (Kelayakan VVIP ≥ 10 Mata)</option>
-                    <option value="C">Grade C (Kelayakan VVIP ≥ 11 Mata)</option>
-                    <option value="Mature">Mature / Lain-lain (Kelayakan VVIP ≥ 12 Mata)</option>
+                    <option value="A">Grade A (VVIP Threshold ≥ 10 Points)</option>
+                    <option value="B">Grade B (VVIP Threshold ≥ 10 Points)</option>
+                    <option value="C">Grade C (VVIP Threshold ≥ 11 Points)</option>
+                    <option value="Mature">Mature / Other (VVIP Threshold ≥ 12 Points)</option>
                 </select>
             </div>
 
@@ -460,100 +439,100 @@
                 <div class="calc-row" onclick="toggleCheckbox('floor15')">
                     <input type="checkbox" id="floor15" data-points="4" onchange="calculateScore()">
                     <div class="calc-label">
-                        Jarak ke Support Floor ≤ 1.5%
-                        <span class="calc-desc">Sangat rapat dengan lantai. Potensi Stop Loss super kecil (~3% sahaja).</span>
+                        Distance to Support Floor ≤ 1.5%
+                        <span class="calc-desc">Trading extremely close to floor. Ultra-tight Stop Loss (~3%).</span>
                     </div>
-                    <div class="calc-points">+4 Mata</div>
+                    <div class="calc-points">+4 Points</div>
                 </div>
                 <div class="calc-row" onclick="toggleCheckbox('floor30')">
                     <input type="checkbox" id="floor30" data-points="2" onchange="calculateScore()">
                     <div class="calc-label">
-                        Jarak ke Support Floor ≤ 3.0%
-                        <span class="calc-desc">Hampir dengan lantai sokongan harian. Masih selamat untuk kemasukan swing.</span>
+                        Distance to Support Floor ≤ 3.0%
+                        <span class="calc-desc">Near support floor. Safe entry window for swing positions.</span>
                     </div>
-                    <div class="calc-points">+2 Mata</div>
+                    <div class="calc-points">+2 Points</div>
                 </div>
 
                 <!-- Group 2: Touch Count -->
                 <div class="calc-row" onclick="toggleCheckbox('touch5')">
                     <input type="checkbox" id="touch5" data-points="3" onchange="calculateScore()">
                     <div class="calc-label">
-                        Sokongan Lantai Disentuh ≥ 5 Kali
-                        <span class="calc-desc">Strong accumulation area. Tapak terbukti kukuh sukar bocor.</span>
+                        Support Floor Touched ≥ 5 Times
+                        <span class="calc-desc">Strong accumulation base. Highly proven support zone.</span>
                     </div>
-                    <div class="calc-points">+3 Mata</div>
+                    <div class="calc-points">+3 Points</div>
                 </div>
                 <div class="calc-row" onclick="toggleCheckbox('touch3')">
                     <input type="checkbox" id="touch3" data-points="2" onchange="calculateScore()">
                     <div class="calc-label">
-                        Sokongan Lantai Disentuh ≥ 3 Kali
-                        <span class="calc-desc">Kekuatan lantai yang sederhana. Tapak sokongan yang sihat.</span>
+                        Support Floor Touched ≥ 3 Times
+                        <span class="calc-desc">Moderate floor strength. Healthy accumulation zone.</span>
                     </div>
-                    <div class="calc-points">+2 Mata</div>
+                    <div class="calc-points">+2 Points</div>
                 </div>
 
                 <!-- Consolidation -->
                 <div class="calc-row" onclick="toggleCheckbox('consolidation')">
                     <input type="checkbox" id="consolidation" data-points="2" onchange="calculateScore()">
                     <div class="calc-label">
-                        Asas Konsolidasi Padat (Consolidation = True)
-                        <span class="calc-desc">Pergerakan harga mendatar dalam range sempit (close tightness ≤ 5.5%).</span>
+                        Tight Consolidation Base (Consolidation = True)
+                        <span class="calc-desc">Price consolidating sideways in tight range (tightness ≤ 5.5%).</span>
                     </div>
-                    <div class="calc-points">+2 Mata</div>
+                    <div class="calc-points">+2 Points</div>
                 </div>
 
                 <!-- Pullback -->
                 <div class="calc-row" onclick="toggleCheckbox('pullback5')">
                     <input type="checkbox" id="pullback5" data-points="3" onchange="calculateScore()">
                     <div class="calc-label">
-                        Pullback dari ATH ≤ 5.0% (RBS / Breakout Runner)
-                        <span class="calc-desc">Dalam zon retest RBS (Resistance Become Support). Momentum menaik sangat kuat.</span>
+                        Pullback from ATH ≤ 5.0% (RBS / Breakout Runner)
+                        <span class="calc-desc">In RBS retest zone (Resistance Become Support). Strong momentum.</span>
                     </div>
-                    <div class="calc-points">+3 Mata</div>
+                    <div class="calc-points">+3 Points</div>
                 </div>
                 <div class="calc-row" onclick="toggleCheckbox('pullback12')">
                     <input type="checkbox" id="pullback12" data-points="2" onchange="calculateScore()">
                     <div class="calc-label">
-                        Pullback dari ATH ≤ 12.0% (Healthy Dip)
-                        <span class="calc-desc">Pullback sederhana untuk swing. Peluang beli di atas diskaun harga yang sihat.</span>
+                        Pullback from ATH ≤ 12.0% (Healthy Dip)
+                        <span class="calc-desc">Moderate pullback for swing entries. Buying opportunity on healthy dip.</span>
                     </div>
-                    <div class="calc-points">+2 Mata</div>
+                    <div class="calc-points">+2 Points</div>
                 </div>
 
                 <!-- SMA -->
                 <div class="calc-row" onclick="toggleCheckbox('sma50')">
                     <input type="checkbox" id="sma50" data-points="2" onchange="calculateScore()">
                     <div class="calc-label">
-                        Harga di atas SMA 50
-                        <span class="calc-desc">Trend jangka sederhana adalah Bullish.</span>
+                        Price Holding Above SMA 50
+                        <span class="calc-desc">Medium-term trend is Bullish.</span>
                     </div>
-                    <div class="calc-points">+2 Mata</div>
+                    <div class="calc-points">+2 Points</div>
                 </div>
                 <div class="calc-row" onclick="toggleCheckbox('sma200')">
                     <input type="checkbox" id="sma200" data-points="1" onchange="calculateScore()">
                     <div class="calc-label">
-                        Harga di atas SMA 200
-                        <span class="calc-desc">Trend jangka panjang adalah Bullish (Upward bias).</span>
+                        Price Holding Above SMA 200
+                        <span class="calc-desc">Long-term trend is Bullish (Upward bias).</span>
                     </div>
-                    <div class="calc-points">+1 Mata</div>
+                    <div class="calc-points">+1 Point</div>
                 </div>
 
                 <!-- Liquidity -->
                 <div class="calc-row" onclick="toggleCheckbox('turnover5m')">
                     <input type="checkbox" id="turnover5m" data-points="1" onchange="calculateScore()">
                     <div class="calc-label">
-                        Turnover Harian ≥ RM 5,000,000
-                        <span class="calc-desc">Kemasukan jerung institusi bersaiz besar (high liquidity).</span>
+                        Daily Turnover ≥ RM 5,000,000
+                        <span class="calc-desc">Institutional Smart Money participation (high liquidity).</span>
                     </div>
-                    <div class="calc-points">+1 Mata</div>
+                    <div class="calc-points">+1 Point</div>
                 </div>
             </div>
 
             <!-- Simulation Result -->
             <div class="calc-result">
                 <div>
-                    <h4 style="font-size: 1.05rem; font-weight: 800; color: white; margin-bottom: 0.2rem;">Hasil Keputusan Simulasi:</h4>
-                    <p style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 0.6rem;">Status kelayakan VVIP (Perlu markah &ge; 12)</p>
+                    <h4 style="font-size: 1.05rem; font-weight: 800; color: white; margin-bottom: 0.2rem;">Simulation Verdict:</h4>
+                    <p style="font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 0.6rem;">VVIP Status (Requires Score &ge; threshold)</p>
                     <div id="verdictBadge" class="verdict-badge verdict-pending">Pending</div>
                 </div>
                 <div style="text-align: right;">
@@ -567,17 +546,17 @@
         <footer style="margin-top: 4rem; padding: 2rem 1.5rem; border-top: 1px solid rgba(255, 255, 255, 0.08); background: rgba(15, 23, 45, 0.6); backdrop-filter: blur(8px); text-align: center; font-size: 0.85rem; color: var(--text-secondary); border-radius: 12px; margin-bottom: 2rem;">
             <div style="max-width: 800px; margin: 0 auto;">
                 <p style="margin-bottom: 1rem; color: #cbd5e1; line-height: 1.6;">
-                    <strong>⚠️ Penafian Kewangan & Risiko:</strong> Semua data, zon harga (Watchlist/Support Floor), formula, skor pintas, dan maklumat kuantitatif yang dipaparkan di JerungBursa adalah hasil pemodelan matematik dan simulasi algoritma untuk tujuan penyelidikan dan pembelajaran sahaja. Kami <strong>BUKAN</strong> penasihat kewangan berlesen. Melabur dalam pasaran saham Bursa Malaysia melibatkan risiko kerugian modal yang tinggi. Sila lakukan penyelidikan sendiri (DYOR) atau berunding dengan penasihat kewangan yang bertauliah sebelum membuat keputusan pelaburan sebenar.
+                    <strong>⚠️ Financial & Risk Disclaimer:</strong> All data, price zones (Watchlist/Support Floor), formulas, smart scores, and quantitative metrics displayed on JerungBursa are generated via mathematical modeling and algorithmic simulation for research and educational purposes only. We are <strong>NOT</strong> licensed financial advisors. Investing in Bursa Malaysia equities carries inherent capital risk. Always conduct your own independent research (DYOR) or consult a certified financial planner before making investment decisions.
                 </p>
                 <p style="margin-bottom: 1rem;">
-                    &copy; 2026 Jerung Bursa. Hak cipta terpelihara.
+                    &copy; 2026 Jerung Bursa. All rights reserved.
                 </p>
                 <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 0.5rem;">
-                    <a href="./articles.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-secondary)'">Koleksi Artikel</a>
-                    <a href="./privacy-policy.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-secondary)'">Dasar Privasi</a>
-                    <a href="./terms.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-secondary)'">Syarat Perkhidmatan</a>
-                    <a href="./about.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-secondary)'">Mengenai Kami</a>
-                    <a href="./contact.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-secondary)'">Hubungi Kami</a>
+                    <a href="./articles.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-secondary)'">Articles & Insights</a>
+                    <a href="./privacy-policy.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-secondary)'">Privacy Policy</a>
+                    <a href="./terms.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-secondary)'">Terms of Service</a>
+                    <a href="./about.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-secondary)'">About Us</a>
+                    <a href="./contact.html" style="color: var(--text-secondary); text-decoration: none; font-weight: 600; transition: color 0.2s;" onmouseover="this.style.color='white'" onmouseout="this.style.color='var(--text-secondary)'">Contact Us</a>
                 </div>
             </div>
         </footer>
