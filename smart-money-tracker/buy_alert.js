@@ -506,8 +506,8 @@ function buildMessage(now, out) {
     // 2. Load trackers (untuk badge + SL warning)
     const frTrades = loadTrackerTrades(path.join(__dirname, 'fresh_rider_tracker.js'));
     const htTrades = loadTrackerTrades(path.join(__dirname, 'hot_theme_tracker.js'));
-    const frTrackedStatus = new Map(frTrades.map(t => [(t.name || '').toUpperCase(), t.status]));
-    const htTrackedStatus = new Map(htTrades.map(t => [(t.name || '').toUpperCase(), t.status]));
+    const frTrackedStatus = new Map(frTrades.map(t => [(t.name || '').toUpperCase(), t]));
+    const htTrackedStatus = new Map(htTrades.map(t => [(t.name || '').toUpperCase(), t]));
     const frTrackedNames = new Set(frTrackedStatus.keys());
     const htTrackedNames = new Set(htTrackedStatus.keys());
     const openFr = frTrades.filter(t => t.status === 'OPEN');
@@ -605,12 +605,13 @@ function buildMessage(now, out) {
     // ➕ ADD-ON = MASIH OPEN dalam tracker & qualify semula hari ini — peluang TAMBAH posisi
     // 🟢 RE-ENTRY = pernah ditrack tapi dah tutup, qualify semula — entry lewat, berhati-hati
     // 🆕 BARU = belum pernah ditrack — signal pertama kali, entry penuh dari base
-    function signalLabel(name, trackedStatus) {
+    function signalLabel(name, trackedMap) {
         const up = (name || '').toUpperCase();
-        const status = trackedStatus.get(up);
-        if (status === 'OPEN') return '➕ ADD-ON';
-        if (status) return '🟢 RE-ENTRY';
-        return '🆕 BARU';
+        const tr = trackedMap.get(up);
+        if (!tr) return '🆕 BARU';
+        if (tr.entryDate && snapDate && tr.entryDate >= snapDate) return '🆕 BARU';
+        if (tr.status === 'OPEN') return '➕ ADD-ON';
+        return '🟢 RE-ENTRY';
     }
 
     const frOut = frList.map(s => {

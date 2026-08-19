@@ -5400,7 +5400,13 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                         : '<span style="font-size: 0.62rem; color: #fbbf24; font-weight: 700;" title="Dah keluar dari senarai (harga lari >10% dari base) — JANGAN beli lagi, tapi yang dah beli terus HOLD selagi tak kena trailing stop">🟡 HOLD SAHAJA</span>')
                     : '<span style="font-size: 0.62rem; color: #f87171; font-weight: 800;" title="Posisi dah ditutup (kena trailing stop)">🔒 DAH JUAL</span>';
                 return `<tr>
-                    <td style="font-weight: 800; color: white;">${getTradingViewAnchorSmall(t.name)}<div style="font-size: 0.62rem; color: #64748b; font-weight: 600;">${t.sector || ''}</div></td>
+                    <td style="font-weight: 800; color: white;">
+                        <div style="display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap;">
+                            ${getTradingViewAnchorSmall(t.name)}
+                            ${getTradingViewButton(t.name)}
+                        </div>
+                        <div style="font-size: 0.62rem; color: #64748b; font-weight: 600; margin-top: 0.15rem;">${t.sector || ''}</div>
+                    </td>
                     <td style="text-align: center;">${statusBadge}</td>
                     <td style="text-align: center; color: #94a3b8; font-size: 0.72rem;">${t.entryDate.slice(5)}</td>
                     <td style="text-align: right; color: white; font-weight: 700;">RM ${t.entry.toFixed(3)}</td>
@@ -5523,7 +5529,13 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                         : '<span style="font-size: 0.62rem; color: #fbbf24; font-weight: 700;" title="Dah keluar dari senarai Hot Theme — JANGAN beli lagi, tapi yang dah beli terus HOLD selagi tak kena trailing stop">🟡 HOLD SAHAJA</span>')
                     : '<span style="font-size: 0.62rem; color: #f87171; font-weight: 800;" title="Posisi dah ditutup (kena trailing stop)">🔒 DAH JUAL</span>';
                 return `<tr>
-                    <td style="font-weight: 800; color: white;">${getTradingViewAnchorSmall(t.name)}<div style="font-size: 0.62rem; color: #64748b; font-weight: 600;">${themeBadges}</div></td>
+                    <td style="font-weight: 800; color: white;">
+                        <div style="display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap;">
+                            ${getTradingViewAnchorSmall(t.name)}
+                            ${getTradingViewButton(t.name)}
+                        </div>
+                        <div style="font-size: 0.62rem; color: #64748b; font-weight: 600; margin-top: 0.15rem;">${themeBadges}</div>
+                    </td>
                     <td style="text-align: center;">${statusBadge}</td>
                     <td style="text-align: center; color: #94a3b8; font-size: 0.72rem;">${t.entryDate.slice(5)}</td>
                     <td style="text-align: right; color: white; font-weight: 700;">RM ${t.entry.toFixed(3)}</td>
@@ -5630,8 +5642,8 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     badgeRow.appendChild(badge);
                     return;
                 }
-                // 🆕 BARU: entry HARI INI (entryDate === todayStr) — signal pertama kali, bukan ADD-ON, bukan RE-ENTRY
-                if (trTrade && trTrade.entryDate === todayStr) {
+                // 🆕 BARU: entry HARI INI (entryDate >= todayStr) — signal pertama kali, bukan ADD-ON, bukan RE-ENTRY
+                if (trTrade && trTrade.entryDate && trTrade.entryDate >= todayStr) {
                     const badge = document.createElement('span');
                     badge.className = 'fr-new-badge';
                     badge.textContent = '🆕 BARU';
@@ -5733,8 +5745,8 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     badgeRow.appendChild(badge);
                     return;
                 }
-                // 🆕 BARU: entry HARI INI (entryDate === todayStr) — signal pertama kali, bukan ADD-ON, bukan RE-ENTRY
-                if (htTrade && htTrade.entryDate === todayStr) {
+                // 🆕 BARU: entry HARI INI (entryDate >= todayStr) — signal pertama kali, bukan ADD-ON, bukan RE-ENTRY
+                if (htTrade && htTrade.entryDate && htTrade.entryDate >= todayStr) {
                     const badge = document.createElement('span');
                     badge.className = 'ht-new-badge';
                     badge.textContent = '🆕 BARU';
