@@ -5400,7 +5400,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                         : '<span style="font-size: 0.62rem; color: #fbbf24; font-weight: 700;" title="Dah keluar dari senarai (harga lari >10% dari base) — JANGAN beli lagi, tapi yang dah beli terus HOLD selagi tak kena trailing stop">🟡 HOLD SAHAJA</span>')
                     : '<span style="font-size: 0.62rem; color: #f87171; font-weight: 800;" title="Posisi dah ditutup (kena trailing stop)">🔒 DAH JUAL</span>';
                 return `<tr>
-                    <td style="font-weight: 800; color: white;">${t.name}<div style="font-size: 0.62rem; color: #64748b; font-weight: 600;">${t.sector || ''}</div></td>
+                    <td style="font-weight: 800; color: white;">${getTradingViewAnchorSmall(t.name)}<div style="font-size: 0.62rem; color: #64748b; font-weight: 600;">${t.sector || ''}</div></td>
                     <td style="text-align: center;">${statusBadge}</td>
                     <td style="text-align: center; color: #94a3b8; font-size: 0.72rem;">${t.entryDate.slice(5)}</td>
                     <td style="text-align: right; color: white; font-weight: 700;">RM ${t.entry.toFixed(3)}</td>
@@ -5523,7 +5523,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                         : '<span style="font-size: 0.62rem; color: #fbbf24; font-weight: 700;" title="Dah keluar dari senarai Hot Theme — JANGAN beli lagi, tapi yang dah beli terus HOLD selagi tak kena trailing stop">🟡 HOLD SAHAJA</span>')
                     : '<span style="font-size: 0.62rem; color: #f87171; font-weight: 800;" title="Posisi dah ditutup (kena trailing stop)">🔒 DAH JUAL</span>';
                 return `<tr>
-                    <td style="font-weight: 800; color: white;">${t.name}<div style="font-size: 0.62rem; color: #64748b; font-weight: 600;">${themeBadges}</div></td>
+                    <td style="font-weight: 800; color: white;">${getTradingViewAnchorSmall(t.name)}<div style="font-size: 0.62rem; color: #64748b; font-weight: 600;">${themeBadges}</div></td>
                     <td style="text-align: center;">${statusBadge}</td>
                     <td style="text-align: center; color: #94a3b8; font-size: 0.72rem;">${t.entryDate.slice(5)}</td>
                     <td style="text-align: right; color: white; font-weight: 700;">RM ${t.entry.toFixed(3)}</td>
@@ -5630,6 +5630,16 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     badgeRow.appendChild(badge);
                     return;
                 }
+                // 🆕 BARU: entry HARI INI (entryDate === todayStr) — signal pertama kali, bukan ADD-ON, bukan RE-ENTRY
+                if (trTrade && trTrade.entryDate === todayStr) {
+                    const badge = document.createElement('span');
+                    badge.className = 'fr-new-badge';
+                    badge.textContent = '🆕 BARU';
+                    badge.style.cssText = 'font-size:0.62rem; background:rgba(245,158,11,0.2); color:#fbbf24; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(245,158,11,0.4); white-space:nowrap; animation: pulse 1.5s infinite;';
+                    badge.title = 'BARU: entry HARI INI dalam Tracker Live Fresh Rider — signal pertama kali, belum pernah ditrack sebelum ni. Beli ikut SOP; SL ikut lantai/trailing tracker.';
+                    badgeRow.appendChild(badge);
+                    return;
+                }
                 if (prevSet.has(name)) return;
                 const badge = document.createElement('span');
                 badge.className = 'fr-new-badge';
@@ -5720,6 +5730,16 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     badge.textContent = '➕ ADD-ON';
                     badge.style.cssText = 'font-size:0.62rem; background:linear-gradient(135deg, rgba(16,185,129,0.3), rgba(56,189,248,0.3)); color:#6ee7b7; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(16,185,129,0.6); white-space:nowrap; animation: pulse 1.5s infinite;';
                     badge.title = 'ADD-ON: MASIH kita pegang (OPEN dalam Tracker Live Hot Theme) & qualify semula hari ini — peluang TAMBAH posisi sebelum breakout. BUKAN signal pertama; guna SL ikut harga belian AWAK sendiri, bukan SL tracker.';
+                    badgeRow.appendChild(badge);
+                    return;
+                }
+                // 🆕 BARU: entry HARI INI (entryDate === todayStr) — signal pertama kali, bukan ADD-ON, bukan RE-ENTRY
+                if (htTrade && htTrade.entryDate === todayStr) {
+                    const badge = document.createElement('span');
+                    badge.className = 'ht-new-badge';
+                    badge.textContent = '🆕 BARU';
+                    badge.style.cssText = 'font-size:0.62rem; background:rgba(245,158,11,0.2); color:#fbbf24; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(245,158,11,0.4); white-space:nowrap; animation: pulse 1.5s infinite;';
+                    badge.title = 'BARU: entry HARI INI dalam Tracker Live Hot Theme — signal pertama kali, belum pernah ditrack sebelum ni. Beli ikut SOP; SL ikut lantai/trailing tracker.';
                     badgeRow.appendChild(badge);
                     return;
                 }
