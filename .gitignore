@@ -1,2 +1,7 @@
 # Folder tool lain — local only
 .freebuff/
+.kilo/
+scratch/
+.env
+node_modules/
+.DS_Store
