@@ -1103,7 +1103,7 @@
                     </tbody>
                 </table>
             </div>
-            <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">* <strong style="color:#34d399;">POSISI SEBENAR</strong> — pegang setiap kaunter dari hari qualify sehingga kena trailing stop hibrid (SL = high × 0.80 sebelum untung dikunci, ketat ke high × 0.90 selepas +20% terkunci). CLOSED_SL = lock keuntungan/rugi. Ini rekod hold sebenar, BUKAN simulasi — contoh: backtest tutup KEEMING awal pada +65%, tracker hold sampai +117%. Auto-update setiap kemas kini data.</p>
+            <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">* <strong style="color:#34d399;">ACTUAL POSITIONS</strong> — hold every counter from qualification day until triggering the hybrid trailing stop (SL = high × 0.80 before profit lock, tightens to high × 0.90 after +20% locked). CLOSED_SL = locked profit/loss. This is an actual holding record, NOT a simulation — e.g. backtest closed KEEMING early at +65%, while tracker held up to +117%. Auto-updated on every data refresh.</p>
         </div>
     </div>
 
@@ -1332,20 +1332,20 @@
                 <table class="data-table" style="font-size: 0.78rem;">
                     <thead>
                         <tr>
-                            <th style="text-align: left;">Kaunter</th>
+                            <th style="text-align: left;">Counter</th>
                             <th style="text-align: center;">Status</th>
                             <th style="text-align: center;">Entry</th>
-                            <th style="text-align: right;">Harga Entry</th>
-                            <th style="text-align: right;">Harga Kini / Exit</th>
-                            <th style="text-align: right;">PnL Kini / Akhir</th>
+                            <th style="text-align: right;">Entry Price</th>
+                            <th style="text-align: right;">Current / Exit Price</th>
+                            <th style="text-align: right;">Current / Final PnL</th>
                             <th style="text-align: right;">Max Gain</th>
-                            <th style="text-align: center;">Hari Hold</th>
-                            <th style="text-align: center;">Status Pegangan</th>
-                            <th style="text-align: right;" title="Trail 20% dari high (bila gain < +20%) / 6% dari high (bila gain >= +20%) / Hard stop -12% selepas 5 hari">SL Trail</th>
+                            <th style="text-align: center;">Days Held</th>
+                            <th style="text-align: center;">Holding Status</th>
+                            <th style="text-align: right;" title="Trail 20% from high (when gain < +20%) / 6% from high (when gain >= +20%) / Hard stop -12% after 5 days">Trailing SL</th>
                         </tr>
                     </thead>
                     <tbody id="htTrackerTableBody">
-                        <tr><td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">⏳ Memuatkan tracker...</td></tr>
+                        <tr><td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">⏳ Loading tracker...</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -1356,7 +1356,7 @@
             <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.7rem;">
                 <span style="font-size: 1rem;">🔄</span>
                 <span style="font-size: 0.75rem; font-weight: 900; color: #fbbf24; letter-spacing: 0.5px; text-transform: uppercase;">Theme Rotation Detector</span>
-                <span id="htThemeMeta" style="font-size: 0.65rem; color: #94a3b8; font-weight: 600;">Kekuatan tema Semicon+Solar dalam pasaran</span>
+                <span id="htThemeMeta" style="font-size: 0.65rem; color: #94a3b8; font-weight: 600;">Semicon + Solar market theme strength</span>
             </div>
             <div style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.7rem;">
                 <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(251,191,36,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 120px; text-align: center; flex: 1;">
