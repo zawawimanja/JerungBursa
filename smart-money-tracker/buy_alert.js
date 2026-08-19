@@ -387,16 +387,16 @@ function buildMessage(now, out) {
     lines.push(dataTxt);
     lines.push('');
 
-    // ---- CS timing label (csHijau = breakout danger, csMerah = entry cantik) ----
+    // ---- CS timing label (csGreen = breakout danger, csRed = prime entry) ----
     function csTimingLabel(changePct) {
         if (changePct === null || changePct === undefined) return '';
-        if (changePct >= 5.0) return '· 🔴 CS HIJAU — jgn kejar';
-        if (changePct >= 3.0) return '· 🟡 CS KUNING — dh lari';
-        if (changePct <= -3.0) return '· 🟢 CS MERAH — entry cantik';
-        if (changePct <= -1.0) return '· 🟢 CS MERAH';
-        return '· ⚪ CS FLAT';
+        if (changePct >= 5.0) return '· 🔴 GREEN CS — do not chase';
+        if (changePct >= 3.0) return '· 🟡 YELLOW CS — extended';
+        if (changePct <= -3.0) return '· 🟢 RED CS — prime entry';
+        if (changePct <= -1.0) return '· 🟢 RED CS';
+        return '· ⚪ FLAT CS';
     }
-    // Rank utk susunan: MERAH(0) > FLAT(1) > KUNING(2) > HIJAU(3)
+    // Rank for sorting: RED(0) > FLAT(1) > YELLOW(2) > GREEN(3)
     function csRank(changePct) {
         if (changePct === null || changePct === undefined) return 1;
         if (changePct <= -1.0) return 0;
@@ -406,31 +406,31 @@ function buildMessage(now, out) {
     }
 
     // ---- Fresh Rider ----
-    // (Susunan dah diset dalam main — pattern web: kesegaran → tightness → lantai → pullback → touch → turnover)
+    // (Sorted: freshness → tightness → dynamic floor → pullback → touch → turnover)
     const fr = out.freshRider;
-    lines.push(`🚀 FRESH RIDER (${fr.list.length})`);
+    lines.push(`🔥 FRESH VVIP RIDER (${fr.list.length})`);
     if (fr.list.length === 0) {
-        lines.push('   Tiada setup hari ini.');
+        lines.push('   No setups today.');
     } else {
         let chaseShown = false;
         fr.list.forEach((s, i) => {
             if (csRank(s.changePct) === 3 && !chaseShown) {
-                lines.push('   ── 🔴 CS HIJAU: JANGAN KEJAR, tunggu pullback ──');
+                lines.push('   ── 🔴 GREEN CS: DO NOT CHASE, wait for pullback ──');
                 chaseShown = true;
             }
             const label = s.label ? s.label + ' ' : '';
-            const floorTxt = s.floorDist != null ? ` · lantai ${s.floorDist.toFixed(1)}%` : '';
+            const floorTxt = s.floorDist != null ? ` · floor ${s.floorDist.toFixed(1)}%` : '';
             const tightTxt = s.tight != null ? ` · tight ${s.tight.toFixed(2)}%` : '';
             const csTxt = csTimingLabel(s.changePct);
             lines.push(`${String(i + 1).padStart(2)}. ${label}${s.name} RM${fmtPrice(s.price)} (${fmtPct(s.changePct)}) · pb ${fmtPlain(s.pullback)}${floorTxt}${tightTxt} · SL RM${fmtPrice(s.sl)} ${csTxt}`);
         });
     }
     const frAdd = fr.list.filter(s => s.label === '➕ ADD-ON');
-    const frNew = fr.list.filter(s => s.label === '🆕 BARU');
-    if (fr.addonCount > 0 || fr.newCount > 0 || fr.reentryCount > 0) lines.push(`   ➕ ${fr.addonCount} add-on / ${fr.newCount} baru / ${fr.reentryCount} re-entry`);
+    const frNew = fr.list.filter(s => s.label === '🆕 NEW');
+    if (fr.addonCount > 0 || fr.newCount > 0 || fr.reentryCount > 0) lines.push(`   ➕ ${fr.addonCount} add-on / ${fr.newCount} new / ${fr.reentryCount} re-entry`);
     lines.push(frNew.length
         ? `   🆕 First time qualify: ${frNew.map(s => s.name).join(', ')}`
-        : (frAdd.length ? `   ➕ ADD-ON hari ini: ${frAdd.map(s => s.name).join(', ')}` : '   🟢 Semua masih layak — tiada signal baru'));
+        : (frAdd.length ? `   ➕ ADD-ON today: ${frAdd.map(s => s.name).join(', ')}` : '   🟢 All qualify — no new signals'));
     lines.push('');
 
     // ---- Hot Theme ----
@@ -438,54 +438,54 @@ function buildMessage(now, out) {
     const ht = out.hotTheme;
     lines.push(`🔥 HOT THEME (${ht.list.length})`);
     if (ht.list.length === 0) {
-        lines.push('   Tiada setup hari ini.');
+        lines.push('   No setups today.');
     } else {
         let chaseShown = false;
         ht.list.forEach((s, i) => {
             if (csRank(s.changePct) === 3 && !chaseShown) {
-                lines.push('   ── 🔴 CS HIJAU: JANGAN KEJAR, tunggu pullback ──');
+                lines.push('   ── 🔴 GREEN CS: DO NOT CHASE, wait for pullback ──');
                 chaseShown = true;
             }
             const label = s.label ? s.label + ' ' : '';
             const triple = s.confluence >= 3 ? 'TRIPLE' : 'DOUBLE';
-            const floorTxt = s.floorDist != null ? ` · lantai ${s.floorDist.toFixed(1)}%` : '';
+            const floorTxt = s.floorDist != null ? ` · floor ${s.floorDist.toFixed(1)}%` : '';
             const tightTxt = s.tight != null ? ` · tight ${s.tight.toFixed(2)}%` : '';
             const csTxt = csTimingLabel(s.changePct);
             lines.push(`${String(i + 1).padStart(2)}. ${label}${s.name} RM${fmtPrice(s.price)} (${fmtPct(s.changePct)}) · ${triple}(${s.confluence}) · pb ${fmtPlain(s.pullback)}${floorTxt}${tightTxt} · SL RM${fmtPrice(s.sl)} ${csTxt}`);
         });
     }
     const htAdd = ht.list.filter(s => s.label === '➕ ADD-ON');
-    const htNew = ht.list.filter(s => s.label === '🆕 BARU');
-    if (ht.addonCount > 0 || ht.newCount > 0 || ht.reentryCount > 0) lines.push(`   ➕ ${ht.addonCount} add-on / ${ht.newCount} baru / ${ht.reentryCount} re-entry`);
+    const htNew = ht.list.filter(s => s.label === '🆕 NEW');
+    if (ht.addonCount > 0 || ht.newCount > 0 || ht.reentryCount > 0) lines.push(`   ➕ ${ht.addonCount} add-on / ${ht.newCount} new / ${ht.reentryCount} re-entry`);
     lines.push(htNew.length
         ? `   🆕 First time qualify: ${htNew.map(s => s.name).join(', ')}`
-        : (htAdd.length ? `   ➕ ADD-ON hari ini: ${htAdd.map(s => s.name).join(', ')}` : '   🟢 Semua masih layak — tiada signal baru'));
+        : (htAdd.length ? `   ➕ ADD-ON today: ${htAdd.map(s => s.name).join(', ')}` : '   🟢 All qualify — no new signals'));
     lines.push('');
 
     // ---- SL warning ----
     if (out.slWarnings.length > 0) {
-        lines.push('⚠️ SL WARNING — posisi bawah trailing stop (pertimbang keluar):');
+        lines.push('⚠️ SL WARNING — position below trailing stop (consider exit):');
         for (const w of out.slWarnings) {
             lines.push(`   ${w.name} RM${w.price} vs SL RM${w.slTrail} (${w.tracker})`);
         }
         lines.push('');
     }
 
-    lines.push(`Trackers: FR ${out.frTracked} unik / HT ${out.htTracked} unik`);
+    lines.push(`Trackers: FR ${out.frTracked} unique / HT ${out.htTracked} unique`);
     lines.push('');
-    lines.push('📖 CARA BACA:');
-    lines.push('🆕 BARU — first time qualify hari ini. Entry penuh dari base.');
-    lines.push('➕ ADD-ON — masih kita pegang (OPEN dalam tracker) & qualify semula = peluang tambah posisi.');
-    lines.push('🟢 RE-ENTRY — pernah ditrack, dah tutup, qualify semula. Entry lewat, hati-hati.');
-    lines.push('⚠️ SL WARNING — posisi bawah trailing stop. Pertimbang keluar.');
+    lines.push('📖 HOW TO READ:');
+    lines.push('🆕 NEW — first time qualifying today. Full entry from base.');
+    lines.push('➕ ADD-ON — OPEN position in tracker & re-qualifying = opportunity to add position.');
+    lines.push('🟢 RE-ENTRY — previously tracked, closed, re-qualifies. Late entry, proceed with caution.');
+    lines.push('⚠️ SL WARNING — position below trailing stop. Consider exit.');
     lines.push('');
-    lines.push('⏱️ CS TIMING (timing entry berdasarkan candle hari ini):');
-    lines.push('🟢 CS MERAH (change ≤ -1%) — harga turun/flat, entry cantik di base');
-    lines.push('⚪ CS FLAT (-1% hingga +3%) — neutral, boleh entry');
-    lines.push('🟡 CS KUNING (+3% hingga +5%) — harga dah lari, hati-hati');
-    lines.push('🔴 CS HIJAU (≥ +5%) — breakout, jangan kejar. Tunggu pullback.');
+    lines.push('⏱️ CS TIMING (entry timing based on daily candle):');
+    lines.push('🟢 RED CS (change ≤ -1%) — price dip/flat, prime entry at base');
+    lines.push('⚪ FLAT CS (-1% to +3%) — neutral, valid entry');
+    lines.push('🟡 YELLOW CS (+3% to +5%) — price extended, proceed with caution');
+    lines.push('🔴 GREEN CS (≥ +5%) — breakout, do not chase. Wait for pullback.');
     lines.push('');
-    lines.push('Dijana oleh buy_alert.js · JerungBursa');
+    lines.push('Generated by buy_alert.js · JerungBursa');
     return lines.join('\n');
 }
 
@@ -608,8 +608,8 @@ function buildMessage(now, out) {
     function signalLabel(name, trackedMap) {
         const up = (name || '').toUpperCase();
         const tr = trackedMap.get(up);
-        if (!tr) return '🆕 BARU';
-        if (tr.entryDate && snapDate && tr.entryDate >= snapDate) return '🆕 BARU';
+        if (!tr) return '🆕 NEW';
+        if (tr.entryDate && snapDate && tr.entryDate >= snapDate) return '🆕 NEW';
         if (tr.status === 'OPEN') return '➕ ADD-ON';
         return '🟢 RE-ENTRY';
     }
@@ -647,7 +647,7 @@ function buildMessage(now, out) {
     // Susun ikut pattern WEB (KEEMING/STRATUS): kesegaran (BARU>ADD-ON>RE-ENTRY) →
     // tightness (squeeze) → lantai dinamik → pullback → [HT: confluence] → touch → turnover.
     // Supaya susunan Telegram SAMA dengan list di web — bukan CS timing lagi.
-    function freshnessRank(label) { return label === '🆕 BARU' ? 0 : (label === '➕ ADD-ON' ? 1 : 2); }
+    function freshnessRank(label) { return label === '🆕 NEW' ? 0 : (label === '➕ ADD-ON' ? 1 : 2); }
     const tieTight = (a, b) => ((a.tight ?? 99) - (b.tight ?? 99));
     const tieFloor = (a, b) => ((a.floorDist ?? 99) - (b.floorDist ?? 99));
     const tiePb = (a, b) => ((a.pullback ?? 99) - (b.pullback ?? 99));
@@ -679,8 +679,8 @@ function buildMessage(now, out) {
     const out = {
         generatedAt: now.toISOString(),
         dataTime,
-        freshRider: { list: frOut, newCount: frOut.filter(s => s.label === '🆕 BARU').length, reentryCount: frOut.filter(s => s.label === '🟢 RE-ENTRY').length, addonCount: frOut.filter(s => s.label === '➕ ADD-ON').length },
-        hotTheme: { list: htOut, newCount: htOut.filter(s => s.label === '🆕 BARU').length, reentryCount: htOut.filter(s => s.label === '🟢 RE-ENTRY').length, addonCount: htOut.filter(s => s.label === '➕ ADD-ON').length },
+        freshRider: { list: frOut, newCount: frOut.filter(s => s.label === '🆕 NEW').length, reentryCount: frOut.filter(s => s.label === '🟢 RE-ENTRY').length, addonCount: frOut.filter(s => s.label === '➕ ADD-ON').length },
+        hotTheme: { list: htOut, newCount: htOut.filter(s => s.label === '🆕 NEW').length, reentryCount: htOut.filter(s => s.label === '🟢 RE-ENTRY').length, addonCount: htOut.filter(s => s.label === '➕ ADD-ON').length },
         slWarnings,
         frTracked: frTrades.length,
         htTracked: htTrades.length,

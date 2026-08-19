@@ -5242,12 +5242,12 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     : `<span style="color: #94a3b8; font-weight: 600; background: rgba(148,163,184,0.1); padding: 0.15rem 0.45rem; border-radius: 4px; font-size: 0.72rem; border: 1px solid rgba(148,163,184,0.2); white-space: nowrap;">NO</span>`;
 
                 let badgesHtml = '';
-                // CS Squeeze badge: CS MERAH (squeeze on = accumulation) vs CS HIJAU (volum spike = expansion/breakout)
-                // Gaya entry: beli masa CS MERAH (belum breakout), elak CS HIJAU (dah breakout / expansion)
+                // CS Squeeze badge: RED CS (squeeze on = accumulation) vs GREEN CS (volume spike = expansion/breakout)
+                // Entry style: buy during RED CS (pre-breakout), avoid GREEN CS (breakout/expansion)
                 const csExpanded = item.hasVolumeSpike === true && (item.volumeSpike || 0) >= 1.5;
                 badgesHtml = (csExpanded
-                    ? `<span style="font-size: 0.62rem; background: rgba(16, 185, 129, 0.18); color: #34d399; padding: 0.08rem 0.32rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(16, 185, 129, 0.5); white-space: nowrap; animation: pulse 1.5s infinite;" title="CS HIJAU: Squeeze OFF — volum spike ${(item.volumeSpike || 0).toFixed(1)}x (breakout/expansion). Bukan fasa accumulation — elak entry gaya CS MERAH.">🔥 CS HIJAU</span>`
-                    : `<span style="font-size: 0.62rem; background: rgba(251, 113, 133, 0.18); color: #fb7185; padding: 0.08rem 0.32rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(251, 113, 133, 0.5); white-space: nowrap;" title="CS MERAH: Squeeze ON — volum senyap, fasa accumulation sebelum breakout. Entry gaya awak: beli masa ni.">🧲 CS MERAH</span>`) + badgesHtml;
+                    ? `<span style="font-size: 0.62rem; background: rgba(16, 185, 129, 0.18); color: #34d399; padding: 0.08rem 0.32rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(16, 185, 129, 0.5); white-space: nowrap; animation: pulse 1.5s infinite;" title="GREEN CS: Squeeze OFF — volume spike ${(item.volumeSpike || 0).toFixed(1)}x (breakout/expansion). Not accumulation phase — avoid entry.">🔥 GREEN CS</span>`
+                    : `<span style="font-size: 0.62rem; background: rgba(251, 113, 133, 0.18); color: #fb7185; padding: 0.08rem 0.32rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(251, 113, 133, 0.5); white-space: nowrap;" title="RED CS: Squeeze ON — quiet volume, accumulation phase before breakout. Optimal entry phase.">🧲 RED CS</span>`) + badgesHtml;
                 // FUSION badge: qualify Fresh Rider + Hot Theme (Semicon/Solar Conf2+)
                 const hotThemes = getHotThemes(item.name);
                 const isHotTheme = hotThemes.length > 0 && matches.length >= 2;
@@ -5368,15 +5368,15 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             const stillQualifies = new Set(liveList.filter(it => {
                 try { return typeof qualifiesFreshRider === 'function' && qualifiesFreshRider(it) && passesGlobalFilters(it); } catch (e) { return false; }
             }).map(it => (it.name || '').toUpperCase()));
-            if (metaEl) metaEl.textContent = `${s.dataDays || '-'} hari data · Dijana ${new Date(s.generatedAt).toLocaleString('en-MY')}`;
+            if (metaEl) metaEl.textContent = `${s.dataDays || '-'} days of data · Generated ${new Date(s.generatedAt).toLocaleString('en-US')}`;
             if (statsEl) {
                 statsEl.innerHTML = [
-                    { label: 'Masih OPEN', val: s.openCount ?? 0, color: '#34d399' },
+                    { label: 'OPEN Positions', val: s.openCount ?? 0, color: '#34d399' },
                     { label: 'CLOSED', val: s.closedCount ?? 0, color: '#94a3b8' },
                     { label: 'Win Rate (closed)', val: (s.closedWinRate ?? 0) + '%', color: '#fde047' },
                     { label: 'Avg Gain (closed)', val: (s.closedAvgGain >= 0 ? '+' : '') + (s.closedAvgGain ?? 0) + '%', color: '#38bdf8' },
                     { label: 'PnL OPEN (unrealized)', val: (s.openPnl >= 0 ? '+' : '') + (s.openPnl ?? 0) + '%', color: '#34d399' },
-                    { label: 'Total PnL Kini', val: (s.totalPnlNow >= 0 ? '+' : '') + (s.totalPnlNow ?? 0) + '%', color: '#fde047' },
+                    { label: 'Total PnL Now', val: (s.totalPnlNow >= 0 ? '+' : '') + (s.totalPnlNow ?? 0) + '%', color: '#fde047' },
                 ].map(c => `<div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(16,185,129,0.25); border-radius: 8px; padding: 0.35rem 0.7rem; min-width: 95px; text-align: center; flex: 1;">
                     <div style="font-size: 0.58rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">${c.label}</div>
                     <div style="font-size: 1rem; color: ${c.color}; font-weight: 900;">${c.val}</div>
@@ -5495,15 +5495,15 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     trendEl.style.color = isRising ? '#34d399' : '#f87171';
                 }
             }
-            if (metaEl) metaEl.textContent = `${s.dataDays || '-'} hari data · Dijana ${new Date(s.generatedAt).toLocaleString('en-MY')}`;
+            if (metaEl) metaEl.textContent = `${s.dataDays || '-'} days of data · Generated ${new Date(s.generatedAt).toLocaleString('en-US')}`;
             if (statsEl) {
                 statsEl.innerHTML = [
-                    { label: 'Masih OPEN', val: s.openCount ?? 0, color: '#34d399' },
+                    { label: 'OPEN Positions', val: s.openCount ?? 0, color: '#34d399' },
                     { label: 'CLOSED', val: s.closedCount ?? 0, color: '#94a3b8' },
                     { label: 'Win Rate (closed)', val: (s.closedWinRate ?? 0) + '%', color: '#fde047' },
                     { label: 'Avg Gain (closed)', val: (s.closedAvgGain >= 0 ? '+' : '') + (s.closedAvgGain ?? 0) + '%', color: '#38bdf8' },
                     { label: 'PnL OPEN (unrealized)', val: (s.openPnl >= 0 ? '+' : '') + (s.openPnl ?? 0) + '%', color: '#34d399' },
-                    { label: 'Total PnL Kini', val: (s.totalPnlNow >= 0 ? '+' : '') + (s.totalPnlNow ?? 0) + '%', color: '#fde047' },
+                    { label: 'Total PnL Now', val: (s.totalPnlNow >= 0 ? '+' : '') + (s.totalPnlNow ?? 0) + '%', color: '#fde047' },
                 ].map(c => `<div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(16,185,129,0.25); border-radius: 8px; padding: 0.35rem 0.7rem; min-width: 95px; text-align: center; flex: 1;">
                     <div style="font-size: 0.58rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">${c.label}</div>
                     <div style="font-size: 1rem; color: ${c.color}; font-weight: 900;">${c.val}</div>
@@ -5673,13 +5673,13 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     badgeRow.appendChild(badge);
                     return;
                 }
-                // 🆕 BARU: entry HARI INI (entryDate >= todayStr) — signal pertama kali, bukan ADD-ON, bukan RE-ENTRY
+                // 🆕 NEW: entry TODAY (entryDate >= todayStr) — first time signal, not ADD-ON, not RE-ENTRY
                 if (trTrade && trTrade.entryDate && trTrade.entryDate >= todayStr) {
                     const badge = document.createElement('span');
                     badge.className = 'fr-new-badge';
-                    badge.textContent = '🆕 BARU';
+                    badge.textContent = '🆕 NEW';
                     badge.style.cssText = 'font-size:0.62rem; background:rgba(245,158,11,0.2); color:#fbbf24; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(245,158,11,0.4); white-space:nowrap; animation: pulse 1.5s infinite;';
-                    badge.title = 'BARU: entry HARI INI dalam Tracker Live Fresh Rider — signal pertama kali, belum pernah ditrack sebelum ni. Beli ikut SOP; SL ikut lantai/trailing tracker.';
+                    badge.title = 'NEW: entry TODAY in Fresh Rider Live Tracker — first-time signal, not previously tracked. Buy per SOP; SL per floor/trailing tracker.';
                     badgeRow.appendChild(badge);
                     return;
                 }
@@ -5687,18 +5687,18 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 const badge = document.createElement('span');
                 badge.className = 'fr-new-badge';
                 const isReEntry = trackedTrades.has(name.toUpperCase());
-                badge.textContent = isReEntry ? '🟢 RE-ENTRY' : '🆕 BARU';
+                badge.textContent = isReEntry ? '🟢 RE-ENTRY' : '🆕 NEW';
                 badge.style.cssText = isReEntry
                     ? 'font-size:0.62rem; background:rgba(16,185,129,0.15); color:#34d399; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(16,185,129,0.4); white-space:nowrap;'
                     : 'font-size:0.62rem; background:rgba(245,158,11,0.2); color:#fbbf24; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(245,158,11,0.4); white-space:nowrap; animation: pulse 1.5s infinite;';
                 badge.title = isReEntry
-                    ? 'RE-ENTRY: pernah ditrack sebelum ni (dah CLOSED dalam Tracker Live Fresh Rider) & qualify semula — entry lewat, berhati-hati'
-                    : 'BARU: belum pernah ditrack dalam Tracker Live Fresh Rider — signal pertama kali';
+                    ? 'RE-ENTRY: tracked previously (CLOSED in Fresh Rider Live Tracker) & qualifies again — late entry, proceed with caution'
+                    : 'NEW: not previously tracked in Fresh Rider Live Tracker — first-time signal';
                 badgeRow.appendChild(badge);
             });
         }
 
-        // ===== HOT THEME: label 🆕 BARU / 🟢 RE-ENTRY (sama macam Fresh Rider) =====
+        // ===== HOT THEME: label 🆕 NEW / 🟢 RE-ENTRY =====
         async function getRecentHotThemeNames(baseDateStr) {
             let base = new Date();
             if (baseDateStr) {
@@ -5727,7 +5727,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                         }
                     }
                 } catch (e) {
-                    // skip — fail satu fail tak penting
+                    // skip
                 }
             }
             return names;
@@ -5735,9 +5735,8 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
         let _hotThemePrevCache = null; // { key, set }
 
-        // Tandai signal: 🆕 BARU = tak pernah qualify dalam 30 hari terakhir DAN belum pernah
-        // ditrack dalam Tracker Live Hot Theme. 🟢 RE-ENTRY = pernah ditrack sebelum ni
-        // (dah ada dalam tracker) tapi qualify semula selepas keluar 30+ hari.
+        // Mark signal: 🆕 NEW = never qualified in last 30 days AND not in Hot Theme Live Tracker.
+        // 🟢 RE-ENTRY = tracked previously but re-qualifies after exiting 30+ days.
         async function markHotThemeNewBadges() {
             const tbody = document.getElementById('hotThemeTableBody');
             if (!tbody) return;
@@ -5756,7 +5755,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 .map(t => [(t.name || '').toUpperCase(), t]));
             const todayStr = hd || (window.HOT_THEME_TRACKER && window.HOT_THEME_TRACKER.summary && window.HOT_THEME_TRACKER.summary.generatedAt ? window.HOT_THEME_TRACKER.summary.generatedAt.slice(0, 10) : new Date().toISOString().slice(0, 10));
 
-            // Buang badge lama (elak duplicate bila re-render)
+            // Clear old badges
             tbody.querySelectorAll('.ht-new-badge').forEach(el => el.remove());
 
             tbody.querySelectorAll('tr[data-ht-name]').forEach(tr => {
@@ -5764,25 +5763,24 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 if (!name) return;
                 const badgeRow = tr.querySelector('.ht-badge-row');
                 if (!badgeRow) return;
-                // ➕ ADD-ON: MASIH OPEN dalam tracker & BERLAKU SEBELUM HARI INI (entryDate < todayStr)
-                // Jika entryDate === todayStr (entry hari ini), ia dikira 🆕 BARU (bukan ADD-ON)!
+                // ➕ ADD-ON
                 const htTrade = trackedTrades.get(name.toUpperCase());
                 if (htTrade && htTrade.status === 'OPEN' && htTrade.entryDate < todayStr) {
                     const badge = document.createElement('span');
                     badge.className = 'ht-new-badge';
                     badge.textContent = '➕ ADD-ON';
                     badge.style.cssText = 'font-size:0.62rem; background:linear-gradient(135deg, rgba(16,185,129,0.3), rgba(56,189,248,0.3)); color:#6ee7b7; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(16,185,129,0.6); white-space:nowrap; animation: pulse 1.5s infinite;';
-                    badge.title = 'ADD-ON: MASIH kita pegang (OPEN dalam Tracker Live Hot Theme) & qualify semula hari ini — peluang TAMBAH posisi sebelum breakout. BUKAN signal pertama; guna SL ikut harga belian AWAK sendiri, bukan SL tracker.';
+                    badge.title = 'ADD-ON: OPEN position in Hot Theme Live Tracker & re-qualifies today — opportunity to ADD position before breakout.';
                     badgeRow.appendChild(badge);
                     return;
                 }
-                // 🆕 BARU: entry HARI INI (entryDate >= todayStr) — signal pertama kali, bukan ADD-ON, bukan RE-ENTRY
+                // 🆕 NEW
                 if (htTrade && htTrade.entryDate && htTrade.entryDate >= todayStr) {
                     const badge = document.createElement('span');
                     badge.className = 'ht-new-badge';
-                    badge.textContent = '🆕 BARU';
+                    badge.textContent = '🆕 NEW';
                     badge.style.cssText = 'font-size:0.62rem; background:rgba(245,158,11,0.2); color:#fbbf24; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(245,158,11,0.4); white-space:nowrap; animation: pulse 1.5s infinite;';
-                    badge.title = 'BARU: entry HARI INI dalam Tracker Live Hot Theme — signal pertama kali, belum pernah ditrack sebelum ni. Beli ikut SOP; SL ikut lantai/trailing tracker.';
+                    badge.title = 'NEW: entry TODAY in Hot Theme Live Tracker — first-time signal, not tracked previously. Buy per SOP; SL per floor/trailing tracker.';
                     badgeRow.appendChild(badge);
                     return;
                 }
@@ -5790,13 +5788,13 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 const badge = document.createElement('span');
                 badge.className = 'ht-new-badge';
                 const isReEntry = trackedTrades.has(name.toUpperCase());
-                badge.textContent = isReEntry ? '🟢 RE-ENTRY' : '🆕 BARU';
+                badge.textContent = isReEntry ? '🟢 RE-ENTRY' : '🆕 NEW';
                 badge.style.cssText = isReEntry
                     ? 'font-size:0.62rem; background:rgba(16,185,129,0.15); color:#34d399; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(16,185,129,0.4); white-space:nowrap;'
                     : 'font-size:0.62rem; background:rgba(245,158,11,0.2); color:#fbbf24; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(245,158,11,0.4); white-space:nowrap; animation: pulse 1.5s infinite;';
                 badge.title = isReEntry
-                    ? 'RE-ENTRY: pernah ditrack sebelum ni (dah CLOSED dalam Tracker Live Hot Theme) & qualify semula — entry lewat, berhati-hati'
-                    : 'BARU: belum pernah ditrack dalam Tracker Live Hot Theme — signal pertama kali';
+                    ? 'RE-ENTRY: tracked previously (CLOSED in Hot Theme Live Tracker) & qualifies again — late entry, proceed with caution'
+                    : 'NEW: not previously tracked in Hot Theme Live Tracker — first-time signal';
                 badgeRow.appendChild(badge);
             });
         }
@@ -6111,11 +6109,11 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     ? `<span style="font-size: 0.65rem; background: rgba(234, 179, 8, 0.2); color: #fde047; padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(234, 179, 8, 0.4); white-space: nowrap;">🔥 TRIPLE</span>`
                     : `<span style="font-size: 0.65rem; background: rgba(14, 165, 233, 0.2); color: #38bdf8; padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(14, 165, 233, 0.4); white-space: nowrap;">⚡ DOUBLE</span>`;
 
-                // CS Squeeze badge: CS MERAH (squeeze on = accumulation) vs CS HIJAU (volum spike = expansion/breakout)
+                // CS Squeeze badge: RED CS (squeeze on = accumulation) vs GREEN CS (volume spike = expansion/breakout)
                 const csExpandedHT = item.hasVolumeSpike === true && (item.volumeSpike || 0) >= 1.5;
                 const csBadge = csExpandedHT
-                    ? `<span style="font-size: 0.62rem; background: rgba(16, 185, 129, 0.18); color: #34d399; padding: 0.08rem 0.32rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(16, 185, 129, 0.5); white-space: nowrap; animation: pulse 1.5s infinite;" title="CS HIJAU: Squeeze OFF — volum spike ${(item.volumeSpike || 0).toFixed(1)}x (breakout/expansion). Bukan fasa accumulation — elak entry gaya CS MERAH.">🔥 CS HIJAU</span>`
-                    : `<span style="font-size: 0.62rem; background: rgba(251, 113, 133, 0.18); color: #fb7185; padding: 0.08rem 0.32rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(251, 113, 133, 0.5); white-space: nowrap;" title="CS MERAH: Squeeze ON — volum senyap, fasa accumulation sebelum breakout. Entry gaya awak: beli masa ni.">🧲 CS MERAH</span>`;
+                    ? `<span style="font-size: 0.62rem; background: rgba(16, 185, 129, 0.18); color: #34d399; padding: 0.08rem 0.32rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(16, 185, 129, 0.5); white-space: nowrap; animation: pulse 1.5s infinite;" title="GREEN CS: Squeeze OFF — volume spike ${(item.volumeSpike || 0).toFixed(1)}x (breakout/expansion). Not accumulation phase — avoid entry.">🔥 GREEN CS</span>`
+                    : `<span style="font-size: 0.62rem; background: rgba(251, 113, 133, 0.18); color: #fb7185; padding: 0.08rem 0.32rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(251, 113, 133, 0.5); white-space: nowrap;" title="RED CS: Squeeze ON — quiet volume, accumulation phase before breakout. Optimal entry phase.">🧲 RED CS</span>`;
 
                 const tierColor = item.confidenceScore >= 90 ? '#a855f7' : (item.confidenceScore >= 75 ? '#38bdf8' : (item.confidenceScore >= 60 ? '#10b981' : '#f59e0b'));
                 const confidenceText = item.confidenceScore !== undefined ? `${item.confidenceScore}/100` : 'N/A';
