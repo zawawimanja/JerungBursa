@@ -643,6 +643,17 @@
             <a href="./hall-of-fame.html" class="btn" style="background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 800; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.25); padding: 0.35rem 0.8rem; font-size: 0.82rem;">🏆 Hall of Fame</a>
             <a href="./formula.html" class="btn" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: #0f172a; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 800; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.25); padding: 0.35rem 0.8rem; font-size: 0.82rem;">🔥 Formula VVIP</a>
             <a href="./articles.html" class="btn" style="background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; box-shadow: 0 4px 15px rgba(14, 165, 233, 0.25); padding: 0.35rem 0.8rem; font-size: 0.82rem;">📚 Artikel & Strategi</a>
+            
+            <!-- TRACKER TOTAL PNL BADGE (glowing WOW badge) -->
+            <div id="top-tracker-pnl-badge" onclick="document.getElementById('fresh-rider-section')?.scrollIntoView({behavior:'smooth'})" style="display: inline-flex; align-items: center; gap: 0.45rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.22), rgba(56, 189, 248, 0.18)); border: 1px solid rgba(52, 211, 153, 0.6); padding: 0.35rem 0.75rem; border-radius: 20px; box-shadow: 0 0 15px rgba(52, 211, 153, 0.3); cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.04)'; this.style.boxShadow='0 0 20px rgba(52,211,153,0.55)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 15px rgba(52,211,153,0.3)';" title="Klik untuk lihat Tracker Live — PnL Terkini Fresh Rider + Hot Theme (Terkumpul)">
+                <span style="font-size: 0.85rem; animation: pulse 1.5s infinite;">⚡</span>
+                <span style="font-size: 0.72rem; color: #94a3b8; font-weight: 800; text-transform: uppercase; letter-spacing: 0.4px;">Tracker PnL:</span>
+                <span id="navTotalPnlBadge" style="font-size: 0.88rem; font-weight: 900; color: #34d399; text-shadow: 0 0 8px rgba(52, 211, 153, 0.6);">+978.6%</span>
+                <div style="display: inline-flex; gap: 0.35rem; font-size: 0.68rem; border-left: 1px solid rgba(255,255,255,0.2); padding-left: 0.45rem;">
+                    <span id="navFrPnlBadge" style="color: #fde047; font-weight: 800;" title="Fresh Rider PnL">🚀 +578.6%</span>
+                    <span id="navHtPnlBadge" style="color: #c4b5fd; font-weight: 800;" title="Hot Theme PnL">🔥 +400.0%</span>
+                </div>
+            </div>
         </div>
         </div>
 
@@ -5547,8 +5558,29 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     <td style="text-align: right; color: #f87171; font-weight: 700;">RM ${slTrail}</td>
                 </tr>`;
             }).join('');
+
+            updateTopTrackerPnlBadge();
         }
         window.renderHotThemeTracker = renderHotThemeTracker;
+
+        function updateTopTrackerPnlBadge() {
+            const frData = window.FRESH_RIDER_TRACKER && window.FRESH_RIDER_TRACKER.summary;
+            const htData = window.HOT_THEME_TRACKER && window.HOT_THEME_TRACKER.summary;
+            if (!frData && !htData) return;
+
+            const frPnl = frData ? (typeof frData.totalPnlNow === 'number' ? frData.totalPnlNow : (frData.openPnl || 0)) : 0;
+            const htPnl = htData ? (typeof htData.totalPnlNow === 'number' ? htData.totalPnlNow : (htData.openPnl || 0)) : 0;
+            const grandTotal = frPnl + htPnl;
+
+            const navTotal = document.getElementById('navTotalPnlBadge');
+            const navFr = document.getElementById('navFrPnlBadge');
+            const navHt = document.getElementById('navHtPnlBadge');
+
+            if (navTotal) navTotal.textContent = `${grandTotal >= 0 ? '+' : ''}${grandTotal.toFixed(1)}%`;
+            if (navFr) navFr.textContent = `🚀 ${frPnl >= 0 ? '+' : ''}${frPnl.toFixed(1)}%`;
+            if (navHt) navHt.textContent = `🔥 ${htPnl >= 0 ? '+' : ''}${htPnl.toFixed(1)}%`;
+        }
+        window.updateTopTrackerPnlBadge = updateTopTrackerPnlBadge;
 
         // Helper: adakah item qualify Fresh VVIP Rider? (logik sama seperti render di atas)
         function qualifiesFreshRider(item) {
