@@ -5123,11 +5123,17 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 p._tripleLock = p._isWhaleBacked && (p._breakoutReady || touches >= 3);
             }
 
-            // KESEGARAN: 0 = belum ditrack (BARU — entry penuh), 1 = OPEN dalam tracker (ADD-ON),
+            // KESEGARAN: 0 = BARU (belum ditrack / entry hari ini), 1 = ADD-ON (OPEN dari hari sebelum),
             // 2 = CLOSED (RE-ENTRY — berhati-hati). Guna tracker untuk tahu siapa dah ditrack.
-            const frTrackStatus = new Map((window.FRESH_RIDER_TRACKER && Array.isArray(window.FRESH_RIDER_TRACKER.trades) ? window.FRESH_RIDER_TRACKER.trades : [])
-                .map(t => [(t.name || '').toUpperCase(), t.status === 'OPEN' ? 1 : 2]));
-            const frFreshness = (it) => frTrackStatus.get((it.name || '').toUpperCase()) ?? 0;
+            const frTrackMap = new Map((window.FRESH_RIDER_TRACKER && Array.isArray(window.FRESH_RIDER_TRACKER.trades) ? window.FRESH_RIDER_TRACKER.trades : [])
+                .map(t => [(t.name || '').toUpperCase(), t]));
+            const curRefDate = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || new Date().toISOString().slice(0, 10);
+            const frFreshness = (it) => {
+                const tr = frTrackMap.get((it.name || '').toUpperCase());
+                if (!tr) return 0;
+                if (tr.status === 'OPEN') return (tr.entryDate && tr.entryDate >= curRefDate) ? 0 : 1;
+                return 2;
+            };
 
             picks.sort((a, b) => {
                 // 0. KESEGARAN: BARU (belum ditrack) > ADD-ON (masih kita pegang) > RE-ENTRY (dah tutup)
@@ -5599,9 +5605,10 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             }
 
             const prevSet = _freshRiderPrevCache.set;
-            // name -> status (OPEN/CLOSED) — guna status, bukan sekadar nama, supaya boleh bezakan ADD-ON
-            const trackedStatus = new Map((window.FRESH_RIDER_TRACKER && Array.isArray(window.FRESH_RIDER_TRACKER.trades) ? window.FRESH_RIDER_TRACKER.trades : [])
-                .map(t => [(t.name || '').toUpperCase(), t.status]));
+            // name -> trade object (status & entryDate)
+            const trackedTrades = new Map((window.FRESH_RIDER_TRACKER && Array.isArray(window.FRESH_RIDER_TRACKER.trades) ? window.FRESH_RIDER_TRACKER.trades : [])
+                .map(t => [(t.name || '').toUpperCase(), t]));
+            const todayStr = hd || (window.FRESH_RIDER_TRACKER && window.FRESH_RIDER_TRACKER.summary && window.FRESH_RIDER_TRACKER.summary.generatedAt ? window.FRESH_RIDER_TRACKER.summary.generatedAt.slice(0, 10) : new Date().toISOString().slice(0, 10));
 
             // Buang badge lama (elak duplicate bila re-render)
             tbody.querySelectorAll('.fr-new-badge').forEach(el => el.remove());
@@ -5611,11 +5618,10 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 if (!name) return;
                 const badgeRow = tr.querySelector('.fr-badge-row');
                 if (!badgeRow) return;
-                // ➕ ADD-ON: MASIH OPEN dalam tracker & qualify semula hari ini = peluang TAMBAH posisi.
-                // (cth. KEEMING 12-Ogos — squeeze paling ketat 1.41% sebelum breakout 13-Ogos, tapi
-                // sebab dah kita pegang sejak Jun, dulu ia tak nampak sebagai signal.)
-                const st = trackedStatus.get(name.toUpperCase());
-                if (st === 'OPEN') {
+                // ➕ ADD-ON: MASIH OPEN dalam tracker & BERLAKU SEBELUM HARI INI (entryDate < todayStr)
+                // Jika entryDate === todayStr (entry hari ini), ia dikira 🆕 BARU (bukan ADD-ON)!
+                const trTrade = trackedTrades.get(name.toUpperCase());
+                if (trTrade && trTrade.status === 'OPEN' && trTrade.entryDate < todayStr) {
                     const badge = document.createElement('span');
                     badge.className = 'fr-new-badge';
                     badge.textContent = '➕ ADD-ON';
@@ -5627,7 +5633,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 if (prevSet.has(name)) return;
                 const badge = document.createElement('span');
                 badge.className = 'fr-new-badge';
-                const isReEntry = trackedStatus.has(name.toUpperCase());
+                const isReEntry = trackedTrades.has(name.toUpperCase());
                 badge.textContent = isReEntry ? '🟢 RE-ENTRY' : '🆕 BARU';
                 badge.style.cssText = isReEntry
                     ? 'font-size:0.62rem; background:rgba(16,185,129,0.15); color:#34d399; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(16,185,129,0.4); white-space:nowrap;'
