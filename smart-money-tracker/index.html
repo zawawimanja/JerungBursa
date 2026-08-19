@@ -5698,9 +5698,10 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             }
 
             const prevSet = _hotThemePrevCache.set;
-            // name -> status (OPEN/CLOSED) — guna status, bukan sekadar nama, supaya boleh bezakan ADD-ON
-            const trackedStatus = new Map((window.HOT_THEME_TRACKER && Array.isArray(window.HOT_THEME_TRACKER.trades) ? window.HOT_THEME_TRACKER.trades : [])
-                .map(t => [(t.name || '').toUpperCase(), t.status]));
+            // name -> trade object (status & entryDate)
+            const trackedTrades = new Map((window.HOT_THEME_TRACKER && Array.isArray(window.HOT_THEME_TRACKER.trades) ? window.HOT_THEME_TRACKER.trades : [])
+                .map(t => [(t.name || '').toUpperCase(), t]));
+            const todayStr = hd || (window.HOT_THEME_TRACKER && window.HOT_THEME_TRACKER.summary && window.HOT_THEME_TRACKER.summary.generatedAt ? window.HOT_THEME_TRACKER.summary.generatedAt.slice(0, 10) : new Date().toISOString().slice(0, 10));
 
             // Buang badge lama (elak duplicate bila re-render)
             tbody.querySelectorAll('.ht-new-badge').forEach(el => el.remove());
@@ -5710,9 +5711,10 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 if (!name) return;
                 const badgeRow = tr.querySelector('.ht-badge-row');
                 if (!badgeRow) return;
-                // ➕ ADD-ON: MASIH OPEN dalam tracker & qualify semula hari ini = peluang TAMBAH posisi
-                const st = trackedStatus.get(name.toUpperCase());
-                if (st === 'OPEN') {
+                // ➕ ADD-ON: MASIH OPEN dalam tracker & BERLAKU SEBELUM HARI INI (entryDate < todayStr)
+                // Jika entryDate === todayStr (entry hari ini), ia dikira 🆕 BARU (bukan ADD-ON)!
+                const htTrade = trackedTrades.get(name.toUpperCase());
+                if (htTrade && htTrade.status === 'OPEN' && htTrade.entryDate < todayStr) {
                     const badge = document.createElement('span');
                     badge.className = 'ht-new-badge';
                     badge.textContent = '➕ ADD-ON';
@@ -5724,7 +5726,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 if (prevSet.has(name)) return;
                 const badge = document.createElement('span');
                 badge.className = 'ht-new-badge';
-                const isReEntry = trackedStatus.has(name.toUpperCase());
+                const isReEntry = trackedTrades.has(name.toUpperCase());
                 badge.textContent = isReEntry ? '🟢 RE-ENTRY' : '🆕 BARU';
                 badge.style.cssText = isReEntry
                     ? 'font-size:0.62rem; background:rgba(16,185,129,0.15); color:#34d399; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(16,185,129,0.4); white-space:nowrap;'
@@ -5984,10 +5986,17 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 }
             }
 
-            // KESEGARAN (sama macam Fresh Rider): 0 = belum ditrack (BARU), 1 = OPEN (ADD-ON), 2 = CLOSED (RE-ENTRY)
-            const htTrackStatus = new Map((window.HOT_THEME_TRACKER && Array.isArray(window.HOT_THEME_TRACKER.trades) ? window.HOT_THEME_TRACKER.trades : [])
-                .map(t => [(t.name || '').toUpperCase(), t.status === 'OPEN' ? 1 : 2]));
-            const htFreshness = (it) => htTrackStatus.get((it.name || '').toUpperCase()) ?? 0;
+            // KESEGARAN (sama macam Fresh Rider): 0 = BARU (belum ditrack / entry hari ini), 1 = ADD-ON (OPEN dari hari sebelum),
+            // 2 = CLOSED (RE-ENTRY — berhati-hati). Guna tracker untuk tahu siapa dah ditrack.
+            const htTrackMap = new Map((window.HOT_THEME_TRACKER && Array.isArray(window.HOT_THEME_TRACKER.trades) ? window.HOT_THEME_TRACKER.trades : [])
+                .map(t => [(t.name || '').toUpperCase(), t]));
+            const curRefDateHT = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || (window.HOT_THEME_TRACKER && window.HOT_THEME_TRACKER.summary && window.HOT_THEME_TRACKER.summary.generatedAt ? window.HOT_THEME_TRACKER.summary.generatedAt.slice(0, 10) : new Date().toISOString().slice(0, 10));
+            const htFreshness = (it) => {
+                const tr = htTrackMap.get((it.name || '').toUpperCase());
+                if (!tr) return 0;
+                if (tr.status === 'OPEN') return (tr.entryDate && tr.entryDate >= curRefDateHT) ? 0 : 1;
+                return 2;
+            };
 
             // Sort pattern (sama macam Fresh Rider): kesegaran -> tightness (squeeze) -> lantai
             // dinamik -> pullback -> confluence count (TRIPLE > DOUBLE) -> touch -> turnover
