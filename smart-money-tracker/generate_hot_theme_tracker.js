@@ -189,8 +189,8 @@ function hotThemeExit(t, price) {
     const floorSL = (t.currentFloor || t.entryFloor) * 0.97;
     const gain = ((t.high - t.entry) / t.entry) * 100;
     const trailSL = gain >= 20 ? t.high * 0.94 : t.high * 0.80;
-    // Hard stop -12% hanya aktif selepas 5 hari (beri masa untuk trade berkembang)
-    const hardStop = t.days > 5 ? t.entry * 0.88 : 0;
+    // Hard stop -16% selepas 5 hari (sweep: 703.7 vs hard12 681.7 — AMS terselamat, semua rugi ditutup)
+    const hardStop = t.days > 5 ? t.entry * 0.84 : 0;
     return Math.max(floorSL, trailSL, hardStop);
 }
 
@@ -301,7 +301,7 @@ function bt20(entry, floor, fut) {
         const floorSL = curFloor * 0.97;
         const gain = ((high - entry) / entry) * 100;
         const trail = gain >= 20 ? high * 0.94 : high * 0.80;
-        const sl = Math.max(floorSL, trail, entry * 0.88);
+        const sl = Math.max(floorSL, trail, entry * 0.84);
         if (d.price <= sl) return ((sl - entry) / entry) * 100;
     }
     return ((fut[fut.length - 1].price - entry) / entry) * 100;

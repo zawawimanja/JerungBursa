@@ -103,17 +103,18 @@ for (const day of dayList) {
         if (cur.price > t.high) { t.high = cur.price; t.highDate = day.date; }
         t.maxGain = +(((t.high - t.entry) / t.entry) * 100).toFixed(1);
 
-        // EXIT: TRAIL 20% dari harga TERTINGGI (high) sejak entry.
-        // Ini cara standard trend-following — biar keuntungan berlari, keluar hanya
-        // bila harga jatuh 20% dari puncak. Lantai harian terlalu volatile untuk SL.
-        // (Ujian: trail 20% dari high kekalkan semua pemenang, exit HKB +39% sebelum runtuh.)
-        const slTrail = t.high * 0.80;
+        // EXIT: (1) Initial SL 11% bawah entry (cut loss awal jika harga tak pernah naik)
+        // ATAU (2) Trail 20% dari HIGH (biar pemenang berlari).
+        // Keputusan sweep 56 hari: SL 11% = PnL 606.8 vs trail sahaja 613.5 (beza 6.7 mata)
+        // tapi semua posisi rugi ditutup — tiada yang tergantung/tersembunyi.
+        const initialSl = t.entry * 0.89;
+        const slTrail = Math.max(initialSl, t.high * 0.80);
         t.slTrail = +slTrail.toFixed(3);
         if (cur.price <= slTrail) {
             t.status = 'CLOSED_SL';
             t.exitDate = day.date;
-            t.exitPrice = slTrail;
-            t.finalGain = +(((slTrail - t.entry) / t.entry) * 100).toFixed(1);
+            t.exitPrice = +cur.price.toFixed(3);
+            t.finalGain = +(((cur.price - t.entry) / t.entry) * 100).toFixed(1);
             delete open[name];
         } else {
             t.finalGain = +(((cur.price - t.entry) / t.entry) * 100).toFixed(1);
@@ -161,7 +162,7 @@ for (const day of dayList) {
 // Backfill harga dari Yahoo ikut symbol yang disahkan (sama macam Hot Theme).
 const { backfillStaleTrades } = require('./backfill_stale.js');
 const latestDay = dayList.length ? dayList[dayList.length - 1].date : '';
-const backfilled = backfillStaleTrades(trades, latestDay, (t) => t.high * 0.80);
+const backfilled = backfillStaleTrades(trades, latestDay, (t) => Math.max(t.entry * 0.89, t.high * 0.80));
 if (backfilled) console.log(`\n🔄 ${backfilled} posisi beku dikemas kini dari Yahoo`);
 
 // Susun: OPEN dulu (latest entry atas), kemudian CLOSED
