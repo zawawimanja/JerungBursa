@@ -637,22 +637,22 @@
 
         <!-- Top Navigation (1 baris sama dengan title) -->
         <div class="top-nav" style="display: flex; justify-content: flex-end; align-items: center; gap: 0.45rem; flex-wrap: wrap; max-width: 100%;">
+            <!-- TRACKER TOTAL PNL BADGE (belah kiri sekali) -->
+            <div id="top-tracker-pnl-badge" onclick="switchTab('confluence'); document.getElementById('view-confluence')?.scrollIntoView({behavior:'smooth'});" style="display: inline-flex; align-items: center; gap: 0.55rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(56, 189, 248, 0.22)); border: 1.5px solid rgba(52, 211, 153, 0.7); padding: 0.45rem 0.95rem; border-radius: 24px; box-shadow: 0 0 18px rgba(52, 211, 153, 0.35); cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; margin-right: auto;" onmouseover="this.style.transform='scale(1.04)'; this.style.boxShadow='0 0 24px rgba(52,211,153,0.6)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 18px rgba(52,211,153,0.35)';" title="Click to view Live Tracker — Cumulative Fresh Rider + Hot Theme PnL">
+                <span style="font-size: 0.85rem; color: #cbd5e1; font-weight: 900; text-transform: uppercase; letter-spacing: 0.6px;">LIVE TRACKER PNL:</span>
+                <span id="navTotalPnlBadge" style="font-size: 1.15rem; font-weight: 900; color: #34d399; text-shadow: 0 0 12px rgba(52, 211, 153, 0.8);">+978.6%</span>
+                <div style="display: inline-flex; gap: 0.45rem; font-size: 0.85rem; border-left: 1.5px solid rgba(255,255,255,0.25); padding-left: 0.6rem; align-items: center;">
+                    <span id="navFrPnlBadge" onclick="event.stopPropagation(); switchTab('confluence'); document.getElementById('view-confluence')?.scrollIntoView({behavior:'smooth'});" style="color: #fde047; font-weight: 900; font-size: 0.88rem; cursor: pointer; padding: 0.15rem 0.45rem; background: rgba(253, 224, 71, 0.15); border-radius: 6px; transition: background 0.2s;" onmouseover="this.style.background='rgba(253,224,71,0.3)'" onmouseout="this.style.background='rgba(253,224,71,0.15)'" title="Click to open Fresh VVIP Rider tab">FR: +578.6%</span>
+                    <span id="navHtPnlBadge" onclick="event.stopPropagation(); switchTab('hottheme'); document.getElementById('view-hottheme')?.scrollIntoView({behavior:'smooth'});" style="color: #c4b5fd; font-weight: 900; font-size: 0.88rem; cursor: pointer; padding: 0.15rem 0.45rem; background: rgba(196, 181, 253, 0.15); border-radius: 6px; transition: background 0.2s;" onmouseover="this.style.background='rgba(196,181,253,0.35)'" onmouseout="this.style.background='rgba(196,181,253,0.15)'" title="Click to open Hot Theme Rider tab">HT: +400.0%</span>
+                </div>
+            </div>
+
             <a href="https://ipobursa.vercel.app" target="_blank" class="btn" style="background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 800; box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3); padding: 0.35rem 0.8rem; font-size: 0.82rem;">📊 BursaIPO Portal ↗</a>
             <a href="./landing.html" class="btn" style="background: linear-gradient(135deg, #0d9488 0%, #0f766e 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; box-shadow: 0 4px 15px rgba(13, 148, 136, 0.25); padding: 0.35rem 0.8rem; font-size: 0.82rem;">💡 Methodology</a>
             <a href="./sop.html" class="btn" style="background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; box-shadow: 0 4px 15px rgba(59, 130, 246, 0.25); padding: 0.35rem 0.8rem; font-size: 0.82rem;">📘 SOP Guide</a>
             <a href="./hall-of-fame.html" class="btn" style="background: linear-gradient(135deg, #a855f7 0%, #7c3aed 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 800; box-shadow: 0 4px 15px rgba(168, 85, 247, 0.25); padding: 0.35rem 0.8rem; font-size: 0.82rem;">🏆 Hall of Fame</a>
             <a href="./formula.html" class="btn" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); color: #0f172a; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 800; box-shadow: 0 4px 15px rgba(245, 158, 11, 0.25); padding: 0.35rem 0.8rem; font-size: 0.82rem;">🔥 VVIP Formula</a>
             <a href="./articles.html" class="btn" style="background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%); color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 700; box-shadow: 0 4px 15px rgba(14, 165, 233, 0.25); padding: 0.35rem 0.8rem; font-size: 0.82rem;">📚 Articles & Strategy</a>
-            
-            <!-- TRACKER TOTAL PNL BADGE (clean WOW badge with tab navigation) -->
-            <div id="top-tracker-pnl-badge" onclick="switchTab('confluence'); document.getElementById('view-confluence')?.scrollIntoView({behavior:'smooth'});" style="display: inline-flex; align-items: center; gap: 0.45rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.22), rgba(56, 189, 248, 0.18)); border: 1px solid rgba(52, 211, 153, 0.6); padding: 0.35rem 0.75rem; border-radius: 20px; box-shadow: 0 0 15px rgba(52, 211, 153, 0.3); cursor: pointer; transition: transform 0.2s, box-shadow 0.2s;" onmouseover="this.style.transform='scale(1.04)'; this.style.boxShadow='0 0 20px rgba(52,211,153,0.55)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 15px rgba(52,211,153,0.3)';" title="Click to view Live Tracker — Cumulative Fresh Rider + Hot Theme PnL">
-                <span style="font-size: 0.72rem; color: #94a3b8; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">LIVE TRACKER PNL:</span>
-                <span id="navTotalPnlBadge" style="font-size: 0.88rem; font-weight: 900; color: #34d399; text-shadow: 0 0 8px rgba(52, 211, 153, 0.6);">+978.6%</span>
-                <div style="display: inline-flex; gap: 0.3rem; font-size: 0.7rem; border-left: 1px solid rgba(255,255,255,0.2); padding-left: 0.45rem;">
-                    <span id="navFrPnlBadge" onclick="event.stopPropagation(); switchTab('confluence'); document.getElementById('view-confluence')?.scrollIntoView({behavior:'smooth'});" style="color: #fde047; font-weight: 800; cursor: pointer; padding: 0.1rem 0.3rem; border-radius: 4px; transition: background 0.2s;" onmouseover="this.style.background='rgba(253,224,71,0.25)'" onmouseout="this.style.background='transparent'" title="Click to open Fresh VVIP Rider tab">FR: +578.6%</span>
-                    <span id="navHtPnlBadge" onclick="event.stopPropagation(); switchTab('hottheme'); document.getElementById('view-hottheme')?.scrollIntoView({behavior:'smooth'});" style="color: #c4b5fd; font-weight: 800; cursor: pointer; padding: 0.1rem 0.3rem; border-radius: 4px; transition: background 0.2s;" onmouseover="this.style.background='rgba(196,181,253,0.3)'" onmouseout="this.style.background='transparent'" title="Click to open Hot Theme Rider tab">HT: +400.0%</span>
-                </div>
-            </div>
         </div>
         </div>
 
@@ -1077,8 +1077,8 @@
         <!-- LIVE TRACKER FRESH RIDER: setiap kaunter yang pernah qualify, track sampai exit -->
         <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(16, 185, 129, 0.07)); border: 1px dashed rgba(16, 185, 129, 0.4); border-radius: 12px; padding: 0.9rem 1.1rem; margin-bottom: 1.25rem;">
             <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.7rem;">
-                <span style="font-size: 1rem;">📡</span>
-                <span style="font-size: 0.75rem; font-weight: 900; color: #34d399; letter-spacing: 0.5px; text-transform: uppercase;">Fresh Rider Live Tracker</span>
+                <span style="font-size: 1.1rem;">📡</span>
+                <span style="font-size: 0.95rem; font-weight: 900; color: #34d399; letter-spacing: 0.6px; text-transform: uppercase;">Fresh Rider Live Tracker</span>
                 <span id="frTrackerMeta" style="font-size: 0.65rem; color: #94a3b8; font-weight: 600;">Generated from historical + live data</span>
             </div>
             <div id="frTrackerStats" style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.7rem;"></div>
@@ -1086,6 +1086,7 @@
                 <table class="data-table" style="font-size: 0.78rem;">
                     <thead>
                         <tr>
+                            <th style="text-align: center; width: 35px;">#</th>
                             <th style="text-align: left;">Counter</th>
                             <th style="text-align: center;">Status</th>
                             <th style="text-align: center;">Entry Date</th>
@@ -1099,7 +1100,7 @@
                         </tr>
                     </thead>
                     <tbody id="frTrackerTableBody">
-                        <tr><td colspan="9" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">⏳ Memuatkan tracker...</td></tr>
+                        <tr><td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">⏳ Memuatkan tracker...</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -1323,8 +1324,8 @@
         <!-- LIVE TRACKER HOT THEME -->
         <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(16, 185, 129, 0.07)); border: 1px dashed rgba(16, 185, 129, 0.4); border-radius: 12px; padding: 0.9rem 1.1rem; margin-bottom: 1.25rem;">
             <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.7rem;">
-                <span style="font-size: 1rem;">📡</span>
-                <span style="font-size: 0.75rem; font-weight: 900; color: #34d399; letter-spacing: 0.5px; text-transform: uppercase;">Hot Theme Live Tracker</span>
+                <span style="font-size: 1.1rem;">📡</span>
+                <span style="font-size: 0.95rem; font-weight: 900; color: #34d399; letter-spacing: 0.6px; text-transform: uppercase;">Hot Theme Live Tracker</span>
                 <span id="htTrackerMeta" style="font-size: 0.65rem; color: #94a3b8; font-weight: 600;">Generated from historical + live data</span>
             </div>
             <div id="htTrackerStats" style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.7rem;"></div>
@@ -1332,6 +1333,7 @@
                 <table class="data-table" style="font-size: 0.78rem;">
                     <thead>
                         <tr>
+                            <th style="text-align: center; width: 35px;">#</th>
                             <th style="text-align: left;">Counter</th>
                             <th style="text-align: center;">Status</th>
                             <th style="text-align: center;">Entry</th>
@@ -1345,7 +1347,7 @@
                         </tr>
                     </thead>
                     <tbody id="htTrackerTableBody">
-                        <tr><td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">⏳ Loading tracker...</td></tr>
+                        <tr><td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">⏳ Loading tracker...</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -5388,7 +5390,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 if (aOpen !== bOpen) return aOpen - bOpen;
                 return (b.entryDate || '').localeCompare(a.entryDate || '');
             });
-            tbody.innerHTML = sortedTrades.map(t => {
+            tbody.innerHTML = sortedTrades.map((t, idx) => {
                 const isOpen = t.status === 'OPEN';
                 const pnl = t.finalGain || 0;
                 const pnlColor = pnl > 0 ? '#34d399' : (pnl < 0 ? '#f87171' : '#94a3b8');
@@ -5408,10 +5410,10 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                         : '<span style="font-size: 0.62rem; color: #fbbf24; font-weight: 700;" title="Left list (price >10% from base) — DO NOT BUY, existing positions HOLD until trailing SL">🟡 HOLD ONLY</span>')
                     : '<span style="font-size: 0.62rem; color: #f87171; font-weight: 800;" title="Position closed (hit trailing stop)">🔒 CLOSED</span>';
                 return `<tr>
+                    <td style="text-align: center; font-weight: 800; color: #fbbf24; font-size: 0.75rem;">${idx + 1}</td>
                     <td style="font-weight: 800; color: white;">
                         <div style="display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap;">
                             ${getTradingViewAnchorSmall(t.name)}
-                            ${getTradingViewButton(t.name)}
                         </div>
                         <div style="font-size: 0.62rem; color: #64748b; font-weight: 600; margin-top: 0.15rem;">${t.sector || ''}</div>
                     </td>
@@ -5516,7 +5518,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 if (aOpen !== bOpen) return aOpen - bOpen;
                 return (b.entryDate || '').localeCompare(a.entryDate || '');
             });
-            tbody.innerHTML = sortedTrades.map(t => {
+            tbody.innerHTML = sortedTrades.map((t, idx) => {
                 const isOpen = t.status === 'OPEN';
                 const pnl = t.finalGain || 0;
                 const pnlColor = pnl > 0 ? '#34d399' : (pnl < 0 ? '#f87171' : '#94a3b8');
@@ -5529,7 +5531,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 const slTrail = (t.slTrail != null ? t.slTrail : 0).toFixed(3);
                 const themeBadges = (t.themes || []).map(th => {
                     const color = th === 'Semiconductor' ? '#a78bfa' : '#4ade80';
-                    return `<span style="font-size: 0.6rem; background: rgba(168,85,247,0.15); color: ${color}; padding: 0.05rem 0.25rem; border-radius: 3px; font-weight: 700;">${th === 'Semiconductor' ? '🔌' : '☀️'}</span>`;
+                    return `<span style="font-size: 0.62rem; background: rgba(168,85,247,0.15); color: ${color}; padding: 0.1rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(168,85,247,0.3);">${th === 'Semiconductor' ? 'Semicon' : 'Solar'}</span>`;
                 }).join(' ');
                 const stillRadar = isOpen
                     ? (stillQualifiesHT.has(t.name.toUpperCase())
@@ -5537,10 +5539,10 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                         : '<span style="font-size: 0.62rem; color: #fbbf24; font-weight: 700;" title="Left Hot Theme list — DO NOT BUY, existing positions HOLD until trailing SL">🟡 HOLD ONLY</span>')
                     : '<span style="font-size: 0.62rem; color: #f87171; font-weight: 800;" title="Position closed (hit trailing stop)">🔒 CLOSED</span>';
                 return `<tr>
+                    <td style="text-align: center; font-weight: 800; color: #a78bfa; font-size: 0.75rem;">${idx + 1}</td>
                     <td style="font-weight: 800; color: white;">
                         <div style="display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap;">
                             ${getTradingViewAnchorSmall(t.name)}
-                            ${getTradingViewButton(t.name)}
                         </div>
                         <div style="font-size: 0.62rem; color: #64748b; font-weight: 600; margin-top: 0.15rem;">${themeBadges}</div>
                     </td>
@@ -6100,7 +6102,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
                 const themeBadge = themes.map(t => {
                     const color = t === 'Semiconductor' ? '#a78bfa' : '#4ade80';
-                    return `<span style="font-size: 0.65rem; background: rgba(168,85,247,0.2); color: ${color}; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(168,85,247,0.4); white-space: nowrap; margin-right: 0.2rem;">${t === 'Semiconductor' ? '🔌' : '☀️'} ${t}</span>`;
+                    return `<span style="font-size: 0.65rem; background: rgba(168,85,247,0.2); color: ${color}; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(168,85,247,0.4); white-space: nowrap; margin-right: 0.2rem;">${t}</span>`;
                 }).join('');
 
                 const confBadge = count >= 3
@@ -6921,7 +6923,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                         </td>
                         <td style="padding: 0.8rem 0.75rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">${statusHtml}</td>
                         <td style="padding: 0.8rem 0.75rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
-                            ${getTradingViewButton(p.name)}
+                            <span style="color: #475569; font-size: 0.75rem;">—</span>
                         </td>
                         <td style="padding: 0.8rem 0.75rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
                             <span style="color: #475569; font-size: 0.75rem;">—</span>
@@ -7308,7 +7310,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3); transition: background 0.2s;" onmouseover="this.style.background='rgba(30, 41, 59, 0.5)'" onmouseout="this.style.background='transparent'">
                     <td style="padding: 0.65rem 0.8rem; font-size: 0.8rem; text-align: center; color: #fbbf24; font-weight: 800;">${idx + 1}</td>
                     <td style="padding: 0.65rem 0.8rem; font-size: 0.85rem; font-weight: 800; color: #f8fafc;">
-                        ${getTradingViewSymbol(mItem.name) ? `<a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(mItem.name)}&interval=D" target="_blank" style="color: #f8fafc; text-decoration: none; display: inline-flex; align-items: center; gap: 0.3rem;" title="Buka Carta TradingView">${mItem.name} <span style="font-size: 0.75rem;">📈</span></a>` : mItem.name}
+                        ${getTradingViewAnchorSmall(mItem.name)}
                         <span style="font-size: 0.7rem; color: #94a3b8; font-weight: 400;">(${mItem.sector || 'Bursa'})</span>
                     </td>
                     <td style="padding: 0.65rem 0.8rem; text-align: center;">${techniqueBadge}</td>
@@ -7319,8 +7321,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     <td style="padding: 0.65rem 0.8rem; font-size: 0.82rem; text-align: right; font-weight: 800; color: #34d399;">${floorDist}</td>
                     <td style="padding: 0.65rem 0.8rem; font-size: 0.82rem; text-align: right; font-weight: 700; color: #cbd5e1;">${turnoverFormatted}</td>
                     <td style="padding: 0.65rem 0.8rem; font-size: 0.78rem; color: #cbd5e1;">${planText}</td>
-                    <td style="padding: 0.65rem 0.8rem; text-align: center; display: flex; gap: 0.4rem; justify-content: center; align-items: center;">
-                        ${getTradingViewSymbol(mItem.name) ? `<a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(mItem.name)}&interval=D" target="_blank" class="btn" style="background: rgba(56, 189, 248, 0.2); border: 1px solid rgba(56, 189, 248, 0.5); color: #38bdf8; padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">📈 TV</a>` : ''}
+                    <td style="padding: 0.65rem 0.8rem; text-align: center;">
                         <button onclick="triggerAIAnalysisModal('${mItem.name}', 'Weekly Homework: ${techniqueName}')" class="btn" style="background: linear-gradient(135deg, #f59e0b, #d97706); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">✨ Plan AI</button>
                     </td>
                 </tr>`;
