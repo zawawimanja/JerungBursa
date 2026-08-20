@@ -47,6 +47,21 @@ function runScraper() {
             if (tErr) console.error(`⚠️ Ralat jana tracker Fresh Rider: ${tErr.message}`);
             else if (tOut) console.log(tOut.split('\n')[0]);
 
+            // Jalankan Telegram Buy Alert SEBELUM pre-close (sekitar 4:30 PM MYT)
+            const mytHour = parseInt(now.toLocaleString('en-US', { timeZone: 'Asia/Kuala_Lumpur', hour: '2-digit', hour12: false }));
+            const mytMin = parseInt(now.toLocaleString('en-US', { timeZone: 'Asia/Kuala_Lumpur', minute: '2-digit' }));
+            const todayStr = now.toISOString().slice(0, 10);
+
+            if (mytHour === 16 && mytMin >= 25 && mytMin <= 40 && global.lastAlertSentDate !== todayStr) {
+                global.lastAlertSentDate = todayStr;
+                console.log(`📢 Menjalankan Buy Alert Telegram (4:30 PM Pre-Close Alert)...`);
+                const alertScript = path.join(__dirname, 'buy_alert.js');
+                exec(`node "${alertScript}"`, { cwd: __dirname }, (aErr, aOut) => {
+                    if (aErr) console.error(`⚠️ Ralat Buy Alert: ${aErr.message}`);
+                    else if (aOut) console.log(`✅ Buy Alert Telegram Selesai dihantar.`);
+                });
+            }
+
             console.log(`📡 Memuat naik data terkini ke GitHub & Vercel...`);
 
             const gitCmd = `git add smart-money-tracker/live_data.json smart-money-tracker/live_data.js smart-money-tracker/fresh_rider_tracker.js smart-money-tracker/history/ && git commit -m "Auto-update live market data (5-min bot) [skip ci]" && git push origin main`;
