@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-20T09:24:39.800Z",
+  "lastUpdated": "2026-08-20T09:53:00.265Z",
   "source": "klse.i3investor.com",
   "topVolume": [
     {
@@ -3541,15 +3541,15 @@
       "sector": "Technology",
       "category": "Intraday / Momentum",
       "setupStyle": "SWING PLAY",
-      "price": 0.33,
-      "change": 0.045,
-      "changePct": 15.79,
+      "price": 1.1100000143051147,
+      "change": -0.009999990463256836,
+      "changePct": -0.89,
       "turnover": 1652457.0212960243,
       "volume": 1488700,
       "signal": "buy",
       "reason": "🔒 Solid Base (7x) | 🔥 Golden Entry: Solid Consolidation Base (Suitable for Swing/Hold) (Healthy Dip)",
-      "high52": 0.4,
-      "pullback": 17.5,
+      "high52": 1.2200000286102295,
+      "pullback": 9.02,
       "setupName": "📉 Healthy Dip",
       "closeTightness": 5.41,
       "lowTightness": 11.43,
@@ -3560,7 +3560,7 @@
       "vcpTightness5": 5.41,
       "isContracting": true,
       "volumeDecline": true,
-      "floorLow": 0.27,
+      "floorLow": 1.0499999523162842,
       "hasLowerWickRejection": false,
       "hasUpperWickRejection": true,
       "isCombStock": false,
@@ -3581,8 +3581,7 @@
       "ema25AboveEma50": true,
       "nearEma25": true,
       "isGoldenCross": false,
-      "goldenCrossAge": null,
-      "code": "5216"
+      "goldenCrossAge": null
     },
     {
       "name": "PETGAS",
