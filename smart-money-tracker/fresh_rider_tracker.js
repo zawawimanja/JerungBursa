@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual
 window.FRESH_RIDER_TRACKER = {
  "summary": {
-  "generatedAt": "2026-08-20T08:40:44.734Z",
+  "generatedAt": "2026-08-20T09:16:41.669Z",
   "dataDays": 56,
   "totalTracked": 18,
   "openCount": 17,
@@ -9,9 +9,9 @@ window.FRESH_RIDER_TRACKER = {
   "closedWins": 1,
   "closedWinRate": 100,
   "closedAvgGain": 31.2,
-  "openPnl": 588.1,
+  "openPnl": 588.8,
   "closedPnl": 31.2,
-  "totalPnlNow": 619.3
+  "totalPnlNow": 620
  },
  "backtest": {
   "dataStart": "2026-06-02",
@@ -20,7 +20,7 @@ window.FRESH_RIDER_TRACKER = {
   "signals": 17,
   "winRate": 76,
   "avgGain": 18.2,
-  "totalPnl": 308.7,
+  "totalPnl": 309.2,
   "worstLoss": -10.3
  },
  "trades": [
@@ -66,11 +66,11 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 2.05,
    "entryFloor": 1.9,
    "currentFloor": 2.9,
-   "currentPrice": 2.859999895095825,
+   "currentPrice": 2.869999885559082,
    "high": 3.0299999713897705,
    "highDate": "2026-08-10",
    "maxGain": 47.8,
-   "finalGain": 39.5,
+   "finalGain": 40,
    "days": 20,
    "lastDate": "2026-08-20",
    "status": "OPEN",
@@ -192,17 +192,17 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 0.655,
    "entryFloor": 0.63,
    "currentFloor": 0.745,
-   "currentPrice": 0.8299999833106995,
-   "high": 0.8299999833106995,
+   "currentPrice": 0.8450000286102295,
+   "high": 0.8450000286102295,
    "highDate": "2026-08-20",
-   "maxGain": 26.7,
-   "finalGain": 26.7,
+   "maxGain": 29,
+   "finalGain": 29,
    "days": 49,
    "lastDate": "2026-08-20",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Property",
-   "slTrail": 0.664
+   "slTrail": 0.676
   },
   {
    "name": "OGX",
@@ -210,11 +210,11 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 0.46,
    "entryFloor": 0.42,
    "currentFloor": 0.48,
-   "currentPrice": 0.4950000047683716,
+   "currentPrice": 0.49000000953674316,
    "high": 0.5249999761581421,
    "highDate": "2026-06-15",
    "maxGain": 14.1,
-   "finalGain": 7.6,
+   "finalGain": 6.5,
    "days": 51,
    "lastDate": "2026-08-20",
    "status": "OPEN",
@@ -300,17 +300,17 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 1.09,
    "entryFloor": 1.03,
    "currentFloor": 2.29,
-   "currentPrice": 2.5,
-   "high": 2.5,
-   "highDate": "2026-08-20",
-   "maxGain": 129.4,
-   "finalGain": 129.4,
+   "currentPrice": 2.490000009536743,
+   "high": 2.490000009536743,
+   "highDate": "2026-08-19",
+   "maxGain": 128.4,
+   "finalGain": 128.4,
    "days": 55,
    "lastDate": "2026-08-20",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Consumer",
-   "slTrail": 2
+   "slTrail": 1.992
   },
   {
    "name": "ICENTS",
