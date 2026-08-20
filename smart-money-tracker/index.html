@@ -638,7 +638,7 @@
         <!-- Top Navigation (1 baris sama dengan title) -->
         <div class="top-nav" style="display: flex; justify-content: flex-end; align-items: center; gap: 0.45rem; flex-wrap: wrap; max-width: 100%;">
             <!-- TRACKER TOTAL PNL BADGE (belah kiri sekali) -->
-            <div id="top-tracker-pnl-badge" onclick="switchTab('confluence'); document.getElementById('view-confluence')?.scrollIntoView({behavior:'smooth'});" style="display: inline-flex; align-items: center; gap: 0.55rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(56, 189, 248, 0.22)); border: 1.5px solid rgba(52, 211, 153, 0.7); padding: 0.45rem 0.95rem; border-radius: 24px; box-shadow: 0 0 18px rgba(52, 211, 153, 0.35); cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; margin-right: auto;" onmouseover="this.style.transform='scale(1.04)'; this.style.boxShadow='0 0 24px rgba(52,211,153,0.6)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 18px rgba(52,211,153,0.35)';" title="Live Tracker PnL = Cumulative Signal Sum (Robot Sum) across 30+ stocks. Real Portfolio ROI (5-Slot Portfolio & 50% TP1 partial exit): ~30%-80%/yr. Click to view Live Tracker.">
+            <div id="top-tracker-pnl-badge" onclick="switchTab('confluence'); document.getElementById('view-confluence')?.scrollIntoView({behavior:'smooth'});" style="display: inline-flex; align-items: center; gap: 0.55rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(56, 189, 248, 0.22)); border: 1.5px solid rgba(52, 211, 153, 0.7); padding: 0.45rem 0.95rem; border-radius: 24px; box-shadow: 0 0 18px rgba(52, 211, 153, 0.35); cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; margin-right: auto;" onmouseover="this.style.transform='scale(1.04)'; this.style.boxShadow='0 0 24px rgba(52,211,153,0.6)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 18px rgba(52,211,153,0.35)';" title="Click to view Live Tracker — Cumulative Fresh Rider + Hot Theme PnL">
                 <span style="font-size: 0.85rem; color: #cbd5e1; font-weight: 900; text-transform: uppercase; letter-spacing: 0.6px;">LIVE TRACKER PNL:</span>
                 <span id="navTotalPnlBadge" style="font-size: 1.15rem; font-weight: 900; color: #34d399; text-shadow: 0 0 12px rgba(52, 211, 153, 0.8);">—</span>
                 <div style="display: inline-flex; gap: 0.45rem; font-size: 0.85rem; border-left: 1.5px solid rgba(255,255,255,0.25); padding-left: 0.6rem; align-items: center;">
@@ -1099,10 +1099,7 @@
                 </button>
             </div>
             <div id="frTrackerBody">
-            <div id="frTrackerStats" style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.5rem;"></div>
-            <p style="margin: 0 0 0.75rem 0; font-size: 0.68rem; color: #94a3b8; line-height: 1.4; background: rgba(15, 23, 42, 0.6); padding: 0.4rem 0.7rem; border-radius: 6px; border: 1px solid rgba(253, 224, 71, 0.2);">
-                * <strong style="color:#fde047;">Nota PnL & SOP Sebenar</strong>: <strong>Total PnL Now</strong> di atas mengira akumulasi peratusan mentah setiap isyarat (Robot Signal Sum). Bagi **Akaun Sebenar Manusia** mengikut SOP (5-Slot Portfolio Sizing & Jual 50% di TP1 +10%), anggaran pertumbuhan akaun sebenar adalah <strong>~30% – 80% setahun</strong> dengan risiko yang sangat terkawal.
-            </p>
+            <div id="frTrackerStats" style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.7rem;"></div>
             <div class="table-responsive">
                 <table class="data-table" style="font-size: 0.78rem;">
                     <thead>
@@ -1370,10 +1367,7 @@
                 </button>
             </div>
             <div id="htTrackerBody">
-            <div id="htTrackerStats" style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.5rem;"></div>
-            <p style="margin: 0 0 0.75rem 0; font-size: 0.68rem; color: #94a3b8; line-height: 1.4; background: rgba(15, 23, 42, 0.6); padding: 0.4rem 0.7rem; border-radius: 6px; border: 1px solid rgba(196, 181, 253, 0.25);">
-                * <strong style="color:#c4b5fd;">Nota PnL & SOP Sebenar</strong>: <strong>Total PnL Now</strong> mengira akumulasi peratusan mentah isyarat tema (Robot Signal Sum). Bagi **Akaun Sebenar Manusia** mengikut SOP (5-Slot Portfolio Sizing & Jual 50% di TP1 +10%), anggaran pertumbuhan akaun sebenar adalah <strong>~30% – 80% setahun</strong>.
-            </p>
+            <div id="htTrackerStats" style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.7rem;"></div>
             <div class="table-responsive">
                 <table class="data-table" style="font-size: 0.78rem;">
                     <thead>
