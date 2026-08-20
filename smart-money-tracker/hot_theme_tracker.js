@@ -1,26 +1,26 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-08-20T03:59:28.179Z",
+  "generatedAt": "2026-08-20T04:44:42.280Z",
   "dataDays": 63,
-  "totalTracked": 27,
-  "openCount": 19,
+  "totalTracked": 28,
+  "openCount": 20,
   "closedCount": 8,
   "closedWins": 6,
   "closedWinRate": 75,
   "closedAvgGain": 21.7,
-  "openPnl": 237.8,
+  "openPnl": 271.2,
   "closedPnl": 173.4,
-  "totalPnlNow": 411.2
+  "totalPnlNow": 444.6
  },
  "backtest": {
   "dataStart": "2026-05-25",
   "dataEnd": "2026-08-20",
   "dataDays": 63,
-  "signals": 23,
+  "signals": 24,
   "winRate": 83,
-  "avgGain": 11.8,
-  "totalPnl": 271.3,
+  "avgGain": 11.9,
+  "totalPnl": 285.3,
   "worstLoss": -12
  },
  "themeStrength": [
@@ -69,401 +69,401 @@ window.HOT_THEME_TRACKER = {
   {
    "date": "2026-06-02",
    "themePct": 0,
-   "themeCount": 37,
+   "themeCount": 38,
    "totalCount": 273,
    "ma5": 6.7
   },
   {
    "date": "2026-06-03",
-   "themePct": 35.8,
-   "themeCount": 38,
+   "themePct": 35.9,
+   "themeCount": 39,
    "totalCount": 275,
-   "ma5": 10.8
+   "ma5": 10.9
   },
   {
    "date": "2026-06-04",
-   "themePct": 38.2,
-   "themeCount": 38,
+   "themePct": 38.4,
+   "themeCount": 39,
    "totalCount": 275,
-   "ma5": 16.5
+   "ma5": 16.6
   },
   {
    "date": "2026-06-05",
-   "themePct": 30.1,
-   "themeCount": 37,
+   "themePct": 30.4,
+   "themeCount": 38,
    "totalCount": 275,
-   "ma5": 20.8
+   "ma5": 20.9
   },
   {
    "date": "2026-06-08",
-   "themePct": 36.7,
-   "themeCount": 37,
+   "themePct": 37.1,
+   "themeCount": 38,
    "totalCount": 274,
-   "ma5": 28.2
+   "ma5": 28.4
   },
   {
    "date": "2026-06-09",
-   "themePct": 25.3,
-   "themeCount": 37,
+   "themePct": 25.6,
+   "themeCount": 38,
    "totalCount": 275,
-   "ma5": 33.2
+   "ma5": 33.5
   },
   {
    "date": "2026-06-10",
-   "themePct": 20.8,
-   "themeCount": 37,
+   "themePct": 21.1,
+   "themeCount": 38,
    "totalCount": 278,
-   "ma5": 30.2
+   "ma5": 30.5
   },
   {
    "date": "2026-06-11",
-   "themePct": 30.5,
-   "themeCount": 37,
+   "themePct": 30.8,
+   "themeCount": 38,
    "totalCount": 277,
-   "ma5": 28.7
+   "ma5": 29
   },
   {
    "date": "2026-06-12",
-   "themePct": 30.7,
-   "themeCount": 37,
+   "themePct": 30.9,
+   "themeCount": 38,
    "totalCount": 277,
-   "ma5": 28.8
+   "ma5": 29.1
   },
   {
    "date": "2026-06-15",
-   "themePct": 21.7,
-   "themeCount": 37,
+   "themePct": 22.1,
+   "themeCount": 38,
    "totalCount": 275,
-   "ma5": 25.8
+   "ma5": 26.1
   },
   {
    "date": "2026-06-16",
-   "themePct": 21.2,
-   "themeCount": 37,
+   "themePct": 21.6,
+   "themeCount": 38,
    "totalCount": 273,
-   "ma5": 25
+   "ma5": 25.3
   },
   {
    "date": "2026-06-17",
    "themePct": 0,
    "themeCount": 0,
    "totalCount": 16,
-   "ma5": 20.8
-  },
-  {
-   "date": "2026-06-18",
-   "themePct": 17.7,
-   "themeCount": 37,
-   "totalCount": 274,
-   "ma5": 18.3
-  },
-  {
-   "date": "2026-06-19",
-   "themePct": 15.9,
-   "themeCount": 38,
-   "totalCount": 275,
-   "ma5": 15.3
-  },
-  {
-   "date": "2026-06-22",
-   "themePct": 30.4,
-   "themeCount": 38,
-   "totalCount": 274,
-   "ma5": 17
-  },
-  {
-   "date": "2026-06-23",
-   "themePct": 15.9,
-   "themeCount": 39,
-   "totalCount": 276,
-   "ma5": 16
-  },
-  {
-   "date": "2026-06-24",
-   "themePct": 20.5,
-   "themeCount": 39,
-   "totalCount": 277,
-   "ma5": 20.1
-  },
-  {
-   "date": "2026-06-25",
-   "themePct": 24.8,
-   "themeCount": 40,
-   "totalCount": 278,
-   "ma5": 21.5
-  },
-  {
-   "date": "2026-06-26",
-   "themePct": 22.9,
-   "themeCount": 39,
-   "totalCount": 281,
-   "ma5": 22.9
-  },
-  {
-   "date": "2026-06-29",
-   "themePct": 21.5,
-   "themeCount": 39,
-   "totalCount": 282,
    "ma5": 21.1
   },
   {
-   "date": "2026-06-30",
-   "themePct": 14.3,
-   "themeCount": 39,
-   "totalCount": 281,
-   "ma5": 20.8
-  },
-  {
-   "date": "2026-07-01",
-   "themePct": 23.8,
-   "themeCount": 39,
-   "totalCount": 279,
-   "ma5": 21.5
-  },
-  {
-   "date": "2026-07-02",
-   "themePct": 22.4,
-   "themeCount": 38,
-   "totalCount": 265,
-   "ma5": 21
-  },
-  {
-   "date": "2026-07-03",
-   "themePct": 21.1,
-   "themeCount": 39,
-   "totalCount": 280,
-   "ma5": 20.6
-  },
-  {
-   "date": "2026-07-06",
-   "themePct": 22.1,
-   "themeCount": 39,
-   "totalCount": 281,
-   "ma5": 20.7
-  },
-  {
-   "date": "2026-07-07",
-   "themePct": 27.8,
-   "themeCount": 39,
-   "totalCount": 279,
-   "ma5": 23.4
-  },
-  {
-   "date": "2026-07-08",
-   "themePct": 27.7,
-   "themeCount": 39,
-   "totalCount": 279,
-   "ma5": 24.2
-  },
-  {
-   "date": "2026-07-09",
-   "themePct": 17.5,
-   "themeCount": 37,
-   "totalCount": 282,
-   "ma5": 23.2
-  },
-  {
-   "date": "2026-07-10",
-   "themePct": 18.6,
-   "themeCount": 37,
-   "totalCount": 279,
-   "ma5": 22.7
-  },
-  {
-   "date": "2026-07-13",
-   "themePct": 13.2,
-   "themeCount": 36,
-   "totalCount": 280,
-   "ma5": 21
-  },
-  {
-   "date": "2026-07-14",
-   "themePct": 19.1,
-   "themeCount": 39,
-   "totalCount": 285,
-   "ma5": 19.2
-  },
-  {
-   "date": "2026-07-15",
-   "themePct": 17.3,
-   "themeCount": 38,
-   "totalCount": 282,
-   "ma5": 17.1
-  },
-  {
-   "date": "2026-07-16",
-   "themePct": 16.5,
-   "themeCount": 38,
-   "totalCount": 285,
-   "ma5": 16.9
-  },
-  {
-   "date": "2026-07-17",
-   "themePct": 16.4,
-   "themeCount": 38,
-   "totalCount": 284,
-   "ma5": 16.5
-  },
-  {
-   "date": "2026-07-21",
-   "themePct": 21.9,
-   "themeCount": 37,
-   "totalCount": 275,
-   "ma5": 18.2
-  },
-  {
-   "date": "2026-07-22",
-   "themePct": 19.8,
-   "themeCount": 39,
-   "totalCount": 286,
-   "ma5": 18.4
-  },
-  {
-   "date": "2026-07-23",
-   "themePct": 11.2,
-   "themeCount": 38,
-   "totalCount": 287,
-   "ma5": 17.2
-  },
-  {
-   "date": "2026-07-24",
-   "themePct": 16.5,
-   "themeCount": 38,
-   "totalCount": 284,
-   "ma5": 17.2
-  },
-  {
-   "date": "2026-07-27",
-   "themePct": 17.8,
-   "themeCount": 38,
-   "totalCount": 285,
-   "ma5": 17.4
-  },
-  {
-   "date": "2026-07-28",
-   "themePct": 19,
-   "themeCount": 38,
-   "totalCount": 284,
-   "ma5": 16.9
-  },
-  {
-   "date": "2026-07-29",
-   "themePct": 35.3,
-   "themeCount": 38,
-   "totalCount": 283,
-   "ma5": 20
-  },
-  {
-   "date": "2026-07-30",
-   "themePct": 30.9,
-   "themeCount": 38,
-   "totalCount": 285,
-   "ma5": 23.9
-  },
-  {
-   "date": "2026-07-31",
-   "themePct": 29.9,
-   "themeCount": 40,
-   "totalCount": 287,
-   "ma5": 26.6
-  },
-  {
-   "date": "2026-08-03",
-   "themePct": 32.8,
-   "themeCount": 39,
-   "totalCount": 285,
-   "ma5": 29.6
-  },
-  {
-   "date": "2026-08-04",
-   "themePct": 21.1,
-   "themeCount": 38,
-   "totalCount": 285,
-   "ma5": 30
-  },
-  {
-   "date": "2026-08-05",
-   "themePct": 28,
-   "themeCount": 39,
-   "totalCount": 284,
-   "ma5": 28.5
-  },
-  {
-   "date": "2026-08-06",
-   "themePct": 15.8,
-   "themeCount": 40,
-   "totalCount": 289,
-   "ma5": 25.5
-  },
-  {
-   "date": "2026-08-07",
+   "date": "2026-06-18",
    "themePct": 18.1,
    "themeCount": 38,
-   "totalCount": 284,
-   "ma5": 23.2
+   "totalCount": 274,
+   "ma5": 18.5
   },
   {
-   "date": "2026-08-10",
-   "themePct": 23.1,
-   "themeCount": 38,
-   "totalCount": 284,
-   "ma5": 21.2
-  },
-  {
-   "date": "2026-08-11",
-   "themePct": 20.2,
+   "date": "2026-06-19",
+   "themePct": 16.1,
    "themeCount": 39,
-   "totalCount": 285,
-   "ma5": 21
+   "totalCount": 275,
+   "ma5": 15.6
   },
   {
-   "date": "2026-08-12",
-   "themePct": 29.6,
+   "date": "2026-06-22",
+   "themePct": 30.5,
+   "themeCount": 39,
+   "totalCount": 274,
+   "ma5": 17.3
+  },
+  {
+   "date": "2026-06-23",
+   "themePct": 16.1,
    "themeCount": 40,
-   "totalCount": 287,
-   "ma5": 21.4
+   "totalCount": 276,
+   "ma5": 16.2
   },
   {
-   "date": "2026-08-13",
-   "themePct": 17.9,
-   "themeCount": 39,
-   "totalCount": 286,
+   "date": "2026-06-24",
+   "themePct": 21.4,
+   "themeCount": 40,
+   "totalCount": 277,
+   "ma5": 20.4
+  },
+  {
+   "date": "2026-06-25",
+   "themePct": 25.1,
+   "themeCount": 41,
+   "totalCount": 278,
    "ma5": 21.8
   },
   {
-   "date": "2026-08-14",
-   "themePct": 15.4,
-   "themeCount": 39,
-   "totalCount": 285,
+   "date": "2026-06-26",
+   "themePct": 23.2,
+   "themeCount": 40,
+   "totalCount": 281,
+   "ma5": 23.3
+  },
+  {
+   "date": "2026-06-29",
+   "themePct": 21.9,
+   "themeCount": 40,
+   "totalCount": 282,
+   "ma5": 21.5
+  },
+  {
+   "date": "2026-06-30",
+   "themePct": 14.4,
+   "themeCount": 40,
+   "totalCount": 281,
    "ma5": 21.2
   },
   {
-   "date": "2026-08-17",
-   "themePct": 13.7,
+   "date": "2026-07-01",
+   "themePct": 24.1,
+   "themeCount": 40,
+   "totalCount": 279,
+   "ma5": 21.7
+  },
+  {
+   "date": "2026-07-02",
+   "themePct": 22.6,
    "themeCount": 39,
-   "totalCount": 287,
+   "totalCount": 265,
+   "ma5": 21.2
+  },
+  {
+   "date": "2026-07-03",
+   "themePct": 21.3,
+   "themeCount": 40,
+   "totalCount": 280,
+   "ma5": 20.9
+  },
+  {
+   "date": "2026-07-06",
+   "themePct": 22.5,
+   "themeCount": 40,
+   "totalCount": 281,
+   "ma5": 21
+  },
+  {
+   "date": "2026-07-07",
+   "themePct": 27.9,
+   "themeCount": 40,
+   "totalCount": 279,
+   "ma5": 23.7
+  },
+  {
+   "date": "2026-07-08",
+   "themePct": 27.9,
+   "themeCount": 40,
+   "totalCount": 279,
+   "ma5": 24.4
+  },
+  {
+   "date": "2026-07-09",
+   "themePct": 17.7,
+   "themeCount": 38,
+   "totalCount": 282,
+   "ma5": 23.5
+  },
+  {
+   "date": "2026-07-10",
+   "themePct": 18.7,
+   "themeCount": 38,
+   "totalCount": 279,
+   "ma5": 22.9
+  },
+  {
+   "date": "2026-07-13",
+   "themePct": 13.4,
+   "themeCount": 37,
+   "totalCount": 280,
+   "ma5": 21.1
+  },
+  {
+   "date": "2026-07-14",
+   "themePct": 19.3,
+   "themeCount": 40,
+   "totalCount": 285,
    "ma5": 19.4
   },
   {
-   "date": "2026-08-18",
-   "themePct": 14.9,
-   "themeCount": 38,
+   "date": "2026-07-15",
+   "themePct": 17.5,
+   "themeCount": 39,
+   "totalCount": 282,
+   "ma5": 17.3
+  },
+  {
+   "date": "2026-07-16",
+   "themePct": 16.7,
+   "themeCount": 39,
+   "totalCount": 285,
+   "ma5": 17.1
+  },
+  {
+   "date": "2026-07-17",
+   "themePct": 16.6,
+   "themeCount": 39,
    "totalCount": 284,
-   "ma5": 18.3
+   "ma5": 16.7
+  },
+  {
+   "date": "2026-07-21",
+   "themePct": 22.2,
+   "themeCount": 38,
+   "totalCount": 275,
+   "ma5": 18.5
+  },
+  {
+   "date": "2026-07-22",
+   "themePct": 19.9,
+   "themeCount": 40,
+   "totalCount": 286,
+   "ma5": 18.6
+  },
+  {
+   "date": "2026-07-23",
+   "themePct": 11.3,
+   "themeCount": 39,
+   "totalCount": 287,
+   "ma5": 17.3
+  },
+  {
+   "date": "2026-07-24",
+   "themePct": 16.6,
+   "themeCount": 39,
+   "totalCount": 284,
+   "ma5": 17.3
+  },
+  {
+   "date": "2026-07-27",
+   "themePct": 18,
+   "themeCount": 39,
+   "totalCount": 285,
+   "ma5": 17.6
+  },
+  {
+   "date": "2026-07-28",
+   "themePct": 19.2,
+   "themeCount": 39,
+   "totalCount": 284,
+   "ma5": 17
+  },
+  {
+   "date": "2026-07-29",
+   "themePct": 35.4,
+   "themeCount": 39,
+   "totalCount": 283,
+   "ma5": 20.1
+  },
+  {
+   "date": "2026-07-30",
+   "themePct": 31,
+   "themeCount": 39,
+   "totalCount": 285,
+   "ma5": 24
+  },
+  {
+   "date": "2026-07-31",
+   "themePct": 30.1,
+   "themeCount": 41,
+   "totalCount": 287,
+   "ma5": 26.7
+  },
+  {
+   "date": "2026-08-03",
+   "themePct": 32.9,
+   "themeCount": 40,
+   "totalCount": 285,
+   "ma5": 29.7
+  },
+  {
+   "date": "2026-08-04",
+   "themePct": 21.2,
+   "themeCount": 39,
+   "totalCount": 285,
+   "ma5": 30.1
+  },
+  {
+   "date": "2026-08-05",
+   "themePct": 28.1,
+   "themeCount": 40,
+   "totalCount": 284,
+   "ma5": 28.7
+  },
+  {
+   "date": "2026-08-06",
+   "themePct": 16,
+   "themeCount": 41,
+   "totalCount": 289,
+   "ma5": 25.7
+  },
+  {
+   "date": "2026-08-07",
+   "themePct": 18.5,
+   "themeCount": 39,
+   "totalCount": 284,
+   "ma5": 23.3
+  },
+  {
+   "date": "2026-08-10",
+   "themePct": 23.4,
+   "themeCount": 39,
+   "totalCount": 284,
+   "ma5": 21.4
+  },
+  {
+   "date": "2026-08-11",
+   "themePct": 20.8,
+   "themeCount": 40,
+   "totalCount": 285,
+   "ma5": 21.4
+  },
+  {
+   "date": "2026-08-12",
+   "themePct": 30.3,
+   "themeCount": 41,
+   "totalCount": 287,
+   "ma5": 21.8
+  },
+  {
+   "date": "2026-08-13",
+   "themePct": 18.6,
+   "themeCount": 40,
+   "totalCount": 286,
+   "ma5": 22.3
+  },
+  {
+   "date": "2026-08-14",
+   "themePct": 16.1,
+   "themeCount": 40,
+   "totalCount": 285,
+   "ma5": 21.8
+  },
+  {
+   "date": "2026-08-17",
+   "themePct": 14.1,
+   "themeCount": 40,
+   "totalCount": 287,
+   "ma5": 20
+  },
+  {
+   "date": "2026-08-18",
+   "themePct": 15.3,
+   "themeCount": 39,
+   "totalCount": 284,
+   "ma5": 18.9
   },
   {
    "date": "2026-08-19",
-   "themePct": 20.7,
-   "themeCount": 39,
+   "themePct": 20.9,
+   "themeCount": 40,
    "totalCount": 290,
-   "ma5": 16.5
+   "ma5": 17
   },
   {
    "date": "2026-08-20",
-   "themePct": 6.4,
-   "themeCount": 38,
+   "themePct": 6.5,
+   "themeCount": 39,
    "totalCount": 288,
-   "ma5": 14.2
+   "ma5": 14.6
   }
  ],
  "themeTrend": "FLAT/FALLING",
@@ -673,11 +673,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 4.52,
    "entryFloor": 4.51,
    "currentFloor": 5.54,
-   "currentPrice": 6.34,
-   "high": 6.34,
+   "currentPrice": 6.43,
+   "high": 6.43,
    "highDate": "2026-08-20",
-   "maxGain": 40.3,
-   "finalGain": 40.3,
+   "maxGain": 42.3,
+   "finalGain": 42.3,
    "days": 43,
    "lastDate": "2026-08-20",
    "status": "OPEN",
@@ -685,7 +685,7 @@ window.HOT_THEME_TRACKER = {
     "Semiconductor"
    ],
    "confluence": 3,
-   "slTrail": 5.96
+   "slTrail": 6.044
   },
   {
    "name": "NE",
@@ -693,11 +693,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 1.06,
    "entryFloor": 1.04,
    "currentFloor": 1.05,
-   "currentPrice": 1.15,
+   "currentPrice": 1.14,
    "high": 1.1699999570846558,
    "highDate": "2026-07-02",
    "maxGain": 10.4,
-   "finalGain": 8.5,
+   "finalGain": 7.5,
    "days": 55,
    "lastDate": "2026-08-20",
    "status": "OPEN",
@@ -747,6 +747,26 @@ window.HOT_THEME_TRACKER = {
    ],
    "confluence": 3,
    "slTrail": 8.968
+  },
+  {
+   "name": "MNHLDG",
+   "entryDate": "2026-06-03",
+   "entry": 2.56,
+   "entryFloor": 2.46,
+   "currentFloor": 3.35,
+   "currentPrice": 3.390000104904175,
+   "high": 3.5,
+   "highDate": "2026-08-17",
+   "maxGain": 36.7,
+   "finalGain": 32.4,
+   "days": 55,
+   "lastDate": "2026-08-20",
+   "status": "OPEN",
+   "themes": [
+    "Solar/RE"
+   ],
+   "confluence": 3,
+   "slTrail": 3.29
   },
   {
    "name": "UWC",
@@ -854,7 +874,7 @@ window.HOT_THEME_TRACKER = {
    "entry": 4.34,
    "entryFloor": 4.3,
    "currentFloor": 4.91,
-   "currentPrice": 4.24,
+   "currentPrice": 4.22,
    "high": 5.190000057220459,
    "highDate": "2026-06-22",
    "maxGain": 19.6,

@@ -106,7 +106,7 @@ async function fetchDynamicCode(name) {
 // -------------------------------------------------------------
 const HOT_THEME_MAP = {
     'Semiconductor': ['UNISEM','MI','VITROX','PENTA','UWC','KGB','NATGATE','FRONTKN','GREATEC','ELSOFT','ATE','PENTECH','KEEMING','HKB','ADNEX','ICENTS','AMS','MINOX','IFCAMSC','TEAMSTR','FAMIERA','SUMI','CRPMATE','PMIBHD','ECOMATE','ATECH','RAMSSOL','TOPMIX','SEMICO','MISC'],
-    'Solar/RE': ['SLVEST','JSSOLAR','VERDANT','SAM','GENERGY','SAMAIDEN','NE']
+    'Solar/RE': ['SLVEST','JSSOLAR','VERDANT','SAM','GENERGY','SAMAIDEN','NE','MNHLDG','PECKHIN']
 };
 function getHotThemes(name) {
     const n = (name || '').toUpperCase();
