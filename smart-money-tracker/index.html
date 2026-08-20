@@ -1010,13 +1010,9 @@
                             </details>
                         </div>
                     </div>
-                    <button onclick="toggleCardCollapse('frScannerContent', this)" class="btn" style="background: rgba(15,23,42,0.85); border: 1.5px solid rgba(253,224,71,0.5); color: #fde047; padding: 0.25rem 0.65rem; border-radius: 8px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; transition: all 0.2s;" onmouseover="this.style.background='rgba(253,224,71,0.2)';" onmouseout="this.style.background='rgba(15,23,42,0.85)';">
-                        <span class="toggle-icon">🔽</span> <span class="toggle-text">Collapse</span>
-                    </button>
                 </div>
 
-                <div id="frScannerContent">
-                    <div class="table-responsive">
+                <div class="table-responsive">
                     <table class="data-table">
                         <thead>
                             <tr>
@@ -1048,17 +1044,11 @@
 
         <!-- DATA BACKTEST FRESH VVIP RIDER -->
         <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(234, 179, 8, 0.06)); border: 1px dashed rgba(234, 179, 8, 0.35); border-radius: 12px; padding: 0.9rem 1.1rem; margin-bottom: 1.25rem;">
-            <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.7rem;">
-                <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-                    <span style="font-size: 1rem;">📊</span>
-                    <span style="font-size: 0.75rem; font-weight: 900; color: #fde047; letter-spacing: 0.5px; text-transform: uppercase;">Fresh VVIP Rider Backtest Data</span>
-                    <span id="frBacktestMeta" style="font-size: 0.65rem; color: #94a3b8; font-weight: 600;">Simulation: position exit after 20 days</span>
-                </div>
-                <button onclick="toggleCardCollapse('frBacktestContent', this)" class="btn" style="background: rgba(15,23,42,0.85); border: 1.5px solid rgba(253,224,71,0.5); color: #fde047; padding: 0.2rem 0.55rem; border-radius: 6px; font-size: 0.7rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.3rem; transition: all 0.2s;" onmouseover="this.style.background='rgba(253,224,71,0.2)';" onmouseout="this.style.background='rgba(15,23,42,0.85)';">
-                    <span class="toggle-icon">🔽</span> <span class="toggle-text">Collapse</span>
-                </button>
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.7rem;">
+                <span style="font-size: 1rem;">📊</span>
+                <span style="font-size: 0.75rem; font-weight: 900; color: #fde047; letter-spacing: 0.5px; text-transform: uppercase;">Fresh VVIP Rider Backtest Data</span>
+                <span id="frBacktestMeta" style="font-size: 0.65rem; color: #94a3b8; font-weight: 600;">Simulation: position exit after 20 days</span>
             </div>
-            <div id="frBacktestContent">
             <div style="display: flex; flex-wrap: wrap; gap: 0.6rem;">
                 <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(234,179,8,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 105px; text-align: center; flex: 1;">
                     <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Unique Signals</div>
@@ -1082,22 +1072,15 @@
                 </div>
             </div>
             <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">* <strong style="color:#fbbf24;">SIMULATION</strong> — assumes each trade is closed after 20 days (regardless of win/loss), to verify profitability of entry rules. Each counter is counted once (first qualifying day). Recalculated automatically daily.</p>
-            </div>
         </div>
 
         <!-- LIVE TRACKER FRESH RIDER: setiap kaunter yang pernah qualify, track sampai exit -->
         <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(16, 185, 129, 0.07)); border: 1px dashed rgba(16, 185, 129, 0.4); border-radius: 12px; padding: 0.9rem 1.1rem; margin-bottom: 1.25rem;">
-            <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.7rem;">
-                <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-                    <span style="font-size: 1.1rem;">📡</span>
-                    <span style="font-size: 0.95rem; font-weight: 900; color: #34d399; letter-spacing: 0.6px; text-transform: uppercase;">Fresh Rider Live Tracker</span>
-                    <span id="frTrackerMeta" style="font-size: 0.65rem; color: #94a3b8; font-weight: 600;">Generated from historical + live data</span>
-                </div>
-                <button onclick="toggleCardCollapse('frTrackerContent', this)" class="btn" style="background: rgba(15,23,42,0.85); border: 1.5px solid rgba(52,211,153,0.5); color: #34d399; padding: 0.25rem 0.65rem; border-radius: 8px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; transition: all 0.2s;" onmouseover="this.style.background='rgba(52,211,153,0.2)';" onmouseout="this.style.background='rgba(15,23,42,0.85)';">
-                    <span class="toggle-icon">🔽</span> <span class="toggle-text">Collapse</span>
-                </button>
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.7rem;">
+                <span style="font-size: 1.1rem;">📡</span>
+                <span style="font-size: 0.95rem; font-weight: 900; color: #34d399; letter-spacing: 0.6px; text-transform: uppercase;">Fresh Rider Live Tracker</span>
+                <span id="frTrackerMeta" style="font-size: 0.65rem; color: #94a3b8; font-weight: 600;">Generated from historical + live data</span>
             </div>
-            <div id="frTrackerContent">
             <div id="frTrackerStats" style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.7rem;"></div>
             <div class="table-responsive">
                 <table class="data-table" style="font-size: 0.78rem;">
@@ -1122,7 +1105,6 @@
                 </table>
             </div>
             <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">* <strong style="color:#34d399;">ACTUAL POSITIONS</strong> — hold every counter from qualification day until triggering the hybrid trailing stop (SL = high × 0.80 before profit lock, tightens to high × 0.90 after +20% locked). CLOSED_SL = locked profit/loss. This is an actual holding record, NOT a simulation — e.g. backtest closed KEEMING early at +65%, while tracker held up to +117%. Auto-updated on every data refresh.</p>
-            </div>
         </div>
     </div>
 
@@ -1271,20 +1253,14 @@
                             </p>
                         </div>
                     </div>
-                    <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
-                        <div style="display: flex; gap: 0.3rem; align-items: center; background: rgba(15,23,42,0.6); padding: 0.2rem; border-radius: 8px; border: 1px solid rgba(168,85,247,0.3);">
-                            <span style="font-size: 0.72rem; color: #64748b; font-weight: 600; padding: 0 0.3rem;">Focus:</span>
-                            <button id="htFilterTriple" onclick="setHotThemeFilter('triple_only')" style="background: transparent; color: #64748b; border: 1px solid transparent; padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">🔥 TRIPLE Only</button>
-                            <button id="htFilterAll" onclick="setHotThemeFilter('all')" style="background: rgba(168,85,247,0.25); color: #c4b5fd; border: 1px solid rgba(168,85,247,0.5); padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer;">⚡ All (2+)</button>
-                        </div>
-                        <button onclick="toggleCardCollapse('htScannerContent', this)" class="btn" style="background: rgba(15,23,42,0.85); border: 1.5px solid rgba(196,181,253,0.5); color: #c4b5fd; padding: 0.25rem 0.65rem; border-radius: 8px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; transition: all 0.2s;" onmouseover="this.style.background='rgba(196,181,253,0.2)';" onmouseout="this.style.background='rgba(15,23,42,0.85)';">
-                            <span class="toggle-icon">🔽</span> <span class="toggle-text">Collapse</span>
-                        </button>
+                    <div style="display: flex; gap: 0.3rem; align-items: center; background: rgba(15,23,42,0.6); padding: 0.2rem; border-radius: 8px; border: 1px solid rgba(168,85,247,0.3);">
+                        <span style="font-size: 0.72rem; color: #64748b; font-weight: 600; padding: 0 0.3rem;">Focus:</span>
+                        <button id="htFilterTriple" onclick="setHotThemeFilter('triple_only')" style="background: transparent; color: #64748b; border: 1px solid transparent; padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">🔥 TRIPLE Only</button>
+                        <button id="htFilterAll" onclick="setHotThemeFilter('all')" style="background: rgba(168,85,247,0.25); color: #c4b5fd; border: 1px solid rgba(168,85,247,0.5); padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer;">⚡ All (2+)</button>
                     </div>
                 </div>
 
-                <div id="htScannerContent">
-                    <div class="table-responsive">
+                <div class="table-responsive">
                     <table class="data-table">
                         <thead>
                             <tr>
@@ -1315,17 +1291,11 @@
 
         <!-- DATA BACKTEST HOT THEME -->
         <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(168, 85, 247, 0.06)); border: 1px dashed rgba(168, 85, 247, 0.35); border-radius: 12px; padding: 0.9rem 1.1rem; margin-bottom: 1.25rem;">
-            <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.7rem;">
-                <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-                    <span style="font-size: 1rem;">📊</span>
-                    <span style="font-size: 0.75rem; font-weight: 900; color: #c4b5fd; letter-spacing: 0.5px; text-transform: uppercase;">Hot Theme Rider Backtest Data</span>
-                    <span id="htBacktestMeta" style="font-size: 0.65rem; color: #94a3b8; font-weight: 600;">Simulation: trades closed after 20 days</span>
-                </div>
-                <button onclick="toggleCardCollapse('htBacktestContent', this)" class="btn" style="background: rgba(15,23,42,0.85); border: 1.5px solid rgba(196,181,253,0.5); color: #c4b5fd; padding: 0.2rem 0.55rem; border-radius: 6px; font-size: 0.7rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.3rem; transition: all 0.2s;" onmouseover="this.style.background='rgba(196,181,253,0.2)';" onmouseout="this.style.background='rgba(15,23,42,0.85)';">
-                    <span class="toggle-icon">🔽</span> <span class="toggle-text">Collapse</span>
-                </button>
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.7rem;">
+                <span style="font-size: 1rem;">📊</span>
+                <span style="font-size: 0.75rem; font-weight: 900; color: #c4b5fd; letter-spacing: 0.5px; text-transform: uppercase;">Hot Theme Rider Backtest Data</span>
+                <span id="htBacktestMeta" style="font-size: 0.65rem; color: #94a3b8; font-weight: 600;">Simulation: trades closed after 20 days</span>
             </div>
-            <div id="htBacktestContent">
             <div style="display: flex; flex-wrap: wrap; gap: 0.6rem;">
                 <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(168,85,247,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 105px; text-align: center; flex: 1;">
                     <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Signals (Unique)</div>
@@ -1349,22 +1319,15 @@
                 </div>
             </div>
             <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">* <strong style="color:#c4b5fd;">SIMULATION</strong> — assumes every trade is closed after 20 holding days (regardless of PnL) to prove baseline entry edge. Each counter counted once on first qualification date. Automatically recalculated daily.</p>
-            </div>
         </div>
 
         <!-- LIVE TRACKER HOT THEME -->
         <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(16, 185, 129, 0.07)); border: 1px dashed rgba(16, 185, 129, 0.4); border-radius: 12px; padding: 0.9rem 1.1rem; margin-bottom: 1.25rem;">
-            <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.7rem;">
-                <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-                    <span style="font-size: 1.1rem;">📡</span>
-                    <span style="font-size: 0.95rem; font-weight: 900; color: #34d399; letter-spacing: 0.6px; text-transform: uppercase;">Hot Theme Live Tracker</span>
-                    <span id="htTrackerMeta" style="font-size: 0.65rem; color: #94a3b8; font-weight: 600;">Generated from historical + live data</span>
-                </div>
-                <button onclick="toggleCardCollapse('htTrackerContent', this)" class="btn" style="background: rgba(15,23,42,0.85); border: 1.5px solid rgba(52,211,153,0.5); color: #34d399; padding: 0.25rem 0.65rem; border-radius: 8px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; transition: all 0.2s;" onmouseover="this.style.background='rgba(52,211,153,0.2)';" onmouseout="this.style.background='rgba(15,23,42,0.85)';">
-                    <span class="toggle-icon">🔽</span> <span class="toggle-text">Collapse</span>
-                </button>
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.7rem;">
+                <span style="font-size: 1.1rem;">📡</span>
+                <span style="font-size: 0.95rem; font-weight: 900; color: #34d399; letter-spacing: 0.6px; text-transform: uppercase;">Hot Theme Live Tracker</span>
+                <span id="htTrackerMeta" style="font-size: 0.65rem; color: #94a3b8; font-weight: 600;">Generated from historical + live data</span>
             </div>
-            <div id="htTrackerContent">
             <div id="htTrackerStats" style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.7rem;"></div>
             <div class="table-responsive">
                 <table class="data-table" style="font-size: 0.78rem;">
@@ -1387,7 +1350,6 @@
                         <tr><td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">⏳ Loading tracker...</td></tr>
                     </tbody>
                 </table>
-            </div>
             </div>
         </div>
 
@@ -5609,24 +5571,6 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
         }
         window.updateTopTrackerPnlBadge = updateTopTrackerPnlBadge;
         try { updateTopTrackerPnlBadge(); } catch(e) {}
-
-        // Global card collapse/expand handler
-        function toggleCardCollapse(contentId, btnEl) {
-            const el = document.getElementById(contentId);
-            if (!el) return;
-            const iconEl = btnEl ? btnEl.querySelector('.toggle-icon') : null;
-            const textEl = btnEl ? btnEl.querySelector('.toggle-text') : null;
-            if (el.style.display === 'none') {
-                el.style.display = 'block';
-                if (iconEl) iconEl.textContent = '🔽';
-                if (textEl) textEl.textContent = 'Collapse';
-            } else {
-                el.style.display = 'none';
-                if (iconEl) iconEl.textContent = '🔼';
-                if (textEl) textEl.textContent = 'Expand';
-            }
-        }
-        window.toggleCardCollapse = toggleCardCollapse;
 
         // Helper: adakah item qualify Fresh VVIP Rider? (logik sama seperti render di atas)
         function qualifiesFreshRider(item) {
