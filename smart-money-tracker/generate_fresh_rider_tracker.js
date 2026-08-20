@@ -103,17 +103,15 @@ for (const day of dayList) {
         if (cur.price > t.high) { t.high = cur.price; t.highDate = day.date; }
         t.maxGain = +(((t.high - t.entry) / t.entry) * 100).toFixed(1);
 
-        // EXIT: TRAIL 20% dari harga TERTINGGI (high) sejak entry.
-        // Ini cara standard trend-following — biar keuntungan berlari, keluar hanya
-        // bila harga jatuh 20% dari puncak. Lantai harian terlalu volatile untuk SL.
-        // (Ujian: trail 20% dari high kekalkan semua pemenang, exit HKB +39% sebelum runtuh.)
-        const slTrail = t.high * 0.80;
+        // EXIT: (1) Initial Floor SL (3% bawah lantai asal jika bocor awal) ATAU (2) Trail 20% dari HIGH
+        const initialSl = (t.entryFloor || t.entry * 0.95) * 0.97;
+        const slTrail = Math.max(initialSl, t.high * 0.80);
         t.slTrail = +slTrail.toFixed(3);
         if (cur.price <= slTrail) {
             t.status = 'CLOSED_SL';
             t.exitDate = day.date;
-            t.exitPrice = slTrail;
-            t.finalGain = +(((slTrail - t.entry) / t.entry) * 100).toFixed(1);
+            t.exitPrice = +cur.price.toFixed(3);
+            t.finalGain = +(((cur.price - t.entry) / t.entry) * 100).toFixed(1);
             delete open[name];
         } else {
             t.finalGain = +(((cur.price - t.entry) / t.entry) * 100).toFixed(1);

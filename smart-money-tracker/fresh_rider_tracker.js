@@ -1,17 +1,17 @@
 // AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual
 window.FRESH_RIDER_TRACKER = {
  "summary": {
-  "generatedAt": "2026-08-20T10:19:27.190Z",
+  "generatedAt": "2026-08-20T13:42:26.928Z",
   "dataDays": 56,
   "totalTracked": 18,
-  "openCount": 17,
-  "closedCount": 1,
+  "openCount": 14,
+  "closedCount": 4,
   "closedWins": 1,
-  "closedWinRate": 100,
-  "closedAvgGain": 31.2,
-  "openPnl": 588.8,
-  "closedPnl": 31.2,
-  "totalPnlNow": 620
+  "closedWinRate": 25,
+  "closedAvgGain": -2.1,
+  "openPnl": 535,
+  "closedPnl": -8.2,
+  "totalPnlNow": 526.8
  },
  "backtest": {
   "dataStart": "2026-06-02",
@@ -40,7 +40,7 @@ window.FRESH_RIDER_TRACKER = {
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Industrial",
-   "slTrail": 0.4
+   "slTrail": 0.412
   },
   {
    "name": "MTTSL",
@@ -112,25 +112,7 @@ window.FRESH_RIDER_TRACKER = {
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Consumer",
-   "slTrail": 1.208
-  },
-  {
-   "name": "SRKK",
-   "entryDate": "2026-07-10",
-   "entry": 0.6,
-   "entryFloor": 0.555,
-   "currentFloor": 0.53,
-   "currentPrice": 0.5550000071525574,
-   "high": 0.6,
-   "highDate": "2026-07-10",
-   "maxGain": 0,
-   "finalGain": -7.5,
-   "days": 29,
-   "lastDate": "2026-08-20",
-   "status": "OPEN",
-   "ipoYear": 2026,
-   "sector": "Technology",
-   "slTrail": 0.48
+   "slTrail": 1.387
   },
   {
    "name": "HEGROUP",
@@ -166,7 +148,7 @@ window.FRESH_RIDER_TRACKER = {
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Industrial",
-   "slTrail": 0.596
+   "slTrail": 0.63
   },
   {
    "name": "MMCS",
@@ -259,42 +241,6 @@ window.FRESH_RIDER_TRACKER = {
    "slTrail": 1.632
   },
   {
-   "name": "AMS",
-   "entryDate": "2026-06-03",
-   "entry": 0.38,
-   "entryFloor": 0.375,
-   "currentFloor": 0.465,
-   "currentPrice": 0.5,
-   "high": 0.5,
-   "highDate": "2026-08-20",
-   "maxGain": 31.6,
-   "finalGain": 31.6,
-   "days": 55,
-   "lastDate": "2026-08-20",
-   "status": "OPEN",
-   "ipoYear": 2026,
-   "sector": "Industrial",
-   "slTrail": 0.4
-  },
-  {
-   "name": "ISF",
-   "entryDate": "2026-06-03",
-   "entry": 0.555,
-   "entryFloor": 0.53,
-   "currentFloor": 0.72,
-   "currentPrice": 0.7200000286102295,
-   "high": 0.7400000095367432,
-   "highDate": "2026-08-14",
-   "maxGain": 33.3,
-   "finalGain": 29.7,
-   "days": 55,
-   "lastDate": "2026-08-20",
-   "status": "OPEN",
-   "ipoYear": 2026,
-   "sector": "Consumer",
-   "slTrail": 0.592
-  },
-  {
    "name": "KEEMING",
    "entryDate": "2026-06-03",
    "entry": 1.09,
@@ -331,6 +277,26 @@ window.FRESH_RIDER_TRACKER = {
    "slTrail": 0.608
   },
   {
+   "name": "SRKK",
+   "entryDate": "2026-07-10",
+   "entry": 0.6,
+   "entryFloor": 0.555,
+   "currentFloor": 0.505,
+   "currentPrice": 0.5149999856948853,
+   "high": 0.6,
+   "highDate": "2026-07-10",
+   "maxGain": 0,
+   "finalGain": -14.2,
+   "days": 6,
+   "lastDate": "2026-07-17",
+   "status": "CLOSED_SL",
+   "ipoYear": 2026,
+   "sector": "Technology",
+   "slTrail": 0.538,
+   "exitDate": "2026-07-17",
+   "exitPrice": 0.515
+  },
+  {
    "name": "HKB",
    "entryDate": "2026-06-03",
    "entry": 0.445,
@@ -340,7 +306,7 @@ window.FRESH_RIDER_TRACKER = {
    "high": 0.7300000190734863,
    "highDate": "2026-06-26",
    "maxGain": 64,
-   "finalGain": 31.2,
+   "finalGain": 24.7,
    "days": 18,
    "lastDate": "2026-06-29",
    "status": "CLOSED_SL",
@@ -348,7 +314,47 @@ window.FRESH_RIDER_TRACKER = {
    "sector": "Technology",
    "slTrail": 0.584,
    "exitDate": "2026-06-29",
-   "exitPrice": 0.5840000152587891
+   "exitPrice": 0.555
+  },
+  {
+   "name": "AMS",
+   "entryDate": "2026-06-03",
+   "entry": 0.38,
+   "entryFloor": 0.375,
+   "currentFloor": 0.35,
+   "currentPrice": 0.3499999940395355,
+   "high": 0.4099999964237213,
+   "highDate": "2026-06-04",
+   "maxGain": 7.9,
+   "finalGain": -7.9,
+   "days": 17,
+   "lastDate": "2026-06-26",
+   "status": "CLOSED_SL",
+   "ipoYear": 2026,
+   "sector": "Industrial",
+   "slTrail": 0.364,
+   "exitDate": "2026-06-26",
+   "exitPrice": 0.35
+  },
+  {
+   "name": "ISF",
+   "entryDate": "2026-06-03",
+   "entry": 0.555,
+   "entryFloor": 0.53,
+   "currentFloor": 0.49,
+   "currentPrice": 0.4950000047683716,
+   "high": 0.5899999737739563,
+   "highDate": "2026-06-04",
+   "maxGain": 6.3,
+   "finalGain": -10.8,
+   "days": 14,
+   "lastDate": "2026-06-23",
+   "status": "CLOSED_SL",
+   "ipoYear": 2026,
+   "sector": "Consumer",
+   "slTrail": 0.514,
+   "exitDate": "2026-06-23",
+   "exitPrice": 0.495
   }
  ]
 };

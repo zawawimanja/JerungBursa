@@ -620,8 +620,8 @@ function buildMessage(now, out) {
             name: s.name, price: s.price, changePct: s.changePct, pullback: s.pullback,
             tight: typeof s.closeTightness === 'number' ? s.closeTightness : null,
             floorDist: effF ? +(((s.price - effF) / effF) * 100).toFixed(2) : null, floor: effF,
-            // Sama macam generator tracker: SL = trail 20% dari high (entry baru: high = harga).
-            sl: +(s.price * 0.80).toFixed(3),
+            // Sama macam generator tracker: SL = max(lantai DINAMIK*0.97, trail high*0.80)
+            sl: +Math.max(effF * 0.97, s.price * 0.80).toFixed(3),
             inTracker: frTrackedNames.has(canonName(s.name).toUpperCase()),
             label: signalLabel(s.name, frTrackedStatus),
             touch: s.touchCount || 0,
