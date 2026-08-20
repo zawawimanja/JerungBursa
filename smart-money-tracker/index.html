@@ -5242,37 +5242,25 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     : `<span style="color: #94a3b8; font-weight: 600; background: rgba(148,163,184,0.1); padding: 0.15rem 0.45rem; border-radius: 4px; font-size: 0.72rem; border: 1px solid rgba(148,163,184,0.2); white-space: nowrap;">NO</span>`;
 
                 let badgesHtml = '';
-                // CS Squeeze badge: RED CS (squeeze on = accumulation) vs GREEN CS (volume spike = expansion/breakout)
-                // Entry style: buy during RED CS (pre-breakout), avoid GREEN CS (breakout/expansion)
+                // 1. Entry Phase Badge (RED CS / GREEN CS)
                 const csExpanded = item.hasVolumeSpike === true && (item.volumeSpike || 0) >= 1.5;
-                badgesHtml = (csExpanded
+                badgesHtml += csExpanded
                     ? `<span style="font-size: 0.62rem; background: rgba(16, 185, 129, 0.18); color: #34d399; padding: 0.08rem 0.32rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(16, 185, 129, 0.5); white-space: nowrap; animation: pulse 1.5s infinite;" title="GREEN CS: Squeeze OFF — volume spike ${(item.volumeSpike || 0).toFixed(1)}x (breakout/expansion). Not accumulation phase — avoid entry.">🔥 GREEN CS</span>`
-                    : `<span style="font-size: 0.62rem; background: rgba(251, 113, 133, 0.18); color: #fb7185; padding: 0.08rem 0.32rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(251, 113, 133, 0.5); white-space: nowrap;" title="RED CS: Squeeze ON — quiet volume, accumulation phase before breakout. Optimal entry phase.">🧲 RED CS</span>`) + badgesHtml;
-                // FUSION badge: qualify Fresh Rider + Hot Theme (Semicon/Solar Conf2+)
+                    : `<span style="font-size: 0.62rem; background: rgba(251, 113, 133, 0.18); color: #fb7185; padding: 0.08rem 0.32rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(251, 113, 133, 0.5); white-space: nowrap;" title="RED CS: Squeeze ON — quiet volume, accumulation phase before breakout. Optimal entry phase.">🧲 RED CS</span>`;
+
+                // 2. High-Conviction Badge (Top 1 Only)
                 const hotThemes = getHotThemes(item.name);
                 const isHotTheme = hotThemes.length > 0 && matches.length >= 2;
                 const isFusion = isFreshRiderPick(item) && isHotTheme;
                 if (isFusion) {
                     badgesHtml += `<span style="font-size: 0.62rem; background: linear-gradient(135deg, rgba(234,179,8,0.35), rgba(168,85,247,0.35)); color: #fde047; padding: 0.08rem 0.35rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(253,224,71,0.7); white-space: nowrap; animation: pulse 1.5s infinite;" title="FUSION: Fresh VVIP Rider + Hot Theme (Semicon/Solar) — Signal paling kuat, entry agresif!">🔥⚡ FUSION</span>`;
-                }
-                if (item._tripleLock) {
+                } else if (item._tripleLock) {
                     badgesHtml += `<span style="font-size: 0.62rem; background: linear-gradient(135deg, rgba(168,85,247,0.3), rgba(16,185,129,0.3)); color: #fde047; padding: 0.08rem 0.35rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(253,224,71,0.6); white-space: nowrap; animation: pulse 1.5s infinite;" title="Triple Lock Signal: Pengumpulan Institusi (Sec 138) + Breakout Ready Base">🔒 TRIPLE LOCK</span>`;
-                }
-                if (item._isWhaleBacked && !item._tripleLock) {
+                } else if (item._isWhaleBacked) {
                     const shortWhale = item._whaleInst ? item._whaleInst.split(' ')[0] : 'JERUNG';
                     badgesHtml += `<span style="font-size: 0.62rem; background: rgba(16, 185, 129, 0.22); color: #34d399; padding: 0.08rem 0.35rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(16, 185, 129, 0.45); white-space: nowrap;" title="Pemfailan Rasmi Seksyen 138: Disokong jerung ${item._whaleInst}">🏛️ ${shortWhale}</span>`;
-                }
-                if (item._breakoutReady && !item._tripleLock) {
+                } else if (item._breakoutReady) {
                     badgesHtml += `<span style="font-size: 0.62rem; background: rgba(234, 179, 8, 0.2); color: #fde047; padding: 0.08rem 0.32rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(234, 179, 8, 0.45); white-space: nowrap; animation: pulse 1.5s infinite;" title="Breakout Ready: Tapak rapat (≤2.5%) + Sentuhan Lantai ≥4x + Volum Senyap">🎯 BREAKOUT</span>`;
-                }
-                if (item._isVdu) {
-                    badgesHtml += `<span style="font-size: 0.62rem; background: rgba(56, 189, 248, 0.18); color: #38bdf8; padding: 0.08rem 0.32rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(56, 189, 248, 0.4); white-space: nowrap;" title="Volume Dry-Up (VDU): Jualan runcit kering, harga bertahan di lantai">🔇 VDU</span>`;
-                }
-                if (item._isReclaim) {
-                    badgesHtml += `<span style="font-size: 0.62rem; background: rgba(251, 113, 133, 0.18); color: #fb7185; padding: 0.08rem 0.32rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(251, 113, 133, 0.4); white-space: nowrap;" title="IPO Open Price Reclaim: Berjaya tebus semula harga pembukaan IPO">🌱 RECLAIM</span>`;
-                }
-                if (item._isHighOs && item._osVal > 0) {
-                    badgesHtml += `<span style="font-size: 0.62rem; background: rgba(168, 85, 247, 0.18); color: #c084fc; padding: 0.08rem 0.32rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(168, 85, 247, 0.35); white-space: nowrap;" title="Permintaan Langganan Tinggi (OS: ${item._osVal}x)">🔥 OS ${item._osVal}x</span>`;
                 }
 
                 html += `
@@ -5670,7 +5658,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     badge.textContent = '➕ ADD-ON';
                     badge.style.cssText = 'font-size:0.62rem; background:linear-gradient(135deg, rgba(16,185,129,0.3), rgba(56,189,248,0.3)); color:#6ee7b7; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(16,185,129,0.6); white-space:nowrap; animation: pulse 1.5s infinite;';
                     badge.title = 'ADD-ON: MASIH kita pegang (OPEN dalam Tracker Live Fresh Rider) & qualify semula hari ini — peluang TAMBAH posisi sebelum breakout. BUKAN signal pertama; guna SL ikut harga belian AWAK sendiri, bukan SL tracker.';
-                    badgeRow.appendChild(badge);
+                    badgeRow.prepend(badge);
                     return;
                 }
                 // 🆕 NEW: entry TODAY (entryDate >= todayStr) — first time signal, not ADD-ON, not RE-ENTRY
@@ -5680,7 +5668,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     badge.textContent = '🆕 NEW';
                     badge.style.cssText = 'font-size:0.62rem; background:rgba(245,158,11,0.2); color:#fbbf24; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(245,158,11,0.4); white-space:nowrap; animation: pulse 1.5s infinite;';
                     badge.title = 'NEW: entry TODAY in Fresh Rider Live Tracker — first-time signal, not previously tracked. Buy per SOP; SL per floor/trailing tracker.';
-                    badgeRow.appendChild(badge);
+                    badgeRow.prepend(badge);
                     return;
                 }
                 if (prevSet.has(name)) return;
@@ -5694,7 +5682,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 badge.title = isReEntry
                     ? 'RE-ENTRY: tracked previously (CLOSED in Fresh Rider Live Tracker) & qualifies again — late entry, proceed with caution'
                     : 'NEW: not previously tracked in Fresh Rider Live Tracker — first-time signal';
-                badgeRow.appendChild(badge);
+                badgeRow.prepend(badge);
             });
         }
 
@@ -5771,7 +5759,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     badge.textContent = '➕ ADD-ON';
                     badge.style.cssText = 'font-size:0.62rem; background:linear-gradient(135deg, rgba(16,185,129,0.3), rgba(56,189,248,0.3)); color:#6ee7b7; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(16,185,129,0.6); white-space:nowrap; animation: pulse 1.5s infinite;';
                     badge.title = 'ADD-ON: OPEN position in Hot Theme Live Tracker & re-qualifies today — opportunity to ADD position before breakout.';
-                    badgeRow.appendChild(badge);
+                    badgeRow.prepend(badge);
                     return;
                 }
                 // 🆕 NEW
@@ -5781,7 +5769,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     badge.textContent = '🆕 NEW';
                     badge.style.cssText = 'font-size:0.62rem; background:rgba(245,158,11,0.2); color:#fbbf24; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(245,158,11,0.4); white-space:nowrap; animation: pulse 1.5s infinite;';
                     badge.title = 'NEW: entry TODAY in Hot Theme Live Tracker — first-time signal, not tracked previously. Buy per SOP; SL per floor/trailing tracker.';
-                    badgeRow.appendChild(badge);
+                    badgeRow.prepend(badge);
                     return;
                 }
                 if (prevSet.has(name)) return;
@@ -5795,7 +5783,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 badge.title = isReEntry
                     ? 'RE-ENTRY: tracked previously (CLOSED in Hot Theme Live Tracker) & qualifies again — late entry, proceed with caution'
                     : 'NEW: not previously tracked in Hot Theme Live Tracker — first-time signal';
-                badgeRow.appendChild(badge);
+                badgeRow.prepend(badge);
             });
         }
 
