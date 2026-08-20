@@ -757,10 +757,10 @@
                                 <th style="text-align: center; width: 45px;">No</th>
                                 <th>Kaunter</th>
                                 <th style="text-align: center;">Kategori Setup</th>
-                                <th style="text-align: right;">Harga Semasa</th>
+                                <th style="text-align: right;">Current Price</th>
                                 <th style="text-align: right;">Perubahan %</th>
-                                <th style="text-align: right;">Lantai Sokongan @ Harga</th>
-                                <th style="text-align: right;">Jarak Lantai</th>
+                                <th style="text-align: right;">Support Floor Price</th>
+                                <th style="text-align: right;">Floor Distance</th>
                                 <th style="text-align: right;">Volatiliti</th>
                                 <th style="text-align: right;">Stop Loss (SL)</th>
                                 <th style="text-align: right;">Turnover</th>
@@ -830,7 +830,7 @@
                 <!-- Whale Portfolio Spotlight Cards -->
                 <div style="margin-bottom: 1.25rem;">
                     <div style="font-size: 0.85rem; font-weight: 800; color: #f8fafc; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.35rem;">
-                        <span>🏆</span> Whale Portfolio Spotlight (Kaunter Teras Jerung Gergasi)
+                        <span>🏆</span> Whale Portfolio Spotlight (Core Whale Holdings)
                     </div>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0.75rem;">
                         <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 10px; padding: 0.85rem; display: flex; flex-direction: column; gap: 0.4rem;">
@@ -895,8 +895,8 @@
                                 <th style="text-align: left;">Institusi (Jerung)</th>
                                 <th style="text-align: center;">Tindakan</th>
                                 <th style="text-align: right;">Unit Diubah</th>
-                                <th style="text-align: right;">Pegangan Semasa (%)</th>
-                                <th style="text-align: center;">Isyarat Radar</th>
+                                <th style="text-align: right;">Current Holding (%)</th>
+                                <th style="text-align: center;">Radar Signal</th>
                                 <th style="text-align: center;">Dokumen Bursa</th>
                             </tr>
                         </thead>
@@ -1163,8 +1163,8 @@
                                 <th>Kaunter</th>
                                 <th style="text-align: center;">Taraf Confluence</th>
                                 <th style="text-align: center;">Fresh Rider?</th>
-                                <th style="text-align: right;">Harga Semasa</th>
-                                <th style="text-align: right;">Lantai Sokongan @ Harga</th>
+                                <th style="text-align: right;">Current Price</th>
+                                <th style="text-align: right;">Support Floor Price</th>
                                 <th style="text-align: right;">Turnover</th>
                                 <th style="text-align: center;">Perubahan %</th>
                                 <th style="text-align: center;">Sejarah</th>
@@ -1293,11 +1293,11 @@
                                 <th>Kaunter</th>
                                 <th style="text-align: center;">Tema</th>
                                 <th style="text-align: center;">Confluence</th>
-                                <th style="text-align: right;">Harga Semasa</th>
+                                <th style="text-align: right;">Current Price</th>
                                 <th style="text-align: right;">Perubahan %</th>
                                 <th style="text-align: right;">Pullback</th>
-                                <th style="text-align: right;">Lantai Sokongan @ Harga</th>
-                                <th style="text-align: right;">Jarak Lantai</th>
+                                <th style="text-align: right;">Support Floor Price</th>
+                                <th style="text-align: right;">Floor Distance</th>
                                 <th style="text-align: right;">Turnover</th>
                                 <th style="text-align: center;">Analisis AI (Skor)</th>
                             </tr>
@@ -1448,14 +1448,14 @@
                                 <option value="30" selected>Top 30 Sahaja</option>
                                 <option value="50">Top 50</option>
                                 <option value="100">Top 100</option>
-                                <option value="ALL">Semua Kaunter</option>
+                                <option value="ALL">All Stocks</option>
                             </select>
                         </div>
 
                         <div style="display: flex; gap: 0.3rem; align-items: center; background: rgba(15,23,42,0.6); padding: 0.25rem; border-radius: 8px; border: 1px solid rgba(16,185,129,0.3);">
                             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; padding: 0 0.3rem;">Harga:</span>
                             <select id="topGainersPriceFilter" onchange="renderTopGainers()" style="background: rgba(15,23,42,0.9); color: #38bdf8; border: 1px solid rgba(56,189,248,0.4); padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.75rem; font-weight: 700; cursor: pointer;">
-                                <option value="ALL" selected>Semua Harga</option>
+                                <option value="ALL" selected>All Prices</option>
                                 <option value="SUB1">Bawah RM1.00 Sahaja (Penny)</option>
                             </select>
                         </div>
@@ -1463,7 +1463,7 @@
                         <div style="display: flex; gap: 0.3rem; align-items: center; background: rgba(15,23,42,0.6); padding: 0.25rem; border-radius: 8px; border: 1px solid rgba(16,185,129,0.3);">
                             <span style="font-size: 0.72rem; color: #64748b; font-weight: 700; padding: 0 0.3rem;">Trend:</span>
                             <select id="topGainersTrendFilter" onchange="renderTopGainers()" style="background: rgba(15,23,42,0.9); color: #a78bfa; border: 1px solid rgba(167,139,250,0.4); padding: 0.25rem 0.5rem; border-radius: 6px; font-size: 0.75rem; font-weight: 700; cursor: pointer;">
-                                <option value="ALL" selected>Semua Trend</option>
+                                <option value="ALL" selected>All Trends</option>
                                 <option value="UPTREND">Di atas SMA50 (Uptrend)</option>
                             </select>
                         </div>
@@ -1532,7 +1532,7 @@
                                 <span style="font-size: 0.7rem; background: rgba(16, 185, 129, 0.2); color: #10b981; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 700; border: 1px solid rgba(16, 185, 129, 0.3); white-space: nowrap;">📈 SWING ONLY</span>
                             </div>
                             <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
-                                SOP Terunggul (Optimasi): <strong style="color: #34d399;">VVIP Trend Rider (5-Slot Beli & Peram)</strong>. Peram selagi di atas Support Floor (SL -3%). <strong style="color: #60a5fa;">Gaya: RIDE THE TREND (Tanpa TP Kaku)!</strong>
+                                Core SOP (Optimized): <strong style="color: #34d399;">VVIP Trend Rider (5-Slot Beli & Peram)</strong>. Peram selagi di atas Support Floor (SL -3%). <strong style="color: #60a5fa;">Gaya: RIDE THE TREND (Tanpa TP Kaku)!</strong>
                             </p>
                         </div>
                     </div>
@@ -1550,10 +1550,10 @@
                                 <th style="width: 50px; text-align: center; color: #3b82f6;">No</th>
                                 <th style="color: #3b82f6; text-align: left;">Kaunter</th>
                                 <th style="text-align: center; color: #3b82f6;">Kategori Setup</th>
-                                <th style="text-align: right; color: #3b82f6;">Harga Semasa</th>
+                                <th style="text-align: right; color: #3b82f6;">Current Price</th>
                                 <th style="text-align: right; color: #3b82f6;">Perubahan %</th>
-                                <th style="text-align: right; color: #3b82f6;">Lantai Sokongan @ Harga</th>
-                                <th style="text-align: right; color: #3b82f6;">Jarak Lantai</th>
+                                <th style="text-align: right; color: #3b82f6;">Support Floor Price</th>
+                                <th style="text-align: right; color: #3b82f6;">Floor Distance</th>
                                 <th style="text-align: right; color: #3b82f6;">Volatiliti</th>
                                 <th style="text-align: right; color: #3b82f6;">Stop Loss (SL)</th>
                                 <th style="text-align: right; color: #3b82f6;">Turnover</th>
@@ -1572,7 +1572,7 @@
         <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 1px solid rgba(99, 102, 241, 0.3); border-radius: 12px; padding: 1rem; box-shadow: 0 8px 24px rgba(99, 102, 241, 0.1); margin-top: 1rem; position: relative; overflow: hidden;">
             <div style="display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid rgba(99, 102, 241, 0.15); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">
                 <span style="font-size: 1.3rem;">🎓</span>
-                <h3 style="margin: 0; font-size: 1.1rem; color: #a5b4fc; font-weight: 800; text-transform: uppercase;">Panduan Strategi: Trend Rider</h3>
+                <h3 style="margin: 0; font-size: 1.1rem; color: #a5b4fc; font-weight: 800; text-transform: uppercase;">Strategy Guide: Trend Rider</h3>
             </div>
             
             <div style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px; padding: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
@@ -1634,12 +1634,12 @@
                                 <th style="width: 50px; text-align: center; color: #fb7185;">No</th>
                                 <th style="color: #fb7185; text-align: left;">Kaunter</th>
                                 <th style="text-align: center; color: #fb7185;">Kategori Setup</th>
-                                <th style="text-align: right; color: #fb7185;">Harga Semasa</th>
+                                <th style="text-align: right; color: #fb7185;">Current Price</th>
                                 <th style="text-align: right; color: #fb7185;">Perubahan %</th>
                                 <th style="text-align: right; color: #fb7185;">Open Price (Trigger)</th>
                                 <th style="text-align: right; color: #fb7185;">Jarak Trigger</th>
                                 <th style="text-align: right; color: #fb7185;">Volatiliti</th>
-                                <th style="text-align: right; color: #fb7185;">Lantai Sokongan @ Harga</th>
+                                <th style="text-align: right; color: #fb7185;">Support Floor Price</th>
                                 <th style="text-align: right; color: #fb7185;">Turnover</th>
                                 <th style="text-align: center; color: #fb7185;">Analisis AI (Skor)</th>
                             </tr>
@@ -1667,7 +1667,7 @@
         <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 1px solid rgba(251, 113, 133, 0.3); border-radius: 12px; padding: 1rem; box-shadow: 0 8px 24px rgba(251, 113, 133, 0.1); margin-top: 1rem; position: relative; overflow: hidden;">
             <div style="display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid rgba(251, 113, 133, 0.15); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">
                 <span style="font-size: 1.3rem;">🎓</span>
-                <h3 style="margin: 0; font-size: 1.1rem; color: #fb7185; font-weight: 800; text-transform: uppercase;">Panduan Strategi: Early Spring (Open Reclaim)</h3>
+                <h3 style="margin: 0; font-size: 1.1rem; color: #fb7185; font-weight: 800; text-transform: uppercase;">Strategy Guide: Early Spring (Open Reclaim)</h3>
             </div>
             
             <div style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px; padding: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
@@ -1729,11 +1729,11 @@
                                 <th style="width: 50px; text-align: center; color: #f97316;">No</th>
                                 <th style="color: #f97316; text-align: left;">Kaunter</th>
                                 <th style="text-align: center; color: #f97316;">Kategori Setup</th>
-                                <th style="text-align: right; color: #f97316;">Harga Semasa</th>
+                                <th style="text-align: right; color: #f97316;">Current Price</th>
                                 <th style="text-align: right; color: #94a3b8;">Perubahan %</th>
                                 <th style="text-align: right; color: #f97316;">Penutup Hari 1 (🔴 Garis Merah)</th>
                                 <th style="text-align: right; color: #f97316;">Jarak Garis Merah</th>
-                                <th style="text-align: right; color: #f97316;">Lantai Sokongan @ Harga</th>
+                                <th style="text-align: right; color: #f97316;">Support Floor Price</th>
                                 <th style="text-align: right; color: #f59e0b;">Turnover</th>
                                 <th style="text-align: center; color: #f97316;">Status Setup</th>
                                 <th style="text-align: center; color: #f97316;">Analisis AI (Skor)</th>
@@ -1762,7 +1762,7 @@
         <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 1px solid rgba(249, 115, 22, 0.3); border-radius: 12px; padding: 1rem; box-shadow: 0 8px 24px rgba(249, 115, 22, 0.1); margin-top: 1rem; position: relative; overflow: hidden;">
             <div style="display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid rgba(249, 115, 22, 0.15); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">
                 <span style="font-size: 1.3rem;">🎓</span>
-                <h3 style="margin: 0; font-size: 1.1rem; color: #f97316; font-weight: 800; text-transform: uppercase;">Panduan Strategi: Phoenix Spring (1st Day Close Reclaim)</h3>
+                <h3 style="margin: 0; font-size: 1.1rem; color: #f97316; font-weight: 800; text-transform: uppercase;">Strategy Guide: Phoenix Spring (1st Day Close Reclaim)</h3>
             </div>
             
             <div style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px; padding: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
@@ -1824,10 +1824,10 @@
                                 <th style="width: 50px; text-align: center; color: #f59e0b;">No</th>
                                 <th style="color: #f59e0b; text-align: left;">Kaunter</th>
                                 <th style="text-align: center; color: #f59e0b;">Kategori Setup</th>
-                                <th style="text-align: right; color: #f59e0b;">Harga Semasa</th>
+                                <th style="text-align: right; color: #f59e0b;">Current Price</th>
                                 <th style="text-align: right; color: #f59e0b;">Perubahan %</th>
-                                <th style="text-align: right; color: #f59e0b;">Lantai Sokongan @ Harga</th>
-                                <th style="text-align: right; color: #f59e0b;">Jarak Lantai</th>
+                                <th style="text-align: right; color: #f59e0b;">Support Floor Price</th>
+                                <th style="text-align: right; color: #f59e0b;">Floor Distance</th>
                                 <th style="text-align: right; color: #f59e0b;">Volatiliti</th>
                                 <th style="text-align: right; color: #f59e0b;">Kejatuhan (Pullback)</th>
                                 <th style="text-align: right; color: #f59e0b;">Turnover</th>
@@ -1846,7 +1846,7 @@
         <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 12px; padding: 1rem; box-shadow: 0 8px 24px rgba(245, 158, 11, 0.1); margin-top: 1rem; position: relative; overflow: hidden;">
             <div style="display: flex; align-items: center; gap: 0.5rem; border-bottom: 1px solid rgba(245, 158, 11, 0.15); padding-bottom: 0.5rem; margin-bottom: 0.75rem;">
                 <span style="font-size: 1.3rem;">🎓</span>
-                <h3 style="margin: 0; font-size: 1.1rem; color: #f59e0b; font-weight: 800; text-transform: uppercase;">Panduan Strategi: Bottom Fishing (Floor Accumulation)</h3>
+                <h3 style="margin: 0; font-size: 1.1rem; color: #f59e0b; font-weight: 800; text-transform: uppercase;">Strategy Guide: Bottom Fishing (Floor Accumulation)</h3>
             </div>
             
             <div style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px; padding: 1rem; display: flex; flex-direction: column; gap: 0.75rem;">
@@ -2003,14 +2003,14 @@
                 </div>
                 <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
                     <select id="backtest-year-filter" onchange="filterBacktestByYear()" style="background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.4rem 0.75rem; border-radius: 8px; font-weight: 800; font-size: 0.8rem; cursor: pointer; outline: none;">
-                        <option value="ALL">📅 Semua Tahun (2026+)</option>
-                        <option value="2026" selected>📅 Tahun 2026</option>
+                        <option value="ALL">📅 All Years (2026+)</option>
+                        <option value="2026" selected>📅 Year 2026</option>
                     </select>
                     <div style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.3); padding: 0.4rem 0.8rem; border-radius: 8px; font-size: 0.8rem; font-weight: 800; color: #38bdf8;">
                         🏆 Pertumbuhan Modal Akaun: <span style="color: #34d399;">+49.6% Net Capital Growth</span> <span style="color: #94a3b8; font-size: 0.75rem;">(+5.0% / trade)</span>
                     </div>
                     <button id="btn-toggle-backtest" onclick="toggleBacktestSection()" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.4rem 0.8rem; border-radius: 8px; font-weight: 800; font-size: 0.8rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.3rem; transition: background 0.2s;" onmouseover="this.style.background='rgba(56, 189, 248, 0.25)'" onmouseout="this.style.background='rgba(56, 189, 248, 0.15)'">
-                        <span>▼</span> Sembunyi / Papar Rekod
+                        <span>▼</span> Hide / Show Records
                     </button>
                 </div>
             </div>
@@ -2147,7 +2147,7 @@
 
             <div class="calc-results">
                 <div class="result-row">
-                    <span class="result-label">Harga Semasa</span>
+                    <span class="result-label">Current Price</span>
                     <span class="result-value" id="calcCurrentPrice">RM 0.000</span>
                 </div>
                 <div class="result-row">
@@ -2159,7 +2159,7 @@
                     <span class="result-value danger" id="calcSlPrice">RM 0.000</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">Jumlah Lot Boleh Dibeli</span>
+                    <span class="result-label">Max Lots to Buy</span>
                     <span class="result-value" id="calcLots">0 Lot (0 unit)</span>
                 </div>
                 <div class="result-row">
@@ -2167,7 +2167,7 @@
                     <span class="result-value" id="calcActualCapital">RM 0.00</span>
                 </div>
                 <div class="result-row">
-                    <span class="result-label">Kerugian Maksimum (Jika Kena SL)</span>
+                    <span class="result-label">Max Loss (If SL Triggered)</span>
                     <span class="result-value danger" id="calcMaxRisk">RM 0.00 (0.00%)</span>
                 </div>
                 <div class="result-row">
@@ -2200,8 +2200,8 @@
         <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.8)); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 1.5rem; box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); backdrop-filter: blur(8px); margin-bottom: 2rem;">
             
             <div style="text-align: center; margin-bottom: 1.5rem;">
-                <h3 style="margin: 0; font-size: 1.3rem; color: #a78bfa; font-weight: 800; text-shadow: 0 0 10px rgba(167, 139, 250, 0.3);">📖 Glosari & Panduan Sistem JerungBursa</h3>
-                <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">Panduan lengkap memahami setiap istilah, lencana, lajur data, dan fungsi tapisan (filter) di dalam web.</p>
+                <h3 style="margin: 0; font-size: 1.3rem; color: #a78bfa; font-weight: 800; text-shadow: 0 0 10px rgba(167, 139, 250, 0.3);">📖 Glossary & System Guide</h3>
+                <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">Comprehensive guide to understanding terms, badges, data columns, and filter functions.</p>
             </div>
 
             <!-- SEKSYEN: BEDAH CONTOH METADATA SAHAM (ANATOMY OF A ROW) -->
@@ -2328,7 +2328,7 @@
                 </h4>
                 <div style="display: grid; grid-template-columns: 1fr; gap: 0.6rem; font-size: 0.75rem;">
                     <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.03); padding-bottom: 0.35rem;">
-                        <strong style="color: #a78bfa; width: 140px; flex-shrink: 0;">Lantai Sokongan:</strong>
+                        <strong style="color: #a78bfa; width: 140px; flex-shrink: 0;">Support Floor:</strong>
                         <span style="color: #cbd5e1; flex-grow: 1;">Harga lantai dasar (Floor Low) terdekat yang dikesan melalui kluster data sejarah. Ia adalah garisan pertahanan Jerung/Smart Money.</span>
                     </div>
                     <div style="display: flex; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.03); padding-bottom: 0.35rem;">
@@ -2353,7 +2353,7 @@
             <!-- SECTION 4: PENAPIS UTAMA (FILTERS) -->
             <div>
                 <h4 style="color: #38bdf8; margin-top: 0; margin-bottom: 0.75rem; font-size: 0.95rem; font-weight: 800;">
-                     ⚙️ Panduan Fungsi Tapisan (Filters)
+                     ⚙️ Filter Functions Guide
                 </h4>
                 <div style="display: grid; grid-template-columns: 1fr; gap: 0.6rem; font-size: 0.75rem;">
                     <div style="background: rgba(30, 41, 59, 0.4); border: 1px solid rgba(255,255,255,0.03); border-radius: 8px; padding: 0.6rem;">
@@ -2384,12 +2384,12 @@
                 <div style="display: flex; align-items: center; gap: 0.6rem;">
                     <span style="font-size: 1.6rem;">💼</span>
                     <div>
-                        <h3 style="margin: 0; font-size: 1.25rem; color: #a78bfa; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">Portfolio Dagangan Peram Saya</h3>
-                        <span style="font-size: 0.7rem; color: var(--text-muted); font-weight: 600;">Kemas kini harga semasa secara langsung merentasi 4 akaun berbeza</span>
+                        <h3 style="margin: 0; font-size: 1.25rem; color: #a78bfa; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">My Swing Trading Portfolio</h3>
+                        <span style="font-size: 0.7rem; color: var(--text-muted); font-weight: 600;">Live price updates across 4 trading accounts</span>
                     </div>
                 </div>
                 <div style="background: rgba(167, 139, 250, 0.1); border: 1px solid rgba(167, 139, 250, 0.25); border-radius: 8px; padding: 0.4rem 0.8rem; font-weight: 700; font-size: 0.85rem; color: #a78bfa;">
-                    Jumlah Nilaian Portfolio: <span id="portfolio-total-val" style="color: white; font-weight: 800;">Dikira Secara Langsung...</span>
+                    Total Portfolio Value: <span id="portfolio-total-val" style="color: white; font-weight: 800;">Calculating Live...</span>
                 </div>
             </div>
             
@@ -2397,16 +2397,16 @@
                 <table class="history-table" style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.85rem;">
                     <thead>
                         <tr style="border-bottom: 2px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">
-                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800;">Saham</th>
-                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Teknik &amp; Disiplin</th>
-                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Harga Beli</th>
-                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Harga Semasa</th>
-                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Harga Stop Loss (SL)</th>
-                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Jarak Ke SL</th>
-                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Prestasi P&amp;L</th>
-                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Status Perlindungan</th>
-                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Carta</th>
-                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Tindakan</th>
+                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800;">Stock</th>
+                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Technique &amp; Discipline</th>
+                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Entry Price</th>
+                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Current Price</th>
+                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Stop Loss (SL) Price</th>
+                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Distance to SL</th>
+                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">P&amp;L Performance</th>
+                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Protection Status</th>
+                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Chart</th>
+                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Action</th>
                         </tr>
                     </thead>
                     <tbody id="portfolioTableBody">
@@ -2866,13 +2866,13 @@ Sila senaraikan perbandingan spesifik dengan format bernombor berikut:
 
             const userPrompt = `Sila buat analisis teknikal & risiko bagi kaunter berikut:
 - Nama Saham: ${item.name}
-- Harga Semasa: RM ${item.price.toFixed(3)}
-- Lantai Sokongan: RM ${floorPrice.toFixed(3)}
-- Jarak ke Lantai Sokongan: ${distToFloor.toFixed(1)}%
+- Current Price: RM ${item.price.toFixed(3)}
+- Support Floor: RM ${floorPrice.toFixed(3)}
+- Jarak ke Support Floor: ${distToFloor.toFixed(1)}%
 - Bilangan Sentuhan Lantai (Touches): ${item.touchCount || 0}x
 - Volatiliti (Low Tightness): ${volatility.toFixed(1)}%
 - Pullback dari Puncak 52-Minggu: -${pullbackVal.toFixed(1)}%
-- Peratusan Perubahan Harga Semasa: ${pct.toFixed(2)}%
+- Peratusan Perubahan Current Price: ${pct.toFixed(2)}%
 - Purata SMA50: ${item.sma50 ? 'RM ' + item.sma50.toFixed(3) : 'N/A'}
 - Purata SMA200: ${item.sma200 ? 'RM ' + item.sma200.toFixed(3) : 'N/A'}
 - Gred IPO: ${item.ipoGrade || 'Unrated'}
@@ -3055,13 +3055,13 @@ Sila senaraikan perbandingan spesifik dengan format bernombor berikut:
             const userPrompt = `Sila buat analisis teknikal & risiko bagi kaunter berikut menggunakan teknik ${technique}:
 - Nama Saham: ${item.name}
 - Teknik Dagangan: ${technique}
-- Harga Semasa: RM ${item.price.toFixed(3)}
-- Lantai Sokongan: RM ${floorPrice.toFixed(3)}
-- Jarak ke Lantai Sokongan: ${distToFloor.toFixed(1)}%
+- Current Price: RM ${item.price.toFixed(3)}
+- Support Floor: RM ${floorPrice.toFixed(3)}
+- Jarak ke Support Floor: ${distToFloor.toFixed(1)}%
 - Bilangan Sentuhan Lantai (Touches): ${item.touchCount || 0}x
 - Volatiliti (Low Tightness): ${volatility.toFixed(1)}%
 - Pullback dari Puncak 52-Minggu: -${pullbackVal.toFixed(1)}%
-- Peratusan Perubahan Harga Semasa: ${pct.toFixed(2)}%
+- Peratusan Perubahan Current Price: ${pct.toFixed(2)}%
 - Purata SMA50: ${item.sma50 ? 'RM ' + item.sma50.toFixed(3) : 'N/A'}
 - Purata SMA200: ${item.sma200 ? 'RM ' + item.sma200.toFixed(3) : 'N/A'}
 - Gred IPO: ${item.ipoGrade || 'Unrated'}
@@ -4905,7 +4905,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             });
 
             if (validPicks.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">🦈 Tiada kaunter dalam fasa pengumpulan jerung hari ini. Cuba lagi esok.</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">🦈 No stocks in whale accumulation phase today.</td></tr>`;
                 return;
             }
 
@@ -5029,7 +5029,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
         // Lantai sokongan DINAMIK: selepas breakout, floorLow scanner (lantai asal) ketinggalan —
         // saham dah bina lantai BARU lebih tinggi (cth. AMBEST breakout 3-Ogos, kini base ~1.09,
         // bukan 0.92 lagi). Rule: kalau harga dah >10% atas lantai asal (sudah breakout), guna
-        // lantai baru = minimum harga 5 hari dagangan terakhir. Kalau masih dalam base asal
+        // lantai baru = minimum harga 5 trading days terakhir. Kalau masih dalam base asal
         // (<10%), kekal floorLow scanner — elak lantai palsu lebih tinggi dari harga (kes MMCS).
         let _recentFloorCache = null; // { key, map: name -> min price (lantai baru) }
         async function getRecentFloorMap(baseDateStr, lookbackDays = 5) {
@@ -5219,7 +5219,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             if (picks.length === 0) {
                 // Bezakan sebab list kosong supaya pengguna tahu nak buat apa:
                 // (1) data belum muat, (2) filter global aktif, (3) memang tiada setup hari ini
-                let emptyMsg = '🔥 Tiada setup Fresh VVIP Rider hari ini.';
+                let emptyMsg = '🔥 No Fresh VVIP Rider setups today.';
                 if (!currentData || currentData.length === 0) {
                     emptyMsg = '⚠️ Data belum dimuat — klik butang <strong>🔄 Muat Data</strong> di atas.';
                 } else {
@@ -5343,7 +5343,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
             tbody.innerHTML = html;
 
-            // Tandai signal yang BARU qualify hari ini (tak qualify hari dagangan sebelumnya)
+            // Tandai signal yang BARU qualify hari ini (tak qualify trading days sebelumnya)
             markFreshRiderNewBadges();
 
             // Render tracker live (entry->exit) setiap kali tab dibuka
@@ -5358,7 +5358,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             if (!tbody) return;
             const data = window.FRESH_RIDER_TRACKER;
             if (!data || !Array.isArray(data.trades) || data.trades.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="9" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">Tiada data tracker lagi — akan dijana pada kemas kini data seterusnya.</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="9" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">No tracker data available yet — will be generated on next data update.</td></tr>';
                 return;
             }
             const s = data.summary || {};
@@ -5378,7 +5378,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 setT('frHeadBtAvg', (bt.avgGain >= 0 ? '+' : '') + (bt.avgGain ?? 18.1));
                 setT('frHeadBtWorst', (bt.worstLoss >= 0 ? '+' : '') + (bt.worstLoss ?? -10.3));
                 const meta = document.getElementById('frBacktestMeta');
-                if (meta) meta.textContent = `${bt.dataDays || '-'} hari dagangan (~3 bulan kalendar: ${bt.dataStart || ''} – ${bt.dataEnd || ''}) · Simulasi: tutup trade selepas 20 hari`;
+                if (meta) meta.textContent = `${bt.dataDays || '-'} trading days (~3 calendar months: ${bt.dataStart || ''} – ${bt.dataEnd || ''}) · Simulation: close trade after 20 days`;
             }
             // Contoh kaunter yang MELEtUP dalam tracker live (maxGain >= 40%) — untuk description header
             const movers = (data.trades || [])
@@ -5387,7 +5387,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 .map(t => `${t.name} +${Math.round(t.maxGain)}%`);
             const moversEl = document.getElementById('frHeadMovers');
             if (moversEl) moversEl.textContent = movers.length ? movers.join(' · ') : '—';
-            // Kaunter yang MASIH qualify hari ini (untuk lajur "Masih Radar?")
+            // Kaunter yang MASIH qualify hari ini (untuk lajur "Still Tracked?")
             const liveList = (currentData && currentData.length > 0) ? currentData : ((window.liveData && window.liveData.topVolume) || []);
             // Pastikan konsisten dengan list Fresh VVIP Rider di atas: label BOLEH ENTRY
             // mesti ikut global filter (harga max, umur IPO, strict, dll) juga — bukan
@@ -5494,12 +5494,12 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             if (!tbody) return;
             const data = window.HOT_THEME_TRACKER;
             if (!data || !Array.isArray(data.trades) || data.trades.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">Tiada data tracker lagi — akan dijana pada kemas kini data seterusnya.</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">No tracker data available yet — will be generated on next data update.</td></tr>';
                 return;
             }
             const s = data.summary || {};
             const bt = data.backtest || {};
-            // Kaunter yang MASIH qualify hari ini (untuk lajur "Status Pegangan")
+            // Kaunter yang MASIH qualify hari ini (untuk lajur "Position Status")
             const htLiveList = (currentData && currentData.length > 0) ? currentData : ((window.liveData && window.liveData.topVolume) || []);
             const stillQualifiesHT = new Set(htLiveList.filter(it => {
                 try { return qualifiesHotTheme(it); } catch (e) { return false; }
@@ -5512,7 +5512,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             setT('htBtTotal', (bt.totalPnl >= 0 ? '+' : '') + (bt.totalPnl ?? '—') + '%');
             setT('htBtWorst', (bt.worstLoss ?? '—') + '%');
             const meta = document.getElementById('htBacktestMeta');
-            if (meta) meta.textContent = `${bt.dataDays || '-'} hari dagangan (~3 bulan kalendar: ${bt.dataStart || ''} – ${bt.dataEnd || ''}) · Simulasi: tutup trade selepas 20 hari`;
+            if (meta) meta.textContent = `${bt.dataDays || '-'} trading days (~3 calendar months: ${bt.dataStart || ''} – ${bt.dataEnd || ''}) · Simulation: close trade after 20 days`;
             // Render theme rotation detector
             if (data.themeStrength && data.themeStrength.length > 0) {
                 const latest = data.themeStrength[data.themeStrength.length - 1];
@@ -5644,7 +5644,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             return true;
         }
 
-        // Kumpul nama yang pernah qualify Fresh Rider dalam 30 hari dagangan terakhir (sebelum tarikh rujukan)
+        // Kumpul nama yang pernah qualify Fresh Rider dalam 30 trading days terakhir (sebelum tarikh rujukan)
         async function getRecentFreshRiderNames(baseDateStr) {
             let base = new Date();
             if (baseDateStr) {
@@ -5943,7 +5943,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             });
 
             if (confluencePicks.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">🎯 Tiada kaunter bertembung (Confluence) hari ini.</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">🎯 No Confluence stocks today.</td></tr>`;
                 return;
             }
 
@@ -6062,7 +6062,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             const list = currentData || [];
 
             // Lantai dinamik (sama macam Fresh Rider): selepas breakout, guna lantai BARU
-            // (min 5 hari dagangan terakhir) — bukan lantai asal yang ketinggalan jauh di bawah.
+            // (min 5 trading days terakhir) — bukan lantai asal yang ketinggalan jauh di bawah.
             const hdHT = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || '';
             const recentFloorMapHT = await getRecentFloorMap(hdHT, 5);
             if (seq !== _hotThemeRenderSeq) return; // render lama — jangan overwrite
@@ -6132,7 +6132,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             });
 
             if (picks.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">⚡ Tiada kaunter Semicon/Solar yang qualify Confluence 2+ hari ini.</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">⚡ No Semicon/Solar stocks qualifying 2+ Confluence today.</td></tr>`;
                 return;
             }
 
@@ -6200,7 +6200,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
 
             tbody.innerHTML = html;
 
-            // Tandai signal yang BARU qualify hari ini (tak qualify hari dagangan sebelumnya)
+            // Tandai signal yang BARU qualify hari ini (tak qualify trading days sebelumnya)
             markHotThemeNewBadges();
         }
 
@@ -6406,7 +6406,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 hybridTbody.innerHTML = `
                     <tr>
                         <td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
-                            ⏳ Tiada kaunter Trend Rider premium hari ini.
+                            ⏳ No premium Trend Rider stocks today.
                         </td>
                     </tr>
                 `;
@@ -6580,7 +6580,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 reclaimTbody.innerHTML = `
                     <tr>
                         <td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
-                            ⏳ Tiada kaunter Early Spring premium hari ini.
+                            ⏳ No premium Early Spring stocks today.
                         </td>
                     </tr>
                 `;
@@ -6694,7 +6694,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 bfTbody.innerHTML = `
                     <tr>
                         <td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
-                            ⏳ Tiada kaunter Bottom Fishing premium hari ini.
+                            ⏳ No premium Bottom Fishing stocks today.
                         </td>
                     </tr>
                 `;
@@ -7190,7 +7190,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 `;
             });
 
-            tbody.innerHTML = html || `<tr><td colspan="11" style="text-align:center; color:var(--text-muted); padding:1.5rem;">⏳ Tiada kaunter Phoenix Spring hari ini.</td></tr>`;
+            tbody.innerHTML = html || `<tr><td colspan="11" style="text-align:center; color:var(--text-muted); padding:1.5rem;">⏳ No Phoenix Spring stocks today.</td></tr>`;
         }
         window.renderPhoenixSpring = renderPhoenixSpring;
 
@@ -7310,7 +7310,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             if (pickEl) pickEl.textContent = `${top5.length} / 5`;
 
             if (top5.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="11" style="text-align: center; color: var(--text-muted); padding: 1.5rem;">Tiada kaunter memenuhi kriteria Weekly Homework.</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="11" style="text-align: center; color: var(--text-muted); padding: 1.5rem;">No stocks matching Weekly Homework criteria.</td></tr>`;
                 return;
             }
 
@@ -7353,7 +7353,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     const slPrice = (mItem.floorLow * 0.97).toFixed(3);
                     planText = `Entry Isnin <strong style="color: #fbbf24;">RM ${entryPriceStr}</strong> | SL <strong style="color: #ef4444;">RM ${slPrice}</strong> (&le; 5%)`;
                 } else {
-                    planText = `Rujuk carta harian untuk entry risiko ketat`;
+                    planText = `Check daily chart for tight risk entry`;
                 }
 
                 html += `
@@ -7388,7 +7388,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             if (!wrapper || !btn) return;
             if (wrapper.style.display === 'none') {
                 wrapper.style.display = 'block';
-                btn.innerHTML = '<span>▲</span> Sembunyikan Rekod';
+                btn.innerHTML = '<span>▲</span> Hidekan Rekod';
             } else {
                 wrapper.style.display = 'none';
                 btn.innerHTML = '<span>▼</span> Buka Rekod Backtest';

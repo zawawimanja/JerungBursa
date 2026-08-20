@@ -1,10 +1,10 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-08-20T09:16:42.308Z",
+  "generatedAt": "2026-08-20T09:24:58.920Z",
   "dataDays": 63,
-  "totalTracked": 46,
-  "openCount": 33,
+  "totalTracked": 45,
+  "openCount": 32,
   "closedCount": 13,
   "closedWins": 9,
   "closedWinRate": 69,
@@ -468,25 +468,6 @@ window.HOT_THEME_TRACKER = {
  ],
  "themeTrend": "FLAT/FALLING",
  "trades": [
-  {
-   "name": "NEXG",
-   "entryDate": "2026-08-20",
-   "entry": 1.11,
-   "entryFloor": 1.05,
-   "currentFloor": 1.05,
-   "currentPrice": 1.11,
-   "high": 1.11,
-   "highDate": "2026-08-20",
-   "maxGain": 0,
-   "finalGain": 0,
-   "days": 1,
-   "lastDate": "2026-08-20",
-   "status": "OPEN",
-   "themes": [
-    "Solar/RE"
-   ],
-   "confluence": 2
-  },
   {
    "name": "MINOX",
    "entryDate": "2026-08-20",
