@@ -1,469 +1,469 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-08-20T04:44:42.280Z",
+  "generatedAt": "2026-08-20T06:02:53.411Z",
   "dataDays": 63,
-  "totalTracked": 28,
-  "openCount": 20,
-  "closedCount": 8,
-  "closedWins": 6,
-  "closedWinRate": 75,
-  "closedAvgGain": 21.7,
-  "openPnl": 271.2,
-  "closedPnl": 173.4,
-  "totalPnlNow": 444.6
+  "totalTracked": 45,
+  "openCount": 32,
+  "closedCount": 13,
+  "closedWins": 9,
+  "closedWinRate": 69,
+  "closedAvgGain": 17,
+  "openPnl": 467.9,
+  "closedPnl": 221,
+  "totalPnlNow": 688.9
  },
  "backtest": {
   "dataStart": "2026-05-25",
   "dataEnd": "2026-08-20",
   "dataDays": 63,
-  "signals": 24,
-  "winRate": 83,
-  "avgGain": 11.9,
-  "totalPnl": 285.3,
+  "signals": 41,
+  "winRate": 73,
+  "avgGain": 9.3,
+  "totalPnl": 381.6,
   "worstLoss": -12
  },
  "themeStrength": [
   {
    "date": "2026-05-25",
-   "themePct": 31.1,
-   "themeCount": 6,
+   "themePct": 33.6,
+   "themeCount": 8,
    "totalCount": 17,
-   "ma5": 31.1
+   "ma5": 33.6
   },
   {
    "date": "2026-05-26",
-   "themePct": 20.3,
-   "themeCount": 10,
+   "themePct": 61.9,
+   "themeCount": 14,
    "totalCount": 28,
-   "ma5": 25.7
+   "ma5": 47.8
   },
   {
    "date": "2026-05-27",
-   "themePct": 14.9,
-   "themeCount": 8,
+   "themePct": 48.7,
+   "themeCount": 11,
    "totalCount": 18,
-   "ma5": 22.1
+   "ma5": 48.1
   },
   {
    "date": "2026-05-28",
-   "themePct": 9.8,
-   "themeCount": 8,
+   "themePct": 35.2,
+   "themeCount": 11,
    "totalCount": 18,
-   "ma5": 19
+   "ma5": 44.8
   },
   {
    "date": "2026-05-29",
-   "themePct": 8.6,
-   "themeCount": 8,
+   "themePct": 20.9,
+   "themeCount": 11,
    "totalCount": 19,
-   "ma5": 16.9
+   "ma5": 40.1
   },
   {
    "date": "2026-06-01",
    "themePct": 0,
-   "themeCount": 2,
+   "themeCount": 3,
    "totalCount": 15,
-   "ma5": 10.7
+   "ma5": 33.3
   },
   {
    "date": "2026-06-02",
    "themePct": 0,
-   "themeCount": 38,
+   "themeCount": 67,
    "totalCount": 273,
-   "ma5": 6.7
+   "ma5": 21
   },
   {
    "date": "2026-06-03",
-   "themePct": 35.9,
-   "themeCount": 39,
+   "themePct": 50,
+   "themeCount": 68,
    "totalCount": 275,
-   "ma5": 10.9
+   "ma5": 21.2
   },
   {
    "date": "2026-06-04",
-   "themePct": 38.4,
-   "themeCount": 39,
+   "themePct": 46.6,
+   "themeCount": 68,
    "totalCount": 275,
-   "ma5": 16.6
+   "ma5": 23.5
   },
   {
    "date": "2026-06-05",
-   "themePct": 30.4,
-   "themeCount": 38,
+   "themePct": 41.4,
+   "themeCount": 67,
    "totalCount": 275,
-   "ma5": 20.9
+   "ma5": 27.6
   },
   {
    "date": "2026-06-08",
-   "themePct": 37.1,
-   "themeCount": 38,
+   "themePct": 50.3,
+   "themeCount": 67,
    "totalCount": 274,
-   "ma5": 28.4
+   "ma5": 37.7
   },
   {
    "date": "2026-06-09",
-   "themePct": 25.6,
-   "themeCount": 38,
+   "themePct": 36.8,
+   "themeCount": 67,
    "totalCount": 275,
-   "ma5": 33.5
+   "ma5": 45
   },
   {
    "date": "2026-06-10",
-   "themePct": 21.1,
-   "themeCount": 38,
+   "themePct": 33.7,
+   "themeCount": 67,
    "totalCount": 278,
-   "ma5": 30.5
+   "ma5": 41.8
   },
   {
    "date": "2026-06-11",
-   "themePct": 30.8,
-   "themeCount": 38,
+   "themePct": 41.8,
+   "themeCount": 67,
    "totalCount": 277,
-   "ma5": 29
+   "ma5": 40.8
   },
   {
    "date": "2026-06-12",
-   "themePct": 30.9,
-   "themeCount": 38,
+   "themePct": 50.8,
+   "themeCount": 67,
    "totalCount": 277,
-   "ma5": 29.1
+   "ma5": 42.7
   },
   {
    "date": "2026-06-15",
-   "themePct": 22.1,
-   "themeCount": 38,
+   "themePct": 35.4,
+   "themeCount": 67,
    "totalCount": 275,
-   "ma5": 26.1
+   "ma5": 39.7
   },
   {
    "date": "2026-06-16",
-   "themePct": 21.6,
-   "themeCount": 38,
+   "themePct": 30.6,
+   "themeCount": 67,
    "totalCount": 273,
-   "ma5": 25.3
+   "ma5": 38.5
   },
   {
    "date": "2026-06-17",
    "themePct": 0,
    "themeCount": 0,
    "totalCount": 16,
-   "ma5": 21.1
+   "ma5": 31.7
   },
   {
    "date": "2026-06-18",
-   "themePct": 18.1,
-   "themeCount": 38,
+   "themePct": 25.8,
+   "themeCount": 67,
    "totalCount": 274,
-   "ma5": 18.5
+   "ma5": 28.5
   },
   {
    "date": "2026-06-19",
-   "themePct": 16.1,
-   "themeCount": 39,
+   "themePct": 27.4,
+   "themeCount": 68,
    "totalCount": 275,
-   "ma5": 15.6
+   "ma5": 23.8
   },
   {
    "date": "2026-06-22",
-   "themePct": 30.5,
-   "themeCount": 39,
+   "themePct": 39.7,
+   "themeCount": 68,
    "totalCount": 274,
-   "ma5": 17.3
+   "ma5": 24.7
   },
   {
    "date": "2026-06-23",
-   "themePct": 16.1,
-   "themeCount": 40,
+   "themePct": 30.4,
+   "themeCount": 69,
    "totalCount": 276,
-   "ma5": 16.2
+   "ma5": 24.7
   },
   {
    "date": "2026-06-24",
-   "themePct": 21.4,
-   "themeCount": 40,
+   "themePct": 35.8,
+   "themeCount": 69,
    "totalCount": 277,
-   "ma5": 20.4
+   "ma5": 31.8
   },
   {
    "date": "2026-06-25",
-   "themePct": 25.1,
-   "themeCount": 41,
+   "themePct": 35.4,
+   "themeCount": 70,
    "totalCount": 278,
-   "ma5": 21.8
+   "ma5": 33.7
   },
   {
    "date": "2026-06-26",
-   "themePct": 23.2,
-   "themeCount": 40,
+   "themePct": 32.2,
+   "themeCount": 69,
    "totalCount": 281,
-   "ma5": 23.3
+   "ma5": 34.7
   },
   {
    "date": "2026-06-29",
-   "themePct": 21.9,
-   "themeCount": 40,
+   "themePct": 31.1,
+   "themeCount": 69,
    "totalCount": 282,
-   "ma5": 21.5
+   "ma5": 33
   },
   {
    "date": "2026-06-30",
-   "themePct": 14.4,
-   "themeCount": 40,
+   "themePct": 32.4,
+   "themeCount": 69,
    "totalCount": 281,
-   "ma5": 21.2
+   "ma5": 33.4
   },
   {
    "date": "2026-07-01",
-   "themePct": 24.1,
-   "themeCount": 40,
+   "themePct": 38.7,
+   "themeCount": 69,
    "totalCount": 279,
-   "ma5": 21.7
+   "ma5": 34
   },
   {
    "date": "2026-07-02",
-   "themePct": 22.6,
-   "themeCount": 39,
+   "themePct": 33.1,
+   "themeCount": 68,
    "totalCount": 265,
-   "ma5": 21.2
+   "ma5": 33.5
   },
   {
    "date": "2026-07-03",
-   "themePct": 21.3,
-   "themeCount": 40,
+   "themePct": 29,
+   "themeCount": 69,
    "totalCount": 280,
-   "ma5": 20.9
+   "ma5": 32.9
   },
   {
    "date": "2026-07-06",
-   "themePct": 22.5,
-   "themeCount": 40,
+   "themePct": 34.4,
+   "themeCount": 69,
    "totalCount": 281,
-   "ma5": 21
+   "ma5": 33.5
   },
   {
    "date": "2026-07-07",
-   "themePct": 27.9,
-   "themeCount": 40,
+   "themePct": 38.5,
+   "themeCount": 69,
    "totalCount": 279,
-   "ma5": 23.7
+   "ma5": 34.7
   },
   {
    "date": "2026-07-08",
-   "themePct": 27.9,
-   "themeCount": 40,
+   "themePct": 38.4,
+   "themeCount": 69,
    "totalCount": 279,
-   "ma5": 24.4
+   "ma5": 34.7
   },
   {
    "date": "2026-07-09",
-   "themePct": 17.7,
-   "themeCount": 38,
+   "themePct": 32,
+   "themeCount": 66,
    "totalCount": 282,
-   "ma5": 23.5
+   "ma5": 34.5
   },
   {
    "date": "2026-07-10",
-   "themePct": 18.7,
-   "themeCount": 38,
+   "themePct": 27.6,
+   "themeCount": 66,
    "totalCount": 279,
-   "ma5": 22.9
+   "ma5": 34.2
   },
   {
    "date": "2026-07-13",
-   "themePct": 13.4,
-   "themeCount": 37,
+   "themePct": 23.1,
+   "themeCount": 65,
    "totalCount": 280,
-   "ma5": 21.1
+   "ma5": 31.9
   },
   {
    "date": "2026-07-14",
-   "themePct": 19.3,
-   "themeCount": 40,
+   "themePct": 30,
+   "themeCount": 68,
    "totalCount": 285,
-   "ma5": 19.4
+   "ma5": 30.2
   },
   {
    "date": "2026-07-15",
-   "themePct": 17.5,
-   "themeCount": 39,
+   "themePct": 25,
+   "themeCount": 68,
    "totalCount": 282,
-   "ma5": 17.3
+   "ma5": 27.5
   },
   {
    "date": "2026-07-16",
-   "themePct": 16.7,
-   "themeCount": 39,
+   "themePct": 21.4,
+   "themeCount": 67,
    "totalCount": 285,
-   "ma5": 17.1
+   "ma5": 25.4
   },
   {
    "date": "2026-07-17",
-   "themePct": 16.6,
-   "themeCount": 39,
+   "themePct": 22.5,
+   "themeCount": 67,
    "totalCount": 284,
-   "ma5": 16.7
+   "ma5": 24.4
   },
   {
    "date": "2026-07-21",
-   "themePct": 22.2,
-   "themeCount": 38,
+   "themePct": 35.3,
+   "themeCount": 63,
    "totalCount": 275,
-   "ma5": 18.5
+   "ma5": 26.8
   },
   {
    "date": "2026-07-22",
-   "themePct": 19.9,
-   "themeCount": 40,
+   "themePct": 25.8,
+   "themeCount": 68,
    "totalCount": 286,
-   "ma5": 18.6
+   "ma5": 26
   },
   {
    "date": "2026-07-23",
-   "themePct": 11.3,
-   "themeCount": 39,
+   "themePct": 15.4,
+   "themeCount": 67,
    "totalCount": 287,
-   "ma5": 17.3
+   "ma5": 24.1
   },
   {
    "date": "2026-07-24",
-   "themePct": 16.6,
-   "themeCount": 39,
+   "themePct": 20.8,
+   "themeCount": 67,
    "totalCount": 284,
-   "ma5": 17.3
-  },
-  {
-   "date": "2026-07-27",
-   "themePct": 18,
-   "themeCount": 39,
-   "totalCount": 285,
-   "ma5": 17.6
-  },
-  {
-   "date": "2026-07-28",
-   "themePct": 19.2,
-   "themeCount": 39,
-   "totalCount": 284,
-   "ma5": 17
-  },
-  {
-   "date": "2026-07-29",
-   "themePct": 35.4,
-   "themeCount": 39,
-   "totalCount": 283,
-   "ma5": 20.1
-  },
-  {
-   "date": "2026-07-30",
-   "themePct": 31,
-   "themeCount": 39,
-   "totalCount": 285,
    "ma5": 24
   },
   {
-   "date": "2026-07-31",
-   "themePct": 30.1,
-   "themeCount": 41,
-   "totalCount": 287,
-   "ma5": 26.7
-  },
-  {
-   "date": "2026-08-03",
-   "themePct": 32.9,
-   "themeCount": 40,
+   "date": "2026-07-27",
+   "themePct": 31,
+   "themeCount": 67,
    "totalCount": 285,
-   "ma5": 29.7
-  },
-  {
-   "date": "2026-08-04",
-   "themePct": 21.2,
-   "themeCount": 39,
-   "totalCount": 285,
-   "ma5": 30.1
-  },
-  {
-   "date": "2026-08-05",
-   "themePct": 28.1,
-   "themeCount": 40,
-   "totalCount": 284,
-   "ma5": 28.7
-  },
-  {
-   "date": "2026-08-06",
-   "themePct": 16,
-   "themeCount": 41,
-   "totalCount": 289,
    "ma5": 25.7
   },
   {
-   "date": "2026-08-07",
-   "themePct": 18.5,
-   "themeCount": 39,
+   "date": "2026-07-28",
+   "themePct": 28.3,
+   "themeCount": 67,
    "totalCount": 284,
-   "ma5": 23.3
+   "ma5": 24.3
+  },
+  {
+   "date": "2026-07-29",
+   "themePct": 44.6,
+   "themeCount": 67,
+   "totalCount": 283,
+   "ma5": 28
+  },
+  {
+   "date": "2026-07-30",
+   "themePct": 38.9,
+   "themeCount": 67,
+   "totalCount": 285,
+   "ma5": 32.7
+  },
+  {
+   "date": "2026-07-31",
+   "themePct": 37.4,
+   "themeCount": 69,
+   "totalCount": 287,
+   "ma5": 36
+  },
+  {
+   "date": "2026-08-03",
+   "themePct": 36.7,
+   "themeCount": 67,
+   "totalCount": 285,
+   "ma5": 37.2
+  },
+  {
+   "date": "2026-08-04",
+   "themePct": 31.8,
+   "themeCount": 67,
+   "totalCount": 285,
+   "ma5": 37.9
+  },
+  {
+   "date": "2026-08-05",
+   "themePct": 45,
+   "themeCount": 69,
+   "totalCount": 284,
+   "ma5": 38
+  },
+  {
+   "date": "2026-08-06",
+   "themePct": 22.5,
+   "themeCount": 70,
+   "totalCount": 289,
+   "ma5": 34.7
+  },
+  {
+   "date": "2026-08-07",
+   "themePct": 25.6,
+   "themeCount": 68,
+   "totalCount": 284,
+   "ma5": 32.3
   },
   {
    "date": "2026-08-10",
-   "themePct": 23.4,
-   "themeCount": 39,
+   "themePct": 35.2,
+   "themeCount": 68,
    "totalCount": 284,
-   "ma5": 21.4
+   "ma5": 32
   },
   {
    "date": "2026-08-11",
-   "themePct": 20.8,
-   "themeCount": 40,
+   "themePct": 29.2,
+   "themeCount": 69,
    "totalCount": 285,
-   "ma5": 21.4
+   "ma5": 31.5
   },
   {
    "date": "2026-08-12",
-   "themePct": 30.3,
-   "themeCount": 41,
+   "themePct": 37.6,
+   "themeCount": 70,
    "totalCount": 287,
-   "ma5": 21.8
+   "ma5": 30
   },
   {
    "date": "2026-08-13",
-   "themePct": 18.6,
-   "themeCount": 40,
+   "themePct": 23.5,
+   "themeCount": 69,
    "totalCount": 286,
-   "ma5": 22.3
+   "ma5": 30.2
   },
   {
    "date": "2026-08-14",
-   "themePct": 16.1,
-   "themeCount": 40,
+   "themePct": 22.7,
+   "themeCount": 69,
    "totalCount": 285,
-   "ma5": 21.8
+   "ma5": 29.6
   },
   {
    "date": "2026-08-17",
-   "themePct": 14.1,
-   "themeCount": 40,
+   "themePct": 24.5,
+   "themeCount": 69,
    "totalCount": 287,
-   "ma5": 20
+   "ma5": 27.5
   },
   {
    "date": "2026-08-18",
-   "themePct": 15.3,
-   "themeCount": 39,
+   "themePct": 26.1,
+   "themeCount": 67,
    "totalCount": 284,
-   "ma5": 18.9
+   "ma5": 26.9
   },
   {
    "date": "2026-08-19",
-   "themePct": 20.9,
-   "themeCount": 40,
+   "themePct": 27.6,
+   "themeCount": 67,
    "totalCount": 290,
-   "ma5": 17
+   "ma5": 24.9
   },
   {
    "date": "2026-08-20",
-   "themePct": 6.5,
-   "themeCount": 39,
+   "themePct": 22.6,
+   "themeCount": 66,
    "totalCount": 288,
-   "ma5": 14.6
+   "ma5": 24.7
   }
  ],
  "themeTrend": "FLAT/FALLING",
@@ -528,6 +528,26 @@ window.HOT_THEME_TRACKER = {
    "slTrail": 0.194
   },
   {
+   "name": "VS",
+   "entryDate": "2026-08-14",
+   "entry": 1.83,
+   "entryFloor": 1.69,
+   "currentFloor": 1.65,
+   "currentPrice": 1.75,
+   "high": 1.83,
+   "highDate": "2026-08-14",
+   "maxGain": 0,
+   "finalGain": -4.4,
+   "days": 5,
+   "lastDate": "2026-08-20",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 2,
+   "slTrail": 1.6
+  },
+  {
    "name": "PENTECH",
    "entryDate": "2026-08-07",
    "entry": 0.29,
@@ -548,6 +568,26 @@ window.HOT_THEME_TRACKER = {
    "slTrail": 0.286
   },
   {
+   "name": "SKYECHIP",
+   "entryDate": "2026-08-06",
+   "entry": 3.03,
+   "entryFloor": 2.84,
+   "currentFloor": 2.96,
+   "currentPrice": 3.1600000858306885,
+   "high": 3.299999952316284,
+   "highDate": "2026-08-12",
+   "maxGain": 8.9,
+   "finalGain": 4.3,
+   "days": 11,
+   "lastDate": "2026-08-20",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "slTrail": 2.871
+  },
+  {
    "name": "NEXGRAM",
    "entryDate": "2026-08-06",
    "entry": 1.05,
@@ -566,6 +606,26 @@ window.HOT_THEME_TRACKER = {
    ],
    "confluence": 2,
    "slTrail": 1.018
+  },
+  {
+   "name": "BETA",
+   "entryDate": "2026-08-05",
+   "entry": 0.78,
+   "entryFloor": 0.72,
+   "currentFloor": 0.755,
+   "currentPrice": 0.7599999904632568,
+   "high": 0.8450000286102295,
+   "highDate": "2026-08-07",
+   "maxGain": 8.3,
+   "finalGain": -2.6,
+   "days": 12,
+   "lastDate": "2026-08-20",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 2,
+   "slTrail": 0.732
   },
   {
    "name": "FRONTKN",
@@ -648,6 +708,26 @@ window.HOT_THEME_TRACKER = {
    "slTrail": 0.233
   },
   {
+   "name": "INFOM",
+   "entryDate": "2026-06-30",
+   "entry": 1.17,
+   "entryFloor": 1.03,
+   "currentFloor": 1.48,
+   "currentPrice": 1.5800000429153442,
+   "high": 1.5800000429153442,
+   "highDate": "2026-08-20",
+   "maxGain": 35,
+   "finalGain": 35,
+   "days": 37,
+   "lastDate": "2026-08-20",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 2,
+   "slTrail": 1.485
+  },
+  {
    "name": "CNERGEN",
    "entryDate": "2026-06-24",
    "entry": 0.605,
@@ -673,11 +753,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 4.52,
    "entryFloor": 4.51,
    "currentFloor": 5.54,
-   "currentPrice": 6.43,
-   "high": 6.43,
+   "currentPrice": 6.42,
+   "high": 6.42,
    "highDate": "2026-08-20",
-   "maxGain": 42.3,
-   "finalGain": 42.3,
+   "maxGain": 42,
+   "finalGain": 42,
    "days": 43,
    "lastDate": "2026-08-20",
    "status": "OPEN",
@@ -685,7 +765,27 @@ window.HOT_THEME_TRACKER = {
     "Semiconductor"
    ],
    "confluence": 3,
-   "slTrail": 6.044
+   "slTrail": 6.035
+  },
+  {
+   "name": "EMPIRE",
+   "entryDate": "2026-06-05",
+   "entry": 1.05,
+   "entryFloor": 0.99,
+   "currentFloor": 0.98,
+   "currentPrice": 1.0299999713897705,
+   "high": 1.059999942779541,
+   "highDate": "2026-06-08",
+   "maxGain": 1,
+   "finalGain": -1.9,
+   "days": 53,
+   "lastDate": "2026-08-20",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "slTrail": 0.951
   },
   {
    "name": "NE",
@@ -707,6 +807,46 @@ window.HOT_THEME_TRACKER = {
    ],
    "confluence": 2,
    "slTrail": 1.018
+  },
+  {
+   "name": "3REN",
+   "entryDate": "2026-06-05",
+   "entry": 0.395,
+   "entryFloor": 0.385,
+   "currentFloor": 0.375,
+   "currentPrice": 0.4050000011920929,
+   "high": 0.4350000023841858,
+   "highDate": "2026-08-14",
+   "maxGain": 10.1,
+   "finalGain": 2.5,
+   "days": 53,
+   "lastDate": "2026-08-20",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 2,
+   "slTrail": 0.364
+  },
+  {
+   "name": "INARI",
+   "entryDate": "2026-06-03",
+   "entry": 2.36,
+   "entryFloor": 2.2,
+   "currentFloor": 2.22,
+   "currentPrice": 2.2200000286102295,
+   "high": 2.5199999809265137,
+   "highDate": "2026-08-10",
+   "maxGain": 6.8,
+   "finalGain": -5.9,
+   "days": 55,
+   "lastDate": "2026-08-20",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 2,
+   "slTrail": 2.153
   },
   {
    "name": "KGB",
@@ -829,6 +969,46 @@ window.HOT_THEME_TRACKER = {
    "slTrail": 2.638
   },
   {
+   "name": "SUNVIEW",
+   "entryDate": "2026-06-03",
+   "entry": 0.37,
+   "entryFloor": 0.365,
+   "currentFloor": 0.36,
+   "currentPrice": 0.3700000047683716,
+   "high": 0.375,
+   "highDate": "2026-06-04",
+   "maxGain": 1.4,
+   "finalGain": 0,
+   "days": 55,
+   "lastDate": "2026-08-20",
+   "status": "OPEN",
+   "themes": [
+    "Solar/RE"
+   ],
+   "confluence": 3,
+   "slTrail": 0.349
+  },
+  {
+   "name": "PWRWELL",
+   "entryDate": "2026-06-03",
+   "entry": 0.815,
+   "entryFloor": 0.795,
+   "currentFloor": 0.985,
+   "currentPrice": 1.1299999952316284,
+   "high": 1.1299999952316284,
+   "highDate": "2026-08-20",
+   "maxGain": 38.7,
+   "finalGain": 38.7,
+   "days": 54,
+   "lastDate": "2026-08-20",
+   "status": "OPEN",
+   "themes": [
+    "Solar/RE"
+   ],
+   "confluence": 3,
+   "slTrail": 1.062
+  },
+  {
    "name": "ECOMATE",
    "entryDate": "2026-06-03",
    "entry": 0.855,
@@ -849,6 +1029,46 @@ window.HOT_THEME_TRACKER = {
    "slTrail": 0.825
   },
   {
+   "name": "CORAZA",
+   "entryDate": "2026-06-03",
+   "entry": 0.985,
+   "entryFloor": 0.94,
+   "currentFloor": 1.11,
+   "currentPrice": 1.1799999475479126,
+   "high": 1.190000057220459,
+   "highDate": "2026-08-14",
+   "maxGain": 20.8,
+   "finalGain": 19.8,
+   "days": 54,
+   "lastDate": "2026-08-20",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 2,
+   "slTrail": 1.119
+  },
+  {
+   "name": "PEKAT",
+   "entryDate": "2026-06-03",
+   "entry": 1.58,
+   "entryFloor": 1.55,
+   "currentFloor": 1.75,
+   "currentPrice": 1.8799999952316284,
+   "high": 1.8799999952316284,
+   "highDate": "2026-08-20",
+   "maxGain": 19,
+   "finalGain": 19,
+   "days": 55,
+   "lastDate": "2026-08-20",
+   "status": "OPEN",
+   "themes": [
+    "Solar/RE"
+   ],
+   "confluence": 3,
+   "slTrail": 1.698
+  },
+  {
    "name": "SAMAIDEN",
    "entryDate": "2026-06-03",
    "entry": 1.25,
@@ -867,6 +1087,26 @@ window.HOT_THEME_TRACKER = {
    ],
    "confluence": 3,
    "slTrail": 1.598
+  },
+  {
+   "name": "HEGROUP",
+   "entryDate": "2026-06-03",
+   "entry": 0.465,
+   "entryFloor": 0.46,
+   "currentFloor": 0.735,
+   "currentPrice": 0.8949999809265137,
+   "high": 0.9150000214576721,
+   "highDate": "2026-08-19",
+   "maxGain": 96.8,
+   "finalGain": 92.5,
+   "days": 55,
+   "lastDate": "2026-08-20",
+   "status": "OPEN",
+   "themes": [
+    "Solar/RE"
+   ],
+   "confluence": 3,
+   "slTrail": 0.86
   },
   {
    "name": "SAM",
@@ -979,6 +1219,28 @@ window.HOT_THEME_TRACKER = {
    "exitPrice": 1.861200017929077
   },
   {
+   "name": "ECA",
+   "entryDate": "2026-06-16",
+   "entry": 0.225,
+   "entryFloor": 0.21,
+   "currentFloor": 0.285,
+   "currentPrice": 0.29499998688697815,
+   "high": 0.33500000834465027,
+   "highDate": "2026-07-07",
+   "maxGain": 48.9,
+   "finalGain": 40,
+   "days": 18,
+   "lastDate": "2026-07-10",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 2,
+   "slTrail": 0.315,
+   "exitDate": "2026-07-10",
+   "exitPrice": 0.3149000078439712
+  },
+  {
    "name": "HKB",
    "entryDate": "2026-06-10",
    "entry": 0.53,
@@ -999,6 +1261,28 @@ window.HOT_THEME_TRACKER = {
    "slTrail": 0.686,
    "exitDate": "2026-06-29",
    "exitPrice": 0.6862000179290771
+  },
+  {
+   "name": "DUFU",
+   "entryDate": "2026-06-03",
+   "entry": 2.07,
+   "entryFloor": 2.02,
+   "currentFloor": 2.14,
+   "currentPrice": 2.3399999141693115,
+   "high": 2.559999942779541,
+   "highDate": "2026-06-25",
+   "maxGain": 23.7,
+   "finalGain": 16.3,
+   "days": 17,
+   "lastDate": "2026-06-26",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 2,
+   "slTrail": 2.406,
+   "exitDate": "2026-06-26",
+   "exitPrice": 2.4063999462127685
   },
   {
    "name": "AMS",
@@ -1023,6 +1307,28 @@ window.HOT_THEME_TRACKER = {
    "exitPrice": 0.36079999999999995
   },
   {
+   "name": "VSTECS",
+   "entryDate": "2026-06-03",
+   "entry": 2.073,
+   "entryFloor": 1.9,
+   "currentFloor": 1.71,
+   "currentPrice": 1.7200000286102295,
+   "high": 2.073,
+   "highDate": "2026-06-03",
+   "maxGain": 0,
+   "finalGain": -12,
+   "days": 14,
+   "lastDate": "2026-06-23",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "slTrail": 1.824,
+   "exitDate": "2026-06-23",
+   "exitPrice": 1.8242399999999999
+  },
+  {
    "name": "DNEX",
    "entryDate": "2026-06-03",
    "entry": 0.315,
@@ -1044,6 +1350,50 @@ window.HOT_THEME_TRACKER = {
    "slTrail": 0.437,
    "exitDate": "2026-06-23",
    "exitPrice": 0.43710000336170196
+  },
+  {
+   "name": "OPPSTAR",
+   "entryDate": "2026-06-03",
+   "entry": 0.66,
+   "entryFloor": 0.65,
+   "currentFloor": 0.53,
+   "currentPrice": 0.5400000214576721,
+   "high": 0.66,
+   "highDate": "2026-06-03",
+   "maxGain": 0,
+   "finalGain": -12,
+   "days": 6,
+   "lastDate": "2026-06-10",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 2,
+   "slTrail": 0.581,
+   "exitDate": "2026-06-10",
+   "exitPrice": 0.5808
+  },
+  {
+   "name": "SFPTECH",
+   "entryDate": "2026-06-03",
+   "entry": 0.265,
+   "entryFloor": 0.275,
+   "currentFloor": 0.265,
+   "currentPrice": 0.30000001192092896,
+   "high": 0.32499998807907104,
+   "highDate": "2026-06-09",
+   "maxGain": 22.6,
+   "finalGain": 15.3,
+   "days": 6,
+   "lastDate": "2026-06-10",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 2,
+   "slTrail": 0.305,
+   "exitDate": "2026-06-10",
+   "exitPrice": 0.30549998879432677
   }
  ]
 };
