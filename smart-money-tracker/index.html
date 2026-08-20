@@ -5338,7 +5338,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                 setT('frHeadBtAvg', (bt.avgGain >= 0 ? '+' : '') + (bt.avgGain ?? 18.1));
                 setT('frHeadBtWorst', (bt.worstLoss >= 0 ? '+' : '') + (bt.worstLoss ?? -10.3));
                 const meta = document.getElementById('frBacktestMeta');
-                if (meta) meta.textContent = `${bt.dataDays || '-'} hari (${bt.dataStart || ''} – ${bt.dataEnd || ''}) · Simulasi: tutup trade selepas 20 hari`;
+                if (meta) meta.textContent = `${bt.dataDays || '-'} hari dagangan (~3 bulan kalendar: ${bt.dataStart || ''} – ${bt.dataEnd || ''}) · Simulasi: tutup trade selepas 20 hari`;
             }
             // Contoh kaunter yang MELEtUP dalam tracker live (maxGain >= 40%) — untuk description header
             const movers = (data.trades || [])
@@ -5472,7 +5472,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
             setT('htBtTotal', (bt.totalPnl >= 0 ? '+' : '') + (bt.totalPnl ?? '—') + '%');
             setT('htBtWorst', (bt.worstLoss ?? '—') + '%');
             const meta = document.getElementById('htBacktestMeta');
-            if (meta) meta.textContent = `${bt.dataDays || '-'} hari (${bt.dataStart || ''} – ${bt.dataEnd || ''}) · Simulasi: tutup trade selepas 20 hari`;
+            if (meta) meta.textContent = `${bt.dataDays || '-'} hari dagangan (~3 bulan kalendar: ${bt.dataStart || ''} – ${bt.dataEnd || ''}) · Simulasi: tutup trade selepas 20 hari`;
             // Render theme rotation detector
             if (data.themeStrength && data.themeStrength.length > 0) {
                 const latest = data.themeStrength[data.themeStrength.length - 1];
