@@ -5416,6 +5416,8 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
                     <td style="text-align: right; color: #f87171; font-weight: 700;">RM ${slTrail}</td>
                 </tr>`;
             }).join('');
+
+            updateTopTrackerPnlBadge();
         }
         window.renderFreshRiderTracker = renderFreshRiderTracker;
 
@@ -6684,6 +6686,7 @@ Bandingkan saham ini SECARA SPESIFIK dengan 3 contoh teknik ${technique} di atas
         window.addEventListener('DOMContentLoaded', () => {
             fetchLiveData();
             renderPhoenixSpring();
+            updateTopTrackerPnlBadge();
 
             const hash = window.location.hash.replace('#', '');
             if (hash && ['vcp', 'trend', 'spring', 'phoenix', 'fishing', 'calculator', 'info', 'portfolio', 'weekly', 'jerung', 'confluence', 'realconfluence'].includes(hash)) {
