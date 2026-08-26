@@ -207,9 +207,9 @@ for (const day of dayList) {
         if (dayChange > 1.5 || dayChange < 0.5) continue;
         t.days++;
         t.lastDate = day.date;
-        t.currentPrice = cur.price;
+        t.currentPrice = +cur.price.toFixed(3);
         if (cur.floorLow) t.currentFloor = +dynamicFloor(name, cur.price, cur.floorLow).toFixed(3);
-        if (cur.price > t.high) { t.high = cur.price; t.highDate = day.date; }
+        if (cur.price > t.high) { t.high = +cur.price.toFixed(3); t.highDate = day.date; }
         t.maxGain = +(((t.high - t.entry) / t.entry) * 100).toFixed(1);
 
         const sl = hotThemeExit(t, cur.price);
@@ -217,7 +217,7 @@ for (const day of dayList) {
         if (cur.price <= sl) {
             t.status = 'CLOSED_SL';
             t.exitDate = day.date;
-            t.exitPrice = sl;
+            t.exitPrice = +sl.toFixed(3);
             t.finalGain = +(((sl - t.entry) / t.entry) * 100).toFixed(1);
             delete open[name];
         } else {
@@ -231,6 +231,17 @@ for (const day of dayList) {
         const name = canonName(it.name).toUpperCase();
         if (open[name] || trades.some(t => t.name.toUpperCase() === name)) continue;
         if (!isHotThemePick(it)) continue;
+
+        // Anomaly guard on entry: semak jika harga entry melonjak pelik vs harga semalam
+        const recentArr = recentByName[name] || [];
+        if (recentArr.length > 0) {
+            const lastPx = recentArr[recentArr.length - 1];
+            if (lastPx > 0) {
+                const ratio = it.price / lastPx;
+                if (ratio > 1.8 || ratio < 0.4) continue; // Abai data anomaly spike pada hari entry
+            }
+        }
+
         const t = {
             name: canonName(it.name),
             entryDate: day.date,

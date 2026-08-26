@@ -14,12 +14,54 @@ const { execSync } = require('child_process');
 const path = require('path');
 
 const VERIFIED_SYMBOLS = {
-    'MI': '5286.KL',        // MI Technovation (disahkan: harga Jun-Jul 4.5-4.7 sepadan)
-    'MSC': '5916.KL',       // Malaysian Smelting Corp (disahkan: 1.97-2.01 sepadan)
-    'NE': '0325.KL',        // Northeast Group
-    'SAMAIDEN': '0223.KL',  // Samaiden Group
-    'SAM': '9822.KL',       // SAM Engineering (disahkan: 7-Jul = 4.97 sepadan)
-    'FRONTKN': '0014.KL',   // Frontken Corp (Yahoo kadang tiada data — fallback kekal beku)
+    'MI': '5286.KL',
+    'MSC': '5916.KL',
+    'NE': '0325.KL',
+    'SAMAIDEN': '0223.KL',
+    'SAM': '9822.KL',
+    'FRONTKN': '0014.KL',
+    'MISC': '3816.KL',
+    'NEXGRAM': '0096.KL',
+    'MINOX': '0288.KL',
+    'PENTECH': '0457.KL',
+    'SKYECHIP': '5357.KL',
+    'CRPMATE': '0331.KL',
+    'NATGATE': '0270.KL',
+    'ICTZONE': '0358.KL',
+    'RAMSSOL': '0236.KL',
+    'TEAMSTR': '0393.KL',
+    'INFOM': '0265.KL',
+    'CNERGEN': '0246.KL',
+    'BETA': '0263.KL',
+    'AMS': '0399.KL',
+    '3REN': '0328.KL',
+    'EMPIRE': '5351.KL',
+    'INARI': '0166.KL',
+    'KGB': '0151.KL',
+    'VITROX': '0097.KL',
+    'MNHLDG': '0245.KL',
+    'UWC': '5292.KL',
+    'SLVEST': '0215.KL',
+    'GREATEC': '0208.KL',
+    'SUNVIEW': '0262.KL',
+    'PWRWELL': '0217.KL',
+    'ECOMATE': '0239.KL',
+    'PEKAT': '0233.KL',
+    'SUNLOGY': '0342.KL',
+    'OXB': '0340.KL',
+    'MTTSL': '0336.KL',
+    'STRATUS': '5354.KL',
+    'ECOSHOP': '5348.KL',
+    'HEGROUP': '0296.KL',
+    'EIPOWER': '0337.KL',
+    'MMCS': '0346.KL',
+    'CBHB': '0339.KL',
+    'OGX': '0347.KL',
+    'AMBEST': '0341.KL',
+    'THMY': '0338.KL',
+    'ISF': '0335.KL',
+    'KEEMING': '0345.KL',
+    'ICENTS': '0343.KL',
 };
 
 // Fetch quote Yahoo (sync via child process — generator kekal sync).
@@ -80,10 +122,10 @@ function backfillStaleTrades(trades, latestDate, exitFn) {
             continue;
         }
 
-        t.currentPrice = q.close;
+        t.currentPrice = +q.close.toFixed(3);
         t.lastDate = q.date;
         t.days = tradingDaysBetween(t.entryDate, q.date);
-        if (q.close > t.high) { t.high = q.close; t.highDate = q.date; }
+        if (q.close > t.high) { t.high = +q.close.toFixed(3); t.highDate = q.date; }
         t.maxGain = +(((t.high - t.entry) / t.entry) * 100).toFixed(1);
 
         const sl = exitFn ? exitFn(t, q.close) : t.high * 0.80;

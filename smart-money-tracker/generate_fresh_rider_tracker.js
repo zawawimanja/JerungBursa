@@ -98,9 +98,9 @@ for (const day of dayList) {
         if (!cur || cur.price <= 0) continue; // tiada data hari ni, skip
         t.days++;
         t.lastDate = day.date;
-        t.currentPrice = cur.price;
+        t.currentPrice = +cur.price.toFixed(3);
         if (cur.floorLow) t.currentFloor = +dynamicFloor(name, cur.price, cur.floorLow).toFixed(3);
-        if (cur.price > t.high) { t.high = cur.price; t.highDate = day.date; }
+        if (cur.price > t.high) { t.high = +cur.price.toFixed(3); t.highDate = day.date; }
         t.maxGain = +(((t.high - t.entry) / t.entry) * 100).toFixed(1);
 
         // EXIT: (1) Initial SL 11% bawah entry (cut loss awal jika harga tak pernah naik)
