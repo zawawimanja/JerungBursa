@@ -448,6 +448,79 @@
             </div>
         </div>
 
+        <!-- FRESH RIDER & HOT THEME TRACKER SOP SECTION -->
+        <div class="section-panel" style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(34, 211, 238, 0.05)); border: 2px solid #38bdf8; box-shadow: 0 10px 30px rgba(56, 189, 248, 0.12);">
+            <div class="panel-title" style="color: #38bdf8; border-bottom: 1px solid rgba(56, 189, 248, 0.25);">🚀 SOP & Exits: Fresh Rider & Hot Theme Trackers</div>
+
+            <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1rem;">
+
+                <!-- Fresh Rider SOP -->
+                <div class="step-block" style="border-left-color: #38bdf8; background: rgba(56, 189, 248, 0.02);">
+                    <h4 class="step-title" style="color: #38bdf8;">🚀 1. Teknik Fresh Rider Tracker (Fresh IPO Trend Ride)</h4>
+                    <p class="step-desc">
+                        Fokus khusus untuk saham IPO Baru (2024-2026) yang mempunyai kekuatan momentum dan disokong oleh volum pembeli institusi.
+                    </p>
+                    <ul class="step-list">
+                        <li><strong>Syarat Entry:</strong> Saham Fresh IPO + melepasi kombinasi tapisan Jerung Radar / Staircase / Trend Rider.</li>
+                        <li><strong>Peraturan Exit 1 (Trailing SL 20%):</strong> Stop Loss dianjutkan sentiasa mengekor <strong>20% di bawah harga Puncak (HIGH)</strong> (<code>t.high * 0.80</code>). Selagi harga terus naik, posisi <strong>HOLD</strong> untuk merebut trend besar (cth. KEEMING +134.9%, AMBEST +73.5%).</li>
+                        <li><strong>Peraturan Exit 2 (Initial Hard SL -11%):</strong> Jika harga jatuh selepas entry tanpa pernah naik, posisi ditutup pada -11% dari harga entry.</li>
+                        <li><strong>Tempoh Pegang:</strong> Tiada had masa tetap — pegang selagi garisan Trailing SL 20% tidak disentuh.</li>
+                    </ul>
+                </div>
+
+                <!-- Hot Theme SOP -->
+                <div class="step-block" style="border-left-color: #a78bfa; background: rgba(167, 139, 250, 0.02);">
+                    <h4 class="step-title" style="color: #a78bfa;">🔥 2. Teknik Hot Theme Tracker (Semiconductor & Solar/RE Confluence)</h4>
+                    <p class="step-desc">
+                        Fokus pada kaunter tema hangat (Semiconductor & Solar/RE) yang mempunyai confluence 2+ strategi teknikal.
+                    </p>
+                    <ul class="step-list">
+                        <li><strong>Syarat Entry:</strong> Kaunter tergolong dalam tema Semiconductor / Solar/RE + melepasi minima 2 strategi (Jerung Radar, VCP, Trend Rider, Early Spring, Bottom Fishing) + buang entry hari volum spike (CS Merah sahaja).</li>
+                        <li><strong>Hybrid Trailing Stop (Kunci Profit):</strong>
+                            <br>&bull; Jika Profit Puncak &lt; +20%: Trailing SL pada <strong>20% di bawah HIGH</strong> (<code>high * 0.80</code>).
+                            <br>&bull; Jika Profit Puncak &ge; +20%: Trailing SL diketatkan kepada <strong>6% di bawah HIGH</strong> (<code>high * 0.94</code>) untuk mengunci sekurang-kurangnya +14% keuntungan.
+                        </li>
+                        <li><strong>Dynamic Floor SL:</strong> Paras sokongan dianjot mengikut lantai 5 hari terakhir selepas berlaku breakout &gt;10%.</li>
+                        <li><strong>Hard Stop -16%:</strong> Jika posisi bertahan &gt; 5 hari tanpa pergerakan, hard stop diletak pada -16% dari harga entry.</li>
+                    </ul>
+                </div>
+
+                <!-- PnL Explanation Box -->
+                <div class="step-block" style="border-left-color: #fbbf24; background: rgba(251, 191, 36, 0.03);">
+                    <h4 class="step-title" style="color: #fbbf24;">💡 3. Pengertian & Perbezaan OPEN PnL vs CLOSED PnL</h4>
+                    <p class="step-desc">
+                        Fahami perbezaan dua statistik utama dalam jadual tracker:
+                    </p>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 0.75rem;">
+                        <div style="background: rgba(15, 23, 42, 0.6); padding: 1rem; border-radius: 8px; border: 1px solid rgba(52, 211, 153, 0.3);">
+                            <div style="font-weight: 800; color: #34d399; font-size: 0.95rem; margin-bottom: 0.4rem;">🟢 OPEN PnL (Unrealized Profit/Loss)</div>
+                            <div style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.5;">
+                                Untung/rugi terapung bagi posisi yang <strong>masih AKTIF</strong> di pasaran.
+                                <br><br>
+                                • Harganya sentiasa bergerak secara <strong>LIVE</strong> mengikut harga pasaran semasa hari ini.
+                                <br>
+                                • Belum dijual / belum direalisasikan.
+                            </div>
+                        </div>
+                        <div style="background: rgba(15, 23, 42, 0.6); padding: 1rem; border-radius: 8px; border: 1px solid rgba(148, 163, 184, 0.3);">
+                            <div style="font-weight: 800; color: #94a3b8; font-size: 0.95rem; margin-bottom: 0.4rem;">⚪ CLOSED PnL (Realized Profit/Loss)</div>
+                            <div style="font-size: 0.85rem; color: #cbd5e1; line-height: 1.5;">
+                                Untung/rugi bagi posisi yang <strong>TELAH DITUTUP (Cut Loss / Take Profit)</strong> apabila terlanggar Stop Loss.
+                                <br><br>
+                                • Memaparkan <strong>Exit Price</strong> pada tarikh trade tersebut ditutup.
+                                <br>
+                                • Nilainya <strong>TIDAK AKAN BERUBAH LAGI</strong> kerana posisi telah selamat dijual.
+                            </div>
+                        </div>
+                    </div>
+                    <div style="margin-top: 0.8rem; font-size: 0.85rem; color: #fbbf24; background: rgba(251, 191, 36, 0.1); padding: 0.6rem 0.8rem; border-radius: 6px;">
+                        <strong>🔑 Total PnL Now:</strong> Jumlah gabungan <code>OPEN PnL + CLOSED PnL</code> untuk mengukur prestasi keseluruhan akaun/sistem dagangan dari awal hingga kini.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
         <!-- Position Sizer Calculator -->
         <div class="section-panel">
             <div class="panel-title" style="color: var(--success);">🧮 Position Sizing & DCA Risk Calculator</div>
