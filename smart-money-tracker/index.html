@@ -638,7 +638,7 @@
         <!-- Top Navigation (1 baris sama dengan title) -->
         <div class="top-nav" style="display: flex; justify-content: flex-end; align-items: center; gap: 0.45rem; flex-wrap: wrap; max-width: 100%;">
             <!-- TRACKER TOTAL PNL BADGE (belah kiri sekali) -->
-            <div id="top-tracker-pnl-badge" onclick="switchTab('confluence'); document.getElementById('view-confluence')?.scrollIntoView({behavior:'smooth'});" style="display: inline-flex; align-items: center; gap: 0.55rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(56, 189, 248, 0.22)); border: 1.5px solid rgba(52, 211, 153, 0.7); padding: 0.45rem 0.95rem; border-radius: 24px; box-shadow: 0 0 18px rgba(52, 211, 153, 0.35); cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; margin-right: auto;" onmouseover="this.style.transform='scale(1.04)'; this.style.boxShadow='0 0 24px rgba(52,211,153,0.6)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 18px rgba(52,211,153,0.35)';" title="Click to view Live Tracker — Cumulative Fresh Rider + Hot Theme PnL">
+            <div id="top-tracker-pnl-badge" onclick="switchTab('trackerdaily'); document.getElementById('view-trackerdaily')?.scrollIntoView({behavior:'smooth'});" style="display: inline-flex; align-items: center; gap: 0.55rem; background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(56, 189, 248, 0.22)); border: 1.5px solid rgba(52, 211, 153, 0.7); padding: 0.45rem 0.95rem; border-radius: 24px; box-shadow: 0 0 18px rgba(52, 211, 153, 0.35); cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; margin-right: auto;" onmouseover="this.style.transform='scale(1.04)'; this.style.boxShadow='0 0 24px rgba(52,211,153,0.6)';" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 18px rgba(52,211,153,0.35)';" title="Click to view Live Tracker Daily — Cohort & Daily Breakdown PnL">
                 <span style="font-size: 0.85rem; color: #cbd5e1; font-weight: 900; text-transform: uppercase; letter-spacing: 0.6px;">LIVE TRACKER PNL:</span>
                 <span id="navTotalPnlBadge" style="font-size: 1.15rem; font-weight: 900; color: #34d399; text-shadow: 0 0 12px rgba(52, 211, 153, 0.8);">—</span>
                 <div style="display: inline-flex; gap: 0.45rem; font-size: 0.85rem; border-left: 1.5px solid rgba(255,255,255,0.25); padding-left: 0.6rem; align-items: center;">
@@ -715,6 +715,7 @@
     <div class="tabs-nav" style="margin-bottom: 1rem; margin-top: 0.5rem; display: flex; gap: 0.2rem; flex-wrap: wrap;">
         <button class="tab-btn active" id="tab-confluence" onclick="switchTab('confluence')">🔥 Fresh Rider</button>
         <button class="tab-btn" id="tab-hottheme" onclick="switchTab('hottheme')">⚡ Hot Theme</button>
+        <button class="tab-btn" id="tab-trackerdaily" onclick="switchTab('trackerdaily')">📅 Tracker Daily</button>
         <button class="tab-btn" id="tab-jerung" onclick="switchTab('jerung')">🦈 Whales</button>
         <button class="tab-btn" id="tab-realconfluence" onclick="switchTab('realconfluence')">🎯 Confluence</button>
         <button class="tab-btn" id="tab-topgainers" onclick="switchTab('topgainers')">🚀 Gainers</button>
@@ -1419,6 +1420,303 @@
             </p>
         </div>
     </div> <!-- End of view-hottheme -->
+
+    <!-- TAB: LIVE TRACKER PER DAILY (COHORT & DAILY BREAKDOWN) -->
+    <div id="view-trackerdaily" style="display: none;">
+        <div style="margin-bottom: 1.25rem;">
+            <!-- Hero Card: Cumulative Tracker Overview -->
+            <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(16, 185, 129, 0.12)); border: 2px dashed #10b981; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2); position: relative; overflow: hidden; margin-bottom: 1.25rem;">
+                <div style="position: absolute; top: -50px; right: -50px; width: 160px; height: 160px; background: rgba(52, 211, 153, 0.15); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
+
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(16, 185, 129, 0.25); padding-bottom: 0.85rem;">
+                    <div style="display: flex; align-items: center; gap: 0.85rem; flex: 1; min-width: 320px;">
+                        <span style="font-size: 2rem;">📅</span>
+                        <div>
+                            <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
+                                <h2 style="margin: 0; font-size: 1.35rem; color: #34d399; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem;">
+                                    Live Tracker: Daily Radar & Cohort PnL
+                                </h2>
+                                <span style="font-size: 0.72rem; background: rgba(16, 185, 129, 0.2); color: #34d399; padding: 0.18rem 0.6rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(16, 185, 129, 0.4); white-space: nowrap;">
+                                    ⚡ HARIAN • ENTRY TO EXIT
+                                </span>
+                            </div>
+                            <p style="margin: 0.3rem 0 0 0; font-size: 0.82rem; color: #94a3b8;">
+                                Pantau prestasi setiap signal mengikut <strong style="color: #34d399;">tarikh kemasukan (Daily Cohorts)</strong>. Gabungan strategi <strong style="color: #fde047;">🔥 Fresh Rider</strong> & <strong style="color: #c4b5fd;">⚡ Hot Theme</strong> yang di-hold menggunakan <strong style="color: #38bdf8;">Hybrid Trailing Stop</strong> sehingga profit lock / exit.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PERMANENT GRAND BENCHMARK STRIP (ALWAYS VISIBLE REFERENCE) -->
+                <div style="background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(16, 185, 129, 0.35); border-radius: 10px; padding: 0.45rem 0.85rem; margin-bottom: 0.75rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; font-size: 0.75rem; box-shadow: 0 4px 14px rgba(0,0,0,0.25);">
+                    <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
+                        <span style="font-weight: 900; color: #34d399; display: inline-flex; align-items: center; gap: 0.25rem;">
+                            <span>🌐</span> GRAND BENCHMARK:
+                        </span>
+                        <span style="font-weight: 900; color: #f8fafc;">
+                            Total PnL: <span id="tdBenchGrandPnl" style="color: #34d399;">+1359.1%</span>
+                        </span>
+                        <span style="color: #64748b;">•</span>
+                        <span style="font-weight: 800; color: #fde047;">
+                            🔥 FR: <span id="tdBenchFrPnl">+637.6%</span> (19)
+                        </span>
+                        <span style="color: #64748b;">•</span>
+                        <span style="font-weight: 800; color: #c4b5fd;">
+                            ⚡ HT: <span id="tdBenchHtPnl">+721.5%</span> (47)
+                        </span>
+                    </div>
+                    <div id="tdCohortContextBadge" style="font-size: 0.72rem; color: #38bdf8; font-weight: 800; background: rgba(56, 189, 248, 0.12); padding: 0.15rem 0.55rem; border-radius: 6px; border: 1px solid rgba(56, 189, 248, 0.3);">
+                        📅 Semua Tarikh Dagangan Aktif (66 Signal)
+                    </div>
+                </div>
+
+                <!-- Big Dynamic Metrics Row -->
+                <div style="display: flex; flex-wrap: wrap; gap: 0.65rem; margin-bottom: 0.85rem;">
+                    <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(15, 23, 42, 0.8)); border: 1.5px solid rgba(52, 211, 153, 0.6); border-radius: 10px; padding: 0.55rem 0.9rem; min-width: 140px; text-align: center; flex: 1; box-shadow: 0 4px 14px rgba(16,185,129,0.2);">
+                        <div id="tdGrandTotalLabel" style="font-size: 0.62rem; color: #94a3b8; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">🏆 GRAND TOTAL PNL</div>
+                        <div id="tdGrandTotalPnl" style="font-size: 1.35rem; color: #34d399; font-weight: 900; text-shadow: 0 0 10px rgba(52,211,153,0.6);">+1359.1%</div>
+                        <div id="tdGrandTotalSub" style="font-size: 0.62rem; color: #34d399; font-weight: 700;">66 signals (100%)</div>
+                    </div>
+                    <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(253, 224, 71, 0.35); border-radius: 10px; padding: 0.55rem 0.9rem; min-width: 130px; text-align: center; flex: 1;">
+                        <div style="font-size: 0.62rem; color: #94a3b8; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">🔥 FRESH RIDER</div>
+                        <div id="tdFrPnl" style="font-size: 1.2rem; color: #fde047; font-weight: 900;">+637.6%</div>
+                        <div id="tdFrCount" style="font-size: 0.62rem; color: #94a3b8; font-weight: 700;">19 signals</div>
+                    </div>
+                    <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(196, 181, 253, 0.35); border-radius: 10px; padding: 0.55rem 0.9rem; min-width: 130px; text-align: center; flex: 1;">
+                        <div style="font-size: 0.62rem; color: #94a3b8; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">⚡ HOT THEME</div>
+                        <div id="tdHtPnl" style="font-size: 1.2rem; color: #c4b5fd; font-weight: 900;">+721.5%</div>
+                        <div id="tdHtCount" style="font-size: 0.62rem; color: #94a3b8; font-weight: 700;">47 signals</div>
+                    </div>
+                    <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 10px; padding: 0.55rem 0.85rem; min-width: 110px; text-align: center; flex: 1;">
+                        <div style="font-size: 0.62rem; color: #94a3b8; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">POSISI OPEN</div>
+                        <div id="tdOpenCount" style="font-size: 1.15rem; color: #34d399; font-weight: 900;">50</div>
+                        <div id="tdOpenPnl" style="font-size: 0.62rem; color: #34d399; font-weight: 700;">+1029.0%</div>
+                    </div>
+                    <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(148, 163, 184, 0.3); border-radius: 10px; padding: 0.55rem 0.85rem; min-width: 110px; text-align: center; flex: 1;">
+                        <div style="font-size: 0.62rem; color: #94a3b8; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">POSISI CLOSED</div>
+                        <div id="tdClosedCount" style="font-size: 1.15rem; color: #94a3b8; font-weight: 900;">16</div>
+                        <div id="tdClosedPnl" style="font-size: 0.62rem; color: #38bdf8; font-weight: 700;">+330.1%</div>
+                    </div>
+                    <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(245, 158, 11, 0.35); border-radius: 10px; padding: 0.55rem 0.85rem; min-width: 120px; text-align: center; flex: 1;">
+                        <div style="font-size: 0.62rem; color: #94a3b8; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">OVERALL WIN RATE</div>
+                        <div id="tdWinRate" style="font-size: 1.15rem; color: #fde047; font-weight: 900;">77%</div>
+                        <div id="tdAvgGain" style="font-size: 0.62rem; color: #34d399; font-weight: 700;">Avg +20.6%/trd</div>
+                    </div>
+                    <div style="background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(236, 72, 153, 0.35); border-radius: 10px; padding: 0.55rem 0.85rem; min-width: 130px; text-align: center; flex: 1;">
+                        <div style="font-size: 0.62rem; color: #94a3b8; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">PEAK TOP GAINER</div>
+                        <div id="tdPeakGainer" style="font-size: 1.15rem; color: #ec4899; font-weight: 900;">+117.4%</div>
+                        <div id="tdPeakName" style="font-size: 0.62rem; color: #f472b6; font-weight: 700;">KEEMING</div>
+                    </div>
+                </div>
+
+                <!-- TODAY'S PNL MOVERS & DRIVERS HIGHLIGHT BOX (JAWAPAN: APA NAIK & TURUN HARI INI) -->
+                <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(56, 189, 248, 0.08)); border: 1.5px solid rgba(56, 189, 248, 0.5); border-radius: 12px; padding: 0.85rem 1.1rem; margin-bottom: 0.85rem; box-shadow: 0 4px 18px rgba(56, 189, 248, 0.15);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.6rem; border-bottom: 1px solid rgba(56, 189, 248, 0.2); padding-bottom: 0.55rem; margin-bottom: 0.65rem;">
+                        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                            <span style="font-size: 1.2rem;">⚡</span>
+                            <span style="font-size: 0.88rem; font-weight: 900; color: #38bdf8; letter-spacing: 0.4px; text-transform: uppercase;">
+                                Pergerakan & Penyumbang PnL Hari Ini (Today's Movers vs Semalam)
+                            </span>
+                            <span id="tdTodayDeltaBadge" style="font-size: 0.8rem; background: rgba(16, 185, 129, 0.25); color: #34d399; padding: 0.15rem 0.6rem; border-radius: 20px; font-weight: 900; border: 1px solid rgba(52, 211, 153, 0.5);">
+                                Perubahan Bersih: +94.2% PnL
+                            </span>
+                        </div>
+                        <div id="tdTodaySentimentSummary" style="font-size: 0.72rem; color: #94a3b8; font-weight: 700;">
+                            <span style="color: #34d399;">▲ 22 Naik</span> · <span style="color: #f87171;">▼ 11 Turun</span> · <span style="color: #94a3b8;">━ 17 Mendatar</span>
+                        </div>
+                    </div>
+
+                    <!-- Top Gainers vs Top PnL Drivers vs Top Dips 3-Column Grid -->
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 0.75rem;">
+                        <!-- 1. Top Price Gainers % Today -->
+                        <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(16, 185, 129, 0.35); border-radius: 10px; padding: 0.6rem 0.8rem;">
+                            <div style="font-size: 0.68rem; font-weight: 900; color: #34d399; text-transform: uppercase; margin-bottom: 0.45rem; display: flex; align-items: center; justify-content: space-between;">
+                                <span>🚀 Top % Kenaikan Harga Hari Ini</span>
+                                <span style="font-size: 0.6rem; color: #94a3b8; font-weight: 600;">(Peratus Naik)</span>
+                            </div>
+                            <div id="tdTopGainersTodayList" style="display: flex; flex-direction: column; gap: 0.35rem;">
+                                <!-- Dynamic JS injection -->
+                            </div>
+                        </div>
+
+                        <!-- 2. Top PnL Point Contributors Today (KENAPA PNL NAIK: KEEMING, NATGATE, DLL) -->
+                        <div style="background: rgba(15, 23, 42, 0.7); border: 1.5px solid rgba(56, 189, 248, 0.45); border-radius: 10px; padding: 0.6rem 0.8rem; box-shadow: 0 0 12px rgba(56,189,248,0.1);">
+                            <div style="font-size: 0.68rem; font-weight: 900; color: #38bdf8; text-transform: uppercase; margin-bottom: 0.45rem; display: flex; align-items: center; justify-content: space-between;">
+                                <span>💰 Top Penyumbang Mata PnL Hari Ini</span>
+                                <span style="font-size: 0.6rem; color: #fde047; font-weight: 700;">(PnL Impact)</span>
+                            </div>
+                            <div id="tdTopPnlDriversTodayList" style="display: flex; flex-direction: column; gap: 0.35rem;">
+                                <!-- Dynamic JS injection -->
+                            </div>
+                        </div>
+
+                        <!-- 3. Top Pullbacks / Dips Today -->
+                        <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(244, 63, 94, 0.35); border-radius: 10px; padding: 0.6rem 0.8rem;">
+                            <div style="font-size: 0.68rem; font-weight: 900; color: #fb7185; text-transform: uppercase; margin-bottom: 0.45rem; display: flex; align-items: center; justify-content: space-between;">
+                                <span>🔻 Top Tarik Balik / Dips Hari Ini</span>
+                                <span style="font-size: 0.6rem; color: #94a3b8; font-weight: 600;">(Harga Rehat)</span>
+                            </div>
+                            <div id="tdTopLosersTodayList" style="display: flex; flex-direction: column; gap: 0.35rem;">
+                                <!-- Dynamic JS injection -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Interactive Filters & Controls Toolbar -->
+                <div style="background: rgba(15, 23, 42, 0.85); border: 1px solid rgba(148, 163, 184, 0.25); border-radius: 12px; padding: 0.75rem 1rem; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.75rem;">
+                    <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem;">
+                        <!-- Strategy filter -->
+                        <div style="display: inline-flex; align-items: center; gap: 0.3rem;">
+                            <label for="tdStrategyFilter" style="font-size: 0.72rem; color: #94a3b8; font-weight: 800; text-transform: uppercase;">Strategi:</label>
+                            <select id="tdStrategyFilter" onchange="onTrackerDailyFilterChange()" style="background: rgba(15, 23, 42, 0.95); color: #f8fafc; border: 1px solid rgba(52, 211, 153, 0.4); border-radius: 6px; padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; cursor: pointer; outline: none;">
+                                <option value="all" selected>Semua Strategi (FR + HT)</option>
+                                <option value="fr">🔥 Fresh Rider Sahaja</option>
+                                <option value="ht">⚡ Hot Theme Sahaja</option>
+                            </select>
+                        </div>
+
+                        <!-- Status filter -->
+                        <div style="display: inline-flex; align-items: center; gap: 0.3rem;">
+                            <label for="tdStatusFilter" style="font-size: 0.72rem; color: #94a3b8; font-weight: 800; text-transform: uppercase;">Status:</label>
+                            <select id="tdStatusFilter" onchange="onTrackerDailyFilterChange()" style="background: rgba(15, 23, 42, 0.95); color: #f8fafc; border: 1px solid rgba(56, 189, 248, 0.4); border-radius: 6px; padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; cursor: pointer; outline: none;">
+                                <option value="all" selected>Semua Status</option>
+                                <option value="open">🟢 OPEN Sahaja</option>
+                                <option value="closed">🔒 CLOSED Sahaja</option>
+                            </select>
+                        </div>
+
+                        <!-- Date filter -->
+                        <div style="display: inline-flex; align-items: center; gap: 0.3rem;">
+                            <label for="tdDateFilter" style="font-size: 0.72rem; color: #94a3b8; font-weight: 800; text-transform: uppercase;">Tarikh:</label>
+                            <select id="tdDateFilter" onchange="onTrackerDailyFilterChange()" style="background: rgba(15, 23, 42, 0.95); color: #f8fafc; border: 1px solid rgba(253, 224, 71, 0.4); border-radius: 6px; padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; cursor: pointer; outline: none;">
+                                <option value="all" selected>Semua Tarikh Entry</option>
+                            </select>
+                        </div>
+
+                        <!-- Search counter -->
+                        <div style="display: inline-flex; align-items: center; gap: 0.3rem; background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(148, 163, 184, 0.3); border-radius: 6px; padding: 0.15rem 0.45rem;">
+                            <span style="font-size: 0.75rem; color: #94a3b8;">🔍</span>
+                            <input type="text" id="tdSearchInput" placeholder="Cari kaunter..." oninput="onTrackerDailyFilterChange()" style="background: transparent; border: none; outline: none; color: white; font-size: 0.75rem; font-weight: 700; width: 100px;">
+                        </div>
+
+                        <!-- Sort selector -->
+                        <div style="display: inline-flex; align-items: center; gap: 0.3rem;">
+                            <label for="tdSortFilter" style="font-size: 0.72rem; color: #94a3b8; font-weight: 800; text-transform: uppercase;">Susun:</label>
+                            <select id="tdSortFilter" onchange="onTrackerDailyFilterChange()" style="background: rgba(15, 23, 42, 0.95); color: #f8fafc; border: 1px solid rgba(244, 63, 94, 0.4); border-radius: 6px; padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; cursor: pointer; outline: none;">
+                                <option value="date_desc" selected>📅 Tarikh Terkini</option>
+                                <option value="today_gain_desc">⚡ Naik Tertinggi Hari Ini (Today's Gainers)</option>
+                                <option value="today_loss_desc">🔻 Turun Tertinggi Hari Ini (Today's Dips)</option>
+                                <option value="pnl_delta_desc">💰 Sumbangan PnL Hari Ini (PnL Delta)</option>
+                                <option value="pnl_desc">🚀 PnL Keseluruhan Tertinggi</option>
+                                <option value="gain_desc">📈 Max Gain Tertinggi</option>
+                                <option value="date_asc">📅 Tarikh Terdahulu</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- View mode & accordion controls -->
+                    <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
+                        <div style="display: inline-flex; background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(52, 211, 153, 0.4); border-radius: 6px; padding: 2px;">
+                            <button id="tdViewMoversBtn" onclick="switchTrackerDailyView('movers')" class="btn" style="background: rgba(56, 189, 248, 0.25); color: #38bdf8; padding: 0.2rem 0.55rem; font-size: 0.72rem; font-weight: 800; border-radius: 4px; border: none; cursor: pointer;" title="Lihat Senarai Pergerakan Hari Ini">⚡ Movers Hari Ini</button>
+                            <button id="tdViewCardsBtn" onclick="switchTrackerDailyView('cards')" class="btn" style="background: transparent; color: #94a3b8; padding: 0.2rem 0.55rem; font-size: 0.72rem; font-weight: 800; border-radius: 4px; border: none; cursor: pointer;" title="Lihat Senarai Mengikut Tarikh Entry">📑 Cohort Harian</button>
+                            <button id="tdViewTableBtn" onclick="switchTrackerDailyView('table')" class="btn" style="background: transparent; color: #94a3b8; padding: 0.2rem 0.55rem; font-size: 0.72rem; font-weight: 800; border-radius: 4px; border: none; cursor: pointer;" title="Lihat Jadual Timeline Tarikh">📊 Jadual Timeline</button>
+                        </div>
+                        <button onclick="expandAllTrackerDailyCohorts(true)" class="btn" style="background: rgba(15,23,42,0.85); border: 1px solid rgba(148,163,184,0.3); color: #94a3b8; padding: 0.2rem 0.5rem; font-size: 0.7rem; font-weight: 700; border-radius: 6px; cursor: pointer;" title="Buka Semua Cohort">🔽 Buka</button>
+                        <button onclick="expandAllTrackerDailyCohorts(false)" class="btn" style="background: rgba(15,23,42,0.85); border: 1px solid rgba(148,163,184,0.3); color: #94a3b8; padding: 0.2rem 0.5rem; font-size: 0.7rem; font-weight: 700; border-radius: 6px; cursor: pointer;" title="Tutup Semua Cohort">🔼 Tutup</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VIEW 0: Today's Movers & Drivers Table Container (DEFAULT VIEW) -->
+            <div id="tdMoversContainer" style="display: block; background: rgba(15, 23, 42, 0.95); border: 1px solid rgba(56, 189, 248, 0.35); border-radius: 14px; padding: 1.25rem; box-shadow: 0 8px 24px rgba(0,0,0,0.3); margin-bottom: 1rem;">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.9rem; flex-wrap: wrap; gap: 0.5rem;">
+                    <div style="font-size: 0.95rem; font-weight: 900; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 0.4rem;">
+                        <span>⚡</span> Senarai Pergerakan Harga & Sumbangan PnL Saham Hari Ini
+                    </div>
+                    <div id="tdMoversMeta" style="font-size: 0.72rem; color: #94a3b8; font-weight: 600;">—</div>
+                </div>
+                <div class="table-responsive">
+                    <table class="data-table" style="font-size: 0.78rem;">
+                        <thead>
+                            <tr>
+                                <th style="text-align: center; width: 35px;">#</th>
+                                <th style="text-align: left;">Kaunter</th>
+                                <th style="text-align: center;">Strategi</th>
+                                <th style="text-align: right;" title="Perubahan harga saham hari ini dalam pasaran">Pergerakan Hari Ini</th>
+                                <th style="text-align: right;" title="Berapa mata % untung/rugi disumbangkan oleh kaunter ini kepada tracker hari ini">Sumbangan PnL Hari Ini</th>
+                                <th style="text-align: right;">Harga Semasa</th>
+                                <th style="text-align: right;">Entry Price</th>
+                                <th style="text-align: center;">Tarikh Entry</th>
+                                <th style="text-align: right;">Total PnL Terkumpul</th>
+                                <th style="text-align: right;">Peak Max Gain</th>
+                                <th style="text-align: right;">Trailing SL</th>
+                                <th style="text-align: center;">Radar Action</th>
+                                <th style="text-align: center;">Chart</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tdMoversTableBody">
+                            <tr><td colspan="13" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">⏳ Memuatkan pergerakan saham hari ini...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- VIEW 1: Daily Cohort Cards Container -->
+            <div id="tdCardsContainer" style="display: none; flex-direction: column; gap: 1rem;">
+                <div style="text-align: center; color: var(--text-secondary); padding: 2rem; background: rgba(15,23,42,0.6); border-radius: 12px; border: 1px dashed var(--panel-border);">
+                    ⏳ Memuatkan data Live Tracker Harian...
+                </div>
+            </div>
+
+            <!-- VIEW 2: Consolidated Timeline Table Container -->
+            <div id="tdTableContainer" style="display: none; background: rgba(15, 23, 42, 0.95); border: 1px solid rgba(16, 185, 129, 0.35); border-radius: 14px; padding: 1.25rem; box-shadow: 0 8px 24px rgba(0,0,0,0.3);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.9rem; flex-wrap: wrap; gap: 0.5rem;">
+                    <div style="font-size: 0.95rem; font-weight: 900; color: #34d399; text-transform: uppercase; letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 0.4rem;">
+                        <span>📊</span> Jadual Ringkasan Prestasi Mengikut Tarikh Kemasukan
+                    </div>
+                    <div id="tdTimelineMeta" style="font-size: 0.72rem; color: #94a3b8; font-weight: 600;">—</div>
+                </div>
+                <div class="table-responsive">
+                    <table class="data-table" style="font-size: 0.78rem;">
+                        <thead>
+                            <tr>
+                                <th style="text-align: center; width: 40px;">#</th>
+                                <th style="text-align: left;">Tarikh Entry</th>
+                                <th style="text-align: center;">Jumlah Signal</th>
+                                <th style="text-align: center;">Pecahan Strategi</th>
+                                <th style="text-align: left;">Senarai Kaunter</th>
+                                <th style="text-align: center;">Status (OPEN / CLOSED)</th>
+                                <th style="text-align: right;">Total Cohort PnL</th>
+                                <th style="text-align: right;">Avg Gain / Trade</th>
+                                <th style="text-align: center;">Win Rate %</th>
+                                <th style="text-align: left;">Top Performer</th>
+                                <th style="text-align: center;">Tindakan</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tdTimelineTableBody">
+                            <tr><td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">⏳ Memuatkan ringkasan tarikh...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Educational & SOP Guide for Tracker -->
+            <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(56, 189, 248, 0.06)); border: 1px dashed rgba(56, 189, 248, 0.35); border-radius: 12px; padding: 0.9rem 1.1rem; margin-top: 1.25rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.5rem;">
+                    <span style="font-size: 1.1rem;">💡</span>
+                    <span style="font-size: 0.82rem; font-weight: 900; color: #38bdf8; letter-spacing: 0.5px; text-transform: uppercase;">
+                        Panduan Menggunakan Live Tracker Per Daily
+                    </span>
+                </div>
+                <div style="font-size: 0.74rem; color: #94a3b8; line-height: 1.6;">
+                    • <strong style="color: #34d399;">Daily Cohorts:</strong> Setiap kumpulan kaunter disusun mengikut tarikh signal pertama kali muncul. Membolehkan anda melihat prestasi signal dari hari ke hari.<br>
+                    • <strong style="color: #fde047;">Disiplin Hybrid Trailing Stop:</strong> Posisi kekal dibuka (OPEN) selagi harga tidak menyentuh Stop Loss trailing (20% dari ATH sebelum profit lock, mengetat ke 10% selepas untung +20% dikunci).<br>
+                    • <strong style="color: #38bdf8;">Status Entry Semasa:</strong> Label <strong style="color: #34d399;">🟢 VALID ENTRY</strong> bermaksud kaunter masih layak dibeli hari ini. Label <strong style="color: #fbbf24;">🟡 HOLD ONLY</strong> bermaksud harga sudah naik &gt;10% dari tapak sokongan — jangan kejar harga baru, hanya pegang posisi sedia ada.
+                </div>
+            </div>
+        </div>
+    </div> <!-- End of view-trackerdaily -->
 
     <!-- TAB: TOP GAINERS % SCANNER -->
     <div id="view-topgainers" style="display: none;">
@@ -2648,6 +2946,7 @@
             const viewRealConfluence = document.getElementById('view-realconfluence');
             const viewTopGainers = document.getElementById('view-topgainers');
             const viewHotTheme = document.getElementById('view-hottheme');
+            const viewTrackerDaily = document.getElementById('view-trackerdaily');
 
             const tabVcp = document.getElementById('tab-vcp');
             const tabJerung = document.getElementById('tab-jerung');
@@ -2655,6 +2954,7 @@
             const tabRealConfluence = document.getElementById('tab-realconfluence');
             const tabTopGainers = document.getElementById('tab-topgainers');
             const tabHotTheme = document.getElementById('tab-hottheme');
+            const tabTrackerDaily = document.getElementById('tab-trackerdaily');
             const tabTrend = document.getElementById('tab-trend');
             const tabSpring = document.getElementById('tab-spring');
             const tabPhoenix = document.getElementById('tab-phoenix');
@@ -2679,6 +2979,7 @@
             if (viewRealConfluence) viewRealConfluence.style.display = 'none';
             if (viewTopGainers) viewTopGainers.style.display = 'none';
             if (viewHotTheme) viewHotTheme.style.display = 'none';
+            if (viewTrackerDaily) viewTrackerDaily.style.display = 'none';
             
             // Remove active class from all tabs
             if (tabVcp) tabVcp.classList.remove('active');
@@ -2687,6 +2988,7 @@
             if (tabRealConfluence) tabRealConfluence.classList.remove('active');
             if (tabTopGainers) tabTopGainers.classList.remove('active');
             if (tabHotTheme) tabHotTheme.classList.remove('active');
+            if (tabTrackerDaily) tabTrackerDaily.classList.remove('active');
             tabTrend.classList.remove('active');
             tabSpring.classList.remove('active');
             if (tabPhoenix) tabPhoenix.classList.remove('active');
@@ -2737,6 +3039,12 @@
                     renderHotThemeTracker();
                 }
                 if (tabHotTheme) tabHotTheme.classList.add('active');
+            } else if (tabId === 'trackerdaily') {
+                if (viewTrackerDaily) {
+                    viewTrackerDaily.style.display = 'block';
+                    renderTrackerDaily();
+                }
+                if (tabTrackerDaily) tabTrackerDaily.classList.add('active');
             } else if (tabId === 'spring') {
                 viewSpring.style.display = 'block';
                 tabSpring.classList.add('active');
@@ -5648,9 +5956,781 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             if (navTotal) navTotal.textContent = `${grandTotal >= 0 ? '+' : ''}${grandTotal.toFixed(1)}%`;
             if (navFr) navFr.textContent = `FR: ${frPnl >= 0 ? '+' : ''}${frPnl.toFixed(1)}%`;
             if (navHt) navHt.textContent = `HT: ${htPnl >= 0 ? '+' : ''}${htPnl.toFixed(1)}%`;
+
+            if (typeof renderTrackerDaily === 'function') {
+                const viewTd = document.getElementById('view-trackerdaily');
+                if (viewTd && viewTd.style.display !== 'none') {
+                    renderTrackerDaily();
+                }
+            }
         }
         window.updateTopTrackerPnlBadge = updateTopTrackerPnlBadge;
         try { updateTopTrackerPnlBadge(); } catch(e) {}
+
+        // ===== LIVE TRACKER DAILY (COHORT & DAILY BREAKDOWN) =====
+        function formatTrackerDateMalay(dateStr) {
+            if (!dateStr) return '—';
+            try {
+                const parts = dateStr.split('-');
+                if (parts.length !== 3) return dateStr;
+                const d = new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, parseInt(parts[2], 10));
+                const dayNamesMalay = ['Ahad', 'Isnin', 'Selasa', 'Rabu', 'Khamis', 'Jumaat', 'Sabtu'];
+                const monthNamesMalay = ['Januari', 'Februari', 'Mac', 'April', 'Mei', 'Jun', 'Julai', 'Ogos', 'September', 'Oktober', 'November', 'Disember'];
+                const dayName = dayNamesMalay[d.getDay()] || '';
+                const dayNum = parseInt(parts[2], 10);
+                const monthName = monthNamesMalay[parseInt(parts[1], 10) - 1] || parts[1];
+                const year = parts[0];
+                return `${dayNum} ${monthName} ${year}${dayName ? ' (' + dayName + ')' : ''}`;
+            } catch (e) {
+                return dateStr;
+            }
+        }
+
+        function switchTrackerDailyView(mode) {
+            const moversView = document.getElementById('tdMoversContainer');
+            const cardsView = document.getElementById('tdCardsContainer');
+            const tableView = document.getElementById('tdTableContainer');
+            const moversBtn = document.getElementById('tdViewMoversBtn');
+            const cardsBtn = document.getElementById('tdViewCardsBtn');
+            const tableBtn = document.getElementById('tdViewTableBtn');
+
+            if (mode === 'movers') {
+                if (moversView) moversView.style.display = 'block';
+                if (cardsView) cardsView.style.display = 'none';
+                if (tableView) tableView.style.display = 'none';
+                if (moversBtn) { moversBtn.style.background = 'rgba(56, 189, 248, 0.25)'; moversBtn.style.color = '#38bdf8'; }
+                if (cardsBtn) { cardsBtn.style.background = 'transparent'; cardsBtn.style.color = '#94a3b8'; }
+                if (tableBtn) { tableBtn.style.background = 'transparent'; tableBtn.style.color = '#94a3b8'; }
+            } else if (mode === 'table') {
+                if (moversView) moversView.style.display = 'none';
+                if (cardsView) cardsView.style.display = 'none';
+                if (tableView) tableView.style.display = 'block';
+                if (moversBtn) { moversBtn.style.background = 'transparent'; moversBtn.style.color = '#94a3b8'; }
+                if (cardsBtn) { cardsBtn.style.background = 'transparent'; cardsBtn.style.color = '#94a3b8'; }
+                if (tableBtn) { tableBtn.style.background = 'rgba(52, 211, 153, 0.25)'; tableBtn.style.color = '#34d399'; }
+            } else {
+                if (moversView) moversView.style.display = 'none';
+                if (cardsView) cardsView.style.display = 'flex';
+                if (tableView) tableView.style.display = 'none';
+                if (moversBtn) { moversBtn.style.background = 'transparent'; moversBtn.style.color = '#94a3b8'; }
+                if (cardsBtn) { cardsBtn.style.background = 'rgba(52, 211, 153, 0.25)'; cardsBtn.style.color = '#34d399'; }
+                if (tableBtn) { tableBtn.style.background = 'transparent'; tableBtn.style.color = '#94a3b8'; }
+            }
+        }
+        window.switchTrackerDailyView = switchTrackerDailyView;
+
+        function expandAllTrackerDailyCohorts(expand) {
+            const bodies = document.querySelectorAll('.td-cohort-body');
+            const btns = document.querySelectorAll('.td-cohort-btn');
+            bodies.forEach(b => {
+                b.style.display = expand ? 'block' : 'none';
+            });
+            btns.forEach(btn => {
+                const iconEl = btn.querySelector('.toggle-icon');
+                const textEl = btn.querySelector('.toggle-text');
+                if (iconEl) iconEl.textContent = expand ? '🔽' : '🔼';
+                if (textEl) textEl.textContent = expand ? 'Collapse' : 'Expand';
+            });
+        }
+        window.expandAllTrackerDailyCohorts = expandAllTrackerDailyCohorts;
+
+        function onTrackerDailyFilterChange() {
+            renderTrackerDaily();
+        }
+        window.onTrackerDailyFilterChange = onTrackerDailyFilterChange;
+
+        function jumpToTrackerDailyCohort(dateStr) {
+            switchTrackerDailyView('cards');
+            const dateFilter = document.getElementById('tdDateFilter');
+            if (dateFilter) {
+                dateFilter.value = 'all';
+            }
+            renderTrackerDaily();
+            setTimeout(() => {
+                const el = document.getElementById('td-cohort-' + dateStr);
+                if (el) {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    el.style.boxShadow = '0 0 25px rgba(52, 211, 153, 0.7)';
+                    const body = document.getElementById('td-cohort-body-' + dateStr);
+                    if (body) body.style.display = 'block';
+                    setTimeout(() => {
+                        el.style.boxShadow = '';
+                    }, 2500);
+                }
+            }, 100);
+        }
+        window.jumpToTrackerDailyCohort = jumpToTrackerDailyCohort;
+
+        function renderTrackerDaily() {
+            const frData = window.FRESH_RIDER_TRACKER || { summary: {}, trades: [] };
+            const htData = window.HOT_THEME_TRACKER || { summary: {}, trades: [] };
+
+            const frTrades = (frData.trades || []).map(t => ({
+                ...t,
+                trackerType: 'FR',
+                trackerTitle: 'Fresh Rider',
+                badgeColor: '#fde047',
+                badgeBg: 'rgba(253, 224, 71, 0.15)',
+                badgeBorder: 'rgba(253, 224, 71, 0.4)'
+            }));
+
+            const htTrades = (htData.trades || []).map(t => ({
+                ...t,
+                trackerType: 'HT',
+                trackerTitle: 'Hot Theme',
+                badgeColor: '#c4b5fd',
+                badgeBg: 'rgba(196, 181, 253, 0.15)',
+                badgeBorder: 'rgba(196, 181, 253, 0.4)'
+            }));
+
+            const allTrades = [...frTrades, ...htTrades];
+
+            // 1. Build live map of prices and movements today
+            const liveList = (currentData && currentData.length > 0) ? currentData : ((window.liveData && window.liveData.topVolume) || []);
+            const liveMap = {};
+            liveList.forEach(it => {
+                if (it && it.name) liveMap[it.name.toUpperCase()] = it;
+            });
+
+            // 2. Compute live deltas & today movers for each trade
+            allTrades.forEach(t => {
+                const live = liveMap[t.name.toUpperCase()];
+                const isOpen = t.status === 'OPEN';
+                t.livePrice = live ? live.price : (isOpen ? t.currentPrice : t.exitPrice);
+                t.changeRmToday = (isOpen && live) ? (live.change || 0) : 0;
+                t.changePctToday = (isOpen && live) ? (live.changePct !== undefined ? live.changePct : live.change) : 0;
+                t.pnlDeltaToday = (isOpen && t.entry > 0) ? ((t.changeRmToday / t.entry) * 100) : 0;
+            });
+
+            // 2. Populate Date Filter Dropdown (keep selected value)
+            const dateFilterEl = document.getElementById('tdDateFilter');
+            const uniqueDates = Array.from(new Set(allTrades.map(t => t.entryDate).filter(Boolean))).sort().reverse();
+            if (dateFilterEl) {
+                const currentSelectedDate = dateFilterEl.value || 'all';
+                let dateOpts = '<option value="all">Semua Tarikh Entry (' + uniqueDates.length + ' Hari)</option>';
+                uniqueDates.forEach(dt => {
+                    const cnt = allTrades.filter(t => t.entryDate === dt).length;
+                    const isSel = currentSelectedDate === dt ? 'selected' : '';
+                    dateOpts += `<option value="${dt}" ${isSel}>${dt} • ${formatTrackerDateMalay(dt)} (${cnt})</option>`;
+                });
+                dateFilterEl.innerHTML = dateOpts;
+            }
+
+            // 3. Read Filters
+            const strategyFilter = document.getElementById('tdStrategyFilter')?.value || 'all';
+            const statusFilter = document.getElementById('tdStatusFilter')?.value || 'all';
+            const dateFilterVal = document.getElementById('tdDateFilter')?.value || 'all';
+            const searchKeyword = (document.getElementById('tdSearchInput')?.value || '').trim().toUpperCase();
+            const sortFilter = document.getElementById('tdSortFilter')?.value || 'date_desc';
+
+            // 4. Apply Filters to Trades
+            let filteredTrades = allTrades.filter(t => {
+                if (strategyFilter === 'fr' && t.trackerType !== 'FR') return false;
+                if (strategyFilter === 'ht' && t.trackerType !== 'HT') return false;
+                if (statusFilter === 'open' && t.status !== 'OPEN') return false;
+                if (statusFilter === 'closed' && t.status === 'OPEN') return false;
+                if (dateFilterVal !== 'all' && t.entryDate !== dateFilterVal) return false;
+                if (searchKeyword && !t.name.toUpperCase().includes(searchKeyword) && !(t.sector || '').toUpperCase().includes(searchKeyword)) return false;
+                return true;
+            });
+
+            // 5. Update Metrics Cards Dynamically based on Filtered Subset
+            const isFiltered = dateFilterVal !== 'all' || strategyFilter !== 'all' || statusFilter !== 'all' || searchKeyword.length > 0;
+            const frTradesSubset = filteredTrades.filter(t => t.trackerType === 'FR');
+            const htTradesSubset = filteredTrades.filter(t => t.trackerType === 'HT');
+
+            let grandTotalPnl = 0;
+            let frPnl = 0;
+            let htPnl = 0;
+
+            if (!isFiltered) {
+                frPnl = frData.summary ? (typeof frData.summary.totalPnlNow === 'number' ? frData.summary.totalPnlNow : (frData.summary.openPnl || 0)) : 0;
+                htPnl = htData.summary ? (typeof htData.summary.totalPnlNow === 'number' ? htData.summary.totalPnlNow : (htData.summary.openPnl || 0)) : 0;
+                grandTotalPnl = frPnl + htPnl;
+            } else {
+                frPnl = frTradesSubset.reduce((acc, t) => acc + (t.finalGain || 0), 0);
+                htPnl = htTradesSubset.reduce((acc, t) => acc + (t.finalGain || 0), 0);
+                grandTotalPnl = frPnl + htPnl;
+            }
+
+            const openTrades = filteredTrades.filter(t => t.status === 'OPEN');
+            const closedTrades = filteredTrades.filter(t => t.status !== 'OPEN');
+            const openPnl = openTrades.reduce((acc, t) => acc + (t.finalGain || 0), 0);
+            const closedPnl = closedTrades.reduce((acc, t) => acc + (t.finalGain || 0), 0);
+
+            const winningTrades = filteredTrades.filter(t => (t.finalGain || 0) > 0);
+            const totalWinRate = filteredTrades.length > 0 ? Math.round((winningTrades.length / filteredTrades.length) * 100) : 0;
+            const totalAvgGain = filteredTrades.length > 0 ? (filteredTrades.reduce((acc, t) => acc + (t.finalGain || 0), 0) / filteredTrades.length) : 0;
+
+            let peakGainer = { gain: -999, name: '—' };
+            filteredTrades.forEach(t => {
+                const g = t.maxGain || t.finalGain || 0;
+                if (g > peakGainer.gain) {
+                    peakGainer = { gain: g, name: t.name };
+                }
+            });
+            if (peakGainer.gain === -999) peakGainer = { gain: 0, name: '—' };
+
+            const setEl = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+            
+            // Global benchmark references
+            const globalFrPnl = frData.summary ? (typeof frData.summary.totalPnlNow === 'number' ? frData.summary.totalPnlNow : (frData.summary.openPnl || 0)) : 0;
+            const globalHtPnl = htData.summary ? (typeof htData.summary.totalPnlNow === 'number' ? htData.summary.totalPnlNow : (htData.summary.openPnl || 0)) : 0;
+            const globalGrandTotal = globalFrPnl + globalHtPnl;
+
+            setEl('tdBenchGrandPnl', `${globalGrandTotal >= 0 ? '+' : ''}${globalGrandTotal.toFixed(1)}%`);
+            setEl('tdBenchFrPnl', `${globalFrPnl >= 0 ? '+' : ''}${globalFrPnl.toFixed(1)}%`);
+            setEl('tdBenchHtPnl', `${globalHtPnl >= 0 ? '+' : ''}${globalHtPnl.toFixed(1)}%`);
+
+            const cohortContextBadge = document.getElementById('tdCohortContextBadge');
+            if (cohortContextBadge) {
+                if (dateFilterVal !== 'all') {
+                    const pctOfGrand = globalGrandTotal > 0 ? ((grandTotalPnl / globalGrandTotal) * 100).toFixed(1) : '0';
+                    cohortContextBadge.innerHTML = `📅 <strong>Tarikh ${formatTrackerDateMalay(dateFilterVal)}:</strong> <span style="color:#34d399; font-weight:900;">${grandTotalPnl >= 0 ? '+' : ''}${grandTotalPnl.toFixed(1)}% PnL</span> (${pctOfGrand}% dari Grand Total) • ${filteredTrades.length}/66 Signals`;
+                    cohortContextBadge.style.background = 'rgba(56, 189, 248, 0.18)';
+                    cohortContextBadge.style.borderColor = 'rgba(56, 189, 248, 0.5)';
+                } else if (isFiltered) {
+                    const pctOfGrand = globalGrandTotal > 0 ? ((grandTotalPnl / globalGrandTotal) * 100).toFixed(1) : '0';
+                    cohortContextBadge.innerHTML = `🔍 <strong>Hasil Tapisan:</strong> <span style="color:#34d399; font-weight:900;">${grandTotalPnl >= 0 ? '+' : ''}${grandTotalPnl.toFixed(1)}% PnL</span> (${pctOfGrand}% dari Grand Total) • ${filteredTrades.length}/66 Signals`;
+                } else {
+                    cohortContextBadge.innerHTML = `📅 <strong>Semua Tarikh Dagangan Aktif</strong> (66 Signal • 100% Portfolio)`;
+                    cohortContextBadge.style.background = 'rgba(16, 185, 129, 0.15)';
+                    cohortContextBadge.style.borderColor = 'rgba(16, 185, 129, 0.35)';
+                }
+            }
+
+            const grandLabelEl = document.getElementById('tdGrandTotalLabel');
+            if (grandLabelEl) {
+                if (dateFilterVal !== 'all') {
+                    grandLabelEl.textContent = `📅 COHORT PNL (${dateFilterVal})`;
+                } else if (isFiltered) {
+                    grandLabelEl.textContent = `🔍 FILTERED PNL`;
+                } else {
+                    grandLabelEl.textContent = `🏆 GRAND TOTAL PNL`;
+                }
+            }
+
+            const grandTotalSub = document.getElementById('tdGrandTotalSub');
+            if (grandTotalSub) {
+                if (!isFiltered) {
+                    grandTotalSub.textContent = `66 signals (100% Total)`;
+                } else {
+                    const pctOfGrand = globalGrandTotal > 0 ? ((grandTotalPnl / globalGrandTotal) * 100).toFixed(1) : '0';
+                    grandTotalSub.textContent = `${filteredTrades.length} signals (${pctOfGrand}% sumbangan)`;
+                }
+            }
+
+            setEl('tdGrandTotalPnl', `${grandTotalPnl >= 0 ? '+' : ''}${grandTotalPnl.toFixed(1)}%`);
+            setEl('tdFrPnl', `${frPnl >= 0 ? '+' : ''}${frPnl.toFixed(1)}%`);
+            setEl('tdFrCount', `${frTradesSubset.length} signals`);
+            setEl('tdHtPnl', `${htPnl >= 0 ? '+' : ''}${htPnl.toFixed(1)}%`);
+            setEl('tdHtCount', `${htTradesSubset.length} signals`);
+            setEl('tdOpenCount', openTrades.length);
+            setEl('tdOpenPnl', `${openPnl >= 0 ? '+' : ''}${openPnl.toFixed(1)}%`);
+            setEl('tdClosedCount', closedTrades.length);
+            setEl('tdClosedPnl', `${closedPnl >= 0 ? '+' : ''}${closedPnl.toFixed(1)}%`);
+            setEl('tdWinRate', `${totalWinRate}%`);
+            setEl('tdAvgGain', `Avg ${totalAvgGain >= 0 ? '+' : ''}${totalAvgGain.toFixed(1)}%/trd`);
+            setEl('tdPeakGainer', peakGainer.name !== '—' ? `+${peakGainer.gain.toFixed(1)}%` : '—');
+            setEl('tdPeakName', peakGainer.name);
+
+            // 6. Calculate TODAY'S NET PNL DELTA & DRIVERS FOR ACTIVE SUBSET
+            const totalDailyDelta = openTrades.reduce((acc, t) => acc + (t.pnlDeltaToday || 0), 0);
+            const gainersToday = openTrades.filter(t => (t.changePctToday || 0) > 0).sort((a, b) => b.changePctToday - a.changePctToday);
+            const losersToday = openTrades.filter(t => (t.changePctToday || 0) < 0).sort((a, b) => a.changePctToday - b.changePctToday);
+            const flatToday = openTrades.filter(t => (t.changePctToday || 0) === 0);
+
+            const todayDeltaBadge = document.getElementById('tdTodayDeltaBadge');
+            if (todayDeltaBadge) {
+                const sign = totalDailyDelta >= 0 ? '+' : '';
+                todayDeltaBadge.textContent = `Perubahan Bersih: ${sign}${totalDailyDelta.toFixed(1)}% PnL (vs Semalam)`;
+                todayDeltaBadge.style.color = totalDailyDelta >= 0 ? '#34d399' : '#f87171';
+                todayDeltaBadge.style.background = totalDailyDelta >= 0 ? 'rgba(16, 185, 129, 0.25)' : 'rgba(239, 68, 68, 0.25)';
+                todayDeltaBadge.style.borderColor = totalDailyDelta >= 0 ? 'rgba(52, 211, 153, 0.5)' : 'rgba(239, 68, 68, 0.5)';
+            }
+
+            const todaySentimentSummary = document.getElementById('tdTodaySentimentSummary');
+            if (todaySentimentSummary) {
+                todaySentimentSummary.innerHTML = `<span style="color: #34d399; font-weight:800;">▲ ${gainersToday.length} Naik</span> · <span style="color: #f87171; font-weight:800;">▼ ${losersToday.length} Turun</span> · <span style="color: #94a3b8; font-weight:700;">━ ${flatToday.length} Mendatar</span>`;
+            }
+
+            // Render Top Price Gainers % Today List
+            const topGainersList = document.getElementById('tdTopGainersTodayList');
+            if (topGainersList) {
+                if (gainersToday.length === 0) {
+                    topGainersList.innerHTML = '<div style="font-size: 0.72rem; color: #94a3b8; font-weight: 600;">Tiada saham mencatat kenaikan hari ini dalam tapisan ini.</div>';
+                } else {
+                    topGainersList.innerHTML = gainersToday.slice(0, 4).map((m, idx) => {
+                        const stratTag = m.trackerType === 'FR' ? '🔥 FR' : '⚡ HT';
+                        const changeStr = (m.changePctToday >= 0 ? '+' : '') + m.changePctToday.toFixed(2) + '%';
+                        const deltaStr = (m.pnlDeltaToday >= 0 ? '+' : '') + m.pnlDeltaToday.toFixed(1) + '% pts';
+                        return `
+                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; background: rgba(15,23,42,0.85); border: 1px solid rgba(16,185,129,0.3); border-radius: 6px; padding: 0.35rem 0.6rem; font-size: 0.74rem;">
+                            <div style="display: flex; align-items: center; gap: 0.4rem;">
+                                <span style="font-weight: 900; color: #34d399;">#${idx + 1}</span>
+                                <strong>${getTradingViewAnchorSmall(m.name)}</strong>
+                                <span style="font-size: 0.62rem; color: #94a3b8; background: rgba(148,163,184,0.15); padding: 0.05rem 0.3rem; border-radius: 4px;">${stratTag}</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.45rem;">
+                                <span style="color: #34d399; font-weight: 900;">▲ ${changeStr}</span>
+                                <span style="color: #38bdf8; font-weight: 800; font-size: 0.65rem; background: rgba(56,189,248,0.15); padding: 0.08rem 0.35rem; border-radius: 4px;" title="Sumbangan kepada PnL Tracker hari ini">${deltaStr}</span>
+                            </div>
+                        </div>`;
+                    }).join('');
+                }
+            }
+
+            // Render Top PnL Drivers Today List (SORTED BY PNL IMPACT)
+            const topPnlDriversList = document.getElementById('tdTopPnlDriversTodayList');
+            const pnlDriversToday = [...openTrades].filter(t => (t.pnlDeltaToday || 0) > 0).sort((a, b) => b.pnlDeltaToday - a.pnlDeltaToday);
+            if (topPnlDriversList) {
+                if (pnlDriversToday.length === 0) {
+                    topPnlDriversList.innerHTML = '<div style="font-size: 0.72rem; color: #94a3b8; font-weight: 600;">Tiada sumbangan positif hari ini dalam tapisan ini.</div>';
+                } else {
+                    topPnlDriversList.innerHTML = pnlDriversToday.slice(0, 4).map((m, idx) => {
+                        const stratTag = m.trackerType === 'FR' ? '🔥 FR' : '⚡ HT';
+                        const changeStr = (m.changePctToday >= 0 ? '+' : '') + m.changePctToday.toFixed(2) + '%';
+                        const deltaStr = '+' + (m.pnlDeltaToday || 0).toFixed(1) + '% pts';
+                        const totalStr = '+' + (m.finalGain || 0).toFixed(1) + '%';
+                        const isKeeming = m.name === 'KEEMING';
+                        return `
+                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; background: ${isKeeming ? 'linear-gradient(135deg, rgba(236,72,153,0.15), rgba(15,23,42,0.9))' : 'rgba(15,23,42,0.85)'}; border: 1px solid ${isKeeming ? 'rgba(236,72,153,0.5)' : 'rgba(56,189,248,0.3)'}; border-radius: 6px; padding: 0.35rem 0.6rem; font-size: 0.74rem;">
+                            <div style="display: flex; align-items: center; gap: 0.4rem;">
+                                <span style="font-weight: 900; color: ${isKeeming ? '#ec4899' : '#38bdf8'};">#${idx + 1}</span>
+                                <strong>${getTradingViewAnchorSmall(m.name)}</strong>
+                                ${isKeeming ? '<span style="font-size: 0.65rem;">👑</span>' : ''}
+                                <span style="font-size: 0.62rem; color: #94a3b8; background: rgba(148,163,184,0.15); padding: 0.05rem 0.3rem; border-radius: 4px;">${stratTag}</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.45rem;">
+                                <span style="color: #38bdf8; font-weight: 900; font-size: 0.78rem;" title="Mata PnL disumbang kepada tracker">${deltaStr}</span>
+                                <span style="color: ${isKeeming ? '#f472b6' : '#fde047'}; font-weight: 800; font-size: 0.68rem;" title="Jumlah untung keseluruhan">${totalStr} total</span>
+                            </div>
+                        </div>`;
+                    }).join('');
+                }
+            }
+
+            // Render Top Losers/Pullbacks Today List
+            const topLosersList = document.getElementById('tdTopLosersTodayList');
+            if (topLosersList) {
+                if (losersToday.length === 0) {
+                    topLosersList.innerHTML = '<div style="font-size: 0.72rem; color: #34d399; font-weight: 600;">✨ Tiada saham yang jatuh hari ini dalam tapisan ini.</div>';
+                } else {
+                    topLosersList.innerHTML = losersToday.slice(0, 4).map((m, idx) => {
+                        const stratTag = m.trackerType === 'FR' ? '🔥 FR' : '⚡ HT';
+                        const changeStr = m.changePctToday.toFixed(2) + '%';
+                        const deltaStr = m.pnlDeltaToday.toFixed(1) + '% pts';
+                        return `
+                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; background: rgba(15,23,42,0.85); border: 1px solid rgba(244,63,94,0.3); border-radius: 6px; padding: 0.35rem 0.6rem; font-size: 0.74rem;">
+                            <div style="display: flex; align-items: center; gap: 0.4rem;">
+                                <span style="font-weight: 900; color: #fb7185;">#${idx + 1}</span>
+                                <strong>${getTradingViewAnchorSmall(m.name)}</strong>
+                                <span style="font-size: 0.62rem; color: #94a3b8; background: rgba(148,163,184,0.15); padding: 0.05rem 0.3rem; border-radius: 4px;">${stratTag}</span>
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.45rem;">
+                                <span style="color: #fb7185; font-weight: 900;">▼ ${changeStr}</span>
+                                <span style="color: #fb7185; font-weight: 800; font-size: 0.65rem; background: rgba(244,63,94,0.15); padding: 0.08rem 0.35rem; border-radius: 4px;" title="Kesan pengurangan mata PnL hari ini">${deltaStr}</span>
+                            </div>
+                        </div>`;
+                    }).join('');
+                }
+            }
+
+            // 8. Radar Live Qualification Set
+            const stillQualifiesFR = new Set(liveList.filter(it => {
+                try { return typeof qualifiesFreshRider === 'function' && qualifiesFreshRider(it) && passesGlobalFilters(it); } catch (e) { return false; }
+            }).map(it => (it.name || '').toUpperCase()));
+
+            const stillQualifiesHT = new Set(liveList.filter(it => {
+                try { return typeof qualifiesHotTheme === 'function' && qualifiesHotTheme(it); } catch (e) { return false; }
+            }).map(it => (it.name || '').toUpperCase()));
+
+            // 9. RENDER VIEW 0: Today's Movers & Drivers Table
+            const moversTbody = document.getElementById('tdMoversTableBody');
+            const moversMeta = document.getElementById('tdMoversMeta');
+            if (moversMeta) moversMeta.textContent = `${filteredTrades.length} Kaunter Ditapis • Net Delta Hari Ini: ${totalDailyDelta >= 0 ? '+' : ''}${totalDailyDelta.toFixed(1)}% PnL`;
+
+            if (moversTbody) {
+                if (filteredTrades.length === 0) {
+                    moversTbody.innerHTML = '<tr><td colspan="13" style="text-align: center; color: #94a3b8; padding: 2rem;">Tiada rekod saham yang sepadan dengan tapisan.</td></tr>';
+                } else {
+                    // Sort filteredTrades for the Movers Table
+                    const sortedMovers = [...filteredTrades].sort((a, b) => {
+                        if (sortFilter === 'today_gain_desc') return (b.changePctToday || 0) - (a.changePctToday || 0);
+                        if (sortFilter === 'today_loss_desc') return (a.changePctToday || 0) - (b.changePctToday || 0);
+                        if (sortFilter === 'pnl_delta_desc') return (b.pnlDeltaToday || 0) - (a.pnlDeltaToday || 0);
+                        if (sortFilter === 'pnl_desc') return (b.finalGain || 0) - (a.finalGain || 0);
+                        if (sortFilter === 'gain_desc') return (b.maxGain || 0) - (a.maxGain || 0);
+                        if (sortFilter === 'date_asc') return (a.entryDate || '').localeCompare(b.entryDate || '');
+                        // default: highest today gain first
+                        return (b.changePctToday || 0) - (a.changePctToday || 0);
+                    });
+
+                    moversTbody.innerHTML = sortedMovers.map((t, idx) => {
+                        const isOpen = t.status === 'OPEN';
+                        const stratBadge = `<span style="font-size: 0.65rem; background: ${t.badgeBg}; color: ${t.badgeColor}; padding: 0.12rem 0.45rem; border-radius: 4px; font-weight: 800; border: 1px solid ${t.badgeBorder};">${t.trackerType === 'FR' ? '🔥 Fresh Rider' : '⚡ Hot Theme'}</span>`;
+
+                        const todayChg = t.changePctToday || 0;
+                        const todayRm = t.changeRmToday || 0;
+                        const todayColor = todayChg > 0 ? '#34d399' : (todayChg < 0 ? '#f87171' : '#94a3b8');
+                        const todayArrow = todayChg > 0 ? '▲' : (todayChg < 0 ? '▼' : '━');
+                        const todayBadge = `<div style="color: ${todayColor}; font-weight: 900; font-size: 0.82rem;">${todayArrow} ${todayChg >= 0 ? '+' : ''}${todayChg.toFixed(2)}%</div>
+                        <div style="font-size: 0.62rem; color: ${todayColor}; font-weight: 700;">(${todayRm >= 0 ? '+' : ''}RM ${todayRm.toFixed(3)})</div>`;
+
+                        const deltaVal = t.pnlDeltaToday || 0;
+                        const deltaColor = deltaVal > 0 ? '#38bdf8' : (deltaVal < 0 ? '#f87171' : '#94a3b8');
+                        const deltaBadge = `<span style="font-weight: 900; color: ${deltaColor}; font-size: 0.85rem; background: ${deltaVal >= 0 ? 'rgba(56,189,248,0.12)' : 'rgba(239,68,68,0.12)'}; padding: 0.15rem 0.45rem; border-radius: 4px; border: 1px solid ${deltaVal >= 0 ? 'rgba(56,189,248,0.3)' : 'rgba(239,68,68,0.3)'};">${deltaVal >= 0 ? '+' : ''}${deltaVal.toFixed(1)}% pts</span>`;
+
+                        const pnl = t.finalGain || 0;
+                        const pnlCol = pnl > 0 ? '#34d399' : (pnl < 0 ? '#f87171' : '#94a3b8');
+                        const pnlText = (pnl >= 0 ? '+' : '') + pnl.toFixed(1) + '%';
+                        const maxText = '+' + (t.maxGain || 0).toFixed(1) + '%';
+
+                        const curPx = isOpen ? t.livePrice : t.exitPrice;
+                        const slTrail = (t.slTrail != null ? t.slTrail : 0).toFixed(3);
+
+                        let stillRadar = '';
+                        if (isOpen) {
+                            const qualifies = t.trackerType === 'FR' ? stillQualifiesFR.has(t.name.toUpperCase()) : stillQualifiesHT.has(t.name.toUpperCase());
+                            stillRadar = qualifies
+                                ? '<span style="font-size: 0.62rem; color: #34d399; font-weight: 800;" title="Still qualifies on scan list — VALID ENTRY">🟢 VALID ENTRY</span>'
+                                : '<span style="font-size: 0.62rem; color: #fbbf24; font-weight: 700;" title="Price moved >10% from base — HOLD ONLY until trailing SL">🟡 HOLD ONLY</span>';
+                        } else {
+                            stillRadar = '<span style="font-size: 0.62rem; color: #f87171; font-weight: 800;" title="Position closed on trailing stop">🔒 CLOSED</span>';
+                        }
+
+                        const themeBadges = (t.themes || []).map(th => {
+                            const color = th === 'Semiconductor' ? '#a78bfa' : '#4ade80';
+                            return `<span style="font-size: 0.6rem; background: rgba(168,85,247,0.12); color: ${color}; padding: 0.08rem 0.3rem; border-radius: 4px; font-weight: 700; border: 1px solid rgba(168,85,247,0.25);">${th === 'Semiconductor' ? 'Semicon' : 'Solar'}</span>`;
+                        }).join(' ');
+
+                        return `
+                        <tr>
+                            <td style="text-align: center; font-weight: 800; color: #38bdf8; font-size: 0.72rem;">${idx + 1}</td>
+                            <td style="font-weight: 800; color: white;">
+                                <div style="display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap;">
+                                    ${getTradingViewAnchorSmall(t.name)}
+                                </div>
+                                <div style="font-size: 0.62rem; color: #64748b; font-weight: 600; margin-top: 0.15rem; display: flex; align-items: center; gap: 0.3rem;">
+                                    <span>${t.sector || ''}</span>
+                                    ${themeBadges}
+                                </div>
+                            </td>
+                            <td style="text-align: center;">${stratBadge}</td>
+                            <td style="text-align: right;">${todayBadge}</td>
+                            <td style="text-align: right;">${deltaBadge}</td>
+                            <td style="text-align: right; color: white; font-weight: 800;">RM ${(curPx || 0).toFixed(3)}</td>
+                            <td style="text-align: right; color: #94a3b8; font-weight: 700;">RM ${(t.entry || 0).toFixed(3)}</td>
+                            <td style="text-align: center; color: #94a3b8; font-size: 0.72rem;">${t.entryDate ? t.entryDate.slice(5) : '—'}</td>
+                            <td style="text-align: right; color: ${pnlCol}; font-weight: 900; font-size: 0.88rem;">${pnlText}</td>
+                            <td style="text-align: right; color: #38bdf8; font-weight: 700;">${maxText}</td>
+                            <td style="text-align: right; color: #f87171; font-weight: 700;">RM ${slTrail}</td>
+                            <td style="text-align: center;">${stillRadar}</td>
+                            <td style="text-align: center;">${getTradingViewButton(t.name)}</td>
+                        </tr>`;
+                    }).join('');
+                }
+            }
+
+            // 10. Group filtered trades by entryDate for Cohort Cards & Timeline Table
+            const dateGroups = {};
+            filteredTrades.forEach(t => {
+                const dt = t.entryDate || 'N/A';
+                if (!dateGroups[dt]) dateGroups[dt] = [];
+                dateGroups[dt].push(t);
+            });
+
+            let sortedDates = Object.keys(dateGroups);
+            if (sortFilter === 'date_desc') {
+                sortedDates.sort((a, b) => b.localeCompare(a));
+            } else if (sortFilter === 'date_asc') {
+                sortedDates.sort((a, b) => a.localeCompare(b));
+            } else if (sortFilter === 'pnl_desc') {
+                sortedDates.sort((a, b) => {
+                    const pnlA = dateGroups[a].reduce((acc, t) => acc + (t.finalGain || 0), 0);
+                    const pnlB = dateGroups[b].reduce((acc, t) => acc + (t.finalGain || 0), 0);
+                    return pnlB - pnlA;
+                });
+            } else if (sortFilter === 'gain_desc') {
+                sortedDates.sort((a, b) => {
+                    const maxA = Math.max(...dateGroups[a].map(t => t.maxGain || t.finalGain || 0));
+                    const maxB = Math.max(...dateGroups[b].map(t => t.maxGain || t.finalGain || 0));
+                    return maxB - maxA;
+                });
+            } else if (sortFilter === 'today_gain_desc' || sortFilter === 'pnl_delta_desc') {
+                sortedDates.sort((a, b) => {
+                    const deltaA = dateGroups[a].reduce((acc, t) => acc + (t.pnlDeltaToday || 0), 0);
+                    const deltaB = dateGroups[b].reduce((acc, t) => acc + (t.pnlDeltaToday || 0), 0);
+                    return deltaB - deltaA;
+                });
+            } else if (sortFilter === 'today_loss_desc') {
+                sortedDates.sort((a, b) => {
+                    const deltaA = dateGroups[a].reduce((acc, t) => acc + (t.pnlDeltaToday || 0), 0);
+                    const deltaB = dateGroups[b].reduce((acc, t) => acc + (t.pnlDeltaToday || 0), 0);
+                    return deltaA - deltaB;
+                });
+            }
+
+            // 11. Render View 1: Daily Cohort Cards
+            const cardsContainer = document.getElementById('tdCardsContainer');
+            if (cardsContainer) {
+                if (sortedDates.length === 0) {
+                    cardsContainer.innerHTML = `<div style="text-align: center; color: #94a3b8; padding: 2.5rem; background: rgba(15,23,42,0.6); border-radius: 12px; border: 1px dashed rgba(148,163,184,0.3);">
+                        <span style="font-size: 1.8rem; display: block; margin-bottom: 0.5rem;">🔍</span>
+                        Tiada rekod tracker yang sepadan dengan tapisan semasa. Sila ubah filter strategi, status, tarikh atau carian kaunter.
+                    </div>`;
+                } else {
+                    let cardsHtml = '';
+                    sortedDates.forEach((dateStr, dIdx) => {
+                        const tradesForDay = dateGroups[dateStr];
+                        // Sort trades within day: OPEN first, then highest today change
+                        tradesForDay.sort((a, b) => {
+                            const aOpen = a.status === 'OPEN' ? 0 : 1;
+                            const bOpen = b.status === 'OPEN' ? 0 : 1;
+                            if (aOpen !== bOpen) return aOpen - bOpen;
+                            return (b.changePctToday || 0) - (a.changePctToday || 0);
+                        });
+
+                        const dayTotalPnl = tradesForDay.reduce((acc, t) => acc + (t.finalGain || 0), 0);
+                        const dayTodayDelta = tradesForDay.reduce((acc, t) => acc + (t.pnlDeltaToday || 0), 0);
+                        const dayFrCount = tradesForDay.filter(t => t.trackerType === 'FR').length;
+                        const dayHtCount = tradesForDay.filter(t => t.trackerType === 'HT').length;
+                        const dayOpenCount = tradesForDay.filter(t => t.status === 'OPEN').length;
+                        const dayClosedCount = tradesForDay.filter(t => t.status !== 'OPEN').length;
+                        const dayWins = tradesForDay.filter(t => (t.finalGain || 0) > 0).length;
+                        const dayWinRate = Math.round((dayWins / tradesForDay.length) * 100);
+
+                        let dayBest = tradesForDay[0];
+                        tradesForDay.forEach(t => {
+                            if ((t.maxGain || 0) > (dayBest.maxGain || 0)) dayBest = t;
+                        });
+
+                        const pnlColor = dayTotalPnl > 0 ? '#34d399' : (dayTotalPnl < 0 ? '#f87171' : '#94a3b8');
+                        const pnlBadgeClass = dayTotalPnl >= 0 ? 'color: #34d399; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(52, 211, 153, 0.4);' : 'color: #f87171; background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.4);';
+
+                        const formattedDateStr = formatTrackerDateMalay(dateStr);
+                        const collapseBodyId = `td-cohort-body-${dateStr}`;
+
+                        cardsHtml += `
+                        <div id="td-cohort-${dateStr}" style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.7)); border: 1.5px solid rgba(52, 211, 153, 0.35); border-radius: 14px; padding: 1.1rem; box-shadow: 0 6px 20px rgba(0,0,0,0.3); transition: all 0.3s ease;">
+                            <!-- Cohort Date Header -->
+                            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; border-bottom: 1px solid rgba(148, 163, 184, 0.2); padding-bottom: 0.75rem; margin-bottom: 0.85rem;">
+                                <div style="display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap;">
+                                    <span style="font-size: 1.3rem;">📅</span>
+                                    <div>
+                                        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                                            <span style="font-size: 1.05rem; font-weight: 900; color: #f8fafc; letter-spacing: 0.3px;">
+                                                ${formattedDateStr}
+                                            </span>
+                                            <span style="font-size: 0.68rem; background: rgba(15, 23, 42, 0.9); color: #94a3b8; padding: 0.15rem 0.45rem; border-radius: 6px; font-weight: 700; border: 1px solid rgba(148,163,184,0.3);">${dateStr}</span>
+                                            <span style="font-size: 0.7rem; background: rgba(56, 189, 248, 0.15); color: #38bdf8; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(56, 189, 248, 0.35);">
+                                                ${tradesForDay.length} Signal${tradesForDay.length > 1 ? 's' : ''}
+                                            </span>
+                                            ${dayFrCount > 0 ? `<span style="font-size: 0.68rem; background: rgba(253, 224, 71, 0.15); color: #fde047; padding: 0.12rem 0.45rem; border-radius: 12px; font-weight: 800; border: 1px solid rgba(253, 224, 71, 0.3);">🔥 ${dayFrCount} FR</span>` : ''}
+                                            ${dayHtCount > 0 ? `<span style="font-size: 0.68rem; background: rgba(196, 181, 253, 0.15); color: #c4b5fd; padding: 0.12rem 0.45rem; border-radius: 12px; font-weight: 800; border: 1px solid rgba(196, 181, 253, 0.3);">⚡ ${dayHtCount} HT</span>` : ''}
+                                            ${dayOpenCount > 0 ? `<span style="font-size: 0.68rem; background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 0.12rem 0.45rem; border-radius: 12px; font-weight: 800;">🟢 ${dayOpenCount} OPEN</span>` : ''}
+                                            ${dayClosedCount > 0 ? `<span style="font-size: 0.68rem; background: rgba(148, 163, 184, 0.15); color: #94a3b8; padding: 0.12rem 0.45rem; border-radius: 12px; font-weight: 800;">🔒 ${dayClosedCount} CLOSED</span>` : ''}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
+                                    <div style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.25rem 0.65rem; border-radius: 8px; font-size: 0.8rem; font-weight: 900; ${pnlBadgeClass}">
+                                        <span>Cohort PnL:</span>
+                                        <span style="font-size: 0.95rem;">${dayTotalPnl >= 0 ? '+' : ''}${dayTotalPnl.toFixed(1)}%</span>
+                                    </div>
+
+                                    ${dayTodayDelta !== 0 ? `
+                                    <div style="background: ${dayTodayDelta >= 0 ? 'rgba(56,189,248,0.15)' : 'rgba(239,68,68,0.15)'}; border: 1px solid ${dayTodayDelta >= 0 ? 'rgba(56,189,248,0.35)' : 'rgba(239,68,68,0.35)'}; border-radius: 8px; padding: 0.25rem 0.55rem; font-size: 0.72rem; color: ${dayTodayDelta >= 0 ? '#38bdf8' : '#f87171'}; font-weight: 800;" title="Perubahan PnL cohort hari ini">
+                                        Hari ini: ${dayTodayDelta >= 0 ? '+' : ''}${dayTodayDelta.toFixed(1)}% pts
+                                    </div>` : ''}
+
+                                    <div style="background: rgba(15,23,42,0.8); border: 1px solid rgba(253,224,71,0.3); border-radius: 8px; padding: 0.25rem 0.55rem; font-size: 0.72rem; color: #fde047; font-weight: 800;">
+                                        Win Rate: ${dayWinRate}% (${dayWins}/${tradesForDay.length})
+                                    </div>
+
+                                    ${dayBest ? `
+                                    <div style="background: rgba(15,23,42,0.8); border: 1px solid rgba(236,72,153,0.3); border-radius: 8px; padding: 0.25rem 0.55rem; font-size: 0.72rem; color: #ec4899; font-weight: 800;" title="Peak gainer in this day's cohort">
+                                        Top: ${dayBest.name} (+${(dayBest.maxGain || dayBest.finalGain || 0).toFixed(1)}%)
+                                    </div>` : ''}
+
+                                    <button onclick="toggleCardCollapse('${collapseBodyId}', this)" class="btn td-cohort-btn" style="background: rgba(15,23,42,0.9); border: 1.5px solid rgba(52,211,153,0.4); color: #34d399; padding: 0.22rem 0.6rem; border-radius: 8px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.3rem;">
+                                        <span class="toggle-icon">🔽</span> <span class="toggle-text">Collapse</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Cohort Trades Table Body -->
+                            <div id="${collapseBodyId}" class="td-cohort-body">
+                                <div class="table-responsive">
+                                    <table class="data-table" style="font-size: 0.78rem;">
+                                        <thead>
+                                            <tr>
+                                                <th style="text-align: center; width: 35px;">#</th>
+                                                <th style="text-align: left;">Kaunter</th>
+                                                <th style="text-align: center;">Strategi</th>
+                                                <th style="text-align: center;">Status</th>
+                                                <th style="text-align: right;" title="Perubahan harga hari ini">Hari Ini</th>
+                                                <th style="text-align: right;">Entry Price</th>
+                                                <th style="text-align: right;">Current / Exit Price</th>
+                                                <th style="text-align: right;">Current / Final PnL</th>
+                                                <th style="text-align: right;">Max Gain</th>
+                                                <th style="text-align: center;">Days Held</th>
+                                                <th style="text-align: center;">Radar Action</th>
+                                                <th style="text-align: right;" title="Trailing Stop Loss level">Trailing SL</th>
+                                                <th style="text-align: center;">Chart</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            ${tradesForDay.map((t, idx) => {
+                                                const isOpen = t.status === 'OPEN';
+                                                const pnl = t.finalGain || 0;
+                                                const pnlCol = pnl > 0 ? '#34d399' : (pnl < 0 ? '#f87171' : '#94a3b8');
+                                                const pnlText = (pnl >= 0 ? '+' : '') + pnl.toFixed(1) + '%';
+                                                const maxText = '+' + (t.maxGain || 0).toFixed(1) + '%';
+
+                                                const stratBadge = `<span style="font-size: 0.65rem; background: ${t.badgeBg}; color: ${t.badgeColor}; padding: 0.12rem 0.45rem; border-radius: 4px; font-weight: 800; border: 1px solid ${t.badgeBorder};">${t.trackerType === 'FR' ? '🔥 Fresh Rider' : '⚡ Hot Theme'}</span>`;
+
+                                                const statusBadge = isOpen
+                                                    ? '<span style="font-size: 0.62rem; background: rgba(16,185,129,0.2); color: #34d399; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(16,185,129,0.4);">🟢 OPEN</span>'
+                                                    : '<span style="font-size: 0.62rem; background: rgba(148,163,184,0.15); color: #94a3b8; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(148,163,184,0.3);">⚪ ' + (t.status || 'CLOSED').replace('CLOSED_', '') + '</span>';
+
+                                                const todayChg = t.changePctToday || 0;
+                                                const todayColor = todayChg > 0 ? '#34d399' : (todayChg < 0 ? '#f87171' : '#94a3b8');
+                                                const todayArrow = todayChg > 0 ? '▲' : (todayChg < 0 ? '▼' : '━');
+                                                const todayChip = isOpen
+                                                    ? `<span style="color: ${todayColor}; font-weight: 800; font-size: 0.72rem;">${todayArrow} ${todayChg >= 0 ? '+' : ''}${todayChg.toFixed(1)}%</span>`
+                                                    : '<span style="color: #64748b; font-size: 0.65rem;">—</span>';
+
+                                                const exitPx = isOpen ? t.livePrice : t.exitPrice;
+                                                const slTrail = (t.slTrail != null ? t.slTrail : 0).toFixed(3);
+
+                                                let stillRadar = '';
+                                                if (isOpen) {
+                                                    const qualifies = t.trackerType === 'FR' ? stillQualifiesFR.has(t.name.toUpperCase()) : stillQualifiesHT.has(t.name.toUpperCase());
+                                                    stillRadar = qualifies
+                                                        ? '<span style="font-size: 0.62rem; color: #34d399; font-weight: 800;" title="Still qualifies on scan list — VALID ENTRY">🟢 VALID ENTRY</span>'
+                                                        : '<span style="font-size: 0.62rem; color: #fbbf24; font-weight: 700;" title="Price moved >10% from base — HOLD ONLY until trailing SL">🟡 HOLD ONLY</span>';
+                                                } else {
+                                                    stillRadar = '<span style="font-size: 0.62rem; color: #f87171; font-weight: 800;" title="Position closed on trailing stop">🔒 CLOSED</span>';
+                                                }
+
+                                                const themeBadges = (t.themes || []).map(th => {
+                                                    const color = th === 'Semiconductor' ? '#a78bfa' : '#4ade80';
+                                                    return `<span style="font-size: 0.6rem; background: rgba(168,85,247,0.12); color: ${color}; padding: 0.08rem 0.3rem; border-radius: 4px; font-weight: 700; border: 1px solid rgba(168,85,247,0.25);">${th === 'Semiconductor' ? 'Semicon' : 'Solar'}</span>`;
+                                                }).join(' ');
+
+                                                return `
+                                                <tr>
+                                                    <td style="text-align: center; font-weight: 800; color: #94a3b8; font-size: 0.72rem;">${idx + 1}</td>
+                                                    <td style="font-weight: 800; color: white;">
+                                                        <div style="display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap;">
+                                                            ${getTradingViewAnchorSmall(t.name)}
+                                                        </div>
+                                                        <div style="font-size: 0.62rem; color: #64748b; font-weight: 600; margin-top: 0.15rem; display: flex; align-items: center; gap: 0.3rem;">
+                                                            <span>${t.sector || ''}</span>
+                                                            ${themeBadges}
+                                                        </div>
+                                                    </td>
+                                                    <td style="text-align: center;">${stratBadge}</td>
+                                                    <td style="text-align: center;">${statusBadge}</td>
+                                                    <td style="text-align: right;">${todayChip}</td>
+                                                    <td style="text-align: right; color: white; font-weight: 700;">RM ${(t.entry || 0).toFixed(3)}</td>
+                                                    <td style="text-align: right; color: white; font-weight: 700;">
+                                                        RM ${(exitPx || 0).toFixed(3)}
+                                                        ${isOpen ? '' : `<div style="font-size:0.6rem; color:#64748b;">(Exit: ${t.exitDate ? t.exitDate.slice(5) : '—'})</div>`}
+                                                    </td>
+                                                    <td style="text-align: right; color: ${pnlCol}; font-weight: 900; font-size: 0.85rem;">${pnlText}</td>
+                                                    <td style="text-align: right; color: #38bdf8; font-weight: 700;">${maxText}</td>
+                                                    <td style="text-align: center; color: #fde047; font-weight: 700;">${t.days || 0}</td>
+                                                    <td style="text-align: center;">${stillRadar}</td>
+                                                    <td style="text-align: right; color: #f87171; font-weight: 700;">RM ${slTrail}</td>
+                                                    <td style="text-align: center;">${getTradingViewButton(t.name)}</td>
+                                                </tr>`;
+                                            }).join('')}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>`;
+                    });
+                    cardsContainer.innerHTML = cardsHtml;
+                }
+            }
+
+            // 12. Render View 2: Consolidated Timeline Summary Table
+            const timelineTbody = document.getElementById('tdTimelineTableBody');
+            const timelineMeta = document.getElementById('tdTimelineMeta');
+            if (timelineMeta) timelineMeta.textContent = `${sortedDates.length} Tarikh Entry • ${filteredTrades.length} Signal Keseluruhan`;
+            if (timelineTbody) {
+                if (sortedDates.length === 0) {
+                    timelineTbody.innerHTML = '<tr><td colspan="11" style="text-align: center; color: #94a3b8; padding: 2rem;">Tiada data untuk paparan jadual timeline.</td></tr>';
+                } else {
+                    let runningPnl = 0;
+                    timelineTbody.innerHTML = sortedDates.map((dateStr, idx) => {
+                        const tradesForDay = dateGroups[dateStr];
+                        const dayTotalPnl = tradesForDay.reduce((acc, t) => acc + (t.finalGain || 0), 0);
+                        runningPnl += dayTotalPnl;
+                        const dayFrCount = tradesForDay.filter(t => t.trackerType === 'FR').length;
+                        const dayHtCount = tradesForDay.filter(t => t.trackerType === 'HT').length;
+                        const dayOpenCount = tradesForDay.filter(t => t.status === 'OPEN').length;
+                        const dayClosedCount = tradesForDay.filter(t => t.status !== 'OPEN').length;
+                        const dayWins = tradesForDay.filter(t => (t.finalGain || 0) > 0).length;
+                        const dayWinRate = Math.round((dayWins / tradesForDay.length) * 100);
+                        const dayAvgGain = dayTotalPnl / tradesForDay.length;
+
+                        let dayBest = tradesForDay[0];
+                        tradesForDay.forEach(t => {
+                            if ((t.maxGain || 0) > (dayBest.maxGain || 0)) dayBest = t;
+                        });
+
+                        const pnlColor = dayTotalPnl > 0 ? '#34d399' : (dayTotalPnl < 0 ? '#f87171' : '#94a3b8');
+                        const pnlStr = (dayTotalPnl >= 0 ? '+' : '') + dayTotalPnl.toFixed(1) + '%';
+                        const avgStr = (dayAvgGain >= 0 ? '+' : '') + dayAvgGain.toFixed(1) + '%';
+
+                        const counterChips = tradesForDay.map(t => {
+                            const pnl = t.finalGain || 0;
+                            const col = pnl > 0 ? '#34d399' : (pnl < 0 ? '#f87171' : '#94a3b8');
+                            return `<span style="display: inline-flex; align-items: center; gap: 0.2rem; background: rgba(15,23,42,0.8); border: 1px solid rgba(148,163,184,0.25); border-radius: 4px; padding: 0.1rem 0.35rem; font-size: 0.68rem; margin: 0.1rem;">
+                                <strong>${t.name}</strong> <span style="color: ${col}; font-weight: 800;">${pnl >= 0 ? '+' : ''}${pnl.toFixed(0)}%</span>
+                            </span>`;
+                        }).join(' ');
+
+                        return `
+                        <tr>
+                            <td style="text-align: center; font-weight: 800; color: #fbbf24; font-size: 0.75rem;">${idx + 1}</td>
+                            <td style="font-weight: 800; color: white;">
+                                <div style="font-size: 0.85rem;">${dateStr}</div>
+                                <div style="font-size: 0.65rem; color: #94a3b8;">${formatTrackerDateMalay(dateStr)}</div>
+                            </td>
+                            <td style="text-align: center; font-weight: 800; color: #38bdf8;">${tradesForDay.length}</td>
+                            <td style="text-align: center; font-size: 0.72rem;">
+                                ${dayFrCount > 0 ? `<span style="color: #fde047; font-weight: 800;">${dayFrCount} FR</span>` : ''}
+                                ${dayFrCount > 0 && dayHtCount > 0 ? ' · ' : ''}
+                                ${dayHtCount > 0 ? `<span style="color: #c4b5fd; font-weight: 800;">${dayHtCount} HT</span>` : ''}
+                            </td>
+                            <td style="text-align: left; max-width: 250px;">${counterChips}</td>
+                            <td style="text-align: center; font-size: 0.72rem;">
+                                <span style="color: #34d399; font-weight: 800;">${dayOpenCount} OPEN</span>
+                                ${dayClosedCount > 0 ? ` · <span style="color: #94a3b8; font-weight: 700;">${dayClosedCount} CLOSED</span>` : ''}
+                            </td>
+                            <td style="text-align: right; color: ${pnlColor}; font-weight: 900; font-size: 0.88rem;">${pnlStr}</td>
+                            <td style="text-align: right; color: ${dayAvgGain >= 0 ? '#34d399' : '#f87171'}; font-weight: 700;">${avgStr}</td>
+                            <td style="text-align: center; color: #fde047; font-weight: 800;">${dayWinRate}%</td>
+                            <td style="text-align: left; color: #ec4899; font-weight: 800; font-size: 0.72rem;">
+                                ${dayBest ? `${dayBest.name} (+${(dayBest.maxGain || dayBest.finalGain || 0).toFixed(1)}%)` : '—'}
+                            </td>
+                            <td style="text-align: center;">
+                                <button onclick="jumpToTrackerDailyCohort('${dateStr}')" class="btn" style="background: rgba(56,189,248,0.15); border: 1px solid rgba(56,189,248,0.4); color: #38bdf8; padding: 0.15rem 0.45rem; font-size: 0.68rem; font-weight: 800; border-radius: 6px; cursor: pointer;">
+                                    🔍 Buka
+                                </button>
+                            </td>
+                        </tr>`;
+                    }).join('');
+                }
+            }
+        }
+        window.renderTrackerDaily = renderTrackerDaily;
 
         // Global card collapse/expand handler
         function toggleCardCollapse(bodyId, btnEl) {
@@ -6788,7 +7868,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             updateTopTrackerPnlBadge();
 
             const hash = window.location.hash.replace('#', '');
-            if (hash && ['vcp', 'trend', 'spring', 'phoenix', 'fishing', 'calculator', 'info', 'portfolio', 'weekly', 'jerung', 'confluence', 'realconfluence'].includes(hash)) {
+            if (hash && ['vcp', 'trend', 'spring', 'phoenix', 'fishing', 'calculator', 'info', 'portfolio', 'weekly', 'jerung', 'confluence', 'realconfluence', 'hottheme', 'trackerdaily', 'topgainers'].includes(hash)) {
                 switchTab(hash);
             } else {
                 switchTab('confluence'); // Default: Fresh Rider (tab kiri pertama)
