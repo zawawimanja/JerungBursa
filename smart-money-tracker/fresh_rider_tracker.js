@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual
 window.FRESH_RIDER_TRACKER = {
  "summary": {
-  "generatedAt": "2026-08-26T05:00:27.500Z",
+  "generatedAt": "2026-08-26T05:41:31.496Z",
   "dataDays": 60,
   "totalTracked": 19,
   "openCount": 17,
