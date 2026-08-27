@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-08-27T09:13:05.913Z",
+ "generatedAt": "2026-08-27T09:13:30.667Z",
  "totalDays": 61,
  "startDate": "2026-06-02",
  "endDate": "2026-08-27",
@@ -27102,14 +27102,14 @@ window.DAILY_EQUITY_TRACKER = {
    "totalSignals": 66,
    "openCount": 49,
    "closedCount": 17,
-   "openPnl": 971,
+   "openPnl": 1042.3,
    "closedPnl": 365.4,
-   "totalPnl": 1336.4,
+   "totalPnl": 1407.7,
    "frPnl": 622.9,
-   "htPnl": 713.5,
+   "htPnl": 784.8,
    "dailyPnlDelta": -1.4,
-   "winRate": 68,
-   "avgGain": 20.2,
+   "winRate": 71,
+   "avgGain": 21.3,
    "peakGainer": {
     "gain": 133.9,
     "name": "KEEMING"
@@ -27290,8 +27290,8 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "MISC",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 6.25,
-     "gainOnDay": 0,
+     "priceOnDay": 8.48,
+     "gainOnDay": 35.7,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -27308,8 +27308,8 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "MINOX",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.17,
-     "gainOnDay": -5.6,
+     "priceOnDay": 0.18,
+     "gainOnDay": 0,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -27443,8 +27443,8 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "NE",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 1.06,
-     "gainOnDay": 0,
+     "priceOnDay": 1.09,
+     "gainOnDay": 2.8,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -27497,8 +27497,8 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "MNHLDG",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 3.56,
-     "gainOnDay": 39.1,
+     "priceOnDay": 3.5,
+     "gainOnDay": 36.7,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -27569,8 +27569,8 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "SAMAIDEN",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 1.4,
-     "gainOnDay": 12,
+     "priceOnDay": 1.77,
+     "gainOnDay": 41.6,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },

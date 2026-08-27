@@ -134,6 +134,7 @@ historyDays.forEach((day, dayIdx) => {
         }
 
         // Posisi aktif atau baru ditutup hari ini
+        const isLatestDay = (dayIdx === historyDays.length - 1);
         let curRow = day.map[nameKey];
         if (curRow && curRow.price > 0) {
             const ratio = curRow.price / t.entry;
@@ -141,18 +142,26 @@ historyDays.forEach((day, dayIdx) => {
         }
 
         let priceOnDay = curRow ? curRow.price : (lastPriceByName[nameKey] || t.entry);
+        if (isLatestDay && t.status === 'OPEN' && (!curRow || curRow.price <= 0)) {
+            priceOnDay = t.currentPrice || priceOnDay;
+        }
         if (t.entryDate === day.date && (!curRow || curRow.price <= 0)) {
             priceOnDay = t.entry;
         }
 
-        const gainOnDay = +(((priceOnDay - t.entry) / t.entry) * 100).toFixed(1);
+        let gainOnDay = +(((priceOnDay - t.entry) / t.entry) * 100).toFixed(1);
+        if (isLatestDay && t.status === 'OPEN' && typeof t.finalGain === 'number') {
+            gainOnDay = t.finalGain;
+            priceOnDay = t.currentPrice || priceOnDay;
+        }
+
         const changeRm = curRow ? (curRow.change || 0) : 0;
         const changePct = curRow ? (typeof curRow.changePct === 'number' ? curRow.changePct : (changeRm / (priceOnDay - changeRm)) * 100) : 0;
         const pnlDeltaToday = t.entry > 0 ? +((changeRm / t.entry) * 100).toFixed(1) : 0;
 
         if (isClosedToday) {
             closedCount++;
-            const g = (t.finalGain || gainOnDay);
+            const g = (t.finalGain !== undefined ? t.finalGain : gainOnDay);
             closedPnl += g;
             if (t.trackerType === 'FR') frPnlOnDay += g; else htPnlOnDay += g;
             dailyPnlDelta += pnlDeltaToday;
