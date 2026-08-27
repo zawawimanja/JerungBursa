@@ -138,6 +138,7 @@ for (const day of dayList) {
             highDate: day.date,
             maxGain: 0,
             finalGain: 0,
+            day1ChangePct: +(typeof it.changePct === 'number' ? it.changePct : ((it.change && it.price) ? (it.change / (it.price - it.change)) * 100 : 0)).toFixed(2),
             days: 1,
             lastDate: day.date,
             status: 'OPEN',

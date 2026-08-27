@@ -13,6 +13,7 @@
     <script src="live_data.js"></script>
     <script src="fresh_rider_tracker.js"></script>
     <script src="hot_theme_tracker.js"></script>
+    <script src="daily_equity_tracker.js"></script>
     <script src="jerung-data.js?v=1.0"></script>
         <style>
         @keyframes spin {
@@ -1111,7 +1112,7 @@
                             <th style="text-align: center;">Entry Date</th>
                             <th style="text-align: right;">Entry Price</th>
                             <th style="text-align: right;">Current / Exit Price</th>
-                            <th style="text-align: right;">Current / Final PnL</th>
+                            <th style="text-align: right;" title="Keuntungan terkumpul jika hold sehingga kini / exit">Pulangan Hold (PnL)</th>
                             <th style="text-align: right;">Max Gain</th>
                             <th style="text-align: center;">Days Held</th>
                             <th style="text-align: center;">Radar Status</th>
@@ -1687,7 +1688,8 @@
                                 <th style="text-align: center;">Pecahan Strategi</th>
                                 <th style="text-align: left;">Senarai Kaunter</th>
                                 <th style="text-align: center;">Status (OPEN / CLOSED)</th>
-                                <th style="text-align: right;">Total Cohort PnL</th>
+                                <th style="text-align: right;" title="Purata pulangan pada hari pertama entry">Day 1 PnL</th>
+                                <th style="text-align: right;" title="Jumlah pulangan bila di-hold hingga hari ini / exit">Pulangan Hold (PnL)</th>
                                 <th style="text-align: right;">Avg Gain / Trade</th>
                                 <th style="text-align: center;">Win Rate %</th>
                                 <th style="text-align: left;">Top Performer</th>
@@ -1794,18 +1796,17 @@
                         <thead>
                             <tr style="background: rgba(15, 23, 42, 0.9);">
                                 <th style="padding: 0.6rem; text-align: center; font-size: 0.75rem; color: #64748b; border-bottom: 2px solid rgba(16,185,129,0.4);">Kedudukan</th>
-                                <th style="padding: 0.6rem; text-align: left; font-size: 0.75rem; color: #64748b; border-bottom: 2px solid rgba(16,185,129,0.4);">Kaunter &amp; Status</th>
+                                <th style="padding: 0.6rem; text-align: left; font-size: 0.75rem; color: #64748b; border-bottom: 2px solid rgba(16,185,129,0.4);">Kaunter (TradingView) &amp; Status</th>
                                 <th style="padding: 0.6rem; text-align: right; font-size: 0.75rem; color: #64748b; border-bottom: 2px solid rgba(16,185,129,0.4);">Current Price</th>
                                 <th style="padding: 0.6rem; text-align: right; font-size: 0.75rem; color: #64748b; border-bottom: 2px solid rgba(16,185,129,0.4);">Change (RM)</th>
                                 <th style="padding: 0.6rem; text-align: right; font-size: 0.75rem; color: #64748b; border-bottom: 2px solid rgba(16,185,129,0.4);">% Gain</th>
                                 <th style="padding: 0.6rem; text-align: right; font-size: 0.75rem; color: #64748b; border-bottom: 2px solid rgba(16,185,129,0.4);">Volume / Turnover</th>
                                 <th style="padding: 0.6rem; text-align: center; font-size: 0.75rem; color: #64748b; border-bottom: 2px solid rgba(16,185,129,0.4);">Trend Alignment</th>
-                                <th style="padding: 0.6rem; text-align: center; font-size: 0.75rem; color: #64748b; border-bottom: 2px solid rgba(16,185,129,0.4);">Chart</th>
                             </tr>
                         </thead>
                         <tbody id="topGainersTableBody">
                             <tr>
-                                <td colspan="8" style="text-align: center; padding: 2rem; color: #64748b;">Loading Top Gainers data...</td>
+                                <td colspan="7" style="text-align: center; padding: 2rem; color: #64748b;">Loading Top Gainers data...</td>
                             </tr>
                         </tbody>
                     </table>
@@ -4222,7 +4223,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             }
 
             if (!list || list.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="8" style="text-align: center; padding: 2rem; color: #64748b;">No market data found. Please click "Load Market Data".</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; padding: 2rem; color: #64748b;">No market data found. Please click "Load Market Data".</td></tr>';
                 return;
             }
 
@@ -4295,7 +4296,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             }
 
             if (displayList.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="8" style="text-align: center; padding: 2rem; color: #64748b;">No Top Gainer stocks match this filter.</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; padding: 2rem; color: #64748b;">No Top Gainer stocks match this filter.</td></tr>';
                 return;
             }
 
@@ -4343,7 +4344,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     <tr style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(16, 185, 129, 0.05)'" onmouseout="this.style.background='transparent'">
                         <td style="padding: 0.65rem; text-align: center;">${rankBadge}</td>
                         <td style="padding: 0.65rem; text-align: left;">
-                            <div style="font-weight: 800; color: #f8fafc; font-size: 0.85rem;">${item.name}</div>
+                            <div style="font-weight: 800; color: #f8fafc; font-size: 0.9rem;">${getTradingViewAnchor(item.name)}</div>
                             <div style="display: flex; gap: 0.3rem; margin-top: 0.2rem; align-items: center;">${tags}</div>
                         </td>
                         <td style="padding: 0.65rem; text-align: right; font-weight: 800; color: #e2e8f0; font-size: 0.85rem;">${price}</td>
@@ -4356,7 +4357,6 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                             <div style="font-size: 0.68rem; color: #64748b;">${turnover}</div>
                         </td>
                         <td style="padding: 0.65rem; text-align: center;">${trendBadge}</td>
-                        <td style="padding: 0.65rem; text-align: center;">${tvBtn}</td>
                     </tr>
                 `;
             });
@@ -6064,6 +6064,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         function renderTrackerDaily() {
             const frData = window.FRESH_RIDER_TRACKER || { summary: {}, trades: [] };
             const htData = window.HOT_THEME_TRACKER || { summary: {}, trades: [] };
+            const eqData = window.DAILY_EQUITY_TRACKER || { timeline: [], byDate: {} };
 
             const frTrades = (frData.trades || []).map(t => ({
                 ...t,
@@ -6089,12 +6090,13 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const liveList = (currentData && currentData.length > 0) ? currentData : ((window.liveData && window.liveData.topVolume) || []);
             const liveMap = {};
             liveList.forEach(it => {
-                if (it && it.name) liveMap[it.name.toUpperCase()] = it;
+                if (it && it.name) liveMap[it.name.toUpperCase().trim()] = it;
             });
 
             // 2. Compute live deltas & today movers for each trade
             allTrades.forEach(t => {
-                const live = liveMap[t.name.toUpperCase()];
+                const nameKey = t.name.toUpperCase().trim();
+                const live = liveMap[nameKey];
                 const isOpen = t.status === 'OPEN';
                 t.livePrice = live ? live.price : (isOpen ? t.currentPrice : t.exitPrice);
                 t.changeRmToday = (isOpen && live) ? (live.change || 0) : 0;
@@ -6102,40 +6104,62 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 t.pnlDeltaToday = (isOpen && t.entry > 0) ? ((t.changeRmToday / t.entry) * 100) : 0;
             });
 
-            // 2. Populate Date Filter Dropdown (keep selected value)
+            // 3. Populate Date Filter Dropdown with ALL trading timeline dates
             const dateFilterEl = document.getElementById('tdDateFilter');
-            const uniqueDates = Array.from(new Set(allTrades.map(t => t.entryDate).filter(Boolean))).sort().reverse();
+            const allTimelineDates = (eqData.timeline || []).map(x => x.date).filter(Boolean).reverse();
+            const uniqueEntryDates = Array.from(new Set(allTrades.map(t => t.entryDate).filter(Boolean))).sort().reverse();
+            const dropdownDates = allTimelineDates.length > 0 ? allTimelineDates : uniqueEntryDates;
+
             if (dateFilterEl) {
                 const currentSelectedDate = dateFilterEl.value || 'all';
-                let dateOpts = '<option value="all">Semua Tarikh Entry (' + uniqueDates.length + ' Hari)</option>';
-                uniqueDates.forEach(dt => {
-                    const cnt = allTrades.filter(t => t.entryDate === dt).length;
+                let dateOpts = '<option value="all">⚡ Hari Ini / Live Portfolio (' + dropdownDates.length + ' Hari Dagangan)</option>';
+                dropdownDates.forEach(dt => {
+                    const snap = eqData.byDate ? eqData.byDate[dt] : null;
+                    const pnlStr = snap ? (snap.totalPnl >= 0 ? '+' : '') + snap.totalPnl.toFixed(1) + '%' : '';
                     const isSel = currentSelectedDate === dt ? 'selected' : '';
-                    dateOpts += `<option value="${dt}" ${isSel}>${dt} • ${formatTrackerDateMalay(dt)} (${cnt})</option>`;
+                    dateOpts += `<option value="${dt}" ${isSel}>${dt} • ${formatTrackerDateMalay(dt)} ${pnlStr ? '• PnL: ' + pnlStr : ''}</option>`;
                 });
                 dateFilterEl.innerHTML = dateOpts;
             }
 
-            // 3. Read Filters
+            // 4. Read Filters
             const strategyFilter = document.getElementById('tdStrategyFilter')?.value || 'all';
             const statusFilter = document.getElementById('tdStatusFilter')?.value || 'all';
             const dateFilterVal = document.getElementById('tdDateFilter')?.value || 'all';
             const searchKeyword = (document.getElementById('tdSearchInput')?.value || '').trim().toUpperCase();
             const sortFilter = document.getElementById('tdSortFilter')?.value || 'date_desc';
 
-            // 4. Apply Filters to Trades
-            let filteredTrades = allTrades.filter(t => {
+            const isSpecificHistoricalDate = dateFilterVal !== 'all' && eqData.byDate && eqData.byDate[dateFilterVal];
+            const histSnap = isSpecificHistoricalDate ? eqData.byDate[dateFilterVal] : null;
+
+            // 5. Select active trades list (Historical Snapshot or Live Trades)
+            let baseTradesList = allTrades;
+            if (histSnap && Array.isArray(histSnap.trades)) {
+                baseTradesList = histSnap.trades.map(t => {
+                    const orig = allTrades.find(x => x.name.toUpperCase().trim() === t.name.toUpperCase().trim() && x.trackerType === t.trackerType) || {};
+                    return {
+                        ...orig,
+                        ...t,
+                        livePrice: t.priceOnDay,
+                        finalGain: t.gainOnDay,
+                        changePctToday: t.dayChangePct,
+                        pnlDeltaToday: t.pnlDeltaToday,
+                        status: t.statusOnDay === 'OPEN' ? 'OPEN' : (t.statusOnDay || 'CLOSED')
+                    };
+                });
+            }
+
+            // Apply filters
+            let filteredTrades = baseTradesList.filter(t => {
                 if (strategyFilter === 'fr' && t.trackerType !== 'FR') return false;
                 if (strategyFilter === 'ht' && t.trackerType !== 'HT') return false;
                 if (statusFilter === 'open' && t.status !== 'OPEN') return false;
                 if (statusFilter === 'closed' && t.status === 'OPEN') return false;
-                if (dateFilterVal !== 'all' && t.entryDate !== dateFilterVal) return false;
                 if (searchKeyword && !t.name.toUpperCase().includes(searchKeyword) && !(t.sector || '').toUpperCase().includes(searchKeyword)) return false;
                 return true;
             });
 
-            // 5. Update Metrics Cards Dynamically based on Filtered Subset
-            const isFiltered = dateFilterVal !== 'all' || strategyFilter !== 'all' || statusFilter !== 'all' || searchKeyword.length > 0;
+            // 6. Metrics Calculations
             const frTradesSubset = filteredTrades.filter(t => t.trackerType === 'FR');
             const htTradesSubset = filteredTrades.filter(t => t.trackerType === 'HT');
 
@@ -6143,7 +6167,11 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             let frPnl = 0;
             let htPnl = 0;
 
-            if (!isFiltered) {
+            if (histSnap && strategyFilter === 'all' && statusFilter === 'all' && !searchKeyword) {
+                grandTotalPnl = histSnap.totalPnl;
+                frPnl = histSnap.frPnl;
+                htPnl = histSnap.htPnl;
+            } else if (dateFilterVal === 'all' && strategyFilter === 'all' && statusFilter === 'all' && !searchKeyword) {
                 frPnl = frData.summary ? (typeof frData.summary.totalPnlNow === 'number' ? frData.summary.totalPnlNow : (frData.summary.openPnl || 0)) : 0;
                 htPnl = htData.summary ? (typeof htData.summary.totalPnlNow === 'number' ? htData.summary.totalPnlNow : (htData.summary.openPnl || 0)) : 0;
                 grandTotalPnl = frPnl + htPnl;
@@ -6184,16 +6212,14 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
             const cohortContextBadge = document.getElementById('tdCohortContextBadge');
             if (cohortContextBadge) {
-                if (dateFilterVal !== 'all') {
-                    const pctOfGrand = globalGrandTotal > 0 ? ((grandTotalPnl / globalGrandTotal) * 100).toFixed(1) : '0';
-                    cohortContextBadge.innerHTML = `📅 <strong>Tarikh ${formatTrackerDateMalay(dateFilterVal)}:</strong> <span style="color:#34d399; font-weight:900;">${grandTotalPnl >= 0 ? '+' : ''}${grandTotalPnl.toFixed(1)}% PnL</span> (${pctOfGrand}% dari Grand Total) • ${filteredTrades.length}/66 Signals`;
+                if (histSnap) {
+                    cohortContextBadge.innerHTML = `📅 <strong>Snapshot Tarikh ${formatTrackerDateMalay(dateFilterVal)}:</strong> Nilai Portfolio = <span style="color:#34d399; font-weight:900;">${grandTotalPnl >= 0 ? '+' : ''}${grandTotalPnl.toFixed(1)}% PnL</span> • Perubahan Bersih Tarikh Ini: <span style="color:${histSnap.dailyPnlDelta >= 0 ? '#34d399' : '#f87171'}; font-weight:900;">${histSnap.dailyPnlDelta >= 0 ? '+' : ''}${histSnap.dailyPnlDelta.toFixed(1)}% pts</span> • ${openTrades.length} Posisi Aktif`;
                     cohortContextBadge.style.background = 'rgba(56, 189, 248, 0.18)';
                     cohortContextBadge.style.borderColor = 'rgba(56, 189, 248, 0.5)';
-                } else if (isFiltered) {
-                    const pctOfGrand = globalGrandTotal > 0 ? ((grandTotalPnl / globalGrandTotal) * 100).toFixed(1) : '0';
-                    cohortContextBadge.innerHTML = `🔍 <strong>Hasil Tapisan:</strong> <span style="color:#34d399; font-weight:900;">${grandTotalPnl >= 0 ? '+' : ''}${grandTotalPnl.toFixed(1)}% PnL</span> (${pctOfGrand}% dari Grand Total) • ${filteredTrades.length}/66 Signals`;
+                } else if (dateFilterVal !== 'all') {
+                    cohortContextBadge.innerHTML = `📅 <strong>Tarikh ${formatTrackerDateMalay(dateFilterVal)}:</strong> <span style="color:#34d399; font-weight:900;">${grandTotalPnl >= 0 ? '+' : ''}${grandTotalPnl.toFixed(1)}% PnL</span> • ${filteredTrades.length} Signals`;
                 } else {
-                    cohortContextBadge.innerHTML = `📅 <strong>Semua Tarikh Dagangan Aktif</strong> (66 Signal • 100% Portfolio)`;
+                    cohortContextBadge.innerHTML = `📅 <strong>Live Portfolio Semasa (2026)</strong> • 66 Signal Keseluruhan (100% Portfolio)`;
                     cohortContextBadge.style.background = 'rgba(16, 185, 129, 0.15)';
                     cohortContextBadge.style.borderColor = 'rgba(16, 185, 129, 0.35)';
                 }
@@ -6201,22 +6227,23 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
             const grandLabelEl = document.getElementById('tdGrandTotalLabel');
             if (grandLabelEl) {
-                if (dateFilterVal !== 'all') {
-                    grandLabelEl.textContent = `📅 COHORT PNL (${dateFilterVal})`;
-                } else if (isFiltered) {
-                    grandLabelEl.textContent = `🔍 FILTERED PNL`;
+                if (histSnap) {
+                    grandLabelEl.textContent = `📅 PORTFOLIO PNL (${dateFilterVal})`;
+                } else if (dateFilterVal !== 'all') {
+                    grandLabelEl.textContent = `🔍 FILTERED PNL (${dateFilterVal})`;
                 } else {
-                    grandLabelEl.textContent = `🏆 GRAND TOTAL PNL`;
+                    grandLabelEl.textContent = `🏆 LIVE GRAND TOTAL PNL`;
                 }
             }
 
             const grandTotalSub = document.getElementById('tdGrandTotalSub');
             if (grandTotalSub) {
-                if (!isFiltered) {
-                    grandTotalSub.textContent = `66 signals (100% Total)`;
+                if (histSnap) {
+                    grandTotalSub.textContent = `${filteredTrades.length} signals aktif/rekod pada tarikh ini`;
+                } else if (dateFilterVal === 'all') {
+                    grandTotalSub.textContent = `66 signals (100% Total Live)`;
                 } else {
-                    const pctOfGrand = globalGrandTotal > 0 ? ((grandTotalPnl / globalGrandTotal) * 100).toFixed(1) : '0';
-                    grandTotalSub.textContent = `${filteredTrades.length} signals (${pctOfGrand}% sumbangan)`;
+                    grandTotalSub.textContent = `${filteredTrades.length} signals ditapis`;
                 }
             }
 
@@ -6234,8 +6261,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             setEl('tdPeakGainer', peakGainer.name !== '—' ? `+${peakGainer.gain.toFixed(1)}%` : '—');
             setEl('tdPeakName', peakGainer.name);
 
-            // 6. Calculate TODAY'S NET PNL DELTA & DRIVERS FOR ACTIVE SUBSET
-            const totalDailyDelta = openTrades.reduce((acc, t) => acc + (t.pnlDeltaToday || 0), 0);
+            // 7. Calculate MOVERS & DRIVERS FOR SELECTED DATE
+            const totalDailyDelta = histSnap ? histSnap.dailyPnlDelta : openTrades.reduce((acc, t) => acc + (t.pnlDeltaToday || 0), 0);
             const gainersToday = openTrades.filter(t => (t.changePctToday || 0) > 0).sort((a, b) => b.changePctToday - a.changePctToday);
             const losersToday = openTrades.filter(t => (t.changePctToday || 0) < 0).sort((a, b) => a.changePctToday - b.changePctToday);
             const flatToday = openTrades.filter(t => (t.changePctToday || 0) === 0);
@@ -6243,7 +6270,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const todayDeltaBadge = document.getElementById('tdTodayDeltaBadge');
             if (todayDeltaBadge) {
                 const sign = totalDailyDelta >= 0 ? '+' : '';
-                todayDeltaBadge.textContent = `Perubahan Bersih: ${sign}${totalDailyDelta.toFixed(1)}% PnL (vs Semalam)`;
+                const dateLabel = histSnap ? formatTrackerDateMalay(dateFilterVal) : 'Semalam';
+                todayDeltaBadge.textContent = `Perubahan Bersih: ${sign}${totalDailyDelta.toFixed(1)}% PnL (${histSnap ? 'pada ' + dateFilterVal : 'vs Semalam'})`;
                 todayDeltaBadge.style.color = totalDailyDelta >= 0 ? '#34d399' : '#f87171';
                 todayDeltaBadge.style.background = totalDailyDelta >= 0 ? 'rgba(16, 185, 129, 0.25)' : 'rgba(239, 68, 68, 0.25)';
                 todayDeltaBadge.style.borderColor = totalDailyDelta >= 0 ? 'rgba(52, 211, 153, 0.5)' : 'rgba(239, 68, 68, 0.5)';
@@ -6254,11 +6282,11 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 todaySentimentSummary.innerHTML = `<span style="color: #34d399; font-weight:800;">▲ ${gainersToday.length} Naik</span> · <span style="color: #f87171; font-weight:800;">▼ ${losersToday.length} Turun</span> · <span style="color: #94a3b8; font-weight:700;">━ ${flatToday.length} Mendatar</span>`;
             }
 
-            // Render Top Price Gainers % Today List
+            // Render Top Price Gainers % List
             const topGainersList = document.getElementById('tdTopGainersTodayList');
             if (topGainersList) {
                 if (gainersToday.length === 0) {
-                    topGainersList.innerHTML = '<div style="font-size: 0.72rem; color: #94a3b8; font-weight: 600;">Tiada saham mencatat kenaikan hari ini dalam tapisan ini.</div>';
+                    topGainersList.innerHTML = '<div style="font-size: 0.72rem; color: #94a3b8; font-weight: 600;">Tiada saham mencatat kenaikan pada tarikh ini.</div>';
                 } else {
                     topGainersList.innerHTML = gainersToday.slice(0, 4).map((m, idx) => {
                         const stratTag = m.trackerType === 'FR' ? '🔥 FR' : '⚡ HT';
@@ -6273,25 +6301,24 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                             </div>
                             <div style="display: flex; align-items: center; gap: 0.45rem;">
                                 <span style="color: #34d399; font-weight: 900;">▲ ${changeStr}</span>
-                                <span style="color: #38bdf8; font-weight: 800; font-size: 0.65rem; background: rgba(56,189,248,0.15); padding: 0.08rem 0.35rem; border-radius: 4px;" title="Sumbangan kepada PnL Tracker hari ini">${deltaStr}</span>
+                                <span style="color: #38bdf8; font-weight: 800; font-size: 0.65rem; background: rgba(56,189,248,0.15); padding: 0.08rem 0.35rem; border-radius: 4px;" title="Sumbangan kepada PnL Tracker">${deltaStr}</span>
                             </div>
                         </div>`;
                     }).join('');
                 }
             }
 
-            // Render Top PnL Drivers Today List (SORTED BY PNL IMPACT)
+            // Render Top PnL Drivers List
             const topPnlDriversList = document.getElementById('tdTopPnlDriversTodayList');
             const pnlDriversToday = [...openTrades].filter(t => (t.pnlDeltaToday || 0) > 0).sort((a, b) => b.pnlDeltaToday - a.pnlDeltaToday);
             if (topPnlDriversList) {
                 if (pnlDriversToday.length === 0) {
-                    topPnlDriversList.innerHTML = '<div style="font-size: 0.72rem; color: #94a3b8; font-weight: 600;">Tiada sumbangan positif hari ini dalam tapisan ini.</div>';
+                    topPnlDriversList.innerHTML = '<div style="font-size: 0.72rem; color: #94a3b8; font-weight: 600;">Tiada sumbangan positif pada tarikh ini.</div>';
                 } else {
                     topPnlDriversList.innerHTML = pnlDriversToday.slice(0, 4).map((m, idx) => {
                         const stratTag = m.trackerType === 'FR' ? '🔥 FR' : '⚡ HT';
-                        const changeStr = (m.changePctToday >= 0 ? '+' : '') + m.changePctToday.toFixed(2) + '%';
                         const deltaStr = '+' + (m.pnlDeltaToday || 0).toFixed(1) + '% pts';
-                        const totalStr = '+' + (m.finalGain || 0).toFixed(1) + '%';
+                        const totalStr = (m.finalGain >= 0 ? '+' : '') + (m.finalGain || 0).toFixed(1) + '%';
                         const isKeeming = m.name === 'KEEMING';
                         return `
                         <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; background: ${isKeeming ? 'linear-gradient(135deg, rgba(236,72,153,0.15), rgba(15,23,42,0.9))' : 'rgba(15,23,42,0.85)'}; border: 1px solid ${isKeeming ? 'rgba(236,72,153,0.5)' : 'rgba(56,189,248,0.3)'}; border-radius: 6px; padding: 0.35rem 0.6rem; font-size: 0.74rem;">
@@ -6302,19 +6329,19 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                                 <span style="font-size: 0.62rem; color: #94a3b8; background: rgba(148,163,184,0.15); padding: 0.05rem 0.3rem; border-radius: 4px;">${stratTag}</span>
                             </div>
                             <div style="display: flex; align-items: center; gap: 0.45rem;">
-                                <span style="color: #38bdf8; font-weight: 900; font-size: 0.78rem;" title="Mata PnL disumbang kepada tracker">${deltaStr}</span>
-                                <span style="color: ${isKeeming ? '#f472b6' : '#fde047'}; font-weight: 800; font-size: 0.68rem;" title="Jumlah untung keseluruhan">${totalStr} total</span>
+                                <span style="color: #38bdf8; font-weight: 900; font-size: 0.78rem;" title="Mata PnL disumbang">${deltaStr}</span>
+                                <span style="color: ${isKeeming ? '#f472b6' : '#fde047'}; font-weight: 800; font-size: 0.68rem;" title="Jumlah untung terkumpul">${totalStr}</span>
                             </div>
                         </div>`;
                     }).join('');
                 }
             }
 
-            // Render Top Losers/Pullbacks Today List
+            // Render Top Losers/Pullbacks List
             const topLosersList = document.getElementById('tdTopLosersTodayList');
             if (topLosersList) {
                 if (losersToday.length === 0) {
-                    topLosersList.innerHTML = '<div style="font-size: 0.72rem; color: #34d399; font-weight: 600;">✨ Tiada saham yang jatuh hari ini dalam tapisan ini.</div>';
+                    topLosersList.innerHTML = '<div style="font-size: 0.72rem; color: #34d399; font-weight: 600;">✨ Tiada saham yang jatuh pada tarikh ini.</div>';
                 } else {
                     topLosersList.innerHTML = losersToday.slice(0, 4).map((m, idx) => {
                         const stratTag = m.trackerType === 'FR' ? '🔥 FR' : '⚡ HT';
@@ -6329,7 +6356,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                             </div>
                             <div style="display: flex; align-items: center; gap: 0.45rem;">
                                 <span style="color: #fb7185; font-weight: 900;">▼ ${changeStr}</span>
-                                <span style="color: #fb7185; font-weight: 800; font-size: 0.65rem; background: rgba(244,63,94,0.15); padding: 0.08rem 0.35rem; border-radius: 4px;" title="Kesan pengurangan mata PnL hari ini">${deltaStr}</span>
+                                <span style="color: #fb7185; font-weight: 800; font-size: 0.65rem; background: rgba(244,63,94,0.15); padding: 0.08rem 0.35rem; border-radius: 4px;" title="Kesan pengurangan mata PnL">${deltaStr}</span>
                             </div>
                         </div>`;
                     }).join('');
@@ -6345,58 +6372,65 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 try { return typeof qualifiesHotTheme === 'function' && qualifiesHotTheme(it); } catch (e) { return false; }
             }).map(it => (it.name || '').toUpperCase()));
 
-            // 9. RENDER VIEW 0: Today's Movers & Drivers Table
+            // 9. RENDER VIEW 0: Movers & Drivers Table
             const moversTbody = document.getElementById('tdMoversTableBody');
             const moversMeta = document.getElementById('tdMoversMeta');
-            if (moversMeta) moversMeta.textContent = `${filteredTrades.length} Kaunter Ditapis • Net Delta Hari Ini: ${totalDailyDelta >= 0 ? '+' : ''}${totalDailyDelta.toFixed(1)}% PnL`;
+
+            // Apply sort
+            let sortedMovers = [...filteredTrades];
+            if (sortFilter === 'pnl_desc') {
+                sortedMovers.sort((a, b) => (b.finalGain || 0) - (a.finalGain || 0));
+            } else if (sortFilter === 'pnl_asc') {
+                sortedMovers.sort((a, b) => (a.finalGain || 0) - (b.finalGain || 0));
+            } else if (sortFilter === 'max_desc') {
+                sortedMovers.sort((a, b) => (b.maxGain || 0) - (a.maxGain || 0));
+            } else if (sortFilter === 'today_delta_desc') {
+                sortedMovers.sort((a, b) => (b.pnlDeltaToday || 0) - (a.pnlDeltaToday || 0));
+            } else if (sortFilter === 'today_pct_desc') {
+                sortedMovers.sort((a, b) => (b.changePctToday || 0) - (a.changePctToday || 0));
+            } else {
+                sortedMovers.sort((a, b) => (b.entryDate || '').localeCompare(a.entryDate || '') || ((b.finalGain || 0) - (a.finalGain || 0)));
+            }
+
+            if (moversMeta) {
+                const dateLabel = histSnap ? ('Snapshot: ' + formatTrackerDateMalay(dateFilterVal) + ' (' + dateFilterVal + ')') : 'Live Market Data';
+                moversMeta.textContent = `${sortedMovers.length} Saham Terpapar • ${dateLabel}`;
+            }
 
             if (moversTbody) {
-                if (filteredTrades.length === 0) {
-                    moversTbody.innerHTML = '<tr><td colspan="13" style="text-align: center; color: #94a3b8; padding: 2rem;">Tiada rekod saham yang sepadan dengan tapisan.</td></tr>';
+                if (sortedMovers.length === 0) {
+                    moversTbody.innerHTML = '<tr><td colspan="13" style="text-align: center; color: var(--text-secondary); padding: 2rem;">Tiada kaunter menepati syarat tapisan ini.</td></tr>';
                 } else {
-                    // Sort filteredTrades for the Movers Table
-                    const sortedMovers = [...filteredTrades].sort((a, b) => {
-                        if (sortFilter === 'today_gain_desc') return (b.changePctToday || 0) - (a.changePctToday || 0);
-                        if (sortFilter === 'today_loss_desc') return (a.changePctToday || 0) - (b.changePctToday || 0);
-                        if (sortFilter === 'pnl_delta_desc') return (b.pnlDeltaToday || 0) - (a.pnlDeltaToday || 0);
-                        if (sortFilter === 'pnl_desc') return (b.finalGain || 0) - (a.finalGain || 0);
-                        if (sortFilter === 'gain_desc') return (b.maxGain || 0) - (a.maxGain || 0);
-                        if (sortFilter === 'date_asc') return (a.entryDate || '').localeCompare(b.entryDate || '');
-                        // default: highest today gain first
-                        return (b.changePctToday || 0) - (a.changePctToday || 0);
-                    });
-
                     moversTbody.innerHTML = sortedMovers.map((t, idx) => {
                         const isOpen = t.status === 'OPEN';
-                        const stratBadge = `<span style="font-size: 0.65rem; background: ${t.badgeBg}; color: ${t.badgeColor}; padding: 0.12rem 0.45rem; border-radius: 4px; font-weight: 800; border: 1px solid ${t.badgeBorder};">${t.trackerType === 'FR' ? '🔥 Fresh Rider' : '⚡ Hot Theme'}</span>`;
-
-                        const todayChg = t.changePctToday || 0;
-                        const todayRm = t.changeRmToday || 0;
-                        const todayColor = todayChg > 0 ? '#34d399' : (todayChg < 0 ? '#f87171' : '#94a3b8');
-                        const todayArrow = todayChg > 0 ? '▲' : (todayChg < 0 ? '▼' : '━');
-                        const todayBadge = `<div style="color: ${todayColor}; font-weight: 900; font-size: 0.82rem;">${todayArrow} ${todayChg >= 0 ? '+' : ''}${todayChg.toFixed(2)}%</div>
-                        <div style="font-size: 0.62rem; color: ${todayColor}; font-weight: 700;">(${todayRm >= 0 ? '+' : ''}RM ${todayRm.toFixed(3)})</div>`;
-
-                        const deltaVal = t.pnlDeltaToday || 0;
-                        const deltaColor = deltaVal > 0 ? '#38bdf8' : (deltaVal < 0 ? '#f87171' : '#94a3b8');
-                        const deltaBadge = `<span style="font-weight: 900; color: ${deltaColor}; font-size: 0.85rem; background: ${deltaVal >= 0 ? 'rgba(56,189,248,0.12)' : 'rgba(239,68,68,0.12)'}; padding: 0.15rem 0.45rem; border-radius: 4px; border: 1px solid ${deltaVal >= 0 ? 'rgba(56,189,248,0.3)' : 'rgba(239,68,68,0.3)'};">${deltaVal >= 0 ? '+' : ''}${deltaVal.toFixed(1)}% pts</span>`;
-
                         const pnl = t.finalGain || 0;
                         const pnlCol = pnl > 0 ? '#34d399' : (pnl < 0 ? '#f87171' : '#94a3b8');
                         const pnlText = (pnl >= 0 ? '+' : '') + pnl.toFixed(1) + '%';
-                        const maxText = '+' + (t.maxGain || 0).toFixed(1) + '%';
+                        const maxText = '+' + (t.maxGain || t.finalGain || 0).toFixed(1) + '%';
 
-                        const curPx = isOpen ? t.livePrice : t.exitPrice;
-                        const slTrail = (t.slTrail != null ? t.slTrail : 0).toFixed(3);
+                        const stratBadge = `<span style="font-size: 0.65rem; background: ${t.badgeBg}; color: ${t.badgeColor}; padding: 0.12rem 0.45rem; border-radius: 4px; font-weight: 800; border: 1px solid ${t.badgeBorder};">${t.trackerType === 'FR' ? '🔥 FR' : '⚡ HT'}</span>`;
+
+                        const todayChg = t.changePctToday || 0;
+                        const todayColor = todayChg > 0 ? '#34d399' : (todayChg < 0 ? '#f87171' : '#94a3b8');
+                        const todayArrow = todayChg > 0 ? '▲' : (todayChg < 0 ? '▼' : '━');
+                        const todayChip = `<span style="color: ${todayColor}; font-weight: 800; font-size: 0.76rem;">${todayArrow} ${todayChg >= 0 ? '+' : ''}${todayChg.toFixed(2)}%</span>`;
+
+                        const pnlDelta = t.pnlDeltaToday || 0;
+                        const pnlDeltaCol = pnlDelta > 0 ? '#38bdf8' : (pnlDelta < 0 ? '#fb7185' : '#64748b');
+                        const pnlDeltaSign = pnlDelta > 0 ? '+' : '';
+                        const pnlDeltaChip = `<span style="color: ${pnlDeltaCol}; font-weight: 900; font-size: 0.76rem;">${pnlDeltaSign}${pnlDelta.toFixed(1)}% pts</span>`;
+
+                        const exitPx = isOpen ? t.livePrice : (t.exitPrice || t.livePrice);
+                        const slTrail = (t.slTrail != null ? t.slTrail : (t.entry * 0.89)).toFixed(3);
 
                         let stillRadar = '';
                         if (isOpen) {
                             const qualifies = t.trackerType === 'FR' ? stillQualifiesFR.has(t.name.toUpperCase()) : stillQualifiesHT.has(t.name.toUpperCase());
                             stillRadar = qualifies
-                                ? '<span style="font-size: 0.62rem; color: #34d399; font-weight: 800;" title="Still qualifies on scan list — VALID ENTRY">🟢 VALID ENTRY</span>'
-                                : '<span style="font-size: 0.62rem; color: #fbbf24; font-weight: 700;" title="Price moved >10% from base — HOLD ONLY until trailing SL">🟡 HOLD ONLY</span>';
+                                ? '<span style="font-size: 0.62rem; color: #34d399; font-weight: 800;" title="Still qualifies on scan list — VALID ENTRY">🟢 VALID</span>'
+                                : '<span style="font-size: 0.62rem; color: #fbbf24; font-weight: 700;" title="Price moved >10% from base — HOLD ONLY until trailing SL">🟡 HOLD</span>';
                         } else {
-                            stillRadar = '<span style="font-size: 0.62rem; color: #f87171; font-weight: 800;" title="Position closed on trailing stop">🔒 CLOSED</span>';
+                            stillRadar = '<span style="font-size: 0.62rem; color: #f87171; font-weight: 800;" title="Position closed">🔒 CLOSED</span>';
                         }
 
                         const themeBadges = (t.themes || []).map(th => {
@@ -6405,7 +6439,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         }).join(' ');
 
                         return `
-                        <tr>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(56,189,248,0.05)'" onmouseout="this.style.background='none'">
                             <td style="text-align: center; font-weight: 800; color: #38bdf8; font-size: 0.72rem;">${idx + 1}</td>
                             <td style="font-weight: 800; color: white;">
                                 <div style="display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap;">
@@ -6417,12 +6451,12 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                                 </div>
                             </td>
                             <td style="text-align: center;">${stratBadge}</td>
-                            <td style="text-align: right;">${todayBadge}</td>
-                            <td style="text-align: right;">${deltaBadge}</td>
-                            <td style="text-align: right; color: white; font-weight: 800;">RM ${(curPx || 0).toFixed(3)}</td>
+                            <td style="text-align: right;">${todayChip}</td>
+                            <td style="text-align: right;">${pnlDeltaChip}</td>
+                            <td style="text-align: right; color: white; font-weight: 700;">RM ${(exitPx || 0).toFixed(3)}</td>
                             <td style="text-align: right; color: #94a3b8; font-weight: 700;">RM ${(t.entry || 0).toFixed(3)}</td>
-                            <td style="text-align: center; color: #94a3b8; font-size: 0.72rem;">${t.entryDate ? t.entryDate.slice(5) : '—'}</td>
-                            <td style="text-align: right; color: ${pnlCol}; font-weight: 900; font-size: 0.88rem;">${pnlText}</td>
+                            <td style="text-align: center; color: #cbd5e1; font-weight: 700; font-size: 0.72rem;">${t.entryDate || '—'}</td>
+                            <td style="text-align: right; color: ${pnlCol}; font-weight: 900; font-size: 0.85rem;">${pnlText}</td>
                             <td style="text-align: right; color: #38bdf8; font-weight: 700;">${maxText}</td>
                             <td style="text-align: right; color: #f87171; font-weight: 700;">RM ${slTrail}</td>
                             <td style="text-align: center;">${stillRadar}</td>
@@ -6432,66 +6466,27 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 }
             }
 
-            // 10. Group filtered trades by entryDate for Cohort Cards & Timeline Table
+            // 10. RENDER VIEW 1: Daily Cohort Cards Container
+            const cardsContainer = document.getElementById('tdCardsContainer');
             const dateGroups = {};
             filteredTrades.forEach(t => {
-                const dt = t.entryDate || 'N/A';
+                const dt = t.entryDate || 'Unknown';
                 if (!dateGroups[dt]) dateGroups[dt] = [];
                 dateGroups[dt].push(t);
             });
 
-            let sortedDates = Object.keys(dateGroups);
-            if (sortFilter === 'date_desc') {
-                sortedDates.sort((a, b) => b.localeCompare(a));
-            } else if (sortFilter === 'date_asc') {
-                sortedDates.sort((a, b) => a.localeCompare(b));
-            } else if (sortFilter === 'pnl_desc') {
-                sortedDates.sort((a, b) => {
-                    const pnlA = dateGroups[a].reduce((acc, t) => acc + (t.finalGain || 0), 0);
-                    const pnlB = dateGroups[b].reduce((acc, t) => acc + (t.finalGain || 0), 0);
-                    return pnlB - pnlA;
-                });
-            } else if (sortFilter === 'gain_desc') {
-                sortedDates.sort((a, b) => {
-                    const maxA = Math.max(...dateGroups[a].map(t => t.maxGain || t.finalGain || 0));
-                    const maxB = Math.max(...dateGroups[b].map(t => t.maxGain || t.finalGain || 0));
-                    return maxB - maxA;
-                });
-            } else if (sortFilter === 'today_gain_desc' || sortFilter === 'pnl_delta_desc') {
-                sortedDates.sort((a, b) => {
-                    const deltaA = dateGroups[a].reduce((acc, t) => acc + (t.pnlDeltaToday || 0), 0);
-                    const deltaB = dateGroups[b].reduce((acc, t) => acc + (t.pnlDeltaToday || 0), 0);
-                    return deltaB - deltaA;
-                });
-            } else if (sortFilter === 'today_loss_desc') {
-                sortedDates.sort((a, b) => {
-                    const deltaA = dateGroups[a].reduce((acc, t) => acc + (t.pnlDeltaToday || 0), 0);
-                    const deltaB = dateGroups[b].reduce((acc, t) => acc + (t.pnlDeltaToday || 0), 0);
-                    return deltaA - deltaB;
-                });
-            }
+            const sortedDates = Object.keys(dateGroups).sort().reverse();
 
-            // 11. Render View 1: Daily Cohort Cards
-            const cardsContainer = document.getElementById('tdCardsContainer');
             if (cardsContainer) {
                 if (sortedDates.length === 0) {
-                    cardsContainer.innerHTML = `<div style="text-align: center; color: #94a3b8; padding: 2.5rem; background: rgba(15,23,42,0.6); border-radius: 12px; border: 1px dashed rgba(148,163,184,0.3);">
-                        <span style="font-size: 1.8rem; display: block; margin-bottom: 0.5rem;">🔍</span>
-                        Tiada rekod tracker yang sepadan dengan tapisan semasa. Sila ubah filter strategi, status, tarikh atau carian kaunter.
-                    </div>`;
+                    cardsContainer.innerHTML = '<div style="text-align: center; color: #94a3b8; padding: 2rem; background: rgba(15,23,42,0.6); border-radius: 12px;">Tiada data cohort untuk tapisan ini.</div>';
                 } else {
                     let cardsHtml = '';
-                    sortedDates.forEach((dateStr, dIdx) => {
+                    sortedDates.forEach(dateStr => {
                         const tradesForDay = dateGroups[dateStr];
-                        // Sort trades within day: OPEN first, then highest today change
-                        tradesForDay.sort((a, b) => {
-                            const aOpen = a.status === 'OPEN' ? 0 : 1;
-                            const bOpen = b.status === 'OPEN' ? 0 : 1;
-                            if (aOpen !== bOpen) return aOpen - bOpen;
-                            return (b.changePctToday || 0) - (a.changePctToday || 0);
-                        });
-
                         const dayTotalPnl = tradesForDay.reduce((acc, t) => acc + (t.finalGain || 0), 0);
+                        const day1CohortSum = tradesForDay.reduce((acc, t) => acc + (t.day1ChangePct || 0), 0);
+                        const day1CohortAvg = tradesForDay.length > 0 ? (day1CohortSum / tradesForDay.length) : 0;
                         const dayTodayDelta = tradesForDay.reduce((acc, t) => acc + (t.pnlDeltaToday || 0), 0);
                         const dayFrCount = tradesForDay.filter(t => t.trackerType === 'FR').length;
                         const dayHtCount = tradesForDay.filter(t => t.trackerType === 'HT').length;
@@ -6502,21 +6497,21 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
                         let dayBest = tradesForDay[0];
                         tradesForDay.forEach(t => {
-                            if ((t.maxGain || 0) > (dayBest.maxGain || 0)) dayBest = t;
+                            const g = t.maxGain || t.finalGain || 0;
+                            const bestG = dayBest.maxGain || dayBest.finalGain || 0;
+                            if (g > bestG) dayBest = t;
                         });
 
-                        const pnlColor = dayTotalPnl > 0 ? '#34d399' : (dayTotalPnl < 0 ? '#f87171' : '#94a3b8');
-                        const pnlBadgeClass = dayTotalPnl >= 0 ? 'color: #34d399; background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(52, 211, 153, 0.4);' : 'color: #f87171; background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.4);';
-
                         const formattedDateStr = formatTrackerDateMalay(dateStr);
-                        const collapseBodyId = `td-cohort-body-${dateStr}`;
+                        const collapseBodyId = 'td-cohort-body-' + dateStr;
+                        const pnlBadgeClass = dayTotalPnl >= 0 ? 'background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4);' : 'background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.4);';
 
                         cardsHtml += `
-                        <div id="td-cohort-${dateStr}" style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.7)); border: 1.5px solid rgba(52, 211, 153, 0.35); border-radius: 14px; padding: 1.1rem; box-shadow: 0 6px 20px rgba(0,0,0,0.3); transition: all 0.3s ease;">
-                            <!-- Cohort Date Header -->
-                            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; border-bottom: 1px solid rgba(148, 163, 184, 0.2); padding-bottom: 0.75rem; margin-bottom: 0.85rem;">
-                                <div style="display: flex; align-items: center; gap: 0.65rem; flex-wrap: wrap;">
-                                    <span style="font-size: 1.3rem;">📅</span>
+                        <div id="td-cohort-${dateStr}" style="background: rgba(15, 23, 42, 0.95); border: 1px solid rgba(148, 163, 184, 0.25); border-radius: 12px; padding: 1rem 1.25rem; box-shadow: 0 4px 16px rgba(0,0,0,0.25); transition: box-shadow 0.3s ease-in-out;">
+                            <!-- Cohort Header -->
+                            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; border-bottom: 1px solid rgba(148, 163, 184, 0.2); padding-bottom: 0.75rem; margin-bottom: 0.75rem;">
+                                <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
+                                    <span style="font-size: 1.25rem;">📅</span>
                                     <div>
                                         <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
                                             <span style="font-size: 1.05rem; font-weight: 900; color: #f8fafc; letter-spacing: 0.3px;">
@@ -6535,8 +6530,11 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                                 </div>
 
                                 <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
-                                    <div style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.25rem 0.65rem; border-radius: 8px; font-size: 0.8rem; font-weight: 900; ${pnlBadgeClass}">
-                                        <span>Cohort PnL:</span>
+                                    <div style="background: rgba(15,23,42,0.8); border: 1px solid rgba(253,224,71,0.4); border-radius: 8px; padding: 0.25rem 0.55rem; font-size: 0.72rem; color: #fde047; font-weight: 800;" title="Purata pergerakan harga saham pada hari pertama entry">
+                                        ⚡ Day 1 Entry: ${day1CohortAvg >= 0 ? '+' : ''}${day1CohortAvg.toFixed(2)}%
+                                    </div>
+                                    <div style="display: inline-flex; align-items: center; gap: 0.35rem; padding: 0.25rem 0.65rem; border-radius: 8px; font-size: 0.8rem; font-weight: 900; ${pnlBadgeClass}" title="Jumlah keuntungan sekiranya di-hold sehingga hari ini / tarikh exit">
+                                        <span>Pulangan Hold:</span>
                                         <span style="font-size: 0.95rem;">${dayTotalPnl >= 0 ? '+' : ''}${dayTotalPnl.toFixed(1)}%</span>
                                     </div>
 
@@ -6570,10 +6568,11 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                                                 <th style="text-align: left;">Kaunter</th>
                                                 <th style="text-align: center;">Strategi</th>
                                                 <th style="text-align: center;">Status</th>
+                                                <th style="text-align: right;" title="Pergerakan harga saham pada hari pertama mula beli">Day 1 (Entry)</th>
                                                 <th style="text-align: right;" title="Perubahan harga hari ini">Hari Ini</th>
                                                 <th style="text-align: right;">Entry Price</th>
                                                 <th style="text-align: right;">Current / Exit Price</th>
-                                                <th style="text-align: right;">Current / Final PnL</th>
+                                                <th style="text-align: right;" title="Keuntungan terkumpul jika hold sehingga kini / exit">Pulangan Hold (PnL)</th>
                                                 <th style="text-align: right;">Max Gain</th>
                                                 <th style="text-align: center;">Days Held</th>
                                                 <th style="text-align: center;">Radar Action</th>
@@ -6602,7 +6601,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                                                     ? `<span style="color: ${todayColor}; font-weight: 800; font-size: 0.72rem;">${todayArrow} ${todayChg >= 0 ? '+' : ''}${todayChg.toFixed(1)}%</span>`
                                                     : '<span style="color: #64748b; font-size: 0.65rem;">—</span>';
 
-                                                const exitPx = isOpen ? t.livePrice : t.exitPrice;
+                                                const exitPx = isOpen ? t.livePrice : (t.exitPrice || t.livePrice);
                                                 const slTrail = (t.slTrail != null ? t.slTrail : 0).toFixed(3);
 
                                                 let stillRadar = '';
@@ -6634,6 +6633,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                                                     </td>
                                                     <td style="text-align: center;">${stratBadge}</td>
                                                     <td style="text-align: center;">${statusBadge}</td>
+                                                    <td style="text-align: right; color: ${(t.day1ChangePct || 0) >= 0 ? '#34d399' : '#f87171'}; font-weight: 800; font-size: 0.74rem;">${t.day1ChangePct != null ? ((t.day1ChangePct >= 0 ? '+' : '') + Number(t.day1ChangePct).toFixed(2) + '%') : '0.00%'}</td>
                                                     <td style="text-align: right;">${todayChip}</td>
                                                     <td style="text-align: right; color: white; font-weight: 700;">RM ${(t.entry || 0).toFixed(3)}</td>
                                                     <td style="text-align: right; color: white; font-weight: 700;">
@@ -6658,79 +6658,61 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 }
             }
 
-            // 12. Render View 2: Consolidated Timeline Summary Table
+            // 11. Render View 2: Consolidated Timeline Summary Table
             const timelineTbody = document.getElementById('tdTimelineTableBody');
             const timelineMeta = document.getElementById('tdTimelineMeta');
-            if (timelineMeta) timelineMeta.textContent = `${sortedDates.length} Tarikh Entry • ${filteredTrades.length} Signal Keseluruhan`;
+            const timelineList = (eqData.timeline && eqData.timeline.length > 0) ? [...eqData.timeline].reverse() : [];
+
+            if (timelineMeta) timelineMeta.textContent = `${timelineList.length} Hari Dagangan • Snapshot Sebenar Portfolio Day-by-Day`;
             if (timelineTbody) {
-                if (sortedDates.length === 0) {
+                if (timelineList.length === 0) {
                     timelineTbody.innerHTML = '<tr><td colspan="11" style="text-align: center; color: #94a3b8; padding: 2rem;">Tiada data untuk paparan jadual timeline.</td></tr>';
                 } else {
-                    let runningPnl = 0;
-                    timelineTbody.innerHTML = sortedDates.map((dateStr, idx) => {
-                        const tradesForDay = dateGroups[dateStr];
-                        const dayTotalPnl = tradesForDay.reduce((acc, t) => acc + (t.finalGain || 0), 0);
-                        runningPnl += dayTotalPnl;
-                        const dayFrCount = tradesForDay.filter(t => t.trackerType === 'FR').length;
-                        const dayHtCount = tradesForDay.filter(t => t.trackerType === 'HT').length;
-                        const dayOpenCount = tradesForDay.filter(t => t.status === 'OPEN').length;
-                        const dayClosedCount = tradesForDay.filter(t => t.status !== 'OPEN').length;
-                        const dayWins = tradesForDay.filter(t => (t.finalGain || 0) > 0).length;
-                        const dayWinRate = Math.round((dayWins / tradesForDay.length) * 100);
-                        const dayAvgGain = dayTotalPnl / tradesForDay.length;
+                    timelineTbody.innerHTML = timelineList.map((snap, idx) => {
+                        const dayPnl = snap.totalPnl;
+                        const dayPnlCol = dayPnl > 0 ? '#34d399' : (dayPnl < 0 ? '#f87171' : '#94a3b8');
+                        const dayPnlText = (dayPnl >= 0 ? '+' : '') + dayPnl.toFixed(1) + '%';
+                        const deltaSign = snap.dailyPnlDelta >= 0 ? '+' : '';
+                        const deltaCol = snap.dailyPnlDelta > 0 ? '#38bdf8' : (snap.dailyPnlDelta < 0 ? '#fb7185' : '#64748b');
 
-                        let dayBest = tradesForDay[0];
-                        tradesForDay.forEach(t => {
-                            if ((t.maxGain || 0) > (dayBest.maxGain || 0)) dayBest = t;
-                        });
-
-                        const pnlColor = dayTotalPnl > 0 ? '#34d399' : (dayTotalPnl < 0 ? '#f87171' : '#94a3b8');
-                        const pnlStr = (dayTotalPnl >= 0 ? '+' : '') + dayTotalPnl.toFixed(1) + '%';
-                        const avgStr = (dayAvgGain >= 0 ? '+' : '') + dayAvgGain.toFixed(1) + '%';
-
-                        const counterChips = tradesForDay.map(t => {
-                            const pnl = t.finalGain || 0;
-                            const col = pnl > 0 ? '#34d399' : (pnl < 0 ? '#f87171' : '#94a3b8');
-                            return `<span style="display: inline-flex; align-items: center; gap: 0.2rem; background: rgba(15,23,42,0.8); border: 1px solid rgba(148,163,184,0.25); border-radius: 4px; padding: 0.1rem 0.35rem; font-size: 0.68rem; margin: 0.1rem;">
-                                <strong>${t.name}</strong> <span style="color: ${col}; font-weight: 800;">${pnl >= 0 ? '+' : ''}${pnl.toFixed(0)}%</span>
-                            </span>`;
-                        }).join(' ');
+                        const sampleStocks = (snap.trades || []).slice(0, 4).map(t => getTradingViewAnchorSmall(t.name)).join(' ');
 
                         return `
-                        <tr>
-                            <td style="text-align: center; font-weight: 800; color: #fbbf24; font-size: 0.75rem;">${idx + 1}</td>
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(16,185,129,0.05)'" onmouseout="this.style.background='none'">
+                            <td style="text-align: center; font-weight: 800; color: #94a3b8; font-size: 0.72rem;">${idx + 1}</td>
                             <td style="font-weight: 800; color: white;">
-                                <div style="font-size: 0.85rem;">${dateStr}</div>
-                                <div style="font-size: 0.65rem; color: #94a3b8;">${formatTrackerDateMalay(dateStr)}</div>
+                                <div style="display: flex; align-items: center; gap: 0.4rem;">
+                                    <span style="color: #34d399;">📅</span>
+                                    <span>${formatTrackerDateMalay(snap.date)}</span>
+                                    <span style="font-size: 0.65rem; color: #64748b;">(${snap.date})</span>
+                                </div>
                             </td>
-                            <td style="text-align: center; font-weight: 800; color: #38bdf8;">${tradesForDay.length}</td>
+                            <td style="text-align: center; font-weight: 800; color: #38bdf8;">${snap.totalSignals}</td>
                             <td style="text-align: center; font-size: 0.72rem;">
-                                ${dayFrCount > 0 ? `<span style="color: #fde047; font-weight: 800;">${dayFrCount} FR</span>` : ''}
-                                ${dayFrCount > 0 && dayHtCount > 0 ? ' · ' : ''}
-                                ${dayHtCount > 0 ? `<span style="color: #c4b5fd; font-weight: 800;">${dayHtCount} HT</span>` : ''}
+                                <span style="color: #fde047; font-weight: 700;">${snap.frPnl >= 0 ? '+' : ''}${snap.frPnl.toFixed(1)}% FR</span> · <span style="color: #c4b5fd; font-weight: 700;">${snap.htPnl >= 0 ? '+' : ''}${snap.htPnl.toFixed(1)}% HT</span>
                             </td>
-                            <td style="text-align: left; max-width: 250px;">${counterChips}</td>
+                            <td style="text-align: left; font-size: 0.72rem;">${sampleStocks}${(snap.trades || []).length > 4 ? ' <span style="color:#64748b;">+' + (snap.trades.length - 4) + ' lagi</span>' : ''}</td>
                             <td style="text-align: center; font-size: 0.72rem;">
-                                <span style="color: #34d399; font-weight: 800;">${dayOpenCount} OPEN</span>
-                                ${dayClosedCount > 0 ? ` · <span style="color: #94a3b8; font-weight: 700;">${dayClosedCount} CLOSED</span>` : ''}
+                                <span style="color: #34d399; font-weight: 800;">${snap.openCount} OPEN</span> · <span style="color: #94a3b8;">${snap.closedCount} CLS</span>
                             </td>
-                            <td style="text-align: right; color: ${pnlColor}; font-weight: 900; font-size: 0.88rem;">${pnlStr}</td>
-                            <td style="text-align: right; color: ${dayAvgGain >= 0 ? '#34d399' : '#f87171'}; font-weight: 700;">${avgStr}</td>
-                            <td style="text-align: center; color: #fde047; font-weight: 800;">${dayWinRate}%</td>
-                            <td style="text-align: left; color: #ec4899; font-weight: 800; font-size: 0.72rem;">
-                                ${dayBest ? `${dayBest.name} (+${(dayBest.maxGain || dayBest.finalGain || 0).toFixed(1)}%)` : '—'}
+                            <td style="text-align: right; font-weight: 800; color: ${deltaCol}; font-size: 0.8rem;">${deltaSign}${snap.dailyPnlDelta.toFixed(1)}% pts</td>
+                            <td style="text-align: right; font-weight: 900; color: ${dayPnlCol}; font-size: 0.88rem;">${dayPnlText}</td>
+                            <td style="text-align: center; color: #fde047; font-weight: 800;">${snap.winRate}%</td>
+                            <td style="text-align: left; font-size: 0.72rem; color: #ec4899; font-weight: 700;">
+                                ${snap.peakGainer ? snap.peakGainer.name + ' (+' + snap.peakGainer.gain.toFixed(1) + '%)' : '—'}
                             </td>
                             <td style="text-align: center;">
-                                <button onclick="jumpToTrackerDailyCohort('${dateStr}')" class="btn" style="background: rgba(56,189,248,0.15); border: 1px solid rgba(56,189,248,0.4); color: #38bdf8; padding: 0.15rem 0.45rem; font-size: 0.68rem; font-weight: 800; border-radius: 6px; cursor: pointer;">
-                                    🔍 Buka
+                                <button onclick="document.getElementById('tdDateFilter').value = '${snap.date}'; onTrackerDailyFilterChange(); switchTrackerDailyView('movers');" class="btn" style="background: rgba(56,189,248,0.15); border: 1px solid rgba(56,189,248,0.35); color: #38bdf8; padding: 0.15rem 0.45rem; border-radius: 4px; font-size: 0.68rem; font-weight: 800; cursor: pointer;">
+                                    🔍 Snapshot
                                 </button>
                             </td>
                         </tr>`;
                     }).join('');
                 }
             }
-        }
-        window.renderTrackerDaily = renderTrackerDaily;
+
+            updateTopTrackerPnlBadge();
+        }window.renderTrackerDaily = renderTrackerDaily;
 
         // Global card collapse/expand handler
         function toggleCardCollapse(bodyId, btnEl) {
