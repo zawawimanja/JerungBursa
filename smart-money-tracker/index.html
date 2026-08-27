@@ -2758,6 +2758,11 @@
 
     <!-- TAB: AUTO TRACK (signal Fresh Rider baharu ditrack automatik) -->
     <script>
+        // Inisialisasi pantas untuk DAILY_EQUITY_TRACKER
+        if (window.DAILY_EQUITY_TRACKER && !window.DAILY_EQUITY_TRACKER.byDate && Array.isArray(window.DAILY_EQUITY_TRACKER.timeline)) {
+            window.DAILY_EQUITY_TRACKER.byDate = Object.fromEntries(window.DAILY_EQUITY_TRACKER.timeline.map(x => [x.date, x]));
+        }
+
         // Helper to convert stock name to valid TradingView ticker symbol
         // Pembetulan rasmi (disahkan Ogos 2026): nama paparan -> ticker TradingView sebenar
         const TV_SYMBOL_OVERRIDES = {
@@ -5379,43 +5384,50 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         // bukan 0.92 lagi). Rule: kalau harga dah >10% atas lantai asal (sudah breakout), guna
         // lantai baru = minimum harga 5 trading days terakhir. Kalau masih dalam base asal
         // (<10%), kekal floorLow scanner — elak lantai palsu lebih tinggi dari harga (kes MMCS).
+        // Guna data in-memory dari DAILY_EQUITY_TRACKER & FRESH_RIDER_TRACKER — pantas (0ms) tanpa network lag.
         let _recentFloorCache = null; // { key, map: name -> min price (lantai baru) }
-        async function getRecentFloorMap(baseDateStr, lookbackDays = 5) {
-            let base = new Date();
-            if (baseDateStr) {
-                const p = baseDateStr.split('-');
-                if (p.length === 3) base = new Date(parseInt(p[0]), parseInt(p[1]) - 1, parseInt(p[2]));
-            }
+        function getRecentFloorMap(baseDateStr, lookbackDays = 5) {
             const key = (baseDateStr || 'live') + '|' + lookbackDays;
             if (_recentFloorCache && _recentFloorCache.key === key) return _recentFloorCache.map;
             const minMap = new Map(); // name -> harga terendah dalam window
-            for (let back = 1; back <= lookbackDays; back++) {
-                const d = new Date(base);
-                d.setDate(base.getDate() - back);
-                const yyyy = d.getFullYear();
-                const mm = String(d.getMonth() + 1).padStart(2, '0');
-                const dd = String(d.getDate()).padStart(2, '0');
-                const dateStr = `${yyyy}-${mm}-${dd}`;
-                try {
-                    const cacheBuster = new Date().getTime();
-                    let res = await fetch(`history/data_${dateStr}.json?t=${cacheBuster}`);
-                    if (!res || !res.ok) {
-                        res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/history/data_${dateStr}.json?t=${cacheBuster}`);
+
+            const eqData = window.DAILY_EQUITY_TRACKER;
+            if (eqData && Array.isArray(eqData.timeline) && eqData.timeline.length > 0) {
+                const timeline = eqData.timeline;
+                let targetIdx = timeline.length - 1;
+                if (baseDateStr) {
+                    const idx = timeline.findIndex(snap => snap.date === baseDateStr);
+                    if (idx !== -1) targetIdx = idx;
+                }
+                const startIdx = Math.max(0, targetIdx - lookbackDays);
+                for (let i = startIdx; i <= targetIdx; i++) {
+                    const snap = timeline[i];
+                    if (snap && Array.isArray(snap.trades)) {
+                        snap.trades.forEach(it => {
+                            if (!it || !it.name) return;
+                            const price = it.priceOnDay || it.currentPrice || it.entry;
+                            if (price > 0) {
+                                const nm = it.name.toUpperCase();
+                                const cur = minMap.get(nm);
+                                if (cur === undefined || price < cur) minMap.set(nm, price);
+                            }
+                        });
                     }
-                    if (res && res.ok) {
-                        const raw = await res.json();
-                        const list = Array.isArray(raw) ? raw : (raw.topVolume || []);
-                        for (const it of list) {
-                            if (!it || !it.name || !(it.price > 0)) continue;
-                            const nm = (it.name || '').toUpperCase();
-                            const cur = minMap.get(nm);
-                            if (cur === undefined || it.price < cur) minMap.set(nm, it.price);
-                        }
-                    }
-                } catch (e) {
-                    // skip — fail satu fail tak penting
                 }
             }
+
+            // Fallback dengan tracker data jika ada
+            const frTrades = (window.FRESH_RIDER_TRACKER && Array.isArray(window.FRESH_RIDER_TRACKER.trades)) ? window.FRESH_RIDER_TRACKER.trades : [];
+            frTrades.forEach(t => {
+                if (t && t.name) {
+                    const nm = t.name.toUpperCase();
+                    if (!minMap.has(nm)) {
+                        const fl = t.currentFloor || t.entryFloor || (t.entry ? t.entry * 0.95 : 0);
+                        if (fl > 0) minMap.set(nm, fl);
+                    }
+                }
+            });
+
             _recentFloorCache = { key, map: minMap };
             return minMap;
         }
@@ -5423,12 +5435,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         // Render Fresh VVIP Rider — setup swing PnL tertinggi hasil backtest 54 hari
         // Formula: isVvip + Fresh IPO (2025+) + pullback <= 10% + closeTightness <= 5.0
         // Backtest: WR 81%, avg +18.7%/trade, worst -3.6% (exit trail hibrid)
-        // PENJAGA RACE: renderConfluenceRadar dipanggil 2x semasa load (sekali dgn data kosong
-        // dari switchTab, sekali lagi lepas fetchLiveData siap). Dua-dua async + await lantai
-        // dinamik (fetch 5 fail sejarah) — yang siap LAMBAT akan overwrite. Kalau render kosong
-        // siap terakhir, list yang dah penuh jadi "Tiada setup". Guard: render lama bail out.
         let _confluenceRenderSeq = 0;
-        async function renderConfluenceRadar() {
+        function renderConfluenceRadar() {
             const tbody = document.getElementById('confluenceRadarTableBody');
             if (!tbody) return;
             const seq = ++_confluenceRenderSeq;
@@ -5438,8 +5446,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
             // Kira lantai dinamik (lantai baru selepas breakout) untuk semua kaunter dalam list
             const hdFloor = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || '';
-            const recentFloorMap = await getRecentFloorMap(hdFloor, 5);
-            if (seq !== _confluenceRenderSeq) return; // render lama (cth. data belum muat) — jangan overwrite
+            const recentFloorMap = getRecentFloorMap(hdFloor, 5);
+            if (seq !== _confluenceRenderSeq) return; // render lama — jangan overwrite
             const effFloorOf = (item) => {
                 const rf = recentFloorMap.get((item.name || '').toUpperCase());
                 const f = item.floorLow || 0;
@@ -5956,13 +5964,6 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             if (navTotal) navTotal.textContent = `${grandTotal >= 0 ? '+' : ''}${grandTotal.toFixed(1)}%`;
             if (navFr) navFr.textContent = `FR: ${frPnl >= 0 ? '+' : ''}${frPnl.toFixed(1)}%`;
             if (navHt) navHt.textContent = `HT: ${htPnl >= 0 ? '+' : ''}${htPnl.toFixed(1)}%`;
-
-            if (typeof renderTrackerDaily === 'function') {
-                const viewTd = document.getElementById('view-trackerdaily');
-                if (viewTd && viewTd.style.display !== 'none') {
-                    renderTrackerDaily();
-                }
-            }
         }
         window.updateTopTrackerPnlBadge = updateTopTrackerPnlBadge;
         try { updateTopTrackerPnlBadge(); } catch(e) {}
@@ -6065,6 +6066,9 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const frData = window.FRESH_RIDER_TRACKER || { summary: {}, trades: [] };
             const htData = window.HOT_THEME_TRACKER || { summary: {}, trades: [] };
             const eqData = window.DAILY_EQUITY_TRACKER || { timeline: [], byDate: {} };
+            if (!eqData.byDate && Array.isArray(eqData.timeline)) {
+                eqData.byDate = Object.fromEntries(eqData.timeline.map(x => [x.date, x]));
+            }
 
             const frTrades = (frData.trades || []).map(t => ({
                 ...t,
@@ -6747,37 +6751,27 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         }
 
         // Kumpul nama yang pernah qualify Fresh Rider dalam 30 trading days terakhir (sebelum tarikh rujukan)
-        async function getRecentFreshRiderNames(baseDateStr) {
+        // Guna data in-memory dari FRESH_RIDER_TRACKER — pantas (0ms) tanpa network fetch lag
+        function getRecentFreshRiderNames(baseDateStr) {
             let base = new Date();
             if (baseDateStr) {
                 const p = baseDateStr.split('-');
                 if (p.length === 3) base = new Date(parseInt(p[0]), parseInt(p[1]) - 1, parseInt(p[2]));
             }
+            const minDate = new Date(base);
+            minDate.setDate(base.getDate() - 35);
+            const minDateStr = minDate.toISOString().slice(0, 10);
+            const refDateStr = base.toISOString().slice(0, 10);
+
             const names = new Set();
-            for (let back = 1; back <= 30; back++) {
-                const d = new Date(base);
-                d.setDate(base.getDate() - back);
-                const yyyy = d.getFullYear();
-                const mm = String(d.getMonth() + 1).padStart(2, '0');
-                const dd = String(d.getDate()).padStart(2, '0');
-                const dateStr = `${yyyy}-${mm}-${dd}`;
-                try {
-                    const cacheBuster = new Date().getTime();
-                    let res = await fetch(`history/data_${dateStr}.json?t=${cacheBuster}`);
-                    if (!res || !res.ok) {
-                        res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/history/data_${dateStr}.json?t=${cacheBuster}`);
-                    }
-                    if (res && res.ok) {
-                        const raw = await res.json();
-                        const list = Array.isArray(raw) ? raw : (raw.topVolume || []);
-                        for (const it of list) {
-                            if (qualifiesFreshRider(it)) names.add(it.name);
-                        }
-                    }
-                } catch (e) {
-                    // skip — fail satu fail tak penting
+            const frTrades = (window.FRESH_RIDER_TRACKER && Array.isArray(window.FRESH_RIDER_TRACKER.trades)) ? window.FRESH_RIDER_TRACKER.trades : [];
+            frTrades.forEach(t => {
+                if (!t || !t.name) return;
+                const eDate = t.entryDate || '';
+                if (eDate && eDate < refDateStr && eDate >= minDateStr) {
+                    names.add(t.name);
                 }
-            }
+            });
             return names;
         }
 
@@ -6786,7 +6780,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         // Tandai signal: 🆕 BARU = tak pernah qualify dalam 30 hari terakhir DAN belum pernah
         // ditrack dalam Tracker Live Fresh Rider. 🟢 RE-ENTRY = pernah ditrack sebelum ni
         // (dah ada dalam tracker) tapi qualify semula selepas keluar 30+ hari.
-        async function markFreshRiderNewBadges() {
+        function markFreshRiderNewBadges() {
             const tbody = document.getElementById('confluenceRadarTableBody');
             if (!tbody) return;
 
@@ -6794,7 +6788,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const key = hd || 'live';
 
             if (!_freshRiderPrevCache || _freshRiderPrevCache.key !== key) {
-                const recentNames = await getRecentFreshRiderNames(hd);
+                const recentNames = getRecentFreshRiderNames(hd);
                 _freshRiderPrevCache = { key, set: recentNames };
             }
 
@@ -6850,37 +6844,27 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         }
 
         // ===== HOT THEME: label 🆕 NEW / 🟢 RE-ENTRY =====
-        async function getRecentHotThemeNames(baseDateStr) {
+        // Guna data in-memory dari HOT_THEME_TRACKER — pantas (0ms) tanpa network fetch lag
+        function getRecentHotThemeNames(baseDateStr) {
             let base = new Date();
             if (baseDateStr) {
                 const p = baseDateStr.split('-');
                 if (p.length === 3) base = new Date(parseInt(p[0]), parseInt(p[1]) - 1, parseInt(p[2]));
             }
+            const minDate = new Date(base);
+            minDate.setDate(base.getDate() - 35);
+            const minDateStr = minDate.toISOString().slice(0, 10);
+            const refDateStr = base.toISOString().slice(0, 10);
+
             const names = new Set();
-            for (let back = 1; back <= 30; back++) {
-                const d = new Date(base);
-                d.setDate(base.getDate() - back);
-                const yyyy = d.getFullYear();
-                const mm = String(d.getMonth() + 1).padStart(2, '0');
-                const dd = String(d.getDate()).padStart(2, '0');
-                const dateStr = `${yyyy}-${mm}-${dd}`;
-                try {
-                    const cacheBuster = new Date().getTime();
-                    let res = await fetch(`history/data_${dateStr}.json?t=${cacheBuster}`);
-                    if (!res || !res.ok) {
-                        res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/history/data_${dateStr}.json?t=${cacheBuster}`);
-                    }
-                    if (res && res.ok) {
-                        const raw = await res.json();
-                        const list = Array.isArray(raw) ? raw : (raw.topVolume || []);
-                        for (const it of list) {
-                            if (qualifiesHotTheme(it)) names.add(it.name);
-                        }
-                    }
-                } catch (e) {
-                    // skip
+            const htTrades = (window.HOT_THEME_TRACKER && Array.isArray(window.HOT_THEME_TRACKER.trades)) ? window.HOT_THEME_TRACKER.trades : [];
+            htTrades.forEach(t => {
+                if (!t || !t.name) return;
+                const eDate = t.entryDate || '';
+                if (eDate && eDate < refDateStr && eDate >= minDateStr) {
+                    names.add(t.name);
                 }
-            }
+            });
             return names;
         }
 
@@ -6888,7 +6872,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
         // Mark signal: 🆕 NEW = never qualified in last 30 days AND not in Hot Theme Live Tracker.
         // 🟢 RE-ENTRY = tracked previously but re-qualifies after exiting 30+ days.
-        async function markHotThemeNewBadges() {
+        function markHotThemeNewBadges() {
             const tbody = document.getElementById('hotThemeTableBody');
             if (!tbody) return;
 
@@ -6896,7 +6880,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const key = hd || 'live';
 
             if (!_hotThemePrevCache || _hotThemePrevCache.key !== key) {
-                const recentNames = await getRecentHotThemeNames(hd);
+                const recentNames = getRecentHotThemeNames(hd);
                 _hotThemePrevCache = { key, set: recentNames };
             }
 
@@ -7166,7 +7150,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             // Lantai dinamik (sama macam Fresh Rider): selepas breakout, guna lantai BARU
             // (min 5 trading days terakhir) — bukan lantai asal yang ketinggalan jauh di bawah.
             const hdHT = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || '';
-            const recentFloorMapHT = await getRecentFloorMap(hdHT, 5);
+            const recentFloorMapHT = getRecentFloorMap(hdHT, 5);
             if (seq !== _hotThemeRenderSeq) return; // render lama — jangan overwrite
             const effFloorOfHT = (item) => {
                 const rf = recentFloorMapHT.get((item.name || '').toUpperCase());
@@ -8323,10 +8307,18 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
             try {
                 const cacheBuster = new Date().getTime();
-                let res = await fetch(`history/data_${fridayStr}.json?t=${cacheBuster}`);
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), 2000);
+                let res = null;
+                try {
+                    res = await fetch(`history/data_${fridayStr}.json?t=${cacheBuster}`, { signal: controller.signal });
+                } catch (e) {}
                 if (!res || !res.ok) {
-                    res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/history/data_${fridayStr}.json?t=${cacheBuster}`);
+                    try {
+                        res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/history/data_${fridayStr}.json?t=${cacheBuster}`, { signal: controller.signal });
+                    } catch (e) {}
                 }
+                clearTimeout(timeoutId);
                 if (res && res.ok) {
                     const raw = await res.json();
                     const list = Array.isArray(raw) ? raw : (raw.topVolume || []);
@@ -8334,7 +8326,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     return { fridayStr, list };
                 }
             } catch (e) {
-                console.warn("Local Weekend Friday fetch failed", e);
+                console.warn("Weekend Friday fetch failed", e);
             }
             return { fridayStr, list: null };
         }

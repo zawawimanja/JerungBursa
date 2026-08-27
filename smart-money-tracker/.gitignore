@@ -6,3 +6,5 @@ buy_alert_latest.json
 scratch/
 # Node modules
 node_modules/
+auto_runner.log
+

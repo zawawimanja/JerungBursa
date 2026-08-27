@@ -122,9 +122,10 @@ historyDays.forEach((day, dayIdx) => {
             closedPnl += g;
             if (t.trackerType === 'FR') frPnlOnDay += g; else htPnlOnDay += g;
             tradesOnDay.push({
-                ...t,
+                name: t.name,
+                trackerType: t.trackerType,
                 statusOnDay: 'CLOSED',
-                priceOnDay: t.exitPrice || t.currentPrice,
+                priceOnDay: +(t.exitPrice || t.currentPrice || 0).toFixed(3),
                 gainOnDay: g,
                 dayChangePct: 0,
                 pnlDeltaToday: 0
@@ -156,9 +157,10 @@ historyDays.forEach((day, dayIdx) => {
             if (t.trackerType === 'FR') frPnlOnDay += g; else htPnlOnDay += g;
             dailyPnlDelta += pnlDeltaToday;
             tradesOnDay.push({
-                ...t,
+                name: t.name,
+                trackerType: t.trackerType,
                 statusOnDay: 'CLOSED_TODAY',
-                priceOnDay: t.exitPrice || priceOnDay,
+                priceOnDay: +(t.exitPrice || priceOnDay || 0).toFixed(3),
                 gainOnDay: g,
                 dayChangePct: +changePct.toFixed(2),
                 pnlDeltaToday
@@ -169,7 +171,8 @@ historyDays.forEach((day, dayIdx) => {
             if (t.trackerType === 'FR') frPnlOnDay += gainOnDay; else htPnlOnDay += gainOnDay;
             dailyPnlDelta += pnlDeltaToday;
             tradesOnDay.push({
-                ...t,
+                name: t.name,
+                trackerType: t.trackerType,
                 statusOnDay: 'OPEN',
                 priceOnDay: +priceOnDay.toFixed(3),
                 gainOnDay,
@@ -211,7 +214,6 @@ historyDays.forEach((day, dayIdx) => {
     };
 
     dailyTimeline.push(snapshot);
-    timelineByDate[day.date] = snapshot;
 });
 
 const outputData = {
@@ -219,8 +221,7 @@ const outputData = {
     totalDays: dailyTimeline.length,
     startDate: dailyTimeline[0]?.date || '',
     endDate: dailyTimeline[dailyTimeline.length - 1]?.date || '',
-    timeline: dailyTimeline,
-    byDate: timelineByDate
+    timeline: dailyTimeline
 };
 
 const jsContent = `// AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual\nwindow.DAILY_EQUITY_TRACKER = ${JSON.stringify(outputData, null, 1)};\n`;
