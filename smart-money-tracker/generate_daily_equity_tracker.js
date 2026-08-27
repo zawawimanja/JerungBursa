@@ -8,7 +8,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const ROOT_DIR = '/home/awi/Desktop/trade/BSKL/smart-money-tracker';
+const ROOT_DIR = __dirname;
 const HIST_DIR = path.join(ROOT_DIR, 'history');
 const OUT_FILE = path.join(ROOT_DIR, 'daily_equity_tracker.js');
 
