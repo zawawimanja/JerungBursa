@@ -6177,6 +6177,29 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         status: t.statusOnDay === 'OPEN' ? 'OPEN' : (t.statusOnDay || 'CLOSED')
                     };
                 });
+
+                // ✅ FIX: Recalculate pnlDeltaToday from consecutive day snapshots
+                // (Stored pnlDeltaToday in history is 0 for stocks not in scanner that day)
+                const timelineArr = eqData.timeline || [];
+                const snapDayIdx = timelineArr.findIndex(x => x.date === dateFilterVal);
+                const prevDaySnap = snapDayIdx > 0 ? timelineArr[snapDayIdx - 1] : null;
+                const prevGainMap = {};
+                if (prevDaySnap && Array.isArray(prevDaySnap.trades)) {
+                    prevDaySnap.trades.forEach(pt => {
+                        const k = (pt.name || '').toUpperCase().trim() + '|' + (pt.trackerType || '');
+                        prevGainMap[k] = pt.gainOnDay || 0;
+                    });
+                }
+                baseTradesList.forEach(t => {
+                    const k = (t.name || '').toUpperCase().trim() + '|' + (t.trackerType || '');
+                    if (k in prevGainMap) {
+                        // Delta = today's gain minus previous day's gain
+                        t.pnlDeltaToday = +((t.finalGain || 0) - prevGainMap[k]).toFixed(1);
+                    } else {
+                        // New trade: entry was on this day, delta = full gain so far
+                        t.pnlDeltaToday = +(t.finalGain || 0).toFixed(1);
+                    }
+                });
             }
 
             // Apply filters
@@ -6338,18 +6361,19 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 }
             }
 
-            // Render Top PnL Drivers List
+            // Render Top PnL Drivers List (✅ FIX: use filteredTrades, not just openTrades)
             const topPnlDriversList = document.getElementById('tdTopPnlDriversTodayList');
-            const pnlDriversToday = [...openTrades].filter(t => (t.pnlDeltaToday || 0) > 0).sort((a, b) => b.pnlDeltaToday - a.pnlDeltaToday);
+            const pnlDriversToday = [...filteredTrades].filter(t => (t.pnlDeltaToday || 0) > 0).sort((a, b) => b.pnlDeltaToday - a.pnlDeltaToday);
             if (topPnlDriversList) {
                 if (pnlDriversToday.length === 0) {
                     topPnlDriversList.innerHTML = '<div style="font-size: 0.72rem; color: #94a3b8; font-weight: 600;">Tiada sumbangan positif pada tarikh ini.</div>';
                 } else {
-                    topPnlDriversList.innerHTML = pnlDriversToday.slice(0, 4).map((m, idx) => {
+                    const renderPnlDriverRow = (m, idx) => {
                         const stratTag = m.trackerType === 'FR' ? '🔥 FR' : '⚡ HT';
-                        const deltaStr = '+' + (m.pnlDeltaToday || 0).toFixed(1) + '% pts';
+                        const deltaStr = (m.pnlDeltaToday >= 0 ? '+' : '') + (m.pnlDeltaToday || 0).toFixed(1) + '% pts';
                         const totalStr = (m.finalGain >= 0 ? '+' : '') + (m.finalGain || 0).toFixed(1) + '%';
                         const isKeeming = m.name === 'KEEMING';
+                        const statusBadge = m.status !== 'OPEN' ? `<span style="font-size:0.58rem; color:#f87171; background:rgba(248,113,113,0.12); padding:0.03rem 0.28rem; border-radius:3px; font-weight:700;">CLOSED</span>` : '';
                         return `
                         <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; background: ${isKeeming ? 'linear-gradient(135deg, rgba(236,72,153,0.15), rgba(15,23,42,0.9))' : 'rgba(15,23,42,0.85)'}; border: 1px solid ${isKeeming ? 'rgba(236,72,153,0.5)' : 'rgba(56,189,248,0.3)'}; border-radius: 6px; padding: 0.35rem 0.6rem; font-size: 0.74rem;">
                             <div style="display: flex; align-items: center; gap: 0.4rem;">
@@ -6357,13 +6381,22 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                                 <strong>${getTradingViewAnchorSmall(m.name)}</strong>
                                 ${isKeeming ? '<span style="font-size: 0.65rem;">👑</span>' : ''}
                                 <span style="font-size: 0.62rem; color: #94a3b8; background: rgba(148,163,184,0.15); padding: 0.05rem 0.3rem; border-radius: 4px;">${stratTag}</span>
+                                ${statusBadge}
                             </div>
                             <div style="display: flex; align-items: center; gap: 0.45rem;">
-                                <span style="color: #38bdf8; font-weight: 900; font-size: 0.78rem;" title="Mata PnL disumbang">${deltaStr}</span>
+                                <span style="color: #38bdf8; font-weight: 900; font-size: 0.78rem;" title="Mata PnL disumbang hari ini">${deltaStr}</span>
                                 <span style="color: ${isKeeming ? '#f472b6' : '#fde047'}; font-weight: 800; font-size: 0.68rem;" title="Jumlah untung terkumpul">${totalStr}</span>
                             </div>
                         </div>`;
-                    }).join('');
+                    };
+                    const TOP_N = 5;
+                    const hasMore = pnlDriversToday.length > TOP_N;
+                    const visibleRows = pnlDriversToday.slice(0, TOP_N).map(renderPnlDriverRow).join('');
+                    const hiddenRows = hasMore ? pnlDriversToday.slice(TOP_N).map((m, i) => renderPnlDriverRow(m, TOP_N + i)).join('') : '';
+                    topPnlDriversList.innerHTML = visibleRows +
+                        (hasMore ? `
+                        <div id="tdPnlDriversExtra" style="display:none; flex-direction:column; gap:0.35rem; margin-top:0.2rem;">${hiddenRows}</div>
+                        <button onclick="(function(){const el=document.getElementById('tdPnlDriversExtra');const btn=document.getElementById('tdPnlDriversToggleBtn');const isOpen=el.style.display!=='none';el.style.display=isOpen?'none':'flex';btn.textContent=isOpen?'▼ Lihat Semua (${pnlDriversToday.length - TOP_N} lagi)':'▲ Tutup';})()" id="tdPnlDriversToggleBtn" style="margin-top:0.3rem; font-size:0.68rem; font-weight:800; color:#38bdf8; background:rgba(56,189,248,0.08); border:1px solid rgba(56,189,248,0.25); border-radius:5px; padding:0.2rem 0.6rem; cursor:pointer; width:100%; text-align:center;">▼ Lihat Semua (${pnlDriversToday.length - TOP_N} lagi)</button>` : '');
                 }
             }
 
@@ -6373,10 +6406,10 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 if (losersToday.length === 0) {
                     topLosersList.innerHTML = '<div style="font-size: 0.72rem; color: #34d399; font-weight: 600;">✨ Tiada saham yang jatuh pada tarikh ini.</div>';
                 } else {
-                    topLosersList.innerHTML = losersToday.slice(0, 4).map((m, idx) => {
+                    const renderLoserRow = (m, idx) => {
                         const stratTag = m.trackerType === 'FR' ? '🔥 FR' : '⚡ HT';
-                        const changeStr = m.changePctToday.toFixed(2) + '%';
-                        const deltaStr = m.pnlDeltaToday.toFixed(1) + '% pts';
+                        const changeStr = (m.changePctToday || 0).toFixed(2) + '%';
+                        const deltaStr = (m.pnlDeltaToday || 0).toFixed(1) + '% pts';
                         return `
                         <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.4rem; background: rgba(15,23,42,0.85); border: 1px solid rgba(244,63,94,0.3); border-radius: 6px; padding: 0.35rem 0.6rem; font-size: 0.74rem;">
                             <div style="display: flex; align-items: center; gap: 0.4rem;">
@@ -6389,7 +6422,15 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                                 <span style="color: #fb7185; font-weight: 800; font-size: 0.65rem; background: rgba(244,63,94,0.15); padding: 0.08rem 0.35rem; border-radius: 4px;" title="Kesan pengurangan mata PnL">${deltaStr}</span>
                             </div>
                         </div>`;
-                    }).join('');
+                    };
+                    const TOP_L = 5;
+                    const hasMoreL = losersToday.length > TOP_L;
+                    const visibleL = losersToday.slice(0, TOP_L).map(renderLoserRow).join('');
+                    const hiddenL = hasMoreL ? losersToday.slice(TOP_L).map((m, i) => renderLoserRow(m, TOP_L + i)).join('') : '';
+                    topLosersList.innerHTML = visibleL +
+                        (hasMoreL ? `
+                        <div id="tdLosersExtra" style="display:none; flex-direction:column; gap:0.35rem; margin-top:0.2rem;">${hiddenL}</div>
+                        <button onclick="(function(){const el=document.getElementById('tdLosersExtra');const btn=document.getElementById('tdLosersToggleBtn');const isOpen=el.style.display!=='none';el.style.display=isOpen?'none':'flex';btn.textContent=isOpen?'▼ Lihat Semua (${losersToday.length - TOP_L} lagi)':'▲ Tutup';})()" id="tdLosersToggleBtn" style="margin-top:0.3rem; font-size:0.68rem; font-weight:800; color:#fb7185; background:rgba(244,63,94,0.08); border:1px solid rgba(244,63,94,0.25); border-radius:5px; padding:0.2rem 0.6rem; cursor:pointer; width:100%; text-align:center;">▼ Lihat Semua (${losersToday.length - TOP_L} lagi)</button>` : '');
                 }
             }
 
