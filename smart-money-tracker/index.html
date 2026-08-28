@@ -1632,34 +1632,41 @@
             <!-- VIEW 0: Today's Movers & Drivers Table Container (DEFAULT VIEW) -->
             <div id="tdMoversContainer" style="display: block; background: rgba(15, 23, 42, 0.95); border: 1px solid rgba(56, 189, 248, 0.35); border-radius: 14px; padding: 1.25rem; box-shadow: 0 8px 24px rgba(0,0,0,0.3); margin-bottom: 1rem;">
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.9rem; flex-wrap: wrap; gap: 0.5rem;">
-                    <div style="font-size: 0.95rem; font-weight: 900; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 0.4rem;">
-                        <span>⚡</span> Senarai Pergerakan Harga & Sumbangan PnL Saham Hari Ini
+                    <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                        <div style="font-size: 0.95rem; font-weight: 900; color: #38bdf8; text-transform: uppercase; letter-spacing: 0.5px; display: inline-flex; align-items: center; gap: 0.4rem;">
+                            <span>⚡</span> Senarai Pergerakan Harga &amp; Sumbangan PnL Saham Hari Ini
+                        </div>
+                        <button id="tdMoversCollapseBtn" onclick="toggleMoversContainer()" class="btn" title="Collapse / Expand jadual" style="background: rgba(56,189,248,0.12); border: 1px solid rgba(56,189,248,0.35); color: #38bdf8; padding: 0.18rem 0.55rem; font-size: 0.72rem; font-weight: 800; border-radius: 6px; cursor: pointer; display: inline-flex; align-items: center; gap: 0.3rem; transition: all 0.2s;">
+                            <span id="tdMoversCollapseIcon">🔼</span> <span id="tdMoversCollapseLabel">Tutup</span>
+                        </button>
                     </div>
                     <div id="tdMoversMeta" style="font-size: 0.72rem; color: #94a3b8; font-weight: 600;">—</div>
                 </div>
-                <div class="table-responsive">
-                    <table class="data-table" style="font-size: 0.78rem;">
-                        <thead>
-                            <tr>
-                                <th style="text-align: center; width: 35px;">#</th>
-                                <th style="text-align: left;">Kaunter</th>
-                                <th style="text-align: center;">Strategi</th>
-                                <th style="text-align: right;" title="Perubahan harga saham hari ini dalam pasaran">Pergerakan Hari Ini</th>
-                                <th style="text-align: right;" title="Berapa mata % untung/rugi disumbangkan oleh kaunter ini kepada tracker hari ini">Sumbangan PnL Hari Ini</th>
-                                <th style="text-align: right;">Harga Semasa</th>
-                                <th style="text-align: right;">Entry Price</th>
-                                <th style="text-align: center;">Tarikh Entry</th>
-                                <th style="text-align: right;">Total PnL Terkumpul</th>
-                                <th style="text-align: right;">Peak Max Gain</th>
-                                <th style="text-align: right;">Trailing SL</th>
-                                <th style="text-align: center;">Radar Action</th>
-                                <th style="text-align: center;">Chart</th>
-                            </tr>
-                        </thead>
-                        <tbody id="tdMoversTableBody">
-                            <tr><td colspan="13" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">⏳ Memuatkan pergerakan saham hari ini...</td></tr>
-                        </tbody>
-                    </table>
+                <div id="tdMoversBody" style="transition: all 0.25s ease;">
+                    <div class="table-responsive">
+                        <table class="data-table" style="font-size: 0.78rem;">
+                            <thead>
+                                <tr>
+                                    <th style="text-align: center; width: 35px;">#</th>
+                                    <th style="text-align: left;">Kaunter</th>
+                                    <th style="text-align: center;">Strategi</th>
+                                    <th style="text-align: right;" title="Perubahan harga saham hari ini dalam pasaran">Pergerakan Hari Ini</th>
+                                    <th style="text-align: right;" title="Berapa mata % untung/rugi disumbangkan oleh kaunter ini kepada tracker hari ini">Sumbangan PnL Hari Ini</th>
+                                    <th style="text-align: right;">Harga Semasa</th>
+                                    <th style="text-align: right;">Entry Price</th>
+                                    <th style="text-align: center;">Tarikh Entry</th>
+                                    <th style="text-align: right;">Total PnL Terkumpul</th>
+                                    <th style="text-align: right;">Peak Max Gain</th>
+                                    <th style="text-align: right;">Trailing SL</th>
+                                    <th style="text-align: center;">Radar Action</th>
+                                    <th style="text-align: center;">Chart</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tdMoversTableBody">
+                                <tr><td colspan="13" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">⏳ Memuatkan pergerakan saham hari ini...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
 
@@ -5987,6 +5994,18 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             }
         }
 
+        function toggleMoversContainer() {
+            const body = document.getElementById('tdMoversBody');
+            const icon = document.getElementById('tdMoversCollapseIcon');
+            const label = document.getElementById('tdMoversCollapseLabel');
+            if (!body) return;
+            const isCollapsed = body.style.display === 'none';
+            body.style.display = isCollapsed ? '' : 'none';
+            if (icon) icon.textContent = isCollapsed ? '🔼' : '🔽';
+            if (label) label.textContent = isCollapsed ? 'Tutup' : 'Buka';
+        }
+        window.toggleMoversContainer = toggleMoversContainer;
+
         function switchTrackerDailyView(mode) {
             const moversView = document.getElementById('tdMoversContainer');
             const cardsView = document.getElementById('tdCardsContainer');
@@ -5999,6 +6018,13 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 if (moversView) moversView.style.display = 'block';
                 if (cardsView) cardsView.style.display = 'none';
                 if (tableView) tableView.style.display = 'none';
+                // Auto-expand body when switching to movers view
+                const moversBody = document.getElementById('tdMoversBody');
+                const icon = document.getElementById('tdMoversCollapseIcon');
+                const lbl = document.getElementById('tdMoversCollapseLabel');
+                if (moversBody) moversBody.style.display = '';
+                if (icon) icon.textContent = '🔼';
+                if (lbl) lbl.textContent = 'Tutup';
                 if (moversBtn) { moversBtn.style.background = 'rgba(56, 189, 248, 0.25)'; moversBtn.style.color = '#38bdf8'; }
                 if (cardsBtn) { cardsBtn.style.background = 'transparent'; cardsBtn.style.color = '#94a3b8'; }
                 if (tableBtn) { tableBtn.style.background = 'transparent'; tableBtn.style.color = '#94a3b8'; }
