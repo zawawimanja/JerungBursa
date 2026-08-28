@@ -2,17 +2,32 @@ name: Bursa Smart Money Auto-Scraper
 
 on:
   schedule:
-    # 1. Run pada 08:30 UTC = 4:30 PM Malaysia Time (Isnin hingga Jumaat) SEBELUM market pre-close 4:45 PM
-    - cron: '30 8 * * 1-5'
-    # 2. Run pada 09:15 UTC = 5:15 PM Malaysia Time (Isnin hingga Jumaat) selepas market tutup
-    - cron: '15 9 * * 1-5'
-  workflow_dispatch: # Membenarkan anda tekan butang 'Run' secara manual di GitHub
+    # ============================================================
+    # WAKTU PASARAN MYT (UTC+8) = Tolak 8 jam untuk dapat UTC
+    # Pasaran Malaysia: 8:30 AM - 5:00 PM MYT
+    # UTC equivalent: 0:30 AM - 9:00 AM UTC
+    # ============================================================
+
+    # Setiap 15 minit dari 8:30 AM hingga 5:00 PM MYT (Isnin-Jumaat)
+    # UTC: 0:30, 0:45, 1:00, 1:15 ... 8:45, 9:00
+    - cron: '30,45 0 * * 1-5'   # 8:30 AM & 8:45 AM MYT
+    - cron: '0,15,30,45 1 * * 1-5'  # 9:00 AM - 9:45 AM MYT
+    - cron: '0,15,30,45 2 * * 1-5'  # 10:00 AM - 10:45 AM MYT
+    - cron: '0,15,30,45 3 * * 1-5'  # 11:00 AM - 11:45 AM MYT
+    - cron: '0,15,30,45 4 * * 1-5'  # 12:00 PM - 12:45 PM MYT
+    - cron: '0,15,30,45 5 * * 1-5'  # 1:00 PM - 1:45 PM MYT
+    - cron: '0,15,30,45 6 * * 1-5'  # 2:00 PM - 2:45 PM MYT
+    - cron: '0,15,30,45 7 * * 1-5'  # 3:00 PM - 3:45 PM MYT
+    - cron: '0,15,30,45 8 * * 1-5'  # 4:00 PM - 4:45 PM MYT
+    - cron: '0 9 * * 1-5'           # 5:00 PM MYT (Tutup pasaran)
+
+  workflow_dispatch: # Membenarkan tekan butang 'Run' secara manual di GitHub
 
 jobs:
   scrape:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Wajib untuk benarkan GitHub update file live_data.json
+      contents: write # Wajib untuk benarkan GitHub update fail data
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v3
@@ -26,20 +41,38 @@ jobs:
         run: npm install axios cheerio
         working-directory: smart-money-tracker
 
-      - name: Run Bursa Smart Money Scraper
+      - name: 🔄 Run Bursa Smart Money Scraper (scrape-real.js)
         run: node scrape-real.js
         working-directory: smart-money-tracker
 
-      - name: Commit and Push live_data.json
+      - name: 📊 Jana Semula Fresh Rider Tracker
+        run: node generate_fresh_rider_tracker.js
+        working-directory: smart-money-tracker
+
+      - name: 🔥 Jana Semula Hot Theme Tracker
+        run: node generate_hot_theme_tracker.js
+        working-directory: smart-money-tracker
+
+      - name: 📈 Jana Semula Daily Equity Tracker
+        run: node generate_daily_equity_tracker.js
+        working-directory: smart-money-tracker
+
+      - name: 💾 Commit and Push semua data terkini ke GitHub
         run: |
-          git config --global user.name 'github-actions[bot]'
-          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git config --global user.name 'Bursa Bot Action'
+          git config --global user.email 'bot@smartmoneytracker.local'
           git add smart-money-tracker/live_data.json
+          git add smart-money-tracker/live_data.js
+          git add smart-money-tracker/fresh_rider_tracker.js
+          git add smart-money-tracker/hot_theme_tracker.js
+          git add smart-money-tracker/daily_equity_tracker.js
           git add smart-money-tracker/history/
-          git commit -m "🤖 Auto-update data Smart Money Bursa: $(date)" || exit 0
+          git commit -m "Auto-update live_data.json/js & trackers [skip ci]" || echo "Tiada perubahan, skip commit."
           git push
 
-      - name: 📢 Hantar Buy Alert ke Telegram
+      - name: 📢 Hantar Buy Alert ke Telegram (4:30 PM Pre-Close sahaja)
+        # Hanya jalankan Buy Alert pada pukul 8:30 UTC = 4:30 PM MYT
+        if: ${{ github.event.schedule == '30 8 * * 1-5' || github.event_name == 'workflow_dispatch' }}
         run: node buy_alert.js
         working-directory: smart-money-tracker
         env:
