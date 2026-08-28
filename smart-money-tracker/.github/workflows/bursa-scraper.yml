@@ -18,7 +18,9 @@ on:
     - cron: '0,15,30,45 5 * * 1-5'  # 1:00 PM - 1:45 PM MYT
     - cron: '0,15,30,45 6 * * 1-5'  # 2:00 PM - 2:45 PM MYT
     - cron: '0,15,30,45 7 * * 1-5'  # 3:00 PM - 3:45 PM MYT
-    - cron: '0,15,30,45 8 * * 1-5'  # 4:00 PM - 4:45 PM MYT
+    - cron: '0,15 8 * * 1-5'         # 4:00 PM & 4:15 PM MYT
+    - cron: '30 8 * * 1-5'          # 4:30 PM MYT ⭐ (Telegram Buy Alert)
+    - cron: '45 8 * * 1-5'          # 4:45 PM MYT
     - cron: '0 9 * * 1-5'           # 5:00 PM MYT (Tutup pasaran)
 
   workflow_dispatch: # Membenarkan tekan butang 'Run' secara manual di GitHub
