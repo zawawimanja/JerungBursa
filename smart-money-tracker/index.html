@@ -6452,7 +6452,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     topLosersList.innerHTML = visibleL +
                         (hasMoreL ? `
                         <div id="tdLosersExtra" style="display:none; flex-direction:column; gap:0.35rem; margin-top:0.2rem;">${hiddenL}</div>
-                        <button onclick="(function(){const el=document.getElementById('tdLosersExtra');const btn=document.getElementById('tdLosersToggleBtn');const isOpen=el.style.display!=='none';el.style.display=isOpen?'none':'flex';btn.textContent=isOpen?'▼ Lihat Semua (${losersToday.length - TOP_L} lagi)':'▲ Tutup';})()" id="tdLosersToggleBtn" style="margin-top:0.3rem; font-size:0.68rem; font-weight:800; color:#fb7185; background:rgba(244,63,94,0.08); border:1px solid rgba(244,63,94,0.25); border-radius:5px; padding:0.2rem 0.6rem; cursor:pointer; width:100%; text-align:center;">▼ Lihat Semua (${losersToday.length - TOP_L} lagi)</button>` : '');
+                        <button onclick="(function(){const el=document.getElementById('tdLosersExtra');const btn=document.getElementById('tdLosersToggleBtn');const isOpen=el.style.display!=='none';el.style.display=isOpen?'none':'flex';btn.textContent=isOpen?'\u25bc Lihat Semua (${losersToday.length - TOP_L} lagi)':'\u25b2 Tutup';})()" id="tdLosersToggleBtn" style="margin-top:0.3rem; font-size:0.68rem; font-weight:800; color:#fb7185; background:rgba(244,63,94,0.08); border:1px solid rgba(244,63,94,0.25); border-radius:5px; padding:0.2rem 0.6rem; cursor:pointer; width:100%; text-align:center;">\u25bc Lihat Semua (${losersToday.length - TOP_L} lagi)</button>` : '');
                 }
             }
 
@@ -6469,19 +6469,24 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const moversTbody = document.getElementById('tdMoversTableBody');
             const moversMeta = document.getElementById('tdMoversMeta');
 
-            // Apply sort
+            // Apply sort (fix: align with HTML option values)
             let sortedMovers = [...filteredTrades];
             if (sortFilter === 'pnl_desc') {
                 sortedMovers.sort((a, b) => (b.finalGain || 0) - (a.finalGain || 0));
             } else if (sortFilter === 'pnl_asc') {
                 sortedMovers.sort((a, b) => (a.finalGain || 0) - (b.finalGain || 0));
-            } else if (sortFilter === 'max_desc') {
+            } else if (sortFilter === 'gain_desc' || sortFilter === 'max_desc') {
                 sortedMovers.sort((a, b) => (b.maxGain || 0) - (a.maxGain || 0));
-            } else if (sortFilter === 'today_delta_desc') {
+            } else if (sortFilter === 'pnl_delta_desc' || sortFilter === 'today_delta_desc') {
                 sortedMovers.sort((a, b) => (b.pnlDeltaToday || 0) - (a.pnlDeltaToday || 0));
-            } else if (sortFilter === 'today_pct_desc') {
+            } else if (sortFilter === 'today_gain_desc' || sortFilter === 'today_pct_desc') {
                 sortedMovers.sort((a, b) => (b.changePctToday || 0) - (a.changePctToday || 0));
+            } else if (sortFilter === 'today_loss_desc') {
+                sortedMovers.sort((a, b) => (a.changePctToday || 0) - (b.changePctToday || 0));
+            } else if (sortFilter === 'date_asc') {
+                sortedMovers.sort((a, b) => (a.entryDate || '').localeCompare(b.entryDate || '') || ((b.finalGain || 0) - (a.finalGain || 0)));
             } else {
+                // date_desc (default)
                 sortedMovers.sort((a, b) => (b.entryDate || '').localeCompare(a.entryDate || '') || ((b.finalGain || 0) - (a.finalGain || 0)));
             }
 
