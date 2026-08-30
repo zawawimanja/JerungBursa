@@ -712,6 +712,36 @@
         </div>
     </header>
 
+    <!-- ============================================================
+         SEO INTRO TEXT (STATIC — INDEXABLE WITHOUT JAVASCRIPT)
+         Direka khas untuk search engine crawler & AdSense review:
+         kandungan asli yang menerangkan platform ini secara penuh
+         walaupun jadual radar (render via JS) tidak dimuatkan.
+         ============================================================ -->
+    <section id="seo-intro" style="background: rgba(15, 23, 42, 0.65); border: 1px solid rgba(51, 65, 85, 0.5); border-radius: 14px; padding: 1.5rem 1.75rem; margin: 1.2rem 0 1rem 0; line-height: 1.75;">
+        <h2 style="font-size: 1.3rem; font-weight: 800; color: #f8fafc; margin-bottom: 0.5rem;">JerungBursa — Bursa Malaysia Smart Money &amp; IPO Scanner</h2>
+        <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 0.9rem;">
+            JerungBursa ialah <strong style="color:#34d399;">scanner pasaran saham Bursa Malaysia</strong> yang mengesan pergerakan institusi (smart money) dan momentum IPO terkini secara automatik. Platform ini menggabungkan data harga harian, turun naik volum, dan rasmi Bursa Malaysia Section 138 filings untuk membina pelbagai radar kuantitatif — semuanya dikira semula setiap hari selepas pasaran tutup pukul 5:00 PM.
+        </p>
+        <p style="font-size: 0.88rem; color: #cbd5e1; margin-bottom: 0.9rem;">
+            <strong style="color:#38bdf8;">Radar utama yang ditawarkan:</strong>
+        </p>
+        <ul style="font-size: 0.85rem; color: #cbd5e1; margin: 0 0 0.9rem 1.2rem; list-style: disc;">
+            <li style="margin-bottom: 0.35rem;"><strong style="color:#fde047;">Fresh Rider</strong> — IPO baharu (2025+) dengan price action ketat berhampiran ATH, disertakan SOP entry &amp; exit penuh.</li>
+            <li style="margin-bottom: 0.35rem;"><strong style="color:#c4b5fd;">Hot Theme Rider</strong> — kaunter tematik Semikonduktor &amp; Solar yang memenuhi Confluence 2+ strategi.</li>
+            <li style="margin-bottom: 0.35rem;"><strong style="color:#38bdf8;">Confluence Radar</strong> — kaunter yang bertindih dalam 2+ strategi serentak (VCP, Trend Rider, Early Spring, Bottom Fishing).</li>
+            <li style="margin-bottom: 0.35rem;"><strong style="color:#34d399;">Whale Radar</strong> — pengumpulan bersih institusi besar (KWSP/EPF, PNB, KWAP, Khazanah) berdasarkan 100% dokumen rasmi Bursa.</li>
+            <li style="margin-bottom: 0.35rem;"><strong style="color:#f472b6;">VCP Staircase</strong> — pola contraction Mark Minervini (C1→C2→C3) dengan Golden Cross MA50 &gt; MA200.</li>
+            <li style="margin-bottom: 0.35rem;"><strong style="color:#fbbf24;">Trend, Spring, Phoenix &amp; Bottom Fishing</strong> — strategi swing lengkap dengan backtest terbuka dan contoh grafik sebenar.</li>
+        </ul>
+        <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 0.75rem;">
+            Setiap radar dilengkapi <strong style="color:#f8fafc;">metrik backtest telus</strong> (win rate, purata keuntungan/tidak dagang, kerugian terburuk) yang dikira semula secara automatik setiap hari. Semua angka prestasi di laman ini adalah <strong style="color:#fbbf24;">HASIL SIMULASI / BACKTEST</strong> berasaskan data harga historikal — bukan rekod perdagangan sebenar dan bukan jaminan pulangan masa hadapan.
+        </p>
+        <p style="font-size: 0.78rem; color: #94a3b8;">
+            ⚠️ <strong>Amaran risiko:</strong> JerungBursa adalah alat penyelidikan pendidikan, bukan penasihat kewangan berlesen. Pelaburan saham — terutamanya IPO — berisiko kehilangan modal. Sila rujuk <a href="./terms.html" style="color:#38bdf8; text-decoration: none; font-weight: 700;">Terms &amp; Disclaimer penuh</a> sebelum membuat sebarang keputusan pelaburan.
+        </p>
+    </section>
+
     <!-- Tab Navigation -->
     <div class="tabs-nav" style="margin-bottom: 1rem; margin-top: 0.5rem; display: flex; gap: 0.2rem; flex-wrap: wrap;">
         <button class="tab-btn active" id="tab-confluence" onclick="switchTab('confluence')">🔥 Fresh Rider</button>
@@ -1457,6 +1487,7 @@
                         <span style="font-weight: 900; color: #f8fafc;">
                             Total PnL: <span id="tdBenchGrandPnl" style="color: #34d399;">+1359.1%</span>
                         </span>
+                        <span style="font-size: 0.68rem; font-weight: 800; color: #fbbf24; background: rgba(251, 191, 36, 0.12); padding: 0.15rem 0.55rem; border-radius: 6px; border: 1px solid rgba(251, 191, 36, 0.4); text-transform: uppercase; letter-spacing: 0.4px;">📊 Backtest / Simulasi — Bukan Hasil Sebenar</span>
                         <span style="color: #64748b;">•</span>
                         <span style="font-weight: 800; color: #fde047;">
                             🔥 FR: <span id="tdBenchFrPnl">+637.6%</span> (19)
@@ -1478,7 +1509,7 @@
                     </button>
                     <div id="tdMetricsBody" style="display: flex; flex-wrap: wrap; gap: 0.65rem; flex: 1;">
                         <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(15, 23, 42, 0.8)); border: 1.5px solid rgba(52, 211, 153, 0.6); border-radius: 10px; padding: 0.55rem 0.9rem; min-width: 140px; text-align: center; flex: 1; box-shadow: 0 4px 14px rgba(16,185,129,0.2);">
-                            <div id="tdGrandTotalLabel" style="font-size: 0.62rem; color: #94a3b8; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">🏆 GRAND TOTAL PNL</div>
+                            <div id="tdGrandTotalLabel" style="font-size: 0.62rem; color: #94a3b8; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">🏆 GRAND TOTAL PNL <span style="color:#fbbf24;">(BACKTEST)</span></div>
                             <div id="tdGrandTotalPnl" style="font-size: 1.35rem; color: #34d399; font-weight: 900; text-shadow: 0 0 10px rgba(52,211,153,0.6);">+1359.1%</div>
                             <div id="tdGrandTotalSub" style="font-size: 0.62rem; color: #34d399; font-weight: 700;">66 signals (100%)</div>
                         </div>
@@ -8687,7 +8718,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
     <footer style="margin-top: 4rem; padding: 2rem 1.5rem; border-top: 1px solid rgba(51, 65, 85, 0.3); background: rgba(15, 23, 45, 0.6); backdrop-filter: blur(8px); text-align: center; font-size: 0.85rem; color: var(--text-muted); border-radius: 12px; margin-bottom: 2rem;">
         <div style="max-width: 800px; margin: 0 auto;">
             <p style="margin-bottom: 1rem; color: #cbd5e1; line-height: 1.6;">
-                <strong>⚠️ Financial & Risk Disclaimer:</strong> All data, price zones (Watchlist/Support Floor), formulas, smart scores, and quantitative metrics displayed on JerungBursa are generated via mathematical modeling and algorithmic simulation for research and educational purposes only. We are <strong>NOT</strong> licensed financial advisors. Investing in Bursa Malaysia equities carries inherent capital risk. Always conduct your own independent research (DYOR) or consult a certified financial planner before making investment decisions.
+                <strong>⚠️ Financial &amp; Risk Disclaimer:</strong> All data, price zones (Watchlist/Support Floor), formulas, smart scores, and quantitative metrics displayed on JerungBursa are generated via mathematical modeling and algorithmic simulation for research and educational purposes only. All performance figures (PnL, Win Rate, gains per trade) shown across this site are <strong style="color:#fbbf24;">BACKTEST / SIMULATION results</strong> computed from historical price data — they are not actual trading results and do not guarantee future returns. We are <strong>NOT</strong> licensed financial advisors. Investing in Bursa Malaysia equities carries inherent capital risk. Always conduct your own independent research (DYOR) or consult a certified financial planner before making investment decisions.
             </p>
             <p style="margin-bottom: 1rem;">
                 &copy; 2026 Jerung Bursa. All rights reserved.
