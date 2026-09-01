@@ -2791,11 +2791,31 @@
                     <span style="font-size: 1.6rem;">💼</span>
                     <div>
                         <h3 style="margin: 0; font-size: 1.25rem; color: #a78bfa; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">My Swing Trading Portfolio</h3>
-                        <span style="font-size: 0.7rem; color: var(--text-muted); font-weight: 600;">Live price updates across 4 trading accounts</span>
+                        <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">7 Kaunter Swing Pilihan Bawah RM1.00 (Sasaran RM500 - RM1,000 / Bulan)</span>
                     </div>
                 </div>
                 <div style="background: rgba(167, 139, 250, 0.1); border: 1px solid rgba(167, 139, 250, 0.25); border-radius: 8px; padding: 0.4rem 0.8rem; font-weight: 700; font-size: 0.85rem; color: #a78bfa;">
                     Total Portfolio Value: <span id="portfolio-total-val" style="color: white; font-weight: 800;">Calculating Live...</span>
+                </div>
+            </div>
+
+            <!-- KPI Metric Highlights -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-bottom: 1.25rem;">
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 0.75rem 1rem;">
+                    <div style="font-size: 0.7rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">🎯 Sasaran Bulanan</div>
+                    <div style="font-size: 1.1rem; font-weight: 800; color: #34d399; margin-top: 0.2rem;">RM 500 – RM 1,000 <span style="font-size: 0.7rem; color: #a78bfa; font-weight: 600;">(ROI ~5.5% - 11%)</span></div>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 0.75rem 1rem;">
+                    <div style="font-size: 0.7rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">💰 Peruntukan Modal</div>
+                    <div style="font-size: 1.1rem; font-weight: 800; color: #38bdf8; margin-top: 0.2rem;">RM 9,000 <span style="font-size: 0.7rem; color: #94a3b8; font-weight: 600;">(2 @ RM2k + 5 @ RM1k)</span></div>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 0.75rem 1rem;">
+                    <div style="font-size: 0.7rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">🛡️ Kawalan Risiko (SL)</div>
+                    <div style="font-size: 1.1rem; font-weight: 800; color: #fb7185; margin-top: 0.2rem;">Maksima &le; 5.0% <span style="font-size: 0.7rem; color: #94a3b8; font-weight: 600;">(Rapat di Lantai)</span></div>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 0.75rem 1rem;">
+                    <div style="font-size: 0.7rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">🎯 Sasaran Keuntungan</div>
+                    <div style="font-size: 1.1rem; font-weight: 800; color: #fbbf24; margin-top: 0.2rem;">TP1 +10% | TP2 +20% <span style="font-size: 0.7rem; color: #94a3b8; font-weight: 600;">(R:R &ge; 1:2.5)</span></div>
                 </div>
             </div>
             
@@ -2812,7 +2832,7 @@
                             <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">P&amp;L Performance</th>
                             <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Protection Status</th>
                             <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Chart</th>
-                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Action</th>
+                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Plan / Target</th>
                         </tr>
                     </thead>
                     <tbody id="portfolioTableBody">
@@ -8123,8 +8143,13 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         function renderPortfolio() {
             const list = currentData || [];
             const portfolio = [
-                { name: 'SRKK', buyPrice: 0.545, slPrice: 0.490, allocation: 2000, technique: 'Deep Pullback Swing', isKental: false },
-                { name: 'EIPOWER', buyPrice: 0.685, slPrice: 0.630, allocation: 2000, technique: 'Trend Rider Pullback', isKental: true }
+                { name: 'SRKK', buyPrice: 0.545, slPrice: 0.490, allocation: 2000, technique: 'Deep Pullback Swing', isKental: false, tp1: 0.600, tp2: 0.655 },
+                { name: 'EIPOWER', buyPrice: 0.685, slPrice: 0.630, allocation: 2000, technique: 'Trend Rider Pullback (FR)', isKental: true, tp1: 0.755, tp2: 0.820 },
+                { name: 'AMS', buyPrice: 0.450, slPrice: 0.430, allocation: 1000, technique: 'Solid Floor Swing (FR)', isKental: true, tp1: 0.495, tp2: 0.540 },
+                { name: 'ISF', buyPrice: 0.735, slPrice: 0.690, allocation: 1000, technique: 'VCP Staircase Base (FR)', isKental: true, tp1: 0.810, tp2: 0.880 },
+                { name: 'OXB', buyPrice: 0.465, slPrice: 0.435, allocation: 1000, technique: 'Fresh Rider Pullback (FR)', isKental: true, tp1: 0.515, tp2: 0.560 },
+                { name: 'DNEX', buyPrice: 0.460, slPrice: 0.440, allocation: 1000, technique: 'Staircase Step (HT)', isKental: true, tp1: 0.510, tp2: 0.555 },
+                { name: 'ATECH', buyPrice: 0.770, slPrice: 0.725, allocation: 1000, technique: 'Tech Theme Swing (HT)', isKental: true, tp1: 0.850, tp2: 0.925 }
             ];
 
             const tbody = document.getElementById('portfolioTableBody');
@@ -8142,7 +8167,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     const pName = p.name.toUpperCase().trim();
                     return sName === pName || sName.startsWith(pName) || pName.startsWith(sName);
                 });
-                const currentPrice = found ? found.price : p.buyPrice;
+                const currentPrice = (found && found.price > 0) ? found.price : p.buyPrice;
                 
                 const units = Math.floor(p.allocation / p.buyPrice);
                 const cost = units * p.buyPrice;
@@ -8168,10 +8193,17 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     ? `<span style="background: rgba(167, 139, 250, 0.15); color: #c084fc; border: 1px solid rgba(167, 139, 250, 0.25); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 800; font-size: 0.65rem; white-space: nowrap;">💎 HOLD KENTAL</span>`
                     : `<span style="background: rgba(248, 113, 113, 0.15); color: #f87171; border: 1px solid rgba(248, 113, 113, 0.25); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 800; font-size: 0.65rem; white-space: nowrap;">🛡️ STRICT SL</span>`;
 
+                const tvSym = typeof getTradingViewSymbol === 'function' ? getTradingViewSymbol(p.name) : p.name;
+                const chartLinkHtml = tvSym ? `
+                    <a href="https://www.tradingview.com/chart/?symbol=MYX:${tvSym}" target="_blank" style="background: rgba(56, 189, 248, 0.12); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.72rem; text-decoration: none; font-weight: 700; display: inline-flex; align-items: center; gap: 0.25rem;">
+                        📊 Carta
+                    </a>
+                ` : '<span style="color: #64748b; font-size: 0.75rem;">—</span>';
+
                 tbody.innerHTML += `
                     <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.02)'" onmouseout="this.style.background='none'">
                         <td style="padding: 0.8rem 0.75rem; font-weight: 800; color: white; border-bottom: 1px solid rgba(255,255,255,0.05);">
-                            ${getTradingViewAnchorSmall(p.name)}
+                            ${typeof getTradingViewAnchorSmall === 'function' ? getTradingViewAnchorSmall(p.name) : p.name}
                             <span style="font-size: 0.65rem; color: var(--text-muted); display: block; font-weight: 400; margin-top: 0.1rem;">PEGANGAN: ${units.toLocaleString()} unit (${(units/100).toFixed(0)} Lot)</span>
                         </td>
                         <td style="padding: 0.8rem 0.75rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
@@ -8190,11 +8222,10 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                             <span style="font-size: 0.65rem; color: ${pnlColor}; display: block; font-weight: 600; margin-top: 0.1rem;">${pnlVal >= 0 ? '+' : ''}RM ${pnlVal.toFixed(2)}</span>
                         </td>
                         <td style="padding: 0.8rem 0.75rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">${statusHtml}</td>
+                        <td style="padding: 0.8rem 0.75rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">${chartLinkHtml}</td>
                         <td style="padding: 0.8rem 0.75rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
-                            <span style="color: #475569; font-size: 0.75rem;">—</span>
-                        </td>
-                        <td style="padding: 0.8rem 0.75rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
-                            <span style="color: #475569; font-size: 0.75rem;">—</span>
+                            <div style="font-size: 0.75rem; font-weight: 700; color: #34d399;">TP1: RM ${p.tp1.toFixed(3)} (+10%)</div>
+                            <div style="font-size: 0.68rem; font-weight: 600; color: #a78bfa; margin-top: 0.15rem;">TP2: RM ${p.tp2.toFixed(3)} (+20%)</div>
                         </td>
                     </tr>
                 `;
