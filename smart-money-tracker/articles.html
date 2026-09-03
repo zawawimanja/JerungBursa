@@ -52,7 +52,6 @@
             margin: 0 auto;
         }
 
-        /* Navigation Style */
         .nav-links {
             display: flex;
             gap: 0.8rem;
@@ -84,11 +83,9 @@
             border-color: rgba(255,255,255,0.15);
         }
 
-        /* Header Style */
         header {
             text-align: center;
             margin-bottom: 3rem;
-            position: relative;
         }
 
         header h1 {
@@ -109,75 +106,42 @@
             margin: 0 auto;
         }
 
-        /* Table of Contents Box */
-        .toc-card {
-            background: rgba(15, 23, 42, 0.8);
-            border: 1px solid var(--panel-border);
-            border-radius: 16px;
-            padding: 1.75rem;
-            margin-bottom: 2.5rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        .toc-card h2 {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.25rem;
-            color: white;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .toc-grid {
+        .articles-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 0.75rem;
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+            gap: 1.75rem;
+            margin-bottom: 3rem;
         }
 
-        .toc-item {
-            color: #a5b4fc;
-            text-decoration: none;
-            font-size: 0.9rem;
-            font-weight: 600;
-            padding: 0.5rem 0.75rem;
-            background: rgba(255,255,255,0.02);
-            border-radius: 8px;
-            border: 1px solid rgba(255,255,255,0.05);
-            transition: all 0.2s ease;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .toc-item:hover {
-            background: rgba(99, 102, 241, 0.15);
-            color: white;
-            border-color: rgba(99, 102, 241, 0.4);
-            transform: translateX(3px);
-        }
-
-        /* Article Card Layout */
-        .article-card {
+        .article-card-link {
             background: var(--panel-bg);
             backdrop-filter: blur(12px);
             border: 1px solid var(--panel-border);
             border-radius: 16px;
-            padding: 2.25rem;
-            margin-bottom: 2.5rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            position: relative;
+            padding: 2rem;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .article-card-link:hover {
+            transform: translateY(-4px);
+            border-color: rgba(99, 102, 241, 0.5);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.15);
         }
 
         .article-tag {
             display: inline-block;
-            font-size: 0.75rem;
+            font-size: 0.72rem;
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             padding: 0.25rem 0.75rem;
             border-radius: 20px;
-            margin-bottom: 1rem;
+            width: fit-content;
         }
 
         .tag-trend { background: rgba(99, 102, 241, 0.15); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.3); }
@@ -188,84 +152,28 @@
         .tag-fresh { background: rgba(245, 158, 11, 0.2); color: #fde047; border: 1px solid rgba(245, 158, 11, 0.4); }
         .tag-conf { background: rgba(168, 85, 247, 0.2); color: #c4b5fd; border: 1px solid rgba(168, 85, 247, 0.4); }
 
-        .article-card h2 {
+        .article-card-link h2 {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.6rem;
+            font-size: 1.35rem;
             font-weight: 800;
             color: white;
-            margin-bottom: 1rem;
             line-height: 1.35;
         }
 
-        .article-card h3 {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #e2e8f0;
-            margin-top: 1.5rem;
-            margin-bottom: 0.75rem;
-            border-left: 4px solid var(--accent);
-            padding-left: 0.75rem;
+        .article-card-link p {
+            color: var(--text-muted);
+            font-size: 0.92rem;
+            line-height: 1.6;
         }
 
-        .article-card p {
-            color: #cbd5e1;
-            margin-bottom: 1.25rem;
-            font-size: 1rem;
-        }
-
-        .article-card ul, .article-card ol {
-            color: #cbd5e1;
-            padding-left: 1.5rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .article-card li {
-            margin-bottom: 0.6rem;
-        }
-
-        .highlight-box {
-            background: rgba(15, 23, 42, 0.9);
-            border-left: 4px solid var(--success);
-            padding: 1.25rem 1.5rem;
-            border-radius: 0 12px 12px 0;
-            margin: 1.5rem 0;
-            border-top: 1px solid rgba(51, 65, 85, 0.3);
-            border-right: 1px solid rgba(51, 65, 85, 0.3);
-            border-bottom: 1px solid rgba(51, 65, 85, 0.3);
-        }
-
-        .highlight-box strong {
-            color: #34d399;
-        }
-
-        .badge-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-
-        .badge-card {
-            background: rgba(30, 41, 59, 0.6);
-            border: 1px solid rgba(51, 65, 85, 0.5);
-            border-radius: 12px;
-            padding: 1rem;
-            text-align: center;
-        }
-
-        .badge-card .num {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--accent);
-            margin-bottom: 0.25rem;
-        }
-
-        .badge-card .title {
+        .read-more {
+            margin-top: auto;
+            color: #a5b4fc;
             font-size: 0.85rem;
             font-weight: 700;
-            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
         }
 
         footer {
@@ -292,7 +200,7 @@
 <body>
     <div class="container">
         <div class="nav-links">
-            <a href="https://ipobursa.vercel.app" target="_blank" class="btn-nav" style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border-color: rgba(99, 102, 241, 0.4); font-weight: 800;">📊 BursaIPO Portal ↗</a>
+            <a href="https://www.ipobursa.my" target="_blank" class="btn-nav" style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border-color: rgba(99, 102, 241, 0.4); font-weight: 800;">📊 BursaIPO Portal ↗</a>
             <a href="index.html" class="btn-nav">← Main Dashboard</a>
             <a href="sop.html" class="btn-nav">📜 VVIP SOP</a>
             <a href="formula.html" class="btn-nav">🧮 Formulas & Indicators</a>
@@ -304,203 +212,90 @@
             <p>Quantitative Analysis, VCP Patterns, Wyckoff Accumulation & Risk Management for Bursa Malaysia Equities</p>
         </header>
 
-        <!-- Table of Contents -->
-        <div class="toc-card" id="article-toc">
-            <h2>📚 Core Strategy Articles</h2>
-            <div class="toc-grid">
-                <a href="#art-trend-rider" class="toc-item"><span>📈</span> 1. Trend Rider Strategy (< RM1.00)</a>
-                <a href="#art-vcp-mamat" class="toc-item"><span>🪜</span> 2. VCP Staircase & Golden Cross</a>
-                <a href="#art-wyckoff-spring" class="toc-item"><span>🌱</span> 3. Wyckoff Early Spring Fresh IPO</a>
-                <a href="#art-bottom-fishing" class="toc-item"><span>🎣</span> 4. Bottom Fishing & Phoenix Recovery</a>
-                <a href="#art-risk-management" class="toc-item"><span>🧮</span> 5. Position Sizing & VVIP SOP</a>
-                <a href="#art-fresh-rider" class="toc-item"><span>🔥</span> 6. Fresh Rider: Capturing Explosive IPOs</a>
-                <a href="#art-confluence" class="toc-item"><span>🌐</span> 7. Confluence: Multi-Strategy Signals</a>
-                <a href="#art-read-backtest" class="toc-item"><span>📊</span> 8. Reading Backtest Data Without Delusion</a>
-                <a href="#art-psychology" class="toc-item"><span>🧠</span> 9. Trading Psychology & Emotional Discipline</a>
-            </div>
-        </div>
-
-        <!-- ARTICLE 1 -->
-        <article class="article-card" id="art-trend-rider">
-            <span class="article-tag tag-trend">Core Strategy #1</span>
-            <h2>1. Trend Rider Strategy Guide for Equities Under RM1.00: Riding Institutional Momentum</h2>
-            <p>The <strong>Trend Rider</strong> strategy is specifically engineered to capture high-probability uptrends in equities priced below RM1.00. Retail traders frequently fail by trying to catch falling stocks (downtrends). This rule-based framework ensures you align strictly with institutional capital flows (Smart Money / Jerung).</p>
+        <div class="articles-grid">
             
-            <h3>3 Core Rules of Trend Rider Trading</h3>
-            <ul>
-                <li><strong>Moving Average Alignment (SMA Alignment):</strong> Current price <u>must</u> trade above both the 50-day Moving Average (SMA50) and 200-day Moving Average (SMA200). This confirms valid medium- and long-term uptrend structures.</li>
-                <li><strong>Ultra-Tight Support Floor Proximity:</strong> Distance between current price and the support floor must be extremely tight (preferably ≤ 4%). This allows placing Stop Loss (SL) orders immediately below the floor to cap total risk under 5%.</li>
-                <li><strong>Fresh IPO Focus & Turnover Surge:</strong> Prioritize IPO equities listed within the last 2-3 years due to minimal historical overhead resistance, supported by daily turnover surges ≥ RM 500,000.</li>
-            </ul>
-
-            <div class="highlight-box">
-                <p><strong>💡 Strategy Summary:</strong> Never buy stocks below the SMA50 regardless of how cheap they appear. Trend Rider ensures your trading capital works inside momentum-backed institutional uptrends.</p>
-            </div>
-        </article>
-
-        <!-- ARTICLE 2 -->
-        <article class="article-card" id="art-vcp-mamat">
-            <span class="article-tag tag-vcp">Core Strategy #2</span>
-            <h2>2. VCP Staircase Technique & Golden Cross: Combining Minervini & VSA Frameworks</h2>
-            <p>The <strong>Volatility Contraction Pattern (VCP)</strong> popularized by U.S. investing champion Mark Minervini is adapted on JerungBursa with <em>Golden Cross</em> validation. This model achieves the highest win rate in our backtested simulations.</p>
-
-            <h3>How Does VCP Staircase Work?</h3>
-            <p>VCP reflects a drying up of market supply. On each successive price consolidation, the percentage depth of the pullback contracts progressively:</p>
-
-            <div class="badge-grid">
-                <div class="badge-card">
-                    <div class="num">C1</div>
-                    <div class="title">Contraction 1 (e.g., -15%)</div>
+            <a href="articles/trend-rider.html" class="article-card-link">
+                <span class="article-tag tag-trend">Core Strategy #1</span>
+                <h2>Trend Rider Strategy Guide for Equities Under RM1.00: Riding Institutional Momentum</h2>
+                <p>A rule-based Trend Rider quantitative trading framework for Bursa Malaysia equities under RM1.00. Master SMA alignment, support floor proximity, and momentum entries.</p>
+                <div class="read-more">
+                    <span>Read Full Article</span> <span>→</span>
                 </div>
-                <div class="badge-card">
-                    <div class="num">C2</div>
-                    <div class="title">Contraction 2 (e.g., -8%)</div>
+            </a>
+            
+            <a href="articles/vcp-staircase.html" class="article-card-link">
+                <span class="article-tag tag-vcp">Core Strategy #2</span>
+                <h2>VCP Staircase Technique & Golden Cross: Combining Minervini & VSA Frameworks</h2>
+                <p>Learn the Volatility Contraction Pattern (VCP) staircase technique adapted for Bursa Malaysia stocks. Minervini setup combined with Volume Spread Analysis (VSA).</p>
+                <div class="read-more">
+                    <span>Read Full Article</span> <span>→</span>
                 </div>
-                <div class="badge-card">
-                    <div class="num">C3</div>
-                    <div class="title">Contraction 3 (e.g., -3%)</div>
+            </a>
+            
+            <a href="articles/wyckoff-early-spring.html" class="article-card-link">
+                <span class="article-tag tag-spring">Core Strategy #3</span>
+                <h2>Wyckoff Early Spring & Rejection Wick Analysis for Fresh IPO Equities</h2>
+                <p>Discover how Wyckoff Early Spring setups and long lower wick rejections reveal institutional accumulation in fresh Bursa Malaysia IPO counters.</p>
+                <div class="read-more">
+                    <span>Read Full Article</span> <span>→</span>
                 </div>
-            </div>
-
-            <p>When pullback depth shrinks down to phase C3 (3%-4%), panic selling is exhausted and only committed long-term holders ("tight hands") remain. Breakouts from this contraction stage yield exceptional Risk-to-Reward ratios exceeding 1:3.</p>
-        </article>
-
-        <!-- ARTICLE 3 -->
-        <article class="article-card" id="art-wyckoff-spring">
-            <span class="article-tag tag-spring">Core Strategy #3</span>
-            <h2>3. Wyckoff Early Spring & Rejection Wick Analysis for Fresh IPO Equities</h2>
-            <p>Empirical research indicates that Fresh IPO equities (listed 2024–2026) frequently undergo support retests following initial listing spikes. The <strong>Early Spring</strong> model detects classic <em>Wyckoff Spring</em> structures at structural support zones.</p>
-
-            <h3>Signs of an Early Spring Setup</h3>
-            <ol>
-                <li><strong>Lower Wick Rejection:</strong> Daily candles form long lower wicks at support floor zones. This signals institutional Smart Money flushing out retail stop-loss orders before bidding prices back up into session close.</li>
-                <li><strong>Day 1 Opening Price Reclaim:</strong> Price successfully reclaims and breaks out above the initial listing Day 1 opening price.</li>
-                <li><strong>Phased Volume Accumulation:</strong> Volume dries up during pullback phases and spikes aggressively as rejection wicks form.</li>
-            </ol>
-        </article>
-
-        <!-- ARTICLE 4 -->
-        <article class="article-card" id="art-bottom-fishing">
-            <span class="article-tag tag-bottom">Core Strategy #4</span>
-            <h2>4. Bottom Fishing Strategy & Phoenix Recovery: Catching Oversold Rebounds</h2>
-            <p>The <strong>Bottom Fishing</strong> and <strong>Phoenix Recovery</strong> models are engineered to spot equities experiencing steep price corrections that show structural signs of institutional re-accumulation at critical support floors.</p>
-
-            <h3>Bottom Fishing Safety Criteria</h3>
-            <p>Buying falling stocks carries inherent risk. To safeguard capital, JerungBursa applies strict screening criteria before listing bottom-fishing candidates:</p>
-            <ul>
-                <li><strong>Proven Support Floor Touches (Floor Touches ≥ 4x to 10x):</strong> Support levels must be historical retested and held at least 4 times.</li>
-                <li><strong>Extremely Oversold Metrics:</strong> RSI (14) momentum oscillator trades in deep oversold territory (< 35) showing <em>Bullish Divergence</em> patterns.</li>
-                <li><strong>Strict Stop Loss Execution:</strong> If price breaks 3% below the primary support floor, position exits must be executed immediately without hesitation.</li>
-            </ul>
-        </article>
-
-        <!-- ARTICLE 5 -->
-        <article class="article-card" id="art-risk-management">
-            <span class="article-tag tag-sop">Risk Management & VVIP SOP</span>
-            <h2>5. Position Sizing Risk Calculator & VVIP SOP Guidelines</h2>
-            <p>Long-term trading success in Bursa Malaysia depends 80% on risk management and position sizing discipline, rather than market forecasting ability.</p>
-
-            <h3>Position Sizing Rules</h3>
-            <div class="highlight-box">
-                <p><strong>Maximum Risk Ratio per Trade:</strong> Never risk more than <strong>1% to 2%</strong> of your total trading account equity on a single position.</p>
-            </div>
-
-            <p>Example Calculation:</p>
-            <ul>
-                <li><strong>Total Trading Capital:</strong> RM 10,000</li>
-                <li><strong>Maximum Loss Risk per Trade (2%):</strong> RM 200</li>
-                <li><strong>Stock Entry Price:</strong> RM 0.50</li>
-                <li><strong>Stop Loss Level (Floor -2%):</strong> RM 0.48 (Per-unit risk = RM 0.02)</li>
-                <li><strong>Max Shares to Buy:</strong> RM 200 / RM 0.02 = 10,000 units (100 lots)</li>
-            </ul>
-
-            <p>By enforcing this mathematical position sizing, even suffering 5 consecutive losing trades results in a manageable 10% drawdown, preserving capital for future high-probability setups.</p>
-        </article>
-
-        <!-- ARTICLE 6 -->
-        <article class="article-card" id="art-fresh-rider">
-            <span class="article-tag tag-fresh">Core Strategy #6 · Fresh Rider</span>
-            <h2>6. Fresh Rider: Capturing High-Probability Explosive IPO Breakouts</h2>
-            <p><strong>Fresh Rider</strong> is the highest-quality quantitative strategy on JerungBursa — built to capture fresh IPO equities building tight bases near All-Time Highs (ATH) prior to explosive breakouts. Unlike high-frequency strategies, Fresh Rider is highly selective, triggering only high-conviction signals per year.</p>
-
-            <h3>Why Fresh IPO Equities Outperform</h3>
-            <ul>
-                <li><strong>Zero Historical Overhead Resistance:</strong> Newly listed IPOs lack trapped bagholders from higher historical levels, creating smooth upside momentum.</li>
-                <li><strong>Tight Base Consolidation:</strong> Price trades in narrow consolidation bands near ATH with shallow pullbacks — signaling steady institutional accumulation.</li>
-                <li><strong>Controlled Downside Risk:</strong> Stop losses are placed tightly below support bases, maintaining small and consistent drawdowns.</li>
-            </ul>
-
-            <h3>Fresh Rider Qualification Criteria</h3>
-            <ol>
-                <li><strong>IPO Listed 2025 Onward</strong> (Fresh IPO).</li>
-                <li><strong>Pullback from ATH ≤ 10%</strong> — price trades in close proximity to all-time highs.</li>
-                <li><strong>Floor Proximity (Tightness) ≤ 5%</strong> — distance to support floor is extremely tight.</li>
-                <li><strong>VVIP Quality Vetting</strong> — confirmed by overall structural health checks.</li>
-            </ol>
-
-            <div class="highlight-box">
-                <p><strong>💡 Backtest Evidence (53 trading days, Jun 02 – Aug 17, 2026):</strong> 17 unique signals, <strong>76% Win Rate</strong>, average <strong>+18.1% return per trade</strong>, cumulative returns <strong>+308.5%</strong>, worst loss <strong>-10.3%</strong>. Top historical gainers: KEEMING +120.2%, MMCS +64.2%, STRATUS +43.9%. Recalculated automatically daily.</p>
-            </div>
-
-            <h3>Exit Rules & Trailing Stop Execution</h3>
-            <ul>
-                <li><strong>Hybrid Trailing Stop:</strong> Initial SL set at highest price × 0.80. Once profit reaches ≥ +20%, SL tightens to highest price × 0.90 — letting profits run while locking in peak gains.</li>
-                <li><strong>20-Day Position Holding:</strong> Trades are held up to 20 trading days to allow trend continuation without premature profit cutting.</li>
-            </ul>
-        </article>
-
-        <!-- ARTICLE 7 -->
-        <article class="article-card" id="art-confluence">
-            <span class="article-tag tag-conf">Core Strategy #7 · Confluence</span>
-            <h2>7. Confluence Strategy: Combining Multi-Indicator Signals for Higher Conviction</h2>
-            <p>The <strong>Confluence</strong> model on JerungBursa is straightforward yet effective: when <strong>2 or 3 distinct technical strategies</strong> trigger buy signals simultaneously on the same counter, probability of price continuation increases significantly.</p>
-
-            <h3>Confluence Classification Tiers</h3>
-            <ul>
-                <li><strong>Triple Confluence (3+ Strategies):</strong> Counters validated simultaneously by 3 strategies — e.g. VCP + Wyckoff Spring + Bottom Fishing.</li>
-                <li><strong>Double Confluence (Exact 2 Strategies):</strong> Two quantitative setups triggering concurrently.</li>
-            </ul>
-
-            <div class="highlight-box">
-                <p><strong>📊 Backtest Findings (58 Trading Days):</strong> Triple Confluence (3+) = 61% Win Rate, avg +5.1% per trade. Double Confluence (2) = 60% Win Rate, avg +5.3% per trade. Both demonstrate solid performance, with Double Confluence offering higher signal frequency.</p>
-            </div>
-        </article>
-
-        <!-- ARTICLE 8 -->
-        <article class="article-card" id="art-read-backtest">
-            <span class="article-tag tag-conf">Data Analysis & Education</span>
-            <h2>8. How to Read Backtest Performance Metrics Without Delusion</h2>
-            <p>Backtesting is an invaluable tool for quantitative trading, but stats can be misunderstood without proper context. Three key metrics — Win Rate, Average Return per Trade, and Cumulative Return — tell the complete statistical story.</p>
-
-            <h3>Evaluating Key Backtest Metrics</h3>
-            <ul>
-                <li><strong>Win Rate (WR%):</strong> Percentage of profitable trades. An 81% WR means 13 out of 16 trades closed positive. Always evaluate Win Rate alongside average win vs. average loss sizes.</li>
-                <li><strong>Average Return per Trade (Avg/Trade):</strong> The single most reliable indicator of strategy expectancy. Fresh Rider's +18.1% avg/trade reflects strong statistical edge.</li>
-                <li><strong>Cumulative Return:</strong> Large total return figures can stem from high trade frequency rather than individual trade edge. Always review sample size alongside total PnL.</li>
-            </ul>
-
-            <div class="highlight-box">
-                <p><strong>💡 Key Takeaway:</strong> Evaluate strategies primarily by <strong>Average Return per Trade</strong> and <strong>Worst Drawdown</strong>. High average returns paired with small maximum losses signal true quantitative edge.</p>
-            </div>
-        </article>
-
-        <!-- ARTICLE 9 -->
-        <article class="article-card" id="art-psychology">
-            <span class="article-tag tag-sop">Risk & Mental Discipline</span>
-            <h2>9. Trading Psychology: Why Rules and Discipline Outperform Emotion</h2>
-            <p>The vast majority of trader losses result not from flawed technical analysis, but from <strong>emotional interference</strong>. The best system is ineffective if you violate your rules during market volatility.</p>
-
-            <h3>Overcoming 3 Core Emotional Traps</h3>
-            <ul>
-                <li><strong>Greed:</strong> Attempting to sell at exact price peaks. Result: Profits evaporate into drawdowns. Solution: Enforce predefined trailing stops.</li>
-                <li><strong>Fear:</strong> Exiting trades too early due to minor pullbacks. Solution: Trust systematic trailing stop levels to let winners compound.</li>
-                <li><strong>Hope:</strong> Holding losing positions hoping for a recovery. Solution: Stop losses are non-negotiable risk limits.</li>
-            </ul>
-
-            <div class="highlight-box">
-                <p><strong>💡 Remember:</strong> Financial markets reward patience and systematic execution over emotional impulse. Disciplined position management preserves capital through all market cycles.</p>
-            </div>
-        </article>
+            </a>
+            
+            <a href="articles/bottom-fishing-phoenix.html" class="article-card-link">
+                <span class="article-tag tag-bottom">Core Strategy #4</span>
+                <h2>Bottom Fishing Strategy & Phoenix Recovery: Catching Oversold Rebounds</h2>
+                <p>A systematic framework to identify oversold bounces in Bursa Malaysia equities without catching falling knives. RSI divergence and multiple floor touches.</p>
+                <div class="read-more">
+                    <span>Read Full Article</span> <span>→</span>
+                </div>
+            </a>
+            
+            <a href="articles/position-sizing-sop.html" class="article-card-link">
+                <span class="article-tag tag-sop">Risk Management & SOP</span>
+                <h2>Position Sizing Risk Calculator & VVIP SOP Guidelines for Bursa Traders</h2>
+                <p>The mathematical approach to risk management and position sizing in Malaysian equities. Limit single trade risk to 1-2% of total capital.</p>
+                <div class="read-more">
+                    <span>Read Full Article</span> <span>→</span>
+                </div>
+            </a>
+            
+            <a href="articles/fresh-rider-ipo.html" class="article-card-link">
+                <span class="article-tag tag-fresh">Core Strategy #6 · Fresh Rider</span>
+                <h2>Fresh Rider: Capturing High-Probability Explosive IPO Breakouts</h2>
+                <p>Quantitative trading model for fresh Bursa Malaysia IPO listings trading near All-Time Highs (ATH). Backtest results, win rates, and trailing stop strategies.</p>
+                <div class="read-more">
+                    <span>Read Full Article</span> <span>→</span>
+                </div>
+            </a>
+            
+            <a href="articles/confluence-signals.html" class="article-card-link">
+                <span class="article-tag tag-conf">Core Strategy #7 · Confluence</span>
+                <h2>Confluence Strategy: Combining Multi-Indicator Signals for Higher Conviction</h2>
+                <p>Double Confluence and Triple Confluence trading strategies on JerungBursa. When multiple quantitative strategies trigger concurrently on Bursa Malaysia stocks.</p>
+                <div class="read-more">
+                    <span>Read Full Article</span> <span>→</span>
+                </div>
+            </a>
+            
+            <a href="articles/reading-backtest-data.html" class="article-card-link">
+                <span class="article-tag tag-conf">Data Analysis & Education</span>
+                <h2>How to Read Backtest Performance Metrics Without Delusion</h2>
+                <p>A realistic guide to analyzing algorithmic trading backtests in Bursa Malaysia. Win rate vs expectancy, average return per trade, and drawdown.</p>
+                <div class="read-more">
+                    <span>Read Full Article</span> <span>→</span>
+                </div>
+            </a>
+            
+            <a href="articles/trading-psychology.html" class="article-card-link">
+                <span class="article-tag tag-sop">Risk & Mental Discipline</span>
+                <h2>Trading Psychology: Why Rules and Discipline Outperform Emotion in Bursa</h2>
+                <p>Overcome greed, fear, and hope in stock market trading. How rules-based quantitative systems protect traders from costly emotional mistakes.</p>
+                <div class="read-more">
+                    <span>Read Full Article</span> <span>→</span>
+                </div>
+            </a>
+            
+        </div>
 
         <footer>
             <p>&copy; 2026 Jerung Bursa. All rights reserved.</p>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Quantitative trading model for fresh Bursa Malaysia IPO listings trading near All-Time Highs (ATH). Backtest results, win rates, and trailing stop strategies.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.jerungbursa.my/articles/fresh-rider-ipo.html">
+    <title>Fresh Rider: Capturing High-Probability Explosive IPO Breakouts | Jerung Bursa</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --panel-bg: rgba(22, 28, 45, 0.75);
+            --panel-border: rgba(51, 65, 85, 0.5);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #6366f1;
+            --accent-glow: rgba(99, 102, 241, 0.2);
+            --success: #10b981;
+            --cyan: #22d3ee;
+            --rose: #fb7185;
+            --amber: #f59e0b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.08) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(245, 158, 11, 0.05) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text-main);
+            padding: 2rem 1.5rem;
+            min-height: 100vh;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.8rem;
+            justify-content: flex-start;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--panel-border);
+            padding-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-nav {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--panel-border);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-nav:hover {
+            color: white;
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.15);
+        }
+
+        .article-card {
+            background: var(--panel-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--panel-border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .article-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            margin-bottom: 1rem;
+        }
+
+        .tag-trend { background: rgba(99, 102, 241, 0.15); color: #a5b4fc; border: 1px solid rgba(99, 102, 241, 0.3); }
+        .tag-vcp { background: rgba(34, 211, 238, 0.15); color: var(--cyan); border: 1px solid rgba(34, 211, 238, 0.3); }
+        .tag-spring { background: rgba(16, 185, 129, 0.15); color: var(--success); border: 1px solid rgba(16, 185, 129, 0.3); }
+        .tag-bottom { background: rgba(251, 113, 133, 0.15); color: var(--rose); border: 1px solid rgba(251, 113, 133, 0.3); }
+        .tag-sop { background: rgba(245, 158, 11, 0.15); color: var(--amber); border: 1px solid rgba(245, 158, 11, 0.3); }
+        .tag-fresh { background: rgba(245, 158, 11, 0.2); color: #fde047; border: 1px solid rgba(245, 158, 11, 0.4); }
+        .tag-conf { background: rgba(168, 85, 247, 0.2); color: #c4b5fd; border: 1px solid rgba(168, 85, 247, 0.4); }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.1rem;
+            font-weight: 800;
+            color: white;
+            margin-bottom: 1.25rem;
+            line-height: 1.3;
+        }
+
+        h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #e2e8f0;
+            margin-top: 1.75rem;
+            margin-bottom: 0.75rem;
+            border-left: 4px solid var(--accent);
+            padding-left: 0.75rem;
+        }
+
+        p {
+            color: #cbd5e1;
+            margin-bottom: 1.25rem;
+            font-size: 1.02rem;
+        }
+
+        ul, ol {
+            color: #cbd5e1;
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        li {
+            margin-bottom: 0.6rem;
+        }
+
+        .highlight-box {
+            background: rgba(15, 23, 42, 0.9);
+            border-left: 4px solid var(--success);
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 12px 12px 0;
+            margin: 1.5rem 0;
+            border-top: 1px solid rgba(51, 65, 85, 0.3);
+            border-right: 1px solid rgba(51, 65, 85, 0.3);
+            border-bottom: 1px solid rgba(51, 65, 85, 0.3);
+        }
+
+        .badge-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .badge-card {
+            background: rgba(30, 41, 59, 0.6);
+            border: 1px solid rgba(51, 65, 85, 0.5);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .badge-card .num {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 0.25rem;
+        }
+
+        .badge-card .title {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(51, 65, 85, 0.4);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 0.75rem;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Fresh Rider: Capturing High-Probability Explosive IPO Breakouts",
+      "description": "Quantitative trading model for fresh Bursa Malaysia IPO listings trading near All-Time Highs (ATH). Backtest results, win rates, and trailing stop strategies.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Jerung Bursa",
+        "url": "https://www.jerungbursa.my/"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.jerungbursa.my/articles/fresh-rider-ipo.html"
+      }
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-links">
+            <a href="../index.html" class="btn-nav">← Main Dashboard</a>
+            <a href="../articles.html" class="btn-nav">📚 All Strategy Articles</a>
+            <a href="../sop.html" class="btn-nav">📜 VVIP SOP</a>
+            <a href="../formula.html" class="btn-nav">🧮 Formulas</a>
+            <a href="https://www.ipobursa.my" target="_blank" class="btn-nav" style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc;">📊 BursaIPO Portal ↗</a>
+        </div>
+
+        <article class="article-card">
+            <span class="article-tag tag-fresh">Core Strategy #6 · Fresh Rider</span>
+            <h1>Fresh Rider: Capturing High-Probability Explosive IPO Breakouts</h1>
+            
+            
+            <p><strong>Fresh Rider</strong> is the highest-quality quantitative strategy on JerungBursa — built to capture fresh IPO equities building tight bases near All-Time Highs (ATH) prior to explosive breakouts. Unlike high-frequency strategies, Fresh Rider is highly selective, triggering only high-conviction signals per year.</p>
+
+            <h3>Why Fresh IPO Equities Outperform</h3>
+            <ul>
+                <li><strong>Zero Historical Overhead Resistance:</strong> Newly listed IPOs lack trapped bagholders from higher historical levels, creating smooth upside momentum.</li>
+                <li><strong>Tight Base Consolidation:</strong> Price trades in narrow consolidation bands near ATH with shallow pullbacks — signaling steady institutional accumulation.</li>
+                <li><strong>Controlled Downside Risk:</strong> Stop losses are placed tightly below support bases, maintaining small and consistent drawdowns.</li>
+            </ul>
+
+            <h3>Fresh Rider Qualification Criteria</h3>
+            <ol>
+                <li><strong>IPO Listed 2025 Onward</strong> (Fresh IPO).</li>
+                <li><strong>Pullback from ATH &le; 10%</strong> — price trades in close proximity to all-time highs.</li>
+                <li><strong>Floor Proximity (Tightness) &le; 5%</strong> — distance to support floor is extremely tight.</li>
+                <li><strong>VVIP Quality Vetting</strong> — confirmed by overall structural health checks.</li>
+            </ol>
+
+            <div class="highlight-box">
+                <p><strong>💡 Backtest Evidence (53 trading days, Jun 02 – Aug 17, 2026):</strong> 17 unique signals, <strong>76% Win Rate</strong>, average <strong>+18.1% return per trade</strong>, cumulative returns <strong>+308.5%</strong>, worst loss <strong>-10.3%</strong>. Top historical gainers: KEEMING +120.2%, MMCS +64.2%, STRATUS +43.9%. Recalculated automatically daily.</p>
+            </div>
+
+            <h3>Exit Rules & Trailing Stop Execution</h3>
+            <ul>
+                <li><strong>Hybrid Trailing Stop:</strong> Initial SL set at highest price &times; 0.80. Once profit reaches &ge; +20%, SL tightens to highest price &times; 0.90 — letting profits run while locking in peak gains.</li>
+                <li><strong>20-Day Position Holding:</strong> Trades are held up to 20 trading days to allow trend continuation without premature profit cutting.</li>
+            </ul>
+        
+
+            <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(51, 65, 85, 0.5); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <a href="../articles.html" style="color: var(--accent); text-decoration: none; font-weight: 700; font-size: 0.9rem;">
+                    ← Back to Strategy Hub
+                </a>
+                <a href="../index.html" style="color: #34d399; text-decoration: none; font-weight: 700; font-size: 0.9rem;">
+                    Launch Radar Scanner →
+                </a>
+            </div>
+        </article>
+
+        <!-- RELATED ARTICLES -->
+        <div style="margin-bottom: 3rem;">
+            <h3 style="border-left: none; padding-left: 0; color: white; margin-bottom: 1rem;">More Strategy Articles</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem;">
+                
+                <a href="trend-rider.html" style="text-decoration: none; background: rgba(22, 28, 45, 0.6); border: 1px solid var(--panel-border); border-radius: 12px; padding: 1.25rem; transition: transform 0.2s, border-color 0.2s; display: block;" onmouseover="this.style.transform='translateY(-3px)'; this.style.borderColor='rgba(99, 102, 241, 0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--panel-border)';">
+                    <span class="article-tag tag-trend" style="font-size: 0.68rem; margin-bottom: 0.5rem;">Core Strategy #1</span>
+                    <h4 style="color: white; font-size: 0.95rem; font-weight: 700; line-height: 1.4;">Trend Rider Strategy Guide for Equities Under RM1.00: Riding Institutional Momentum</h4>
+                </a>
+                
+                <a href="vcp-staircase.html" style="text-decoration: none; background: rgba(22, 28, 45, 0.6); border: 1px solid var(--panel-border); border-radius: 12px; padding: 1.25rem; transition: transform 0.2s, border-color 0.2s; display: block;" onmouseover="this.style.transform='translateY(-3px)'; this.style.borderColor='rgba(99, 102, 241, 0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--panel-border)';">
+                    <span class="article-tag tag-vcp" style="font-size: 0.68rem; margin-bottom: 0.5rem;">Core Strategy #2</span>
+                    <h4 style="color: white; font-size: 0.95rem; font-weight: 700; line-height: 1.4;">VCP Staircase Technique & Golden Cross: Combining Minervini & VSA Frameworks</h4>
+                </a>
+                
+                <a href="wyckoff-early-spring.html" style="text-decoration: none; background: rgba(22, 28, 45, 0.6); border: 1px solid var(--panel-border); border-radius: 12px; padding: 1.25rem; transition: transform 0.2s, border-color 0.2s; display: block;" onmouseover="this.style.transform='translateY(-3px)'; this.style.borderColor='rgba(99, 102, 241, 0.5)';" onmouseout="this.style.transform='translateY(0)'; this.style.borderColor='var(--panel-border)';">
+                    <span class="article-tag tag-spring" style="font-size: 0.68rem; margin-bottom: 0.5rem;">Core Strategy #3</span>
+                    <h4 style="color: white; font-size: 0.95rem; font-weight: 700; line-height: 1.4;">Wyckoff Early Spring & Rejection Wick Analysis for Fresh IPO Equities</h4>
+                </a>
+                
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Jerung Bursa. All rights reserved.</p>
+            <div style="margin-top: 1rem;">
+                <a href="../index.html">Main Dashboard</a>
+                <a href="../articles.html">Articles Hub</a>
+                <a href="../sop.html">VVIP SOP</a>
+                <a href="../formula.html">Formulas</a>
+                <a href="../hall-of-fame.html">Hall of Fame</a>
+                <a href="../privacy-policy.html">Privacy Policy</a>
+                <a href="../terms.html">Terms of Service</a>
+                <a href="../about.html">About Us</a>
+                <a href="../contact.html">Contact Us</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
