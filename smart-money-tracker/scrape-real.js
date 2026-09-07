@@ -25,10 +25,9 @@ async function getIpoList() {
     }
 
     const candidatePaths = [
-        path.join(__dirname, '../../ipo/data.json'),
         path.join(__dirname, '../../ipohunterv2/data.json'),
-        '/home/awi/Desktop/ipohunterv2/data.json',
-        'C:/Users/aaror/OneDrive - PERTUBUHAN KESELAMATAN SOSIAL/Desktop/ipo/data.json'
+        path.join(__dirname, '../../../ipohunterv2/data.json'),
+        '/home/awi/Desktop/trade/ipohunterv2/data.json'
     ];
     for (const p of candidatePaths) {
         if (fs.existsSync(p)) {
@@ -305,18 +304,40 @@ async function main() {
     }
 
     function resolveCodeAndSymbol(name) {
+        if (!name) return { symbol: '', code: '' };
         const cleanName = name.toUpperCase().trim();
+        
+        // 1. Direct exact match
         let symbol = rawMappings[cleanName] || mappings[cleanName];
+        
+        // 2. Normalized exact match
         if (!symbol) {
+            const normName = cleanName.replace(/[^A-Z0-9]/g, '');
             const foundKey = Object.keys(rawMappings).find(key => {
                 const normKey = key.replace(/[^A-Z0-9]/g, '');
-                const normName = cleanName.replace(/[^A-Z0-9]/g, '');
-                return normName.startsWith(normKey) || normKey.startsWith(normName);
+                return normKey === normName;
             });
             if (foundKey) {
                 symbol = rawMappings[foundKey];
             }
         }
+        
+        // 3. Conservative prefix match: only for longer company names (>= 5 chars)
+        // Elak singkatan/ticker pendek (cth: "NE", "MI", "VS", "SAM", "SUM") tertindih dengan nama syarikat lain
+        if (!symbol) {
+            const normName = cleanName.replace(/[^A-Z0-9]/g, '');
+            if (normName.length >= 5) {
+                const foundKey = Object.keys(rawMappings).find(key => {
+                    const normKey = key.replace(/[^A-Z0-9]/g, '');
+                    if (normKey.length < 5) return false;
+                    return normName.startsWith(normKey) || normKey.startsWith(normName);
+                });
+                if (foundKey) {
+                    symbol = rawMappings[foundKey];
+                }
+            }
+        }
+
         if (symbol) {
             const code = symbol.split('.')[0];
             return { symbol, code };
@@ -490,16 +511,30 @@ async function main() {
 
     console.log('\n🔍 Mendaftarkan Custom VIP Watchlist dari symbol_mappings.json...');
     for (const s of customWatchlist) {
-        // Cari padanan nama secara fuzzy untuk mengelakkan nama pendua (cth: SRKK vs SRKKAI)
+        // Cari padanan nama selamat (utamakan kod Bursa atau nama penuh tepat)
         let existingKey = null;
         if (allRawStocks.has(s.name)) {
             existingKey = s.name;
         } else {
-            existingKey = [...allRawStocks.keys()].find(k => {
+            const normS = s.name.replace(/[^A-Z0-9]/g, '').toUpperCase();
+            for (const [k, stock] of allRawStocks.entries()) {
+                if (s.code && stock.code && s.code === stock.code) {
+                    existingKey = k;
+                    break;
+                }
                 const normK = k.replace(/[^A-Z0-9]/g, '').toUpperCase();
-                const normS = s.name.replace(/[^A-Z0-9]/g, '').toUpperCase();
-                return normK.startsWith(normS) || normS.startsWith(normK);
-            });
+                if (normK === normS) {
+                    existingKey = k;
+                    break;
+                }
+                // Hanya padankan prefix jika nama cukup panjang (>= 5) dan kod Bursa tidak bercanggah
+                if (normK.length >= 5 && normS.length >= 5 && (!s.code || !stock.code || s.code === stock.code)) {
+                    if (normK.startsWith(normS) || normS.startsWith(normK)) {
+                        existingKey = k;
+                        break;
+                    }
+                }
+            }
         }
         
         if (!existingKey) {
@@ -515,8 +550,12 @@ async function main() {
         } else {
             const existing = allRawStocks.get(existingKey);
             existing.isVip = true;
-            existing.sector = s.sector;
-            existing.code = s.code;
+            if (!existing.sector || existing.sector === 'Bursa') {
+                existing.sector = s.sector;
+            }
+            if (!existing.code && s.code) {
+                existing.code = s.code;
+            }
         }
     }
 
@@ -533,11 +572,25 @@ async function main() {
         if (allRawStocks.has(cleanSym)) {
             existingKey = cleanSym;
         } else {
-            existingKey = [...allRawStocks.keys()].find(k => {
+            const normS = cleanSym.replace(/[^A-Z0-9]/g, '').toUpperCase();
+            const ipoCode = ipo.code || (rawMappings[cleanSym] ? rawMappings[cleanSym].split('.')[0] : '');
+            for (const [k, stock] of allRawStocks.entries()) {
+                if (ipoCode && stock.code && ipoCode === stock.code) {
+                    existingKey = k;
+                    break;
+                }
                 const normK = k.replace(/[^A-Z0-9]/g, '').toUpperCase();
-                const normS = cleanSym.replace(/[^A-Z0-9]/g, '').toUpperCase();
-                return normK.startsWith(normS) || normS.startsWith(normK);
-            });
+                if (normK === normS) {
+                    existingKey = k;
+                    break;
+                }
+                if (normK.length >= 5 && normS.length >= 5 && (!ipoCode || !stock.code || ipoCode === stock.code)) {
+                    if (normK.startsWith(normS) || normS.startsWith(normK)) {
+                        existingKey = k;
+                        break;
+                    }
+                }
+            }
         }
         
         let ipoSec = ipo.sector || 'IPO';

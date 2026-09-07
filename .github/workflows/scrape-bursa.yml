@@ -24,6 +24,8 @@ jobs:
           node-version: '20' # Use stable LTS version
           
       - name: Install dependencies
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: 'true'
         run: |
           cd smart-money-tracker
           npm install
@@ -34,6 +36,8 @@ jobs:
           node scrape-real.js
           node generate_fresh_rider_tracker.js
           node generate_hot_theme_tracker.js
+          node generate_daily_equity_tracker.js
+          node scrape-jerung.js
           
       - name: Commit and Push changes
         run: |
@@ -43,6 +47,13 @@ jobs:
           git add smart-money-tracker/live_data.js
           git add smart-money-tracker/fresh_rider_tracker.js
           git add smart-money-tracker/hot_theme_tracker.js
+          git add smart-money-tracker/daily_equity_tracker.js
+          git add smart-money-tracker/jerung-data.json
+          git add smart-money-tracker/jerung-data.js
           git add smart-money-tracker/history/
           # Only commit if there are changes
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update live_data.json/js & trackers [skip ci]" && git push)
+          if ! git diff --quiet || ! git diff --staged --quiet; then
+            git commit -m "Auto-update live_data.json/js & trackers [skip ci]"
+            git pull --rebase origin main || true
+            git push origin main
+          fi

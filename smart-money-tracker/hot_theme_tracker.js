@@ -1,17 +1,17 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-07T10:43:31.842Z",
+  "generatedAt": "2026-09-07T16:19:13.684Z",
   "dataDays": 74,
   "totalTracked": 48,
-  "openCount": 24,
-  "closedCount": 24,
-  "closedWins": 18,
-  "closedWinRate": 75,
-  "closedAvgGain": 20.1,
-  "openPnl": 233.8,
-  "closedPnl": 483.3,
-  "totalPnlNow": 717.1
+  "openCount": 26,
+  "closedCount": 22,
+  "closedWins": 17,
+  "closedWinRate": 77,
+  "closedAvgGain": 21.9,
+  "openPnl": 176.9,
+  "closedPnl": 482,
+  "totalPnlNow": 658.9
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -572,20 +572,20 @@ window.HOT_THEME_TRACKER = {
    "entry": 6.25,
    "entryFloor": 7.79,
    "currentFloor": 5.71,
-   "currentPrice": 7.77,
-   "high": 7.77,
-   "highDate": "2026-09-07",
-   "maxGain": 24.3,
-   "finalGain": 24.3,
+   "currentPrice": 6.25,
+   "high": 6.25,
+   "highDate": "2026-08-21",
+   "maxGain": 0,
+   "finalGain": 0,
    "day1ChangePct": -1.11,
-   "days": 12,
-   "lastDate": "2026-09-07",
+   "days": 4,
+   "lastDate": "2026-08-26",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
-   "slTrail": 7.304
+   "slTrail": 5.539
   },
   {
    "name": "NEXG",
@@ -607,6 +607,27 @@ window.HOT_THEME_TRACKER = {
    ],
    "confluence": 2,
    "slTrail": 0.96
+  },
+  {
+   "name": "MINOX",
+   "entryDate": "2026-08-20",
+   "entry": 0.18,
+   "entryFloor": 0.18,
+   "currentFloor": 0.17,
+   "currentPrice": 0.17,
+   "high": 0.18,
+   "highDate": "2026-08-25",
+   "maxGain": 0,
+   "finalGain": -5.6,
+   "day1ChangePct": 1.12,
+   "days": 5,
+   "lastDate": "2026-08-26",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 2,
+   "slTrail": 0.165
   },
   {
    "name": "CRPMATE",
@@ -777,19 +798,40 @@ window.HOT_THEME_TRACKER = {
    "slTrail": 1.504
   },
   {
+   "name": "SAM",
+   "entryDate": "2026-06-05",
+   "entry": 4.34,
+   "entryFloor": 4.3,
+   "currentFloor": 4.91,
+   "currentPrice": 4.97,
+   "high": 5.19,
+   "highDate": "2026-06-22",
+   "maxGain": 19.6,
+   "finalGain": 14.5,
+   "day1ChangePct": -0.91,
+   "days": 23,
+   "lastDate": "2026-07-08",
+   "status": "OPEN",
+   "themes": [
+    "Solar/RE"
+   ],
+   "confluence": 2,
+   "slTrail": 4.763
+  },
+  {
    "name": "NE",
    "entryDate": "2026-06-05",
    "entry": 1.06,
    "entryFloor": 1.04,
    "currentFloor": 1.05,
-   "currentPrice": 1.07,
+   "currentPrice": 1.06,
    "high": 1.17,
    "highDate": "2026-07-02",
    "maxGain": 10.4,
-   "finalGain": 0.9,
+   "finalGain": 0,
    "day1ChangePct": -1.85,
-   "days": 67,
-   "lastDate": "2026-09-07",
+   "days": 23,
+   "lastDate": "2026-07-08",
    "status": "OPEN",
    "themes": [
     "Semiconductor",
@@ -894,8 +936,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 43.4,
    "finalGain": 42.6,
    "day1ChangePct": 3.23,
-   "days": 69,
-   "lastDate": "2026-09-07",
+   "days": 61,
+   "lastDate": "2026-09-04",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -930,14 +972,14 @@ window.HOT_THEME_TRACKER = {
    "entry": 2.82,
    "entryFloor": 2.78,
    "currentFloor": 3,
-   "currentPrice": 3.3,
-   "high": 3.3,
-   "highDate": "2026-09-07",
-   "maxGain": 17,
-   "finalGain": 17,
+   "currentPrice": 3.17,
+   "high": 3.22,
+   "highDate": "2026-09-03",
+   "maxGain": 14.2,
+   "finalGain": 12.4,
    "day1ChangePct": -1.05,
-   "days": 69,
-   "lastDate": "2026-09-07",
+   "days": 65,
+   "lastDate": "2026-09-04",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -1035,20 +1077,20 @@ window.HOT_THEME_TRACKER = {
    "entry": 1.25,
    "entryFloor": 1.22,
    "currentFloor": 1.36,
-   "currentPrice": 1.85,
-   "high": 1.85,
-   "highDate": "2026-09-07",
-   "maxGain": 48,
-   "finalGain": 48,
+   "currentPrice": 1.4,
+   "high": 1.41,
+   "highDate": "2026-07-01",
+   "maxGain": 12.8,
+   "finalGain": 12,
    "day1ChangePct": 0,
-   "days": 69,
-   "lastDate": "2026-09-07",
+   "days": 25,
+   "lastDate": "2026-07-08",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
    ],
    "confluence": 3,
-   "slTrail": 1.739
+   "slTrail": 1.319
   },
   {
    "name": "EMPIRE",
@@ -1072,52 +1114,6 @@ window.HOT_THEME_TRACKER = {
    "slTrail": 0.882,
    "exitDate": "2026-09-07",
    "exitPrice": 0.882
-  },
-  {
-   "name": "SAM",
-   "entryDate": "2026-06-05",
-   "entry": 4.34,
-   "entryFloor": 4.3,
-   "currentFloor": 4.91,
-   "currentPrice": 4.34,
-   "high": 5.19,
-   "highDate": "2026-06-22",
-   "maxGain": 19.6,
-   "finalGain": 9.7,
-   "day1ChangePct": -0.91,
-   "days": 67,
-   "lastDate": "2026-09-07",
-   "status": "CLOSED_SL",
-   "themes": [
-    "Solar/RE"
-   ],
-   "confluence": 2,
-   "slTrail": 4.763,
-   "exitDate": "2026-09-07",
-   "exitPrice": 4.7627
-  },
-  {
-   "name": "MINOX",
-   "entryDate": "2026-08-20",
-   "entry": 0.18,
-   "entryFloor": 0.18,
-   "currentFloor": 0.17,
-   "currentPrice": 0.16,
-   "high": 0.18,
-   "highDate": "2026-08-25",
-   "maxGain": 0,
-   "finalGain": -8.4,
-   "day1ChangePct": 1.12,
-   "days": 13,
-   "lastDate": "2026-09-07",
-   "status": "CLOSED_SL",
-   "themes": [
-    "Semiconductor"
-   ],
-   "confluence": 2,
-   "slTrail": 0.165,
-   "exitDate": "2026-09-07",
-   "exitPrice": 0.16490000000000002
   },
   {
    "name": "BETA",

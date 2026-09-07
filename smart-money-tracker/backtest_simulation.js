@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const historyDir = 'C:/Users/aaror/OneDrive - PERTUBUHAN KESELAMATAN SOSIAL/Desktop/JerungBursa/smart-money-tracker/history';
+const historyDir = path.join(__dirname, 'history');
 
 // 1. Get all history files and sort by date
 const files = fs.readdirSync(historyDir)

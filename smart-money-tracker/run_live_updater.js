@@ -66,7 +66,7 @@ function runScraper() {
 
             console.log(`📡 Memuat naik data terkini ke GitHub & Vercel...`);
 
-            const gitCmd = `git add smart-money-tracker/live_data.json smart-money-tracker/live_data.js smart-money-tracker/fresh_rider_tracker.js smart-money-tracker/hot_theme_tracker.js smart-money-tracker/daily_equity_tracker.js smart-money-tracker/history/ && git commit -m "Auto-update live market data (5-min bot) [skip ci]" && git push origin main`;
+            const gitCmd = `git pull --rebase origin main && git add smart-money-tracker/live_data.json smart-money-tracker/live_data.js smart-money-tracker/fresh_rider_tracker.js smart-money-tracker/hot_theme_tracker.js smart-money-tracker/daily_equity_tracker.js smart-money-tracker/history/ && git commit -m "Auto-update live market data (5-min bot) [skip ci]" && git push origin main`;
 
             exec(gitCmd, { cwd: projectRoot }, (gitErr, gitStdout, gitStderr) => {
                 isRunning = false;

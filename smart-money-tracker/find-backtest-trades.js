@@ -1,10 +1,16 @@
 const fs = require('fs');
 const path = require('path');
 
-const backtestFile = 'c:/Users/aaror/OneDrive - PERTUBUHAN KESELAMATAN SOSIAL/Desktop/JerungAI/backtest-data.js';
-if (!fs.existsSync(backtestFile)) {
-  console.error("backtest-data.js not found at " + backtestFile);
-  process.exit(1);
+const candidatePaths = [
+  path.join(__dirname, 'backtest-data.js'),
+  path.join(__dirname, '../backtest-data.js'),
+  path.join(__dirname, '../../JerungAI/backtest-data.js'),
+  'c:/Users/aaror/OneDrive - PERTUBUHAN KESELAMATAN SOSIAL/Desktop/JerungAI/backtest-data.js'
+];
+const backtestFile = candidatePaths.find(p => fs.existsSync(p));
+if (!backtestFile) {
+  console.warn("backtest-data.js tidak ditemui. Sila pastikan fail berada dalam direktori projek.");
+  process.exit(0);
 }
 
 const content = fs.readFileSync(backtestFile, 'utf8');
