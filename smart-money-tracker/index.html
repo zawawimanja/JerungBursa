@@ -7582,6 +7582,10 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
                 // CS Squeeze badge: RED CS (squeeze on = accumulation) vs GREEN CS (volume spike = expansion/breakout)
                 const csExpandedHT = item.hasVolumeSpike === true && (item.volumeSpike || 0) >= 1.5;
+                const isFusionHT = isFreshRiderPick(item) && themes.length > 0 && matches.length >= 2;
+                const fusionBadgeHT = isFusionHT
+                    ? `<span style="font-size: 0.62rem; background: linear-gradient(135deg, rgba(234,179,8,0.35), rgba(168,85,247,0.35)); color: #fde047; padding: 0.08rem 0.35rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(253,224,71,0.7); white-space: nowrap; animation: pulse 1.5s infinite;" title="FUSION: Fresh VVIP Rider + Hot Theme (Semicon/Solar) — Strongest signal!">🔥⚡ FUSION</span>`
+                    : '';
                 const csBadge = csExpandedHT
                     ? `<span style="font-size: 0.62rem; background: rgba(16, 185, 129, 0.18); color: #34d399; padding: 0.08rem 0.32rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(16, 185, 129, 0.5); white-space: nowrap; animation: pulse 1.5s infinite;" title="GREEN CS: Squeeze OFF — volume spike ${(item.volumeSpike || 0).toFixed(1)}x (breakout/expansion). Not accumulation phase — avoid entry.">🔥 GREEN CS</span>`
                     : `<span style="font-size: 0.62rem; background: rgba(251, 113, 133, 0.18); color: #fb7185; padding: 0.08rem 0.32rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(251, 113, 133, 0.5); white-space: nowrap;" title="RED CS: Squeeze ON — quiet volume, accumulation phase before breakout. Optimal entry phase.">🧲 RED CS</span>`;
@@ -7595,7 +7599,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         <td style="font-weight: 700; color: white; padding: 0.6rem 0.8rem;">
                             ${getTradingViewAnchor(item.name)}
                             <div style="margin-top: 0.2rem; display: inline-flex; align-items: center; gap: 0.2rem; flex-wrap: wrap;">${themeBadge}</div>
-                            <div class="ht-badge-row" style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.25rem; flex-wrap: wrap;">${csBadge}</div>
+                            <div class="ht-badge-row" style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.25rem; flex-wrap: wrap;">${csBadge}${fusionBadgeHT}</div>
                         </td>
                         <td style="text-align: right; color: #38bdf8; font-weight: 800;" title="Tightness: ${tightValHT}% — semakin rapat konsolidasi squeeze, semakin bersedia untuk breakout">
                             tight ${tightValHT}%
