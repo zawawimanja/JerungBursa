@@ -1062,17 +1062,17 @@
                         <thead>
                             <tr style="user-select: none;">
                                 <th style="text-align: center; width: 45px; cursor: pointer;" onclick="sortFR('no')" title="Klik untuk balik ke ranking asal">No <span id="frSort_no"></span></th>
-                                <th style="cursor: pointer;" onclick="sortFR('name')" title="Klik untuk susun ikut Nama Kaunter">Counter <span id="frSort_name" style="color:#64748b;">↕</span></th>
+                                <th style="cursor: pointer;" onclick="sortFR('name')" title="Klik untuk susun ikut Nama Kaunter">Kaunter <span id="frSort_name" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: center; cursor: pointer;" onclick="sortFR('grade')" title="Klik untuk susun ikut Gred IPO">IPO Grade <span id="frSort_grade" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: center; cursor: pointer;" onclick="sortFR('pullback')" title="Klik untuk susun ikut Pullback %">Pullback <span id="frSort_pullback" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('price')" title="Klik untuk susun ikut Harga Semasa">Current Price <span id="frSort_price" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('floor')" title="Klik untuk susun ikut Harga Floor">Support Floor @ Price <span id="frSort_floor" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('sl')" title="Klik untuk susun ikut Trailing Stop Loss">Trailing SL (×0.97) <span id="frSort_sl" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('price')" title="Klik untuk susun ikut Harga Semasa">Harga Semasa <span id="frSort_price" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: center; cursor: pointer;" onclick="sortFR('change')" title="Klik untuk susun ikut Perubahan %">Change % <span id="frSort_change" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('pullback')" title="Klik untuk susun ikut Pullback %">Pullback <span id="frSort_pullback" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('floor')" title="Klik untuk susun ikut Harga Floor">Support Floor <span id="frSort_floor" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('dist')" title="Klik untuk susun ikut Jarak Floor %">Jarak Floor <span id="frSort_dist" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: right; cursor: pointer;" onclick="sortFR('turnover')" title="Klik untuk susun ikut Turnover">Turnover <span id="frSort_turnover" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: center; cursor: pointer;" onclick="sortFR('change')" title="Klik me-sort Perubahan %">Change % <span id="frSort_change" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: center; cursor: pointer;" onclick="sortFR('confluence')" title="Klik untuk susun ikut Bilangan Signal Confluence">Confluence? <span id="frSort_confluence" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: center;">History</th>
-                                <th style="text-align: center; cursor: pointer;" onclick="sortFR('score')" title="Klik untuk susun ikut Skor AI">AI Analysis (Score) <span id="frSort_score" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: center; cursor: pointer;" onclick="sortFR('confluence')" title="Klik untuk susun ikut Bilangan Signal Confluence">Confluence <span id="frSort_confluence" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: center;">Sejarah</th>
+                                <th style="text-align: center; cursor: pointer;" onclick="sortFR('score')" title="Klik untuk susun ikut Skor AI">Skor AI <span id="frSort_score" style="color:#64748b;">↕</span></th>
                             </tr>
                         </thead>
                         <tbody id="confluenceRadarTableBody">
@@ -1314,7 +1314,7 @@
                         </div>
                     </div>
                     <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
-                        <div style="display: flex; gap: 0.3rem; align-items: center; background: rgba(15,23,42,0.6); padding: 0.2rem; border-radius: 8px; border: 1px solid rgba(168,85,247,0.3);">
+                    <div style="display: flex; gap: 0.3rem; align-items: center; background: rgba(15,23,42,0.6); padding: 0.2rem; border-radius: 8px; border: 1px solid rgba(168,85,247,0.3);">
                             <span style="font-size: 0.72rem; color: #64748b; font-weight: 600; padding: 0 0.3rem;">Focus:</span>
                             <button id="htFilterTriple" onclick="setHotThemeFilter('triple_only')" style="background: transparent; color: #64748b; border: 1px solid transparent; padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">🔥 TRIPLE Only</button>
                             <button id="htFilterAll" onclick="setHotThemeFilter('all')" style="background: rgba(168,85,247,0.25); color: #c4b5fd; border: 1px solid rgba(168,85,247,0.5); padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer;">⚡ All (2+)</button>
@@ -1333,14 +1333,15 @@
                                 <th style="text-align: center; width: 45px; cursor: pointer;" onclick="sortHT('no')" title="Klik untuk balik ke ranking asal">No <span id="htSort_no"></span></th>
                                 <th style="cursor: pointer;" onclick="sortHT('name')" title="Klik untuk susun ikut Nama Kaunter">Kaunter <span id="htSort_name" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: center; cursor: pointer;" onclick="sortHT('theme')" title="Klik untuk susun ikut Sektor Tema">Tema <span id="htSort_theme" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: center; cursor: pointer;" onclick="sortHT('confluence')" title="Klik untuk susun ikut Bilangan Signal Confluence">Confluence <span id="htSort_confluence" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="sortHT('price')" title="Klik untuk susun ikut Harga Semasa">Current Price <span id="htSort_price" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="sortHT('change')" title="Klik untuk susun ikut Perubahan %">Change % <span id="htSort_change" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortHT('price')" title="Klik untuk susun ikut Harga Semasa">Harga Semasa <span id="htSort_price" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: center; cursor: pointer;" onclick="sortHT('change')" title="Klik untuk susun ikut Perubahan %">Change % <span id="htSort_change" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: right; cursor: pointer;" onclick="sortHT('pullback')" title="Klik untuk susun ikut Pullback %">Pullback <span id="htSort_pullback" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="sortHT('floor')" title="Klik untuk susun ikut Harga Floor">Support Floor Price <span id="htSort_floor" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="sortHT('dist')" title="Klik untuk susun ikut Jarak Ke Floor %">Floor Distance <span id="htSort_dist" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortHT('floor')" title="Klik untuk susun ikut Harga Floor">Support Floor <span id="htSort_floor" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortHT('dist')" title="Klik untuk susun ikut Jarak Floor %">Jarak Floor <span id="htSort_dist" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: right; cursor: pointer;" onclick="sortHT('turnover')" title="Klik untuk susun ikut Turnover">Turnover <span id="htSort_turnover" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: center; cursor: pointer;" onclick="sortHT('score')" title="Klik untuk susun ikut Skor AI">Analisis AI (Skor) <span id="htSort_score" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: center; cursor: pointer;" onclick="sortHT('confluence')" title="Klik untuk susun ikut Bilangan Signal Confluence">Confluence <span id="htSort_confluence" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: center;">Sejarah</th>
+                                <th style="text-align: center; cursor: pointer;" onclick="sortHT('score')" title="Klik untuk susun ikut Skor AI">Skor AI <span id="htSort_score" style="color:#64748b;">↕</span></th>
                             </tr>
                         </thead>
                         <tbody id="hotThemeTableBody">
@@ -5830,17 +5831,17 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                             </div>
                         </td>
                         <td style="text-align: center; color: #a5b4fc; font-weight: 800;">${grade}</td>
-                        <td style="text-align: center; color: ${pbColor}; font-weight: 800;" title="Pullback: ${pb !== null ? pb.toFixed(1) : '—'}% dari ATH · Tightness: ${tightVal}% — smaller tightness indicates tighter consolidation before breakout (KEEMING/STRATUS pattern)">${pb !== null ? pb.toFixed(1) + '%' : '—'}<span style="font-size: 0.58rem; color: #94a3b8; font-weight: 700;"> · tight ${tightVal}%</span></td>
                         <td style="text-align: right; font-weight: bold; color: white;">RM ${item.price.toFixed(3)}</td>
+                        <td style="text-align: center; color: var(--${changeClass}); font-weight: 800;">${changeSign}${changeVal !== undefined ? changeVal.toFixed(2) : '0.00'}%</td>
+                        <td style="text-align: right; color: ${pbColor}; font-weight: 800;" title="Pullback: ${pb !== null ? pb.toFixed(1) : '—'}% dari ATH · Tightness: ${tightVal}% — smaller tightness indicates tighter consolidation before breakout">${pb !== null ? pb.toFixed(1) + '%' : '—'}<span style="font-size: 0.58rem; color: #94a3b8; font-weight: 700;"> · tight ${tightVal}%</span></td>
                         <td style="text-align: right;">
                             <span style="color: #34d399; font-weight: 800; font-size: 0.95rem;">${item.touchCount || 0}x</span>
-                            <div style="font-size: 0.78rem; color: #94a3b8; font-weight: 600; margin-top: 0.2rem;">${floorPrice} <span style="color: #60a5fa;">+${floorDist}</span></div>
+                            <div style="font-size: 0.78rem; color: #94a3b8; font-weight: 600; margin-top: 0.2rem;">${floorPrice}</div>
                         </td>
-                        <td style="text-align: right; color: #f87171; font-weight: 800;">${slTrail}</td>
+                        <td style="text-align: right; color: #60a5fa; font-weight: 700;">+${floorDist}</td>
                         <td style="text-align: right;">
                             <span style="color: ${(item.turnover||0) >= 2000000 ? '#f59e0b' : (item.turnover||0) >= 500000 ? '#34d399' : '#94a3b8'}; font-weight: 700; font-size: 0.82rem;">${(item.turnover||0) >= 1000000 ? 'RM ' + ((item.turnover||0)/1000000).toFixed(2) + 'M' : 'RM ' + ((item.turnover||0)/1000).toFixed(0) + 'k'}${(item.turnover||0) >= 2000000 ? ' 🔥' : ''}</span>
                         </td>
-                        <td style="text-align: center; color: var(--${changeClass}); font-weight: 800;">${changeSign}${changeVal !== undefined ? changeVal.toFixed(2) : '0.00'}%</td>
                         <td style="text-align: center; padding: 0.8rem 0.5rem; white-space: nowrap;">${confHtml}</td>
                         <td style="text-align: center;">
                             <button onclick="triggerStockHistoryModal('${item.name}')" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.25rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
@@ -7511,22 +7512,27 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         <td style="text-align: center; font-weight: 800; color: #a78bfa;">#${idx + 1}</td>
                         <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
                             ${getTradingViewAnchor(item.name)}
-                            <div class="ht-badge-row" style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.35rem; flex-wrap: wrap;">${csBadge}${themeBadge}</div>
+                            <div class="ht-badge-row" style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.35rem; flex-wrap: wrap;">${csBadge}</div>
                         </td>
-                        <td style="text-align: center;">${confBadge}</td>
-                        <td style="text-align: center; font-size: 0.7rem; color: #94a3b8;">${matches.join('<br>')}</td>
+                        <td style="text-align: center;">${themeBadge}</td>
                         <td style="text-align: right; font-weight: bold; color: white;">RM ${item.price.toFixed(3)}</td>
                         <td style="text-align: center; color: var(--${changeClass}); font-weight: 800;">${changeSign}${changeVal !== undefined ? changeVal.toFixed(2) : '0.00'}%</td>
-                        <td style="text-align: right; color: ${pbColor}; font-weight: 700;" title="Pullback: ${pb !== null ? pb.toFixed(1) : '—'}% dari ATH · Tightness: ${tightValHT}% — smaller tightness indicates tighter consolidation before breakout (KEEMING/STRATUS pattern)">${pb !== null ? pb.toFixed(1) + '%' : '—'}<span style="font-size: 0.58rem; color: #94a3b8; font-weight: 700;"> · tight ${tightValHT}%</span></td>
+                        <td style="text-align: right; color: ${pbColor}; font-weight: 700;" title="Pullback: ${pb !== null ? pb.toFixed(1) : '—'}% dari ATH · Tightness: ${tightValHT}% — smaller tightness indicates tighter consolidation before breakout">${pb !== null ? pb.toFixed(1) + '%' : '—'}<span style="font-size: 0.58rem; color: #94a3b8; font-weight: 700;"> · tight ${tightValHT}%</span></td>
                         <td style="text-align: right;">
                             <span style="color: #34d399; font-weight: 800; font-size: 0.95rem;">${item.touchCount || 0}x</span>
                             <div style="font-size: 0.78rem; color: #94a3b8; font-weight: 600; margin-top: 0.2rem;">${floorPrice}</div>
                         </td>
-                        <td style="text-align: right; color: #60a5fa; font-weight: 700;">${floorDist}</td>
+                        <td style="text-align: right; color: #60a5fa; font-weight: 700;">+${floorDist.replace('+', '')}</td>
                         <td style="text-align: right;">
                             <span style="color: ${(item.turnover||0) >= 2000000 ? '#f59e0b' : (item.turnover||0) >= 500000 ? '#34d399' : '#94a3b8'}; font-weight: 700; font-size: 0.82rem;">${(item.turnover||0) >= 1000000 ? 'RM ' + ((item.turnover||0)/1000000).toFixed(2) + 'M' : 'RM ' + ((item.turnover||0)/1000).toFixed(0) + 'k'}${(item.turnover||0) >= 2000000 ? ' 🔥' : ''}</span>
                         </td>
-                        <td style="text-align: center; padding: 0.5rem 0.2rem;">
+                        <td style="text-align: center; padding: 0.8rem 0.5rem; white-space: nowrap;">${confBadge}</td>
+                        <td style="text-align: center;">
+                            <button onclick="triggerStockHistoryModal('${item.name}')" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.25rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                📜 History
+                            </button>
+                        </td>
+                        <td style="text-align: center;">
                             <div style="display: flex; flex-direction: column; align-items: center; gap: 0.25rem;">
                                 <span style="color: ${tierColor}; font-weight: 800; font-size: 0.78rem;">${confidenceText}</span>
                                 <button onclick="triggerAIAnalysisModal('${item.name}', 'Hot Theme Rider')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.7rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
