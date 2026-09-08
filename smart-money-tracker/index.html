@@ -5764,18 +5764,31 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 });
             } else {
                 picks.sort((a, b) => {
+                    // 1. Keutamaan #1: 🔥⚡ FUSION (Lulus FR + HT)
+                    const fusionA = isFreshRiderPick(a) && getHotThemes(a.name).length > 0;
+                    const fusionB = isFreshRiderPick(b) && getHotThemes(b.name).length > 0;
+                    if (fusionA !== fusionB) return fusionA ? -1 : 1;
+
+                    // 2. Keutamaan #2: 🆕 NEW Signal (0 = NEW < 1 = ADD-ON < 2 = RE-ENTRY)
                     const fa = frFreshness(a), fb = frFreshness(b);
                     if (fa !== fb) return fa - fb;
+
+                    // 3. Keutamaan #3: Tightness % (Squeeze Rapat)
                     const ta = typeof a.closeTightness === 'number' ? a.closeTightness : 99;
                     const tb = typeof b.closeTightness === 'number' ? b.closeTightness : 99;
                     if (ta !== tb) return ta - tb;
+
+                    // 4. Jarak Floor (Risiko SL Nipis)
                     const ea = effFloorOf(a), eb = effFloorOf(b);
                     const da = ea ? Math.max(0, (a.price - ea) / ea) : 99;
                     const db = eb ? Math.max(0, (b.price - eb) / eb) : 99;
                     if (da !== db) return da - db;
+
+                    // 5. Pullback %
                     const pa = a.pullback !== null && a.pullback !== undefined ? a.pullback : 99;
                     const pb = b.pullback !== null && b.pullback !== undefined ? b.pullback : 99;
                     if (pa !== pb) return pa - pb;
+
                     const ca = a.touchCount || 0, cb = b.touchCount || 0;
                     if (ca !== cb) return cb - ca;
                     if (a._tripleLock !== b._tripleLock) return a._tripleLock ? -1 : 1;
