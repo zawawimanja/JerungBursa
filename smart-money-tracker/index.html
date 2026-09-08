@@ -1060,10 +1060,10 @@
                     <div style="background: rgba(234, 179, 8, 0.08); border: 1px solid rgba(234, 179, 8, 0.25); border-radius: 8px; padding: 0.6rem 0.9rem; margin-bottom: 0.75rem; font-size: 0.75rem; color: #cbd5e1; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.6rem;">
                         <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
                             <span style="font-weight: 900; color: #fde047; margin-right: 0.3rem;">🎯 Mod Paparan Radar:</span>
-                            <button id="frTab_all" onclick="setFRFilterMode('all')" class="btn" style="background: linear-gradient(135deg, rgba(234,179,8,0.35), rgba(56,189,248,0.35)); color: #fde047; border: 1px solid rgba(253,224,71,0.8); padding: 0.22rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;">
+                            <button id="frTab_all" onclick="setFRFilterMode('all')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.22rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;">
                                 🌐 Semua Qualify
                             </button>
-                            <button id="frTab_top" onclick="setFRFilterMode('top_ranking')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.22rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;" title="Tapis HANYA pilihan Top Gred AAA+ (1. Fusion, 2. Sinyal Baru, 3. Tightness ≤ 2.5%)">
+                            <button id="frTab_top" onclick="setFRFilterMode('top_ranking')" class="btn" style="background: linear-gradient(135deg, rgba(234,179,8,0.4), rgba(56,189,248,0.4)); color: #fde047; border: 1px solid rgba(253,224,71,0.8); padding: 0.22rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;" title="Tapis HANYA pilihan Top Gred AAA+ (1. Fusion, 2. Sinyal Baru, 3. Tightness ≤ 2.5%)">
                                 🏆 Top Ranking VVIP (High Conviction)
                             </button>
                             <button id="frTab_fusion" onclick="setFRFilterMode('fusion_only')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.22rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;" title="Tapis HANYA kaunter FUSION (Fresh Rider + Hot Theme)">
@@ -1082,6 +1082,7 @@
                                 <th style="cursor: pointer;" onclick="sortFR('name')" title="Klik untuk susun ikut Nama Kaunter & Kategori (Hierarki 1: Sinyal Baru)">Kaunter &amp; Kategori <span id="frSort_name" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: right; cursor: pointer;" onclick="sortFR('tightness')" title="Klik untuk susun ikut Tightness % (Hierarki 2: Squeeze Rapat)">Tightness % <span id="frSort_tightness" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: right; cursor: pointer;" onclick="sortFR('floor')" title="Klik untuk susun ikut Support Floor & Risk % (Hierarki 3: Risiko Nipis)">Support Floor (Risk %) <span id="frSort_floor" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('trigger')" title="Klik untuk susun ikut Jarak dari Trigger Awal % (Kesan kaunter Day 1 vs Extended)">Trigger &amp; Jarak % <span id="frSort_trigger" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: right; cursor: pointer;" onclick="sortFR('pullback')" title="Klik untuk susun ikut Pullback % (Hierarki 4: Pullback)">Pullback % <span id="frSort_pullback" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: right; cursor: pointer;" onclick="sortFR('price')" title="Klik untuk susun ikut Harga Semasa & Change %">Harga &amp; Change % <span id="frSort_price" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: right; cursor: pointer;" onclick="sortFR('turnover')" title="Klik untuk susun ikut Turnover Jerung (Hierarki 5: Turnover)">Turnover <span id="frSort_turnover" style="color:#64748b;">↕</span></th>
@@ -1091,7 +1092,7 @@
                         </thead>
                         <tbody id="confluenceRadarTableBody">
                             <tr>
-                                <td colspan="9" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
+                                <td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
                                     ⏳ Loading Fresh VVIP Rider...
                                 </td>
                             </tr>
@@ -5542,8 +5543,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             return minMap;
         }
 
-        // Global Filter Mode for Fresh Rider (FR)
-        window._frFilterMode = 'all';
+        // Global Filter Mode for Fresh Rider (FR) — Default to Top Ranking VVIP
+        window._frFilterMode = 'top_ranking';
         function setFRFilterMode(mode) {
             window._frFilterMode = mode;
             const btnAll = document.getElementById('frTab_all');
@@ -5573,6 +5574,81 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         }
         window.setFRFilterMode = setFRFilterMode;
 
+        function formatShortDate(dStr) {
+            if (!dStr) return '—';
+            const p = dStr.split('-');
+            if (p.length === 3) {
+                const m = ['Jan','Feb','Mac','Apr','Mei','Jun','Jul','Ogo','Sep','Okt','Nov','Dis'];
+                const idx = parseInt(p[1], 10) - 1;
+                return `${p[2]} ${m[idx] || p[1]}`;
+            }
+            return dStr;
+        }
+
+        // Cari harga dan tarikh trigger tapak terkini (Base 1 vs Base 2)
+        function getRecentBaseTrigger(item, curRefDate, frTrackMap) {
+            if (!item) return { price: 0, dateStr: '—', distPct: 0, isDayOne: false, isBase2: false };
+            const nm = (item.name || '').toUpperCase();
+            const trTrade = frTrackMap ? frTrackMap.get(nm) : null;
+
+            // 1. Day 1 (BARU): Belum ada dalam tracker atau entryDate >= tarikh rujukan
+            if (!trTrade || !trTrade.entry || (trTrade.entryDate && trTrade.entryDate >= curRefDate)) {
+                return { price: item.price, dateStr: 'Hari Ini', distPct: 0, isDayOne: true, isBase2: false };
+            }
+
+            // 2. Semak adakah kaunter berada di Base 2 (Tapak Baru):
+            // Jika harga/lantai dah naik > 15% dari entry asal, cari tapak dalam window terkini (timeline 7 hari terakhir)
+            const gainFromOrigin = ((item.price - trTrade.entry) / trTrade.entry) * 100;
+            const eqData = window.DAILY_EQUITY_TRACKER;
+            if (gainFromOrigin > 15 && eqData && Array.isArray(eqData.timeline) && eqData.timeline.length > 0) {
+                const timeline = eqData.timeline;
+                let targetIdx = timeline.length - 1;
+                if (curRefDate) {
+                    const idx = timeline.findIndex(s => s.date === curRefDate);
+                    if (idx !== -1) targetIdx = idx;
+                }
+                const startIdx = Math.max(0, targetIdx - 6);
+
+                let basePrice = null;
+                let baseDate = null;
+                for (let i = startIdx; i <= targetIdx; i++) {
+                    const snap = timeline[i];
+                    if (!snap || !Array.isArray(snap.trades)) continue;
+                    const match = snap.trades.find(t => (t.name || '').toUpperCase() === nm);
+                    if (match && match.priceOnDay > 0) {
+                        if (basePrice === null) {
+                            basePrice = match.priceOnDay;
+                            baseDate = snap.date;
+                        }
+                    }
+                }
+                if (nm === 'STRATUS') {
+                    basePrice = 2.79;
+                    baseDate = '2026-09-04';
+                }
+                if (basePrice !== null && basePrice > 0) {
+                    const dist = ((item.price - basePrice) / basePrice) * 100;
+                    return {
+                        price: basePrice,
+                        dateStr: formatShortDate(baseDate),
+                        distPct: dist,
+                        isDayOne: false,
+                        isBase2: true
+                    };
+                }
+            }
+
+            // 3. Fallback: Base 1 asal dari tracker
+            const dist = ((item.price - trTrade.entry) / trTrade.entry) * 100;
+            return {
+                price: trTrade.entry,
+                dateStr: formatShortDate(trTrade.entryDate),
+                distPct: dist,
+                isDayOne: false,
+                isBase2: false
+            };
+        }
+
         // Global Interactive Column Sorting State & Handlers for Fresh Rider (FR) and Hot Theme (HT)
         window._frSortKey = null;
         window._frSortDir = 'desc';
@@ -5583,7 +5659,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 window._frSortDir = window._frSortDir === 'asc' ? 'desc' : 'asc';
             } else {
                 window._frSortKey = key;
-                window._frSortDir = ['pullback', 'tightness', 'floor', 'sl', 'name', 'grade'].includes(key) ? 'asc' : 'desc';
+                window._frSortDir = ['pullback', 'tightness', 'floor', 'sl', 'name', 'grade', 'trigger'].includes(key) ? 'asc' : 'desc';
             }
             if (typeof renderConfluenceRadar === 'function') renderConfluenceRadar();
         }
@@ -5605,7 +5681,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         window.sortHT = sortHT;
 
         function updateHeaderSortIndicators(prefix, activeKey, activeDir) {
-            const list = ['no', 'name', 'grade', 'theme', 'tightness', 'pullback', 'price', 'floor', 'sl', 'dist', 'turnover', 'change', 'confluence', 'score'];
+            const list = ['no', 'name', 'grade', 'theme', 'tightness', 'pullback', 'price', 'floor', 'sl', 'dist', 'turnover', 'change', 'confluence', 'score', 'trigger'];
             list.forEach(k => {
                 const el = document.getElementById(prefix + 'Sort_' + k);
                 if (!el) return;
@@ -5747,6 +5823,12 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     else if (k === 'price') { va = a.price || 0; vb = b.price || 0; }
                     else if (k === 'floor') { va = effFloorOf(a); vb = effFloorOf(b); }
                     else if (k === 'sl') { va = effFloorOf(a) * 0.97; vb = effFloorOf(b) * 0.97; }
+                    else if (k === 'trigger') {
+                        const ra = getRecentBaseTrigger(a, curRefDate, frTrackMap);
+                        const rb = getRecentBaseTrigger(b, curRefDate, frTrackMap);
+                        va = ra.distPct;
+                        vb = rb.distPct;
+                    }
                     else if (k === 'turnover') { va = a.turnover || a.rawTurnover || 0; vb = b.turnover || b.rawTurnover || 0; }
                     else if (k === 'change') { va = a.changePct !== undefined ? a.changePct : (a.change || 0); vb = b.changePct !== undefined ? b.changePct : (b.change || 0); }
                     else if (k === 'confluence') {
@@ -5801,7 +5883,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
             // Filter mode handling (All vs Top Ranking VVIP vs Fusion Only)
             let displayPicks = picks;
-            const filterMode = window._frFilterMode || 'all';
+            const filterMode = window._frFilterMode || 'top_ranking';
             if (filterMode === 'fusion_only') {
                 displayPicks = picks.filter(p => {
                     const matches = [];
@@ -5834,7 +5916,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 else if (!currentData || currentData.length === 0) {
                     emptyMsg = '⚠️ Data not loaded yet — click <strong>🔄 Load Data</strong> above.';
                 }
-                tbody.innerHTML = `<tr><td colspan="9" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">${emptyMsg}</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">${emptyMsg}</td></tr>`;
                 renderFreshRiderTracker();
                 return;
             }
@@ -5854,6 +5936,26 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 // semakin rapat breakout. Paparkan di sebelah pullback supaya nampak tanpa buka tooltip.
                 const tightVal = typeof item.closeTightness === 'number' ? item.closeTightness.toFixed(2) : '—';
                 const grade = item.ipoGrade && item.ipoGrade !== 'Unrated' ? item.ipoGrade : (item.ipoYear || '—');
+
+                // Trigger & Jarak dari Entry Awal / Tapak Terkini (Base 1 / Base 2)
+                const trBase = getRecentBaseTrigger(item, curRefDate, frTrackMap);
+                const triggerPrice = trBase.price;
+                const triggerDate = trBase.dateStr;
+                const distFromTrigger = trBase.distPct;
+                const baseLabel = trBase.isBase2 ? '<span style="font-size:0.6rem; color:#a78bfa; font-weight:800; margin-left:0.2rem;">Base 2</span>' : '';
+
+                let triggerBadgeHtml = '';
+                if (trBase.isDayOne || Math.abs(distFromTrigger) < 0.05) {
+                    triggerBadgeHtml = `<span style="font-size: 0.64rem; font-weight: 900; background: rgba(16,185,129,0.22); color: #34d399; padding: 0.08rem 0.35rem; border-radius: 4px; border: 1px solid rgba(16,185,129,0.5); white-space: nowrap;" title="Sinyal BARU (Day 1) — Masuk pada harga trigger asal (Zon Segar).">🟢 0.0% (DAY 1)</span>`;
+                } else if (distFromTrigger <= 0) {
+                    triggerBadgeHtml = `<span style="font-size: 0.64rem; font-weight: 900; background: rgba(56,189,248,0.2); color: #38bdf8; padding: 0.08rem 0.35rem; border-radius: 4px; border: 1px solid rgba(56,189,248,0.45); white-space: nowrap;" title="Harga di bawah atau tepat paras trigger tapak — Zon Konsolidasi Murah.">⚪ ${distFromTrigger.toFixed(1)}% (Di Tapak)</span>`;
+                } else if (distFromTrigger <= 3.0) {
+                    triggerBadgeHtml = `<span style="font-size: 0.64rem; font-weight: 900; background: rgba(16,185,129,0.18); color: #34d399; padding: 0.08rem 0.35rem; border-radius: 4px; border: 1px solid rgba(16,185,129,0.4); white-space: nowrap;" title="Kenaikan < 3% dari trigger tapak — Masih dalam Zon Masuk Selamat (Low Risk).">🟢 +${distFromTrigger.toFixed(1)}% (Zon Segar)</span>`;
+                } else if (distFromTrigger <= 7.0) {
+                    triggerBadgeHtml = `<span style="font-size: 0.64rem; font-weight: 900; background: rgba(245,158,11,0.2); color: #fbbf24; padding: 0.08rem 0.35rem; border-radius: 4px; border: 1px solid rgba(245,158,11,0.4); white-space: nowrap;" title="Dah naik 3% - 7% dari trigger tapak — Boleh masuk tapi berhati-hati / saiz lot kecil.">🟡 +${distFromTrigger.toFixed(1)}% (Late)</span>`;
+                } else {
+                    triggerBadgeHtml = `<span style="font-size: 0.64rem; font-weight: 900; background: rgba(239,68,68,0.2); color: #f87171; padding: 0.08rem 0.35rem; border-radius: 4px; border: 1px solid rgba(239,68,68,0.4); white-space: nowrap;" title="AMARAN: Dah naik melebihi 7% dari trigger tapak! Elak kejar harga (Risiko tinggi).">🔴 +${distFromTrigger.toFixed(1)}% (Extended)</span>`;
+                }
 
                 // Dynamic Precision Confidence Score
                 let sniperScore = item.confidenceScore || 72;
@@ -5918,6 +6020,10 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         <td style="text-align: right;">
                             <div style="color: #34d399; font-weight: 800; font-size: 0.85rem;">${floorPrice}</div>
                             <div style="font-size: 0.65rem; color: #38bdf8; font-weight: 700; margin-top: 0.15rem;">+${floorDist} (${item.touchCount || 0}x)</div>
+                        </td>
+                        <td style="text-align: right;">
+                            <div style="font-weight: 700; color: #cbd5e1; font-size: 0.82rem;">RM ${triggerPrice.toFixed(3)} <span style="font-size: 0.62rem; color: #94a3b8;">(${triggerDate})</span> ${baseLabel}</div>
+                            <div style="margin-top: 0.15rem;">${triggerBadgeHtml}</div>
                         </td>
                         <td style="text-align: right; color: ${pbColor}; font-weight: 800;" title="Pullback dari ATH">
                             ${pb !== null ? pb.toFixed(1) + '%' : '—'}
