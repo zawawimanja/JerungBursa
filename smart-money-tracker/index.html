@@ -6,6 +6,8 @@
     <meta name="description" content="JerungBursa — Live Bursa Malaysia stock scanner & institutional tracker. Radar Fresh Rider, Confluence, VCP Staircase, Trend Rider & Early Spring with AI analysis and backtested swing trading signals.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.jerungbursa.my/">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6303372615694359" crossorigin="anonymous"></script>
     <title>Jerung Bursa - Live IPO & Institutional Smart Money Scanner</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -1058,19 +1060,19 @@
                     <div class="table-responsive">
                     <table class="data-table">
                         <thead>
-                            <tr>
-                                <th style="text-align: center; width: 45px;">No</th>
-                                <th>Counter</th>
-                                <th style="text-align: center;">IPO Grade</th>
-                                <th style="text-align: center;">Pullback</th>
-                                <th style="text-align: right;">Current Price</th>
-                                <th style="text-align: right;">Support Floor @ Price</th>
-                                <th style="text-align: right;">Trailing SL (×0.97)</th>
-                                <th style="text-align: right;">Turnover</th>
-                                <th style="text-align: center;">Change %</th>
-                                <th style="text-align: center;">Confluence?</th>
+                            <tr style="user-select: none;">
+                                <th style="text-align: center; width: 45px; cursor: pointer;" onclick="sortFR('no')" title="Klik untuk balik ke ranking asal">No <span id="frSort_no"></span></th>
+                                <th style="cursor: pointer;" onclick="sortFR('name')" title="Klik untuk susun ikut Nama Kaunter">Counter <span id="frSort_name" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: center; cursor: pointer;" onclick="sortFR('grade')" title="Klik untuk susun ikut Gred IPO">IPO Grade <span id="frSort_grade" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: center; cursor: pointer;" onclick="sortFR('pullback')" title="Klik untuk susun ikut Pullback %">Pullback <span id="frSort_pullback" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('price')" title="Klik untuk susun ikut Harga Semasa">Current Price <span id="frSort_price" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('floor')" title="Klik untuk susun ikut Harga Floor">Support Floor @ Price <span id="frSort_floor" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('sl')" title="Klik untuk susun ikut Trailing Stop Loss">Trailing SL (×0.97) <span id="frSort_sl" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('turnover')" title="Klik untuk susun ikut Turnover">Turnover <span id="frSort_turnover" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: center; cursor: pointer;" onclick="sortFR('change')" title="Klik me-sort Perubahan %">Change % <span id="frSort_change" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: center; cursor: pointer;" onclick="sortFR('confluence')" title="Klik untuk susun ikut Bilangan Signal Confluence">Confluence? <span id="frSort_confluence" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: center;">History</th>
-                                <th style="text-align: center;">AI Analysis (Score)</th>
+                                <th style="text-align: center; cursor: pointer;" onclick="sortFR('score')" title="Klik untuk susun ikut Skor AI">AI Analysis (Score) <span id="frSort_score" style="color:#64748b;">↕</span></th>
                             </tr>
                         </thead>
                         <tbody id="confluenceRadarTableBody">
@@ -1327,18 +1329,18 @@
                     <div class="table-responsive">
                     <table class="data-table">
                         <thead>
-                            <tr>
-                                <th style="text-align: center; width: 45px;">No</th>
-                                <th>Kaunter</th>
-                                <th style="text-align: center;">Tema</th>
-                                <th style="text-align: center;">Confluence</th>
-                                <th style="text-align: right;">Current Price</th>
-                                <th style="text-align: right;">Change %</th>
-                                <th style="text-align: right;">Pullback</th>
-                                <th style="text-align: right;">Support Floor Price</th>
-                                <th style="text-align: right;">Floor Distance</th>
-                                <th style="text-align: right;">Turnover</th>
-                                <th style="text-align: center;">Analisis AI (Skor)</th>
+                            <tr style="user-select: none;">
+                                <th style="text-align: center; width: 45px; cursor: pointer;" onclick="sortHT('no')" title="Klik untuk balik ke ranking asal">No <span id="htSort_no"></span></th>
+                                <th style="cursor: pointer;" onclick="sortHT('name')" title="Klik untuk susun ikut Nama Kaunter">Kaunter <span id="htSort_name" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: center; cursor: pointer;" onclick="sortHT('theme')" title="Klik untuk susun ikut Sektor Tema">Tema <span id="htSort_theme" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: center; cursor: pointer;" onclick="sortHT('confluence')" title="Klik untuk susun ikut Bilangan Signal Confluence">Confluence <span id="htSort_confluence" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortHT('price')" title="Klik untuk susun ikut Harga Semasa">Current Price <span id="htSort_price" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortHT('change')" title="Klik untuk susun ikut Perubahan %">Change % <span id="htSort_change" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortHT('pullback')" title="Klik untuk susun ikut Pullback %">Pullback <span id="htSort_pullback" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortHT('floor')" title="Klik untuk susun ikut Harga Floor">Support Floor Price <span id="htSort_floor" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortHT('dist')" title="Klik untuk susun ikut Jarak Ke Floor %">Floor Distance <span id="htSort_dist" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortHT('turnover')" title="Klik untuk susun ikut Turnover">Turnover <span id="htSort_turnover" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: center; cursor: pointer;" onclick="sortHT('score')" title="Klik untuk susun ikut Skor AI">Analisis AI (Skor) <span id="htSort_score" style="color:#64748b;">↕</span></th>
                             </tr>
                         </thead>
                         <tbody id="hotThemeTableBody">
@@ -5628,36 +5630,59 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 return 2;
             };
 
-            picks.sort((a, b) => {
-                // 0. KESEGARAN: BARU (belum ditrack) > ADD-ON (masih kita pegang) > RE-ENTRY (dah tutup)
-                const fa = frFreshness(a), fb = frFreshness(b);
-                if (fa !== fb) return fa - fb;
-                // 1. PATTERN KEEMING/STRATUS: TIGHTNESS paling kecil = squeeze paling rapat breakout
-                // (KEEMING 1.41% & STRATUS 2.44% -> breakout esok). Ini trigger utama pattern.
-                const ta = typeof a.closeTightness === 'number' ? a.closeTightness : 99;
-                const tb = typeof b.closeTightness === 'number' ? b.closeTightness : 99;
-                if (ta !== tb) return ta - tb;
-                // 2. Paling rapat LANTAI DINAMIK dulu (lantai baru selepas breakout — SL paling ketat, R:R terbaik)
-                const ea = effFloorOf(a), eb = effFloorOf(b);
-                // clamp >= 0: harga pecah lantai baru = isyarat bahaya, jangan naikkan ranking
-                const da = ea ? Math.max(0, (a.price - ea) / ea) : 99;
-                const db = eb ? Math.max(0, (b.price - eb) / eb) : 99;
-                if (da !== db) return da - db;
-                // 3. Pullback paling kecil (paling dekat ATH — coiling untuk break, bukan extended)
-                const pa = a.pullback !== null && a.pullback !== undefined ? a.pullback : 99;
-                const pb = b.pullback !== null && b.pullback !== undefined ? b.pullback : 99;
-                if (pa !== pb) return pa - pb;
-                // 4. Sentuhan lantai paling banyak (base paling kukuh)
-                const ca = a.touchCount || 0, cb = b.touchCount || 0;
-                if (ca !== cb) return cb - ca;
-                // 5. Kualiti signal: Triple Lock > Jerung Sec 138 > biasa
-                if (a._tripleLock !== b._tripleLock) return a._tripleLock ? -1 : 1;
-                if (a._isWhaleBacked !== b._isWhaleBacked) return a._isWhaleBacked ? -1 : 1;
-                // 6. Kecairan (turnover tertinggi dulu)
-                const toA = a.turnover || a.rawTurnover || 0;
-                const toB = b.turnover || b.rawTurnover || 0;
-                return toB - toA;
-            });
+            if (typeof updateHeaderSortIndicators === 'function') {
+                updateHeaderSortIndicators('fr', window._frSortKey, window._frSortDir);
+            }
+
+            if (window._frSortKey && window._frSortKey !== 'no') {
+                const k = window._frSortKey;
+                const dir = window._frSortDir === 'asc' ? 1 : -1;
+                picks.sort((a, b) => {
+                    let va, vb;
+                    if (k === 'name') { va = a.name || ''; vb = b.name || ''; return va.localeCompare(vb) * dir; }
+                    if (k === 'grade') { va = a.ipoGrade || 'Z'; vb = b.ipoGrade || 'Z'; return va.localeCompare(vb) * dir; }
+                    if (k === 'pullback') { va = a.pullback !== null && a.pullback !== undefined ? a.pullback : 999; vb = b.pullback !== null && b.pullback !== undefined ? b.pullback : 999; }
+                    else if (k === 'price') { va = a.price || 0; vb = b.price || 0; }
+                    else if (k === 'floor') { va = effFloorOf(a); vb = effFloorOf(b); }
+                    else if (k === 'sl') { va = effFloorOf(a) * 0.97; vb = effFloorOf(b) * 0.97; }
+                    else if (k === 'turnover') { va = a.turnover || a.rawTurnover || 0; vb = b.turnover || b.rawTurnover || 0; }
+                    else if (k === 'change') { va = a.changePct !== undefined ? a.changePct : (a.change || 0); vb = b.changePct !== undefined ? b.changePct : (b.change || 0); }
+                    else if (k === 'confluence') {
+                        let ca = 0, cb = 0;
+                        if (typeof passesJerungRadar === 'function') { if (passesJerungRadar(a)) ca++; if (passesJerungRadar(b)) cb++; }
+                        if (typeof passesVcpStaircase === 'function') { if (passesVcpStaircase(a)) ca++; if (passesVcpStaircase(b)) cb++; }
+                        if (typeof passesTrendRiders === 'function') { if (passesTrendRiders(a)) ca++; if (passesTrendRiders(b)) cb++; }
+                        if (typeof passesEarlySpring === 'function') { if (passesEarlySpring(a)) ca++; if (passesEarlySpring(b)) cb++; }
+                        if (typeof passesBottomFishing === 'function') { if (passesBottomFishing(a)) ca++; if (passesBottomFishing(b)) cb++; }
+                        va = ca; vb = cb;
+                    }
+                    else if (k === 'score') { va = a.confidenceScore || 0; vb = b.confidenceScore || 0; }
+                    else { va = 0; vb = 0; }
+                    return (va - vb) * dir;
+                });
+            } else {
+                picks.sort((a, b) => {
+                    const fa = frFreshness(a), fb = frFreshness(b);
+                    if (fa !== fb) return fa - fb;
+                    const ta = typeof a.closeTightness === 'number' ? a.closeTightness : 99;
+                    const tb = typeof b.closeTightness === 'number' ? b.closeTightness : 99;
+                    if (ta !== tb) return ta - tb;
+                    const ea = effFloorOf(a), eb = effFloorOf(b);
+                    const da = ea ? Math.max(0, (a.price - ea) / ea) : 99;
+                    const db = eb ? Math.max(0, (b.price - eb) / eb) : 99;
+                    if (da !== db) return da - db;
+                    const pa = a.pullback !== null && a.pullback !== undefined ? a.pullback : 99;
+                    const pb = b.pullback !== null && b.pullback !== undefined ? b.pullback : 99;
+                    if (pa !== pb) return pa - pb;
+                    const ca = a.touchCount || 0, cb = b.touchCount || 0;
+                    if (ca !== cb) return cb - ca;
+                    if (a._tripleLock !== b._tripleLock) return a._tripleLock ? -1 : 1;
+                    if (a._isWhaleBacked !== b._isWhaleBacked) return a._isWhaleBacked ? -1 : 1;
+                    const toA = a.turnover || a.rawTurnover || 0;
+                    const toB = b.turnover || b.rawTurnover || 0;
+                    return toB - toA;
+                });
+            }
 
             if (picks.length === 0) {
                 // Bezakan sebab list kosong supaya pengguna tahu nak buat apa:
@@ -7346,28 +7371,55 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 return 2;
             };
 
-            // Sort pattern (sama macam Fresh Rider): kesegaran -> tightness (squeeze) -> lantai
-            // dinamik -> pullback -> confluence count (TRIPLE > DOUBLE) -> touch -> turnover
-            picks.sort((a, b) => {
-                const fa = htFreshness(a.item), fb = htFreshness(b.item);
-                if (fa !== fb) return fa - fb;
-                const ta = typeof a.item.closeTightness === 'number' ? a.item.closeTightness : 99;
-                const tb = typeof b.item.closeTightness === 'number' ? b.item.closeTightness : 99;
-                if (ta !== tb) return ta - tb;
-                const ea = effFloorOfHT(a.item), eb = effFloorOfHT(b.item);
-                const distA = ea ? Math.max(0, (a.item.price - ea) / ea) : 99;
-                const distB = eb ? Math.max(0, (b.item.price - eb) / eb) : 99;
-                if (distA !== distB) return distA - distB;
-                const pa = a.item.pullback !== null && a.item.pullback !== undefined ? a.item.pullback : 99;
-                const pbb = b.item.pullback !== null && b.item.pullback !== undefined ? b.item.pullback : 99;
-                if (pa !== pbb) return pa - pbb;
-                if (a.count !== b.count) return b.count - a.count;
-                const ca = a.item.touchCount || 0, cb = b.item.touchCount || 0;
-                if (ca !== cb) return cb - ca;
-                const toA = a.item.turnover || 0;
-                const toB = b.item.turnover || 0;
-                return toB - toA;
-            });
+            if (typeof updateHeaderSortIndicators === 'function') {
+                updateHeaderSortIndicators('ht', window._htSortKey, window._htSortDir);
+            }
+
+            if (window._htSortKey && window._htSortKey !== 'no') {
+                const k = window._htSortKey;
+                const dir = window._htSortDir === 'asc' ? 1 : -1;
+                picks.sort((a, b) => {
+                    let va, vb;
+                    const itemA = a.item, itemB = b.item;
+                    if (k === 'name') { va = itemA.name || ''; vb = itemB.name || ''; return va.localeCompare(vb) * dir; }
+                    if (k === 'theme') { va = (a.themes || []).join(','); vb = (b.themes || []).join(','); return va.localeCompare(vb) * dir; }
+                    if (k === 'confluence') { va = a.count || 0; vb = b.count || 0; }
+                    else if (k === 'price') { va = itemA.price || 0; vb = itemB.price || 0; }
+                    else if (k === 'change') { va = itemA.changePct !== undefined ? itemA.changePct : (itemA.change || 0); vb = itemB.changePct !== undefined ? itemB.changePct : (itemB.change || 0); }
+                    else if (k === 'pullback') { va = itemA.pullback !== null && itemA.pullback !== undefined ? itemA.pullback : 999; vb = itemB.pullback !== null && itemB.pullback !== undefined ? itemB.pullback : 999; }
+                    else if (k === 'floor') { va = effFloorOfHT(itemA); vb = effFloorOfHT(itemB); }
+                    else if (k === 'dist') {
+                        const ea = effFloorOfHT(itemA), eb = effFloorOfHT(itemB);
+                        va = ea ? (itemA.price - ea) / ea : 999;
+                        vb = eb ? (itemB.price - eb) / eb : 999;
+                    }
+                    else if (k === 'turnover') { va = itemA.turnover || 0; vb = itemB.turnover || 0; }
+                    else if (k === 'score') { va = itemA.confidenceScore || 0; vb = itemB.confidenceScore || 0; }
+                    else { va = 0; vb = 0; }
+                    return (va - vb) * dir;
+                });
+            } else {
+                picks.sort((a, b) => {
+                    const fa = htFreshness(a.item), fb = htFreshness(b.item);
+                    if (fa !== fb) return fa - fb;
+                    const ta = typeof a.item.closeTightness === 'number' ? a.item.closeTightness : 99;
+                    const tb = typeof b.item.closeTightness === 'number' ? b.item.closeTightness : 99;
+                    if (ta !== tb) return ta - tb;
+                    const ea = effFloorOfHT(a.item), eb = effFloorOfHT(b.item);
+                    const distA = ea ? Math.max(0, (a.item.price - ea) / ea) : 99;
+                    const distB = eb ? Math.max(0, (b.item.price - eb) / eb) : 99;
+                    if (distA !== distB) return distA - distB;
+                    const pa = a.item.pullback !== null && a.item.pullback !== undefined ? a.item.pullback : 99;
+                    const pbb = b.item.pullback !== null && b.item.pullback !== undefined ? b.item.pullback : 99;
+                    if (pa !== pbb) return pa - pbb;
+                    if (a.count !== b.count) return b.count - a.count;
+                    const ca = a.item.touchCount || 0, cb = b.item.touchCount || 0;
+                    if (ca !== cb) return cb - ca;
+                    const toA = a.item.turnover || 0;
+                    const toB = b.item.turnover || 0;
+                    return toB - toA;
+                });
+            }
 
             if (picks.length === 0) {
                 tbody.innerHTML = `<tr><td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">⚡ No Semicon/Solar stocks qualifying 2+ Confluence today.</td></tr>`;
