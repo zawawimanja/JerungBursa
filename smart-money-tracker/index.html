@@ -1057,13 +1057,21 @@
                 </div>
 
                 <div id="frScannerBody">
-                    <div style="background: rgba(234, 179, 8, 0.08); border: 1px solid rgba(234, 179, 8, 0.25); border-radius: 8px; padding: 0.5rem 0.8rem; margin-bottom: 0.75rem; font-size: 0.75rem; color: #cbd5e1; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+                    <div style="background: rgba(234, 179, 8, 0.08); border: 1px solid rgba(234, 179, 8, 0.25); border-radius: 8px; padding: 0.6rem 0.9rem; margin-bottom: 0.75rem; font-size: 0.75rem; color: #cbd5e1; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.6rem;">
                         <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
-                            <span style="font-weight: 900; color: #fde047;">🏷️ Ranking Asal (Default Hierarchy):</span>
-                            <span style="color: #94a3b8; font-size: 0.72rem; font-weight: 600;">1. Sinyal Baru ➔ 2. Tightness % (Squeeze Rapat) ➔ 3. Jarak Floor (Risiko Nipis) ➔ 4. Pullback % ➔ 5. Turnover Jerung</span>
+                            <span style="font-weight: 900; color: #fde047; margin-right: 0.3rem;">🎯 Mod Paparan Radar:</span>
+                            <button id="frTab_all" onclick="setFRFilterMode('all')" class="btn" style="background: linear-gradient(135deg, rgba(234,179,8,0.35), rgba(56,189,248,0.35)); color: #fde047; border: 1px solid rgba(253,224,71,0.8); padding: 0.22rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;">
+                                🌐 Semua Qualify
+                            </button>
+                            <button id="frTab_top" onclick="setFRFilterMode('top_ranking')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.22rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;" title="Tapis HANYA pilihan Top Gred AAA+ (1. Fusion, 2. Sinyal Baru, 3. Tightness ≤ 2.5%)">
+                                🏆 Top Ranking VVIP (High Conviction)
+                            </button>
+                            <button id="frTab_fusion" onclick="setFRFilterMode('fusion_only')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.22rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;" title="Tapis HANYA kaunter FUSION (Fresh Rider + Hot Theme)">
+                                🔥⚡ Fusion Sahaja
+                            </button>
                         </div>
-                        <div style="font-size: 0.7rem; color: #38bdf8; font-weight: 700;">
-                            💡 Klik mana-mana Header Lajur di bawah untuk susun semula mengikut pilihan anda!
+                        <div style="color: #94a3b8; font-size: 0.7rem; font-weight: 600;">
+                            🏷️ Hierarki Asal: <span style="color: #fde047;">1. Sinyal Baru ➔ 2. Tightness % ➔ 3. Jarak Floor ➔ 4. Pullback % ➔ 5. Turnover</span>
                         </div>
                     </div>
                     <div class="table-responsive">
@@ -5534,6 +5542,37 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             return minMap;
         }
 
+        // Global Filter Mode for Fresh Rider (FR)
+        window._frFilterMode = 'all';
+        function setFRFilterMode(mode) {
+            window._frFilterMode = mode;
+            const btnAll = document.getElementById('frTab_all');
+            const btnTop = document.getElementById('frTab_top');
+            const btnFusion = document.getElementById('frTab_fusion');
+
+            const resetBtn = (btn) => {
+                if (!btn) return;
+                btn.style.background = 'rgba(15,23,42,0.8)';
+                btn.style.color = '#94a3b8';
+                btn.style.border = '1px solid rgba(148,163,184,0.3)';
+            };
+            const setBtnActive = (btn, bg) => {
+                if (!btn) return;
+                btn.style.background = bg || 'linear-gradient(135deg, rgba(234,179,8,0.35), rgba(56,189,248,0.35))';
+                btn.style.color = '#fde047';
+                btn.style.border = '1px solid rgba(253,224,71,0.8)';
+            };
+
+            resetBtn(btnAll); resetBtn(btnTop); resetBtn(btnFusion);
+
+            if (mode === 'top_ranking') setBtnActive(btnTop, 'linear-gradient(135deg, rgba(234,179,8,0.4), rgba(56,189,248,0.4))');
+            else if (mode === 'fusion_only') setBtnActive(btnFusion, 'linear-gradient(135deg, rgba(168,85,247,0.4), rgba(234,179,8,0.4))');
+            else setBtnActive(btnAll, 'linear-gradient(135deg, rgba(234,179,8,0.35), rgba(56,189,248,0.35))');
+
+            if (typeof renderConfluenceRadar === 'function') renderConfluenceRadar();
+        }
+        window.setFRFilterMode = setFRFilterMode;
+
         // Global Interactive Column Sorting State & Handlers for Fresh Rider (FR) and Hot Theme (HT)
         window._frSortKey = null;
         window._frSortDir = 'desc';
@@ -5747,31 +5786,48 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 });
             }
 
-            if (picks.length === 0) {
-                // Bezakan sebab list kosong supaya pengguna tahu nak buat apa:
-                // (1) data belum muat, (2) filter global aktif, (3) memang tiada setup hari ini
-                let emptyMsg = '🔥 No Fresh VVIP Rider setups today.';
-                if (!currentData || currentData.length === 0) {
+            // Filter mode handling (All vs Top Ranking VVIP vs Fusion Only)
+            let displayPicks = picks;
+            const filterMode = window._frFilterMode || 'all';
+            if (filterMode === 'fusion_only') {
+                displayPicks = picks.filter(p => {
+                    const matches = [];
+                    if (typeof passesJerungRadar === 'function' && passesJerungRadar(p)) matches.push('Whale');
+                    if (typeof passesVcpStaircase === 'function' && passesVcpStaircase(p)) matches.push('VCP');
+                    if (typeof passesTrendRiders === 'function' && passesTrendRiders(p)) matches.push('Trend');
+                    if (typeof passesEarlySpring === 'function' && passesEarlySpring(p)) matches.push('Spring');
+                    if (typeof passesBottomFishing === 'function' && passesBottomFishing(p)) matches.push('Bottom');
+                    return getHotThemes(p.name).length > 0 && matches.length >= 2;
+                });
+            } else if (filterMode === 'top_ranking') {
+                displayPicks = picks.filter(p => {
+                    const fresh = frFreshness(p); // 0 = NEW
+                    const matches = [];
+                    if (typeof passesJerungRadar === 'function' && passesJerungRadar(p)) matches.push('Whale');
+                    if (typeof passesVcpStaircase === 'function' && passesVcpStaircase(p)) matches.push('VCP');
+                    if (typeof passesTrendRiders === 'function' && passesTrendRiders(p)) matches.push('Trend');
+                    if (typeof passesEarlySpring === 'function' && passesEarlySpring(p)) matches.push('Spring');
+                    if (typeof passesBottomFishing === 'function' && passesBottomFishing(p)) matches.push('Bottom');
+                    const isFusion = getHotThemes(p.name).length > 0 && matches.length >= 2;
+                    const tight = typeof p.closeTightness === 'number' ? p.closeTightness : 99;
+                    return isFusion || fresh === 0 || tight <= 2.5;
+                });
+            }
+
+            if (displayPicks.length === 0) {
+                let emptyMsg = '🔥 No Fresh VVIP Rider setups under current view.';
+                if (filterMode === 'fusion_only') emptyMsg = '⚡ Tiada sinyal <strong>🔥⚡ FUSION</strong> hari ini (Fresh Rider + Hot Theme Semicon/Solar).';
+                else if (filterMode === 'top_ranking') emptyMsg = '🏆 Tiada sinyal <strong>🏆 Top Ranking VVIP</strong> hari ini (Fusion / Sinyal Baru / Squeeze ≤ 2.5%). Sila pilih mod <strong>🌐 Semua Qualify</strong>.';
+                else if (!currentData || currentData.length === 0) {
                     emptyMsg = '⚠️ Data not loaded yet — click <strong>🔄 Load Data</strong> above.';
-                } else {
-                    const priceMaxVal = document.getElementById('priceMaxFilter') ? document.getElementById('priceMaxFilter').value : 'ALL';
-                    const ipoAgeFilterVal = document.getElementById('ipoAgeFilter') ? document.getElementById('ipoAgeFilter').value : 'ALL';
-                    const strictVal = document.getElementById('strictEntryFilter') ? document.getElementById('strictEntryFilter').checked : false;
-                    const premiumVal = document.getElementById('premiumHypeFilter') ? document.getElementById('premiumHypeFilter').checked : false;
-                    const earlyVal = document.getElementById('earlyDetectFilter') ? document.getElementById('earlyDetectFilter').checked : false;
-                    const filtersActive = priceMaxVal !== 'ALL' || ipoAgeFilterVal !== 'ALL' || strictVal || premiumVal || earlyVal;
-                    if (filtersActive) {
-                        emptyMsg = '⚠️ No setups match current <strong>global filters</strong> (Price / IPO / Ultra-Strict / Premium Hype / Early Detect) — try relaxing filters to view Fresh VVIP Rider setups.';
-                    }
                 }
-                tbody.innerHTML = `<tr><td colspan="12" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">${emptyMsg}</td></tr>`;
-                // Tracker tetap kena render walaupun list kosong — kalau tak, ia tersekat "Memuatkan tracker..."
+                tbody.innerHTML = `<tr><td colspan="9" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">${emptyMsg}</td></tr>`;
                 renderFreshRiderTracker();
                 return;
             }
 
             let html = '';
-            picks.forEach((item, idx) => {
+            displayPicks.forEach((item, idx) => {
                 const effFloor = effFloorOf(item);
                 const floorPrice = effFloor ? 'RM ' + effFloor.toFixed(3) : '—';
                 const floorDist = effFloor ? ((item.price - effFloor) / effFloor * 100).toFixed(1) + '%' : '—';
