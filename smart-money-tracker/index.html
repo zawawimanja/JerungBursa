@@ -1071,12 +1071,12 @@
                         <thead>
                             <tr style="user-select: none;">
                                 <th style="text-align: center; width: 45px; cursor: pointer;" onclick="sortFR('no')" title="Klik untuk balik ke ranking hierarki asal">No <span id="frSort_no"></span></th>
-                                <th style="cursor: pointer;" onclick="sortFR('name')" title="Klik untuk susun ikut Nama Kaunter & Kategori">Kaunter &amp; Kategori <span id="frSort_name" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('price')" title="Klik untuk susun ikut Harga Semasa">Harga Semasa <span id="frSort_price" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: center; cursor: pointer;" onclick="sortFR('change')" title="Klik untuk susun ikut Perubahan %">Change % <span id="frSort_change" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('pullback')" title="Klik untuk susun ikut Pullback & Tightness %">Pullback &amp; Tightness <span id="frSort_pullback" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('floor')" title="Klik untuk susun ikut Harga Floor & Jarak Risk %">Support Floor (Risk %) <span id="frSort_floor" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('turnover')" title="Klik untuk susun ikut Turnover">Turnover <span id="frSort_turnover" style="color:#64748b;">↕</span></th>
+                                <th style="cursor: pointer;" onclick="sortFR('name')" title="Klik untuk susun ikut Nama Kaunter & Kategori (Hierarki 1: Sinyal Baru)">Kaunter &amp; Kategori <span id="frSort_name" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('tightness')" title="Klik untuk susun ikut Tightness % (Hierarki 2: Squeeze Rapat)">Tightness % <span id="frSort_tightness" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('floor')" title="Klik untuk susun ikut Support Floor & Risk % (Hierarki 3: Risiko Nipis)">Support Floor (Risk %) <span id="frSort_floor" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('pullback')" title="Klik untuk susun ikut Pullback % (Hierarki 4: Pullback)">Pullback % <span id="frSort_pullback" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('price')" title="Klik untuk susun ikut Harga Semasa & Change %">Harga &amp; Change % <span id="frSort_price" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('turnover')" title="Klik untuk susun ikut Turnover Jerung (Hierarki 5: Turnover)">Turnover <span id="frSort_turnover" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: center; cursor: pointer;" onclick="sortFR('confluence')" title="Klik untuk susun ikut Bilangan Signal Confluence">Confluence <span id="frSort_confluence" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: center; cursor: pointer;" onclick="sortFR('score')" title="Klik untuk susun ikut Skor AI">Skor &amp; Tindakan <span id="frSort_score" style="color:#64748b;">↕</span></th>
                             </tr>
@@ -1346,12 +1346,12 @@
                         <thead>
                             <tr style="user-select: none;">
                                 <th style="text-align: center; width: 45px; cursor: pointer;" onclick="sortHT('no')" title="Klik untuk balik ke ranking hierarki asal">No <span id="htSort_no"></span></th>
-                                <th style="cursor: pointer;" onclick="sortHT('name')" title="Klik untuk susun ikut Nama Kaunter & Tema">Kaunter &amp; Tema <span id="htSort_name" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="sortHT('price')" title="Klik untuk susun ikut Harga Semasa">Harga Semasa <span id="htSort_price" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: center; cursor: pointer;" onclick="sortHT('change')" title="Klik untuk susun ikut Perubahan %">Change % <span id="htSort_change" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="sortHT('pullback')" title="Klik untuk susun ikut Pullback & Tightness %">Pullback &amp; Tightness <span id="htSort_pullback" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="sortHT('floor')" title="Klik untuk susun ikut Harga Floor & Jarak Risk %">Support Floor (Risk %) <span id="htSort_floor" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="sortHT('turnover')" title="Klik untuk susun ikut Turnover">Turnover <span id="htSort_turnover" style="color:#64748b;">↕</span></th>
+                                <th style="cursor: pointer;" onclick="sortHT('name')" title="Klik untuk susun ikut Nama Kaunter & Tema (Hierarki 1: Sinyal Baru)">Kaunter &amp; Tema <span id="htSort_name" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortHT('tightness')" title="Klik untuk susun ikut Tightness % (Hierarki 2: Squeeze Rapat)">Tightness % <span id="htSort_tightness" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortHT('floor')" title="Klik untuk susun ikut Support Floor & Risk % (Hierarki 3: Risiko Nipis)">Support Floor (Risk %) <span id="htSort_floor" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortHT('pullback')" title="Klik untuk susun ikut Pullback % (Hierarki 4: Pullback)">Pullback % <span id="htSort_pullback" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortHT('price')" title="Klik untuk susun ikut Harga Semasa & Change %">Harga &amp; Change % <span id="htSort_price" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortHT('turnover')" title="Klik untuk susun ikut Turnover Jerung (Hierarki 5: Turnover)">Turnover <span id="htSort_turnover" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: center; cursor: pointer;" onclick="sortHT('confluence')" title="Klik untuk susun ikut Bilangan Signal Confluence">Confluence <span id="htSort_confluence" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: center; cursor: pointer;" onclick="sortHT('score')" title="Klik untuk susun ikut Skor AI">Skor &amp; Tindakan <span id="htSort_score" style="color:#64748b;">↕</span></th>
                             </tr>
@@ -5544,7 +5544,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 window._frSortDir = window._frSortDir === 'asc' ? 'desc' : 'asc';
             } else {
                 window._frSortKey = key;
-                window._frSortDir = ['pullback', 'floor', 'sl', 'name', 'grade'].includes(key) ? 'asc' : 'desc';
+                window._frSortDir = ['pullback', 'tightness', 'floor', 'sl', 'name', 'grade'].includes(key) ? 'asc' : 'desc';
             }
             if (typeof renderConfluenceRadar === 'function') renderConfluenceRadar();
         }
@@ -5559,14 +5559,14 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 window._htSortDir = window._htSortDir === 'asc' ? 'desc' : 'asc';
             } else {
                 window._htSortKey = key;
-                window._htSortDir = ['pullback', 'floor', 'dist', 'name', 'theme'].includes(key) ? 'asc' : 'desc';
+                window._htSortDir = ['pullback', 'tightness', 'floor', 'dist', 'name', 'theme'].includes(key) ? 'asc' : 'desc';
             }
             if (typeof renderHotTheme === 'function') renderHotTheme();
         }
         window.sortHT = sortHT;
 
         function updateHeaderSortIndicators(prefix, activeKey, activeDir) {
-            const list = ['no', 'name', 'grade', 'theme', 'pullback', 'price', 'floor', 'sl', 'dist', 'turnover', 'change', 'confluence', 'score'];
+            const list = ['no', 'name', 'grade', 'theme', 'tightness', 'pullback', 'price', 'floor', 'sl', 'dist', 'turnover', 'change', 'confluence', 'score'];
             list.forEach(k => {
                 const el = document.getElementById(prefix + 'Sort_' + k);
                 if (!el) return;
@@ -5703,7 +5703,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     let va, vb;
                     if (k === 'name') { va = a.name || ''; vb = b.name || ''; return va.localeCompare(vb) * dir; }
                     if (k === 'grade') { va = a.ipoGrade || 'Z'; vb = b.ipoGrade || 'Z'; return va.localeCompare(vb) * dir; }
-                    if (k === 'pullback') { va = a.pullback !== null && a.pullback !== undefined ? a.pullback : 999; vb = b.pullback !== null && b.pullback !== undefined ? b.pullback : 999; }
+                    if (k === 'tightness') { va = typeof a.closeTightness === 'number' ? a.closeTightness : 999; vb = typeof b.closeTightness === 'number' ? b.closeTightness : 999; }
+                    else if (k === 'pullback') { va = a.pullback !== null && a.pullback !== undefined ? a.pullback : 999; vb = b.pullback !== null && b.pullback !== undefined ? b.pullback : 999; }
                     else if (k === 'price') { va = a.price || 0; vb = b.price || 0; }
                     else if (k === 'floor') { va = effFloorOf(a); vb = effFloorOf(b); }
                     else if (k === 'sl') { va = effFloorOf(a) * 0.97; vb = effFloorOf(b) * 0.97; }
@@ -5842,12 +5843,19 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                                 ${badgesHtml}
                             </div>
                         </td>
-                        <td style="text-align: right; font-weight: bold; color: white;">RM ${item.price.toFixed(3)}</td>
-                        <td style="text-align: center; color: var(--${changeClass}); font-weight: 800;">${changeSign}${changeVal !== undefined ? changeVal.toFixed(2) : '0.00'}%</td>
-                        <td style="text-align: right; color: ${pbColor}; font-weight: 800;" title="Pullback: ${pb !== null ? pb.toFixed(1) : '—'}% dari ATH · Tightness: ${tightVal}%">${pb !== null ? pb.toFixed(1) + '%' : '—'}<div style="font-size: 0.65rem; color: #94a3b8; font-weight: 700; margin-top: 0.15rem;">tight ${tightVal}%</div></td>
+                        <td style="text-align: right; color: #38bdf8; font-weight: 800;" title="Tightness: ${tightVal}% — semakin rapat konsolidasi squeeze, semakin bersedia untuk breakout">
+                            tight ${tightVal}%
+                        </td>
                         <td style="text-align: right;">
                             <div style="color: #34d399; font-weight: 800; font-size: 0.85rem;">${floorPrice}</div>
                             <div style="font-size: 0.65rem; color: #38bdf8; font-weight: 700; margin-top: 0.15rem;">+${floorDist} (${item.touchCount || 0}x)</div>
+                        </td>
+                        <td style="text-align: right; color: ${pbColor}; font-weight: 800;" title="Pullback dari ATH">
+                            ${pb !== null ? pb.toFixed(1) + '%' : '—'}
+                        </td>
+                        <td style="text-align: right;">
+                            <div style="font-weight: bold; color: white;">RM ${item.price.toFixed(3)}</div>
+                            <div style="font-size: 0.65rem; color: var(--${changeClass}); font-weight: 800; margin-top: 0.1rem;">${changeSign}${changeVal !== undefined ? changeVal.toFixed(2) : '0.00'}%</div>
                         </td>
                         <td style="text-align: right;">
                             <span style="color: ${(item.turnover||0) >= 2000000 ? '#f59e0b' : ((item.turnover||0) >= 500000 ? '#34d399' : '#94a3b8')}; font-weight: 700; font-size: 0.82rem;">${(item.turnover||0) >= 1000000 ? 'RM ' + ((item.turnover||0)/1000000).toFixed(2) + 'M' : 'RM ' + ((item.turnover||0)/1000).toFixed(0) + 'k'}${(item.turnover||0) >= 2000000 ? ' 🔥' : ''}</span>
@@ -7440,6 +7448,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     if (k === 'confluence') { va = a.count || 0; vb = b.count || 0; }
                     else if (k === 'price') { va = itemA.price || 0; vb = itemB.price || 0; }
                     else if (k === 'change') { va = itemA.changePct !== undefined ? itemA.changePct : (itemA.change || 0); vb = itemB.changePct !== undefined ? itemB.changePct : (itemB.change || 0); }
+                    if (k === 'tightness') { va = typeof itemA.closeTightness === 'number' ? itemA.closeTightness : 999; vb = typeof itemB.closeTightness === 'number' ? itemB.closeTightness : 999; }
                     else if (k === 'pullback') { va = itemA.pullback !== null && itemA.pullback !== undefined ? itemA.pullback : 999; vb = itemB.pullback !== null && itemB.pullback !== undefined ? itemB.pullback : 999; }
                     else if (k === 'floor') { va = effFloorOfHT(itemA); vb = effFloorOfHT(itemB); }
                     else if (k === 'dist') {
@@ -7519,12 +7528,19 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                             <div style="margin-top: 0.2rem; display: inline-flex; align-items: center; gap: 0.2rem; flex-wrap: wrap;">${themeBadge}</div>
                             <div class="ht-badge-row" style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.25rem; flex-wrap: wrap;">${csBadge}</div>
                         </td>
-                        <td style="text-align: right; font-weight: bold; color: white;">RM ${item.price.toFixed(3)}</td>
-                        <td style="text-align: center; color: var(--${changeClass}); font-weight: 800;">${changeSign}${changeVal !== undefined ? changeVal.toFixed(2) : '0.00'}%</td>
-                        <td style="text-align: right; color: ${pbColor}; font-weight: 700;" title="Pullback: ${pb !== null ? pb.toFixed(1) : '—'}% dari ATH · Tightness: ${tightValHT}%">${pb !== null ? pb.toFixed(1) + '%' : '—'}<div style="font-size: 0.65rem; color: #94a3b8; font-weight: 700; margin-top: 0.15rem;">tight ${tightValHT}%</div></td>
+                        <td style="text-align: right; color: #38bdf8; font-weight: 800;" title="Tightness: ${tightValHT}% — semakin rapat konsolidasi squeeze, semakin bersedia untuk breakout">
+                            tight ${tightValHT}%
+                        </td>
                         <td style="text-align: right;">
                             <div style="color: #34d399; font-weight: 800; font-size: 0.85rem;">${floorPrice}</div>
                             <div style="font-size: 0.65rem; color: #38bdf8; font-weight: 700; margin-top: 0.15rem;">+${floorDist.replace('+', '')} (${item.touchCount || 0}x)</div>
+                        </td>
+                        <td style="text-align: right; color: ${pbColor}; font-weight: 700;" title="Pullback dari ATH">
+                            ${pb !== null ? pb.toFixed(1) + '%' : '—'}
+                        </td>
+                        <td style="text-align: right;">
+                            <div style="font-weight: bold; color: white;">RM ${item.price.toFixed(3)}</div>
+                            <div style="font-size: 0.65rem; color: var(--${changeClass}); font-weight: 800; margin-top: 0.1rem;">${changeSign}${changeVal !== undefined ? changeVal.toFixed(2) : '0.00'}%</div>
                         </td>
                         <td style="text-align: right;">
                             <span style="color: ${(item.turnover||0) >= 2000000 ? '#f59e0b' : ((item.turnover||0) >= 500000 ? '#34d399' : '#94a3b8')}; font-weight: 700; font-size: 0.82rem;">${(item.turnover||0) >= 1000000 ? 'RM ' + ((item.turnover||0)/1000000).toFixed(2) + 'M' : 'RM ' + ((item.turnover||0)/1000).toFixed(0) + 'k'}${(item.turnover||0) >= 2000000 ? ' 🔥' : ''}</span>
