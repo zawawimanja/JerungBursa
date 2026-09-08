@@ -5521,6 +5521,55 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             return minMap;
         }
 
+        // Global Interactive Column Sorting State & Handlers for Fresh Rider (FR) and Hot Theme (HT)
+        window._frSortKey = null;
+        window._frSortDir = 'desc';
+        function sortFR(key) {
+            if (key === 'no') {
+                window._frSortKey = null;
+            } else if (window._frSortKey === key) {
+                window._frSortDir = window._frSortDir === 'asc' ? 'desc' : 'asc';
+            } else {
+                window._frSortKey = key;
+                window._frSortDir = ['pullback', 'floor', 'sl', 'name', 'grade'].includes(key) ? 'asc' : 'desc';
+            }
+            if (typeof renderConfluenceRadar === 'function') renderConfluenceRadar();
+        }
+        window.sortFR = sortFR;
+
+        window._htSortKey = null;
+        window._htSortDir = 'desc';
+        function sortHT(key) {
+            if (key === 'no') {
+                window._htSortKey = null;
+            } else if (window._htSortKey === key) {
+                window._htSortDir = window._htSortDir === 'asc' ? 'desc' : 'asc';
+            } else {
+                window._htSortKey = key;
+                window._htSortDir = ['pullback', 'floor', 'dist', 'name', 'theme'].includes(key) ? 'asc' : 'desc';
+            }
+            if (typeof renderHotTheme === 'function') renderHotTheme();
+        }
+        window.sortHT = sortHT;
+
+        function updateHeaderSortIndicators(prefix, activeKey, activeDir) {
+            const list = ['no', 'name', 'grade', 'theme', 'pullback', 'price', 'floor', 'sl', 'dist', 'turnover', 'change', 'confluence', 'score'];
+            list.forEach(k => {
+                const el = document.getElementById(prefix + 'Sort_' + k);
+                if (!el) return;
+                if (k === activeKey) {
+                    el.textContent = activeDir === 'asc' ? '▲' : '▼';
+                    el.style.color = '#38bdf8';
+                    el.style.fontWeight = '900';
+                } else {
+                    el.textContent = '↕';
+                    el.style.color = '#64748b';
+                    el.style.fontWeight = 'normal';
+                }
+            });
+        }
+        window.updateHeaderSortIndicators = updateHeaderSortIndicators;
+
         // Render Fresh VVIP Rider — setup swing PnL tertinggi hasil backtest 54 hari
         // Formula: isVvip + Fresh IPO (2025+) + pullback <= 10% + closeTightness <= 5.0
         // Backtest: WR 81%, avg +18.7%/trade, worst -3.6% (exit trail hibrid)
