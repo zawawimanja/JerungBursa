@@ -5966,7 +5966,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     if (typeof passesBottomFishing === 'function' && passesBottomFishing(p)) matches.push('Bottom');
                     const isFusion = getHotThemes(p.name).length > 0 && matches.length >= 2;
                     const tight = typeof p.closeTightness === 'number' ? p.closeTightness : 99;
-                    return isFusion || fresh === 0 || tight <= 2.5;
+                    const isHighConfidence = (p.confidenceScore && p.confidenceScore >= 80);
+                    return isFusion || fresh === 0 || tight <= 3.5 || isHighConfidence;
                 });
             }
 
