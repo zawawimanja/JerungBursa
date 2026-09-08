@@ -2814,44 +2814,64 @@
                 <div style="display: flex; align-items: center; gap: 0.6rem;">
                     <span style="font-size: 1.6rem;">💼</span>
                     <div>
-                        <h3 style="margin: 0; font-size: 1.25rem; color: #a78bfa; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">My Swing Trading Portfolio</h3>
-                        <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">7 Kaunter Swing Pilihan Bawah RM1.00 (Sasaran RM500 - RM1,000 / Bulan)</span>
+                        <h3 style="margin: 0; font-size: 1.25rem; color: #a78bfa; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px;">My Swing &amp; Top Ranking Portfolio</h3>
+                        <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600;">2 Kaunter Top Ranking VVIP (RM 2.5k + RM 2.5k) + 1 Deep Pullback Swing (RM 2.0k) | Sasaran: RM500 - RM1,000 / Bulan</span>
                     </div>
                 </div>
-                <div style="background: rgba(167, 139, 250, 0.1); border: 1px solid rgba(167, 139, 250, 0.25); border-radius: 8px; padding: 0.4rem 0.8rem; font-weight: 700; font-size: 0.85rem; color: #a78bfa;">
-                    Total Portfolio Value: <span id="portfolio-total-val" style="color: white; font-weight: 800;">Calculating Live...</span>
+                <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                    <button id="btn-sync-portfolio-top" onclick="syncPortfolioWithTopRanking()" style="background: linear-gradient(135deg, rgba(234, 179, 8, 0.25), rgba(168, 85, 247, 0.25)); border: 1px solid rgba(250, 204, 21, 0.5); color: #fde047; padding: 0.42rem 0.85rem; border-radius: 8px; font-weight: 800; font-size: 0.75rem; cursor: pointer; display: flex; align-items: center; gap: 0.35rem; transition: all 0.2s;" title="Ambil Top 2 Fresh VVIP Rider terkini dan kemaskini portfolio secara automatik">
+                        ⚡ Ambil Top Ranking
+                    </button>
+                    <button onclick="resetPortfolioDefault()" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.15); color: #cbd5e1; padding: 0.42rem 0.75rem; border-radius: 8px; font-weight: 700; font-size: 0.75rem; cursor: pointer; transition: all 0.2s;" title="Reset semula ke pegangan asal">
+                        🔄 Reset Default
+                    </button>
+                    <div style="background: rgba(167, 139, 250, 0.1); border: 1px solid rgba(167, 139, 250, 0.25); border-radius: 8px; padding: 0.42rem 0.85rem; font-weight: 700; font-size: 0.85rem; color: #a78bfa;">
+                        Portfolio Aktif: <span id="portfolio-total-val" style="color: white; font-weight: 800;">Calculating Live...</span>
+                    </div>
                 </div>
             </div>
 
             <!-- KPI Metric Highlights -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-bottom: 1.25rem;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(175px, 1fr)); gap: 0.75rem; margin-bottom: 1.25rem;">
                 <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 0.75rem 1rem;">
                     <div style="font-size: 0.7rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">🎯 Sasaran Bulanan</div>
-                    <div style="font-size: 1.1rem; font-weight: 800; color: #34d399; margin-top: 0.2rem;">RM 500 – RM 1,000 <span style="font-size: 0.7rem; color: #a78bfa; font-weight: 600;">(ROI ~5.5% - 11%)</span></div>
+                    <div style="font-size: 1.05rem; font-weight: 800; color: #34d399; margin-top: 0.2rem;">RM 500 – RM 1,000 <span style="font-size: 0.68rem; color: #a78bfa; font-weight: 600;">(ROI ~7.1% - 14.3%)</span></div>
                 </div>
                 <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 0.75rem 1rem;">
-                    <div style="font-size: 0.7rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">💰 Peruntukan Modal</div>
-                    <div style="font-size: 1.1rem; font-weight: 800; color: #38bdf8; margin-top: 0.2rem;">RM 9,000 <span style="font-size: 0.7rem; color: #94a3b8; font-weight: 600;">(2 @ RM2k + 5 @ RM1k)</span></div>
+                    <div style="font-size: 0.7rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">💰 Peruntukan Modal Aktif</div>
+                    <div style="font-size: 1.05rem; font-weight: 800; color: #38bdf8; margin-top: 0.2rem;">RM 7,000 <span style="font-size: 0.68rem; color: #94a3b8; font-weight: 600;">(2 @ RM2.5k + 1 @ RM2k)</span></div>
+                </div>
+                <div style="background: rgba(52, 211, 153, 0.05); border: 1px solid rgba(52, 211, 153, 0.2); border-radius: 8px; padding: 0.75rem 1rem;">
+                    <div style="font-size: 0.7rem; color: #34d399; font-weight: 700; text-transform: uppercase;">💵 Untung Terkunci (Realized)</div>
+                    <div id="portfolio-realized-card" style="font-size: 1.05rem; font-weight: 800; color: #34d399; margin-top: 0.2rem;">+RM 248.18 <span style="font-size: 0.68rem; color: #a78bfa; font-weight: 600;">(+12.4% EIPOWER)</span></div>
                 </div>
                 <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 0.75rem 1rem;">
                     <div style="font-size: 0.7rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">🛡️ Kawalan Risiko (SL)</div>
-                    <div style="font-size: 1.1rem; font-weight: 800; color: #fb7185; margin-top: 0.2rem;">Maksima &le; 5.0% <span style="font-size: 0.7rem; color: #94a3b8; font-weight: 600;">(Rapat di Lantai)</span></div>
+                    <div style="font-size: 1.05rem; font-weight: 800; color: #fb7185; margin-top: 0.2rem;">Maksima &le; 5.0% - 7.0% <span style="font-size: 0.68rem; color: #94a3b8; font-weight: 600;">(Lantai Rapat)</span></div>
                 </div>
                 <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 0.75rem 1rem;">
                     <div style="font-size: 0.7rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">🎯 Sasaran Keuntungan</div>
-                    <div style="font-size: 1.1rem; font-weight: 800; color: #fbbf24; margin-top: 0.2rem;">TP1 +10% | TP2 +20% <span style="font-size: 0.7rem; color: #94a3b8; font-weight: 600;">(R:R &ge; 1:2.5)</span></div>
+                    <div style="font-size: 1.05rem; font-weight: 800; color: #fbbf24; margin-top: 0.2rem;">TP1 +10% | TP2 +20% <span style="font-size: 0.68rem; color: #94a3b8; font-weight: 600;">(R:R &ge; 1:2.5)</span></div>
                 </div>
             </div>
+
+            <!-- TABEL 1: PEGANGAN AKTIF -->
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.6rem; flex-wrap: wrap; gap: 0.5rem;">
+                <div style="font-weight: 800; font-size: 0.95rem; color: #e2e8f0; display: flex; align-items: center; gap: 0.4rem;">
+                    <span>📊</span> Pegangan Aktif (3 Kaunter: 2 Top Ranking VVIP + 1 Swing)
+                </div>
+                <span style="font-size: 0.72rem; color: #94a3b8;">Harga dikira secara dinamik daripada data pasaran terkini</span>
+            </div>
             
-            <div style="overflow-x: auto;">
+            <div style="overflow-x: auto; margin-bottom: 1.25rem;">
                 <table class="history-table" style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.85rem;">
                     <thead>
                         <tr style="border-bottom: 2px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">
-                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800;">Stock</th>
+                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800;">Stock &amp; Pegangan</th>
                             <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Technique &amp; Discipline</th>
                             <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Entry Price</th>
                             <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Current Price</th>
-                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Stop Loss (SL) Price</th>
+                            <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Stop Loss (SL)</th>
                             <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Distance to SL</th>
                             <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">P&amp;L Performance</th>
                             <th style="color: #a78bfa; padding: 0.75rem; font-weight: 800; text-align: center;">Protection Status</th>
@@ -2863,6 +2883,47 @@
                         <!-- Dynamically populated from JS -->
                     </tbody>
                 </table>
+            </div>
+
+            <!-- Callout Pengurusan Risiko & SRKK Guidance -->
+            <div style="background: rgba(56, 189, 248, 0.05); border: 1px solid rgba(56, 189, 248, 0.2); border-radius: 8px; padding: 0.85rem 1rem; margin-bottom: 1.5rem; display: flex; gap: 0.75rem; align-items: flex-start;">
+                <span style="font-size: 1.3rem; line-height: 1;">💡</span>
+                <div style="font-size: 0.75rem; color: #cbd5e1; line-height: 1.5;">
+                    <strong style="color: #38bdf8; display: block; margin-bottom: 0.2rem;">Nota Pelaksanaan &amp; Disiplin Ambil Untung (Take-Profit):</strong>
+                    • <strong>PENTECH &amp; STRATUS (Top Ranking VVIP):</strong> Masuk waktu pembukaan pasaran (market open ~9:05 AM). Pasang GTC Stop Loss automatik di lantai keselamatan (Pentech RM 0.325, Stratus RM 2.680).<br>
+                    • <strong>SRKK (Modal RM 2,000 @ RM 0.545):</strong> Beli sebelum ini, sempat untung namun retrace semula. Lantai kritikal di <strong>RM 0.490</strong> masih kukuh (jarak ~6.7% dari paras semasa RM 0.525). Menanti giliran lantunan semula sektor semikonduktor. <em>Disiplin wajib bila kembali hijau: Kunci separuh keuntungan (50% TP) di TP1 RM 0.600 (+10%), kemudian anjakkan SL ke Breakeven (RM 0.545) untuk lindungi baki keuntungan.</em>
+                </div>
+            </div>
+
+            <!-- TABEL 2: REKOD JUALAN TERLAKSANA (CLOSED TRADES) -->
+            <div style="border-top: 1px dashed rgba(255,255,255,0.1); padding-top: 1.25rem;">
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.6rem; flex-wrap: wrap; gap: 0.5rem;">
+                    <div style="font-weight: 800; font-size: 0.95rem; color: #34d399; display: flex; align-items: center; gap: 0.4rem;">
+                        <span>💰</span> Rekod Jualan Terlaksana (Closed Trades / Realized Profit)
+                    </div>
+                    <span style="font-size: 0.72rem; color: #34d399; font-weight: 700;">Keuntungan Dikunci &amp; Modal Dilepaskan Semula</span>
+                </div>
+                
+                <div style="overflow-x: auto;">
+                    <table class="history-table" style="width: 100%; border-collapse: collapse; text-align: left; font-size: 0.85rem;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">
+                                <th style="color: #34d399; padding: 0.65rem 0.75rem; font-weight: 800;">Stock Sold</th>
+                                <th style="color: #34d399; padding: 0.65rem 0.75rem; font-weight: 800; text-align: center;">Technique</th>
+                                <th style="color: #34d399; padding: 0.65rem 0.75rem; font-weight: 800; text-align: center;">Entry Price</th>
+                                <th style="color: #34d399; padding: 0.65rem 0.75rem; font-weight: 800; text-align: center;">Exit / Sold Price</th>
+                                <th style="color: #34d399; padding: 0.65rem 0.75rem; font-weight: 800; text-align: center;">Modal Asal</th>
+                                <th style="color: #34d399; padding: 0.65rem 0.75rem; font-weight: 800; text-align: center;">Nilai Jualan</th>
+                                <th style="color: #34d399; padding: 0.65rem 0.75rem; font-weight: 800; text-align: center;">Untung Bersih (P&amp;L)</th>
+                                <th style="color: #34d399; padding: 0.65rem 0.75rem; font-weight: 800; text-align: center;">Status Jualan</th>
+                                <th style="color: #34d399; padding: 0.65rem 0.75rem; font-weight: 800;">Tindakan Modal</th>
+                            </tr>
+                        </thead>
+                        <tbody id="portfolioClosedTableBody">
+                            <!-- Populated from JS -->
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     </div>
@@ -5909,6 +5970,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 });
             }
 
+            window._latestFreshRiderPicks = displayPicks;
+
             if (displayPicks.length === 0) {
                 let emptyMsg = '🔥 No Fresh VVIP Rider setups under current view.';
                 if (filterMode === 'fusion_only') emptyMsg = '⚡ Tiada sinyal <strong>🔥⚡ FUSION</strong> hari ini (Fresh Rider + Hot Theme Semicon/Solar).';
@@ -8439,17 +8502,163 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             });
         });
 
+        const DEFAULT_PORTFOLIO_ACTIVE = [
+            {
+                name: 'PENTECH',
+                buyPrice: 0.350,
+                slPrice: 0.325,
+                allocation: 2500,
+                technique: 'Top 1 VVIP (Day 1 Fusion)',
+                rankTag: '🥇 TOP 1 VVIP',
+                isKental: true,
+                tp1: 0.385,
+                tp2: 0.420,
+                notes: 'Day 1 Trigger (Semicon Theme). SL rapat di Lantai RM 0.325.'
+            },
+            {
+                name: 'STRATUS',
+                buyPrice: 2.800,
+                slPrice: 2.680,
+                allocation: 2500,
+                technique: 'Top 2 VVIP (Base 2 Rider)',
+                rankTag: '🥈 TOP 2 VVIP',
+                isKental: true,
+                tp1: 3.050,
+                tp2: 3.250,
+                notes: 'Base 2 Zon Segar (+0.4% dari trigger). SL di RM 2.680.'
+            },
+            {
+                name: 'SRKK',
+                buyPrice: 0.545,
+                slPrice: 0.490,
+                allocation: 2000,
+                technique: 'Deep Pullback Swing',
+                rankTag: '⏳ REBOUND HUNT',
+                isKental: false,
+                tp1: 0.600,
+                tp2: 0.655,
+                notes: 'Hold lama. Menanti giliran lantunan semula di atas lantai RM 0.490.'
+            }
+        ];
+
+        const DEFAULT_PORTFOLIO_CLOSED = [
+            {
+                name: 'EIPOWER',
+                technique: 'Trend Rider Pullback (FR)',
+                buyPrice: 0.685,
+                sellPrice: 0.770,
+                allocation: 2000,
+                exitDate: '08 Sep 2026',
+                status: '✅ PROFIT LOCKED',
+                notes: 'Untung dikunci +12.41% (~RM 248). Modal RM 2k + untung dipusing masuk ke Top Ranking (PENTECH & STRATUS).'
+            }
+        ];
+
+        function syncPortfolioWithTopRanking() {
+            let picks = window._latestFreshRiderPicks || [];
+            if (!picks || picks.length === 0) {
+                if (typeof renderFreshRiderTable === 'function') {
+                    renderFreshRiderTable();
+                    picks = window._latestFreshRiderPicks || [];
+                }
+            }
+
+            if (!picks || picks.length === 0) {
+                alert('⚠️ Data Fresh VVIP Rider belum selesai dimuatkan. Sila pastikan data telah dimuat turun.');
+                return;
+            }
+
+            // Ambil Top 2 kaunter VVIP teratas
+            const topPicks = picks.slice(0, 2);
+            if (topPicks.length < 2) {
+                alert('⚠️ Kurang daripada 2 kaunter Top Ranking ditemui.');
+                return;
+            }
+
+            const p0Price = topPicks[0].price || 0.350;
+            const p1Price = topPicks[1].price || 2.800;
+            const p0Floor = (typeof effFloorOf === 'function') ? effFloorOf(topPicks[0]) : 0;
+            const p1Floor = (typeof effFloorOf === 'function') ? effFloorOf(topPicks[1]) : 0;
+
+            const newActive = [
+                {
+                    name: topPicks[0].name,
+                    buyPrice: p0Price,
+                    slPrice: p0Floor > 0 ? +(p0Floor * 0.97).toFixed(3) : +(p0Price * 0.93).toFixed(3),
+                    allocation: 2500,
+                    technique: 'Top 1 VVIP (Day 1 Fusion)',
+                    rankTag: '🥇 TOP 1 VVIP',
+                    isKental: true,
+                    tp1: +(p0Price * 1.10).toFixed(3),
+                    tp2: +(p0Price * 1.20).toFixed(3),
+                    notes: 'Auto-sync daripada Top Ranking #1 Fresh VVIP Rider.'
+                },
+                {
+                    name: topPicks[1].name,
+                    buyPrice: p1Price,
+                    slPrice: p1Floor > 0 ? +(p1Floor * 0.97).toFixed(3) : +(p1Price * 0.95).toFixed(3),
+                    allocation: 2500,
+                    technique: 'Top 2 VVIP (Base 2 Rider)',
+                    rankTag: '🥈 TOP 2 VVIP',
+                    isKental: true,
+                    tp1: +(p1Price * 1.09).toFixed(3),
+                    tp2: +(p1Price * 1.16).toFixed(3),
+                    notes: 'Auto-sync daripada Top Ranking #2 Fresh VVIP Rider.'
+                },
+                {
+                    name: 'SRKK',
+                    buyPrice: 0.545,
+                    slPrice: 0.490,
+                    allocation: 2000,
+                    technique: 'Deep Pullback Swing',
+                    rankTag: '⏳ REBOUND HUNT',
+                    isKental: false,
+                    tp1: 0.600,
+                    tp2: 0.655,
+                    notes: 'Hold lama. Menanti giliran lantunan semula di atas lantai RM 0.490.'
+                }
+            ];
+
+            localStorage.setItem('my_active_portfolio', JSON.stringify(newActive));
+            renderPortfolio();
+
+            const btn = document.getElementById('btn-sync-portfolio-top');
+            if (btn) {
+                const oldText = btn.innerHTML;
+                btn.innerHTML = '✅ Diselaraskan!';
+                btn.style.background = 'rgba(52, 211, 153, 0.25)';
+                btn.style.borderColor = '#34d399';
+                btn.style.color = '#34d399';
+                setTimeout(() => {
+                    btn.innerHTML = oldText;
+                    btn.style.background = '';
+                    btn.style.borderColor = '';
+                    btn.style.color = '';
+                }, 2000);
+            }
+        }
+        window.syncPortfolioWithTopRanking = syncPortfolioWithTopRanking;
+
+        function resetPortfolioDefault() {
+            localStorage.removeItem('my_active_portfolio');
+            renderPortfolio();
+        }
+        window.resetPortfolioDefault = resetPortfolioDefault;
+
         function renderPortfolio() {
             const list = currentData || [];
-            const portfolio = [
-                { name: 'SRKK', buyPrice: 0.545, slPrice: 0.490, allocation: 2000, technique: 'Deep Pullback Swing', isKental: false, tp1: 0.600, tp2: 0.655 },
-                { name: 'EIPOWER', buyPrice: 0.685, slPrice: 0.630, allocation: 2000, technique: 'Trend Rider Pullback (FR)', isKental: true, tp1: 0.755, tp2: 0.820 },
-                { name: 'AMS', buyPrice: 0.450, slPrice: 0.430, allocation: 1000, technique: 'Solid Floor Swing (FR)', isKental: true, tp1: 0.495, tp2: 0.540 },
-                { name: 'ISF', buyPrice: 0.735, slPrice: 0.690, allocation: 1000, technique: 'VCP Staircase Base (FR)', isKental: true, tp1: 0.810, tp2: 0.880 },
-                { name: 'OXB', buyPrice: 0.465, slPrice: 0.435, allocation: 1000, technique: 'Fresh Rider Pullback (FR)', isKental: true, tp1: 0.515, tp2: 0.560 },
-                { name: 'ATECH', buyPrice: 0.770, slPrice: 0.725, allocation: 1000, technique: 'Tech Theme Swing (HT)', isKental: true, tp1: 0.850, tp2: 0.925 },
-                { name: 'CRPMATE', buyPrice: 0.205, slPrice: 0.194, allocation: 1000, technique: 'Industrial Theme Swing (HT)', isKental: true, tp1: 0.230, tp2: 0.250 }
-            ];
+            let portfolio = DEFAULT_PORTFOLIO_ACTIVE;
+            try {
+                const saved = localStorage.getItem('my_active_portfolio');
+                if (saved) {
+                    const parsed = JSON.parse(saved);
+                    if (Array.isArray(parsed) && parsed.length > 0) {
+                        portfolio = parsed;
+                    }
+                }
+            } catch(e) {
+                portfolio = DEFAULT_PORTFOLIO_ACTIVE;
+            }
 
             const tbody = document.getElementById('portfolioTableBody');
             if (!tbody) return;
@@ -8459,11 +8668,9 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             let totalVal = 0;
             
             portfolio.forEach(p => {
-                // Find current price from currentData
-                // Ticker name in currentData might have suffix like .KL, e.g. SDCG.KL
                 const found = list.find(s => {
-                    const sName = s.name.toUpperCase().trim();
-                    const pName = p.name.toUpperCase().trim();
+                    const sName = (s.name || '').toUpperCase().trim();
+                    const pName = (p.name || '').toUpperCase().trim();
                     return sName === pName || sName.startsWith(pName) || pName.startsWith(sName);
                 });
                 const currentPrice = (found && found.price > 0) ? found.price : p.buyPrice;
@@ -8486,11 +8693,15 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 
                 const statusHtml = currentPrice <= p.slPrice 
                     ? `<span style="background: rgba(244, 63, 94, 0.15); color: #fb7185; border: 1px solid rgba(244, 63, 94, 0.25); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 800; font-size: 0.7rem; white-space: nowrap;">🚨 BOCOR SL (SELL)</span>`
-                    : `<span style="background: rgba(52, 211, 153, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.25); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 800; font-size: 0.7rem; white-space: nowrap;">🛡️ SAFE</span>`;
+                    : (distToSl <= 3.0 
+                        ? `<span style="background: rgba(251, 191, 36, 0.15); color: #fbbf24; border: 1px solid rgba(251, 191, 36, 0.25); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 800; font-size: 0.7rem; white-space: nowrap;">⚠️ AMARAN RAPAT SL</span>`
+                        : `<span style="background: rgba(52, 211, 153, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.25); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 800; font-size: 0.7rem; white-space: nowrap;">🛡️ SAFE</span>`);
                 
                 const disciplineHtml = p.isKental
                     ? `<span style="background: rgba(167, 139, 250, 0.15); color: #c084fc; border: 1px solid rgba(167, 139, 250, 0.25); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 800; font-size: 0.65rem; white-space: nowrap;">💎 HOLD KENTAL</span>`
                     : `<span style="background: rgba(248, 113, 113, 0.15); color: #f87171; border: 1px solid rgba(248, 113, 113, 0.25); padding: 0.15rem 0.5rem; border-radius: 4px; font-weight: 800; font-size: 0.65rem; white-space: nowrap;">🛡️ STRICT SL</span>`;
+
+                const rankTagHtml = p.rankTag ? `<span style="background: rgba(234, 179, 8, 0.15); color: #fde047; border: 1px solid rgba(250, 204, 21, 0.3); padding: 0.12rem 0.45rem; border-radius: 4px; font-size: 0.65rem; font-weight: 800; margin-left: 0.35rem; white-space: nowrap;">${p.rankTag}</span>` : '';
 
                 const tvSym = typeof getTradingViewSymbol === 'function' ? getTradingViewSymbol(p.name) : p.name;
                 const chartLinkHtml = tvSym ? `
@@ -8502,8 +8713,11 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 tbody.innerHTML += `
                     <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.02)'" onmouseout="this.style.background='none'">
                         <td style="padding: 0.8rem 0.75rem; font-weight: 800; color: white; border-bottom: 1px solid rgba(255,255,255,0.05);">
-                            ${typeof getTradingViewAnchorSmall === 'function' ? getTradingViewAnchorSmall(p.name) : p.name}
-                            <span style="font-size: 0.65rem; color: var(--text-muted); display: block; font-weight: 400; margin-top: 0.1rem;">PEGANGAN: ${units.toLocaleString()} unit (${(units/100).toFixed(0)} Lot)</span>
+                            <div style="display: flex; align-items: center; flex-wrap: wrap; gap: 0.25rem;">
+                                ${typeof getTradingViewAnchorSmall === 'function' ? getTradingViewAnchorSmall(p.name) : p.name}
+                                ${rankTagHtml}
+                            </div>
+                            <span style="font-size: 0.65rem; color: var(--text-muted); display: block; font-weight: 500; margin-top: 0.2rem;">MODAL: RM ${p.allocation.toLocaleString()} &bull; ${units.toLocaleString()} unit (${Math.floor(units/100)} Lot)</span>
                         </td>
                         <td style="padding: 0.8rem 0.75rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
                             <span style="font-weight: 700; color: #e2e8f0; font-size: 0.75rem; display: block; text-transform: uppercase;">${p.technique}</span>
@@ -8514,7 +8728,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         <td style="padding: 0.8rem 0.75rem; text-align: center; font-weight: 700; color: #f87171; border-bottom: 1px solid rgba(255,255,255,0.05);">RM ${p.slPrice.toFixed(3)}</td>
                         <td style="padding: 0.8rem 0.75rem; text-align: center; font-weight: 700; color: ${slColor}; border-bottom: 1px solid rgba(255,255,255,0.05);">
                             ${distToSl > 0 ? `+${distToSl.toFixed(1)}%` : `${distToSl.toFixed(1)}%`}
-                            <span style="font-size: 0.65rem; color: var(--text-muted); display: block; font-weight: 400; margin-top: 0.1rem;">from SL Floor</span>
+                            <span style="font-size: 0.65rem; color: var(--text-muted); display: block; font-weight: 400; margin-top: 0.1rem;">dari Lantai SL</span>
                         </td>
                         <td style="padding: 0.8rem 0.75rem; text-align: center; font-weight: 800; color: ${pnlColor}; border-bottom: 1px solid rgba(255,255,255,0.05);">
                             ${pnlArrow} ${Math.abs(pnlPct).toFixed(2)}%
@@ -8523,8 +8737,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         <td style="padding: 0.8rem 0.75rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">${statusHtml}</td>
                         <td style="padding: 0.8rem 0.75rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">${chartLinkHtml}</td>
                         <td style="padding: 0.8rem 0.75rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.05);">
-                            <div style="font-size: 0.75rem; font-weight: 700; color: #34d399;">TP1: RM ${p.tp1.toFixed(3)} (+10%)</div>
-                            <div style="font-size: 0.68rem; font-weight: 600; color: #a78bfa; margin-top: 0.15rem;">TP2: RM ${p.tp2.toFixed(3)} (+20%)</div>
+                            <div style="font-size: 0.75rem; font-weight: 700; color: #34d399;">TP1: RM ${p.tp1 ? p.tp1.toFixed(3) : '—'} (+10%)</div>
+                            <div style="font-size: 0.68rem; font-weight: 600; color: #a78bfa; margin-top: 0.15rem;">TP2: RM ${p.tp2 ? p.tp2.toFixed(3) : '—'} (+20%)</div>
                         </td>
                     </tr>
                 `;
@@ -8537,6 +8751,45 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const totalValEl = document.getElementById('portfolio-total-val');
             if (totalValEl) {
                 totalValEl.innerHTML = `RM ${totalVal.toFixed(2)} <span style="font-size: 0.75rem; color: ${totalColor}; margin-left: 0.4rem; font-weight: 700;">(${totalPnlVal >= 0 ? '+' : ''}RM ${totalPnlVal.toFixed(2)} / ${totalPnlVal >= 0 ? '+' : ''}${totalPnlPct.toFixed(2)}%)</span>`;
+            }
+
+            // Render Closed / Realized Trades
+            const closedTbody = document.getElementById('portfolioClosedTableBody');
+            if (closedTbody) {
+                closedTbody.innerHTML = '';
+                DEFAULT_PORTFOLIO_CLOSED.forEach(c => {
+                    const units = Math.floor(c.allocation / c.buyPrice);
+                    const cost = units * c.buyPrice;
+                    const proceeds = units * c.sellPrice;
+                    const realizedPnl = proceeds - cost;
+                    const pnlPct = ((c.sellPrice - c.buyPrice) / c.buyPrice) * 100;
+
+                    closedTbody.innerHTML += `
+                        <tr style="border-bottom: 1px solid rgba(255,255,255,0.05); transition: background 0.2s;" onmouseover="this.style.background='rgba(255,255,255,0.02)'" onmouseout="this.style.background='none'">
+                            <td style="padding: 0.75rem; font-weight: 800; color: white;">
+                                ${typeof getTradingViewAnchorSmall === 'function' ? getTradingViewAnchorSmall(c.name) : c.name}
+                                <span style="font-size: 0.65rem; color: #94a3b8; display: block; font-weight: 400; margin-top: 0.1rem;">Tarikh Keluar: ${c.exitDate || '08 Sep 2026'}</span>
+                            </td>
+                            <td style="padding: 0.75rem; text-align: center; color: #cbd5e1; font-size: 0.75rem; font-weight: 600;">${c.technique}</td>
+                            <td style="padding: 0.75rem; text-align: center; color: #a5b4fc; font-weight: 700;">RM ${c.buyPrice.toFixed(3)}</td>
+                            <td style="padding: 0.75rem; text-align: center; color: #34d399; font-weight: 800;">RM ${c.sellPrice.toFixed(3)}</td>
+                            <td style="padding: 0.75rem; text-align: center; color: #94a3b8; font-weight: 600;">RM ${c.allocation.toLocaleString()} <span style="font-size: 0.65rem; display: block;">(${Math.floor(units/100)} Lot)</span></td>
+                            <td style="padding: 0.75rem; text-align: center; color: white; font-weight: 700;">RM ${proceeds.toFixed(2)}</td>
+                            <td style="padding: 0.75rem; text-align: center; font-weight: 800; color: #34d399;">
+                                ▲ +${pnlPct.toFixed(2)}%
+                                <span style="font-size: 0.65rem; color: #34d399; display: block; font-weight: 700;">+RM ${realizedPnl.toFixed(2)}</span>
+                            </td>
+                            <td style="padding: 0.75rem; text-align: center;">
+                                <span style="background: rgba(52, 211, 153, 0.15); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.3); padding: 0.2rem 0.55rem; border-radius: 4px; font-weight: 800; font-size: 0.7rem; white-space: nowrap;">
+                                    ${c.status}
+                                </span>
+                            </td>
+                            <td style="padding: 0.75rem; font-size: 0.72rem; color: #94a3b8; line-height: 1.4;">
+                                ${c.notes}
+                            </td>
+                        </tr>
+                    `;
+                });
             }
         }
         window.renderPortfolio = renderPortfolio;
