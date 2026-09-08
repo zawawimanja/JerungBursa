@@ -5836,36 +5836,28 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 html += `
                     <tr data-fr-name="${item.name}">
                         <td style="text-align: center; font-weight: 800; color: #fde047;">#${idx + 1}</td>
-                        <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
-                            ${getTradingViewAnchor(item.name)}
-                            <div class="fr-badge-row" style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.35rem; flex-wrap: wrap;">
+                        <td style="font-weight: 700; color: white; padding: 0.6rem 0.8rem;">
+                            ${getTradingViewAnchor(item.name)} <span style="font-size: 0.68rem; color: #a5b4fc; font-weight: 800;">(${grade})</span>
+                            <div class="fr-badge-row" style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.25rem; flex-wrap: wrap;">
                                 ${badgesHtml}
                             </div>
                         </td>
-                        <td style="text-align: center; color: #a5b4fc; font-weight: 800;">${grade}</td>
                         <td style="text-align: right; font-weight: bold; color: white;">RM ${item.price.toFixed(3)}</td>
                         <td style="text-align: center; color: var(--${changeClass}); font-weight: 800;">${changeSign}${changeVal !== undefined ? changeVal.toFixed(2) : '0.00'}%</td>
-                        <td style="text-align: right; color: ${pbColor}; font-weight: 800;" title="Pullback: ${pb !== null ? pb.toFixed(1) : '—'}% dari ATH · Tightness: ${tightVal}% — smaller tightness indicates tighter consolidation before breakout">${pb !== null ? pb.toFixed(1) + '%' : '—'}<span style="font-size: 0.58rem; color: #94a3b8; font-weight: 700;"> · tight ${tightVal}%</span></td>
+                        <td style="text-align: right; color: ${pbColor}; font-weight: 800;" title="Pullback: ${pb !== null ? pb.toFixed(1) : '—'}% dari ATH · Tightness: ${tightVal}%">${pb !== null ? pb.toFixed(1) + '%' : '—'}<div style="font-size: 0.65rem; color: #94a3b8; font-weight: 700; margin-top: 0.15rem;">tight ${tightVal}%</div></td>
                         <td style="text-align: right;">
-                            <span style="color: #34d399; font-weight: 800; font-size: 0.95rem;">${item.touchCount || 0}x</span>
-                            <div style="font-size: 0.78rem; color: #94a3b8; font-weight: 600; margin-top: 0.2rem;">${floorPrice}</div>
+                            <div style="color: #34d399; font-weight: 800; font-size: 0.85rem;">${floorPrice}</div>
+                            <div style="font-size: 0.65rem; color: #38bdf8; font-weight: 700; margin-top: 0.15rem;">+${floorDist} (${item.touchCount || 0}x)</div>
                         </td>
-                        <td style="text-align: right; color: #60a5fa; font-weight: 700;">+${floorDist}</td>
                         <td style="text-align: right;">
-                            <span style="color: ${(item.turnover||0) >= 2000000 ? '#f59e0b' : (item.turnover||0) >= 500000 ? '#34d399' : '#94a3b8'}; font-weight: 700; font-size: 0.82rem;">${(item.turnover||0) >= 1000000 ? 'RM ' + ((item.turnover||0)/1000000).toFixed(2) + 'M' : 'RM ' + ((item.turnover||0)/1000).toFixed(0) + 'k'}${(item.turnover||0) >= 2000000 ? ' 🔥' : ''}</span>
+                            <span style="color: ${(item.turnover||0) >= 2000000 ? '#f59e0b' : ((item.turnover||0) >= 500000 ? '#34d399' : '#94a3b8')}; font-weight: 700; font-size: 0.82rem;">${(item.turnover||0) >= 1000000 ? 'RM ' + ((item.turnover||0)/1000000).toFixed(2) + 'M' : 'RM ' + ((item.turnover||0)/1000).toFixed(0) + 'k'}${(item.turnover||0) >= 2000000 ? ' 🔥' : ''}</span>
                         </td>
-                        <td style="text-align: center; padding: 0.8rem 0.5rem; white-space: nowrap;">${confHtml}</td>
-                        <td style="text-align: center;">
-                            <button onclick="triggerStockHistoryModal('${item.name}')" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.25rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                                📜 History
-                            </button>
-                        </td>
-                        <td style="text-align: center;">
-                            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.25rem;">
-                                <span style="color: ${tierColor}; font-weight: 800; font-size: 0.78rem;">${confidenceText}</span>
-                                <button onclick="triggerAIAnalysisModal('${item.name}', 'Fresh VVIP Rider')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.2rem 0.55rem; border-radius: 6px; font-size: 0.7rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                                    ✨ Ask AI
-                                </button>
+                        <td style="text-align: center; padding: 0.6rem 0.4rem; white-space: nowrap;">${confHtml}</td>
+                        <td style="text-align: center; padding: 0.6rem 0.4rem;">
+                            <div style="display: flex; align-items: center; justify-content: center; gap: 0.3rem; flex-wrap: wrap;">
+                                <span style="color: ${tierColor}; font-weight: 800; font-size: 0.75rem;">${confidenceText}</span>
+                                <button onclick="triggerStockHistoryModal('${item.name}')" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.15rem 0.4rem; border-radius: 5px; font-size: 0.68rem; font-weight: 800; cursor: pointer;" title="History">📜</button>
+                                <button onclick="triggerAIAnalysisModal('${item.name}', 'Fresh VVIP Rider')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.15rem 0.4rem; border-radius: 5px; font-size: 0.68rem; font-weight: 800; cursor: pointer;" title="Ask AI">✨ AI</button>
                             </div>
                         </td>
                     </tr>`;
@@ -7522,34 +7514,27 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 html += `
                     <tr data-ht-name="${item.name}">
                         <td style="text-align: center; font-weight: 800; color: #a78bfa;">#${idx + 1}</td>
-                        <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
+                        <td style="font-weight: 700; color: white; padding: 0.6rem 0.8rem;">
                             ${getTradingViewAnchor(item.name)}
-                            <div class="ht-badge-row" style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.35rem; flex-wrap: wrap;">${csBadge}</div>
+                            <div style="margin-top: 0.2rem; display: inline-flex; align-items: center; gap: 0.2rem; flex-wrap: wrap;">${themeBadge}</div>
+                            <div class="ht-badge-row" style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.25rem; flex-wrap: wrap;">${csBadge}</div>
                         </td>
-                        <td style="text-align: center;">${themeBadge}</td>
                         <td style="text-align: right; font-weight: bold; color: white;">RM ${item.price.toFixed(3)}</td>
                         <td style="text-align: center; color: var(--${changeClass}); font-weight: 800;">${changeSign}${changeVal !== undefined ? changeVal.toFixed(2) : '0.00'}%</td>
-                        <td style="text-align: right; color: ${pbColor}; font-weight: 700;" title="Pullback: ${pb !== null ? pb.toFixed(1) : '—'}% dari ATH · Tightness: ${tightValHT}% — smaller tightness indicates tighter consolidation before breakout">${pb !== null ? pb.toFixed(1) + '%' : '—'}<span style="font-size: 0.58rem; color: #94a3b8; font-weight: 700;"> · tight ${tightValHT}%</span></td>
+                        <td style="text-align: right; color: ${pbColor}; font-weight: 700;" title="Pullback: ${pb !== null ? pb.toFixed(1) : '—'}% dari ATH · Tightness: ${tightValHT}%">${pb !== null ? pb.toFixed(1) + '%' : '—'}<div style="font-size: 0.65rem; color: #94a3b8; font-weight: 700; margin-top: 0.15rem;">tight ${tightValHT}%</div></td>
                         <td style="text-align: right;">
-                            <span style="color: #34d399; font-weight: 800; font-size: 0.95rem;">${item.touchCount || 0}x</span>
-                            <div style="font-size: 0.78rem; color: #94a3b8; font-weight: 600; margin-top: 0.2rem;">${floorPrice}</div>
+                            <div style="color: #34d399; font-weight: 800; font-size: 0.85rem;">${floorPrice}</div>
+                            <div style="font-size: 0.65rem; color: #38bdf8; font-weight: 700; margin-top: 0.15rem;">+${floorDist.replace('+', '')} (${item.touchCount || 0}x)</div>
                         </td>
-                        <td style="text-align: right; color: #60a5fa; font-weight: 700;">+${floorDist.replace('+', '')}</td>
                         <td style="text-align: right;">
-                            <span style="color: ${(item.turnover||0) >= 2000000 ? '#f59e0b' : (item.turnover||0) >= 500000 ? '#34d399' : '#94a3b8'}; font-weight: 700; font-size: 0.82rem;">${(item.turnover||0) >= 1000000 ? 'RM ' + ((item.turnover||0)/1000000).toFixed(2) + 'M' : 'RM ' + ((item.turnover||0)/1000).toFixed(0) + 'k'}${(item.turnover||0) >= 2000000 ? ' 🔥' : ''}</span>
+                            <span style="color: ${(item.turnover||0) >= 2000000 ? '#f59e0b' : ((item.turnover||0) >= 500000 ? '#34d399' : '#94a3b8')}; font-weight: 700; font-size: 0.82rem;">${(item.turnover||0) >= 1000000 ? 'RM ' + ((item.turnover||0)/1000000).toFixed(2) + 'M' : 'RM ' + ((item.turnover||0)/1000).toFixed(0) + 'k'}${(item.turnover||0) >= 2000000 ? ' 🔥' : ''}</span>
                         </td>
-                        <td style="text-align: center; padding: 0.8rem 0.5rem; white-space: nowrap;">${confBadge}</td>
-                        <td style="text-align: center;">
-                            <button onclick="triggerStockHistoryModal('${item.name}')" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.25rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                                📜 History
-                            </button>
-                        </td>
-                        <td style="text-align: center;">
-                            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.25rem;">
-                                <span style="color: ${tierColor}; font-weight: 800; font-size: 0.78rem;">${confidenceText}</span>
-                                <button onclick="triggerAIAnalysisModal('${item.name}', 'Hot Theme Rider')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.7rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                                    ✨ Ask AI
-                                </button>
+                        <td style="text-align: center; padding: 0.6rem 0.4rem; white-space: nowrap;">${confBadge}</td>
+                        <td style="text-align: center; padding: 0.6rem 0.4rem;">
+                            <div style="display: flex; align-items: center; justify-content: center; gap: 0.3rem; flex-wrap: wrap;">
+                                <span style="color: ${tierColor}; font-weight: 800; font-size: 0.75rem;">${confidenceText}</span>
+                                <button onclick="triggerStockHistoryModal('${item.name}')" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.15rem 0.4rem; border-radius: 5px; font-size: 0.68rem; font-weight: 800; cursor: pointer;" title="History">📜</button>
+                                <button onclick="triggerAIAnalysisModal('${item.name}', 'Hot Theme Rider')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.15rem 0.4rem; border-radius: 5px; font-size: 0.68rem; font-weight: 800; cursor: pointer;" title="Ask AI">✨ AI</button>
                             </div>
                         </td>
                     </tr>`;
