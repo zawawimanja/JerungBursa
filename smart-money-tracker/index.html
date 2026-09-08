@@ -1057,27 +1057,33 @@
                 </div>
 
                 <div id="frScannerBody">
+                    <div style="background: rgba(234, 179, 8, 0.08); border: 1px solid rgba(234, 179, 8, 0.25); border-radius: 8px; padding: 0.5rem 0.8rem; margin-bottom: 0.75rem; font-size: 0.75rem; color: #cbd5e1; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+                        <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
+                            <span style="font-weight: 900; color: #fde047;">🏷️ Ranking Asal (Default Hierarchy):</span>
+                            <span style="color: #94a3b8; font-size: 0.72rem; font-weight: 600;">1. Sinyal Baru ➔ 2. Tightness % (Squeeze Rapat) ➔ 3. Jarak Floor (Risiko Nipis) ➔ 4. Pullback % ➔ 5. Turnover Jerung</span>
+                        </div>
+                        <div style="font-size: 0.7rem; color: #38bdf8; font-weight: 700;">
+                            💡 Klik mana-mana Header Lajur di bawah untuk susun semula mengikut pilihan anda!
+                        </div>
+                    </div>
                     <div class="table-responsive">
                     <table class="data-table">
                         <thead>
                             <tr style="user-select: none;">
-                                <th style="text-align: center; width: 45px; cursor: pointer;" onclick="sortFR('no')" title="Klik untuk balik ke ranking asal">No <span id="frSort_no"></span></th>
-                                <th style="cursor: pointer;" onclick="sortFR('name')" title="Klik untuk susun ikut Nama Kaunter">Kaunter <span id="frSort_name" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: center; cursor: pointer;" onclick="sortFR('grade')" title="Klik untuk susun ikut Gred IPO">IPO Grade <span id="frSort_grade" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: center; width: 45px; cursor: pointer;" onclick="sortFR('no')" title="Klik untuk balik ke ranking hierarki asal">No <span id="frSort_no"></span></th>
+                                <th style="cursor: pointer;" onclick="sortFR('name')" title="Klik untuk susun ikut Nama Kaunter & Kategori">Kaunter &amp; Kategori <span id="frSort_name" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: right; cursor: pointer;" onclick="sortFR('price')" title="Klik untuk susun ikut Harga Semasa">Harga Semasa <span id="frSort_price" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: center; cursor: pointer;" onclick="sortFR('change')" title="Klik untuk susun ikut Perubahan %">Change % <span id="frSort_change" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('pullback')" title="Klik untuk susun ikut Pullback %">Pullback <span id="frSort_pullback" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('floor')" title="Klik untuk susun ikut Harga Floor">Support Floor <span id="frSort_floor" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('dist')" title="Klik untuk susun ikut Jarak Floor %">Jarak Floor <span id="frSort_dist" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('pullback')" title="Klik untuk susun ikut Pullback & Tightness %">Pullback &amp; Tightness <span id="frSort_pullback" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('floor')" title="Klik untuk susun ikut Harga Floor & Jarak Risk %">Support Floor (Risk %) <span id="frSort_floor" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: right; cursor: pointer;" onclick="sortFR('turnover')" title="Klik untuk susun ikut Turnover">Turnover <span id="frSort_turnover" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: center; cursor: pointer;" onclick="sortFR('confluence')" title="Klik untuk susun ikut Bilangan Signal Confluence">Confluence <span id="frSort_confluence" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: center;">Sejarah</th>
-                                <th style="text-align: center; cursor: pointer;" onclick="sortFR('score')" title="Klik untuk susun ikut Skor AI">Skor AI <span id="frSort_score" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: center; cursor: pointer;" onclick="sortFR('score')" title="Klik untuk susun ikut Skor AI">Skor &amp; Tindakan <span id="frSort_score" style="color:#64748b;">↕</span></th>
                             </tr>
                         </thead>
                         <tbody id="confluenceRadarTableBody">
                             <tr>
-                                <td colspan="12" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
+                                <td colspan="9" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
                                     ⏳ Loading Fresh VVIP Rider...
                                 </td>
                             </tr>
@@ -1326,27 +1332,33 @@
                 </div>
 
                 <div id="htScannerBody">
+                    <div style="background: rgba(168, 85, 247, 0.08); border: 1px solid rgba(168, 85, 247, 0.25); border-radius: 8px; padding: 0.5rem 0.8rem; margin-bottom: 0.75rem; font-size: 0.75rem; color: #cbd5e1; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+                        <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
+                            <span style="font-weight: 900; color: #c4b5fd;">🏷️ Ranking Asal (Default Hierarchy):</span>
+                            <span style="color: #94a3b8; font-size: 0.72rem; font-weight: 600;">1. Sinyal Baru ➔ 2. Tightness % (Squeeze Rapat) ➔ 3. Jarak Floor (Risiko Nipis) ➔ 4. Pullback % ➔ 5. Turnover Jerung</span>
+                        </div>
+                        <div style="font-size: 0.7rem; color: #38bdf8; font-weight: 700;">
+                            💡 Klik mana-mana Header Lajur di bawah untuk susun semula mengikut pilihan anda!
+                        </div>
+                    </div>
                     <div class="table-responsive">
                     <table class="data-table">
                         <thead>
                             <tr style="user-select: none;">
-                                <th style="text-align: center; width: 45px; cursor: pointer;" onclick="sortHT('no')" title="Klik untuk balik ke ranking asal">No <span id="htSort_no"></span></th>
-                                <th style="cursor: pointer;" onclick="sortHT('name')" title="Klik untuk susun ikut Nama Kaunter">Kaunter <span id="htSort_name" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: center; cursor: pointer;" onclick="sortHT('theme')" title="Klik untuk susun ikut Sektor Tema">Tema <span id="htSort_theme" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: center; width: 45px; cursor: pointer;" onclick="sortHT('no')" title="Klik untuk balik ke ranking hierarki asal">No <span id="htSort_no"></span></th>
+                                <th style="cursor: pointer;" onclick="sortHT('name')" title="Klik untuk susun ikut Nama Kaunter & Tema">Kaunter &amp; Tema <span id="htSort_name" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: right; cursor: pointer;" onclick="sortHT('price')" title="Klik untuk susun ikut Harga Semasa">Harga Semasa <span id="htSort_price" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: center; cursor: pointer;" onclick="sortHT('change')" title="Klik untuk susun ikut Perubahan %">Change % <span id="htSort_change" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="sortHT('pullback')" title="Klik untuk susun ikut Pullback %">Pullback <span id="htSort_pullback" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="sortHT('floor')" title="Klik untuk susun ikut Harga Floor">Support Floor <span id="htSort_floor" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="sortHT('dist')" title="Klik untuk susun ikut Jarak Floor %">Jarak Floor <span id="htSort_dist" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortHT('pullback')" title="Klik untuk susun ikut Pullback & Tightness %">Pullback &amp; Tightness <span id="htSort_pullback" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortHT('floor')" title="Klik untuk susun ikut Harga Floor & Jarak Risk %">Support Floor (Risk %) <span id="htSort_floor" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: right; cursor: pointer;" onclick="sortHT('turnover')" title="Klik untuk susun ikut Turnover">Turnover <span id="htSort_turnover" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: center; cursor: pointer;" onclick="sortHT('confluence')" title="Klik untuk susun ikut Bilangan Signal Confluence">Confluence <span id="htSort_confluence" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: center;">Sejarah</th>
-                                <th style="text-align: center; cursor: pointer;" onclick="sortHT('score')" title="Klik untuk susun ikut Skor AI">Skor AI <span id="htSort_score" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: center; cursor: pointer;" onclick="sortHT('score')" title="Klik untuk susun ikut Skor AI">Skor &amp; Tindakan <span id="htSort_score" style="color:#64748b;">↕</span></th>
                             </tr>
                         </thead>
                         <tbody id="hotThemeTableBody">
                             <tr>
-                                <td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
+                                <td colspan="9" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
                                     ⚡ Memuatkan Hot Theme Rider...
                                 </td>
                             </tr>
