@@ -696,23 +696,51 @@ function buildMessage(now, out) {
     const chatId = process.env.TELEGRAM_CHAT_ID;
     if (token && chatId) {
         try {
-            const url = `https://api.telegram.org/bot${token}/sendMessage`;
-            const body = JSON.stringify({ chat_id: chatId, text: msg });
-            const r = await new Promise((resolve, reject) => {
-                const req = https.request(url, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(body) }
-                }, (res) => {
-                    let s = '';
-                    res.on('data', d => s += d);
-                    res.on('end', () => { try { resolve(JSON.parse(s)); } catch (e) { reject(e); } });
+            // Pecahkan mesej jika melebihi had 4096 aksara Telegram
+            const chunks = [];
+            if (msg.length <= 3800) {
+                chunks.push(msg);
+            } else {
+                const lines = msg.split('\n');
+                let cur = '';
+                for (const l of lines) {
+                    if ((cur + '\n' + l).length > 3800) {
+                        if (cur) chunks.push(cur);
+                        cur = l;
+                    } else {
+                        cur = cur ? cur + '\n' + l : l;
+                    }
+                }
+                if (cur) chunks.push(cur);
+            }
+
+            console.log(`📤 Menghantar ${chunks.length} bahagian mesej ke Telegram...`);
+            for (let i = 0; i < chunks.length; i++) {
+                const part = chunks[i];
+                const url = `https://api.telegram.org/bot${token}/sendMessage`;
+                const body = JSON.stringify({ chat_id: chatId, text: part });
+                const r = await new Promise((resolve, reject) => {
+                    const req = https.request(url, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(body) }
+                    }, (res) => {
+                        let s = '';
+                        res.on('data', d => s += d);
+                        res.on('end', () => { try { resolve(JSON.parse(s)); } catch (e) { reject(e); } });
+                    });
+                    req.on('error', reject);
+                    req.write(body);
+                    req.end();
                 });
-                req.on('error', reject);
-                req.write(body);
-                req.end();
-            });
-            if (r && r.ok) console.log('✅ Telegram: mesej dihantar.');
-            else console.error('❌ Telegram gagal:', JSON.stringify(r));
+                if (r && r.ok) {
+                    console.log(`✅ Telegram: bahagian ${i + 1}/${chunks.length} berjaya dihantar.`);
+                } else {
+                    console.error(`❌ Telegram gagal (bahagian ${i + 1}):`, JSON.stringify(r));
+                }
+                if (i < chunks.length - 1) {
+                    await new Promise(res => setTimeout(res, 800));
+                }
+            }
         } catch (e) {
             console.error('❌ Telegram error:', e.message);
         }
