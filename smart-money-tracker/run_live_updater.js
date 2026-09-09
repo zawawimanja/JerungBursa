@@ -49,11 +49,23 @@ function runScraper() {
             if (tErr) console.error(`⚠️ Ralat jana tracker Fresh Rider: ${tErr.message}`);
             else if (tOut) console.log(tOut.split('\n')[0]);
 
-            // Jalankan Telegram Buy Alert SEBELUM pre-close (sekitar 4:30 PM MYT)
+            // Waktu tempatan MYT
             const mytHour = parseInt(now.toLocaleString('en-US', { timeZone: 'Asia/Kuala_Lumpur', hour: '2-digit', hour12: false }));
             const mytMin = parseInt(now.toLocaleString('en-US', { timeZone: 'Asia/Kuala_Lumpur', minute: '2-digit' }));
             const todayStr = now.toISOString().slice(0, 10);
 
+            // 1. Morning Open Execution Alert (sekitar 9:01 AM - 9:10 AM MYT)
+            if (mytHour === 9 && mytMin >= 1 && mytMin <= 10 && global.lastMorningAlertSentDate !== todayStr) {
+                global.lastMorningAlertSentDate = todayStr;
+                console.log(`📢 Menjalankan Morning Open Execution Alert Telegram (9:02 AM)...`);
+                const morningScript = path.join(__dirname, 'morning_alert.js');
+                exec(`node "${morningScript}"`, { cwd: __dirname }, (mErr, mOut) => {
+                    if (mErr) console.error(`⚠️ Ralat Morning Alert: ${mErr.message}`);
+                    else if (mOut) console.log(`✅ Morning Alert Telegram Selesai dihantar.`);
+                });
+            }
+
+            // 2. Pre-Close Buy Alert (sekitar 4:30 PM MYT)
             if (mytHour === 16 && mytMin >= 25 && mytMin <= 40 && global.lastAlertSentDate !== todayStr) {
                 global.lastAlertSentDate = todayStr;
                 console.log(`📢 Menjalankan Buy Alert Telegram (4:30 PM Pre-Close Alert)...`);

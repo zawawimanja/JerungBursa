@@ -1,0 +1,36 @@
+{
+  "date": "2026-09-10",
+  "time": "00:57",
+  "results": [
+    {
+      "name": "PENTECH",
+      "prevClose": 0.35,
+      "curPrice": 0.35,
+      "gapPct": 0,
+      "situation": "A",
+      "situBadge": "🟢 SITUASI A (BUY ON OPEN)",
+      "advice": "Harga di zon tapak asal / diskaun (tiada gap). Risiko SL kekal minima. Sangat selamat untuk match order terus!",
+      "specialNote": "🥇 Top 1 VVIP (Day 1 Breakout, Semicon, Gred A, Turnover RM 3.2M 🔥). SL: RM 0.325."
+    },
+    {
+      "name": "STRATUS",
+      "prevClose": 2.8,
+      "curPrice": 2.78,
+      "gapPct": -0.71,
+      "situation": "A",
+      "situBadge": "🟢 SITUASI A (ZON DISKAUN - BUY ON OPEN)",
+      "advice": "Buka di bawah harga semalam (-0.7%). Peluang beli pada harga diskaun di bawah tapak!",
+      "specialNote": "🥈 Heavyweight Leader (Base 2, Turnover RM 6.2M 🔥, Tightness 1.08%). SL: RM 2.680."
+    },
+    {
+      "name": "AMS",
+      "prevClose": 0.46,
+      "curPrice": 0.46,
+      "gapPct": 0,
+      "situation": "A",
+      "situBadge": "🟢 SITUASI A (BUY ON OPEN)",
+      "advice": "Harga di zon tapak asal / diskaun (tiada gap). Risiko SL kekal minima. Sangat selamat untuk match order terus!",
+      "specialNote": "⚠️ PANTANG LARANG: Turnover lemau (RM 1.4M), kaunter lama sejak Jun. Utamakan PENTECH / STRATUS."
+    }
+  ]
+}
