@@ -76,6 +76,13 @@ function runScraper() {
                 });
             }
 
+            // 3. Real-Time Portfolio TP/SL & Breakeven Alert (setiap 5 minit)
+            const portfolioScript = path.join(__dirname, 'portfolio_alert.js');
+            exec(`node "${portfolioScript}"`, { cwd: __dirname }, (pErr, pOut) => {
+                if (pErr) console.error(`⚠️ Ralat Portfolio Alert: ${pErr.message}`);
+                else if (pOut && pOut.trim()) console.log(pOut.trim());
+            });
+
             console.log(`📡 Memuat naik data terkini ke GitHub & Vercel...`);
 
             const gitCmd = `git pull --rebase origin main && git add smart-money-tracker/live_data.json smart-money-tracker/live_data.js smart-money-tracker/fresh_rider_tracker.js smart-money-tracker/hot_theme_tracker.js smart-money-tracker/daily_equity_tracker.js smart-money-tracker/history/ && git commit -m "Auto-update live market data (5-min bot) [skip ci]" && git push origin main`;

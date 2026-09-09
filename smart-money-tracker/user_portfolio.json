@@ -1,0 +1,47 @@
+[
+  {
+    "name": "PENTECH",
+    "symbol": "0457.KL",
+    "buyPrice": 0.350,
+    "slPrice": 0.325,
+    "allocation": 2000,
+    "shares": 5700,
+    "technique": "Top 1 VVIP (Day 1 Fusion)",
+    "rankTag": "🥇 TOP 1 VVIP",
+    "isKental": true,
+    "tp1": 0.385,
+    "tp2": 0.420,
+    "entryDate": "2026-09-08",
+    "notes": "Day 1 Trigger (Semicon Theme). Modal RM 2,000 @ 0.350. SL rapat di Lantai RM 0.325."
+  },
+  {
+    "name": "STRATUS",
+    "symbol": "5356.KL",
+    "buyPrice": 2.760,
+    "slPrice": 2.680,
+    "allocation": 2000,
+    "shares": 700,
+    "technique": "Top 2 VVIP (Base 2 Rider)",
+    "rankTag": "🥈 TOP 2 VVIP",
+    "isKental": true,
+    "tp1": 3.050,
+    "tp2": 3.250,
+    "entryDate": "2026-07-24",
+    "notes": "Base 2 Zon Segar. Modal RM 2,000 @ 2.760. SL di RM 2.680."
+  },
+  {
+    "name": "SRKK",
+    "symbol": "0386.KL",
+    "buyPrice": 0.545,
+    "slPrice": 0.490,
+    "allocation": 2000,
+    "shares": 3600,
+    "technique": "Deep Pullback Swing",
+    "rankTag": "⏳ REBOUND HUNT",
+    "isKental": false,
+    "tp1": 0.600,
+    "tp2": 0.655,
+    "entryDate": "2026-08-15",
+    "notes": "Rebound hunt di atas tapak RM 0.490."
+  }
+]
