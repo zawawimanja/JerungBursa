@@ -383,107 +383,64 @@ function buildMessage(now, out) {
     }
 
     const lines = [];
-    lines.push(`📋 BUY LIST — ${dateStr} ${timeStr} MYT`);
-    lines.push(dataTxt);
+    lines.push(`🔔 *SMART MONEY TRACKER — PRE-CLOSE BUY ALERT*`);
+    lines.push(`⏰ ${dateStr} ${timeStr} MYT · ${dataTxt}`);
     lines.push('');
 
     // ---- CS timing label (csGreen = breakout danger, csRed = prime entry) ----
     function csTimingLabel(changePct) {
         if (changePct === null || changePct === undefined) return '';
-        if (changePct >= 5.0) return '· 🔴 GREEN CS — do not chase';
-        if (changePct >= 3.0) return '· 🟡 YELLOW CS — extended';
-        if (changePct <= -3.0) return '· 🟢 RED CS — prime entry';
-        if (changePct <= -1.0) return '· 🟢 RED CS';
-        return '· ⚪ FLAT CS';
-    }
-    // Rank for sorting: RED(0) > FLAT(1) > YELLOW(2) > GREEN(3)
-    function csRank(changePct) {
-        if (changePct === null || changePct === undefined) return 1;
-        if (changePct <= -1.0) return 0;
-        if (changePct < 3.0) return 1;
-        if (changePct < 5.0) return 2;
-        return 3;
+        if (changePct >= 5.0) return '🔴 GREEN CS (Extended/Breakout)';
+        if (changePct >= 3.0) return '🟡 YELLOW CS (Extended)';
+        if (changePct <= -3.0) return '🟢 RED CS (Prime Dip)';
+        if (changePct <= -1.0) return '🟢 RED CS (Dip)';
+        return '⚪ FLAT CS (Neutral)';
     }
 
-    // ---- Fresh Rider ----
-    // (Sorted: freshness → tightness → dynamic floor → pullback → touch → turnover)
+    // ---- Fresh Rider Top Ranking VVIP ----
     const fr = out.freshRider;
-    lines.push(`🔥 FRESH VVIP RIDER (${fr.list.length})`);
+    lines.push(`🏆 *FRESH RIDER VVIP (${fr.list.length} Kaunter Terpilih)*`);
+    lines.push('──────────────────────────────');
+
     if (fr.list.length === 0) {
-        lines.push('   No setups today.');
+        lines.push('Tiada setup Fresh Rider yang menepati kriteria hari ini.');
+        lines.push('💡 _Cash is a position — tunggu peluang terbaik!_');
     } else {
-        let chaseShown = false;
         fr.list.forEach((s, i) => {
-            if (csRank(s.changePct) === 3 && !chaseShown) {
-                lines.push('   ── 🔴 GREEN CS: DO NOT CHASE, wait for pullback ──');
-                chaseShown = true;
-            }
-            const label = s.label ? s.label + ' ' : '';
-            const floorTxt = s.floorDist != null ? ` · floor ${s.floorDist.toFixed(1)}%` : '';
-            const tightTxt = s.tight != null ? ` · tight ${s.tight.toFixed(2)}%` : '';
+            const medal = i === 0 ? '🥇' : (i === 1 ? '🥈' : (i === 2 ? '🥉' : '🔹'));
+            const themes = getHotThemes(s.name);
+            const themeTxt = themes.length > 0 ? ` · ${themes.join('/')}` : '';
+            const toVal = s.turnover || 0;
+            const toStr = toVal >= 1e6 ? `RM ${(toVal / 1e6).toFixed(2)}M` : `RM ${(toVal / 1e3).toFixed(0)}k`;
+            const toEmoji = toVal >= 2e6 ? ' 🔥' : '';
+            const tightStr = s.tight != null ? `${s.tight.toFixed(2)}%` : '—';
+            const pbStr = s.pullback != null ? `${s.pullback.toFixed(1)}%` : '—';
             const csTxt = csTimingLabel(s.changePct);
-            lines.push(`${String(i + 1).padStart(2)}. ${label}${s.name} RM${fmtPrice(s.price)} (${fmtPct(s.changePct)}) · pb ${fmtPlain(s.pullback)}${floorTxt}${tightTxt} · SL RM${fmtPrice(s.sl)} ${csTxt}`);
+            const gradeStr = s.grade && s.grade !== '—' ? ` · Gred ${s.grade}` : '';
+
+            lines.push(`${medal} *${s.name}* (${s.label}${gradeStr}${themeTxt})`);
+            lines.push(`   💵 Harga: *RM ${fmtPrice(s.price)}* (${fmtPct(s.changePct)}) · ${csTxt}`);
+            lines.push(`   📐 Squeeze: Tight *${tightStr}* | PB *${pbStr}*`);
+            lines.push(`   🛡️ SL: *RM ${fmtPrice(s.sl)}* | Floor: *RM ${fmtPrice(s.floor)}*`);
+            lines.push(`   💰 Turnover: *${toStr}*${toEmoji}`);
+            lines.push('');
         });
     }
-    const frAdd = fr.list.filter(s => s.label === '➕ ADD-ON');
-    const frNew = fr.list.filter(s => s.label === '🆕 NEW');
-    if (fr.addonCount > 0 || fr.newCount > 0 || fr.reentryCount > 0) lines.push(`   ➕ ${fr.addonCount} add-on / ${fr.newCount} new / ${fr.reentryCount} re-entry`);
-    lines.push(frNew.length
-        ? `   🆕 First time qualify: ${frNew.map(s => s.name).join(', ')}`
-        : (frAdd.length ? `   ➕ ADD-ON today: ${frAdd.map(s => s.name).join(', ')}` : '   🟢 All qualify — no new signals'));
-    lines.push('');
 
-    // ---- Hot Theme ----
-    // (Susunan dah diset dalam main — pattern web: kesegaran → tightness → lantai → pullback → confluence → touch → turnover)
-    const ht = out.hotTheme;
-    lines.push(`🔥 HOT THEME (${ht.list.length})`);
-    if (ht.list.length === 0) {
-        lines.push('   No setups today.');
-    } else {
-        let chaseShown = false;
-        ht.list.forEach((s, i) => {
-            if (csRank(s.changePct) === 3 && !chaseShown) {
-                lines.push('   ── 🔴 GREEN CS: DO NOT CHASE, wait for pullback ──');
-                chaseShown = true;
-            }
-            const label = s.label ? s.label + ' ' : '';
-            const triple = s.confluence >= 3 ? 'TRIPLE' : 'DOUBLE';
-            const floorTxt = s.floorDist != null ? ` · floor ${s.floorDist.toFixed(1)}%` : '';
-            const tightTxt = s.tight != null ? ` · tight ${s.tight.toFixed(2)}%` : '';
-            const csTxt = csTimingLabel(s.changePct);
-            lines.push(`${String(i + 1).padStart(2)}. ${label}${s.name} RM${fmtPrice(s.price)} (${fmtPct(s.changePct)}) · ${triple}(${s.confluence}) · pb ${fmtPlain(s.pullback)}${floorTxt}${tightTxt} · SL RM${fmtPrice(s.sl)} ${csTxt}`);
-        });
-    }
-    const htAdd = ht.list.filter(s => s.label === '➕ ADD-ON');
-    const htNew = ht.list.filter(s => s.label === '🆕 NEW');
-    if (ht.addonCount > 0 || ht.newCount > 0 || ht.reentryCount > 0) lines.push(`   ➕ ${ht.addonCount} add-on / ${ht.newCount} new / ${ht.reentryCount} re-entry`);
-    lines.push(htNew.length
-        ? `   🆕 First time qualify: ${htNew.map(s => s.name).join(', ')}`
-        : (htAdd.length ? `   ➕ ADD-ON today: ${htAdd.map(s => s.name).join(', ')}` : '   🟢 All qualify — no new signals'));
-    lines.push('');
-
-    // ---- SL warning ----
-    if (out.slWarnings.length > 0) {
-        lines.push('⚠️ SL WARNING — position below trailing stop (consider exit):');
-        for (const w of out.slWarnings) {
-            lines.push(`   ${w.name} RM${w.price} vs SL RM${w.slTrail} (${w.tracker})`);
+    // ---- SL warning (hanya untuk kaunter FR / Portfolio) ----
+    const frSl = (out.slWarnings || []).filter(w => w.tracker === 'FR');
+    if (frSl.length > 0) {
+        lines.push('⚠️ *AMARAN STOP LOSS (FR Tracker)*:');
+        for (const w of frSl) {
+            lines.push(`   • *${w.name}*: RM ${w.price} vs SL RM ${w.slTrail}`);
         }
         lines.push('');
     }
 
-    lines.push(`Trackers: FR ${out.frTracked} unique / HT ${out.htTracked} unique`);
-    lines.push('');
-    lines.push('📖 HOW TO READ:');
-    lines.push('🆕 NEW — first time qualifying today. Full entry from base.');
-    lines.push('➕ ADD-ON — OPEN position in tracker & re-qualifying = opportunity to add position.');
-    lines.push('🟢 RE-ENTRY — previously tracked, closed, re-qualifies. Late entry, proceed with caution.');
-    lines.push('⚠️ SL WARNING — position below trailing stop. Consider exit.');
-    lines.push('');
-    lines.push('⏱️ CS TIMING (entry timing based on daily candle):');
-    lines.push('🟢 RED CS (change ≤ -1%) — price dip/flat, prime entry at base');
-    lines.push('⚪ FLAT CS (-1% to +3%) — neutral, valid entry');
-    lines.push('🟡 YELLOW CS (+3% to +5%) — price extended, proceed with caution');
-    lines.push('🔴 GREEN CS (≥ +5%) — breakout, do not chase. Wait for pullback.');
+    lines.push('🧭 *SOP 4-LANGKAH TAPISAN JERUNG*:');
+    lines.push('1. Utamakan *🆕 NEW (Day 1)* — masuk zon selamat dari tapak.');
+    lines.push('2. *➕ ADD-ON* hanya layak jika Turnover > RM 2.5M - 3M 🔥 & Tightness < 2% (seperti STRATUS). Abaikan kaunter lemau.');
+    lines.push('3. Risiko SL wajib ≤ 5% - 7%.');
     lines.push('');
     lines.push('Generated by buy_alert.js · JerungBursa');
     return lines.join('\n');
@@ -573,8 +530,32 @@ function buildMessage(now, out) {
     }
     if (refreshed) console.log(`🔄 ${refreshed} kaunter snapshot stale dikemas kini dari Yahoo 1y`);
 
-    // 5. Kira list FR & HT hari ini
-    const frList = candidates.filter(isFreshRiderPick);
+    // Label signal (sama macam list di index.html):
+    // ➕ ADD-ON = MASIH OPEN dalam tracker & qualify semula hari ini — peluang TAMBAH posisi
+    // 🟢 RE-ENTRY = pernah ditrack tapi dah tutup, qualify semula — entry lewat, berhati-hati
+    // 🆕 BARU = belum pernah ditrack — signal pertama kali, entry penuh dari base
+    function signalLabel(name, trackedMap) {
+        const up = (name || '').toUpperCase();
+        const tr = trackedMap.get(up);
+        if (!tr) return '🆕 NEW';
+        if (tr.entryDate && snapDate && tr.entryDate >= snapDate) return '🆕 NEW';
+        if (tr.status === 'OPEN') return '➕ ADD-ON';
+        return '🟢 RE-ENTRY';
+    }
+
+    // Filter Top Ranking VVIP (sepadan dengan paparan lalai Top Ranking di index.html):
+    // Lulus jika: FUSION (Semicon/Solar) ATAU Sinyal Baru (Day 1) ATAU Tightness <= 3.5% ATAU Score >= 80
+    function isTopRankingVvip(s) {
+        const lbl = signalLabel(s.name, frTrackedStatus);
+        const fresh = (lbl === '🆕 NEW') ? 0 : (lbl === '➕ ADD-ON' ? 1 : 2);
+        const isFusion = getHotThemes(s.name).length > 0;
+        const tight = typeof s.closeTightness === 'number' ? s.closeTightness : 99;
+        const isHighConfidence = (s.confidenceScore && s.confidenceScore >= 80);
+        return isFusion || fresh === 0 || tight <= 3.5 || isHighConfidence;
+    }
+
+    // 5. Kira list FR (Top Ranking VVIP) & HT hari ini
+    const frList = candidates.filter(isFreshRiderPick).filter(isTopRankingVvip);
     const htList = candidates.filter(isHotThemePick);
 
     // 6. Lantai DINAMIK (sama macam list): selepas breakout, guna lantai BARU
@@ -601,19 +582,6 @@ function buildMessage(now, out) {
         return f || rf || 0;
     }
 
-    // Label signal (sama macam list di index.html):
-    // ➕ ADD-ON = MASIH OPEN dalam tracker & qualify semula hari ini — peluang TAMBAH posisi
-    // 🟢 RE-ENTRY = pernah ditrack tapi dah tutup, qualify semula — entry lewat, berhati-hati
-    // 🆕 BARU = belum pernah ditrack — signal pertama kali, entry penuh dari base
-    function signalLabel(name, trackedMap) {
-        const up = (name || '').toUpperCase();
-        const tr = trackedMap.get(up);
-        if (!tr) return '🆕 NEW';
-        if (tr.entryDate && snapDate && tr.entryDate >= snapDate) return '🆕 NEW';
-        if (tr.status === 'OPEN') return '➕ ADD-ON';
-        return '🟢 RE-ENTRY';
-    }
-
     const frOut = frList.map(s => {
         const effF = effFloor(s.name, s.price, s.floorLow || s.price * 0.95);
         return {
@@ -621,17 +589,17 @@ function buildMessage(now, out) {
             tight: typeof s.closeTightness === 'number' ? s.closeTightness : null,
             floorDist: effF ? +(((s.price - effF) / effF) * 100).toFixed(2) : null, floor: effF,
             // Sama macam generator tracker: SL = max(entry*0.89, trail high*0.80).
-            // Entry baru: high = harga, jadi SL = 11% bawah entry.
             sl: +Math.max(s.price * 0.89, s.price * 0.80).toFixed(3),
             inTracker: frTrackedNames.has(canonName(s.name).toUpperCase()),
             label: signalLabel(s.name, frTrackedStatus),
             touch: s.touchCount || 0,
-            turnover: s.rawTurnover || s.turnover || 0
+            turnover: s.rawTurnover || s.turnover || 0,
+            grade: s.ipoGrade || s.ipoYear || '—',
+            confidenceScore: s.confidenceScore || 0
         };
     });
     const htOut = htList.map(s => {
         const effF = effFloor(s.name, s.price, s.floorLow || s.price * 0.95);
-        // Sama macam hotThemeExit() generator: max(lantai DINAMIK*0.97, trail high*0.80).
         const sl = Math.max(effF * 0.97, s.price * 0.80);
         return {
             name: s.name, price: s.price, changePct: s.changePct, pullback: s.pullback,
@@ -645,17 +613,25 @@ function buildMessage(now, out) {
             turnover: s.rawTurnover || s.turnover || 0
         };
     });
-    // Susun ikut pattern WEB (KEEMING/STRATUS): kesegaran (BARU>ADD-ON>RE-ENTRY) →
-    // tightness (squeeze) → lantai dinamik → pullback → [HT: confluence] → touch → turnover.
-    // Supaya susunan Telegram SAMA dengan list di web — bukan CS timing lagi.
+    // Susun mengikut susunan Top Ranking VVIP di web:
+    // 1. FUSION dulu (Semicon/Solar)
+    // 2. Freshness (🆕 NEW > ➕ ADD-ON > 🟢 RE-ENTRY)
+    // 3. Tightness % (paling mampat/squeeze)
+    // 4. Floor dist % (SL nipis)
+    // 5. Pullback %
+    // 6. Turnover (paling besar)
     function freshnessRank(label) { return label === '🆕 NEW' ? 0 : (label === '➕ ADD-ON' ? 1 : 2); }
     const tieTight = (a, b) => ((a.tight ?? 99) - (b.tight ?? 99));
     const tieFloor = (a, b) => ((a.floorDist ?? 99) - (b.floorDist ?? 99));
     const tiePb = (a, b) => ((a.pullback ?? 99) - (b.pullback ?? 99));
     const tieTouch = (a, b) => (b.touch - a.touch);
     const tieTurnover = (a, b) => (b.turnover - a.turnover);
-    frOut.sort((a, b) =>
-        (freshnessRank(a.label) - freshnessRank(b.label)) || tieTight(a, b) || tieFloor(a, b) || tiePb(a, b) || tieTouch(a, b) || tieTurnover(a, b));
+    frOut.sort((a, b) => {
+        const fusionA = getHotThemes(a.name).length > 0;
+        const fusionB = getHotThemes(b.name).length > 0;
+        if (fusionA !== fusionB) return fusionA ? -1 : 1;
+        return (freshnessRank(a.label) - freshnessRank(b.label)) || tieTight(a, b) || tieFloor(a, b) || tiePb(a, b) || tieTouch(a, b) || tieTurnover(a, b);
+    });
     htOut.sort((a, b) =>
         (freshnessRank(a.label) - freshnessRank(b.label)) || tieTight(a, b) || tieFloor(a, b) || tiePb(a, b) || (b.confluence - a.confluence) || tieTouch(a, b) || tieTurnover(a, b));
 
