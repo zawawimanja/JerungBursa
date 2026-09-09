@@ -60,4 +60,27 @@ Dokumen ini mengarkibkan penemuan penting daripada sesi debugging, kuiz, dan pen
   * **22 Mei:** Naik ke RM 1.930 (+14.8%).
   * **22 Jun:** Mencecah puncak tertinggi pada **RM 2.750** (Kenaikan maksima **+63.7%** dari harga entry kita pada RM 1.680!).
 
+---
+
+## 7. Kes Pembelajaran 6: Perbezaan Setup 'ADD-ON Berkuasa' (STRATUS) vs 'ADD-ON Lemau' (AMS) & SOP Pemilihan Top Ranking
+* **Isu Utama:** Kedua-dua AMS dan STRATUS muncul dalam scanner Fresh Rider / Top Ranking dengan status `➕ ADD-ON`, tetapi hanya STRATUS yang layak dibeli, manakala AMS wajib dielakkan (*Jangan Beli*).
+* **Punca & Perbandingan Mendalam:**
+  1. **Kecairan / Turnover Jerung:**
+     * **STRATUS:** Turnover harian mencecah **RM 6.23 Juta** (Top 4 paling aktif transaksi di seluruh pasaran Bursa Malaysia). Duit jerung institusi sangat aktif mengalir masuk.
+     * **AMS:** Turnover hanya **RM 1.40 Juta** (semalam cuma RM 711k). Tiada momentum institusi aktif, pergerakan terlalu perlahan (*slow grinder / lemau*).
+  2. **Kerapatan Squeeze (Spring Energy):**
+     * **STRATUS:** `closeTightness = 1.08%` (Ultra-mampat, spring ditekan habis sebelum letupan).
+     * **AMS:** `closeTightness = 3.33%` (3x ganda lebih longgar).
+  3. **Kesegaran Fasa (Stage of Base):**
+     * **STRATUS:** Saham muda berumur **50 hari dagangan** (IPO 21 Julai 2026, Gred A). Sedang membina tangga baru (Base 2) selepas rehat pertama.
+     * **AMS:** Saham berumur **139 hari** (IPO April 2026, Gred B). Sudah 68 hari dagangan tersadai di paras sama sejak entry Jun 2026.
+  4. **Pullback Borderline:**
+     * **AMS:** Pullback 9.8% (berada di hujung tanduk had maksimum $\le 10.0\%$). Turun setengah sen sahaja akan terus gugur keluar dari scanner.
+     * **STRATUS:** Pullback sihat di Base 2 dengan risiko Stop Loss hanya **2.89%** (Entry RM 2.760 vs SL RM 2.680).
+* **SOP Pemilihan Harian (Golden Rules):**
+  * **Prioriti 1:** Selalu utamakan kaunter bertanda **`🆕 NEW` (Day 1)** seperti PENTECH (08-09 Sep 2026).
+  * **Syarat Ambil `➕ ADD-ON`:** Hanya ambil jika Turnover $\ge$ RM 3.0 Juta, Tightness $\le 2.0\%$, dan risiko SL $\le 5\%$ (seperti STRATUS).
+  * **Pantang Larang:** JANGAN ambil `ADD-ON` yang lemau (Turnover < RM 2.0M, umur lama > 100 hari, pullback tepi jurang > 9.5%) seperti AMS walaupun skornya 100.
+
+
 
