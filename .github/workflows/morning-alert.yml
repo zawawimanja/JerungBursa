@@ -1,0 +1,28 @@
+name: MORNING Alert 9:02 AM
+
+# Kirim amaran panduan belian pembukaan pasaran (Situasi A/B/C) ke Telegram
+# setiap hari dagangan ~9:02 pagi MYT (1:02 AM UTC).
+
+on:
+  schedule:
+    - cron: '2 1 * * 1-5'   # 1:02 UTC = 9:02 AM Malaysia, Isnin-Jumaat
+  workflow_dispatch:         # Butang 'Run workflow' di GitHub utk uji manual
+
+jobs:
+  alert:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Run Morning Alert (harga live + gap analysis + Telegram)
+        run: node morning_alert.js
+        working-directory: smart-money-tracker
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}

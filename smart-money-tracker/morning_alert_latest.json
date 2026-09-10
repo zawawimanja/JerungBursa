@@ -1,6 +1,6 @@
 {
   "date": "2026-09-10",
-  "time": "01:25",
+  "time": "09:21",
   "results": [
     {
       "name": "PENTECH",
@@ -14,13 +14,53 @@
     },
     {
       "name": "STRATUS",
-      "prevClose": 2.8,
+      "prevClose": 2.78,
       "curPrice": 2.78,
-      "gapPct": -0.71,
+      "gapPct": 0,
+      "situation": "A",
+      "situBadge": "🟢 SITUASI A (BUY ON OPEN)",
+      "advice": "Harga di zon tapak asal / diskaun (tiada gap). Risiko SL kekal minima. Sangat selamat untuk match order terus!",
+      "specialNote": "🥈 Heavyweight Leader (Base 2, Turnover RM 6.2M 🔥, Tightness 1.08%). SL: RM 2.680."
+    },
+    {
+      "name": "OXB",
+      "prevClose": 0.44,
+      "curPrice": 0.43,
+      "gapPct": -2.27,
+      "situation": "A",
+      "situBadge": "🟢 SITUASI A (ZON DISKAUN - BUY ON OPEN)",
+      "advice": "Buka di bawah harga semalam (-2.3%). Peluang beli pada harga diskaun di bawah tapak!",
+      "specialNote": ""
+    },
+    {
+      "name": "CBHB",
+      "prevClose": 1.01,
+      "curPrice": 1,
+      "gapPct": -0.99,
+      "situation": "A",
+      "situBadge": "🟢 SITUASI A (ZON DISKAUN - BUY ON OPEN)",
+      "advice": "Buka di bawah harga semalam (-1.0%). Peluang beli pada harga diskaun di bawah tapak!",
+      "specialNote": ""
+    },
+    {
+      "name": "AMBEST",
+      "prevClose": 1.43,
+      "curPrice": 1.42,
+      "gapPct": -0.7,
       "situation": "A",
       "situBadge": "🟢 SITUASI A (ZON DISKAUN - BUY ON OPEN)",
       "advice": "Buka di bawah harga semalam (-0.7%). Peluang beli pada harga diskaun di bawah tapak!",
-      "specialNote": "🥈 Heavyweight Leader (Base 2, Turnover RM 6.2M 🔥, Tightness 1.08%). SL: RM 2.680."
+      "specialNote": ""
+    },
+    {
+      "name": "ISF",
+      "prevClose": 0.805,
+      "curPrice": 0.805,
+      "gapPct": 0,
+      "situation": "A",
+      "situBadge": "🟢 SITUASI A (BUY ON OPEN)",
+      "advice": "Harga di zon tapak asal / diskaun (tiada gap). Risiko SL kekal minima. Sangat selamat untuk match order terus!",
+      "specialNote": ""
     },
     {
       "name": "AMS",
