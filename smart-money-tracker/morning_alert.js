@@ -178,14 +178,6 @@ function fmtPct(p) { return p == null ? '—' : (p > 0 ? '+' : '') + Number(p).t
     const token = process.env.TELEGRAM_BOT_TOKEN;
     const chatId = process.env.TELEGRAM_CHAT_ID;
     if (token && chatId) {
-        // Kawalan Masa: Elak mesej basi sampai lewat (cth 1:40 PM) jika GitHub Actions cron delay
-        const mytHour = parseInt(now.toLocaleTimeString('en-US', { timeZone: 'Asia/Kuala_Lumpur', hour: '2-digit', hour12: false }));
-        const forceAlert = process.env.FORCE_ALERT === 'true';
-        if (!forceAlert && (mytHour < 8 || mytHour >= 11)) {
-            console.log(`⚠️ Jam sekarang (${timeStr} MYT) di luar sesi pembukaan pagi (8:30 - 11:00 AM). Menghalang pengiriman mesej basi (stale) ke Telegram.`);
-            return;
-        }
-
         try {
             const url = `https://api.telegram.org/bot${token}/sendMessage`;
             const body = JSON.stringify({ chat_id: chatId, text: msg });
