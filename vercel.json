@@ -8,12 +8,18 @@
   "routes": [
     { "src": "/api/chat", "dest": "/smart-money-tracker/api/chat.js" },
     { "src": "/api/cron-scrape", "dest": "/smart-money-tracker/api/cron-scrape.js" },
+    { "src": "/api/cron-alert", "dest": "/smart-money-tracker/api/cron-scrape.js" },
+    { "src": "/api/cron-dispatch", "dest": "/smart-money-tracker/api/cron-scrape.js" },
     { "src": "/(.*)", "dest": "/smart-money-tracker/$1" }
   ],
   "crons": [
     {
-      "path": "/api/cron-scrape",
-      "schedule": "*/10 1-9 * * 1-5"
+      "path": "/api/cron-scrape?job=morning_alert",
+      "schedule": "2 1 * * 1-5"
+    },
+    {
+      "path": "/api/cron-scrape?job=buy_alert",
+      "schedule": "15 8 * * 1-5"
     }
   ]
 }

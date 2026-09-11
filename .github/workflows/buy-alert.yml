@@ -17,8 +17,10 @@ name: BUY Alert 4:30 PM
 
 on:
   schedule:
-    - cron: '15 8 * * 1-5'   # 8:15 UTC = 4:15 PM Malaysia, Isnin-Jumaat
+    - cron: '15 8 * * 1-5'   # 8:15 UTC = 4:15 PM Malaysia, Isnin-Jumaat (fallback)
   workflow_dispatch:         # Butang 'Run workflow' di GitHub utk uji manual
+  repository_dispatch:       # Webhook trigger (Vercel / cron-job.org)
+    types: [buy_alert_trigger]
 
 jobs:
   alert:

@@ -671,6 +671,16 @@ function buildMessage(now, out) {
     const token = process.env.TELEGRAM_BOT_TOKEN;
     const chatId = process.env.TELEGRAM_CHAT_ID;
     if (token && chatId) {
+        // Kawalan Masa: Elak mesej basi sampai malam (cth 8:49 PM) jika GitHub Actions cron delay
+        const mytHour = parseInt(now.toLocaleTimeString('en-US', { timeZone: 'Asia/Kuala_Lumpur', hour: '2-digit', hour12: false }));
+        const mytMin = parseInt(now.toLocaleTimeString('en-US', { timeZone: 'Asia/Kuala_Lumpur', minute: '2-digit', hour12: false }));
+        const forceAlert = process.env.FORCE_ALERT === 'true';
+        if (!forceAlert && (mytHour < 15 || (mytHour === 15 && mytMin < 30) || mytHour >= 18)) {
+            const timeDisplay = `${mytHour}:${mytMin < 10 ? '0' + mytMin : mytMin}`;
+            console.log(`⚠️ Jam sekarang (${timeDisplay} MYT) di luar jendela pre-close (15:30 - 17:30 MYT). Menghalang pengiriman mesej basi (stale) ke Telegram.`);
+            return;
+        }
+
         try {
             // Pecahkan mesej jika melebihi had 4096 aksara Telegram
             const chunks = [];

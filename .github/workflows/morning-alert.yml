@@ -5,8 +5,10 @@ name: MORNING Alert 9:02 AM
 
 on:
   schedule:
-    - cron: '2 1 * * 1-5'   # 1:02 UTC = 9:02 AM Malaysia, Isnin-Jumaat
+    - cron: '2 1 * * 1-5'   # 1:02 UTC = 9:02 AM Malaysia, Isnin-Jumaat (fallback)
   workflow_dispatch:         # Butang 'Run workflow' di GitHub utk uji manual
+  repository_dispatch:       # Webhook trigger (Vercel / cron-job.org)
+    types: [morning_alert_trigger]
 
 jobs:
   alert:
