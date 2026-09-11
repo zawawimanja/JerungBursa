@@ -2,10 +2,18 @@
   "version": 2,
   "builds": [
     { "src": "smart-money-tracker/api/chat.js", "use": "@vercel/node" },
+    { "src": "smart-money-tracker/api/cron-scrape.js", "use": "@vercel/node" },
     { "src": "smart-money-tracker/**", "use": "@vercel/static" }
   ],
   "routes": [
     { "src": "/api/chat", "dest": "/smart-money-tracker/api/chat.js" },
+    { "src": "/api/cron-scrape", "dest": "/smart-money-tracker/api/cron-scrape.js" },
     { "src": "/(.*)", "dest": "/smart-money-tracker/$1" }
+  ],
+  "crons": [
+    {
+      "path": "/api/cron-scrape",
+      "schedule": "*/10 1-9 * * 1-5"
+    }
   ]
 }
