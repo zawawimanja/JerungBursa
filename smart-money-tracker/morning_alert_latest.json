@@ -1,76 +1,76 @@
 {
-  "date": "2026-09-10",
-  "time": "09:21",
+  "date": "2026-09-12",
+  "time": "00:04",
   "results": [
     {
       "name": "PENTECH",
-      "prevClose": 0.35,
+      "prevClose": 0.355,
       "curPrice": 0.35,
-      "gapPct": 0,
+      "gapPct": -1.41,
       "situation": "A",
-      "situBadge": "🟢 SITUASI A (BUY ON OPEN)",
-      "advice": "Harga di zon tapak asal / diskaun (tiada gap). Risiko SL kekal minima. Sangat selamat untuk match order terus!",
+      "situBadge": "🟢 SITUASI A (ZON DISKAUN - BUY ON OPEN)",
+      "advice": "Buka di bawah harga semalam (-1.4%). Peluang beli pada harga diskaun di bawah tapak!",
       "specialNote": "🥇 Top 1 VVIP (Day 1 Breakout, Semicon, Gred A, Turnover RM 3.2M 🔥). SL: RM 0.325."
     },
     {
       "name": "STRATUS",
-      "prevClose": 2.78,
-      "curPrice": 2.78,
-      "gapPct": 0,
+      "prevClose": 2.91,
+      "curPrice": 2.81,
+      "gapPct": -3.44,
       "situation": "A",
-      "situBadge": "🟢 SITUASI A (BUY ON OPEN)",
-      "advice": "Harga di zon tapak asal / diskaun (tiada gap). Risiko SL kekal minima. Sangat selamat untuk match order terus!",
+      "situBadge": "🟢 SITUASI A (ZON DISKAUN - BUY ON OPEN)",
+      "advice": "Buka di bawah harga semalam (-3.4%). Peluang beli pada harga diskaun di bawah tapak!",
       "specialNote": "🥈 Heavyweight Leader (Base 2, Turnover RM 6.2M 🔥, Tightness 1.08%). SL: RM 2.680."
     },
     {
-      "name": "OXB",
-      "prevClose": 0.44,
-      "curPrice": 0.43,
-      "gapPct": -2.27,
+      "name": "ISF",
+      "prevClose": 0.82,
+      "curPrice": 0.785,
+      "gapPct": -4.27,
       "situation": "A",
       "situBadge": "🟢 SITUASI A (ZON DISKAUN - BUY ON OPEN)",
-      "advice": "Buka di bawah harga semalam (-2.3%). Peluang beli pada harga diskaun di bawah tapak!",
+      "advice": "Buka di bawah harga semalam (-4.3%). Peluang beli pada harga diskaun di bawah tapak!",
       "specialNote": ""
     },
     {
       "name": "CBHB",
-      "prevClose": 1.01,
-      "curPrice": 1,
-      "gapPct": -0.99,
+      "prevClose": 1.03,
+      "curPrice": 0.995,
+      "gapPct": -3.4,
       "situation": "A",
       "situBadge": "🟢 SITUASI A (ZON DISKAUN - BUY ON OPEN)",
-      "advice": "Buka di bawah harga semalam (-1.0%). Peluang beli pada harga diskaun di bawah tapak!",
-      "specialNote": ""
-    },
-    {
-      "name": "AMBEST",
-      "prevClose": 1.43,
-      "curPrice": 1.42,
-      "gapPct": -0.7,
-      "situation": "A",
-      "situBadge": "🟢 SITUASI A (ZON DISKAUN - BUY ON OPEN)",
-      "advice": "Buka di bawah harga semalam (-0.7%). Peluang beli pada harga diskaun di bawah tapak!",
-      "specialNote": ""
-    },
-    {
-      "name": "ISF",
-      "prevClose": 0.805,
-      "curPrice": 0.805,
-      "gapPct": 0,
-      "situation": "A",
-      "situBadge": "🟢 SITUASI A (BUY ON OPEN)",
-      "advice": "Harga di zon tapak asal / diskaun (tiada gap). Risiko SL kekal minima. Sangat selamat untuk match order terus!",
+      "advice": "Buka di bawah harga semalam (-3.4%). Peluang beli pada harga diskaun di bawah tapak!",
       "specialNote": ""
     },
     {
       "name": "AMS",
-      "prevClose": 0.46,
-      "curPrice": 0.46,
+      "prevClose": 0.445,
+      "curPrice": 0.435,
+      "gapPct": -2.25,
+      "situation": "A",
+      "situBadge": "🟢 SITUASI A (ZON DISKAUN - BUY ON OPEN)",
+      "advice": "Buka di bawah harga semalam (-2.3%). Peluang beli pada harga diskaun di bawah tapak!",
+      "specialNote": "⚠️ PANTANG LARANG: Turnover lemau (RM 1.4M), kaunter lama sejak Jun. Utamakan PENTECH / STRATUS."
+    },
+    {
+      "name": "OXB",
+      "prevClose": 0.435,
+      "curPrice": 0.435,
       "gapPct": 0,
       "situation": "A",
       "situBadge": "🟢 SITUASI A (BUY ON OPEN)",
       "advice": "Harga di zon tapak asal / diskaun (tiada gap). Risiko SL kekal minima. Sangat selamat untuk match order terus!",
-      "specialNote": "⚠️ PANTANG LARANG: Turnover lemau (RM 1.4M), kaunter lama sejak Jun. Utamakan PENTECH / STRATUS."
+      "specialNote": ""
+    },
+    {
+      "name": "AMBEST",
+      "prevClose": 1.48,
+      "curPrice": 1.52,
+      "gapPct": 2.7,
+      "situation": "C",
+      "situBadge": "🔴 SITUASI C (JANGAN KEJAR / DO NOT CHASE)",
+      "advice": "Gap up melompat terlalu tinggi (+2.7%). Jarak SL melebar & terdedah jualan pagi. Tunggu pullback 9:30 - 10:00 AM berhampiran RM 1.480.",
+      "specialNote": ""
     }
   ]
 }

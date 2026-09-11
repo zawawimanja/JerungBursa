@@ -438,7 +438,7 @@ function buildMessage(now, out) {
     }
 
     lines.push('🧭 *SOP 4-LANGKAH TAPISAN JERUNG*:');
-    lines.push('1. Utamakan *🆕 NEW (Day 1)* — masuk zon selamat dari tapak.');
+    lines.push('1. Utamakan *🔥 NEW (Day 1)* — masuk zon selamat dari tapak.');
     lines.push('2. *➕ ADD-ON* hanya layak jika Turnover > RM 2.5M - 3M 🔥 & Tightness < 2% (seperti STRATUS). Abaikan kaunter lemau.');
     lines.push('3. Risiko SL wajib ≤ 5% - 7%.');
     lines.push('');
@@ -533,12 +533,12 @@ function buildMessage(now, out) {
     // Label signal (sama macam list di index.html):
     // ➕ ADD-ON = MASIH OPEN dalam tracker & qualify semula hari ini — peluang TAMBAH posisi
     // 🟢 RE-ENTRY = pernah ditrack tapi dah tutup, qualify semula — entry lewat, berhati-hati
-    // 🆕 BARU = belum pernah ditrack — signal pertama kali, entry penuh dari base
+    // 🔥 NEW (Day 1) = belum pernah ditrack — signal pertama kali, entry penuh dari base
     function signalLabel(name, trackedMap) {
         const up = (name || '').toUpperCase();
         const tr = trackedMap.get(up);
-        if (!tr) return '🆕 NEW';
-        if (tr.entryDate && snapDate && tr.entryDate >= snapDate) return '🆕 NEW';
+        if (!tr) return '🔥 NEW (Day 1)';
+        if (tr.entryDate && snapDate && tr.entryDate >= snapDate) return '🔥 NEW (Day 1)';
         if (tr.status === 'OPEN') return '➕ ADD-ON';
         return '🟢 RE-ENTRY';
     }
@@ -547,7 +547,7 @@ function buildMessage(now, out) {
     // Lulus jika: FUSION (Semicon/Solar) ATAU Sinyal Baru (Day 1) ATAU Tightness <= 3.5% ATAU Score >= 80
     function isTopRankingVvip(s) {
         const lbl = signalLabel(s.name, frTrackedStatus);
-        const fresh = (lbl === '🆕 NEW') ? 0 : (lbl === '➕ ADD-ON' ? 1 : 2);
+        const fresh = (lbl && lbl.includes('NEW')) ? 0 : (lbl === '➕ ADD-ON' ? 1 : 2);
         const isFusion = getHotThemes(s.name).length > 0;
         const tight = typeof s.closeTightness === 'number' ? s.closeTightness : 99;
         const isHighConfidence = (s.confidenceScore && s.confidenceScore >= 80);
@@ -615,12 +615,12 @@ function buildMessage(now, out) {
     });
     // Susun mengikut susunan Top Ranking VVIP di web:
     // 1. FUSION dulu (Semicon/Solar)
-    // 2. Freshness (🆕 NEW > ➕ ADD-ON > 🟢 RE-ENTRY)
+    // 2. Freshness (🔥 NEW (Day 1) > ➕ ADD-ON > 🟢 RE-ENTRY)
     // 3. Tightness % (paling mampat/squeeze)
     // 4. Floor dist % (SL nipis)
     // 5. Pullback %
     // 6. Turnover (paling besar)
-    function freshnessRank(label) { return label === '🆕 NEW' ? 0 : (label === '➕ ADD-ON' ? 1 : 2); }
+    function freshnessRank(label) { return (label && label.includes('NEW')) ? 0 : (label === '➕ ADD-ON' ? 1 : 2); }
     const tieTight = (a, b) => ((a.tight ?? 99) - (b.tight ?? 99));
     const tieFloor = (a, b) => ((a.floorDist ?? 99) - (b.floorDist ?? 99));
     const tiePb = (a, b) => ((a.pullback ?? 99) - (b.pullback ?? 99));
@@ -656,8 +656,8 @@ function buildMessage(now, out) {
     const out = {
         generatedAt: now.toISOString(),
         dataTime,
-        freshRider: { list: frOut, newCount: frOut.filter(s => s.label === '🆕 NEW').length, reentryCount: frOut.filter(s => s.label === '🟢 RE-ENTRY').length, addonCount: frOut.filter(s => s.label === '➕ ADD-ON').length },
-        hotTheme: { list: htOut, newCount: htOut.filter(s => s.label === '🆕 NEW').length, reentryCount: htOut.filter(s => s.label === '🟢 RE-ENTRY').length, addonCount: htOut.filter(s => s.label === '➕ ADD-ON').length },
+        freshRider: { list: frOut, newCount: frOut.filter(s => s.label && s.label.includes('NEW')).length, reentryCount: frOut.filter(s => s.label === '🟢 RE-ENTRY').length, addonCount: frOut.filter(s => s.label === '➕ ADD-ON').length },
+        hotTheme: { list: htOut, newCount: htOut.filter(s => s.label && s.label.includes('NEW')).length, reentryCount: htOut.filter(s => s.label === '🟢 RE-ENTRY').length, addonCount: htOut.filter(s => s.label === '➕ ADD-ON').length },
         slWarnings,
         frTracked: frTrades.length,
         htTracked: htTrades.length,
