@@ -38,7 +38,7 @@ Pengguna sering keliru apabila melihat **AMS** muncul dalam scanner Fresh Rider 
 
 1. **Buka Tab "🏆 Top Ranking VVIP":**
    * Hanya tapis kaunter dengan `Tightness <= 3.5%` dan `Score >= 80` atau `Fusion Jerung`.
-2. **Utamakan Lencana `🆕 NEW` (Day 1):**
+2. **Utamakan Lencana `🔥 NEW (Day 1)`:**
    * Prioriti #1 sentiasa diberikan kepada kaunter yang baru meletup dari tapak asal (seperti PENTECH pada 08-09 Sep).
    * Lencana `➕ ADD-ON` hanya dibenarkan jika menepati ciri STRATUS (Turnover > RM 3M, Tightness < 2%, Risiko SL < 4%).
 3. **Semak 3 Angka Emas:**
@@ -47,7 +47,7 @@ Pengguna sering keliru apabila melihat **AMS** muncul dalam scanner Fresh Rider 
    * **Jarak ke SL:** $\le$ 5.0%.
 4. **Disiplin Slot Modal:**
    * Had maksimum 2 hingga 3 kaunter aktif pada satu-satu masa.
-   * Jika sudah ada PENTECH + STRATUS, simpan lebihan tunai (*Cash is a position*) untuk menyambar kaunter `🆕 NEW` seterusnya.
+   * Jika sudah ada PENTECH + STRATUS, simpan lebihan tunai (*Cash is a position*) untuk menyambar kaunter `🔥 NEW (Day 1)` seterusnya.
 
 ---
 

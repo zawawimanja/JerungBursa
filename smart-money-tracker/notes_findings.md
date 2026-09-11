@@ -78,7 +78,7 @@ Dokumen ini mengarkibkan penemuan penting daripada sesi debugging, kuiz, dan pen
      * **AMS:** Pullback 9.8% (berada di hujung tanduk had maksimum $\le 10.0\%$). Turun setengah sen sahaja akan terus gugur keluar dari scanner.
      * **STRATUS:** Pullback sihat di Base 2 dengan risiko Stop Loss hanya **2.89%** (Entry RM 2.760 vs SL RM 2.680).
 * **SOP Pemilihan Harian (Golden Rules):**
-  * **Prioriti 1:** Selalu utamakan kaunter bertanda **`🆕 NEW` (Day 1)** seperti PENTECH (08-09 Sep 2026).
+  * **Prioriti 1:** Selalu utamakan kaunter bertanda **`🔥 NEW (Day 1)`** seperti PENTECH (08-09 Sep 2026).
   * **Syarat Ambil `➕ ADD-ON`:** Hanya ambil jika Turnover $\ge$ RM 3.0 Juta, Tightness $\le 2.0\%$, dan risiko SL $\le 5\%$ (seperti STRATUS).
   * **Pantang Larang:** JANGAN ambil `ADD-ON` yang lemau (Turnover < RM 2.0M, umur lama > 100 hari, pullback tepi jurang > 9.5%) seperti AMS walaupun skornya 100.
 
