@@ -1,7 +1,22 @@
-# Folder tool lain — local only
+# Tools & editor settings
 .freebuff/
 .kilo/
-scratch/
-.env
-node_modules/
+.gemini/
 .DS_Store
+Thumbs.db
+old_tests/
+
+# Scratch & temporary logs
+**/scratch/
+scratch/
+*.log
+*_log.txt
+
+# Secrets & Environment variables
+**/.env
+.env
+
+# Dependencies
+**/node_modules/
+node_modules/
+

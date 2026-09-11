@@ -58,3 +58,15 @@ Setiap kali mengimbas, menilai, atau mengesyorkan saham dalam dashboard JerungBu
 * Pasaran tutup jam 5:00 PM.
 * Data muktamad (*settlement*) Yahoo Finance / Bursa hanya stabil antara **5:50 PM hingga 6:05 PM**. 
 * Elakkan membuat keputusan muktamad sebelum jam 5:50 PM kerana lilin harian masih belum ditutup rasmi.
+
+---
+
+## 💰 6. Formula Kunci Untung Bertingkat: Teknik Jual 50% (Scale-Out)
+Untuk mengelakkan terlepas ombak besar (*let winners run*) dan mengelak rasa ralat (seperti kes *EIPOWER*):
+* **Fasa 1 (+5% Untung):** 🛡️ **Kunci Bebas Risiko (*Free Trade*)**
+  * Alih Stop Loss dari paras tapak ke harga modal (*breakeven*). Jangan jual lagi. Posisi kini 100% sifar risiko.
+* **Fasa 2 (TP1 +10% Untung):** 💰 **Wajib Tuai 50% Lot**
+  * Jual separuh (50%) pegangan. Kunci untung tunai pertama terus ke poket/akaun.
+* **Fasa 3 (Baki 50% Lot):** 🚀 **Biarkan Menunggang Ombak Jerung (*Ride to TP2 +20%+*)**
+  * Alih Stop Loss baki ke paras TP1. Biarkan separuh baki terbang menuai keuntungan maksimum tanpa sebarang risiko modal.
+
