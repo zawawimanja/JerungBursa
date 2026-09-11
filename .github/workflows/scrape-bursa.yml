@@ -6,6 +6,8 @@ on:
     # This runs Monday to Friday
     - cron: '*/5 1-9 * * 1-5'
   workflow_dispatch: # Allows manual trigger from GitHub UI
+  repository_dispatch: # Allows external webhook triggers (e.g. cron-job.org / Telegram bot)
+    types: [scrape_trigger]
 
 permissions:
   contents: write
