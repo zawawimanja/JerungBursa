@@ -82,5 +82,17 @@ Dokumen ini mengarkibkan penemuan penting daripada sesi debugging, kuiz, dan pen
   * **Syarat Ambil `➕ ADD-ON`:** Hanya ambil jika Turnover $\ge$ RM 3.0 Juta, Tightness $\le 2.0\%$, dan risiko SL $\le 5\%$ (seperti STRATUS).
   * **Pantang Larang:** JANGAN ambil `ADD-ON` yang lemau (Turnover < RM 2.0M, umur lama > 100 hari, pullback tepi jurang > 9.5%) seperti AMS walaupun skornya 100.
 
+---
+
+## 8. Kes Pembelajaran 7: Kajian Kuantitatif Menyeluruh: 🔥 NEW (Day 1) vs ⭐ ADD-ON A+
+* **Tarikh Analisis:** 15 September 2026 (72 Hari Dagangan, 285 Total Signals).
+* **Penemuan Utama:**
+  1. **`🔥 NEW (Day 1)`:** Win Rate **77.3%** | TP1 Hit **63.6%** | Avg Return **+16.1%** | Profit Factor **7.91**. Zon paling selamat untuk kemasukan dari tapak asal.
+  2. **`⭐ ADD-ON A+` (Hari 1-5 / Lantai $\le$ 3.5% / Base 2 $\le$ 20%):** Win Rate **82.9%** 🔥 | TP1 Hit **77.1%** | TP2 Hit **71.4%** | Avg Return **+20.1%** | Profit Factor **13.39**. Terbukti memberikan pulangan tertinggi apabila menunggang momentum gelombang kedua *leader*.
+  3. **`⚠️ ADD-ON Pucuk` (> 20% dari Asal):** Win Rate jatuh ke **57.3%**, TP2 Hit **37.1%**, Profit Factor jatuh ke **3.06**. Wajib dielakkan untuk kemasukan baharu.
+* **Tindakan Sistem:**
+  * Auto-tagging diperkenalkan dalam sistem `buy_alert.js` dan `index.html` dengan badge **`⭐ ADD-ON A+`** untuk setup gred tinggi dan **`⚠️ ADD-ON (+X%)`** untuk amaran pucuk.
+  * Dokumen kajian penuh diarkibkan dalam [kajian_fr_new_addon.md](file:///home/awi/Desktop/trade/BSKL/smart-money-tracker/kajian_fr_new_addon.md).
+
 
 
