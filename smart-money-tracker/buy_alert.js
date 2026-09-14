@@ -290,20 +290,32 @@ async function fetchYahoo(symbol) {
         if (!res) return null;
         const meta = res.meta || {};
         const ts = res.timestamp || [];
-        const q = res.indicators.quote[0];
+        const q = (res.indicators && res.indicators.quote && res.indicators.quote[0]) || {};
+        const qClose = q.close || [];
+        const qOpen = q.open || [];
+        const qHigh = q.high || [];
+        const qLow = q.low || [];
+        const qVol = q.volume || [];
         const bars = [];
         for (let i = 0; i < ts.length; i++) {
-            if (q.close[i] == null || q.close[i] <= 0) continue;
+            let closeVal = qClose[i];
+            if ((closeVal == null || closeVal <= 0) && i === ts.length - 1 && meta.regularMarketPrice > 0) {
+                closeVal = meta.regularMarketPrice;
+            }
+            if (closeVal == null || closeVal <= 0) continue;
             bars.push({
-                date: new Date(ts[i] * 1000).toISOString().slice(0, 10),
-                open: q.open[i], high: q.high[i], low: q.low[i],
-                close: q.close[i], volume: q.volume[i] || 0
+                date: new Date(ts[i] * 1000 + 8 * 3600 * 1000).toISOString().slice(0, 10),
+                open: qOpen[i] || closeVal,
+                high: qHigh[i] || closeVal,
+                low: qLow[i] || closeVal,
+                close: closeVal,
+                volume: qVol[i] || 0
             });
         }
         // Masa last trade sebenar (meta.regularMarketTime) — penting utk
         // sahkan harga yang digunakan betul-betul waktu 4:30 petang.
         const dataTime = (meta.regularMarketTime || (ts.length ? ts[ts.length - 1] : 0)) * 1000;
-        return { bars, dataTime };
+        return { bars, dataTime, regularMarketPrice: meta.regularMarketPrice, prevClose: meta.chartPreviousClose || meta.previousClose };
     } catch (e) { return null; }
 }
 
