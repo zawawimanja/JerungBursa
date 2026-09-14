@@ -13,6 +13,16 @@ module.exports = async (req, res) => {
     const repoOwner = 'zawawimanja';
     const repoName = 'JerungBursa';
 
+    // ✅ Diagnostic: Jika tiada token, kembalikan 401 dengan panduan
+    if (!token) {
+        return res.status(401).json({
+            success: false,
+            error: 'GITHUB_TOKEN tidak dijumpai dalam Vercel Environment Variables.',
+            fix: 'Pergi ke Vercel Dashboard > Settings > Environment Variables > Tambah GITHUB_TOKEN dengan nilai Personal Access Token GitHub awi.',
+            timestamp: new Date().toISOString()
+        });
+    }
+
     // Tentukan jenis tugasan: morning_alert, buy_alert, atau scrape_trigger (default)
     const jobParam = String(req.query.job || req.query.type || req.query.event || '').toLowerCase();
     let event_type = 'scrape_trigger';
@@ -28,19 +38,16 @@ module.exports = async (req, res) => {
     try {
         console.log(`[Vercel Cron] Triggering GitHub Actions dispatch (${event_type}) for ${repoOwner}/${repoName}...`);
 
-        const headers = {
-            'Accept': 'application/vnd.github+json',
-            'User-Agent': 'Vercel-Cron-Trigger'
-        };
-
-        if (token) {
-            headers['Authorization'] = `Bearer ${token}`;
-        }
-
         const response = await axios.post(
             `https://api.github.com/repos/${repoOwner}/${repoName}/dispatches`,
             { event_type },
-            { headers }
+            {
+                headers: {
+                    'Accept': 'application/vnd.github+json',
+                    'Authorization': `Bearer ${token}`,
+                    'User-Agent': 'Vercel-Cron-Trigger'
+                }
+            }
         );
 
         return res.status(200).json({
@@ -50,7 +57,8 @@ module.exports = async (req, res) => {
             timestamp: new Date().toISOString()
         });
     } catch (err) {
-        console.error('[Vercel Cron Error]:', err.message);
+        const githubMsg = err.response?.data?.message || err.message;
+        console.error('[Vercel Cron Error]:', githubMsg);
         return res.status(500).json({
             error: `Failed to dispatch GitHub Action: ${err.response?.data?.message || err.message}`,
             timestamp: new Date().toISOString()
