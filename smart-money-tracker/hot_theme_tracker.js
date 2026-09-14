@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-14T11:05:30.077Z",
+  "generatedAt": "2026-09-14T11:08:03.921Z",
   "dataDays": 79,
   "totalTracked": 49,
   "openCount": 25,
