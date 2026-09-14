@@ -54,15 +54,44 @@ Kajian ini dijalankan khusus untuk menjawab persoalan:
 
 ---
 
-## 🏆 4. Kajian Kes Kaunter Sebenar (Historical Validation)
+## 🔬 4. Analisis Mendalam Kaunter Utama (Deep-Dive Case Studies)
 
-| Kaunter | Kategori | Total Signal | Win Rate | TP1 (+10%) | TP2 (+20%) | Hasil Dagangan |
-| :--- | :--- | :---: | :---: | :---: | :---: | :--- |
-| **ICENTS** | `⭐ ADD-ON A+` | 26 | **96.2%** | 88.5% | 84.6% | 🚀 Lonjakan padu dari RM 0.475 ke RM 0.845+ (+77.9%) |
-| **CBHB** | `⭐ ADD-ON A+` | 31 | **93.5%** | 87.1% | 54.8% | 🚀 Naik tangga konsisten dari RM 0.655 ke RM 1.020+ (+55.7%) |
-| **SUNLOGY** | `⭐ ADD-ON A+` | 6 | **83.3%** | 83.3% | 83.3% | 🚀 Rebound Base 2 cantik dari RM 0.405 ke RM 0.480+ |
-| **HKB** | `⭐ ADD-ON A+` | 5 | **100.0%** | 100.0% | 100.0% | 🚀 Squeeze Base 2 meletup dari RM 0.445 ke RM 0.730+ (+64%) |
-| **AMS** | `⚠️ ADD-ON LEMAU` | 14 | **7.1%** ❌ | 7.1% | 7.1% | 📉 13 kali rugi / SL (Loss Rate 92.9%) — Bukti wajib tapis kaunter lemau! |
+### 🥇 A. SUNLOGY (0345) — Model Contoh `⭐ ADD-ON A+`
+* **Win Rate Bersih:** **83.3%** 🔥 | **Scale-Out WR:** **83.3%** | **Profit Factor:** **15.34x**
+* **TP1 (+10%) Hit:** **83.3%** | **TP2 (+20%) Hit:** **83.3%** | **Max Gain:** **+29.6%** (Puncak RM 0.525)
+* **Kronologi Struktur Tangga:**
+  1. **Base 1 (21–28 Ogos @ RM 0.405):** Masuk Fresh Rider, squeeze mampat 2.5% – 3.7%.
+  2. **Wave 1 Breakout (01–02 Sep):** Meletup +22.8% dalam 1 hari dengan Turnover jerung **RM 13.62M** menuju puncak RM 0.525.
+  3. **Base 2 Staircase (07–14 Sep @ RM 0.455 – RM 0.475):** Rehat sihat di atas lantai baru RM 0.450 – 0.460. Turnover kekal padu **RM 2.2M – RM 3.12M**.
+* **Trading Plan:** Beli di zon **RM 0.455 – RM 0.475**, SL di **RM 0.435 – RM 0.440** (Risiko SL hanya **~3.5%**).
+
+---
+
+### 🥈 B. SUM (0459) — Model Contoh `🔥 NEW / ADD-ON FUSION (Semicon)`
+* **Status Fasa:** Baru **Day 2 (11 Sep)**.
+* **Kenaikan Dari Tapak:** RM 0.610 $\rightarrow$ RM 0.645 (**+5.7%** — masih di fasa permulaan Base 1).
+* **Kekukuhan Tapak:** Mempunyai **10x sentuhan lantai tebal di RM 0.580** + FUSION Semikonduktor.
+* **Trading Plan:** Masuk di zon **RM 0.620 – RM 0.645**, SL di **RM 0.575** (Risiko SL $\le 6\%$).
+
+---
+
+### 🥉 C. STRATUS (5356) — Model Pengurusan Posisi `HOLD Base 2`
+* **Status Posisi Awang:** Beli @ **RM 2.760** (Modal RM 2,000 / 700 unit).
+* **Harga Terkini:** **RM 2.720** (Masih bertahan di atas lantai Base 2 RM 2.680 – RM 2.690).
+* **Kawalan Risiko:** Stop Loss di **RM 2.680** (Risiko kerugian cuma **-2.89% / ~RM 56 sahaja**).
+* **Pelan:** Kekal **HOLD** selagi atas RM 2.680. Tuai 50% di TP1 RM 3.050, biarkan baki 50% ke TP2 RM 3.250+.
+
+---
+
+### 🚫 D. KEEMING (0392) — Kenapa Diharamkan di Paras RM 2.400+
+* **Sejarah Base Sah:**
+  * Base 1 (Jun @ RM 1.05) $\rightarrow$ Naik ke RM 1.98.
+  * Base 2 (Julai @ RM 1.80, Sentuhan 6x, SL 2.2%) $\rightarrow$ Naik ke RM 2.49 (+38%).
+  * Base 3 (Ogos @ RM 2.13, Sentuhan 16x) $\rightarrow$ Naik ke RM 2.60.
+* **Kenapa RM 2.400 – RM 2.550 Gagal Hari Ini:**
+  1. Lantai sokongan 10-hari masih jauh di **RM 2.100** (Jarak ke SL **> 14%**, melanggar SOP had risiko $\le 5\%$).
+  2. Volatiliti buas (-6.5% $\rightarrow$ +10.5% $\rightarrow$ -5.1%).
+  3. Turnover jerung mengecil ke ~RM 1.0M.
 
 ---
 
