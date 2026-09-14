@@ -4186,13 +4186,53 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             let raw = null;
             let loadedLocal = false;
 
+            // ── Staleness Guard Helper ──────────────────────────────────────────────
+            // Returns true if the data is stale (>30 min old OR from a previous calendar day)
+            // so the fallback to GitHub Raw is triggered automatically.
+            function isDataStale(dataRaw) {
+                if (!dataRaw || !dataRaw.lastUpdated) return true;
+                try {
+                    const dataMs = new Date(dataRaw.lastUpdated).getTime();
+                    const nowMs  = Date.now();
+                    const ageMin = (nowMs - dataMs) / 60000;
+
+                    // Within market hours (09:00–17:00 MYT) → stale if > 30 min
+                    // Outside market hours → stale if data is from a previous calendar day
+                    const myt = new Date(nowMs + 8 * 3600000); // UTC+8
+                    const mytHour = myt.getUTCHours();
+                    const isMarketHours = mytHour >= 9 && mytHour < 17;
+
+                    if (isMarketHours) {
+                        if (ageMin > 30) {
+                            console.warn(`[Staleness Guard] Data lapuk ${ageMin.toFixed(0)} minit — fallback ke GitHub Raw.`);
+                            return true;
+                        }
+                    } else {
+                        // After hours: accept today's data (post-close snapshot), reject previous day
+                        const todayMYT = myt.toISOString().slice(0, 10);
+                        const dataDate = new Date(dataMs + 8 * 3600000).toISOString().slice(0, 10);
+                        if (dataDate < todayMYT) {
+                            console.warn(`[Staleness Guard] Data dari ${dataDate} (bukan hari ini ${todayMYT}) — fallback ke GitHub Raw.`);
+                            return true;
+                        }
+                    }
+                    return false;
+                } catch (_) { return true; }
+            }
+            // ───────────────────────────────────────────────────────────────────────
+
             // Try to load local file if not on file:// protocol
             if (window.location.protocol !== 'file:') {
                 try {
                     const res = await fetch(`live_data.json?t=${cacheBuster}`);
                     if (res.ok) {
-                        raw = await res.json();
-                        loadedLocal = true;
+                        const candidate = await res.json();
+                        if (!isDataStale(candidate)) {
+                            raw = candidate;
+                            loadedLocal = true;
+                        } else {
+                            console.log("[Staleness Guard] Data Vercel lapuk — melangkau ke GitHub Raw.");
+                        }
                     }
                 } catch (e) {
                     console.log("Failed to fetch local data, will try fallback.", e);
@@ -4201,8 +4241,12 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 // For file:// protocol, we can bypass CORS by reading window.liveData pre-loaded from live_data.js script tag!
                 if (window.liveData) {
                     raw = window.liveData;
-                    loadedLocal = true;
-                    console.log("Loaded local data from live_data.js script successfully.");
+                    loadedLocal = !isDataStale(window.liveData);
+                    if (loadedLocal) {
+                        console.log("Loaded local data from live_data.js script successfully.");
+                    } else {
+                        console.warn("live_data.js stale — falling back to GitHub Raw.");
+                    }
                 } else {
                     console.warn("Running under file:// protocol and live_data.js not loaded. Falling back to GitHub raw storage.");
                     const notice = document.getElementById('dashboardSubtitle');
@@ -4212,12 +4256,14 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 }
             }
 
-            // Fallback to GitHub if local load failed
+            // Fallback to GitHub Raw if local load failed OR data is stale
             if (!loadedLocal) {
                 try {
+                    console.log("[Staleness Guard] Menarik data segar dari GitHub Raw...");
                     const res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/live_data.json?t=${cacheBuster}`);
                     if (res.ok) {
                         raw = await res.json();
+                        console.log(`[Staleness Guard] ✅ GitHub Raw berjaya. lastUpdated: ${raw?.lastUpdated}`);
                     }
                 } catch (e) {
                     console.error("Failed to fetch online fallback data.", e);

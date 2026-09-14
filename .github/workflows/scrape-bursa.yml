@@ -55,7 +55,7 @@ jobs:
           git add smart-money-tracker/history/
           # Only commit if there are changes
           if ! git diff --quiet || ! git diff --staged --quiet; then
-            git commit -m "Auto-update live_data.json/js & trackers [skip ci]"
+            git commit -m "Auto-update live_data.json/js & trackers"
             git pull --rebase origin main || true
             git push origin main
           fi
