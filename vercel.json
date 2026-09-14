@@ -14,10 +14,6 @@
   ],
   "crons": [
     {
-      "path": "/api/cron-scrape?job=scrape_trigger",
-      "schedule": "*/15 1-9 * * 1-5"
-    },
-    {
       "path": "/api/cron-scrape?job=morning_alert",
       "schedule": "2 1 * * 1-5"
     },
