@@ -12,11 +12,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <script src="live_data.js"></script>
-    <script src="fresh_rider_tracker.js"></script>
-    <script src="hot_theme_tracker.js"></script>
-    <script src="daily_equity_tracker.js"></script>
-    <script src="jerung-data.js?v=1.0"></script>
+    <script>
+      (function() {
+        const cb = (window.location.protocol === 'file:') ? '' : ('?t=' + Date.now());
+        ['live_data.js', 'fresh_rider_tracker.js', 'hot_theme_tracker.js', 'daily_equity_tracker.js', 'jerung-data.js'].forEach(function(src) {
+          document.write('<script src="' + src + cb + '"><\/script>');
+        });
+      })();
+    </script>
         <style>
         @keyframes spin {
             0% { transform: rotate(0deg); }
@@ -4180,93 +4183,92 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             return num.toLocaleString();
         }
 
+        // Anti-Freeze & Self-Healing: Rekod masa trigger bot terakhir supaya tak spam
+        window._lastSelfHealTrigger = window._lastSelfHealTrigger || 0;
+
         // Fetch Live Data
         async function fetchLiveData() {
-            const cacheBuster = new Date().getTime();
+            const cacheBuster = Date.now();
             let raw = null;
-            let loadedLocal = false;
 
-            // ── Staleness Guard Helper ──────────────────────────────────────────────
-            // Returns true if the data is stale (>30 min old OR from a previous calendar day)
-            // so the fallback to GitHub Raw is triggered automatically.
-            function isDataStale(dataRaw) {
-                if (!dataRaw || !dataRaw.lastUpdated) return true;
-                try {
-                    const dataMs = new Date(dataRaw.lastUpdated).getTime();
-                    const nowMs  = Date.now();
-                    const ageMin = (nowMs - dataMs) / 60000;
+            // Semak status waktu pasaran Bursa (Isnin - Jumaat, 9:00 AM - 5:00 PM MYT)
+            const mytNow = new Date(Date.now() + 8 * 3600000);
+            const mytDay = mytNow.getUTCDay(); // 1 = Isnin, 5 = Jumaat
+            const mytHour = mytNow.getUTCHours();
+            const isMarketOpen = (mytDay >= 1 && mytDay <= 5 && mytHour >= 9 && mytHour < 17);
 
-                    // Within market hours (09:00–17:00 MYT) → stale if > 30 min
-                    // Outside market hours → stale if data is from a previous calendar day
-                    const myt = new Date(nowMs + 8 * 3600000); // UTC+8
-                    const mytHour = myt.getUTCHours();
-                    const isMarketHours = mytHour >= 9 && mytHour < 17;
+            let vercelData = null;
+            let githubData = null;
 
-                    if (isMarketHours) {
-                        if (ageMin > 30) {
-                            console.warn(`[Staleness Guard] Data lapuk ${ageMin.toFixed(0)} minit — fallback ke GitHub Raw.`);
-                            return true;
-                        }
-                    } else {
-                        // After hours: accept today's data (post-close snapshot), reject previous day
-                        const todayMYT = myt.toISOString().slice(0, 10);
-                        const dataDate = new Date(dataMs + 8 * 3600000).toISOString().slice(0, 10);
-                        if (dataDate < todayMYT) {
-                            console.warn(`[Staleness Guard] Data dari ${dataDate} (bukan hari ini ${todayMYT}) — fallback ke GitHub Raw.`);
-                            return true;
-                        }
-                    }
-                    return false;
-                } catch (_) { return true; }
-            }
-            // ───────────────────────────────────────────────────────────────────────
-
-            // Try to load local file if not on file:// protocol
+            // 1. Dapatkan data daripada Vercel / server hos
             if (window.location.protocol !== 'file:') {
                 try {
-                    const res = await fetch(`live_data.json?t=${cacheBuster}`);
-                    if (res.ok) {
-                        const candidate = await res.json();
-                        if (!isDataStale(candidate)) {
-                            raw = candidate;
-                            loadedLocal = true;
-                        } else {
-                            console.log("[Staleness Guard] Data Vercel lapuk — melangkau ke GitHub Raw.");
-                        }
-                    }
+                    const res = await fetch(`live_data.json?t=${cacheBuster}`, { cache: 'no-store' });
+                    if (res.ok) vercelData = await res.json();
                 } catch (e) {
-                    console.log("Failed to fetch local data, will try fallback.", e);
+                    console.warn("[Data Fetch] Vercel fetch failed:", e);
                 }
-            } else {
-                // For file:// protocol, we can bypass CORS by reading window.liveData pre-loaded from live_data.js script tag!
-                if (window.liveData) {
-                    raw = window.liveData;
-                    loadedLocal = !isDataStale(window.liveData);
-                    if (loadedLocal) {
-                        console.log("Loaded local data from live_data.js script successfully.");
-                    } else {
-                        console.warn("live_data.js stale — falling back to GitHub Raw.");
-                    }
-                } else {
-                    console.warn("Running under file:// protocol and live_data.js not loaded. Falling back to GitHub raw storage.");
-                    const notice = document.getElementById('dashboardSubtitle');
-                    if (notice) {
-                        notice.innerHTML = `<span class="pulse" style="background: #f59e0b;"></span> Running via file:// (CORS Restricted) • Loading from GitHub Online...`;
-                    }
+            } else if (window.liveData) {
+                vercelData = window.liveData;
+            }
+
+            const nowMs = Date.now();
+            const vTime = (vercelData && vercelData.lastUpdated) ? new Date(vercelData.lastUpdated).getTime() : 0;
+            const vAgeMin = vTime ? (nowMs - vTime) / 60000 : 999999;
+
+            // 2. Jika data Vercel tiada, atau lapuk (> 10 minit waktu market, atau bukan hari ini selepas market tutup),
+            // tarik data segar terus dari GitHub Raw
+            const todayMYT = mytNow.toISOString().slice(0, 10);
+            const vDate = vTime ? new Date(vTime + 8 * 3600000).toISOString().slice(0, 10) : '';
+            const needGitHubFallback = !vercelData || (isMarketOpen && vAgeMin > 10) || (!isMarketOpen && vDate < todayMYT);
+
+            if (needGitHubFallback || window.location.protocol === 'file:') {
+                try {
+                    const res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/live_data.json?t=${cacheBuster}`, { cache: 'no-store' });
+                    if (res.ok) githubData = await res.json();
+                } catch (e) {
+                    console.warn("[Data Fetch] GitHub Raw fetch failed:", e);
                 }
             }
 
-            // Fallback to GitHub Raw if local load failed OR data is stale
-            if (!loadedLocal) {
-                try {
-                    console.log("[Staleness Guard] Menarik data segar dari GitHub Raw...");
-                    const res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/live_data.json?t=${cacheBuster}`);
-                    if (res.ok) {
-                        raw = await res.json();
-                        console.log(`[Staleness Guard] ✅ GitHub Raw berjaya. lastUpdated: ${raw?.lastUpdated}`);
+            const gTime = (githubData && githubData.lastUpdated) ? new Date(githubData.lastUpdated).getTime() : 0;
+
+            // 3. Smart Picker: Pilih data yang paling baru timestamp
+            if (gTime > vTime) {
+                raw = githubData;
+                console.log(`[Smart Picker] Menggunakan data GitHub Raw (${new Date(gTime).toLocaleTimeString('en-MY', { timeZone: 'Asia/Kuala_Lumpur' })}) — lebih segar.`);
+            } else {
+                raw = vercelData || githubData;
+            }
+
+            // 4. ── BENTENG SELF-HEALING ANTI-FREEZE ──
+            // Jika waktu pasaran dibuka (9:00 - 17:00), tetapi data yang didapati > 15 minit lapuk,
+            // bangunkan GitHub Actions scraper automatik di cloud!
+            if (isMarketOpen) {
+                const activeTime = Math.max(vTime, gTime);
+                const activeAgeMin = activeTime ? (nowMs - activeTime) / 60000 : 999999;
+
+                if (activeAgeMin > 15 && (nowMs - window._lastSelfHealTrigger > 8 * 60 * 1000)) {
+                    window._lastSelfHealTrigger = nowMs;
+                    console.warn(`[Self-Healing] Data pasaran dikesan lapuk (${activeAgeMin.toFixed(0)} min). Mengaktifkan bot imbasan automatik...`);
+
+                    const notice = document.getElementById('dashboardSubtitle');
+                    if (notice) {
+                        const existingText = notice.innerHTML.replace(/<span id="selfHealBadge".*<\/span>/, '');
+                        notice.innerHTML = existingText + ` <span id="selfHealBadge" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 6px;">⚡ Memperbaharui data di cloud...</span>`;
                     }
-                } catch (e) {
-                    console.error("Failed to fetch online fallback data.", e);
+
+                    fetch('/api/cron-scrape')
+                        .then(r => r.json())
+                        .then(res => {
+                            console.log("[Self-Healing] Bot cloud berjaya digerakkan:", res);
+                            // Tunggu 35 saat untuk bot siap scrape & commit, kemudian auto-refresh
+                            setTimeout(async () => {
+                                console.log("[Self-Healing] Memuat semula paparan dengan data pasaran terkini...");
+                                await fetchLiveData();
+                            }, 35000);
+                        })
+                        .catch(err => console.warn("[Self-Healing Error]:", err));
                 }
             }
 

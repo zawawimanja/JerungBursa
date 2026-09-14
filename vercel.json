@@ -10,6 +10,20 @@
     { "src": "/api/cron-scrape", "dest": "/smart-money-tracker/api/cron-scrape.js" },
     { "src": "/api/cron-alert", "dest": "/smart-money-tracker/api/cron-scrape.js" },
     { "src": "/api/cron-dispatch", "dest": "/smart-money-tracker/api/cron-scrape.js" },
+    {
+      "src": "/(.*)\\.json",
+      "headers": {
+        "cache-control": "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0"
+      },
+      "dest": "/smart-money-tracker/$1.json"
+    },
+    {
+      "src": "/(live_data|fresh_rider_tracker|hot_theme_tracker|daily_equity_tracker|jerung-data)\\.js",
+      "headers": {
+        "cache-control": "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0"
+      },
+      "dest": "/smart-money-tracker/$1.js"
+    },
     { "src": "/(.*)", "dest": "/smart-money-tracker/$1" }
   ],
   "crons": [
