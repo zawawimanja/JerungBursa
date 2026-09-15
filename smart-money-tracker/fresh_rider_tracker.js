@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual
 window.FRESH_RIDER_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-15T09:30:59.131Z",
+  "generatedAt": "2026-09-15T09:40:47.859Z",
   "dataDays": 73,
   "totalTracked": 21,
   "openCount": 15,
@@ -26,6 +26,7 @@ window.FRESH_RIDER_TRACKER = {
  "trades": [
   {
    "name": "SUM",
+   "entryType": "🔥 NEW",
    "entryDate": "2026-09-11",
    "entry": 0.61,
    "entryFloor": 0.58,
@@ -45,6 +46,7 @@ window.FRESH_RIDER_TRACKER = {
   },
   {
    "name": "PENTECH",
+   "entryType": "🔥 NEW",
    "entryDate": "2026-09-08",
    "entry": 0.35,
    "entryFloor": 0.33,
@@ -64,6 +66,7 @@ window.FRESH_RIDER_TRACKER = {
   },
   {
    "name": "SUNLOGY",
+   "entryType": "🔥 NEW",
    "entryDate": "2026-08-21",
    "entry": 0.405,
    "entryFloor": 0.4,
@@ -83,6 +86,7 @@ window.FRESH_RIDER_TRACKER = {
   },
   {
    "name": "STRATUS",
+   "entryType": "🔥 NEW",
    "entryDate": "2026-07-24",
    "entry": 2.05,
    "entryFloor": 1.9,
@@ -102,6 +106,7 @@ window.FRESH_RIDER_TRACKER = {
   },
   {
    "name": "ICTZONE",
+   "entryType": "🔥 NEW",
    "entryDate": "2026-07-17",
    "entry": 0.2,
    "entryFloor": 0.185,
@@ -121,6 +126,7 @@ window.FRESH_RIDER_TRACKER = {
   },
   {
    "name": "ECOSHOP",
+   "entryType": "🔥 NEW",
    "entryDate": "2026-07-13",
    "entry": 1.51,
    "entryFloor": 1.43,
@@ -140,6 +146,7 @@ window.FRESH_RIDER_TRACKER = {
   },
   {
    "name": "HEGROUP",
+   "entryType": "🔥 NEW",
    "entryDate": "2026-07-08",
    "entry": 0.545,
    "entryFloor": 0.52,
@@ -159,6 +166,7 @@ window.FRESH_RIDER_TRACKER = {
   },
   {
    "name": "EIPOWER",
+   "entryType": "🔥 NEW",
    "entryDate": "2026-06-24",
    "entry": 0.68,
    "entryFloor": 0.65,
@@ -178,6 +186,7 @@ window.FRESH_RIDER_TRACKER = {
   },
   {
    "name": "CBHB",
+   "entryType": "🔥 NEW",
    "entryDate": "2026-06-11",
    "entry": 0.655,
    "entryFloor": 0.63,
@@ -197,6 +206,7 @@ window.FRESH_RIDER_TRACKER = {
   },
   {
    "name": "AMBEST",
+   "entryType": "🔥 NEW",
    "entryDate": "2026-06-08",
    "entry": 0.68,
    "entryFloor": 0.66,
@@ -216,6 +226,7 @@ window.FRESH_RIDER_TRACKER = {
   },
   {
    "name": "THMY",
+   "entryType": "🔥 NEW",
    "entryDate": "2026-06-04",
    "entry": 1.69,
    "entryFloor": 1.58,
@@ -235,6 +246,7 @@ window.FRESH_RIDER_TRACKER = {
   },
   {
    "name": "AMS",
+   "entryType": "🔥 NEW",
    "entryDate": "2026-06-03",
    "entry": 0.38,
    "entryFloor": 0.375,
@@ -254,6 +266,7 @@ window.FRESH_RIDER_TRACKER = {
   },
   {
    "name": "ISF",
+   "entryType": "🔥 NEW",
    "entryDate": "2026-06-03",
    "entry": 0.555,
    "entryFloor": 0.53,
@@ -273,6 +286,7 @@ window.FRESH_RIDER_TRACKER = {
   },
   {
    "name": "KEEMING",
+   "entryType": "🔥 NEW",
    "entryDate": "2026-06-03",
    "entry": 1.09,
    "entryFloor": 1.03,
@@ -292,6 +306,7 @@ window.FRESH_RIDER_TRACKER = {
   },
   {
    "name": "ICENTS",
+   "entryType": "🔥 NEW",
    "entryDate": "2026-06-03",
    "entry": 0.475,
    "entryFloor": 0.46,
@@ -311,6 +326,7 @@ window.FRESH_RIDER_TRACKER = {
   },
   {
    "name": "MTTSL",
+   "entryType": "🔥 NEW",
    "entryDate": "2026-07-31",
    "entry": 1.09,
    "entryFloor": 1.03,
@@ -332,6 +348,7 @@ window.FRESH_RIDER_TRACKER = {
   },
   {
    "name": "OXB",
+   "entryType": "🔥 NEW",
    "entryDate": "2026-08-19",
    "entry": 0.485,
    "entryFloor": 0.425,
@@ -353,6 +370,7 @@ window.FRESH_RIDER_TRACKER = {
   },
   {
    "name": "MMCS",
+   "entryType": "🔥 NEW",
    "entryDate": "2026-06-24",
    "entry": 0.265,
    "entryFloor": 0.245,
@@ -374,6 +392,7 @@ window.FRESH_RIDER_TRACKER = {
   },
   {
    "name": "OGX",
+   "entryType": "🔥 NEW",
    "entryDate": "2026-06-09",
    "entry": 0.46,
    "entryFloor": 0.42,
@@ -395,6 +414,7 @@ window.FRESH_RIDER_TRACKER = {
   },
   {
    "name": "SRKK",
+   "entryType": "🔥 NEW",
    "entryDate": "2026-07-10",
    "entry": 0.6,
    "entryFloor": 0.555,
@@ -416,6 +436,7 @@ window.FRESH_RIDER_TRACKER = {
   },
   {
    "name": "HKB",
+   "entryType": "🔥 NEW",
    "entryDate": "2026-06-03",
    "entry": 0.445,
    "entryFloor": 0.445,
@@ -434,6 +455,147 @@ window.FRESH_RIDER_TRACKER = {
    "slTrail": 0.584,
    "exitDate": "2026-06-29",
    "exitPrice": 0.555
+  }
+ ]
+};
+window.ADD_ON_TRACKER = {
+ "summary": {
+  "generatedAt": "2026-09-15T09:40:47.859Z",
+  "dataDays": 73,
+  "totalTracked": 6,
+  "openCount": 4,
+  "closedCount": 2,
+  "closedWins": 0,
+  "closedWinRate": 0,
+  "closedAvgGain": -6,
+  "openPnl": 118.8,
+  "closedPnl": -12,
+  "totalPnlNow": 106.8
+ },
+ "trades": [
+  {
+   "name": "STRATUS",
+   "entryType": "⭐ ADD-ON A+",
+   "entryDate": "2026-07-29",
+   "entry": 2.07,
+   "entryFloor": 2.01,
+   "currentFloor": 2.69,
+   "currentPrice": 2.74,
+   "high": 3.03,
+   "highDate": "2026-08-10",
+   "maxGain": 46.4,
+   "finalGain": 32.4,
+   "day1ChangePct": -1.9,
+   "days": 33,
+   "lastDate": "2026-09-15",
+   "status": "OPEN",
+   "ipoYear": 2026,
+   "sector": "Factory",
+   "slTrail": 2.424
+  },
+  {
+   "name": "ISF",
+   "entryType": "⭐ ADD-ON A+",
+   "entryDate": "2026-07-28",
+   "entry": 0.61,
+   "entryFloor": 0.6,
+   "currentFloor": 0.71,
+   "currentPrice": 0.755,
+   "high": 0.82,
+   "highDate": "2026-09-10",
+   "maxGain": 34.4,
+   "finalGain": 23.8,
+   "day1ChangePct": -3.17,
+   "days": 35,
+   "lastDate": "2026-09-15",
+   "status": "OPEN",
+   "ipoYear": 2026,
+   "sector": "Consumer",
+   "slTrail": 0.656
+  },
+  {
+   "name": "CBHB",
+   "entryType": "⭐ ADD-ON A+",
+   "entryDate": "2026-06-19",
+   "entry": 0.675,
+   "entryFloor": 0.655,
+   "currentFloor": 0.995,
+   "currentPrice": 1,
+   "high": 1.03,
+   "highDate": "2026-09-10",
+   "maxGain": 52.6,
+   "finalGain": 48.1,
+   "day1ChangePct": 0.75,
+   "days": 61,
+   "lastDate": "2026-09-15",
+   "status": "OPEN",
+   "ipoYear": 2025,
+   "sector": "Property",
+   "slTrail": 0.824
+  },
+  {
+   "name": "AMS",
+   "entryType": "⭐ ADD-ON A+",
+   "entryDate": "2026-06-03",
+   "entry": 0.38,
+   "entryFloor": 0.375,
+   "currentFloor": 0.415,
+   "currentPrice": 0.435,
+   "high": 0.505,
+   "highDate": "2026-08-26",
+   "maxGain": 32.9,
+   "finalGain": 14.5,
+   "day1ChangePct": -1.3,
+   "days": 72,
+   "lastDate": "2026-09-15",
+   "status": "OPEN",
+   "ipoYear": 2026,
+   "sector": "Industrial",
+   "slTrail": 0.404
+  },
+  {
+   "name": "MTTSL",
+   "entryType": "⭐ ADD-ON A+",
+   "entryDate": "2026-08-04",
+   "entry": 1.1,
+   "entryFloor": 1.07,
+   "currentFloor": 1.1,
+   "currentPrice": 1.1,
+   "high": 1.41,
+   "highDate": "2026-08-26",
+   "maxGain": 28.2,
+   "finalGain": 0,
+   "day1ChangePct": 0,
+   "days": 30,
+   "lastDate": "2026-09-15",
+   "status": "CLOSED_SL",
+   "ipoYear": 2026,
+   "sector": "Transportation",
+   "slTrail": 1.128,
+   "exitDate": "2026-09-15",
+   "exitPrice": 1.1
+  },
+  {
+   "name": "OXB",
+   "entryType": "⭐ ADD-ON A+",
+   "entryDate": "2026-09-07",
+   "entry": 0.46,
+   "entryFloor": 0.445,
+   "currentFloor": 0.405,
+   "currentPrice": 0.405,
+   "high": 0.46,
+   "highDate": "2026-09-08",
+   "maxGain": 0,
+   "finalGain": -12,
+   "day1ChangePct": -2.13,
+   "days": 7,
+   "lastDate": "2026-09-15",
+   "status": "CLOSED_SL",
+   "ipoYear": 2025,
+   "sector": "Industrial",
+   "slTrail": 0.409,
+   "exitDate": "2026-09-15",
+   "exitPrice": 0.405
   }
  ]
 };
