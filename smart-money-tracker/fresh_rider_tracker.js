@@ -1,17 +1,17 @@
 // AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual
 window.FRESH_RIDER_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-15T03:30:51.525Z",
+  "generatedAt": "2026-09-15T03:40:45.375Z",
   "dataDays": 73,
   "totalTracked": 21,
   "openCount": 15,
   "closedCount": 6,
   "closedWins": 3,
   "closedWinRate": 50,
-  "closedAvgGain": 4.4,
-  "openPnl": 550.4,
-  "closedPnl": 26.3,
-  "totalPnlNow": 576.7
+  "closedAvgGain": 4.2,
+  "openPnl": 552.6,
+  "closedPnl": 25.3,
+  "totalPnlNow": 577.9
  },
  "backtest": {
   "dataStart": "2026-06-02",
@@ -125,11 +125,11 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 1.51,
    "entryFloor": 1.43,
    "currentFloor": 1.43,
-   "currentPrice": 1.45,
+   "currentPrice": 1.46,
    "high": 1.51,
    "highDate": "2026-07-13",
    "maxGain": 0,
-   "finalGain": -4,
+   "finalGain": -3.3,
    "day1ChangePct": 0.67,
    "days": 45,
    "lastDate": "2026-09-15",
@@ -182,11 +182,11 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 0.655,
    "entryFloor": 0.63,
    "currentFloor": 0.955,
-   "currentPrice": 1.01,
+   "currentPrice": 1.02,
    "high": 1.03,
    "highDate": "2026-09-10",
    "maxGain": 57.3,
-   "finalGain": 54.2,
+   "finalGain": 55.7,
    "day1ChangePct": 0.77,
    "days": 66,
    "lastDate": "2026-09-15",
@@ -315,11 +315,11 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 1.09,
    "entryFloor": 1.03,
    "currentFloor": 1.1,
-   "currentPrice": 1.12,
+   "currentPrice": 1.11,
    "high": 1.41,
    "highDate": "2026-08-26",
    "maxGain": 29.4,
-   "finalGain": 2.8,
+   "finalGain": 1.8,
    "day1ChangePct": 0.93,
    "days": 32,
    "lastDate": "2026-09-15",
@@ -328,7 +328,7 @@ window.FRESH_RIDER_TRACKER = {
    "sector": "Transportation",
    "slTrail": 1.128,
    "exitDate": "2026-09-15",
-   "exitPrice": 1.12
+   "exitPrice": 1.11
   },
   {
    "name": "OXB",
