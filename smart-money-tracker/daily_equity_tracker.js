@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-09-15T08:20:52.289Z",
+ "generatedAt": "2026-09-15T08:30:56.430Z",
  "totalDays": 73,
  "startDate": "2026-06-02",
  "endDate": "2026-09-15",
@@ -31468,15 +31468,6 @@ window.DAILY_EQUITY_TRACKER = {
    },
    "trades": [
     {
-     "name": "PENTECH",
-     "trackerType": "FR",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 0.35,
-     "gainOnDay": 0,
-     "dayChangePct": 2.94,
-     "pnlDeltaToday": 2.9
-    },
-    {
      "name": "SUNLOGY",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
@@ -31610,6 +31601,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -5.2,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "PENTECH",
+     "trackerType": "FR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.35,
+     "gainOnDay": 0,
+     "dayChangePct": 2.94,
+     "pnlDeltaToday": 2.9
     },
     {
      "name": "MMCS",
@@ -32100,15 +32100,6 @@ window.DAILY_EQUITY_TRACKER = {
    },
    "trades": [
     {
-     "name": "PENTECH",
-     "trackerType": "FR",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 0.35,
-     "gainOnDay": 0,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "SUNLOGY",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
@@ -32242,6 +32233,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -9.3,
      "dayChangePct": -4.35,
      "pnlDeltaToday": -4.1
+    },
+    {
+     "name": "PENTECH",
+     "trackerType": "FR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.35,
+     "gainOnDay": 0,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "name": "MMCS",
@@ -32741,15 +32741,6 @@ window.DAILY_EQUITY_TRACKER = {
    },
    "trades": [
     {
-     "name": "PENTECH",
-     "trackerType": "FR",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 0.355,
-     "gainOnDay": 1.4,
-     "dayChangePct": 1.43,
-     "pnlDeltaToday": 1.4
-    },
-    {
      "name": "SUNLOGY",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
@@ -32883,6 +32874,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -10.3,
      "dayChangePct": -1.14,
      "pnlDeltaToday": -1
+    },
+    {
+     "name": "PENTECH",
+     "trackerType": "FR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.355,
+     "gainOnDay": 1.4,
+     "dayChangePct": 1.43,
+     "pnlDeltaToday": 1.4
     },
     {
      "name": "MMCS",
@@ -33391,15 +33391,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "PENTECH",
-     "trackerType": "FR",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 0.35,
-     "gainOnDay": 0,
-     "dayChangePct": -1.41,
-     "pnlDeltaToday": -1.4
-    },
-    {
      "name": "SUNLOGY",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
@@ -33533,6 +33524,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -10.3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "PENTECH",
+     "trackerType": "FR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.35,
+     "gainOnDay": 0,
+     "dayChangePct": -1.41,
+     "pnlDeltaToday": -1.4
     },
     {
      "name": "MMCS",
@@ -34041,15 +34041,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "PENTECH",
-     "trackerType": "FR",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 0.35,
-     "gainOnDay": 0,
-     "dayChangePct": -1.41,
-     "pnlDeltaToday": -1.4
-    },
-    {
      "name": "SUNLOGY",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
@@ -34183,6 +34174,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -10.3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "PENTECH",
+     "trackerType": "FR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.35,
+     "gainOnDay": 0,
+     "dayChangePct": -1.41,
+     "pnlDeltaToday": -1.4
     },
     {
      "name": "MMCS",
@@ -34666,18 +34666,18 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-09-15",
    "totalSignals": 70,
-   "openCount": 39,
-   "closedCount": 31,
-   "openPnl": 693.3,
-   "closedPnl": 560.1,
-   "totalPnl": 1253.4,
-   "frPnl": 558.2,
-   "htPnl": 695.2,
-   "dailyPnlDelta": -51.3,
+   "openCount": 38,
+   "closedCount": 32,
+   "openPnl": 699.5,
+   "closedPnl": 548.7,
+   "totalPnl": 1248.2,
+   "frPnl": 556.1,
+   "htPnl": 692.1,
+   "dailyPnlDelta": -56,
    "winRate": 67,
-   "avgGain": 17.9,
+   "avgGain": 17.8,
    "peakGainer": {
-    "gain": 115.6,
+    "gain": 117.4,
     "name": "KEEMING"
    },
    "trades": [
@@ -34689,15 +34689,6 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 4.1,
      "dayChangePct": -1.55,
      "pnlDeltaToday": -1.6
-    },
-    {
-     "name": "PENTECH",
-     "trackerType": "FR",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 0.315,
-     "gainOnDay": -10,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
     },
     {
      "name": "SUNLOGY",
@@ -34775,46 +34766,46 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "THMY",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 1.72,
-     "gainOnDay": 1.8,
-     "dayChangePct": 0.58,
-     "pnlDeltaToday": 0.6
+     "priceOnDay": 1.73,
+     "gainOnDay": 2.4,
+     "dayChangePct": 1.17,
+     "pnlDeltaToday": 1.2
     },
     {
      "name": "AMS",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.43,
-     "gainOnDay": 13.2,
-     "dayChangePct": -1.15,
-     "pnlDeltaToday": -1.3
+     "priceOnDay": 0.425,
+     "gainOnDay": 11.8,
+     "dayChangePct": -2.3,
+     "pnlDeltaToday": -2.6
     },
     {
      "name": "ISF",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.76,
-     "gainOnDay": 36.9,
-     "dayChangePct": -1.3,
-     "pnlDeltaToday": -1.8
+     "priceOnDay": 0.745,
+     "gainOnDay": 34.2,
+     "dayChangePct": -3.25,
+     "pnlDeltaToday": -4.5
     },
     {
      "name": "KEEMING",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.35,
-     "gainOnDay": 115.6,
-     "dayChangePct": -2.08,
-     "pnlDeltaToday": -4.6
+     "priceOnDay": 2.37,
+     "gainOnDay": 117.4,
+     "dayChangePct": -1.25,
+     "pnlDeltaToday": -2.8
     },
     {
      "name": "ICENTS",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.815,
-     "gainOnDay": 71.6,
-     "dayChangePct": -0.61,
-     "pnlDeltaToday": -1.1
+     "priceOnDay": 0.82,
+     "gainOnDay": 72.6,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "name": "MTTSL",
@@ -34833,6 +34824,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -15.5,
      "dayChangePct": -3.53,
      "pnlDeltaToday": -3.1
+    },
+    {
+     "name": "PENTECH",
+     "trackerType": "FR",
+     "statusOnDay": "CLOSED_TODAY",
+     "priceOnDay": 0.31,
+     "gainOnDay": -11.4,
+     "dayChangePct": -1.59,
+     "pnlDeltaToday": -1.4
     },
     {
      "name": "MMCS",
@@ -34883,10 +34883,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "ATECH",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.755,
-     "gainOnDay": -6.2,
-     "dayChangePct": -3.82,
-     "pnlDeltaToday": -3.7
+     "priceOnDay": 0.76,
+     "gainOnDay": -5.6,
+     "dayChangePct": -3.18,
+     "pnlDeltaToday": -3.1
     },
     {
      "name": "MISC",
@@ -34937,10 +34937,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "SKYECHIP",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.93,
-     "gainOnDay": -3.3,
-     "dayChangePct": 0.34,
-     "pnlDeltaToday": 0.3
+     "priceOnDay": 2.92,
+     "gainOnDay": -3.6,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "name": "NEXGRAM",
@@ -34964,10 +34964,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "RAMSSOL",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.79,
-     "gainOnDay": 1.9,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
+     "priceOnDay": 0.785,
+     "gainOnDay": 1.3,
+     "dayChangePct": -0.63,
+     "pnlDeltaToday": -0.6
     },
     {
      "name": "TEAMSTR",
@@ -35018,10 +35018,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "KGB",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.53,
-     "gainOnDay": 9.2,
-     "dayChangePct": -1.04,
-     "pnlDeltaToday": -1.2
+     "priceOnDay": 8.49,
+     "gainOnDay": 8.7,
+     "dayChangePct": -1.51,
+     "pnlDeltaToday": -1.7
     },
     {
      "name": "VITROX",
@@ -35036,19 +35036,19 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "UWC",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 6.16,
-     "gainOnDay": 4.9,
-     "dayChangePct": -1.6,
-     "pnlDeltaToday": -1.7
+     "priceOnDay": 6.15,
+     "gainOnDay": 4.8,
+     "dayChangePct": -1.76,
+     "pnlDeltaToday": -1.9
     },
     {
      "name": "GREATEC",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.51,
-     "gainOnDay": -3.8,
-     "dayChangePct": 0.4,
-     "pnlDeltaToday": 0.4
+     "priceOnDay": 2.47,
+     "gainOnDay": -5.4,
+     "dayChangePct": -1.2,
+     "pnlDeltaToday": -1.1
     },
     {
      "name": "SUNVIEW",
@@ -35072,10 +35072,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "PEKAT",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.04,
-     "gainOnDay": 29.1,
-     "dayChangePct": -0.49,
-     "pnlDeltaToday": -0.6
+     "priceOnDay": 2.03,
+     "gainOnDay": 28.5,
+     "dayChangePct": -0.98,
+     "pnlDeltaToday": -1.3
     },
     {
      "name": "SAMAIDEN",
@@ -35101,8 +35101,8 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED_TODAY",
      "priceOnDay": 3.29,
      "gainOnDay": 16.7,
-     "dayChangePct": 1.25,
-     "pnlDeltaToday": 1.4
+     "dayChangePct": 1.56,
+     "pnlDeltaToday": 1.8
     },
     {
      "name": "SAM",
