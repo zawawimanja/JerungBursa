@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-09-15T04:40:48.004Z",
+ "generatedAt": "2026-09-15T04:50:42.670Z",
  "totalDays": 73,
  "startDate": "2026-06-02",
  "endDate": "2026-09-15",
@@ -34668,16 +34668,16 @@ window.DAILY_EQUITY_TRACKER = {
    "totalSignals": 70,
    "openCount": 39,
    "closedCount": 31,
-   "openPnl": 690,
+   "openPnl": 689.7,
    "closedPnl": 561.2,
-   "totalPnl": 1251.2,
-   "frPnl": 553.7,
-   "htPnl": 697.5,
-   "dailyPnlDelta": -52.1,
+   "totalPnl": 1250.9,
+   "frPnl": 554.4,
+   "htPnl": 696.5,
+   "dailyPnlDelta": -51.9,
    "winRate": 67,
    "avgGain": 17.9,
    "peakGainer": {
-    "gain": 114.7,
+    "gain": 113.8,
     "name": "KEEMING"
    },
    "trades": [
@@ -34766,10 +34766,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "AMBEST",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 1.28,
-     "gainOnDay": 88.2,
-     "dayChangePct": -7.91,
-     "pnlDeltaToday": -16.2
+     "priceOnDay": 1.3,
+     "gainOnDay": 91.2,
+     "dayChangePct": -6.47,
+     "pnlDeltaToday": -13.2
     },
     {
      "name": "THMY",
@@ -34784,10 +34784,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "AMS",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.43,
-     "gainOnDay": 13.2,
-     "dayChangePct": -1.15,
-     "pnlDeltaToday": -1.3
+     "priceOnDay": 0.425,
+     "gainOnDay": 11.8,
+     "dayChangePct": -2.3,
+     "pnlDeltaToday": -2.6
     },
     {
      "name": "ISF",
@@ -34802,10 +34802,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "KEEMING",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.34,
-     "gainOnDay": 114.7,
-     "dayChangePct": -2.5,
-     "pnlDeltaToday": -5.5
+     "priceOnDay": 2.33,
+     "gainOnDay": 113.8,
+     "dayChangePct": -2.92,
+     "pnlDeltaToday": -6.4
     },
     {
      "name": "ICENTS",
@@ -34892,8 +34892,8 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "MISC",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 7.9,
-     "gainOnDay": 26.4,
+     "priceOnDay": 7.91,
+     "gainOnDay": 26.6,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -35018,28 +35018,28 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "KGB",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.47,
-     "gainOnDay": 8.5,
-     "dayChangePct": -1.74,
-     "pnlDeltaToday": -1.9
+     "priceOnDay": 8.46,
+     "gainOnDay": 8.3,
+     "dayChangePct": -1.86,
+     "pnlDeltaToday": -2
     },
     {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 9.06,
-     "gainOnDay": 33,
-     "dayChangePct": -0.88,
-     "pnlDeltaToday": -1.2
+     "priceOnDay": 9.02,
+     "gainOnDay": 32.5,
+     "dayChangePct": -1.31,
+     "pnlDeltaToday": -1.8
     },
     {
      "name": "UWC",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 6.24,
-     "gainOnDay": 6.3,
-     "dayChangePct": -0.32,
-     "pnlDeltaToday": -0.3
+     "priceOnDay": 6.21,
+     "gainOnDay": 5.8,
+     "dayChangePct": -0.8,
+     "pnlDeltaToday": -0.9
     },
     {
      "name": "GREATEC",
@@ -35092,8 +35092,8 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED_TODAY",
      "priceOnDay": 3.647,
      "gainOnDay": 42.5,
-     "dayChangePct": -2.7,
-     "pnlDeltaToday": -3.9
+     "dayChangePct": -2.43,
+     "pnlDeltaToday": -3.5
     },
     {
      "name": "SLVEST",
@@ -35101,8 +35101,8 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED_TODAY",
      "priceOnDay": 3.29,
      "gainOnDay": 16.7,
-     "dayChangePct": 1.56,
-     "pnlDeltaToday": 1.8
+     "dayChangePct": 2.19,
+     "pnlDeltaToday": 2.5
     },
     {
      "name": "SAM",
@@ -35110,8 +35110,8 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED_TODAY",
      "priceOnDay": 4.152,
      "gainOnDay": -4.3,
-     "dayChangePct": -2.9,
-     "pnlDeltaToday": -2.8
+     "dayChangePct": -3.38,
+     "pnlDeltaToday": -3.2
     },
     {
      "name": "EMPIRE",
