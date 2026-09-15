@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-09-15T06:50:53.321Z",
+ "generatedAt": "2026-09-15T07:01:00.739Z",
  "totalDays": 73,
  "startDate": "2026-06-02",
  "endDate": "2026-09-15",
@@ -34668,16 +34668,16 @@ window.DAILY_EQUITY_TRACKER = {
    "totalSignals": 70,
    "openCount": 39,
    "closedCount": 31,
-   "openPnl": 694,
+   "openPnl": 704.6,
    "closedPnl": 561.2,
-   "totalPnl": 1255.2,
-   "frPnl": 556.1,
-   "htPnl": 699.1,
-   "dailyPnlDelta": -49.8,
-   "winRate": 67,
-   "avgGain": 17.9,
+   "totalPnl": 1265.8,
+   "frPnl": 565.7,
+   "htPnl": 700.1,
+   "dailyPnlDelta": -35.7,
+   "winRate": 69,
+   "avgGain": 18.1,
    "peakGainer": {
-    "gain": 116.5,
+    "gain": 118.3,
     "name": "KEEMING"
    },
    "trades": [
@@ -34685,10 +34685,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "SUM",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.625,
-     "gainOnDay": 2.5,
-     "dayChangePct": -3.1,
-     "pnlDeltaToday": -3.3
+     "priceOnDay": 0.635,
+     "gainOnDay": 4.1,
+     "dayChangePct": -1.55,
+     "pnlDeltaToday": -1.6
     },
     {
      "name": "PENTECH",
@@ -34730,28 +34730,28 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "ECOSHOP",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 1.45,
-     "gainOnDay": -4,
-     "dayChangePct": -0.68,
-     "pnlDeltaToday": -0.7
+     "priceOnDay": 1.46,
+     "gainOnDay": -3.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "name": "HEGROUP",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.93,
-     "gainOnDay": 70.6,
-     "dayChangePct": -1.59,
-     "pnlDeltaToday": -2.8
+     "priceOnDay": 0.935,
+     "gainOnDay": 71.6,
+     "dayChangePct": -1.06,
+     "pnlDeltaToday": -1.8
     },
     {
      "name": "EIPOWER",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.78,
-     "gainOnDay": 14.7,
-     "dayChangePct": -3.11,
-     "pnlDeltaToday": -3.7
+     "priceOnDay": 0.785,
+     "gainOnDay": 15.4,
+     "dayChangePct": -2.48,
+     "pnlDeltaToday": -2.9
     },
     {
      "name": "CBHB",
@@ -34766,10 +34766,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "AMBEST",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 1.3,
-     "gainOnDay": 91.2,
-     "dayChangePct": -6.47,
-     "pnlDeltaToday": -13.2
+     "priceOnDay": 1.32,
+     "gainOnDay": 94.1,
+     "dayChangePct": -5.04,
+     "pnlDeltaToday": -10.3
     },
     {
      "name": "THMY",
@@ -34793,19 +34793,19 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "ISF",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.76,
-     "gainOnDay": 36.9,
-     "dayChangePct": -1.3,
-     "pnlDeltaToday": -1.8
+     "priceOnDay": 0.765,
+     "gainOnDay": 37.8,
+     "dayChangePct": -0.65,
+     "pnlDeltaToday": -0.9
     },
     {
      "name": "KEEMING",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.36,
-     "gainOnDay": 116.5,
-     "dayChangePct": -1.67,
-     "pnlDeltaToday": -3.7
+     "priceOnDay": 2.38,
+     "gainOnDay": 118.3,
+     "dayChangePct": -0.83,
+     "pnlDeltaToday": -1.8
     },
     {
      "name": "ICENTS",
@@ -34874,10 +34874,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "SUM",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.625,
-     "gainOnDay": -0.8,
-     "dayChangePct": -3.1,
-     "pnlDeltaToday": -3.2
+     "priceOnDay": 0.635,
+     "gainOnDay": 0.8,
+     "dayChangePct": -1.55,
+     "pnlDeltaToday": -1.6
     },
     {
      "name": "ATECH",
@@ -34892,10 +34892,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "MISC",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 7.93,
-     "gainOnDay": 26.9,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
+     "priceOnDay": 7.96,
+     "gainOnDay": 27.4,
+     "dayChangePct": 1.92,
+     "pnlDeltaToday": 2.4
     },
     {
      "name": "NEXG",
@@ -34937,10 +34937,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "SKYECHIP",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.92,
-     "gainOnDay": -3.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
+     "priceOnDay": 2.91,
+     "gainOnDay": -4,
+     "dayChangePct": -0.34,
+     "pnlDeltaToday": -0.3
     },
     {
      "name": "NEXGRAM",
@@ -35009,19 +35009,19 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "INARI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.57,
-     "gainOnDay": 8.9,
-     "dayChangePct": 0.39,
-     "pnlDeltaToday": 0.4
+     "priceOnDay": 2.56,
+     "gainOnDay": 8.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "name": "KGB",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.47,
-     "gainOnDay": 8.5,
-     "dayChangePct": -1.74,
-     "pnlDeltaToday": -1.9
+     "priceOnDay": 8.48,
+     "gainOnDay": 8.6,
+     "dayChangePct": -1.62,
+     "pnlDeltaToday": -1.8
     },
     {
      "name": "VITROX",
@@ -35036,10 +35036,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "UWC",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 6.25,
-     "gainOnDay": 6.5,
-     "dayChangePct": -0.16,
-     "pnlDeltaToday": -0.2
+     "priceOnDay": 6.23,
+     "gainOnDay": 6.1,
+     "dayChangePct": -0.48,
+     "pnlDeltaToday": -0.5
     },
     {
      "name": "GREATEC",
@@ -35101,8 +35101,8 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED_TODAY",
      "priceOnDay": 3.29,
      "gainOnDay": 16.7,
-     "dayChangePct": 1.25,
-     "pnlDeltaToday": 1.4
+     "dayChangePct": 1.56,
+     "pnlDeltaToday": 1.8
     },
     {
      "name": "SAM",
@@ -35110,8 +35110,8 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED_TODAY",
      "priceOnDay": 4.152,
      "gainOnDay": -4.3,
-     "dayChangePct": -3.38,
-     "pnlDeltaToday": -3.2
+     "dayChangePct": -2.66,
+     "pnlDeltaToday": -2.5
     },
     {
      "name": "EMPIRE",
