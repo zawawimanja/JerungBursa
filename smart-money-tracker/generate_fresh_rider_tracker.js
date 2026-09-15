@@ -1,8 +1,9 @@
 // =============================================================
-// FRESH RIDER TRACKER GENERATOR
+// FRESH RIDER & ADD-ON A+ TRACKER GENERATOR
 // Replay semua data history + live, kesan setiap kaunter yang qualify
-// Fresh VVIP Rider, track sampai EXIT (RIDE floor) atau kekal OPEN.
-// Output: window.FRESH_RIDER_TRACKER dalam fresh_rider_tracker.js
+// Fresh VVIP Rider (Day 1) dan ⭐ ADD-ON A+ (Base 2 Staircase),
+// track sampai EXIT (Hybrid Trailing Stop) atau kekal OPEN.
+// Output: window.FRESH_RIDER_TRACKER & window.ADD_ON_TRACKER dalam fresh_rider_tracker.js
 // =============================================================
 const fs = require('fs');
 const path = require('path');
@@ -10,9 +11,6 @@ const path = require('path');
 const HIST_DIR = path.join(__dirname, 'history');
 const OUT_FILE = path.join(__dirname, 'fresh_rider_tracker.js');
 
-// ---- Kanonikalkan nama stok ikut symbol_mappings.json ----
-// Sebab: feed boleh guna nama berbeza untuk syarikat sama (cth. "SRKKAI" dulu, "SRKK" sekarang) —
-// tanpa ini satu saham boleh ditrack DUA kali (duplicate position + harga beku).
 const SYM_MAP = JSON.parse(fs.readFileSync(path.join(__dirname, 'symbol_mappings.json'), 'utf8'));
 const symNames = {};
 for (const [nm, sym] of Object.entries(SYM_MAP)) {
@@ -30,26 +28,47 @@ function canonName(name) {
     return canonByName[up] || name;
 }
 
-// ---- Rule Fresh VVIP Rider (A5) — sama macam index.html ----
+// ---- Rule Fresh VVIP Rider (Day 1) ----
 function isFreshRiderPick(item) {
     return item.isVvip === true && item.signal !== 'avoid' && !item.isCombStock
         && (item.ipoYear || 0) >= 2025 && (item.pullback ?? 99) <= 10 && (item.closeTightness ?? 99) <= 5.0
         && item.price >= 0.10 && item.price <= 50
-        && item.hasVolumeSpike !== true; // CS MERAH sahaja — buang entry hari volum spike (breakout/expansion)
+        && item.hasVolumeSpike !== true; // CS MERAH sahaja
 }
 
-// ---- Hari dagangan sebenar (buang snapshot hujung minggu) ----
-// Snapshot Sabtu/Ahad wujud bila scraper jalan manual/luar waktu — ia cuma
-// data stale hari dagangan terakhir. Tanpa filter ini, entry direkod pada
-// hari pasaran tutup (cth. MTTSL "entry 2-Ogos-Ahad" sedangkan sepatutnya 3-Ogos-Isnin).
+// ---- Rule ⭐ ADD-ON A+ (Base 1 / Base 2 Staircase) ----
+function isAddOnAPick(item, initialBasePrice) {
+    if (!item || !item.name || item.price <= 0 || item.price > 50) return false;
+    if (item.isVvip !== true || item.signal === 'avoid' || item.isCombStock) return false;
+    if ((item.ipoYear || 0) < 2025) return false;
+    if ((item.pullback ?? 99) > 10.0) return false;
+    
+    const tight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
+    if (tight > 3.5) return false; // Squeeze Tightness <= 3.5%
+
+    const f = item.floorLow || 0;
+    const floorDist = f > 0 ? ((item.price - f) / f * 100) : 99;
+    if (floorDist > 3.5) return false; // Floor Distance <= 3.5%
+
+    const turnover = item.turnover || item.rawTurnover || 0;
+    if (turnover < 2000000) return false; // Turnover >= RM 2.0M
+
+    if (item.hasVolumeSpike === true) return false; // CS MERAH
+
+    if (initialBasePrice > 0) {
+        const gainFromBase = ((item.price - initialBasePrice) / initialBasePrice * 100);
+        if (gainFromBase > 20.0) return false; // Tolak ADD-ON Pucuk > 20%
+    }
+    return true;
+}
+
 function isTradingDay(dateStr) {
     const d = new Date(dateStr);
     if (isNaN(d.getTime())) return false;
     const wd = d.getDay();
-    return wd !== 0 && wd !== 6; // bukan Ahad (0) / Sabtu (6)
+    return wd !== 0 && wd !== 6;
 }
 
-// ---- Kumpul semua hari (history + live_data.json sebagai hari terkini) ----
 const files = fs.readdirSync(HIST_DIR).filter(f => /^data_.*\.json$/.test(f))
     .filter(f => fs.statSync(path.join(HIST_DIR, f)).size > 100000)
     .filter(f => isTradingDay(f.replace('data_', '').replace('.json', '')))
@@ -60,7 +79,7 @@ for (const f of files) {
     let d; try { d = JSON.parse(fs.readFileSync(path.join(HIST_DIR, f), 'utf8')); } catch (e) { continue; }
     dayList.push({ date: f.replace('data_', '').replace('.json', ''), rows: d.topVolume || [] });
 }
-// Live data = hari semasa (jika tarikh berbeza dari history terakhir)
+
 const liveFile = path.join(__dirname, 'live_data.json');
 if (fs.existsSync(liveFile)) {
     try {
@@ -72,14 +91,7 @@ if (fs.existsSync(liveFile)) {
     } catch (e) { /* abaikan */ }
 }
 
-// ---- Replay: masuk bila qualify, track sampai exit ----
-const open = {};   // name -> trade state
-const trades = []; // semua trade (open + closed)
-
-// Lantai dinamik (sama macam list di index.html): selepas breakout (>10% atas lantai asal),
-// guna lantai BARU = minimum harga 5 hari dagangan terakhir, bukan floorLow yang ketinggalan
-// jauh di bawah (cth. AMBEST lantai asal 0.92 tapi lantai baru 1.09).
-const recentByName = {}; // name -> harga beberapa hari sebelum hari semasa
+const recentByName = {};
 function dynamicFloor(name, price, floorLow) {
     const rfArr = recentByName[name] || [];
     const rf = rfArr.length ? Math.min(...rfArr) : 0;
@@ -88,14 +100,19 @@ function dynamicFloor(name, price, floorLow) {
     return f || rf;
 }
 
+// -------------------------------------------------------------
+// 1. ENGINE 1: FRESH RIDER NEW (DAY 1) TRACKER
+// -------------------------------------------------------------
+const openFR = {};
+const tradesFR = [];
+
 for (const day of dayList) {
     const map = {};
     for (const it of day.rows) if (it && it.name && it.price > 0) map[canonName(it.name).toUpperCase()] = it;
 
-    // 1) Update trade OPEN: semak exit / rekod high
-    for (const [name, t] of Object.entries(open)) {
+    for (const [name, t] of Object.entries(openFR)) {
         const cur = map[name];
-        if (!cur || cur.price <= 0) continue; // tiada data hari ni, skip
+        if (!cur || cur.price <= 0) continue;
         t.days++;
         t.lastDate = day.date;
         t.currentPrice = +cur.price.toFixed(3);
@@ -103,10 +120,6 @@ for (const day of dayList) {
         if (cur.price > t.high) { t.high = +cur.price.toFixed(3); t.highDate = day.date; }
         t.maxGain = +(((t.high - t.entry) / t.entry) * 100).toFixed(1);
 
-        // EXIT: (1) Initial SL 11% bawah entry (cut loss awal jika harga tak pernah naik)
-        // ATAU (2) Trail 20% dari HIGH (biar pemenang berlari).
-        // Keputusan sweep 56 hari: SL 11% = PnL 606.8 vs trail sahaja 613.5 (beza 6.7 mata)
-        // tapi semua posisi rugi ditutup — tiada yang tergantung/tersembunyi.
         const initialSl = t.entry * 0.89;
         const slTrail = Math.max(initialSl, t.high * 0.80);
         t.slTrail = +slTrail.toFixed(3);
@@ -115,20 +128,20 @@ for (const day of dayList) {
             t.exitDate = day.date;
             t.exitPrice = +cur.price.toFixed(3);
             t.finalGain = +(((cur.price - t.entry) / t.entry) * 100).toFixed(1);
-            delete open[name];
+            delete openFR[name];
         } else {
             t.finalGain = +(((cur.price - t.entry) / t.entry) * 100).toFixed(1);
         }
     }
 
-    // 2) Entry baru: qualify hari ini & belum pernah ditrack
     for (const it of day.rows) {
         if (!it || !it.name || it.price <= 0) continue;
         const name = canonName(it.name).toUpperCase();
-        if (open[name] || trades.some(t => t.name.toUpperCase() === name)) continue; // dedup: satu kaunter satu trade
+        if (openFR[name] || tradesFR.some(t => t.name.toUpperCase() === name)) continue;
         if (!isFreshRiderPick(it)) continue;
         const t = {
             name: canonName(it.name),
+            entryType: '🔥 NEW',
             entryDate: day.date,
             entry: +it.price.toFixed(3),
             entryFloor: +dynamicFloor(name, it.price, it.floorLow || it.price * 0.95).toFixed(3),
@@ -145,11 +158,10 @@ for (const day of dayList) {
             ipoYear: it.ipoYear || null,
             sector: it.sector || '',
         };
-        open[name] = t;
-        trades.push(t);
+        openFR[name] = t;
+        tradesFR.push(t);
     }
 
-    // Rekod harga hari ini (untuk lantai dinamik hari seterusnya)
     for (const [nm, it] of Object.entries(map)) {
         if (!recentByName[nm]) recentByName[nm] = [];
         recentByName[nm].push(it.price);
@@ -157,42 +169,130 @@ for (const day of dayList) {
     }
 }
 
-// ---- Backfill harga terkini untuk posisi beku (keluar dari top-volume) ----
-// Posisi OPEN hanya dikemas kini bila saham ADA dalam senarai top-volume harian.
-// Bila saham keluar dari senarai, harga "kini" beku dan PnL jadi salah.
-// Backfill harga dari Yahoo ikut symbol yang disahkan (sama macam Hot Theme).
+// -------------------------------------------------------------
+// 2. ENGINE 2: ⭐ ADD-ON A+ TRACKER (STAIRCASE BASE 2 / BASE 3)
+// -------------------------------------------------------------
+const openAddOn = {};
+const tradesAddOn = [];
+const initialBaseMap = {};
+
+for (const day of dayList) {
+    const map = {};
+    for (const it of day.rows) if (it && it.name && it.price > 0) map[canonName(it.name).toUpperCase()] = it;
+
+    for (const it of day.rows) {
+        if (!it || !it.name || it.price <= 0) continue;
+        const name = canonName(it.name).toUpperCase();
+        if (!initialBaseMap[name] && isFreshRiderPick(it)) {
+            initialBaseMap[name] = it.price;
+        }
+    }
+
+    for (const [name, t] of Object.entries(openAddOn)) {
+        const cur = map[name];
+        if (!cur || cur.price <= 0) continue;
+        t.days++;
+        t.lastDate = day.date;
+        t.currentPrice = +cur.price.toFixed(3);
+        if (cur.floorLow) t.currentFloor = +dynamicFloor(name, cur.price, cur.floorLow).toFixed(3);
+        if (cur.price > t.high) { t.high = +cur.price.toFixed(3); t.highDate = day.date; }
+        t.maxGain = +(((t.high - t.entry) / t.entry) * 100).toFixed(1);
+
+        const initialSl = t.entry * 0.89;
+        const slTrail = Math.max(initialSl, t.high * 0.80);
+        t.slTrail = +slTrail.toFixed(3);
+        if (cur.price <= slTrail) {
+            t.status = 'CLOSED_SL';
+            t.exitDate = day.date;
+            t.exitPrice = +cur.price.toFixed(3);
+            t.finalGain = +(((cur.price - t.entry) / t.entry) * 100).toFixed(1);
+            delete openAddOn[name];
+        } else {
+            t.finalGain = +(((cur.price - t.entry) / t.entry) * 100).toFixed(1);
+        }
+    }
+
+    for (const it of day.rows) {
+        if (!it || !it.name || it.price <= 0) continue;
+        const name = canonName(it.name).toUpperCase();
+        if (openAddOn[name]) continue;
+
+        const initialPx = initialBaseMap[name] || 0;
+        if (!isAddOnAPick(it, initialPx)) continue;
+
+        const t = {
+            name: canonName(it.name),
+            entryType: '⭐ ADD-ON A+',
+            entryDate: day.date,
+            entry: +it.price.toFixed(3),
+            entryFloor: +dynamicFloor(name, it.price, it.floorLow || it.price * 0.95).toFixed(3),
+            currentFloor: +dynamicFloor(name, it.price, it.floorLow || it.price * 0.95).toFixed(3),
+            currentPrice: +it.price.toFixed(3),
+            high: +it.price.toFixed(3),
+            highDate: day.date,
+            maxGain: 0,
+            finalGain: 0,
+            day1ChangePct: +(typeof it.changePct === 'number' ? it.changePct : ((it.change && it.price) ? (it.change / (it.price - it.change)) * 100 : 0)).toFixed(2),
+            days: 1,
+            lastDate: day.date,
+            status: 'OPEN',
+            ipoYear: it.ipoYear || null,
+            sector: it.sector || '',
+        };
+        openAddOn[name] = t;
+        tradesAddOn.push(t);
+    }
+}
+
+// ---- Backfill harga terkini untuk posisi beku dari Yahoo ----
 const { backfillStaleTrades } = require('./backfill_stale.js');
 const latestDay = dayList.length ? dayList[dayList.length - 1].date : '';
-const backfilled = backfillStaleTrades(trades, latestDay, (t) => Math.max(t.entry * 0.89, t.high * 0.80));
-if (backfilled) console.log(`\n🔄 ${backfilled} posisi beku dikemas kini dari Yahoo`);
 
-// Susun: OPEN dulu (latest entry atas), kemudian CLOSED
-const openTrades = trades.filter(t => t.status === 'OPEN').sort((a, b) => b.entryDate.localeCompare(a.entryDate));
-const closedTrades = trades.filter(t => t.status !== 'OPEN').sort((a, b) => b.exitDate.localeCompare(a.exitDate));
-const all = [...openTrades, ...closedTrades];
+backfillStaleTrades(tradesFR, latestDay, (t) => Math.max(t.entry * 0.89, t.high * 0.80));
+backfillStaleTrades(tradesAddOn, latestDay, (t) => Math.max(t.entry * 0.89, t.high * 0.80));
 
-// Statistik ringkas
-const wins = closedTrades.filter(t => t.finalGain > 0).length;
-const openPnl = openTrades.reduce((a, b) => a + (b.finalGain || 0), 0);
-const closedPnl = closedTrades.reduce((a, b) => a + (b.finalGain || 0), 0);
-const summary = {
+const openFRTrades = tradesFR.filter(t => t.status === 'OPEN').sort((a, b) => b.entryDate.localeCompare(a.entryDate));
+const closedFRTrades = tradesFR.filter(t => t.status !== 'OPEN').sort((a, b) => b.exitDate.localeCompare(a.exitDate));
+const allFR = [...openFRTrades, ...closedFRTrades];
+
+const winsFR = closedFRTrades.filter(t => t.finalGain > 0).length;
+const openPnlFR = openFRTrades.reduce((a, b) => a + (b.finalGain || 0), 0);
+const closedPnlFR = closedFRTrades.reduce((a, b) => a + (b.finalGain || 0), 0);
+const summaryFR = {
     generatedAt: new Date().toISOString(),
     dataDays: dayList.length,
-    totalTracked: trades.length,
-    openCount: openTrades.length,
-    closedCount: closedTrades.length,
-    closedWins: wins,
-    closedWinRate: closedTrades.length ? Math.round(100 * wins / closedTrades.length) : 0,
-    closedAvgGain: closedTrades.length ? +(closedTrades.reduce((a, b) => a + b.finalGain, 0) / closedTrades.length).toFixed(1) : 0,
-    openPnl: +openPnl.toFixed(1),
-    closedPnl: +closedPnl.toFixed(1),
-    totalPnlNow: +(openPnl + closedPnl).toFixed(1),
+    totalTracked: tradesFR.length,
+    openCount: openFRTrades.length,
+    closedCount: closedFRTrades.length,
+    closedWins: winsFR,
+    closedWinRate: closedFRTrades.length ? Math.round(100 * winsFR / closedFRTrades.length) : 0,
+    closedAvgGain: closedFRTrades.length ? +(closedFRTrades.reduce((a, b) => a + b.finalGain, 0) / closedFRTrades.length).toFixed(1) : 0,
+    openPnl: +openPnlFR.toFixed(1),
+    closedPnl: +closedPnlFR.toFixed(1),
+    totalPnlNow: +(openPnlFR + closedPnlFR).toFixed(1),
 };
 
-// =============================================================
-// BACKTEST 20-hari (exit paksa) — dikira semula setiap hari supaya
-// statistik sentiasa terkini (bukan kekal 11 Ogos).
-// =============================================================
+const openAddOnTrades = tradesAddOn.filter(t => t.status === 'OPEN').sort((a, b) => b.entryDate.localeCompare(a.entryDate));
+const closedAddOnTrades = tradesAddOn.filter(t => t.status !== 'OPEN').sort((a, b) => b.exitDate.localeCompare(a.exitDate));
+const allAddOn = [...openAddOnTrades, ...closedAddOnTrades];
+
+const winsAddOn = closedAddOnTrades.filter(t => t.finalGain > 0).length;
+const openPnlAddOn = openAddOnTrades.reduce((a, b) => a + (b.finalGain || 0), 0);
+const closedPnlAddOn = closedAddOnTrades.reduce((a, b) => a + (b.finalGain || 0), 0);
+const summaryAddOn = {
+    generatedAt: new Date().toISOString(),
+    dataDays: dayList.length,
+    totalTracked: tradesAddOn.length,
+    openCount: openAddOnTrades.length,
+    closedCount: closedAddOnTrades.length,
+    closedWins: winsAddOn,
+    closedWinRate: closedAddOnTrades.length ? Math.round(100 * winsAddOn / closedAddOnTrades.length) : 0,
+    closedAvgGain: closedAddOnTrades.length ? +(closedAddOnTrades.reduce((a, b) => a + b.finalGain, 0) / closedAddOnTrades.length).toFixed(1) : 0,
+    openPnl: +openPnlAddOn.toFixed(1),
+    closedPnl: +closedPnlAddOn.toFixed(1),
+    totalPnlNow: +(openPnlAddOn + closedPnlAddOn).toFixed(1),
+};
+
 function rideFloor20(entry, floor, fut) {
     for (const d of fut) {
         const g = ((d.price - entry) / entry) * 100;
@@ -214,7 +314,6 @@ for (let i = 0; i < dateMap.length - 3; i++) {
         if (btSeen.has(name) || item.price < 0.10) continue;
         if (!isFreshRiderPick(item)) continue;
         btSeen.add(name);
-        // kumpul 20 hari ke depan
         const fut = [];
         let prev = item.price;
         let ok = true;
@@ -243,14 +342,12 @@ const backtest = {
     worstLoss: btRets.length ? +Math.min(...btRets).toFixed(1) : 0,
 };
 
-const js = `// AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual\nwindow.FRESH_RIDER_TRACKER = ${JSON.stringify({ summary, backtest, trades: all }, null, 1)};\n`;
+const js = `// AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual\n`
+    + `window.FRESH_RIDER_TRACKER = ${JSON.stringify({ summary: summaryFR, backtest, trades: allFR }, null, 1)};\n`
+    + `window.ADD_ON_TRACKER = ${JSON.stringify({ summary: summaryAddOn, trades: allAddOn }, null, 1)};\n`;
+
 fs.writeFileSync(OUT_FILE, js);
 
 console.log(`✅ Tracker dijana: ${OUT_FILE}`);
-console.log(`   Data: ${dayList.length} hari (${dayList[0].date} -> ${dayList[dayList.length - 1].date})`);
-console.log(`   Total: ${summary.totalTracked} | OPEN: ${summary.openCount} | CLOSED: ${summary.closedCount} (WR ${summary.closedWinRate}%, avg ${summary.closedAvgGain}%)`);
-console.log(`   Backtest 20h: ${backtest.signals} signal | WR ${backtest.winRate}% | avg ${backtest.avgGain}% | total ${backtest.totalPnl}% | worst ${backtest.worstLoss}%`);
-console.log('\n--- MASIH OPEN ---');
-openTrades.forEach(t => console.log(`   ${t.name.padEnd(12)} entry ${t.entryDate} @ RM${t.entry} | kini RM${t.currentPrice} (${t.finalGain >= 0 ? '+' : ''}${t.finalGain}%) | max +${t.maxGain}% | ${t.days} hari`));
-console.log('\n--- CLOSED ---');
-closedTrades.forEach(t => console.log(`   ${t.name.padEnd(12)} ${t.entryDate} -> ${t.exitDate} | ${t.finalGain >= 0 ? '+' : ''}${t.finalGain}% (max +${t.maxGain}%) | ${t.status}`));
+console.log(`   🔥 FRESH RIDER (Day 1): Total ${summaryFR.totalTracked} | OPEN ${summaryFR.openCount} | CLOSED ${summaryFR.closedCount} (WR ${summaryFR.closedWinRate}%, avg ${summaryFR.closedAvgGain}%)`);
+console.log(`   ⭐ ADD-ON A+ (Staircase): Total ${summaryAddOn.totalTracked} | OPEN ${summaryAddOn.openCount} | CLOSED ${summaryAddOn.closedCount} (WR ${summaryAddOn.closedWinRate}%, avg ${summaryAddOn.closedAvgGain}%)`);

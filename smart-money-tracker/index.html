@@ -1335,6 +1335,14 @@
                 </button>
             </div>
             <div id="frTrackerBody">
+            <div style="display: flex; gap: 0.4rem; margin-bottom: 0.75rem; flex-wrap: wrap;">
+                <button id="frTrackerTab_new" onclick="switchFrTrackerSubTab('new')" class="btn" style="background: linear-gradient(135deg, rgba(16,185,129,0.3), rgba(56,189,248,0.3)); color: #34d399; border: 1.5px solid rgba(52,211,153,0.6); padding: 0.25rem 0.75rem; border-radius: 6px; font-size: 0.75rem; font-weight: 800; cursor: pointer;">
+                    🔥 NEW Signals Tracker (Day 1)
+                </button>
+                <button id="frTrackerTab_addon" onclick="switchFrTrackerSubTab('addon')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.25rem 0.75rem; border-radius: 6px; font-size: 0.75rem; font-weight: 800; cursor: pointer;">
+                    ⭐ ADD-ON A+ Tracker (Base 2 Staircase)
+                </button>
+            </div>
             <div id="frTrackerStats" style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.7rem;"></div>
             <div class="table-responsive">
                 <table class="data-table" style="font-size: 0.78rem;">
@@ -6480,20 +6488,51 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             renderFreshRiderTracker();
         }
 
-        // ===== LIVE TRACKER FRESH RIDER (auto-generated data: fresh_rider_tracker.js) =====
+        // ===== LIVE TRACKER FRESH RIDER & ADD-ON A+ (auto-generated data: fresh_rider_tracker.js) =====
+        window._frTrackerSubTab = 'new';
+        function switchFrTrackerSubTab(mode) {
+            window._frTrackerSubTab = mode;
+            const btnNew = document.getElementById('frTrackerTab_new');
+            const btnAddon = document.getElementById('frTrackerTab_addon');
+            if (btnNew && btnAddon) {
+                if (mode === 'addon') {
+                    btnNew.style.background = 'rgba(15,23,42,0.8)';
+                    btnNew.style.color = '#94a3b8';
+                    btnNew.style.border = '1px solid rgba(148,163,184,0.3)';
+
+                    btnAddon.style.background = 'linear-gradient(135deg, rgba(234,179,8,0.35), rgba(168,85,247,0.35))';
+                    btnAddon.style.color = '#fde047';
+                    btnAddon.style.border = '1.5px solid rgba(253,224,71,0.6)';
+                } else {
+                    btnAddon.style.background = 'rgba(15,23,42,0.8)';
+                    btnAddon.style.color = '#94a3b8';
+                    btnAddon.style.border = '1px solid rgba(148,163,184,0.3)';
+
+                    btnNew.style.background = 'linear-gradient(135deg, rgba(16,185,129,0.3), rgba(56,189,248,0.3))';
+                    btnNew.style.color = '#34d399';
+                    btnNew.style.border = '1.5px solid rgba(52,211,153,0.6)';
+                }
+            }
+            renderFreshRiderTracker();
+        }
+        window.switchFrTrackerSubTab = switchFrTrackerSubTab;
+
         function renderFreshRiderTracker() {
             const tbody = document.getElementById('frTrackerTableBody');
             const statsEl = document.getElementById('frTrackerStats');
             const metaEl = document.getElementById('frTrackerMeta');
             if (!tbody) return;
-            const data = window.FRESH_RIDER_TRACKER;
+
+            const mode = window._frTrackerSubTab || 'new';
+            const data = (mode === 'addon') ? window.ADD_ON_TRACKER : window.FRESH_RIDER_TRACKER;
+
             if (!data || !Array.isArray(data.trades) || data.trades.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="9" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">Tiada data penjejak lagi — akan dijana pada kemaskini data seterusnya.</td></tr>';
+                tbody.innerHTML = `<tr><td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">Tiada data penjejak ${mode === 'addon' ? 'ADD-ON A+' : 'Fresh Rider'} lagi — akan dijana pada kemaskini data seterusnya.</td></tr>`;
                 return;
             }
             const s = data.summary || {};
-            // Render statistik BACKTEST 20-hari (dinamik, dikira semula setiap hari)
-            const bt = data.backtest;
+
+            const bt = (window.FRESH_RIDER_TRACKER && window.FRESH_RIDER_TRACKER.backtest) ? window.FRESH_RIDER_TRACKER.backtest : null;
             if (bt) {
                 const setT = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
                 setT('frBtSignals', bt.signals ?? 16);
@@ -6501,7 +6540,6 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 setT('frBtAvg', (bt.avgGain >= 0 ? '+' : '') + (bt.avgGain ?? 19.3) + '%');
                 setT('frBtTotal', (bt.totalPnl >= 0 ? '+' : '') + (bt.totalPnl ?? 309) + '%');
                 setT('frBtWorst', (bt.worstLoss ?? -7.4) + '%');
-                // Nombor backtest dalam header atas (dinamik — tak boleh stale)
                 setT('frHeadBtDays', bt.dataDays ?? 53);
                 setT('frHeadBtRange', `${bt.dataStart || '02 Jun'} – ${bt.dataEnd || '17 Ogos 2026'}`);
                 setT('frHeadBtWr', bt.winRate ?? 76);
@@ -6510,23 +6548,21 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 const meta = document.getElementById('frBacktestMeta');
                 if (meta) meta.textContent = `${bt.dataDays || '-'} trading days (~3 calendar months: ${bt.dataStart || ''} – ${bt.dataEnd || ''}) · Simulation: close trade after 20 days`;
             }
-            // Contoh kaunter yang MELEtUP dalam tracker live (maxGain >= 40%) — untuk description header
+
             const movers = (data.trades || [])
                 .filter(t => (t.maxGain || 0) >= 40)
                 .sort((a, b) => (b.maxGain || 0) - (a.maxGain || 0))
                 .map(t => `${t.name} +${Math.round(t.maxGain)}%`);
             const moversEl = document.getElementById('frHeadMovers');
             if (moversEl) moversEl.textContent = movers.length ? movers.join(' · ') : '—';
-            // Kaunter yang MASIH qualify hari ini (untuk lajur "Still Tracked?")
+
             const liveList = (currentData && currentData.length > 0) ? currentData : ((window.liveData && window.liveData.topVolume) || []);
-            // Pastikan konsisten dengan list Fresh VVIP Rider di atas: label BOLEH ENTRY
-            // mesti ikut global filter (harga max, umur IPO, strict, dll) juga — bukan
-            // sekadar rule Fresh Rider. Kalau tak, saham yang ditapis di atas tetap
-            // nampak BOLEH ENTRY di sini → keliru.
             const stillQualifies = new Set(liveList.filter(it => {
                 try { return typeof qualifiesFreshRider === 'function' && qualifiesFreshRider(it) && passesGlobalFilters(it); } catch (e) { return false; }
             }).map(it => (it.name || '').toUpperCase()));
-            if (metaEl) metaEl.textContent = `${s.dataDays || '-'} days of data · Generated ${new Date(s.generatedAt).toLocaleString('en-US')}`;
+
+            if (metaEl) metaEl.textContent = `${s.dataDays || '-'} days of data · Mode: ${mode === 'addon' ? '⭐ ADD-ON A+ (Base 2 Staircase)' : '🔥 NEW Signals (Day 1)'} · Generated ${new Date(s.generatedAt).toLocaleString('en-US')}`;
+
             if (statsEl) {
                 statsEl.innerHTML = [
                     { label: 'OPEN Positions', val: s.openCount ?? 0, color: '#34d399' },
@@ -6535,19 +6571,19 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     { label: 'Avg Gain (closed)', val: (s.closedAvgGain >= 0 ? '+' : '') + (s.closedAvgGain ?? 0) + '%', color: '#38bdf8' },
                     { label: 'PnL OPEN (unrealized)', val: (s.openPnl >= 0 ? '+' : '') + (s.openPnl ?? 0) + '%', color: '#34d399' },
                     { label: 'Total PnL Now', val: (s.totalPnlNow >= 0 ? '+' : '') + (s.totalPnlNow ?? 0) + '%', color: '#fde047' },
-                ].map(c => `<div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(16,185,129,0.25); border-radius: 8px; padding: 0.35rem 0.7rem; min-width: 95px; text-align: center; flex: 1;">
+                ].map(c => `<div style="background: rgba(15,23,42,0.7); border: 1px solid ${mode === 'addon' ? 'rgba(234,179,8,0.3)' : 'rgba(16,185,129,0.25)'}; border-radius: 8px; padding: 0.35rem 0.7rem; min-width: 95px; text-align: center; flex: 1;">
                     <div style="font-size: 0.58rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">${c.label}</div>
                     <div style="font-size: 1rem; color: ${c.color}; font-weight: 900;">${c.val}</div>
                 </div>`).join('');
             }
-            // Susun: OPEN dulu, kemudian CLOSED; dalam setiap kumpulan entry TERKINI di atas.
-            // Sort di frontend (bukan bergantung pada urutan data file) supaya sentiasa betul.
+
             const sortedTrades = [...data.trades].sort((a, b) => {
                 const aOpen = a.status === 'OPEN' ? 0 : 1;
                 const bOpen = b.status === 'OPEN' ? 0 : 1;
                 if (aOpen !== bOpen) return aOpen - bOpen;
                 return (b.entryDate || '').localeCompare(a.entryDate || '');
             });
+
             tbody.innerHTML = sortedTrades.map((t, idx) => {
                 const isOpen = t.status === 'OPEN';
                 const pnl = t.finalGain || 0;
@@ -6555,7 +6591,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 const pnlStr = (pnl >= 0 ? '+' : '') + pnl.toFixed(1) + '%';
                 const maxStr = '+' + (t.maxGain || 0).toFixed(1) + '%';
                 const statusBadge = isOpen
-                    ? '<span style="font-size: 0.62rem; background: rgba(16,185,129,0.2); color: #34d399; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(16,185,129,0.4);">🟢 OPEN</span>'
+                    ? `<span style="font-size: 0.62rem; background: ${mode === 'addon' ? 'rgba(234,179,8,0.2)' : 'rgba(16,185,129,0.2)'}; color: ${mode === 'addon' ? '#fde047' : '#34d399'}; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 900; border: 1px solid ${mode === 'addon' ? 'rgba(234,179,8,0.5)' : 'rgba(16,185,129,0.4)'};">${mode === 'addon' ? '⭐ ADD-ON' : '🟢 OPEN'}</span>`
                     : '<span style="font-size: 0.62rem; background: rgba(148,163,184,0.15); color: #94a3b8; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(148,163,184,0.3);">⚪ ' + t.status.replace('CLOSED_', '') + '</span>';
                 const exitPx = isOpen ? t.currentPrice : t.exitPrice;
                 const slTrail = (t.slTrail != null
