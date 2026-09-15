@@ -697,6 +697,36 @@ function buildMessage(now, out) {
     }
     slWarnings.sort((a, b) => (a.price / a.slTrail) - (b.price / b.slTrail));
 
+    // 7b. Semak Corporate News & Dividen Automatik untuk Top Ranking
+    console.log('📣 Semakan Berita Korporat & Tarikh Ex-Dividen Automatik...');
+    const { getCorporateNewsRisk } = require('./fetch_news_module');
+    const symbolMap = fs.existsSync(path.join(__dirname, 'symbol_mappings.json')) 
+        ? JSON.parse(fs.readFileSync(path.join(__dirname, 'symbol_mappings.json'), 'utf8')) 
+        : {};
+
+    async function enrichListWithNews(list) {
+        for (const item of list) {
+            let code = item.code || '';
+            if (!code && symbolMap[item.name.toUpperCase()]) {
+                code = symbolMap[item.name.toUpperCase()].replace(/\.KL$/i, '');
+            }
+            if (code) {
+                const newsData = await getCorporateNewsRisk(code, item.name);
+                item.newsAlert = newsData.hasNewsAlert;
+                item.newsBadges = newsData.newsBadges;
+                item.announcements = newsData.announcements;
+                item.entitlements = newsData.entitlements;
+            } else {
+                item.newsAlert = false;
+                item.newsBadges = [];
+            }
+        }
+    }
+
+    await enrichListWithNews(frOut);
+    await enrichListWithNews(htOut);
+    console.log('✅ Semakan Berita & Ex-Dividen selesai untuk senarai signal.');
+
     // 8. Format & hantar
     const out = {
         generatedAt: now.toISOString(),

@@ -15,7 +15,7 @@
     <script>
       (function() {
         const cb = (window.location.protocol === 'file:') ? '' : ('?t=' + Date.now());
-        ['live_data.js', 'fresh_rider_tracker.js', 'hot_theme_tracker.js', 'daily_equity_tracker.js', 'jerung-data.js'].forEach(function(src) {
+        ['live_data.js', 'fresh_rider_tracker.js', 'hot_theme_tracker.js', 'daily_equity_tracker.js', 'jerung-data.js', 'news_data.js'].forEach(function(src) {
           document.write('<script src="' + src + cb + '"><\/script>');
         });
       })();
@@ -758,6 +758,7 @@
     <div class="tabs-nav" style="margin-bottom: 1rem; margin-top: 0.5rem; display: flex; gap: 0.2rem; flex-wrap: wrap;">
         <button class="tab-btn active" id="tab-confluence" onclick="switchTab('confluence')">🔥 Fresh Rider</button>
         <button class="tab-btn" id="tab-hottheme" onclick="switchTab('hottheme')">⚡ Hot Theme</button>
+        <button class="tab-btn" id="tab-allmarket" onclick="switchTab('allmarket')">🌐 All Market</button>
         <button class="tab-btn" id="tab-trackerdaily" onclick="switchTab('trackerdaily')">📅 Tracker Daily</button>
         <button class="tab-btn" id="tab-jerung" onclick="switchTab('jerung')">🦈 Whales</button>
         <button class="tab-btn" id="tab-realconfluence" onclick="switchTab('realconfluence')">🎯 Confluence</button>
@@ -1358,6 +1359,93 @@
                 </table>
             </div>
             <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">* <strong style="color:#34d399;">ACTUAL POSITIONS</strong> — hold every counter from qualification day until triggering the hybrid trailing stop (SL = high × 0.80 before profit lock, tightens to high × 0.90 after +20% locked). CLOSED_SL = locked profit/loss. This is an actual holding record, NOT a simulation — e.g. backtest closed KEEMING early at +65%, while tracker held up to +117%. Auto-updated on every data refresh.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- TAB: ALL MARKET UNIVERSE -->
+    <div id="view-allmarket" style="display: none;">
+        <div id="allmarket-universe-section" style="margin-bottom: 1.25rem;">
+            <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(56, 189, 248, 0.08)); border: 2px dashed #38bdf8; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(56, 189, 248, 0.15); position: relative; overflow: hidden;">
+                <div style="position: absolute; top: -50px; left: -50px; width: 150px; height: 150px; background: rgba(56, 189, 248, 0.15); filter: blur(50px); border-radius: 50%; pointer-events: none;"></div>
+
+                <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(56, 189, 248, 0.25); padding-bottom: 0.75rem;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1; min-width: 300px;">
+                        <span style="font-size: 1.8rem;">🌐</span>
+                        <div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                                <h2 style="margin: 0; font-size: 1.3rem; color: #38bdf8; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem;">All Market Universe Scanner</h2>
+                                <span style="font-size: 0.7rem; background: rgba(56, 189, 248, 0.2); color: #38bdf8; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(56, 189, 248, 0.3); white-space: nowrap;">📊 300+ BURSA MALAYSIA EQUITIES</span>
+                            </div>
+                            <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
+                                Complete institutional market scanner listing all tracked equities with Fresh Rider metric columns: Squeeze Tightness %, Support Floors, Initial Trigger Base, Pullback from ATH, Smart Money Turnover, Corporate News &amp; Ex-Dividend Risk Badges, and AI Trading Plan generator.
+                            </p>
+                        </div>
+                    </div>
+                    <button onclick="toggleCardCollapse('allMarketScannerBody', this)" class="btn" style="background: rgba(15,23,42,0.85); border: 1.5px solid rgba(56,189,248,0.5); color: #38bdf8; padding: 0.25rem 0.65rem; border-radius: 8px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; transition: all 0.2s;">
+                        <span class="toggle-icon">🔽</span> <span class="toggle-text">Collapse</span>
+                    </button>
+                </div>
+
+                <div id="allMarketScannerBody">
+                    <!-- Filters Toolbar -->
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; justify-content: space-between; margin-bottom: 1rem; background: rgba(15, 23, 42, 0.6); padding: 0.75rem; border-radius: 10px; border: 1px solid rgba(148, 163, 184, 0.15);">
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; flex: 1;">
+                            <input type="text" id="allMarketSearchInput" onkeyup="renderAllMarketUniverse()" placeholder="🔍 Search stock name or symbol..." style="background: rgba(30, 41, 59, 0.9); border: 1px solid rgba(56, 189, 248, 0.4); color: white; padding: 0.4rem 0.8rem; border-radius: 8px; font-size: 0.8rem; min-width: 220px; outline: none;">
+                            
+                            <select id="allMarketSignalFilter" onchange="renderAllMarketUniverse()" style="background: rgba(30, 41, 59, 0.9); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.4rem 0.8rem; border-radius: 8px; font-size: 0.8rem; font-weight: 700; outline: none;">
+                                <option value="all">🌐 All Stocks (Full Universe)</option>
+                                <option value="top_ranking">🏆 Top Ranking VVIP</option>
+                                <option value="fr">🔥 Fresh Rider Picks</option>
+                                <option value="ht">⚡ Hot Theme Picks</option>
+                                <option value="whale">🏛️ Whale Backed Sec 138</option>
+                                <option value="news_risk">⚠️ Corporate Event / Dividend Risks</option>
+                            </select>
+
+                            <select id="allMarketSectorFilter" onchange="renderAllMarketUniverse()" style="background: rgba(30, 41, 59, 0.9); border: 1px solid rgba(56, 189, 248, 0.4); color: #a78bfa; padding: 0.4rem 0.8rem; border-radius: 8px; font-size: 0.8rem; font-weight: 700; outline: none;">
+                                <option value="all">📁 All Sectors</option>
+                                <option value="Technology">💻 Technology / Semicon</option>
+                                <option value="Industrial">🏭 Industrial Products</option>
+                                <option value="Consumer">🛒 Consumer Services &amp; Goods</option>
+                                <option value="Energy">⚡ Energy &amp; Utilities</option>
+                                <option value="Construction">🏗️ Construction &amp; Property</option>
+                                <option value="Healthcare">🏥 Healthcare &amp; Gloves</option>
+                                <option value="Financial">🏦 Financial Services</option>
+                                <option value="Telecommunications">📡 Telecom &amp; Media</option>
+                            </select>
+                        </div>
+                        <div style="font-size: 0.8rem; color: #94a3b8; font-weight: 700;">
+                            Showing <span id="allMarketCountBadge" style="color: #38bdf8; font-weight: 900;">0</span> stocks
+                        </div>
+                    </div>
+
+                    <!-- Table -->
+                    <div class="table-responsive">
+                        <table class="data-table">
+                            <thead>
+                                <tr style="user-select: none;">
+                                    <th style="text-align: center; width: 45px; cursor: pointer;" onclick="sortAM('no')" title="Click to reset default sort">No <span id="amSort_no"></span></th>
+                                    <th style="cursor: pointer;" onclick="sortAM('name')" title="Click to sort by Stock Name">Stock &amp; Category <span id="amSort_name" style="color:#64748b;">↕</span></th>
+                                    <th style="text-align: right; cursor: pointer;" onclick="sortAM('tightness')" title="Click to sort by Tightness %">Tightness % <span id="amSort_tightness" style="color:#64748b;">↕</span></th>
+                                    <th style="text-align: right; cursor: pointer;" onclick="sortAM('floor')" title="Click to sort by Support Floor">Support Floor (Risk %) <span id="amSort_floor" style="color:#64748b;">↕</span></th>
+                                    <th style="text-align: right; cursor: pointer;" onclick="sortAM('trigger')" title="Click to sort by Base Trigger Distance %">Trigger &amp; Dist % <span id="amSort_trigger" style="color:#64748b;">↕</span></th>
+                                    <th style="text-align: right; cursor: pointer;" onclick="sortAM('pullback')" title="Click to sort by Pullback %">Pullback % <span id="amSort_pullback" style="color:#64748b;">↕</span></th>
+                                    <th style="text-align: right; cursor: pointer;" onclick="sortAM('price')" title="Click to sort by Price">Price &amp; Change % <span id="amSort_price" style="color:#64748b;">↕</span></th>
+                                    <th style="text-align: right; cursor: pointer;" onclick="sortAM('turnover')" title="Click to sort by Turnover">Turnover <span id="amSort_turnover" style="color:#64748b;">↕</span></th>
+                                    <th style="text-align: center; cursor: pointer;" onclick="sortAM('confluence')" title="Click to sort by Confluence Count">Confluence <span id="amSort_confluence" style="color:#64748b;">↕</span></th>
+                                    <th style="text-align: center; cursor: pointer;" onclick="sortAM('score')" title="Click to sort by Score">Score &amp; Action <span id="amSort_score" style="color:#64748b;">↕</span></th>
+                                </tr>
+                            </thead>
+                            <tbody id="allMarketUniverseTableBody">
+                                <tr>
+                                    <td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
+                                        ⏳ Loading All Market Universe data...
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -3304,6 +3392,7 @@
             const viewTopGainers = document.getElementById('view-topgainers');
             const viewHotTheme = document.getElementById('view-hottheme');
             const viewTrackerDaily = document.getElementById('view-trackerdaily');
+            const viewAllMarket = document.getElementById('view-allmarket');
 
             const tabVcp = document.getElementById('tab-vcp');
             const tabJerung = document.getElementById('tab-jerung');
@@ -3312,6 +3401,7 @@
             const tabTopGainers = document.getElementById('tab-topgainers');
             const tabHotTheme = document.getElementById('tab-hottheme');
             const tabTrackerDaily = document.getElementById('tab-trackerdaily');
+            const tabAllMarket = document.getElementById('tab-allmarket');
             const tabTrend = document.getElementById('tab-trend');
             const tabSpring = document.getElementById('tab-spring');
             const tabPhoenix = document.getElementById('tab-phoenix');
@@ -3337,6 +3427,7 @@
             if (viewTopGainers) viewTopGainers.style.display = 'none';
             if (viewHotTheme) viewHotTheme.style.display = 'none';
             if (viewTrackerDaily) viewTrackerDaily.style.display = 'none';
+            if (viewAllMarket) viewAllMarket.style.display = 'none';
             
             // Remove active class from all tabs
             if (tabVcp) tabVcp.classList.remove('active');
@@ -3346,6 +3437,7 @@
             if (tabTopGainers) tabTopGainers.classList.remove('active');
             if (tabHotTheme) tabHotTheme.classList.remove('active');
             if (tabTrackerDaily) tabTrackerDaily.classList.remove('active');
+            if (tabAllMarket) tabAllMarket.classList.remove('active');
             tabTrend.classList.remove('active');
             tabSpring.classList.remove('active');
             if (tabPhoenix) tabPhoenix.classList.remove('active');
@@ -3396,6 +3488,12 @@
                     renderHotThemeTracker();
                 }
                 if (tabHotTheme) tabHotTheme.classList.add('active');
+            } else if (tabId === 'allmarket') {
+                if (viewAllMarket) {
+                    viewAllMarket.style.display = 'block';
+                    renderAllMarketUniverse();
+                }
+                if (tabAllMarket) tabAllMarket.classList.add('active');
             } else if (tabId === 'trackerdaily') {
                 if (viewTrackerDaily) {
                     viewTrackerDaily.style.display = 'block';
@@ -4599,6 +4697,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             updateSentiment(currentData);
             renderJerungRadar();
             renderConfluenceRadar();
+            renderAllMarketUniverse();
             renderRealConfluenceRadar();
             renderTopGainers();
             renderVcpStaircase();
@@ -6315,6 +6414,22 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     }
                 }
 
+                // 4. Corporate News & Ex-Dividend Risk Badge
+                const nameUpper = (item.name || '').toUpperCase();
+                const newsRisk = (window.NEWS_DATA && window.NEWS_DATA[nameUpper]) 
+                    ? window.NEWS_DATA[nameUpper] 
+                    : (window._buyAlertLatest ? [...(window._buyAlertLatest.freshRider?.list || []), ...(window._buyAlertLatest.hotTheme?.list || [])].find(x => (x.name || '').toUpperCase() === nameUpper) : null);
+
+                if (newsRisk && newsRisk.newsBadges && newsRisk.newsBadges.length > 0) {
+                    newsRisk.newsBadges.forEach(b => {
+                        const bg = b.severity === 'danger' ? 'rgba(239, 68, 68, 0.25)' : (b.severity === 'warning' ? 'rgba(245, 158, 11, 0.25)' : 'rgba(14, 165, 233, 0.25)');
+                        const fg = b.severity === 'danger' ? '#fca5a5' : (b.severity === 'warning' ? '#fef08a' : '#7dd3fc');
+                        const border = b.severity === 'danger' ? 'rgba(239, 68, 68, 0.6)' : (b.severity === 'warning' ? 'rgba(245, 158, 11, 0.6)' : 'rgba(14, 165, 233, 0.6)');
+                        const titleEsc = (b.title || '').replace(/"/g, '&quot;');
+                        badgesHtml += `<span class="fr-new-badge news-risk-badge" style="font-size:0.62rem; background:${bg}; color:${fg}; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid ${border}; white-space:nowrap; cursor:help;" title="${titleEsc}">⚠️ ${b.label}</span>`;
+                    });
+                }
+
                 html += `
                     <tr data-fr-name="${item.name}">
                         <td style="text-align: center; font-weight: 800; color: #fde047;">#${idx + 1}</td>
@@ -6457,6 +6572,12 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     <td style="font-weight: 800; color: white;">
                         <div style="display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap;">
                             ${getTradingViewAnchorSmall(t.name)}
+                            ${(function() {
+                                const nameUpper = (t.name || '').toUpperCase();
+                                const newsRisk = (window.NEWS_DATA && window.NEWS_DATA[nameUpper]) ? window.NEWS_DATA[nameUpper] : null;
+                                if (!newsRisk || !newsRisk.newsBadges) return '';
+                                return newsRisk.newsBadges.map(b => `<span class="fr-new-badge news-risk-badge" style="font-size:0.62rem; background:${b.severity==='danger'?'rgba(239,68,68,0.25)':(b.severity==='warning'?'rgba(245,158,11,0.25)':'rgba(14,165,233,0.25)')}; color:${b.severity==='danger'?'#fca5a5':(b.severity==='warning'?'#fef08a':'#7dd3fc')}; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid ${b.severity==='danger'?'rgba(239,68,68,0.6)':(b.severity==='warning'?'rgba(245,158,11,0.6)':'rgba(14,165,233,0.6)')}; white-space:nowrap; cursor:help;" title="${(b.title||'').replace(/"/g, '&quot;')}">⚠️ ${b.label}</span>`).join(' ');
+                            })()}
                         </div>
                         <div style="font-size: 0.62rem; color: #64748b; font-weight: 600; margin-top: 0.15rem;">${t.sector || ''}</div>
                     </td>
@@ -6475,6 +6596,312 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             updateTopTrackerPnlBadge();
         }
         window.renderFreshRiderTracker = renderFreshRiderTracker;
+
+        // ===== ALL MARKET UNIVERSE SCANNER =====
+        window._amSortKey = null;
+        window._amSortDir = 'desc';
+        function sortAM(key) {
+            if (key === 'no') {
+                window._amSortKey = null;
+            } else if (window._amSortKey === key) {
+                window._amSortDir = window._amSortDir === 'asc' ? 'desc' : 'asc';
+            } else {
+                window._amSortKey = key;
+                window._amSortDir = ['pullback', 'tightness', 'floor', 'sl', 'name', 'grade', 'trigger'].includes(key) ? 'asc' : 'desc';
+            }
+            if (typeof renderAllMarketUniverse === 'function') renderAllMarketUniverse();
+        }
+        window.sortAM = sortAM;
+
+        function renderAllMarketUniverse() {
+            const tbody = document.getElementById('allMarketUniverseTableBody');
+            if (!tbody) return;
+
+            const list = currentData || [];
+            if (!list || list.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">⚠️ Data not loaded yet — please click <strong>🔄 Muat Data</strong> above.</td></tr>`;
+                return;
+            }
+
+            const searchInput = document.getElementById('allMarketSearchInput');
+            const searchVal = searchInput ? searchInput.value.trim().toUpperCase() : '';
+
+            const signalFilter = document.getElementById('allMarketSignalFilter');
+            const sigVal = signalFilter ? signalFilter.value : 'all';
+
+            const sectorFilter = document.getElementById('allMarketSectorFilter');
+            const secVal = sectorFilter ? sectorFilter.value : 'all';
+
+            const hdFloor = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || '';
+            const recentFloorMap = getRecentFloorMap(hdFloor, 5);
+            const effFloorOf = (item) => {
+                const rf = recentFloorMap.get((item.name || '').toUpperCase());
+                const f = item.floorLow || 0;
+                if (f > 0 && rf > 0 && ((item.price - f) / f) > 0.10) return Math.max(f, rf);
+                return f || rf || 0;
+            };
+
+            const curRefDate = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || '';
+            const frTrackMap = (typeof getRecentFrTrackMap === 'function') ? getRecentFrTrackMap(curRefDate, 30) : new Map();
+
+            const jerungList = Array.isArray(window.jerungData) ? window.jerungData : [];
+            const jerungBySymbol = {};
+            for (const j of jerungList) {
+                const sym = (j.symbol || '').toUpperCase();
+                if (sym && !jerungBySymbol[sym]) jerungBySymbol[sym] = j;
+            }
+            const _S2J = {
+                '99SPEEDMARTRETAIL': '99SMART', '99SPEEDMART': '99SMART',
+                'FARMFRESHBERHAD': 'FFB', 'FARMFRESH': 'FFB',
+                'MRDIYGROUPM': 'MRDIY', 'MRDIYGROUP': 'MRDIY',
+                'CTOSDIGITAL': 'CTOS', 'KEYFIELDINTL': 'KEYFIELD', 'KEYFIELDINTERNATIONAL': 'KEYFIELD',
+                'SKYCHIPBERHAD': 'SKYECHIP', 'SRKKAIBER': 'SRKK', 'SRKKAI': 'SRKK',
+                'ELRIDGEENERGY': 'ELRIDGE', 'PENTECHBERHAD': 'PENTECH',
+                'MNHOLDINGS': 'MNHLDG', 'MNHOLDINGSBERHAD': 'MNHLDG',
+                'ISFGROUP': 'ISF', 'ISFGROUPBERHAD': 'ISF'
+            };
+
+            let filtered = [];
+            for (const item of list) {
+                if (!item || !item.name || item.price <= 0) continue;
+
+                // Search Filter
+                if (searchVal) {
+                    const n = (item.name || '').toUpperCase();
+                    const s = (item.symbol || '').toUpperCase();
+                    if (!n.includes(searchVal) && !s.includes(searchVal)) continue;
+                }
+
+                // Sector Filter
+                if (secVal !== 'all') {
+                    const sec = (item.sector || item.category || '').toUpperCase();
+                    if (!sec.includes(secVal.toUpperCase())) continue;
+                }
+
+                const nameRaw = (item.name || '').toUpperCase().replace(/\s+/g, '');
+                const aliasKey = _S2J[nameRaw] || nameRaw;
+                let whaleMatch = jerungBySymbol[aliasKey] || jerungBySymbol[nameRaw] || null;
+                if (!whaleMatch) {
+                    const nameLower = nameRaw.toLowerCase();
+                    for (const j of jerungList) {
+                        const jSym = (j.symbol || '').toUpperCase();
+                        if (nameLower.includes(jSym.toLowerCase()) || jSym.toUpperCase() === nameRaw) { whaleMatch = j; break; }
+                    }
+                }
+                item._isWhaleBacked = !!whaleMatch;
+                item._whaleInst = whaleMatch ? whaleMatch.institution : '';
+
+                const tight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
+                const touches = item.touchCount || 0;
+                const isVolQuiet = item.hasVolumeSpike !== true && (typeof item.volumeSpike !== 'number' || item.volumeSpike < 1.5);
+                const isVdu = (item.volumeDecline === true || ((item.volumeSpike || 99) < 0.5)) && (item.turnover || 0) >= 200000;
+                item._isVdu = isVdu;
+                item._breakoutReady = tight <= 2.5 && touches >= 4 && (isVolQuiet || isVdu);
+                item._tripleLock = item._isWhaleBacked && (item._breakoutReady || touches >= 3);
+
+                const nameUpper = (item.name || '').toUpperCase();
+                const newsRisk = (window.NEWS_DATA && window.NEWS_DATA[nameUpper]) 
+                    ? window.NEWS_DATA[nameUpper] 
+                    : (window._buyAlertLatest ? [...(window._buyAlertLatest.freshRider?.list || []), ...(window._buyAlertLatest.hotTheme?.list || [])].find(x => (x.name || '').toUpperCase() === nameUpper) : null);
+                item._newsRisk = newsRisk;
+
+                // Signal Filter
+                if (sigVal === 'top_ranking') {
+                    const fresh = (typeof frFreshness === 'function') ? frFreshness(item) : 99;
+                    const matches = [];
+                    if (typeof passesJerungRadar === 'function' && passesJerungRadar(item)) matches.push('Whale');
+                    if (typeof passesVcpStaircase === 'function' && passesVcpStaircase(item)) matches.push('VCP');
+                    if (typeof passesTrendRiders === 'function' && passesTrendRiders(item)) matches.push('Trend');
+                    if (typeof passesEarlySpring === 'function' && passesEarlySpring(item)) matches.push('Spring');
+                    if (typeof passesBottomFishing === 'function' && passesBottomFishing(item)) matches.push('Bottom');
+                    const isFusion = (typeof getHotThemes === 'function' ? getHotThemes(item.name).length > 0 : false) && matches.length >= 2;
+                    const isHighConfidence = (item.confidenceScore && item.confidenceScore >= 80);
+                    if (!isFusion && fresh !== 0 && tight > 3.5 && !isHighConfidence) continue;
+                } else if (sigVal === 'fr') {
+                    if (typeof isFreshRiderPick === 'function' && !isFreshRiderPick(item)) continue;
+                } else if (sigVal === 'ht') {
+                    if (typeof getHotThemes === 'function' && getHotThemes(item.name).length === 0) continue;
+                } else if (sigVal === 'whale') {
+                    if (!item._isWhaleBacked) continue;
+                } else if (sigVal === 'news_risk') {
+                    if (!newsRisk || !newsRisk.newsBadges || newsRisk.newsBadges.length === 0) continue;
+                }
+
+                filtered.push(item);
+            }
+
+            const countBadge = document.getElementById('allMarketCountBadge');
+            if (countBadge) countBadge.textContent = filtered.length;
+
+            if (typeof updateHeaderSortIndicators === 'function') {
+                updateHeaderSortIndicators('am', window._amSortKey, window._amSortDir);
+            }
+
+            if (window._amSortKey && window._amSortKey !== 'no') {
+                const k = window._amSortKey;
+                const dir = window._amSortDir === 'asc' ? 1 : -1;
+                filtered.sort((a, b) => {
+                    let va, vb;
+                    if (k === 'name') { va = a.name || ''; vb = b.name || ''; return va.localeCompare(vb) * dir; }
+                    if (k === 'grade') { va = a.ipoGrade || 'Z'; vb = b.ipoGrade || 'Z'; return va.localeCompare(vb) * dir; }
+                    if (k === 'tightness') { va = typeof a.closeTightness === 'number' ? a.closeTightness : 999; vb = typeof b.closeTightness === 'number' ? b.closeTightness : 999; }
+                    else if (k === 'pullback') { va = a.pullback !== null && a.pullback !== undefined ? a.pullback : 999; vb = b.pullback !== null && b.pullback !== undefined ? b.pullback : 999; }
+                    else if (k === 'price') { va = a.price || 0; vb = b.price || 0; }
+                    else if (k === 'floor') { va = effFloorOf(a); vb = effFloorOf(b); }
+                    else if (k === 'sl') { va = effFloorOf(a) * 0.97; vb = effFloorOf(b) * 0.97; }
+                    else if (k === 'trigger') {
+                        const ra = getRecentBaseTrigger(a, curRefDate, frTrackMap);
+                        const rb = getRecentBaseTrigger(b, curRefDate, frTrackMap);
+                        va = ra.distPct; vb = rb.distPct;
+                    }
+                    else if (k === 'turnover') { va = a.turnover || a.rawTurnover || 0; vb = b.turnover || b.rawTurnover || 0; }
+                    else if (k === 'change') { va = a.changePct !== undefined ? a.changePct : (a.change || 0); vb = b.changePct !== undefined ? b.changePct : (b.change || 0); }
+                    else if (k === 'score') { va = a.confidenceScore || 0; vb = b.confidenceScore || 0; }
+                    else { va = 0; vb = 0; }
+                    return (va - vb) * dir;
+                });
+            } else {
+                filtered.sort((a, b) => {
+                    const toA = a.turnover || a.rawTurnover || 0;
+                    const toB = b.turnover || b.rawTurnover || 0;
+                    return toB - toA;
+                });
+            }
+
+            if (filtered.length === 0) {
+                tbody.innerHTML = `<tr><td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">🔍 No stocks match your search or filter criteria.</td></tr>`;
+                return;
+            }
+
+            let html = '';
+            filtered.forEach((item, idx) => {
+                const effFloor = effFloorOf(item);
+                const floorPrice = effFloor ? 'RM ' + effFloor.toFixed(3) : '—';
+                const floorDist = effFloor ? ((item.price - effFloor) / effFloor * 100).toFixed(1) + '%' : '—';
+                const changeVal = item.changePct !== undefined ? item.changePct : item.change;
+                const changeClass = changeVal >= 0 ? 'success' : 'danger';
+                const changeSign = changeVal > 0 ? '+' : '';
+                const pb = item.pullback !== null && item.pullback !== undefined ? item.pullback : null;
+                const pbColor = pb !== null && pb <= 5 ? '#34d399' : '#f59e0b';
+                const tightVal = typeof item.closeTightness === 'number' ? item.closeTightness.toFixed(2) : '—';
+                const grade = item.ipoGrade && item.ipoGrade !== 'Unrated' ? item.ipoGrade : (item.ipoYear || '—');
+
+                const trBase = getRecentBaseTrigger(item, curRefDate, frTrackMap);
+                const triggerPrice = trBase.price;
+                const triggerDate = trBase.dateStr;
+                const distFromTrigger = trBase.distPct;
+                const baseLabel = trBase.isBase2 ? '<span style="font-size:0.6rem; color:#a78bfa; font-weight:800; margin-left:0.2rem;">Base 2</span>' : '';
+
+                let triggerBadgeHtml = '';
+                if (trBase.isDayOne || Math.abs(distFromTrigger) < 0.05) {
+                    triggerBadgeHtml = `<span style="font-size: 0.64rem; font-weight: 900; background: rgba(16,185,129,0.22); color: #34d399; padding: 0.08rem 0.35rem; border-radius: 4px; border: 1px solid rgba(16,185,129,0.5); white-space: nowrap;">🟢 0.0% (DAY 1)</span>`;
+                } else if (distFromTrigger <= 0) {
+                    triggerBadgeHtml = `<span style="font-size: 0.64rem; font-weight: 900; background: rgba(56,189,248,0.2); color: #38bdf8; padding: 0.08rem 0.35rem; border-radius: 4px; border: 1px solid rgba(56,189,248,0.45); white-space: nowrap;">⚪ ${distFromTrigger.toFixed(1)}% (At Base)</span>`;
+                } else if (distFromTrigger <= 3.0) {
+                    triggerBadgeHtml = `<span style="font-size: 0.64rem; font-weight: 900; background: rgba(16,185,129,0.18); color: #34d399; padding: 0.08rem 0.35rem; border-radius: 4px; border: 1px solid rgba(16,185,129,0.4); white-space: nowrap;">🟢 +${distFromTrigger.toFixed(1)}% (Fresh Zone)</span>`;
+                } else if (distFromTrigger <= 7.0) {
+                    triggerBadgeHtml = `<span style="font-size: 0.64rem; font-weight: 900; background: rgba(245,158,11,0.2); color: #fbbf24; padding: 0.08rem 0.35rem; border-radius: 4px; border: 1px solid rgba(245,158,11,0.4); white-space: nowrap;">🟡 +${distFromTrigger.toFixed(1)}% (Late)</span>`;
+                } else {
+                    triggerBadgeHtml = `<span style="font-size: 0.64rem; font-weight: 900; background: rgba(239,68,68,0.2); color: #f87171; padding: 0.08rem 0.35rem; border-radius: 4px; border: 1px solid rgba(239,68,68,0.4); white-space: nowrap;">🔴 +${distFromTrigger.toFixed(1)}% (Extended)</span>`;
+                }
+
+                let sniperScore = item.confidenceScore || 65;
+                if (item._tripleLock) sniperScore += 18;
+                else if (item._isWhaleBacked) sniperScore += 12;
+                if (item._breakoutReady) sniperScore += 10;
+                if (item._isVdu) sniperScore += 6;
+                sniperScore = Math.min(99, sniperScore);
+
+                const tierColor = sniperScore >= 90 ? '#a855f7' : (sniperScore >= 80 ? '#38bdf8' : (sniperScore >= 65 ? '#10b981' : '#f59e0b'));
+
+                const matches = [];
+                if (typeof passesJerungRadar === 'function' && passesJerungRadar(item)) matches.push('🦈 Whale');
+                if (typeof passesVcpStaircase === 'function' && passesVcpStaircase(item)) matches.push('🪜 VCP');
+                if (typeof passesTrendRiders === 'function' && passesTrendRiders(item)) matches.push('📈 Trend');
+                if (typeof passesEarlySpring === 'function' && passesEarlySpring(item)) matches.push('🌱 Spring');
+                if (typeof passesBottomFishing === 'function' && passesBottomFishing(item)) matches.push('🎣 Bottom');
+
+                const isConf = matches.length >= 2;
+                const confHtml = isConf
+                    ? `<span style="color: #34d399; font-weight: 800; background: rgba(52,211,153,0.1); padding: 0.15rem 0.45rem; border-radius: 4px; font-size: 0.72rem; border: 1px solid rgba(52,211,153,0.25); white-space: nowrap;">YES (${matches.length}x)</span>`
+                    : `<span style="color: #94a3b8; font-weight: 600; background: rgba(148,163,184,0.1); padding: 0.15rem 0.45rem; border-radius: 4px; font-size: 0.72rem; border: 1px solid rgba(148,163,184,0.2); white-space: nowrap;">NO</span>`;
+
+                let badgesHtml = '';
+                const csExpanded = item.hasVolumeSpike === true && (item.volumeSpike || 0) >= 1.5;
+                badgesHtml += csExpanded
+                    ? `<span style="font-size: 0.62rem; background: rgba(16, 185, 129, 0.18); color: #34d399; padding: 0.08rem 0.32rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(16, 185, 129, 0.5); white-space: nowrap;">🔥 GREEN CS</span>`
+                    : `<span style="font-size: 0.62rem; background: rgba(251, 113, 133, 0.18); color: #fb7185; padding: 0.08rem 0.32rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(251, 113, 133, 0.5); white-space: nowrap;">🧲 RED CS</span>`;
+
+                const hotThemes = (typeof getHotThemes === 'function') ? getHotThemes(item.name) : [];
+                const isHotTheme = hotThemes.length > 0 && matches.length >= 2;
+                const isFusion = (typeof isFreshRiderPick === 'function' ? isFreshRiderPick(item) : false) && isHotTheme;
+
+                if (isFusion) {
+                    badgesHtml += `<span style="font-size: 0.62rem; background: linear-gradient(135deg, rgba(234,179,8,0.35), rgba(168,85,247,0.35)); color: #fde047; padding: 0.08rem 0.35rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(253,224,71,0.7); white-space: nowrap;">🔥⚡ FUSION</span>`;
+                } else if (item._tripleLock) {
+                    badgesHtml += `<span style="font-size: 0.62rem; background: linear-gradient(135deg, rgba(168,85,247,0.3), rgba(16,185,129,0.3)); color: #fde047; padding: 0.08rem 0.35rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(253,224,71,0.6); white-space: nowrap;">🔒 TRIPLE LOCK</span>`;
+                } else if (item._isWhaleBacked) {
+                    const shortWhale = item._whaleInst ? item._whaleInst.split(' ')[0] : 'JERUNG';
+                    badgesHtml += `<span style="font-size: 0.62rem; background: rgba(16, 185, 129, 0.22); color: #34d399; padding: 0.08rem 0.35rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(16, 185, 129, 0.45); white-space: nowrap;">🏛️ ${shortWhale}</span>`;
+                }
+
+                const newsRisk = item._newsRisk;
+                if (newsRisk && newsRisk.newsBadges && newsRisk.newsBadges.length > 0) {
+                    newsRisk.newsBadges.forEach(b => {
+                        const bg = b.severity === 'danger' ? 'rgba(239, 68, 68, 0.25)' : (b.severity === 'warning' ? 'rgba(245, 158, 11, 0.25)' : 'rgba(14, 165, 233, 0.25)');
+                        const fg = b.severity === 'danger' ? '#fca5a5' : (b.severity === 'warning' ? '#fef08a' : '#7dd3fc');
+                        const border = b.severity === 'danger' ? 'rgba(239, 68, 68, 0.6)' : (b.severity === 'warning' ? 'rgba(245, 158, 11, 0.6)' : 'rgba(14, 165, 233, 0.6)');
+                        const titleEsc = (b.title || '').replace(/"/g, '&quot;');
+                        badgesHtml += `<span class="news-risk-badge" style="font-size:0.62rem; background:${bg}; color:${fg}; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid ${border}; white-space:nowrap; cursor:help;" title="${titleEsc}">⚠️ ${b.label}</span>`;
+                    });
+                }
+
+                const tvAnchor = (typeof getTradingViewAnchor === 'function') ? getTradingViewAnchor(item.name) : item.name;
+
+                html += `
+                    <tr>
+                        <td style="text-align: center; font-weight: 800; color: #38bdf8;">#${idx + 1}</td>
+                        <td style="font-weight: 700; color: white; padding: 0.6rem 0.8rem;">
+                            ${tvAnchor} <span style="font-size: 0.68rem; color: #a5b4fc; font-weight: 800;">(${grade})</span>
+                            <div class="fr-badge-row" style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.25rem; flex-wrap: wrap;">
+                                ${badgesHtml}
+                            </div>
+                        </td>
+                        <td style="text-align: right; color: #38bdf8; font-weight: 800;">
+                            tight ${tightVal}%
+                        </td>
+                        <td style="text-align: right;">
+                            <div style="color: #34d399; font-weight: 800; font-size: 0.85rem;">${floorPrice}</div>
+                            <div style="font-size: 0.65rem; color: #38bdf8; font-weight: 700; margin-top: 0.15rem;">+${floorDist} (${item.touchCount || 0}x)</div>
+                        </td>
+                        <td style="text-align: right;">
+                            <div style="font-weight: 700; color: #cbd5e1; font-size: 0.82rem;">RM ${triggerPrice.toFixed(3)} <span style="font-size: 0.62rem; color: #94a3b8;">(${triggerDate})</span> ${baseLabel}</div>
+                            <div style="margin-top: 0.15rem;">${triggerBadgeHtml}</div>
+                        </td>
+                        <td style="text-align: right; color: ${pbColor}; font-weight: 800;">
+                            ${pb !== null ? pb.toFixed(1) + '%' : '—'}
+                        </td>
+                        <td style="text-align: right;">
+                            <div style="font-weight: bold; color: white;">RM ${item.price.toFixed(3)}</div>
+                            <div style="font-size: 0.65rem; color: var(--${changeClass}); font-weight: 800; margin-top: 0.1rem;">${changeSign}${changeVal !== undefined ? changeVal.toFixed(2) : '0.00'}%</div>
+                        </td>
+                        <td style="text-align: right;">
+                            <span style="color: ${(item.turnover||0) >= 2000000 ? '#f59e0b' : ((item.turnover||0) >= 500000 ? '#34d399' : '#94a3b8')}; font-weight: 700; font-size: 0.82rem;">${(item.turnover||0) >= 1000000 ? 'RM ' + ((item.turnover||0)/1000000).toFixed(2) + 'M' : 'RM ' + ((item.turnover||0)/1000).toFixed(0) + 'k'}${(item.turnover||0) >= 2000000 ? ' 🔥' : ''}</span>
+                        </td>
+                        <td style="text-align: center; padding: 0.6rem 0.4rem; white-space: nowrap;">${confHtml}</td>
+                        <td style="text-align: center; padding: 0.6rem 0.4rem;">
+                            <div style="display: flex; align-items: center; justify-content: center; gap: 0.3rem; flex-wrap: wrap;">
+                                <span style="color: ${tierColor}; font-weight: 800; font-size: 0.75rem;">${sniperScore}/100</span>
+                                <button onclick="triggerStockHistoryModal('${item.name}')" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.15rem 0.4rem; border-radius: 5px; font-size: 0.68rem; font-weight: 800; cursor: pointer;" title="History">📜</button>
+                                <button onclick="triggerAIAnalysisModal('${item.name}', 'All Market Scanner')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.15rem 0.4rem; border-radius: 5px; font-size: 0.68rem; font-weight: 800; cursor: pointer;" title="Ask AI">✨ AI</button>
+                            </div>
+                        </td>
+                    </tr>`;
+            });
+
+            tbody.innerHTML = html;
+        }
+        window.renderAllMarketUniverse = renderAllMarketUniverse;
 
         // Helper: adakah item masih qualify Hot Theme Rider? (semak sama macam renderHotTheme)
         // CS MERAH = squeeze ON (volum senyap, fasa accumulation sebelum breakout).
@@ -6588,6 +7015,12 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     <td style="font-weight: 800; color: white;">
                         <div style="display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap;">
                             ${getTradingViewAnchorSmall(t.name)}
+                            ${(function() {
+                                const nameUpper = (t.name || '').toUpperCase();
+                                const newsRisk = (window.NEWS_DATA && window.NEWS_DATA[nameUpper]) ? window.NEWS_DATA[nameUpper] : null;
+                                if (!newsRisk || !newsRisk.newsBadges) return '';
+                                return newsRisk.newsBadges.map(b => `<span class="fr-new-badge news-risk-badge" style="font-size:0.62rem; background:${b.severity==='danger'?'rgba(239,68,68,0.25)':(b.severity==='warning'?'rgba(245,158,11,0.25)':'rgba(14,165,233,0.25)')}; color:${b.severity==='danger'?'#fca5a5':(b.severity==='warning'?'#fef08a':'#7dd3fc')}; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid ${b.severity==='danger'?'rgba(239,68,68,0.6)':(b.severity==='warning'?'rgba(245,158,11,0.6)':'rgba(14,165,233,0.6)')}; white-space:nowrap; cursor:help;" title="${(b.title||'').replace(/"/g, '&quot;')}">⚠️ ${b.label}</span>`).join(' ');
+                            })()}
                         </div>
                         <div style="font-size: 0.62rem; color: #64748b; font-weight: 600; margin-top: 0.15rem;">${themeBadges}</div>
                     </td>
@@ -7580,8 +8013,40 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     ? 'RE-ENTRY: tracked previously (CLOSED in Fresh Rider Live Tracker) & qualifies again — late entry, proceed with caution'
                     : 'NEW: not previously tracked in Fresh Rider Live Tracker — first-time signal';
                 badgeRow.prepend(badge);
+
+                // Attach Corporate News Risk Badges (Ex-Dividend / QR / Corp Action)
+                if (window._buyAlertLatest) {
+                    const list = [...(window._buyAlertLatest.freshRider?.list || []), ...(window._buyAlertLatest.hotTheme?.list || [])];
+                    const match = list.find(x => (x.name || '').toUpperCase() === name.toUpperCase());
+                    if (match && match.newsBadges && match.newsBadges.length > 0) {
+                        match.newsBadges.forEach(b => {
+                            const newsSpan = document.createElement('span');
+                            newsSpan.className = 'fr-new-badge news-risk-badge';
+                            newsSpan.textContent = '⚠️ ' + b.label;
+                            const bg = b.severity === 'danger' ? 'rgba(239, 68, 68, 0.25)' : (b.severity === 'warning' ? 'rgba(245, 158, 11, 0.25)' : 'rgba(14, 165, 233, 0.25)');
+                            const fg = b.severity === 'danger' ? '#fca5a5' : (b.severity === 'warning' ? '#fef08a' : '#7dd3fc');
+                            const border = b.severity === 'danger' ? 'rgba(239, 68, 68, 0.6)' : (b.severity === 'warning' ? 'rgba(245, 158, 11, 0.6)' : 'rgba(14, 165, 233, 0.6)');
+                            newsSpan.style.cssText = `font-size:0.62rem; background:${bg}; color:${fg}; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid ${border}; white-space:nowrap; cursor:help; margin-left:0.2rem;`;
+                            newsSpan.title = b.title;
+                            badgeRow.appendChild(newsSpan);
+                        });
+                    }
+                }
             });
         }
+
+        // Auto load latest buy_alert_latest.json for corporate news data
+        (async function loadBuyAlertLatest() {
+            try {
+                const res = await fetch('buy_alert_latest.json?t=' + Date.now());
+                if (res.ok) {
+                    window._buyAlertLatest = await res.json();
+                    if (typeof renderConfluenceRadar === 'function') renderConfluenceRadar();
+                    if (typeof renderAllMarketUniverse === 'function') renderAllMarketUniverse();
+                    if (typeof markFreshRiderNewBadges === 'function') markFreshRiderNewBadges();
+                }
+            } catch(e) {}
+        })();
 
         // ===== HOT THEME: label 🆕 NEW / 🟢 RE-ENTRY =====
         // Guna data in-memory dari HOT_THEME_TRACKER — pantas (0ms) tanpa network fetch lag
