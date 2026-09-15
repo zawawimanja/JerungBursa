@@ -1062,35 +1062,35 @@
                 <div id="frScannerBody">
                     <div style="background: rgba(234, 179, 8, 0.08); border: 1px solid rgba(234, 179, 8, 0.25); border-radius: 8px; padding: 0.6rem 0.9rem; margin-bottom: 0.75rem; font-size: 0.75rem; color: #cbd5e1; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.6rem;">
                         <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
-                            <span style="font-weight: 900; color: #fde047; margin-right: 0.3rem;">🎯 Mod Paparan Radar:</span>
+                            <span style="font-weight: 900; color: #fde047; margin-right: 0.3rem;">🎯 Radar Display Mode:</span>
                             <button id="frTab_all" onclick="setFRFilterMode('all')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.22rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;">
-                                🌐 Semua Qualify
+                                🌐 All Qualified
                             </button>
-                            <button id="frTab_top" onclick="setFRFilterMode('top_ranking')" class="btn" style="background: linear-gradient(135deg, rgba(234,179,8,0.4), rgba(56,189,248,0.4)); color: #fde047; border: 1px solid rgba(253,224,71,0.8); padding: 0.22rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;" title="Tapis HANYA pilihan Top Gred AAA+ (1. Fusion, 2. Sinyal Baru, 3. Tightness ≤ 2.5%)">
+                            <button id="frTab_top" onclick="setFRFilterMode('top_ranking')" class="btn" style="background: linear-gradient(135deg, rgba(234,179,8,0.4), rgba(56,189,248,0.4)); color: #fde047; border: 1px solid rgba(253,224,71,0.8); padding: 0.22rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;" title="Filter Top Grade AAA+ choices ONLY (1. Fusion, 2. New Signal, 3. Tightness ≤ 2.5%)">
                                 🏆 Top Ranking VVIP (High Conviction)
                             </button>
-                            <button id="frTab_fusion" onclick="setFRFilterMode('fusion_only')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.22rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;" title="Tapis HANYA kaunter FUSION (Fresh Rider + Hot Theme)">
-                                🔥⚡ Fusion Sahaja
+                            <button id="frTab_fusion" onclick="setFRFilterMode('fusion_only')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.22rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;" title="Filter FUSION stocks ONLY (Fresh Rider + Hot Theme)">
+                                🔥⚡ Fusion Only
                             </button>
                         </div>
                         <div style="color: #94a3b8; font-size: 0.7rem; font-weight: 600;">
-                            🏷️ Hierarki Asal: <span style="color: #fde047;">1. Sinyal Baru ➔ 2. Tightness % ➔ 3. Jarak Floor ➔ 4. Pullback % ➔ 5. Turnover</span>
+                            🏷️ Default Hierarchy: <span style="color: #fde047;">1. New Signal ➔ 2. Tightness % ➔ 3. Floor Distance ➔ 4. Pullback % ➔ 5. Turnover</span>
                         </div>
                     </div>
                     <div class="table-responsive">
                     <table class="data-table">
                         <thead>
                             <tr style="user-select: none;">
-                                <th style="text-align: center; width: 45px; cursor: pointer;" onclick="sortFR('no')" title="Klik untuk balik ke ranking hierarki asal">No <span id="frSort_no"></span></th>
-                                <th style="cursor: pointer;" onclick="sortFR('name')" title="Klik untuk susun ikut Nama Kaunter & Kategori (Hierarki 1: Sinyal Baru)">Kaunter &amp; Kategori <span id="frSort_name" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('tightness')" title="Klik untuk susun ikut Tightness % (Hierarki 2: Squeeze Rapat)">Tightness % <span id="frSort_tightness" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('floor')" title="Klik untuk susun ikut Support Floor & Risk % (Hierarki 3: Risiko Nipis)">Support Floor (Risk %) <span id="frSort_floor" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('trigger')" title="Klik untuk susun ikut Jarak dari Trigger Awal % (Kesan kaunter Day 1 vs Extended)">Trigger &amp; Jarak % <span id="frSort_trigger" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('pullback')" title="Klik untuk susun ikut Pullback % (Hierarki 4: Pullback)">Pullback % <span id="frSort_pullback" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('price')" title="Klik untuk susun ikut Harga Semasa & Change %">Harga &amp; Change % <span id="frSort_price" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('turnover')" title="Klik untuk susun ikut Turnover Jerung (Hierarki 5: Turnover)">Turnover <span id="frSort_turnover" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: center; cursor: pointer;" onclick="sortFR('confluence')" title="Klik untuk susun ikut Bilangan Signal Confluence">Confluence <span id="frSort_confluence" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: center; cursor: pointer;" onclick="sortFR('score')" title="Klik untuk susun ikut Skor AI">Skor &amp; Tindakan <span id="frSort_score" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: center; width: 45px; cursor: pointer;" onclick="sortFR('no')" title="Click to reset to default hierarchy ranking">No <span id="frSort_no"></span></th>
+                                <th style="cursor: pointer;" onclick="sortFR('name')" title="Click to sort by Stock Name & Category (Hierarchy 1: New Signal)">Stock &amp; Category <span id="frSort_name" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('tightness')" title="Click to sort by Tightness % (Hierarchy 2: Tight Squeeze)">Tightness % <span id="frSort_tightness" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('floor')" title="Click to sort by Support Floor & Risk % (Hierarchy 3: Tight Risk)">Support Floor (Risk %) <span id="frSort_floor" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('trigger')" title="Click to sort by Distance from Initial Trigger % (Day 1 vs Extended)">Trigger &amp; Dist % <span id="frSort_trigger" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('pullback')" title="Click to sort by Pullback % (Hierarchy 4: Pullback)">Pullback % <span id="frSort_pullback" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('price')" title="Click to sort by Current Price & Change %">Price &amp; Change % <span id="frSort_price" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: right; cursor: pointer;" onclick="sortFR('turnover')" title="Click to sort by Whale Turnover (Hierarchy 5: Turnover)">Turnover <span id="frSort_turnover" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: center; cursor: pointer;" onclick="sortFR('confluence')" title="Click to sort by Signal Confluence Count">Confluence <span id="frSort_confluence" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: center; cursor: pointer;" onclick="sortFR('score')" title="Click to sort by AI Score">Score &amp; Action <span id="frSort_score" style="color:#64748b;">↕</span></th>
                             </tr>
                         </thead>
                         <tbody id="confluenceRadarTableBody">
@@ -1523,7 +1523,7 @@
                     <div style="background: rgba(168, 85, 247, 0.08); border: 1px solid rgba(168, 85, 247, 0.25); border-radius: 8px; padding: 0.5rem 0.8rem; margin-bottom: 0.75rem; font-size: 0.75rem; color: #cbd5e1; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
                         <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
                             <span style="font-weight: 900; color: #c4b5fd;">🏷️ Ranking Asal (Default Hierarchy):</span>
-                            <span style="color: #94a3b8; font-size: 0.72rem; font-weight: 600;">1. Sinyal Baru ➔ 2. Tightness % (Squeeze Rapat) ➔ 3. Jarak Floor (Risiko Nipis) ➔ 4. Pullback % ➔ 5. Turnover Jerung</span>
+                            <span style="color: #94a3b8; font-size: 0.72rem; font-weight: 600;">1. Signal Baru ➔ 2. Tightness % (Squeeze Rapat) ➔ 3. Jarak Floor (Risiko Nipis) ➔ 4. Pullback % ➔ 5. Turnover Jerung</span>
                         </div>
                         <div style="font-size: 0.7rem; color: #38bdf8; font-weight: 700;">
                             💡 Klik mana-mana Header Lajur di bawah untuk susun semula mengikut pilihan anda!
@@ -1534,7 +1534,7 @@
                         <thead>
                             <tr style="user-select: none;">
                                 <th style="text-align: center; width: 45px; cursor: pointer;" onclick="sortHT('no')" title="Klik untuk balik ke ranking hierarki asal">No <span id="htSort_no"></span></th>
-                                <th style="cursor: pointer;" onclick="sortHT('name')" title="Klik untuk susun ikut Nama Kaunter & Tema (Hierarki 1: Sinyal Baru)">Kaunter &amp; Tema <span id="htSort_name" style="color:#64748b;">↕</span></th>
+                                <th style="cursor: pointer;" onclick="sortHT('name')" title="Klik untuk susun ikut Nama Kaunter & Tema (Hierarki 1: Signal Baru)">Kaunter &amp; Tema <span id="htSort_name" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: right; cursor: pointer;" onclick="sortHT('tightness')" title="Klik untuk susun ikut Tightness % (Hierarki 2: Squeeze Rapat)">Tightness % <span id="htSort_tightness" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: right; cursor: pointer;" onclick="sortHT('floor')" title="Klik untuk susun ikut Support Floor & Risk % (Hierarki 3: Risiko Nipis)">Support Floor (Risk %) <span id="htSort_floor" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: right; cursor: pointer;" onclick="sortHT('pullback')" title="Klik untuk susun ikut Pullback % (Hierarki 4: Pullback)">Pullback % <span id="htSort_pullback" style="color:#64748b;">↕</span></th>
@@ -1628,7 +1628,7 @@
                         </tr>
                     </thead>
                     <tbody id="htTrackerTableBody">
-                        <tr><td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">⏳ Loading tracker...</td></tr>
+                        <tr><td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">⏳ Memuatkan penjejak...</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -2076,7 +2076,7 @@
                         </thead>
                         <tbody id="topGainersTableBody">
                             <tr>
-                                <td colspan="7" style="text-align: center; padding: 2rem; color: #64748b;">Loading Top Gainers data...</td>
+                                <td colspan="7" style="text-align: center; padding: 2rem; color: #64748b;">Memuatkan data Top Gainers...</td>
                             </tr>
                         </tbody>
                     </table>
@@ -4624,7 +4624,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             }
 
             if (!list || list.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; padding: 2rem; color: #64748b;">No market data found. Please click "Load Market Data".</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; padding: 2rem; color: #64748b;">Tiada data pasaran ditemui. Sila klik "Muat Data Pasaran".</td></tr>';
                 return;
             }
 
@@ -4697,7 +4697,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             }
 
             if (displayList.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; padding: 2rem; color: #64748b;">No Top Gainer stocks match this filter.</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="7" style="text-align: center; padding: 2rem; color: #64748b;">Tiada saham Top Gainer menepati tapisan ini.</td></tr>';
                 return;
             }
 
@@ -5449,7 +5449,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             if (!tbody) return;
 
             if (list.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="8" style="text-align: center; padding: 1.5rem; color: #94a3b8;">No Section 138 filings match search.</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="8" style="text-align: center; padding: 1.5rem; color: #94a3b8;">Tiada pemfailan Seksyen 138 menepati carian.</td></tr>';
                 return;
             }
 
@@ -5654,7 +5654,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             });
 
             if (validPicks.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">🦈 No stocks in whale accumulation phase today.</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">🦈 Tiada saham dalam fasa pengumpulan Jerung hari ini.</td></tr>`;
                 return;
             }
 
@@ -6208,11 +6208,11 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             window._latestFreshRiderPicks = displayPicks;
 
             if (displayPicks.length === 0) {
-                let emptyMsg = '🔥 No Fresh VVIP Rider setups under current view.';
-                if (filterMode === 'fusion_only') emptyMsg = '⚡ Tiada sinyal <strong>🔥⚡ FUSION</strong> hari ini (Fresh Rider + Hot Theme Semicon/Solar).';
-                else if (filterMode === 'top_ranking') emptyMsg = '🏆 Tiada sinyal <strong>🏆 Top Ranking VVIP</strong> hari ini (Fusion / Sinyal Baru / Squeeze ≤ 3.5%). Sila pilih mod <strong>🌐 Semua Qualify</strong>.';
+                let emptyMsg = '🔥 Tiada setup Fresh VVIP Rider dalam pandangan semasa.';
+                if (filterMode === 'fusion_only') emptyMsg = '⚡ Tiada signal <strong>🔥⚡ FUSION</strong> hari ini (Fresh Rider + Hot Theme Semicon/Solar).';
+                else if (filterMode === 'top_ranking') emptyMsg = '🏆 Tiada signal <strong>🏆 Top Ranking VVIP</strong> hari ini (Fusion / Signal Baru / Squeeze ≤ 3.5%). Sila pilih mod <strong>🌐 Semua Qualify</strong>.';
                 else if (!currentData || currentData.length === 0) {
-                    emptyMsg = '⚠️ Data not loaded yet — click <strong>🔄 Load Data</strong> above.';
+                    emptyMsg = '⚠️ Data belum dimuat naik — sila klik <strong>🔄 Muat Data</strong> di atas.';
                 }
                 tbody.innerHTML = `<tr><td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">${emptyMsg}</td></tr>`;
                 renderFreshRiderTracker();
@@ -6244,15 +6244,15 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
                 let triggerBadgeHtml = '';
                 if (trBase.isDayOne || Math.abs(distFromTrigger) < 0.05) {
-                    triggerBadgeHtml = `<span style="font-size: 0.64rem; font-weight: 900; background: rgba(16,185,129,0.22); color: #34d399; padding: 0.08rem 0.35rem; border-radius: 4px; border: 1px solid rgba(16,185,129,0.5); white-space: nowrap;" title="Sinyal BARU (Day 1) — Masuk pada harga trigger asal (Zon Segar).">🟢 0.0% (DAY 1)</span>`;
+                    triggerBadgeHtml = `<span style="font-size: 0.64rem; font-weight: 900; background: rgba(16,185,129,0.22); color: #34d399; padding: 0.08rem 0.35rem; border-radius: 4px; border: 1px solid rgba(16,185,129,0.5); white-space: nowrap;" title="NEW Signal (Day 1) — Entry at original trigger price (Fresh Zone).">🟢 0.0% (DAY 1)</span>`;
                 } else if (distFromTrigger <= 0) {
-                    triggerBadgeHtml = `<span style="font-size: 0.64rem; font-weight: 900; background: rgba(56,189,248,0.2); color: #38bdf8; padding: 0.08rem 0.35rem; border-radius: 4px; border: 1px solid rgba(56,189,248,0.45); white-space: nowrap;" title="Harga di bawah atau tepat paras trigger tapak — Zon Konsolidasi Murah.">⚪ ${distFromTrigger.toFixed(1)}% (Di Tapak)</span>`;
+                    triggerBadgeHtml = `<span style="font-size: 0.64rem; font-weight: 900; background: rgba(56,189,248,0.2); color: #38bdf8; padding: 0.08rem 0.35rem; border-radius: 4px; border: 1px solid rgba(56,189,248,0.45); white-space: nowrap;" title="Price at or below base trigger level — Value Consolidation Zone.">⚪ ${distFromTrigger.toFixed(1)}% (At Base)</span>`;
                 } else if (distFromTrigger <= 3.0) {
-                    triggerBadgeHtml = `<span style="font-size: 0.64rem; font-weight: 900; background: rgba(16,185,129,0.18); color: #34d399; padding: 0.08rem 0.35rem; border-radius: 4px; border: 1px solid rgba(16,185,129,0.4); white-space: nowrap;" title="Kenaikan < 3% dari trigger tapak — Masih dalam Zon Masuk Selamat (Low Risk).">🟢 +${distFromTrigger.toFixed(1)}% (Zon Segar)</span>`;
+                    triggerBadgeHtml = `<span style="font-size: 0.64rem; font-weight: 900; background: rgba(16,185,129,0.18); color: #34d399; padding: 0.08rem 0.35rem; border-radius: 4px; border: 1px solid rgba(16,185,129,0.4); white-space: nowrap;" title="Gain < 3% from base trigger — Safe Entry Zone (Low Risk).">🟢 +${distFromTrigger.toFixed(1)}% (Fresh Zone)</span>`;
                 } else if (distFromTrigger <= 7.0) {
-                    triggerBadgeHtml = `<span style="font-size: 0.64rem; font-weight: 900; background: rgba(245,158,11,0.2); color: #fbbf24; padding: 0.08rem 0.35rem; border-radius: 4px; border: 1px solid rgba(245,158,11,0.4); white-space: nowrap;" title="Dah naik 3% - 7% dari trigger tapak — Boleh masuk tapi berhati-hati / saiz lot kecil.">🟡 +${distFromTrigger.toFixed(1)}% (Late)</span>`;
+                    triggerBadgeHtml = `<span style="font-size: 0.64rem; font-weight: 900; background: rgba(245,158,11,0.2); color: #fbbf24; padding: 0.08rem 0.35rem; border-radius: 4px; border: 1px solid rgba(245,158,11,0.4); white-space: nowrap;" title="Up 3% - 7% from base trigger — Exercise caution / smaller lot size.">🟡 +${distFromTrigger.toFixed(1)}% (Late)</span>`;
                 } else {
-                    triggerBadgeHtml = `<span style="font-size: 0.64rem; font-weight: 900; background: rgba(239,68,68,0.2); color: #f87171; padding: 0.08rem 0.35rem; border-radius: 4px; border: 1px solid rgba(239,68,68,0.4); white-space: nowrap;" title="AMARAN: Dah naik melebihi 7% dari trigger tapak! Elak kejar harga (Risiko tinggi).">🔴 +${distFromTrigger.toFixed(1)}% (Extended)</span>`;
+                    triggerBadgeHtml = `<span style="font-size: 0.64rem; font-weight: 900; background: rgba(239,68,68,0.2); color: #f87171; padding: 0.08rem 0.35rem; border-radius: 4px; border: 1px solid rgba(239,68,68,0.4); white-space: nowrap;" title="WARNING: Up over 7% from base trigger! Avoid chasing (High Risk).">🔴 +${distFromTrigger.toFixed(1)}% (Extended)</span>`;
                 }
 
                 // Dynamic Precision Confidence Score
@@ -6307,11 +6307,11 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 const trInfo = frTrackMap.get((item.name || '').toUpperCase());
                 if (trInfo) {
                     if (trInfo.days <= 2) {
-                        badgesHtml += `<span style="font-size: 0.62rem; background: linear-gradient(135deg, rgba(239, 68, 68, 0.28), rgba(249, 115, 22, 0.28)); color: #ff6b4a; padding: 0.08rem 0.35rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(249, 115, 22, 0.6); white-space: nowrap; text-shadow: 0 0 6px rgba(249, 115, 22, 0.5);" title="Sinyal Segar Hari Pertama / Kedua (Mula dikesan: ${formatShortDate(trInfo.entryDate)})">🔥 Day ${trInfo.days} (${formatShortDate(trInfo.entryDate)})</span>`;
+                        badgesHtml += `<span style="font-size: 0.62rem; background: linear-gradient(135deg, rgba(239, 68, 68, 0.28), rgba(249, 115, 22, 0.28)); color: #ff6b4a; padding: 0.08rem 0.35rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(249, 115, 22, 0.6); white-space: nowrap; text-shadow: 0 0 6px rgba(249, 115, 22, 0.5);" title="Fresh Signal Day 1 / 2 (First detected: ${formatShortDate(trInfo.entryDate)})">🔥 Day ${trInfo.days} (${formatShortDate(trInfo.entryDate)})</span>`;
                     } else if (trInfo.days <= 10) {
-                        badgesHtml += `<span style="font-size: 0.62rem; background: rgba(56, 189, 248, 0.2); color: #38bdf8; padding: 0.08rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(56, 189, 248, 0.4); white-space: nowrap;" title="Kaunter sedang membina momentum (${trInfo.days} hari sejak ${formatShortDate(trInfo.entryDate)})">⏱️ Day ${trInfo.days}</span>`;
+                        badgesHtml += `<span style="font-size: 0.62rem; background: rgba(56, 189, 248, 0.2); color: #38bdf8; padding: 0.08rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(56, 189, 248, 0.4); white-space: nowrap;" title="Building momentum (${trInfo.days} days since ${formatShortDate(trInfo.entryDate)})">⏱️ Day ${trInfo.days}</span>`;
                     } else {
-                        badgesHtml += `<span style="font-size: 0.62rem; background: rgba(148, 163, 184, 0.15); color: #94a3b8; padding: 0.08rem 0.35rem; border-radius: 4px; font-weight: 700; border: 1px solid rgba(148, 163, 184, 0.3); white-space: nowrap;" title="Kaunter lama dalam sistem (${trInfo.days} hari sejak ${formatShortDate(trInfo.entryDate)}). Sila tapis mengikut SOP.">⏳ ${trInfo.days} Hari (${formatShortDate(trInfo.entryDate)})</span>`;
+                        badgesHtml += `<span style="font-size: 0.62rem; background: rgba(148, 163, 184, 0.15); color: #94a3b8; padding: 0.08rem 0.35rem; border-radius: 4px; font-weight: 700; border: 1px solid rgba(148, 163, 184, 0.3); white-space: nowrap;" title="Older stock in tracker (${trInfo.days} days since ${formatShortDate(trInfo.entryDate)}). Filter per SOP.">⏳ ${trInfo.days} Days (${formatShortDate(trInfo.entryDate)})</span>`;
                     }
                 }
 
@@ -6373,7 +6373,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             if (!tbody) return;
             const data = window.FRESH_RIDER_TRACKER;
             if (!data || !Array.isArray(data.trades) || data.trades.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="9" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">No tracker data available yet — will be generated on next data update.</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="9" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">Tiada data penjejak lagi — akan dijana pada kemaskini data seterusnya.</td></tr>';
                 return;
             }
             const s = data.summary || {};
@@ -6509,7 +6509,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             if (!tbody) return;
             const data = window.HOT_THEME_TRACKER;
             if (!data || !Array.isArray(data.trades) || data.trades.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">No tracker data available yet — will be generated on next data update.</td></tr>';
+                tbody.innerHTML = '<tr><td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">Tiada data penjejak lagi — akan dijana pada kemaskini data seterusnya.</td></tr>';
                 return;
             }
             const s = data.summary || {};
@@ -7769,7 +7769,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             });
 
             if (confluencePicks.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">🎯 No Confluence stocks today.</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">🎯 Tiada saham Konfluens hari ini.</td></tr>`;
                 return;
             }
 
@@ -7986,7 +7986,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             }
 
             if (picks.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">⚡ No Semicon/Solar stocks qualifying 2+ Confluence today.</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">⚡ Tiada saham Semicon/Solar yang layak 2+ Konfluens hari ini.</td></tr>`;
                 return;
             }
 
@@ -9285,7 +9285,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 `;
             });
 
-            tbody.innerHTML = html || `<tr><td colspan="11" style="text-align:center; color:var(--text-muted); padding:1.5rem;">⏳ No Phoenix Spring stocks today.</td></tr>`;
+            tbody.innerHTML = html || `<tr><td colspan="11" style="text-align:center; color:var(--text-muted); padding:1.5rem;">⏳ Tiada saham Phoenix Spring hari ini.</td></tr>`;
         }
         window.renderPhoenixSpring = renderPhoenixSpring;
 
@@ -9413,7 +9413,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             if (pickEl) pickEl.textContent = `${top5.length} / 5`;
 
             if (top5.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="11" style="text-align: center; color: var(--text-muted); padding: 1.5rem;">No stocks matching Weekly Homework criteria.</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="11" style="text-align: center; color: var(--text-muted); padding: 1.5rem;">Tiada saham menepati kriteria Kerja Rumah Mingguan.</td></tr>`;
                 return;
             }
 

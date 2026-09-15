@@ -606,7 +606,7 @@ function buildMessage(now, out) {
     }
 
     // Filter Top Ranking VVIP (sepadan dengan paparan lalai Top Ranking di index.html):
-    // Lulus jika: FUSION (Semicon/Solar) ATAU Sinyal Baru (Day 1) ATAU ADD-ON A+ ATAU Tightness <= 3.5% ATAU Score >= 80
+    // Lulus jika: FUSION (Semicon/Solar) ATAU Signal Baru (Day 1) ATAU ADD-ON A+ ATAU Tightness <= 3.5% ATAU Score >= 80
     function isTopRankingVvip(s) {
         const lbl = signalLabel(s, frTrackedStatus);
         const rank = freshnessRank(lbl);

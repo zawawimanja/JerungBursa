@@ -77,3 +77,11 @@ Untuk mengelakkan terlepas ombak besar (*let winners run*) dan mengelak rasa ral
 * **Fasa 3 (Baki 50% Lot):** 🚀 **Biarkan Menunggang Ombak Jerung (*Ride to TP2 +20%+*)**
   * Alih Stop Loss baki ke paras TP1. Biarkan separuh baki terbang menuai keuntungan maksimum tanpa sebarang risiko modal.
 
+---
+
+## 🌐 7. Bahasa Rasmi Web & UI (Bahasa Inggeris / Professional Trading English for AdSense)
+* Paparan UI Web JerungBursa (tajuk, butang, jadual, lencana, tooltip, dan mesej status) **WAJIB** menggunakan **Bahasa Inggeris (Professional Financial/Trading English)** secara seragam untuk memastikan kesesuaian dan kelulusan **Google AdSense**.
+* Perbualan AI bersama pengguna tetap dijalankan dalam **Bahasa Melayu** mengikut keselesaan pengguna, tetapi elemen UI web kekal seragam dalam Bahasa Inggeris.
+
+
+
