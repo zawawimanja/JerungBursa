@@ -429,12 +429,15 @@ function buildMessage(now, out) {
             const pbStr = s.pullback != null ? `${s.pullback.toFixed(1)}%` : '—';
             const csTxt = csTimingLabel(s.changePct);
             const gradeStr = s.grade && s.grade !== '—' ? ` · Gred ${s.grade}` : '';
+            const newsAlertTxt = (s.newsBadges && s.newsBadges.length > 0)
+                ? `\n   ⚠️ *BERITA / EX-DIV:* ${s.newsBadges.map(b => b.label).join(' · ')}`
+                : '';
 
             lines.push(`${medal} *${s.name}* (${s.label}${gradeStr}${themeTxt})`);
             lines.push(`   💵 Harga: *RM ${fmtPrice(s.price)}* (${fmtPct(s.changePct)}) · ${csTxt}`);
             lines.push(`   📐 Squeeze: Tight *${tightStr}* | PB *${pbStr}*`);
             lines.push(`   🛡️ SL: *RM ${fmtPrice(s.sl)}* | Floor: *RM ${fmtPrice(s.floor)}*`);
-            lines.push(`   💰 Turnover: *${toStr}*${toEmoji}`);
+            lines.push(`   💰 Turnover: *${toStr}*${toEmoji}${newsAlertTxt}`);
             lines.push('');
         });
     }
@@ -586,8 +589,10 @@ function buildMessage(now, out) {
             const floorDist = (effF && curP) ? ((curP - effF) / effF) * 100 : 99;
             const toVal = (typeof stock === 'object') ? (stock.rawTurnover || stock.turnover || 0) : 0;
 
-            if (pctFromEntry <= 20 && floorDist <= 3.5 && toVal >= 2000000) {
+            if (pctFromEntry >= 0 && pctFromEntry <= 20 && floorDist <= 3.5 && toVal >= 2000000) {
                 return '⭐ ADD-ON A+';
+            } else if (pctFromEntry < 0 && floorDist <= 3.5) {
+                return '🔻 RETEST BASE';
             } else if (pctFromEntry > 20) {
                 return `⚠️ ADD-ON (+${pctFromEntry.toFixed(0)}%)`;
             }

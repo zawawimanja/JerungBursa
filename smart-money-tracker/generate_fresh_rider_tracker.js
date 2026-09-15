@@ -37,7 +37,7 @@ function isFreshRiderPick(item) {
 }
 
 // ---- Rule ⭐ ADD-ON A+ (Base 1 / Base 2 Staircase) ----
-function isAddOnAPick(item, initialBasePrice) {
+function isAddOnAPick(item, initialBasePrice, effFloor) {
     if (!item || !item.name || item.price <= 0 || item.price > 50) return false;
     if (item.isVvip !== true || item.signal === 'avoid' || item.isCombStock) return false;
     if ((item.ipoYear || 0) < 2025) return false;
@@ -46,7 +46,7 @@ function isAddOnAPick(item, initialBasePrice) {
     const tight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
     if (tight > 3.5) return false; // Squeeze Tightness <= 3.5%
 
-    const f = item.floorLow || 0;
+    const f = effFloor || item.floorLow || 0;
     const floorDist = f > 0 ? ((item.price - f) / f * 100) : 99;
     if (floorDist > 3.5) return false; // Floor Distance <= 3.5%
 
@@ -170,9 +170,9 @@ for (const day of dayList) {
 }
 
 // -------------------------------------------------------------
-// 2. ENGINE 2: ⭐ ADD-ON A+ TRACKER (STAIRCASE BASE 2 / BASE 3)
+// 2. ENGINE 2: ⭐ ADD-ON A+ TRACKER (TRACK SETIAP KALI TRIGGER)
 // -------------------------------------------------------------
-const openAddOn = {};
+let openAddOn = [];
 const tradesAddOn = [];
 const initialBaseMap = {};
 
@@ -180,17 +180,24 @@ for (const day of dayList) {
     const map = {};
     for (const it of day.rows) if (it && it.name && it.price > 0) map[canonName(it.name).toUpperCase()] = it;
 
+    // Track initial base (Day 1) for every stock
     for (const it of day.rows) {
         if (!it || !it.name || it.price <= 0) continue;
         const name = canonName(it.name).toUpperCase();
         if (!initialBaseMap[name] && isFreshRiderPick(it)) {
-            initialBaseMap[name] = it.price;
+            initialBaseMap[name] = { date: day.date, price: it.price };
         }
     }
 
-    for (const [name, t] of Object.entries(openAddOn)) {
+    // Update existing open ADD-ON positions
+    const nextOpen = [];
+    for (const t of openAddOn) {
+        const name = t.name.toUpperCase();
         const cur = map[name];
-        if (!cur || cur.price <= 0) continue;
+        if (!cur || cur.price <= 0) {
+            nextOpen.push(t);
+            continue;
+        }
         t.days++;
         t.lastDate = day.date;
         t.currentPrice = +cur.price.toFixed(3);
@@ -206,27 +213,35 @@ for (const day of dayList) {
             t.exitDate = day.date;
             t.exitPrice = +cur.price.toFixed(3);
             t.finalGain = +(((cur.price - t.entry) / t.entry) * 100).toFixed(1);
-            delete openAddOn[name];
         } else {
             t.finalGain = +(((cur.price - t.entry) / t.entry) * 100).toFixed(1);
+            nextOpen.push(t);
         }
     }
+    openAddOn = nextOpen;
 
+    // Scan for new ADD-ON A+ entries on this date (setiap kali trigger, rekod trade baharu)
     for (const it of day.rows) {
         if (!it || !it.name || it.price <= 0) continue;
         const name = canonName(it.name).toUpperCase();
-        if (openAddOn[name]) continue;
+        const base = initialBaseMap[name];
+        if (!base || day.date <= base.date) continue; // Wajib selepas Day 1
 
-        const initialPx = initialBaseMap[name] || 0;
-        if (!isAddOnAPick(it, initialPx)) continue;
+        const effFloor = dynamicFloor(name, it.price, it.floorLow);
+        // Wajib qualify sebagai setup yang sah
+        if (!isAddOnAPick(it, base.price, effFloor)) continue;
+
+        const gainFromBase = ((it.price - base.price) / base.price) * 100;
+        if (gainFromBase > 20.0) continue; // Tolak ADD-ON Pucuk > 20% dari base asal
 
         const t = {
+            id: `${name}_${day.date}_ADDON`,
             name: canonName(it.name),
             entryType: '⭐ ADD-ON A+',
             entryDate: day.date,
             entry: +it.price.toFixed(3),
-            entryFloor: +dynamicFloor(name, it.price, it.floorLow || it.price * 0.95).toFixed(3),
-            currentFloor: +dynamicFloor(name, it.price, it.floorLow || it.price * 0.95).toFixed(3),
+            entryFloor: +effFloor.toFixed(3),
+            currentFloor: +effFloor.toFixed(3),
             currentPrice: +it.price.toFixed(3),
             high: +it.price.toFixed(3),
             highDate: day.date,
@@ -239,7 +254,7 @@ for (const day of dayList) {
             ipoYear: it.ipoYear || null,
             sector: it.sector || '',
         };
-        openAddOn[name] = t;
+        openAddOn.push(t);
         tradesAddOn.push(t);
     }
 }
@@ -293,6 +308,29 @@ const summaryAddOn = {
     totalPnlNow: +(openPnlAddOn + closedPnlAddOn).toFixed(1),
 };
 
+// ---- 3. UNIFIED ALL-IN-ONE TRACKER (COMBINED NEW + ADD-ON) ----
+const allUnifiedRaw = [...tradesFR, ...tradesAddOn];
+const openUnifiedTrades = allUnifiedRaw.filter(t => t.status === 'OPEN').sort((a, b) => b.entryDate.localeCompare(a.entryDate));
+const closedUnifiedTrades = allUnifiedRaw.filter(t => t.status !== 'OPEN').sort((a, b) => b.exitDate.localeCompare(a.exitDate));
+const allUnified = [...openUnifiedTrades, ...closedUnifiedTrades];
+
+const winsUnified = closedUnifiedTrades.filter(t => t.finalGain > 0).length;
+const openPnlUnified = openUnifiedTrades.reduce((a, b) => a + (b.finalGain || 0), 0);
+const closedPnlUnified = closedUnifiedTrades.reduce((a, b) => a + (b.finalGain || 0), 0);
+const summaryUnified = {
+    generatedAt: new Date().toISOString(),
+    dataDays: dayList.length,
+    totalTracked: allUnified.length,
+    openCount: openUnifiedTrades.length,
+    closedCount: closedUnifiedTrades.length,
+    closedWins: winsUnified,
+    closedWinRate: closedUnifiedTrades.length ? Math.round(100 * winsUnified / closedUnifiedTrades.length) : 0,
+    closedAvgGain: closedUnifiedTrades.length ? +(closedUnifiedTrades.reduce((a, b) => a + b.finalGain, 0) / closedUnifiedTrades.length).toFixed(1) : 0,
+    openPnl: +openPnlUnified.toFixed(1),
+    closedPnl: +closedPnlUnified.toFixed(1),
+    totalPnlNow: +(openPnlUnified + closedPnlUnified).toFixed(1),
+};
+
 function rideFloor20(entry, floor, fut) {
     for (const d of fut) {
         const g = ((d.price - entry) / entry) * 100;
@@ -344,10 +382,12 @@ const backtest = {
 
 const js = `// AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual\n`
     + `window.FRESH_RIDER_TRACKER = ${JSON.stringify({ summary: summaryFR, backtest, trades: allFR }, null, 1)};\n`
-    + `window.ADD_ON_TRACKER = ${JSON.stringify({ summary: summaryAddOn, trades: allAddOn }, null, 1)};\n`;
+    + `window.ADD_ON_TRACKER = ${JSON.stringify({ summary: summaryAddOn, trades: allAddOn }, null, 1)};\n`
+    + `window.ALL_TRACKER = ${JSON.stringify({ summary: summaryUnified, trades: allUnified }, null, 1)};\n`;
 
 fs.writeFileSync(OUT_FILE, js);
 
 console.log(`✅ Tracker dijana: ${OUT_FILE}`);
+console.log(`   🌟 UNIFIED ALL: Total ${summaryUnified.totalTracked} | OPEN ${summaryUnified.openCount} | CLOSED ${summaryUnified.closedCount} (WR ${summaryUnified.closedWinRate}%, avg ${summaryUnified.closedAvgGain}%)`);
 console.log(`   🔥 FRESH RIDER (Day 1): Total ${summaryFR.totalTracked} | OPEN ${summaryFR.openCount} | CLOSED ${summaryFR.closedCount} (WR ${summaryFR.closedWinRate}%, avg ${summaryFR.closedAvgGain}%)`);
 console.log(`   ⭐ ADD-ON A+ (Staircase): Total ${summaryAddOn.totalTracked} | OPEN ${summaryAddOn.openCount} | CLOSED ${summaryAddOn.closedCount} (WR ${summaryAddOn.closedWinRate}%, avg ${summaryAddOn.closedAvgGain}%)`);

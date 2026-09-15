@@ -1,5 +1,5 @@
 // Auto-generated Corporate News & Ex-Dividend Database
-// Generated At: 2026-09-15T09:17:00.010Z
+// Generated At: 2026-09-15T16:15:06.351Z
 window.NEWS_DATA = {
   "SIME": {
     "hasNewsAlert": true,
@@ -254,15 +254,8 @@ window.NEWS_DATA = {
     ]
   },
   "HLBANK": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 13 Mar 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.3000) | Ex-Date: 13 Mar 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -354,15 +347,8 @@ window.NEWS_DATA = {
     ]
   },
   "ICTZONE": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 03 Apr 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0020) | Ex-Date: 03 Apr 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -395,15 +381,8 @@ window.NEWS_DATA = {
     ]
   },
   "MKHOP": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 09 Jun 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0200) | Ex-Date: 09 Jun 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -445,15 +424,8 @@ window.NEWS_DATA = {
     ]
   },
   "NATGATE": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 08 Sep 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0025) | Ex-Date: 08 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -495,15 +467,8 @@ window.NEWS_DATA = {
     ]
   },
   "MTTSL": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 07 Sep 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0320) | Ex-Date: 07 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -604,15 +569,8 @@ window.NEWS_DATA = {
     ]
   },
   "MI": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 11 Jun 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0100) | Ex-Date: 11 Jun 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -695,15 +653,8 @@ window.NEWS_DATA = {
     ]
   },
   "PPB": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 10 Sep 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.1300) | Ex-Date: 10 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -745,15 +696,8 @@ window.NEWS_DATA = {
     ]
   },
   "YEWLEE": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 16 Jun 2022",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0030) | Ex-Date: 16 Jun 2022"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -847,15 +791,8 @@ window.NEWS_DATA = {
     ]
   },
   "MEGAFB": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 25 Sep 2025",
-        "severity": "warning",
-        "title": "Final Dividend (0.0050) | Ex-Date: 25 Sep 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -906,15 +843,8 @@ window.NEWS_DATA = {
     ]
   },
   "VITROX": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 29 Jun 2026",
-        "severity": "warning",
-        "title": "Final Dividend (0.0118) | Ex-Date: 29 Jun 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -956,15 +886,8 @@ window.NEWS_DATA = {
     ]
   },
   "KLK": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 09 Jul 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.2000) | Ex-Date: 09 Jul 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -1271,15 +1194,8 @@ window.NEWS_DATA = {
     ]
   },
   "PSP": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 29 Jun 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0010) | Ex-Date: 29 Jun 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -1312,15 +1228,8 @@ window.NEWS_DATA = {
     ]
   },
   "PETDAG": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 08 Sep 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.2500) | Ex-Date: 08 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -1371,15 +1280,8 @@ window.NEWS_DATA = {
     ]
   },
   "JAKS": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 31 Jan 2025",
-        "severity": "warning",
-        "title": "First Interim Dividend (with Dividend Re-Investment Plan) (0.0050) | Ex-Date: 31 Jan 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -1412,15 +1314,8 @@ window.NEWS_DATA = {
     ]
   },
   "JCY": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 19 Dec 2019",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0050) | Ex-Date: 19 Dec 2019"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -1514,15 +1409,8 @@ window.NEWS_DATA = {
     ]
   },
   "SLVEST": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 29 Dec 2020",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0100) | Ex-Date: 29 Dec 2020"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -1625,15 +1513,8 @@ window.NEWS_DATA = {
     ]
   },
   "SEMICO": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 04 Sep 2026",
-        "severity": "warning",
-        "title": "Third Interim Dividend (0.0015) | Ex-Date: 04 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -1666,15 +1547,8 @@ window.NEWS_DATA = {
     ]
   },
   "CBHB": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 10 Sep 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0027) | Ex-Date: 10 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -1707,15 +1581,8 @@ window.NEWS_DATA = {
     ]
   },
   "MNHLDG": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 13 Jun 2025",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0010) | Ex-Date: 13 Jun 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -1757,15 +1624,8 @@ window.NEWS_DATA = {
     ]
   },
   "UMCCA": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 23 Jul 2026",
-        "severity": "warning",
-        "title": "Special Dividend (0.0600) | Ex-Date: 23 Jul 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -1816,15 +1676,8 @@ window.NEWS_DATA = {
     ]
   },
   "CRPMATE": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 09 Jul 2026",
-        "severity": "warning",
-        "title": "Final Dividend (0.0060) | Ex-Date: 09 Jul 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -1979,15 +1832,8 @@ window.NEWS_DATA = {
     ]
   },
   "PWRWELL": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 19 Aug 2026",
-        "severity": "warning",
-        "title": "Second Interim Dividend (0.0100) | Ex-Date: 19 Aug 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -2029,15 +1875,8 @@ window.NEWS_DATA = {
     ]
   },
   "HKB": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 04 Feb 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0010) | Ex-Date: 04 Feb 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -2088,15 +1927,8 @@ window.NEWS_DATA = {
     ]
   },
   "INFOM": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 04 Aug 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0068) | Ex-Date: 04 Aug 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -2204,15 +2036,8 @@ window.NEWS_DATA = {
     ]
   },
   "SDCG": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 11 Dec 2025",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0150) | Ex-Date: 11 Dec 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -2254,15 +2079,8 @@ window.NEWS_DATA = {
     ]
   },
   "DUFU": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 27 Aug 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0200) | Ex-Date: 27 Aug 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -2304,15 +2122,8 @@ window.NEWS_DATA = {
     ]
   },
   "LEFORM": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 19 Jan 2023",
-        "severity": "warning",
-        "title": "Special Dividend (0.0090) | Ex-Date: 19 Jan 2023"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -2363,15 +2174,8 @@ window.NEWS_DATA = {
     ]
   },
   "HEGROUP": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 31 Mar 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0100) | Ex-Date: 31 Mar 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -2404,15 +2208,8 @@ window.NEWS_DATA = {
     ]
   },
   "HLFG": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 13 Mar 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.2200) | Ex-Date: 13 Mar 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -2463,15 +2260,8 @@ window.NEWS_DATA = {
     ]
   },
   "KJTS": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 12 Sep 2025",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0040) | Ex-Date: 12 Sep 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -2504,15 +2294,8 @@ window.NEWS_DATA = {
     ]
   },
   "RADIUM": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 27 Nov 2025",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0100) | Ex-Date: 27 Nov 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -2563,15 +2346,8 @@ window.NEWS_DATA = {
     ]
   },
   "CPETECH": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 09 Dec 2025",
-        "severity": "warning",
-        "title": "Final Dividend (0.0150) | Ex-Date: 09 Dec 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -2604,15 +2380,8 @@ window.NEWS_DATA = {
     ]
   },
   "TSA": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 04 Sep 2026",
-        "severity": "warning",
-        "title": "Second Interim Dividend (0.0125) | Ex-Date: 04 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -2654,15 +2423,8 @@ window.NEWS_DATA = {
     ]
   },
   "RAMSSOL": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 14 Mar 2025",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0028) | Ex-Date: 14 Mar 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -2754,15 +2516,8 @@ window.NEWS_DATA = {
     ]
   },
   "WTK": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 14 Jul 2026",
-        "severity": "warning",
-        "title": "Final Dividend (0.0150) | Ex-Date: 14 Jul 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -2813,15 +2568,8 @@ window.NEWS_DATA = {
     ]
   },
   "ECOSHOP": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 13 Aug 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0060) | Ex-Date: 13 Aug 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -2863,15 +2611,8 @@ window.NEWS_DATA = {
     ]
   },
   "MCLEAN": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 15 Jun 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0040) | Ex-Date: 15 Jun 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -2913,15 +2654,8 @@ window.NEWS_DATA = {
     ]
   },
   "OXB": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 05 May 2026",
-        "severity": "warning",
-        "title": "Final Dividend (0.0050) | Ex-Date: 05 May 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -2972,15 +2706,8 @@ window.NEWS_DATA = {
     ]
   },
   "CNERGEN": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 06 Dec 2024",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0080) | Ex-Date: 06 Dec 2024"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -3022,15 +2749,8 @@ window.NEWS_DATA = {
     ]
   },
   "MERSEC": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 14 Jul 2025",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0050) | Ex-Date: 14 Jul 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -3054,15 +2774,8 @@ window.NEWS_DATA = {
     ]
   },
   "XPB": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 10 Jun 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0010) | Ex-Date: 10 Jun 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -3215,15 +2928,8 @@ window.NEWS_DATA = {
     ]
   },
   "CKI": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 24 Apr 2026",
-        "severity": "warning",
-        "title": "Final Dividend (0.0184) | Ex-Date: 24 Apr 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -3265,15 +2971,8 @@ window.NEWS_DATA = {
     ]
   },
   "UNITRAD": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 11 Dec 2025",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0010) | Ex-Date: 11 Dec 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -3324,15 +3023,8 @@ window.NEWS_DATA = {
     ]
   },
   "GIIB": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 14 Jan 2020",
-        "severity": "warning",
-        "title": "Special Dividend (0.0700) | Ex-Date: 14 Jan 2020"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -3374,15 +3066,8 @@ window.NEWS_DATA = {
     ]
   },
   "CLITE": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 12 May 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0035) | Ex-Date: 12 May 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -3433,15 +3118,8 @@ window.NEWS_DATA = {
     ]
   },
   "FAMIERA": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 03 Jun 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0050) | Ex-Date: 03 Jun 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -3474,15 +3152,8 @@ window.NEWS_DATA = {
     ]
   },
   "KHJB": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 30 Jul 2026",
-        "severity": "warning",
-        "title": "Final Dividend (0.0010) | Ex-Date: 30 Jul 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -3574,15 +3245,8 @@ window.NEWS_DATA = {
     ]
   },
   "OPPSTAR": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 14 Jun 2024",
-        "severity": "warning",
-        "title": "Second Interim Dividend (0.0030) | Ex-Date: 14 Jun 2024"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -3615,15 +3279,8 @@ window.NEWS_DATA = {
     ]
   },
   "PGLOBAL": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 28 May 2026",
-        "severity": "warning",
-        "title": "Second Interim Dividend (0.0200) | Ex-Date: 28 May 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -3665,15 +3322,8 @@ window.NEWS_DATA = {
     ]
   },
   "PMIBHD": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 09 Apr 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0020) | Ex-Date: 09 Apr 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -3862,15 +3512,8 @@ window.NEWS_DATA = {
     ]
   },
   "AIMFLEX": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 10 Dec 2020",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0025) | Ex-Date: 10 Dec 2020"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -3946,15 +3589,8 @@ window.NEWS_DATA = {
     ]
   },
   "L&PBHD": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 27 Sep 2024",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0050) | Ex-Date: 27 Sep 2024"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -4028,15 +3664,8 @@ window.NEWS_DATA = {
     ]
   },
   "RTECH": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 28 Feb 2025",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0050) | Ex-Date: 28 Feb 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -4051,15 +3680,8 @@ window.NEWS_DATA = {
     ]
   },
   "KHB": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 08 Dec 2025",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0035) | Ex-Date: 08 Dec 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -4074,15 +3696,8 @@ window.NEWS_DATA = {
     ]
   },
   "EMCC": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 08 Sep 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0060) | Ex-Date: 08 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -4115,15 +3730,8 @@ window.NEWS_DATA = {
     ]
   },
   "DAY3": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 09 Sep 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0057) | Ex-Date: 09 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -4165,15 +3773,8 @@ window.NEWS_DATA = {
     ]
   },
   "WTEC": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 09 Mar 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0050) | Ex-Date: 09 Mar 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -4405,15 +4006,8 @@ window.NEWS_DATA = {
     ]
   },
   "WELLCHIP": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 30 Jun 2026",
-        "severity": "warning",
-        "title": "Final Dividend (0.0510) | Ex-Date: 30 Jun 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -4523,15 +4117,8 @@ window.NEWS_DATA = {
     ]
   },
   "DXN": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 12 Aug 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0060) | Ex-Date: 12 Aug 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -4625,15 +4212,8 @@ window.NEWS_DATA = {
     ]
   },
   "SENFONG": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 17 Mar 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0100) | Ex-Date: 17 Mar 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -4675,15 +4255,8 @@ window.NEWS_DATA = {
     ]
   },
   "PCHEM": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 04 Sep 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0600) | Ex-Date: 04 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -4786,15 +4359,8 @@ window.NEWS_DATA = {
     ]
   },
   "MOBILIA": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 18 Jun 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0050) | Ex-Date: 18 Jun 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -4895,15 +4461,8 @@ window.NEWS_DATA = {
     ]
   },
   "YXPM": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 23 May 2025",
-        "severity": "warning",
-        "title": "Final Dividend (0.0030) | Ex-Date: 23 May 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -5049,15 +4608,8 @@ window.NEWS_DATA = {
     ]
   },
   "JPG": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 02 Sep 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0110) | Ex-Date: 02 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -5099,15 +4651,8 @@ window.NEWS_DATA = {
     ]
   },
   "PEKAT": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 07 Sep 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0100) | Ex-Date: 07 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -5174,15 +4719,8 @@ window.NEWS_DATA = {
     ]
   },
   "ADNEX": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 12 Jun 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0050) | Ex-Date: 12 Jun 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -5233,15 +4771,8 @@ window.NEWS_DATA = {
     ]
   },
   "KITACON": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 04 Sep 2026",
-        "severity": "warning",
-        "title": "Second Interim Dividend (0.0100) | Ex-Date: 04 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -5283,15 +4814,8 @@ window.NEWS_DATA = {
     ]
   },
   "HHRG": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 26 Feb 2015",
-        "severity": "warning",
-        "title": "First Interim Dividend (5.0000) | Ex-Date: 26 Feb 2015"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -5342,15 +4866,8 @@ window.NEWS_DATA = {
     ]
   },
   "CLOUDPT": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 12 Mar 2026",
-        "severity": "warning",
-        "title": "Second Interim Dividend (0.0100) | Ex-Date: 12 Mar 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -5392,15 +4909,8 @@ window.NEWS_DATA = {
     ]
   },
   "HPMT": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 09 Sep 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0017) | Ex-Date: 09 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -5442,15 +4952,8 @@ window.NEWS_DATA = {
     ]
   },
   "MAHSING": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 12 May 2026",
-        "severity": "warning",
-        "title": "Final Dividend (0.0500) | Ex-Date: 12 May 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -5542,15 +5045,8 @@ window.NEWS_DATA = {
     ]
   },
   "ECOMATE": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 19 May 2023",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0050) | Ex-Date: 19 May 2023"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -5617,15 +5113,8 @@ window.NEWS_DATA = {
     ]
   },
   "CHB": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 27 Oct 2025",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0188) | Ex-Date: 27 Oct 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -5710,15 +5199,8 @@ window.NEWS_DATA = {
     ]
   },
   "OHM": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 07 Sep 2026",
-        "severity": "warning",
-        "title": "Final Dividend (0.0060) | Ex-Date: 07 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -5769,15 +5251,8 @@ window.NEWS_DATA = {
     ]
   },
   "SET": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 05 Jan 2026",
-        "severity": "warning",
-        "title": "Final Dividend (0.0060) | Ex-Date: 05 Jan 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -5880,15 +5355,8 @@ window.NEWS_DATA = {
     ]
   },
   "ORGABIO": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 02 Sep 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0050) | Ex-Date: 02 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -5982,15 +5450,8 @@ window.NEWS_DATA = {
     ]
   },
   "SAG": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 16 Jul 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0100) | Ex-Date: 16 Jul 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -6082,15 +5543,8 @@ window.NEWS_DATA = {
     ]
   },
   "LHI": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 10 Sep 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0150) | Ex-Date: 10 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -6141,15 +5595,8 @@ window.NEWS_DATA = {
     ]
   },
   "UWC": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 20 Sep 2022",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0291) | Ex-Date: 20 Sep 2022"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -6243,15 +5690,8 @@ window.NEWS_DATA = {
     ]
   },
   "AMS": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 11 Jun 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0040) | Ex-Date: 11 Jun 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -6406,15 +5846,8 @@ window.NEWS_DATA = {
     ]
   },
   "TECHSTORE": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 14 May 2026",
-        "severity": "warning",
-        "title": "Final Dividend (0.0025) | Ex-Date: 14 May 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -6517,15 +5950,8 @@ window.NEWS_DATA = {
     ]
   },
   "PMW": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 09 Mar 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0030) | Ex-Date: 09 Mar 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -6576,15 +6002,8 @@ window.NEWS_DATA = {
     ]
   },
   "UNIQUE": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 25 Jun 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0080) | Ex-Date: 25 Jun 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -6685,15 +6104,8 @@ window.NEWS_DATA = {
     ]
   },
   "KTI": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 24 Apr 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0040) | Ex-Date: 24 Apr 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -6744,15 +6156,8 @@ window.NEWS_DATA = {
     ]
   },
   "UTDPLT": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 24 Apr 2026",
-        "severity": "warning",
-        "title": "Special Dividend (0.3000) | Ex-Date: 24 Apr 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -6846,15 +6251,8 @@ window.NEWS_DATA = {
     ]
   },
   "MTEC": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 21 Aug 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0100) | Ex-Date: 21 Aug 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -6905,15 +6303,8 @@ window.NEWS_DATA = {
     ]
   },
   "SPRING": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 06 May 2025",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0070) | Ex-Date: 06 May 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -6955,15 +6346,8 @@ window.NEWS_DATA = {
     ]
   },
   "LACMED": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 26 May 2026",
-        "severity": "warning",
-        "title": "Final Dividend (0.0065) | Ex-Date: 26 May 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -7014,15 +6398,8 @@ window.NEWS_DATA = {
     ]
   },
   "DLADY": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 05 Jun 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.3000) | Ex-Date: 05 Jun 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -7073,15 +6450,8 @@ window.NEWS_DATA = {
     ]
   },
   "PMCK": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 03 Sep 2026",
-        "severity": "warning",
-        "title": "Final Dividend (0.0015) | Ex-Date: 03 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -7114,15 +6484,8 @@ window.NEWS_DATA = {
     ]
   },
   "RANHILL": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 13 Jun 2023",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0150) | Ex-Date: 13 Jun 2023"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -7266,15 +6629,8 @@ window.NEWS_DATA = {
     ]
   },
   "FEYTECH": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 05 Feb 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0060) | Ex-Date: 05 Feb 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -7359,15 +6715,8 @@ window.NEWS_DATA = {
     ]
   },
   "QL": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 10 Sep 2026",
-        "severity": "warning",
-        "title": "Final Dividend (0.0250) | Ex-Date: 10 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -7409,15 +6758,8 @@ window.NEWS_DATA = {
     ]
   },
   "ORKIM": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 08 Jul 2026",
-        "severity": "warning",
-        "title": "Final Dividend (0.0160) | Ex-Date: 08 Jul 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -7459,15 +6801,8 @@ window.NEWS_DATA = {
     ]
   },
   "PENTA": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 11 Jul 2024",
-        "severity": "warning",
-        "title": "Final Dividend (0.0200) | Ex-Date: 11 Jul 2024"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -7509,15 +6844,8 @@ window.NEWS_DATA = {
     ]
   },
   "KOPI": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 09 Dec 2025",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0100) | Ex-Date: 09 Dec 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -7568,15 +6896,8 @@ window.NEWS_DATA = {
     ]
   },
   "SUMI": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 15 Jun 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0020) | Ex-Date: 15 Jun 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -7627,15 +6948,8 @@ window.NEWS_DATA = {
     ]
   },
   "VS": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 13 Jan 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0040) | Ex-Date: 13 Jan 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -7677,15 +6991,8 @@ window.NEWS_DATA = {
     ]
   },
   "UMSINT": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 02 Jan 2024",
-        "severity": "warning",
-        "title": "First and Final Dividend (0.0350) | Ex-Date: 02 Jan 2024"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -7829,15 +7136,8 @@ window.NEWS_DATA = {
     ]
   },
   "HLIND": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 20 May 2026",
-        "severity": "warning",
-        "title": "Third Interim Dividend (0.2000) | Ex-Date: 20 May 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -7879,15 +7179,8 @@ window.NEWS_DATA = {
     ]
   },
   "SRKK": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 22 Oct 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0030) | Ex-Date: 22 Oct 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -7920,15 +7213,8 @@ window.NEWS_DATA = {
     ]
   },
   "AZAMJAYA": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 25 Nov 2025",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0050) | Ex-Date: 25 Nov 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -7961,15 +7247,8 @@ window.NEWS_DATA = {
     ]
   },
   "DSS": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 14 Oct 2025",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0100) | Ex-Date: 14 Oct 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -8054,15 +7333,8 @@ window.NEWS_DATA = {
     ]
   },
   "VTC": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 24 Dec 2025",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0085) | Ex-Date: 24 Dec 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -8113,15 +7385,8 @@ window.NEWS_DATA = {
     ]
   },
   "DNEX": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 07 Apr 2022",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0060) | Ex-Date: 07 Apr 2022"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -8215,15 +7480,8 @@ window.NEWS_DATA = {
     ]
   },
   "FOODIE": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 08 May 2026",
-        "severity": "warning",
-        "title": "Special Dividend (0.0021) | Ex-Date: 08 May 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -8256,15 +7514,8 @@ window.NEWS_DATA = {
     ]
   },
   "VANZO": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 16 Dec 2025",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0020) | Ex-Date: 16 Dec 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -8347,15 +7598,8 @@ window.NEWS_DATA = {
     ]
   },
   "PLINTAS": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 09 Sep 2026",
-        "severity": "warning",
-        "title": "Income Distribution (0.0318) | Ex-Date: 09 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -8397,15 +7641,8 @@ window.NEWS_DATA = {
     ]
   },
   "KLCC": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 09 Sep 2026",
-        "severity": "warning",
-        "title": "Second Interim Dividend (0.0185) | Ex-Date: 09 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -8456,15 +7693,8 @@ window.NEWS_DATA = {
     ]
   },
   "KUCINGKO": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 06 Dec 2024",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0085) | Ex-Date: 06 Dec 2024"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -8515,15 +7745,8 @@ window.NEWS_DATA = {
     ]
   },
   "SUPREME": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 12 Jun 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0035) | Ex-Date: 12 Jun 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -8565,15 +7788,8 @@ window.NEWS_DATA = {
     ]
   },
   "A1AKK": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 09 Dec 2025",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0018) | Ex-Date: 09 Dec 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -8658,15 +7874,8 @@ window.NEWS_DATA = {
     ]
   },
   "MINOX": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 12 Mar 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0025) | Ex-Date: 12 Mar 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -8767,15 +7976,8 @@ window.NEWS_DATA = {
     ]
   },
   "SDS": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 16 Jun 2026",
-        "severity": "warning",
-        "title": "Second Interim Dividend (0.0100) | Ex-Date: 16 Jun 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -9030,15 +8232,8 @@ window.NEWS_DATA = {
     ]
   },
   "REACHTEN": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 26 Jun 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0100) | Ex-Date: 26 Jun 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -9175,15 +8370,8 @@ window.NEWS_DATA = {
     ]
   },
   "LSH": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 10 Sep 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0056) | Ex-Date: 10 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -9225,15 +8413,8 @@ window.NEWS_DATA = {
     ]
   },
   "SBH": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 14 Jan 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0025) | Ex-Date: 14 Jan 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -9266,15 +8447,8 @@ window.NEWS_DATA = {
     ]
   },
   "NEXG": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 24 Jun 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0001) | Ex-Date: 24 Jun 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -9316,15 +8490,8 @@ window.NEWS_DATA = {
     ]
   },
   "AMEREIT": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 13 Aug 2026",
-        "severity": "warning",
-        "title": "Income Distribution (0.0215) | Ex-Date: 13 Aug 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -9366,15 +8533,8 @@ window.NEWS_DATA = {
     ]
   },
   "OPTIMAX": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 13 Mar 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0060) | Ex-Date: 13 Mar 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -9416,15 +8576,8 @@ window.NEWS_DATA = {
     ]
   },
   "SKYWLD": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 02 Jul 2026",
-        "severity": "warning",
-        "title": "Final Dividend (0.0038) | Ex-Date: 02 Jul 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -9466,15 +8619,8 @@ window.NEWS_DATA = {
     ]
   },
   "VOLCANO": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 01 Dec 2025",
-        "severity": "warning",
-        "title": "Final Dividend (0.0020) | Ex-Date: 01 Dec 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -9516,15 +8662,8 @@ window.NEWS_DATA = {
     ]
   },
   "99 SPEED MART RETAIL": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 04 Jun 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0225) | Ex-Date: 04 Jun 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -9566,15 +8705,8 @@ window.NEWS_DATA = {
     ]
   },
   "OBHB": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 12 Aug 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0020) | Ex-Date: 12 Aug 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -9616,15 +8748,8 @@ window.NEWS_DATA = {
     ]
   },
   "LGMS": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 07 Sep 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0050) | Ex-Date: 07 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -9666,15 +8791,8 @@ window.NEWS_DATA = {
     ]
   },
   "PARADIGM": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 21 Aug 2026",
-        "severity": "warning",
-        "title": "Income Distribution (0.0183) | Ex-Date: 21 Aug 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -9759,15 +8877,8 @@ window.NEWS_DATA = {
     ]
   },
   "TOPMIX": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 07 Sep 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0060) | Ex-Date: 07 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -9868,15 +8979,8 @@ window.NEWS_DATA = {
     ]
   },
   "UMC": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 29 Jan 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0030) | Ex-Date: 29 Jan 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -9943,15 +9047,8 @@ window.NEWS_DATA = {
     ]
   },
   "CHEEDING": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 08 Sep 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0030) | Ex-Date: 08 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -9984,15 +9081,8 @@ window.NEWS_DATA = {
     ]
   },
   "EPB": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 05 Nov 2025",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0100) | Ex-Date: 05 Nov 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -10095,15 +9185,8 @@ window.NEWS_DATA = {
     ]
   },
   "VSTECS": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 23 Apr 2026",
-        "severity": "warning",
-        "title": "Second Interim Dividend (0.0400) | Ex-Date: 23 Apr 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -10145,15 +9228,8 @@ window.NEWS_DATA = {
     ]
   },
   "PANDA": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 10 Jun 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0025) | Ex-Date: 10 Jun 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -10247,15 +9323,8 @@ window.NEWS_DATA = {
     ]
   },
   "NESTLE": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 02 Sep 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.8000) | Ex-Date: 02 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -10297,15 +9366,8 @@ window.NEWS_DATA = {
     ]
   },
   "3REN": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 11 Mar 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0075) | Ex-Date: 11 Mar 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -10338,15 +9400,8 @@ window.NEWS_DATA = {
     ]
   },
   "HPPHB": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 07 May 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0050) | Ex-Date: 07 May 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -10388,15 +9443,8 @@ window.NEWS_DATA = {
     ]
   },
   "PTRB": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 15 Oct 2024",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0099) | Ex-Date: 15 Oct 2024"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -10429,15 +9477,8 @@ window.NEWS_DATA = {
     ]
   },
   "MSTGOLF": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 15 Dec 2025",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0025) | Ex-Date: 15 Dec 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -10479,15 +9520,8 @@ window.NEWS_DATA = {
     ]
   },
   "TJSETIA": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 30 Jul 2026",
-        "severity": "warning",
-        "title": "Final Dividend (0.0040) | Ex-Date: 30 Jul 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -10529,15 +9563,8 @@ window.NEWS_DATA = {
     ]
   },
   "ADB": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 11 Jun 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0150) | Ex-Date: 11 Jun 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -10579,15 +9606,8 @@ window.NEWS_DATA = {
     ]
   },
   "BETA": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 05 Aug 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0125) | Ex-Date: 05 Aug 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -10629,15 +9649,8 @@ window.NEWS_DATA = {
     ]
   },
   "SNS": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 04 May 2026",
-        "severity": "warning",
-        "title": "Fourth Interim Dividend (0.0025) | Ex-Date: 04 May 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -10781,15 +9794,8 @@ window.NEWS_DATA = {
     ]
   },
   "EDELTEQ": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 27 Mar 2025",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0020) | Ex-Date: 27 Mar 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -10933,15 +9939,8 @@ window.NEWS_DATA = {
     ]
   },
   "CEKD": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 21 Aug 2026",
-        "severity": "warning",
-        "title": "Second Interim Dividend (0.0075) | Ex-Date: 21 Aug 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -11051,15 +10050,8 @@ window.NEWS_DATA = {
     ]
   },
   "SFPTECH": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 30 Aug 2024",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0020) | Ex-Date: 30 Aug 2024"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -11110,15 +10102,8 @@ window.NEWS_DATA = {
     ]
   },
   "KEYFIELD": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 02 Sep 2026",
-        "severity": "warning",
-        "title": "Second Interim Dividend (0.0150) | Ex-Date: 02 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -11169,15 +10154,8 @@ window.NEWS_DATA = {
     ]
   },
   "AQUAWALK": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 09 Sep 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0050) | Ex-Date: 09 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -11280,15 +10258,8 @@ window.NEWS_DATA = {
     ]
   },
   "KENERGY": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 03 Mar 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0100) | Ex-Date: 03 Mar 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -11321,15 +10292,8 @@ window.NEWS_DATA = {
     ]
   },
   "GDGROUP": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 21 May 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0250) | Ex-Date: 21 May 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -11380,15 +10344,8 @@ window.NEWS_DATA = {
     ]
   },
   "GLXT": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 13 Aug 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0050) | Ex-Date: 13 Aug 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -11480,15 +10437,8 @@ window.NEWS_DATA = {
     ]
   },
   "SAM": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 14 Jul 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0140) | Ex-Date: 14 Jul 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -11530,15 +10480,8 @@ window.NEWS_DATA = {
     ]
   },
   "ZANTAT": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 10 Jun 2024",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0150) | Ex-Date: 10 Jun 2024"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -11562,15 +10505,8 @@ window.NEWS_DATA = {
     ]
   },
   "UNISEM": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 18 Mar 2026",
-        "severity": "warning",
-        "title": "Fourth Interim Dividend (0.0100) | Ex-Date: 18 Mar 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -11612,15 +10548,8 @@ window.NEWS_DATA = {
     ]
   },
   "NADIBHD": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 14 Apr 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0200) | Ex-Date: 14 Apr 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -11671,15 +10600,8 @@ window.NEWS_DATA = {
     ]
   },
   "CTOS": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 13 Aug 2026",
-        "severity": "warning",
-        "title": "Special Dividend (0.0107) | Ex-Date: 13 Aug 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -11823,15 +10745,8 @@ window.NEWS_DATA = {
     ]
   },
   "SDG": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 20 Oct 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.1118) | Ex-Date: 20 Oct 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -11873,15 +10788,8 @@ window.NEWS_DATA = {
     ]
   },
   "OGX": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 12 May 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0050) | Ex-Date: 12 May 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -11966,15 +10874,8 @@ window.NEWS_DATA = {
     ]
   },
   "BWYS": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 02 Dec 2025",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0005) | Ex-Date: 02 Dec 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -12132,15 +11033,8 @@ window.NEWS_DATA = {
     ]
   },
   "INNATURE": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 11 Mar 2026",
-        "severity": "warning",
-        "title": "Final Dividend (0.0100) | Ex-Date: 11 Mar 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -12225,15 +11119,8 @@ window.NEWS_DATA = {
     ]
   },
   "AGX": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 15 Jul 2026",
-        "severity": "warning",
-        "title": "Special Dividend (0.0220) | Ex-Date: 15 Jul 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -12275,15 +11162,8 @@ window.NEWS_DATA = {
     ]
   },
   "TASHIN": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 18 Jun 2026",
-        "severity": "warning",
-        "title": "Final Dividend (0.0050) | Ex-Date: 18 Jun 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -12325,15 +11205,8 @@ window.NEWS_DATA = {
     ]
   },
   "MESTRON": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 06 Apr 2023",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0015) | Ex-Date: 06 Apr 2023"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -12436,15 +11309,8 @@ window.NEWS_DATA = {
     ]
   },
   "TCS": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 10 Mar 2021",
-        "severity": "warning",
-        "title": "Second Interim Dividend (0.0100) | Ex-Date: 10 Mar 2021"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -12486,15 +11352,8 @@ window.NEWS_DATA = {
     ]
   },
   "AGMO": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 18 Jun 2025",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0150) | Ex-Date: 18 Jun 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -12545,15 +11404,8 @@ window.NEWS_DATA = {
     ]
   },
   "ZETRIX": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 22 Oct 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0025) | Ex-Date: 22 Oct 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -12604,15 +11456,8 @@ window.NEWS_DATA = {
     ]
   },
   "MPI": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 19 May 2026",
-        "severity": "warning",
-        "title": "Second Interim Dividend (0.3000) | Ex-Date: 19 May 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -12663,15 +11508,8 @@ window.NEWS_DATA = {
     ]
   },
   "MCEMENT": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 10 Sep 2026",
-        "severity": "warning",
-        "title": "Second Interim Dividend (0.0900) | Ex-Date: 10 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -12765,15 +11603,8 @@ window.NEWS_DATA = {
     ]
   },
   "AXIATA": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 13 Apr 2026",
-        "severity": "warning",
-        "title": "Second Interim Dividend (0.0500) | Ex-Date: 13 Apr 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -12815,15 +11646,8 @@ window.NEWS_DATA = {
     ]
   },
   "ITMAX": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 12 Mar 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0230) | Ex-Date: 12 Mar 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -12917,15 +11741,8 @@ window.NEWS_DATA = {
     ]
   },
   "INFOTEC": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 14 Mar 2025",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0063) | Ex-Date: 14 Mar 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -12967,15 +11784,8 @@ window.NEWS_DATA = {
     ]
   },
   "CREST": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 05 Aug 2026",
-        "severity": "warning",
-        "title": "First and Final Dividend (0.0200) | Ex-Date: 05 Aug 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -13076,15 +11886,8 @@ window.NEWS_DATA = {
     ]
   },
   "EFRAME": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 21 Nov 2024",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0200) | Ex-Date: 21 Nov 2024"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -13126,15 +11929,8 @@ window.NEWS_DATA = {
     ]
   },
   "SENHENG": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 21 Apr 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0019) | Ex-Date: 21 Apr 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -13235,15 +12031,8 @@ window.NEWS_DATA = {
     ]
   },
   "5ER": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 14 May 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0043) | Ex-Date: 14 May 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -13294,15 +12083,8 @@ window.NEWS_DATA = {
     ]
   },
   "MTAG": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 09 Jul 2025",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0200) | Ex-Date: 09 Jul 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -13396,15 +12178,8 @@ window.NEWS_DATA = {
     ]
   },
   "HONGSENG": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 26 Sep 2013",
-        "severity": "warning",
-        "title": "Interim Dividend (20.0000) | Ex-Date: 26 Sep 2013"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -13471,15 +12246,8 @@ window.NEWS_DATA = {
     ]
   },
   "ACO": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 21 Jul 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0020) | Ex-Date: 21 Jul 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -13521,15 +12289,8 @@ window.NEWS_DATA = {
     ]
   },
   "RL": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 09 Sep 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0100) | Ex-Date: 09 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -13571,15 +12332,8 @@ window.NEWS_DATA = {
     ]
   },
   "SYNERGY": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 13 Mar 2025",
-        "severity": "warning",
-        "title": "Second Interim Dividend (0.0074) | Ex-Date: 13 Mar 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -13680,15 +12434,8 @@ window.NEWS_DATA = {
     ]
   },
   "CEB": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 26 Jul 2024",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0067) | Ex-Date: 26 Jul 2024"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -13739,15 +12486,8 @@ window.NEWS_DATA = {
     ]
   },
   "F&N": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 15 May 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.3000) | Ex-Date: 15 May 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -13789,15 +12529,8 @@ window.NEWS_DATA = {
     ]
   },
   "TFP": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 26 Jun 2008",
-        "severity": "warning",
-        "title": "Interim Dividend (7.5000) | Ex-Date: 26 Jun 2008"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -13848,15 +12581,8 @@ window.NEWS_DATA = {
     ]
   },
   "TELADAN": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 16 Dec 2025",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0100) | Ex-Date: 16 Dec 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -14002,15 +12728,8 @@ window.NEWS_DATA = {
     ]
   },
   "PEOPLE": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 08 Apr 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0022) | Ex-Date: 08 Apr 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -14086,15 +12805,8 @@ window.NEWS_DATA = {
     ]
   },
   "BMS": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 09 Sep 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0014) | Ex-Date: 09 Sep 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -14197,15 +12909,8 @@ window.NEWS_DATA = {
     ]
   },
   "DESTINI": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 08 Apr 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0050) | Ex-Date: 08 Apr 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -14256,15 +12961,8 @@ window.NEWS_DATA = {
     ]
   },
   "OFB": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 20 Mar 2025",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0050) | Ex-Date: 20 Mar 2025"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -14315,15 +13013,8 @@ window.NEWS_DATA = {
     ]
   },
   "FLEXI": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 30 May 2022",
-        "severity": "warning",
-        "title": "Final Dividend (0.0100) | Ex-Date: 30 May 2022"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -14347,15 +13038,8 @@ window.NEWS_DATA = {
     ]
   },
   "PLYTEC": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 12 Dec 2024",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0050) | Ex-Date: 12 Dec 2024"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -14388,15 +13072,8 @@ window.NEWS_DATA = {
     ]
   },
   "COLFORM": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 08 Jul 2026",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0100) | Ex-Date: 08 Jul 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -14420,15 +13097,8 @@ window.NEWS_DATA = {
     ]
   },
   "AGRICOR": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 15 Jun 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0130) | Ex-Date: 15 Jun 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {
@@ -14461,15 +13131,8 @@ window.NEWS_DATA = {
     ]
   },
   "DPIH": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 12 Aug 2026",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0010) | Ex-Date: 12 Aug 2026"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [],
     "entitlements": [
       {

@@ -83,5 +83,10 @@ Untuk mengelakkan terlepas ombak besar (*let winners run*) dan mengelak rasa ral
 * Paparan UI Web JerungBursa (tajuk, butang, jadual, lencana, tooltip, dan mesej status) **WAJIB** menggunakan **Bahasa Inggeris (Professional Financial/Trading English)** secara seragam untuk memastikan kesesuaian dan kelulusan **Google AdSense**.
 * Perbualan AI bersama pengguna tetap dijalankan dalam **Bahasa Melayu** mengikut keselesaan pengguna, tetapi elemen UI web kekal seragam dalam Bahasa Inggeris.
 
+---
 
-
+## 📊 8. Prinsip Penjejakan Isyarat Realistik (Multi-Entry Tracker)
+* **Setiap Kemunculan Isyarat Dijejak Berasingan:**
+  Setiap kali kaunter memenuhi kriteria `⭐ ADD-ON A+` pada tarikh baharu (contohnya SUNLOGY pada 11 Sep & 14 Sep), sistem **WAJIB** membuka dan menjejak rekod transaksi individu baharu mengikut tarikh dan harga sebenar pada hari tersebut.
+* **Tiada Sekatan De-duplikasi Kaunter OPEN:**
+  Walaupun kaunter tersebut telah mempunyai posisi Day 1 atau ADD-ON sedia ada yang masih `OPEN`, isyarat baharu tetap direkodkan sebagai entri bebas (*independent trade*) dengan pengiraan hari (*days held*), PnL, dan paras Stop Loss Trailing tersendiri.

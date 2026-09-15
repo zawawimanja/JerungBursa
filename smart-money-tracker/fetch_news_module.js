@@ -131,18 +131,28 @@ async function getCorporateNewsRisk(stockCode, stockName) {
     const newsBadges = [];
     let hasNewsAlert = false;
 
-    // 1. Analyze Entitlements (Ex-Dividend)
+    // 1. Analyze Entitlements (Ex-Dividend) - Only flag active & upcoming dividends (within -5 days to +30 days)
     const divEntitlements = entitlements.filter(e => e.isDividend);
     if (divEntitlements.length > 0) {
         const latestEnt = divEntitlements[0];
         if (latestEnt.exDate) {
-            newsBadges.push({
-                type: 'EX_DIVIDEND',
-                label: `Ex-Div: ${latestEnt.exDate}`,
-                severity: 'warning',
-                title: `${latestEnt.type} (${latestEnt.amount || 'Dividend'}) | Ex-Date: ${latestEnt.exDate}`
-            });
-            hasNewsAlert = true;
+            const exDateObj = new Date(latestEnt.exDate);
+            const now = new Date();
+            let isRelevant = true;
+            if (!isNaN(exDateObj.getTime())) {
+                const diffDays = Math.round((exDateObj.getTime() - now.getTime()) / (24 * 3600 * 1000));
+                // Only alert if ex-date is within last 5 days or next 30 days
+                isRelevant = (diffDays >= -5 && diffDays <= 30);
+            }
+            if (isRelevant) {
+                newsBadges.push({
+                    type: 'EX_DIVIDEND',
+                    label: `Ex-Div: ${latestEnt.exDate}`,
+                    severity: 'warning',
+                    title: `${latestEnt.type} (${latestEnt.amount || 'Dividend'}) | Ex-Date: ${latestEnt.exDate}`
+                });
+                hasNewsAlert = true;
+            }
         }
     }
 
