@@ -12,7 +12,7 @@ const ROOT_DIR = __dirname;
 const HIST_DIR = path.join(ROOT_DIR, 'history');
 const OUT_FILE = path.join(ROOT_DIR, 'daily_equity_tracker.js');
 
-// 1. Muatkan signal trade dari Fresh Rider & Hot Theme
+// 1. Muatkan signal trade dari Fresh Rider, ADD-ON & Hot Theme
 global.window = {};
 require(path.join(ROOT_DIR, 'fresh_rider_tracker.js'));
 require(path.join(ROOT_DIR, 'hot_theme_tracker.js'));
@@ -26,6 +26,15 @@ const frTrades = (window.FRESH_RIDER_TRACKER.trades || []).map(t => ({
     badgeBorder: 'rgba(253, 224, 71, 0.4)'
 }));
 
+const addOnTrades = (window.ADD_ON_TRACKER && window.ADD_ON_TRACKER.trades || []).map(t => ({
+    ...t,
+    trackerType: 'ADD',
+    trackerTitle: 'ADD-ON A+',
+    badgeColor: '#67e8f9',
+    badgeBg: 'rgba(103, 232, 249, 0.15)',
+    badgeBorder: 'rgba(103, 232, 249, 0.4)'
+}));
+
 const htTrades = (window.HOT_THEME_TRACKER.trades || []).map(t => ({
     ...t,
     trackerType: 'HT',
@@ -35,10 +44,28 @@ const htTrades = (window.HOT_THEME_TRACKER.trades || []).map(t => ({
     badgeBorder: 'rgba(196, 181, 253, 0.4)'
 }));
 
-const allTrades = [...frTrades, ...htTrades];
+const allTrades = [...frTrades, ...addOnTrades, ...htTrades];
 
 // 2. Kumpul fail history
+const BURSA_MALAYSIA_HOLIDAYS = new Set([
+    '2026-01-01', // New Year's Day
+    '2026-01-28', '2026-01-29', '2026-01-30', // Chinese New Year
+    '2026-02-01', '2026-02-02', // Thaipusam / FT Day / Replacement
+    '2026-03-08', '2026-03-09', // Nuzul Al-Quran
+    '2026-03-20', '2026-03-21', '2026-03-22', '2026-03-23', // Hari Raya Aidilfitri
+    '2026-05-01', // Labour Day
+    '2026-05-27', // Hari Raya Haji / Aidiladha
+    '2026-05-31', '2026-06-01', // Wesak Day / Agong's Birthday
+    '2026-06-17', // Awal Muharram
+    '2026-08-25', // Maulidur Rasul
+    '2026-08-31', // Hari Kebangsaan (National Day)
+    '2026-09-16', // Hari Malaysia (Malaysia Day)
+    '2026-11-08', '2026-11-09', // Deepavali / Replacement
+    '2026-12-25'  // Christmas Day
+]);
+
 function isTradingDay(dateStr) {
+    if (!dateStr || BURSA_MALAYSIA_HOLIDAYS.has(dateStr)) return false;
     const d = new Date(dateStr);
     if (isNaN(d.getTime())) return false;
     const wd = d.getDay();
@@ -107,6 +134,7 @@ historyDays.forEach((day, dayIdx) => {
     let closedCount = 0;
     let dailyPnlDelta = 0;
     let frPnlOnDay = 0;
+    let addOnPnlOnDay = 0;
     let htPnlOnDay = 0;
 
     allTrades.forEach(t => {
@@ -120,7 +148,9 @@ historyDays.forEach((day, dayIdx) => {
             closedCount++;
             const g = (t.finalGain || 0);
             closedPnl += g;
-            if (t.trackerType === 'FR') frPnlOnDay += g; else htPnlOnDay += g;
+            if (t.trackerType === 'FR') frPnlOnDay += g;
+            else if (t.trackerType === 'ADD') addOnPnlOnDay += g;
+            else htPnlOnDay += g;
             tradesOnDay.push({
                 name: t.name,
                 trackerType: t.trackerType,
@@ -163,7 +193,9 @@ historyDays.forEach((day, dayIdx) => {
             closedCount++;
             const g = (t.finalGain !== undefined ? t.finalGain : gainOnDay);
             closedPnl += g;
-            if (t.trackerType === 'FR') frPnlOnDay += g; else htPnlOnDay += g;
+            if (t.trackerType === 'FR') frPnlOnDay += g;
+            else if (t.trackerType === 'ADD') addOnPnlOnDay += g;
+            else htPnlOnDay += g;
             dailyPnlDelta += pnlDeltaToday;
             tradesOnDay.push({
                 name: t.name,
@@ -177,7 +209,9 @@ historyDays.forEach((day, dayIdx) => {
         } else {
             openCount++;
             openPnl += gainOnDay;
-            if (t.trackerType === 'FR') frPnlOnDay += gainOnDay; else htPnlOnDay += gainOnDay;
+            if (t.trackerType === 'FR') frPnlOnDay += gainOnDay;
+            else if (t.trackerType === 'ADD') addOnPnlOnDay += gainOnDay;
+            else htPnlOnDay += gainOnDay;
             dailyPnlDelta += pnlDeltaToday;
             tradesOnDay.push({
                 name: t.name,
@@ -214,6 +248,7 @@ historyDays.forEach((day, dayIdx) => {
         closedPnl: +closedPnl.toFixed(1),
         totalPnl,
         frPnl: +frPnlOnDay.toFixed(1),
+        addOnPnl: +addOnPnlOnDay.toFixed(1),
         htPnl: +htPnlOnDay.toFixed(1),
         dailyPnlDelta: +dailyPnlDelta.toFixed(1),
         winRate,

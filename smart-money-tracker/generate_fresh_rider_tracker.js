@@ -62,7 +62,25 @@ function isAddOnAPick(item, initialBasePrice, effFloor) {
     return true;
 }
 
+const BURSA_MALAYSIA_HOLIDAYS = new Set([
+    '2026-01-01', // New Year's Day
+    '2026-01-28', '2026-01-29', '2026-01-30', // Chinese New Year
+    '2026-02-01', '2026-02-02', // Thaipusam / FT Day / Replacement
+    '2026-03-08', '2026-03-09', // Nuzul Al-Quran
+    '2026-03-20', '2026-03-21', '2026-03-22', '2026-03-23', // Hari Raya Aidilfitri
+    '2026-05-01', // Labour Day
+    '2026-05-27', // Hari Raya Haji / Aidiladha
+    '2026-05-31', '2026-06-01', // Wesak Day / Agong's Birthday
+    '2026-06-17', // Awal Muharram
+    '2026-08-25', // Maulidur Rasul
+    '2026-08-31', // Hari Kebangsaan (National Day)
+    '2026-09-16', // Hari Malaysia (Malaysia Day)
+    '2026-11-08', '2026-11-09', // Deepavali / Replacement
+    '2026-12-25'  // Christmas Day
+]);
+
 function isTradingDay(dateStr) {
+    if (!dateStr || BURSA_MALAYSIA_HOLIDAYS.has(dateStr)) return false;
     const d = new Date(dateStr);
     if (isNaN(d.getTime())) return false;
     const wd = d.getDay();
@@ -175,6 +193,15 @@ for (const day of dayList) {
 let openAddOn = [];
 const tradesAddOn = [];
 const initialBaseMap = {};
+const recentByNameAddOn = {};
+
+function dynamicFloorAddOn(name, price, floorLow) {
+    const rfArr = recentByNameAddOn[name] || [];
+    const rf = rfArr.length ? Math.min(...rfArr) : 0;
+    const f = floorLow || 0;
+    if (f > 0 && rf > 0 && ((price - f) / f) > 0.10) return Math.max(f, rf);
+    return f || rf;
+}
 
 for (const day of dayList) {
     const map = {};
@@ -201,7 +228,7 @@ for (const day of dayList) {
         t.days++;
         t.lastDate = day.date;
         t.currentPrice = +cur.price.toFixed(3);
-        if (cur.floorLow) t.currentFloor = +dynamicFloor(name, cur.price, cur.floorLow).toFixed(3);
+        if (cur.floorLow) t.currentFloor = +dynamicFloorAddOn(name, cur.price, cur.floorLow).toFixed(3);
         if (cur.price > t.high) { t.high = +cur.price.toFixed(3); t.highDate = day.date; }
         t.maxGain = +(((t.high - t.entry) / t.entry) * 100).toFixed(1);
 
@@ -227,7 +254,7 @@ for (const day of dayList) {
         const base = initialBaseMap[name];
         if (!base || day.date <= base.date) continue; // Wajib selepas Day 1
 
-        const effFloor = dynamicFloor(name, it.price, it.floorLow);
+        const effFloor = dynamicFloorAddOn(name, it.price, it.floorLow);
         // Wajib qualify sebagai setup yang sah
         if (!isAddOnAPick(it, base.price, effFloor)) continue;
 
@@ -256,6 +283,12 @@ for (const day of dayList) {
         };
         openAddOn.push(t);
         tradesAddOn.push(t);
+    }
+
+    for (const [nm, it] of Object.entries(map)) {
+        if (!recentByNameAddOn[nm]) recentByNameAddOn[nm] = [];
+        recentByNameAddOn[nm].push(it.price);
+        if (recentByNameAddOn[nm].length > 5) recentByNameAddOn[nm].shift();
     }
 }
 

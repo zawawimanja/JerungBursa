@@ -1,8 +1,8 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-16T10:16:14.300Z",
-  "dataDays": 81,
+  "generatedAt": "2026-09-16T16:07:19.420Z",
+  "dataDays": 76,
   "totalTracked": 49,
   "openCount": 24,
   "closedCount": 25,
@@ -15,12 +15,12 @@ window.HOT_THEME_TRACKER = {
  },
  "backtest": {
   "dataStart": "2026-05-25",
-  "dataEnd": "2026-09-16",
-  "dataDays": 81,
+  "dataEnd": "2026-09-15",
+  "dataDays": 76,
   "signals": 45,
-  "winRate": 71,
-  "avgGain": 9.2,
-  "totalPnl": 415.8,
+  "winRate": 67,
+  "avgGain": 8.4,
+  "totalPnl": 377.6,
   "worstLoss": -16
  },
  "themeStrength": [
@@ -39,60 +39,46 @@ window.HOT_THEME_TRACKER = {
    "ma5": 47.8
   },
   {
-   "date": "2026-05-27",
-   "themePct": 48.7,
-   "themeCount": 11,
-   "totalCount": 18,
-   "ma5": 48.1
-  },
-  {
    "date": "2026-05-28",
    "themePct": 35.2,
    "themeCount": 11,
    "totalCount": 18,
-   "ma5": 44.8
+   "ma5": 43.6
   },
   {
    "date": "2026-05-29",
    "themePct": 20.9,
    "themeCount": 11,
    "totalCount": 19,
-   "ma5": 40.1
-  },
-  {
-   "date": "2026-06-01",
-   "themePct": 0,
-   "themeCount": 3,
-   "totalCount": 15,
-   "ma5": 33.3
+   "ma5": 37.9
   },
   {
    "date": "2026-06-02",
    "themePct": 0,
    "themeCount": 67,
    "totalCount": 273,
-   "ma5": 21
+   "ma5": 30.3
   },
   {
    "date": "2026-06-03",
    "themePct": 50,
    "themeCount": 68,
    "totalCount": 275,
-   "ma5": 21.2
+   "ma5": 33.6
   },
   {
    "date": "2026-06-04",
    "themePct": 46.6,
    "themeCount": 68,
    "totalCount": 275,
-   "ma5": 23.5
+   "ma5": 30.5
   },
   {
    "date": "2026-06-05",
    "themePct": 41.4,
    "themeCount": 67,
    "totalCount": 275,
-   "ma5": 27.6
+   "ma5": 31.8
   },
   {
    "date": "2026-06-08",
@@ -144,39 +130,32 @@ window.HOT_THEME_TRACKER = {
    "ma5": 38.5
   },
   {
-   "date": "2026-06-17",
-   "themePct": 0,
-   "themeCount": 0,
-   "totalCount": 16,
-   "ma5": 31.7
-  },
-  {
    "date": "2026-06-18",
    "themePct": 25.8,
    "themeCount": 67,
    "totalCount": 274,
-   "ma5": 28.5
+   "ma5": 36.9
   },
   {
    "date": "2026-06-19",
    "themePct": 27.4,
    "themeCount": 68,
    "totalCount": 275,
-   "ma5": 23.8
+   "ma5": 34
   },
   {
    "date": "2026-06-22",
    "themePct": 39.7,
    "themeCount": 68,
    "totalCount": 274,
-   "ma5": 24.7
+   "ma5": 31.8
   },
   {
    "date": "2026-06-23",
    "themePct": 30.4,
    "themeCount": 69,
    "totalCount": 276,
-   "ma5": 24.7
+   "ma5": 30.8
   },
   {
    "date": "2026-06-24",
@@ -480,32 +459,25 @@ window.HOT_THEME_TRACKER = {
    "ma5": 30.4
   },
   {
-   "date": "2026-08-25",
-   "themePct": 35,
-   "themeCount": 68,
-   "totalCount": 296,
-   "ma5": 32.1
-  },
-  {
    "date": "2026-08-26",
    "themePct": 24.7,
    "themeCount": 69,
    "totalCount": 296,
-   "ma5": 31.6
+   "ma5": 30.1
   },
   {
    "date": "2026-08-27",
    "themePct": 23.2,
    "themeCount": 67,
    "totalCount": 296,
-   "ma5": 31.4
+   "ma5": 29.2
   },
   {
    "date": "2026-08-28",
    "themePct": 8,
    "themeCount": 68,
    "totalCount": 297,
-   "ma5": 25.2
+   "ma5": 26
   },
   {
    "date": "2026-09-01",
@@ -583,13 +555,6 @@ window.HOT_THEME_TRACKER = {
    "themeCount": 76,
    "totalCount": 307,
    "ma5": 22.4
-  },
-  {
-   "date": "2026-09-16",
-   "themePct": 18.8,
-   "themeCount": 76,
-   "totalCount": 308,
-   "ma5": 22.6
   }
  ],
  "themeTrend": "RISING",
@@ -606,8 +571,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 0.8,
    "finalGain": 0.8,
    "day1ChangePct": 2.44,
-   "days": 6,
-   "lastDate": "2026-09-16",
+   "days": 5,
+   "lastDate": "2026-09-15",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -627,8 +592,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 0,
    "finalGain": -5.6,
    "day1ChangePct": -1.83,
-   "days": 13,
-   "lastDate": "2026-09-16",
+   "days": 12,
+   "lastDate": "2026-09-15",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -648,8 +613,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 27.2,
    "finalGain": 27.2,
    "day1ChangePct": -1.11,
-   "days": 7,
-   "lastDate": "2026-09-16",
+   "days": 5,
+   "lastDate": "2026-09-15",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -669,7 +634,7 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 2.7,
    "finalGain": -3.6,
    "day1ChangePct": -0.89,
-   "days": 6,
+   "days": 5,
    "lastDate": "2026-09-07",
    "status": "OPEN",
    "themes": [
@@ -686,12 +651,12 @@ window.HOT_THEME_TRACKER = {
    "currentFloor": 0.16,
    "currentPrice": 0.16,
    "high": 0.18,
-   "highDate": "2026-08-25",
+   "highDate": "2026-08-24",
    "maxGain": 0,
    "finalGain": -11.1,
    "day1ChangePct": 1.12,
-   "days": 12,
-   "lastDate": "2026-09-16",
+   "days": 10,
+   "lastDate": "2026-09-15",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -711,8 +676,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 0,
    "finalGain": -7,
    "day1ChangePct": -2.27,
-   "days": 20,
-   "lastDate": "2026-09-16",
+   "days": 18,
+   "lastDate": "2026-09-15",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -732,7 +697,7 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 0,
    "finalGain": -10.9,
    "day1ChangePct": 1.67,
-   "days": 16,
+   "days": 15,
    "lastDate": "2026-09-07",
    "status": "OPEN",
    "themes": [
@@ -753,8 +718,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 8.9,
    "finalGain": -3.6,
    "day1ChangePct": -0.98,
-   "days": 29,
-   "lastDate": "2026-09-16",
+   "days": 27,
+   "lastDate": "2026-09-15",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -816,8 +781,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 3.9,
    "finalGain": 1.3,
    "day1ChangePct": 1.31,
-   "days": 43,
-   "lastDate": "2026-09-16",
+   "days": 41,
+   "lastDate": "2026-09-15",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -837,8 +802,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 6,
    "finalGain": 0,
    "day1ChangePct": 0,
-   "days": 51,
-   "lastDate": "2026-09-16",
+   "days": 49,
+   "lastDate": "2026-09-15",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -858,8 +823,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 36.8,
    "finalGain": 34.2,
    "day1ChangePct": 6.36,
-   "days": 55,
-   "lastDate": "2026-09-16",
+   "days": 53,
+   "lastDate": "2026-09-15",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -879,8 +844,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 10.4,
    "finalGain": -5.7,
    "day1ChangePct": -1.85,
-   "days": 30,
-   "lastDate": "2026-09-16",
+   "days": 29,
+   "lastDate": "2026-09-15",
    "status": "OPEN",
    "themes": [
     "Semiconductor",
@@ -901,8 +866,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 10.1,
    "finalGain": -3.8,
    "day1ChangePct": 0,
-   "days": 71,
-   "lastDate": "2026-09-16",
+   "days": 69,
+   "lastDate": "2026-09-15",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -922,8 +887,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 14.4,
    "finalGain": 7.6,
    "day1ChangePct": 0.85,
-   "days": 73,
-   "lastDate": "2026-09-16",
+   "days": 71,
+   "lastDate": "2026-09-15",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -943,8 +908,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 17.8,
    "finalGain": 8.6,
    "day1ChangePct": 2.36,
-   "days": 73,
-   "lastDate": "2026-09-16",
+   "days": 71,
+   "lastDate": "2026-09-15",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -964,8 +929,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 40.1,
    "finalGain": 33.6,
    "day1ChangePct": 0.59,
-   "days": 73,
-   "lastDate": "2026-09-16",
+   "days": 71,
+   "lastDate": "2026-09-15",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -985,8 +950,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 17.5,
    "finalGain": 4.6,
    "day1ChangePct": -1.01,
-   "days": 73,
-   "lastDate": "2026-09-16",
+   "days": 71,
+   "lastDate": "2026-09-15",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -1006,8 +971,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 5.7,
    "finalGain": -4.2,
    "day1ChangePct": -2.97,
-   "days": 73,
-   "lastDate": "2026-09-16",
+   "days": 71,
+   "lastDate": "2026-09-15",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -1027,8 +992,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 1.4,
    "finalGain": 0,
    "day1ChangePct": -1.33,
-   "days": 73,
-   "lastDate": "2026-09-16",
+   "days": 71,
+   "lastDate": "2026-09-15",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -1048,8 +1013,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 1.2,
    "finalGain": -0.6,
    "day1ChangePct": -0.58,
-   "days": 73,
-   "lastDate": "2026-09-16",
+   "days": 71,
+   "lastDate": "2026-09-15",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -1062,21 +1027,21 @@ window.HOT_THEME_TRACKER = {
    "entryDate": "2026-06-03",
    "entry": 1.58,
    "entryFloor": 1.55,
-   "currentFloor": 2.03,
+   "currentFloor": 2.07,
    "currentPrice": 2.03,
    "high": 2.12,
    "highDate": "2026-09-10",
    "maxGain": 34.2,
    "finalGain": 28.5,
    "day1ChangePct": -3.66,
-   "days": 73,
-   "lastDate": "2026-09-16",
+   "days": 71,
+   "lastDate": "2026-09-15",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
    ],
    "confluence": 3,
-   "slTrail": 1.993
+   "slTrail": 2.008
   },
   {
    "name": "SAMAIDEN",
@@ -1090,8 +1055,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 55.2,
    "finalGain": 48.8,
    "day1ChangePct": 0,
-   "days": 32,
-   "lastDate": "2026-09-16",
+   "days": 31,
+   "lastDate": "2026-09-15",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -1134,7 +1099,7 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 24.1,
    "finalGain": 16.7,
    "day1ChangePct": -1.05,
-   "days": 70,
+   "days": 69,
    "lastDate": "2026-09-15",
    "status": "CLOSED_SL",
    "themes": [
@@ -1180,7 +1145,7 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 1,
    "finalGain": -16,
    "day1ChangePct": 3.96,
-   "days": 64,
+   "days": 63,
    "lastDate": "2026-09-07",
    "status": "CLOSED_SL",
    "themes": [
@@ -1203,7 +1168,7 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 8.3,
    "finalGain": -13.3,
    "day1ChangePct": -1.27,
-   "days": 21,
+   "days": 20,
    "lastDate": "2026-09-03",
    "status": "CLOSED_SL",
    "themes": [
@@ -1226,7 +1191,7 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 23.2,
    "finalGain": 15.8,
    "day1ChangePct": 7.89,
-   "days": 61,
+   "days": 60,
    "lastDate": "2026-09-01",
    "status": "CLOSED_SL",
    "themes": [
@@ -1272,7 +1237,7 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 31,
    "finalGain": 23.2,
    "day1ChangePct": -1.69,
-   "days": 17,
+   "days": 16,
    "lastDate": "2026-09-01",
    "status": "CLOSED_SL",
    "themes": [
@@ -1288,14 +1253,14 @@ window.HOT_THEME_TRACKER = {
    "entryDate": "2026-08-19",
    "entry": 1.47,
    "entryFloor": 1.34,
-   "currentFloor": 1.49,
+   "currentFloor": 1.41,
    "currentPrice": 1.74,
    "high": 1.86,
    "highDate": "2026-08-28",
    "maxGain": 26.5,
    "finalGain": 18.9,
    "day1ChangePct": -0.68,
-   "days": 9,
+   "days": 8,
    "lastDate": "2026-09-01",
    "status": "CLOSED_SL",
    "themes": [
@@ -1318,7 +1283,7 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 38.7,
    "finalGain": 30.3,
    "day1ChangePct": 0,
-   "days": 60,
+   "days": 59,
    "lastDate": "2026-08-28",
    "status": "CLOSED_SL",
    "themes": [
@@ -1334,14 +1299,14 @@ window.HOT_THEME_TRACKER = {
    "entryDate": "2026-06-24",
    "entry": 0.605,
    "entryFloor": 0.545,
-   "currentFloor": 0.875,
+   "currentFloor": 0.77,
    "currentPrice": 0.855,
    "high": 0.92,
    "highDate": "2026-08-21",
    "maxGain": 52.1,
    "finalGain": 42.9,
    "day1ChangePct": 11.01,
-   "days": 47,
+   "days": 46,
    "lastDate": "2026-08-28",
    "status": "CLOSED_SL",
    "themes": [
@@ -1357,14 +1322,14 @@ window.HOT_THEME_TRACKER = {
    "entryDate": "2026-07-14",
    "entry": 0.205,
    "entryFloor": 0.185,
-   "currentFloor": 0.275,
+   "currentFloor": 0.27,
    "currentPrice": 0.275,
    "high": 0.295,
    "highDate": "2026-08-26",
    "maxGain": 43.9,
    "finalGain": 35.3,
    "day1ChangePct": 5.13,
-   "days": 32,
+   "days": 31,
    "lastDate": "2026-08-27",
    "status": "CLOSED_SL",
    "themes": [
