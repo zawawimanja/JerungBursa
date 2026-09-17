@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-09-17T04:10:45.222Z",
+ "generatedAt": "2026-09-17T04:20:44.374Z",
  "totalDays": 73,
  "startDate": "2026-06-02",
  "endDate": "2026-09-17",
@@ -39942,17 +39942,17 @@ window.DAILY_EQUITY_TRACKER = {
    "totalSignals": 89,
    "openCount": 53,
    "closedCount": 36,
-   "openPnl": 1213,
+   "openPnl": 1211.8,
    "closedPnl": 523.9,
-   "totalPnl": 1736.9,
-   "frPnl": 570.8,
-   "addOnPnl": 471.4,
-   "htPnl": 694.7,
-   "dailyPnlDelta": 5.7,
+   "totalPnl": 1735.7,
+   "frPnl": 571.3,
+   "addOnPnl": 470.6,
+   "htPnl": 693.8,
+   "dailyPnlDelta": 4.5,
    "winRate": 67,
    "avgGain": 19.5,
    "peakGainer": {
-    "gain": 116.5,
+    "gain": 117.4,
     "name": "KEEMING"
    },
    "trades": [
@@ -39969,10 +39969,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "PENTECH",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.32,
-     "gainOnDay": -8.6,
-     "dayChangePct": 1.59,
-     "pnlDeltaToday": 1.4
+     "priceOnDay": 0.315,
+     "gainOnDay": -10,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "name": "SUNLOGY",
@@ -40014,10 +40014,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "HEGROUP",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.93,
-     "gainOnDay": 70.6,
-     "dayChangePct": -0.53,
-     "pnlDeltaToday": -0.9
+     "priceOnDay": 0.94,
+     "gainOnDay": 72.5,
+     "dayChangePct": 0.53,
+     "pnlDeltaToday": 0.9
     },
     {
      "name": "EIPOWER",
@@ -40068,19 +40068,19 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "ISF",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.775,
-     "gainOnDay": 39.6,
-     "dayChangePct": 2.65,
-     "pnlDeltaToday": 3.6
+     "priceOnDay": 0.77,
+     "gainOnDay": 38.7,
+     "dayChangePct": 1.99,
+     "pnlDeltaToday": 2.7
     },
     {
      "name": "KEEMING",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.36,
-     "gainOnDay": 116.5,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
+     "priceOnDay": 2.37,
+     "gainOnDay": 117.4,
+     "dayChangePct": 0.42,
+     "pnlDeltaToday": 0.9
     },
     {
      "name": "ICENTS",
@@ -40203,10 +40203,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "ISF",
      "trackerType": "ADD",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.775,
-     "gainOnDay": 27,
-     "dayChangePct": 2.65,
-     "pnlDeltaToday": 3.3
+     "priceOnDay": 0.77,
+     "gainOnDay": 26.2,
+     "dayChangePct": 1.99,
+     "pnlDeltaToday": 2.5
     },
     {
      "name": "STRATUS",
@@ -40383,10 +40383,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "SKYECHIP",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.9,
-     "gainOnDay": -4.3,
-     "dayChangePct": -0.68,
-     "pnlDeltaToday": -0.7
+     "priceOnDay": 2.91,
+     "gainOnDay": -4,
+     "dayChangePct": -0.34,
+     "pnlDeltaToday": -0.3
     },
     {
      "name": "NEXGRAM",
@@ -40464,19 +40464,19 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "KGB",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.39,
-     "gainOnDay": 7.4,
-     "dayChangePct": -1.06,
-     "pnlDeltaToday": -1.2
+     "priceOnDay": 8.38,
+     "gainOnDay": 7.3,
+     "dayChangePct": -1.18,
+     "pnlDeltaToday": -1.3
     },
     {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 9.18,
-     "gainOnDay": 34.8,
-     "dayChangePct": 0.88,
-     "pnlDeltaToday": 1.2
+     "priceOnDay": 9.16,
+     "gainOnDay": 34.5,
+     "dayChangePct": 0.66,
+     "pnlDeltaToday": 0.9
     },
     {
      "name": "UWC",
@@ -40527,10 +40527,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "SAMAIDEN",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 1.87,
-     "gainOnDay": 49.6,
-     "dayChangePct": 0.54,
-     "pnlDeltaToday": 0.8
+     "priceOnDay": 1.86,
+     "gainOnDay": 48.8,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "name": "MNHLDG",
