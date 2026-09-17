@@ -6751,10 +6751,11 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             }
 
             const sortedTrades = [...data.trades].sort((a, b) => {
+                const dateCmp = (b.entryDate || '').localeCompare(a.entryDate || '');
+                if (dateCmp !== 0) return dateCmp;
                 const aOpen = a.status === 'OPEN' ? 0 : 1;
                 const bOpen = b.status === 'OPEN' ? 0 : 1;
-                if (aOpen !== bOpen) return aOpen - bOpen;
-                return (b.entryDate || '').localeCompare(a.entryDate || '');
+                return aOpen - bOpen;
             });
 
             const todayStr = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || new Date().toISOString().slice(0, 10);
@@ -7220,13 +7221,13 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 </div>`).join('');
             }
             // Render trades table
-            // Susun: OPEN dulu, kemudian CLOSED; dalam setiap kumpulan entry TERKINI di atas.
-            // Sort di frontend (bukan bergantung pada urutan data file) supaya sentiasa betul.
+            // Susun: Entry Date TERKINI di atas sekali (chronological latest first).
             const sortedTrades = [...data.trades].sort((a, b) => {
+                const dateCmp = (b.entryDate || '').localeCompare(a.entryDate || '');
+                if (dateCmp !== 0) return dateCmp;
                 const aOpen = a.status === 'OPEN' ? 0 : 1;
                 const bOpen = b.status === 'OPEN' ? 0 : 1;
-                if (aOpen !== bOpen) return aOpen - bOpen;
-                return (b.entryDate || '').localeCompare(a.entryDate || '');
+                return aOpen - bOpen;
             });
             tbody.innerHTML = sortedTrades.map((t, idx) => {
                 const isOpen = t.status === 'OPEN';
@@ -8323,6 +8324,10 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 .map(t => [(t.name || '').toUpperCase(), t]));
             const todayStr = hd || (window.FRESH_RIDER_TRACKER && window.FRESH_RIDER_TRACKER.summary && window.FRESH_RIDER_TRACKER.summary.generatedAt ? window.FRESH_RIDER_TRACKER.summary.generatedAt.slice(0, 10) : new Date().toISOString().slice(0, 10));
 
+            // Create lookup map of current rendered picks for exact price, floor & tightness
+            const currentPicksMap = new Map((window._latestFreshRiderPicks || currentData || []).map(it => [(it.name || '').toUpperCase(), it]));
+            const recentFloorMap = getRecentFloorMap(hd, 5);
+
             // Buang badge lama (elak duplicate bila re-render)
             tbody.querySelectorAll('.fr-new-badge').forEach(el => el.remove());
 
@@ -8331,26 +8336,41 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 if (!name) return;
                 const badgeRow = tr.querySelector('.fr-badge-row');
                 if (!badgeRow) return;
+
+                const nameUpper = name.toUpperCase();
+                const trTrade = trackedTrades.get(nameUpper);
+                const item = currentPicksMap.get(nameUpper);
+
                 // ➕ ADD-ON: MASIH OPEN dalam tracker & BERLAKU SEBELUM HARI INI (entryDate < todayStr)
                 // Jika entryDate === todayStr (entry hari ini), ia dikira 🆕 BARU (bukan ADD-ON)!
-                const trTrade = trackedTrades.get(name.toUpperCase());
                 if (trTrade && trTrade.status === 'OPEN' && trTrade.entryDate < todayStr) {
                     const badge = document.createElement('span');
                     badge.className = 'fr-new-badge';
                     const entryPrice = trTrade.entry || 0;
-                    const curP = trTrade.currentPrice || entryPrice;
+                    const curP = (item && item.price) ? item.price : (trTrade.currentPrice || entryPrice);
                     const pctFromEntry = entryPrice > 0 ? ((curP - entryPrice) / entryPrice) * 100 : 0;
-                    const curFloor = trTrade.currentFloor || trTrade.entryFloor || 0;
-                    const floorDist = curFloor > 0 ? ((curP - curFloor) / curFloor) * 100 : 99;
 
-                    if (pctFromEntry >= 0 && pctFromEntry <= 20 && floorDist <= 3.5) {
+                    // Guna effFloor dinamik (recent low / base 2)
+                    let effF = 0;
+                    if (item) {
+                        const rf = recentFloorMap.get(nameUpper);
+                        const f = item.floorLow || 0;
+                        if (f > 0 && rf > 0 && ((curP - f) / f) > 0.10) effF = Math.max(f, rf);
+                        else effF = f || rf || 0;
+                    }
+                    if (!effF) effF = trTrade.currentFloor || trTrade.entryFloor || 0;
+
+                    const floorDist = effF > 0 ? ((curP - effF) / effF) * 100 : 99;
+                    const toVal = (item && (item.turnover || item.rawTurnover)) || 0;
+
+                    if (pctFromEntry >= 0 && pctFromEntry <= 20 && floorDist <= 3.5 && (toVal >= 2000000 || toVal === 0)) {
                         badge.textContent = '⭐ ADD-ON A+';
                         badge.style.cssText = 'font-size:0.62rem; background:linear-gradient(135deg, rgba(16,185,129,0.35), rgba(234,179,8,0.35)); color:#fef08a; padding:0.08rem 0.35rem; border-radius:4px; font-weight:900; border:1px solid rgba(234,179,8,0.7); white-space:nowrap; animation: pulse 1.5s infinite; text-shadow: 0 0 6px rgba(234,179,8,0.5);';
                         badge.title = `ADD-ON A+ (Fresh Base / Staircase 2): OPEN in Tracker, hanya +${pctFromEntry.toFixed(1)}% dari entry asal (RM ${entryPrice.toFixed(3)}) & lantai rapat ${floorDist.toFixed(1)}%. Win Rate Backtest ~80%!`;
                     } else if (pctFromEntry < 0 && floorDist <= 3.5) {
                         badge.textContent = '🔻 RETEST BASE';
                         badge.style.cssText = 'font-size:0.62rem; background:rgba(56,189,248,0.25); color:#7dd3fc; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid rgba(56,189,248,0.5); white-space:nowrap;';
-                        badge.title = `RETEST BASE: Harga kini RM ${curP.toFixed(3)} (${pctFromEntry.toFixed(1)}% dari entry asal) sedang menguji sokongan lantai RM ${curFloor.toFixed(3)}.`;
+                        badge.title = `RETEST BASE: Harga kini RM ${curP.toFixed(3)} (${pctFromEntry.toFixed(1)}% dari entry asal) sedang menguji sokongan lantai RM ${effF.toFixed(3)}.`;
                     } else if (pctFromEntry > 20) {
                         badge.textContent = `⚠️ ADD-ON (+${pctFromEntry.toFixed(0)}%)`;
                         badge.style.cssText = 'font-size:0.62rem; background:rgba(239,68,68,0.2); color:#fca5a5; padding:0.08rem 0.3rem; border-radius:4px; font-weight:800; border:1px solid rgba(239,68,68,0.4); white-space:nowrap;';
@@ -8387,7 +8407,6 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 badgeRow.prepend(badge);
 
                 // Attach Corporate News Risk Badges (Ex-Dividend / QR / Corp Action)
-                const nameUpper = name.toUpperCase();
                 let badgesToShow = [];
                 if (window.NEWS_DATA && window.NEWS_DATA[nameUpper] && Array.isArray(window.NEWS_DATA[nameUpper].newsBadges)) {
                     badgesToShow = window.NEWS_DATA[nameUpper].newsBadges;
@@ -9450,6 +9469,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
         // Page setup and event listeners
         window.addEventListener('DOMContentLoaded', () => {
+            renderFreshRiderTracker();
             fetchLiveData();
             renderPhoenixSpring();
             updateTopTrackerPnlBadge();

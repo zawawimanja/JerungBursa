@@ -566,11 +566,12 @@ function buildMessage(now, out) {
     // 5. Lantai DINAMIK (sama macam list): selepas breakout, guna lantai BARU
     // (min harga 5 hari dagangan terakhir) — bukan floorLow scanner yang ketinggalan.
     const allCand = new Set(candidates.map(s => canonName(s.name).toUpperCase()));
-    const recentFloor = new Map();
-    for (let back = 1; back <= 5; back++) {
+    let validDaysCount = 0;
+    for (let back = 1; back <= 15 && validDaysCount < 5; back++) {
         const d = new Date(now.getTime() - back * 24 * 3600 * 1000);
         const ds = d.toISOString().slice(0, 10);
         if (!isTradingDay(ds)) continue;
+        validDaysCount++;
         const day = loadHistoryDay(ds);
         for (const it of day) {
             if (!it || !it.name || !(it.price > 0)) continue;
