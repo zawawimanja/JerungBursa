@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-17T04:20:44.116Z",
+  "generatedAt": "2026-09-17T04:30:52.933Z",
   "dataDays": 77,
   "totalTracked": 49,
   "openCount": 24,
@@ -9,9 +9,9 @@ window.HOT_THEME_TRACKER = {
   "closedWins": 19,
   "closedWinRate": 76,
   "closedAvgGain": 21.5,
-  "openPnl": 156.9,
+  "openPnl": 155.7,
   "closedPnl": 536.9,
-  "totalPnlNow": 693.8
+  "totalPnlNow": 692.6
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -558,9 +558,9 @@ window.HOT_THEME_TRACKER = {
   },
   {
    "date": "2026-09-17",
-   "themePct": 20.5,
+   "themePct": 20.4,
    "themeCount": 75,
-   "totalCount": 306,
+   "totalCount": 307,
    "ma5": 23
   }
  ],
@@ -614,11 +614,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 6.25,
    "entryFloor": 7.79,
    "currentFloor": 7.68,
-   "currentPrice": 8.01,
-   "high": 8.01,
+   "currentPrice": 7.99,
+   "high": 7.99,
    "highDate": "2026-09-17",
-   "maxGain": 28.2,
-   "finalGain": 28.2,
+   "maxGain": 27.8,
+   "finalGain": 27.8,
    "day1ChangePct": -1.11,
    "days": 20,
    "lastDate": "2026-09-17",
@@ -627,7 +627,7 @@ window.HOT_THEME_TRACKER = {
     "Semiconductor"
    ],
    "confluence": 3,
-   "slTrail": 7.529
+   "slTrail": 7.511
   },
   {
    "name": "NEXG",
@@ -1056,11 +1056,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 1.25,
    "entryFloor": 1.22,
    "currentFloor": 1.76,
-   "currentPrice": 1.86,
+   "currentPrice": 1.85,
    "high": 1.94,
    "highDate": "2026-09-10",
    "maxGain": 55.2,
-   "finalGain": 48.8,
+   "finalGain": 48,
    "day1ChangePct": 0,
    "days": 32,
    "lastDate": "2026-09-17",
