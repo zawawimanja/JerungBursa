@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual
 window.FRESH_RIDER_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-17T09:01:15.129Z",
+  "generatedAt": "2026-09-17T09:11:25.724Z",
   "dataDays": 73,
   "totalTracked": 21,
   "openCount": 15,
@@ -9,9 +9,9 @@ window.FRESH_RIDER_TRACKER = {
   "closedWins": 3,
   "closedWinRate": 50,
   "closedAvgGain": 3.5,
-  "openPnl": 578.8,
+  "openPnl": 577.7,
   "closedPnl": 21.3,
-  "totalPnlNow": 600.1
+  "totalPnlNow": 599
  },
  "backtest": {
   "dataStart": "2026-06-02",
@@ -20,7 +20,7 @@ window.FRESH_RIDER_TRACKER = {
   "signals": 21,
   "winRate": 71,
   "avgGain": 14.7,
-  "totalPnl": 309.5,
+  "totalPnl": 309.1,
   "worstLoss": -15.5
  },
  "trades": [
@@ -31,18 +31,18 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 0.61,
    "entryFloor": 0.58,
    "currentFloor": 0.61,
-   "currentPrice": 0.685,
-   "high": 0.685,
+   "currentPrice": 0.69,
+   "high": 0.69,
    "highDate": "2026-09-17",
-   "maxGain": 12.3,
-   "finalGain": 12.3,
+   "maxGain": 13.1,
+   "finalGain": 13.1,
    "day1ChangePct": 0,
    "days": 4,
    "lastDate": "2026-09-17",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Technology",
-   "slTrail": 0.548
+   "slTrail": 0.552
   },
   {
    "name": "PENTECH",
@@ -71,11 +71,11 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 0.405,
    "entryFloor": 0.4,
    "currentFloor": 0.405,
-   "currentPrice": 0.42,
+   "currentPrice": 0.415,
    "high": 0.51,
    "highDate": "2026-09-02",
    "maxGain": 25.9,
-   "finalGain": 3.7,
+   "finalGain": 2.5,
    "day1ChangePct": -2.41,
    "days": 17,
    "lastDate": "2026-09-17",
@@ -131,11 +131,11 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 1.51,
    "entryFloor": 1.43,
    "currentFloor": 1.4,
-   "currentPrice": 1.45,
+   "currentPrice": 1.46,
    "high": 1.51,
    "highDate": "2026-07-13",
    "maxGain": 0,
-   "finalGain": -4,
+   "finalGain": -3.3,
    "day1ChangePct": 0.67,
    "days": 45,
    "lastDate": "2026-09-17",
@@ -251,11 +251,11 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 0.38,
    "entryFloor": 0.375,
    "currentFloor": 0.42,
-   "currentPrice": 0.43,
+   "currentPrice": 0.425,
    "high": 0.505,
    "highDate": "2026-08-26",
    "maxGain": 32.9,
-   "finalGain": 13.2,
+   "finalGain": 11.8,
    "day1ChangePct": -1.3,
    "days": 72,
    "lastDate": "2026-09-17",
@@ -460,17 +460,17 @@ window.FRESH_RIDER_TRACKER = {
 };
 window.ADD_ON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-17T09:01:15.129Z",
+  "generatedAt": "2026-09-17T09:11:25.725Z",
   "dataDays": 73,
   "totalTracked": 18,
   "openCount": 13,
   "closedCount": 5,
   "closedWins": 1,
   "closedWinRate": 20,
-  "closedAvgGain": -6.9,
+  "closedAvgGain": -7.3,
   "openPnl": 512.2,
-  "closedPnl": -34.3,
-  "totalPnlNow": 477.9
+  "closedPnl": -36.3,
+  "totalPnlNow": 475.9
  },
  "trades": [
   {
@@ -754,11 +754,11 @@ window.ADD_ON_TRACKER = {
    "entry": 0.475,
    "entryFloor": 0.47,
    "currentFloor": 0.405,
-   "currentPrice": 0.42,
+   "currentPrice": 0.415,
    "high": 0.475,
    "highDate": "2026-09-11",
    "maxGain": 0,
-   "finalGain": -11.6,
+   "finalGain": -12.6,
    "day1ChangePct": -2.06,
    "days": 4,
    "lastDate": "2026-09-17",
@@ -767,7 +767,7 @@ window.ADD_ON_TRACKER = {
    "sector": "Industrial",
    "slTrail": 0.423,
    "exitDate": "2026-09-17",
-   "exitPrice": 0.42
+   "exitPrice": 0.415
   },
   {
    "id": "SUNLOGY_2026-09-14_ADDON",
@@ -777,11 +777,11 @@ window.ADD_ON_TRACKER = {
    "entry": 0.475,
    "entryFloor": 0.47,
    "currentFloor": 0.405,
-   "currentPrice": 0.42,
+   "currentPrice": 0.415,
    "high": 0.475,
    "highDate": "2026-09-14",
    "maxGain": 0,
-   "finalGain": -11.6,
+   "finalGain": -12.6,
    "day1ChangePct": -2.06,
    "days": 3,
    "lastDate": "2026-09-17",
@@ -790,7 +790,7 @@ window.ADD_ON_TRACKER = {
    "sector": "Industrial",
    "slTrail": 0.423,
    "exitDate": "2026-09-17",
-   "exitPrice": 0.42
+   "exitPrice": 0.415
   },
   {
    "id": "MTTSL_2026-08-04_ADDON",
@@ -865,17 +865,17 @@ window.ADD_ON_TRACKER = {
 };
 window.ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-17T09:01:15.129Z",
+  "generatedAt": "2026-09-17T09:11:25.725Z",
   "dataDays": 73,
   "totalTracked": 39,
   "openCount": 28,
   "closedCount": 11,
   "closedWins": 4,
   "closedWinRate": 36,
-  "closedAvgGain": -1.2,
-  "openPnl": 1091,
-  "closedPnl": -13,
-  "totalPnlNow": 1078
+  "closedAvgGain": -1.4,
+  "openPnl": 1089.9,
+  "closedPnl": -15,
+  "totalPnlNow": 1074.9
  },
  "trades": [
   {
@@ -906,18 +906,18 @@ window.ALL_TRACKER = {
    "entry": 0.61,
    "entryFloor": 0.58,
    "currentFloor": 0.61,
-   "currentPrice": 0.685,
-   "high": 0.685,
+   "currentPrice": 0.69,
+   "high": 0.69,
    "highDate": "2026-09-17",
-   "maxGain": 12.3,
-   "finalGain": 12.3,
+   "maxGain": 13.1,
+   "finalGain": 13.1,
    "day1ChangePct": 0,
    "days": 4,
    "lastDate": "2026-09-17",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Technology",
-   "slTrail": 0.548
+   "slTrail": 0.552
   },
   {
    "name": "PENTECH",
@@ -946,11 +946,11 @@ window.ALL_TRACKER = {
    "entry": 0.405,
    "entryFloor": 0.4,
    "currentFloor": 0.405,
-   "currentPrice": 0.42,
+   "currentPrice": 0.415,
    "high": 0.51,
    "highDate": "2026-09-02",
    "maxGain": 25.9,
-   "finalGain": 3.7,
+   "finalGain": 2.5,
    "day1ChangePct": -2.41,
    "days": 17,
    "lastDate": "2026-09-17",
@@ -1153,11 +1153,11 @@ window.ALL_TRACKER = {
    "entry": 1.51,
    "entryFloor": 1.43,
    "currentFloor": 1.4,
-   "currentPrice": 1.45,
+   "currentPrice": 1.46,
    "high": 1.51,
    "highDate": "2026-07-13",
    "maxGain": 0,
-   "finalGain": -4,
+   "finalGain": -3.3,
    "day1ChangePct": 0.67,
    "days": 45,
    "lastDate": "2026-09-17",
@@ -1378,11 +1378,11 @@ window.ALL_TRACKER = {
    "entry": 0.38,
    "entryFloor": 0.375,
    "currentFloor": 0.42,
-   "currentPrice": 0.43,
+   "currentPrice": 0.425,
    "high": 0.505,
    "highDate": "2026-08-26",
    "maxGain": 32.9,
-   "finalGain": 13.2,
+   "finalGain": 11.8,
    "day1ChangePct": -1.3,
    "days": 72,
    "lastDate": "2026-09-17",
@@ -1459,11 +1459,11 @@ window.ALL_TRACKER = {
    "entry": 0.475,
    "entryFloor": 0.47,
    "currentFloor": 0.405,
-   "currentPrice": 0.42,
+   "currentPrice": 0.415,
    "high": 0.475,
    "highDate": "2026-09-11",
    "maxGain": 0,
-   "finalGain": -11.6,
+   "finalGain": -12.6,
    "day1ChangePct": -2.06,
    "days": 4,
    "lastDate": "2026-09-17",
@@ -1472,7 +1472,7 @@ window.ALL_TRACKER = {
    "sector": "Industrial",
    "slTrail": 0.423,
    "exitDate": "2026-09-17",
-   "exitPrice": 0.42
+   "exitPrice": 0.415
   },
   {
    "id": "SUNLOGY_2026-09-14_ADDON",
@@ -1482,11 +1482,11 @@ window.ALL_TRACKER = {
    "entry": 0.475,
    "entryFloor": 0.47,
    "currentFloor": 0.405,
-   "currentPrice": 0.42,
+   "currentPrice": 0.415,
    "high": 0.475,
    "highDate": "2026-09-14",
    "maxGain": 0,
-   "finalGain": -11.6,
+   "finalGain": -12.6,
    "day1ChangePct": -2.06,
    "days": 3,
    "lastDate": "2026-09-17",
@@ -1495,7 +1495,7 @@ window.ALL_TRACKER = {
    "sector": "Industrial",
    "slTrail": 0.423,
    "exitDate": "2026-09-17",
-   "exitPrice": 0.42
+   "exitPrice": 0.415
   },
   {
    "name": "MTTSL",
