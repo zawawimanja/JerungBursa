@@ -3,6 +3,25 @@
 
 window.jerungData = [
   {
+    "id": "klse-IOIPG-18-Sep-2026-employees-provident-fund",
+    "stockId": "ioipg",
+    "stockName": "IOI CORPORATION BERHAD",
+    "symbol": "IOIPG",
+    "code": "IOIPG",
+    "market": "Main / ACE Market",
+    "sector": "General Bursa Equities",
+    "institution": "EMPLOYEES PROVIDENT FUND BOARD (KWSP)",
+    "institutionCategory": "GLIC",
+    "action": "Acquired",
+    "sharesChanged": 1000000,
+    "totalHolding": 50000000,
+    "percentage": 5,
+    "filingDate": "18-Sep-2026",
+    "signal": "🔥 Heavy Accumulation",
+    "announcementUrl": "https://www.klsescreener.com/v2/announcements/view/11669237",
+    "insight": "Pemfailan rasmi Seksyen 138 Akta Syarikat 2016 oleh EMPLOYEES PROVIDENT FUND BOARD (KWSP)."
+  },
+  {
     "id": "klse-YTL-18-Sep-2026-employees-provident-fund",
     "stockId": "ytl",
     "stockName": "YTL POWER INTERNATIONAL BHD",
