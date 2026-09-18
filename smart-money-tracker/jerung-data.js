@@ -3,6 +3,25 @@
 
 window.jerungData = [
   {
+    "id": "klse-MR-18-Sep-2026-employees-provident-fund",
+    "stockId": "mr",
+    "stockName": "MR D.I.Y. GROUP (M) BERHAD",
+    "symbol": "MR",
+    "code": "MR",
+    "market": "Main / ACE Market",
+    "sector": "General Bursa Equities",
+    "institution": "EMPLOYEES PROVIDENT FUND BOARD (KWSP)",
+    "institutionCategory": "GLIC",
+    "action": "Acquired",
+    "sharesChanged": 1000000,
+    "totalHolding": 50000000,
+    "percentage": 5,
+    "filingDate": "18-Sep-2026",
+    "signal": "🔥 Heavy Accumulation",
+    "announcementUrl": "https://www.klsescreener.com/v2/announcements/view/11669737",
+    "insight": "Pemfailan rasmi Seksyen 138 Akta Syarikat 2016 oleh EMPLOYEES PROVIDENT FUND BOARD (KWSP)."
+  },
+  {
     "id": "klse-THMY-18-Sep-2026-employees-provident-fund",
     "stockId": "thmy",
     "stockName": "THMY HOLDINGS BERHAD",
