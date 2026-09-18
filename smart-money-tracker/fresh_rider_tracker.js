@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual
 window.FRESH_RIDER_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-18T07:20:48.420Z",
+  "generatedAt": "2026-09-18T07:40:48.610Z",
   "dataDays": 74,
   "totalTracked": 21,
   "openCount": 15,
@@ -9,9 +9,9 @@ window.FRESH_RIDER_TRACKER = {
   "closedWins": 3,
   "closedWinRate": 50,
   "closedAvgGain": 3.5,
-  "openPnl": 643.5,
+  "openPnl": 644.4,
   "closedPnl": 21.3,
-  "totalPnlNow": 664.8
+  "totalPnlNow": 665.7
  },
  "backtest": {
   "dataStart": "2026-06-02",
@@ -20,7 +20,7 @@ window.FRESH_RIDER_TRACKER = {
   "signals": 21,
   "winRate": 71,
   "avgGain": 14.8,
-  "totalPnl": 310.3,
+  "totalPnl": 311.6,
   "worstLoss": -15.5
  },
  "trades": [
@@ -71,11 +71,11 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 0.405,
    "entryFloor": 0.4,
    "currentFloor": 0.405,
-   "currentPrice": 0.42,
+   "currentPrice": 0.425,
    "high": 0.51,
    "highDate": "2026-09-02",
    "maxGain": 25.9,
-   "finalGain": 3.7,
+   "finalGain": 4.9,
    "day1ChangePct": -2.41,
    "days": 18,
    "lastDate": "2026-09-18",
@@ -151,18 +151,18 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 0.545,
    "entryFloor": 0.52,
    "currentFloor": 0.935,
-   "currentPrice": 1.01,
-   "high": 1.01,
+   "currentPrice": 1,
+   "high": 1,
    "highDate": "2026-09-18",
-   "maxGain": 85.3,
-   "finalGain": 85.3,
+   "maxGain": 83.5,
+   "finalGain": 83.5,
    "day1ChangePct": 0,
    "days": 49,
    "lastDate": "2026-09-18",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Utilities",
-   "slTrail": 0.808
+   "slTrail": 0.8
   },
   {
    "name": "EIPOWER",
@@ -231,11 +231,11 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 1.69,
    "entryFloor": 1.58,
    "currentFloor": 1.66,
-   "currentPrice": 1.77,
+   "currentPrice": 1.78,
    "high": 2.06,
    "highDate": "2026-08-27",
    "maxGain": 21.9,
-   "finalGain": 4.7,
+   "finalGain": 5.3,
    "day1ChangePct": -0.59,
    "days": 72,
    "lastDate": "2026-09-18",
@@ -271,18 +271,18 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 0.555,
    "entryFloor": 0.53,
    "currentFloor": 0.755,
-   "currentPrice": 0.85,
-   "high": 0.85,
+   "currentPrice": 0.855,
+   "high": 0.855,
    "highDate": "2026-09-18",
-   "maxGain": 53.2,
-   "finalGain": 53.2,
+   "maxGain": 54.1,
+   "finalGain": 54.1,
    "day1ChangePct": -1.77,
    "days": 73,
    "lastDate": "2026-09-18",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Consumer",
-   "slTrail": 0.68
+   "slTrail": 0.684
   },
   {
    "name": "KEEMING",
@@ -460,7 +460,7 @@ window.FRESH_RIDER_TRACKER = {
 };
 window.ADD_ON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-18T07:20:48.420Z",
+  "generatedAt": "2026-09-18T07:40:48.610Z",
   "dataDays": 74,
   "totalTracked": 18,
   "openCount": 13,
@@ -468,9 +468,9 @@ window.ADD_ON_TRACKER = {
   "closedWins": 1,
   "closedWinRate": 20,
   "closedAvgGain": -7.3,
-  "openPnl": 556.9,
+  "openPnl": 557.8,
   "closedPnl": -36.3,
-  "totalPnlNow": 520.6
+  "totalPnlNow": 521.5
  },
  "trades": [
   {
@@ -586,18 +586,18 @@ window.ADD_ON_TRACKER = {
    "entry": 0.61,
    "entryFloor": 0.6,
    "currentFloor": 0.755,
-   "currentPrice": 0.85,
-   "high": 0.85,
+   "currentPrice": 0.855,
+   "high": 0.855,
    "highDate": "2026-09-18",
-   "maxGain": 39.3,
-   "finalGain": 39.3,
+   "maxGain": 40.2,
+   "finalGain": 40.2,
    "day1ChangePct": -3.17,
    "days": 36,
    "lastDate": "2026-09-18",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Consumer",
-   "slTrail": 0.68
+   "slTrail": 0.684
   },
   {
    "id": "STRATUS_2026-07-27_ADDON",
@@ -865,7 +865,7 @@ window.ADD_ON_TRACKER = {
 };
 window.ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-18T07:20:48.420Z",
+  "generatedAt": "2026-09-18T07:40:48.610Z",
   "dataDays": 74,
   "totalTracked": 39,
   "openCount": 28,
@@ -873,9 +873,9 @@ window.ALL_TRACKER = {
   "closedWins": 4,
   "closedWinRate": 36,
   "closedAvgGain": -1.4,
-  "openPnl": 1200.4,
+  "openPnl": 1202.2,
   "closedPnl": -15,
-  "totalPnlNow": 1185.4
+  "totalPnlNow": 1187.2
  },
  "trades": [
   {
@@ -946,11 +946,11 @@ window.ALL_TRACKER = {
    "entry": 0.405,
    "entryFloor": 0.4,
    "currentFloor": 0.405,
-   "currentPrice": 0.42,
+   "currentPrice": 0.425,
    "high": 0.51,
    "highDate": "2026-09-02",
    "maxGain": 25.9,
-   "finalGain": 3.7,
+   "finalGain": 4.9,
    "day1ChangePct": -2.41,
    "days": 18,
    "lastDate": "2026-09-18",
@@ -1051,18 +1051,18 @@ window.ALL_TRACKER = {
    "entry": 0.61,
    "entryFloor": 0.6,
    "currentFloor": 0.755,
-   "currentPrice": 0.85,
-   "high": 0.85,
+   "currentPrice": 0.855,
+   "high": 0.855,
    "highDate": "2026-09-18",
-   "maxGain": 39.3,
-   "finalGain": 39.3,
+   "maxGain": 40.2,
+   "finalGain": 40.2,
    "day1ChangePct": -3.17,
    "days": 36,
    "lastDate": "2026-09-18",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Consumer",
-   "slTrail": 0.68
+   "slTrail": 0.684
   },
   {
    "id": "STRATUS_2026-07-27_ADDON",
@@ -1173,18 +1173,18 @@ window.ALL_TRACKER = {
    "entry": 0.545,
    "entryFloor": 0.52,
    "currentFloor": 0.935,
-   "currentPrice": 1.01,
-   "high": 1.01,
+   "currentPrice": 1,
+   "high": 1,
    "highDate": "2026-09-18",
-   "maxGain": 85.3,
-   "finalGain": 85.3,
+   "maxGain": 83.5,
+   "finalGain": 83.5,
    "day1ChangePct": 0,
    "days": 49,
    "lastDate": "2026-09-18",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Utilities",
-   "slTrail": 0.808
+   "slTrail": 0.8
   },
   {
    "id": "CBHB_2026-07-03_ADDON",
@@ -1358,11 +1358,11 @@ window.ALL_TRACKER = {
    "entry": 1.69,
    "entryFloor": 1.58,
    "currentFloor": 1.66,
-   "currentPrice": 1.77,
+   "currentPrice": 1.78,
    "high": 2.06,
    "highDate": "2026-08-27",
    "maxGain": 21.9,
-   "finalGain": 4.7,
+   "finalGain": 5.3,
    "day1ChangePct": -0.59,
    "days": 72,
    "lastDate": "2026-09-18",
@@ -1398,18 +1398,18 @@ window.ALL_TRACKER = {
    "entry": 0.555,
    "entryFloor": 0.53,
    "currentFloor": 0.755,
-   "currentPrice": 0.85,
-   "high": 0.85,
+   "currentPrice": 0.855,
+   "high": 0.855,
    "highDate": "2026-09-18",
-   "maxGain": 53.2,
-   "finalGain": 53.2,
+   "maxGain": 54.1,
+   "finalGain": 54.1,
    "day1ChangePct": -1.77,
    "days": 73,
    "lastDate": "2026-09-18",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Consumer",
-   "slTrail": 0.68
+   "slTrail": 0.684
   },
   {
    "name": "KEEMING",
