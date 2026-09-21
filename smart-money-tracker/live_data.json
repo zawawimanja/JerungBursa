@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-21T05:10:58.226Z",
+  "lastUpdated": "2026-09-21T05:20:44.944Z",
   "source": "klse.i3investor.com",
   "topVolume": [
     {
@@ -11767,6 +11767,60 @@
       "outlier": false
     },
     {
+      "name": "PIONEER",
+      "sector": "Industrial Products & Services",
+      "category": "Intraday / Momentum",
+      "setupStyle": "EXPLOSIVE",
+      "price": 0.32499998807907104,
+      "change": 0.02499997615814209,
+      "changePct": 8.33,
+      "turnover": 3565997.369199991,
+      "volume": 10972300,
+      "signal": "avoid",
+      "reason": "⚠️ Overextended: Jauh dari Lantai Sokongan (+27.5% dari floor) (Healthy Dip)",
+      "high52": 0.3449999988079071,
+      "pullback": 5.8,
+      "setupName": "📉 Healthy Dip",
+      "closeTightness": 8.33,
+      "lowTightness": 13.73,
+      "touchCount": 1,
+      "isConsolidation": false,
+      "vcpStage": null,
+      "vcpTightness20": null,
+      "vcpTightness5": 8.33,
+      "isContracting": false,
+      "volumeDecline": true,
+      "floorLow": 0.2549999952316284,
+      "hasLowerWickRejection": false,
+      "hasUpperWickRejection": false,
+      "isCombStock": false,
+      "sma50": 0.3083333373069763,
+      "sma200": 0.3083333373069763,
+      "openPrice": 0.255,
+      "wentUnderwater": true,
+      "firstDayOpenPrice": 0.2549999952316284,
+      "avgVolume20": 44107500,
+      "volumeSpike": 0.25,
+      "hasVolumeSpike": false,
+      "ipoAge": 4,
+      "isStaircaseIpo": false,
+      "confidenceScore": 8,
+      "confidenceTier": "❌ AVOID",
+      "ema25": null,
+      "ema50": null,
+      "ema25AboveEma50": false,
+      "nearEma25": false,
+      "isGoldenCross": false,
+      "goldenCrossAge": null,
+      "isVvip": true,
+      "ipoGrade": "B",
+      "ipoYear": 2026,
+      "ipoPrice": 0.25,
+      "listingDate": "17-Sep-2026",
+      "os": 47.8,
+      "outlier": false
+    },
+    {
       "name": "DNEX",
       "sector": "Technology",
       "category": "Intraday / Momentum",
@@ -16001,6 +16055,16 @@
       "setupName": "📉 Healthy Dip"
     },
     {
+      "name": "PIONEER",
+      "price": 0.32499998807907104,
+      "changePct": 8.33,
+      "volume": 10972300,
+      "turnover": 3565997.369199991,
+      "high52": 0.3449999988079071,
+      "pullback": 5.8,
+      "setupName": "📉 Healthy Dip"
+    },
+    {
       "name": "VERDANT",
       "price": 0.2199999988079071,
       "changePct": 7.32,
@@ -16128,16 +16192,6 @@
       "turnover": 2080500.054359436,
       "high52": 0.9750000238418579,
       "pullback": 62.56,
-      "setupName": "🧊 Downtrend / Avoid"
-    },
-    {
-      "name": "CAPITALA",
-      "price": 0.24500000476837158,
-      "changePct": 4.26,
-      "volume": 21034700,
-      "turnover": 5153501.600301266,
-      "high52": 1.0299999713897705,
-      "pullback": 76.21,
       "setupName": "🧊 Downtrend / Avoid"
     }
   ]
