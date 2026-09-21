@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-21T06:40:48.652Z",
+  "generatedAt": "2026-09-21T06:51:05.575Z",
   "dataDays": 79,
   "totalTracked": 49,
   "openCount": 24,
@@ -9,9 +9,9 @@ window.HOT_THEME_TRACKER = {
   "closedWins": 19,
   "closedWinRate": 76,
   "closedAvgGain": 21.5,
-  "openPnl": 238.3,
+  "openPnl": 240.3,
   "closedPnl": 536.9,
-  "totalPnlNow": 775.2
+  "totalPnlNow": 777.2
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -572,10 +572,10 @@ window.HOT_THEME_TRACKER = {
   },
   {
    "date": "2026-09-21",
-   "themePct": 29.4,
+   "themePct": 28.5,
    "themeCount": 74,
-   "totalCount": 307,
-   "ma5": 24.1
+   "totalCount": 306,
+   "ma5": 23.9
   }
  ],
  "themeTrend": "RISING",
@@ -628,11 +628,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 6.25,
    "entryFloor": 7.79,
    "currentFloor": 7.68,
-   "currentPrice": 7.96,
-   "high": 7.96,
+   "currentPrice": 7.97,
+   "high": 7.97,
    "highDate": "2026-09-21",
-   "maxGain": 27.4,
-   "finalGain": 27.4,
+   "maxGain": 27.5,
+   "finalGain": 27.5,
    "day1ChangePct": -1.11,
    "days": 22,
    "lastDate": "2026-09-21",
@@ -641,7 +641,7 @@ window.HOT_THEME_TRACKER = {
     "Semiconductor"
    ],
    "confluence": 3,
-   "slTrail": 7.482
+   "slTrail": 7.492
   },
   {
    "name": "NEXG",
@@ -859,11 +859,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 1.06,
    "entryFloor": 1.04,
    "currentFloor": 1,
-   "currentPrice": 1.1,
+   "currentPrice": 1.11,
    "high": 1.17,
    "highDate": "2026-07-02",
    "maxGain": 10.4,
-   "finalGain": 3.8,
+   "finalGain": 4.7,
    "day1ChangePct": -1.85,
    "days": 32,
    "lastDate": "2026-09-21",
@@ -923,11 +923,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 7.81,
    "entryFloor": 7.51,
    "currentFloor": 8.1,
-   "currentPrice": 8.56,
+   "currentPrice": 8.53,
    "high": 9.2,
    "highDate": "2026-08-28",
    "maxGain": 17.8,
-   "finalGain": 9.6,
+   "finalGain": 9.2,
    "day1ChangePct": 2.36,
    "days": 74,
    "lastDate": "2026-09-21",
@@ -944,11 +944,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 6.81,
    "entryFloor": 6.7,
    "currentFloor": 8.84,
-   "currentPrice": 9.63,
+   "currentPrice": 9.54,
    "high": 9.8,
    "highDate": "2026-09-18",
    "maxGain": 43.9,
-   "finalGain": 41.4,
+   "finalGain": 40.1,
    "day1ChangePct": 0.59,
    "days": 74,
    "lastDate": "2026-09-21",
@@ -965,11 +965,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 5.87,
    "entryFloor": 5.72,
    "currentFloor": 5.99,
-   "currentPrice": 6.4,
+   "currentPrice": 6.42,
    "high": 6.9,
    "highDate": "2026-08-28",
    "maxGain": 17.5,
-   "finalGain": 9,
+   "finalGain": 9.4,
    "day1ChangePct": -1.01,
    "days": 74,
    "lastDate": "2026-09-21",
@@ -986,11 +986,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 2.61,
    "entryFloor": 2.6,
    "currentFloor": 2.46,
-   "currentPrice": 2.58,
+   "currentPrice": 2.56,
    "high": 2.76,
    "highDate": "2026-08-17",
    "maxGain": 5.7,
-   "finalGain": -1.1,
+   "finalGain": -1.9,
    "day1ChangePct": -2.97,
    "days": 74,
    "lastDate": "2026-09-21",
@@ -1049,11 +1049,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 1.58,
    "entryFloor": 1.55,
    "currentFloor": 2.03,
-   "currentPrice": 2.23,
-   "high": 2.23,
+   "currentPrice": 2.24,
+   "high": 2.24,
    "highDate": "2026-09-21",
-   "maxGain": 41.1,
-   "finalGain": 41.1,
+   "maxGain": 41.8,
+   "finalGain": 41.8,
    "day1ChangePct": -3.66,
    "days": 74,
    "lastDate": "2026-09-21",
@@ -1062,7 +1062,7 @@ window.HOT_THEME_TRACKER = {
     "Solar/RE"
    ],
    "confluence": 3,
-   "slTrail": 2.096
+   "slTrail": 2.106
   },
   {
    "name": "SAMAIDEN",
@@ -1070,11 +1070,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 1.25,
    "entryFloor": 1.22,
    "currentFloor": 1.86,
-   "currentPrice": 2.2,
-   "high": 2.2,
+   "currentPrice": 2.23,
+   "high": 2.23,
    "highDate": "2026-09-21",
-   "maxGain": 76,
-   "finalGain": 76,
+   "maxGain": 78.4,
+   "finalGain": 78.4,
    "day1ChangePct": 0,
    "days": 34,
    "lastDate": "2026-09-21",
@@ -1083,7 +1083,7 @@ window.HOT_THEME_TRACKER = {
     "Solar/RE"
    ],
    "confluence": 3,
-   "slTrail": 2.068
+   "slTrail": 2.096
   },
   {
    "name": "MNHLDG",
