@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual
 window.FRESH_RIDER_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-21T07:51:08.348Z",
+  "generatedAt": "2026-09-21T08:01:23.596Z",
   "dataDays": 75,
   "totalTracked": 21,
   "openCount": 15,
@@ -9,9 +9,9 @@ window.FRESH_RIDER_TRACKER = {
   "closedWins": 3,
   "closedWinRate": 50,
   "closedAvgGain": 3.5,
-  "openPnl": 677.4,
+  "openPnl": 677.9,
   "closedPnl": 21.3,
-  "totalPnlNow": 698.7
+  "totalPnlNow": 699.2
  },
  "backtest": {
   "dataStart": "2026-06-02",
@@ -20,7 +20,7 @@ window.FRESH_RIDER_TRACKER = {
   "signals": 21,
   "winRate": 71,
   "avgGain": 15.5,
-  "totalPnl": 325.4,
+  "totalPnl": 324.9,
   "worstLoss": -10.3
  },
  "trades": [
@@ -31,18 +31,18 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 0.61,
    "entryFloor": 0.58,
    "currentFloor": 0.61,
-   "currentPrice": 0.705,
-   "high": 0.705,
-   "highDate": "2026-09-18",
-   "maxGain": 15.6,
-   "finalGain": 15.6,
+   "currentPrice": 0.71,
+   "high": 0.71,
+   "highDate": "2026-09-21",
+   "maxGain": 16.4,
+   "finalGain": 16.4,
    "day1ChangePct": 0,
    "days": 6,
    "lastDate": "2026-09-21",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Technology",
-   "slTrail": 0.564
+   "slTrail": 0.568
   },
   {
    "name": "PENTECH",
@@ -71,11 +71,11 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 0.405,
    "entryFloor": 0.4,
    "currentFloor": 0.415,
-   "currentPrice": 0.45,
+   "currentPrice": 0.445,
    "high": 0.51,
    "highDate": "2026-09-02",
    "maxGain": 25.9,
-   "finalGain": 11.1,
+   "finalGain": 9.9,
    "day1ChangePct": -2.41,
    "days": 19,
    "lastDate": "2026-09-21",
@@ -271,11 +271,11 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 0.555,
    "entryFloor": 0.53,
    "currentFloor": 0.755,
-   "currentPrice": 0.835,
+   "currentPrice": 0.84,
    "high": 0.86,
    "highDate": "2026-09-18",
    "maxGain": 55,
-   "finalGain": 50.5,
+   "finalGain": 51.4,
    "day1ChangePct": -1.77,
    "days": 74,
    "lastDate": "2026-09-21",
@@ -460,7 +460,7 @@ window.FRESH_RIDER_TRACKER = {
 };
 window.ADD_ON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-21T07:51:08.349Z",
+  "generatedAt": "2026-09-21T08:01:23.596Z",
   "dataDays": 75,
   "totalTracked": 18,
   "openCount": 13,
@@ -468,9 +468,9 @@ window.ADD_ON_TRACKER = {
   "closedWins": 1,
   "closedWinRate": 20,
   "closedAvgGain": -7.3,
-  "openPnl": 580.5,
+  "openPnl": 581.3,
   "closedPnl": -36.3,
-  "totalPnlNow": 544.2
+  "totalPnlNow": 545
  },
  "trades": [
   {
@@ -586,11 +586,11 @@ window.ADD_ON_TRACKER = {
    "entry": 0.61,
    "entryFloor": 0.6,
    "currentFloor": 0.755,
-   "currentPrice": 0.835,
+   "currentPrice": 0.84,
    "high": 0.86,
    "highDate": "2026-09-18",
    "maxGain": 41,
-   "finalGain": 36.9,
+   "finalGain": 37.7,
    "day1ChangePct": -3.17,
    "days": 37,
    "lastDate": "2026-09-21",
@@ -865,7 +865,7 @@ window.ADD_ON_TRACKER = {
 };
 window.ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-21T07:51:08.349Z",
+  "generatedAt": "2026-09-21T08:01:23.596Z",
   "dataDays": 75,
   "totalTracked": 39,
   "openCount": 28,
@@ -873,9 +873,9 @@ window.ALL_TRACKER = {
   "closedWins": 4,
   "closedWinRate": 36,
   "closedAvgGain": -1.4,
-  "openPnl": 1257.9,
+  "openPnl": 1259.2,
   "closedPnl": -15,
-  "totalPnlNow": 1242.9
+  "totalPnlNow": 1244.2
  },
  "trades": [
   {
@@ -906,18 +906,18 @@ window.ALL_TRACKER = {
    "entry": 0.61,
    "entryFloor": 0.58,
    "currentFloor": 0.61,
-   "currentPrice": 0.705,
-   "high": 0.705,
-   "highDate": "2026-09-18",
-   "maxGain": 15.6,
-   "finalGain": 15.6,
+   "currentPrice": 0.71,
+   "high": 0.71,
+   "highDate": "2026-09-21",
+   "maxGain": 16.4,
+   "finalGain": 16.4,
    "day1ChangePct": 0,
    "days": 6,
    "lastDate": "2026-09-21",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Technology",
-   "slTrail": 0.564
+   "slTrail": 0.568
   },
   {
    "name": "PENTECH",
@@ -946,11 +946,11 @@ window.ALL_TRACKER = {
    "entry": 0.405,
    "entryFloor": 0.4,
    "currentFloor": 0.415,
-   "currentPrice": 0.45,
+   "currentPrice": 0.445,
    "high": 0.51,
    "highDate": "2026-09-02",
    "maxGain": 25.9,
-   "finalGain": 11.1,
+   "finalGain": 9.9,
    "day1ChangePct": -2.41,
    "days": 19,
    "lastDate": "2026-09-21",
@@ -1051,11 +1051,11 @@ window.ALL_TRACKER = {
    "entry": 0.61,
    "entryFloor": 0.6,
    "currentFloor": 0.755,
-   "currentPrice": 0.835,
+   "currentPrice": 0.84,
    "high": 0.86,
    "highDate": "2026-09-18",
    "maxGain": 41,
-   "finalGain": 36.9,
+   "finalGain": 37.7,
    "day1ChangePct": -3.17,
    "days": 37,
    "lastDate": "2026-09-21",
@@ -1398,11 +1398,11 @@ window.ALL_TRACKER = {
    "entry": 0.555,
    "entryFloor": 0.53,
    "currentFloor": 0.755,
-   "currentPrice": 0.835,
+   "currentPrice": 0.84,
    "high": 0.86,
    "highDate": "2026-09-18",
    "maxGain": 55,
-   "finalGain": 50.5,
+   "finalGain": 51.4,
    "day1ChangePct": -1.77,
    "days": 74,
    "lastDate": "2026-09-21",
