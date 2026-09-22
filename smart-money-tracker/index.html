@@ -813,8 +813,9 @@
                 <span id="navTotalRmBadge" style="font-size: 0.88rem; font-weight: 900; color: #fde047; text-shadow: 0 0 10px rgba(253, 224, 71, 0.6); white-space: nowrap;">—</span>
                 <div style="display: inline-flex; gap: 0.35rem; font-size: 0.78rem; border-left: 1.5px solid rgba(255,255,255,0.25); padding-left: 0.6rem; align-items: center;">
                     <span id="navFrPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('new');" style="color: #fde047; font-weight: 900; font-size: 0.78rem; cursor: pointer; padding: 0.15rem 0.42rem; background: rgba(253, 224, 71, 0.15); border: 1px solid rgba(253,224,71,0.3); border-radius: 6px; transition: all 0.2s;" onmouseover="this.style.background='rgba(253,224,71,0.35)'" onmouseout="this.style.background='rgba(253,224,71,0.15)'" title="Click to view Fresh Rider (Day 1 NEW) Live Tracker">FR: —</span>
-                    <span id="navAddonPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('addon');" style="color: #67e8f9; font-weight: 900; font-size: 0.78rem; cursor: pointer; padding: 0.15rem 0.42rem; background: rgba(103, 232, 249, 0.15); border: 1px solid rgba(103,232,249,0.3); border-radius: 6px; transition: all 0.2s;" onmouseover="this.style.background='rgba(103,232,249,0.35)'" onmouseout="this.style.background='rgba(103,232,249,0.15)'" title="Click to view ADD-ON A+ (Staircase) Live Tracker">ADD: —</span>
-                    <span id="navHtPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('ht');" style="color: #c4b5fd; font-weight: 900; font-size: 0.78rem; cursor: pointer; padding: 0.15rem 0.42rem; background: rgba(196, 181, 253, 0.15); border: 1px solid rgba(196,181,253,0.3); border-radius: 6px; transition: all 0.2s;" onmouseover="this.style.background='rgba(196,181,253,0.35)'" onmouseout="this.style.background='rgba(196,181,253,0.15)'" title="Click to view Hot Theme Live Tracker">HT: —</span>
+                    <span id="navAddonPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('addon');" style="color: #67e8f9; font-weight: 900; font-size: 0.78rem; cursor: pointer; padding: 0.15rem 0.42rem; background: rgba(103, 232, 249, 0.15); border: 1px solid rgba(103,232,249,0.3); border-radius: 6px; transition: all 0.2s;" onmouseover="this.style.background='rgba(103,232,249,0.35)'" onmouseout="this.style.background='rgba(103,232,249,0.15)'" title="Click to view ADD-ON A+ (Fresh Base ≤ 20%) Live Tracker">A+: —</span>
+                    <span id="navFloorPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('floor');" style="color: #c4b5fd; font-weight: 900; font-size: 0.78rem; cursor: pointer; padding: 0.15rem 0.42rem; background: rgba(168, 85, 247, 0.15); border: 1px solid rgba(168,85,247,0.3); border-radius: 6px; transition: all 0.2s;" onmouseover="this.style.background='rgba(168,85,247,0.35)'" onmouseout="this.style.background='rgba(168,85,247,0.15)'" title="Click to view ADD-ON (Lantai Rapat) Live Tracker">LANTAI: —</span>
+                    <span id="navHtPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('ht');" style="color: #94a3b8; font-weight: 900; font-size: 0.78rem; cursor: pointer; padding: 0.15rem 0.42rem; background: rgba(148, 163, 184, 0.15); border: 1px solid rgba(148,163,184,0.3); border-radius: 6px; transition: all 0.2s;" onmouseover="this.style.background='rgba(148,163,184,0.35)'" onmouseout="this.style.background='rgba(148,163,184,0.15)'" title="Click to view Hot Theme Live Tracker">HT: —</span>
                 </div>
             </div>
         </div>
@@ -7313,12 +7314,14 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const allFrData = window.ALL_TRACKER && window.ALL_TRACKER.summary;
             const frData = window.FRESH_RIDER_TRACKER && window.FRESH_RIDER_TRACKER.summary;
             const addOnData = window.ADD_ON_TRACKER && window.ADD_ON_TRACKER.summary;
+            const floorData = window.FLOOR_ADDON_TRACKER && window.FLOOR_ADDON_TRACKER.summary;
             const htData = window.HOT_THEME_TRACKER && window.HOT_THEME_TRACKER.summary;
-            if (!frData && !addOnData && !htData) return;
+            if (!frData && !addOnData && !floorData && !htData) return;
 
             const frOnlyPnl = frData ? (typeof frData.totalPnlNow === 'number' ? frData.totalPnlNow : (frData.openPnl || 0)) : 0;
             const addOnPnl = addOnData ? (typeof addOnData.totalPnlNow === 'number' ? addOnData.totalPnlNow : (addOnData.openPnl || 0)) : 0;
-            const unifiedFrPnl = allFrData ? (typeof allFrData.totalPnlNow === 'number' ? allFrData.totalPnlNow : (allFrData.openPnl || 0)) : (frOnlyPnl + addOnPnl);
+            const floorPnl = floorData ? (typeof floorData.totalPnlNow === 'number' ? floorData.totalPnlNow : (floorData.openPnl || 0)) : 0;
+            const unifiedFrPnl = allFrData ? (typeof allFrData.totalPnlNow === 'number' ? allFrData.totalPnlNow : (allFrData.openPnl || 0)) : (frOnlyPnl + addOnPnl + floorPnl);
             const htPnl = htData ? (typeof htData.totalPnlNow === 'number' ? htData.totalPnlNow : (htData.openPnl || 0)) : 0;
 
             const grandTotal = unifiedFrPnl + htPnl;
@@ -7326,6 +7329,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const grandTotalRm = (grandTotal / 100) * entryCapital;
             const frOnlyRm = (frOnlyPnl / 100) * entryCapital;
             const addOnRm = (addOnPnl / 100) * entryCapital;
+            const floorRm = (floorPnl / 100) * entryCapital;
             const htRm = (htPnl / 100) * entryCapital;
 
             const fmtCompactRm = (rm) => {
@@ -7339,12 +7343,14 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const navTotalRm = document.getElementById('navTotalRmBadge');
             const navFr = document.getElementById('navFrPnlBadge');
             const navAddon = document.getElementById('navAddonPnlBadge');
+            const navFloor = document.getElementById('navFloorPnlBadge');
             const navHt = document.getElementById('navHtPnlBadge');
 
             if (navTotal) navTotal.textContent = `${grandTotal >= 0 ? '+' : ''}${grandTotal.toFixed(1)}%`;
             if (navTotalRm) navTotalRm.textContent = `(${grandTotalRm >= 0 ? '+' : '-'}RM ${Math.abs(grandTotalRm).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })})`;
             if (navFr) navFr.textContent = `FR: ${frOnlyPnl >= 0 ? '+' : ''}${frOnlyPnl.toFixed(1)}% (${fmtCompactRm(frOnlyRm)})`;
-            if (navAddon) navAddon.textContent = `ADD: ${addOnPnl >= 0 ? '+' : ''}${addOnPnl.toFixed(1)}% (${fmtCompactRm(addOnRm)})`;
+            if (navAddon) navAddon.textContent = `A+: ${addOnPnl >= 0 ? '+' : ''}${addOnPnl.toFixed(1)}% (${fmtCompactRm(addOnRm)})`;
+            if (navFloor) navFloor.textContent = `LANTAI: ${floorPnl >= 0 ? '+' : ''}${floorPnl.toFixed(1)}% (${fmtCompactRm(floorRm)})`;
             if (navHt) navHt.textContent = `HT: ${htPnl >= 0 ? '+' : ''}${htPnl.toFixed(1)}% (${fmtCompactRm(htRm)})`;
         }
         window.updateTopTrackerPnlBadge = updateTopTrackerPnlBadge;
@@ -7368,9 +7374,9 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 return;
             }
 
-            // Default or 'all', 'new', 'addon': navigate to Fresh Rider Live Tracker
+            // Default or 'all', 'new', 'addon', 'floor': navigate to Fresh Rider Live Tracker
             if (typeof switchTab === 'function') switchTab('confluence');
-            const subTabMode = (target === 'new' || target === 'addon') ? target : 'all';
+            const subTabMode = (target === 'new' || target === 'addon' || target === 'floor') ? target : 'all';
             if (typeof switchFrTrackerSubTab === 'function') {
                 switchFrTrackerSubTab(subTabMode);
             }
