@@ -921,7 +921,6 @@
         <button class="tab-btn" id="tab-jerung" onclick="switchTab('jerung')">🦈 Whales</button>
         <button class="tab-btn" id="tab-realconfluence" onclick="switchTab('realconfluence')">🎯 Confluence</button>
         <button class="tab-btn" id="tab-topgainers" onclick="switchTab('topgainers')">🚀 Gainers</button>
-        <button class="tab-btn" id="tab-weekly" onclick="switchTab('weekly')">🗓️ Weekly</button>
         <button class="tab-btn" id="tab-vcp" onclick="switchTab('vcp')">🪜 VCP</button>
         <button class="tab-btn" id="tab-trend" onclick="switchTab('trend')">📈 Trend</button>
         <button class="tab-btn" id="tab-spring" onclick="switchTab('spring')">🌱 Spring</button>
@@ -2718,248 +2717,6 @@
         </div>
     </div> <!-- End of view-fishing -->
 
-    <!-- TAB 1: WEEKLY HOMEWORK (TOP 5 SWING - PRIMARY DEFAULT TAB) -->
-    <div id="view-weekly" style="display: none;">
-        <!-- WEEKLY HOMEWORK HERO SECTION -->
-        <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 2px solid #f59e0b; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(245, 158, 11, 0.2); position: relative; overflow: hidden; margin-bottom: 1.25rem;">
-            <div style="position: absolute; top: -50px; right: -50px; width: 200px; height: 200px; background: rgba(245, 158, 11, 0.15); filter: blur(60px); border-radius: 50%; pointer-events: none;"></div>
-            
-            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem; border-bottom: 1px solid rgba(245, 158, 11, 0.25); padding-bottom: 0.75rem;">
-                <div style="display: flex; align-items: center; gap: 0.75rem; flex: 1; min-width: 300px;">
-                    <span style="font-size: 2rem;">🗓️</span>
-                    <div>
-                        <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-                            <h2 style="margin: 0; font-size: 1.35rem; color: #fbbf24; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase;">Weekly Homework: JerungBursa Top 5 Swing</h2>
-                            <span id="weeklyLockBadge" style="font-size: 0.75rem; background: rgba(245, 158, 11, 0.2); color: #fbbf24; padding: 0.2rem 0.6rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(245, 158, 11, 0.4);">🔒 LOCKED: MONDAY SNAPSHOT</span>
-                        </div>
-                        <p style="margin: 0.35rem 0 0 0; font-size: 0.85rem; color: #cbd5e1; line-height: 1.4;">
-                            Automated screening across hundreds of stocks — narrowing down search to <strong style="color: #fbbf24;">Top 5 Picks</strong> based on 4 Core Techniques: <strong style="color: #38bdf8;">Trend Rider</strong>, <strong style="color: #4ade80;">Early Spring</strong>, <strong style="color: #fb7185;">Phoenix</strong>, and <strong style="color: #f59e0b;">Bottom</strong>.
-                        </p>
-                    </div>
-                </div>
-                <div style="display: flex; gap: 0.6rem; align-items: center; flex-wrap: wrap;">
-                    <button onclick="copyWeeklyWatchlist()" style="background: linear-gradient(135deg, #d97706, #f59e0b); color: white; border: none; padding: 0.55rem 1.1rem; border-radius: 8px; font-weight: 800; font-size: 0.83rem; cursor: pointer; display: flex; align-items: center; gap: 0.4rem; transition: transform 0.2s; box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                        📋 Copy TV Watchlist (Top 5)
-                    </button>
-                </div>
-            </div>
-
-            <!-- KPI SUMMARY CARDS -->
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-bottom: 1.25rem;">
-                <div style="background: rgba(15, 23, 42, 0.6); padding: 0.75rem; border-radius: 10px; border: 1px solid rgba(51, 65, 85, 0.5);">
-                    <div style="font-size: 0.75rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">🔍 Stocks Scanned</div>
-                    <div style="font-size: 1.4rem; font-weight: 900; color: #f8fafc; margin-top: 0.2rem;" id="weeklyScannedCount">0</div>
-                </div>
-                <div style="background: rgba(15, 23, 42, 0.6); padding: 0.75rem; border-radius: 10px; border: 1px solid rgba(245, 158, 11, 0.3);">
-                    <div style="font-size: 0.75rem; color: #fbbf24; font-weight: 700; text-transform: uppercase;">🎯 Top Picks</div>
-                    <div style="font-size: 1.4rem; font-weight: 900; color: #fbbf24; margin-top: 0.2rem;" id="weeklyPickCount">5 / 5</div>
-                </div>
-                <div style="background: rgba(15, 23, 42, 0.6); padding: 0.75rem; border-radius: 10px; border: 1px solid rgba(16, 185, 129, 0.3);">
-                    <div style="font-size: 0.75rem; color: #34d399; font-weight: 700; text-transform: uppercase;">🛡️ Max Risk</div>
-                    <div style="font-size: 1.4rem; font-weight: 900; color: #34d399; margin-top: 0.2rem;">&le; 5.0%</div>
-                </div>
-                <div style="background: rgba(15, 23, 42, 0.6); padding: 0.75rem; border-radius: 10px; border: 1px solid rgba(99, 102, 241, 0.3);">
-                    <div style="font-size: 0.75rem; color: #818cf8; font-weight: 700; text-transform: uppercase;">🦈 Min Whale Turnover</div>
-                    <div style="font-size: 1.4rem; font-weight: 900; color: #818cf8; margin-top: 0.2rem;">&ge; RM 500k</div>
-                </div>
-            </div>
-
-            <!-- TABLE WRAPPER -->
-            <div class="table-wrapper" style="margin-top: 0.5rem; margin-bottom: 0; overflow-x: auto;">
-                <table style="width: 100%; border-collapse: collapse; min-width: 950px;">
-                    <thead>
-                        <tr>
-                            <th style="width: 45px; text-align: center; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">No</th>
-                            <th style="color: #fbbf24; text-align: left; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Kaunter</th>
-                            <th style="text-align: center; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Teknik Setup</th>
-                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Weekend Base Price</th>
-                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Current Price</th>
-                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">This Week Performance %</th>
-                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Support Floor</th>
-                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Risk Distance</th>
-                            <th style="text-align: right; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Whale Turnover</th>
-                            <th style="text-align: left; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">SOP Trading Plan</th>
-                            <th style="text-align: center; color: #fbbf24; padding: 0.6rem 0.8rem; font-size: 0.78rem; text-transform: uppercase; background: rgba(245, 158, 11, 0.08); border-bottom: 2px solid rgba(245, 158, 11, 0.3);">Action</th>
-                        </tr>
-                    </thead>
-                    <tbody id="weeklyHomeworkTableBody">
-                        <!-- Populated dynamically -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
-
-        <!-- PANDUAN SOP RASMI WEEKLY SWING -->
-        <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 1px solid rgba(245, 158, 11, 0.4); border-radius: 12px; padding: 1.25rem; box-shadow: 0 8px 24px rgba(245, 158, 11, 0.15); margin-top: 1.25rem;">
-            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; border-bottom: 1px solid rgba(245, 158, 11, 0.2); padding-bottom: 0.75rem; margin-bottom: 1rem;">
-                <div style="display: flex; align-items: center; gap: 0.5rem;">
-                    <span style="font-size: 1.5rem;">🎓</span>
-                    <h3 style="margin: 0; font-size: 1.15rem; color: #fbbf24; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px;">Official Weekly Swing Trading SOP (JerungBursa Rulebook)</h3>
-                </div>
-                <span style="font-size: 0.75rem; background: rgba(52, 211, 153, 0.15); color: #34d399; padding: 0.25rem 0.75rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(52, 211, 153, 0.3);">🛡️ STRICT RISK ≤ 5%</span>
-            </div>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem; font-size: 0.83rem; color: #cbd5e1;">
-                <div style="background: rgba(15, 23, 42, 0.6); padding: 0.9rem; border-radius: 10px; border-left: 4px solid #38bdf8; border-top: 1px solid rgba(56, 189, 248, 0.2);">
-                    <div style="display: flex; align-items: center; gap: 0.4rem; font-weight: 800; color: #38bdf8; font-size: 0.9rem; margin-bottom: 0.4rem;">
-                        <span>1. Entry Time (Monday Morning)</span>
-                    </div>
-                    Beli 2 hingga 3 kaunter pilihan teratas pada pagi Isnin yang bertapak rapat di atas **Support Floor (Risk Distance &le; 2.5%)**.
-                </div>
-
-                <div style="background: rgba(15, 23, 42, 0.6); padding: 0.9rem; border-radius: 10px; border-left: 4px solid #ef4444; border-top: 1px solid rgba(239, 68, 68, 0.2);">
-                    <div style="display: flex; align-items: center; gap: 0.4rem; font-weight: 800; color: #ef4444; font-size: 0.9rem; margin-bottom: 0.4rem;">
-                        <span>2. Stop Loss (Strict Discipline)</span>
-                    </div>
-                    Set automatic Stop Loss order **-3% below Support Floor**. If price breaks the floor, **SELL IMMEDIATELY** without hesitation.
-                </div>
-
-                <div style="background: rgba(15, 23, 42, 0.6); padding: 0.9rem; border-radius: 10px; border-left: 4px solid #4ade80; border-top: 1px solid rgba(74, 222, 128, 0.2);">
-                    <div style="display: flex; align-items: center; gap: 0.4rem; font-weight: 800; color: #4ade80; font-size: 0.9rem; margin-bottom: 0.4rem;">
-                        <span>3. Target Profit (TP1 & TP2)</span>
-                    </div>
-                    Take 50% profit at **TP1 (+10%)**, and let the remaining 50% run (*Ride The Trend*) until **TP2 (+20% - +40%)** or trailing stop is hit.
-                </div>
-
-                <div style="background: rgba(15, 23, 42, 0.6); padding: 0.9rem; border-radius: 10px; border-left: 4px solid #fbbf24; border-top: 1px solid rgba(251, 191, 36, 0.2);">
-                    <div style="display: flex; align-items: center; gap: 0.4rem; font-weight: 800; color: #fbbf24; font-size: 0.9rem; margin-bottom: 0.4rem;">
-                        <span>4. Hold Duration (Hold Rule)</span>
-                    </div>
-                    Hold for <strong>2 to 4 weeks</strong> as long as price closes green above the floor. Sell flat counters (sideways for 2 weeks) to rotate into new ones.
-                </div>
-            </div>
-        </div>
-
-        <!-- LOG REKOD BACKTEST REKOD MINGGUAN (LIVE DYNAMIC LOG) -->
-        <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.95), rgba(15, 23, 42, 0.98)); border: 1px solid rgba(56, 189, 248, 0.3); border-radius: 12px; padding: 1.25rem; box-shadow: 0 8px 24px rgba(56, 189, 248, 0.1); margin-top: 1.25rem;">
-            <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; border-bottom: 1px solid rgba(56, 189, 248, 0.2); padding-bottom: 0.75rem; margin-bottom: 1rem;">
-                <div style="display: flex; align-items: center; gap: 0.5rem;">
-                    <span style="font-size: 1.5rem;">📊</span>
-                    <div>
-                        <h3 style="margin: 0; font-size: 1.15rem; color: #38bdf8; font-weight: 900; text-transform: uppercase; letter-spacing: 0.5px;">8-Week Live Performance & Backtest Log</h3>
-                        <p style="margin: 0.2rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">Displays Top 5 picks selected week-to-week (June – July 2026) and their respective breakout return status.</p>
-                    </div>
-                </div>
-                <div style="display: flex; align-items: center; gap: 0.6rem; flex-wrap: wrap;">
-                    <select id="backtest-year-filter" onchange="filterBacktestByYear()" style="background: rgba(15, 23, 42, 0.9); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.4rem 0.75rem; border-radius: 8px; font-weight: 800; font-size: 0.8rem; cursor: pointer; outline: none;">
-                        <option value="ALL">📅 All Years (2026+)</option>
-                        <option value="2026" selected>📅 Year 2026</option>
-                    </select>
-                    <div style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.3); padding: 0.4rem 0.8rem; border-radius: 8px; font-size: 0.8rem; font-weight: 800; color: #38bdf8;">
-                        🏆 Account Capital Growth: <span style="color: #34d399;">+49.6% Net Capital Growth</span> <span style="color: #94a3b8; font-size: 0.75rem;">(+5.0% / trade)</span>
-                    </div>
-                    <button id="btn-toggle-backtest" onclick="toggleBacktestSection()" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.4rem 0.8rem; border-radius: 8px; font-weight: 800; font-size: 0.8rem; cursor: pointer; display: inline-flex; align-items: center; gap: 0.3rem; transition: background 0.2s;" onmouseover="this.style.background='rgba(56, 189, 248, 0.25)'" onmouseout="this.style.background='rgba(56, 189, 248, 0.15)'">
-                        <span>▼</span> Hide / Show Records
-                    </button>
-                </div>
-            </div>
-
-            <!-- BACKTEST SUMMARY TABLE COLLAPSIBLE WRAPPER -->
-            <div id="backtest-collapsible-wrapper" style="display: block; transition: all 0.3s ease;">
-                <div class="table-wrapper" style="margin-top: 0.5rem; margin-bottom: 0; overflow-x: auto;">
-                    <table style="width: 100%; border-collapse: collapse; min-width: 950px; font-size: 0.82rem;">
-                        <thead style="position: sticky; top: 0; z-index: 10; background: rgba(15, 23, 42, 0.98);">
-                            <tr style="background: rgba(56, 189, 248, 0.08); border-bottom: 2px solid rgba(56, 189, 248, 0.3);">
-                                <th style="padding: 0.6rem 0.8rem; text-align: left; color: #38bdf8; font-weight: 800;">Week / Date</th>
-                                <th style="padding: 0.6rem 0.8rem; text-align: left; color: #38bdf8; font-weight: 800;">Top 5 Core Selections</th>
-                                <th style="padding: 0.6rem 0.8rem; text-align: right; color: #38bdf8; font-weight: 800;">Average Peak Gain</th>
-                                <th style="padding: 0.6rem 0.8rem; text-align: right; color: #34d399; font-weight: 800;">Formula Net PnL (Win - Loss)</th>
-                                <th style="padding: 0.6rem 0.8rem; text-align: center; color: #38bdf8; font-weight: 800;">Top Breakout Counter</th>
-                                <th style="padding: 0.6rem 0.8rem; text-align: center; color: #38bdf8; font-weight: 800;">Performance Status</th>
-                            </tr>
-                        </thead>
-                        <tbody id="backtest-summary-tbody">
-                            <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);" data-year="2026">
-                                <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Week 1 (2 June 2026)</td>
-                                <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">TMK, AMBEST, SDCG, YEWLEE, ECOMATE</td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+16.6%</td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; white-space: nowrap;">+108.7% - 0.0% = <strong>+108.7%</strong></td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">🚀 TMK (+63.7%) & AMBEST (+27.1%)</span></td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 5 Win</span> / <span style="color: #94a3b8;">0 Loss</span></td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);" data-year="2026">
-                                <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Week 2 (9 June 2026)</td>
-                                <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">TMK (#2), SDCG (#1), YEWLEE, TOPGLOV, SUNVIEW</td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+9.3%</td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; white-space: nowrap;">+40.2% - 10.6% = <strong>+29.6%</strong></td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">🚀 TMK (+32.9%)</span></td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 4 Win</span> / <span style="color: #ef4444;">🔴 1 Loss (TOPGLOV -6.5%)</span></td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);" data-year="2026">
-                                <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Week 3 (16 June 2026)</td>
-                                <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">JPG, RADIUM, EXSIMHB, ECOMATE, KTI</td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+8.9%</td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; white-space: nowrap;">+37.4% - 5.5% = <strong>+31.9%</strong></td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">JPG (+22.2%) & RADIUM (+12.1%)</span></td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 3 Win</span> / <span style="color: #ef4444;">🔴 2 Loss (ECOMATE -0.6%, YEWLEE -0.9%)</span></td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);" data-year="2026">
-                                <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Week 4 (23 June 2026)</td>
-                                <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">MNHLDG, PWRWELL, YEWLEE, SDCG, EMPIRE</td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+4.8%</td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; white-space: nowrap;">+31.8% - 5.3% = <strong>+26.5%</strong></td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">MNHLDG (+13.0%)</span></td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 2 Win</span> / <span style="color: #ef4444;">🔴 3 Loss (PWRWELL -5.3%, AMBEST -4.1%)</span></td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);" data-year="2026">
-                                <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Week 5 (30 June 2026)</td>
-                                <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">JPG (#1), SDCG, YEWLEE, ECOMATE, SUNVIEW</td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+4.3%</td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; white-space: nowrap;">+28.5% - 9.7% = <strong>+18.9%</strong></td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">JPG (+14.6%)</span></td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 3 Win</span> / <span style="color: #ef4444;">🔴 2 Loss (YEWLEE -5.4%, ECOMATE -0.6%)</span></td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);" data-year="2026">
-                                <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Week 6 (7 July 2026)</td>
-                                <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">MEGAFB, MNHLDG (#1), DUFU, PWRWELL, SCGBHD</td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+5.3%</td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; white-space: nowrap;">+19.6% - 11.0% = <strong>+8.5%</strong></td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">MEGAFB (+14.9%)</span></td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 3 Win</span> / <span style="color: #ef4444;">🔴 2 Loss (MCLEAN -4.0%, YEWLEE -2.5%)</span></td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);" data-year="2026">
-                                <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Week 7 (14 July 2026)</td>
-                                <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">MEGAFB (#1), PEKAT, SEMICO, ECOMATE, ECOSHOP</td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+4.4%</td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #ef4444; white-space: nowrap;">+6.1% - 7.2% = <strong>-1.1%</strong></td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">MEGAFB (+15.6%)</span></td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 3 Win</span> / <span style="color: #ef4444;">🔴 2 Loss (AMBEST -5.8%, ECOMATE -0.6%)</span></td>
-                            </tr>
-                            <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3);" data-year="2026">
-                                <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #fbbf24;">Week 8 (21 July 2026)</td>
-                                <td style="padding: 0.65rem 0.8rem; color: #f8fafc;">JPG, MNHLDG, ECOSHOP, MRDIY, ECOMATE</td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">+0.6%</td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #ef4444; white-space: nowrap;">+0.5% - 5.8% = <strong>-5.3%</strong></td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">MNHLDG & JPG</span></td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: center; font-weight: 800;"><span style="color: #34d399;">🟢 3 Win</span> / <span style="color: #ef4444;">🔴 2 Loss (HEGROUP -1.7%, TEAMSTR -2.0%)</span></td>
-                            </tr>
-                            <tr style="background: rgba(52, 211, 153, 0.08); border-top: 2px solid rgba(52, 211, 153, 0.3);" data-year="2026">
-                                <td style="padding: 0.65rem 0.8rem; font-weight: 900; color: #34d399;">Week 9 (27 July 2026 - Current)</td>
-                                <td style="padding: 0.65rem 0.8rem; font-weight: 800; color: #34d399;">ECOSHOP, MNHLDG, CBHB, DNEX, JPG</td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 800; color: #34d399;">🔥 ACTIVE RESULT</td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; white-space: nowrap;">🔥 ACTIVE (MONDAY)</td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: center;"><span style="background: rgba(52, 211, 153, 0.2); color: #34d399; border: 1px solid rgba(52, 211, 153, 0.4); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.75rem;">ECOSHOP & MNHLDG</span></td>
-                                <td style="padding: 0.65rem 0.8rem; text-align: center; color: #34d399; font-weight: 900;">🚀 ACTIVE ENTRY (MONDAY)</td>
-                            </tr>
-                        </tbody>
-                        <tfoot style="position: sticky; bottom: 0; z-index: 10; background: rgba(15, 23, 42, 0.98);">
-                            <tr style="background: linear-gradient(135deg, rgba(245, 158, 11, 0.2), rgba(16, 185, 129, 0.2)); border-top: 2px solid #f59e0b; border-bottom: 2px solid #f59e0b;">
-                                <td id="tfoot-backtest-label" style="padding: 0.75rem 0.8rem; font-weight: 900; color: #fbbf24; font-size: 0.88rem; white-space: nowrap;">🏆 OVERALL TOTAL (8 WEEKS)</td>
-                                <td id="tfoot-backtest-trades" style="padding: 0.75rem 0.8rem; font-weight: 800; color: #f8fafc; white-space: nowrap;">40 Selected Trades</td>
-                                <td id="tfoot-backtest-avg-peak" style="padding: 0.75rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; white-space: nowrap;">+6.8% Average</td>
-                                <td id="tfoot-backtest-net-formula" style="padding: 0.75rem 0.8rem; text-align: right; font-weight: 900; color: #34d399; font-size: 0.82rem; white-space: nowrap;">
-                                    +274.1% - 56.4% = <span style="display: inline-block; background: rgba(16, 185, 129, 0.25); color: #34d399; padding: 0.15rem 0.45rem; border-radius: 6px; border: 1px solid #10b981; margin-left: 0.3rem;">+217.7% Net PnL</span>
-                                </td>
-                                <td id="tfoot-backtest-meletup" style="padding: 0.75rem 0.8rem; text-align: center; font-weight: 900; color: #fbbf24; white-space: nowrap;">🚀 16 Breakout Counters</td>
-                                <td id="tfoot-backtest-winloss" style="padding: 0.75rem 0.8rem; text-align: center; font-weight: 900; white-space: nowrap;"><span style="color: #34d399;">🟢 26 Win</span> / <span style="color: #ef4444;">🔴 14 Loss (65% Win Rate)</span></td>
-                            </tr>
-                        </tfoot>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div> <!-- End of view-weekly -->
-
     <!-- TAB 4: CALCULATOR -->
     <div id="view-calculator" style="display: none;">
         <!-- Kalkulator -->
@@ -3566,7 +3323,6 @@
             const viewSpring = document.getElementById('view-spring');
             const viewPhoenix = document.getElementById('view-phoenix');
             const viewFishing = document.getElementById('view-fishing');
-            const viewWeekly = document.getElementById('view-weekly');
             const viewCalculator = document.getElementById('view-calculator');
             const viewInfo = document.getElementById('view-info');
             const viewPortfolio = document.getElementById('view-portfolio');
@@ -3588,7 +3344,6 @@
             const tabSpring = document.getElementById('tab-spring');
             const tabPhoenix = document.getElementById('tab-phoenix');
             const tabFishing = document.getElementById('tab-fishing');
-            const tabWeekly = document.getElementById('tab-weekly');
             const tabCalculator = document.getElementById('tab-calculator');
             const tabInfo = document.getElementById('tab-info');
             const tabPortfolio = document.getElementById('tab-portfolio');
@@ -3601,7 +3356,6 @@
             viewSpring.style.display = 'none';
             if (viewPhoenix) viewPhoenix.style.display = 'none';
             viewFishing.style.display = 'none';
-            if (viewWeekly) viewWeekly.style.display = 'none';
             viewCalculator.style.display = 'none';
             if (viewInfo) viewInfo.style.display = 'none';
             if (viewPortfolio) viewPortfolio.style.display = 'none';
@@ -3624,7 +3378,6 @@
             tabSpring.classList.remove('active');
             if (tabPhoenix) tabPhoenix.classList.remove('active');
             tabFishing.classList.remove('active');
-            if (tabWeekly) tabWeekly.classList.remove('active');
             tabCalculator.classList.remove('active');
             if (tabInfo) tabInfo.classList.remove('active');
             if (tabPortfolio) tabPortfolio.classList.remove('active');
@@ -3694,12 +3447,6 @@
             } else if (tabId === 'fishing') {
                 viewFishing.style.display = 'block';
                 tabFishing.classList.add('active');
-            } else if (tabId === 'weekly') {
-                if (viewWeekly) {
-                    viewWeekly.style.display = 'block';
-                    renderWeeklyHomework();
-                }
-                if (tabWeekly) tabWeekly.classList.add('active');
             } else if (tabId === 'calculator') {
                 viewCalculator.style.display = 'block';
                 tabCalculator.classList.add('active');
@@ -4887,7 +4634,6 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             renderReclaimRadar();
             renderBottomFishing();
             renderPhoenixSpring();
-            renderWeeklyHomework();
             updateSpecialPicks();
             renderPortfolio();
         }
@@ -9525,7 +9271,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             updateTopTrackerPnlBadge();
 
             const hash = window.location.hash.replace('#', '');
-            if (hash && ['vcp', 'trend', 'spring', 'phoenix', 'fishing', 'calculator', 'info', 'portfolio', 'weekly', 'jerung', 'confluence', 'realconfluence', 'hottheme', 'trackerdaily', 'topgainers'].includes(hash)) {
+            if (hash && ['vcp', 'trend', 'spring', 'phoenix', 'fishing', 'calculator', 'info', 'portfolio', 'jerung', 'confluence', 'realconfluence', 'hottheme', 'trackerdaily', 'topgainers'].includes(hash)) {
                 switchTab(hash);
             } else {
                 switchTab('confluence'); // Default: Fresh Rider (tab kiri pertama)
@@ -10202,314 +9948,6 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             tbody.innerHTML = html || `<tr><td colspan="11" style="text-align:center; color:var(--text-muted); padding:1.5rem;">⏳ Tiada saham Phoenix Spring hari ini.</td></tr>`;
         }
         window.renderPhoenixSpring = renderPhoenixSpring;
-
-        let _weekendSnapshotCache = {};
-
-        async function getWeekendSnapshotList(targetDateStr) {
-            let refDate = new Date();
-            if (targetDateStr) {
-                const parts = targetDateStr.split('-');
-                if (parts.length === 3) {
-                    refDate = new Date(parseInt(parts[0]), parseInt(parts[1]) - 1, parseInt(parts[2]));
-                }
-            }
-            const day = refDate.getDay(); // 0: Sun, 1: Mon, ..., 5: Fri, 6: Sat
-            let diffToFriday = 5 - day;
-            if (day < 5) {
-                diffToFriday = -2 - day; // Go back to previous Friday close
-            }
-            const fridayDate = new Date(refDate.setDate(refDate.getDate() + diffToFriday));
-            const yyyy = fridayDate.getFullYear();
-            const mm = String(fridayDate.getMonth() + 1).padStart(2, '0');
-            const dd = String(fridayDate.getDate()).padStart(2, '0');
-            const fridayStr = `${yyyy}-${mm}-${dd}`;
-
-            if (_weekendSnapshotCache[fridayStr]) {
-                return { fridayStr, list: _weekendSnapshotCache[fridayStr] };
-            }
-
-            try {
-                const cacheBuster = new Date().getTime();
-                const controller = new AbortController();
-                const timeoutId = setTimeout(() => controller.abort(), 2000);
-                let res = null;
-                try {
-                    res = await fetch(`history/data_${fridayStr}.json?t=${cacheBuster}`, { signal: controller.signal });
-                } catch (e) {}
-                if (!res || !res.ok) {
-                    try {
-                        res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/history/data_${fridayStr}.json?t=${cacheBuster}`, { signal: controller.signal });
-                    } catch (e) {}
-                }
-                clearTimeout(timeoutId);
-                if (res && res.ok) {
-                    const raw = await res.json();
-                    const list = Array.isArray(raw) ? raw : (raw.topVolume || []);
-                    _weekendSnapshotCache[fridayStr] = list;
-                    return { fridayStr, list };
-                }
-            } catch (e) {
-                console.warn("Weekend Friday fetch failed", e);
-            }
-            return { fridayStr, list: null };
-        }
-
-        // Render Weekly Homework (Top 5 High Conviction Swing Picks - LOCKED TO WEEKEND SNAPSHOT)
-        async function renderWeeklyHomework() {
-            const liveList = (currentData && currentData.length > 0) ? currentData : ((window.liveData && window.liveData.topVolume) || []);
-            const scannedEl = document.getElementById('weeklyScannedCount');
-            const pickEl = document.getElementById('weeklyPickCount');
-            const tbody = document.getElementById('weeklyHomeworkTableBody');
-
-            if (!tbody) return;
-
-            const activeDateVal = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || '';
-            const { fridayStr, list: weekendList } = await getWeekendSnapshotList(activeDateVal);
-
-            // Use Weekend (Friday Close) snapshot list to lock the Weekly Top 5 picks
-            const sourceList = (weekendList && weekendList.length > 0) ? weekendList : liveList;
-
-            if (scannedEl) scannedEl.textContent = sourceList.length || 0;
-
-            const badgeEl = document.getElementById('weeklyLockBadge');
-            if (badgeEl) {
-                badgeEl.textContent = `🔒 LOCKED: WEEKEND HOMEWORK (${fridayStr})`;
-            }
-
-            // Filter Weekend list for weekly swing candidates using global filters (Price Max & IPO Status)
-            const candidates = sourceList.filter(s => {
-                if (!passesGlobalFilters(s)) return false;
-                if (s.signal === 'sell') return false;
-                const itemPrice = s.price || s.close || s.last || 0;
-                const turnover = s.turnover || (s.volume ? s.volume * itemPrice : 500000);
-                if (turnover < 250000) return false;
-                return true;
-            });
-
-            candidates.forEach(s => {
-                let score = 0;
-                const itemPrice = s.price || s.close || s.last || 0;
-                const floorDist = s.floorLow ? Math.abs((itemPrice - s.floorLow) / s.floorLow * 100) : 999;
-
-                if (floorDist <= 2.5) score += 40;
-                else if (floorDist <= 4.5) score += 30;
-                else if (floorDist <= 6.5) score += 20;
-
-                const touches = s.touchCount || 0;
-                if (touches >= 6) score += 20;
-                else if (touches >= 4) score += 15;
-                else if (touches >= 3) score += 10;
-
-                const tightness = s.closeTightness || 99;
-                if (tightness <= 3.0) score += 20;
-                else if (tightness <= 5.0) score += 15;
-                else if (tightness <= 8.0) score += 10;
-
-                const turnover = s.turnover || (s.volume ? s.volume * itemPrice : 500000);
-                if (turnover >= 2000000) score += 35;
-                else if (turnover >= 1000000) score += 25;
-                else if (turnover >= 500000) score += 15;
-
-                if (s.signal === 'buy') score += 20;
-                if (s.setupStyle === 'STAIRCASE' || s.setupStyle === 'SWING PLAY') score += 15;
-                if (s.setupStyle === 'EXPLOSIVE') score += 10;
-                if (s.isConsolidation || s.setupName?.includes('Reclaim')) score += 15;
-
-                s._weeklyScore = score;
-                s._floorDist = floorDist;
-            });
-
-            candidates.sort((a, b) => b._weeklyScore - a._weeklyScore);
-
-            const top5 = candidates.slice(0, 5);
-            window._weeklyTop5Picks = top5;
-
-            if (pickEl) pickEl.textContent = `${top5.length} / 5`;
-
-            if (top5.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="11" style="text-align: center; color: var(--text-muted); padding: 1.5rem;">Tiada saham menepati kriteria Kerja Rumah Mingguan.</td></tr>`;
-                return;
-            }
-
-            let html = '';
-            top5.forEach((mItem, idx) => {
-                const liveMatch = liveList.find(x => x.name === mItem.name) || mItem;
-                const mPrice = mItem.price || mItem.close || 0;
-                const curPrice = liveMatch.price || liveMatch.close || mPrice;
-                const perfPct = mPrice > 0 ? ((curPrice - mPrice) / mPrice * 100) : 0;
-
-                const entryPriceStr = mPrice ? mPrice.toFixed(3) : '0.000';
-                const curPriceStr = curPrice ? curPrice.toFixed(3) : '0.000';
-
-                const perfColor = perfPct >= 0 ? '#34d399' : '#ef4444';
-                const perfSign = perfPct >= 0 ? '+' : '';
-                const perfStr = `${perfSign}${perfPct.toFixed(2)}%`;
-
-                const floor = mItem.floorLow ? mItem.floorLow.toFixed(3) : '-';
-                const floorDist = mItem._floorDist !== 999 ? mItem._floorDist.toFixed(1) + '%' : '-';
-                const turnoverFormatted = mItem.turnover ? 'RM ' + (mItem.turnover / 1000).toFixed(0) + 'k' : '-';
-
-                let techniqueBadge = '';
-                let techniqueName = 'Trend Rider';
-                if (mItem.setupStyle === 'STAIRCASE' || mItem.setupName?.includes('RBS')) {
-                    techniqueBadge = '<span style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.72rem;">🚀 Trend Rider</span>';
-                    techniqueName = 'Trend Rider';
-                } else if (mItem.closeTightness <= 5 || mItem.setupName?.includes('Reclaim')) {
-                    techniqueBadge = '<span style="background: rgba(74, 222, 128, 0.15); color: #4ade80; border: 1px solid rgba(74, 222, 128, 0.3); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.72rem;">🌱 Early Spring</span>';
-                    techniqueName = 'Early Spring';
-                } else if (mItem.setupName?.includes('ATH') || mItem.setupStyle === 'EXPLOSIVE') {
-                    techniqueBadge = '<span style="background: rgba(251, 113, 133, 0.15); color: #fb7185; border: 1px solid rgba(251, 113, 133, 0.3); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.72rem;">🔥 Phoenix</span>';
-                    techniqueName = 'Phoenix';
-                } else {
-                    techniqueBadge = '<span style="background: rgba(245, 158, 11, 0.15); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.3); padding: 0.15rem 0.5rem; border-radius: 6px; font-weight: 800; font-size: 0.72rem;">🧱 Bottom</span>';
-                    techniqueName = 'Bottom Support';
-                }
-
-                let planText = '';
-                if (mItem.floorLow) {
-                    const slPrice = (mItem.floorLow * 0.97).toFixed(3);
-                    planText = `Entry Isnin <strong style="color: #fbbf24;">RM ${entryPriceStr}</strong> | SL <strong style="color: #ef4444;">RM ${slPrice}</strong> (&le; 5%)`;
-                } else {
-                    planText = `Check daily chart for tight risk entry`;
-                }
-
-                html += `
-                <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.3); transition: background 0.2s;" onmouseover="this.style.background='rgba(30, 41, 59, 0.5)'" onmouseout="this.style.background='transparent'">
-                    <td style="padding: 0.65rem 0.8rem; font-size: 0.8rem; text-align: center; color: #fbbf24; font-weight: 800;">${idx + 1}</td>
-                    <td style="padding: 0.65rem 0.8rem; font-size: 0.85rem; font-weight: 800; color: #f8fafc;">
-                        ${getTradingViewAnchorSmall(mItem.name)}
-                        <span style="font-size: 0.7rem; color: #94a3b8; font-weight: 400;">(${mItem.sector || 'Bursa'})</span>
-                    </td>
-                    <td style="padding: 0.65rem 0.8rem; text-align: center;">${techniqueBadge}</td>
-                    <td style="padding: 0.65rem 0.8rem; font-size: 0.85rem; text-align: right; font-weight: 800; color: #fbbf24;">RM ${entryPriceStr}</td>
-                    <td style="padding: 0.65rem 0.8rem; font-size: 0.85rem; text-align: right; font-weight: 800; color: #f8fafc;">RM ${curPriceStr}</td>
-                    <td style="padding: 0.65rem 0.8rem; font-size: 0.82rem; text-align: right; font-weight: 800; color: ${perfColor};">${perfStr}</td>
-                    <td style="padding: 0.65rem 0.8rem; font-size: 0.82rem; text-align: right; font-weight: 700; color: #60a5fa;">RM ${floor}</td>
-                    <td style="padding: 0.65rem 0.8rem; font-size: 0.82rem; text-align: right; font-weight: 800; color: #34d399;">${floorDist}</td>
-                    <td style="padding: 0.65rem 0.8rem; font-size: 0.82rem; text-align: right; font-weight: 700; color: #cbd5e1;">${turnoverFormatted}</td>
-                    <td style="padding: 0.65rem 0.8rem; font-size: 0.78rem; color: #cbd5e1;">${planText}</td>
-                    <td style="padding: 0.65rem 0.8rem; text-align: center;">
-                        <button onclick="triggerAIAnalysisModal('${mItem.name}', 'Weekly Homework: ${techniqueName}')" class="btn" style="background: linear-gradient(135deg, #f59e0b, #d97706); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">✨ Plan AI</button>
-                    </td>
-                </tr>`;
-            });
-
-            tbody.innerHTML = html;
-            updateDynamicBacktestTotals();
-        }
-
-        // Toggle Backtest Section Collapse/Expand
-        function toggleBacktestSection() {
-            const wrapper = document.getElementById('backtest-collapsible-wrapper');
-            const btn = document.getElementById('btn-toggle-backtest');
-            if (!wrapper || !btn) return;
-            if (wrapper.style.display === 'none') {
-                wrapper.style.display = 'block';
-                btn.innerHTML = '<span>▲</span> Hide Record';
-            } else {
-                wrapper.style.display = 'none';
-                btn.innerHTML = '<span>▼</span> Open Backtest Record';
-            }
-        }
-        window.toggleBacktestSection = toggleBacktestSection;
-
-        // Filter Backtest Rows By Year
-        function filterBacktestByYear() {
-            const filterEl = document.getElementById('backtest-year-filter');
-            const tbody = document.getElementById('backtest-summary-tbody');
-            if (!filterEl || !tbody) return;
-
-            const selectedYear = filterEl.value;
-            const rows = tbody.querySelectorAll('tr');
-
-            rows.forEach(r => {
-                const year = r.getAttribute('data-year');
-                if (selectedYear === 'ALL' || !year || year === selectedYear) {
-                    r.style.display = '';
-                } else {
-                    r.style.display = 'none';
-                }
-            });
-
-            updateDynamicBacktestTotals();
-        }
-        window.filterBacktestByYear = filterBacktestByYear;
-
-        // Dynamic Calculation of Backtest Footer Totals
-        function updateDynamicBacktestTotals() {
-            const tbody = document.getElementById('backtest-summary-tbody');
-            if (!tbody) return;
-            
-            const rows = tbody.querySelectorAll('tr');
-            let totalWin = 0;
-            let totalLoss = 0;
-            let winCount = 0;
-            let lossCount = 0;
-            let weekCount = 0;
-
-            rows.forEach(r => {
-                if (r.style.display === 'none') return;
-                const cells = r.querySelectorAll('td');
-                if (cells.length < 6) return;
-                
-                const formulaText = cells[3].textContent || '';
-                const winLossText = cells[5].textContent || '';
-
-                if (formulaText.includes('ACTIVE')) return;
-
-                weekCount++;
-
-                const match = formulaText.match(/\+([\d\.]+)\%\s*-\s*([\d\.]+)\%/);
-                if (match) {
-                    totalWin += parseFloat(match[1]) || 0;
-                    totalLoss += parseFloat(match[2]) || 0;
-                }
-
-                const wMatch = winLossText.match(/(\d+)\s*Win/i);
-                const lMatch = winLossText.match(/(\d+)\s*Loss/i);
-                if (wMatch) winCount += parseInt(wMatch[1], 10);
-                if (lMatch) lossCount += parseInt(lMatch[1], 10);
-            });
-
-            const totalNet = totalWin - totalLoss;
-            const totalTrades = weekCount * 5;
-            const totalWinsLosses = winCount + lossCount;
-            const winRate = totalWinsLosses > 0 ? Math.round((winCount / totalWinsLosses) * 100) : 0;
-
-            const filterEl = document.getElementById('backtest-year-filter');
-            const selectedYearLabel = (filterEl && filterEl.value !== 'ALL') ? filterEl.value : '';
-            const yearSuffix = selectedYearLabel ? ` (${selectedYearLabel})` : '';
-
-            const labelEl = document.getElementById('tfoot-backtest-label');
-            const tradesEl = document.getElementById('tfoot-backtest-trades');
-            const formulaEl = document.getElementById('tfoot-backtest-net-formula');
-            const winLossEl = document.getElementById('tfoot-backtest-winloss');
-
-            if (labelEl) labelEl.textContent = `🏆 OVERALL TOTAL (${weekCount} WEEKS${yearSuffix})`;
-            if (tradesEl) tradesEl.textContent = `${totalTrades} Selected Trades`;
-            if (formulaEl) {
-                formulaEl.innerHTML = `+${totalWin.toFixed(1)}% - ${totalLoss.toFixed(1)}% = <span style="display: inline-block; background: rgba(16, 185, 129, 0.25); color: #34d399; padding: 0.15rem 0.45rem; border-radius: 6px; border: 1px solid #10b981; margin-left: 0.3rem;">+${totalNet.toFixed(1)}% Net PnL</span>`;
-            }
-            if (winLossEl) {
-                winLossEl.innerHTML = `<span style="color: #34d399;">🟢 ${winCount} Win</span> / <span style="color: #ef4444;">🔴 ${lossCount} Loss (${winRate}% Win Rate)</span>`;
-            }
-        }
-        window.updateDynamicBacktestTotals = updateDynamicBacktestTotals;
-
-        function copyWeeklyWatchlist() {
-            const picks = window._weeklyTop5Picks || [];
-            if (picks.length === 0) {
-                alert('No stocks available to copy.');
-                return;
-            }
-            const tickers = picks.map(p => getTradingViewSymbol(p.name)).filter(Boolean).map(s => `MYX:${s}`).join(',');
-            navigator.clipboard.writeText(tickers).then(() => {
-                alert('Weekly Top 5 Watchlist successfully copied!\n' + tickers + '\n\nCan be pasted directly into TradingView.');
-            }).catch(err => {
-                console.error('Failure copying: ', err);
-            });
-        }
-        window.renderWeeklyHomework = renderWeeklyHomework;
     </script>
 
     <!-- Global Footer with Legal Policies & Disclaimers -->
