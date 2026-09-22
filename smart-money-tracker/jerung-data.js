@@ -3,6 +3,25 @@
 
 window.jerungData = [
   {
+    "id": "klse-SDG-22-Sep-2026-kumpulan-wang-persaraan",
+    "stockId": "sdg",
+    "stockName": "SD GUTHRIE BERHAD",
+    "symbol": "SDG",
+    "code": "SDG",
+    "market": "Main / ACE Market",
+    "sector": "General Bursa Equities",
+    "institution": "KUMPULAN WANG PERSARAAN (KWAP)",
+    "institutionCategory": "GLIC",
+    "action": "Acquired",
+    "sharesChanged": 1000000,
+    "totalHolding": 50000000,
+    "percentage": 5,
+    "filingDate": "22-Sep-2026",
+    "signal": "🔥 Heavy Accumulation",
+    "announcementUrl": "https://www.klsescreener.com/v2/announcements/view/11670683",
+    "insight": "Pemfailan rasmi Seksyen 138 Akta Syarikat 2016 oleh KUMPULAN WANG PERSARAAN (KWAP)."
+  },
+  {
     "id": "klse-PENTA-21-Sep-2026-kumpulan-wang-persaraan",
     "stockId": "penta",
     "stockName": "PENTAMASTER CORPORATION BERHAD",

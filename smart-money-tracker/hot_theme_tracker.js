@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-22T04:30:56.470Z",
+  "generatedAt": "2026-09-22T04:40:51.351Z",
   "dataDays": 80,
   "totalTracked": 49,
   "openCount": 24,
@@ -9,9 +9,9 @@ window.HOT_THEME_TRACKER = {
   "closedWins": 19,
   "closedWinRate": 76,
   "closedAvgGain": 21.5,
-  "openPnl": 280.4,
+  "openPnl": 279.6,
   "closedPnl": 536.9,
-  "totalPnlNow": 817.3
+  "totalPnlNow": 816.5
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -19,8 +19,8 @@ window.HOT_THEME_TRACKER = {
   "dataDays": 80,
   "signals": 45,
   "winRate": 67,
-  "avgGain": 8.8,
-  "totalPnl": 394.6,
+  "avgGain": 8.7,
+  "totalPnl": 393,
   "worstLoss": -16
  },
  "themeStrength": [
@@ -579,7 +579,7 @@ window.HOT_THEME_TRACKER = {
   },
   {
    "date": "2026-09-22",
-   "themePct": 28.7,
+   "themePct": 29.1,
    "themeCount": 75,
    "totalCount": 309,
    "ma5": 22.8
@@ -593,11 +593,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 0.63,
    "entryFloor": 0.58,
    "currentFloor": 0.61,
-   "currentPrice": 0.735,
-   "high": 0.735,
+   "currentPrice": 0.725,
+   "high": 0.725,
    "highDate": "2026-09-22",
-   "maxGain": 16.7,
-   "finalGain": 16.7,
+   "maxGain": 15.1,
+   "finalGain": 15.1,
    "day1ChangePct": 2.44,
    "days": 9,
    "lastDate": "2026-09-22",
@@ -698,11 +698,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 0.215,
    "entryFloor": 0.2,
    "currentFloor": 0.195,
-   "currentPrice": 0.2,
+   "currentPrice": 0.205,
    "high": 0.215,
    "highDate": "2026-08-21",
    "maxGain": 0,
-   "finalGain": -7,
+   "finalGain": -4.7,
    "day1ChangePct": -2.27,
    "days": 22,
    "lastDate": "2026-09-22",
@@ -866,11 +866,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 1.06,
    "entryFloor": 1.04,
    "currentFloor": 1,
-   "currentPrice": 1.11,
+   "currentPrice": 1.1,
    "high": 1.17,
    "highDate": "2026-07-02",
    "maxGain": 10.4,
-   "finalGain": 4.7,
+   "finalGain": 3.8,
    "day1ChangePct": -1.85,
    "days": 33,
    "lastDate": "2026-09-22",
@@ -930,11 +930,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 7.81,
    "entryFloor": 7.51,
    "currentFloor": 8.1,
-   "currentPrice": 8.71,
+   "currentPrice": 8.7,
    "high": 9.2,
    "highDate": "2026-08-28",
    "maxGain": 17.8,
-   "finalGain": 11.5,
+   "finalGain": 11.4,
    "day1ChangePct": 2.36,
    "days": 75,
    "lastDate": "2026-09-22",
@@ -951,11 +951,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 6.81,
    "entryFloor": 6.7,
    "currentFloor": 9.1,
-   "currentPrice": 9.92,
-   "high": 9.92,
+   "currentPrice": 9.9,
+   "high": 9.9,
    "highDate": "2026-09-22",
-   "maxGain": 45.7,
-   "finalGain": 45.7,
+   "maxGain": 45.4,
+   "finalGain": 45.4,
    "day1ChangePct": 0.59,
    "days": 75,
    "lastDate": "2026-09-22",
@@ -964,19 +964,19 @@ window.HOT_THEME_TRACKER = {
     "Semiconductor"
    ],
    "confluence": 3,
-   "slTrail": 9.325
+   "slTrail": 9.306
   },
   {
    "name": "UWC",
    "entryDate": "2026-06-03",
    "entry": 5.87,
    "entryFloor": 5.72,
-   "currentFloor": 6.14,
-   "currentPrice": 6.63,
+   "currentFloor": 5.99,
+   "currentPrice": 6.57,
    "high": 6.9,
    "highDate": "2026-08-28",
    "maxGain": 17.5,
-   "finalGain": 12.9,
+   "finalGain": 11.9,
    "day1ChangePct": -1.01,
    "days": 75,
    "lastDate": "2026-09-22",
@@ -985,7 +985,7 @@ window.HOT_THEME_TRACKER = {
     "Semiconductor"
    ],
    "confluence": 3,
-   "slTrail": 5.956
+   "slTrail": 5.81
   },
   {
    "name": "GREATEC",
@@ -1077,11 +1077,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 1.25,
    "entryFloor": 1.22,
    "currentFloor": 1.86,
-   "currentPrice": 2.38,
-   "high": 2.38,
+   "currentPrice": 2.39,
+   "high": 2.39,
    "highDate": "2026-09-22",
-   "maxGain": 90.4,
-   "finalGain": 90.4,
+   "maxGain": 91.2,
+   "finalGain": 91.2,
    "day1ChangePct": 0,
    "days": 35,
    "lastDate": "2026-09-22",
@@ -1090,7 +1090,7 @@ window.HOT_THEME_TRACKER = {
     "Solar/RE"
    ],
    "confluence": 3,
-   "slTrail": 2.237
+   "slTrail": 2.247
   },
   {
    "name": "MNHLDG",
