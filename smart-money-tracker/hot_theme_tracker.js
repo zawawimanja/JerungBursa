@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-22T03:40:49.156Z",
+  "generatedAt": "2026-09-22T03:50:45.656Z",
   "dataDays": 80,
   "totalTracked": 49,
   "openCount": 24,
@@ -9,9 +9,9 @@ window.HOT_THEME_TRACKER = {
   "closedWins": 19,
   "closedWinRate": 76,
   "closedAvgGain": 21.5,
-  "openPnl": 270.8,
+  "openPnl": 268.9,
   "closedPnl": 536.9,
-  "totalPnlNow": 807.7
+  "totalPnlNow": 805.8
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -20,7 +20,7 @@ window.HOT_THEME_TRACKER = {
   "signals": 45,
   "winRate": 67,
   "avgGain": 8.7,
-  "totalPnl": 391.2,
+  "totalPnl": 392,
   "worstLoss": -16
  },
  "themeStrength": [
@@ -579,7 +579,7 @@ window.HOT_THEME_TRACKER = {
   },
   {
    "date": "2026-09-22",
-   "themePct": 30.9,
+   "themePct": 31,
    "themeCount": 75,
    "totalCount": 307,
    "ma5": 23.2
@@ -593,11 +593,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 0.63,
    "entryFloor": 0.58,
    "currentFloor": 0.61,
-   "currentPrice": 0.71,
-   "high": 0.71,
-   "highDate": "2026-09-21",
-   "maxGain": 12.7,
-   "finalGain": 12.7,
+   "currentPrice": 0.715,
+   "high": 0.715,
+   "highDate": "2026-09-22",
+   "maxGain": 13.5,
+   "finalGain": 13.5,
    "day1ChangePct": 2.44,
    "days": 9,
    "lastDate": "2026-09-22",
@@ -635,11 +635,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 6.25,
    "entryFloor": 7.79,
    "currentFloor": 7.68,
-   "currentPrice": 7.99,
-   "high": 7.99,
+   "currentPrice": 7.96,
+   "high": 7.96,
    "highDate": "2026-09-22",
-   "maxGain": 27.8,
-   "finalGain": 27.8,
+   "maxGain": 27.4,
+   "finalGain": 27.4,
    "day1ChangePct": -1.11,
    "days": 23,
    "lastDate": "2026-09-22",
@@ -648,7 +648,7 @@ window.HOT_THEME_TRACKER = {
     "Semiconductor"
    ],
    "confluence": 3,
-   "slTrail": 7.511
+   "slTrail": 7.482
   },
   {
    "name": "NEXG",
@@ -930,11 +930,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 7.81,
    "entryFloor": 7.51,
    "currentFloor": 8.1,
-   "currentPrice": 8.68,
+   "currentPrice": 8.69,
    "high": 9.2,
    "highDate": "2026-08-28",
    "maxGain": 17.8,
-   "finalGain": 11.1,
+   "finalGain": 11.3,
    "day1ChangePct": 2.36,
    "days": 75,
    "lastDate": "2026-09-22",
@@ -951,11 +951,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 6.81,
    "entryFloor": 6.7,
    "currentFloor": 9.1,
-   "currentPrice": 9.91,
-   "high": 9.91,
+   "currentPrice": 9.82,
+   "high": 9.82,
    "highDate": "2026-09-22",
-   "maxGain": 45.5,
-   "finalGain": 45.5,
+   "maxGain": 44.2,
+   "finalGain": 44.2,
    "day1ChangePct": 0.59,
    "days": 75,
    "lastDate": "2026-09-22",
@@ -964,19 +964,19 @@ window.HOT_THEME_TRACKER = {
     "Semiconductor"
    ],
    "confluence": 3,
-   "slTrail": 9.315
+   "slTrail": 9.231
   },
   {
    "name": "UWC",
    "entryDate": "2026-06-03",
    "entry": 5.87,
    "entryFloor": 5.72,
-   "currentFloor": 6.14,
-   "currentPrice": 6.61,
+   "currentFloor": 5.99,
+   "currentPrice": 6.57,
    "high": 6.9,
    "highDate": "2026-08-28",
    "maxGain": 17.5,
-   "finalGain": 12.6,
+   "finalGain": 11.9,
    "day1ChangePct": -1.01,
    "days": 75,
    "lastDate": "2026-09-22",
@@ -985,7 +985,7 @@ window.HOT_THEME_TRACKER = {
     "Semiconductor"
    ],
    "confluence": 3,
-   "slTrail": 5.956
+   "slTrail": 5.81
   },
   {
    "name": "GREATEC",
@@ -1014,11 +1014,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 0.37,
    "entryFloor": 0.365,
    "currentFloor": 0.355,
-   "currentPrice": 0.38,
-   "high": 0.38,
-   "highDate": "2026-09-22",
-   "maxGain": 2.7,
-   "finalGain": 2.7,
+   "currentPrice": 0.375,
+   "high": 0.375,
+   "highDate": "2026-06-04",
+   "maxGain": 1.4,
+   "finalGain": 1.4,
    "day1ChangePct": -1.33,
    "days": 75,
    "lastDate": "2026-09-22",
@@ -1077,11 +1077,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 1.25,
    "entryFloor": 1.22,
    "currentFloor": 1.86,
-   "currentPrice": 2.34,
+   "currentPrice": 2.35,
    "high": 2.38,
    "highDate": "2026-09-21",
    "maxGain": 90.4,
-   "finalGain": 87.2,
+   "finalGain": 88,
    "day1ChangePct": 0,
    "days": 35,
    "lastDate": "2026-09-22",
