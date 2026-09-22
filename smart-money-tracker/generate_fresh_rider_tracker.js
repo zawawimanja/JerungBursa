@@ -41,27 +41,30 @@ function isAddOnAPick(item, initialBasePrice, effFloor) {
     if (!item || !item.name || item.price <= 0 || item.price > 50) return false;
     if (item.isVvip !== true || item.signal === 'avoid' || item.isCombStock) return false;
     if ((item.ipoYear || 0) < 2025) return false;
-    if ((item.pullback ?? 99) > 10.0) return false;
+    const pb = item.pullback ?? 99;
+    if (pb > 10.0) return false;
     
     const tight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
-    if (tight > 3.5) return false; // Squeeze Tightness <= 3.5%
+    if (tight > 3.5) return false;
+
+    const turnover = item.turnover || item.rawTurnover || 0;
+    if (turnover < 2000000) return false;
 
     const f = effFloor || item.floorLow || 0;
     const floorDist = f > 0 ? ((item.price - f) / f * 100) : 99;
-    if (floorDist > 3.5) return false; // Floor Distance <= 3.5%
 
-    const turnover = item.turnover || item.rawTurnover || 0;
-    if (turnover < 2000000) return false; // Turnover >= RM 2.0M
+    const touches = item.touchCount || 0;
+    const isSolidBase2 = (touches >= 3 && tight <= 3.5 && floorDist <= 4.5 && turnover >= 2000000);
 
-    if (item.hasVolumeSpike === true) return false; // CS MERAH
+    if (floorDist > 3.5 && !isSolidBase2) return false;
+    if (item.hasVolumeSpike === true) return false;
 
     if (initialBasePrice > 0) {
         const gainFromBase = ((item.price - initialBasePrice) / initialBasePrice * 100);
-        if (gainFromBase > 20.0) return false; // Tolak ADD-ON Pucuk > 20%
+        if (gainFromBase > 20.0 && !isSolidBase2) return false;
     }
     return true;
 }
-
 const BURSA_MALAYSIA_HOLIDAYS = new Set([
     '2026-01-01', // New Year's Day
     '2026-01-28', '2026-01-29', '2026-01-30', // Chinese New Year
@@ -259,7 +262,12 @@ for (const day of dayList) {
         if (!isAddOnAPick(it, base.price, effFloor)) continue;
 
         const gainFromBase = ((it.price - base.price) / base.price) * 100;
-        if (gainFromBase > 20.0) continue; // Tolak ADD-ON Pucuk > 20% dari base asal
+        const touches = it.touchCount || 0;
+        const tight = typeof it.closeTightness === 'number' ? it.closeTightness : 99;
+        const fDist = effFloor > 0 ? ((it.price - effFloor) / effFloor * 100) : 99;
+        const toVal = it.turnover || it.rawTurnover || 0;
+        const isSolidBase2 = (touches >= 3 && tight <= 3.5 && fDist <= 4.5 && toVal >= 2000000);
+        if (gainFromBase > 20.0 && !isSolidBase2) continue;
 
         const t = {
             id: `${name}_${day.date}_ADDON`,
