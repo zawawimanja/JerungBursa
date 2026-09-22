@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-22T07:21:06.812Z",
+  "generatedAt": "2026-09-22T07:31:03.337Z",
   "dataDays": 80,
   "totalTracked": 49,
   "openCount": 24,
@@ -9,9 +9,9 @@ window.HOT_THEME_TRACKER = {
   "closedWins": 19,
   "closedWinRate": 76,
   "closedAvgGain": 21.5,
-  "openPnl": 268.8,
+  "openPnl": 268.1,
   "closedPnl": 536.9,
-  "totalPnlNow": 805.7
+  "totalPnlNow": 805
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -579,10 +579,10 @@ window.HOT_THEME_TRACKER = {
   },
   {
    "date": "2026-09-22",
-   "themePct": 29.5,
+   "themePct": 29,
    "themeCount": 74,
-   "totalCount": 305,
-   "ma5": 22.9
+   "totalCount": 306,
+   "ma5": 22.8
   }
  ],
  "themeTrend": "RISING",
@@ -845,11 +845,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 1.17,
    "entryFloor": 1.03,
    "currentFloor": 1.51,
-   "currentPrice": 1.59,
+   "currentPrice": 1.57,
    "high": 1.6,
    "highDate": "2026-09-18",
    "maxGain": 36.8,
-   "finalGain": 35.9,
+   "finalGain": 34.2,
    "day1ChangePct": 6.36,
    "days": 57,
    "lastDate": "2026-09-22",
@@ -909,11 +909,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 2.36,
    "entryFloor": 2.2,
    "currentFloor": 2.51,
-   "currentPrice": 2.65,
+   "currentPrice": 2.66,
    "high": 2.7,
    "highDate": "2026-09-08",
    "maxGain": 14.4,
-   "finalGain": 12.3,
+   "finalGain": 12.7,
    "day1ChangePct": 0.85,
    "days": 75,
    "lastDate": "2026-09-22",
@@ -1056,11 +1056,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 1.58,
    "entryFloor": 1.55,
    "currentFloor": 2.03,
-   "currentPrice": 2.27,
-   "high": 2.27,
+   "currentPrice": 2.28,
+   "high": 2.28,
    "highDate": "2026-09-22",
-   "maxGain": 43.7,
-   "finalGain": 43.7,
+   "maxGain": 44.3,
+   "finalGain": 44.3,
    "day1ChangePct": -3.66,
    "days": 75,
    "lastDate": "2026-09-22",
@@ -1069,7 +1069,7 @@ window.HOT_THEME_TRACKER = {
     "Solar/RE"
    ],
    "confluence": 3,
-   "slTrail": 2.134
+   "slTrail": 2.143
   },
   {
    "name": "SAMAIDEN",
