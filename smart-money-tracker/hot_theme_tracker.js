@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-22T02:50:52.656Z",
+  "generatedAt": "2026-09-22T03:01:11.037Z",
   "dataDays": 80,
   "totalTracked": 49,
   "openCount": 24,
@@ -9,9 +9,9 @@ window.HOT_THEME_TRACKER = {
   "closedWins": 19,
   "closedWinRate": 76,
   "closedAvgGain": 21.5,
-  "openPnl": 273.5,
+  "openPnl": 276.8,
   "closedPnl": 536.9,
-  "totalPnlNow": 810.4
+  "totalPnlNow": 813.7
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -579,7 +579,7 @@ window.HOT_THEME_TRACKER = {
   },
   {
    "date": "2026-09-22",
-   "themePct": 34.3,
+   "themePct": 34.6,
    "themeCount": 76,
    "totalCount": 309,
    "ma5": 23.9
@@ -930,11 +930,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 7.81,
    "entryFloor": 7.51,
    "currentFloor": 8.1,
-   "currentPrice": 8.73,
+   "currentPrice": 8.75,
    "high": 9.2,
    "highDate": "2026-08-28",
    "maxGain": 17.8,
-   "finalGain": 11.8,
+   "finalGain": 12,
    "day1ChangePct": 2.36,
    "days": 75,
    "lastDate": "2026-09-22",
@@ -951,11 +951,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 6.81,
    "entryFloor": 6.7,
    "currentFloor": 9.1,
-   "currentPrice": 9.99,
-   "high": 9.99,
+   "currentPrice": 10.06,
+   "high": 10.06,
    "highDate": "2026-09-22",
-   "maxGain": 46.7,
-   "finalGain": 46.7,
+   "maxGain": 47.7,
+   "finalGain": 47.7,
    "day1ChangePct": 0.59,
    "days": 75,
    "lastDate": "2026-09-22",
@@ -964,7 +964,7 @@ window.HOT_THEME_TRACKER = {
     "Semiconductor"
    ],
    "confluence": 3,
-   "slTrail": 9.391
+   "slTrail": 9.456
   },
   {
    "name": "UWC",
@@ -1014,11 +1014,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 0.37,
    "entryFloor": 0.365,
    "currentFloor": 0.355,
-   "currentPrice": 0.375,
-   "high": 0.375,
-   "highDate": "2026-06-04",
-   "maxGain": 1.4,
-   "finalGain": 1.4,
+   "currentPrice": 0.38,
+   "high": 0.38,
+   "highDate": "2026-09-22",
+   "maxGain": 2.7,
+   "finalGain": 2.7,
    "day1ChangePct": -1.33,
    "days": 75,
    "lastDate": "2026-09-22",
@@ -1077,11 +1077,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 1.25,
    "entryFloor": 1.22,
    "currentFloor": 1.86,
-   "currentPrice": 2.32,
+   "currentPrice": 2.33,
    "high": 2.38,
    "highDate": "2026-09-21",
    "maxGain": 90.4,
-   "finalGain": 85.6,
+   "finalGain": 86.4,
    "day1ChangePct": 0,
    "days": 35,
    "lastDate": "2026-09-22",
