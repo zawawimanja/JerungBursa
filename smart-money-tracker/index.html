@@ -6372,9 +6372,16 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     const ef = effFloorOf(it);
                     const fd = (ef && it.price) ? ((it.price - ef) / ef) * 100 : 99;
                     const toVal = it.turnover || it.rawTurnover || 0;
-                    if (pct <= 20 && fd <= 3.5 && (toVal >= 2000000 || toVal === 0)) return 1; // ⭐ ADD-ON A+
-                    if (pct > 20) return 3; // ⚠️ ADD-ON Late/High
-                    return 2; // Standard ADD-ON
+                    const touches = it.touchCount || 0;
+                    const tight = typeof it.closeTightness === 'number' ? it.closeTightness : 99;
+
+                    // ⭐ ADD-ON A+: Fresh Base 1 <= 20% ATAU Solid Base 2 (Touches >= 4, Floor <= 3.5%, Squeeze <= 3.5%, Whale >= RM 2M)
+                    if (fd <= 3.5 && (toVal >= 2000000 || toVal === 0)) {
+                        if (pct <= 20) return 1; // ⭐ ADD-ON A+ (Base 1 / Staircase 1)
+                        if (touches >= 4 && tight <= 3.5) return 1; // ⭐ ADD-ON A+ (Solid Base 2 Staircase - e.g. STRATUS)
+                    }
+                    if (pct > 20 && fd > 5.0) return 3; // ⚠️ ADD-ON Pucuk (jauh dari lantai)
+                    return 2; // ➕ Standard ADD-ON
                 }
                 return 4; // RE-ENTRY
             };
@@ -6418,12 +6425,19 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 });
             } else {
                 picks.sort((a, b) => {
+                    // 0. Keutamaan #0: Duit Jerung Aktif (Turnover >= RM 2.0M) sentiasa diutamakan atas kaunter lemau!
+                    const toA = a.turnover || a.rawTurnover || 0;
+                    const toB = b.turnover || b.rawTurnover || 0;
+                    const isWhaleA = toA >= 2000000 ? 1 : 0;
+                    const isWhaleB = toB >= 2000000 ? 1 : 0;
+                    if (isWhaleA !== isWhaleB) return isWhaleB - isWhaleA;
+
                     // 1. Keutamaan #1: 🔥⚡ FUSION (Lulus FR + HT)
                     const fusionA = isFreshRiderPick(a) && getHotThemes(a.name).length > 0;
                     const fusionB = isFreshRiderPick(b) && getHotThemes(b.name).length > 0;
                     if (fusionA !== fusionB) return fusionA ? -1 : 1;
 
-                    // 2. Keutamaan #2: 🆕 NEW Signal (0 = NEW < 1 = ADD-ON < 2 = RE-ENTRY)
+                    // 2. Keutamaan #2: 🆕 NEW Signal (0 = NEW < 1 = ADD-ON A+ < 2 = ➕ ADD-ON < 3 = ⚠️ ADD-ON < 4 = RE-ENTRY)
                     const fa = frFreshness(a), fb = frFreshness(b);
                     if (fa !== fb) return fa - fb;
 
@@ -6447,8 +6461,6 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     if (ca !== cb) return cb - ca;
                     if (a._tripleLock !== b._tripleLock) return a._tripleLock ? -1 : 1;
                     if (a._isWhaleBacked !== b._isWhaleBacked) return a._isWhaleBacked ? -1 : 1;
-                    const toA = a.turnover || a.rawTurnover || 0;
-                    const toB = b.turnover || b.rawTurnover || 0;
                     return toB - toA;
                 });
             }

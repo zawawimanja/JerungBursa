@@ -607,12 +607,21 @@ function buildMessage(now, out) {
             const effF = (typeof stock === 'object' && curP) ? effFloor(name, curP, stock.floorLow || curP * 0.95) : 0;
             const floorDist = (effF && curP) ? ((curP - effF) / effF) * 100 : 99;
             const toVal = (typeof stock === 'object') ? (stock.rawTurnover || stock.turnover || 0) : 0;
+            const touches = (typeof stock === 'object' && stock.touchCount) ? stock.touchCount : 0;
+            const tight = (typeof stock === 'object' && typeof stock.closeTightness === 'number') ? stock.closeTightness : 99;
 
-            if (pctFromEntry >= 0 && pctFromEntry <= 20 && floorDist <= 3.5 && toVal >= 2000000) {
-                return '⭐ ADD-ON A+';
-            } else if (pctFromEntry < 0 && floorDist <= 3.5) {
+            // ⭐ ADD-ON A+: Fresh Base 1 <= 20% ATAU Solid Base 2 (Touches >= 4, Floor <= 3.5%, Squeeze <= 3.5%, Whale >= RM 2M)
+            if (floorDist <= 3.5 && toVal >= 2000000) {
+                if (pctFromEntry >= 0 && pctFromEntry <= 20) {
+                    return '⭐ ADD-ON A+';
+                }
+                if (touches >= 4 && tight <= 3.5) {
+                    return '⭐ ADD-ON A+';
+                }
+            }
+            if (pctFromEntry < 0 && floorDist <= 3.5) {
                 return '🔻 RETEST BASE';
-            } else if (pctFromEntry > 20) {
+            } else if (pctFromEntry > 20 && floorDist > 5.0) {
                 return `⚠️ ADD-ON (+${pctFromEntry.toFixed(0)}%)`;
             }
             return '➕ ADD-ON';
@@ -690,6 +699,11 @@ function buildMessage(now, out) {
         if (label.includes('⚠️')) return 3;
         return 4; // RE-ENTRY
     }
+    const tieWhale = (a, b) => {
+        const wa = (a.turnover || 0) >= 2000000 ? 1 : 0;
+        const wb = (b.turnover || 0) >= 2000000 ? 1 : 0;
+        return wb - wa;
+    };
     const tieTight = (a, b) => ((a.tight ?? 99) - (b.tight ?? 99));
     const tieFloor = (a, b) => ((a.floorDist ?? 99) - (b.floorDist ?? 99));
     const tiePb = (a, b) => ((a.pullback ?? 99) - (b.pullback ?? 99));
@@ -699,10 +713,10 @@ function buildMessage(now, out) {
         const fusionA = getHotThemes(a.name).length > 0;
         const fusionB = getHotThemes(b.name).length > 0;
         if (fusionA !== fusionB) return fusionA ? -1 : 1;
-        return (freshnessRank(a.label) - freshnessRank(b.label)) || tieTight(a, b) || tieFloor(a, b) || tiePb(a, b) || tieTouch(a, b) || tieTurnover(a, b);
+        return tieWhale(a, b) || (freshnessRank(a.label) - freshnessRank(b.label)) || tieTight(a, b) || tieFloor(a, b) || tiePb(a, b) || tieTouch(a, b) || tieTurnover(a, b);
     });
     htOut.sort((a, b) =>
-        (freshnessRank(a.label) - freshnessRank(b.label)) || tieTight(a, b) || tieFloor(a, b) || tiePb(a, b) || (b.confluence - a.confluence) || tieTouch(a, b) || tieTurnover(a, b));
+        tieWhale(a, b) || (freshnessRank(a.label) - freshnessRank(b.label)) || tieTight(a, b) || tieFloor(a, b) || tiePb(a, b) || (b.confluence - a.confluence) || tieTouch(a, b) || tieTurnover(a, b));
 
     // 7. SL warning — posisi OPEN tracker bawah trailing stop
     const slWarnings = [];
