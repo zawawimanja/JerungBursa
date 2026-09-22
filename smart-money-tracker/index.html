@@ -6375,11 +6375,10 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     const touches = it.touchCount || 0;
                     const tight = typeof it.closeTightness === 'number' ? it.closeTightness : 99;
 
-                    // ⭐ ADD-ON A+: Fresh Base 1 <= 20% ATAU Solid Base 2 (Touches >= 4, Floor <= 3.5%, Squeeze <= 3.5%, Whale >= RM 2M)
-                    if (fd <= 3.5 && (toVal >= 2000000 || toVal === 0)) {
-                        if (pct <= 20) return 1; // ⭐ ADD-ON A+ (Base 1 / Staircase 1)
-                        if (touches >= 4 && tight <= 3.5) return 1; // ⭐ ADD-ON A+ (Solid Base 2 Staircase - e.g. STRATUS)
-                    }
+                    // ⭐ ADD-ON A+: Fresh Base 1 <= 20% ATAU Solid Base 2 (Touches >= 3, Floor <= 4.5%, Squeeze <= 3.5%, Whale >= RM 2M)
+                    const isSolidBase2 = (touches >= 3 && tight <= 3.5 && fd <= 4.5 && (toVal >= 2000000 || toVal === 0));
+                    const isFreshBase1 = (pct >= 0 && pct <= 20 && fd <= 3.5 && (toVal >= 2000000 || toVal === 0));
+                    if (isFreshBase1 || isSolidBase2) return 1; // ⭐ ADD-ON A+
                     if (pct > 20 && fd > 5.0) return 3; // ⚠️ ADD-ON Pucuk (jauh dari lantai)
                     return 2; // ➕ Standard ADD-ON
                 }
@@ -8374,16 +8373,21 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
                     const floorDist = effF > 0 ? ((curP - effF) / effF) * 100 : 99;
                     const toVal = (item && (item.turnover || item.rawTurnover)) || 0;
+                    const touches = (item && item.touchCount) || 0;
+                    const tight = (item && typeof item.closeTightness === 'number') ? item.closeTightness : 99;
 
-                    if (pctFromEntry >= 0 && pctFromEntry <= 20 && floorDist <= 3.5 && (toVal >= 2000000 || toVal === 0)) {
+                    const isSolidBase2 = (touches >= 3 && tight <= 3.5 && floorDist <= 4.5 && (toVal >= 2000000 || toVal === 0));
+                    const isFreshBase1 = (pctFromEntry >= 0 && pctFromEntry <= 20 && floorDist <= 3.5 && (toVal >= 2000000 || toVal === 0));
+
+                    if (isFreshBase1 || isSolidBase2) {
                         badge.textContent = '⭐ ADD-ON A+';
                         badge.style.cssText = 'font-size:0.62rem; background:linear-gradient(135deg, rgba(16,185,129,0.35), rgba(234,179,8,0.35)); color:#fef08a; padding:0.08rem 0.35rem; border-radius:4px; font-weight:900; border:1px solid rgba(234,179,8,0.7); white-space:nowrap; animation: pulse 1.5s infinite; text-shadow: 0 0 6px rgba(234,179,8,0.5);';
-                        badge.title = `ADD-ON A+ (Fresh Base / Staircase 2): OPEN in Tracker, hanya +${pctFromEntry.toFixed(1)}% dari entry asal (RM ${entryPrice.toFixed(3)}) & lantai rapat ${floorDist.toFixed(1)}%. Win Rate Backtest ~80%!`;
+                        badge.title = `ADD-ON A+ (${isSolidBase2 ? 'Solid Base 2 Staircase' : 'Fresh Base 1'}): OPEN in Tracker, lantai rapat ${floorDist.toFixed(1)}% & volume jerung. Win Rate Backtest ~80%!`;
                     } else if (pctFromEntry < 0 && floorDist <= 3.5) {
                         badge.textContent = '🔻 RETEST BASE';
                         badge.style.cssText = 'font-size:0.62rem; background:rgba(56,189,248,0.25); color:#7dd3fc; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid rgba(56,189,248,0.5); white-space:nowrap;';
                         badge.title = `RETEST BASE: Harga kini RM ${curP.toFixed(3)} (${pctFromEntry.toFixed(1)}% dari entry asal) sedang menguji sokongan lantai RM ${effF.toFixed(3)}.`;
-                    } else if (pctFromEntry > 20) {
+                    } else if (pctFromEntry > 20 && floorDist > 5.0) {
                         badge.textContent = `⚠️ ADD-ON (+${pctFromEntry.toFixed(0)}%)`;
                         badge.style.cssText = 'font-size:0.62rem; background:rgba(239,68,68,0.2); color:#fca5a5; padding:0.08rem 0.3rem; border-radius:4px; font-weight:800; border:1px solid rgba(239,68,68,0.4); white-space:nowrap;';
                         badge.title = `ADD-ON TINGGI: Harga kini RM ${curP.toFixed(3)} (+${pctFromEntry.toFixed(1)}% dari tapak asal RM ${entryPrice.toFixed(3)}). Risiko kejatuhan lebih tinggi.`;

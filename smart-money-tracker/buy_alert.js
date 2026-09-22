@@ -610,14 +610,11 @@ function buildMessage(now, out) {
             const touches = (typeof stock === 'object' && stock.touchCount) ? stock.touchCount : 0;
             const tight = (typeof stock === 'object' && typeof stock.closeTightness === 'number') ? stock.closeTightness : 99;
 
-            // ⭐ ADD-ON A+: Fresh Base 1 <= 20% ATAU Solid Base 2 (Touches >= 4, Floor <= 3.5%, Squeeze <= 3.5%, Whale >= RM 2M)
-            if (floorDist <= 3.5 && toVal >= 2000000) {
-                if (pctFromEntry >= 0 && pctFromEntry <= 20) {
-                    return '⭐ ADD-ON A+';
-                }
-                if (touches >= 4 && tight <= 3.5) {
-                    return '⭐ ADD-ON A+';
-                }
+            // ⭐ ADD-ON A+: Fresh Base 1 <= 20% ATAU Solid Base 2 (Touches >= 3, Floor <= 4.5%, Squeeze <= 3.5%, Whale >= RM 2M)
+            const isSolidBase2 = (touches >= 3 && tight <= 3.5 && floorDist <= 4.5 && toVal >= 2000000);
+            const isFreshBase1 = (pctFromEntry >= 0 && pctFromEntry <= 20 && floorDist <= 3.5 && toVal >= 2000000);
+            if (isFreshBase1 || isSolidBase2) {
+                return '⭐ ADD-ON A+';
             }
             if (pctFromEntry < 0 && floorDist <= 3.5) {
                 return '🔻 RETEST BASE';
