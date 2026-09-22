@@ -7,12 +7,10 @@ Dokumen ini adalah peraturan rasmi dan memori kekal projek **JerungBursa / Smart
 ## 📌 1. Strategi Gandingan Pasangan (1 NEW + 1 ADD-ON)
 SOP pemilihan harian mengutamakan formula seimbang:
 * **1 Kaunter `🔥 NEW (Day 1)`**: Saham yang baru meletup dari tapak asal dengan risiko SL paling minima (Win Rate 77.3%, Profit Factor 7.91). Contoh: *PENTECH* pada 08 Sep, *SUM* pada 11 Sep.
-* **1 Kaunter `⭐ ADD-ON A+` Berkualiti Tinggi**: Saham pendahulu (*leader*) yang sedang membina momentum tangga kedua/ketiga (Base 2 Staircase) yang terbukti secara backtest mencatat **Win Rate 78% – 83% & Profit Factor > 10**:
-  - Kenaikan dari Entry Asal $\le$ 20% (Base 1 / Base 2).
-  - Jarak ke Lantai Sokongan $\le$ 3.0% – 3.5% (Risiko SL minima).
-  - Suntikan Turnover Jerung $\ge$ RM 2.0M – RM 2.5M.
-  - Umur kesegaran dalam tracker $\le$ 10 hari dagangan.
-  *(Contoh: SUNLOGY, STRATUS awal base 2, ICENTS, CBHB)*.
+* **1 Kaunter `🔥 NEW (Day 1)`**: Saham yang baru meletup dari tapak asal dengan risiko SL paling minima (Win Rate 77.3%, Profit Factor 7.91). Contoh: *PENTECH* pada 08 Sep, *SUM* pada 11 Sep.
+* **1 Kaunter `⭐ ADD-ON A+ (AWAL)` atau `🛡️ ADD-ON (LANTAI RAPAT)` Berkualiti Tinggi**:
+  - **`⭐ ADD-ON A+ (AWAL)`**: Saham fasa awal Base 1 / Base 2 dengan kenaikan $\le$ 20%, jarak ke lantai $\le$ 3.0% – 3.5%, turnover Jerung $\ge$ RM 2.0M, umur $\le$ 10 hari dagangan (Win Rate 82.9%, PF 13.39x).
+  - **`🛡️ ADD-ON (LANTAI RAPAT)`**: Saham tangga kedua (Base 2 Staircase) yang sudah naik $> 20\%$ dari tapak asal, TAPI membina lantai konsolidasi baharu yang sangat rapat ($\le 3.5\% - 4.5\%$), sentuhan lantai $\ge 3$x, squeeze mampat ($\le 3.5\%$) dan suntikan turnover Jerung $\ge$ RM 2.0M – RM 2.5M 🔥 (Win Rate 81.8%, PF 10.57x). Contoh: *STRATUS* pada 08 Sep, *EIPOWER* pada 15 Sep, *CBHB* pada Sept.
 * **Had Pegangan**: Maksimum 2 hingga 3 kaunter aktif serentak untuk mengelakkan pencairan modal dan *overtrading*.
 
 ---
@@ -37,9 +35,10 @@ Setiap kali mengimbas, menilai, atau mengesyorkan saham dalam dashboard JerungBu
 ## 🧭 3. SOP 4-Langkah Tapisan Top Ranking Harian
 1. **Buka Tab "🏆 Top Ranking VVIP":**
    * Tapis kaunter dengan `Tightness <= 3.5%` dan `Score >= 80` atau `Fusion Jerung`.
-2. **Pilih 1 NEW + 1 ADD-ON A+:**
+2. **Pilih 1 NEW + 1 ADD-ON (A+ Awal / Lantai Rapat):**
    * **Utamakan `🔥 NEW (Day 1)`** sebagai kemasukan segar dari tapak.
-   * **Bagi `⭐ ADD-ON A+`**, ia HANYA layak jika memenuhi syarat: Kenaikan dari tapak $\le 20\%$, Lantai Rapat $\le 3.5\%$, dan Turnover $\ge$ RM 2.0M – RM 2.5M 🔥.
+   * **Bagi `⭐ ADD-ON A+ (AWAL)`**, kenaikan dari tapak $\le 20\%$, Lantai Rapat $\le 3.5\%$, dan Turnover $\ge$ RM 2.0M.
+   * **Bagi `🛡️ ADD-ON (LANTAI RAPAT)`**, tangga Base 2 matang dengan lantai baharu rapat $\le 3.5\% - 4.5\%$, Tightness $\le 3.5\%$, dan Turnover Jerung $\ge$ RM 2.0M – RM 2.5M 🔥.
 3. **Semak 3 Angka Emas:**
    * **Turnover:** Wajib $\ge$ RM 2.0M – RM 2.5M.
    * **Tightness:** Bawah 3.5%.
@@ -51,12 +50,12 @@ Setiap kali mengimbas, menilai, atau mengesyorkan saham dalam dashboard JerungBu
 ---
 
 ## 🚫 4. Peringatan Khas: Saham ADD-ON Layak vs Lemau / Pucuk
-* **`⭐ ADD-ON A+` (LAYAK & DIGALAKKAN):**
-  * **SUNLOGY:** Base 2 tangga (+17% dari asal), Turnover RM 2.8M – 3.1M 🔥, Lantai RM 0.470 rapat (2.1%), Uptrend di atas SMA50/200, Bawah RM1.00.
-  * **EIPOWER:** Base 2 tangga (+18% dari asal), Turnover RM 2.5M, Tightness 3.16%, Lantai RM 0.790 rapat (1.9%).
-  * **STRATUS (awal Base 2):** Turnover RM 6.2M, Tightness 1.08%, SL rapat RM 2.680 (-2.89%).
+* **`⭐ ADD-ON A+ (AWAL)` & `🛡️ ADD-ON (LANTAI RAPAT)` (LAYAK & DIGALAKKAN):**
+  * **SUNLOGY:** Base 1 tangga (+17% dari asal), Turnover RM 2.8M – 3.1M 🔥, Lantai RM 0.470 rapat (2.1%), Uptrend di atas SMA50/200, Bawah RM1.00.
+  * **EIPOWER:** Base 2 tangga (+18% - 35% dari asal), Turnover RM 2.5M, Tightness 3.16%, Lantai RM 0.790 / 0.770 rapat (1.9% - 3.2%).
+  * **STRATUS (Lantai Rapat Base 2):** Turnover RM 6.2M 🔥, Tightness 1.08%, Lantai baharu rapat RM 2.680 (-2.89% ke -4.1%).
 * **`⚠️ ADD-ON PUCUK / LEMAU` (DIHARAMKAN):**
-  * **ADD-ON Pucuk (> 20% - 100% dari tapak):** Contoh KEEMING (+134%), ICENTS/HEGROUP (+73%) — walaupun uptrend kuat, zon belian lewat membawa risiko pullback tajam.
+  * **ADD-ON Pucuk (Jauh dari Lantai > 5.0% - 15%):** Contoh KEEMING bila lantai lebih 14% jauh — walaupun uptrend kuat, zon belian lewat tanpa sokongan lantai membawa risiko kejatuhan tajam.
   * **ADD-ON Lemau:** AMS (Turnover suam-suam kuku bawah RM 1.5M, umur lama > 100 hari tersadai sejak Jun 2026, pullback tepi jurang 9.8%). Backtest membuktikan Win Rate AMS cuma 7.1%.
 
 ---

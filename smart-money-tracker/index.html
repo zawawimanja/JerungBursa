@@ -1500,7 +1500,10 @@
                     🔥 NEW Signals (Day 1)
                 </button>
                 <button id="frTrackerTab_addon" onclick="switchFrTrackerSubTab('addon')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.25rem 0.75rem; border-radius: 6px; font-size: 0.75rem; font-weight: 800; cursor: pointer;">
-                    ⭐ ADD-ON A+ (Base 2 Staircase)
+                    ⭐ ADD-ON A+ (Awal ≤ 20%)
+                </button>
+                <button id="frTrackerTab_floor" onclick="switchFrTrackerSubTab('floor')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.25rem 0.75rem; border-radius: 6px; font-size: 0.75rem; font-weight: 800; cursor: pointer;">
+                    🛡️ ADD-ON (Lantai Rapat)
                 </button>
             </div>
             <div id="frTrackerStats" style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.7rem;"></div>
@@ -6375,12 +6378,14 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     const touches = it.touchCount || 0;
                     const tight = typeof it.closeTightness === 'number' ? it.closeTightness : 99;
 
-                    // ⭐ ADD-ON A+: Fresh Base 1 <= 20% ATAU Solid Base 2 (Touches >= 3, Floor <= 4.5%, Squeeze <= 3.5%, Whale >= RM 2M)
+                    // ⭐ ADD-ON A+ (AWAL): Fresh Base 1 <= 20%
+                    // 🛡️ ADD-ON (LANTAI RAPAT): Solid Base 2 (Touches >= 3, Floor <= 4.5%, Squeeze <= 3.5%, Whale >= RM 2M)
                     const isSolidBase2 = (touches >= 3 && tight <= 3.5 && fd <= 4.5 && (toVal >= 2000000 || toVal === 0));
                     const isFreshBase1 = (pct >= 0 && pct <= 20 && fd <= 3.5 && (toVal >= 2000000 || toVal === 0));
-                    if (isFreshBase1 || isSolidBase2) return 1; // ⭐ ADD-ON A+
-                    if (pct > 20 && fd > 5.0) return 3; // ⚠️ ADD-ON Pucuk (jauh dari lantai)
-                    return 2; // ➕ Standard ADD-ON
+                    if (isFreshBase1) return 1; // ⭐ ADD-ON A+ (AWAL)
+                    if (isSolidBase2) return 2; // 🛡️ ADD-ON (LANTAI RAPAT)
+                    if (pct > 20 && fd > 5.0) return 4; // ⚠️ ADD-ON Pucuk (jauh dari lantai)
+                    return 3; // ➕ Standard ADD-ON
                 }
                 return 4; // RE-ENTRY
             };
@@ -6489,7 +6494,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     const isFusion = getHotThemes(p.name).length > 0 && matches.length >= 2;
                     const tight = typeof p.closeTightness === 'number' ? p.closeTightness : 99;
                     const isHighConfidence = (p.confidenceScore && p.confidenceScore >= 80);
-                    return isFusion || fresh === 0 || tight <= 3.5 || isHighConfidence;
+                    return isFusion || fresh <= 2 || tight <= 3.5 || isHighConfidence;
                 });
             }
 
@@ -6663,7 +6668,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         window._frTrackerSubTab = 'all';
         function switchFrTrackerSubTab(mode) {
             window._frTrackerSubTab = mode;
-            ['all', 'new', 'addon'].forEach(m => {
+            ['all', 'new', 'addon', 'floor'].forEach(m => {
                 const btn = document.getElementById('frTrackerTab_' + m);
                 if (!btn) return;
                 if (m === mode) {
@@ -6671,6 +6676,10 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         btn.style.background = 'linear-gradient(135deg, rgba(234,179,8,0.35), rgba(168,85,247,0.35))';
                         btn.style.color = '#fde047';
                         btn.style.border = '1.5px solid rgba(253,224,71,0.6)';
+                    } else if (m === 'floor') {
+                        btn.style.background = 'linear-gradient(135deg, rgba(56,189,248,0.35), rgba(168,85,247,0.35))';
+                        btn.style.color = '#67e8f9';
+                        btn.style.border = '1.5px solid rgba(103,232,249,0.7)';
                     } else if (m === 'new') {
                         btn.style.background = 'linear-gradient(135deg, rgba(239,68,68,0.3), rgba(249,115,22,0.3))';
                         btn.style.color = '#ff6b4a';
@@ -6699,11 +6708,13 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const mode = window._frTrackerSubTab || 'all';
             let data;
             if (mode === 'addon') data = window.ADD_ON_TRACKER;
+            else if (mode === 'floor') data = window.FLOOR_ADDON_TRACKER;
             else if (mode === 'new') data = window.FRESH_RIDER_TRACKER;
             else data = window.ALL_TRACKER || window.FRESH_RIDER_TRACKER;
 
             if (!data || !Array.isArray(data.trades) || data.trades.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">Tiada data penjejak ${mode === 'addon' ? 'ADD-ON A+' : (mode === 'new' ? 'Fresh Rider' : 'Semua')} lagi — akan dijana pada kemaskini data seterusnya.</td></tr>`;
+                const emptyName = mode === 'floor' ? 'ADD-ON Lantai Rapat' : (mode === 'addon' ? 'ADD-ON A+' : (mode === 'new' ? 'Fresh Rider' : 'Semua'));
+                tbody.innerHTML = `<tr><td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">Tiada data penjejak ${emptyName} lagi — akan dijana pada kemaskini data seterusnya.</td></tr>`;
                 return;
             }
             const s = data.summary || {};
@@ -6737,7 +6748,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 try { return typeof qualifiesFreshRider === 'function' && qualifiesFreshRider(it) && passesGlobalFilters(it); } catch (e) { return false; }
             }).map(it => (it.name || '').toUpperCase()));
 
-            const modeLabel = mode === 'addon' ? '⭐ ADD-ON A+ (Base 2 Staircase)' : (mode === 'new' ? '🔥 NEW Signals (Day 1)' : '🌟 ALL Signals (Unified Portfolio)');
+            const modeLabel = mode === 'floor' ? '🛡️ ADD-ON (Lantai Rapat ≤ 3.5%)' : (mode === 'addon' ? '⭐ ADD-ON A+ (Fresh Base ≤ 20%)' : (mode === 'new' ? '🔥 NEW Signals (Day 1)' : '🌟 ALL Signals (Unified Portfolio)'));
             if (metaEl) metaEl.textContent = `${s.dataDays || '-'} days of data · Mode: ${modeLabel} · Generated ${new Date(s.generatedAt).toLocaleString('en-US')}`;
 
             const entryCapital = 2000;
@@ -6779,12 +6790,15 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 const tradeRm = (pnl / 100) * 2000;
                 const tradeRmStr = `${tradeRm >= 0 ? '+' : '-'}RM ${Math.abs(tradeRm).toFixed(2)}`;
                 const maxStr = '+' + (t.maxGain || 0).toFixed(1) + '%';
+                const isFloorAddon = (t.entryType || '').includes('LANTAI RAPAT');
                 const isAddOn = (t.entryType || '').includes('ADD-ON');
-                const typeBadge = isAddOn
-                    ? `<span style="font-size: 0.6rem; background: rgba(234,179,8,0.25); color: #fef08a; padding: 0.05rem 0.35rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(234,179,8,0.6); white-space: nowrap;">⭐ ADD-ON A+</span>`
-                    : `<span style="font-size: 0.6rem; background: rgba(239,68,68,0.25); color: #ff6b4a; padding: 0.05rem 0.35rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(249,115,22,0.6); white-space: nowrap;">🔥 NEW (Day 1)</span>`;
+                const typeBadge = isFloorAddon
+                    ? `<span style="font-size: 0.6rem; background: rgba(168,85,247,0.25); color: #c4b5fd; padding: 0.05rem 0.35rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(168,85,247,0.6); white-space: nowrap;">🛡️ ADD-ON (Lantai Rapat)</span>`
+                    : (isAddOn
+                        ? `<span style="font-size: 0.6rem; background: rgba(234,179,8,0.25); color: #fef08a; padding: 0.05rem 0.35rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(234,179,8,0.6); white-space: nowrap;">⭐ ADD-ON A+</span>`
+                        : `<span style="font-size: 0.6rem; background: rgba(239,68,68,0.25); color: #ff6b4a; padding: 0.05rem 0.35rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(249,115,22,0.6); white-space: nowrap;">🔥 NEW (Day 1)</span>`);
                 const statusBadge = isOpen
-                    ? `<span style="font-size: 0.62rem; background: ${isAddOn ? 'rgba(234,179,8,0.2)' : 'rgba(16,185,129,0.2)'}; color: ${isAddOn ? '#fde047' : '#34d399'}; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 900; border: 1px solid ${isAddOn ? 'rgba(234,179,8,0.5)' : 'rgba(16,185,129,0.4)'};">🟢 OPEN</span>`
+                    ? `<span style="font-size: 0.62rem; background: ${isFloorAddon ? 'rgba(168,85,247,0.2)' : (isAddOn ? 'rgba(234,179,8,0.2)' : 'rgba(16,185,129,0.2)')}; color: ${isFloorAddon ? '#c4b5fd' : (isAddOn ? '#fde047' : '#34d399')}; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 900; border: 1px solid ${isFloorAddon ? 'rgba(168,85,247,0.5)' : (isAddOn ? 'rgba(234,179,8,0.5)' : 'rgba(16,185,129,0.4)')};">🟢 OPEN</span>`
                     : '<span style="font-size: 0.62rem; background: rgba(148,163,184,0.15); color: #94a3b8; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(148,163,184,0.3);">⚪ ' + t.status.replace('CLOSED_', '') + '</span>';
                 const exitPx = isOpen ? t.currentPrice : t.exitPrice;
                 const slTrail = (t.slTrail != null
@@ -7515,6 +7529,16 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 badgeBorder: 'rgba(103, 232, 249, 0.4)'
             }));
 
+            const floorAddOnData = window.FLOOR_ADDON_TRACKER || { summary: {}, trades: [] };
+            const floorTrades = (floorAddOnData.trades || []).map(t => ({
+                ...t,
+                trackerType: 'FLR',
+                trackerTitle: 'ADD-ON (Lantai Rapat)',
+                badgeColor: '#a78bfa',
+                badgeBg: 'rgba(167, 139, 250, 0.15)',
+                badgeBorder: 'rgba(167, 139, 250, 0.4)'
+            }));
+
             const htTrades = (htData.trades || []).map(t => ({
                 ...t,
                 trackerType: 'HT',
@@ -7524,7 +7548,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 badgeBorder: 'rgba(196, 181, 253, 0.4)'
             }));
 
-            const allTrades = [...frTrades, ...addOnTrades, ...htTrades];
+            const allTrades = [...frTrades, ...addOnTrades, ...floorTrades, ...htTrades];
 
             // 1. Build live map of prices and movements today
             const liveList = (currentData && currentData.length > 0) ? currentData : ((window.liveData && window.liveData.topVolume) || []);
@@ -8379,10 +8403,14 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     const isSolidBase2 = (touches >= 3 && tight <= 3.5 && floorDist <= 4.5 && (toVal >= 2000000 || toVal === 0));
                     const isFreshBase1 = (pctFromEntry >= 0 && pctFromEntry <= 20 && floorDist <= 3.5 && (toVal >= 2000000 || toVal === 0));
 
-                    if (isFreshBase1 || isSolidBase2) {
-                        badge.textContent = '⭐ ADD-ON A+';
+                    if (isFreshBase1) {
+                        badge.textContent = '⭐ ADD-ON A+ (AWAL)';
                         badge.style.cssText = 'font-size:0.62rem; background:linear-gradient(135deg, rgba(16,185,129,0.35), rgba(234,179,8,0.35)); color:#fef08a; padding:0.08rem 0.35rem; border-radius:4px; font-weight:900; border:1px solid rgba(234,179,8,0.7); white-space:nowrap; animation: pulse 1.5s infinite; text-shadow: 0 0 6px rgba(234,179,8,0.5);';
-                        badge.title = `ADD-ON A+ (${isSolidBase2 ? 'Solid Base 2 Staircase' : 'Fresh Base 1'}): OPEN in Tracker, lantai rapat ${floorDist.toFixed(1)}% & volume jerung. Win Rate Backtest ~80%!`;
+                        badge.title = `ADD-ON A+ (Fresh Base): Kenaikan <= 20% dari entry asal (+${pctFromEntry.toFixed(1)}%), lantai rapat ${floorDist.toFixed(1)}% & volume jerung. Win Rate Backtest ~82.9%!`;
+                    } else if (isSolidBase2) {
+                        badge.textContent = '🛡️ ADD-ON (LANTAI RAPAT)';
+                        badge.style.cssText = 'font-size:0.62rem; background:linear-gradient(135deg, rgba(56,189,248,0.35), rgba(168,85,247,0.35)); color:#67e8f9; padding:0.08rem 0.35rem; border-radius:4px; font-weight:900; border:1px solid rgba(103,232,249,0.7); white-space:nowrap; animation: pulse 1.5s infinite; text-shadow: 0 0 6px rgba(103,232,249,0.5);';
+                        badge.title = `ADD-ON (Lantai Rapat): Tangga Base 2 matang (Sentuhan ${touches}x, Squeeze tight ${tight.toFixed(2)}%), lantai baru RM ${effF.toFixed(3)} rapat ${floorDist.toFixed(1)}% & suntikan volume jerung. Win Rate Backtest ~81.8%!`;
                     } else if (pctFromEntry < 0 && floorDist <= 3.5) {
                         badge.textContent = '🔻 RETEST BASE';
                         badge.style.cssText = 'font-size:0.62rem; background:rgba(56,189,248,0.25); color:#7dd3fc; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid rgba(56,189,248,0.5); white-space:nowrap;';

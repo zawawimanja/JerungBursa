@@ -35,6 +35,15 @@ const addOnTrades = (window.ADD_ON_TRACKER && window.ADD_ON_TRACKER.trades || []
     badgeBorder: 'rgba(103, 232, 249, 0.4)'
 }));
 
+const floorTrades = (window.FLOOR_ADDON_TRACKER && window.FLOOR_ADDON_TRACKER.trades || []).map(t => ({
+    ...t,
+    trackerType: 'FLR',
+    trackerTitle: 'ADD-ON (Lantai Rapat)',
+    badgeColor: '#a78bfa',
+    badgeBg: 'rgba(167, 139, 250, 0.15)',
+    badgeBorder: 'rgba(167, 139, 250, 0.4)'
+}));
+
 const htTrades = (window.HOT_THEME_TRACKER.trades || []).map(t => ({
     ...t,
     trackerType: 'HT',
@@ -44,7 +53,7 @@ const htTrades = (window.HOT_THEME_TRACKER.trades || []).map(t => ({
     badgeBorder: 'rgba(196, 181, 253, 0.4)'
 }));
 
-const allTrades = [...frTrades, ...addOnTrades, ...htTrades];
+const allTrades = [...frTrades, ...addOnTrades, ...floorTrades, ...htTrades];
 
 // 2. Kumpul fail history
 const BURSA_MALAYSIA_HOLIDAYS = new Set([
@@ -149,7 +158,7 @@ historyDays.forEach((day, dayIdx) => {
             const g = (t.finalGain || 0);
             closedPnl += g;
             if (t.trackerType === 'FR') frPnlOnDay += g;
-            else if (t.trackerType === 'ADD') addOnPnlOnDay += g;
+            else if (t.trackerType === 'ADD' || t.trackerType === 'FLR') addOnPnlOnDay += g;
             else htPnlOnDay += g;
             tradesOnDay.push({
                 name: t.name,
@@ -194,7 +203,7 @@ historyDays.forEach((day, dayIdx) => {
             const g = (t.finalGain !== undefined ? t.finalGain : gainOnDay);
             closedPnl += g;
             if (t.trackerType === 'FR') frPnlOnDay += g;
-            else if (t.trackerType === 'ADD') addOnPnlOnDay += g;
+            else if (t.trackerType === 'ADD' || t.trackerType === 'FLR') addOnPnlOnDay += g;
             else htPnlOnDay += g;
             dailyPnlDelta += pnlDeltaToday;
             tradesOnDay.push({
@@ -210,7 +219,7 @@ historyDays.forEach((day, dayIdx) => {
             openCount++;
             openPnl += gainOnDay;
             if (t.trackerType === 'FR') frPnlOnDay += gainOnDay;
-            else if (t.trackerType === 'ADD') addOnPnlOnDay += gainOnDay;
+            else if (t.trackerType === 'ADD' || t.trackerType === 'FLR') addOnPnlOnDay += gainOnDay;
             else htPnlOnDay += gainOnDay;
             dailyPnlDelta += pnlDeltaToday;
             tradesOnDay.push({

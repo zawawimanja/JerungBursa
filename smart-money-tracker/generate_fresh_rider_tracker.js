@@ -267,12 +267,13 @@ for (const day of dayList) {
         const fDist = effFloor > 0 ? ((it.price - effFloor) / effFloor * 100) : 99;
         const toVal = it.turnover || it.rawTurnover || 0;
         const isSolidBase2 = (touches >= 3 && tight <= 3.5 && fDist <= 4.5 && toVal >= 2000000);
-        if (gainFromBase > 20.0 && !isSolidBase2) continue;
+        const isFloorAddon = (gainFromBase > 20.0 && isSolidBase2);
+        const entryType = isFloorAddon ? '🛡️ ADD-ON (LANTAI RAPAT)' : '⭐ ADD-ON A+';
 
         const t = {
             id: `${name}_${day.date}_ADDON`,
             name: canonName(it.name),
-            entryType: '⭐ ADD-ON A+',
+            entryType: entryType,
             entryDate: day.date,
             entry: +it.price.toFixed(3),
             entryFloor: +effFloor.toFixed(3),
@@ -328,26 +329,43 @@ const summaryFR = {
     totalPnlNow: +(openPnlFR + closedPnlFR).toFixed(1),
 };
 
-const openAddOnTrades = tradesAddOn.filter(t => t.status === 'OPEN').sort((a, b) => b.entryDate.localeCompare(a.entryDate));
-const closedAddOnTrades = tradesAddOn.filter(t => t.status !== 'OPEN').sort((a, b) => b.exitDate.localeCompare(a.exitDate));
-const allAddOn = [...openAddOnTrades, ...closedAddOnTrades];
+function buildSummary(tradesList) {
+    const openTrades = tradesList.filter(t => t.status === 'OPEN').sort((a, b) => b.entryDate.localeCompare(a.entryDate));
+    const closedTrades = tradesList.filter(t => t.status !== 'OPEN').sort((a, b) => b.exitDate.localeCompare(a.exitDate));
+    const allTrades = [...openTrades, ...closedTrades];
+    const wins = closedTrades.filter(t => t.finalGain > 0).length;
+    const openPnl = openTrades.reduce((a, b) => a + (b.finalGain || 0), 0);
+    const closedPnl = closedTrades.reduce((a, b) => a + (b.finalGain || 0), 0);
+    const summary = {
+        generatedAt: new Date().toISOString(),
+        dataDays: dayList.length,
+        totalTracked: tradesList.length,
+        openCount: openTrades.length,
+        closedCount: closedTrades.length,
+        closedWins: wins,
+        closedWinRate: closedTrades.length ? Math.round(100 * wins / closedTrades.length) : 0,
+        closedAvgGain: closedTrades.length ? +(closedTrades.reduce((a, b) => a + b.finalGain, 0) / closedTrades.length).toFixed(1) : 0,
+        openPnl: +openPnl.toFixed(1),
+        closedPnl: +closedPnl.toFixed(1),
+        totalPnlNow: +(openPnl + closedPnl).toFixed(1),
+    };
+    return { summary, allTrades };
+}
 
-const winsAddOn = closedAddOnTrades.filter(t => t.finalGain > 0).length;
-const openPnlAddOn = openAddOnTrades.reduce((a, b) => a + (b.finalGain || 0), 0);
-const closedPnlAddOn = closedAddOnTrades.reduce((a, b) => a + (b.finalGain || 0), 0);
-const summaryAddOn = {
-    generatedAt: new Date().toISOString(),
-    dataDays: dayList.length,
-    totalTracked: tradesAddOn.length,
-    openCount: openAddOnTrades.length,
-    closedCount: closedAddOnTrades.length,
-    closedWins: winsAddOn,
-    closedWinRate: closedAddOnTrades.length ? Math.round(100 * winsAddOn / closedAddOnTrades.length) : 0,
-    closedAvgGain: closedAddOnTrades.length ? +(closedAddOnTrades.reduce((a, b) => a + b.finalGain, 0) / closedAddOnTrades.length).toFixed(1) : 0,
-    openPnl: +openPnlAddOn.toFixed(1),
-    closedPnl: +closedPnlAddOn.toFixed(1),
-    totalPnlNow: +(openPnlAddOn + closedPnlAddOn).toFixed(1),
-};
+const tradesAddOnEarly = tradesAddOn.filter(t => t.entryType === '⭐ ADD-ON A+');
+const tradesAddOnFloor = tradesAddOn.filter(t => t.entryType === '🛡️ ADD-ON (LANTAI RAPAT)');
+
+const earlyRes = buildSummary(tradesAddOnEarly);
+const summaryAddOnEarly = earlyRes.summary;
+const allAddOnEarly = earlyRes.allTrades;
+
+const floorRes = buildSummary(tradesAddOnFloor);
+const summaryAddOnFloor = floorRes.summary;
+const allAddOnFloor = floorRes.allTrades;
+
+const addOnRes = buildSummary(tradesAddOn);
+const summaryAddOn = addOnRes.summary;
+const allAddOn = addOnRes.allTrades;
 
 // ---- 3. UNIFIED ALL-IN-ONE TRACKER (COMBINED NEW + ADD-ON) ----
 const allUnifiedRaw = [...tradesFR, ...tradesAddOn];
@@ -423,7 +441,8 @@ const backtest = {
 
 const js = `// AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual\n`
     + `window.FRESH_RIDER_TRACKER = ${JSON.stringify({ summary: summaryFR, backtest, trades: allFR }, null, 1)};\n`
-    + `window.ADD_ON_TRACKER = ${JSON.stringify({ summary: summaryAddOn, trades: allAddOn }, null, 1)};\n`
+    + `window.ADD_ON_TRACKER = ${JSON.stringify({ summary: summaryAddOnEarly, trades: allAddOnEarly }, null, 1)};\n`
+    + `window.FLOOR_ADDON_TRACKER = ${JSON.stringify({ summary: summaryAddOnFloor, trades: allAddOnFloor }, null, 1)};\n`
     + `window.ALL_TRACKER = ${JSON.stringify({ summary: summaryUnified, trades: allUnified }, null, 1)};\n`;
 
 fs.writeFileSync(OUT_FILE, js);
@@ -431,4 +450,5 @@ fs.writeFileSync(OUT_FILE, js);
 console.log(`✅ Tracker dijana: ${OUT_FILE}`);
 console.log(`   🌟 UNIFIED ALL: Total ${summaryUnified.totalTracked} | OPEN ${summaryUnified.openCount} | CLOSED ${summaryUnified.closedCount} (WR ${summaryUnified.closedWinRate}%, avg ${summaryUnified.closedAvgGain}%)`);
 console.log(`   🔥 FRESH RIDER (Day 1): Total ${summaryFR.totalTracked} | OPEN ${summaryFR.openCount} | CLOSED ${summaryFR.closedCount} (WR ${summaryFR.closedWinRate}%, avg ${summaryFR.closedAvgGain}%)`);
-console.log(`   ⭐ ADD-ON A+ (Staircase): Total ${summaryAddOn.totalTracked} | OPEN ${summaryAddOn.openCount} | CLOSED ${summaryAddOn.closedCount} (WR ${summaryAddOn.closedWinRate}%, avg ${summaryAddOn.closedAvgGain}%)`);
+console.log(`   ⭐ ADD-ON A+ (Awal <= 20%): Total ${summaryAddOnEarly.totalTracked} | OPEN ${summaryAddOnEarly.openCount} | CLOSED ${summaryAddOnEarly.closedCount} (WR ${summaryAddOnEarly.closedWinRate}%, avg ${summaryAddOnEarly.closedAvgGain}%)`);
+console.log(`   🛡️ ADD-ON (Lantai Rapat): Total ${summaryAddOnFloor.totalTracked} | OPEN ${summaryAddOnFloor.openCount} | CLOSED ${summaryAddOnFloor.closedCount} (WR ${summaryAddOnFloor.closedWinRate}%, avg ${summaryAddOnFloor.closedAvgGain}%)`);

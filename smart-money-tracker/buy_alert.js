@@ -566,6 +566,7 @@ function buildMessage(now, out) {
     // 5. Lantai DINAMIK (sama macam list): selepas breakout, guna lantai BARU
     // (min harga 5 hari dagangan terakhir) — bukan floorLow scanner yang ketinggalan.
     const allCand = new Set(candidates.map(s => canonName(s.name).toUpperCase()));
+    const recentFloor = new Map();
     let validDaysCount = 0;
     for (let back = 1; back <= 15 && validDaysCount < 5; back++) {
         const d = new Date(now.getTime() - back * 24 * 3600 * 1000);
@@ -610,11 +611,15 @@ function buildMessage(now, out) {
             const touches = (typeof stock === 'object' && stock.touchCount) ? stock.touchCount : 0;
             const tight = (typeof stock === 'object' && typeof stock.closeTightness === 'number') ? stock.closeTightness : 99;
 
-            // ⭐ ADD-ON A+: Fresh Base 1 <= 20% ATAU Solid Base 2 (Touches >= 3, Floor <= 4.5%, Squeeze <= 3.5%, Whale >= RM 2M)
+            // ⭐ ADD-ON A+ (AWAL): Fresh Base 1 <= 20%, Floor <= 3.5%, Whale >= RM 2M
+            // 🛡️ ADD-ON (LANTAI RAPAT): Solid Base 2 (Touches >= 3, Floor <= 4.5%, Squeeze <= 3.5%, Whale >= RM 2M)
             const isSolidBase2 = (touches >= 3 && tight <= 3.5 && floorDist <= 4.5 && toVal >= 2000000);
             const isFreshBase1 = (pctFromEntry >= 0 && pctFromEntry <= 20 && floorDist <= 3.5 && toVal >= 2000000);
-            if (isFreshBase1 || isSolidBase2) {
-                return '⭐ ADD-ON A+';
+            if (isFreshBase1) {
+                return '⭐ ADD-ON A+ (AWAL)';
+            }
+            if (isSolidBase2) {
+                return '🛡️ ADD-ON (LANTAI RAPAT)';
             }
             if (pctFromEntry < 0 && floorDist <= 3.5) {
                 return '🔻 RETEST BASE';
@@ -627,23 +632,24 @@ function buildMessage(now, out) {
     }
 
     function freshnessRank(label) {
-        if (!label) return 4;
+        if (!label) return 5;
         if (label.includes('NEW')) return 0;
         if (label.includes('ADD-ON A+')) return 1;
-        if (label.includes('ADD-ON') && !label.includes('⚠️')) return 2;
-        if (label.includes('⚠️')) return 3;
-        return 4; // RE-ENTRY
+        if (label.includes('LANTAI RAPAT')) return 2;
+        if (label.includes('ADD-ON') && !label.includes('⚠️')) return 3;
+        if (label.includes('⚠️')) return 4;
+        return 5; // RE-ENTRY
     }
 
     // Filter Top Ranking VVIP (sepadan dengan paparan lalai Top Ranking di index.html):
-    // Lulus jika: FUSION (Semicon/Solar) ATAU Signal Baru (Day 1) ATAU ADD-ON A+ ATAU Tightness <= 3.5% ATAU Score >= 80
+    // Lulus jika: FUSION (Semicon/Solar) ATAU Signal Baru (Day 1) ATAU ADD-ON A+ / Lantai Rapat ATAU Tightness <= 3.5% ATAU Score >= 80
     function isTopRankingVvip(s) {
         const lbl = signalLabel(s, frTrackedStatus);
         const rank = freshnessRank(lbl);
         const isFusion = getHotThemes(s.name).length > 0;
         const tight = typeof s.closeTightness === 'number' ? s.closeTightness : 99;
         const isHighConfidence = (s.confidenceScore && s.confidenceScore >= 80);
-        return isFusion || rank <= 1 || tight <= 3.5 || isHighConfidence;
+        return isFusion || rank <= 2 || tight <= 3.5 || isHighConfidence;
     }
 
     // 6. Kira list FR (Top Ranking VVIP) & HT hari ini
