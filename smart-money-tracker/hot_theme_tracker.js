@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-23T03:00:56.802Z",
+  "generatedAt": "2026-09-23T03:10:43.058Z",
   "dataDays": 81,
   "totalTracked": 49,
   "openCount": 24,
@@ -586,10 +586,10 @@ window.HOT_THEME_TRACKER = {
   },
   {
    "date": "2026-09-23",
-   "themePct": 28.3,
-   "themeCount": 76,
+   "themePct": 27,
+   "themeCount": 75,
    "totalCount": 306,
-   "ma5": 23.5
+   "ma5": 23.3
   }
  ],
  "themeTrend": "RISING",
@@ -937,11 +937,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 7.81,
    "entryFloor": 7.51,
    "currentFloor": 8.1,
-   "currentPrice": 8.63,
+   "currentPrice": 8.64,
    "high": 9.2,
    "highDate": "2026-08-28",
    "maxGain": 17.8,
-   "finalGain": 10.5,
+   "finalGain": 10.6,
    "day1ChangePct": 2.36,
    "days": 76,
    "lastDate": "2026-09-23",
@@ -958,11 +958,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 6.81,
    "entryFloor": 6.7,
    "currentFloor": 9.1,
-   "currentPrice": 9.86,
+   "currentPrice": 9.87,
    "high": 10,
    "highDate": "2026-09-22",
    "maxGain": 46.8,
-   "finalGain": 44.8,
+   "finalGain": 44.9,
    "day1ChangePct": 0.59,
    "days": 76,
    "lastDate": "2026-09-23",
@@ -979,11 +979,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 5.87,
    "entryFloor": 5.72,
    "currentFloor": 6.14,
-   "currentPrice": 6.63,
+   "currentPrice": 6.66,
    "high": 6.9,
    "highDate": "2026-08-28",
    "maxGain": 17.5,
-   "finalGain": 12.9,
+   "finalGain": 13.5,
    "day1ChangePct": -1.01,
    "days": 76,
    "lastDate": "2026-09-23",
@@ -1084,11 +1084,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 1.25,
    "entryFloor": 1.22,
    "currentFloor": 1.86,
-   "currentPrice": 2.52,
-   "high": 2.52,
+   "currentPrice": 2.51,
+   "high": 2.51,
    "highDate": "2026-09-23",
-   "maxGain": 101.6,
-   "finalGain": 101.6,
+   "maxGain": 100.8,
+   "finalGain": 100.8,
    "day1ChangePct": 0,
    "days": 36,
    "lastDate": "2026-09-23",
@@ -1097,7 +1097,7 @@ window.HOT_THEME_TRACKER = {
     "Solar/RE"
    ],
    "confluence": 3,
-   "slTrail": 2.369
+   "slTrail": 2.359
   },
   {
    "name": "MNHLDG",
