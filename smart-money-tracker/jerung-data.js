@@ -3,6 +3,25 @@
 
 window.jerungData = [
   {
+    "id": "klse-KUALA-22-Sep-2026-employees-provident-fund",
+    "stockId": "kuala",
+    "stockName": "KUALA LUMPUR KEPONG BERHAD",
+    "symbol": "KUALA",
+    "code": "KUALA",
+    "market": "Main / ACE Market",
+    "sector": "General Bursa Equities",
+    "institution": "EMPLOYEES PROVIDENT FUND BOARD (KWSP)",
+    "institutionCategory": "GLIC",
+    "action": "Acquired",
+    "sharesChanged": 1000000,
+    "totalHolding": 50000000,
+    "percentage": 5,
+    "filingDate": "22-Sep-2026",
+    "signal": "🔥 Heavy Accumulation",
+    "announcementUrl": "https://www.klsescreener.com/v2/announcements/view/11671251",
+    "insight": "Pemfailan rasmi Seksyen 138 Akta Syarikat 2016 oleh EMPLOYEES PROVIDENT FUND BOARD (KWSP)."
+  },
+  {
     "id": "klse-CTOS-22-Sep-2026-employees-provident-fund",
     "stockId": "ctos",
     "stockName": "CTOS DIGITAL BERHAD",
