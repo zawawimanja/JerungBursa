@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-09-23T07:50:43.888Z",
+ "generatedAt": "2026-09-23T08:00:59.621Z",
  "totalDays": 77,
  "startDate": "2026-06-02",
  "endDate": "2026-09-23",
@@ -49800,13 +49800,13 @@ window.DAILY_EQUITY_TRACKER = {
    "totalSignals": 115,
    "openCount": 76,
    "closedCount": 39,
-   "openPnl": 2484.3,
+   "openPnl": 2483.1,
    "closedPnl": 484.5,
-   "totalPnl": 2968.8,
-   "frPnl": 752.9,
-   "addOnPnl": 1383,
-   "htPnl": 832.9,
-   "dailyPnlDelta": -15.4,
+   "totalPnl": 2967.6,
+   "frPnl": 751.2,
+   "addOnPnl": 1379.6,
+   "htPnl": 836.8,
+   "dailyPnlDelta": -16.8,
    "winRate": 77,
    "avgGain": 25.8,
    "peakGainer": {
@@ -49836,19 +49836,19 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "SUNLOGY",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.46,
-     "gainOnDay": 13.6,
-     "dayChangePct": 2.22,
-     "pnlDeltaToday": 2.5
+     "priceOnDay": 0.455,
+     "gainOnDay": 12.3,
+     "dayChangePct": 1.11,
+     "pnlDeltaToday": 1.2
     },
     {
      "name": "STRATUS",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 3.09,
-     "gainOnDay": 50.7,
-     "dayChangePct": -2.83,
-     "pnlDeltaToday": -4.4
+     "priceOnDay": 3.07,
+     "gainOnDay": 49.8,
+     "dayChangePct": -3.46,
+     "pnlDeltaToday": -5.4
     },
     {
      "name": "ICTZONE",
@@ -49872,10 +49872,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "HEGROUP",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 1.05,
-     "gainOnDay": 92.7,
-     "dayChangePct": -0.94,
-     "pnlDeltaToday": -1.8
+     "priceOnDay": 1.06,
+     "gainOnDay": 94.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "name": "EIPOWER",
@@ -49917,10 +49917,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "AMS",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.455,
-     "gainOnDay": 19.7,
-     "dayChangePct": 3.41,
-     "pnlDeltaToday": 3.9
+     "priceOnDay": 0.45,
+     "gainOnDay": 18.4,
+     "dayChangePct": 2.27,
+     "pnlDeltaToday": 2.6
     },
     {
      "name": "ISF",
@@ -50034,37 +50034,37 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "STRATUS",
      "trackerType": "ADD",
      "statusOnDay": "OPEN",
-     "priceOnDay": 3.09,
-     "gainOnDay": 47.1,
-     "dayChangePct": -2.83,
-     "pnlDeltaToday": -4.3
+     "priceOnDay": 3.07,
+     "gainOnDay": 46.2,
+     "dayChangePct": -3.46,
+     "pnlDeltaToday": -5.2
     },
     {
      "name": "STRATUS",
      "trackerType": "ADD",
      "statusOnDay": "OPEN",
-     "priceOnDay": 3.09,
-     "gainOnDay": 49.3,
-     "dayChangePct": -2.83,
-     "pnlDeltaToday": -4.3
+     "priceOnDay": 3.07,
+     "gainOnDay": 48.3,
+     "dayChangePct": -3.46,
+     "pnlDeltaToday": -5.3
     },
     {
      "name": "STRATUS",
      "trackerType": "ADD",
      "statusOnDay": "OPEN",
-     "priceOnDay": 3.09,
-     "gainOnDay": 50.7,
-     "dayChangePct": -2.83,
-     "pnlDeltaToday": -4.4
+     "priceOnDay": 3.07,
+     "gainOnDay": 49.8,
+     "dayChangePct": -3.46,
+     "pnlDeltaToday": -5.4
     },
     {
      "name": "STRATUS",
      "trackerType": "ADD",
      "statusOnDay": "OPEN",
-     "priceOnDay": 3.09,
-     "gainOnDay": 49.3,
-     "dayChangePct": -2.83,
-     "pnlDeltaToday": -4.3
+     "priceOnDay": 3.07,
+     "gainOnDay": 48.3,
+     "dayChangePct": -3.46,
+     "pnlDeltaToday": -5.3
     },
     {
      "name": "ISF",
@@ -50079,10 +50079,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "STRATUS",
      "trackerType": "ADD",
      "statusOnDay": "OPEN",
-     "priceOnDay": 3.09,
-     "gainOnDay": 47.1,
-     "dayChangePct": -2.83,
-     "pnlDeltaToday": -4.3
+     "priceOnDay": 3.07,
+     "gainOnDay": 46.2,
+     "dayChangePct": -3.46,
+     "pnlDeltaToday": -5.2
     },
     {
      "name": "CBHB",
@@ -50106,19 +50106,19 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "HEGROUP",
      "trackerType": "ADD",
      "statusOnDay": "OPEN",
-     "priceOnDay": 1.05,
-     "gainOnDay": 81,
-     "dayChangePct": -0.94,
-     "pnlDeltaToday": -1.7
+     "priceOnDay": 1.06,
+     "gainOnDay": 82.8,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "name": "HEGROUP",
      "trackerType": "ADD",
      "statusOnDay": "OPEN",
-     "priceOnDay": 1.05,
-     "gainOnDay": 79.5,
-     "dayChangePct": -0.94,
-     "pnlDeltaToday": -1.7
+     "priceOnDay": 1.06,
+     "gainOnDay": 81.2,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "name": "EIPOWER",
@@ -50250,10 +50250,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "STRATUS",
      "trackerType": "FLR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 3.09,
-     "gainOnDay": 10.4,
-     "dayChangePct": -2.83,
-     "pnlDeltaToday": -3.2
+     "priceOnDay": 3.07,
+     "gainOnDay": 9.6,
+     "dayChangePct": -3.46,
+     "pnlDeltaToday": -3.9
     },
     {
      "name": "CBHB",
@@ -50304,10 +50304,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "STRATUS",
      "trackerType": "FLR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 3.09,
-     "gainOnDay": 7.3,
-     "dayChangePct": -2.83,
-     "pnlDeltaToday": -3.1
+     "priceOnDay": 3.07,
+     "gainOnDay": 6.6,
+     "dayChangePct": -3.46,
+     "pnlDeltaToday": -3.8
     },
     {
      "name": "ISF",
@@ -50322,10 +50322,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "STRATUS",
      "trackerType": "FLR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 3.09,
-     "gainOnDay": 6.2,
-     "dayChangePct": -2.83,
-     "pnlDeltaToday": -3.1
+     "priceOnDay": 3.07,
+     "gainOnDay": 5.5,
+     "dayChangePct": -3.46,
+     "pnlDeltaToday": -3.8
     },
     {
      "name": "ISF",
@@ -50520,19 +50520,19 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "INFOM",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 1.57,
-     "gainOnDay": 34.2,
-     "dayChangePct": -0.63,
-     "pnlDeltaToday": -0.9
+     "priceOnDay": 1.58,
+     "gainOnDay": 35,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "name": "NE",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 1.12,
-     "gainOnDay": 5.7,
-     "dayChangePct": 1.82,
-     "pnlDeltaToday": 1.9
+     "priceOnDay": 1.13,
+     "gainOnDay": 6.6,
+     "dayChangePct": 2.73,
+     "pnlDeltaToday": 2.8
     },
     {
      "name": "3REN",
@@ -50556,28 +50556,28 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "KGB",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.77,
-     "gainOnDay": 12.3,
-     "dayChangePct": 0.69,
-     "pnlDeltaToday": 0.8
+     "priceOnDay": 8.78,
+     "gainOnDay": 12.4,
+     "dayChangePct": 0.8,
+     "pnlDeltaToday": 0.9
     },
     {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 9.83,
-     "gainOnDay": 44.3,
-     "dayChangePct": -1.7,
-     "pnlDeltaToday": -2.5
+     "priceOnDay": 9.84,
+     "gainOnDay": 44.5,
+     "dayChangePct": -1.6,
+     "pnlDeltaToday": -2.3
     },
     {
      "name": "UWC",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 6.64,
-     "gainOnDay": 13.1,
-     "dayChangePct": -0.3,
-     "pnlDeltaToday": -0.3
+     "priceOnDay": 6.63,
+     "gainOnDay": 12.9,
+     "dayChangePct": -0.45,
+     "pnlDeltaToday": -0.5
     },
     {
      "name": "GREATEC",
@@ -50610,19 +50610,19 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "PEKAT",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.38,
-     "gainOnDay": 50.6,
-     "dayChangePct": 4.85,
-     "pnlDeltaToday": 7
+     "priceOnDay": 2.4,
+     "gainOnDay": 51.9,
+     "dayChangePct": 5.73,
+     "pnlDeltaToday": 8.2
     },
     {
      "name": "SAMAIDEN",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.52,
-     "gainOnDay": 101.6,
-     "dayChangePct": 7.69,
-     "pnlDeltaToday": 14.4
+     "priceOnDay": 2.53,
+     "gainOnDay": 102.4,
+     "dayChangePct": 8.12,
+     "pnlDeltaToday": 15.2
     },
     {
      "name": "MNHLDG",
