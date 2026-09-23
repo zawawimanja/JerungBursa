@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-23T04:20:43.873Z",
+  "generatedAt": "2026-09-23T04:30:55.918Z",
   "dataDays": 81,
   "totalTracked": 49,
   "openCount": 24,
@@ -9,9 +9,9 @@ window.HOT_THEME_TRACKER = {
   "closedWins": 19,
   "closedWinRate": 76,
   "closedAvgGain": 21.5,
-  "openPnl": 299.6,
+  "openPnl": 297.3,
   "closedPnl": 536.9,
-  "totalPnlNow": 836.5
+  "totalPnlNow": 834.2
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -20,7 +20,7 @@ window.HOT_THEME_TRACKER = {
   "signals": 45,
   "winRate": 67,
   "avgGain": 8.7,
-  "totalPnl": 390.5,
+  "totalPnl": 391.3,
   "worstLoss": -16
  },
  "themeStrength": [
@@ -586,10 +586,10 @@ window.HOT_THEME_TRACKER = {
   },
   {
    "date": "2026-09-23",
-   "themePct": 26.2,
-   "themeCount": 75,
-   "totalCount": 305,
-   "ma5": 23.1
+   "themePct": 25.5,
+   "themeCount": 76,
+   "totalCount": 306,
+   "ma5": 23
   }
  ],
  "themeTrend": "FLAT/FALLING",
@@ -600,11 +600,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 0.63,
    "entryFloor": 0.58,
    "currentFloor": 0.635,
-   "currentPrice": 0.725,
-   "high": 0.725,
+   "currentPrice": 0.73,
+   "high": 0.73,
    "highDate": "2026-09-23",
-   "maxGain": 15.1,
-   "finalGain": 15.1,
+   "maxGain": 15.9,
+   "finalGain": 15.9,
    "day1ChangePct": 2.44,
    "days": 10,
    "lastDate": "2026-09-23",
@@ -642,11 +642,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 6.25,
    "entryFloor": 7.79,
    "currentFloor": 7.68,
-   "currentPrice": 7.96,
-   "high": 7.96,
-   "highDate": "2026-09-23",
-   "maxGain": 27.4,
-   "finalGain": 27.4,
+   "currentPrice": 7.95,
+   "high": 7.95,
+   "highDate": "2026-09-15",
+   "maxGain": 27.2,
+   "finalGain": 27.2,
    "day1ChangePct": -1.11,
    "days": 24,
    "lastDate": "2026-09-23",
@@ -655,7 +655,7 @@ window.HOT_THEME_TRACKER = {
     "Semiconductor"
    ],
    "confluence": 3,
-   "slTrail": 7.482
+   "slTrail": 7.473
   },
   {
    "name": "NEXG",
@@ -809,7 +809,7 @@ window.HOT_THEME_TRACKER = {
    "entryDate": "2026-07-16",
    "entry": 0.775,
    "entryFloor": 0.735,
-   "currentFloor": 0.765,
+   "currentFloor": 0.76,
    "currentPrice": 0.765,
    "high": 0.805,
    "highDate": "2026-09-14",
@@ -823,7 +823,7 @@ window.HOT_THEME_TRACKER = {
     "Semiconductor"
    ],
    "confluence": 2,
-   "slTrail": 0.742
+   "slTrail": 0.737
   },
   {
    "name": "TEAMSTR",
@@ -937,11 +937,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 7.81,
    "entryFloor": 7.51,
    "currentFloor": 8.1,
-   "currentPrice": 8.69,
+   "currentPrice": 8.67,
    "high": 9.2,
    "highDate": "2026-08-28",
    "maxGain": 17.8,
-   "finalGain": 11.3,
+   "finalGain": 11,
    "day1ChangePct": 2.36,
    "days": 76,
    "lastDate": "2026-09-23",
@@ -958,11 +958,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 6.81,
    "entryFloor": 6.7,
    "currentFloor": 9.1,
-   "currentPrice": 9.83,
+   "currentPrice": 9.82,
    "high": 10,
    "highDate": "2026-09-22",
    "maxGain": 46.8,
-   "finalGain": 44.3,
+   "finalGain": 44.2,
    "day1ChangePct": 0.59,
    "days": 76,
    "lastDate": "2026-09-23",
@@ -979,11 +979,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 5.87,
    "entryFloor": 5.72,
    "currentFloor": 6.14,
-   "currentPrice": 6.6,
+   "currentPrice": 6.59,
    "high": 6.9,
    "highDate": "2026-08-28",
    "maxGain": 17.5,
-   "finalGain": 12.4,
+   "finalGain": 12.3,
    "day1ChangePct": -1.01,
    "days": 76,
    "lastDate": "2026-09-23",
@@ -1084,11 +1084,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 1.25,
    "entryFloor": 1.22,
    "currentFloor": 1.86,
-   "currentPrice": 2.59,
-   "high": 2.59,
+   "currentPrice": 2.56,
+   "high": 2.56,
    "highDate": "2026-09-23",
-   "maxGain": 107.2,
-   "finalGain": 107.2,
+   "maxGain": 104.8,
+   "finalGain": 104.8,
    "day1ChangePct": 0,
    "days": 36,
    "lastDate": "2026-09-23",
@@ -1097,7 +1097,7 @@ window.HOT_THEME_TRACKER = {
     "Solar/RE"
    ],
    "confluence": 3,
-   "slTrail": 2.435
+   "slTrail": 2.406
   },
   {
    "name": "MNHLDG",
