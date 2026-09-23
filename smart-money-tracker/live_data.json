@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-23T09:20:44.769Z",
+  "lastUpdated": "2026-09-23T09:30:49.763Z",
   "source": "klse.i3investor.com",
   "topVolume": [
     {
@@ -13996,8 +13996,8 @@
       "price": 1.690000057220459,
       "change": 0.08000004291534424,
       "changePct": 4.97,
-      "turnover": 2440360.082626343,
-      "volume": 1444000,
+      "turnover": 2438670.0825691223,
+      "volume": 1443000,
       "signal": "avoid",
       "reason": "🧊 Downtrend Stock: Avoid Trading!",
       "high52": 2.059999942779541,
@@ -14090,8 +14090,8 @@
       "price": 0.1850000023841858,
       "change": -0.019999995827674866,
       "changePct": -9.76,
-      "turnover": 54391924.70097542,
-      "volume": 294010400,
+      "turnover": 54382674.70085621,
+      "volume": 293960400,
       "signal": "avoid",
       "reason": "🧊 Downtrend Stock: Avoid Trading!",
       "high52": 0.9100000262260437,
@@ -16140,8 +16140,8 @@
       "name": "BMGREEN",
       "price": 1.690000057220459,
       "changePct": 4.97,
-      "volume": 1444000,
-      "turnover": 2440360.082626343,
+      "volume": 1443000,
+      "turnover": 2438670.0825691223,
       "high52": 2.059999942779541,
       "pullback": 17.96,
       "setupName": "🧊 Downtrend / Avoid"
