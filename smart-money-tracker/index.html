@@ -1200,10 +1200,10 @@
                         <div>
                             <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
                                 <h2 style="margin: 0; font-size: 1.3rem; color: #fde047; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem;">Fresh VVIP Rider</h2>
-                                <span style="font-size: 0.7rem; background: rgba(234, 179, 8, 0.2); color: #fde047; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(234, 179, 8, 0.3); white-space: nowrap;">🏆 HIGHEST SWING PNL (BACKTESTED)</span>
+                                <span id="frHeadBadge" style="font-size: 0.7rem; background: rgba(234, 179, 8, 0.2); color: #fde047; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(234, 179, 8, 0.3); white-space: nowrap;">🎯 BACKTEST: <span id="frHeadBadgeSignals">—</span> signals | WR <span id="frHeadBadgeWr">—</span>% | <span id="frHeadBadgeAvg">—</span>%/trade</span>
                             </div>
                             <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
-                                Fresh IPO (2025+) + VVIP + <strong style="color:#fde047;">pullback ≤ 10% from ATH</strong> + tight price action (tight ≤ 5%). Backtested (<span id="frHeadBtDays">—</span> days, <span id="frHeadBtRange">—</span>): <strong style="color:#34d399;">Win Rate <span id="frHeadBtWr">—</span>%, avg <span id="frHeadBtAvg">—</span>%/trade, worst loss <span id="frHeadBtWorst">—</span>%</strong>. Exit: <strong style="color:#34d399;">HYBRID TRAILING STOP</strong> — SL high × 0.80, tightens to high × 0.90 after +20% gain locked. Recalculated automatically daily. 🔥 Historical gainers: <span id="frHeadMovers">—</span>
+                                Fresh IPO (2025+) + VVIP + <strong style="color:#fde047;">pullback ≤ 10% from ATH</strong> + tight price action (tight ≤ 5%). Backtested (<span id="frHeadBtDays">—</span> days, <span id="frHeadBtRange">—</span>): <strong style="color:#34d399;"><span id="frHeadBtSignals">—</span> signals, Win Rate <span id="frHeadBtWr">—</span>%, avg <span id="frHeadBtAvg">—</span>%/trade, worst loss <span id="frHeadBtWorst">—</span>%</strong>. Exit: <strong style="color:#34d399;">HYBRID TRAILING STOP</strong> — SL high × 0.80, tightens to high × 0.90 after +20% gain locked. Recalculated automatically daily. 🔥 Historical gainers: <span id="frHeadMovers">—</span>
                             </p>
                             <details style="margin: 0.5rem 0 0 0; font-size: 0.78rem; color: #fbbf24; background: rgba(245,158,11,0.08); border: 1px dashed rgba(245,158,11,0.35); border-radius: 8px; padding: 0.45rem 0.7rem; line-height: 1.5;">
                                 <summary style="cursor: pointer; font-weight: 800; color: #fde047; outline: none; user-select: none;">⏰ SOP & Entry Strategy — click to expand</summary>
@@ -1281,23 +1281,23 @@
             <div style="display: flex; flex-wrap: wrap; gap: 0.6rem;">
                 <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(234,179,8,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 105px; text-align: center; flex: 1;">
                     <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Unique Signals</div>
-                    <div id="frBtSignals" style="font-size: 1.05rem; color: #fde047; font-weight: 900;">16</div>
+                    <div id="frBtSignals" style="font-size: 1.05rem; color: #fde047; font-weight: 900;">—</div>
                 </div>
                 <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(234,179,8,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 105px; text-align: center; flex: 1;">
                     <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Win Rate</div>
-                    <div id="frBtWinRate" style="font-size: 1.05rem; color: #34d399; font-weight: 900;">81%</div>
+                    <div id="frBtWinRate" style="font-size: 1.05rem; color: #34d399; font-weight: 900;">—</div>
                 </div>
                 <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(234,179,8,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 105px; text-align: center; flex: 1;">
                     <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Avg / Trade</div>
-                    <div id="frBtAvg" style="font-size: 1.05rem; color: #34d399; font-weight: 900;">+18.7%</div>
+                    <div id="frBtAvg" style="font-size: 1.05rem; color: #34d399; font-weight: 900;">—</div>
                 </div>
                 <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(234,179,8,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 105px; text-align: center; flex: 1;">
                     <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Total PnL</div>
-                    <div id="frBtTotal" style="font-size: 1.05rem; color: #34d399; font-weight: 900;">+298.6%</div>
+                    <div id="frBtTotal" style="font-size: 1.05rem; color: #34d399; font-weight: 900;">—</div>
                 </div>
                 <div style="background: rgba(15,23,42,0.7); border: 1px solid rgba(234,179,8,0.25); border-radius: 8px; padding: 0.4rem 0.8rem; min-width: 105px; text-align: center; flex: 1;">
                     <div style="font-size: 0.6rem; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.3px;">Worst Loss</div>
-                    <div id="frBtWorst" style="font-size: 1.05rem; color: #f87171; font-weight: 900;">−3.6%</div>
+                    <div id="frBtWorst" style="font-size: 1.05rem; color: #f87171; font-weight: 900;">—</div>
                 </div>
             </div>
             <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">* <strong style="color:#fbbf24;">SIMULATION</strong> — assumes each trade is closed after 20 days (regardless of win/loss), to verify profitability of entry rules. Each counter is counted once (first qualifying day). Recalculated automatically daily.</p>
@@ -1758,10 +1758,10 @@
                         <div>
                             <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
                                 <h2 style="margin: 0; font-size: 1.3rem; color: #c4b5fd; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem;">Hot Theme Rider: Semicon & Solar</h2>
-                                <span style="font-size: 0.7rem; background: rgba(168, 85, 247, 0.2); color: #c4b5fd; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(168, 85, 247, 0.3); white-space: nowrap;">🎯 BACKTEST: 23 signals | WR 83% | +13.3%/trade</span>
+                                <span id="htHeadBadge" style="font-size: 0.7rem; background: rgba(168, 85, 247, 0.2); color: #c4b5fd; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(168, 85, 247, 0.3); white-space: nowrap;">🎯 BACKTEST: <span id="htHeadBadgeSignals">—</span> signals | WR <span id="htHeadBadgeWr">—</span>% | <span id="htHeadBadgeAvg">—</span>%/trade</span>
                             </div>
                             <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
-                                <strong style="color:#c4b5fd;">Semiconductor & Solar/RE</strong> counters qualifying <strong style="color:#38bdf8;">Confluence 2+ strategies</strong> (Jerung Radar / VCP / Trend Rider / Early Spring / Bottom Fishing). 61-day backtest: <strong style="color:#34d399;">23 signals, Win Rate 83%, avg +13.3%/trade, total +305.7%, max loss -5.3%</strong>.
+                                <strong style="color:#c4b5fd;">Semiconductor & Solar/RE</strong> counters qualifying <strong style="color:#38bdf8;">Confluence 2+ strategies</strong> (Jerung Radar / VCP / Trend Rider / Early Spring / Bottom Fishing). Backtested (<span id="htHeadBtDays">—</span> days, <span id="htHeadBtRange">—</span>): <strong style="color:#34d399;"><span id="htHeadBtSignals">—</span> signals, Win Rate <span id="htHeadBtWr">—</span>%, avg <span id="htHeadBtAvg">—</span>%/trade, total <span id="htHeadBtTotal">—</span>, max loss <span id="htHeadBtWorst">—</span></strong>.
                             </p>
                             <p style="margin: 0.5rem 0 0 0; font-size: 0.78rem; color: #fbbf24; background: rgba(245,158,11,0.08); border: 1px dashed rgba(245,158,11,0.35); border-radius: 8px; padding: 0.5rem 0.7rem; line-height: 1.5;">
                                 ⚡ <strong style="color:#c4b5fd;">SOP: Check AFTER MARKET CLOSE (5:00–6:00 PM)</strong> — data reflects daily closing prices. Current active themes (Aug 2026): <strong style="color:#38bdf8;">Semicon (AI/Data Center boom) & Solar (RE push)</strong>. Review monthly — if new thematic stocks dominate top volume, add to watchlist.
@@ -6556,9 +6556,13 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 setT('frBtWorst', (bt.worstLoss ?? -7.4) + '%');
                 setT('frHeadBtDays', bt.dataDays ?? 53);
                 setT('frHeadBtRange', `${bt.dataStart || '02 Jun'} – ${bt.dataEnd || '17 Ogos 2026'}`);
-                setT('frHeadBtWr', bt.winRate ?? 76);
-                setT('frHeadBtAvg', (bt.avgGain >= 0 ? '+' : '') + (bt.avgGain ?? 18.1));
-                setT('frHeadBtWorst', (bt.worstLoss >= 0 ? '+' : '') + (bt.worstLoss ?? -10.3));
+                setT('frHeadBtWr', bt.winRate ?? '—');
+                setT('frHeadBtAvg', (bt.avgGain >= 0 ? '+' : '') + (bt.avgGain ?? '—'));
+                setT('frHeadBtWorst', (bt.worstLoss >= 0 ? '+' : '') + (bt.worstLoss ?? '—'));
+                setT('frHeadBtSignals', bt.signals ?? '—');
+                setT('frHeadBadgeSignals', bt.signals ?? '—');
+                setT('frHeadBadgeWr', bt.winRate ?? '—');
+                setT('frHeadBadgeAvg', (bt.avgGain >= 0 ? '+' : '') + (bt.avgGain ?? '—'));
                 const meta = document.getElementById('frBacktestMeta');
                 if (meta) meta.textContent = `${bt.dataDays || '-'} trading days (~3 calendar months: ${bt.dataStart || ''} – ${bt.dataEnd || ''}) · Simulation: close trade after 20 days`;
             }
@@ -7051,6 +7055,16 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             setT('htBtAvg', (bt.avgGain >= 0 ? '+' : '') + (bt.avgGain ?? '—') + '%');
             setT('htBtTotal', (bt.totalPnl >= 0 ? '+' : '') + (bt.totalPnl ?? '—') + '%');
             setT('htBtWorst', (bt.worstLoss ?? '—') + '%');
+            setT('htHeadBadgeSignals', bt.signals ?? '—');
+            setT('htHeadBadgeWr', bt.winRate ?? '—');
+            setT('htHeadBadgeAvg', (bt.avgGain >= 0 ? '+' : '') + (bt.avgGain ?? '—'));
+            setT('htHeadBtDays', bt.dataDays ?? '—');
+            setT('htHeadBtRange', `${bt.dataStart || ''} – ${bt.dataEnd || ''}`);
+            setT('htHeadBtSignals', bt.signals ?? '—');
+            setT('htHeadBtWr', bt.winRate ?? '—');
+            setT('htHeadBtAvg', (bt.avgGain >= 0 ? '+' : '') + (bt.avgGain ?? '—'));
+            setT('htHeadBtTotal', (bt.totalPnl >= 0 ? '+' : '') + (bt.totalPnl ?? '—') + '%');
+            setT('htHeadBtWorst', (bt.worstLoss ?? '—') + '%');
             const meta = document.getElementById('htBacktestMeta');
             if (meta) meta.textContent = `${bt.dataDays || '-'} trading days (~3 calendar months: ${bt.dataStart || ''} – ${bt.dataEnd || ''}) · Simulation: close trade after 20 days`;
             // Render theme rotation detector
@@ -9339,6 +9353,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         // Page setup and event listeners
         window.addEventListener('DOMContentLoaded', () => {
             renderFreshRiderTracker();
+            if (typeof renderHotThemeTracker === 'function') renderHotThemeTracker();
             fetchLiveData();
             renderPhoenixSpring();
             updateTopTrackerPnlBadge();
