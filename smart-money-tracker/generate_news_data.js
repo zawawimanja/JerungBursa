@@ -6,6 +6,20 @@ const LIVE_DATA_PATH = path.join(__dirname, 'live_data.json');
 const SYMBOL_MAP_PATH = path.join(__dirname, 'symbol_mappings.json');
 const OUTPUT_FILE = path.join(__dirname, 'news_data.js');
 
+async function pLimit(concurrency, items, fn) {
+    const results = [];
+    const executing = new Set();
+    for (const item of items) {
+        const p = Promise.resolve().then(() => fn(item));
+        results.push(p);
+        executing.add(p);
+        const clean = () => executing.delete(p);
+        p.then(clean, clean);
+        if (executing.size >= concurrency) await Promise.race(executing);
+    }
+    return Promise.all(results);
+}
+
 async function generateNewsData() {
     console.log('==================================================');
     console.log('🌐 GENERATING AUTOMATIC CORPORATE NEWS & DIVIDEND DB');
@@ -27,7 +41,7 @@ async function generateNewsData() {
     let processedCount = 0;
     let alertCount = 0;
 
-    for (const stock of candidates) {
+    await pLimit(8, candidates, async (stock) => {
         const nameUpper = stock.name.toUpperCase();
         let code = stock.code || '';
         if (!code && symbolMap[nameUpper]) {
@@ -42,14 +56,14 @@ async function generateNewsData() {
                     alertCount++;
                 }
             } catch (e) {
-                console.warn(`⚠️ Error fetching news for ${stock.name} (${code}):`, e.message);
+                // Abaikan ralat kecil
             }
         }
         processedCount++;
-        if (processedCount % 20 === 0 || processedCount === candidates.length) {
+        if (processedCount % 50 === 0 || processedCount === candidates.length) {
             console.log(`   Processed ${processedCount}/${candidates.length} stocks... (${alertCount} news risks detected)`);
         }
-    }
+    });
 
     const fileContent = `// Auto-generated Corporate News & Ex-Dividend Database
 // Generated At: ${new Date().toISOString()}

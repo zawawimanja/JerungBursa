@@ -39,25 +39,46 @@ async function fetchAnnouncements(code) {
         if (!json || !json.html) return [];
 
         const announcements = [];
-        const trRegex = /<tr[^>]*>([\s\S]*?)<\/tr>/gi;
-        let match;
-        while ((match = trRegex.exec(json.html)) !== null) {
-            const row = match[1];
-            const tdRegex = /<td[^>]*>([\s\S]*?)<\/td>/gi;
-            const tds = [];
-            let tdMatch;
-            while ((tdMatch = tdRegex.exec(row)) !== null) {
-                tds.push(cleanHtmlText(tdMatch[1]));
-            }
-            if (tds.length >= 2) {
+        // Format baharu KLSE Screener: <a ... class="announcement-item">
+        const itemRegex = /<a[^>]*class=\"announcement-item\"[^>]*>([\s\S]*?)<\/a>/gi;
+        let itemMatch;
+        while ((itemMatch = itemRegex.exec(json.html)) !== null) {
+            const block = itemMatch[1];
+            const day = (block.match(/<span class=\"day\">([^<]+)<\/span>/i) || [])[1] || '';
+            const month = (block.match(/<span class=\"month\">([^<]+)<\/span>/i) || [])[1] || '';
+            const cat = (block.match(/<span class=\"category-tag[^\"]*\">([^<]+)<\/span>/i) || [])[1] || '';
+            const title = (block.match(/<div class=\"title\">([\s\S]*?)<\/div>/i) || [])[1] || '';
+            if (day && month && title) {
                 announcements.push({
-                    date: tds[0] || '',
-                    category: tds[1] || '',
-                    title: tds[2] || tds[1] || ''
+                    date: `${day.trim()} ${month.trim()}`,
+                    category: cat.trim(),
+                    title: cleanHtmlText(title)
                 });
             }
         }
-        return announcements.slice(0, 5);
+
+        // Fallback untuk format jadual lama <tr><td>
+        if (announcements.length === 0) {
+            const trRegex = /<tr[^>]*>([\s\S]*?)<\/tr>/gi;
+            let match;
+            while ((match = trRegex.exec(json.html)) !== null) {
+                const row = match[1];
+                const tdRegex = /<td[^>]*>([\s\S]*?)<\/td>/gi;
+                const tds = [];
+                let tdMatch;
+                while ((tdMatch = tdRegex.exec(row)) !== null) {
+                    tds.push(cleanHtmlText(tdMatch[1]));
+                }
+                if (tds.length >= 2) {
+                    announcements.push({
+                        date: tds[0] || '',
+                        category: tds[1] || '',
+                        title: tds[2] || tds[1] || ''
+                    });
+                }
+            }
+        }
+        return announcements.slice(0, 40);
     } catch (e) {
         return [];
     }

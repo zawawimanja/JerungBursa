@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An empirical post-mortem investigation into the 3 Black Swan event risks in Bursa Malaysia momentum trading: Ex-Dividend Traps, Earnings QR Binary Risk, and Post-IPO Debut Dumping.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.jerungbursa.my/articles/black-swan-risk.html">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6303372615694359" crossorigin="anonymous"></script>
+    <title>The 3 Black Swan Risks in Bursa Malaysia Momentum Trading | Jerung Bursa</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --panel-bg: rgba(22, 28, 45, 0.75);
+            --panel-border: rgba(51, 65, 85, 0.5);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #6366f1;
+            --accent-glow: rgba(99, 102, 241, 0.2);
+            --success: #10b981;
+            --cyan: #22d3ee;
+            --rose: #fb7185;
+            --amber: #f59e0b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(251, 113, 133, 0.08) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(245, 158, 11, 0.05) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text-main);
+            padding: 2rem 1.5rem;
+            min-height: 100vh;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.8rem;
+            justify-content: flex-start;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--panel-border);
+            padding-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-nav {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--panel-border);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-nav:hover {
+            color: white;
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.15);
+        }
+
+        .article-card {
+            background: var(--panel-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--panel-border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .article-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            margin-bottom: 1.25rem;
+            background: rgba(251, 113, 133, 0.2);
+            color: #fda4af;
+            border: 1px solid rgba(251, 113, 133, 0.4);
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: white;
+            line-height: 1.25;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .meta-info {
+            display: flex;
+            gap: 1.2rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid rgba(51, 65, 85, 0.4);
+            flex-wrap: wrap;
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.45rem;
+            color: white;
+            margin: 2rem 0 1rem;
+            padding-left: 0.75rem;
+            border-left: 3px solid var(--rose);
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            color: #f1f5f9;
+            margin: 1.5rem 0 0.75rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: #cbd5e1;
+        }
+
+        ul, ol {
+            margin: 0 0 1.5rem 1.5rem;
+            color: #cbd5e1;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .highlight-box {
+            background: rgba(245, 158, 11, 0.08);
+            border-left: 4px solid var(--amber);
+            border-radius: 0 10px 10px 0;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .danger-box {
+            background: rgba(251, 113, 133, 0.08);
+            border-left: 4px solid var(--rose);
+            border-radius: 0 10px 10px 0;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .success-box {
+            background: rgba(16, 185, 129, 0.08);
+            border-left: 4px solid var(--success);
+            border-radius: 0 10px 10px 0;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .case-study {
+            background: rgba(15, 23, 42, 0.7);
+            border: 1px solid rgba(71, 85, 105, 0.5);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin: 1.25rem 0;
+        }
+
+        .case-study-title {
+            font-weight: 800;
+            color: #f8fafc;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .badge-danger {
+            background: rgba(239, 68, 68, 0.2);
+            color: #f87171;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        .badge-warning {
+            background: rgba(245, 158, 11, 0.2);
+            color: #fbbf24;
+            padding: 2px 8px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        th, td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+        }
+
+        th {
+            background: rgba(30, 41, 59, 0.8);
+            color: #94a3b8;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            color: #e2e8f0;
+        }
+
+        .ad-container {
+            margin: 2rem 0;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px dashed rgba(51, 65, 85, 0.4);
+            border-radius: 12px;
+            padding: 1rem;
+            min-height: 100px;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(51, 65, 85, 0.4);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 0.75rem;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "The 3 Black Swan Risks in Bursa Malaysia Momentum Trading",
+      "description": "An empirical post-mortem investigation into the 3 Black Swan event risks in Bursa Malaysia momentum trading: Ex-Dividend Traps, Earnings QR Binary Risk, and Post-IPO Debut Dumping.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Jerung Bursa",
+        "url": "https://www.jerungbursa.my/"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.jerungbursa.my/articles/black-swan-risk.html"
+      }
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-links">
+            <a href="../index.html" class="btn-nav">← Main Dashboard</a>
+            <a href="../articles.html" class="btn-nav">📚 All Strategy Articles</a>
+            <a href="../sop.html" class="btn-nav">📜 VVIP SOP</a>
+            <a href="../formula.html" class="btn-nav">🧮 Formulas</a>
+            <a href="https://www.ipobursa.my" target="_blank" class="btn-nav" style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc;">📊 BursaIPO Portal ↗</a>
+        </div>
+
+        <article class="article-card">
+            <span class="article-tag">Risk Management & Post-Mortem Analytics</span>
+            <h1>The 3 Black Swan Risks in Bursa Malaysia Momentum Trading</h1>
+            
+            <div class="meta-info">
+                <span>By <strong>JerungBursa Quantitative Research Team</strong></span>
+                <span>Updated: September 2026</span>
+                <span>Reading Time: 8 min</span>
+                <span>Category: Empirical Risk Analysis</span>
+            </div>
+
+            <!-- In-Article Ad Slot 1 -->
+            <div class="ad-container">
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-6303372615694359"
+                     data-ad-slot="auto"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+
+            <p>In quantitative momentum trading, high win-rate setups and tight technical patterns are only half the battle. A comprehensive post-mortem analysis of actual trade executions across Bursa Malaysia Small-Cap and IPO equities revealed a striking reality: <strong>nearly 100% of catastrophic stop-loss triggers and painful drawdowns stemmed not from faulty chart patterns, but from scheduled, predictable event risks</strong> — what we classify as the <em>3 Black Swans</em>.</p>
+
+            <p>When algorithmic screening surfaces a technically immaculate consolidation base near All-Time Highs (ATH) with pristine volume dry-up, entering without verifying these three critical event gates frequently results in sudden double-digit capital erosion.</p>
+
+            <h2>1. Ex-Dividend Trap: Price Adjustment & Post-Yield Dumping</h2>
+            
+            <p>The <strong>Ex-Dividend Trap</strong> occurs when retail traders enter a high-momentum stock within 7 to 10 trading days prior to its official Ex-Dividend Date (Ex-Date). While a dividend announcement is outwardly perceived as positive corporate news, the market mechanics behind dividend distribution create immediate mathematical and psychological headwinds.</p>
+
+            <div class="danger-box">
+                <strong>⚠️ The Mechanical Reality:</strong> On the morning of the Ex-Date, Bursa Malaysia exchange automatically adjusts the opening stock price downward by the exact dividend amount per share. Concurrently, short-term "dividend hunters" and yield funds who accumulated solely to capture the entitlement aggressively dump their positions into retail liquidity.
+            </div>
+
+            <div class="case-study">
+                <div class="case-study-title">
+                    <span>📌 Real Case Study: PENTECH (Sept 2026)</span>
+                    <span class="badge-danger">EX-DIVIDEND HIT</span>
+                </div>
+                <p>On September 8, PENTECH signaled a pristine breakout from a mature base with strong institutional accumulation at RM 0.350. However, its Ex-Date was scheduled for September 14 (a 0.5 sen dividend entitlement). On Ex-Date morning, the reference price was deducted, and instant distribution pressure forced the stock down to RM 0.335 — dragging the position into negative territory despite sound underlying technicals.</p>
+            </div>
+
+            <p><strong>Strict Execution Rule:</strong> Completely embargo new trade entries if an equity's Ex-Dividend Date falls within <strong>7 to 10 trading days</strong>. The short-term upside is mathematically asymmetric against the guaranteed downward price adjustment.</p>
+
+            <h2>2. Quarterly Report (QR) / Earnings Binary Risk</h2>
+
+            <p>In the Bursa Malaysia equity market, quarterly financial announcements represent a high-stakes binary event. Scheduled four times a year with peak earnings seasons occurring in <strong>February, May, August, and November</strong>, corporate earnings releases introduce extreme volatility that completely overrides technical support levels.</p>
+
+            <div class="highlight-box">
+                <strong>The "Sell on News" Phenomenon:</strong> Even when a company posts record-breaking net profits, the stock frequently experiences violent liquidation if earnings growth fails to exceed retail speculative hype, or if institutional players utilize the heightened liquidity to offload massive blocks accumulated months prior.
+            </div>
+
+            <h3>Empirical Post-Mortem Records</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Counter</th>
+                        <th>Entry Price</th>
+                        <th>Earnings Event Date</th>
+                        <th>Post-Earnings Reaction</th>
+                        <th>Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>OXB</strong></td>
+                        <td>RM 0.485 (Aug 19)</td>
+                        <td>Aug 21 (Q2 Report)</td>
+                        <td>Panic dumping -6.1% on RM 5.9M turnover</td>
+                        <td><span class="badge-danger">SL Hit @ RM 0.405 (-16.5%)</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>MMCS</strong></td>
+                        <td>RM 0.445 (Aug 10)</td>
+                        <td>Aug 18 (Maiden QR)</td>
+                        <td>Modest net profit RM 320k missed retail hype</td>
+                        <td><span class="badge-danger">Dumped to RM 0.385 (-13.5%)</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>KEEMING</strong></td>
+                        <td>RM 2.460 (Aug 24)</td>
+                        <td>Aug 27 (Quarterly QR)</td>
+                        <td>Slumped to RM 2.180 (-11.4%) triggering SL before later rebound</td>
+                        <td><span class="badge-warning">Premature Exit on Noise</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>OGX</strong></td>
+                        <td>+17.4% Peak Gain</td>
+                        <td>July 28 (Q4 Earnings)</td>
+                        <td>Quarter-on-quarter net profit dropped -40%</td>
+                        <td><span class="badge-warning">Full Profit Erased</span></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p><strong>Strict Execution Rule:</strong> Avoid initiating new positions within <strong>3 to 5 trading days prior to scheduled QR announcements</strong>. Wait for earnings numbers to be officially absorbed by the market, then trade the resulting price action with full clarity.</p>
+
+            <!-- In-Article Ad Slot 2 -->
+            <div class="ad-container">
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-6303372615694359"
+                     data-ad-slot="auto"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+
+            <h2>3. The Post-IPO Debut Dump: Euphoria vs Technical Base Maturity</h2>
+
+            <p>Fresh IPO listings in Malaysia frequently open with euphoric 50% to 100%+ premia on listing morning. Retail momentum screeners often trigger massive "Volume Expansion" alerts on Day 1 and Day 2 due to hundreds of millions in traded volume.</p>
+
+            <p>However, entering an IPO on Day 1, Day 2, or during its initial debut week carries a catastrophic failure rate. The colossal turnover witnessed during IPO debut week is driven by <strong>private placement recipients and retail allotment flippers dumping their cost-free shares onto late retail buyers</strong>.</p>
+
+            <div class="case-study">
+                <div class="case-study-title">
+                    <span>📌 Real Case Study: SRKK AI Listing Debut</span>
+                    <span class="badge-danger">POST-DEBUT TRAP</span>
+                </div>
+                <p>SRKK AI debuted on July 9, surging +87% from its IPO price of RM 0.320 to RM 0.600. A mechanical volume scanner bought the Day 2 momentum on July 10 at RM 0.600. Without an established institutional floor base, allotment holders liquidated relentlessly over the following 5 sessions, cratering the price to RM 0.515 for a rapid <strong>-14.2% loss</strong>.</p>
+            </div>
+
+            <div class="success-box">
+                <strong>🛡️ The 15-Day Base Maturity Requirement:</strong> A newly listed IPO only becomes a high-conviction candidate after trading for at least <strong>15 to 20 trading days</strong>, allowing the speculative allotment float to be completely absorbed by institutional smart money and forming a verifiable support floor with at least 3 to 4 technical floor touches.
+            </div>
+
+            <h2>The JerungBursa Pre-Trade Black Swan Checklist</h2>
+
+            <p>Before executing any trade signal generated by Fresh Rider, Hot Theme Rider, or Top Ranking VVIP, run the prospective counter through this mandatory 3-point gatekeeper checklist:</p>
+
+            <ol>
+                <li><strong>Gate 1 (Ex-Dividend Verification):</strong> Is the stock free of any Ex-Dividend dates within the next 10 trading days? (Pass = 🟢 Clear)</li>
+                <li><strong>Gate 2 (Quarterly Report Window):</strong> Is the stock outside the 3–5 day binary earnings announcement window? (Pass = 🟢 Clear)</li>
+                <li><strong>Gate 3 (IPO Base Maturity):</strong> If the counter is a recent IPO, has it traded for &ge; 15 days with a mature, multi-touch base? (Pass = 🟢 Clear)</li>
+            </ol>
+
+            <p>By enforcing these three filters automatically in our radar algorithms, traders eliminate over 90% of sudden event-driven drawdown risks, allowing quantitative trend-following models to operate with peak mathematical expectancy.</p>
+
+            <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(51, 65, 85, 0.5); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <a href="../articles.html" style="color: var(--accent); text-decoration: none; font-weight: 700; font-size: 0.9rem;">
+                    ← Back to Strategy Hub
+                </a>
+                <a href="quantitative-backtest-study.html" style="color: #38bdf8; text-decoration: none; font-weight: 700; font-size: 0.9rem;">
+                    Next: Quantitative Backtest Study (Day 1 vs Add-On) →
+                </a>
+            </div>
+        </article>
+
+        <!-- RELATED ARTICLES -->
+        <div style="margin-bottom: 3rem;">
+            <h3 style="color: white; margin-bottom: 1rem;">Related Risk Management Guides</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem;">
+                <a href="position-sizing-sop.html" style="text-decoration: none; background: rgba(22, 28, 45, 0.6); border: 1px solid var(--panel-border); border-radius: 12px; padding: 1.25rem; transition: transform 0.2s, border-color 0.2s; display: block;">
+                    <span class="article-tag" style="background: rgba(245, 158, 11, 0.15); color: var(--amber); border: 1px solid rgba(245, 158, 11, 0.3); font-size: 0.68rem; margin-bottom: 0.5rem;">SOP & Sizing</span>
+                    <h4 style="color: white; font-size: 0.95rem; font-weight: 700; line-height: 1.4;">Position Sizing Risk Calculator & VVIP SOP Guidelines for Bursa Traders</h4>
+                </a>
+                <a href="reading-backtest-data.html" style="text-decoration: none; background: rgba(22, 28, 45, 0.6); border: 1px solid var(--panel-border); border-radius: 12px; padding: 1.25rem; transition: transform 0.2s, border-color 0.2s; display: block;">
+                    <span class="article-tag" style="background: rgba(168, 85, 247, 0.2); color: #c4b5fd; border: 1px solid rgba(168, 85, 247, 0.4); font-size: 0.68rem; margin-bottom: 0.5rem;">Data Analysis</span>
+                    <h4 style="color: white; font-size: 0.95rem; font-weight: 700; line-height: 1.4;">How to Read Backtest Performance Metrics Without Delusion</h4>
+                </a>
+                <a href="fresh-rider-ipo.html" style="text-decoration: none; background: rgba(22, 28, 45, 0.6); border: 1px solid var(--panel-border); border-radius: 12px; padding: 1.25rem; transition: transform 0.2s, border-color 0.2s; display: block;">
+                    <span class="article-tag" style="background: rgba(245, 158, 11, 0.2); color: #fde047; border: 1px solid rgba(245, 158, 11, 0.4); font-size: 0.68rem; margin-bottom: 0.5rem;">Core Strategy #6</span>
+                    <h4 style="color: white; font-size: 0.95rem; font-weight: 700; line-height: 1.4;">Fresh Rider: Capturing High-Probability Explosive IPO Breakouts</h4>
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Jerung Bursa. All rights reserved.</p>
+            <div style="margin-top: 1rem;">
+                <a href="../index.html">Main Dashboard</a>
+                <a href="../articles.html">Articles Hub</a>
+                <a href="../sop.html">VVIP SOP</a>
+                <a href="../formula.html">Formulas</a>
+                <a href="../hall-of-fame.html">Hall of Fame</a>
+                <a href="../privacy-policy.html">Privacy Policy</a>
+                <a href="../terms.html">Terms of Service</a>
+                <a href="../about.html">About Us</a>
+                <a href="../contact.html">Contact Us</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

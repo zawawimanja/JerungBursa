@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A comprehensive quantitative study comparing 🔥 NEW (Day 1) breakout entries vs ⭐ ADD-ON A+ pullbacks across 72 trading days and 285 signals in Bursa Malaysia.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.jerungbursa.my/articles/quantitative-backtest-study.html">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6303372615694359" crossorigin="anonymous"></script>
+    <title>Quantitative Study: Day 1 Breakouts vs Add-On Pullbacks | Jerung Bursa</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --panel-bg: rgba(22, 28, 45, 0.75);
+            --panel-border: rgba(51, 65, 85, 0.5);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #6366f1;
+            --accent-glow: rgba(99, 102, 241, 0.2);
+            --success: #10b981;
+            --cyan: #22d3ee;
+            --rose: #fb7185;
+            --amber: #f59e0b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(16, 185, 129, 0.08) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(34, 211, 238, 0.05) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text-main);
+            padding: 2rem 1.5rem;
+            min-height: 100vh;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.8rem;
+            justify-content: flex-start;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--panel-border);
+            padding-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-nav {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--panel-border);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-nav:hover {
+            color: white;
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.15);
+        }
+
+        .article-card {
+            background: var(--panel-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--panel-border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            position: relative;
+        }
+
+        .article-tag {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            margin-bottom: 1.25rem;
+            background: rgba(16, 185, 129, 0.2);
+            color: #6ee7b7;
+            border: 1px solid rgba(16, 185, 129, 0.4);
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 900;
+            color: white;
+            line-height: 1.25;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .meta-info {
+            display: flex;
+            gap: 1.2rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid rgba(51, 65, 85, 0.4);
+            flex-wrap: wrap;
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.45rem;
+            color: white;
+            margin: 2rem 0 1rem;
+            padding-left: 0.75rem;
+            border-left: 3px solid var(--accent);
+        }
+
+        h3 {
+            font-size: 1.15rem;
+            color: #f1f5f9;
+            margin: 1.5rem 0 0.75rem;
+        }
+
+        p {
+            margin-bottom: 1.2rem;
+            color: #cbd5e1;
+        }
+
+        ul, ol {
+            margin: 0 0 1.5rem 1.5rem;
+            color: #cbd5e1;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .stat-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(51, 65, 85, 0.6);
+            border-radius: 12px;
+            padding: 1.25rem;
+            text-align: center;
+        }
+
+        .stat-val {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 700;
+        }
+
+        .highlight-box {
+            background: rgba(99, 102, 241, 0.08);
+            border-left: 4px solid var(--accent);
+            border-radius: 0 10px 10px 0;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .success-box {
+            background: rgba(16, 185, 129, 0.08);
+            border-left: 4px solid var(--success);
+            border-radius: 0 10px 10px 0;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .danger-box {
+            background: rgba(251, 113, 133, 0.08);
+            border-left: 4px solid var(--rose);
+            border-radius: 0 10px 10px 0;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.9rem;
+        }
+
+        th, td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+        }
+
+        th {
+            background: rgba(30, 41, 59, 0.8);
+            color: #94a3b8;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            color: #e2e8f0;
+        }
+
+        .ad-container {
+            margin: 2rem 0;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px dashed rgba(51, 65, 85, 0.4);
+            border-radius: 12px;
+            padding: 1rem;
+            min-height: 100px;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(51, 65, 85, 0.4);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 0.75rem;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Quantitative Study: Day 1 Breakouts vs Add-On Pullbacks",
+      "description": "A comprehensive quantitative study comparing 🔥 NEW (Day 1) breakout entries vs ⭐ ADD-ON A+ pullbacks across 72 trading days and 285 signals in Bursa Malaysia.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Jerung Bursa",
+        "url": "https://www.jerungbursa.my/"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://www.jerungbursa.my/articles/quantitative-backtest-study.html"
+      }
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-links">
+            <a href="../index.html" class="btn-nav">← Main Dashboard</a>
+            <a href="../articles.html" class="btn-nav">📚 All Strategy Articles</a>
+            <a href="../sop.html" class="btn-nav">📜 VVIP SOP</a>
+            <a href="../formula.html" class="btn-nav">🧮 Formulas</a>
+            <a href="https://www.ipobursa.my" target="_blank" class="btn-nav" style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc;">📊 BursaIPO Portal ↗</a>
+        </div>
+
+        <article class="article-card">
+            <span class="article-tag">Quantitative Research & Empirical Backtest</span>
+            <h1>Quantitative Study: Day 1 Breakouts vs Add-On Pullbacks</h1>
+            
+            <div class="meta-info">
+                <span>By <strong>JerungBursa Quantitative Research Team</strong></span>
+                <span>Dataset: 72 Trading Days · 285 Tested Signals</span>
+                <span>Reading Time: 9 min</span>
+                <span>Category: Algorithmic Backtest</span>
+            </div>
+
+            <!-- In-Article Ad Slot 1 -->
+            <div class="ad-container">
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-6303372615694359"
+                     data-ad-slot="auto"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+
+            <p>One of the most fiercely debated questions among Malaysian momentum and swing traders is whether to buy <strong>Day 1 explosive breakouts</strong> directly off initial consolidation bases, or wait for <strong>staircase Add-On pullbacks</strong> to enter with secondary confirmation. In this whitepaper, we present empirical data derived from <strong>72 trading sessions</strong> and <strong>285 rigorously tracked quantitative signals</strong> across Bursa Malaysia equities.</p>
+
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="stat-val" style="color: #60a5fa;">72 Days</div>
+                    <div class="stat-label">Trading Window</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val" style="color: #a78bfa;">285</div>
+                    <div class="stat-label">Signals Tested</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val" style="color: #34d399;">82.9%</div>
+                    <div class="stat-label">Peak Win Rate (Add-On A+)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val" style="color: #fbbf24;">13.39x</div>
+                    <div class="stat-label">Max Profit Factor</div>
+                </div>
+            </div>
+
+            <h2>Comprehensive Empirical Comparison</h2>
+
+            <p>Our backtest engine segmented all 285 signals into four distinct tactical classifications based on base maturity, percentage extension, floor tightness, and institutional turnover:</p>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Win Rate (%)</th>
+                        <th>Profit Factor</th>
+                        <th>Avg Return</th>
+                        <th>Key Technical Criteria</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>⭐ ADD-ON A+ (Early)</strong></td>
+                        <td style="color: #34d399; font-weight: 800;">82.9%</td>
+                        <td style="color: #34d399; font-weight: 800;">13.39x</td>
+                        <td>+14.8%</td>
+                        <td>Base 1/2, Gain &le; 20%, Floor &le; 3.5%, Turnover &ge; RM 2.0M</td>
+                    </tr>
+                    <tr>
+                        <td><strong>🛡️ ADD-ON (Tight Floor)</strong></td>
+                        <td style="color: #38bdf8; font-weight: 800;">81.8%</td>
+                        <td style="color: #38bdf8; font-weight: 800;">10.57x</td>
+                        <td>+16.2%</td>
+                        <td>Staircase Base 2, Squeeze &le; 3.5%, Floor &le; 3.5%–4.5%, Turnover &ge; RM 2.5M</td>
+                    </tr>
+                    <tr>
+                        <td><strong>🔥 NEW (Day 1 Breakout)</strong></td>
+                        <td style="color: #fbbf24; font-weight: 800;">77.3%</td>
+                        <td style="color: #fbbf24; font-weight: 800;">7.91x</td>
+                        <td>+18.7%</td>
+                        <td>Primary base ignition, lowest stop loss distance (&le; 4.0%)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>⚠️ Stale Chasers / Pucuk</strong></td>
+                        <td style="color: #f87171; font-weight: 800;">7.1%</td>
+                        <td style="color: #f87171; font-weight: 800;">0.18x</td>
+                        <td>-11.4%</td>
+                        <td>Extended &gt; 15% above floor, weak turnover &lt; RM 1.5M, age &gt; 60 days</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2>1. 🔥 NEW (Day 1) Breakouts: The Purest Asymmetry</h2>
+
+            <p>Day 1 signals represent equities breaking out from their primary foundation (Base 1). Because these stocks have not yet extended, they offer the tightest risk-to-reward ratio in the market.</p>
+
+            <ul>
+                <li><strong>Lowest Initial Risk:</strong> Initial Stop Loss can be anchored directly below the primary base floor (typically 3.0% to 4.5% below entry).</li>
+                <li><strong>Zero Overhead Supply:</strong> Particularly in fresh IPOs, lack of historical trapped bagholders allows explosive acceleration once volume ignites.</li>
+                <li><strong>Real Market Examples:</strong> <em>PENTECH</em> on September 08 (clean base lift-off), <em>SUM</em> on September 11.</li>
+            </ul>
+
+            <h2>2. ⭐ ADD-ON A+ (Early) & 🛡️ ADD-ON (Tight Floor): The Power of Confirmation</h2>
+
+            <p>Contrary to retail intuition that "buying higher is riskier", the quantitative data revealed that <strong>ADD-ON A+ pullbacks exhibited the highest Win Rate (82.9%) and the highest Profit Factor (13.39x)</strong> of any category tested. Why?</p>
+
+            <div class="success-box">
+                <strong>💡 Institutional Confirmation:</strong> An ADD-ON candidate has already demonstrated that institutional smart money is actively supporting the trend. By waiting for a staircase consolidation (Base 2) where the stock builds a fresh, tight floor (&le; 3.5% distance) backed by multi-million ringgit turnover (&ge; RM 2.0M – RM 2.5M), traders enter with proven institutional sponsorship.
+            </div>
+
+            <h3>Prime Add-On Case Studies</h3>
+            <ul>
+                <li><strong>SUNLOGY:</strong> Base 1 staircase (+17% from original base), Turnover RM 2.8M – 3.1M, floor at RM 0.470 just 2.1% away, pristine uptrend aligned above SMA50/SMA200.</li>
+                <li><strong>EIPOWER:</strong> Base 2 staircase (+18% to +35% from origin), Turnover RM 2.5M, Tightness 3.16%, floor tightly respected at RM 0.790 / 0.770 (1.9% – 3.2% risk).</li>
+                <li><strong>STRATUS:</strong> Base 2 tight floor with RM 6.2M massive turnover, ultra-compressed tightness 1.08%, new floor at RM 2.680.</li>
+            </ul>
+
+            <!-- In-Article Ad Slot 2 -->
+            <div class="ad-container">
+                <ins class="adsbygoogle"
+                     style="display:block; text-align:center;"
+                     data-ad-layout="in-article"
+                     data-ad-format="fluid"
+                     data-ad-client="ca-pub-6303372615694359"
+                     data-ad-slot="auto"></ins>
+                <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            </div>
+
+            <h2>3. The Death Trap: ⚠️ ADD-ON Pucuk & Stale Runners</h2>
+
+            <p>The backtest also unequivocally proved where retail traders consistently lose money: chasing overextended stocks without support floors, and buying stale "lemau" tickers.</p>
+
+            <div class="danger-box">
+                <strong>Empirical Warning:</strong> Stocks extended more than 10% to 15% above their nearest technical floor (e.g., entering <em>KEEMING</em> when the floor is 14% away) or buying low-turnover, aged runners (&gt; 60–100 days old with sub-RM 1.5M turnover like <em>AMS</em>) produced a catastrophic <strong>7.1% Win Rate</strong> and a miserable <strong>0.18x Profit Factor</strong>. Without an immediate floor to anchor risk, a normal market pullback triggers an unrecoverable 10%–15% drawdown.
+            </div>
+
+            <h2>The "1 NEW + 1 ADD-ON" Portfolio Pairing Strategy</h2>
+
+            <p>Based on these quantitative findings, JerungBursa established the official <strong>1 NEW + 1 ADD-ON allocation SOP</strong>:</p>
+
+            <ol>
+                <li><strong>Slot 1: One 🔥 NEW (Day 1) Candidate</strong> — Provides maximum explosive upside potential with ultra-tight primary risk.</li>
+                <li><strong>Slot 2: One ⭐ ADD-ON A+ or 🛡️ Tight Floor Candidate</strong> — Provides rock-solid stability and high-probability continuation (82.9% Win Rate).</li>
+                <li><strong>Slot Discipline:</strong> Total active holdings strictly capped at 2 to 3 counters simultaneously to eliminate capital dilution and emotional overtrading.</li>
+            </ol>
+
+            <h2>Multi-Step Scale-Out Profit Locking Formula</h2>
+
+            <p>To capture multi-week trend runners without prematurely forfeiting gains, execution adheres to the 3-phase scale-out formula:</p>
+
+            <div class="highlight-box">
+                <p><strong>Phase 1 (+5% Gain):</strong> 🛡️ <em>Free Trade Lock</em> — Move Stop Loss from support floor to entry price (breakeven). The position is now completely risk-free.</p>
+                <p><strong>Phase 2 (+10% Gain / TP1):</strong> 💰 <em>Bank 50% Cash</em> — Liquidate half (50%) of total lots. Lock guaranteed profits into the account.</p>
+                <p><strong>Phase 3 (+20%+ Gain / TP2):</strong> 🚀 <em>Ride the Institutional Wave</em> — Elevate trailing stop on the remaining 50% to TP1 (+10%), allowing the remainder to run to full multi-bagger potential without downside risk.</p>
+            </div>
+
+            <div style="margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(51, 65, 85, 0.5); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <a href="black-swan-risk.html" style="color: var(--accent); text-decoration: none; font-weight: 700; font-size: 0.9rem;">
+                    ← Previous: The 3 Black Swan Risks
+                </a>
+                <a href="../index.html" style="color: #34d399; text-decoration: none; font-weight: 700; font-size: 0.9rem;">
+                    Launch Smart Money Scanner →
+                </a>
+            </div>
+        </article>
+
+        <!-- RELATED ARTICLES -->
+        <div style="margin-bottom: 3rem;">
+            <h3 style="color: white; margin-bottom: 1rem;">More Quantitative Studies</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1rem;">
+                <a href="vcp-staircase.html" style="text-decoration: none; background: rgba(22, 28, 45, 0.6); border: 1px solid var(--panel-border); border-radius: 12px; padding: 1.25rem; transition: transform 0.2s, border-color 0.2s; display: block;">
+                    <span class="article-tag" style="background: rgba(34, 211, 238, 0.15); color: var(--cyan); border: 1px solid rgba(34, 211, 238, 0.3); font-size: 0.68rem; margin-bottom: 0.5rem;">Core Strategy #2</span>
+                    <h4 style="color: white; font-size: 0.95rem; font-weight: 700; line-height: 1.4;">VCP Staircase Technique & Golden Cross: Combining Minervini & VSA Frameworks</h4>
+                </a>
+                <a href="fresh-rider-ipo.html" style="text-decoration: none; background: rgba(22, 28, 45, 0.6); border: 1px solid var(--panel-border); border-radius: 12px; padding: 1.25rem; transition: transform 0.2s, border-color 0.2s; display: block;">
+                    <span class="article-tag" style="background: rgba(245, 158, 11, 0.2); color: #fde047; border: 1px solid rgba(245, 158, 11, 0.4); font-size: 0.68rem; margin-bottom: 0.5rem;">Core Strategy #6</span>
+                    <h4 style="color: white; font-size: 0.95rem; font-weight: 700; line-height: 1.4;">Fresh Rider: Capturing High-Probability Explosive IPO Breakouts</h4>
+                </a>
+                <a href="reading-backtest-data.html" style="text-decoration: none; background: rgba(22, 28, 45, 0.6); border: 1px solid var(--panel-border); border-radius: 12px; padding: 1.25rem; transition: transform 0.2s, border-color 0.2s; display: block;">
+                    <span class="article-tag" style="background: rgba(168, 85, 247, 0.2); color: #c4b5fd; border: 1px solid rgba(168, 85, 247, 0.4); font-size: 0.68rem; margin-bottom: 0.5rem;">Data Analysis</span>
+                    <h4 style="color: white; font-size: 0.95rem; font-weight: 700; line-height: 1.4;">How to Read Backtest Performance Metrics Without Delusion</h4>
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 Jerung Bursa. All rights reserved.</p>
+            <div style="margin-top: 1rem;">
+                <a href="../index.html">Main Dashboard</a>
+                <a href="../articles.html">Articles Hub</a>
+                <a href="../sop.html">VVIP SOP</a>
+                <a href="../formula.html">Formulas</a>
+                <a href="../hall-of-fame.html">Hall of Fame</a>
+                <a href="../privacy-policy.html">Privacy Policy</a>
+                <a href="../terms.html">Terms of Service</a>
+                <a href="../about.html">About Us</a>
+                <a href="../contact.html">Contact Us</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
