@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-23T04:10:43.977Z",
+  "generatedAt": "2026-09-23T04:20:43.873Z",
   "dataDays": 81,
   "totalTracked": 49,
   "openCount": 24,
@@ -9,9 +9,9 @@ window.HOT_THEME_TRACKER = {
   "closedWins": 19,
   "closedWinRate": 76,
   "closedAvgGain": 21.5,
-  "openPnl": 300.1,
+  "openPnl": 299.6,
   "closedPnl": 536.9,
-  "totalPnlNow": 837
+  "totalPnlNow": 836.5
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -586,10 +586,10 @@ window.HOT_THEME_TRACKER = {
   },
   {
    "date": "2026-09-23",
-   "themePct": 25.7,
+   "themePct": 26.2,
    "themeCount": 75,
-   "totalCount": 306,
-   "ma5": 23
+   "totalCount": 305,
+   "ma5": 23.1
   }
  ],
  "themeTrend": "FLAT/FALLING",
@@ -916,11 +916,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 2.36,
    "entryFloor": 2.2,
    "currentFloor": 2.51,
-   "currentPrice": 2.68,
+   "currentPrice": 2.67,
    "high": 2.7,
    "highDate": "2026-09-22",
    "maxGain": 14.4,
-   "finalGain": 13.6,
+   "finalGain": 13.1,
    "day1ChangePct": 0.85,
    "days": 76,
    "lastDate": "2026-09-23",
@@ -937,11 +937,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 7.81,
    "entryFloor": 7.51,
    "currentFloor": 8.1,
-   "currentPrice": 8.72,
+   "currentPrice": 8.69,
    "high": 9.2,
    "highDate": "2026-08-28",
    "maxGain": 17.8,
-   "finalGain": 11.7,
+   "finalGain": 11.3,
    "day1ChangePct": 2.36,
    "days": 76,
    "lastDate": "2026-09-23",
@@ -958,11 +958,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 6.81,
    "entryFloor": 6.7,
    "currentFloor": 9.1,
-   "currentPrice": 9.82,
+   "currentPrice": 9.83,
    "high": 10,
    "highDate": "2026-09-22",
    "maxGain": 46.8,
-   "finalGain": 44.2,
+   "finalGain": 44.3,
    "day1ChangePct": 0.59,
    "days": 76,
    "lastDate": "2026-09-23",
@@ -979,11 +979,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 5.87,
    "entryFloor": 5.72,
    "currentFloor": 6.14,
-   "currentPrice": 6.63,
+   "currentPrice": 6.6,
    "high": 6.9,
    "highDate": "2026-08-28",
    "maxGain": 17.5,
-   "finalGain": 12.9,
+   "finalGain": 12.4,
    "day1ChangePct": -1.01,
    "days": 76,
    "lastDate": "2026-09-23",
@@ -1084,11 +1084,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 1.25,
    "entryFloor": 1.22,
    "currentFloor": 1.86,
-   "currentPrice": 2.58,
-   "high": 2.58,
+   "currentPrice": 2.59,
+   "high": 2.59,
    "highDate": "2026-09-23",
-   "maxGain": 106.4,
-   "finalGain": 106.4,
+   "maxGain": 107.2,
+   "finalGain": 107.2,
    "day1ChangePct": 0,
    "days": 36,
    "lastDate": "2026-09-23",
@@ -1097,7 +1097,7 @@ window.HOT_THEME_TRACKER = {
     "Solar/RE"
    ],
    "confluence": 3,
-   "slTrail": 2.425
+   "slTrail": 2.435
   },
   {
    "name": "MNHLDG",
