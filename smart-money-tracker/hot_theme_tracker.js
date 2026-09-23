@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-23T08:00:59.148Z",
+  "generatedAt": "2026-09-23T08:10:42.926Z",
   "dataDays": 81,
   "totalTracked": 49,
   "openCount": 24,
@@ -9,9 +9,9 @@ window.HOT_THEME_TRACKER = {
   "closedWins": 19,
   "closedWinRate": 76,
   "closedAvgGain": 21.5,
-  "openPnl": 299.9,
+  "openPnl": 297.9,
   "closedPnl": 536.9,
-  "totalPnlNow": 836.8
+  "totalPnlNow": 834.8
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -588,7 +588,7 @@ window.HOT_THEME_TRACKER = {
    "date": "2026-09-23",
    "themePct": 28.8,
    "themeCount": 76,
-   "totalCount": 307,
+   "totalCount": 306,
    "ma5": 23.6
   }
  ],
@@ -642,11 +642,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 6.25,
    "entryFloor": 7.79,
    "currentFloor": 7.68,
-   "currentPrice": 7.95,
+   "currentPrice": 7.93,
    "high": 7.95,
    "highDate": "2026-09-15",
    "maxGain": 27.2,
-   "finalGain": 27.2,
+   "finalGain": 26.9,
    "day1ChangePct": -1.11,
    "days": 24,
    "lastDate": "2026-09-23",
@@ -979,11 +979,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 5.87,
    "entryFloor": 5.72,
    "currentFloor": 6.14,
-   "currentPrice": 6.63,
+   "currentPrice": 6.64,
    "high": 6.9,
    "highDate": "2026-08-28",
    "maxGain": 17.5,
-   "finalGain": 12.9,
+   "finalGain": 13.1,
    "day1ChangePct": -1.01,
    "days": 76,
    "lastDate": "2026-09-23",
@@ -1063,11 +1063,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 1.58,
    "entryFloor": 1.55,
    "currentFloor": 2.03,
-   "currentPrice": 2.4,
-   "high": 2.4,
+   "currentPrice": 2.37,
+   "high": 2.37,
    "highDate": "2026-09-23",
-   "maxGain": 51.9,
-   "finalGain": 51.9,
+   "maxGain": 50,
+   "finalGain": 50,
    "day1ChangePct": -3.66,
    "days": 76,
    "lastDate": "2026-09-23",
@@ -1076,7 +1076,7 @@ window.HOT_THEME_TRACKER = {
     "Solar/RE"
    ],
    "confluence": 3,
-   "slTrail": 2.256
+   "slTrail": 2.228
   },
   {
    "name": "SAMAIDEN",
