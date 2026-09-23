@@ -1521,11 +1521,12 @@
                             <th style="text-align: right;">Max Gain</th>
                             <th style="text-align: center;">Days Held</th>
                             <th style="text-align: center;">Radar Status</th>
+                            <th style="text-align: center;" title="3 Black Swan Risk Check: Ex-Dividend Trap | QR Earnings Risk | IPO Debut Dump">🦢 Risk Check</th>
                             <th style="text-align: right;" title="Hybrid trail: 20% from high before profit lock, tightens to 10% after +20% gain locked">Trailing SL (Hybrid 20→10%)</th>
                         </tr>
                     </thead>
                     <tbody id="frTrackerTableBody">
-                        <tr><td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">⏳ Loading Fresh Rider tracker...</td></tr>
+                        <tr><td colspan="12" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">⏳ Loading Fresh Rider tracker...</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -6010,6 +6011,94 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         }
         window.updateHeaderSortIndicators = updateHeaderSortIndicators;
 
+        function parseDateFlexible(dStr, defaultYear) {
+            if (!dStr) return null;
+            if (/^\d{4}-\d{2}-\d{2}$/.test(dStr)) return new Date(dStr + 'T00:00:00Z');
+            const parts = dStr.trim().split(/\s+/);
+            if (parts.length >= 2) {
+                const day = parseInt(parts[0], 10);
+                const months = { jan:0, feb:1, mar:2, apr:3, may:4, jun:5, jul:6, aug:7, sep:8, oct:9, nov:10, dec:11 };
+                const m = months[parts[1].slice(0,3).toLowerCase()];
+                const yr = parts[2] ? parseInt(parts[2], 10) : (defaultYear || 2026);
+                if (!isNaN(day) && m !== undefined) return new Date(Date.UTC(yr, m, day));
+            }
+            const d = new Date(dStr);
+            return isNaN(d.getTime()) ? null : d;
+        }
+
+        function getBlackSwanEvaluation(name, item, viewDateStr) {
+            const curDateStr = viewDateStr || (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || new Date().toISOString().slice(0, 10);
+            const refDate = parseDateFlexible(curDateStr) || new Date();
+            const up = (name || '').toUpperCase();
+            const news = (window.NEWS_DATA && window.NEWS_DATA[up]) ? window.NEWS_DATA[up] : null;
+
+            // 1. Semakan Ex-Dividend Trap
+            if (news && Array.isArray(news.entitlements)) {
+                for (const ent of news.entitlements) {
+                    if (!ent.isDividend || !ent.exDate) continue;
+                    const exD = parseDateFlexible(ent.exDate, refDate.getUTCFullYear());
+                    if (!exD) continue;
+                    const diffDays = Math.round((exD.getTime() - refDate.getTime()) / (24 * 3600 * 1000));
+                    // Jika Ex-Date jatuh antara -1 hingga +10 hari daripada tarikh paparan
+                    if (diffDays >= -1 && diffDays <= 10) {
+                        const dayTxt = diffDays === 0 ? 'HARI INI' : (diffDays > 0 ? (diffDays + ' hari lagi') : 'Semalam');
+                        return {
+                            status: 'ex_div',
+                            severity: 'danger',
+                            label: 'EX-DIV TRAP',
+                            icon: '🔴 ⚠️',
+                            badgeHtml: `<span class="fr-new-badge" style="font-size:0.62rem; background:rgba(239,68,68,0.28); color:#fca5a5; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid rgba(239,68,68,0.7); white-space:nowrap; cursor:help;" title="[Black Swan 1: Ex-Dividend Trap] Ex-Date: ${ent.exDate} (${dayTxt}) | ${ent.type || 'Dividen'} ${ent.amount || ''}. AMARAN: Jangan masuk sebelum Ex-Date kerana risiko kejatuhan harga automatik & lambakan jualan dividen!">🔴 ⚠️ EX-DIV TRAP</span>`
+                        };
+                    }
+                }
+            }
+
+            // 2. Semakan Musim / Pengumuman Quarterly Report (QR)
+            if (news && Array.isArray(news.announcements)) {
+                for (const ann of news.announcements) {
+                    const cat = (ann.category || '').toUpperCase();
+                    const title = (ann.title || '').toUpperCase();
+                    if (title.includes('QUARTERLY') || title.includes('FINANCIAL RESULTS') || cat.includes('FINANCIAL')) {
+                        const annD = parseDateFlexible(ann.date, refDate.getUTCFullYear());
+                        if (annD) {
+                            const diffDays = Math.round((annD.getTime() - refDate.getTime()) / (24 * 3600 * 1000));
+                            if (diffDays >= -3 && diffDays <= 5) {
+                                return {
+                                    status: 'qr_risk',
+                                    severity: 'warning',
+                                    label: 'QR RISK',
+                                    icon: '🟡 ⚠️',
+                                    badgeHtml: `<span class="fr-new-badge" style="font-size:0.62rem; background:rgba(245,158,11,0.25); color:#fef08a; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid rgba(245,158,11,0.7); white-space:nowrap; cursor:help;" title="[Black Swan 2: Earnings Binary Risk] Tarikh QR: ${ann.date} (${ann.title}). AMARAN: Elak masuk menjelang laporan kewangan bagi mengelak fenomena Sell on News atau kejatuhan margin keuntungan!">🟡 ⚠️ QR RISK</span>`
+                                };
+                            }
+                        }
+                    }
+                }
+            }
+
+            // 3. Semakan Kematangan IPO Mentah (< 15 hari dagangan)
+            const isFreshIpo = item && (item.ipoYear === refDate.getUTCFullYear() || item.ipoYear === (refDate.getUTCFullYear() - 1)) && (item.touchCount || 0) < 2 && (item.daysHeld || 0) < 15;
+            if (isFreshIpo && (item.hasVolumeSpike || (item.volumeSpike || 0) > 3.0)) {
+                return {
+                    status: 'ipo_debut',
+                    severity: 'danger',
+                    label: 'IPO DEBUT DUMP',
+                    icon: '🚨',
+                    badgeHtml: `<span class="fr-new-badge" style="font-size:0.62rem; background:rgba(239,68,68,0.28); color:#fca5a5; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid rgba(239,68,68,0.7); white-space:nowrap; cursor:help;" title="[Black Swan 3: Post-IPO Debut Dump] Saham baru debut belum membina tapak matang (< 15 hari). AMARAN: Elak beli hari debut untuk mengelak buangan untung penerima IPO!">🚨 IPO DEBUT DUMP</span>`
+                };
+            }
+
+            // 4. Lulus Semua Semakan (PASS)
+            return {
+                status: 'pass',
+                severity: 'pass',
+                label: 'Swan: PASS',
+                icon: '🟢 🛡️',
+                badgeHtml: `<span class="fr-new-badge" style="font-size:0.62rem; background:rgba(16,185,129,0.18); color:#34d399; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid rgba(16,185,129,0.45); white-space:nowrap; cursor:help;" title="[Black Swan: LULUS] Bebas daripada tarikh Ex-Dividen terdekat, bebas risiko laporan QR, dan bertapak kukuh. Selamat dipertimbangkan mengikut SOP.">🟢 🛡️ Swan: PASS</span>`
+            };
+        }
+        window.getBlackSwanEvaluation = getBlackSwanEvaluation;
+
         // Render Fresh VVIP Rider — setup swing PnL tertinggi hasil backtest 54 hari
         // Formula: isVvip + Fresh IPO (2025+) + pullback <= 10% + closeTightness <= 5.0
         // Backtest: WR 81%, avg +18.7%/trade, worst -3.6% (exit trail hibrid)
@@ -6345,20 +6434,10 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     badgesHtml += `<span style="font-size: 0.58rem; background: rgba(148, 163, 184, 0.12); color: #94a3b8; padding: 0.05rem 0.25rem; border-radius: 3px; font-weight: 700; border: 1px solid rgba(148, 163, 184, 0.25); white-space: nowrap;" title="Tracked for ${trInfo.days} trading days. Filter per SOP.">⏳ ${trInfo.days}d</span>`;
                 }
 
-                // 4. Corporate News & Ex-Dividend Risk Badge
-                const nameUpper = (item.name || '').toUpperCase();
-                const newsRisk = (window.NEWS_DATA && window.NEWS_DATA[nameUpper]) 
-                    ? window.NEWS_DATA[nameUpper] 
-                    : (window._buyAlertLatest ? [...(window._buyAlertLatest.freshRider?.list || []), ...(window._buyAlertLatest.hotTheme?.list || [])].find(x => (x.name || '').toUpperCase() === nameUpper) : null);
-
-                if (newsRisk && newsRisk.newsBadges && newsRisk.newsBadges.length > 0) {
-                    newsRisk.newsBadges.forEach(b => {
-                        const bg = b.severity === 'danger' ? 'rgba(239, 68, 68, 0.25)' : (b.severity === 'warning' ? 'rgba(245, 158, 11, 0.25)' : 'rgba(14, 165, 233, 0.25)');
-                        const fg = b.severity === 'danger' ? '#fca5a5' : (b.severity === 'warning' ? '#fef08a' : '#7dd3fc');
-                        const border = b.severity === 'danger' ? 'rgba(239, 68, 68, 0.6)' : (b.severity === 'warning' ? 'rgba(245, 158, 11, 0.6)' : 'rgba(14, 165, 233, 0.6)');
-                        const titleEsc = (b.title || '').replace(/"/g, '&quot;');
-                        badgesHtml += `<span class="fr-new-badge news-risk-badge" style="font-size:0.62rem; background:${bg}; color:${fg}; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid ${border}; white-space:nowrap; cursor:help;" title="${titleEsc}">⚠️ ${b.label}</span>`;
-                    });
+                // 4. Black Swan Risk Evaluation (Ex-Div Trap / QR Risk / IPO Dump / PASS)
+                const swanEval = typeof getBlackSwanEvaluation === 'function' ? getBlackSwanEvaluation(item.name, item, curRefDate) : null;
+                if (swanEval) {
+                    badgesHtml += swanEval.badgeHtml;
                 }
 
                 html += `
@@ -6567,18 +6646,31 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     stillRadar = '<span style="font-size: 0.62rem; color: #fbbf24; font-weight: 700;" title="Price >10% from base — DO NOT CHASE, existing positions HOLD until trailing SL">🟡 HOLD ONLY</span>';
                 }
 
+                // ---- 🦢 Black Swan Risk Check ----
+                // For historical closed trades: check at entryDate (was there risk when we entered?)
+                // For open trades: check at entryDate (historical) + todayStr (current risk)
+                const swanEntryEval = typeof getBlackSwanEvaluation === 'function' ? getBlackSwanEvaluation(t.name, t, t.entryDate) : null;
+                const swanTodayEval = isOpen && typeof getBlackSwanEvaluation === 'function' ? getBlackSwanEvaluation(t.name, t, todayStr) : null;
+                let riskCheckHtml = '';
+                if (swanEntryEval && swanEntryEval.status !== 'pass') {
+                    // Had a risk at time of entry — show with "(at entry)" sub-label
+                    const badgeWithSub = swanEntryEval.badgeHtml.replace('</span>', ' <span style="font-size:0.5rem;opacity:0.75;">(at entry)</span></span>');
+                    riskCheckHtml += badgeWithSub;
+                }
+                if (swanTodayEval && swanTodayEval.status !== 'pass' && swanTodayEval.status !== (swanEntryEval && swanEntryEval.status)) {
+                    riskCheckHtml += (riskCheckHtml ? '<br>' : '') + swanTodayEval.badgeHtml;
+                }
+                if (!riskCheckHtml) {
+                    const passEval = swanTodayEval || swanEntryEval;
+                    riskCheckHtml = passEval ? passEval.badgeHtml : '<span style="font-size:0.65rem; color:#34d399; font-weight:800;">🟢 PASS</span>';
+                }
+
                 return `<tr>
                     <td style="text-align: center; font-weight: 800; color: #fbbf24; font-size: 0.75rem;">${idx + 1}</td>
                     <td style="font-weight: 800; color: white;">
                         <div style="display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap;">
                             ${getTradingViewAnchorSmall(t.name)}
                             ${typeBadge}
-                            ${(function() {
-                                const nameUpper = (t.name || '').toUpperCase();
-                                const newsRisk = (window.NEWS_DATA && window.NEWS_DATA[nameUpper]) ? window.NEWS_DATA[nameUpper] : null;
-                                if (!newsRisk || !newsRisk.newsBadges) return '';
-                                return newsRisk.newsBadges.map(b => `<span class="fr-new-badge news-risk-badge" style="font-size:0.62rem; background:${b.severity==='danger'?'rgba(239,68,68,0.25)':(b.severity==='warning'?'rgba(245,158,11,0.25)':'rgba(14,165,233,0.25)')}; color:${b.severity==='danger'?'#fca5a5':(b.severity==='warning'?'#fef08a':'#7dd3fc')}; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid ${b.severity==='danger'?'rgba(239,68,68,0.6)':(b.severity==='warning'?'rgba(245,158,11,0.6)':'rgba(14,165,233,0.6)')}; white-space:nowrap; cursor:help;" title="${(b.title||'').replace(/"/g, '&quot;')}">⚠️ ${b.label}</span>`).join(' ');
-                            })()}
                         </div>
                         <div style="font-size: 0.62rem; color: #64748b; font-weight: 600; margin-top: 0.15rem;">${t.sector || ''}</div>
                     </td>
@@ -6593,6 +6685,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     <td style="text-align: right; color: #38bdf8; font-weight: 700;">${maxStr}</td>
                     <td style="text-align: center; color: #fde047; font-weight: 700;">${t.days}</td>
                     <td style="text-align: center;">${stillRadar}</td>
+                    <td style="text-align: center;">${riskCheckHtml}</td>
                     <td style="text-align: right; color: #f87171; font-weight: 700;">RM ${slTrail}</td>
                 </tr>`;
             }).join('');
@@ -7029,10 +7122,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         <div style="display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap;">
                             ${getTradingViewAnchorSmall(t.name)}
                             ${(function() {
-                                const nameUpper = (t.name || '').toUpperCase();
-                                const newsRisk = (window.NEWS_DATA && window.NEWS_DATA[nameUpper]) ? window.NEWS_DATA[nameUpper] : null;
-                                if (!newsRisk || !newsRisk.newsBadges) return '';
-                                return newsRisk.newsBadges.map(b => `<span class="fr-new-badge news-risk-badge" style="font-size:0.62rem; background:${b.severity==='danger'?'rgba(239,68,68,0.25)':(b.severity==='warning'?'rgba(245,158,11,0.25)':'rgba(14,165,233,0.25)')}; color:${b.severity==='danger'?'#fca5a5':(b.severity==='warning'?'#fef08a':'#7dd3fc')}; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid ${b.severity==='danger'?'rgba(239,68,68,0.6)':(b.severity==='warning'?'rgba(245,158,11,0.6)':'rgba(14,165,233,0.6)')}; white-space:nowrap; cursor:help;" title="${(b.title||'').replace(/"/g, '&quot;')}">⚠️ ${b.label}</span>`).join(' ');
+                                const swanEval = typeof getBlackSwanEvaluation === 'function' ? getBlackSwanEvaluation(t.name, t, t.entryDate) : null;
+                                return swanEval ? swanEval.badgeHtml : '';
                             })()}
                         </div>
                         <div style="font-size: 0.62rem; color: #64748b; font-weight: 600; margin-top: 0.15rem;">${themeBadges}</div>
@@ -8115,8 +8206,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const currentPicksMap = new Map((window._latestFreshRiderPicks || currentData || []).map(it => [(it.name || '').toUpperCase(), it]));
             const recentFloorMap = getRecentFloorMap(hd, 5);
 
-            // Buang badge lama (elak duplicate bila re-render)
-            tbody.querySelectorAll('.fr-new-badge').forEach(el => el.remove());
+            // Buang badge kesegaran lama sahaja (kekalkan swan-eval-badge jika ada)
+            tbody.querySelectorAll('.fr-new-badge:not(.swan-eval-badge)').forEach(el => el.remove());
 
             tbody.querySelectorAll('tr[data-fr-name]').forEach(tr => {
                 const name = tr.getAttribute('data-fr-name');
@@ -8129,7 +8220,6 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 const item = currentPicksMap.get(nameUpper);
 
                 // ➕ ADD-ON: MASIH OPEN dalam tracker & BERLAKU SEBELUM HARI INI (entryDate < todayStr)
-                // Jika entryDate === todayStr (entry hari ini), ia dikira 🆕 BARU (bukan ADD-ON)!
                 if (trTrade && trTrade.status === 'OPEN' && trTrade.entryDate < todayStr) {
                     const badge = document.createElement('span');
                     badge.className = 'fr-new-badge';
@@ -8177,55 +8267,37 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         badge.title = 'ADD-ON: Currently OPEN in Live Fresh Rider Tracker & re-qualifying today.';
                     }
                     badgeRow.prepend(badge);
-                    return;
-                }
-                // 🔥 NEW (Day 1): entry TODAY (entryDate >= todayStr) — first time signal, not ADD-ON, not RE-ENTRY
-                if (trTrade && trTrade.entryDate && trTrade.entryDate >= todayStr) {
+                } else if (trTrade && trTrade.entryDate && trTrade.entryDate >= todayStr) {
+                    // 🔥 NEW (Day 1): entry TODAY (entryDate >= todayStr) — first time signal
                     const badge = document.createElement('span');
                     badge.className = 'fr-new-badge';
                     badge.textContent = '🔥 NEW (Day 1)';
                     badge.style.cssText = 'font-size:0.62rem; background:linear-gradient(135deg, rgba(239,68,68,0.28), rgba(249,115,22,0.28)); color:#ff6b4a; padding:0.08rem 0.35rem; border-radius:4px; font-weight:900; border:1px solid rgba(249,115,22,0.6); white-space:nowrap; animation: pulse 1.5s infinite; text-shadow: 0 0 6px rgba(249,115,22,0.5);';
                     badge.title = 'NEW: entry TODAY in Fresh Rider Live Tracker — first-time signal, not previously tracked. Buy per SOP; SL per floor/trailing tracker.';
                     badgeRow.prepend(badge);
-                    return;
+                } else if (!prevSet.has(name)) {
+                    const badge = document.createElement('span');
+                    badge.className = 'fr-new-badge';
+                    const isReEntry = trackedTrades.has(name.toUpperCase());
+                    badge.textContent = isReEntry ? '🟢 RE-ENTRY' : '🔥 NEW (Day 1)';
+                    badge.style.cssText = isReEntry
+                        ? 'font-size:0.62rem; background:rgba(16,185,129,0.15); color:#34d399; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(16,185,129,0.4); white-space:nowrap;'
+                        : 'font-size:0.62rem; background:linear-gradient(135deg, rgba(239,68,68,0.28), rgba(249,115,22,0.28)); color:#ff6b4a; padding:0.08rem 0.35rem; border-radius:4px; font-weight:900; border:1px solid rgba(249,115,22,0.6); white-space:nowrap; animation: pulse 1.5s infinite; text-shadow: 0 0 6px rgba(249,115,22,0.5);';
+                    badge.title = isReEntry
+                        ? 'RE-ENTRY: tracked previously (CLOSED in Fresh Rider Live Tracker) & qualifies again — late entry, proceed with caution'
+                        : 'NEW: not previously tracked in Fresh Rider Live Tracker — first-time signal';
+                    badgeRow.prepend(badge);
                 }
-                if (prevSet.has(name)) return;
-                const badge = document.createElement('span');
-                badge.className = 'fr-new-badge';
-                const isReEntry = trackedTrades.has(name.toUpperCase());
-                badge.textContent = isReEntry ? '🟢 RE-ENTRY' : '🔥 NEW (Day 1)';
-                badge.style.cssText = isReEntry
-                    ? 'font-size:0.62rem; background:rgba(16,185,129,0.15); color:#34d399; padding:0.08rem 0.3rem; border-radius:4px; font-weight:900; border:1px solid rgba(16,185,129,0.4); white-space:nowrap;'
-                    : 'font-size:0.62rem; background:linear-gradient(135deg, rgba(239,68,68,0.28), rgba(249,115,22,0.28)); color:#ff6b4a; padding:0.08rem 0.35rem; border-radius:4px; font-weight:900; border:1px solid rgba(249,115,22,0.6); white-space:nowrap; animation: pulse 1.5s infinite; text-shadow: 0 0 6px rgba(249,115,22,0.5);';
-                badge.title = isReEntry
-                    ? 'RE-ENTRY: tracked previously (CLOSED in Fresh Rider Live Tracker) & qualifies again — late entry, proceed with caution'
-                    : 'NEW: not previously tracked in Fresh Rider Live Tracker — first-time signal';
-                badgeRow.prepend(badge);
 
-                // Attach Corporate News Risk Badges (Ex-Dividend / QR / Corp Action)
-                let badgesToShow = [];
-                if (window.NEWS_DATA && window.NEWS_DATA[nameUpper] && Array.isArray(window.NEWS_DATA[nameUpper].newsBadges)) {
-                    badgesToShow = window.NEWS_DATA[nameUpper].newsBadges;
-                } else if (window._buyAlertLatest) {
-                    const list = [...(window._buyAlertLatest.freshRider?.list || []), ...(window._buyAlertLatest.hotTheme?.list || [])];
-                    const match = list.find(x => (x.name || '').toUpperCase() === nameUpper);
-                    if (match && match.newsBadges && match.newsBadges.length > 0) {
-                        badgesToShow = match.newsBadges;
+                // Attach Black Swan Status Badge if not already attached
+                if (!badgeRow.querySelector('.swan-eval-badge')) {
+                    const swanEval = typeof getBlackSwanEvaluation === 'function' ? getBlackSwanEvaluation(name, item, todayStr) : null;
+                    if (swanEval && swanEval.badgeHtml) {
+                        const tempSpan = document.createElement('span');
+                        tempSpan.innerHTML = swanEval.badgeHtml;
+                        const el = tempSpan.firstElementChild;
+                        if (el) badgeRow.appendChild(el);
                     }
-                }
-
-                if (badgesToShow.length > 0 && !badgeRow.querySelector('.news-risk-badge')) {
-                    badgesToShow.forEach(b => {
-                        const newsSpan = document.createElement('span');
-                        newsSpan.className = 'fr-new-badge news-risk-badge';
-                        newsSpan.textContent = '⚠️ ' + b.label;
-                        const bg = b.severity === 'danger' ? 'rgba(239, 68, 68, 0.25)' : (b.severity === 'warning' ? 'rgba(245, 158, 11, 0.25)' : 'rgba(14, 165, 233, 0.25)');
-                        const fg = b.severity === 'danger' ? '#fca5a5' : (b.severity === 'warning' ? '#fef08a' : '#7dd3fc');
-                        const border = b.severity === 'danger' ? 'rgba(239, 68, 68, 0.6)' : (b.severity === 'warning' ? 'rgba(245, 158, 11, 0.6)' : 'rgba(14, 165, 233, 0.6)');
-                        newsSpan.style.cssText = `font-size:0.62rem; background:${bg}; color:${fg}; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid ${border}; white-space:nowrap; cursor:help; margin-left:0.2rem;`;
-                        newsSpan.title = b.title;
-                        badgeRow.appendChild(newsSpan);
-                    });
                 }
             });
         }
