@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-09-24T04:20:44.303Z",
+ "generatedAt": "2026-09-24T04:30:52.893Z",
  "totalDays": 78,
  "startDate": "2026-06-02",
  "endDate": "2026-09-24",
@@ -50856,15 +50856,15 @@ window.DAILY_EQUITY_TRACKER = {
    "totalSignals": 116,
    "openCount": 77,
    "closedCount": 39,
-   "openPnl": 2443.2,
+   "openPnl": 2452.4,
    "closedPnl": 484.5,
-   "totalPnl": 2927.7,
-   "frPnl": 743.9,
-   "addOnPnl": 1355.6,
-   "htPnl": 828.2,
-   "dailyPnlDelta": -28.9,
-   "winRate": 75,
-   "avgGain": 25.2,
+   "totalPnl": 2936.9,
+   "frPnl": 747,
+   "addOnPnl": 1359,
+   "htPnl": 830.9,
+   "dailyPnlDelta": -19.5,
+   "winRate": 76,
+   "avgGain": 25.3,
    "peakGainer": {
     "gain": 134.9,
     "name": "KEEMING"
@@ -50901,10 +50901,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "SUNLOGY",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.44,
-     "gainOnDay": 8.6,
-     "dayChangePct": -2.22,
-     "pnlDeltaToday": -2.5
+     "priceOnDay": 0.445,
+     "gainOnDay": 9.9,
+     "dayChangePct": -1.11,
+     "pnlDeltaToday": -1.2
     },
     {
      "name": "STRATUS",
@@ -50937,10 +50937,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "HEGROUP",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 1.1,
-     "gainOnDay": 101.8,
-     "dayChangePct": 4.76,
-     "pnlDeltaToday": 9.2
+     "priceOnDay": 1.11,
+     "gainOnDay": 103.7,
+     "dayChangePct": 5.71,
+     "pnlDeltaToday": 11
     },
     {
      "name": "EIPOWER",
@@ -50973,19 +50973,19 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "THMY",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 1.95,
-     "gainOnDay": 15.4,
-     "dayChangePct": -1.02,
-     "pnlDeltaToday": -1.2
+     "priceOnDay": 1.97,
+     "gainOnDay": 16.6,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "name": "AMS",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.45,
-     "gainOnDay": 18.4,
-     "dayChangePct": -1.1,
-     "pnlDeltaToday": -1.3
+     "priceOnDay": 0.445,
+     "gainOnDay": 17.1,
+     "dayChangePct": -2.2,
+     "pnlDeltaToday": -2.6
     },
     {
      "name": "ISF",
@@ -51171,19 +51171,19 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "HEGROUP",
      "trackerType": "ADD",
      "statusOnDay": "OPEN",
-     "priceOnDay": 1.1,
-     "gainOnDay": 89.7,
-     "dayChangePct": 4.76,
-     "pnlDeltaToday": 8.6
+     "priceOnDay": 1.11,
+     "gainOnDay": 91.4,
+     "dayChangePct": 5.71,
+     "pnlDeltaToday": 10.3
     },
     {
      "name": "HEGROUP",
      "trackerType": "ADD",
      "statusOnDay": "OPEN",
-     "priceOnDay": 1.1,
-     "gainOnDay": 88,
-     "dayChangePct": 4.76,
-     "pnlDeltaToday": 8.5
+     "priceOnDay": 1.11,
+     "gainOnDay": 89.7,
+     "dayChangePct": 5.71,
+     "pnlDeltaToday": 10.3
     },
     {
      "name": "EIPOWER",
@@ -51495,8 +51495,8 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "MISC",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 7.99,
-     "gainOnDay": 27.8,
+     "priceOnDay": 7.98,
+     "gainOnDay": 27.7,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -51540,10 +51540,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "SKYECHIP",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 3.06,
-     "gainOnDay": 1,
-     "dayChangePct": -1.29,
-     "pnlDeltaToday": -1.3
+     "priceOnDay": 3.07,
+     "gainOnDay": 1.3,
+     "dayChangePct": -0.97,
+     "pnlDeltaToday": -1
     },
     {
      "name": "NEXGRAM",
@@ -51576,10 +51576,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "TEAMSTR",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.24,
-     "gainOnDay": -4,
-     "dayChangePct": -2.04,
-     "pnlDeltaToday": -2
+     "priceOnDay": 0.235,
+     "gainOnDay": -6,
+     "dayChangePct": -4.08,
+     "pnlDeltaToday": -4
     },
     {
      "name": "INFOM",
@@ -51594,10 +51594,10 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "NE",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 1.13,
-     "gainOnDay": 6.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
+     "priceOnDay": 1.14,
+     "gainOnDay": 7.5,
+     "dayChangePct": 0.88,
+     "pnlDeltaToday": 0.9
     },
     {
      "name": "3REN",
@@ -51630,37 +51630,37 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 9.86,
-     "gainOnDay": 44.8,
-     "dayChangePct": -0.2,
-     "pnlDeltaToday": -0.3
+     "priceOnDay": 9.85,
+     "gainOnDay": 44.6,
+     "dayChangePct": -0.3,
+     "pnlDeltaToday": -0.4
     },
     {
      "name": "UWC",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 6.54,
-     "gainOnDay": 11.4,
-     "dayChangePct": -1.8,
-     "pnlDeltaToday": -2
+     "priceOnDay": 6.55,
+     "gainOnDay": 11.6,
+     "dayChangePct": -1.65,
+     "pnlDeltaToday": -1.9
     },
     {
      "name": "GREATEC",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.57,
-     "gainOnDay": -1.5,
-     "dayChangePct": -1.91,
-     "pnlDeltaToday": -1.9
+     "priceOnDay": 2.59,
+     "gainOnDay": -0.8,
+     "dayChangePct": -1.15,
+     "pnlDeltaToday": -1.1
     },
     {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.37,
-     "gainOnDay": 0,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
+     "priceOnDay": 0.375,
+     "gainOnDay": 1.4,
+     "dayChangePct": 1.35,
+     "pnlDeltaToday": 1.4
     },
     {
      "name": "ECOMATE",
@@ -51675,19 +51675,19 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "PEKAT",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.44,
-     "gainOnDay": 54.4,
-     "dayChangePct": 1.67,
-     "pnlDeltaToday": 2.5
+     "priceOnDay": 2.45,
+     "gainOnDay": 55.1,
+     "dayChangePct": 2.08,
+     "pnlDeltaToday": 3.2
     },
     {
      "name": "SAMAIDEN",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.54,
-     "gainOnDay": 103.2,
-     "dayChangePct": -0.39,
-     "pnlDeltaToday": -0.8
+     "priceOnDay": 2.55,
+     "gainOnDay": 104,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "name": "MNHLDG",

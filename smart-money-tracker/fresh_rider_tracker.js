@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual
 window.FRESH_RIDER_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-24T04:20:43.261Z",
+  "generatedAt": "2026-09-24T04:30:51.993Z",
   "dataDays": 78,
   "totalTracked": 22,
   "openCount": 16,
@@ -9,9 +9,9 @@ window.FRESH_RIDER_TRACKER = {
   "closedWins": 3,
   "closedWinRate": 50,
   "closedAvgGain": 3.5,
-  "openPnl": 722.6,
+  "openPnl": 725.7,
   "closedPnl": 21.3,
-  "totalPnlNow": 743.9
+  "totalPnlNow": 747
  },
  "backtest": {
   "dataStart": "2026-06-02",
@@ -89,12 +89,12 @@ window.FRESH_RIDER_TRACKER = {
    "entryDate": "2026-08-21",
    "entry": 0.405,
    "entryFloor": 0.4,
-   "currentFloor": 0.4,
-   "currentPrice": 0.44,
+   "currentFloor": 0.415,
+   "currentPrice": 0.445,
    "high": 0.51,
    "highDate": "2026-09-02",
    "maxGain": 25.9,
-   "finalGain": 8.6,
+   "finalGain": 9.9,
    "day1ChangePct": -2.41,
    "days": 22,
    "lastDate": "2026-09-24",
@@ -170,18 +170,18 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 0.545,
    "entryFloor": 0.52,
    "currentFloor": 0.965,
-   "currentPrice": 1.1,
-   "high": 1.1,
+   "currentPrice": 1.11,
+   "high": 1.11,
    "highDate": "2026-09-24",
-   "maxGain": 101.8,
-   "finalGain": 101.8,
+   "maxGain": 103.7,
+   "finalGain": 103.7,
    "day1ChangePct": 0,
    "days": 53,
    "lastDate": "2026-09-24",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Utilities",
-   "slTrail": 0.88
+   "slTrail": 0.888
   },
   {
    "name": "EIPOWER",
@@ -250,11 +250,11 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 1.69,
    "entryFloor": 1.58,
    "currentFloor": 1.75,
-   "currentPrice": 1.95,
+   "currentPrice": 1.97,
    "high": 2.06,
    "highDate": "2026-08-27",
    "maxGain": 21.9,
-   "finalGain": 15.4,
+   "finalGain": 16.6,
    "day1ChangePct": -0.59,
    "days": 76,
    "lastDate": "2026-09-24",
@@ -270,11 +270,11 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 0.38,
    "entryFloor": 0.375,
    "currentFloor": 0.42,
-   "currentPrice": 0.45,
+   "currentPrice": 0.445,
    "high": 0.505,
    "highDate": "2026-08-26",
    "maxGain": 32.9,
-   "finalGain": 18.4,
+   "finalGain": 17.1,
    "day1ChangePct": -1.3,
    "days": 77,
    "lastDate": "2026-09-24",
@@ -479,7 +479,7 @@ window.FRESH_RIDER_TRACKER = {
 };
 window.ADD_ON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-24T04:20:43.261Z",
+  "generatedAt": "2026-09-24T04:30:51.993Z",
   "dataDays": 78,
   "totalTracked": 26,
   "openCount": 21,
@@ -487,9 +487,9 @@ window.ADD_ON_TRACKER = {
   "closedWins": 1,
   "closedWinRate": 20,
   "closedAvgGain": -7.3,
-  "openPnl": 1161.5,
+  "openPnl": 1164.9,
   "closedPnl": -36.3,
-  "totalPnlNow": 1125.2
+  "totalPnlNow": 1128.6
  },
  "trades": [
   {
@@ -731,18 +731,18 @@ window.ADD_ON_TRACKER = {
    "entry": 0.58,
    "entryFloor": 0.56,
    "currentFloor": 0.965,
-   "currentPrice": 1.1,
-   "high": 1.1,
+   "currentPrice": 1.11,
+   "high": 1.11,
    "highDate": "2026-09-24",
-   "maxGain": 89.7,
-   "finalGain": 89.7,
+   "maxGain": 91.4,
+   "finalGain": 91.4,
    "day1ChangePct": -0.85,
    "days": 47,
    "lastDate": "2026-09-24",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Utilities",
-   "slTrail": 0.88
+   "slTrail": 0.888
   },
   {
    "id": "HEGROUP_2026-07-15_ADDON",
@@ -752,18 +752,18 @@ window.ADD_ON_TRACKER = {
    "entry": 0.585,
    "entryFloor": 0.56,
    "currentFloor": 0.965,
-   "currentPrice": 1.1,
-   "high": 1.1,
+   "currentPrice": 1.11,
+   "high": 1.11,
    "highDate": "2026-09-24",
-   "maxGain": 88,
-   "finalGain": 88,
+   "maxGain": 89.7,
+   "finalGain": 89.7,
    "day1ChangePct": 0.86,
    "days": 48,
    "lastDate": "2026-09-24",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Utilities",
-   "slTrail": 0.88
+   "slTrail": 0.888
   },
   {
    "id": "EIPOWER_2026-07-10_ADDON",
@@ -1052,7 +1052,7 @@ window.ADD_ON_TRACKER = {
 };
 window.FLOOR_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-24T04:20:43.261Z",
+  "generatedAt": "2026-09-24T04:30:51.993Z",
   "dataDays": 78,
   "totalTracked": 19,
   "openCount": 16,
@@ -1474,7 +1474,7 @@ window.FLOOR_ADDON_TRACKER = {
 };
 window.ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-24T04:20:43.261Z",
+  "generatedAt": "2026-09-24T04:30:51.993Z",
   "dataDays": 78,
   "totalTracked": 67,
   "openCount": 53,
@@ -1482,9 +1482,9 @@ window.ALL_TRACKER = {
   "closedWins": 4,
   "closedWinRate": 29,
   "closedAvgGain": -3.7,
-  "openPnl": 2151.9,
+  "openPnl": 2158.4,
   "closedPnl": -52.4,
-  "totalPnlNow": 2099.5
+  "totalPnlNow": 2106
  },
  "trades": [
   {
@@ -1762,12 +1762,12 @@ window.ALL_TRACKER = {
    "entryDate": "2026-08-21",
    "entry": 0.405,
    "entryFloor": 0.4,
-   "currentFloor": 0.4,
-   "currentPrice": 0.44,
+   "currentFloor": 0.415,
+   "currentPrice": 0.445,
    "high": 0.51,
    "highDate": "2026-09-02",
    "maxGain": 25.9,
-   "finalGain": 8.6,
+   "finalGain": 9.9,
    "day1ChangePct": -2.41,
    "days": 22,
    "lastDate": "2026-09-24",
@@ -2181,18 +2181,18 @@ window.ALL_TRACKER = {
    "entry": 0.58,
    "entryFloor": 0.56,
    "currentFloor": 0.965,
-   "currentPrice": 1.1,
-   "high": 1.1,
+   "currentPrice": 1.11,
+   "high": 1.11,
    "highDate": "2026-09-24",
-   "maxGain": 89.7,
-   "finalGain": 89.7,
+   "maxGain": 91.4,
+   "finalGain": 91.4,
    "day1ChangePct": -0.85,
    "days": 47,
    "lastDate": "2026-09-24",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Utilities",
-   "slTrail": 0.88
+   "slTrail": 0.888
   },
   {
    "id": "HEGROUP_2026-07-15_ADDON",
@@ -2202,18 +2202,18 @@ window.ALL_TRACKER = {
    "entry": 0.585,
    "entryFloor": 0.56,
    "currentFloor": 0.965,
-   "currentPrice": 1.1,
-   "high": 1.1,
+   "currentPrice": 1.11,
+   "high": 1.11,
    "highDate": "2026-09-24",
-   "maxGain": 88,
-   "finalGain": 88,
+   "maxGain": 89.7,
+   "finalGain": 89.7,
    "day1ChangePct": 0.86,
    "days": 48,
    "lastDate": "2026-09-24",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Utilities",
-   "slTrail": 0.88
+   "slTrail": 0.888
   },
   {
    "name": "ECOSHOP",
@@ -2284,18 +2284,18 @@ window.ALL_TRACKER = {
    "entry": 0.545,
    "entryFloor": 0.52,
    "currentFloor": 0.965,
-   "currentPrice": 1.1,
-   "high": 1.1,
+   "currentPrice": 1.11,
+   "high": 1.11,
    "highDate": "2026-09-24",
-   "maxGain": 101.8,
-   "finalGain": 101.8,
+   "maxGain": 103.7,
+   "finalGain": 103.7,
    "day1ChangePct": 0,
    "days": 53,
    "lastDate": "2026-09-24",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Utilities",
-   "slTrail": 0.88
+   "slTrail": 0.888
   },
   {
    "id": "CBHB_2026-07-03_ADDON",
@@ -2490,11 +2490,11 @@ window.ALL_TRACKER = {
    "entry": 1.69,
    "entryFloor": 1.58,
    "currentFloor": 1.75,
-   "currentPrice": 1.95,
+   "currentPrice": 1.97,
    "high": 2.06,
    "highDate": "2026-08-27",
    "maxGain": 21.9,
-   "finalGain": 15.4,
+   "finalGain": 16.6,
    "day1ChangePct": -0.59,
    "days": 76,
    "lastDate": "2026-09-24",
@@ -2510,11 +2510,11 @@ window.ALL_TRACKER = {
    "entry": 0.38,
    "entryFloor": 0.375,
    "currentFloor": 0.42,
-   "currentPrice": 0.45,
+   "currentPrice": 0.445,
    "high": 0.505,
    "highDate": "2026-08-26",
    "maxGain": 32.9,
-   "finalGain": 18.4,
+   "finalGain": 17.1,
    "day1ChangePct": -1.3,
    "days": 77,
    "lastDate": "2026-09-24",
