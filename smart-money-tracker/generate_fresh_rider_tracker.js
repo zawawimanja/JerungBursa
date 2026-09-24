@@ -266,8 +266,13 @@ for (const day of dayList) {
         const tight = typeof it.closeTightness === 'number' ? it.closeTightness : 99;
         const fDist = effFloor > 0 ? ((it.price - effFloor) / effFloor * 100) : 99;
         const toVal = it.turnover || it.rawTurnover || 0;
+        // isFreshBase1 = ADD-ON A+ (Awal): kenaikan ≤ 20% dari base, lantai rapat ≤ 3.5%, jerung ≥ 2M
+        const isFreshBase1 = (gainFromBase >= 0 && gainFromBase <= 20 && fDist <= 3.5 && toVal >= 2000000);
+        // isSolidBase2 = LANTAI RAPAT: tangga solid (sentuhan ≥ 3x, tight ≤ 3.5%, lantai ≤ 4.5%, jerung ≥ 2M)
         const isSolidBase2 = (touches >= 3 && tight <= 3.5 && fDist <= 4.5 && toVal >= 2000000);
-        const isFloorAddon = (gainFromBase > 20.0 && isSolidBase2);
+        // LANTAI RAPAT = lulus isSolidBase2 TAPI GAGAL isFreshBase1 (lantai jarak 3.5%-4.5%)
+        // Selaras 100% dengan logik scanner (index.html / buy_alert.js)
+        const isFloorAddon = (isSolidBase2 && !isFreshBase1);
         const entryType = isFloorAddon ? '🛡️ ADD-ON (LANTAI RAPAT)' : '⭐ ADD-ON A+';
 
         const t = {
