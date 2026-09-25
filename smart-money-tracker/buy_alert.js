@@ -696,6 +696,14 @@ function buildMessage(now, out) {
     const htOut = htList.map(s => {
         const effF = effFloor(s.name, s.price, s.floorLow || s.price * 0.95);
         const sl = Math.max(effF * 0.97, s.price * 0.80);
+        const toVal = s.rawTurnover || s.turnover || 0;
+        const tight = typeof s.closeTightness === 'number' ? s.closeTightness : 99;
+        const floorDist = effF ? +(((s.price - effF) / effF) * 100).toFixed(2) : 99;
+        const isDump = s.hasUpperWickRejection === true && (s.change < 0 || (s.changePct && s.changePct < 0));
+        const isTierAPlus = (toVal >= 2000000 && tight <= 3.5 && floorDist >= -1.0 && floorDist <= 3.5 && !isDump);
+        const isTierA = (!isTierAPlus && toVal >= 500000 && tight <= 5.0 && floorDist >= -1.5 && floorDist <= 5.0 && !isDump);
+        const tierBadge = isTierAPlus ? '⭐ TIER A+ SNIPER' : (isTierA ? '🎯 TIER A' : '⚪ TIER B');
+
         return {
             name: s.name, price: s.price, changePct: s.changePct, pullback: s.pullback,
             tight: typeof s.closeTightness === 'number' ? s.closeTightness : null,
@@ -704,6 +712,9 @@ function buildMessage(now, out) {
             sl: +sl.toFixed(3),
             inTracker: htTrackedNames.has(canonName(s.name).toUpperCase()),
             label: signalLabel(s, htTrackedStatus),
+            tierBadge,
+            isTierAPlus,
+            isTierA,
             touch: s.touchCount || 0,
             turnover: s.rawTurnover || s.turnover || 0
         };
@@ -733,8 +744,11 @@ function buildMessage(now, out) {
         if (fusionA !== fusionB) return fusionA ? -1 : 1;
         return tieWhale(a, b) || (freshnessRank(a.label) - freshnessRank(b.label)) || tieTight(a, b) || tieFloor(a, b) || tiePb(a, b) || tieTouch(a, b) || tieTurnover(a, b);
     });
-    htOut.sort((a, b) =>
-        tieWhale(a, b) || (freshnessRank(a.label) - freshnessRank(b.label)) || tieTight(a, b) || tieFloor(a, b) || tiePb(a, b) || (b.confluence - a.confluence) || tieTouch(a, b) || tieTurnover(a, b));
+    htOut.sort((a, b) => {
+        if (a.isTierAPlus !== b.isTierAPlus) return b.isTierAPlus ? 1 : -1;
+        if (a.isTierA !== b.isTierA) return b.isTierA ? 1 : -1;
+        return tieWhale(a, b) || (freshnessRank(a.label) - freshnessRank(b.label)) || tieTight(a, b) || tieFloor(a, b) || tiePb(a, b) || (b.confluence - a.confluence) || tieTouch(a, b) || tieTurnover(a, b);
+    });
 
     // 7. SL warning — posisi OPEN tracker bawah trailing stop
     const slWarnings = [];

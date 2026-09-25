@@ -1773,8 +1773,9 @@
                     <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
                     <div style="display: flex; gap: 0.3rem; align-items: center; background: rgba(15,23,42,0.6); padding: 0.2rem; border-radius: 8px; border: 1px solid rgba(168,85,247,0.3);">
                             <span style="font-size: 0.72rem; color: #64748b; font-weight: 600; padding: 0 0.3rem;">Focus:</span>
+                            <button id="htFilterTierA" onclick="setHotThemeFilter('tier_a')" style="background: rgba(234,179,8,0.25); color: #fde047; border: 1px solid rgba(234,179,8,0.6); padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer;">⭐ Sniper &amp; Tier A</button>
                             <button id="htFilterTriple" onclick="setHotThemeFilter('triple_only')" style="background: transparent; color: #64748b; border: 1px solid transparent; padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">🔥 TRIPLE Only</button>
-                            <button id="htFilterAll" onclick="setHotThemeFilter('all')" style="background: rgba(168,85,247,0.25); color: #c4b5fd; border: 1px solid rgba(168,85,247,0.5); padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer;">⚡ All (2+)</button>
+                            <button id="htFilterAll" onclick="setHotThemeFilter('all')" style="background: transparent; color: #64748b; border: 1px solid transparent; padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">🌐 All (2+)</button>
                         </div>
                         <button onclick="toggleCardCollapse('htScannerBody', this)" class="btn" style="background: rgba(15,23,42,0.85); border: 1.5px solid rgba(196,181,253,0.5); color: #c4b5fd; padding: 0.25rem 0.65rem; border-radius: 8px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; transition: all 0.2s;" onmouseover="this.style.background='rgba(196,181,253,0.2)';" onmouseout="this.style.background='rgba(15,23,42,0.85)';">
                             <span class="toggle-icon">🔽</span> <span class="toggle-text">Collapse</span>
@@ -8676,28 +8677,32 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         }
         function setHotThemeFilter(mode) {
             window._hotThemeFilterMode = mode;
+            const btnTierA = document.getElementById('htFilterTierA');
             const btnTriple = document.getElementById('htFilterTriple');
             const btnAll = document.getElementById('htFilterAll');
-            if (btnTriple && btnAll) {
-                if (mode === 'triple_only') {
-                    btnTriple.style.background = 'rgba(234,179,8,0.25)';
-                    btnTriple.style.color = '#fde047';
-                    btnTriple.style.borderColor = 'rgba(234,179,8,0.5)';
-                    btnTriple.style.fontWeight = '800';
-                    btnAll.style.background = 'transparent';
-                    btnAll.style.color = '#64748b';
-                    btnAll.style.borderColor = 'transparent';
-                    btnAll.style.fontWeight = '700';
-                } else {
-                    btnAll.style.background = 'rgba(168,85,247,0.25)';
-                    btnAll.style.color = '#c4b5fd';
-                    btnAll.style.borderColor = 'rgba(168,85,247,0.5)';
-                    btnAll.style.fontWeight = '800';
-                    btnTriple.style.background = 'transparent';
-                    btnTriple.style.color = '#64748b';
-                    btnTriple.style.borderColor = 'transparent';
-                    btnTriple.style.fontWeight = '700';
-                }
+            const resetBtn = (btn) => {
+                if (!btn) return;
+                btn.style.background = 'transparent';
+                btn.style.color = '#64748b';
+                btn.style.borderColor = 'transparent';
+                btn.style.fontWeight = '700';
+            };
+            [btnTierA, btnTriple, btnAll].forEach(resetBtn);
+            if (mode === 'triple_only' && btnTriple) {
+                btnTriple.style.background = 'rgba(234,179,8,0.25)';
+                btnTriple.style.color = '#fde047';
+                btnTriple.style.borderColor = 'rgba(234,179,8,0.5)';
+                btnTriple.style.fontWeight = '800';
+            } else if (mode === 'all' && btnAll) {
+                btnAll.style.background = 'rgba(168,85,247,0.25)';
+                btnAll.style.color = '#c4b5fd';
+                btnAll.style.borderColor = 'rgba(168,85,247,0.5)';
+                btnAll.style.fontWeight = '800';
+            } else if (btnTierA) {
+                btnTierA.style.background = 'rgba(234,179,8,0.25)';
+                btnTierA.style.color = '#fde047';
+                btnTierA.style.borderColor = 'rgba(234,179,8,0.6)';
+                btnTierA.style.fontWeight = '800';
             }
             renderHotTheme();
         }
@@ -8760,6 +8765,21 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 return 2;
             };
 
+            // Klasifikasi Tier A+ Sniper / Tier A / Tier B untuk Hot Theme
+            const getTierOfHT = (it) => {
+                const toVal = it.turnover || it.rawTurnover || 0;
+                const effF = effFloorOfHT(it);
+                const fDistVal = effF ? ((it.price - effF) / effF * 100) : 99;
+                const tightValNum = typeof it.closeTightness === 'number' ? it.closeTightness : 99;
+                const swanEval = typeof getBlackSwanEvaluation === 'function' ? getBlackSwanEvaluation(it.name, it, curRefDateHT) : null;
+                const isBlackSwanClean = !swanEval || (swanEval.status && String(swanEval.status).toLowerCase() === 'pass');
+                const isRealUpperWickDump = it.hasUpperWickRejection === true && (it.change < 0 || (it.changePct && it.changePct < 0));
+
+                const isTierAPlus = (toVal >= 2000000 && tightValNum <= 3.5 && fDistVal >= -1.0 && fDistVal <= 3.5 && isBlackSwanClean && !isRealUpperWickDump);
+                const isTierA = (!isTierAPlus && toVal >= 500000 && tightValNum <= 5.0 && fDistVal >= -1.5 && fDistVal <= 5.0 && !isRealUpperWickDump);
+                return { isTierAPlus, isTierA, toVal, fDistVal, tightValNum };
+            };
+
             if (typeof updateHeaderSortIndicators === 'function') {
                 updateHeaderSortIndicators('ht', window._htSortKey, window._htSortDir);
             }
@@ -8790,34 +8810,69 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 });
             } else {
                 picks.sort((a, b) => {
+                    // 0. Keutamaan Mutlak: ⭐ TIER A+ SNIPER & 🎯 TIER A
+                    const tierA = getTierOfHT(a.item);
+                    const tierB = getTierOfHT(b.item);
+                    if (tierA.isTierAPlus !== tierB.isTierAPlus) return tierB.isTierAPlus ? 1 : -1;
+                    if (tierA.isTierA !== tierB.isTierA) return tierB.isTierA ? 1 : -1;
+
+                    // 1. Duit Jerung Aktif (Turnover >= RM 2.0M)
+                    const isWhaleA = tierA.toVal >= 2000000 ? 1 : 0;
+                    const isWhaleB = tierB.toVal >= 2000000 ? 1 : 0;
+                    if (isWhaleA !== isWhaleB) return isWhaleB - isWhaleA;
+
+                    // 2. Freshness
                     const fa = htFreshness(a.item), fb = htFreshness(b.item);
                     if (fa !== fb) return fa - fb;
-                    const ta = typeof a.item.closeTightness === 'number' ? a.item.closeTightness : 99;
-                    const tb = typeof b.item.closeTightness === 'number' ? b.item.closeTightness : 99;
+
+                    // 3. Tightness Squeeze
+                    const ta = tierA.tightValNum;
+                    const tb = tierB.tightValNum;
                     if (ta !== tb) return ta - tb;
+
+                    // 4. Jarak Floor (Risiko Rendah)
                     const ea = effFloorOfHT(a.item), eb = effFloorOfHT(b.item);
                     const distA = ea ? Math.max(0, (a.item.price - ea) / ea) : 99;
                     const distB = eb ? Math.max(0, (b.item.price - eb) / eb) : 99;
                     if (distA !== distB) return distA - distB;
+
+                    // 5. Pullback
                     const pa = a.item.pullback !== null && a.item.pullback !== undefined ? a.item.pullback : 99;
                     const pbb = b.item.pullback !== null && b.item.pullback !== undefined ? b.item.pullback : 99;
                     if (pa !== pbb) return pa - pbb;
+
                     if (a.count !== b.count) return b.count - a.count;
                     const ca = a.item.touchCount || 0, cb = b.item.touchCount || 0;
                     if (ca !== cb) return cb - ca;
-                    const toA = a.item.turnover || 0;
-                    const toB = b.item.turnover || 0;
-                    return toB - toA;
+                    return tierB.toVal - tierA.toVal;
                 });
             }
 
-            if (picks.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">⚡ Tiada saham Semicon/Solar yang layak 2+ Konfluens hari ini.</td></tr>`;
+            // Tapis mengikut mod fokus (default: tier_a untuk keselamatan maksimum)
+            const htFilter = window._hotThemeFilterMode || 'tier_a';
+            let displayPicks = picks;
+            if (htFilter === 'tier_a') {
+                displayPicks = picks.filter(p => {
+                    const t = getTierOfHT(p.item);
+                    return t.isTierAPlus || t.isTierA;
+                });
+            } else if (htFilter === 'triple_only') {
+                displayPicks = picks.filter(p => p.count >= 3);
+            }
+
+            if (displayPicks.length === 0) {
+                let emptyMsg = '⚡ Tiada saham Semicon/Solar yang layak 2+ Konfluens hari ini.';
+                if (htFilter === 'tier_a') {
+                    emptyMsg = '⭐ Tiada setup <strong>Tier A+ Sniper / Tier A</strong> dalam tema Semicon/Solar hari ini (Turnover &ge; RM500k &amp; Lantai &le; 5.0%). Sila klik butang <strong>🌐 All (2+)</strong> di atas untuk melihat semua kaunter.';
+                } else if (htFilter === 'triple_only') {
+                    emptyMsg = '🔥 Tiada setup <strong>TRIPLE Confluence (3+)</strong> dalam tema Semicon/Solar hari ini.';
+                }
+                tbody.innerHTML = `<tr><td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">${emptyMsg}</td></tr>`;
                 return;
             }
 
             let html = '';
-            picks.forEach(({ item, themes, count, matches }, idx) => {
+            displayPicks.forEach(({ item, themes, count, matches }, idx) => {
                 const effFloorHT = effFloorOfHT(item);
                 const floorPrice = effFloorHT ? 'RM ' + effFloorHT.toFixed(3) : '—';
                 const floorDist = effFloorHT ? ((item.price - effFloorHT) / effFloorHT * 100).toFixed(1) + '%' : '—';
@@ -8828,6 +8883,17 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 const pbColor = pb !== null && pb <= 5 ? '#34d399' : '#f59e0b';
                 // Tightness — penunjuk utama pattern KEEMING/STRATUS (sama macam list Fresh Rider)
                 const tightValHT = typeof item.closeTightness === 'number' ? item.closeTightness.toFixed(2) : '—';
+
+                // Tier A+ / Tier A Badge
+                const tierInfo = getTierOfHT(item);
+                let tierBadgeHtml = '';
+                if (tierInfo.isTierAPlus) {
+                    tierBadgeHtml = `<span style="font-size: 0.62rem; background: linear-gradient(135deg, rgba(234,179,8,0.35), rgba(16,185,129,0.35)); color: #fde047; padding: 0.1rem 0.42rem; border-radius: 4px; font-weight: 900; border: 1.2px solid rgba(253,224,71,0.85); box-shadow: 0 0 10px rgba(253,224,71,0.25); white-space: nowrap; letter-spacing: 0.3px;" title="⭐ TIER A+ SNIPER: Mematuhi semua 3 Angka Emas (Turnover >= RM2M, Tightness <= 3.5%, Lantai <= 3.5%) + Bebas Black Swan!">⭐ TIER A+ SNIPER</span>`;
+                } else if (tierInfo.isTierA) {
+                    tierBadgeHtml = `<span style="font-size: 0.6rem; background: rgba(56,189,248,0.2); color: #38bdf8; padding: 0.08rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(56,189,248,0.45); white-space: nowrap;" title="🎯 TIER A: Setup berkualiti baik (Turnover >= RM500k, Tightness <= 5.0%, Lantai <= 5.0%).">🎯 TIER A</span>`;
+                } else {
+                    tierBadgeHtml = `<span style="font-size: 0.58rem; background: rgba(148,163,184,0.15); color: #94a3b8; padding: 0.06rem 0.3rem; border-radius: 4px; font-weight: 700; border: 1px solid rgba(148,163,184,0.3); white-space: nowrap;" title="⚪ TIER B: Kualiti standard / jauh dari lantai.">⚪ TIER B</span>`;
+                }
 
                 const themeBadge = themes.map(t => {
                     const color = t === 'Semiconductor' ? '#a78bfa' : '#4ade80';
@@ -8881,7 +8947,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         <td style="font-weight: 700; color: white; padding: 0.6rem 0.8rem;">
                             ${getTradingViewAnchor(item.name)}
                             <div style="margin-top: 0.2rem; display: inline-flex; align-items: center; gap: 0.2rem; flex-wrap: wrap;">${themeBadge}</div>
-                            <div class="ht-badge-row" style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.25rem; flex-wrap: wrap;">${csBadge}${vduBadgeHT}${baseTouchBadgeHT}${fusionBadgeHT}${swanBadgeHT}</div>
+                            <div class="ht-badge-row" style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.25rem; flex-wrap: wrap;">${tierBadgeHtml}${csBadge}${vduBadgeHT}${baseTouchBadgeHT}${fusionBadgeHT}${swanBadgeHT}</div>
                         </td>
                         <td style="text-align: center; padding: 0.6rem 0.4rem; vertical-align: middle;">
                             ${trendStatusHtmlHT}
