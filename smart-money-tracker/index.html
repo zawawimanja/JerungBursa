@@ -6269,9 +6269,26 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 });
             } else {
                 picks.sort((a, b) => {
-                    // 0. Keutamaan #0: Duit Jerung Aktif (Turnover >= RM 2.0M) sentiasa diutamakan atas kaunter lemau!
                     const toA = a.turnover || a.rawTurnover || 0;
                     const toB = b.turnover || b.rawTurnover || 0;
+                    const ta = typeof a.closeTightness === 'number' ? a.closeTightness : 99;
+                    const tb = typeof b.closeTightness === 'number' ? b.closeTightness : 99;
+                    const ea = effFloorOf(a), eb = effFloorOf(b);
+                    const da = ea ? ((a.price - ea) / ea * 100) : 99;
+                    const db = eb ? ((b.price - eb) / eb * 100) : 99;
+                    const swanA = typeof getBlackSwanEvaluation === 'function' ? getBlackSwanEvaluation(a.name, a, curRefDate) : null;
+                    const swanB = typeof getBlackSwanEvaluation === 'function' ? getBlackSwanEvaluation(b.name, b, curRefDate) : null;
+                    const swanCleanA = !swanA || (swanA.status && String(swanA.status).toLowerCase() === 'pass');
+                    const swanCleanB = !swanB || (swanB.status && String(swanB.status).toLowerCase() === 'pass');
+                    const dumpA = a.hasUpperWickRejection === true && (a.change < 0 || (a.changePct && a.changePct < 0));
+                    const dumpB = b.hasUpperWickRejection === true && (b.change < 0 || (b.changePct && b.changePct < 0));
+
+                    // ⭐ Keutamaan Mutlak #1: ⭐ TIER A+ SNIPER (Turnover >= RM2M + Squeeze <= 3.5% + Floor <= 3.5% + Black Swan PASS + Tiada Selling Dump)
+                    const isTierAPlusA = (toA >= 2000000 && ta <= 3.5 && da >= -1.0 && da <= 3.5 && swanCleanA && !dumpA) ? 1 : 0;
+                    const isTierAPlusB = (toB >= 2000000 && tb <= 3.5 && db >= -1.0 && db <= 3.5 && swanCleanB && !dumpB) ? 1 : 0;
+                    if (isTierAPlusA !== isTierAPlusB) return isTierAPlusB - isTierAPlusA;
+
+                    // 0. Keutamaan #0: Duit Jerung Aktif (Turnover >= RM 2.0M) sentiasa diutamakan atas kaunter lemau!
                     const isWhaleA = toA >= 2000000 ? 1 : 0;
                     const isWhaleB = toB >= 2000000 ? 1 : 0;
                     if (isWhaleA !== isWhaleB) return isWhaleB - isWhaleA;
@@ -6286,15 +6303,12 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     if (fa !== fb) return fa - fb;
 
                     // 3. Keutamaan #3: Tightness % (Squeeze Rapat)
-                    const ta = typeof a.closeTightness === 'number' ? a.closeTightness : 99;
-                    const tb = typeof b.closeTightness === 'number' ? b.closeTightness : 99;
                     if (ta !== tb) return ta - tb;
 
                     // 4. Jarak Floor (Risiko SL Nipis)
-                    const ea = effFloorOf(a), eb = effFloorOf(b);
-                    const da = ea ? Math.max(0, (a.price - ea) / ea) : 99;
-                    const db = eb ? Math.max(0, (b.price - eb) / eb) : 99;
-                    if (da !== db) return da - db;
+                    const distFloorA = ea ? Math.max(0, (a.price - ea) / ea) : 99;
+                    const distFloorB = eb ? Math.max(0, (b.price - eb) / eb) : 99;
+                    if (distFloorA !== distFloorB) return distFloorA - distFloorB;
 
                     // 5. Pullback %
                     const pa = a.pullback !== null && a.pullback !== undefined ? a.pullback : 99;
@@ -6422,7 +6436,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 const fDistVal = effF ? ((item.price - effF) / effF * 100) : 99;
                 const tightValNum = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
                 const swanEval = typeof getBlackSwanEvaluation === 'function' ? getBlackSwanEvaluation(item.name, item, curRefDate) : null;
-                const isBlackSwanClean = !swanEval || swanEval.status === 'pass';
+                const isBlackSwanClean = !swanEval || (swanEval.status && String(swanEval.status).toLowerCase() === 'pass');
                 const isRealUpperWickDump = item.hasUpperWickRejection === true && (item.change < 0 || (item.changePct && item.changePct < 0));
 
                 // Syarat Emas Tier A+ Sniper:
@@ -6431,8 +6445,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 // 3. Jarak ke Lantai <= 3.5%
                 // 4. Bebas Risiko Black Swan (Ex-Div / QR / Debut Dump)
                 // 5. Tiada Selling Dump Merah
-                const isTierAPlus = (toVal >= 2000000 && tightValNum <= 3.5 && fDistVal <= 3.5 && isBlackSwanClean && !isRealUpperWickDump);
-                const isTierA = (!isTierAPlus && toVal >= 500000 && tightValNum <= 5.0 && fDistVal <= 5.0 && !isRealUpperWickDump);
+                const isTierAPlus = (toVal >= 2000000 && tightValNum <= 3.5 && fDistVal >= -1.0 && fDistVal <= 3.5 && isBlackSwanClean && !isRealUpperWickDump);
+                const isTierA = (!isTierAPlus && toVal >= 500000 && tightValNum <= 5.0 && fDistVal >= -1.5 && fDistVal <= 5.0 && !isRealUpperWickDump);
 
                 if (isTierAPlus) {
                     badgesHtml += `<span style="font-size: 0.62rem; background: linear-gradient(135deg, rgba(234,179,8,0.35), rgba(16,185,129,0.35)); color: #fde047; padding: 0.1rem 0.42rem; border-radius: 4px; font-weight: 900; border: 1.2px solid rgba(253,224,71,0.85); box-shadow: 0 0 10px rgba(253,224,71,0.25); white-space: nowrap; letter-spacing: 0.3px;" title="⭐ TIER A+ SNIPER: Mematuhi semua 3 Angka Emas (Turnover >= RM2M, Tightness <= 3.5%, Lantai <= 3.5%) + Bebas Black Swan!">⭐ TIER A+ SNIPER</span>`;

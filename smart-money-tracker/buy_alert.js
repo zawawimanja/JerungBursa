@@ -333,18 +333,28 @@ async function pLimit(concurrency, items, fn) {
     return Promise.all(results);
 }
 
+const vm = require('vm');
+
 // -------------------------------------------------------------
-// Load tracker file (window.X = {...}; — buang comment & prefix)
+// Load tracker file (window.X = {...}; — guna VM context yang selamat & sokong multiple window assignments)
 // -------------------------------------------------------------
 function loadTrackerTrades(file) {
+    if (!fs.existsSync(file)) return [];
     try {
-        let raw = fs.readFileSync(file, 'utf8');
-        raw = raw.replace(/^\/\/[^\n]*\n/g, '');
-        const start = raw.indexOf('=');
-        if (start < 0) return [];
-        const obj = JSON.parse(raw.slice(start + 1).replace(/;\s*$/, '').trim());
-        return (obj && Array.isArray(obj.trades)) ? obj.trades : [];
-    } catch (e) { return []; }
+        const raw = fs.readFileSync(file, 'utf8');
+        const sandbox = { window: {} };
+        vm.runInNewContext(raw, sandbox);
+        const fr = sandbox.window.FRESH_RIDER_TRACKER;
+        const addOn = sandbox.window.ADD_ON_TRACKER;
+        const ht = sandbox.window.HOT_THEME_TRACKER;
+        const allTrades = [];
+        if (fr && Array.isArray(fr.trades)) allTrades.push(...fr.trades);
+        if (addOn && Array.isArray(addOn.trades)) allTrades.push(...addOn.trades);
+        if (ht && Array.isArray(ht.trades)) allTrades.push(...ht.trades);
+        return allTrades;
+    } catch (e) {
+        return [];
+    }
 }
 
 // -------------------------------------------------------------
@@ -451,7 +461,8 @@ function buildMessage(now, out) {
                 ? `\n   ⚠️ *BERITA / EX-DIV:* ${s.newsBadges.map(b => b.label).join(' · ')}`
                 : '';
 
-            lines.push(`${medal} *${s.name}* (${s.label}${gradeStr}${themeTxt})`);
+            const tierTxt = s.tierBadge ? ` [${s.tierBadge}]` : '';
+            lines.push(`${medal} *${s.name}*${tierTxt} (${s.label}${gradeStr}${themeTxt})`);
             lines.push(`   💵 Harga: *RM ${fmtPrice(s.price)}* (${fmtPct(s.changePct)}) · ${csTxt}`);
             lines.push(`   📐 Squeeze: Tight *${tightStr}* | PB *${pbStr}*`);
             lines.push(`   🛡️ SL: *RM ${fmtPrice(s.sl)}* | Floor: *RM ${fmtPrice(s.floor)}*`);
@@ -658,6 +669,14 @@ function buildMessage(now, out) {
 
     const frOut = frList.map(s => {
         const effF = effFloor(s.name, s.price, s.floorLow || s.price * 0.95);
+        const toVal = s.rawTurnover || s.turnover || 0;
+        const tight = typeof s.closeTightness === 'number' ? s.closeTightness : 99;
+        const floorDist = effF ? +(((s.price - effF) / effF) * 100).toFixed(2) : 99;
+        const isDump = s.hasUpperWickRejection === true && (s.change < 0 || (s.changePct && s.changePct < 0));
+        const isTierAPlus = (toVal >= 2000000 && tight <= 3.5 && floorDist >= -1.0 && floorDist <= 3.5 && !isDump);
+        const isTierA = (!isTierAPlus && toVal >= 500000 && tight <= 5.0 && floorDist >= -1.5 && floorDist <= 5.0 && !isDump);
+        const tierBadge = isTierAPlus ? '⭐ TIER A+ SNIPER' : (isTierA ? '🎯 TIER A' : '⚪ TIER B');
+
         return {
             name: s.name, price: s.price, changePct: s.changePct, pullback: s.pullback,
             tight: typeof s.closeTightness === 'number' ? s.closeTightness : null,
@@ -666,6 +685,8 @@ function buildMessage(now, out) {
             sl: +Math.max(s.price * 0.89, s.price * 0.80).toFixed(3),
             inTracker: frTrackedNames.has(canonName(s.name).toUpperCase()),
             label: signalLabel(s, frTrackedStatus),
+            tierBadge,
+            isTierAPlus,
             touch: s.touchCount || 0,
             turnover: s.rawTurnover || s.turnover || 0,
             grade: s.ipoGrade || s.ipoYear || '—',
@@ -688,20 +709,13 @@ function buildMessage(now, out) {
         };
     });
     // Susun mengikut susunan Top Ranking VVIP di web:
+    // 0. ⭐ TIER A+ SNIPER mutlak ke atas
     // 1. FUSION dulu (Semicon/Solar)
-    // 2. Freshness (🔥 NEW (Day 1) > ⭐ ADD-ON A+ > ➕ ADD-ON > ⚠️ ADD-ON > 🟢 RE-ENTRY)
+    // 2. Freshness (🔥 NEW (Day 1) > ⭐ ADD-ON A+ > 🛡️ ADD-ON (LANTAI RAPAT) > ➕ ADD-ON > ⚠️ ADD-ON > 🟢 RE-ENTRY)
     // 3. Tightness % (paling mampat/squeeze)
     // 4. Floor dist % (SL nipis)
     // 5. Pullback %
     // 6. Turnover (paling besar)
-    function freshnessRank(label) {
-        if (!label) return 4;
-        if (label.includes('NEW')) return 0;
-        if (label.includes('ADD-ON A+')) return 1;
-        if (label.includes('ADD-ON') && !label.includes('⚠️')) return 2;
-        if (label.includes('⚠️')) return 3;
-        return 4; // RE-ENTRY
-    }
     const tieWhale = (a, b) => {
         const wa = (a.turnover || 0) >= 2000000 ? 1 : 0;
         const wb = (b.turnover || 0) >= 2000000 ? 1 : 0;
@@ -713,6 +727,7 @@ function buildMessage(now, out) {
     const tieTouch = (a, b) => (b.touch - a.touch);
     const tieTurnover = (a, b) => (b.turnover - a.turnover);
     frOut.sort((a, b) => {
+        if (a.isTierAPlus !== b.isTierAPlus) return b.isTierAPlus ? 1 : -1;
         const fusionA = getHotThemes(a.name).length > 0;
         const fusionB = getHotThemes(b.name).length > 0;
         if (fusionA !== fusionB) return fusionA ? -1 : 1;
