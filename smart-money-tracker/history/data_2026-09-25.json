@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-25T09:20:42.628Z",
+  "lastUpdated": "2026-09-25T09:30:54.828Z",
   "source": "klse.i3investor.com",
   "topVolume": [
     {
@@ -12588,8 +12588,8 @@
       "price": 1.6699999570846558,
       "change": -0.060000061988830566,
       "changePct": -3.47,
-      "turnover": 4525031.883716583,
-      "volume": 2709600,
+      "turnover": 4521691.883802414,
+      "volume": 2707600,
       "signal": "avoid",
       "reason": "🧊 Downtrend Stock: Avoid Trading!",
       "high52": 2.059999942779541,
@@ -13365,8 +13365,8 @@
       "price": 0.004999999888241291,
       "change": -0.005000000111758709,
       "changePct": -50,
-      "turnover": 4533365.398671385,
-      "volume": 906673100,
+      "turnover": 4532270.39869586,
+      "volume": 906454100,
       "signal": "avoid",
       "reason": "🧊 Downtrend Stock: Avoid Trading!",
       "high52": 0.014999999664723873,
