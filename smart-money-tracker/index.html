@@ -6415,6 +6415,38 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     : `<span style="color: #94a3b8; font-weight: 600; background: rgba(148,163,184,0.1); padding: 0.15rem 0.45rem; border-radius: 4px; font-size: 0.72rem; border: 1px solid rgba(148,163,184,0.2); white-space: nowrap;">NO</span>`;
 
                 let badgesHtml = '';
+
+                // 0. Sniper Tier Classification (⭐ A+ Sniper vs 🎯 Tier A vs ⚪ Tier B)
+                const toVal = item.turnover || item.rawTurnover || 0;
+                const effF = effFloor;
+                const fDistVal = effF ? ((item.price - effF) / effF * 100) : 99;
+                const tightValNum = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
+                const swanEval = typeof getBlackSwanEvaluation === 'function' ? getBlackSwanEvaluation(item.name, item, curRefDate) : null;
+                const isBlackSwanClean = !swanEval || swanEval.status === 'pass';
+                const isRealUpperWickDump = item.hasUpperWickRejection === true && (item.change < 0 || (item.changePct && item.changePct < 0));
+
+                // Syarat Emas Tier A+ Sniper:
+                // 1. Turnover Jerung >= RM 2.0M
+                // 2. Tightness Squeeze <= 3.5%
+                // 3. Jarak ke Lantai <= 3.5%
+                // 4. Bebas Risiko Black Swan (Ex-Div / QR / Debut Dump)
+                // 5. Tiada Selling Dump Merah
+                const isTierAPlus = (toVal >= 2000000 && tightValNum <= 3.5 && fDistVal <= 3.5 && isBlackSwanClean && !isRealUpperWickDump);
+                const isTierA = (!isTierAPlus && toVal >= 500000 && tightValNum <= 5.0 && fDistVal <= 5.0 && !isRealUpperWickDump);
+
+                if (isTierAPlus) {
+                    badgesHtml += `<span style="font-size: 0.62rem; background: linear-gradient(135deg, rgba(234,179,8,0.35), rgba(16,185,129,0.35)); color: #fde047; padding: 0.1rem 0.42rem; border-radius: 4px; font-weight: 900; border: 1.2px solid rgba(253,224,71,0.85); box-shadow: 0 0 10px rgba(253,224,71,0.25); white-space: nowrap; letter-spacing: 0.3px;" title="⭐ TIER A+ SNIPER: Mematuhi semua 3 Angka Emas (Turnover >= RM2M, Tightness <= 3.5%, Lantai <= 3.5%) + Bebas Black Swan!">⭐ TIER A+ SNIPER</span>`;
+                } else if (isTierA) {
+                    badgesHtml += `<span style="font-size: 0.6rem; background: rgba(56,189,248,0.2); color: #38bdf8; padding: 0.08rem 0.35rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(56,189,248,0.45); white-space: nowrap;" title="🎯 TIER A: Setup berkualiti baik tetapi belum capai paras Tier A+ Sniper.">🎯 TIER A</span>`;
+                } else {
+                    badgesHtml += `<span style="font-size: 0.58rem; background: rgba(148,163,184,0.15); color: #94a3b8; padding: 0.06rem 0.3rem; border-radius: 4px; font-weight: 700; border: 1px solid rgba(148,163,184,0.3); white-space: nowrap;" title="⚪ TIER B: Kualiti standard / pemerhatian sahaja.">⚪ TIER B</span>`;
+                }
+
+                // Upper Wick Rejection Warning Badge hanya jika benar-benar selling dump merah
+                if (isRealUpperWickDump) {
+                    badgesHtml += `<span style="font-size: 0.6rem; background: rgba(239,68,68,0.25); color: #f87171; padding: 0.06rem 0.32rem; border-radius: 3px; font-weight: 800; border: 1px solid rgba(239,68,68,0.5); white-space: nowrap;" title="⚠️ UPPER WICK DUMP: Ekor atas panjang disertai lilin merah — tekanan jualan aktif.">⚠️ UPPER WICK DUMP</span>`;
+                }
+
                 // 1. Expansion Volume Spike Warning (hanya tunjuk jika GREEN CS spike untuk elak kejar pucuk)
                 const csExpanded = item.hasVolumeSpike === true && (item.volumeSpike || 0) >= 1.5;
                 if (csExpanded) {
@@ -6449,7 +6481,6 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 }
 
                 // 6. Black Swan Risk Evaluation (Ex-Div Trap / QR Risk / IPO Dump / PASS)
-                const swanEval = typeof getBlackSwanEvaluation === 'function' ? getBlackSwanEvaluation(item.name, item, curRefDate) : null;
                 if (swanEval) {
                     badgesHtml += swanEval.badgeHtml;
                 }
