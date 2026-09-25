@@ -11,5 +11,18 @@
     "exitDate": "2026-09-08",
     "technique": "Top 1 VVIP Breakout",
     "notes": "Untung RM 248.16 telah dipusingkan (snowball) ke PENTECH & STRATUS."
+  },
+  {
+    "name": "STRATUS",
+    "symbol": "5356.KL",
+    "buyPrice": 2.760,
+    "sellPrice": 3.170,
+    "allocation": 2000,
+    "gainPct": 14.86,
+    "profit": 287.00,
+    "entryDate": "2026-07-24",
+    "exitDate": "2026-09-23",
+    "technique": "Top 2 VVIP (Base 2 Rider)",
+    "notes": "Jual pada 3.170 (+14.86%)."
   }
 ]

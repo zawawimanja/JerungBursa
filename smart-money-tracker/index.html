@@ -1242,6 +1242,7 @@
                             <tr style="user-select: none;">
                                 <th style="text-align: center; width: 45px; cursor: pointer;" onclick="sortFR('no')" title="Click to reset to default hierarchy ranking">No <span id="frSort_no"></span></th>
                                 <th style="cursor: pointer;" onclick="sortFR('name')" title="Click to sort by Stock Name & Category (Hierarchy 1: New Signal)">Stock &amp; Category <span id="frSort_name" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: center;">Trend Status</th>
                                 <th style="text-align: right; cursor: pointer;" onclick="sortFR('tightness')" title="Click to sort by Tightness % (Hierarchy 2: Tight Squeeze)">Tightness % <span id="frSort_tightness" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: right; cursor: pointer;" onclick="sortFR('floor')" title="Click to sort by Support Floor & Risk % (Hierarchy 3: Tight Risk)">Support Floor (Risk %) <span id="frSort_floor" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: right; cursor: pointer;" onclick="sortFR('trigger')" title="Click to sort by Distance from Initial Trigger % (Day 1 vs Extended)">Trigger &amp; Dist % <span id="frSort_trigger" style="color:#64748b;">↕</span></th>
@@ -1254,7 +1255,7 @@
                         </thead>
                         <tbody id="confluenceRadarTableBody">
                             <tr>
-                                <td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
+                                <td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
                                     ⏳ Loading Fresh VVIP Rider...
                                 </td>
                             </tr>
@@ -1515,6 +1516,7 @@
                             <th style="text-align: center; width: 35px;">#</th>
                             <th style="text-align: left;">Counter</th>
                             <th style="text-align: center;">Status</th>
+                            <th style="text-align: center;">Trend Status</th>
                             <th style="text-align: center;">Entry Date</th>
                             <th style="text-align: right;">Entry Price</th>
                             <th style="text-align: right;">Current / Exit Price</th>
@@ -1527,7 +1529,7 @@
                         </tr>
                     </thead>
                     <tbody id="frTrackerTableBody">
-                        <tr><td colspan="12" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">⏳ Loading Fresh Rider tracker...</td></tr>
+                        <tr><td colspan="13" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">⏳ Loading Fresh Rider tracker...</td></tr>
                     </tbody>
                 </table>
             </div>
@@ -6344,7 +6346,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 else if (!currentData || currentData.length === 0) {
                     emptyMsg = '⚠️ Data belum dimuat naik — sila klik <strong>🔄 Muat Data</strong> di atas.';
                 }
-                tbody.innerHTML = `<tr><td colspan="10" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">${emptyMsg}</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">${emptyMsg}</td></tr>`;
                 renderFreshRiderTracker();
                 return;
             }
@@ -6441,6 +6443,11 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     badgesHtml += swanEval.badgeHtml;
                 }
 
+                const isDowntrend = (item.setupName || '').includes('Downtrend') || (item.reason || '').includes('Downtrend');
+                const trendStatusHtml = isDowntrend
+                    ? '<span style="font-size: 0.62rem; background: rgba(239,68,68,0.2); color: #f87171; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(249,115,22,0.4);">🧊 DOWNTREND</span>'
+                    : '<span style="font-size: 0.62rem; background: rgba(16,185,129,0.2); color: #34d399; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16,185,129,0.4);">🔥 UPTREND</span>';
+
                 html += `
                     <tr data-fr-name="${item.name}">
                         <td style="text-align: center; font-weight: 800; color: #fde047;">#${idx + 1}</td>
@@ -6449,6 +6456,9 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                             <div class="fr-badge-row" style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.25rem; flex-wrap: wrap;">
                                 ${badgesHtml}
                             </div>
+                        </td>
+                        <td style="text-align: center; padding: 0.6rem 0.4rem; vertical-align: middle;">
+                            ${trendStatusHtml}
                         </td>
                         <td style="text-align: right; color: #38bdf8; font-weight: 800;" title="Tightness: ${tightVal}% — semakin rapat konsolidasi squeeze, semakin bersedia untuk breakout">
                             tight ${tightVal}%
@@ -6638,6 +6648,13 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 ).toFixed(3);
 
                 const liveItem = liveList.find(it => (it.name || '').toUpperCase() === (t.name || '').toUpperCase());
+                let trendStatusHtml = '<span style="color:#64748b; font-size:0.65rem;">N/A</span>';
+                if (liveItem) {
+                    const isDowntrend = (liveItem.setupName || '').includes('Downtrend') || (liveItem.reason || '').includes('Downtrend');
+                    trendStatusHtml = isDowntrend
+                        ? '<span style="font-size: 0.62rem; background: rgba(239,68,68,0.2); color: #f87171; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(249,115,22,0.4);">🧊 DOWNTREND</span>'
+                        : '<span style="font-size: 0.62rem; background: rgba(16,185,129,0.2); color: #34d399; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16,185,129,0.4);">🔥 UPTREND</span>';
+                }
                 let stillRadar = '';
                 if (!isOpen) {
                     stillRadar = '<span style="font-size: 0.62rem; color: #f87171; font-weight: 800;" title="Position closed (hit trailing stop)">🔒 CLOSED</span>';
@@ -6680,6 +6697,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         <div style="font-size: 0.62rem; color: #64748b; font-weight: 600; margin-top: 0.15rem;">${t.sector || ''}</div>
                     </td>
                     <td style="text-align: center;">${statusBadge}</td>
+                    <td style="text-align: center;">${trendStatusHtml}</td>
                     <td style="text-align: center; color: #94a3b8; font-size: 0.72rem;">${t.entryDate.slice(5)}</td>
                     <td style="text-align: right; color: white; font-weight: 700;">RM ${t.entry.toFixed(3)}</td>
                     <td style="text-align: right; color: white; font-weight: 700;">RM ${(exitPx || 0).toFixed(3)}${isOpen ? '' : ' <span style="font-size:0.6rem;color:#64748b;">(' + t.exitDate.slice(5) + ')</span>'}</td>
