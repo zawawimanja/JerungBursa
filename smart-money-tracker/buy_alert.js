@@ -663,6 +663,46 @@ function buildMessage(now, out) {
         return isFusion || rank <= 2 || tight <= 3.5 || isHighConfidence;
     }
 
+    let newsData = {};
+    try {
+        const newsPath = path.join(__dirname, 'news_data.js');
+        if (fs.existsSync(newsPath)) {
+            const rawNews = fs.readFileSync(newsPath, 'utf8');
+            const ctx = { window: {} };
+            vm.runInNewContext(rawNews, ctx);
+            newsData = ctx.window.NEWS_DATA || ctx.NEWS_DATA || {};
+        }
+    } catch (e) {}
+
+    function isBlackSwanClean(s) {
+        const up = (s.name || '').toUpperCase();
+        const news = newsData[up];
+        const refDate = now;
+        if (news && Array.isArray(news.entitlements)) {
+            for (const ent of news.entitlements) {
+                if (!ent.isDividend || !ent.exDate) continue;
+                const exD = new Date(ent.exDate);
+                if (isNaN(exD.getTime())) continue;
+                const diffDays = Math.round((exD.getTime() - refDate.getTime()) / (24 * 3600 * 1000));
+                if (diffDays >= -1 && diffDays <= 10) return false;
+            }
+        }
+        if (news && Array.isArray(news.announcements)) {
+            for (const ann of news.announcements) {
+                const cat = (ann.category || '').toUpperCase();
+                const title = (ann.title || '').toUpperCase();
+                if (title.includes('QUARTERLY') || title.includes('FINANCIAL RESULTS') || cat.includes('FINANCIAL')) {
+                    const annD = new Date(ann.date);
+                    if (!isNaN(annD.getTime())) {
+                        const diffDays = Math.round((annD.getTime() - refDate.getTime()) / (24 * 3600 * 1000));
+                        if (diffDays >= -3 && diffDays <= 5) return false;
+                    }
+                }
+            }
+        }
+        return true;
+    }
+
     // 6. Kira list FR (Top Ranking VVIP) & HT hari ini
     const frList = candidates.filter(isFreshRiderPick).filter(isTopRankingVvip);
     const htList = candidates.filter(isHotThemePick);
@@ -673,8 +713,9 @@ function buildMessage(now, out) {
         const tight = typeof s.closeTightness === 'number' ? s.closeTightness : 99;
         const floorDist = effF ? +(((s.price - effF) / effF) * 100).toFixed(2) : 99;
         const isDump = s.hasUpperWickRejection === true && (s.change < 0 || (s.changePct && s.changePct < 0));
-        const isTierAPlus = (toVal >= 2000000 && tight <= 3.5 && floorDist >= -1.0 && floorDist <= 3.5 && !isDump);
-        const isTierA = (!isTierAPlus && toVal >= 500000 && tight <= 5.0 && floorDist >= -1.5 && floorDist <= 5.0 && !isDump);
+        const isSwanClean = isBlackSwanClean(s);
+        const isTierAPlus = (toVal >= 2000000 && tight <= 3.5 && floorDist >= -1.0 && floorDist <= 3.5 && isSwanClean && !isDump);
+        const isTierA = (!isTierAPlus && toVal >= 500000 && tight <= 5.0 && floorDist >= -1.5 && floorDist <= 5.0 && isSwanClean && !isDump);
         const tierBadge = isTierAPlus ? '⭐ TIER A+ SNIPER' : (isTierA ? '🎯 TIER A' : '⚪ TIER B');
 
         return {
@@ -700,8 +741,9 @@ function buildMessage(now, out) {
         const tight = typeof s.closeTightness === 'number' ? s.closeTightness : 99;
         const floorDist = effF ? +(((s.price - effF) / effF) * 100).toFixed(2) : 99;
         const isDump = s.hasUpperWickRejection === true && (s.change < 0 || (s.changePct && s.changePct < 0));
-        const isTierAPlus = (toVal >= 2000000 && tight <= 3.5 && floorDist >= -1.0 && floorDist <= 3.5 && !isDump);
-        const isTierA = (!isTierAPlus && toVal >= 500000 && tight <= 5.0 && floorDist >= -1.5 && floorDist <= 5.0 && !isDump);
+        const isSwanClean = isBlackSwanClean(s);
+        const isTierAPlus = (toVal >= 2000000 && tight <= 3.5 && floorDist >= -1.0 && floorDist <= 3.5 && isSwanClean && !isDump);
+        const isTierA = (!isTierAPlus && toVal >= 500000 && tight <= 5.0 && floorDist >= -1.5 && floorDist <= 5.0 && isSwanClean && !isDump);
         const tierBadge = isTierAPlus ? '⭐ TIER A+ SNIPER' : (isTierA ? '🎯 TIER A' : '⚪ TIER B');
 
         return {
@@ -747,6 +789,9 @@ function buildMessage(now, out) {
     htOut.sort((a, b) => {
         if (a.isTierAPlus !== b.isTierAPlus) return b.isTierAPlus ? 1 : -1;
         if (a.isTierA !== b.isTierA) return b.isTierA ? 1 : -1;
+        const fusionA = isFreshRiderPick(a) && getHotThemes(a.name).length > 0;
+        const fusionB = isFreshRiderPick(b) && getHotThemes(b.name).length > 0;
+        if (fusionA !== fusionB) return fusionA ? -1 : 1;
         return tieWhale(a, b) || (freshnessRank(a.label) - freshnessRank(b.label)) || tieTight(a, b) || tieFloor(a, b) || tiePb(a, b) || (b.confluence - a.confluence) || tieTouch(a, b) || tieTurnover(a, b);
     });
 

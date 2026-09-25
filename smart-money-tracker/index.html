@@ -6447,7 +6447,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 // 4. Bebas Risiko Black Swan (Ex-Div / QR / Debut Dump)
                 // 5. Tiada Selling Dump Merah
                 const isTierAPlus = (toVal >= 2000000 && tightValNum <= 3.5 && fDistVal >= -1.0 && fDistVal <= 3.5 && isBlackSwanClean && !isRealUpperWickDump);
-                const isTierA = (!isTierAPlus && toVal >= 500000 && tightValNum <= 5.0 && fDistVal >= -1.5 && fDistVal <= 5.0 && !isRealUpperWickDump);
+                const isTierA = (!isTierAPlus && toVal >= 500000 && tightValNum <= 5.0 && fDistVal >= -1.5 && fDistVal <= 5.0 && isBlackSwanClean && !isRealUpperWickDump);
 
                 if (isTierAPlus) {
                     badgesHtml += `<span style="font-size: 0.62rem; background: linear-gradient(135deg, rgba(234,179,8,0.35), rgba(16,185,129,0.35)); color: #fde047; padding: 0.1rem 0.42rem; border-radius: 4px; font-weight: 900; border: 1.2px solid rgba(253,224,71,0.85); box-shadow: 0 0 10px rgba(253,224,71,0.25); white-space: nowrap; letter-spacing: 0.3px;" title="⭐ TIER A+ SNIPER: Mematuhi semua 3 Angka Emas (Turnover >= RM2M, Tightness <= 3.5%, Lantai <= 3.5%) + Bebas Black Swan!">⭐ TIER A+ SNIPER</span>`;
@@ -8776,7 +8776,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 const isRealUpperWickDump = it.hasUpperWickRejection === true && (it.change < 0 || (it.changePct && it.changePct < 0));
 
                 const isTierAPlus = (toVal >= 2000000 && tightValNum <= 3.5 && fDistVal >= -1.0 && fDistVal <= 3.5 && isBlackSwanClean && !isRealUpperWickDump);
-                const isTierA = (!isTierAPlus && toVal >= 500000 && tightValNum <= 5.0 && fDistVal >= -1.5 && fDistVal <= 5.0 && !isRealUpperWickDump);
+                const isTierA = (!isTierAPlus && toVal >= 500000 && tightValNum <= 5.0 && fDistVal >= -1.5 && fDistVal <= 5.0 && isBlackSwanClean && !isRealUpperWickDump);
                 return { isTierAPlus, isTierA, toVal, fDistVal, tightValNum };
             };
 
@@ -8816,16 +8816,21 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     if (tierA.isTierAPlus !== tierB.isTierAPlus) return tierB.isTierAPlus ? 1 : -1;
                     if (tierA.isTierA !== tierB.isTierA) return tierB.isTierA ? 1 : -1;
 
-                    // 1. Duit Jerung Aktif (Turnover >= RM 2.0M)
+                    // 1. Keutamaan #1: ⚡ FUSION (Lulus FR + HT Serentak)
+                    const fusionA = isFreshRiderPick(a.item) && (a.themes || []).length > 0;
+                    const fusionB = isFreshRiderPick(b.item) && (b.themes || []).length > 0;
+                    if (fusionA !== fusionB) return fusionA ? -1 : 1;
+
+                    // 2. Duit Jerung Aktif (Turnover >= RM 2.0M)
                     const isWhaleA = tierA.toVal >= 2000000 ? 1 : 0;
                     const isWhaleB = tierB.toVal >= 2000000 ? 1 : 0;
                     if (isWhaleA !== isWhaleB) return isWhaleB - isWhaleA;
 
-                    // 2. Freshness
+                    // 3. Freshness
                     const fa = htFreshness(a.item), fb = htFreshness(b.item);
                     if (fa !== fb) return fa - fb;
 
-                    // 3. Tightness Squeeze
+                    // 4. Tightness Squeeze
                     const ta = tierA.tightValNum;
                     const tb = tierB.tightValNum;
                     if (ta !== tb) return ta - tb;
