@@ -99,7 +99,7 @@ function fmtPct(p) { return p == null ? '—' : (p > 0 ? '+' : '') + Number(p).t
                     target: pos.tp1,
                     gainPct,
                     grossPnl,
-                    advice: `Harga mencecah sasaran TP1 RM ${fmtPrice(pos.tp1)} (${fmtPct(gainPct)})! Kunci 50% untung (+RM ${(grossPnl*0.5).toFixed(2)} masuk poket) dan naikkan Stop Loss ke harga modal RM ${fmtPrice(pos.buyPrice)}.`
+                    advice: `Harga mencecah sasaran TP1 RM ${fmtPrice(pos.tp1)} (${fmtPct(gainPct)})! Tindakan Wajib SOP Jual 50%: 1. Jual 50% lot sekarang (+RM ${(grossPnl*0.5).toFixed(2)} tunai masuk poket) · 2. Naikkan Stop Loss baki 50% ke harga modal RM ${fmtPrice(pos.buyPrice)} (Free Trade) · 3. Biarkan baki 50% menunggang ke sasaran TP2 RM ${fmtPrice(pos.tp2)} (+20%+).`
                 });
             }
         }
