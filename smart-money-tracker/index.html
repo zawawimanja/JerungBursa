@@ -6366,8 +6366,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const trTrade = frTrackMap ? frTrackMap.get(nm) : null;
 
             // 1. Day 1 (BARU): Belum ada dalam tracker atau entryDate >= tarikh rujukan
-            const cleanRefDate = curRefDate && curRefDate.length > 5 ? curRefDate.split('-').slice(-2).join('-') : curRefDate;
-            if (!trTrade || !trTrade.entry || (trTrade.entryDate && trTrade.entryDate >= cleanRefDate)) {
+            if (!trTrade || !trTrade.entry || (trTrade.entryDate && trTrade.entryDate >= curRefDate)) {
                 return { price: item.price, dateStr: 'Hari Ini', distPct: 0, isDayOne: true, isBase2: false };
             }
 
@@ -6673,8 +6672,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 const tr = frTrackMap.get((it.name || '').toUpperCase());
                 if (!tr) return 0;
                 if (tr.status === 'OPEN') {
-                    const clRef = curRefDate && curRefDate.length > 5 ? curRefDate.split('-').slice(-2).join('-') : curRefDate;
-                    if (tr.entryDate && tr.entryDate >= clRef) return 0;
+                    if (tr.entryDate && tr.entryDate >= curRefDate) return 0;
                     const entryP = tr.entry || 0;
                     const pct = (entryP > 0 && it.price) ? ((it.price - entryP) / entryP) * 100 : 0;
                     const ef = effFloorOf(it);
@@ -8898,7 +8896,6 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const trackedTrades = new Map((window.FRESH_RIDER_TRACKER && Array.isArray(window.FRESH_RIDER_TRACKER.trades) ? window.FRESH_RIDER_TRACKER.trades : [])
                 .map(t => [(t.name || '').toUpperCase(), t]));
             const todayStr = hd || (window.FRESH_RIDER_TRACKER && window.FRESH_RIDER_TRACKER.summary && window.FRESH_RIDER_TRACKER.summary.generatedAt ? window.FRESH_RIDER_TRACKER.summary.generatedAt.slice(0, 10) : new Date().toISOString().slice(0, 10));
-            const todayMD = todayStr.length > 5 ? todayStr.split('-').slice(-2).join('-') : todayStr;
 
             // Create lookup map of current rendered picks for exact price, floor & tightness
             const currentPicksMap = new Map((window._latestFreshRiderPicks || currentData || []).map(it => [(it.name || '').toUpperCase(), it]));
@@ -8917,8 +8914,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 const trTrade = trackedTrades.get(nameUpper);
                 const item = currentPicksMap.get(nameUpper);
 
-                // ➕ ADD-ON: MASIH OPEN dalam tracker & BERLAKU SEBELUM HARI INI (entryDate < todayMD)
-                if (trTrade && trTrade.status === 'OPEN' && trTrade.entryDate < todayMD) {
+                // ➕ ADD-ON: MASIH OPEN dalam tracker & BERLAKU SEBELUM HARI INI (entryDate < todayStr)
+                if (trTrade && trTrade.status === 'OPEN' && trTrade.entryDate < todayStr) {
                     const badge = document.createElement('span');
                     badge.className = 'fr-new-badge';
                     const entryPrice = trTrade.entry || 0;
@@ -8965,8 +8962,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         badge.title = 'ADD-ON: Currently OPEN in Live Fresh Rider Tracker & re-qualifying today.';
                     }
                     badgeRow.prepend(badge);
-                } else if (trTrade && trTrade.entryDate && trTrade.entryDate >= todayMD) {
-                    // 🔥 NEW (Day 1): entry TODAY (entryDate >= todayMD) — first time signal
+                } else if (trTrade && trTrade.entryDate && trTrade.entryDate >= todayStr) {
+                    // 🔥 NEW (Day 1): entry TODAY (entryDate >= todayStr) — first time signal
                     const badge = document.createElement('span');
                     badge.className = 'fr-new-badge';
                     badge.textContent = '🔥 NEW (Day 1)';
@@ -9076,7 +9073,6 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             }
 
             const todayStr = hd || (window.HOT_THEME_TRACKER && window.HOT_THEME_TRACKER.summary && window.HOT_THEME_TRACKER.summary.generatedAt ? window.HOT_THEME_TRACKER.summary.generatedAt.slice(0, 10) : new Date().toISOString().slice(0, 10));
-            const todayMD = todayStr.length > 5 ? todayStr.split('-').slice(-2).join('-') : todayStr;
 
             // Clear old badges
             tbody.querySelectorAll('.ht-new-badge').forEach(el => el.remove());
@@ -9091,7 +9087,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 const htTrade = trackedTrades.get(nameUpper);
                 const item = liveItemMap.get(nameUpper);
 
-                if (htTrade && htTrade.status === 'OPEN' && htTrade.entryDate < todayMD) {
+                if (htTrade && htTrade.status === 'OPEN' && htTrade.entryDate < todayStr) {
                     const badge = document.createElement('span');
                     badge.className = 'ht-new-badge';
 
@@ -9138,7 +9134,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         badge.title = 'ADD-ON: Currently OPEN in Hot Theme Live Tracker & re-qualifying today.';
                     }
                     badgeRow.prepend(badge);
-                } else if (htTrade && htTrade.entryDate && htTrade.entryDate >= todayMD) {
+                } else if (htTrade && htTrade.entryDate && htTrade.entryDate >= todayStr) {
                     const badge = document.createElement('span');
                     badge.className = 'ht-new-badge';
                     badge.textContent = '🔥 NEW (Day 1)';
@@ -9504,8 +9500,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     return 99; // Standard un-tracked (bukan Day 1)
                 }
                 if (tr.status === 'OPEN') {
-                    const clRefHT = curRefDateHT && curRefDateHT.length > 5 ? curRefDateHT.split('-').slice(-2).join('-') : curRefDateHT;
-                    if (tr.entryDate && tr.entryDate >= clRefHT) return 0; // NEW (Day 1)
+                    if (tr.entryDate && tr.entryDate >= curRefDateHT) return 0; // NEW (Day 1)
                     const entryP = tr.entry || 0;
                     const pct = (entryP > 0 && it.price) ? ((it.price - entryP) / entryP) * 100 : 0;
 
