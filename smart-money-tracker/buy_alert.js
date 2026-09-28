@@ -228,6 +228,15 @@ function applyYahooBar(item, bars, prevClose) {
     // Pullback dari 52W high (price-driven — guna high52 scanner, bukan Yahoo)
     if (item.high52) item.pullback = +(((item.high52 - item.price) / item.high52) * 100).toFixed(2);
 
+    // Re-evaluate avoid logic untuk kes 'Below IPO Price'
+    if (item.signal === 'avoid' && item.ipoPrice && item.price >= item.ipoPrice) {
+        const r = (item.reason || '').toUpperCase();
+        if (r.includes('BELOW IPO PRICE') || r.includes('FAILED IPO BASE')) {
+            item.signal = 'neutral';
+            item.reason = 'Recovered above IPO Price intraday';
+        }
+    }
+
     // NOTA: volumeSpike/closeTightness/floorDist TIDAK dikira semula dari Yahoo —
     // Yahoo volum & close utk Bursa tak konsisten dengan scanner i3investor dan boleh
     // flip CS MERAH/HIJAU + qualification (cth. MTTSL volSpike 2.1x scanner = CS HIJAU
