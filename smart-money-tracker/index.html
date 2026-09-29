@@ -9610,38 +9610,44 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 });
             } else {
                 picks.sort((a, b) => {
-                    // 0. Keutamaan Mutlak: ⭐ TIER A+ SNIPER & 🎯 TIER A
                     const tierA = getTierOfHT(a.item);
                     const tierB = getTierOfHT(b.item);
+                    const fa = htFreshness(a.item), fb = htFreshness(b.item);
+
+                    // 0. Keutamaan Mutlak #0: 🔥 NEW (Day 1 Breakout) sentiasa menduduki tangga teratas sebagai entri segar!
+                    if (fa !== fb) {
+                        if (fa === 0 || fb === 0) return fa - fb;
+                    }
+
+                    // 1. Keutamaan #1: ⭐ TIER A+ SNIPER & 🎯 TIER A
                     if (tierA.isTierAPlus !== tierB.isTierAPlus) return tierB.isTierAPlus ? 1 : -1;
                     if (tierA.isTierA !== tierB.isTierA) return tierB.isTierA ? 1 : -1;
 
-                    // 1. Keutamaan #1: ⚡ FUSION (Lulus FR + HT Serentak)
+                    // 2. Keutamaan #2: ⚡ FUSION (Lulus FR + HT Serentak)
                     const fusionA = isFreshRiderPick(a.item) && (a.themes || []).length > 0;
                     const fusionB = isFreshRiderPick(b.item) && (b.themes || []).length > 0;
                     if (fusionA !== fusionB) return fusionA ? -1 : 1;
 
-                    // 2. Duit Jerung Aktif (Turnover >= RM 2.0M)
+                    // 3. Duit Jerung Aktif (Turnover >= RM 2.0M)
                     const isWhaleA = tierA.toVal >= 2000000 ? 1 : 0;
                     const isWhaleB = tierB.toVal >= 2000000 ? 1 : 0;
                     if (isWhaleA !== isWhaleB) return isWhaleB - isWhaleA;
 
-                    // 3. Freshness (0 = NEW < 1 = ADD-ON A+ < 2 = LANTAI RAPAT < 3 = STANDARD < 4 = PUCUK < 5 = RE-ENTRY)
-                    const fa = htFreshness(a.item), fb = htFreshness(b.item);
+                    // 4. Freshness (0 = NEW < 1 = ADD-ON A+ < 2 = LANTAI RAPAT < 3 = STANDARD < 4 = PUCUK < 5 = RE-ENTRY)
                     if (fa !== fb) return fa - fb;
 
-                    // 4. Tightness Squeeze
+                    // 5. Tightness Squeeze
                     const ta = tierA.tightValNum;
                     const tb = tierB.tightValNum;
                     if (ta !== tb) return ta - tb;
 
-                    // 4. Jarak Floor (Risiko Rendah)
+                    // 6. Jarak Floor (Risiko Rendah)
                     const ea = effFloorOfHT(a.item), eb = effFloorOfHT(b.item);
                     const distA = ea ? Math.max(0, (a.item.price - ea) / ea) : 99;
                     const distB = eb ? Math.max(0, (b.item.price - eb) / eb) : 99;
                     if (distA !== distB) return distA - distB;
 
-                    // 5. Pullback
+                    // 7. Pullback
                     const pa = a.item.pullback !== null && a.item.pullback !== undefined ? a.item.pullback : 99;
                     const pbb = b.item.pullback !== null && b.item.pullback !== undefined ? b.item.pullback : 99;
                     if (pa !== pbb) return pa - pbb;
@@ -9662,9 +9668,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     const fresh = htFreshness(p.item);
                     const isFusion = isFreshRiderPick(p.item) && (p.themes || []).length > 0;
 
-                    // 1. DILARANG SAMA SEKALI: Pucuk / Extended (Lantai > 4.8%, kecuali Base Matang touchCount >= 5 & Turnover >= RM2M had sehingga 6.8%)
-                    const maxAllowedFloorDist = ((p.item.touchCount || 0) >= 5 && t.toVal >= 2000000 && t.tightValNum <= 3.5) ? 6.8 : 4.8;
-                    if (t.fDistVal > maxAllowedFloorDist || t.fDistVal < -2.0 || fresh === 4) return false;
+                    // 1. DILARANG SAMA SEKALI: Pucuk / Extended atau SL tepi jurang
+                    if (fresh === 4) return false;
 
                     // 2. DILARANG: Kaunter turnover lemau / runcit (< RM 1.0M)
                     if (t.toVal < 1000000) return false;
@@ -9675,11 +9680,18 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     const isRealUpperWickDump = p.item.hasUpperWickRejection === true && (p.item.change < 0 || (p.item.changePct && p.item.changePct < 0));
                     if (!isBlackSwanClean || isRealUpperWickDump) return false;
 
-                    // Syarat Emas: Squeeze tight <= 4.8%, Lantai <= maxAllowedFloorDist, Jerung Turnover >= RM 1.0M
-                    const meetsGolden = (t.tightValNum <= 4.8 && t.fDistVal <= maxAllowedFloorDist && t.toVal >= 1000000);
+                    // 4. LAYAK: 🔥 NEW (Day 1 Breakout) — benarkan lilin breakout hijau
+                    if (fresh === 0) {
+                        return (t.fDistVal <= 10.0 && t.fDistVal >= -2.0 && t.tightValNum <= 10.0);
+                    }
 
-                    // Layak jika Tier A+ Sniper ATAU (Fresh/ADD-ON A+/Lantai Rapat/Fusion mematuhi Syarat Emas)
-                    return t.isTierAPlus || ((fresh === 0 || fresh === 1 || fresh === 2 || isFusion) && meetsGolden);
+                    // 5. LAYAK: ⭐ ADD-ON A+ / 🛡️ ADD-ON (LANTAI RAPAT) — lantai rapat
+                    const maxAllowedFloorDist = ((p.item.touchCount || 0) >= 5 && t.toVal >= 2000000 && t.tightValNum <= 3.5) ? 6.8 : 4.8;
+                    if (t.fDistVal > maxAllowedFloorDist || t.fDistVal < -2.0) return false;
+
+                    // Layak jika Tier A+ Sniper ATAU (ADD-ON A+/Lantai Rapat/Fusion mematuhi Syarat Emas)
+                    const meetsGolden = (t.tightValNum <= 4.8 && t.fDistVal <= maxAllowedFloorDist && t.toVal >= 1000000);
+                    return t.isTierAPlus || ((fresh === 1 || fresh === 2 || isFusion) && meetsGolden);
                 });
             } else if (htFilter === 'new_only') {
                 displayPicks = picks.filter(p => htFreshness(p.item) === 0);
