@@ -122,3 +122,19 @@ Setiap kali ada signal baharu muncul dalam tab Fresh Rider atau Top Ranking VVIP
 - [ ] **Semakan 2 (Musim QR):** Bebas daripada pengumuman Laporan Kewangan (QR) dalam tempoh 3-5 hari terdekat (atau tiada sentimen buruk daripada QR baru).
 - [ ] **Semakan 3 (Kematangan IPO):** Jika saham IPO baharu, ia mesti sudah berdagang sekurang-kurangnya $\ge$ 15 hari dagangan dan telah membentuk lantai tapak yang kukuh (bukan kejar euphoria hari debut).
 
+---
+
+## 🔒 11. Prinsip Semakan Wajib 3-Sudut (Triple-Check Verification Before Commit)
+Untuk mengelakkan isu percanggahan (*desynchronization*), kaunter hilang dari radar, atau perbezaan logik antara backend dan frontend, setiap kali ada sebarang penalaan formula atau kod, AI **WAJIB** menyemak dan mengesahkan 3 sudut ini serentak sebelum membuat `git commit / push`:
+
+1. **Sudut 1: Backend Generators & Trackers**
+   * Semak `generate_fresh_rider_tracker.js` & `generate_hot_theme_tracker.js`.
+   * Pastikan output JSON/JS di `fresh_rider_tracker.js` dan `hot_theme_tracker.js` menjana signal dengan tepat.
+2. **Sudut 2: Frontend UI & Display Filters**
+   * Semak `index.html` (fungsi `renderConfluenceRadar`, `renderHotTheme`, `qualifiesFreshRider`, `isCSMerah`, dan lapisan penapis `top_ranking` / sub-tabs).
+   * Pastikan tiada syarat *hardcoded* tersembunyi yang menyekat signal yang sepatutnya terpapar di skrin pengguna.
+3. **Sudut 3: Telegram Bot & Live Alerts**
+   * Semak `morning_alert.js`, `buy_alert.js`, `portfolio_alert.js`, dan `run_live_updater.js`.
+   * Pastikan mesej notifikasi Telegram dan live update berjalan lancar dan sepadan dengan data paparan web.
+
+
