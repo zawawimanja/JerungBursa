@@ -6672,7 +6672,11 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 const tr = frTrackMap.get((it.name || '').toUpperCase());
                 if (!tr) return 0;
                 if (tr.status === 'OPEN') {
-                    if (tr.entryDate && tr.entryDate >= curRefDate) return 0;
+                    if (tr.entryDate && tr.entryDate >= curRefDate) {
+                        if (tr.entryType && tr.entryType.includes('LANTAI RAPAT')) return 2; // 🛡️ ADD-ON (LANTAI RAPAT)
+                        if (tr.entryType && tr.entryType.includes('ADD-ON')) return 1; // ⭐ ADD-ON A+ (AWAL)
+                        return 0; // 🔥 NEW (Day 1)
+                    }
                     const entryP = tr.entry || 0;
                     const pct = (entryP > 0 && it.price) ? ((it.price - entryP) / entryP) * 100 : 0;
                     const ef = effFloorOf(it);
@@ -8963,12 +8967,23 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     }
                     badgeRow.prepend(badge);
                 } else if (trTrade && trTrade.entryDate && trTrade.entryDate >= todayStr) {
-                    // 🔥 NEW (Day 1): entry TODAY (entryDate >= todayStr) — first time signal
                     const badge = document.createElement('span');
                     badge.className = 'fr-new-badge';
-                    badge.textContent = '🔥 NEW (Day 1)';
-                    badge.style.cssText = 'font-size:0.62rem; background:linear-gradient(135deg, rgba(239,68,68,0.28), rgba(249,115,22,0.28)); color:#ff6b4a; padding:0.08rem 0.35rem; border-radius:4px; font-weight:900; border:1px solid rgba(249,115,22,0.6); white-space:nowrap; animation: pulse 1.5s infinite; text-shadow: 0 0 6px rgba(249,115,22,0.5);';
-                    badge.title = 'NEW: entry TODAY in Fresh Rider Live Tracker — first-time signal, not previously tracked. Buy per SOP; SL per floor/trailing tracker.';
+                    const isFloorAddon = (trTrade.entryType || '').includes('LANTAI RAPAT');
+                    const isAddOn = (trTrade.entryType || '').includes('ADD-ON');
+                    if (isFloorAddon) {
+                        badge.textContent = '🛡️ ADD-ON (LANTAI RAPAT)';
+                        badge.style.cssText = 'font-size:0.62rem; background:linear-gradient(135deg, rgba(56,189,248,0.35), rgba(168,85,247,0.35)); color:#67e8f9; padding:0.08rem 0.35rem; border-radius:4px; font-weight:900; border:1px solid rgba(103,232,249,0.7); white-space:nowrap; animation: pulse 1.5s infinite; text-shadow: 0 0 6px rgba(103,232,249,0.5);';
+                        badge.title = 'ADD-ON (Lantai Rapat): Entry TODAY in Fresh Rider Live Tracker (Base 2 Staircase & Tight Floor).';
+                    } else if (isAddOn) {
+                        badge.textContent = '⭐ ADD-ON A+ (AWAL)';
+                        badge.style.cssText = 'font-size:0.62rem; background:linear-gradient(135deg, rgba(16,185,129,0.35), rgba(234,179,8,0.35)); color:#fef08a; padding:0.08rem 0.35rem; border-radius:4px; font-weight:900; border:1px solid rgba(234,179,8,0.7); white-space:nowrap; animation: pulse 1.5s infinite; text-shadow: 0 0 6px rgba(234,179,8,0.5);';
+                        badge.title = 'ADD-ON A+: Entry TODAY in Fresh Rider Live Tracker (Fresh Base 1 / Base 2).';
+                    } else {
+                        badge.textContent = '🔥 NEW (Day 1)';
+                        badge.style.cssText = 'font-size:0.62rem; background:linear-gradient(135deg, rgba(239,68,68,0.28), rgba(249,115,22,0.28)); color:#ff6b4a; padding:0.08rem 0.35rem; border-radius:4px; font-weight:900; border:1px solid rgba(249,115,22,0.6); white-space:nowrap; animation: pulse 1.5s infinite; text-shadow: 0 0 6px rgba(249,115,22,0.5);';
+                        badge.title = 'NEW: entry TODAY in Fresh Rider Live Tracker — first-time signal, not previously tracked. Buy per SOP; SL per floor/trailing tracker.';
+                    }
                     badgeRow.prepend(badge);
                 } else if (!prevSet.has(name)) {
                     const badge = document.createElement('span');
@@ -9137,9 +9152,21 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 } else if (htTrade && htTrade.entryDate && htTrade.entryDate >= todayStr) {
                     const badge = document.createElement('span');
                     badge.className = 'ht-new-badge';
-                    badge.textContent = '🔥 NEW (Day 1)';
-                    badge.style.cssText = 'font-size:0.62rem; background:linear-gradient(135deg, rgba(239,68,68,0.28), rgba(249,115,22,0.28)); color:#ff6b4a; padding:0.08rem 0.35rem; border-radius:4px; font-weight:900; border:1px solid rgba(249,115,22,0.6); white-space:nowrap; animation: pulse 1.5s infinite; text-shadow: 0 0 6px rgba(249,115,22,0.5);';
-                    badge.title = 'NEW: entry TODAY in Hot Theme Live Tracker — first-time signal, not tracked previously. Buy per SOP; SL per floor/trailing tracker.';
+                    const isFloorAddon = (htTrade.entryType || '').includes('LANTAI RAPAT');
+                    const isAddOn = (htTrade.entryType || '').includes('ADD-ON');
+                    if (isFloorAddon) {
+                        badge.textContent = '🛡️ ADD-ON (LANTAI RAPAT)';
+                        badge.style.cssText = 'font-size:0.62rem; background:linear-gradient(135deg, rgba(56,189,248,0.35), rgba(168,85,247,0.35)); color:#67e8f9; padding:0.08rem 0.35rem; border-radius:4px; font-weight:900; border:1px solid rgba(103,232,249,0.7); white-space:nowrap; animation: pulse 1.5s infinite; text-shadow: 0 0 6px rgba(103,232,249,0.5);';
+                        badge.title = 'ADD-ON (Lantai Rapat): Entry TODAY in Hot Theme Live Tracker (Base 2 Staircase & Tight Floor).';
+                    } else if (isAddOn) {
+                        badge.textContent = '⭐ ADD-ON A+ (AWAL)';
+                        badge.style.cssText = 'font-size:0.62rem; background:linear-gradient(135deg, rgba(16,185,129,0.35), rgba(234,179,8,0.35)); color:#fef08a; padding:0.08rem 0.35rem; border-radius:4px; font-weight:900; border:1px solid rgba(234,179,8,0.7); white-space:nowrap; animation: pulse 1.5s infinite; text-shadow: 0 0 6px rgba(234,179,8,0.5);';
+                        badge.title = 'ADD-ON A+: Entry TODAY in Hot Theme Live Tracker (Fresh Base 1 / Base 2).';
+                    } else {
+                        badge.textContent = '🔥 NEW (Day 1)';
+                        badge.style.cssText = 'font-size:0.62rem; background:linear-gradient(135deg, rgba(239,68,68,0.28), rgba(249,115,22,0.28)); color:#ff6b4a; padding:0.08rem 0.35rem; border-radius:4px; font-weight:900; border:1px solid rgba(249,115,22,0.6); white-space:nowrap; animation: pulse 1.5s infinite; text-shadow: 0 0 6px rgba(249,115,22,0.5);';
+                        badge.title = 'NEW: entry TODAY in Hot Theme Live Tracker — first-time signal, not tracked previously. Buy per SOP; SL per floor/trailing tracker.';
+                    }
                     badgeRow.prepend(badge);
                 } else if (!prevSet.has(name)) {
                     const isReEntry = trackedTrades.has(nameUpper);
@@ -9500,7 +9527,11 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     return 99; // Standard un-tracked (bukan Day 1)
                 }
                 if (tr.status === 'OPEN') {
-                    if (tr.entryDate && tr.entryDate >= curRefDateHT) return 0; // NEW (Day 1)
+                    if (tr.entryDate && tr.entryDate >= curRefDateHT) {
+                        if (tr.entryType && tr.entryType.includes('LANTAI RAPAT')) return 2; // 🛡️ ADD-ON (LANTAI RAPAT)
+                        if (tr.entryType && tr.entryType.includes('ADD-ON')) return 1; // ⭐ ADD-ON A+ (AWAL)
+                        return 0; // 🔥 NEW (Day 1)
+                    }
                     const entryP = tr.entry || 0;
                     const pct = (entryP > 0 && it.price) ? ((it.price - entryP) / entryP) * 100 : 0;
 
