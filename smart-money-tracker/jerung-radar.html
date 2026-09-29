@@ -17,9 +17,8 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         (function() {
-            var repoUrl = 'https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/';
-            var cb = '?t=' + Date.now();
-            document.write('<script src="' + repoUrl + 'jerung-data.js' + cb + '"><\/script>');
+            var cb = (window.location.protocol === 'file:') ? '' : ('?t=' + Date.now());
+            document.write('<script src="jerung-data.js' + cb + '"><\/script>');
         })();
     </script>
     <style>

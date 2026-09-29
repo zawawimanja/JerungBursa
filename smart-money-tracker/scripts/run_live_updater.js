@@ -58,7 +58,7 @@ function runScraper() {
             if (mytHour === 9 && mytMin >= 1 && mytMin <= 10 && global.lastMorningAlertSentDate !== todayStr) {
                 global.lastMorningAlertSentDate = todayStr;
                 console.log(`📢 Menjalankan Morning Open Execution Alert Telegram (9:02 AM)...`);
-                const morningScript = path.join(path.join(__dirname, '..'), 'morning_alert.js');
+                const morningScript = path.join(__dirname, 'morning_alert.js');
                 exec(`node "${morningScript}"`, { cwd: path.join(__dirname, '..') }, (mErr, mOut) => {
                     if (mErr) console.error(`⚠️ Ralat Morning Alert: ${mErr.message}`);
                     else if (mOut) console.log(`✅ Morning Alert Telegram Selesai dihantar.`);
@@ -69,7 +69,7 @@ function runScraper() {
             if (mytHour === 16 && mytMin >= 25 && mytMin <= 40 && global.lastAlertSentDate !== todayStr) {
                 global.lastAlertSentDate = todayStr;
                 console.log(`📢 Menjalankan Buy Alert Telegram (4:30 PM Pre-Close Alert)...`);
-                const alertScript = path.join(path.join(__dirname, '..'), 'buy_alert.js');
+                const alertScript = path.join(__dirname, 'buy_alert.js');
                 exec(`node "${alertScript}"`, { cwd: path.join(__dirname, '..') }, (aErr, aOut) => {
                     if (aErr) console.error(`⚠️ Ralat Buy Alert: ${aErr.message}`);
                     else if (aOut) console.log(`✅ Buy Alert Telegram Selesai dihantar.`);
@@ -77,7 +77,7 @@ function runScraper() {
             }
 
             // 3. Real-Time Portfolio TP/SL & Breakeven Alert (setiap 5 minit)
-            const portfolioScript = path.join(path.join(__dirname, '..'), 'portfolio_alert.js');
+            const portfolioScript = path.join(__dirname, 'portfolio_alert.js');
             exec(`node "${portfolioScript}"`, { cwd: path.join(__dirname, '..') }, (pErr, pOut) => {
                 if (pErr) console.error(`⚠️ Ralat Portfolio Alert: ${pErr.message}`);
                 else if (pOut && pOut.trim()) console.log(pOut.trim());
