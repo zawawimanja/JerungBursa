@@ -1,6 +1,6 @@
 {
   "date": "2026-09-29",
-  "time": "21:58",
+  "time": "23:25",
   "results": [
     {
       "name": "PENTECH",
@@ -33,16 +33,6 @@
       "specialNote": ""
     },
     {
-      "name": "ICENTS",
-      "prevClose": 0.845,
-      "curPrice": 0.85,
-      "gapPct": 0.59,
-      "situation": "B",
-      "situBadge": "🟡 SITUASI B (BOLEH MASUK - TOLERANSI)",
-      "advice": "Gap up kecil 1-2 tick (+0.6%). Risiko SL naik sedikit tetapi masih dalam zon tapak selamat. Boleh masuk mengikut SOP.",
-      "specialNote": ""
-    },
-    {
       "name": "CBHB",
       "prevClose": 1.08,
       "curPrice": 1.09,
@@ -63,13 +53,23 @@
       "specialNote": "⚠️ PANTANG LARANG: Turnover lemau (RM 1.4M), kaunter lama sejak Jun. Utamakan PENTECH / STRATUS."
     },
     {
-      "name": "ISF",
-      "prevClose": 0.835,
-      "curPrice": 0.845,
-      "gapPct": 1.2,
-      "situation": "B",
-      "situBadge": "🟡 SITUASI B (BOLEH MASUK - TOLERANSI)",
-      "advice": "Gap up kecil 1-2 tick (+1.2%). Risiko SL naik sedikit tetapi masih dalam zon tapak selamat. Boleh masuk mengikut SOP.",
+      "name": "AMBEST",
+      "prevClose": 1.36,
+      "curPrice": 1.4,
+      "gapPct": 2.94,
+      "situation": "C",
+      "situBadge": "🔴 SITUASI C (JANGAN KEJAR / DO NOT CHASE)",
+      "advice": "Gap up melompat terlalu tinggi (+2.9%). Jarak SL melebar & terdedah jualan pagi. Tunggu pullback 9:30 - 10:00 AM berhampiran RM 1.360.",
+      "specialNote": ""
+    },
+    {
+      "name": "KEEMING",
+      "prevClose": 2.53,
+      "curPrice": 2.64,
+      "gapPct": 4.35,
+      "situation": "C",
+      "situBadge": "🔴 SITUASI C (JANGAN KEJAR / DO NOT CHASE)",
+      "advice": "Gap up melompat terlalu tinggi (+4.3%). Jarak SL melebar & terdedah jualan pagi. Tunggu pullback 9:30 - 10:00 AM berhampiran RM 2.530.",
       "specialNote": ""
     }
   ]

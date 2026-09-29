@@ -69,7 +69,7 @@ function passesJerungRadar(item) {
     if (!item || !item.price || item.price <= 0 || item.price > 10.0) return false;
     if (isSleepingOrAvoidStock(item) || item.isCombStock || item.signal === 'avoid') return false;
     const changeVal = item.changePct !== undefined ? item.changePct : item.change;
-    if (changeVal > 5.0) return false;
+    if (changeVal > 8.0) return false;
     const pullback = item.pullback; if (pullback == null) return false;
     const closeTight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
     const touches = item.touchCount || 0;
@@ -80,7 +80,7 @@ function passesJerungRadar(item) {
     if ((item.turnover || 0) < 300000) return false;
     if (isNearAthPath && touches < 2) return false;
     const t1 = isNearAthPath && !item.hasVolumeSpike && item.isConsolidation === true && touches >= 3 && closeTight <= 5.0;
-    const t2 = isNearAthPath && item.hasVolumeSpike && (item.volumeSpike || 0) < 3.0 && changeVal < 3.5 && closeTight <= 10.0;
+    const t2 = isNearAthPath && item.hasVolumeSpike && (item.volumeSpike || 0) < 5.0 && changeVal >= 0 && closeTight <= 10.0;
     return t1 || t2 || isSecondaryBasePath;
 }
 function passesVcpStaircase(item) {
@@ -124,7 +124,20 @@ function isHotThemePick(item) {
     if (isSleepingOrAvoidStock(item) || item.isCombStock) return false;
     const themes = getHotThemes(item.name);
     if (themes.length === 0) return false;
-    if (item.hasVolumeSpike === true) return false; // CS MERAH sahaja
+
+    // Anti-Debut Dump Shield (Rule 9 SOP)
+    if (item.ipoAge != null && item.ipoAge < 15 && (item.touchCount || 0) < 2) return false;
+
+    const isGreenBreakout = (item.change >= 0 || (item.changePct || 0) >= 0);
+    const tight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
+
+    if (item.hasVolumeSpike === true) {
+        if (!isGreenBreakout) return false;
+        if (tight > 10.0) return false;
+    } else {
+        if (tight > 5.0) return false;
+    }
+
     return confluenceCount(item) >= 2;
 }
 

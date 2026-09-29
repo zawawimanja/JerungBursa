@@ -6198,7 +6198,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             if (!item || !item.name || !item.price || item.price <= 0 || item.price > 10.0) return false;
             if (isSleepingOrAvoidStock(item) || item.isCombStock || item.signal === 'avoid') return false;
             const changeVal = item.changePct !== undefined ? item.changePct : item.change;
-            if (changeVal > 5.0) return false;
+            if (changeVal > 8.0) return false;
             const pullback = item.pullback;
             if (pullback === null || pullback === undefined) return false;
             const closeTight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
@@ -6210,7 +6210,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             if ((item.turnover || 0) < 300000) return false;
             if (isNearAthPath && touches < 2) return false;
             const isTier1Quiet = isNearAthPath && !item.hasVolumeSpike && item.isConsolidation === true && touches >= 3 && closeTight <= 5.0;
-            const isTier2Early = isNearAthPath && item.hasVolumeSpike && (item.volumeSpike || 0) < 3.0 && changeVal < 3.5 && closeTight <= 10.0;
+            const isTier2Early = isNearAthPath && item.hasVolumeSpike && (item.volumeSpike || 0) < 5.0 && changeVal >= 0 && closeTight <= 10.0;
             const isTier3SecondBase = isSecondaryBasePath;
             return isTier1Quiet || isTier2Early || isTier3SecondBase;
         }
@@ -6595,9 +6595,19 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 if ((item.ipoYear || 0) < 2025) continue;
                 const pb = item.pullback !== null && item.pullback !== undefined ? item.pullback : 99;
                 if (pb > 10.0) continue;
+
+                // Anti-Debut Dump Shield
+                if (item.ipoAge != null && item.ipoAge < 15 && (item.touchCount || 0) < 2) continue;
+
+                const isGreenBreakout = (item.change >= 0 || (item.changePct || 0) >= 0);
                 const tight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
-                if (tight > 5.0) continue;
-                if (!isCSMerah(item)) continue;
+
+                if (item.hasVolumeSpike === true) {
+                    if (!isGreenBreakout) continue;
+                    if (tight > 10.0) continue;
+                } else {
+                    if (tight > 5.0) continue;
+                }
 
                 // ✅ Dedup: satu symbol, satu baris sahaja
                 const nameKey = (item.name || '').toUpperCase().trim();
@@ -7590,7 +7600,11 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         // CS MERAH = squeeze ON (volum senyap, fasa accumulation sebelum breakout).
         // CS HIJAU = volum spike >=1.5x (breakout/expansion). Gaya entry: beli masa CS MERAH sahaja.
         function isCSMerah(item) {
-            return !(item && item.hasVolumeSpike === true && (item.volumeSpike || 0) >= 1.5);
+            if (!item) return false;
+            if (!item.hasVolumeSpike || (item.volumeSpike || 0) < 1.5) return true;
+            const isGreen = (item.change >= 0 || (item.changePct || 0) >= 0);
+            const tight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
+            return isGreen && tight <= 10.0;
         }
 
         function qualifiesHotTheme(item) {
@@ -8847,9 +8861,19 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             if ((item.ipoYear || 0) < 2025) return false;
             const pb = item.pullback !== null && item.pullback !== undefined ? item.pullback : 99;
             if (pb > 10.0) return false;
+
+            // Anti-Debut Dump Shield
+            if (item.ipoAge != null && item.ipoAge < 15 && (item.touchCount || 0) < 2) return false;
+
+            const isGreenBreakout = (item.change >= 0 || (item.changePct || 0) >= 0);
             const tight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
-            if (tight > 5.0) return false;
-            if (!isCSMerah(item)) return false;
+
+            if (item.hasVolumeSpike === true) {
+                if (!isGreenBreakout) return false;
+                if (tight > 10.0) return false;
+            } else {
+                if (tight > 5.0) return false;
+            }
             return true;
         }
 
@@ -9235,13 +9259,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
         // Kaunter yang juga layak Fresh VVIP Rider (bertindih kedua-dua strategi)
         function isFreshRiderPick(item) {
-            return item && item.price >= 0.10 && item.price <= 50
-                && item.isVvip === true
-                && item.signal !== 'avoid' && !item.isCombStock
-                && (item.ipoYear || 0) >= 2025
-                && (item.pullback !== null && item.pullback !== undefined ? item.pullback : 99) <= 10
-                && (typeof item.closeTightness === 'number' ? item.closeTightness : 99) <= 5.0
-                && isCSMerah(item);
+            return qualifiesFreshRider(item);
         }
 
         // Render VVIP Confluence Radar asal (Double & Triple Confluence, 2+ daripada 5 strategi)

@@ -30,10 +30,25 @@ function canonName(name) {
 
 // ---- Rule Fresh VVIP Rider (Day 1) ----
 function isFreshRiderPick(item) {
-    return item.isVvip === true && item.signal !== 'avoid' && !item.isCombStock
-        && (item.ipoYear || 0) >= 2025 && (item.pullback ?? 99) <= 10 && (item.closeTightness ?? 99) <= 5.0
-        && item.price >= 0.10 && item.price <= 50
-        && item.hasVolumeSpike !== true; // CS MERAH sahaja
+    if (!item || item.price < 0.10 || item.price > 50) return false;
+    if (item.isVvip !== true || item.signal === 'avoid' || item.isCombStock) return false;
+    if ((item.ipoYear || 0) < 2025) return false;
+    const pb = item.pullback ?? 99;
+    if (pb > 10.0) return false;
+
+    // Anti-Debut Dump Shield (Rule 9 SOP: wait min 15 days or at least 2 floor touches)
+    if (item.ipoAge != null && item.ipoAge < 15 && (item.touchCount || 0) < 2) return false;
+
+    const isGreenBreakout = (item.change >= 0 || (item.changePct || 0) >= 0);
+    const tight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
+
+    if (item.hasVolumeSpike === true) {
+        if (!isGreenBreakout) return false; // CS Merah spike / dump rejected
+        if (tight > 10.0) return false; // Breakout candle max tightness 10%
+    } else {
+        if (tight > 5.0) return false;
+    }
+    return true;
 }
 
 // ---- Rule ⭐ ADD-ON A+ (Base 1 / Base 2 Staircase) ----

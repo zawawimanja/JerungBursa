@@ -1,29 +1,68 @@
 // AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual
 window.FRESH_RIDER_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-29T13:57:41.696Z",
+  "generatedAt": "2026-09-29T15:25:09.002Z",
   "dataDays": 81,
-  "totalTracked": 21,
-  "openCount": 14,
+  "totalTracked": 23,
+  "openCount": 16,
   "closedCount": 7,
   "closedWins": 4,
   "closedWinRate": 57,
   "closedAvgGain": 5.2,
-  "openPnl": 729.2,
+  "openPnl": 721.2,
   "closedPnl": 36.3,
-  "totalPnlNow": 765.5
+  "totalPnlNow": 757.5
  },
  "backtest": {
   "dataStart": "2026-06-02",
   "dataEnd": "2026-09-29",
   "dataDays": 81,
-  "signals": 21,
-  "winRate": 71,
-  "avgGain": 16.1,
-  "totalPnl": 337.7,
+  "signals": 22,
+  "winRate": 68,
+  "avgGain": 15,
+  "totalPnl": 329.7,
   "worstLoss": -10.3
  },
  "trades": [
+  {
+   "name": "XPB",
+   "entryType": "🔥 NEW",
+   "entryDate": "2026-09-29",
+   "entry": 0.23,
+   "entryFloor": 0.21,
+   "currentFloor": 0.21,
+   "currentPrice": 0.23,
+   "high": 0.23,
+   "highDate": "2026-09-29",
+   "maxGain": 0,
+   "finalGain": 0,
+   "day1ChangePct": 6.98,
+   "days": 1,
+   "lastDate": "2026-09-29",
+   "status": "OPEN",
+   "ipoYear": 2025,
+   "sector": "Industrial"
+  },
+  {
+   "name": "SUNMED",
+   "entryType": "🔥 NEW",
+   "entryDate": "2026-09-18",
+   "entry": 2.26,
+   "entryFloor": 2.07,
+   "currentFloor": 2.05,
+   "currentPrice": 2.08,
+   "high": 2.29,
+   "highDate": "2026-09-21",
+   "maxGain": 1.3,
+   "finalGain": -8,
+   "day1ChangePct": 3.67,
+   "days": 8,
+   "lastDate": "2026-09-29",
+   "status": "OPEN",
+   "ipoYear": 2026,
+   "sector": "Healthcare",
+   "slTrail": 2.011
+  },
   {
    "name": "SUM",
    "entryType": "🔥 NEW",
@@ -462,7 +501,7 @@ window.FRESH_RIDER_TRACKER = {
 };
 window.ADD_ON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-29T13:57:41.701Z",
+  "generatedAt": "2026-09-29T15:25:09.003Z",
   "dataDays": 81,
   "totalTracked": 16,
   "openCount": 12,
@@ -823,7 +862,7 @@ window.ADD_ON_TRACKER = {
 };
 window.FLOOR_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-29T13:57:41.702Z",
+  "generatedAt": "2026-09-29T15:25:09.003Z",
   "dataDays": 81,
   "totalTracked": 36,
   "openCount": 32,
@@ -1601,19 +1640,38 @@ window.FLOOR_ADDON_TRACKER = {
 };
 window.ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-29T13:57:41.702Z",
+  "generatedAt": "2026-09-29T15:25:09.003Z",
   "dataDays": 81,
-  "totalTracked": 73,
-  "openCount": 58,
+  "totalTracked": 75,
+  "openCount": 60,
   "closedCount": 15,
   "closedWins": 5,
   "closedWinRate": 33,
   "closedAvgGain": -2.5,
-  "openPnl": 2208.3,
+  "openPnl": 2200.3,
   "closedPnl": -37.4,
-  "totalPnlNow": 2170.9
+  "totalPnlNow": 2162.9
  },
  "trades": [
+  {
+   "name": "XPB",
+   "entryType": "🔥 NEW",
+   "entryDate": "2026-09-29",
+   "entry": 0.23,
+   "entryFloor": 0.21,
+   "currentFloor": 0.21,
+   "currentPrice": 0.23,
+   "high": 0.23,
+   "highDate": "2026-09-29",
+   "maxGain": 0,
+   "finalGain": 0,
+   "day1ChangePct": 6.98,
+   "days": 1,
+   "lastDate": "2026-09-29",
+   "status": "OPEN",
+   "ipoYear": 2025,
+   "sector": "Industrial"
+  },
   {
    "id": "STRATUS_2026-09-29_ADDON",
    "name": "STRATUS",
@@ -1757,6 +1815,26 @@ window.ALL_TRACKER = {
    "ipoYear": 2026,
    "sector": "Technology",
    "slTrail": 0.636
+  },
+  {
+   "name": "SUNMED",
+   "entryType": "🔥 NEW",
+   "entryDate": "2026-09-18",
+   "entry": 2.26,
+   "entryFloor": 2.07,
+   "currentFloor": 2.05,
+   "currentPrice": 2.08,
+   "high": 2.29,
+   "highDate": "2026-09-21",
+   "maxGain": 1.3,
+   "finalGain": -8,
+   "day1ChangePct": 3.67,
+   "days": 8,
+   "lastDate": "2026-09-29",
+   "status": "OPEN",
+   "ipoYear": 2026,
+   "sector": "Healthcare",
+   "slTrail": 2.011
   },
   {
    "id": "CBHB_2026-09-17_ADDON",
