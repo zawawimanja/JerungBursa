@@ -30,7 +30,7 @@ function runScraper() {
     console.log(`[${now.toLocaleString('en-MY', { timeZone: 'Asia/Kuala_Lumpur' })}] 🔄 Memulakan imbasan pasaran live (5-Minit Auto-Run)...`);
     console.log(`==================================================`);
     
-    const scrapeScript = path.join(path.join(__dirname, '..'), 'scrape-real.js');
+    const scrapeScript = path.join(__dirname, 'scrape-real.js');
     const projectRoot = path.join(path.join(__dirname, '..'), '..');
     
     exec(`node "${scrapeScript}"`, { cwd: path.join(__dirname, '..') }, (error, stdout, stderr) => {
@@ -42,9 +42,9 @@ function runScraper() {
         if (stdout) console.log(stdout);
 
         // Jana semula tracker Fresh Rider DULU, baru push (supaya fail tracker terkini ikut sekali)
-        const trackerScript = path.join(path.join(__dirname, '..'), 'generate_fresh_rider_tracker.js');
-        const htTrackerScript = path.join(path.join(__dirname, '..'), 'generate_hot_theme_tracker.js');
-        const eqTrackerScript = path.join(path.join(__dirname, '..'), 'generate_daily_equity_tracker.js');
+        const trackerScript = path.join(__dirname, 'generate_fresh_rider_tracker.js');
+        const htTrackerScript = path.join(__dirname, 'generate_hot_theme_tracker.js');
+        const eqTrackerScript = path.join(__dirname, 'generate_daily_equity_tracker.js');
         exec(`node "${trackerScript}" && node "${htTrackerScript}" && node "${eqTrackerScript}"`, { cwd: path.join(__dirname, '..') }, (tErr, tOut) => {
             if (tErr) console.error(`⚠️ Ralat jana tracker Fresh Rider: ${tErr.message}`);
             else if (tOut) console.log(tOut.split('\n')[0]);

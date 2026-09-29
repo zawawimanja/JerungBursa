@@ -67,7 +67,7 @@ const VERIFIED_SYMBOLS = {
 // Fetch quote Yahoo (sync via child process — generator kekal sync).
 function fetchYahooQuotes(symbols) {
     if (!symbols.length) return {};
-    const fetchScript = path.join(path.join(__dirname, '..'), 'backfill_fetch.js');
+    const fetchScript = path.join(__dirname, 'backfill_fetch.js');
     try {
         const out = execSync(`node "${fetchScript}" ${symbols.join(' ')}`, { encoding: 'utf8', timeout: 60000, windowsHide: true });
         const line = out.trim().split('\n').pop();
