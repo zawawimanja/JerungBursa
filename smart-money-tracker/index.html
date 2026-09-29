@@ -15,9 +15,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script>
       (function() {
-        const cb = (window.location.protocol === 'file:') ? '' : ('?t=' + Date.now());
+        const repoUrl = 'https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/';
+        const cb = '?t=' + Date.now();
         ['live_data.js', 'fresh_rider_tracker.js', 'hot_theme_tracker.js', 'daily_equity_tracker.js', 'jerung-data.js', 'news_data.js'].forEach(function(src) {
-          document.write('<script src="' + src + cb + '"><\/script>');
+          document.write('<script src="' + repoUrl + src + cb + '"><\/script>');
         });
       })();
     </script>

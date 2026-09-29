@@ -15,7 +15,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="jerung-data.js?v=1.0"></script>
+    <script>
+        (function() {
+            var repoUrl = 'https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/';
+            var cb = '?t=' + Date.now();
+            document.write('<script src="' + repoUrl + 'jerung-data.js' + cb + '"><\/script>');
+        })();
+    </script>
     <style>
         :root {
             --primary: #10b981;
