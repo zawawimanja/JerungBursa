@@ -6763,6 +6763,13 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 picks.sort((a, b) => {
                     const tierA = getTierOfFR(a);
                     const tierB = getTierOfFR(b);
+                    const fa = frFreshness(a), fb = frFreshness(b);
+
+                    // 0. Keutamaan Mutlak #0: 🔥 NEW (Day 1 Breakout) sentiasa menduduki tangga teratas sebagai entri segar!
+                    // Urutan: 0 = 🔥 NEW (Day 1) < 1 = ⭐ ADD-ON A+ < 2 = 🛡️ ADD-ON (LANTAI RAPAT)
+                    if (fa !== fb) {
+                        if (fa === 0 || fb === 0) return fa - fb;
+                    }
 
                     // ⭐ Keutamaan Mutlak #1: ⭐ TIER A+ SNIPER (Turnover >= RM2M + Squeeze <= 3.5% + Floor <= 3.5% + Black Swan PASS + Tiada Selling Dump)
                     if (tierA.isTierAPlus !== tierB.isTierAPlus) return tierB.isTierAPlus ? 1 : -1;
@@ -6779,7 +6786,6 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     if (fusionA !== fusionB) return fusionA ? -1 : 1;
 
                     // 2. Keutamaan #2: 🆕 NEW Signal (0 = NEW < 1 = ADD-ON A+ < 2 = LANTAI RAPAT < 3 = STANDARD < 4 = PUCUK < 5 = RE-ENTRY)
-                    const fa = frFreshness(a), fb = frFreshness(b);
                     if (fa !== fb) return fa - fb;
 
                     // 3. Keutamaan #3: Tightness % (Squeeze Rapat)
@@ -6842,31 +6848,27 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     const t = getTierOfFR(p);
                     const fresh = frFreshness(p); // 0 = NEW, 1 = ADD-ON A+, 2 = LANTAI RAPAT, 3 = STANDARD, 4 = PUCUK
 
-                    // 1. DILARANG SAMA SEKALI: Pucuk / Extended (> 4.8% dari lantai) atau SL tepi jurang
-                    if (t.fDistVal > 4.8 || t.fDistVal < -2.0 || fresh === 4) return false;
+                    // 1. DILARANG SAMA SEKALI: Pucuk / Extended atau SL tepi jurang
+                    if (!t.isBlackSwanClean || t.isRealUpperWickDump || fresh === 4) return false;
 
                     // 2. DILARANG: Kaunter turnover lemau / runcit (< RM 1.0M)
                     if (t.toVal < 1000000) return false;
 
-                    // 3. DILARANG: Terkena Black Swan Trap atau Selling Dump Merah
-                    if (!t.isBlackSwanClean || t.isRealUpperWickDump) return false;
+                    // 3. LAYAK: 🔥 NEW (Day 1 Breakout) — benarkan lilin breakout hijau
+                    if (fresh === 0) {
+                        return (t.fDistVal <= 10.0 && t.fDistVal >= -2.0 && t.tightValNum <= 10.0);
+                    }
 
-                    // 4. SYARAT LAYAK:
-                    // a) Tier A+ Sniper
-                    if (t.isTierAPlus) return true;
-                    // b) Fresh NEW (Day 1) atau ADD-ON A+ / Lantai Rapat yang memenuhi Syarat Emas (Tight <= 4.8%, Floor <= 4.8%, TO >= RM 1.0M)
-                    const meetsGolden = (t.tightValNum <= 4.8 && t.fDistVal <= 4.8 && t.toVal >= 1000000);
-                    if ((fresh === 0 || fresh === 1 || fresh === 2) && meetsGolden) return true;
+                    // 4. LAYAK: ⭐ ADD-ON A+ / 🛡️ ADD-ON (LANTAI RAPAT) — lantai rapat wajib <= 4.8%
+                    if (fresh === 1 || fresh === 2) {
+                        if (t.fDistVal > 4.8 || t.fDistVal < -2.0) return false;
+                        if (t.tightValNum <= 4.8) return true;
+                    }
 
-                    // c) Fusion yang memenuhi Syarat Emas
-                    const matches = [];
-                    if (typeof passesJerungRadar === 'function' && passesJerungRadar(p)) matches.push('Whale');
-                    if (typeof passesVcpStaircase === 'function' && passesVcpStaircase(p)) matches.push('VCP');
-                    if (typeof passesTrendRiders === 'function' && passesTrendRiders(p)) matches.push('Trend');
-                    if (typeof passesEarlySpring === 'function' && passesEarlySpring(p)) matches.push('Spring');
-                    if (typeof passesBottomFishing === 'function' && passesBottomFishing(p)) matches.push('Bottom');
-                    const isFusion = getHotThemes(p.name).length > 0 && matches.length >= 2;
-                    if (isFusion && meetsGolden) return true;
+                    // 5. LAYAK: Tier A+ / Tier A / Fusion
+                    if (t.isTierAPlus || t.isTierA) return true;
+                    const isFusion = getHotThemes(p.name).length > 0;
+                    if (isFusion && t.tightValNum <= 4.8 && t.fDistVal <= 4.8) return true;
 
                     return false;
                 });
