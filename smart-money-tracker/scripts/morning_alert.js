@@ -16,7 +16,7 @@ const https = require('https');
 // Load .env
 function loadEnvFile() {
     try {
-        const f = path.join(__dirname, '.env');
+        const f = path.join(path.join(__dirname, '..'), '.env');
         if (!fs.existsSync(f)) return;
         for (const line of fs.readFileSync(f, 'utf8').split('\n')) {
             const m = line.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*)\s*$/);
@@ -26,7 +26,7 @@ function loadEnvFile() {
 }
 loadEnvFile();
 
-const SYM_MAP = JSON.parse(fs.readFileSync(path.join(__dirname, 'symbol_mappings.json'), 'utf8'));
+const SYM_MAP = JSON.parse(fs.readFileSync(path.join(path.join(__dirname, '..'), 'symbol_mappings.json'), 'utf8'));
 
 function getYahooMeta(symbol) {
     return new Promise((resolve) => {
@@ -60,7 +60,7 @@ function fmtPct(p) { return p == null ? '—' : (p > 0 ? '+' : '') + Number(p).t
 
     // 1. Ambil kaunter Top Ranking VVIP semalam
     let candidates = [];
-    const buyAlertFile = path.join(__dirname, 'buy_alert_latest.json');
+    const buyAlertFile = path.join(path.join(__dirname, '..'), 'buy_alert_latest.json');
     if (fs.existsSync(buyAlertFile)) {
         try {
             const bData = JSON.parse(fs.readFileSync(buyAlertFile, 'utf8'));
@@ -168,7 +168,7 @@ function fmtPct(p) { return p == null ? '—' : (p > 0 ? '+' : '') + Number(p).t
     console.log('-----------------------\n');
 
     // Simpan fail latest JSON
-    fs.writeFileSync(path.join(__dirname, 'morning_alert_latest.json'), JSON.stringify({
+    fs.writeFileSync(path.join(path.join(__dirname, '..'), 'morning_alert_latest.json'), JSON.stringify({
         date: dateStr,
         time: timeStr,
         results

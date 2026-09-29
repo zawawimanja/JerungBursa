@@ -3,7 +3,7 @@ const path = require('path');
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-const OUTPUT_FILE = path.join(__dirname, 'live_data.json');
+const OUTPUT_FILE = path.join(path.join(__dirname, '..'), 'live_data.json');
 
 const HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
@@ -25,8 +25,8 @@ async function getIpoList() {
     }
 
     const candidatePaths = [
-        path.join(__dirname, '../../ipohunterv2/data.json'),
-        path.join(__dirname, '../../../ipohunterv2/data.json'),
+        path.join(path.join(__dirname, '..'), '../../ipohunterv2/data.json'),
+        path.join(path.join(__dirname, '..'), '../../../ipohunterv2/data.json'),
         '/home/awi/Desktop/trade/ipohunterv2/data.json'
     ];
     for (const p of candidatePaths) {
@@ -283,7 +283,7 @@ async function main() {
     // ==========================================
     // CUSTOM VIP WATCHLIST (YAHOO FINANCE)
     // ==========================================
-    const rawMappings = JSON.parse(fs.readFileSync(path.join(__dirname, 'symbol_mappings.json'), 'utf8'));
+    const rawMappings = JSON.parse(fs.readFileSync(path.join(path.join(__dirname, '..'), 'symbol_mappings.json'), 'utf8'));
     
     // Deduplicate mappings: if multiple names map to the same symbol, keep only the shortest name (ticker symbol)
     const mappings = {};
@@ -453,7 +453,7 @@ async function main() {
                 
                 // Auto-append to symbol_mappings.json to avoid repeating lookups
                 try {
-                    const mappingsPath = path.join(__dirname, 'symbol_mappings.json');
+                    const mappingsPath = path.join(path.join(__dirname, '..'), 'symbol_mappings.json');
                     const raw = JSON.parse(fs.readFileSync(mappingsPath, 'utf8'));
                     if (!raw[cleanName]) {
                         raw[cleanName] = symbol;
@@ -1424,7 +1424,7 @@ async function main() {
 
     // Tag VVIP (appeared in previous history file and is not a comb/downtrend stock yesterday or today)
     try {
-        const histDir = path.join(__dirname, 'history');
+        const histDir = path.join(path.join(__dirname, '..'), 'history');
         if (fs.existsSync(histDir)) {
             const histFiles = fs.readdirSync(histDir)
                 .filter(f => f.startsWith('data_') && f.endsWith('.json'))
@@ -1510,7 +1510,7 @@ async function main() {
     };
     
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(output, null, 2));
-    fs.writeFileSync(path.join(__dirname, 'live_data.js'), `window.liveData = ${JSON.stringify(output)};`);
+    fs.writeFileSync(path.join(path.join(__dirname, '..'), 'live_data.js'), `window.liveData = ${JSON.stringify(output)};`);
     console.log(`\n🎉 Selesai! ${processedData.length} saham dianalisis.`);
     console.log(`📂 Disimpan ke ${OUTPUT_FILE} dan live_data.js`);
     
@@ -1523,7 +1523,7 @@ async function main() {
         console.log('🌙 Hujung minggu (MYT) — rekod sejarah diskip (elak data stale menindih hari dagangan).');
     } else {
         const dateStr = new Date().toISOString().split('T')[0];
-        const histDir = path.join(__dirname, 'history');
+        const histDir = path.join(path.join(__dirname, '..'), 'history');
         if (!fs.existsSync(histDir)) fs.mkdirSync(histDir);
         fs.writeFileSync(path.join(histDir, `data_${dateStr}.json`), JSON.stringify(output, null, 2));
     }

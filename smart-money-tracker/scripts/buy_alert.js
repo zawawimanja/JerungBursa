@@ -24,7 +24,7 @@ const fs = require('fs');
 const path = require('path');
 const https = require('https');
 
-const HIST_DIR = path.join(__dirname, 'history');
+const HIST_DIR = path.join(path.join(__dirname, '..'), 'history');
 
 // -------------------------------------------------------------
 // Load .env tempatan (jika wujud) — tanpa dependency tambahan.
@@ -32,7 +32,7 @@ const HIST_DIR = path.join(__dirname, 'history');
 // -------------------------------------------------------------
 function loadEnvFile() {
     try {
-        const f = path.join(__dirname, '.env');
+        const f = path.join(path.join(__dirname, '..'), '.env');
         if (!fs.existsSync(f)) return;
         for (const line of fs.readFileSync(f, 'utf8').split('\n')) {
             const m = line.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*)\s*$/);
@@ -61,7 +61,7 @@ function getJson(url) {
 // -------------------------------------------------------------
 // Kanonikalkan nama stok (sama macam generator)
 // -------------------------------------------------------------
-const SYM_MAP = JSON.parse(fs.readFileSync(path.join(__dirname, 'symbol_mappings.json'), 'utf8'));
+const SYM_MAP = JSON.parse(fs.readFileSync(path.join(path.join(__dirname, '..'), 'symbol_mappings.json'), 'utf8'));
 const symNames = {};
 for (const [nm, sym] of Object.entries(SYM_MAP)) {
     if (!symNames[sym]) symNames[sym] = [];
@@ -533,7 +533,7 @@ function buildMessage(now, out) {
     const now = new Date();
 
     // 1. Load live_data.json
-    const liveFile = path.join(__dirname, 'live_data.json');
+    const liveFile = path.join(path.join(__dirname, '..'), 'live_data.json');
     if (!fs.existsSync(liveFile)) { console.error('❌ live_data.json tidak wujud — jalankan scrape-real.js dulu.'); process.exit(1); }
     const live = JSON.parse(fs.readFileSync(liveFile, 'utf8'));
     const rows = (live.topVolume || []).filter(r => r && r.name);
@@ -541,8 +541,8 @@ function buildMessage(now, out) {
     console.log(`📦 Loaded ${rows.length} stocks dari live_data.json (${live.lastUpdated || '?'})`);
 
     // 2. Load trackers (untuk badge + SL warning)
-    const frTrades = loadTrackerTrades(path.join(__dirname, 'fresh_rider_tracker.js'));
-    const htTrades = loadTrackerTrades(path.join(__dirname, 'hot_theme_tracker.js'));
+    const frTrades = loadTrackerTrades(path.join(path.join(__dirname, '..'), 'fresh_rider_tracker.js'));
+    const htTrades = loadTrackerTrades(path.join(path.join(__dirname, '..'), 'hot_theme_tracker.js'));
     const frTrackedStatus = new Map(frTrades.map(t => [(t.name || '').toUpperCase(), t]));
     const htTrackedStatus = new Map(htTrades.map(t => [(t.name || '').toUpperCase(), t]));
     const frTrackedNames = new Set(frTrackedStatus.keys());
@@ -701,7 +701,7 @@ function buildMessage(now, out) {
 
     let newsData = {};
     try {
-        const newsPath = path.join(__dirname, 'news_data.js');
+        const newsPath = path.join(path.join(__dirname, '..'), 'news_data.js');
         if (fs.existsSync(newsPath)) {
             const rawNews = fs.readFileSync(newsPath, 'utf8');
             const ctx = { window: {} };
@@ -851,8 +851,8 @@ function buildMessage(now, out) {
     // 7b. Semak Corporate News & Dividen Automatik untuk Top Ranking
     console.log('📣 Semakan Berita Korporat & Tarikh Ex-Dividen Automatik...');
     const { getCorporateNewsRisk } = require('./fetch_news_module');
-    const symbolMap = fs.existsSync(path.join(__dirname, 'symbol_mappings.json')) 
-        ? JSON.parse(fs.readFileSync(path.join(__dirname, 'symbol_mappings.json'), 'utf8')) 
+    const symbolMap = fs.existsSync(path.join(path.join(__dirname, '..'), 'symbol_mappings.json')) 
+        ? JSON.parse(fs.readFileSync(path.join(path.join(__dirname, '..'), 'symbol_mappings.json'), 'utf8')) 
         : {};
 
     async function enrichListWithNews(list) {
@@ -891,7 +891,7 @@ function buildMessage(now, out) {
     const msg = buildMessage(now, out);
 
     // Simpan output untuk rujukan
-    fs.writeFileSync(path.join(__dirname, 'buy_alert_latest.json'), JSON.stringify(out, null, 2), 'utf8');
+    fs.writeFileSync(path.join(path.join(__dirname, '..'), 'buy_alert_latest.json'), JSON.stringify(out, null, 2), 'utf8');
     console.log('\n' + msg + '\n');
 
     const token = process.env.TELEGRAM_BOT_TOKEN;

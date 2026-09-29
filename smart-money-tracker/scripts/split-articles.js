@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const articlesDir = path.join(__dirname, 'articles');
+const articlesDir = path.join(path.join(__dirname, '..'), 'articles');
 if (!fs.existsSync(articlesDir)) {
     fs.mkdirSync(articlesDir, { recursive: true });
 }
@@ -785,11 +785,11 @@ const hubHtml = `<!DOCTYPE html>
 </html>
 `;
 
-fs.writeFileSync(path.join(__dirname, 'articles.html'), hubHtml, 'utf8');
+fs.writeFileSync(path.join(path.join(__dirname, '..'), 'articles.html'), hubHtml, 'utf8');
 console.log('Updated articles.html as Hub successfully');
 
 // Update JerungBursa sitemap.xml
-const sitemapPath = path.join(__dirname, 'sitemap.xml');
+const sitemapPath = path.join(path.join(__dirname, '..'), 'sitemap.xml');
 const today = new Date().toISOString().split('T')[0];
 
 const coreJerungUrls = [

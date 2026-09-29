@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const file = path.join(__dirname, 'tracker_data.js');
+const file = path.join(path.join(__dirname, '..'), 'tracker_data.js');
 if (!fs.existsSync(file)) {
   console.error("tracker_data.js not found");
   process.exit(1);

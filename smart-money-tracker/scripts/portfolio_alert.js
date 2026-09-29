@@ -16,7 +16,7 @@ const https = require('https');
 // Load .env
 function loadEnvFile() {
     try {
-        const f = path.join(__dirname, '.env');
+        const f = path.join(path.join(__dirname, '..'), '.env');
         if (!fs.existsSync(f)) return;
         for (const line of fs.readFileSync(f, 'utf8').split('\n')) {
             const m = line.match(/^\s*([A-Z0-9_]+)\s*=\s*(.*)\s*$/);
@@ -26,9 +26,9 @@ function loadEnvFile() {
 }
 loadEnvFile();
 
-const portfolioFile = path.join(__dirname, 'user_portfolio.json');
-const historyAlertsFile = path.join(__dirname, 'portfolio_alerts_history.json');
-const liveFile = path.join(__dirname, 'live_data.json');
+const portfolioFile = path.join(path.join(__dirname, '..'), 'user_portfolio.json');
+const historyAlertsFile = path.join(path.join(__dirname, '..'), 'portfolio_alerts_history.json');
+const liveFile = path.join(path.join(__dirname, '..'), 'live_data.json');
 
 function fmtPrice(p) { return p == null ? '—' : Number(p).toFixed(3); }
 function fmtPct(p) { return p == null ? '—' : (p > 0 ? '+' : '') + Number(p).toFixed(2) + '%'; }

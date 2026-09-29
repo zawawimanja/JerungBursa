@@ -30,10 +30,10 @@ function runScraper() {
     console.log(`[${now.toLocaleString('en-MY', { timeZone: 'Asia/Kuala_Lumpur' })}] 🔄 Memulakan imbasan pasaran live (5-Minit Auto-Run)...`);
     console.log(`==================================================`);
     
-    const scrapeScript = path.join(__dirname, 'scrape-real.js');
-    const projectRoot = path.join(__dirname, '..');
+    const scrapeScript = path.join(path.join(__dirname, '..'), 'scrape-real.js');
+    const projectRoot = path.join(path.join(__dirname, '..'), '..');
     
-    exec(`node "${scrapeScript}"`, { cwd: __dirname }, (error, stdout, stderr) => {
+    exec(`node "${scrapeScript}"`, { cwd: path.join(__dirname, '..') }, (error, stdout, stderr) => {
         if (error) {
             console.error(`❌ Ralat semasa mengemas kini harga: ${error.message}`);
             isRunning = false;
@@ -42,10 +42,10 @@ function runScraper() {
         if (stdout) console.log(stdout);
 
         // Jana semula tracker Fresh Rider DULU, baru push (supaya fail tracker terkini ikut sekali)
-        const trackerScript = path.join(__dirname, 'generate_fresh_rider_tracker.js');
-        const htTrackerScript = path.join(__dirname, 'generate_hot_theme_tracker.js');
-        const eqTrackerScript = path.join(__dirname, 'generate_daily_equity_tracker.js');
-        exec(`node "${trackerScript}" && node "${htTrackerScript}" && node "${eqTrackerScript}"`, { cwd: __dirname }, (tErr, tOut) => {
+        const trackerScript = path.join(path.join(__dirname, '..'), 'generate_fresh_rider_tracker.js');
+        const htTrackerScript = path.join(path.join(__dirname, '..'), 'generate_hot_theme_tracker.js');
+        const eqTrackerScript = path.join(path.join(__dirname, '..'), 'generate_daily_equity_tracker.js');
+        exec(`node "${trackerScript}" && node "${htTrackerScript}" && node "${eqTrackerScript}"`, { cwd: path.join(__dirname, '..') }, (tErr, tOut) => {
             if (tErr) console.error(`⚠️ Ralat jana tracker Fresh Rider: ${tErr.message}`);
             else if (tOut) console.log(tOut.split('\n')[0]);
 
@@ -58,8 +58,8 @@ function runScraper() {
             if (mytHour === 9 && mytMin >= 1 && mytMin <= 10 && global.lastMorningAlertSentDate !== todayStr) {
                 global.lastMorningAlertSentDate = todayStr;
                 console.log(`📢 Menjalankan Morning Open Execution Alert Telegram (9:02 AM)...`);
-                const morningScript = path.join(__dirname, 'morning_alert.js');
-                exec(`node "${morningScript}"`, { cwd: __dirname }, (mErr, mOut) => {
+                const morningScript = path.join(path.join(__dirname, '..'), 'morning_alert.js');
+                exec(`node "${morningScript}"`, { cwd: path.join(__dirname, '..') }, (mErr, mOut) => {
                     if (mErr) console.error(`⚠️ Ralat Morning Alert: ${mErr.message}`);
                     else if (mOut) console.log(`✅ Morning Alert Telegram Selesai dihantar.`);
                 });
@@ -69,16 +69,16 @@ function runScraper() {
             if (mytHour === 16 && mytMin >= 25 && mytMin <= 40 && global.lastAlertSentDate !== todayStr) {
                 global.lastAlertSentDate = todayStr;
                 console.log(`📢 Menjalankan Buy Alert Telegram (4:30 PM Pre-Close Alert)...`);
-                const alertScript = path.join(__dirname, 'buy_alert.js');
-                exec(`node "${alertScript}"`, { cwd: __dirname }, (aErr, aOut) => {
+                const alertScript = path.join(path.join(__dirname, '..'), 'buy_alert.js');
+                exec(`node "${alertScript}"`, { cwd: path.join(__dirname, '..') }, (aErr, aOut) => {
                     if (aErr) console.error(`⚠️ Ralat Buy Alert: ${aErr.message}`);
                     else if (aOut) console.log(`✅ Buy Alert Telegram Selesai dihantar.`);
                 });
             }
 
             // 3. Real-Time Portfolio TP/SL & Breakeven Alert (setiap 5 minit)
-            const portfolioScript = path.join(__dirname, 'portfolio_alert.js');
-            exec(`node "${portfolioScript}"`, { cwd: __dirname }, (pErr, pOut) => {
+            const portfolioScript = path.join(path.join(__dirname, '..'), 'portfolio_alert.js');
+            exec(`node "${portfolioScript}"`, { cwd: path.join(__dirname, '..') }, (pErr, pOut) => {
                 if (pErr) console.error(`⚠️ Ralat Portfolio Alert: ${pErr.message}`);
                 else if (pOut && pOut.trim()) console.log(pOut.trim());
             });

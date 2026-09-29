@@ -23,7 +23,7 @@ jobs:
           node-version: '18'
 
       - name: Run Morning Alert (harga live + gap analysis + Telegram)
-        run: node morning_alert.js
+        run: node scripts/morning_alert.js
         working-directory: smart-money-tracker
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}

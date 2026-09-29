@@ -35,7 +35,7 @@ jobs:
           node-version: '18'
 
       - name: Run Buy Alert (harga live + list FR/HT + Telegram)
-        run: node buy_alert.js
+        run: node scripts/buy_alert.js
         working-directory: smart-money-tracker
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}

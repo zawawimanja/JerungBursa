@@ -3,8 +3,8 @@ const path = require('path');
 const axios = require('axios');
 const cheerio = require('cheerio');
 
-const JERUNG_JSON = path.join(__dirname, 'jerung-data.json');
-const JERUNG_JS = path.join(__dirname, 'jerung-data.js');
+const JERUNG_JSON = path.join(path.join(__dirname, '..'), 'jerung-data.json');
+const JERUNG_JS = path.join(path.join(__dirname, '..'), 'jerung-data.js');
 
 const HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
@@ -31,7 +31,7 @@ let nameToSymbolMap = null;
 function loadSymbolMappings() {
     if (nameToSymbolMap) return nameToSymbolMap;
     nameToSymbolMap = {};
-    const mapFile = path.join(__dirname, 'symbol_mappings.json');
+    const mapFile = path.join(path.join(__dirname, '..'), 'symbol_mappings.json');
     if (fs.existsSync(mapFile)) {
         try {
             const data = JSON.parse(fs.readFileSync(mapFile, 'utf8'));
@@ -43,7 +43,7 @@ function loadSymbolMappings() {
             }
         } catch (e) { /* ignore */ }
     }
-    const liveFile = path.join(__dirname, 'live_data.json');
+    const liveFile = path.join(path.join(__dirname, '..'), 'live_data.json');
     if (fs.existsSync(liveFile)) {
         try {
             const d = JSON.parse(fs.readFileSync(liveFile, 'utf8'));

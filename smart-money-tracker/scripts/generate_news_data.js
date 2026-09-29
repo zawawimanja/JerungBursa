@@ -2,9 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const { getCorporateNewsRisk } = require('./fetch_news_module');
 
-const LIVE_DATA_PATH = path.join(__dirname, 'live_data.json');
-const SYMBOL_MAP_PATH = path.join(__dirname, 'symbol_mappings.json');
-const OUTPUT_FILE = path.join(__dirname, 'news_data.js');
+const LIVE_DATA_PATH = path.join(path.join(__dirname, '..'), 'live_data.json');
+const SYMBOL_MAP_PATH = path.join(path.join(__dirname, '..'), 'symbol_mappings.json');
+const OUTPUT_FILE = path.join(path.join(__dirname, '..'), 'news_data.js');
 
 async function pLimit(concurrency, items, fn) {
     const results = [];

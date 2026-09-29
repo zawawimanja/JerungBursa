@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const historyDir = path.join(__dirname, 'history');
+const historyDir = path.join(path.join(__dirname, '..'), 'history');
 
 // 1. Get all history files and sort by date
 const files = fs.readdirSync(historyDir)

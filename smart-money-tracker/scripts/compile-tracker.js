@@ -1,8 +1,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const HISTORY_DIR = path.join(__dirname, 'history');
-const OUTPUT_FILE = path.join(__dirname, 'tracker_data.js');
+const HISTORY_DIR = path.join(path.join(__dirname, '..'), 'history');
+const OUTPUT_FILE = path.join(path.join(__dirname, '..'), 'tracker_data.js');
 
 function calculateSmartScore(item) {
   let score = 0;

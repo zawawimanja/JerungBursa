@@ -2,9 +2,9 @@ const fs = require('fs');
 const path = require('path');
 
 const candidatePaths = [
-  path.join(__dirname, 'backtest-data.js'),
-  path.join(__dirname, '../backtest-data.js'),
-  path.join(__dirname, '../../JerungAI/backtest-data.js'),
+  path.join(path.join(__dirname, '..'), 'backtest-data.js'),
+  path.join(path.join(__dirname, '..'), '../backtest-data.js'),
+  path.join(path.join(__dirname, '..'), '../../JerungAI/backtest-data.js'),
   'c:/Users/aaror/OneDrive - PERTUBUHAN KESELAMATAN SOSIAL/Desktop/JerungAI/backtest-data.js'
 ];
 const backtestFile = candidatePaths.find(p => fs.existsSync(p));

@@ -8,10 +8,10 @@
 const fs = require('fs');
 const path = require('path');
 
-const HIST_DIR = path.join(__dirname, 'history');
-const OUT_FILE = path.join(__dirname, 'fresh_rider_tracker.js');
+const HIST_DIR = path.join(path.join(__dirname, '..'), 'history');
+const OUT_FILE = path.join(path.join(__dirname, '..'), 'fresh_rider_tracker.js');
 
-const SYM_MAP = JSON.parse(fs.readFileSync(path.join(__dirname, 'symbol_mappings.json'), 'utf8'));
+const SYM_MAP = JSON.parse(fs.readFileSync(path.join(path.join(__dirname, '..'), 'symbol_mappings.json'), 'utf8'));
 const symNames = {};
 for (const [nm, sym] of Object.entries(SYM_MAP)) {
     if (!symNames[sym]) symNames[sym] = [];
@@ -101,7 +101,7 @@ for (const f of files) {
     dayList.push({ date: f.replace('data_', '').replace('.json', ''), rows: d.topVolume || [] });
 }
 
-const liveFile = path.join(__dirname, 'live_data.json');
+const liveFile = path.join(path.join(__dirname, '..'), 'live_data.json');
 if (fs.existsSync(liveFile)) {
     try {
         const live = JSON.parse(fs.readFileSync(liveFile, 'utf8'));
