@@ -1,17 +1,17 @@
 // AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual
 window.FRESH_RIDER_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-30T05:50:51.061Z",
+  "generatedAt": "2026-09-30T06:01:06.091Z",
   "dataDays": 82,
-  "totalTracked": 24,
-  "openCount": 16,
+  "totalTracked": 25,
+  "openCount": 17,
   "closedCount": 8,
   "closedWins": 4,
   "closedWinRate": 50,
   "closedAvgGain": 3.4,
-  "openPnl": 687.6,
+  "openPnl": 686.2,
   "closedPnl": 27.4,
-  "totalPnlNow": 715
+  "totalPnlNow": 713.6
  },
  "backtest": {
   "dataStart": "2026-06-02",
@@ -121,6 +121,26 @@ window.FRESH_RIDER_TRACKER = {
    "ipoYear": 2026,
    "sector": "Technology",
    "slTrail": 0.624
+  },
+  {
+   "name": "PENTECH",
+   "entryType": "🔥 NEW",
+   "entryDate": "2026-09-08",
+   "entry": 0.35,
+   "entryFloor": 0.33,
+   "currentFloor": 0.315,
+   "currentPrice": 0.345,
+   "high": 0.355,
+   "highDate": "2026-09-10",
+   "maxGain": 1.4,
+   "finalGain": -1.4,
+   "day1ChangePct": 2.94,
+   "days": 16,
+   "lastDate": "2026-09-30",
+   "status": "OPEN",
+   "ipoYear": 2026,
+   "sector": "Industrial",
+   "slTrail": 0.311
   },
   {
    "name": "SUNLOGY",
@@ -522,7 +542,7 @@ window.FRESH_RIDER_TRACKER = {
 };
 window.ADD_ON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-30T05:50:51.061Z",
+  "generatedAt": "2026-09-30T06:01:06.091Z",
   "dataDays": 82,
   "totalTracked": 16,
   "openCount": 12,
@@ -883,7 +903,7 @@ window.ADD_ON_TRACKER = {
 };
 window.FLOOR_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-30T05:50:51.061Z",
+  "generatedAt": "2026-09-30T06:01:06.091Z",
   "dataDays": 82,
   "totalTracked": 31,
   "openCount": 29,
@@ -1553,17 +1573,17 @@ window.FLOOR_ADDON_TRACKER = {
 };
 window.ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-30T05:50:51.061Z",
+  "generatedAt": "2026-09-30T06:01:06.091Z",
   "dataDays": 82,
-  "totalTracked": 71,
-  "openCount": 57,
+  "totalTracked": 72,
+  "openCount": 58,
   "closedCount": 14,
   "closedWins": 5,
   "closedWinRate": 36,
   "closedAvgGain": -1.6,
-  "openPnl": 2075.3,
+  "openPnl": 2073.9,
   "closedPnl": -22.4,
-  "totalPnlNow": 2052.9
+  "totalPnlNow": 2051.5
  },
  "trades": [
   {
@@ -1892,6 +1912,26 @@ window.ALL_TRACKER = {
    "ipoYear": 2026,
    "sector": "Technology",
    "slTrail": 0.624
+  },
+  {
+   "name": "PENTECH",
+   "entryType": "🔥 NEW",
+   "entryDate": "2026-09-08",
+   "entry": 0.35,
+   "entryFloor": 0.33,
+   "currentFloor": 0.315,
+   "currentPrice": 0.345,
+   "high": 0.355,
+   "highDate": "2026-09-10",
+   "maxGain": 1.4,
+   "finalGain": -1.4,
+   "day1ChangePct": 2.94,
+   "days": 16,
+   "lastDate": "2026-09-30",
+   "status": "OPEN",
+   "ipoYear": 2026,
+   "sector": "Industrial",
+   "slTrail": 0.311
   },
   {
    "id": "STRATUS_2026-09-08_ADDON",

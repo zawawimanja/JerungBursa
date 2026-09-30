@@ -1,17 +1,17 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-30T05:50:52.236Z",
+  "generatedAt": "2026-09-30T06:01:07.103Z",
   "dataDays": 86,
-  "totalTracked": 315,
-  "openCount": 199,
+  "totalTracked": 316,
+  "openCount": 200,
   "closedCount": 116,
   "closedWins": 81,
   "closedWinRate": 70,
   "closedAvgGain": 11.4,
-  "openPnl": 2168.6,
+  "openPnl": 2167.2,
   "closedPnl": 1320.6,
-  "totalPnlNow": 3489.2
+  "totalPnlNow": 3487.8
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -1776,6 +1776,29 @@ window.HOT_THEME_TRACKER = {
    ],
    "confluence": 3,
    "slTrail": 2.386
+  },
+  {
+   "id": "PENTECH_2026-09-09_ADDON",
+   "name": "PENTECH",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-09-09",
+   "entry": 0.35,
+   "entryFloor": 0.33,
+   "currentFloor": 0.315,
+   "currentPrice": 0.345,
+   "high": 0.355,
+   "highDate": "2026-09-10",
+   "maxGain": 1.4,
+   "finalGain": -1.4,
+   "day1ChangePct": 0,
+   "days": 15,
+   "lastDate": "2026-09-30",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "slTrail": 0.306
   },
   {
    "id": "DNEX_2026-09-09_ADDON",
@@ -8116,7 +8139,7 @@ window.HOT_THEME_TRACKER = {
 };
 window.HOT_THEME_NEW_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-30T05:50:52.236Z",
+  "generatedAt": "2026-09-30T06:01:07.103Z",
   "dataDays": 86,
   "totalTracked": 48,
   "openCount": 11,
@@ -9312,7 +9335,7 @@ window.HOT_THEME_NEW_TRACKER = {
 };
 window.HOT_THEME_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-30T05:50:52.236Z",
+  "generatedAt": "2026-09-30T06:01:07.103Z",
   "dataDays": 86,
   "totalTracked": 115,
   "openCount": 76,
@@ -12052,17 +12075,17 @@ window.HOT_THEME_ADDON_TRACKER = {
 };
 window.HOT_THEME_FLOOR_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-30T05:50:52.237Z",
+  "generatedAt": "2026-09-30T06:01:07.103Z",
   "dataDays": 86,
-  "totalTracked": 152,
-  "openCount": 112,
+  "totalTracked": 153,
+  "openCount": 113,
   "closedCount": 40,
   "closedWins": 30,
   "closedWinRate": 75,
   "closedAvgGain": 11.4,
-  "openPnl": 899.5,
+  "openPnl": 898.1,
   "closedPnl": 457.6,
-  "totalPnlNow": 1357.1
+  "totalPnlNow": 1355.7
  },
  "trades": [
   {
@@ -14705,6 +14728,29 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "slTrail": 2.386
   },
   {
+   "id": "PENTECH_2026-09-09_ADDON",
+   "name": "PENTECH",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-09-09",
+   "entry": 0.35,
+   "entryFloor": 0.33,
+   "currentFloor": 0.315,
+   "currentPrice": 0.345,
+   "high": 0.355,
+   "highDate": "2026-09-10",
+   "maxGain": 1.4,
+   "finalGain": -1.4,
+   "day1ChangePct": 0,
+   "days": 15,
+   "lastDate": "2026-09-30",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "slTrail": 0.306
+  },
+  {
    "id": "DNEX_2026-09-09_ADDON",
    "name": "DNEX",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -15650,17 +15696,17 @@ window.HOT_THEME_FLOOR_TRACKER = {
 };
 window.HOT_THEME_ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-30T05:50:52.236Z",
+  "generatedAt": "2026-09-30T06:01:07.103Z",
   "dataDays": 86,
-  "totalTracked": 315,
-  "openCount": 199,
+  "totalTracked": 316,
+  "openCount": 200,
   "closedCount": 116,
   "closedWins": 81,
   "closedWinRate": 70,
   "closedAvgGain": 11.4,
-  "openPnl": 2168.6,
+  "openPnl": 2167.2,
   "closedPnl": 1320.6,
-  "totalPnlNow": 3489.2
+  "totalPnlNow": 3487.8
  },
  "trades": [
   {
@@ -16810,6 +16856,29 @@ window.HOT_THEME_ALL_TRACKER = {
    ],
    "confluence": 3,
    "slTrail": 2.386
+  },
+  {
+   "id": "PENTECH_2026-09-09_ADDON",
+   "name": "PENTECH",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-09-09",
+   "entry": 0.35,
+   "entryFloor": 0.33,
+   "currentFloor": 0.315,
+   "currentPrice": 0.345,
+   "high": 0.355,
+   "highDate": "2026-09-10",
+   "maxGain": 1.4,
+   "finalGain": -1.4,
+   "day1ChangePct": 0,
+   "days": 15,
+   "lastDate": "2026-09-30",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "slTrail": 0.306
   },
   {
    "id": "DNEX_2026-09-09_ADDON",
