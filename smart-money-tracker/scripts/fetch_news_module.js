@@ -183,6 +183,54 @@ async function getCorporateNewsRisk(stockCode, stockName) {
             const catUpper = ann.category.toUpperCase();
             const titleUpper = ann.title.toUpperCase();
 
+            // 1. EV / Green Mobility / Tenaga Baharu (BYD, MOU, Solar, RE)
+            if (titleUpper.includes('BYD') || titleUpper.includes('ELECTRIC VEHICLE') || titleUpper.includes('EV BUS') || titleUpper.includes('GREEN MOBILITY') || titleUpper.includes('SOLAR') || titleUpper.includes('RENEWABLE')) {
+                if (!newsBadges.some(b => b.type === 'EV_CATALYST')) {
+                    newsBadges.push({
+                        type: 'EV_CATALYST',
+                        label: `⚡ EV / Green Catalyst`,
+                        severity: 'success',
+                        title: `[${ann.date}] ${ann.title}`
+                    });
+                }
+            }
+
+            // 2. AI / Data Centre / Semicon Catalyst
+            if (titleUpper.includes('ARTIFICIAL INTELLIGENCE') || titleUpper.includes('DATA CENTRE') || titleUpper.includes('NVIDIA') || titleUpper.includes('CHIP') || titleUpper.includes('SEMICONDUCTOR')) {
+                if (!newsBadges.some(b => b.type === 'AI_CATALYST')) {
+                    newsBadges.push({
+                        type: 'AI_CATALYST',
+                        label: `🤖 AI / Data Centre`,
+                        severity: 'success',
+                        title: `[${ann.date}] ${ann.title}`
+                    });
+                }
+            }
+
+            // 3. Contract / Award Win
+            if (titleUpper.includes('LETTER OF AWARD') || titleUpper.includes('CONTRACT AWARD') || titleUpper.includes('PROJECT AWARD') || (titleUpper.includes('CONTRACT') && titleUpper.includes('AWARD'))) {
+                if (!newsBadges.some(b => b.type === 'CONTRACT_WIN')) {
+                    newsBadges.push({
+                        type: 'CONTRACT_WIN',
+                        label: `📜 Contract Award`,
+                        severity: 'success',
+                        title: `[${ann.date}] ${ann.title}`
+                    });
+                }
+            }
+
+            // 4. Jerung Pemegang Saham 5%+ (Substantial Shareholder / Sec 138)
+            if (titleUpper.includes('SUBSTANTIAL') || titleUpper.includes('SECTION 138') || titleUpper.includes('ACQUISITION OF SHARES') || catUpper.includes('CHANGES IN SHAREHOLDINGS')) {
+                if (!newsBadges.some(b => b.type === 'JERUNG_5PCT')) {
+                    newsBadges.push({
+                        type: 'JERUNG_5PCT',
+                        label: `🐋 Jerung 5%+ Action`,
+                        severity: 'success',
+                        title: `[${ann.date}] ${ann.title}`
+                    });
+                }
+            }
+
             if (titleUpper.includes('QUARTERLY') || titleUpper.includes('FINANCIAL RESULTS') || catUpper.includes('FINANCIAL')) {
                 if (!newsBadges.some(b => b.type === 'EARNINGS_QR')) {
                     newsBadges.push({
