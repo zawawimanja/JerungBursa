@@ -229,11 +229,25 @@ for (const day of dayList) {
         if (cur.price > t.high) { t.high = +cur.price.toFixed(3); t.highDate = day.date; }
         t.maxGain = +(((t.high - t.entry) / t.entry) * 100).toFixed(1);
 
-        const initialSl = t.entry * 0.89;
-        const slTrail = Math.max(initialSl, t.high * 0.80);
+        // Rule 6: Kunci Bebas Risiko & Scale-Out
+        let slTrail = t.entryFloor > 0 ? t.entryFloor * 0.97 : t.entry * 0.89; // Initial SL bawah lantai
+        if (t.maxGain >= 10) {
+            slTrail = Math.max(t.entry * 1.10, t.high * 0.85); // Lock di TP1 (+10%), trail 15% dari puncak
+        } else if (t.maxGain >= 5) {
+            slTrail = Math.max(t.entry, t.high * 0.88); // Free Trade: Breakeven
+        } else {
+            slTrail = Math.max(slTrail, t.high * 0.88); // Default trail 12%
+        }
+        
         t.slTrail = +slTrail.toFixed(3);
         if (cur.price <= slTrail) {
             t.status = 'CLOSED_SL';
+            t.exitDate = day.date;
+            t.exitPrice = +cur.price.toFixed(3);
+            t.finalGain = +(((cur.price - t.entry) / t.entry) * 100).toFixed(1);
+            delete openFR[name];
+        } else if (t.days >= 60 && t.maxGain < 10 && t.finalGain < 5) { // Time Stop: Lemau lepas 60 hari
+            t.status = 'CLOSED_TIME';
             t.exitDate = day.date;
             t.exitPrice = +cur.price.toFixed(3);
             t.finalGain = +(((cur.price - t.entry) / t.entry) * 100).toFixed(1);
@@ -323,11 +337,24 @@ for (const day of dayList) {
         if (cur.price > t.high) { t.high = +cur.price.toFixed(3); t.highDate = day.date; }
         t.maxGain = +(((t.high - t.entry) / t.entry) * 100).toFixed(1);
 
-        const initialSl = t.entry * 0.89;
-        const slTrail = Math.max(initialSl, t.high * 0.80);
+        // Rule 6: Kunci Bebas Risiko & Scale-Out
+        let slTrail = t.entryFloor > 0 ? t.entryFloor * 0.97 : t.entry * 0.89;
+        if (t.maxGain >= 10) {
+            slTrail = Math.max(t.entry * 1.10, t.high * 0.85); // Lock di TP1 (+10%), trail 15% dari puncak
+        } else if (t.maxGain >= 5) {
+            slTrail = Math.max(t.entry, t.high * 0.88); // Free Trade: Breakeven
+        } else {
+            slTrail = Math.max(slTrail, t.high * 0.88); // Default trail 12%
+        }
+        
         t.slTrail = +slTrail.toFixed(3);
         if (cur.price <= slTrail) {
             t.status = 'CLOSED_SL';
+            t.exitDate = day.date;
+            t.exitPrice = +cur.price.toFixed(3);
+            t.finalGain = +(((cur.price - t.entry) / t.entry) * 100).toFixed(1);
+        } else if (t.days >= 60 && t.maxGain < 10 && t.finalGain < 5) {
+            t.status = 'CLOSED_TIME';
             t.exitDate = day.date;
             t.exitPrice = +cur.price.toFixed(3);
             t.finalGain = +(((cur.price - t.entry) / t.entry) * 100).toFixed(1);
