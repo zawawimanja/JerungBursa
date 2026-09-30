@@ -7032,13 +7032,13 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 if (stockNews && Array.isArray(stockNews.newsBadges)) {
                     for (const nb of stockNews.newsBadges) {
                         if (nb.type === 'EV_CATALYST') {
-                            badgesHtml += `<span class="fr-new-badge" style="font-size:0.6rem; background:rgba(6,182,212,0.25); color:#67e8f9; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(6,182,212,0.6); white-space:nowrap; cursor:help;" title="${nb.title || 'EV / Green Mobility Catalyst'}">⚡ EV Catalyst</span>`;
+                            badgesHtml += `<span class="catalyst-badge" style="font-size:0.6rem; background:rgba(6,182,212,0.25); color:#67e8f9; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(6,182,212,0.6); white-space:nowrap; cursor:help;" title="${nb.title || 'EV / Green Mobility Catalyst'}">⚡ EV Catalyst</span>`;
                         } else if (nb.type === 'AI_CATALYST') {
-                            badgesHtml += `<span class="fr-new-badge" style="font-size:0.6rem; background:rgba(168,85,247,0.25); color:#e9d5ff; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(168,85,247,0.6); white-space:nowrap; cursor:help;" title="${nb.title || 'AI / Data Centre Catalyst'}">🤖 AI Catalyst</span>`;
+                            badgesHtml += `<span class="catalyst-badge" style="font-size:0.6rem; background:rgba(168,85,247,0.25); color:#e9d5ff; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(168,85,247,0.6); white-space:nowrap; cursor:help;" title="${nb.title || 'AI / Data Centre Catalyst'}">🤖 AI Catalyst</span>`;
                         } else if (nb.type === 'CONTRACT_WIN') {
-                            badgesHtml += `<span class="fr-new-badge" style="font-size:0.6rem; background:rgba(234,179,8,0.25); color:#fef08a; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(234,179,8,0.6); white-space:nowrap; cursor:help;" title="${nb.title || 'Contract Award Win'}">📜 Contract Win</span>`;
+                            badgesHtml += `<span class="catalyst-badge" style="font-size:0.6rem; background:rgba(234,179,8,0.25); color:#fef08a; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(234,179,8,0.6); white-space:nowrap; cursor:help;" title="${nb.title || 'Contract Award Win'}">📜 Contract Win</span>`;
                         } else if (nb.type === 'JERUNG_5PCT') {
-                            badgesHtml += `<span class="fr-new-badge" style="font-size:0.6rem; background:rgba(16,185,129,0.25); color:#6ee7b7; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(16,185,129,0.6); white-space:nowrap; cursor:help;" title="${nb.title || 'Substantial Shareholder Jerung Acquisition (5%+)'}">🐋 Jerung 5%+</span>`;
+                            badgesHtml += `<span class="catalyst-badge" style="font-size:0.6rem; background:rgba(16,185,129,0.25); color:#6ee7b7; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(16,185,129,0.6); white-space:nowrap; cursor:help;" title="${nb.title || 'Substantial Shareholder Jerung Acquisition (5%+)'}">🐋 Jerung 5%+</span>`;
                         }
                     }
                 }
@@ -8969,8 +8969,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const currentPicksMap = new Map((window._latestFreshRiderPicks || currentData || []).map(it => [(it.name || '').toUpperCase(), it]));
             const recentFloorMap = getRecentFloorMap(hd, 5);
 
-            // Buang badge kesegaran lama sahaja (kekalkan swan-eval-badge jika ada)
-            tbody.querySelectorAll('.fr-new-badge:not(.swan-eval-badge)').forEach(el => el.remove());
+            // Buang badge kesegaran lama sahaja (kekalkan swan-eval-badge & catalyst-badge)
+            tbody.querySelectorAll('.fr-new-badge:not(.swan-eval-badge):not(.catalyst-badge)').forEach(el => el.remove());
 
             tbody.querySelectorAll('tr[data-fr-name]').forEach(tr => {
                 const name = tr.getAttribute('data-fr-name');
