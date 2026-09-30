@@ -114,6 +114,12 @@ function isFreshRiderPick(item, dateStr) {
     } else {
         if (tight > 5.0) return false;
     }
+
+    // SL Risk (Floor Distance) must be <= 10.0% (Align with Scanner)
+    const f = item.effFloor || item.floorLow || 0;
+    const fDistVal = f > 0 ? ((item.price - f) / f * 100) : 99;
+    if (fDistVal > 10.0 || fDistVal < -2.0) return false;
+
     return true;
 }
 
