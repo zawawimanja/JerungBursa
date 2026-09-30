@@ -36,6 +36,7 @@ async function generateNewsData() {
     // Collect all unique stock candidates from live_data.json, fresh_rider_tracker.js, and hot_theme_tracker.js
     const candidateMap = new Map();
     (liveData.topVolume || []).forEach(s => { if (s && s.name) candidateMap.set(s.name.toUpperCase(), { name: s.name, code: s.code || '' }); });
+    (liveData.topGainers || []).forEach(s => { if (s && s.name) candidateMap.set(s.name.toUpperCase(), { name: s.name, code: s.code || '' }); });
 
     const frPath = path.join(__dirname, '..', 'fresh_rider_tracker.js');
     if (fs.existsSync(frPath)) {
