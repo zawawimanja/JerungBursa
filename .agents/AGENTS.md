@@ -137,4 +137,23 @@ Untuk mengelakkan isu percanggahan (*desynchronization*), kaunter hilang dari ra
    * Semak `morning_alert.js`, `buy_alert.js`, `portfolio_alert.js`, dan `run_live_updater.js`.
    * Pastikan mesej notifikasi Telegram dan live update berjalan lancar dan sepadan dengan data paparan web.
 
+---
 
+## 🔄 12. Bug Klasik: Tracker Ada Tapi Scanner Tak Timbul (Desync Diagnosis)
+Setiap kali berlaku kes "kaunter ada dalam FR Tracker tapi tak timbul dalam scanner" (contoh: EXSIMHB 30 Sep 2026, XPB 29 Sep 2026), AI **WAJIB** menyemak 4 punca utama mengikut urutan ini:
+
+1. **Data Turnover Pagi (Pre-Market / Early Session):**
+   * Data live pagi hari biasanya masih separuh — turnover rendah kerana pasaran baru buka.
+   * Penyelesaian: Tunggu data muktamad (5:50 PM – 6:05 PM) sebelum buat kesimpulan bahawa scanner ada bug.
+
+2. **Syarat `isVvip !== true` dalam `live_data.js`:**
+   * Scanner wajib isVvip = true untuk paparan. Semak nilai isVvip dalam live_data.js untuk kaunter berkenaan.
+   * Jika false, punca adalah di `scrape-real.js` (logik penilaian VVIP perlu dikaji).
+
+3. **Syarat `ipoYear < 2025` dalam Scanner:**
+   * Scanner line 6596 menapis `ipoYear < 2025`. Jika ipoYear salah dalam live_data.js, kaunter akan hilang.
+
+4. **Fungsi `qualifiesFreshRider` vs Syarat Terus dalam `renderConfluenceRadar`:**
+   * Scanner menggunakan syarat terus (line 6590-6619), bukan fungsi `qualifiesFreshRider`.
+   * Pastikan kedua-dua logik ini SELARAS — jika ada perbezaan, ini adalah punca desync.
+   * **Penyelesaian permanen**: Refactor scanner supaya guna fungsi `qualifiesFreshRider` yang sama.
