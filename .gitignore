@@ -2,6 +2,7 @@
 .freebuff/
 .kilo/
 .gemini/
+.vscode/
 .DS_Store
 Thumbs.db
 old_tests/

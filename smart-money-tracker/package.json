@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node scripts/verify_scanner_tracker_sync.js",
+    "verify": "node scripts/verify_scanner_tracker_sync.js"
   },
   "keywords": [],
   "author": "",

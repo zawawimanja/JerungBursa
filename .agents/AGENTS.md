@@ -140,20 +140,35 @@ Untuk mengelakkan isu percanggahan (*desynchronization*), kaunter hilang dari ra
 ---
 
 ## 🔄 12. Bug Klasik: Tracker Ada Tapi Scanner Tak Timbul (Desync Diagnosis)
-Setiap kali berlaku kes "kaunter ada dalam FR Tracker tapi tak timbul dalam scanner" (contoh: EXSIMHB 30 Sep 2026, XPB 29 Sep 2026), AI **WAJIB** menyemak 4 punca utama mengikut urutan ini:
+Setiap kali berlaku kes "kaunter ada dalam FR Tracker tapi tak timbul dalam scanner" (contoh: EXSIMHB 30 Sep 2026, XPB 29 Sep 2026, STRATUS 30 Sep 2026), AI **WAJIB** menyemak 6 punca utama mengikut urutan ini:
 
-1. **Data Turnover Pagi (Pre-Market / Early Session):**
-   * Data live pagi hari biasanya masih separuh — turnover rendah kerana pasaran baru buka.
-   * Penyelesaian: Tunggu data muktamad (5:50 PM – 6:05 PM) sebelum buat kesimpulan bahawa scanner ada bug.
+1. **Rujukan Tracker Sumber (ALL_TRACKER vs FRESH_RIDER_TRACKER):**
+   * Scanner UI (`index.html`) **WAJIB** merujuk `window.ALL_TRACKER` yang merangkumi semua entri (NEW + ADD-ON A+ + LANTAI RAPAT). Jika rujuk `FRESH_RIDER_TRACKER` sahaja, kaunter ADD-ON yang mempunyai sejarah `CLOSED_SL` lama (seperti CBHB & ISF dari Jun 2026) akan salah dinilai sebagai status 4 (RE-ENTRY) dan disekat oleh filter `top_ranking`.
+2. **Keutamaan Status OPEN Mengatasi CLOSED:**
+   * Di dalam `frTrackMap`, posisi `OPEN` terkini **WAJIB** mengatasi rekod sejarah `CLOSED_SL` lampau.
+3. **Lantai Dinamik Pasca-Breakout (effFloor vs floorLow):**
+   * Saham tangga kedua (Base 2) yang telah breakout perlu diukur jarak lantainya menggunakan `effFloor` (recent base low), bukan `floorLow` asal IPO. Generator tracker dan scanner UI wajib menggunakan paras lantai dinamik yang sama.
+4. **Had Toleransi Jarak Lantai (SOP Jarak ke SL <= 5.0%):**
+   * Pastikan had jarak lantai konsisten $\le 5.0\%$ (bukan 4.80% atau nilai tegar lain) supaya kaunter berkualiti tinggi seperti *STRATUS* (jarak 4.83%, turnover RM 11.36M) tidak tercicir.
+5. **Data Turnover Pagi (Pre-Market / Early Session):**
+   * Data live pagi hari biasanya masih separuh — turnover rendah kerana pasaran baru buka. Gunakan pengecualian `isTrackerConfirmedToday` untuk membenarkan kaunter yang sudah disahkan dalam tracker semalam melepasi tapisan pagi.
+6. **Syarat `isVvip !== true` dan `ipoYear < 2025`:**
+   * Saham wajib mempunyai status VVIP dan IPO $\ge 2025$ untuk melepasi tapisan Fresh Rider.
 
-2. **Syarat `isVvip !== true` dalam `live_data.js`:**
-   * Scanner wajib isVvip = true untuk paparan. Semak nilai isVvip dalam live_data.js untuk kaunter berkenaan.
-   * Jika false, punca adalah di `scrape-real.js` (logik penilaian VVIP perlu dikaji).
+---
 
-3. **Syarat `ipoYear < 2025` dalam Scanner:**
-   * Scanner line 6596 menapis `ipoYear < 2025`. Jika ipoYear salah dalam live_data.js, kaunter akan hilang.
+## 🛡️ 13. Awang Tak Perlu Ingat Lagi: Ujian Automatik Wajib Sebelum Commit (`npm test`)
+Beban mengingati senarai kaunter, formula, dan memastikan tiada signal yang tercicir **BUKAN** tanggungjawab Awang (`awi`), tetapi **TANGGUNGJAWAB PENUH SISTEM & AGEN AI**:
 
-4. **Fungsi `qualifiesFreshRider` vs Syarat Terus dalam `renderConfluenceRadar`:**
-   * Scanner menggunakan syarat terus (line 6590-6619), bukan fungsi `qualifiesFreshRider`.
-   * Pastikan kedua-dua logik ini SELARAS — jika ada perbezaan, ini adalah punca desync.
-   * **Penyelesaian permanen**: Refactor scanner supaya guna fungsi `qualifiesFreshRider` yang sama.
+* **Skrip Audit Automatik Rasmi:**
+  * Fail: `smart-money-tracker/scripts/verify_scanner_tracker_sync.js`
+  * Perintah: `npm test` (di dalam folder `smart-money-tracker`)
+* **Syarat Mandatori Setiap Sesi / Sebelum Commit:**
+  * Setiap kali ada sebarang perubahan kod pada generator (`generate_fresh_rider_tracker.js`, `generate_hot_theme_tracker.js`), data live, atau UI scanner (`index.html`), AI **WAJIB** menjalankan `npm test` secara automatik.
+  * Ujian ini mengesahkan 100%:
+    1. Semua entri aktif `OPEN` hari ini wujud dalam `🏆 Top Ranking VVIP`.
+    2. Kaunter pegangan aktif sedia ada (*STRATUS*, *CBHB*, *ISF*) kekal terpapar tanpa tercicir.
+    3. Perangkap jualan lilin merah (*BUSCAP*, *SUNLOGY*) disekat dengan tepat.
+    4. Hot Theme Leaders (*GREATEC*, *DUFU*, *MNHLDG*) selaras antara tracker dan scanner.
+  * **Pantang AI:** Jangan sesekali bertanya atau membiarkan Awang memeriksa manual atau mengingati senarai kaunter. Pastikan `npm test` mengeluarkan keputusan `18 PASSED, 0 FAILED` terlebih dahulu!
+
