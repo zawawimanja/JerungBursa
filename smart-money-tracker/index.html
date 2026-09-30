@@ -7040,10 +7040,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     badgesHtml += `<span style="font-size: 0.6rem; background: rgba(56,189,248,0.2); color: #38bdf8; padding: 0.05rem 0.3rem; border-radius: 3px; font-weight: 800; border: 1px solid rgba(56,189,248,0.45); white-space: nowrap;" title="Volume Dry-Up (VDU): Jualan kering, sedia meletup!">💧 VDU</span>`;
                 }
 
-                // 3. Base Maturity / Touches
-                if ((item.touchCount || 0) >= 3) {
-                    badgesHtml += `<span style="font-size: 0.58rem; background: rgba(168,85,247,0.18); color: #c4b5fd; padding: 0.05rem 0.28rem; border-radius: 3px; font-weight: 800; border: 1px solid rgba(168,85,247,0.35); white-space: nowrap;" title="Mature Base: ${item.touchCount}x support floor touches">🏛️ Base ${item.touchCount}x</span>`;
-                }
+                // 3. Base Maturity / Touches (Simplified: already shown in Floor column)
 
                 // 4. High-Conviction Theme / Institutional Flag
                 const hotThemes = getHotThemes(item.name);
@@ -7087,7 +7084,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 const isDowntrend = (item.setupName || '').includes('Downtrend') || (item.reason || '').includes('Downtrend');
                 const trendStatusHtml = isDowntrend
                     ? '<span style="font-size: 0.62rem; background: rgba(239,68,68,0.2); color: #f87171; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(249,115,22,0.4);">🧊 DOWNTREND</span>'
-                    : '<span style="font-size: 0.62rem; background: rgba(16,185,129,0.2); color: #34d399; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(16,185,129,0.4);">🔥 UPTREND</span>';
+                    : '';
 
                 // Risk:Reward Ratio calculation (Target TP1 +10%)
                 const floorDistVal = effFloor ? ((item.price - effFloor) / effFloor * 100) : 0;
