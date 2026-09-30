@@ -183,12 +183,12 @@ async function getCorporateNewsRisk(stockCode, stockName) {
             const catUpper = ann.category.toUpperCase();
             const titleUpper = ann.title.toUpperCase();
 
-            // 1. EV / Green Mobility / Tenaga Baharu (BYD, MOU, Solar, RE)
-            if (titleUpper.includes('BYD') || titleUpper.includes('ELECTRIC VEHICLE') || titleUpper.includes('EV BUS') || titleUpper.includes('GREEN MOBILITY') || titleUpper.includes('SOLAR') || titleUpper.includes('RENEWABLE')) {
+            // 1. EV / Green Mobility / Tenaga Baharu / MOU Partnership (BYD, MOU, Solar, RE)
+            if (titleUpper.includes('BYD') || titleUpper.includes('MEMORANDUM OF UNDERSTANDING') || titleUpper.includes('MOU') || titleUpper.includes('PARTNERSHIP') || titleUpper.includes('ELECTRIC VEHICLE') || titleUpper.includes('EV BUS') || titleUpper.includes('GREEN MOBILITY') || titleUpper.includes('SOLAR') || titleUpper.includes('RENEWABLE')) {
                 if (!newsBadges.some(b => b.type === 'EV_CATALYST')) {
                     newsBadges.push({
                         type: 'EV_CATALYST',
-                        label: `⚡ EV / Green Catalyst`,
+                        label: `⚡ MOU / EV Catalyst`,
                         severity: 'success',
                         title: `[${ann.date}] ${ann.title}`
                     });

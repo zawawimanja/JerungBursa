@@ -33,9 +33,36 @@ async function generateNewsData() {
     const liveData = JSON.parse(fs.readFileSync(LIVE_DATA_PATH, 'utf8'));
     const symbolMap = fs.existsSync(SYMBOL_MAP_PATH) ? JSON.parse(fs.readFileSync(SYMBOL_MAP_PATH, 'utf8')) : {};
     
-    // Collect all unique stock candidates
-    const candidates = (liveData.topVolume || []).filter(s => s && s.name);
-    console.log(`📦 Found ${candidates.length} stocks to evaluate for corporate news & dividends...`);
+    // Collect all unique stock candidates from live_data.json, fresh_rider_tracker.js, and hot_theme_tracker.js
+    const candidateMap = new Map();
+    (liveData.topVolume || []).forEach(s => { if (s && s.name) candidateMap.set(s.name.toUpperCase(), { name: s.name, code: s.code || '' }); });
+
+    const frPath = path.join(__dirname, '..', 'fresh_rider_tracker.js');
+    if (fs.existsSync(frPath)) {
+        try {
+            const content = fs.readFileSync(frPath, 'utf8');
+            const matches = content.match(/"name":\s*"([^"]+)"/g) || [];
+            matches.forEach(m => {
+                const nm = m.replace(/"name":\s*"/, '').replace(/"/, '').trim();
+                if (nm && !candidateMap.has(nm.toUpperCase())) candidateMap.set(nm.toUpperCase(), { name: nm, code: '' });
+            });
+        } catch (e) {}
+    }
+
+    const htPath = path.join(__dirname, '..', 'hot_theme_tracker.js');
+    if (fs.existsSync(htPath)) {
+        try {
+            const content = fs.readFileSync(htPath, 'utf8');
+            const matches = content.match(/"name":\s*"([^"]+)"/g) || [];
+            matches.forEach(m => {
+                const nm = m.replace(/"name":\s*"/, '').replace(/"/, '').trim();
+                if (nm && !candidateMap.has(nm.toUpperCase())) candidateMap.set(nm.toUpperCase(), { name: nm, code: '' });
+            });
+        } catch (e) {}
+    }
+
+    const candidates = Array.from(candidateMap.values());
+    console.log(`📦 Found ${candidates.length} unique stocks to evaluate for corporate news & dividends...`);
 
     const newsData = {};
     let processedCount = 0;
