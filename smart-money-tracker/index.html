@@ -6829,7 +6829,11 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 displayPicks = picks.filter(p => {
                     const fresh = frFreshness(p);
                     const t = getTierOfFR(p);
-                    const isAddonValid = (fresh === 1 || fresh === 2) && t.fDistVal <= 4.5 && t.fDistVal >= -1.5 && t.toVal >= 1500000;
+                    // Bypass turnover gate untuk kaunter yang sudah disahkan dalam Tracker hari ini
+                    const nameKeyAO = (p.name || '').toUpperCase();
+                    const trackedEntryAO = frTrackMap.get(nameKeyAO);
+                    const isTrackerConfirmedTodayAO = !!(trackedEntryAO && trackedEntryAO.status === 'OPEN' && trackedEntryAO.entryDate === curRefDate);
+                    const isAddonValid = (fresh === 1 || fresh === 2) && t.fDistVal <= 4.5 && t.fDistVal >= -1.5 && (t.toVal >= 1500000 || isTrackerConfirmedTodayAO);
                     return isAddonValid;
                 });
             } else if (filterMode === 'fusion_only') {
@@ -9688,21 +9692,32 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     // 1. DILARANG SAMA SEKALI: Pucuk / Extended atau SL tepi jurang
                     if (fresh === 4) return false;
 
-                    // 2. DILARANG: Kaunter turnover lemau / runcit (< RM 1.0M)
-                    if (t.toVal < 1000000) return false;
+                    // 2. Semak sama ada kaunter SUDAH DISAHKAN dalam HT Tracker hari ini
+                    // Bypass tapisan turnover pagi untuk elak desync Tracker-vs-Scanner
+                    const nameKeyHT = (p.item.name || '').toUpperCase();
+                    const trackedEntryHT = htTrackMap.get(nameKeyHT);
+                    const isHtConfirmedToday = !!(
+                        trackedEntryHT &&
+                        trackedEntryHT.status === 'OPEN' &&
+                        trackedEntryHT.entryDate === curRefDateHT
+                    );
 
-                    // 3. DILARANG: Terkena Black Swan Trap atau Selling Dump Merah
+                    // 3. DILARANG: Kaunter turnover lemau / runcit (< RM 1.0M)
+                    // PENGECUALIAN: Kaunter yang SUDAH DISAHKAN dalam Tracker hari ini dibenarkan
+                    if (t.toVal < 1000000 && !isHtConfirmedToday) return false;
+
+                    // 4. DILARANG: Terkena Black Swan Trap atau Selling Dump Merah
                     const swanEval = typeof getBlackSwanEvaluation === 'function' ? getBlackSwanEvaluation(p.item.name, p.item, curRefDateHT) : null;
                     const isBlackSwanClean = !swanEval || (swanEval.status && String(swanEval.status).toLowerCase() === 'pass');
                     const isRealUpperWickDump = p.item.hasUpperWickRejection === true && (p.item.change < 0 || (p.item.changePct && p.item.changePct < 0));
                     if (!isBlackSwanClean || isRealUpperWickDump) return false;
 
-                    // 4. LAYAK: 🔥 NEW (Day 1 Breakout) — benarkan lilin breakout hijau
+                    // 5. LAYAK: 🔥 NEW (Day 1 Breakout) — benarkan lilin breakout hijau
                     if (fresh === 0) {
                         return (t.fDistVal <= 10.0 && t.fDistVal >= -2.0 && t.tightValNum <= 10.0);
                     }
 
-                    // 5. LAYAK: ⭐ ADD-ON A+ / 🛡️ ADD-ON (LANTAI RAPAT) — lantai rapat
+                    // 6. LAYAK: ⭐ ADD-ON A+ / 🛡️ ADD-ON (LANTAI RAPAT) — lantai rapat
                     const maxAllowedFloorDist = ((p.item.touchCount || 0) >= 5 && t.toVal >= 2000000 && t.tightValNum <= 3.5) ? 6.8 : 4.8;
                     if (t.fDistVal > maxAllowedFloorDist || t.fDistVal < -2.0) return false;
 
@@ -9716,7 +9731,11 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 displayPicks = picks.filter(p => {
                     const f = htFreshness(p.item);
                     const t = getTierOfHT(p.item);
-                    return (f === 1 || f === 2) && t.fDistVal <= 4.5 && t.fDistVal >= -1.5 && t.toVal >= 1500000;
+                    // Bypass turnover gate untuk kaunter yang sudah disahkan dalam HT Tracker hari ini
+                    const nameKeyHTAO = (p.item.name || '').toUpperCase();
+                    const trackedEntryHTAO = htTrackMap.get(nameKeyHTAO);
+                    const isHtConfirmedTodayAO = !!(trackedEntryHTAO && trackedEntryHTAO.status === 'OPEN' && trackedEntryHTAO.entryDate === curRefDateHT);
+                    return (f === 1 || f === 2) && t.fDistVal <= 4.5 && t.fDistVal >= -1.5 && (t.toVal >= 1500000 || isHtConfirmedTodayAO);
                 });
             } else if (htFilter === 'tier_a_plus') {
                 displayPicks = picks.filter(p => {
