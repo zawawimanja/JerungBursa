@@ -12,7 +12,7 @@
     <title>JerungBursa — Bursa Malaysia Smart Money Tracker & IPO Analytics Platform</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <script>
       (function() {
         const cb = '?t=' + Date.now();
@@ -27,18 +27,20 @@
             100% { transform: rotate(360deg); }
         }
         :root {
-            --bg-color: #0b0f19;
-            --panel-bg: rgba(22, 28, 45, 0.7);
-            --panel-border: rgba(51, 65, 85, 0.5);
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent: #6366f1;
-            --accent-glow: rgba(99, 102, 241, 0.4);
-            --success: #10b981;
-            --success-glow: rgba(16, 185, 129, 0.3);
-            --danger: #ef4444;
-            --warning: #f59e0b;
-            --info: #0ea5e9;
+            /* Tactical Whale Terminal Theme */
+            --bg-color: #090A0F;
+            --bg-gradient: radial-gradient(circle at 80% 0%, #131722 0%, #090A0F 60%);
+            --panel-bg: #131722;
+            --panel-border: #2A2E39;
+            --text-main: #E2E8F0;
+            --text-muted: #9CA3AF;
+            --accent: #F59E0B;
+            --accent-glow: rgba(245, 158, 11, 0.2);
+            --success: #089981;
+            --success-glow: rgba(8, 153, 129, 0.2);
+            --danger: #F23645;
+            --warning: #F59E0B;
+            --info: #06B6D4;
         }
 
         * {
@@ -75,12 +77,12 @@
         body {
             background-color: var(--bg-color);
             background-image: 
-                radial-gradient(circle at 15% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 85% 80%, rgba(16, 185, 129, 0.12) 0%, transparent 40%),
-                radial-gradient(circle at 50% 50%, rgba(168, 85, 247, 0.08) 0%, transparent 60%);
+                radial-gradient(circle at 15% 20%, rgba(245, 158, 11, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 85% 80%, rgba(6, 182, 212, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 50% 50%, rgba(245, 158, 11, 0.03) 0%, transparent 60%);
             background-attachment: fixed;
             color: var(--text-main);
-            padding: 1rem 1.5rem;
+            padding: 0.75rem 1rem; /* Dense layout */
             min-height: 100vh;
             position: relative;
         }
@@ -99,12 +101,12 @@
             pointer-events: none;
         }
         body::before {
-            background: rgba(99, 102, 241, 0.15);
+            background: rgba(250, 204, 21, 0.07);
             top: -10vw;
             left: -10vw;
         }
         body::after {
-            background: rgba(16, 185, 129, 0.1);
+            background: rgba(255, 23, 68, 0.05);
             bottom: -10vw;
             right: -10vw;
             animation-duration: 25s;
@@ -128,12 +130,13 @@
 
         .brand h1 {
             font-family: 'Outfit', sans-serif;
-            font-size: 2.2rem;
-            font-weight: 800;
-            background: linear-gradient(135deg, #a5b4fc 0%, #6366f1 50%, #34d399 100%);
+            font-size: 2.2rem; /* Slightly denser */
+            font-weight: 900;
+            background: linear-gradient(135deg, #F59E0B 0%, #D97706 50%, #B45309 100%); /* Hot Amber Gold */
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            letter-spacing: -0.02em;
+            letter-spacing: -0.03em;
+            text-transform: uppercase;
         }
 
         .subtitle {
@@ -156,9 +159,23 @@
         }
 
         @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
-            70% { box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+            0% { box-shadow: 0 0 0 0 rgba(8, 153, 129, 0.7); }
+            70% { box-shadow: 0 0 0 8px rgba(8, 153, 129, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(8, 153, 129, 0); }
+        }
+        
+        /* Monospace helpers for data & counters */
+        .font-mono {
+            font-family: 'Fira Code', 'Courier New', monospace;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .metric-label {
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-size: 0.75rem; /* text-xs */
+            color: var(--text-muted);
+            font-weight: 600;
         }
 
         /* Tabs Navigation */
@@ -220,20 +237,21 @@
 
         .ticker-card {
             background: var(--panel-bg);
-            backdrop-filter: blur(12px);
+            backdrop-filter: blur(16px);
             border: 1px solid var(--panel-border);
-            border-radius: 16px;
+            border-bottom: 2px solid transparent;
+            border-radius: 12px;
             padding: 1.5rem;
             position: relative;
             overflow: hidden;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
         }
 
         .ticker-card:hover {
-            transform: translateY(-5px);
-            border-color: rgba(99, 102, 241, 0.6);
-            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.15);
+            transform: translateY(-8px);
+            border-bottom: 2px solid var(--accent);
+            box-shadow: 0 15px 40px var(--accent-glow);
         }
 
         .card-header {
@@ -529,16 +547,14 @@
             font-size: 0.9rem;
         }
 
-        /* General Table styling */
+        /* General Table styling - Dense & High Utility Layout */
         .table-wrapper {
-            background: rgba(22, 28, 45, 0.6);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(99, 102, 241, 0.25);
-            border-radius: 16px;
+            background: var(--panel-bg);
+            border: 1px solid var(--panel-border);
+            border-radius: 8px; /* Tighter corner for terminal feel */
             overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.05);
-            margin-bottom: 3rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            margin-bottom: 2rem;
             overflow-x: auto;
         }
 
@@ -555,27 +571,26 @@
         }
 
         th {
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(8px);
+            background: #0D1117; /* Darker header for terminal */
             color: var(--text-muted);
-            font-weight: 800;
-            font-size: 0.8rem;
+            font-weight: 700;
+            font-size: 0.75rem; /* text-xs */
             text-transform: uppercase;
-            letter-spacing: 0.08em;
-            padding: 1.2rem 1rem;
-            border-bottom: 1px solid rgba(99, 102, 241, 0.3);
+            letter-spacing: 0.08em; /* tracking-wider */
+            padding: 0.7rem 0.8rem; /* Reduced padding for density */
+            border-bottom: 1px solid var(--panel-border);
             text-align: left;
         }
 
         td {
-            padding: 1.1rem 1rem;
-            border-bottom: 1px solid rgba(51, 65, 85, 0.2);
-            font-size: 0.95rem;
-            transition: all 0.2s ease;
+            padding: 0.65rem 0.8rem; /* Dense packing */
+            border-bottom: 1px solid var(--panel-border);
+            font-size: 0.9rem;
+            transition: background 0.15s ease;
         }
 
         tr {
-            transition: all 0.2s ease;
+            transition: all 0.1s ease;
         }
 
         tr:last-child td {
@@ -583,11 +598,18 @@
         }
 
         tr:hover td {
-            background: rgba(99, 102, 241, 0.08);
+            background: rgba(255, 255, 255, 0.03); /* Subtle terminal hover */
         }
 
         tr:hover {
             box-shadow: inset 3px 0 0 var(--accent);
+        }
+
+        /* Tactical Typography */
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+            font-variant-numeric: tabular-nums;
+            letter-spacing: -0.02em;
         }
 
         .tv-link {
@@ -7159,9 +7181,9 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
                 html += `
                     <tr data-fr-name="${item.name}">
-                        <td style="text-align: center; font-weight: 800; color: #fde047;">#${idx + 1}</td>
+                        <td style="text-align: center; font-weight: 800; color: #facc15;" class="font-mono">#${idx + 1}</td>
                         <td style="font-weight: 700; color: white; padding: 0.6rem 0.8rem;">
-                            ${getTradingViewAnchor(item.name)} <span style="font-size: 0.68rem; color: #a5b4fc; font-weight: 800;">(${grade})</span>
+                            ${getTradingViewAnchor(item.name)} <span style="font-size: 0.68rem; color: #a5b4fc; font-weight: 800;" class="font-mono">(${grade})</span>
                             <div class="fr-badge-row" style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.25rem; flex-wrap: wrap;">
                                 ${badgesHtml}
                             </div>
@@ -7169,27 +7191,27 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         <td style="text-align: center; padding: 0.6rem 0.4rem; vertical-align: middle;">
                             ${trendStatusHtml}
                         </td>
-                        <td style="text-align: right; color: #38bdf8; font-weight: 800;" title="Tightness: ${tightVal}% — semakin rapat konsolidasi squeeze, semakin bersedia untuk breakout">
-                            tight ${tightVal}%
+                        <td style="text-align: right; color: #00b0ff; font-weight: 800;" title="Tightness: ${tightVal}% — semakin rapat konsolidasi squeeze, semakin bersedia untuk breakout">
+                            <span class="font-mono">tight ${tightVal}%</span>
                         </td>
                         <td style="text-align: right;">
-                            <div style="color: #34d399; font-weight: 800; font-size: 0.85rem;">${floorPrice}</div>
-                            <div style="font-size: 0.65rem; color: #38bdf8; font-weight: 700; margin-top: 0.15rem;">+${floorDist} (${item.touchCount || 0}x)</div>
-                            <div style="font-size: 0.62rem; color: #fde047; font-weight: 800; margin-top: 0.1rem;" title="Risk:Reward ratio to TP1 (+10% target)">R:R 1:${rrRatio}</div>
+                            <div style="color: #00e676; font-weight: 800; font-size: 0.85rem;" class="font-mono">${floorPrice}</div>
+                            <div style="font-size: 0.65rem; color: #00b0ff; font-weight: 700; margin-top: 0.15rem;" class="font-mono">+${floorDist} (${item.touchCount || 0}x)</div>
+                            <div style="font-size: 0.62rem; color: #facc15; font-weight: 800; margin-top: 0.1rem;" title="Risk:Reward ratio to TP1 (+10% target)" class="font-mono">R:R 1:${rrRatio}</div>
                         </td>
                         <td style="text-align: right;">
-                            <div style="font-weight: 700; color: #cbd5e1; font-size: 0.82rem;">RM ${triggerPrice.toFixed(3)} <span style="font-size: 0.62rem; color: #94a3b8;">(${triggerDate})</span> ${baseLabel}</div>
+                            <div style="font-weight: 700; color: #cbd5e1; font-size: 0.82rem;" class="font-mono">RM ${triggerPrice.toFixed(3)} <span style="font-size: 0.62rem; color: #94a3b8;">(${triggerDate})</span> ${baseLabel}</div>
                             <div style="margin-top: 0.15rem;">${triggerBadgeHtml}</div>
                         </td>
-                        <td style="text-align: right; color: ${pbColor}; font-weight: 800;" title="Pullback dari ATH">
+                        <td style="text-align: right; color: ${pbColor}; font-weight: 800;" class="font-mono" title="Pullback dari ATH">
                             ${pb !== null ? pb.toFixed(1) + '%' : '—'}
                         </td>
                         <td style="text-align: right;">
-                            <div style="font-weight: bold; color: white;">RM ${item.price.toFixed(3)}</div>
-                            <div style="font-size: 0.65rem; color: var(--${changeClass}); font-weight: 800; margin-top: 0.1rem;">${changeSign}${changeVal !== undefined ? changeVal.toFixed(2) : '0.00'}%</div>
+                            <div style="font-weight: bold; color: white;" class="font-mono">RM ${item.price.toFixed(3)}</div>
+                            <div style="font-size: 0.65rem; color: var(--${changeClass}); font-weight: 800; margin-top: 0.1rem;" class="font-mono">${changeSign}${changeVal !== undefined ? changeVal.toFixed(2) : '0.00'}%</div>
                         </td>
                         <td style="text-align: right;">
-                            <span style="color: ${(item.turnover||0) >= 2000000 ? '#f59e0b' : ((item.turnover||0) >= 500000 ? '#34d399' : '#94a3b8')}; font-weight: 700; font-size: 0.82rem;">${(item.turnover||0) >= 1000000 ? 'RM ' + ((item.turnover||0)/1000000).toFixed(2) + 'M' : 'RM ' + ((item.turnover||0)/1000).toFixed(0) + 'k'}${(item.turnover||0) >= 2000000 ? ' 🔥' : ''}</span>
+                            <span style="color: ${(item.turnover||0) >= 2000000 ? '#ff9100' : ((item.turnover||0) >= 500000 ? '#00e676' : '#8b9bb4')}; font-weight: 700; font-size: 0.82rem;" class="font-mono">${(item.turnover||0) >= 1000000 ? 'RM ' + ((item.turnover||0)/1000000).toFixed(2) + 'M' : 'RM ' + ((item.turnover||0)/1000).toFixed(0) + 'k'}${(item.turnover||0) >= 2000000 ? ' 🔥' : ''}</span>
                         </td>
                         <td style="text-align: center; padding: 0.6rem 0.4rem; white-space: nowrap;">${confHtml}</td>
                         <td style="text-align: center; padding: 0.6rem 0.4rem;">
@@ -7965,7 +7987,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 }
 
                 return `<tr>
-                    <td style="text-align: center; font-weight: 800; color: #a78bfa; font-size: 0.75rem;">${idx + 1}</td>
+                    <td style="text-align: center; font-weight: 800; color: #a78bfa; font-size: 0.75rem;" class="font-mono">${idx + 1}</td>
                     <td style="font-weight: 800; color: white;">
                         <div style="display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap;">
                             ${getTradingViewAnchorSmall(t.name)}
@@ -7978,18 +8000,18 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     </td>
                     <td style="text-align: center;">${statusBadge}</td>
                     <td style="text-align: center;">${trendStatusHtml}</td>
-                    <td style="text-align: center; color: #94a3b8; font-size: 0.72rem;">${(t.entryDate || '').slice(5)}</td>
-                    <td style="text-align: right; color: white; font-weight: 700;">RM ${(t.entry || 0).toFixed(3)}</td>
-                    <td style="text-align: right; color: white; font-weight: 700;">${isOpen ? 'RM ' + (exitPx || 0).toFixed(3) : '<span style="font-size:0.65rem;color:#94a3b8;font-weight:600;">Exit</span> RM ' + (exitPx || 0).toFixed(3) + ' <span style="font-size:0.6rem;color:#64748b;">(' + (t.exitDate || '').slice(5) + ')</span>'}</td>
+                    <td style="text-align: center; color: #94a3b8; font-size: 0.72rem;" class="font-mono">${(t.entryDate || '').slice(5)}</td>
+                    <td style="text-align: right; color: white; font-weight: 700;" class="font-mono">RM ${(t.entry || 0).toFixed(3)}</td>
+                    <td style="text-align: right; color: white; font-weight: 700;" class="font-mono">${isOpen ? 'RM ' + (exitPx || 0).toFixed(3) : '<span style="font-size:0.65rem;color:#94a3b8;font-weight:600;">Exit</span> RM ' + (exitPx || 0).toFixed(3) + ' <span style="font-size:0.6rem;color:#64748b;">(' + (t.exitDate || '').slice(5) + ')</span>'}</td>
                     <td style="text-align: right;">
-                        <div style="color: ${pnlColor}; font-weight: 900; font-size: 0.85rem;">${pnlStr}</div>
-                        <div style="color: ${pnlColor}; font-weight: 800; font-size: 0.68rem; margin-top: 0.1rem;">${tradeRmStr}</div>
+                        <div style="color: ${pnlColor}; font-weight: 900; font-size: 0.85rem;" class="font-mono">${pnlStr}</div>
+                        <div style="color: ${pnlColor}; font-weight: 800; font-size: 0.68rem; margin-top: 0.1rem;" class="font-mono">${tradeRmStr}</div>
                     </td>
-                    <td style="text-align: right; color: #38bdf8; font-weight: 700;">${maxStr}</td>
-                    <td style="text-align: center; color: #fde047; font-weight: 700;">${t.days || 0}</td>
+                    <td style="text-align: right; color: #38bdf8; font-weight: 700;" class="font-mono">${maxStr}</td>
+                    <td style="text-align: center; color: #fde047; font-weight: 700;" class="font-mono">${t.days || 0}</td>
                     <td style="text-align: center;">${stillRadar}</td>
                     <td style="text-align: center;">${riskCheckHtml}</td>
-                    <td style="text-align: right; color: #f87171; font-weight: 700;">RM ${slTrail}</td>
+                    <td style="text-align: right; color: #f87171; font-weight: 700;" class="font-mono">RM ${slTrail}</td>
                 </tr>`;
             }).join('');
 
