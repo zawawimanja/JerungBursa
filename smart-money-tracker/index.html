@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
     <script>
       (function() {
-        const cb = (window.location.protocol === 'file:') ? '' : ('?t=' + Date.now());
+        const cb = '?t=' + Date.now();
         ['live_data.js', 'fresh_rider_tracker.js', 'hot_theme_tracker.js', 'daily_equity_tracker.js', 'jerung-data.js', 'news_data.js'].forEach(function(src) {
           document.write('<script src="' + src + cb + '"><\/script>');
         });
@@ -6509,7 +6509,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                             severity: 'danger',
                             label: 'EX-DIV TRAP',
                             icon: '🔴 ⚠️',
-                            badgeHtml: `<span class="fr-new-badge" style="font-size:0.62rem; background:rgba(239,68,68,0.28); color:#fca5a5; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid rgba(239,68,68,0.7); white-space:nowrap; cursor:help;" title="[Black Swan 1: Ex-Dividend Trap] Ex-Date: ${ent.exDate} (${dayTxt}) | ${ent.type || 'Dividen'} ${ent.amount || ''}. AMARAN: Jangan masuk sebelum Ex-Date kerana risiko kejatuhan harga automatik & lambakan jualan dividen!">🔴 ⚠️ EX-DIV TRAP</span>`
+                            badgeHtml: `<span class="fr-new-badge swan-eval-badge" style="font-size:0.62rem; background:rgba(239,68,68,0.28); color:#fca5a5; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid rgba(239,68,68,0.7); white-space:nowrap; cursor:help;" title="[Black Swan 1: Ex-Dividend Trap] Ex-Date: ${ent.exDate} (${dayTxt}) | ${ent.type || 'Dividen'} ${ent.amount || ''}. AMARAN: Jangan masuk sebelum Ex-Date kerana risiko kejatuhan harga automatik & lambakan jualan dividen!">🔴 ⚠️ EX-DIV TRAP</span>`
                         };
                     }
                 }
@@ -6530,7 +6530,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                                     severity: 'warning',
                                     label: 'QR RISK',
                                     icon: '🟡 ⚠️',
-                                    badgeHtml: `<span class="fr-new-badge" style="font-size:0.62rem; background:rgba(245,158,11,0.25); color:#fef08a; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid rgba(245,158,11,0.7); white-space:nowrap; cursor:help;" title="[Black Swan 2: Earnings Binary Risk] Tarikh QR: ${ann.date} (${ann.title}). AMARAN: Elak masuk menjelang laporan kewangan bagi mengelak fenomena Sell on News atau kejatuhan margin keuntungan!">🟡 ⚠️ QR RISK</span>`
+                                    badgeHtml: `<span class="fr-new-badge swan-eval-badge" style="font-size:0.62rem; background:rgba(245,158,11,0.25); color:#fef08a; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid rgba(245,158,11,0.7); white-space:nowrap; cursor:help;" title="[Black Swan 2: Earnings Binary Risk] Tarikh QR: ${ann.date} (${ann.title}). AMARAN: Elak masuk menjelang laporan kewangan bagi mengelak fenomena Sell on News atau kejatuhan margin keuntungan!">🟡 ⚠️ QR RISK</span>`
                                 };
                             }
                         }
@@ -6546,7 +6546,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     severity: 'danger',
                     label: 'IPO DEBUT DUMP',
                     icon: '🚨',
-                    badgeHtml: `<span class="fr-new-badge" style="font-size:0.62rem; background:rgba(239,68,68,0.28); color:#fca5a5; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid rgba(239,68,68,0.7); white-space:nowrap; cursor:help;" title="[Black Swan 3: Post-IPO Debut Dump] Saham baru debut belum membina tapak matang (< 15 hari). AMARAN: Elak beli hari debut untuk mengelak buangan untung penerima IPO!">🚨 IPO DEBUT DUMP</span>`
+                    badgeHtml: `<span class="fr-new-badge swan-eval-badge" style="font-size:0.62rem; background:rgba(239,68,68,0.28); color:#fca5a5; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid rgba(239,68,68,0.7); white-space:nowrap; cursor:help;" title="[Black Swan 3: Post-IPO Debut Dump] Saham baru debut belum membina tapak matang (< 15 hari). AMARAN: Elak beli hari debut untuk mengelak buangan untung penerima IPO!">🚨 IPO DEBUT DUMP</span>`
                 };
             }
 
@@ -6556,7 +6556,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 severity: 'pass',
                 label: 'Swan: PASS',
                 icon: '🟢 🛡️',
-                badgeHtml: `<span class="fr-new-badge" style="font-size:0.62rem; background:rgba(16,185,129,0.18); color:#34d399; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid rgba(16,185,129,0.45); white-space:nowrap; cursor:help;" title="[Black Swan: LULUS] Bebas daripada tarikh Ex-Dividen terdekat, bebas risiko laporan QR, dan bertapak kukuh. Selamat dipertimbangkan mengikut SOP.">🟢 🛡️ Swan: PASS</span>`
+                badgeHtml: `<span class="fr-new-badge swan-eval-badge" style="font-size:0.62rem; background:rgba(16,185,129,0.18); color:#34d399; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid rgba(16,185,129,0.45); white-space:nowrap; cursor:help;" title="[Black Swan: LULUS] Bebas daripada tarikh Ex-Dividen terdekat, bebas risiko laporan QR, dan bertapak kukuh. Selamat dipertimbangkan mengikut SOP.">🟢 🛡️ Swan: PASS</span>`
             };
         }
         window.getBlackSwanEvaluation = getBlackSwanEvaluation;
@@ -7032,13 +7032,13 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 if (stockNews && Array.isArray(stockNews.newsBadges)) {
                     for (const nb of stockNews.newsBadges) {
                         if (nb.type === 'EV_CATALYST') {
-                            badgesHtml += `<span class="catalyst-badge" style="font-size:0.6rem; background:rgba(6,182,212,0.25); color:#67e8f9; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(6,182,212,0.6); white-space:nowrap; cursor:help;" title="${nb.title || 'EV / Green Mobility Catalyst'}">⚡ EV Catalyst</span>`;
+                            badgesHtml += `<span class="fr-new-badge catalyst-badge" style="font-size:0.6rem; background:rgba(6,182,212,0.25); color:#67e8f9; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(6,182,212,0.6); white-space:nowrap; cursor:help;" title="${nb.title || 'EV / Green Mobility Catalyst'}">⚡ EV Catalyst</span>`;
                         } else if (nb.type === 'AI_CATALYST') {
-                            badgesHtml += `<span class="catalyst-badge" style="font-size:0.6rem; background:rgba(168,85,247,0.25); color:#e9d5ff; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(168,85,247,0.6); white-space:nowrap; cursor:help;" title="${nb.title || 'AI / Data Centre Catalyst'}">🤖 AI Catalyst</span>`;
+                            badgesHtml += `<span class="fr-new-badge catalyst-badge" style="font-size:0.6rem; background:rgba(168,85,247,0.25); color:#e9d5ff; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(168,85,247,0.6); white-space:nowrap; cursor:help;" title="${nb.title || 'AI / Data Centre Catalyst'}">🤖 AI Catalyst</span>`;
                         } else if (nb.type === 'CONTRACT_WIN') {
-                            badgesHtml += `<span class="catalyst-badge" style="font-size:0.6rem; background:rgba(234,179,8,0.25); color:#fef08a; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(234,179,8,0.6); white-space:nowrap; cursor:help;" title="${nb.title || 'Contract Award Win'}">📜 Contract Win</span>`;
+                            badgesHtml += `<span class="fr-new-badge catalyst-badge" style="font-size:0.6rem; background:rgba(234,179,8,0.25); color:#fef08a; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(234,179,8,0.6); white-space:nowrap; cursor:help;" title="${nb.title || 'Contract Award Win'}">📜 Contract Win</span>`;
                         } else if (nb.type === 'JERUNG_5PCT') {
-                            badgesHtml += `<span class="catalyst-badge" style="font-size:0.6rem; background:rgba(16,185,129,0.25); color:#6ee7b7; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(16,185,129,0.6); white-space:nowrap; cursor:help;" title="${nb.title || 'Substantial Shareholder Jerung Acquisition (5%+)'}">🐋 Jerung 5%+</span>`;
+                            badgesHtml += `<span class="fr-new-badge catalyst-badge" style="font-size:0.6rem; background:rgba(16,185,129,0.25); color:#6ee7b7; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(16,185,129,0.6); white-space:nowrap; cursor:help;" title="${nb.title || 'Substantial Shareholder Jerung Acquisition (5%+)'}">🐋 Jerung 5%+</span>`;
                         }
                     }
                 }
