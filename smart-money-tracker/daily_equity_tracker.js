@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-09-30T05:31:00.034Z",
+ "generatedAt": "2026-09-30T05:40:51.282Z",
  "totalDays": 82,
  "startDate": "2026-06-02",
  "endDate": "2026-09-30",
@@ -5823,8 +5823,8 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-06-22",
-   "totalSignals": 83,
-   "openCount": 70,
+   "totalSignals": 84,
+   "openCount": 71,
    "closedCount": 13,
    "openPnl": 382.2,
    "closedPnl": -31.8,
@@ -5832,8 +5832,8 @@ window.DAILY_EQUITY_TRACKER = {
    "frPnl": 122,
    "addOnPnl": -3.7,
    "htPnl": 232.1,
-   "dailyPnlDelta": -27,
-   "winRate": 39,
+   "dailyPnlDelta": -29.2,
+   "winRate": 38,
    "avgGain": 4.2,
    "peakGainer": {
     "gain": 47.6,
@@ -5938,6 +5938,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 0,
      "dayChangePct": -3.7,
      "pnlDeltaToday": -3.8
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.72,
+     "gainOnDay": 0,
+     "dayChangePct": -2.15,
+     "pnlDeltaToday": -2.2
     },
     {
      "name": "SLVEST",
@@ -6591,17 +6600,17 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-06-23",
-   "totalSignals": 89,
-   "openCount": 70,
+   "totalSignals": 90,
+   "openCount": 71,
    "closedCount": 19,
-   "openPnl": 121.1,
+   "openPnl": 115.4,
    "closedPnl": 52.2,
-   "totalPnl": 173.3,
+   "totalPnl": 167.6,
    "frPnl": 90.8,
    "addOnPnl": -9.8,
-   "htPnl": 92.3,
-   "dailyPnlDelta": -207.6,
-   "winRate": 24,
+   "htPnl": 86.6,
+   "dailyPnlDelta": -213.3,
+   "winRate": 23,
    "avgGain": 1.9,
    "peakGainer": {
     "gain": 51.7,
@@ -6760,6 +6769,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 0,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.28,
+     "gainOnDay": -5.7,
+     "dayChangePct": -5.7,
+     "pnlDeltaToday": -5.7
     },
     {
      "name": "SLVEST",
@@ -7413,18 +7431,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-06-24",
-   "totalSignals": 93,
-   "openCount": 74,
+   "totalSignals": 94,
+   "openCount": 75,
    "closedCount": 19,
-   "openPnl": 225.6,
+   "openPnl": 223.3,
    "closedPnl": 52.2,
-   "totalPnl": 277.8,
+   "totalPnl": 275.5,
    "frPnl": 106.8,
    "addOnPnl": -5.2,
-   "htPnl": 176.2,
-   "dailyPnlDelta": 108,
+   "htPnl": 173.9,
+   "dailyPnlDelta": 111.4,
    "winRate": 34,
-   "avgGain": 3,
+   "avgGain": 2.9,
    "peakGainer": {
     "gain": 55.1,
     "name": "HKB"
@@ -7618,6 +7636,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -2.9,
      "dayChangePct": -2.86,
      "pnlDeltaToday": -2.9
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.54,
+     "gainOnDay": -2.3,
+     "dayChangePct": 3.57,
+     "pnlDeltaToday": 3.4
     },
     {
      "name": "SLVEST",
@@ -8271,17 +8298,17 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-06-25",
-   "totalSignals": 94,
-   "openCount": 74,
+   "totalSignals": 95,
+   "openCount": 75,
    "closedCount": 20,
-   "openPnl": 245.7,
+   "openPnl": 248.5,
    "closedPnl": 49.8,
-   "totalPnl": 295.5,
+   "totalPnl": 298.3,
    "frPnl": 135.6,
    "addOnPnl": -3.7,
-   "htPnl": 163.6,
-   "dailyPnlDelta": 17.5,
-   "winRate": 37,
+   "htPnl": 166.4,
+   "dailyPnlDelta": 22.7,
+   "winRate": 38,
    "avgGain": 3.1,
    "peakGainer": {
     "gain": 57.3,
@@ -8485,6 +8512,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -5.7,
      "dayChangePct": -2.94,
      "pnlDeltaToday": -2.9
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.94,
+     "gainOnDay": 2.8,
+     "dayChangePct": 5.31,
+     "pnlDeltaToday": 5.2
     },
     {
      "name": "SLVEST",
@@ -9138,17 +9174,17 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-06-26",
-   "totalSignals": 96,
-   "openCount": 74,
+   "totalSignals": 97,
+   "openCount": 75,
    "closedCount": 22,
-   "openPnl": 225.8,
+   "openPnl": 227,
    "closedPnl": 42.8,
-   "totalPnl": 268.6,
+   "totalPnl": 269.8,
    "frPnl": 133.6,
    "addOnPnl": -6,
-   "htPnl": 141,
-   "dailyPnlDelta": -29.9,
-   "winRate": 34,
+   "htPnl": 142.2,
+   "dailyPnlDelta": -31.6,
+   "winRate": 35,
    "avgGain": 2.8,
    "peakGainer": {
     "gain": 64,
@@ -9370,6 +9406,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -5.7,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.81,
+     "gainOnDay": 1.2,
+     "dayChangePct": -1.64,
+     "pnlDeltaToday": -1.7
     },
     {
      "name": "SLVEST",
@@ -10023,16 +10068,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-06-29",
-   "totalSignals": 98,
-   "openCount": 74,
+   "totalSignals": 99,
+   "openCount": 75,
    "closedCount": 24,
-   "openPnl": 272.7,
+   "openPnl": 275.4,
    "closedPnl": 97,
-   "totalPnl": 369.7,
+   "totalPnl": 372.4,
    "frPnl": 128.5,
    "addOnPnl": -6,
-   "htPnl": 247.2,
-   "dailyPnlDelta": 77.7,
+   "htPnl": 249.9,
+   "dailyPnlDelta": 79.3,
    "winRate": 45,
    "avgGain": 3.8,
    "peakGainer": {
@@ -10273,6 +10318,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -6.2,
      "dayChangePct": -0.51,
      "pnlDeltaToday": -0.5
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.93,
+     "gainOnDay": 2.7,
+     "dayChangePct": 1.54,
+     "pnlDeltaToday": 1.6
     },
     {
      "name": "SLVEST",
@@ -10926,16 +10980,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-06-30",
-   "totalSignals": 98,
-   "openCount": 74,
+   "totalSignals": 100,
+   "openCount": 76,
    "closedCount": 24,
-   "openPnl": 327.6,
+   "openPnl": 331.2,
    "closedPnl": 97,
-   "totalPnl": 424.6,
+   "totalPnl": 428.2,
    "frPnl": 141.4,
    "addOnPnl": 13.3,
-   "htPnl": 269.9,
-   "dailyPnlDelta": 54.5,
+   "htPnl": 273.5,
+   "dailyPnlDelta": 56.3,
    "winRate": 46,
    "avgGain": 4.3,
    "peakGainer": {
@@ -11088,6 +11142,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 3.8
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8,
+     "gainOnDay": 0,
+     "dayChangePct": 0.88,
+     "pnlDeltaToday": 0.9
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -11176,6 +11239,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -5.7,
      "dayChangePct": 0.51,
      "pnlDeltaToday": 0.5
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8,
+     "gainOnDay": 3.6,
+     "dayChangePct": 0.88,
+     "pnlDeltaToday": 0.9
     },
     {
      "name": "SLVEST",
@@ -11829,17 +11901,17 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-07-01",
-   "totalSignals": 101,
-   "openCount": 77,
+   "totalSignals": 103,
+   "openCount": 79,
    "closedCount": 24,
-   "openPnl": 497.2,
+   "openPnl": 507.2,
    "closedPnl": 97,
-   "totalPnl": 594.2,
+   "totalPnl": 604.2,
    "frPnl": 163.9,
    "addOnPnl": 24.7,
-   "htPnl": 405.6,
-   "dailyPnlDelta": 173.7,
-   "winRate": 60,
+   "htPnl": 415.6,
+   "dailyPnlDelta": 180,
+   "winRate": 61,
    "avgGain": 5.9,
    "peakGainer": {
     "gain": 71.6,
@@ -12018,6 +12090,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.25,
+     "gainOnDay": 3.1,
+     "dayChangePct": 3.13,
+     "pnlDeltaToday": 3.1
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -12106,6 +12187,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -1,
      "dayChangePct": 5.05,
      "pnlDeltaToday": 4.8
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.25,
+     "gainOnDay": 6.9,
+     "dayChangePct": 3.13,
+     "pnlDeltaToday": 3.2
     },
     {
      "name": "SLVEST",
@@ -12759,18 +12849,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-07-02",
-   "totalSignals": 111,
-   "openCount": 87,
+   "totalSignals": 113,
+   "openCount": 89,
    "closedCount": 24,
-   "openPnl": 365.1,
+   "openPnl": 368.3,
    "closedPnl": 97,
-   "totalPnl": 462.1,
+   "totalPnl": 465.3,
    "frPnl": 141.6,
    "addOnPnl": 13.3,
-   "htPnl": 307.2,
-   "dailyPnlDelta": -152.2,
+   "htPnl": 310.4,
+   "dailyPnlDelta": -159.1,
    "winRate": 47,
-   "avgGain": 4.2,
+   "avgGain": 4.1,
    "peakGainer": {
     "gain": 65.1,
     "name": "KEEMING"
@@ -13038,6 +13128,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 1.7
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.98,
+     "gainOnDay": -0.2,
+     "dayChangePct": -3.27,
+     "pnlDeltaToday": -3.4
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -13126,6 +13225,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3.8,
      "dayChangePct": -2.88,
      "pnlDeltaToday": -2.9
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.98,
+     "gainOnDay": 3.4,
+     "dayChangePct": -3.27,
+     "pnlDeltaToday": -3.5
     },
     {
      "name": "SLVEST",
@@ -13779,16 +13887,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-07-03",
-   "totalSignals": 117,
-   "openCount": 93,
+   "totalSignals": 119,
+   "openCount": 95,
    "closedCount": 24,
-   "openPnl": 383.9,
+   "openPnl": 387.5,
    "closedPnl": 97,
-   "totalPnl": 480.9,
+   "totalPnl": 484.5,
    "frPnl": 155.6,
    "addOnPnl": 17,
-   "htPnl": 308.3,
-   "dailyPnlDelta": 22.2,
+   "htPnl": 311.9,
+   "dailyPnlDelta": 22.7,
    "winRate": 50,
    "avgGain": 4.1,
    "peakGainer": {
@@ -14112,6 +14220,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 1.7
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8,
+     "gainOnDay": 0,
+     "dayChangePct": 0.25,
+     "pnlDeltaToday": 0.2
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -14200,6 +14317,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3.8,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8,
+     "gainOnDay": 3.6,
+     "dayChangePct": 0.25,
+     "pnlDeltaToday": 0.3
     },
     {
      "name": "SLVEST",
@@ -14853,18 +14979,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-07-06",
-   "totalSignals": 121,
-   "openCount": 96,
+   "totalSignals": 123,
+   "openCount": 98,
    "closedCount": 25,
-   "openPnl": 341.5,
+   "openPnl": 340,
    "closedPnl": 81,
-   "totalPnl": 422.5,
+   "totalPnl": 421,
    "frPnl": 167.3,
    "addOnPnl": 39.8,
-   "htPnl": 215.4,
-   "dailyPnlDelta": -65.9,
+   "htPnl": 213.9,
+   "dailyPnlDelta": -71,
    "winRate": 39,
-   "avgGain": 3.5,
+   "avgGain": 3.4,
    "peakGainer": {
     "gain": 67.9,
     "name": "KEEMING"
@@ -15222,6 +15348,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -5.1
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.8,
+     "gainOnDay": -2.5,
+     "dayChangePct": -2.5,
+     "pnlDeltaToday": -2.5
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -15310,6 +15445,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -5.2,
      "dayChangePct": -1.49,
      "pnlDeltaToday": -1.4
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.8,
+     "gainOnDay": 1,
+     "dayChangePct": -2.5,
+     "pnlDeltaToday": -2.6
     },
     {
      "name": "SLVEST",
@@ -15963,18 +16107,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-07-07",
-   "totalSignals": 129,
-   "openCount": 104,
+   "totalSignals": 131,
+   "openCount": 106,
    "closedCount": 25,
-   "openPnl": 384.4,
+   "openPnl": 382.1,
    "closedPnl": 81,
-   "totalPnl": 465.4,
+   "totalPnl": 463.1,
    "frPnl": 176.5,
    "addOnPnl": 35.4,
-   "htPnl": 253.5,
-   "dailyPnlDelta": 42.7,
+   "htPnl": 251.2,
+   "dailyPnlDelta": 41.9,
    "winRate": 50,
-   "avgGain": 3.6,
+   "avgGain": 3.5,
    "peakGainer": {
     "gain": 81.7,
     "name": "KEEMING"
@@ -16404,6 +16548,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.77,
+     "gainOnDay": -2.9,
+     "dayChangePct": -0.38,
+     "pnlDeltaToday": -0.4
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -16492,6 +16645,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -5.7,
      "dayChangePct": -0.5,
      "pnlDeltaToday": -0.5
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.77,
+     "gainOnDay": 0.6,
+     "dayChangePct": -0.38,
+     "pnlDeltaToday": -0.4
     },
     {
      "name": "SLVEST",
@@ -17145,18 +17307,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-07-08",
-   "totalSignals": 138,
-   "openCount": 113,
+   "totalSignals": 140,
+   "openCount": 115,
    "closedCount": 25,
-   "openPnl": 384.4,
+   "openPnl": 382.1,
    "closedPnl": 81,
-   "totalPnl": 465.4,
+   "totalPnl": 463.1,
    "frPnl": 176.5,
    "addOnPnl": 35.4,
-   "htPnl": 253.5,
-   "dailyPnlDelta": 42.5,
+   "htPnl": 251.2,
+   "dailyPnlDelta": 41.7,
    "winRate": 46,
-   "avgGain": 3.4,
+   "avgGain": 3.3,
    "peakGainer": {
     "gain": 81.7,
     "name": "KEEMING"
@@ -17667,6 +17829,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.77,
+     "gainOnDay": -2.9,
+     "dayChangePct": -0.38,
+     "pnlDeltaToday": -0.4
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -17755,6 +17926,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -5.7,
      "dayChangePct": -0.5,
      "pnlDeltaToday": -0.5
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.77,
+     "gainOnDay": 0.6,
+     "dayChangePct": -0.38,
+     "pnlDeltaToday": -0.4
     },
     {
      "name": "SLVEST",
@@ -18408,16 +18588,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-07-09",
-   "totalSignals": 147,
-   "openCount": 122,
+   "totalSignals": 149,
+   "openCount": 124,
    "closedCount": 25,
-   "openPnl": 423.5,
+   "openPnl": 426.7,
    "closedPnl": 81,
-   "totalPnl": 504.5,
+   "totalPnl": 507.7,
    "frPnl": 186.9,
    "addOnPnl": 49,
-   "htPnl": 268.6,
-   "dailyPnlDelta": 159.8,
+   "htPnl": 271.8,
+   "dailyPnlDelta": 166.9,
    "winRate": 55,
    "avgGain": 3.4,
    "peakGainer": {
@@ -19011,6 +19191,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 3.4
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.98,
+     "gainOnDay": -0.2,
+     "dayChangePct": 3.64,
+     "pnlDeltaToday": 3.5
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -19099,6 +19288,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -5.2,
      "dayChangePct": -0.5,
      "pnlDeltaToday": -0.5
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.98,
+     "gainOnDay": 3.4,
+     "dayChangePct": 3.64,
+     "pnlDeltaToday": 3.6
     },
     {
      "name": "SLVEST",
@@ -19752,16 +19950,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-07-10",
-   "totalSignals": 153,
-   "openCount": 126,
+   "totalSignals": 155,
+   "openCount": 128,
    "closedCount": 27,
-   "openPnl": 226.5,
+   "openPnl": 229.1,
    "closedPnl": 191.8,
-   "totalPnl": 418.3,
+   "totalPnl": 420.9,
    "frPnl": 189.9,
    "addOnPnl": 54.3,
-   "htPnl": 174.1,
-   "dailyPnlDelta": -105.9,
+   "htPnl": 176.7,
+   "dailyPnlDelta": -106.4,
    "winRate": 37,
    "avgGain": 2.7,
    "peakGainer": {
@@ -20409,6 +20607,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -1.7
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.96,
+     "gainOnDay": -0.5,
+     "dayChangePct": -0.25,
+     "pnlDeltaToday": -0.2
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -20497,6 +20704,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -4.8,
      "dayChangePct": 0.5,
      "pnlDeltaToday": 0.5
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.96,
+     "gainOnDay": 3.1,
+     "dayChangePct": -0.25,
+     "pnlDeltaToday": -0.3
     },
     {
      "name": "SLVEST",
@@ -21150,17 +21366,17 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-07-13",
-   "totalSignals": 159,
-   "openCount": 132,
+   "totalSignals": 161,
+   "openCount": 134,
    "closedCount": 27,
-   "openPnl": 62.6,
+   "openPnl": 58.5,
    "closedPnl": 191.8,
-   "totalPnl": 254.4,
+   "totalPnl": 250.3,
    "frPnl": 183.2,
    "addOnPnl": 25.1,
-   "htPnl": 46.1,
-   "dailyPnlDelta": -167.2,
-   "winRate": 30,
+   "htPnl": 42,
+   "dailyPnlDelta": -173.9,
+   "winRate": 29,
    "avgGain": 1.6,
    "peakGainer": {
     "gain": 70.8,
@@ -21861,6 +22077,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -5.1
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.7,
+     "gainOnDay": -3.8,
+     "dayChangePct": -3.27,
+     "pnlDeltaToday": -3.3
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -21949,6 +22174,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -6.7,
      "dayChangePct": -2,
      "pnlDeltaToday": -1.9
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.7,
+     "gainOnDay": -0.3,
+     "dayChangePct": -3.27,
+     "pnlDeltaToday": -3.4
     },
     {
      "name": "SLVEST",
@@ -22602,16 +22836,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-07-14",
-   "totalSignals": 161,
-   "openCount": 134,
+   "totalSignals": 163,
+   "openCount": 136,
    "closedCount": 27,
-   "openPnl": 132,
+   "openPnl": 126.2,
    "closedPnl": 191.8,
-   "totalPnl": 323.8,
+   "totalPnl": 318,
    "frPnl": 186,
    "addOnPnl": 61.8,
-   "htPnl": 76,
-   "dailyPnlDelta": 71.5,
+   "htPnl": 70.2,
+   "dailyPnlDelta": 69.7,
    "winRate": 29,
    "avgGain": 2,
    "peakGainer": {
@@ -23331,6 +23565,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 1.7
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.63,
+     "gainOnDay": -4.6,
+     "dayChangePct": -0.91,
+     "pnlDeltaToday": -0.9
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -23419,6 +23662,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -6.2,
      "dayChangePct": 0.51,
      "pnlDeltaToday": 0.5
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.63,
+     "gainOnDay": -1.2,
+     "dayChangePct": -0.91,
+     "pnlDeltaToday": -0.9
     },
     {
      "name": "SLVEST",
@@ -24072,16 +24324,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-07-15",
-   "totalSignals": 165,
-   "openCount": 138,
+   "totalSignals": 167,
+   "openCount": 140,
    "closedCount": 27,
-   "openPnl": 387.6,
+   "openPnl": 385.3,
    "closedPnl": 191.8,
-   "totalPnl": 579.4,
+   "totalPnl": 577.1,
    "frPnl": 214.2,
    "addOnPnl": 53.6,
-   "htPnl": 311.6,
-   "dailyPnlDelta": 260,
+   "htPnl": 309.3,
+   "dailyPnlDelta": 263.5,
    "winRate": 47,
    "avgGain": 3.5,
    "peakGainer": {
@@ -24837,6 +25089,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 5.1
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.77,
+     "gainOnDay": -2.9,
+     "dayChangePct": 1.83,
+     "pnlDeltaToday": 1.7
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -24925,6 +25186,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -6.7,
      "dayChangePct": -0.51,
      "pnlDeltaToday": -0.5
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.77,
+     "gainOnDay": 0.6,
+     "dayChangePct": 1.83,
+     "pnlDeltaToday": 1.8
     },
     {
      "name": "SLVEST",
@@ -25578,16 +25848,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-07-16",
-   "totalSignals": 171,
-   "openCount": 144,
+   "totalSignals": 173,
+   "openCount": 146,
    "closedCount": 27,
-   "openPnl": 445.8,
+   "openPnl": 445.1,
    "closedPnl": 191.8,
-   "totalPnl": 637.6,
+   "totalPnl": 636.9,
    "frPnl": 213.1,
    "addOnPnl": 35.4,
-   "htPnl": 389.1,
-   "dailyPnlDelta": 60.8,
+   "htPnl": 388.4,
+   "dailyPnlDelta": 62.3,
    "winRate": 54,
    "avgGain": 3.7,
    "peakGainer": {
@@ -26397,6 +26667,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 13.6
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.83,
+     "gainOnDay": -2.1,
+     "dayChangePct": 0.77,
+     "pnlDeltaToday": 0.7
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -26485,6 +26764,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -5.2,
      "dayChangePct": 1.53,
      "pnlDeltaToday": 1.4
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.83,
+     "gainOnDay": 1.4,
+     "dayChangePct": 0.77,
+     "pnlDeltaToday": 0.8
     },
     {
      "name": "SLVEST",
@@ -27138,18 +27426,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-07-17",
-   "totalSignals": 175,
-   "openCount": 146,
+   "totalSignals": 177,
+   "openCount": 148,
    "closedCount": 29,
-   "openPnl": 132.6,
+   "openPnl": 123.5,
    "closedPnl": 168.4,
-   "totalPnl": 301,
+   "totalPnl": 291.9,
    "frPnl": 171.3,
    "addOnPnl": 3.1,
-   "htPnl": 126.6,
-   "dailyPnlDelta": -336.4,
+   "htPnl": 117.5,
+   "dailyPnlDelta": -344.8,
    "winRate": 37,
-   "avgGain": 1.7,
+   "avgGain": 1.6,
    "peakGainer": {
     "gain": 71.6,
     "name": "KEEMING"
@@ -27993,6 +28281,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -6.8
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.5,
+     "gainOnDay": -6.3,
+     "dayChangePct": -4.21,
+     "pnlDeltaToday": -4.1
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -28081,6 +28378,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -6.2,
      "dayChangePct": -1.01,
      "pnlDeltaToday": -1
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.5,
+     "gainOnDay": -2.8,
+     "dayChangePct": -4.21,
+     "pnlDeltaToday": -4.3
     },
     {
      "name": "SLVEST",
@@ -28734,16 +29040,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-07-21",
-   "totalSignals": 176,
-   "openCount": 147,
+   "totalSignals": 178,
+   "openCount": 149,
    "closedCount": 29,
-   "openPnl": 605.6,
+   "openPnl": 610,
    "closedPnl": 168.4,
-   "totalPnl": 774,
+   "totalPnl": 778.4,
    "frPnl": 226.7,
    "addOnPnl": 50.5,
-   "htPnl": 496.8,
-   "dailyPnlDelta": 306.5,
+   "htPnl": 501.2,
+   "dailyPnlDelta": 312.8,
    "winRate": 62,
    "avgGain": 4.4,
    "peakGainer": {
@@ -29598,6 +29904,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 5.1
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.03,
+     "gainOnDay": 0.4,
+     "dayChangePct": 3.21,
+     "pnlDeltaToday": 3.1
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -29686,6 +30001,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -5.7,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.03,
+     "gainOnDay": 4,
+     "dayChangePct": 3.21,
+     "pnlDeltaToday": 3.2
     },
     {
      "name": "SLVEST",
@@ -30339,18 +30663,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-07-22",
-   "totalSignals": 176,
-   "openCount": 147,
+   "totalSignals": 178,
+   "openCount": 149,
    "closedCount": 29,
-   "openPnl": 528.9,
+   "openPnl": 534.6,
    "closedPnl": 168.4,
-   "totalPnl": 697.3,
+   "totalPnl": 703,
    "frPnl": 230.4,
    "addOnPnl": 39,
-   "htPnl": 427.9,
-   "dailyPnlDelta": -114.5,
+   "htPnl": 433.6,
+   "dailyPnlDelta": -113.3,
    "winRate": 62,
-   "avgGain": 4,
+   "avgGain": 3.9,
    "peakGainer": {
     "gain": 70.8,
     "name": "KEEMING"
@@ -31203,6 +31527,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.08,
+     "gainOnDay": 1,
+     "dayChangePct": 0.62,
+     "pnlDeltaToday": 0.6
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -31291,6 +31624,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -5.7,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.08,
+     "gainOnDay": 4.7,
+     "dayChangePct": 0.62,
+     "pnlDeltaToday": 0.6
     },
     {
      "name": "SLVEST",
@@ -31944,16 +32286,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-07-23",
-   "totalSignals": 179,
-   "openCount": 150,
+   "totalSignals": 181,
+   "openCount": 152,
    "closedCount": 29,
-   "openPnl": 497.9,
+   "openPnl": 502.1,
    "closedPnl": 168.4,
-   "totalPnl": 666.3,
+   "totalPnl": 670.5,
    "frPnl": 232.4,
    "addOnPnl": 28.6,
-   "htPnl": 405.3,
-   "dailyPnlDelta": -34.8,
+   "htPnl": 409.5,
+   "dailyPnlDelta": -36.3,
    "winRate": 61,
    "avgGain": 3.7,
    "peakGainer": {
@@ -32835,6 +33177,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 1.7
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.02,
+     "gainOnDay": 0.3,
+     "dayChangePct": -0.74,
+     "pnlDeltaToday": -0.7
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -32923,6 +33274,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -6.2,
      "dayChangePct": -0.51,
      "pnlDeltaToday": -0.5
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.02,
+     "gainOnDay": 3.9,
+     "dayChangePct": -0.74,
+     "pnlDeltaToday": -0.8
     },
     {
      "name": "SLVEST",
@@ -33576,18 +33936,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-07-24",
-   "totalSignals": 184,
-   "openCount": 155,
+   "totalSignals": 186,
+   "openCount": 157,
    "closedCount": 29,
-   "openPnl": 449.7,
+   "openPnl": 453.6,
    "closedPnl": 168.4,
-   "totalPnl": 618.1,
+   "totalPnl": 622,
    "frPnl": 208.2,
    "addOnPnl": 18.7,
-   "htPnl": 391.2,
-   "dailyPnlDelta": -49.3,
-   "winRate": 59,
-   "avgGain": 3.4,
+   "htPnl": 395.1,
+   "dailyPnlDelta": -49.5,
+   "winRate": 60,
+   "avgGain": 3.3,
    "peakGainer": {
     "gain": 70.8,
     "name": "KEEMING"
@@ -34512,6 +34872,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.01,
+     "gainOnDay": 0.1,
+     "dayChangePct": -0.12,
+     "pnlDeltaToday": -0.1
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -34600,6 +34969,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -5.7,
      "dayChangePct": 0.51,
      "pnlDeltaToday": 0.5
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.01,
+     "gainOnDay": 3.8,
+     "dayChangePct": -0.12,
+     "pnlDeltaToday": -0.1
     },
     {
      "name": "SLVEST",
@@ -35253,16 +35631,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-07-27",
-   "totalSignals": 192,
-   "openCount": 163,
+   "totalSignals": 194,
+   "openCount": 165,
    "closedCount": 29,
-   "openPnl": 553.2,
+   "openPnl": 562.1,
    "closedPnl": 168.4,
-   "totalPnl": 721.6,
+   "totalPnl": 730.5,
    "frPnl": 222.2,
    "addOnPnl": 12,
-   "htPnl": 487.4,
-   "dailyPnlDelta": 107.8,
+   "htPnl": 496.3,
+   "dailyPnlDelta": 112.9,
    "winRate": 57,
    "avgGain": 3.8,
    "peakGainer": {
@@ -36261,6 +36639,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 3.4
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.21,
+     "gainOnDay": 2.6,
+     "dayChangePct": 2.5,
+     "pnlDeltaToday": 2.5
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -36349,6 +36736,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -4.8,
      "dayChangePct": 1.01,
      "pnlDeltaToday": 1
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.21,
+     "gainOnDay": 6.3,
+     "dayChangePct": 2.5,
+     "pnlDeltaToday": 2.6
     },
     {
      "name": "SLVEST",
@@ -37002,18 +37398,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-07-28",
-   "totalSignals": 197,
-   "openCount": 168,
+   "totalSignals": 199,
+   "openCount": 170,
    "closedCount": 29,
-   "openPnl": 297.1,
+   "openPnl": 298.2,
    "closedPnl": 168.4,
-   "totalPnl": 465.5,
+   "totalPnl": 466.6,
    "frPnl": 208,
    "addOnPnl": -19.1,
-   "htPnl": 276.6,
-   "dailyPnlDelta": -263.9,
+   "htPnl": 277.7,
+   "dailyPnlDelta": -271.8,
    "winRate": 50,
-   "avgGain": 2.4,
+   "avgGain": 2.3,
    "peakGainer": {
     "gain": 78,
     "name": "KEEMING"
@@ -38055,6 +38451,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -6.8
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.9,
+     "gainOnDay": -1.2,
+     "dayChangePct": -3.78,
+     "pnlDeltaToday": -3.9
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -38143,6 +38548,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -2.9,
      "dayChangePct": 2,
      "pnlDeltaToday": 1.9
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 7.9,
+     "gainOnDay": 2.3,
+     "dayChangePct": -3.78,
+     "pnlDeltaToday": -4
     },
     {
      "name": "SLVEST",
@@ -38796,16 +39210,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-07-29",
-   "totalSignals": 202,
-   "openCount": 173,
+   "totalSignals": 204,
+   "openCount": 175,
    "closedCount": 29,
-   "openPnl": 409,
+   "openPnl": 413.9,
    "closedPnl": 168.4,
-   "totalPnl": 577.4,
+   "totalPnl": 582.3,
    "frPnl": 219,
    "addOnPnl": -12.1,
-   "htPnl": 370.5,
-   "dailyPnlDelta": 112.8,
+   "htPnl": 375.4,
+   "dailyPnlDelta": 116.6,
    "winRate": 55,
    "avgGain": 2.9,
    "peakGainer": {
@@ -39894,6 +40308,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 1.7
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.05,
+     "gainOnDay": 0.6,
+     "dayChangePct": 1.9,
+     "pnlDeltaToday": 1.9
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -39982,6 +40405,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -4.8,
      "dayChangePct": -1.96,
      "pnlDeltaToday": -1.9
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.05,
+     "gainOnDay": 4.3,
+     "dayChangePct": 1.9,
+     "pnlDeltaToday": 1.9
     },
     {
      "name": "SLVEST",
@@ -40635,17 +41067,17 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-07-30",
-   "totalSignals": 209,
-   "openCount": 180,
+   "totalSignals": 211,
+   "openCount": 182,
    "closedCount": 29,
-   "openPnl": 400.6,
+   "openPnl": 405.2,
    "closedPnl": 168.4,
-   "totalPnl": 569,
+   "totalPnl": 573.6,
    "frPnl": 224.8,
    "addOnPnl": 1.5,
-   "htPnl": 342.7,
-   "dailyPnlDelta": -9.2,
-   "winRate": 52,
+   "htPnl": 347.3,
+   "dailyPnlDelta": -9.4,
+   "winRate": 53,
    "avgGain": 2.7,
    "peakGainer": {
     "gain": 77.1,
@@ -41796,6 +42228,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -1.7
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.04,
+     "gainOnDay": 0.5,
+     "dayChangePct": -0.12,
+     "pnlDeltaToday": -0.1
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -41884,6 +42325,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -2.9,
      "dayChangePct": 2,
      "pnlDeltaToday": 1.9
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.04,
+     "gainOnDay": 4.1,
+     "dayChangePct": -0.12,
+     "pnlDeltaToday": -0.1
     },
     {
      "name": "SLVEST",
@@ -42537,16 +42987,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-07-31",
-   "totalSignals": 214,
-   "openCount": 185,
+   "totalSignals": 216,
+   "openCount": 187,
    "closedCount": 29,
-   "openPnl": 779.1,
+   "openPnl": 790.6,
    "closedPnl": 168.4,
-   "totalPnl": 947.5,
+   "totalPnl": 959,
    "frPnl": 269,
    "addOnPnl": 0.9,
-   "htPnl": 677.6,
-   "dailyPnlDelta": 381.1,
+   "htPnl": 689.1,
+   "dailyPnlDelta": 388,
    "winRate": 61,
    "avgGain": 4.4,
    "peakGainer": {
@@ -43743,6 +44193,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 5.1
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.31,
+     "gainOnDay": 3.9,
+     "dayChangePct": 3.36,
+     "pnlDeltaToday": 3.4
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -43831,6 +44290,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -2.9,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.31,
+     "gainOnDay": 7.6,
+     "dayChangePct": 3.36,
+     "pnlDeltaToday": 3.5
     },
     {
      "name": "SLVEST",
@@ -44484,16 +44952,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-03",
-   "totalSignals": 218,
-   "openCount": 189,
+   "totalSignals": 220,
+   "openCount": 191,
    "closedCount": 29,
-   "openPnl": 878.2,
+   "openPnl": 886.9,
    "closedPnl": 168.4,
-   "totalPnl": 1046.6,
+   "totalPnl": 1055.3,
    "frPnl": 288,
    "addOnPnl": 37.4,
-   "htPnl": 721.2,
-   "dailyPnlDelta": 101.5,
+   "htPnl": 729.9,
+   "dailyPnlDelta": 98.7,
    "winRate": 62,
    "avgGain": 4.8,
    "peakGainer": {
@@ -45726,6 +46194,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 3.4
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.2,
+     "gainOnDay": 2.5,
+     "dayChangePct": -1.32,
+     "pnlDeltaToday": -1.4
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -45814,6 +46291,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -1.9,
      "dayChangePct": 0.98,
      "pnlDeltaToday": 1
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.2,
+     "gainOnDay": 6.2,
+     "dayChangePct": -1.32,
+     "pnlDeltaToday": -1.4
     },
     {
      "name": "SLVEST",
@@ -46467,16 +46953,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-04",
-   "totalSignals": 222,
-   "openCount": 193,
+   "totalSignals": 224,
+   "openCount": 195,
    "closedCount": 29,
-   "openPnl": 1152.6,
+   "openPnl": 1174.6,
    "closedPnl": 168.4,
-   "totalPnl": 1321,
+   "totalPnl": 1343,
    "frPnl": 315.9,
    "addOnPnl": 114.7,
-   "htPnl": 890.4,
-   "dailyPnlDelta": 276.3,
+   "htPnl": 912.4,
+   "dailyPnlDelta": 289.5,
    "winRate": 70,
    "avgGain": 6,
    "peakGainer": {
@@ -47745,6 +48231,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -3.4
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.72,
+     "gainOnDay": 9,
+     "dayChangePct": 6.34,
+     "pnlDeltaToday": 6.5
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -47833,6 +48328,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -1,
      "dayChangePct": 0.97,
      "pnlDeltaToday": 1
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.72,
+     "gainOnDay": 13,
+     "dayChangePct": 6.34,
+     "pnlDeltaToday": 6.7
     },
     {
      "name": "SLVEST",
@@ -48486,18 +48990,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-05",
-   "totalSignals": 224,
-   "openCount": 194,
+   "totalSignals": 226,
+   "openCount": 196,
    "closedCount": 30,
-   "openPnl": 1433.9,
+   "openPnl": 1456.6,
    "closedPnl": 183.5,
-   "totalPnl": 1617.4,
+   "totalPnl": 1640.1,
    "frPnl": 317.7,
    "addOnPnl": 118.9,
-   "htPnl": 1180.8,
-   "dailyPnlDelta": 301.2,
+   "htPnl": 1203.5,
+   "dailyPnlDelta": 302,
    "winRate": 75,
-   "avgGain": 7.2,
+   "avgGain": 7.3,
    "peakGainer": {
     "gain": 99.1,
     "name": "KEEMING"
@@ -49782,6 +50286,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -3.4
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.75,
+     "gainOnDay": 9.4,
+     "dayChangePct": 0.34,
+     "pnlDeltaToday": 0.4
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -49870,6 +50383,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -1.9,
      "dayChangePct": -0.96,
      "pnlDeltaToday": -1
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.75,
+     "gainOnDay": 13.3,
+     "dayChangePct": 0.34,
+     "pnlDeltaToday": 0.4
     },
     {
      "name": "SLVEST",
@@ -50523,16 +51045,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-06",
-   "totalSignals": 228,
-   "openCount": 198,
+   "totalSignals": 230,
+   "openCount": 200,
    "closedCount": 30,
-   "openPnl": 1548.2,
+   "openPnl": 1573.4,
    "closedPnl": 183.5,
-   "totalPnl": 1731.7,
+   "totalPnl": 1756.9,
    "frPnl": 324.8,
    "addOnPnl": 130.4,
-   "htPnl": 1276.5,
-   "dailyPnlDelta": 113.2,
+   "htPnl": 1301.7,
+   "dailyPnlDelta": 115.8,
    "winRate": 71,
    "avgGain": 7.6,
    "peakGainer": {
@@ -51855,6 +52377,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 1.7
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.85,
+     "gainOnDay": 10.6,
+     "dayChangePct": 1.14,
+     "pnlDeltaToday": 1.3
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -51943,6 +52474,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3.8,
      "dayChangePct": -1.94,
      "pnlDeltaToday": -1.9
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.85,
+     "gainOnDay": 14.6,
+     "dayChangePct": 1.14,
+     "pnlDeltaToday": 1.3
     },
     {
      "name": "SLVEST",
@@ -52596,18 +53136,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-07",
-   "totalSignals": 232,
-   "openCount": 202,
+   "totalSignals": 234,
+   "openCount": 204,
    "closedCount": 30,
-   "openPnl": 1726.4,
+   "openPnl": 1749.8,
    "closedPnl": 183.5,
-   "totalPnl": 1909.9,
+   "totalPnl": 1933.3,
    "frPnl": 353.6,
    "addOnPnl": 278,
-   "htPnl": 1278.3,
-   "dailyPnlDelta": 173.1,
+   "htPnl": 1301.7,
+   "dailyPnlDelta": 171.3,
    "winRate": 74,
-   "avgGain": 8.2,
+   "avgGain": 8.3,
    "peakGainer": {
     "gain": 95.4,
     "name": "KEEMING"
@@ -53964,6 +54504,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 1.7
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.78,
+     "gainOnDay": 9.7,
+     "dayChangePct": -0.79,
+     "pnlDeltaToday": -0.9
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -54052,6 +54601,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -4.8,
      "dayChangePct": -1.96,
      "pnlDeltaToday": -1.9
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.78,
+     "gainOnDay": 13.7,
+     "dayChangePct": -0.79,
+     "pnlDeltaToday": -0.9
     },
     {
      "name": "SLVEST",
@@ -54705,16 +55263,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-10",
-   "totalSignals": 238,
-   "openCount": 208,
+   "totalSignals": 240,
+   "openCount": 210,
    "closedCount": 30,
-   "openPnl": 2098.9,
+   "openPnl": 2120.3,
    "closedPnl": 183.5,
-   "totalPnl": 2282.4,
+   "totalPnl": 2303.8,
    "frPnl": 398.6,
    "addOnPnl": 333.5,
-   "htPnl": 1550.3,
-   "dailyPnlDelta": 372.9,
+   "htPnl": 1571.7,
+   "dailyPnlDelta": 370.9,
    "winRate": 78,
    "avgGain": 9.6,
    "peakGainer": {
@@ -56127,6 +56685,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 1.7
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.7,
+     "gainOnDay": 8.7,
+     "dayChangePct": -0.91,
+     "pnlDeltaToday": -1
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -56215,6 +56782,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -1.9,
      "dayChangePct": 3,
      "pnlDeltaToday": 2.9
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.7,
+     "gainOnDay": 12.7,
+     "dayChangePct": -0.91,
+     "pnlDeltaToday": -1
     },
     {
      "name": "SLVEST",
@@ -56868,17 +57444,17 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-11",
-   "totalSignals": 243,
-   "openCount": 213,
+   "totalSignals": 245,
+   "openCount": 215,
    "closedCount": 30,
-   "openPnl": 2178.5,
+   "openPnl": 2198.2,
    "closedPnl": 183.5,
-   "totalPnl": 2362,
+   "totalPnl": 2381.7,
    "frPnl": 418.8,
    "addOnPnl": 377.8,
-   "htPnl": 1565.4,
-   "dailyPnlDelta": 77.2,
-   "winRate": 72,
+   "htPnl": 1585.1,
+   "dailyPnlDelta": 75.4,
+   "winRate": 73,
    "avgGain": 9.7,
    "peakGainer": {
     "gain": 97.2,
@@ -58335,6 +58911,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 1.7
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.63,
+     "gainOnDay": 7.9,
+     "dayChangePct": -0.8,
+     "pnlDeltaToday": -0.9
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -58423,6 +59008,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3.8,
      "dayChangePct": -1.94,
      "pnlDeltaToday": -1.9
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.63,
+     "gainOnDay": 11.8,
+     "dayChangePct": -0.8,
+     "pnlDeltaToday": -0.9
     },
     {
      "name": "SLVEST",
@@ -59076,17 +59670,17 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-12",
-   "totalSignals": 252,
-   "openCount": 222,
+   "totalSignals": 254,
+   "openCount": 224,
    "closedCount": 30,
-   "openPnl": 2336.5,
+   "openPnl": 2359.5,
    "closedPnl": 183.5,
-   "totalPnl": 2520,
+   "totalPnl": 2543,
    "frPnl": 421.1,
    "addOnPnl": 391.2,
-   "htPnl": 1707.7,
-   "dailyPnlDelta": 152.1,
-   "winRate": 71,
+   "htPnl": 1730.7,
+   "dailyPnlDelta": 155.4,
+   "winRate": 72,
    "avgGain": 10,
    "peakGainer": {
     "gain": 95.4,
@@ -60624,6 +61218,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -1.7
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.76,
+     "gainOnDay": 9.5,
+     "dayChangePct": 1.51,
+     "pnlDeltaToday": 1.6
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -60712,6 +61315,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3.8,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.76,
+     "gainOnDay": 13.5,
+     "dayChangePct": 1.51,
+     "pnlDeltaToday": 1.7
     },
     {
      "name": "SLVEST",
@@ -61365,16 +61977,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-13",
-   "totalSignals": 255,
-   "openCount": 225,
+   "totalSignals": 257,
+   "openCount": 227,
    "closedCount": 30,
-   "openPnl": 2524.4,
+   "openPnl": 2546.6,
    "closedPnl": 183.5,
-   "totalPnl": 2707.9,
+   "totalPnl": 2730.1,
    "frPnl": 450.4,
    "addOnPnl": 445.9,
-   "htPnl": 1811.6,
-   "dailyPnlDelta": 187.3,
+   "htPnl": 1833.8,
+   "dailyPnlDelta": 186.5,
    "winRate": 80,
    "avgGain": 10.6,
    "peakGainer": {
@@ -62940,6 +63552,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 1.7
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.73,
+     "gainOnDay": 9.1,
+     "dayChangePct": -0.34,
+     "pnlDeltaToday": -0.4
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -63028,6 +63649,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -4.8,
      "dayChangePct": -0.99,
      "pnlDeltaToday": -1
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.73,
+     "gainOnDay": 13.1,
+     "dayChangePct": -0.34,
+     "pnlDeltaToday": -0.4
     },
     {
      "name": "SLVEST",
@@ -63681,17 +64311,17 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-14",
-   "totalSignals": 260,
-   "openCount": 230,
+   "totalSignals": 262,
+   "openCount": 232,
    "closedCount": 30,
-   "openPnl": 2551.8,
+   "openPnl": 2573.2,
    "closedPnl": 183.5,
-   "totalPnl": 2735.3,
+   "totalPnl": 2756.7,
    "frPnl": 467.5,
    "addOnPnl": 469.8,
-   "htPnl": 1798,
-   "dailyPnlDelta": 26.1,
-   "winRate": 80,
+   "htPnl": 1819.4,
+   "dailyPnlDelta": 25.3,
+   "winRate": 81,
    "avgGain": 10.5,
    "peakGainer": {
     "gain": 117.4,
@@ -65301,6 +65931,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -1.7
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.7,
+     "gainOnDay": 8.7,
+     "dayChangePct": -0.34,
+     "pnlDeltaToday": -0.4
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -65389,6 +66028,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -2.9,
      "dayChangePct": 2,
      "pnlDeltaToday": 1.9
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.7,
+     "gainOnDay": 12.7,
+     "dayChangePct": -0.34,
+     "pnlDeltaToday": -0.4
     },
     {
      "name": "SLVEST",
@@ -66042,16 +66690,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-17",
-   "totalSignals": 264,
-   "openCount": 233,
+   "totalSignals": 266,
+   "openCount": 235,
    "closedCount": 31,
-   "openPnl": 2795.7,
+   "openPnl": 2813,
    "closedPnl": 173,
-   "totalPnl": 2968.7,
+   "totalPnl": 2986,
    "frPnl": 522.7,
    "addOnPnl": 523.4,
-   "htPnl": 1922.6,
-   "dailyPnlDelta": 231.2,
+   "htPnl": 1939.9,
+   "dailyPnlDelta": 227.1,
    "winRate": 74,
    "avgGain": 11.2,
    "peakGainer": {
@@ -67698,6 +68346,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 1.7
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.54,
+     "gainOnDay": 6.7,
+     "dayChangePct": -1.84,
+     "pnlDeltaToday": -2
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -67786,6 +68443,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3.8,
      "dayChangePct": -0.98,
      "pnlDeltaToday": -1
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.54,
+     "gainOnDay": 10.6,
+     "dayChangePct": -1.84,
+     "pnlDeltaToday": -2.1
     },
     {
      "name": "SLVEST",
@@ -68439,16 +69105,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-18",
-   "totalSignals": 268,
-   "openCount": 237,
+   "totalSignals": 270,
+   "openCount": 239,
    "closedCount": 31,
-   "openPnl": 2848.4,
+   "openPnl": 2865.7,
    "closedPnl": 173,
-   "totalPnl": 3021.4,
+   "totalPnl": 3038.7,
    "frPnl": 522.7,
    "addOnPnl": 523.4,
-   "htPnl": 1975.3,
-   "dailyPnlDelta": 241.2,
+   "htPnl": 1992.6,
+   "dailyPnlDelta": 237.1,
    "winRate": 73,
    "avgGain": 11.3,
    "peakGainer": {
@@ -70131,6 +70797,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 1.7
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.54,
+     "gainOnDay": 6.7,
+     "dayChangePct": -1.84,
+     "pnlDeltaToday": -2
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -70219,6 +70894,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3.8,
      "dayChangePct": -0.98,
      "pnlDeltaToday": -1
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.54,
+     "gainOnDay": 10.6,
+     "dayChangePct": -1.84,
+     "pnlDeltaToday": -2.1
     },
     {
      "name": "SLVEST",
@@ -70872,16 +71556,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-19",
-   "totalSignals": 272,
-   "openCount": 235,
+   "totalSignals": 274,
+   "openCount": 237,
    "closedCount": 37,
-   "openPnl": 2782.7,
+   "openPnl": 2811.6,
    "closedPnl": 233.1,
-   "totalPnl": 3015.8,
+   "totalPnl": 3044.7,
    "frPnl": 533.8,
    "addOnPnl": 615.6,
-   "htPnl": 1866.4,
-   "dailyPnlDelta": -44.6,
+   "htPnl": 1895.3,
+   "dailyPnlDelta": -44.8,
    "winRate": 69,
    "avgGain": 11.1,
    "peakGainer": {
@@ -72600,6 +73284,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 1.7
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.99,
+     "gainOnDay": 12.4,
+     "dayChangePct": -0.11,
+     "pnlDeltaToday": -0.1
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -72688,6 +73381,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -1.9,
      "dayChangePct": 0.98,
      "pnlDeltaToday": 1
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.99,
+     "gainOnDay": 16.5,
+     "dayChangePct": -0.11,
+     "pnlDeltaToday": -0.1
     },
     {
      "name": "SLVEST",
@@ -73341,17 +74043,17 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-20",
-   "totalSignals": 275,
-   "openCount": 225,
+   "totalSignals": 277,
+   "openCount": 227,
    "closedCount": 50,
-   "openPnl": 2900.3,
+   "openPnl": 2929.4,
    "closedPnl": 359.6,
-   "totalPnl": 3259.9,
+   "totalPnl": 3289,
    "frPnl": 559.6,
    "addOnPnl": 693.8,
-   "htPnl": 2006.5,
-   "dailyPnlDelta": 213.9,
-   "winRate": 69,
+   "htPnl": 2035.6,
+   "dailyPnlDelta": 214.1,
+   "winRate": 70,
    "avgGain": 11.9,
    "peakGainer": {
     "gain": 128.4,
@@ -75096,6 +75798,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -11.9
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 9,
+     "gainOnDay": 12.5,
+     "dayChangePct": 0.11,
+     "pnlDeltaToday": 0.1
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -75184,6 +75895,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -1.9,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 9,
+     "gainOnDay": 16.6,
+     "dayChangePct": 0.11,
+     "pnlDeltaToday": 0.1
     },
     {
      "name": "SLVEST",
@@ -75837,16 +76557,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-21",
-   "totalSignals": 281,
-   "openCount": 230,
+   "totalSignals": 283,
+   "openCount": 232,
    "closedCount": 51,
-   "openPnl": 2852.4,
+   "openPnl": 2871.5,
    "closedPnl": 346.1,
-   "totalPnl": 3198.5,
+   "totalPnl": 3217.6,
    "frPnl": 569.4,
    "addOnPnl": 739.7,
-   "htPnl": 1889.4,
-   "dailyPnlDelta": -58.7,
+   "htPnl": 1908.5,
+   "dailyPnlDelta": -68.7,
    "winRate": 65,
    "avgGain": 11.4,
    "peakGainer": {
@@ -77646,6 +78366,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.61,
+     "gainOnDay": 7.6,
+     "dayChangePct": -4.33,
+     "pnlDeltaToday": -4.9
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -77734,6 +78463,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -1.9,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.61,
+     "gainOnDay": 11.5,
+     "dayChangePct": -4.33,
+     "pnlDeltaToday": -5.1
     },
     {
      "name": "SLVEST",
@@ -78387,17 +79125,17 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-24",
-   "totalSignals": 284,
-   "openCount": 226,
+   "totalSignals": 286,
+   "openCount": 228,
    "closedCount": 58,
-   "openPnl": 2407.1,
+   "openPnl": 2419.9,
    "closedPnl": 494.2,
-   "totalPnl": 2901.3,
+   "totalPnl": 2914.1,
    "frPnl": 555.8,
    "addOnPnl": 769.1,
-   "htPnl": 1576.4,
-   "dailyPnlDelta": -325.7,
-   "winRate": 63,
+   "htPnl": 1589.2,
+   "dailyPnlDelta": -332,
+   "winRate": 64,
    "avgGain": 10.2,
    "peakGainer": {
     "gain": 125.7,
@@ -80223,6 +80961,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.36,
+     "gainOnDay": 4.5,
+     "dayChangePct": -2.9,
+     "pnlDeltaToday": -3.1
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -80311,6 +81058,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -11.9,
      "dayChangePct": -10.19,
      "pnlDeltaToday": -10
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.36,
+     "gainOnDay": 8.3,
+     "dayChangePct": -2.9,
+     "pnlDeltaToday": -3.2
     },
     {
      "name": "SLVEST",
@@ -80964,16 +81720,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-26",
-   "totalSignals": 287,
-   "openCount": 228,
+   "totalSignals": 289,
+   "openCount": 230,
    "closedCount": 59,
-   "openPnl": 2786.6,
+   "openPnl": 2814.1,
    "closedPnl": 488.6,
-   "totalPnl": 3275.2,
+   "totalPnl": 3302.7,
    "frPnl": 595.3,
    "addOnPnl": 886.3,
-   "htPnl": 1793.6,
-   "dailyPnlDelta": 390.9,
+   "htPnl": 1821.1,
+   "dailyPnlDelta": 405.6,
    "winRate": 66,
    "avgGain": 11.4,
    "peakGainer": {
@@ -82827,6 +83583,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.94,
+     "gainOnDay": 11.7,
+     "dayChangePct": 6.94,
+     "pnlDeltaToday": 7.2
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -82915,6 +83680,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -10,
      "dayChangePct": 2.16,
      "pnlDeltaToday": 1.9
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.94,
+     "gainOnDay": 15.8,
+     "dayChangePct": 6.94,
+     "pnlDeltaToday": 7.5
     },
     {
      "name": "SLVEST",
@@ -83568,16 +84342,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-27",
-   "totalSignals": 288,
-   "openCount": 229,
+   "totalSignals": 290,
+   "openCount": 231,
    "closedCount": 59,
-   "openPnl": 3013.9,
+   "openPnl": 3046.8,
    "closedPnl": 488.6,
-   "totalPnl": 3502.5,
+   "totalPnl": 3535.4,
    "frPnl": 583.2,
    "addOnPnl": 839.5,
-   "htPnl": 2079.8,
-   "dailyPnlDelta": 229.8,
+   "htPnl": 2112.7,
+   "dailyPnlDelta": 235.1,
    "winRate": 72,
    "avgGain": 12.2,
    "peakGainer": {
@@ -85440,6 +86214,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 9.15,
+     "gainOnDay": 14.4,
+     "dayChangePct": 2.35,
+     "pnlDeltaToday": 2.6
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -85528,6 +86311,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -11,
      "dayChangePct": -1.06,
      "pnlDeltaToday": -1
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 9.15,
+     "gainOnDay": 18.5,
+     "dayChangePct": 2.35,
+     "pnlDeltaToday": 2.7
     },
     {
      "name": "SLVEST",
@@ -86181,17 +86973,17 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-28",
-   "totalSignals": 291,
-   "openCount": 224,
+   "totalSignals": 293,
+   "openCount": 226,
    "closedCount": 67,
-   "openPnl": 2462.9,
+   "openPnl": 2497.1,
    "closedPnl": 703.2,
-   "totalPnl": 3166.1,
+   "totalPnl": 3200.3,
    "frPnl": 512.4,
    "addOnPnl": 766.8,
-   "htPnl": 1886.9,
-   "dailyPnlDelta": -337.3,
-   "winRate": 70,
+   "htPnl": 1921.1,
+   "dailyPnlDelta": -336.1,
+   "winRate": 71,
    "avgGain": 10.9,
    "peakGainer": {
     "gain": 124.8,
@@ -88080,6 +88872,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 9.2,
+     "gainOnDay": 15,
+     "dayChangePct": 0.55,
+     "pnlDeltaToday": 0.6
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -88168,6 +88969,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -11,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 9.2,
+     "gainOnDay": 19.2,
+     "dayChangePct": 0.55,
+     "pnlDeltaToday": 0.6
     },
     {
      "name": "SLVEST",
@@ -88821,17 +89631,17 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-01",
-   "totalSignals": 294,
-   "openCount": 220,
+   "totalSignals": 296,
+   "openCount": 222,
    "closedCount": 74,
-   "openPnl": 2026.5,
+   "openPnl": 2051.5,
    "closedPnl": 817.9,
-   "totalPnl": 2844.4,
+   "totalPnl": 2869.4,
    "frPnl": 528.2,
    "addOnPnl": 696.4,
-   "htPnl": 1619.8,
-   "dailyPnlDelta": -347.6,
-   "winRate": 65,
+   "htPnl": 1644.8,
+   "dailyPnlDelta": -356.8,
+   "winRate": 66,
    "avgGain": 9.7,
    "peakGainer": {
     "gain": 110.1,
@@ -90747,6 +91557,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.84,
+     "gainOnDay": 10.5,
+     "dayChangePct": -3.91,
+     "pnlDeltaToday": -4.5
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -90835,6 +91654,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -11,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.84,
+     "gainOnDay": 14.5,
+     "dayChangePct": -3.91,
+     "pnlDeltaToday": -4.7
     },
     {
      "name": "SLVEST",
@@ -91488,17 +92316,17 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-02",
-   "totalSignals": 298,
-   "openCount": 220,
+   "totalSignals": 300,
+   "openCount": 222,
    "closedCount": 78,
-   "openPnl": 1910.3,
+   "openPnl": 1928.4,
    "closedPnl": 774.5,
-   "totalPnl": 2684.8,
+   "totalPnl": 2702.9,
    "frPnl": 503.8,
    "addOnPnl": 681.6,
-   "htPnl": 1499.4,
-   "dailyPnlDelta": -215.1,
-   "winRate": 62,
+   "htPnl": 1517.5,
+   "dailyPnlDelta": -222,
+   "winRate": 63,
    "avgGain": 9,
    "peakGainer": {
     "gain": 100,
@@ -93450,6 +94278,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.57,
+     "gainOnDay": 7.1,
+     "dayChangePct": -3.05,
+     "pnlDeltaToday": -3.4
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -93538,6 +94375,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -10.5,
      "dayChangePct": 0.53,
      "pnlDeltaToday": 0.5
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.57,
+     "gainOnDay": 11,
+     "dayChangePct": -3.05,
+     "pnlDeltaToday": -3.5
     },
     {
      "name": "SLVEST",
@@ -94191,16 +95037,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-03",
-   "totalSignals": 299,
-   "openCount": 212,
+   "totalSignals": 301,
+   "openCount": 214,
    "closedCount": 87,
-   "openPnl": 2229.8,
+   "openPnl": 2252.5,
    "closedPnl": 786.3,
-   "totalPnl": 3016.1,
+   "totalPnl": 3038.8,
    "frPnl": 560.9,
    "addOnPnl": 749.7,
-   "htPnl": 1705.5,
-   "dailyPnlDelta": 320.1,
+   "htPnl": 1728.2,
+   "dailyPnlDelta": 324.7,
    "winRate": 65,
    "avgGain": 10.1,
    "peakGainer": {
@@ -96162,6 +97008,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.75,
+     "gainOnDay": 9.4,
+     "dayChangePct": 2.1,
+     "pnlDeltaToday": 2.3
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -96250,6 +97105,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -11,
      "dayChangePct": -0.53,
      "pnlDeltaToday": -0.5
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.75,
+     "gainOnDay": 13.3,
+     "dayChangePct": 2.1,
+     "pnlDeltaToday": 2.3
     },
     {
      "name": "SLVEST",
@@ -96903,16 +97767,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-04",
-   "totalSignals": 304,
-   "openCount": 216,
+   "totalSignals": 306,
+   "openCount": 218,
    "closedCount": 88,
-   "openPnl": 2260.9,
+   "openPnl": 2282.1,
    "closedPnl": 820.3,
-   "totalPnl": 3081.2,
+   "totalPnl": 3102.4,
    "frPnl": 575.6,
    "addOnPnl": 804.8,
-   "htPnl": 1700.8,
-   "dailyPnlDelta": 63.1,
+   "htPnl": 1722,
+   "dailyPnlDelta": 61.5,
    "winRate": 64,
    "avgGain": 10.1,
    "peakGainer": {
@@ -98919,6 +99783,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.69,
+     "gainOnDay": 8.6,
+     "dayChangePct": -0.69,
+     "pnlDeltaToday": -0.8
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -99007,6 +99880,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -14.3,
      "dayChangePct": -3.74,
      "pnlDeltaToday": -3.3
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.69,
+     "gainOnDay": 12.6,
+     "dayChangePct": -0.69,
+     "pnlDeltaToday": -0.8
     },
     {
      "name": "SLVEST",
@@ -99660,16 +100542,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-07",
-   "totalSignals": 311,
-   "openCount": 220,
+   "totalSignals": 313,
+   "openCount": 222,
    "closedCount": 91,
-   "openPnl": 2343.8,
+   "openPnl": 2361.5,
    "closedPnl": 772.3,
-   "totalPnl": 3116.1,
+   "totalPnl": 3133.8,
    "frPnl": 575.3,
    "addOnPnl": 853.2,
-   "htPnl": 1687.6,
-   "dailyPnlDelta": 25.7,
+   "htPnl": 1705.3,
+   "dailyPnlDelta": 22.2,
    "winRate": 62,
    "avgGain": 10,
    "peakGainer": {
@@ -101739,6 +102621,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.55,
+     "gainOnDay": 6.9,
+     "dayChangePct": -1.61,
+     "pnlDeltaToday": -1.7
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -101827,6 +102718,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -16,
      "dayChangePct": -3.33,
      "pnlDeltaToday": -2.9
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.55,
+     "gainOnDay": 10.8,
+     "dayChangePct": -1.61,
+     "pnlDeltaToday": -1.8
     },
     {
      "name": "SLVEST",
@@ -102480,16 +103380,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-08",
-   "totalSignals": 317,
-   "openCount": 226,
+   "totalSignals": 319,
+   "openCount": 228,
    "closedCount": 91,
-   "openPnl": 2656.5,
+   "openPnl": 2677.7,
    "closedPnl": 772.3,
-   "totalPnl": 3428.8,
+   "totalPnl": 3450,
    "frPnl": 584,
    "addOnPnl": 890.7,
-   "htPnl": 1954.1,
-   "dailyPnlDelta": 212,
+   "htPnl": 1975.3,
+   "dailyPnlDelta": 215.5,
    "winRate": 65,
    "avgGain": 10.8,
    "peakGainer": {
@@ -104613,6 +105513,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.69,
+     "gainOnDay": 8.6,
+     "dayChangePct": 1.64,
+     "pnlDeltaToday": 1.7
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -104701,6 +105610,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -16,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.69,
+     "gainOnDay": 12.6,
+     "dayChangePct": 1.64,
+     "pnlDeltaToday": 1.8
     },
     {
      "name": "SLVEST",
@@ -105354,17 +106272,17 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-09",
-   "totalSignals": 321,
-   "openCount": 229,
+   "totalSignals": 323,
+   "openCount": 231,
    "closedCount": 92,
-   "openPnl": 3399.3,
+   "openPnl": 3419.4,
    "closedPnl": 756.3,
-   "totalPnl": 4155.6,
+   "totalPnl": 4175.7,
    "frPnl": 621.7,
    "addOnPnl": 1006.5,
-   "htPnl": 2527.4,
-   "dailyPnlDelta": 349.4,
-   "winRate": 66,
+   "htPnl": 2547.5,
+   "dailyPnlDelta": 348.4,
+   "winRate": 67,
    "avgGain": 12.9,
    "peakGainer": {
     "gain": 136.7,
@@ -107523,6 +108441,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.65,
+     "gainOnDay": 8.1,
+     "dayChangePct": -0.46,
+     "pnlDeltaToday": -0.5
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -107611,6 +108538,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -16,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.65,
+     "gainOnDay": 12,
+     "dayChangePct": -0.46,
+     "pnlDeltaToday": -0.5
     },
     {
      "name": "SLVEST",
@@ -108264,18 +109200,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-10",
-   "totalSignals": 327,
-   "openCount": 235,
+   "totalSignals": 329,
+   "openCount": 237,
    "closedCount": 92,
-   "openPnl": 3512.3,
+   "openPnl": 3532.4,
    "closedPnl": 756.3,
-   "totalPnl": 4268.6,
+   "totalPnl": 4288.7,
    "frPnl": 648.3,
    "addOnPnl": 1064.9,
-   "htPnl": 2555.4,
+   "htPnl": 2575.5,
    "dailyPnlDelta": 103.9,
    "winRate": 66,
-   "avgGain": 13.1,
+   "avgGain": 13,
    "peakGainer": {
     "gain": 138.5,
     "name": "KEEMING"
@@ -110487,6 +111423,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.65,
+     "gainOnDay": 8.1,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -110573,6 +111518,15 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 0.882,
      "gainOnDay": -16,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.65,
+     "gainOnDay": 12,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -111228,16 +112182,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-11",
-   "totalSignals": 334,
-   "openCount": 242,
+   "totalSignals": 336,
+   "openCount": 244,
    "closedCount": 92,
-   "openPnl": 2914.6,
+   "openPnl": 2930,
    "closedPnl": 756.3,
-   "totalPnl": 3670.9,
+   "totalPnl": 3686.3,
    "frPnl": 624.7,
    "addOnPnl": 999.2,
-   "htPnl": 2047,
-   "dailyPnlDelta": -658.1,
+   "htPnl": 2062.4,
+   "dailyPnlDelta": -663,
    "winRate": 61,
    "avgGain": 11,
    "peakGainer": {
@@ -113514,6 +114468,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.46,
+     "gainOnDay": 5.8,
+     "dayChangePct": -2.2,
+     "pnlDeltaToday": -2.4
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -113602,6 +114565,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -16,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.46,
+     "gainOnDay": 9.6,
+     "dayChangePct": -2.2,
+     "pnlDeltaToday": -2.5
     },
     {
      "name": "SLVEST",
@@ -114255,16 +115227,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-14",
-   "totalSignals": 340,
-   "openCount": 248,
+   "totalSignals": 342,
+   "openCount": 250,
    "closedCount": 92,
-   "openPnl": 2914.6,
+   "openPnl": 2930,
    "closedPnl": 756.3,
-   "totalPnl": 3670.9,
+   "totalPnl": 3686.3,
    "frPnl": 624.7,
    "addOnPnl": 999.2,
-   "htPnl": 2047,
-   "dailyPnlDelta": -670.2,
+   "htPnl": 2062.4,
+   "dailyPnlDelta": -675.1,
    "winRate": 60,
    "avgGain": 10.8,
    "peakGainer": {
@@ -116595,6 +117567,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.46,
+     "gainOnDay": 5.8,
+     "dayChangePct": -2.2,
+     "pnlDeltaToday": -2.4
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -116683,6 +117664,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -16,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.46,
+     "gainOnDay": 9.6,
+     "dayChangePct": -2.2,
+     "pnlDeltaToday": -2.5
     },
     {
      "name": "SLVEST",
@@ -117336,16 +118326,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-15",
-   "totalSignals": 342,
-   "openCount": 216,
+   "totalSignals": 344,
+   "openCount": 218,
    "closedCount": 126,
-   "openPnl": 1725.8,
+   "openPnl": 1741.6,
    "closedPnl": 1313.3,
-   "totalPnl": 3039.1,
+   "totalPnl": 3054.9,
    "frPnl": 558.2,
    "addOnPnl": 883.8,
-   "htPnl": 1597.1,
-   "dailyPnlDelta": -297.7,
+   "htPnl": 1612.9,
+   "dailyPnlDelta": -301.3,
    "winRate": 56,
    "avgGain": 8.9,
    "peakGainer": {
@@ -119694,6 +120684,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.48,
+     "gainOnDay": 6,
+     "dayChangePct": -1.62,
+     "pnlDeltaToday": -1.8
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -119782,6 +120781,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -16,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.48,
+     "gainOnDay": 9.8,
+     "dayChangePct": -1.62,
+     "pnlDeltaToday": -1.8
     },
     {
      "name": "SLVEST",
@@ -120435,16 +121443,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-17",
-   "totalSignals": 346,
-   "openCount": 218,
+   "totalSignals": 348,
+   "openCount": 220,
    "closedCount": 128,
-   "openPnl": 2129.4,
+   "openPnl": 2146.5,
    "closedPnl": 1288.1,
-   "totalPnl": 3417.5,
+   "totalPnl": 3434.6,
    "frPnl": 586.9,
    "addOnPnl": 925.5,
-   "htPnl": 1905.1,
-   "dailyPnlDelta": 384.7,
+   "htPnl": 1922.2,
+   "dailyPnlDelta": 385.9,
    "winRate": 59,
    "avgGain": 9.9,
    "peakGainer": {
@@ -122829,6 +123837,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.53,
+     "gainOnDay": 6.6,
+     "dayChangePct": 0.59,
+     "pnlDeltaToday": 0.6
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -122917,6 +123934,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -16,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.53,
+     "gainOnDay": 10.5,
+     "dayChangePct": 0.59,
+     "pnlDeltaToday": 0.6
     },
     {
      "name": "SLVEST",
@@ -123570,16 +124596,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-18",
-   "totalSignals": 348,
-   "openCount": 220,
+   "totalSignals": 350,
+   "openCount": 222,
    "closedCount": 128,
-   "openPnl": 2748.3,
+   "openPnl": 2771,
    "closedPnl": 1288.1,
-   "totalPnl": 4036.4,
+   "totalPnl": 4059.1,
    "frPnl": 654.6,
    "addOnPnl": 1083.1,
-   "htPnl": 2298.7,
-   "dailyPnlDelta": 621.7,
+   "htPnl": 2321.4,
+   "dailyPnlDelta": 627.3,
    "winRate": 66,
    "avgGain": 11.6,
    "peakGainer": {
@@ -125982,6 +127008,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.75,
+     "gainOnDay": 9.4,
+     "dayChangePct": 2.58,
+     "pnlDeltaToday": 2.8
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -126070,6 +127105,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -16,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.75,
+     "gainOnDay": 13.3,
+     "dayChangePct": 2.58,
+     "pnlDeltaToday": 2.8
     },
     {
      "name": "SLVEST",
@@ -126723,16 +127767,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-21",
-   "totalSignals": 349,
-   "openCount": 221,
+   "totalSignals": 352,
+   "openCount": 224,
    "closedCount": 128,
-   "openPnl": 3228.3,
+   "openPnl": 3247.2,
    "closedPnl": 1288.1,
-   "totalPnl": 4516.4,
+   "totalPnl": 4535.3,
    "frPnl": 682.8,
    "addOnPnl": 1124,
-   "htPnl": 2709.6,
-   "dailyPnlDelta": 481.2,
+   "htPnl": 2728.5,
+   "dailyPnlDelta": 475.7,
    "winRate": 68,
    "avgGain": 12.9,
    "peakGainer": {
@@ -127279,6 +128323,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 0,
      "dayChangePct": 0.18,
      "pnlDeltaToday": 0.2
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.6,
+     "gainOnDay": 0,
+     "dayChangePct": -1.71,
+     "pnlDeltaToday": -1.7
     },
     {
      "name": "GREATEC",
@@ -129144,6 +130197,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.6,
+     "gainOnDay": 7.5,
+     "dayChangePct": -1.71,
+     "pnlDeltaToday": -1.9
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -129232,6 +130294,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -16,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.6,
+     "gainOnDay": 11.4,
+     "dayChangePct": -1.71,
+     "pnlDeltaToday": -1.9
     },
     {
      "name": "SLVEST",
@@ -129885,16 +130956,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-22",
-   "totalSignals": 350,
-   "openCount": 222,
+   "totalSignals": 353,
+   "openCount": 225,
    "closedCount": 128,
-   "openPnl": 3723.5,
+   "openPnl": 3746.5,
    "closedPnl": 1288.1,
-   "totalPnl": 5011.6,
+   "totalPnl": 5034.6,
    "frPnl": 725.6,
    "addOnPnl": 1344,
-   "htPnl": 2942,
-   "dailyPnlDelta": 494.6,
+   "htPnl": 2965,
+   "dailyPnlDelta": 498.7,
    "winRate": 77,
    "avgGain": 14.3,
    "peakGainer": {
@@ -130450,6 +131521,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 5.8,
      "dayChangePct": 5.83,
      "pnlDeltaToday": 5.8
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.71,
+     "gainOnDay": 1.3,
+     "dayChangePct": 1.28,
+     "pnlDeltaToday": 1.3
     },
     {
      "name": "GREATEC",
@@ -132315,6 +133395,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.71,
+     "gainOnDay": 8.9,
+     "dayChangePct": 1.28,
+     "pnlDeltaToday": 1.4
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -132403,6 +133492,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -16,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.71,
+     "gainOnDay": 12.8,
+     "dayChangePct": 1.28,
+     "pnlDeltaToday": 1.4
     },
     {
      "name": "SLVEST",
@@ -133056,16 +134154,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-23",
-   "totalSignals": 353,
-   "openCount": 225,
+   "totalSignals": 356,
+   "openCount": 228,
    "closedCount": 128,
-   "openPnl": 3796.1,
+   "openPnl": 3820.5,
    "closedPnl": 1288.1,
-   "totalPnl": 5084.2,
+   "totalPnl": 5108.6,
    "frPnl": 716.3,
    "addOnPnl": 1300.7,
-   "htPnl": 3067.2,
-   "dailyPnlDelta": 62,
+   "htPnl": 3091.6,
+   "dailyPnlDelta": 63.5,
    "winRate": 74,
    "avgGain": 14.4,
    "peakGainer": {
@@ -133648,6 +134746,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 8.3,
      "dayChangePct": 2.34,
      "pnlDeltaToday": 2.5
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.75,
+     "gainOnDay": 1.7,
+     "dayChangePct": 0.46,
+     "pnlDeltaToday": 0.5
     },
     {
      "name": "GREATEC",
@@ -135513,6 +136620,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.75,
+     "gainOnDay": 9.4,
+     "dayChangePct": 0.46,
+     "pnlDeltaToday": 0.5
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -135601,6 +136717,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -16,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.75,
+     "gainOnDay": 13.3,
+     "dayChangePct": 0.46,
+     "pnlDeltaToday": 0.5
     },
     {
      "name": "SLVEST",
@@ -136254,16 +137379,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-24",
-   "totalSignals": 358,
-   "openCount": 230,
+   "totalSignals": 361,
+   "openCount": 233,
    "closedCount": 128,
-   "openPnl": 3776.9,
+   "openPnl": 3802.1,
    "closedPnl": 1288.1,
-   "totalPnl": 5065,
+   "totalPnl": 5090.2,
    "frPnl": 713.3,
    "addOnPnl": 1283.6,
-   "htPnl": 3068.1,
-   "dailyPnlDelta": -23.6,
+   "htPnl": 3093.3,
+   "dailyPnlDelta": -22.8,
    "winRate": 72,
    "avgGain": 14.1,
    "peakGainer": {
@@ -136891,6 +138016,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 2.7,
      "dayChangePct": -5.22,
      "pnlDeltaToday": -5.7
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.77,
+     "gainOnDay": 2,
+     "dayChangePct": 0.23,
+     "pnlDeltaToday": 0.2
     },
     {
      "name": "GREATEC",
@@ -138756,6 +139890,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.77,
+     "gainOnDay": 9.6,
+     "dayChangePct": 0.23,
+     "pnlDeltaToday": 0.3
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -138844,6 +139987,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -16,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.77,
+     "gainOnDay": 13.6,
+     "dayChangePct": 0.23,
+     "pnlDeltaToday": 0.3
     },
     {
      "name": "SLVEST",
@@ -139497,16 +140649,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-25",
-   "totalSignals": 364,
-   "openCount": 235,
+   "totalSignals": 367,
+   "openCount": 238,
    "closedCount": 129,
-   "openPnl": 4260.7,
+   "openPnl": 4294.1,
    "closedPnl": 1283.2,
-   "totalPnl": 5543.9,
+   "totalPnl": 5577.3,
    "frPnl": 752,
    "addOnPnl": 1324,
-   "htPnl": 3467.9,
-   "dailyPnlDelta": 482.1,
+   "htPnl": 3501.3,
+   "dailyPnlDelta": 490.2,
    "winRate": 75,
    "avgGain": 15.2,
    "peakGainer": {
@@ -140188,6 +141340,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 2.5,
      "dayChangePct": -0.17,
      "pnlDeltaToday": -0.2
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.99,
+     "gainOnDay": 4.5,
+     "dayChangePct": 2.51,
+     "pnlDeltaToday": 2.6
     },
     {
      "name": "GREATEC",
@@ -142053,6 +143214,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.99,
+     "gainOnDay": 12.4,
+     "dayChangePct": 2.51,
+     "pnlDeltaToday": 2.7
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -142141,6 +143311,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -16,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.99,
+     "gainOnDay": 16.5,
+     "dayChangePct": 2.51,
+     "pnlDeltaToday": 2.8
     },
     {
      "name": "SLVEST",
@@ -142794,18 +143973,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-28",
-   "totalSignals": 369,
-   "openCount": 240,
+   "totalSignals": 372,
+   "openCount": 243,
    "closedCount": 129,
-   "openPnl": 3916.7,
+   "openPnl": 3940.1,
    "closedPnl": 1283.2,
-   "totalPnl": 5199.9,
+   "totalPnl": 5223.3,
    "frPnl": 700.9,
    "addOnPnl": 1225.5,
-   "htPnl": 3273.5,
-   "dailyPnlDelta": -349.7,
+   "htPnl": 3296.9,
+   "dailyPnlDelta": -359.7,
    "winRate": 68,
-   "avgGain": 14.1,
+   "avgGain": 14,
    "peakGainer": {
     "gain": 132.1,
     "name": "KEEMING"
@@ -143530,6 +144709,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -0.9,
      "dayChangePct": -3.28,
      "pnlDeltaToday": -3.4
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.72,
+     "gainOnDay": 1.4,
+     "dayChangePct": -3,
+     "pnlDeltaToday": -3.1
     },
     {
      "name": "GREATEC",
@@ -145395,6 +146583,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.72,
+     "gainOnDay": 9,
+     "dayChangePct": -3,
+     "pnlDeltaToday": -3.4
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -145483,6 +146680,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -16,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.72,
+     "gainOnDay": 13,
+     "dayChangePct": -3,
+     "pnlDeltaToday": -3.5
     },
     {
      "name": "SLVEST",
@@ -146136,18 +147342,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-29",
-   "totalSignals": 377,
-   "openCount": 247,
+   "totalSignals": 381,
+   "openCount": 251,
    "closedCount": 130,
-   "openPnl": 4471.5,
+   "openPnl": 4495.2,
    "closedPnl": 1298.2,
-   "totalPnl": 5769.7,
+   "totalPnl": 5793.4,
    "frPnl": 737.2,
    "addOnPnl": 1333.8,
-   "htPnl": 3698.7,
-   "dailyPnlDelta": 563,
+   "htPnl": 3722.4,
+   "dailyPnlDelta": 563.4,
    "winRate": 69,
-   "avgGain": 15.3,
+   "avgGain": 15.2,
    "peakGainer": {
     "gain": 154.4,
     "name": "SAMAIDEN"
@@ -146766,6 +147972,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.73,
+     "gainOnDay": 0,
+     "dayChangePct": 0.11,
+     "pnlDeltaToday": 0.1
+    },
+    {
      "name": "DUFU",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -146944,6 +148159,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -4.8,
      "dayChangePct": -3.92,
      "pnlDeltaToday": -3.9
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.73,
+     "gainOnDay": 1.5,
+     "dayChangePct": 0.11,
+     "pnlDeltaToday": 0.1
     },
     {
      "name": "GREATEC",
@@ -148809,6 +150033,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.73,
+     "gainOnDay": 9.1,
+     "dayChangePct": 0.11,
+     "pnlDeltaToday": 0.1
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -148897,6 +150130,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -16,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.73,
+     "gainOnDay": 13.1,
+     "dayChangePct": 0.11,
+     "pnlDeltaToday": 0.1
     },
     {
      "name": "SLVEST",
@@ -149550,18 +150792,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-30",
-   "totalSignals": 386,
-   "openCount": 256,
+   "totalSignals": 390,
+   "openCount": 260,
    "closedCount": 130,
-   "openPnl": 4243.9,
+   "openPnl": 4264.7,
    "closedPnl": 1298.2,
-   "totalPnl": 5542.1,
+   "totalPnl": 5562.9,
    "frPnl": 715,
    "addOnPnl": 1337.9,
-   "htPnl": 3489.2,
-   "dailyPnlDelta": -318.3,
+   "htPnl": 3510,
+   "dailyPnlDelta": -321.2,
    "winRate": 67,
-   "avgGain": 14.4,
+   "avgGain": 14.3,
    "peakGainer": {
     "gain": 143.2,
     "name": "SAMAIDEN"
@@ -150261,6 +151503,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.67,
+     "gainOnDay": -0.7,
+     "dayChangePct": -0.69,
+     "pnlDeltaToday": -0.7
+    },
+    {
      "name": "DUFU",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -150439,6 +151690,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -7.8,
      "dayChangePct": -3.15,
      "pnlDeltaToday": -3
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.67,
+     "gainOnDay": 0.8,
+     "dayChangePct": -0.69,
+     "pnlDeltaToday": -0.7
     },
     {
      "name": "GREATEC",
@@ -152304,6 +153564,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.67,
+     "gainOnDay": 8.4,
+     "dayChangePct": -0.69,
+     "pnlDeltaToday": -0.7
+    },
+    {
      "name": "SUNVIEW",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -152392,6 +153661,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -16,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "KGB",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 8.67,
+     "gainOnDay": 12.3,
+     "dayChangePct": -0.69,
+     "pnlDeltaToday": -0.8
     },
     {
      "name": "SLVEST",

@@ -1,17 +1,17 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-30T05:30:59.497Z",
+  "generatedAt": "2026-09-30T05:40:50.755Z",
   "dataDays": 86,
-  "totalTracked": 315,
-  "openCount": 199,
+  "totalTracked": 319,
+  "openCount": 203,
   "closedCount": 116,
   "closedWins": 81,
   "closedWinRate": 70,
   "closedAvgGain": 11.4,
-  "openPnl": 2168.6,
+  "openPnl": 2189.4,
   "closedPnl": 1320.6,
-  "totalPnlNow": 3489.2
+  "totalPnlNow": 3510
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -764,6 +764,29 @@ window.HOT_THEME_TRACKER = {
    "slTrail": 2.386
   },
   {
+   "id": "KGB_2026-09-29_ADDON",
+   "name": "KGB",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-09-29",
+   "entry": 8.73,
+   "entryFloor": 8.31,
+   "currentFloor": 8.31,
+   "currentPrice": 8.67,
+   "high": 8.73,
+   "highDate": "2026-09-29",
+   "maxGain": 0,
+   "finalGain": -0.7,
+   "day1ChangePct": 0.11,
+   "days": 2,
+   "lastDate": "2026-09-30",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "slTrail": 8.061
+  },
+  {
    "id": "DUFU_2026-09-29_ADDON",
    "name": "DUFU",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -1223,6 +1246,29 @@ window.HOT_THEME_TRACKER = {
    ],
    "confluence": 3,
    "slTrail": 5.063
+  },
+  {
+   "id": "KGB_2026-09-21_ADDON",
+   "name": "KGB",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-09-21",
+   "entry": 8.6,
+   "entryFloor": 8.1,
+   "currentFloor": 8.31,
+   "currentPrice": 8.67,
+   "high": 8.99,
+   "highDate": "2026-09-25",
+   "maxGain": 4.5,
+   "finalGain": 0.8,
+   "day1ChangePct": -1.71,
+   "days": 8,
+   "lastDate": "2026-09-30",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "slTrail": 8.061
   },
   {
    "id": "GREATEC_2026-09-18_ADDON",
@@ -6129,6 +6175,29 @@ window.HOT_THEME_TRACKER = {
    "exitPrice": 0.338
   },
   {
+   "id": "KGB_2026-06-30_ADDON",
+   "name": "KGB",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-06-30",
+   "entry": 8,
+   "entryFloor": 7.69,
+   "currentFloor": 8.31,
+   "currentPrice": 8.67,
+   "high": 9.2,
+   "highDate": "2026-08-28",
+   "maxGain": 15,
+   "finalGain": 8.4,
+   "day1ChangePct": 0.88,
+   "days": 63,
+   "lastDate": "2026-09-30",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "slTrail": 8.28
+  },
+  {
    "id": "SUNVIEW_2026-06-29_ADDON",
    "name": "SUNVIEW",
    "entryType": "⭐ ADD-ON A+",
@@ -6367,6 +6436,29 @@ window.HOT_THEME_TRACKER = {
    "slTrail": 0.882,
    "exitDate": "2026-09-07",
    "exitPrice": 0.882
+  },
+  {
+   "id": "KGB_2026-06-22_ADDON",
+   "name": "KGB",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-06-22",
+   "entry": 7.72,
+   "entryFloor": 7.66,
+   "currentFloor": 8.31,
+   "currentPrice": 8.67,
+   "high": 9.2,
+   "highDate": "2026-08-28",
+   "maxGain": 19.2,
+   "finalGain": 12.3,
+   "day1ChangePct": -2.15,
+   "days": 69,
+   "lastDate": "2026-09-30",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "slTrail": 8.28
   },
   {
    "id": "SLVEST_2026-06-22_ADDON",
@@ -8116,7 +8208,7 @@ window.HOT_THEME_TRACKER = {
 };
 window.HOT_THEME_NEW_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-30T05:30:59.497Z",
+  "generatedAt": "2026-09-30T05:40:50.755Z",
   "dataDays": 86,
   "totalTracked": 48,
   "openCount": 11,
@@ -9312,7 +9404,7 @@ window.HOT_THEME_NEW_TRACKER = {
 };
 window.HOT_THEME_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-30T05:30:59.497Z",
+  "generatedAt": "2026-09-30T05:40:50.755Z",
   "dataDays": 86,
   "totalTracked": 115,
   "openCount": 76,
@@ -12052,17 +12144,17 @@ window.HOT_THEME_ADDON_TRACKER = {
 };
 window.HOT_THEME_FLOOR_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-30T05:30:59.497Z",
+  "generatedAt": "2026-09-30T05:40:50.755Z",
   "dataDays": 86,
-  "totalTracked": 152,
-  "openCount": 112,
+  "totalTracked": 156,
+  "openCount": 116,
   "closedCount": 40,
   "closedWins": 30,
   "closedWinRate": 75,
   "closedAvgGain": 11.4,
-  "openPnl": 899.5,
+  "openPnl": 920.3,
   "closedPnl": 457.6,
-  "totalPnlNow": 1357.1
+  "totalPnlNow": 1377.9
  },
  "trades": [
   {
@@ -12544,6 +12636,29 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "slTrail": 4.221
   },
   {
+   "id": "KGB_2026-06-22_ADDON",
+   "name": "KGB",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-06-22",
+   "entry": 7.72,
+   "entryFloor": 7.66,
+   "currentFloor": 8.31,
+   "currentPrice": 8.67,
+   "high": 9.2,
+   "highDate": "2026-08-28",
+   "maxGain": 19.2,
+   "finalGain": 12.3,
+   "day1ChangePct": -2.15,
+   "days": 69,
+   "lastDate": "2026-09-30",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "slTrail": 8.28
+  },
+  {
    "id": "SLVEST_2026-06-22_ADDON",
    "name": "SLVEST",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -12688,6 +12803,29 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "slTrail": 2.268,
    "exitDate": "2026-08-20",
    "exitPrice": 2.268
+  },
+  {
+   "id": "KGB_2026-06-30_ADDON",
+   "name": "KGB",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-06-30",
+   "entry": 8,
+   "entryFloor": 7.69,
+   "currentFloor": 8.31,
+   "currentPrice": 8.67,
+   "high": 9.2,
+   "highDate": "2026-08-28",
+   "maxGain": 15,
+   "finalGain": 8.4,
+   "day1ChangePct": 0.88,
+   "days": 63,
+   "lastDate": "2026-09-30",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "slTrail": 8.28
   },
   {
    "id": "PENTA_2026-07-01_ADDON",
@@ -15121,6 +15259,29 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "slTrail": 5.063
   },
   {
+   "id": "KGB_2026-09-21_ADDON",
+   "name": "KGB",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-09-21",
+   "entry": 8.6,
+   "entryFloor": 8.1,
+   "currentFloor": 8.31,
+   "currentPrice": 8.67,
+   "high": 8.99,
+   "highDate": "2026-09-25",
+   "maxGain": 4.5,
+   "finalGain": 0.8,
+   "day1ChangePct": -1.71,
+   "days": 8,
+   "lastDate": "2026-09-30",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "slTrail": 8.061
+  },
+  {
    "id": "GREATEC_2026-09-22_ADDON",
    "name": "GREATEC",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -15467,6 +15628,29 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "slTrail": 2.386
   },
   {
+   "id": "KGB_2026-09-29_ADDON",
+   "name": "KGB",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-09-29",
+   "entry": 8.73,
+   "entryFloor": 8.31,
+   "currentFloor": 8.31,
+   "currentPrice": 8.67,
+   "high": 8.73,
+   "highDate": "2026-09-29",
+   "maxGain": 0,
+   "finalGain": -0.7,
+   "day1ChangePct": 0.11,
+   "days": 2,
+   "lastDate": "2026-09-30",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "slTrail": 8.061
+  },
+  {
    "id": "DUFU_2026-09-29_ADDON",
    "name": "DUFU",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -15650,17 +15834,17 @@ window.HOT_THEME_FLOOR_TRACKER = {
 };
 window.HOT_THEME_ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-30T05:30:59.497Z",
+  "generatedAt": "2026-09-30T05:40:50.755Z",
   "dataDays": 86,
-  "totalTracked": 315,
-  "openCount": 199,
+  "totalTracked": 319,
+  "openCount": 203,
   "closedCount": 116,
   "closedWins": 81,
   "closedWinRate": 70,
   "closedAvgGain": 11.4,
-  "openPnl": 2168.6,
+  "openPnl": 2189.4,
   "closedPnl": 1320.6,
-  "totalPnlNow": 3489.2
+  "totalPnlNow": 3510
  },
  "trades": [
   {
@@ -15796,6 +15980,29 @@ window.HOT_THEME_ALL_TRACKER = {
    ],
    "confluence": 3,
    "slTrail": 2.386
+  },
+  {
+   "id": "KGB_2026-09-29_ADDON",
+   "name": "KGB",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-09-29",
+   "entry": 8.73,
+   "entryFloor": 8.31,
+   "currentFloor": 8.31,
+   "currentPrice": 8.67,
+   "high": 8.73,
+   "highDate": "2026-09-29",
+   "maxGain": 0,
+   "finalGain": -0.7,
+   "day1ChangePct": 0.11,
+   "days": 2,
+   "lastDate": "2026-09-30",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "slTrail": 8.061
   },
   {
    "id": "DUFU_2026-09-29_ADDON",
@@ -16257,6 +16464,29 @@ window.HOT_THEME_ALL_TRACKER = {
    ],
    "confluence": 3,
    "slTrail": 5.063
+  },
+  {
+   "id": "KGB_2026-09-21_ADDON",
+   "name": "KGB",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-09-21",
+   "entry": 8.6,
+   "entryFloor": 8.1,
+   "currentFloor": 8.31,
+   "currentPrice": 8.67,
+   "high": 8.99,
+   "highDate": "2026-09-25",
+   "maxGain": 4.5,
+   "finalGain": 0.8,
+   "day1ChangePct": -1.71,
+   "days": 8,
+   "lastDate": "2026-09-30",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "slTrail": 8.061
   },
   {
    "id": "GREATEC_2026-09-18_ADDON",
@@ -21163,6 +21393,29 @@ window.HOT_THEME_ALL_TRACKER = {
    "exitPrice": 0.338
   },
   {
+   "id": "KGB_2026-06-30_ADDON",
+   "name": "KGB",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-06-30",
+   "entry": 8,
+   "entryFloor": 7.69,
+   "currentFloor": 8.31,
+   "currentPrice": 8.67,
+   "high": 9.2,
+   "highDate": "2026-08-28",
+   "maxGain": 15,
+   "finalGain": 8.4,
+   "day1ChangePct": 0.88,
+   "days": 63,
+   "lastDate": "2026-09-30",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "slTrail": 8.28
+  },
+  {
    "id": "SUNVIEW_2026-06-29_ADDON",
    "name": "SUNVIEW",
    "entryType": "⭐ ADD-ON A+",
@@ -21401,6 +21654,29 @@ window.HOT_THEME_ALL_TRACKER = {
    "slTrail": 0.882,
    "exitDate": "2026-09-07",
    "exitPrice": 0.882
+  },
+  {
+   "id": "KGB_2026-06-22_ADDON",
+   "name": "KGB",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-06-22",
+   "entry": 7.72,
+   "entryFloor": 7.66,
+   "currentFloor": 8.31,
+   "currentPrice": 8.67,
+   "high": 9.2,
+   "highDate": "2026-08-28",
+   "maxGain": 19.2,
+   "finalGain": 12.3,
+   "day1ChangePct": -2.15,
+   "days": 69,
+   "lastDate": "2026-09-30",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "slTrail": 8.28
   },
   {
    "id": "SLVEST_2026-06-22_ADDON",
