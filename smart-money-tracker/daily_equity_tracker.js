@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-09-30T09:40:50.594Z",
+ "generatedAt": "2026-09-30T09:50:54.546Z",
  "totalDays": 82,
  "startDate": "2026-06-02",
  "endDate": "2026-09-30",
@@ -27,8 +27,8 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-06-03",
-   "totalSignals": 23,
-   "openCount": 23,
+   "totalSignals": 22,
+   "openCount": 22,
    "closedCount": 0,
    "openPnl": 0,
    "closedPnl": 0,
@@ -36,7 +36,7 @@ window.DAILY_EQUITY_TRACKER = {
    "frPnl": 0,
    "addOnPnl": 0,
    "htPnl": 0,
-   "dailyPnlDelta": -6.1,
+   "dailyPnlDelta": -6.9,
    "winRate": 0,
    "avgGain": 0,
    "peakGainer": {
@@ -106,15 +106,6 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 0,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
-    },
-    {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.36,
-     "gainOnDay": 0,
-     "dayChangePct": 0.85,
-     "pnlDeltaToday": 0.8
     },
     {
      "name": "VITROX",
@@ -255,17 +246,17 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-06-04",
-   "totalSignals": 33,
-   "openCount": 30,
+   "totalSignals": 32,
+   "openCount": 29,
    "closedCount": 3,
-   "openPnl": 19.6,
+   "openPnl": 21.3,
    "closedPnl": -10.2,
-   "totalPnl": 9.4,
+   "totalPnl": 11.1,
    "frPnl": 6.9,
    "addOnPnl": 0,
-   "htPnl": 2.5,
-   "dailyPnlDelta": 9.2,
-   "winRate": 33,
+   "htPnl": 4.2,
+   "dailyPnlDelta": 10.9,
+   "winRate": 34,
    "avgGain": 0.3,
    "peakGainer": {
     "gain": 6.3,
@@ -426,15 +417,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 3.2
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.32,
-     "gainOnDay": -1.7,
-     "dayChangePct": -1.69,
-     "pnlDeltaToday": -1.7
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -573,18 +555,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-06-05",
-   "totalSignals": 39,
+   "totalSignals": 38,
    "openCount": 35,
-   "closedCount": 4,
+   "closedCount": 3,
    "openPnl": 26.8,
-   "closedPnl": -14.8,
-   "totalPnl": 12,
+   "closedPnl": -10.2,
+   "totalPnl": 16.6,
    "frPnl": 14.5,
    "addOnPnl": 0,
-   "htPnl": -2.5,
-   "dailyPnlDelta": 0.7,
-   "winRate": 28,
-   "avgGain": 0.3,
+   "htPnl": 2.1,
+   "dailyPnlDelta": 3.7,
+   "winRate": 29,
+   "avgGain": 0.4,
    "peakGainer": {
     "gain": 18,
     "name": "HKB"
@@ -798,15 +780,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 4
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED_TODAY",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": -3.02,
-     "pnlDeltaToday": -3
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -945,18 +918,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-06-08",
-   "totalSignals": 44,
+   "totalSignals": 43,
    "openCount": 32,
-   "closedCount": 12,
+   "closedCount": 11,
    "openPnl": 2.6,
-   "closedPnl": -49.7,
-   "totalPnl": -47.1,
+   "closedPnl": -45.1,
+   "totalPnl": -42.5,
    "frPnl": 7.7,
    "addOnPnl": 0,
-   "htPnl": -54.8,
+   "htPnl": -50.2,
    "dailyPnlDelta": -72.7,
-   "winRate": 27,
-   "avgGain": -1.1,
+   "winRate": 28,
+   "avgGain": -1,
    "peakGainer": {
     "gain": 18,
     "name": "HKB"
@@ -1215,15 +1188,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -4
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -1362,18 +1326,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-06-09",
-   "totalSignals": 47,
+   "totalSignals": 46,
    "openCount": 35,
-   "closedCount": 12,
+   "closedCount": 11,
    "openPnl": 91.7,
-   "closedPnl": -49.7,
-   "totalPnl": 42,
+   "closedPnl": -45.1,
+   "totalPnl": 46.6,
    "frPnl": 25.4,
    "addOnPnl": 0,
-   "htPnl": 16.6,
+   "htPnl": 21.2,
    "dailyPnlDelta": 87.9,
-   "winRate": 45,
-   "avgGain": 0.9,
+   "winRate": 46,
+   "avgGain": 1,
    "peakGainer": {
     "gain": 22.6,
     "name": "SFPTECH"
@@ -1659,15 +1623,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 4.8
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -1806,18 +1761,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-06-10",
-   "totalSignals": 50,
+   "totalSignals": 49,
    "openCount": 37,
-   "closedCount": 13,
+   "closedCount": 12,
    "openPnl": 72.8,
-   "closedPnl": -34.4,
-   "totalPnl": 38.4,
+   "closedPnl": -29.8,
+   "totalPnl": 43,
    "frPnl": 32.2,
    "addOnPnl": 0,
-   "htPnl": 6.2,
+   "htPnl": 10.8,
    "dailyPnlDelta": -3.5,
-   "winRate": 42,
-   "avgGain": 0.8,
+   "winRate": 43,
+   "avgGain": 0.9,
    "peakGainer": {
     "gain": 19.1,
     "name": "HKB"
@@ -2130,15 +2085,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -1.6
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -2277,18 +2223,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-06-11",
-   "totalSignals": 54,
+   "totalSignals": 53,
    "openCount": 41,
-   "closedCount": 13,
+   "closedCount": 12,
    "openPnl": 124.4,
-   "closedPnl": -34.4,
-   "totalPnl": 90,
+   "closedPnl": -29.8,
+   "totalPnl": 94.6,
    "frPnl": 58.9,
    "addOnPnl": 0,
-   "htPnl": 31.1,
+   "htPnl": 35.7,
    "dailyPnlDelta": 54,
-   "winRate": 44,
-   "avgGain": 1.7,
+   "winRate": 45,
+   "avgGain": 1.8,
    "peakGainer": {
     "gain": 27.2,
     "name": "AMBEST"
@@ -2637,15 +2583,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -2784,18 +2721,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-06-12",
-   "totalSignals": 57,
+   "totalSignals": 56,
    "openCount": 44,
-   "closedCount": 13,
+   "closedCount": 12,
    "openPnl": 150.3,
-   "closedPnl": -34.4,
-   "totalPnl": 115.9,
+   "closedPnl": -29.8,
+   "totalPnl": 120.5,
    "frPnl": 67,
    "addOnPnl": 0,
-   "htPnl": 48.9,
+   "htPnl": 53.5,
    "dailyPnlDelta": 25.9,
-   "winRate": 47,
-   "avgGain": 2,
+   "winRate": 48,
+   "avgGain": 2.2,
    "peakGainer": {
     "gain": 27.9,
     "name": "AMBEST"
@@ -3171,15 +3108,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -3318,18 +3246,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-06-15",
-   "totalSignals": 64,
+   "totalSignals": 63,
    "openCount": 51,
-   "closedCount": 13,
+   "closedCount": 12,
    "openPnl": 265.5,
-   "closedPnl": -34.4,
-   "totalPnl": 231.1,
+   "closedPnl": -29.8,
+   "totalPnl": 235.7,
    "frPnl": 103.5,
    "addOnPnl": 4.6,
-   "htPnl": 123,
+   "htPnl": 127.6,
    "dailyPnlDelta": 120.9,
-   "winRate": 47,
-   "avgGain": 3.6,
+   "winRate": 48,
+   "avgGain": 3.7,
    "peakGainer": {
     "gain": 31.6,
     "name": "AMBEST"
@@ -3768,15 +3696,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -3915,18 +3834,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-06-16",
-   "totalSignals": 68,
+   "totalSignals": 67,
    "openCount": 55,
-   "closedCount": 13,
+   "closedCount": 12,
    "openPnl": 344.1,
-   "closedPnl": -34.4,
-   "totalPnl": 309.7,
+   "closedPnl": -29.8,
+   "totalPnl": 314.3,
    "frPnl": 117.8,
    "addOnPnl": 6.2,
-   "htPnl": 185.7,
+   "htPnl": 190.3,
    "dailyPnlDelta": 77.9,
-   "winRate": 53,
-   "avgGain": 4.6,
+   "winRate": 54,
+   "avgGain": 4.7,
    "peakGainer": {
     "gain": 34.6,
     "name": "AMBEST"
@@ -4401,15 +4320,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 3.2
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -4548,18 +4458,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-06-18",
-   "totalSignals": 70,
+   "totalSignals": 69,
    "openCount": 56,
-   "closedCount": 14,
+   "closedCount": 13,
    "openPnl": 293.2,
-   "closedPnl": -36.4,
-   "totalPnl": 256.8,
+   "closedPnl": -31.8,
+   "totalPnl": 261.4,
    "frPnl": 103.6,
    "addOnPnl": 3.1,
-   "htPnl": 150.1,
+   "htPnl": 154.7,
    "dailyPnlDelta": -52.8,
    "winRate": 49,
-   "avgGain": 3.7,
+   "avgGain": 3.8,
    "peakGainer": {
     "gain": 42.7,
     "name": "HKB"
@@ -5052,15 +4962,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -3.2
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -5199,18 +5100,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-06-19",
-   "totalSignals": 79,
+   "totalSignals": 78,
    "openCount": 65,
-   "closedCount": 14,
+   "closedCount": 13,
    "openPnl": 405,
-   "closedPnl": -36.4,
-   "totalPnl": 368.6,
+   "closedPnl": -31.8,
+   "totalPnl": 373.2,
    "frPnl": 106.3,
    "addOnPnl": 3.8,
-   "htPnl": 258.5,
+   "htPnl": 263.1,
    "dailyPnlDelta": 120.9,
    "winRate": 56,
-   "avgGain": 4.7,
+   "avgGain": 4.8,
    "peakGainer": {
     "gain": 47.6,
     "name": "DNEX"
@@ -5784,15 +5685,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -0.8
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -5931,18 +5823,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-06-22",
-   "totalSignals": 84,
+   "totalSignals": 83,
    "openCount": 70,
-   "closedCount": 14,
+   "closedCount": 13,
    "openPnl": 382.2,
-   "closedPnl": -36.4,
-   "totalPnl": 345.8,
+   "closedPnl": -31.8,
+   "totalPnl": 350.4,
    "frPnl": 122,
    "addOnPnl": -3.7,
-   "htPnl": 227.5,
+   "htPnl": 232.1,
    "dailyPnlDelta": -27,
-   "winRate": 38,
-   "avgGain": 4.1,
+   "winRate": 39,
+   "avgGain": 4.2,
    "peakGainer": {
     "gain": 47.6,
     "name": "DNEX"
@@ -6561,15 +6453,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -0.8
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -6709,15 +6592,15 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-06-23",
    "totalSignals": 89,
-   "openCount": 69,
-   "closedCount": 20,
+   "openCount": 70,
+   "closedCount": 19,
    "openPnl": 121.1,
-   "closedPnl": 47.6,
-   "totalPnl": 168.7,
+   "closedPnl": 52.2,
+   "totalPnl": 173.3,
    "frPnl": 90.8,
    "addOnPnl": -9.8,
-   "htPnl": 87.7,
-   "dailyPnlDelta": -203.5,
+   "htPnl": 92.3,
+   "dailyPnlDelta": -207.6,
    "winRate": 24,
    "avgGain": 1.9,
    "peakGainer": {
@@ -6841,6 +6724,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 0,
      "dayChangePct": 1.53,
      "pnlDeltaToday": 1.5
+    },
+    {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.18,
+     "gainOnDay": 0,
+     "dayChangePct": -3.96,
+     "pnlDeltaToday": -4.1
     },
     {
      "name": "MI",
@@ -7383,15 +7275,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 1.6
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED_TODAY",
@@ -7531,17 +7414,17 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-06-24",
    "totalSignals": 93,
-   "openCount": 73,
-   "closedCount": 20,
-   "openPnl": 225.1,
-   "closedPnl": 47.6,
-   "totalPnl": 272.7,
+   "openCount": 74,
+   "closedCount": 19,
+   "openPnl": 225.6,
+   "closedPnl": 52.2,
+   "totalPnl": 277.8,
    "frPnl": 106.8,
    "addOnPnl": -5.2,
-   "htPnl": 171.1,
-   "dailyPnlDelta": 107.5,
-   "winRate": 33,
-   "avgGain": 2.9,
+   "htPnl": 176.2,
+   "dailyPnlDelta": 108,
+   "winRate": 34,
+   "avgGain": 3,
    "peakGainer": {
     "gain": 55.1,
     "name": "HKB"
@@ -7699,6 +7582,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -0.8,
      "dayChangePct": -0.75,
      "pnlDeltaToday": -0.8
+    },
+    {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.19,
+     "gainOnDay": 0.5,
+     "dayChangePct": 0.46,
+     "pnlDeltaToday": 0.5
     },
     {
      "name": "MI",
@@ -8241,15 +8133,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -0.8
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -8389,16 +8272,16 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-06-25",
    "totalSignals": 94,
-   "openCount": 73,
-   "closedCount": 21,
-   "openPnl": 242.5,
-   "closedPnl": 45.2,
-   "totalPnl": 287.7,
+   "openCount": 74,
+   "closedCount": 20,
+   "openPnl": 245.7,
+   "closedPnl": 49.8,
+   "totalPnl": 295.5,
    "frPnl": 135.6,
    "addOnPnl": -3.7,
-   "htPnl": 155.8,
-   "dailyPnlDelta": 14.7,
-   "winRate": 36,
+   "htPnl": 163.6,
+   "dailyPnlDelta": 17.5,
+   "winRate": 37,
    "avgGain": 3.1,
    "peakGainer": {
     "gain": 57.3,
@@ -8566,6 +8449,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 0,
      "dayChangePct": 0.76,
      "pnlDeltaToday": 0.8
+    },
+    {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.25,
+     "gainOnDay": 3.2,
+     "dayChangePct": 2.74,
+     "pnlDeltaToday": 2.8
     },
     {
      "name": "MI",
@@ -9108,15 +9000,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0.8
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -9256,17 +9139,17 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-06-26",
    "totalSignals": 96,
-   "openCount": 73,
-   "closedCount": 23,
-   "openPnl": 224.9,
-   "closedPnl": 38.2,
-   "totalPnl": 263.1,
+   "openCount": 74,
+   "closedCount": 22,
+   "openPnl": 225.8,
+   "closedPnl": 42.8,
+   "totalPnl": 268.6,
    "frPnl": 133.6,
    "addOnPnl": -6,
-   "htPnl": 135.5,
-   "dailyPnlDelta": -27.6,
-   "winRate": 33,
-   "avgGain": 2.7,
+   "htPnl": 141,
+   "dailyPnlDelta": -29.9,
+   "winRate": 34,
+   "avgGain": 2.8,
    "peakGainer": {
     "gain": 64,
     "name": "HKB"
@@ -9451,6 +9334,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 3,
      "dayChangePct": 3.01,
      "pnlDeltaToday": 3
+    },
+    {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.2,
+     "gainOnDay": 0.9,
+     "dayChangePct": -2.22,
+     "pnlDeltaToday": -2.3
     },
     {
      "name": "MI",
@@ -9993,15 +9885,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 3.2
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -10141,17 +10024,17 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-06-29",
    "totalSignals": 98,
-   "openCount": 73,
-   "closedCount": 25,
-   "openPnl": 269.5,
-   "closedPnl": 92.4,
-   "totalPnl": 361.9,
+   "openCount": 74,
+   "closedCount": 24,
+   "openPnl": 272.7,
+   "closedPnl": 97,
+   "totalPnl": 369.7,
    "frPnl": 128.5,
    "addOnPnl": -6,
-   "htPnl": 239.4,
-   "dailyPnlDelta": 75.4,
-   "winRate": 44,
-   "avgGain": 3.7,
+   "htPnl": 247.2,
+   "dailyPnlDelta": 77.7,
+   "winRate": 45,
+   "avgGain": 3.8,
    "peakGainer": {
     "gain": 70.6,
     "name": "KEEMING"
@@ -10354,6 +10237,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 4.5,
      "dayChangePct": 1.46,
      "pnlDeltaToday": 1.5
+    },
+    {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.25,
+     "gainOnDay": 3.2,
+     "dayChangePct": 2.27,
+     "pnlDeltaToday": 2.3
     },
     {
      "name": "MI",
@@ -10896,15 +10788,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 1.6
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -11044,17 +10927,17 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-06-30",
    "totalSignals": 98,
-   "openCount": 73,
-   "closedCount": 25,
-   "openPnl": 323.9,
-   "closedPnl": 92.4,
-   "totalPnl": 416.3,
+   "openCount": 74,
+   "closedCount": 24,
+   "openPnl": 327.6,
+   "closedPnl": 97,
+   "totalPnl": 424.6,
    "frPnl": 141.4,
    "addOnPnl": 13.3,
-   "htPnl": 261.6,
-   "dailyPnlDelta": 54,
-   "winRate": 45,
-   "avgGain": 4.2,
+   "htPnl": 269.9,
+   "dailyPnlDelta": 54.5,
+   "winRate": 46,
+   "avgGain": 4.3,
    "peakGainer": {
     "gain": 67.9,
     "name": "KEEMING"
@@ -11257,6 +11140,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 5.3,
      "dayChangePct": 0.72,
      "pnlDeltaToday": 0.8
+    },
+    {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.26,
+     "gainOnDay": 3.7,
+     "dayChangePct": 0.44,
+     "pnlDeltaToday": 0.5
     },
     {
      "name": "MI",
@@ -11799,15 +11691,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0.8
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -11947,17 +11830,17 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-07-01",
    "totalSignals": 101,
-   "openCount": 76,
-   "closedCount": 25,
-   "openPnl": 490.8,
-   "closedPnl": 92.4,
-   "totalPnl": 583.2,
+   "openCount": 77,
+   "closedCount": 24,
+   "openPnl": 497.2,
+   "closedPnl": 97,
+   "totalPnl": 594.2,
    "frPnl": 163.9,
    "addOnPnl": 24.7,
-   "htPnl": 394.6,
-   "dailyPnlDelta": 170.9,
-   "winRate": 59,
-   "avgGain": 5.8,
+   "htPnl": 405.6,
+   "dailyPnlDelta": 173.7,
+   "winRate": 60,
+   "avgGain": 5.9,
    "peakGainer": {
     "gain": 71.6,
     "name": "KEEMING"
@@ -12187,6 +12070,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 6,
      "dayChangePct": 0.71,
      "pnlDeltaToday": 0.8
+    },
+    {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.32,
+     "gainOnDay": 6.4,
+     "dayChangePct": 2.65,
+     "pnlDeltaToday": 2.8
     },
     {
      "name": "MI",
@@ -12729,15 +12621,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0.8
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -12877,17 +12760,17 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-07-02",
    "totalSignals": 111,
-   "openCount": 86,
-   "closedCount": 25,
-   "openPnl": 363.3,
-   "closedPnl": 92.4,
-   "totalPnl": 455.7,
+   "openCount": 87,
+   "closedCount": 24,
+   "openPnl": 365.1,
+   "closedPnl": 97,
+   "totalPnl": 462.1,
    "frPnl": 141.6,
    "addOnPnl": 13.3,
-   "htPnl": 300.8,
-   "dailyPnlDelta": -147.6,
-   "winRate": 46,
-   "avgGain": 4.1,
+   "htPnl": 307.2,
+   "dailyPnlDelta": -152.2,
+   "winRate": 47,
+   "avgGain": 4.2,
    "peakGainer": {
     "gain": 65.1,
     "name": "KEEMING"
@@ -13207,6 +13090,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 6,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.22,
+     "gainOnDay": 1.8,
+     "dayChangePct": -4.31,
+     "pnlDeltaToday": -4.6
     },
     {
      "name": "MI",
@@ -13749,15 +13641,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -13897,16 +13780,16 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-07-03",
    "totalSignals": 117,
-   "openCount": 92,
-   "closedCount": 25,
-   "openPnl": 382.5,
-   "closedPnl": 92.4,
-   "totalPnl": 474.9,
+   "openCount": 93,
+   "closedCount": 24,
+   "openPnl": 383.9,
+   "closedPnl": 97,
+   "totalPnl": 480.9,
    "frPnl": 155.6,
    "addOnPnl": 17,
-   "htPnl": 302.3,
-   "dailyPnlDelta": 22.7,
-   "winRate": 49,
+   "htPnl": 308.3,
+   "dailyPnlDelta": 22.2,
+   "winRate": 50,
    "avgGain": 4.1,
    "peakGainer": {
     "gain": 61.5,
@@ -14281,6 +14164,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 5.3,
      "dayChangePct": -0.71,
      "pnlDeltaToday": -0.8
+    },
+    {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.21,
+     "gainOnDay": 1.4,
+     "dayChangePct": -0.45,
+     "pnlDeltaToday": -0.5
     },
     {
      "name": "MI",
@@ -14823,15 +14715,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -0.8
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -14971,15 +14854,15 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-07-06",
    "totalSignals": 121,
-   "openCount": 95,
-   "closedCount": 26,
-   "openPnl": 342,
-   "closedPnl": 76.4,
-   "totalPnl": 418.4,
+   "openCount": 96,
+   "closedCount": 25,
+   "openPnl": 341.5,
+   "closedPnl": 81,
+   "totalPnl": 422.5,
    "frPnl": 167.3,
    "addOnPnl": 39.8,
-   "htPnl": 211.3,
-   "dailyPnlDelta": -64.1,
+   "htPnl": 215.4,
+   "dailyPnlDelta": -65.9,
    "winRate": 39,
    "avgGain": 3.5,
    "peakGainer": {
@@ -15391,6 +15274,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 3,
      "dayChangePct": -2.14,
      "pnlDeltaToday": -2.3
+    },
+    {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.17,
+     "gainOnDay": -0.5,
+     "dayChangePct": -1.81,
+     "pnlDeltaToday": -1.8
     },
     {
      "name": "MI",
@@ -15933,15 +15825,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -2.4
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -16081,16 +15964,16 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-07-07",
    "totalSignals": 129,
-   "openCount": 103,
-   "closedCount": 26,
-   "openPnl": 383.9,
-   "closedPnl": 76.4,
-   "totalPnl": 460.3,
+   "openCount": 104,
+   "closedCount": 25,
+   "openPnl": 384.4,
+   "closedPnl": 81,
+   "totalPnl": 465.4,
    "frPnl": 176.5,
    "addOnPnl": 35.4,
-   "htPnl": 248.4,
-   "dailyPnlDelta": 41.8,
-   "winRate": 49,
+   "htPnl": 253.5,
+   "dailyPnlDelta": 42.7,
+   "winRate": 50,
    "avgGain": 3.6,
    "peakGainer": {
     "gain": 81.7,
@@ -16573,6 +16456,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 5.3,
      "dayChangePct": 2.19,
      "pnlDeltaToday": 2.3
+    },
+    {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.19,
+     "gainOnDay": 0.5,
+     "dayChangePct": 0.92,
+     "pnlDeltaToday": 0.9
     },
     {
      "name": "MI",
@@ -17115,15 +17007,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 2.4
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -17263,17 +17146,17 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-07-08",
    "totalSignals": 138,
-   "openCount": 112,
-   "closedCount": 26,
-   "openPnl": 383.9,
-   "closedPnl": 76.4,
-   "totalPnl": 460.3,
+   "openCount": 113,
+   "closedCount": 25,
+   "openPnl": 384.4,
+   "closedPnl": 81,
+   "totalPnl": 465.4,
    "frPnl": 176.5,
    "addOnPnl": 35.4,
-   "htPnl": 248.4,
-   "dailyPnlDelta": 41.6,
+   "htPnl": 253.5,
+   "dailyPnlDelta": 42.5,
    "winRate": 46,
-   "avgGain": 3.3,
+   "avgGain": 3.4,
    "peakGainer": {
     "gain": 81.7,
     "name": "KEEMING"
@@ -17838,6 +17721,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 2.3
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.19,
+     "gainOnDay": 0.5,
+     "dayChangePct": 0.92,
+     "pnlDeltaToday": 0.9
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -18378,15 +18270,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 2.4
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -18526,16 +18409,16 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-07-09",
    "totalSignals": 147,
-   "openCount": 121,
-   "closedCount": 26,
-   "openPnl": 421.2,
-   "closedPnl": 76.4,
-   "totalPnl": 497.6,
+   "openCount": 122,
+   "closedCount": 25,
+   "openPnl": 423.5,
+   "closedPnl": 81,
+   "totalPnl": 504.5,
    "frPnl": 186.9,
    "addOnPnl": 49,
-   "htPnl": 261.7,
-   "dailyPnlDelta": 157.5,
-   "winRate": 54,
+   "htPnl": 268.6,
+   "dailyPnlDelta": 159.8,
+   "winRate": 55,
    "avgGain": 3.4,
    "peakGainer": {
     "gain": 72.5,
@@ -19182,6 +19065,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.23,
+     "gainOnDay": 2.3,
+     "dayChangePct": 2.29,
+     "pnlDeltaToday": 2.3
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -19722,15 +19614,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -19870,15 +19753,15 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-07-10",
    "totalSignals": 153,
-   "openCount": 125,
-   "closedCount": 28,
+   "openCount": 126,
+   "closedCount": 27,
    "openPnl": 226.5,
-   "closedPnl": 187.2,
-   "totalPnl": 413.7,
+   "closedPnl": 191.8,
+   "totalPnl": 418.3,
    "frPnl": 189.9,
    "addOnPnl": 54.3,
-   "htPnl": 169.5,
-   "dailyPnlDelta": -103.6,
+   "htPnl": 174.1,
+   "dailyPnlDelta": -105.9,
    "winRate": 37,
    "avgGain": 2.7,
    "peakGainer": {
@@ -20580,6 +20463,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.18,
+     "gainOnDay": 0,
+     "dayChangePct": -2.24,
+     "pnlDeltaToday": -2.3
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -21120,15 +21012,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -21268,15 +21151,15 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-07-13",
    "totalSignals": 159,
-   "openCount": 131,
-   "closedCount": 28,
-   "openPnl": 63.5,
-   "closedPnl": 187.2,
-   "totalPnl": 250.7,
+   "openCount": 132,
+   "closedCount": 27,
+   "openPnl": 62.6,
+   "closedPnl": 191.8,
+   "totalPnl": 254.4,
    "frPnl": 183.2,
    "addOnPnl": 25.1,
-   "htPnl": 42.4,
-   "dailyPnlDelta": -166.3,
+   "htPnl": 46.1,
+   "dailyPnlDelta": -167.2,
    "winRate": 30,
    "avgGain": 1.6,
    "peakGainer": {
@@ -22032,6 +21915,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.16,
+     "gainOnDay": -0.9,
+     "dayChangePct": -0.92,
+     "pnlDeltaToday": -0.9
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -22572,15 +22464,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -22720,15 +22603,15 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-07-14",
    "totalSignals": 161,
-   "openCount": 133,
-   "closedCount": 28,
-   "openPnl": 132.5,
-   "closedPnl": 187.2,
-   "totalPnl": 319.7,
+   "openCount": 134,
+   "closedCount": 27,
+   "openPnl": 132,
+   "closedPnl": 191.8,
+   "totalPnl": 323.8,
    "frPnl": 186,
    "addOnPnl": 61.8,
-   "htPnl": 71.9,
-   "dailyPnlDelta": 71,
+   "htPnl": 76,
+   "dailyPnlDelta": 71.5,
    "winRate": 29,
    "avgGain": 2,
    "peakGainer": {
@@ -23502,6 +23385,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.17,
+     "gainOnDay": -0.5,
+     "dayChangePct": 0.46,
+     "pnlDeltaToday": 0.5
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -24042,15 +23934,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -24190,15 +24073,15 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-07-15",
    "totalSignals": 165,
-   "openCount": 137,
-   "closedCount": 28,
+   "openCount": 138,
+   "closedCount": 27,
    "openPnl": 387.6,
-   "closedPnl": 187.2,
-   "totalPnl": 574.8,
+   "closedPnl": 191.8,
+   "totalPnl": 579.4,
    "frPnl": 214.2,
    "addOnPnl": 53.6,
-   "htPnl": 307,
-   "dailyPnlDelta": 259.5,
+   "htPnl": 311.6,
+   "dailyPnlDelta": 260,
    "winRate": 47,
    "avgGain": 3.5,
    "peakGainer": {
@@ -25008,6 +24891,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.18,
+     "gainOnDay": 0,
+     "dayChangePct": 0.46,
+     "pnlDeltaToday": 0.5
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -25548,15 +25440,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -25696,16 +25579,16 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-07-16",
    "totalSignals": 171,
-   "openCount": 143,
-   "closedCount": 28,
-   "openPnl": 444.9,
-   "closedPnl": 187.2,
-   "totalPnl": 632.1,
+   "openCount": 144,
+   "closedCount": 27,
+   "openPnl": 445.8,
+   "closedPnl": 191.8,
+   "totalPnl": 637.6,
    "frPnl": 213.1,
    "addOnPnl": 35.4,
-   "htPnl": 383.6,
-   "dailyPnlDelta": 59.9,
-   "winRate": 53,
+   "htPnl": 389.1,
+   "dailyPnlDelta": 60.8,
+   "winRate": 54,
    "avgGain": 3.7,
    "peakGainer": {
     "gain": 73.4,
@@ -26568,6 +26451,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.2,
+     "gainOnDay": 0.9,
+     "dayChangePct": 0.92,
+     "pnlDeltaToday": 0.9
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -27108,15 +27000,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -27256,15 +27139,15 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-07-17",
    "totalSignals": 175,
-   "openCount": 145,
-   "closedCount": 30,
-   "openPnl": 133.1,
-   "closedPnl": 163.8,
-   "totalPnl": 296.9,
+   "openCount": 146,
+   "closedCount": 29,
+   "openPnl": 132.6,
+   "closedPnl": 168.4,
+   "totalPnl": 301,
    "frPnl": 171.3,
    "addOnPnl": 3.1,
-   "htPnl": 122.5,
-   "dailyPnlDelta": -335,
+   "htPnl": 126.6,
+   "dailyPnlDelta": -336.4,
    "winRate": 37,
    "avgGain": 1.7,
    "peakGainer": {
@@ -28164,6 +28047,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.17,
+     "gainOnDay": -0.5,
+     "dayChangePct": -1.36,
+     "pnlDeltaToday": -1.4
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -28704,15 +28596,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -28852,17 +28735,17 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-07-21",
    "totalSignals": 176,
-   "openCount": 146,
-   "closedCount": 30,
-   "openPnl": 600.1,
-   "closedPnl": 163.8,
-   "totalPnl": 763.9,
+   "openCount": 147,
+   "closedCount": 29,
+   "openPnl": 605.6,
+   "closedPnl": 168.4,
+   "totalPnl": 774,
    "frPnl": 226.7,
    "addOnPnl": 50.5,
-   "htPnl": 486.7,
-   "dailyPnlDelta": 305.6,
-   "winRate": 61,
-   "avgGain": 4.3,
+   "htPnl": 496.8,
+   "dailyPnlDelta": 306.5,
+   "winRate": 62,
+   "avgGain": 4.4,
    "peakGainer": {
     "gain": 74.3,
     "name": "KEEMING"
@@ -29769,6 +29652,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.3,
+     "gainOnDay": 5.5,
+     "dayChangePct": 0.88,
+     "pnlDeltaToday": 0.9
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -30309,15 +30201,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -30457,17 +30340,17 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-07-22",
    "totalSignals": 176,
-   "openCount": 146,
-   "closedCount": 30,
-   "openPnl": 523.9,
-   "closedPnl": 163.8,
-   "totalPnl": 687.7,
+   "openCount": 147,
+   "closedCount": 29,
+   "openPnl": 528.9,
+   "closedPnl": 168.4,
+   "totalPnl": 697.3,
    "frPnl": 230.4,
    "addOnPnl": 39,
-   "htPnl": 418.3,
-   "dailyPnlDelta": -114,
-   "winRate": 61,
-   "avgGain": 3.9,
+   "htPnl": 427.9,
+   "dailyPnlDelta": -114.5,
+   "winRate": 62,
+   "avgGain": 4,
    "peakGainer": {
     "gain": 70.8,
     "name": "KEEMING"
@@ -31374,6 +31257,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.29,
+     "gainOnDay": 5,
+     "dayChangePct": -0.43,
+     "pnlDeltaToday": -0.5
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -31914,15 +31806,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -32062,16 +31945,16 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-07-23",
    "totalSignals": 179,
-   "openCount": 149,
-   "closedCount": 30,
-   "openPnl": 495.6,
-   "closedPnl": 163.8,
-   "totalPnl": 659.4,
+   "openCount": 150,
+   "closedCount": 29,
+   "openPnl": 497.9,
+   "closedPnl": 168.4,
+   "totalPnl": 666.3,
    "frPnl": 232.4,
    "addOnPnl": 28.6,
-   "htPnl": 398.4,
-   "dailyPnlDelta": -32,
-   "winRate": 60,
+   "htPnl": 405.3,
+   "dailyPnlDelta": -34.8,
+   "winRate": 61,
    "avgGain": 3.7,
    "peakGainer": {
     "gain": 70.8,
@@ -33006,6 +32889,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.23,
+     "gainOnDay": 2.3,
+     "dayChangePct": -2.62,
+     "pnlDeltaToday": -2.8
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -33546,15 +33438,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -33694,17 +33577,17 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-07-24",
    "totalSignals": 184,
-   "openCount": 154,
-   "closedCount": 30,
-   "openPnl": 448.8,
-   "closedPnl": 163.8,
-   "totalPnl": 612.6,
+   "openCount": 155,
+   "closedCount": 29,
+   "openPnl": 449.7,
+   "closedPnl": 168.4,
+   "totalPnl": 618.1,
    "frPnl": 208.2,
    "addOnPnl": 18.7,
-   "htPnl": 385.7,
-   "dailyPnlDelta": -47.9,
+   "htPnl": 391.2,
+   "dailyPnlDelta": -49.3,
    "winRate": 59,
-   "avgGain": 3.3,
+   "avgGain": 3.4,
    "peakGainer": {
     "gain": 70.8,
     "name": "KEEMING"
@@ -34683,6 +34566,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.2,
+     "gainOnDay": 0.9,
+     "dayChangePct": -1.35,
+     "pnlDeltaToday": -1.4
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -35223,15 +35115,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -35371,17 +35254,17 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-07-27",
    "totalSignals": 192,
-   "openCount": 162,
-   "closedCount": 30,
-   "openPnl": 550.9,
-   "closedPnl": 163.8,
-   "totalPnl": 714.7,
+   "openCount": 163,
+   "closedCount": 29,
+   "openPnl": 553.2,
+   "closedPnl": 168.4,
+   "totalPnl": 721.6,
    "frPnl": 222.2,
    "addOnPnl": 12,
-   "htPnl": 480.5,
-   "dailyPnlDelta": 106.4,
-   "winRate": 56,
-   "avgGain": 3.7,
+   "htPnl": 487.4,
+   "dailyPnlDelta": 107.8,
+   "winRate": 57,
+   "avgGain": 3.8,
    "peakGainer": {
     "gain": 76.1,
     "name": "KEEMING"
@@ -36432,6 +36315,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.23,
+     "gainOnDay": 2.3,
+     "dayChangePct": 1.36,
+     "pnlDeltaToday": 1.4
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -36972,15 +36864,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -37120,17 +37003,17 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-07-28",
    "totalSignals": 197,
-   "openCount": 167,
-   "closedCount": 30,
-   "openPnl": 297.6,
-   "closedPnl": 163.8,
-   "totalPnl": 461.4,
+   "openCount": 168,
+   "closedCount": 29,
+   "openPnl": 297.1,
+   "closedPnl": 168.4,
+   "totalPnl": 465.5,
    "frPnl": 208,
    "addOnPnl": -19.1,
-   "htPnl": 272.5,
-   "dailyPnlDelta": -261.1,
+   "htPnl": 276.6,
+   "dailyPnlDelta": -263.9,
    "winRate": 50,
-   "avgGain": 2.3,
+   "avgGain": 2.4,
    "peakGainer": {
     "gain": 78,
     "name": "KEEMING"
@@ -38226,6 +38109,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.17,
+     "gainOnDay": -0.5,
+     "dayChangePct": -2.69,
+     "pnlDeltaToday": -2.8
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -38766,15 +38658,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -38914,17 +38797,17 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-07-29",
    "totalSignals": 202,
-   "openCount": 172,
-   "closedCount": 30,
-   "openPnl": 410.8,
-   "closedPnl": 163.8,
-   "totalPnl": 574.6,
+   "openCount": 173,
+   "closedCount": 29,
+   "openPnl": 409,
+   "closedPnl": 168.4,
+   "totalPnl": 577.4,
    "frPnl": 219,
    "addOnPnl": -12.1,
-   "htPnl": 367.7,
-   "dailyPnlDelta": 114.2,
+   "htPnl": 370.5,
+   "dailyPnlDelta": 112.8,
    "winRate": 55,
-   "avgGain": 2.8,
+   "avgGain": 2.9,
    "peakGainer": {
     "gain": 74.3,
     "name": "KEEMING"
@@ -40065,6 +39948,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.14,
+     "gainOnDay": -1.8,
+     "dayChangePct": -1.38,
+     "pnlDeltaToday": -1.4
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -40605,15 +40497,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -40753,15 +40636,15 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-07-30",
    "totalSignals": 209,
-   "openCount": 179,
-   "closedCount": 30,
-   "openPnl": 403.4,
-   "closedPnl": 163.8,
-   "totalPnl": 567.2,
+   "openCount": 180,
+   "closedCount": 29,
+   "openPnl": 400.6,
+   "closedPnl": 168.4,
+   "totalPnl": 569,
    "frPnl": 224.8,
    "addOnPnl": 1.5,
-   "htPnl": 340.9,
-   "dailyPnlDelta": -8.3,
+   "htPnl": 342.7,
+   "dailyPnlDelta": -9.2,
    "winRate": 52,
    "avgGain": 2.7,
    "peakGainer": {
@@ -41967,6 +41850,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.12,
+     "gainOnDay": -2.8,
+     "dayChangePct": -0.93,
+     "pnlDeltaToday": -0.9
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -42507,15 +42399,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -42655,16 +42538,16 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-07-31",
    "totalSignals": 214,
-   "openCount": 184,
-   "closedCount": 30,
-   "openPnl": 777.3,
-   "closedPnl": 163.8,
-   "totalPnl": 941.1,
+   "openCount": 185,
+   "closedCount": 29,
+   "openPnl": 779.1,
+   "closedPnl": 168.4,
+   "totalPnl": 947.5,
    "frPnl": 269,
    "addOnPnl": 0.9,
-   "htPnl": 671.2,
-   "dailyPnlDelta": 376.5,
-   "winRate": 60,
+   "htPnl": 677.6,
+   "dailyPnlDelta": 381.1,
+   "winRate": 61,
    "avgGain": 4.4,
    "peakGainer": {
     "gain": 90.8,
@@ -43914,6 +43797,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.22,
+     "gainOnDay": 1.8,
+     "dayChangePct": 4.72,
+     "pnlDeltaToday": 4.6
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -44454,15 +44346,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -44602,16 +44485,16 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-08-03",
    "totalSignals": 218,
-   "openCount": 188,
-   "closedCount": 30,
-   "openPnl": 877.7,
-   "closedPnl": 163.8,
-   "totalPnl": 1041.5,
+   "openCount": 189,
+   "closedCount": 29,
+   "openPnl": 878.2,
+   "closedPnl": 168.4,
+   "totalPnl": 1046.6,
    "frPnl": 288,
    "addOnPnl": 37.4,
-   "htPnl": 716.1,
-   "dailyPnlDelta": 102.9,
-   "winRate": 61,
+   "htPnl": 721.2,
+   "dailyPnlDelta": 101.5,
+   "winRate": 62,
    "avgGain": 4.8,
    "peakGainer": {
     "gain": 90.8,
@@ -45897,6 +45780,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.19,
+     "gainOnDay": 0.5,
+     "dayChangePct": -1.35,
+     "pnlDeltaToday": -1.4
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -46437,15 +46329,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -46585,17 +46468,17 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-08-04",
    "totalSignals": 222,
-   "openCount": 192,
-   "closedCount": 30,
-   "openPnl": 1151.2,
-   "closedPnl": 163.8,
-   "totalPnl": 1315,
+   "openCount": 193,
+   "closedCount": 29,
+   "openPnl": 1152.6,
+   "closedPnl": 168.4,
+   "totalPnl": 1321,
    "frPnl": 315.9,
    "addOnPnl": 114.7,
-   "htPnl": 884.4,
-   "dailyPnlDelta": 275.4,
-   "winRate": 69,
-   "avgGain": 5.9,
+   "htPnl": 890.4,
+   "dailyPnlDelta": 276.3,
+   "winRate": 70,
+   "avgGain": 6,
    "peakGainer": {
     "gain": 95.4,
     "name": "KEEMING"
@@ -47916,6 +47799,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.21,
+     "gainOnDay": 1.4,
+     "dayChangePct": 0.91,
+     "pnlDeltaToday": 0.9
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -48456,15 +48348,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -48604,15 +48487,15 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-08-05",
    "totalSignals": 224,
-   "openCount": 193,
-   "closedCount": 31,
-   "openPnl": 1423.3,
-   "closedPnl": 178.9,
-   "totalPnl": 1602.2,
+   "openCount": 194,
+   "closedCount": 30,
+   "openPnl": 1433.9,
+   "closedPnl": 183.5,
+   "totalPnl": 1617.4,
    "frPnl": 317.7,
    "addOnPnl": 118.9,
-   "htPnl": 1165.6,
-   "dailyPnlDelta": 292,
+   "htPnl": 1180.8,
+   "dailyPnlDelta": 301.2,
    "winRate": 75,
    "avgGain": 7.2,
    "peakGainer": {
@@ -49953,6 +49836,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.41,
+     "gainOnDay": 10.6,
+     "dayChangePct": 9.05,
+     "pnlDeltaToday": 9.2
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -50493,15 +50385,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -50641,17 +50524,17 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-08-06",
    "totalSignals": 228,
-   "openCount": 197,
-   "closedCount": 31,
-   "openPnl": 1535.8,
-   "closedPnl": 178.9,
-   "totalPnl": 1714.7,
+   "openCount": 198,
+   "closedCount": 30,
+   "openPnl": 1548.2,
+   "closedPnl": 183.5,
+   "totalPnl": 1731.7,
    "frPnl": 324.8,
    "addOnPnl": 130.4,
-   "htPnl": 1259.5,
-   "dailyPnlDelta": 111.4,
+   "htPnl": 1276.5,
+   "dailyPnlDelta": 113.2,
    "winRate": 71,
-   "avgGain": 7.5,
+   "avgGain": 7.6,
    "peakGainer": {
     "gain": 100.9,
     "name": "KEEMING"
@@ -52026,6 +51909,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.45,
+     "gainOnDay": 12.4,
+     "dayChangePct": 1.66,
+     "pnlDeltaToday": 1.8
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -52566,15 +52458,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -52714,16 +52597,16 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-08-07",
    "totalSignals": 232,
-   "openCount": 201,
-   "closedCount": 31,
-   "openPnl": 1716.3,
-   "closedPnl": 178.9,
-   "totalPnl": 1895.2,
+   "openCount": 202,
+   "closedCount": 30,
+   "openPnl": 1726.4,
+   "closedPnl": 183.5,
+   "totalPnl": 1909.9,
    "frPnl": 353.6,
    "addOnPnl": 278,
-   "htPnl": 1263.6,
-   "dailyPnlDelta": 175.4,
-   "winRate": 73,
+   "htPnl": 1278.3,
+   "dailyPnlDelta": 173.1,
+   "winRate": 74,
    "avgGain": 8.2,
    "peakGainer": {
     "gain": 95.4,
@@ -54135,6 +54018,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.4,
+     "gainOnDay": 10.1,
+     "dayChangePct": -2.04,
+     "pnlDeltaToday": -2.3
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -54675,15 +54567,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -54823,17 +54706,17 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-08-10",
    "totalSignals": 238,
-   "openCount": 207,
-   "closedCount": 31,
-   "openPnl": 2083.3,
-   "closedPnl": 178.9,
-   "totalPnl": 2262.2,
+   "openCount": 208,
+   "closedCount": 30,
+   "openPnl": 2098.9,
+   "closedPnl": 183.5,
+   "totalPnl": 2282.4,
    "frPnl": 398.6,
    "addOnPnl": 333.5,
-   "htPnl": 1530.1,
-   "dailyPnlDelta": 367.4,
-   "winRate": 77,
-   "avgGain": 9.5,
+   "htPnl": 1550.3,
+   "dailyPnlDelta": 372.9,
+   "winRate": 78,
+   "avgGain": 9.6,
    "peakGainer": {
     "gain": 98.2,
     "name": "KEEMING"
@@ -56298,6 +56181,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.52,
+     "gainOnDay": 15.6,
+     "dayChangePct": 5,
+     "pnlDeltaToday": 5.5
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -56838,15 +56730,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -56986,17 +56869,17 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-08-11",
    "totalSignals": 243,
-   "openCount": 212,
-   "closedCount": 31,
-   "openPnl": 2163.8,
-   "closedPnl": 178.9,
-   "totalPnl": 2342.7,
+   "openCount": 213,
+   "closedCount": 30,
+   "openPnl": 2178.5,
+   "closedPnl": 183.5,
+   "totalPnl": 2362,
    "frPnl": 418.8,
    "addOnPnl": 377.8,
-   "htPnl": 1546.1,
-   "dailyPnlDelta": 78.1,
+   "htPnl": 1565.4,
+   "dailyPnlDelta": 77.2,
    "winRate": 72,
-   "avgGain": 9.6,
+   "avgGain": 9.7,
    "peakGainer": {
     "gain": 97.2,
     "name": "KEEMING"
@@ -58506,6 +58389,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.5,
+     "gainOnDay": 14.7,
+     "dayChangePct": -0.79,
+     "pnlDeltaToday": -0.9
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -59046,15 +58938,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -59194,17 +59077,17 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-08-12",
    "totalSignals": 252,
-   "openCount": 221,
-   "closedCount": 31,
-   "openPnl": 2321.8,
-   "closedPnl": 178.9,
-   "totalPnl": 2500.7,
+   "openCount": 222,
+   "closedCount": 30,
+   "openPnl": 2336.5,
+   "closedPnl": 183.5,
+   "totalPnl": 2520,
    "frPnl": 421.1,
    "addOnPnl": 391.2,
-   "htPnl": 1688.4,
+   "htPnl": 1707.7,
    "dailyPnlDelta": 152.1,
    "winRate": 71,
-   "avgGain": 9.9,
+   "avgGain": 10,
    "peakGainer": {
     "gain": 95.4,
     "name": "KEEMING"
@@ -60795,6 +60678,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.5,
+     "gainOnDay": 14.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -61335,15 +61227,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -61483,16 +61366,16 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-08-13",
    "totalSignals": 255,
-   "openCount": 224,
-   "closedCount": 31,
-   "openPnl": 2512.5,
-   "closedPnl": 178.9,
-   "totalPnl": 2691.4,
+   "openCount": 225,
+   "closedCount": 30,
+   "openPnl": 2524.4,
+   "closedPnl": 183.5,
+   "totalPnl": 2707.9,
    "frPnl": 450.4,
    "addOnPnl": 445.9,
-   "htPnl": 1795.1,
-   "dailyPnlDelta": 190.1,
-   "winRate": 79,
+   "htPnl": 1811.6,
+   "dailyPnlDelta": 187.3,
+   "winRate": 80,
    "avgGain": 10.6,
    "peakGainer": {
     "gain": 110.1,
@@ -63111,6 +62994,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.44,
+     "gainOnDay": 11.9,
+     "dayChangePct": -2.4,
+     "pnlDeltaToday": -2.8
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -63651,15 +63543,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -63799,15 +63682,15 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-08-14",
    "totalSignals": 260,
-   "openCount": 229,
-   "closedCount": 31,
-   "openPnl": 2540.8,
-   "closedPnl": 178.9,
-   "totalPnl": 2719.7,
+   "openCount": 230,
+   "closedCount": 30,
+   "openPnl": 2551.8,
+   "closedPnl": 183.5,
+   "totalPnl": 2735.3,
    "frPnl": 467.5,
    "addOnPnl": 469.8,
-   "htPnl": 1782.4,
-   "dailyPnlDelta": 27,
+   "htPnl": 1798,
+   "dailyPnlDelta": 26.1,
    "winRate": 80,
    "avgGain": 10.5,
    "peakGainer": {
@@ -65472,6 +65355,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.42,
+     "gainOnDay": 11,
+     "dayChangePct": -0.82,
+     "pnlDeltaToday": -0.9
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -66012,15 +65904,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -66160,16 +66043,16 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-08-17",
    "totalSignals": 264,
-   "openCount": 232,
-   "closedCount": 32,
-   "openPnl": 2784.7,
-   "closedPnl": 168.4,
-   "totalPnl": 2953.1,
+   "openCount": 233,
+   "closedCount": 31,
+   "openPnl": 2795.7,
+   "closedPnl": 173,
+   "totalPnl": 2968.7,
    "frPnl": 522.7,
    "addOnPnl": 523.4,
-   "htPnl": 1907,
+   "htPnl": 1922.6,
    "dailyPnlDelta": 231.2,
-   "winRate": 73,
+   "winRate": 74,
    "avgGain": 11.2,
    "peakGainer": {
     "gain": 120.2,
@@ -67869,6 +67752,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.42,
+     "gainOnDay": 11,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -68409,15 +68301,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -68557,17 +68440,17 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-08-18",
    "totalSignals": 268,
-   "openCount": 236,
-   "closedCount": 32,
-   "openPnl": 2837.4,
-   "closedPnl": 168.4,
-   "totalPnl": 3005.8,
+   "openCount": 237,
+   "closedCount": 31,
+   "openPnl": 2848.4,
+   "closedPnl": 173,
+   "totalPnl": 3021.4,
    "frPnl": 522.7,
    "addOnPnl": 523.4,
-   "htPnl": 1959.7,
+   "htPnl": 1975.3,
    "dailyPnlDelta": 241.2,
    "winRate": 73,
-   "avgGain": 11.2,
+   "avgGain": 11.3,
    "peakGainer": {
     "gain": 120.2,
     "name": "KEEMING"
@@ -70302,6 +70185,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 2.42,
+     "gainOnDay": 11,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -70842,15 +70734,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -70993,14 +70876,14 @@ window.DAILY_EQUITY_TRACKER = {
    "openCount": 235,
    "closedCount": 37,
    "openPnl": 2782.7,
-   "closedPnl": 220.8,
-   "totalPnl": 3003.5,
+   "closedPnl": 233.1,
+   "totalPnl": 3015.8,
    "frPnl": 533.8,
    "addOnPnl": 615.6,
-   "htPnl": 1854.1,
-   "dailyPnlDelta": -40.9,
+   "htPnl": 1866.4,
+   "dailyPnlDelta": -44.6,
    "winRate": 69,
-   "avgGain": 11,
+   "avgGain": 11.1,
    "peakGainer": {
     "gain": 128.4,
     "name": "KEEMING"
@@ -72771,6 +72654,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED_TODAY",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": -3.38,
+     "pnlDeltaToday": -3.7
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -73311,15 +73203,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -73462,14 +73345,14 @@ window.DAILY_EQUITY_TRACKER = {
    "openCount": 225,
    "closedCount": 50,
    "openPnl": 2900.3,
-   "closedPnl": 347.3,
-   "totalPnl": 3247.6,
+   "closedPnl": 359.6,
+   "totalPnl": 3259.9,
    "frPnl": 559.6,
    "addOnPnl": 693.8,
-   "htPnl": 1994.2,
+   "htPnl": 2006.5,
    "dailyPnlDelta": 213.9,
    "winRate": 69,
-   "avgGain": 11.8,
+   "avgGain": 11.9,
    "peakGainer": {
     "gain": 128.4,
     "name": "KEEMING"
@@ -75267,6 +75150,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -75807,15 +75699,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -75958,14 +75841,14 @@ window.DAILY_EQUITY_TRACKER = {
    "openCount": 230,
    "closedCount": 51,
    "openPnl": 2852.4,
-   "closedPnl": 333.8,
-   "totalPnl": 3186.2,
+   "closedPnl": 346.1,
+   "totalPnl": 3198.5,
    "frPnl": 569.4,
    "addOnPnl": 739.7,
-   "htPnl": 1877.1,
+   "htPnl": 1889.4,
    "dailyPnlDelta": -58.7,
-   "winRate": 64,
-   "avgGain": 11.3,
+   "winRate": 65,
+   "avgGain": 11.4,
    "peakGainer": {
     "gain": 124.8,
     "name": "KEEMING"
@@ -77817,6 +77700,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -78357,15 +78249,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -78508,11 +78391,11 @@ window.DAILY_EQUITY_TRACKER = {
    "openCount": 226,
    "closedCount": 58,
    "openPnl": 2407.1,
-   "closedPnl": 481.9,
-   "totalPnl": 2889,
+   "closedPnl": 494.2,
+   "totalPnl": 2901.3,
    "frPnl": 555.8,
    "addOnPnl": 769.1,
-   "htPnl": 1564.1,
+   "htPnl": 1576.4,
    "dailyPnlDelta": -325.7,
    "winRate": 63,
    "avgGain": 10.2,
@@ -80394,6 +80277,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -80934,15 +80826,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -81085,13 +80968,13 @@ window.DAILY_EQUITY_TRACKER = {
    "openCount": 228,
    "closedCount": 59,
    "openPnl": 2786.6,
-   "closedPnl": 476.3,
-   "totalPnl": 3262.9,
+   "closedPnl": 488.6,
+   "totalPnl": 3275.2,
    "frPnl": 595.3,
    "addOnPnl": 886.3,
-   "htPnl": 1781.3,
+   "htPnl": 1793.6,
    "dailyPnlDelta": 390.9,
-   "winRate": 65,
+   "winRate": 66,
    "avgGain": 11.4,
    "peakGainer": {
     "gain": 134.9,
@@ -82998,6 +82881,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -83538,15 +83430,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -83689,14 +83572,14 @@ window.DAILY_EQUITY_TRACKER = {
    "openCount": 229,
    "closedCount": 59,
    "openPnl": 3013.9,
-   "closedPnl": 476.3,
-   "totalPnl": 3490.2,
+   "closedPnl": 488.6,
+   "totalPnl": 3502.5,
    "frPnl": 583.2,
    "addOnPnl": 839.5,
-   "htPnl": 2067.5,
+   "htPnl": 2079.8,
    "dailyPnlDelta": 229.8,
    "winRate": 72,
-   "avgGain": 12.1,
+   "avgGain": 12.2,
    "peakGainer": {
     "gain": 133.9,
     "name": "KEEMING"
@@ -85611,6 +85494,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -86151,15 +86043,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -86302,14 +86185,14 @@ window.DAILY_EQUITY_TRACKER = {
    "openCount": 224,
    "closedCount": 67,
    "openPnl": 2462.9,
-   "closedPnl": 690.9,
-   "totalPnl": 3153.8,
+   "closedPnl": 703.2,
+   "totalPnl": 3166.1,
    "frPnl": 512.4,
    "addOnPnl": 766.8,
-   "htPnl": 1874.6,
+   "htPnl": 1886.9,
    "dailyPnlDelta": -337.3,
    "winRate": 70,
-   "avgGain": 10.8,
+   "avgGain": 10.9,
    "peakGainer": {
     "gain": 124.8,
     "name": "KEEMING"
@@ -88251,6 +88134,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -88791,15 +88683,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -88942,14 +88825,14 @@ window.DAILY_EQUITY_TRACKER = {
    "openCount": 220,
    "closedCount": 74,
    "openPnl": 2026.5,
-   "closedPnl": 805.6,
-   "totalPnl": 2832.1,
+   "closedPnl": 817.9,
+   "totalPnl": 2844.4,
    "frPnl": 528.2,
    "addOnPnl": 696.4,
-   "htPnl": 1607.5,
+   "htPnl": 1619.8,
    "dailyPnlDelta": -347.6,
    "winRate": 65,
-   "avgGain": 9.6,
+   "avgGain": 9.7,
    "peakGainer": {
     "gain": 110.1,
     "name": "KEEMING"
@@ -90918,6 +90801,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED_TODAY",
@@ -91458,15 +91350,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -91609,11 +91492,11 @@ window.DAILY_EQUITY_TRACKER = {
    "openCount": 220,
    "closedCount": 78,
    "openPnl": 1910.3,
-   "closedPnl": 762.2,
-   "totalPnl": 2672.5,
+   "closedPnl": 774.5,
+   "totalPnl": 2684.8,
    "frPnl": 503.8,
    "addOnPnl": 681.6,
-   "htPnl": 1487.1,
+   "htPnl": 1499.4,
    "dailyPnlDelta": -215.1,
    "winRate": 62,
    "avgGain": 9,
@@ -93621,6 +93504,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -94161,15 +94053,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -94312,14 +94195,14 @@ window.DAILY_EQUITY_TRACKER = {
    "openCount": 212,
    "closedCount": 87,
    "openPnl": 2229.8,
-   "closedPnl": 774,
-   "totalPnl": 3003.8,
+   "closedPnl": 786.3,
+   "totalPnl": 3016.1,
    "frPnl": 560.9,
    "addOnPnl": 749.7,
-   "htPnl": 1693.2,
+   "htPnl": 1705.5,
    "dailyPnlDelta": 320.1,
    "winRate": 65,
-   "avgGain": 10,
+   "avgGain": 10.1,
    "peakGainer": {
     "gain": 121.1,
     "name": "KEEMING"
@@ -96333,6 +96216,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -96873,15 +96765,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -97024,13 +96907,13 @@ window.DAILY_EQUITY_TRACKER = {
    "openCount": 216,
    "closedCount": 88,
    "openPnl": 2260.9,
-   "closedPnl": 808,
-   "totalPnl": 3068.9,
+   "closedPnl": 820.3,
+   "totalPnl": 3081.2,
    "frPnl": 575.6,
    "addOnPnl": 804.8,
-   "htPnl": 1688.5,
+   "htPnl": 1700.8,
    "dailyPnlDelta": 63.1,
-   "winRate": 63,
+   "winRate": 64,
    "avgGain": 10.1,
    "peakGainer": {
     "gain": 127.5,
@@ -99090,6 +98973,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -99630,15 +99522,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -99777,18 +99660,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-07",
-   "totalSignals": 312,
-   "openCount": 221,
+   "totalSignals": 311,
+   "openCount": 220,
    "closedCount": 91,
    "openPnl": 2343.8,
-   "closedPnl": 760,
-   "totalPnl": 3103.8,
+   "closedPnl": 772.3,
+   "totalPnl": 3116.1,
    "frPnl": 575.3,
    "addOnPnl": 853.2,
-   "htPnl": 1675.3,
-   "dailyPnlDelta": 26.8,
+   "htPnl": 1687.6,
+   "dailyPnlDelta": 25.7,
    "winRate": 62,
-   "avgGain": 9.9,
+   "avgGain": 10,
    "peakGainer": {
     "gain": 124.8,
     "name": "KEEMING"
@@ -100315,15 +100198,6 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 0,
      "dayChangePct": -0.56,
      "pnlDeltaToday": -0.6
-    },
-    {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.61,
-     "gainOnDay": 0,
-     "dayChangePct": 1.16,
-     "pnlDeltaToday": 1.1
     },
     {
      "name": "DNEX",
@@ -101919,6 +101793,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -102459,15 +102342,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -102606,17 +102480,17 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-08",
-   "totalSignals": 318,
-   "openCount": 227,
+   "totalSignals": 317,
+   "openCount": 226,
    "closedCount": 91,
-   "openPnl": 2659.9,
-   "closedPnl": 760,
-   "totalPnl": 3419.9,
+   "openPnl": 2656.5,
+   "closedPnl": 772.3,
+   "totalPnl": 3428.8,
    "frPnl": 584,
    "addOnPnl": 890.7,
-   "htPnl": 1945.2,
-   "dailyPnlDelta": 215.4,
-   "winRate": 64,
+   "htPnl": 1954.1,
+   "dailyPnlDelta": 212,
+   "winRate": 65,
    "avgGain": 10.8,
    "peakGainer": {
     "gain": 132.1,
@@ -103198,15 +103072,6 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 0.6,
      "dayChangePct": 0.56,
      "pnlDeltaToday": 0.6
-    },
-    {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.7,
-     "gainOnDay": 3.4,
-     "dayChangePct": 3.45,
-     "pnlDeltaToday": 3.4
     },
     {
      "name": "DNEX",
@@ -104802,6 +104667,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 2.3
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -105342,15 +105216,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 2.4
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -105489,16 +105354,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-09",
-   "totalSignals": 322,
-   "openCount": 230,
+   "totalSignals": 321,
+   "openCount": 229,
    "closedCount": 92,
-   "openPnl": 3400.8,
-   "closedPnl": 744,
-   "totalPnl": 4144.8,
+   "openPnl": 3399.3,
+   "closedPnl": 756.3,
+   "totalPnl": 4155.6,
    "frPnl": 621.7,
    "addOnPnl": 1006.5,
-   "htPnl": 2516.6,
-   "dailyPnlDelta": 347.5,
+   "htPnl": 2527.4,
+   "dailyPnlDelta": 349.4,
    "winRate": 66,
    "avgGain": 12.9,
    "peakGainer": {
@@ -106117,15 +105982,6 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 9.5,
      "dayChangePct": 8.89,
      "pnlDeltaToday": 8.9
-    },
-    {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.65,
-     "gainOnDay": 1.5,
-     "dayChangePct": -1.85,
-     "pnlDeltaToday": -1.9
     },
     {
      "name": "DNEX",
@@ -107721,6 +107577,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 3
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -108261,15 +108126,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 3.2
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -108408,18 +108264,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-10",
-   "totalSignals": 329,
-   "openCount": 237,
+   "totalSignals": 327,
+   "openCount": 235,
    "closedCount": 92,
-   "openPnl": 3514.6,
-   "closedPnl": 744,
-   "totalPnl": 4258.6,
+   "openPnl": 3512.3,
+   "closedPnl": 756.3,
+   "totalPnl": 4268.6,
    "frPnl": 648.3,
    "addOnPnl": 1064.9,
-   "htPnl": 2545.4,
-   "dailyPnlDelta": 105.4,
+   "htPnl": 2555.4,
+   "dailyPnlDelta": 103.9,
    "winRate": 66,
-   "avgGain": 12.9,
+   "avgGain": 13.1,
    "peakGainer": {
     "gain": 138.5,
     "name": "KEEMING"
@@ -108948,15 +108804,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -2.1
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.67,
-     "gainOnDay": 0,
-     "dayChangePct": 0.75,
-     "pnlDeltaToday": 0.7
-    },
-    {
      "name": "DUFU",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -109099,15 +108946,6 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 8.9,
      "dayChangePct": -0.51,
      "pnlDeltaToday": -0.6
-    },
-    {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.67,
-     "gainOnDay": 2.3,
-     "dayChangePct": 0.75,
-     "pnlDeltaToday": 0.8
     },
     {
      "name": "DNEX",
@@ -110703,6 +110541,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 1.5
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -111243,15 +111090,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 1.6
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -111390,18 +111228,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-11",
-   "totalSignals": 336,
-   "openCount": 244,
+   "totalSignals": 334,
+   "openCount": 242,
    "closedCount": 92,
-   "openPnl": 2916.1,
-   "closedPnl": 744,
-   "totalPnl": 3660.1,
+   "openPnl": 2914.6,
+   "closedPnl": 756.3,
+   "totalPnl": 3670.9,
    "frPnl": 624.7,
    "addOnPnl": 999.2,
-   "htPnl": 2036.2,
-   "dailyPnlDelta": -658.9,
+   "htPnl": 2047,
+   "dailyPnlDelta": -658.1,
    "winRate": 61,
-   "avgGain": 10.9,
+   "avgGain": 11,
    "peakGainer": {
     "gain": 133.9,
     "name": "KEEMING"
@@ -111993,15 +111831,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -1.1
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.66,
-     "gainOnDay": -0.4,
-     "dayChangePct": -0.37,
-     "pnlDeltaToday": -0.4
-    },
-    {
      "name": "DUFU",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -112144,15 +111973,6 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 6.1,
      "dayChangePct": -2.56,
      "pnlDeltaToday": -2.8
-    },
-    {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.66,
-     "gainOnDay": 1.9,
-     "dayChangePct": -0.37,
-     "pnlDeltaToday": -0.4
     },
     {
      "name": "DNEX",
@@ -113748,6 +113568,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -5.3
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -114286,15 +114115,6 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 49.6,
      "dayChangePct": -3.61,
      "pnlDeltaToday": -5.6
-    },
-    {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
     },
     {
      "name": "VITROX",
@@ -114435,18 +114255,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-14",
-   "totalSignals": 342,
-   "openCount": 250,
+   "totalSignals": 340,
+   "openCount": 248,
    "closedCount": 92,
-   "openPnl": 2916.1,
-   "closedPnl": 744,
-   "totalPnl": 3660.1,
+   "openPnl": 2914.6,
+   "closedPnl": 756.3,
+   "totalPnl": 3670.9,
    "frPnl": 624.7,
    "addOnPnl": 999.2,
-   "htPnl": 2036.2,
-   "dailyPnlDelta": -671,
+   "htPnl": 2047,
+   "dailyPnlDelta": -670.2,
    "winRate": 60,
-   "avgGain": 10.7,
+   "avgGain": 10.8,
    "peakGainer": {
     "gain": 133.9,
     "name": "KEEMING"
@@ -115092,15 +114912,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -1.1
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.66,
-     "gainOnDay": -0.4,
-     "dayChangePct": -0.37,
-     "pnlDeltaToday": -0.4
-    },
-    {
      "name": "DUFU",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -115243,15 +115054,6 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 6.1,
      "dayChangePct": -2.56,
      "pnlDeltaToday": -2.8
-    },
-    {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.66,
-     "gainOnDay": 1.9,
-     "dayChangePct": -0.37,
-     "pnlDeltaToday": -0.4
     },
     {
      "name": "DNEX",
@@ -116847,6 +116649,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -5.3
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -117387,15 +117198,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -5.6
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -117534,18 +117336,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-15",
-   "totalSignals": 344,
-   "openCount": 218,
+   "totalSignals": 342,
+   "openCount": 216,
    "closedCount": 126,
-   "openPnl": 1718.2,
-   "closedPnl": 1301,
-   "totalPnl": 3019.2,
+   "openPnl": 1725.8,
+   "closedPnl": 1313.3,
+   "totalPnl": 3039.1,
    "frPnl": 558.2,
    "addOnPnl": 883.8,
-   "htPnl": 1577.2,
-   "dailyPnlDelta": -299.2,
-   "winRate": 55,
-   "avgGain": 8.8,
+   "htPnl": 1597.1,
+   "dailyPnlDelta": -297.7,
+   "winRate": 56,
+   "avgGain": 8.9,
    "peakGainer": {
     "gain": 116.5,
     "name": "KEEMING"
@@ -118209,15 +118011,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -2.1
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.54,
-     "gainOnDay": -4.9,
-     "dayChangePct": -0.78,
-     "pnlDeltaToday": -0.7
-    },
-    {
      "name": "DUFU",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -118360,15 +118153,6 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 0,
      "dayChangePct": 1.7,
      "pnlDeltaToday": 1.7
-    },
-    {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.54,
-     "gainOnDay": -2.7,
-     "dayChangePct": -0.78,
-     "pnlDeltaToday": -0.8
     },
     {
      "name": "DNEX",
@@ -119964,6 +119748,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0.8
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -120504,15 +120297,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0.8
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -120651,18 +120435,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-17",
-   "totalSignals": 348,
-   "openCount": 220,
+   "totalSignals": 346,
+   "openCount": 218,
    "closedCount": 128,
-   "openPnl": 2121.8,
-   "closedPnl": 1275.8,
-   "totalPnl": 3397.6,
+   "openPnl": 2129.4,
+   "closedPnl": 1288.1,
+   "totalPnl": 3417.5,
    "frPnl": 586.9,
    "addOnPnl": 925.5,
-   "htPnl": 1885.2,
+   "htPnl": 1905.1,
    "dailyPnlDelta": 384.7,
    "winRate": 59,
-   "avgGain": 9.8,
+   "avgGain": 9.9,
    "peakGainer": {
     "gain": 117.4,
     "name": "KEEMING"
@@ -121362,15 +121146,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -1.1
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.54,
-     "gainOnDay": -4.9,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "DUFU",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -121513,15 +121288,6 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 2.8,
      "dayChangePct": 2.79,
      "pnlDeltaToday": 2.8
-    },
-    {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.54,
-     "gainOnDay": -2.7,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
     },
     {
      "name": "DNEX",
@@ -123117,6 +122883,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 3
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -123657,15 +123432,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 3.2
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -123804,18 +123570,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-18",
-   "totalSignals": 350,
-   "openCount": 222,
+   "totalSignals": 348,
+   "openCount": 220,
    "closedCount": 128,
    "openPnl": 2748.3,
-   "closedPnl": 1275.8,
-   "totalPnl": 4024.1,
+   "closedPnl": 1288.1,
+   "totalPnl": 4036.4,
    "frPnl": 654.6,
    "addOnPnl": 1083.1,
-   "htPnl": 2286.4,
-   "dailyPnlDelta": 629.2,
-   "winRate": 65,
-   "avgGain": 11.5,
+   "htPnl": 2298.7,
+   "dailyPnlDelta": 621.7,
+   "winRate": 66,
+   "avgGain": 11.6,
    "peakGainer": {
     "gain": 127.5,
     "name": "KEEMING"
@@ -124533,15 +124299,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 5.3
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.64,
-     "gainOnDay": -1.1,
-     "dayChangePct": 3.94,
-     "pnlDeltaToday": 3.7
-    },
-    {
      "name": "DUFU",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -124684,15 +124441,6 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 5.6,
      "dayChangePct": 2.72,
      "pnlDeltaToday": 2.8
-    },
-    {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.64,
-     "gainOnDay": 1.1,
-     "dayChangePct": 3.94,
-     "pnlDeltaToday": 3.8
     },
     {
      "name": "DNEX",
@@ -126288,6 +126036,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 3.8
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -126828,15 +126585,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 4
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -126975,18 +126723,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-21",
-   "totalSignals": 351,
-   "openCount": 223,
+   "totalSignals": 349,
+   "openCount": 221,
    "closedCount": 128,
-   "openPnl": 3229.8,
-   "closedPnl": 1275.8,
-   "totalPnl": 4505.6,
+   "openPnl": 3228.3,
+   "closedPnl": 1288.1,
+   "totalPnl": 4516.4,
    "frPnl": 682.8,
    "addOnPnl": 1124,
-   "htPnl": 2698.8,
-   "dailyPnlDelta": 482.7,
+   "htPnl": 2709.6,
+   "dailyPnlDelta": 481.2,
    "winRate": 68,
-   "avgGain": 12.8,
+   "avgGain": 12.9,
    "peakGainer": {
     "gain": 133,
     "name": "KEEMING"
@@ -127713,15 +127461,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 2.1
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.66,
-     "gainOnDay": -0.4,
-     "dayChangePct": 0.76,
-     "pnlDeltaToday": 0.7
-    },
-    {
      "name": "DUFU",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -127864,15 +127603,6 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 7.8,
      "dayChangePct": 2.12,
      "pnlDeltaToday": 2.2
-    },
-    {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.66,
-     "gainOnDay": 1.9,
-     "dayChangePct": 0.76,
-     "pnlDeltaToday": 0.8
     },
     {
      "name": "DNEX",
@@ -129468,6 +129198,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 32.3
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -130008,15 +129747,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 34.4
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -130155,18 +129885,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-22",
-   "totalSignals": 352,
-   "openCount": 224,
+   "totalSignals": 350,
+   "openCount": 222,
    "closedCount": 128,
-   "openPnl": 3728,
-   "closedPnl": 1275.8,
-   "totalPnl": 5003.8,
+   "openPnl": 3723.5,
+   "closedPnl": 1288.1,
+   "totalPnl": 5011.6,
    "frPnl": 725.6,
    "addOnPnl": 1344,
-   "htPnl": 2934.2,
-   "dailyPnlDelta": 497.6,
+   "htPnl": 2942,
+   "dailyPnlDelta": 494.6,
    "winRate": 77,
-   "avgGain": 14.2,
+   "avgGain": 14.3,
    "peakGainer": {
     "gain": 132.1,
     "name": "KEEMING"
@@ -130902,15 +130632,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.7,
-     "gainOnDay": 1.1,
-     "dayChangePct": 1.5,
-     "pnlDeltaToday": 1.5
-    },
-    {
      "name": "DUFU",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -131053,15 +130774,6 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 7.8,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
-    },
-    {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.7,
-     "gainOnDay": 3.4,
-     "dayChangePct": 1.5,
-     "pnlDeltaToday": 1.5
     },
     {
      "name": "DNEX",
@@ -132657,6 +132369,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -3
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -133197,15 +132918,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -3.2
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -133344,18 +133056,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-23",
-   "totalSignals": 355,
-   "openCount": 227,
+   "totalSignals": 353,
+   "openCount": 225,
    "closedCount": 128,
-   "openPnl": 3799.2,
-   "closedPnl": 1275.8,
-   "totalPnl": 5075,
+   "openPnl": 3796.1,
+   "closedPnl": 1288.1,
+   "totalPnl": 5084.2,
    "frPnl": 716.3,
    "addOnPnl": 1300.7,
-   "htPnl": 3058,
-   "dailyPnlDelta": 60.5,
+   "htPnl": 3067.2,
+   "dailyPnlDelta": 62,
    "winRate": 74,
-   "avgGain": 14.3,
+   "avgGain": 14.4,
    "peakGainer": {
     "gain": 134.9,
     "name": "KEEMING"
@@ -134118,15 +133830,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 2.1
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.68,
-     "gainOnDay": 0.4,
-     "dayChangePct": -0.74,
-     "pnlDeltaToday": -0.7
-    },
-    {
      "name": "DUFU",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -134269,15 +133972,6 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 8.4,
      "dayChangePct": 0.52,
      "pnlDeltaToday": 0.6
-    },
-    {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.68,
-     "gainOnDay": 2.7,
-     "dayChangePct": -0.74,
-     "pnlDeltaToday": -0.8
     },
     {
      "name": "DNEX",
@@ -135873,6 +135567,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 15.8
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -136413,15 +136116,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 16.8
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -136560,18 +136254,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-24",
-   "totalSignals": 360,
-   "openCount": 232,
+   "totalSignals": 358,
+   "openCount": 230,
    "closedCount": 128,
-   "openPnl": 3774.7,
-   "closedPnl": 1275.8,
-   "totalPnl": 5050.5,
+   "openPnl": 3776.9,
+   "closedPnl": 1288.1,
+   "totalPnl": 5065,
    "frPnl": 713.3,
    "addOnPnl": 1283.6,
-   "htPnl": 3053.6,
-   "dailyPnlDelta": -28.9,
-   "winRate": 71,
-   "avgGain": 14,
+   "htPnl": 3068.1,
+   "dailyPnlDelta": -23.6,
+   "winRate": 72,
+   "avgGain": 14.1,
    "peakGainer": {
     "gain": 133,
     "name": "KEEMING"
@@ -137379,15 +137073,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 1.1
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.61,
-     "gainOnDay": -2.2,
-     "dayChangePct": -2.61,
-     "pnlDeltaToday": -2.6
-    },
-    {
      "name": "DUFU",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -137530,15 +137215,6 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 3.4,
      "dayChangePct": -4.64,
      "pnlDeltaToday": -5
-    },
-    {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.61,
-     "gainOnDay": 0,
-     "dayChangePct": -2.61,
-     "pnlDeltaToday": -2.7
     },
     {
      "name": "DNEX",
@@ -139134,6 +138810,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 10.5
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -139674,15 +139359,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 11.2
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -139821,18 +139497,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-25",
-   "totalSignals": 366,
-   "openCount": 237,
+   "totalSignals": 364,
+   "openCount": 235,
    "closedCount": 129,
-   "openPnl": 4262.2,
-   "closedPnl": 1270.9,
-   "totalPnl": 5533.1,
+   "openPnl": 4260.7,
+   "closedPnl": 1283.2,
+   "totalPnl": 5543.9,
    "frPnl": 752,
    "addOnPnl": 1324,
-   "htPnl": 3457.1,
-   "dailyPnlDelta": 485.9,
+   "htPnl": 3467.9,
+   "dailyPnlDelta": 482.1,
    "winRate": 75,
-   "avgGain": 15.1,
+   "avgGain": 15.2,
    "peakGainer": {
     "gain": 137.6,
     "name": "KEEMING"
@@ -140694,15 +140370,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -1.1
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.66,
-     "gainOnDay": -0.4,
-     "dayChangePct": 1.92,
-     "pnlDeltaToday": 1.9
-    },
-    {
      "name": "DUFU",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -140845,15 +140512,6 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 5,
      "dayChangePct": 1.62,
      "pnlDeltaToday": 1.7
-    },
-    {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.66,
-     "gainOnDay": 1.9,
-     "dayChangePct": 1.92,
-     "pnlDeltaToday": 1.9
     },
     {
      "name": "DNEX",
@@ -142449,6 +142107,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 12.8
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -142989,15 +142656,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 13.6
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -143136,18 +142794,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-28",
-   "totalSignals": 371,
-   "openCount": 242,
+   "totalSignals": 369,
+   "openCount": 240,
    "closedCount": 129,
-   "openPnl": 3909.9,
-   "closedPnl": 1270.9,
-   "totalPnl": 5180.8,
+   "openPnl": 3916.7,
+   "closedPnl": 1283.2,
+   "totalPnl": 5199.9,
    "frPnl": 700.9,
    "addOnPnl": 1225.5,
-   "htPnl": 3254.4,
-   "dailyPnlDelta": -358,
-   "winRate": 67,
-   "avgGain": 14,
+   "htPnl": 3273.5,
+   "dailyPnlDelta": -349.7,
+   "winRate": 68,
+   "avgGain": 14.1,
    "peakGainer": {
     "gain": 132.1,
     "name": "KEEMING"
@@ -144054,15 +143712,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -2.1
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.55,
-     "gainOnDay": -4.5,
-     "dayChangePct": -4.14,
-     "pnlDeltaToday": -4.1
-    },
-    {
      "name": "DUFU",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -144205,15 +143854,6 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 1.1,
      "dayChangePct": -3.72,
      "pnlDeltaToday": -3.9
-    },
-    {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.55,
-     "gainOnDay": -2.3,
-     "dayChangePct": -4.14,
-     "pnlDeltaToday": -4.2
     },
     {
      "name": "DNEX",
@@ -145809,6 +145449,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 3
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -146349,15 +145998,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 3.2
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -146496,18 +146136,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-29",
-   "totalSignals": 379,
-   "openCount": 249,
+   "totalSignals": 377,
+   "openCount": 247,
    "closedCount": 130,
-   "openPnl": 4461.7,
-   "closedPnl": 1285.9,
-   "totalPnl": 5747.6,
+   "openPnl": 4471.5,
+   "closedPnl": 1298.2,
+   "totalPnl": 5769.7,
    "frPnl": 737.2,
    "addOnPnl": 1333.8,
-   "htPnl": 3676.6,
-   "dailyPnlDelta": 560,
-   "winRate": 68,
-   "avgGain": 15.2,
+   "htPnl": 3698.7,
+   "dailyPnlDelta": 563,
+   "winRate": 69,
+   "avgGain": 15.3,
    "peakGainer": {
     "gain": 154.4,
     "name": "SAMAIDEN"
@@ -147486,15 +147126,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 1.1
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.51,
-     "gainOnDay": -6,
-     "dayChangePct": -1.57,
-     "pnlDeltaToday": -1.5
-    },
-    {
      "name": "DUFU",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -147637,15 +147268,6 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 2.8,
      "dayChangePct": 1.66,
      "pnlDeltaToday": 1.7
-    },
-    {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.51,
-     "gainOnDay": -3.8,
-     "dayChangePct": -1.57,
-     "pnlDeltaToday": -1.5
     },
     {
      "name": "DNEX",
@@ -149241,6 +148863,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 21.1
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -149781,15 +149412,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
-    },
-    {
      "name": "VITROX",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -149928,18 +149550,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-30",
-   "totalSignals": 386,
-   "openCount": 256,
+   "totalSignals": 384,
+   "openCount": 254,
    "closedCount": 130,
-   "openPnl": 4264.4,
-   "closedPnl": 1285.9,
-   "totalPnl": 5550.3,
+   "openPnl": 4275,
+   "closedPnl": 1298.2,
+   "totalPnl": 5573.2,
    "frPnl": 722.9,
    "addOnPnl": 1334,
-   "htPnl": 3493.4,
-   "dailyPnlDelta": -287.2,
-   "winRate": 67,
-   "avgGain": 14.4,
+   "htPnl": 3516.3,
+   "dailyPnlDelta": -286.4,
+   "winRate": 68,
+   "avgGain": 14.5,
    "peakGainer": {
     "gain": 142.2,
     "name": "KEEMING"
@@ -150981,15 +150603,6 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 3.2
     },
     {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.5,
-     "gainOnDay": -6.4,
-     "dayChangePct": -0.4,
-     "pnlDeltaToday": -0.4
-    },
-    {
      "name": "DUFU",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -151132,15 +150745,6 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 1.7,
      "dayChangePct": -1.09,
      "pnlDeltaToday": -1.1
-    },
-    {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.5,
-     "gainOnDay": -4.2,
-     "dayChangePct": -0.4,
-     "pnlDeltaToday": -0.4
     },
     {
      "name": "DNEX",
@@ -152736,6 +152340,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -12
     },
     {
+     "name": "INARI",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 2.347,
+     "gainOnDay": 7.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -153274,15 +152887,6 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 141.6,
      "dayChangePct": -5.03,
      "pnlDeltaToday": -12.8
-    },
-    {
-     "name": "INARI",
-     "trackerType": "HT",
-     "statusOnDay": "CLOSED",
-     "priceOnDay": 2.25,
-     "gainOnDay": -4.6,
-     "dayChangePct": 0,
-     "pnlDeltaToday": 0
     },
     {
      "name": "VITROX",

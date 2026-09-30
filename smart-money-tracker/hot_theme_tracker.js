@@ -1,26 +1,26 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-30T09:40:50.029Z",
+  "generatedAt": "2026-09-30T09:50:54.010Z",
   "dataDays": 86,
-  "totalTracked": 315,
-  "openCount": 199,
+  "totalTracked": 313,
+  "openCount": 197,
   "closedCount": 116,
-  "closedWins": 80,
-  "closedWinRate": 69,
-  "closedAvgGain": 11.3,
-  "openPnl": 2185.1,
-  "closedPnl": 1308.3,
-  "totalPnlNow": 3493.4
+  "closedWins": 81,
+  "closedWinRate": 70,
+  "closedAvgGain": 11.4,
+  "openPnl": 2195.7,
+  "closedPnl": 1320.6,
+  "totalPnlNow": 3516.3
  },
  "backtest": {
   "dataStart": "2026-05-25",
   "dataEnd": "2026-09-30",
   "dataDays": 86,
   "signals": 43,
-  "winRate": 63,
-  "avgGain": 7.8,
-  "totalPnl": 335.7,
+  "winRate": 65,
+  "avgGain": 8.1,
+  "totalPnl": 346.7,
   "worstLoss": -16
  },
  "themeStrength": [
@@ -1641,29 +1641,6 @@ window.HOT_THEME_TRACKER = {
    "slTrail": 0.451
   },
   {
-   "id": "INARI_2026-09-10_ADDON",
-   "name": "INARI",
-   "entryType": "⭐ ADD-ON A+",
-   "entryDate": "2026-09-10",
-   "entry": 2.67,
-   "entryFloor": 2.58,
-   "currentFloor": 2.45,
-   "currentPrice": 2.5,
-   "high": 2.7,
-   "highDate": "2026-09-22",
-   "maxGain": 1.1,
-   "finalGain": -6.4,
-   "day1ChangePct": 0.75,
-   "days": 14,
-   "lastDate": "2026-09-30",
-   "status": "OPEN",
-   "themes": [
-    "Semiconductor"
-   ],
-   "confluence": 3,
-   "slTrail": 2.377
-  },
-  {
    "id": "DUFU_2026-09-10_ADDON",
    "name": "DUFU",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -2031,29 +2008,6 @@ window.HOT_THEME_TRACKER = {
    ],
    "confluence": 3,
    "slTrail": 0.863
-  },
-  {
-   "id": "INARI_2026-09-07_ADDON",
-   "name": "INARI",
-   "entryType": "⭐ ADD-ON A+",
-   "entryDate": "2026-09-07",
-   "entry": 2.61,
-   "entryFloor": 2.55,
-   "currentFloor": 2.45,
-   "currentPrice": 2.5,
-   "high": 2.7,
-   "highDate": "2026-09-22",
-   "maxGain": 3.4,
-   "finalGain": -4.2,
-   "day1ChangePct": 1.16,
-   "days": 17,
-   "lastDate": "2026-09-30",
-   "status": "OPEN",
-   "themes": [
-    "Semiconductor"
-   ],
-   "confluence": 3,
-   "slTrail": 2.377
   },
   {
    "id": "DNEX_2026-09-04_ADDON",
@@ -4987,7 +4941,7 @@ window.HOT_THEME_TRACKER = {
   {
    "id": "INARI_2026-07-10_ADDON",
    "name": "INARI",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryType": "⭐ ADD-ON A+",
    "entryDate": "2026-07-10",
    "entry": 2.18,
    "entryFloor": 2.15,
@@ -5104,7 +5058,7 @@ window.HOT_THEME_TRACKER = {
   {
    "id": "INARI_2026-07-09_ADDON",
    "name": "INARI",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryType": "⭐ ADD-ON A+",
    "entryDate": "2026-07-09",
    "entry": 2.23,
    "entryFloor": 2.16,
@@ -5273,7 +5227,7 @@ window.HOT_THEME_TRACKER = {
   {
    "id": "INARI_2026-07-08_ADDON",
    "name": "INARI",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryType": "⭐ ADD-ON A+",
    "entryDate": "2026-07-08",
    "entry": 2.19,
    "entryFloor": 2.16,
@@ -5468,7 +5422,7 @@ window.HOT_THEME_TRACKER = {
   {
    "id": "INARI_2026-07-07_ADDON",
    "name": "INARI",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryType": "⭐ ADD-ON A+",
    "entryDate": "2026-07-07",
    "entry": 2.19,
    "entryFloor": 2.16,
@@ -6268,6 +6222,31 @@ window.HOT_THEME_TRACKER = {
    ],
    "confluence": 3,
    "slTrail": 2.989
+  },
+  {
+   "id": "INARI_2026-06-23_NEW",
+   "name": "INARI",
+   "entryType": "🔥 NEW",
+   "entryDate": "2026-06-23",
+   "entry": 2.18,
+   "entryFloor": 2.22,
+   "currentFloor": 2.42,
+   "currentPrice": 2.29,
+   "high": 2.52,
+   "highDate": "2026-08-10",
+   "maxGain": 15.6,
+   "finalGain": 7.7,
+   "day1ChangePct": -3.96,
+   "days": 41,
+   "lastDate": "2026-08-19",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "slTrail": 2.347,
+   "exitDate": "2026-08-19",
+   "exitPrice": 2.347
   },
   {
    "id": "MI_2026-06-23_NEW",
@@ -7713,31 +7692,6 @@ window.HOT_THEME_TRACKER = {
    "slTrail": 2.989
   },
   {
-   "id": "INARI_2026-06-03_NEW",
-   "name": "INARI",
-   "entryType": "🔥 NEW",
-   "entryDate": "2026-06-03",
-   "entry": 2.36,
-   "entryFloor": 2.2,
-   "currentFloor": 2.32,
-   "currentPrice": 2.25,
-   "high": 2.36,
-   "highDate": "2026-06-03",
-   "maxGain": 0,
-   "finalGain": -4.6,
-   "day1ChangePct": 0.85,
-   "days": 3,
-   "lastDate": "2026-06-05",
-   "status": "CLOSED_SL",
-   "themes": [
-    "Semiconductor"
-   ],
-   "confluence": 2,
-   "slTrail": 2.25,
-   "exitDate": "2026-06-05",
-   "exitPrice": 2.25
-  },
-  {
    "id": "VITROX_2026-06-03_NEW",
    "name": "VITROX",
    "entryType": "🔥 NEW",
@@ -8117,44 +8071,19 @@ window.HOT_THEME_TRACKER = {
 };
 window.HOT_THEME_NEW_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-30T09:40:50.030Z",
+  "generatedAt": "2026-09-30T09:50:54.010Z",
   "dataDays": 86,
   "totalTracked": 48,
   "openCount": 11,
   "closedCount": 37,
-  "closedWins": 12,
-  "closedWinRate": 32,
-  "closedAvgGain": 5,
+  "closedWins": 13,
+  "closedWinRate": 35,
+  "closedAvgGain": 5.3,
   "openPnl": 204.8,
-  "closedPnl": 183.6,
-  "totalPnlNow": 388.4
+  "closedPnl": 195.9,
+  "totalPnlNow": 400.7
  },
  "trades": [
-  {
-   "id": "INARI_2026-06-03_NEW",
-   "name": "INARI",
-   "entryType": "🔥 NEW",
-   "entryDate": "2026-06-03",
-   "entry": 2.36,
-   "entryFloor": 2.2,
-   "currentFloor": 2.32,
-   "currentPrice": 2.25,
-   "high": 2.36,
-   "highDate": "2026-06-03",
-   "maxGain": 0,
-   "finalGain": -4.6,
-   "day1ChangePct": 0.85,
-   "days": 3,
-   "lastDate": "2026-06-05",
-   "status": "CLOSED_SL",
-   "themes": [
-    "Semiconductor"
-   ],
-   "confluence": 2,
-   "slTrail": 2.25,
-   "exitDate": "2026-06-05",
-   "exitPrice": 2.25
-  },
   {
    "id": "VITROX_2026-06-03_NEW",
    "name": "VITROX",
@@ -8877,6 +8806,31 @@ window.HOT_THEME_NEW_TRACKER = {
    "exitPrice": 0.383
   },
   {
+   "id": "INARI_2026-06-23_NEW",
+   "name": "INARI",
+   "entryType": "🔥 NEW",
+   "entryDate": "2026-06-23",
+   "entry": 2.18,
+   "entryFloor": 2.22,
+   "currentFloor": 2.42,
+   "currentPrice": 2.29,
+   "high": 2.52,
+   "highDate": "2026-08-10",
+   "maxGain": 15.6,
+   "finalGain": 7.7,
+   "day1ChangePct": -3.96,
+   "days": 41,
+   "lastDate": "2026-08-19",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "slTrail": 2.347,
+   "exitDate": "2026-08-19",
+   "exitPrice": 2.347
+  },
+  {
    "id": "MI_2026-06-23_NEW",
    "name": "MI",
    "entryType": "🔥 NEW",
@@ -9313,17 +9267,17 @@ window.HOT_THEME_NEW_TRACKER = {
 };
 window.HOT_THEME_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-30T09:40:50.030Z",
+  "generatedAt": "2026-09-30T09:50:54.011Z",
   "dataDays": 86,
-  "totalTracked": 113,
-  "openCount": 78,
-  "closedCount": 35,
-  "closedWins": 34,
+  "totalTracked": 115,
+  "openCount": 76,
+  "closedCount": 39,
+  "closedWins": 38,
   "closedWinRate": 97,
-  "closedAvgGain": 18.7,
-  "openPnl": 1055.3,
-  "closedPnl": 654.2,
-  "totalPnlNow": 1709.5
+  "closedAvgGain": 17.1,
+  "openPnl": 1065.9,
+  "closedPnl": 667.1,
+  "totalPnlNow": 1733
  },
  "trades": [
   {
@@ -10302,6 +10256,31 @@ window.HOT_THEME_ADDON_TRACKER = {
    "slTrail": 6.363
   },
   {
+   "id": "INARI_2026-07-07_ADDON",
+   "name": "INARI",
+   "entryType": "⭐ ADD-ON A+",
+   "entryDate": "2026-07-07",
+   "entry": 2.19,
+   "entryFloor": 2.16,
+   "currentFloor": 2.2,
+   "currentPrice": 2.22,
+   "high": 2.52,
+   "highDate": "2026-08-10",
+   "maxGain": 15.1,
+   "finalGain": 3.6,
+   "day1ChangePct": 0.92,
+   "days": 32,
+   "lastDate": "2026-08-20",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "slTrail": 2.268,
+   "exitDate": "2026-08-20",
+   "exitPrice": 2.268
+  },
+  {
    "id": "DUFU_2026-07-07_ADDON",
    "name": "DUFU",
    "entryType": "⭐ ADD-ON A+",
@@ -10421,6 +10400,31 @@ window.HOT_THEME_ADDON_TRACKER = {
    ],
    "confluence": 3,
    "slTrail": 6.363
+  },
+  {
+   "id": "INARI_2026-07-08_ADDON",
+   "name": "INARI",
+   "entryType": "⭐ ADD-ON A+",
+   "entryDate": "2026-07-08",
+   "entry": 2.19,
+   "entryFloor": 2.16,
+   "currentFloor": 2.2,
+   "currentPrice": 2.22,
+   "high": 2.52,
+   "highDate": "2026-08-10",
+   "maxGain": 15.1,
+   "finalGain": 3.6,
+   "day1ChangePct": 0.92,
+   "days": 31,
+   "lastDate": "2026-08-20",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "slTrail": 2.268,
+   "exitDate": "2026-08-20",
+   "exitPrice": 2.268
   },
   {
    "id": "DUFU_2026-07-08_ADDON",
@@ -10544,6 +10548,31 @@ window.HOT_THEME_ADDON_TRACKER = {
    "slTrail": 6.363
   },
   {
+   "id": "INARI_2026-07-09_ADDON",
+   "name": "INARI",
+   "entryType": "⭐ ADD-ON A+",
+   "entryDate": "2026-07-09",
+   "entry": 2.23,
+   "entryFloor": 2.16,
+   "currentFloor": 2.2,
+   "currentPrice": 2.22,
+   "high": 2.52,
+   "highDate": "2026-08-10",
+   "maxGain": 13,
+   "finalGain": 1.7,
+   "day1ChangePct": 2.29,
+   "days": 30,
+   "lastDate": "2026-08-20",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "slTrail": 2.268,
+   "exitDate": "2026-08-20",
+   "exitPrice": 2.268
+  },
+  {
    "id": "VITROX_2026-07-09_ADDON",
    "name": "VITROX",
    "entryType": "⭐ ADD-ON A+",
@@ -10638,6 +10667,31 @@ window.HOT_THEME_ADDON_TRACKER = {
    ],
    "confluence": 3,
    "slTrail": 6.363
+  },
+  {
+   "id": "INARI_2026-07-10_ADDON",
+   "name": "INARI",
+   "entryType": "⭐ ADD-ON A+",
+   "entryDate": "2026-07-10",
+   "entry": 2.18,
+   "entryFloor": 2.15,
+   "currentFloor": 2.2,
+   "currentPrice": 2.22,
+   "high": 2.52,
+   "highDate": "2026-08-10",
+   "maxGain": 15.6,
+   "finalGain": 4,
+   "day1ChangePct": -2.24,
+   "days": 29,
+   "lastDate": "2026-08-20",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "slTrail": 2.268,
+   "exitDate": "2026-08-20",
+   "exitPrice": 2.268
   },
   {
    "id": "SLVEST_2026-07-10_ADDON",
@@ -11812,29 +11866,6 @@ window.HOT_THEME_ADDON_TRACKER = {
    "slTrail": 8.061
   },
   {
-   "id": "INARI_2026-09-07_ADDON",
-   "name": "INARI",
-   "entryType": "⭐ ADD-ON A+",
-   "entryDate": "2026-09-07",
-   "entry": 2.61,
-   "entryFloor": 2.55,
-   "currentFloor": 2.45,
-   "currentPrice": 2.5,
-   "high": 2.7,
-   "highDate": "2026-09-22",
-   "maxGain": 3.4,
-   "finalGain": -4.2,
-   "day1ChangePct": 1.16,
-   "days": 17,
-   "lastDate": "2026-09-30",
-   "status": "OPEN",
-   "themes": [
-    "Semiconductor"
-   ],
-   "confluence": 3,
-   "slTrail": 2.377
-  },
-  {
    "id": "KGB_2026-09-09_ADDON",
    "name": "KGB",
    "entryType": "⭐ ADD-ON A+",
@@ -11879,29 +11910,6 @@ window.HOT_THEME_ADDON_TRACKER = {
    ],
    "confluence": 3,
    "slTrail": 0.97
-  },
-  {
-   "id": "INARI_2026-09-10_ADDON",
-   "name": "INARI",
-   "entryType": "⭐ ADD-ON A+",
-   "entryDate": "2026-09-10",
-   "entry": 2.67,
-   "entryFloor": 2.58,
-   "currentFloor": 2.45,
-   "currentPrice": 2.5,
-   "high": 2.7,
-   "highDate": "2026-09-22",
-   "maxGain": 1.1,
-   "finalGain": -6.4,
-   "day1ChangePct": 0.75,
-   "days": 14,
-   "lastDate": "2026-09-30",
-   "status": "OPEN",
-   "themes": [
-    "Semiconductor"
-   ],
-   "confluence": 3,
-   "slTrail": 2.377
   },
   {
    "id": "KGB_2026-09-11_ADDON",
@@ -11999,17 +12007,17 @@ window.HOT_THEME_ADDON_TRACKER = {
 };
 window.HOT_THEME_FLOOR_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-30T09:40:50.030Z",
+  "generatedAt": "2026-09-30T09:50:54.011Z",
   "dataDays": 86,
-  "totalTracked": 154,
+  "totalTracked": 150,
   "openCount": 110,
-  "closedCount": 44,
-  "closedWins": 34,
-  "closedWinRate": 77,
-  "closedAvgGain": 10.7,
+  "closedCount": 40,
+  "closedWins": 30,
+  "closedWinRate": 75,
+  "closedAvgGain": 11.4,
   "openPnl": 925,
-  "closedPnl": 470.5,
-  "totalPnlNow": 1395.5
+  "closedPnl": 457.6,
+  "totalPnlNow": 1382.6
  },
  "trades": [
   {
@@ -12762,31 +12770,6 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "exitPrice": 1.071
   },
   {
-   "id": "INARI_2026-07-07_ADDON",
-   "name": "INARI",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
-   "entryDate": "2026-07-07",
-   "entry": 2.19,
-   "entryFloor": 2.16,
-   "currentFloor": 2.2,
-   "currentPrice": 2.22,
-   "high": 2.52,
-   "highDate": "2026-08-10",
-   "maxGain": 15.1,
-   "finalGain": 3.6,
-   "day1ChangePct": 0.92,
-   "days": 32,
-   "lastDate": "2026-08-20",
-   "status": "CLOSED_SL",
-   "themes": [
-    "Semiconductor"
-   ],
-   "confluence": 3,
-   "slTrail": 2.268,
-   "exitDate": "2026-08-20",
-   "exitPrice": 2.268
-  },
-  {
    "id": "KGB_2026-07-07_ADDON",
    "name": "KGB",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -12836,31 +12819,6 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "exitPrice": 0.498
   },
   {
-   "id": "INARI_2026-07-08_ADDON",
-   "name": "INARI",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
-   "entryDate": "2026-07-08",
-   "entry": 2.19,
-   "entryFloor": 2.16,
-   "currentFloor": 2.2,
-   "currentPrice": 2.22,
-   "high": 2.52,
-   "highDate": "2026-08-10",
-   "maxGain": 15.1,
-   "finalGain": 3.6,
-   "day1ChangePct": 0.92,
-   "days": 31,
-   "lastDate": "2026-08-20",
-   "status": "CLOSED_SL",
-   "themes": [
-    "Semiconductor"
-   ],
-   "confluence": 3,
-   "slTrail": 2.268,
-   "exitDate": "2026-08-20",
-   "exitPrice": 2.268
-  },
-  {
    "id": "KGB_2026-07-08_ADDON",
    "name": "KGB",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -12908,31 +12866,6 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "slTrail": 0.498,
    "exitDate": "2026-08-24",
    "exitPrice": 0.498
-  },
-  {
-   "id": "INARI_2026-07-09_ADDON",
-   "name": "INARI",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
-   "entryDate": "2026-07-09",
-   "entry": 2.23,
-   "entryFloor": 2.16,
-   "currentFloor": 2.2,
-   "currentPrice": 2.22,
-   "high": 2.52,
-   "highDate": "2026-08-10",
-   "maxGain": 13,
-   "finalGain": 1.7,
-   "day1ChangePct": 2.29,
-   "days": 30,
-   "lastDate": "2026-08-20",
-   "status": "CLOSED_SL",
-   "themes": [
-    "Semiconductor"
-   ],
-   "confluence": 3,
-   "slTrail": 2.268,
-   "exitDate": "2026-08-20",
-   "exitPrice": 2.268
   },
   {
    "id": "UNISEM_2026-07-09_ADDON",
@@ -13004,31 +12937,6 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "slTrail": 1.119,
    "exitDate": "2026-08-24",
    "exitPrice": 1.119
-  },
-  {
-   "id": "INARI_2026-07-10_ADDON",
-   "name": "INARI",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
-   "entryDate": "2026-07-10",
-   "entry": 2.18,
-   "entryFloor": 2.15,
-   "currentFloor": 2.2,
-   "currentPrice": 2.22,
-   "high": 2.52,
-   "highDate": "2026-08-10",
-   "maxGain": 15.6,
-   "finalGain": 4,
-   "day1ChangePct": -2.24,
-   "days": 29,
-   "lastDate": "2026-08-20",
-   "status": "CLOSED_SL",
-   "themes": [
-    "Semiconductor"
-   ],
-   "confluence": 3,
-   "slTrail": 2.268,
-   "exitDate": "2026-08-20",
-   "exitPrice": 2.268
   },
   {
    "id": "UNISEM_2026-07-10_ADDON",
@@ -15652,17 +15560,17 @@ window.HOT_THEME_FLOOR_TRACKER = {
 };
 window.HOT_THEME_ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-30T09:40:50.029Z",
+  "generatedAt": "2026-09-30T09:50:54.010Z",
   "dataDays": 86,
-  "totalTracked": 315,
-  "openCount": 199,
+  "totalTracked": 313,
+  "openCount": 197,
   "closedCount": 116,
-  "closedWins": 80,
-  "closedWinRate": 69,
-  "closedAvgGain": 11.3,
-  "openPnl": 2185.1,
-  "closedPnl": 1308.3,
-  "totalPnlNow": 3493.4
+  "closedWins": 81,
+  "closedWinRate": 70,
+  "closedAvgGain": 11.4,
+  "openPnl": 2195.7,
+  "closedPnl": 1320.6,
+  "totalPnlNow": 3516.3
  },
  "trades": [
   {
@@ -16677,29 +16585,6 @@ window.HOT_THEME_ALL_TRACKER = {
    "slTrail": 0.451
   },
   {
-   "id": "INARI_2026-09-10_ADDON",
-   "name": "INARI",
-   "entryType": "⭐ ADD-ON A+",
-   "entryDate": "2026-09-10",
-   "entry": 2.67,
-   "entryFloor": 2.58,
-   "currentFloor": 2.45,
-   "currentPrice": 2.5,
-   "high": 2.7,
-   "highDate": "2026-09-22",
-   "maxGain": 1.1,
-   "finalGain": -6.4,
-   "day1ChangePct": 0.75,
-   "days": 14,
-   "lastDate": "2026-09-30",
-   "status": "OPEN",
-   "themes": [
-    "Semiconductor"
-   ],
-   "confluence": 3,
-   "slTrail": 2.377
-  },
-  {
    "id": "DUFU_2026-09-10_ADDON",
    "name": "DUFU",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -17067,29 +16952,6 @@ window.HOT_THEME_ALL_TRACKER = {
    ],
    "confluence": 3,
    "slTrail": 0.863
-  },
-  {
-   "id": "INARI_2026-09-07_ADDON",
-   "name": "INARI",
-   "entryType": "⭐ ADD-ON A+",
-   "entryDate": "2026-09-07",
-   "entry": 2.61,
-   "entryFloor": 2.55,
-   "currentFloor": 2.45,
-   "currentPrice": 2.5,
-   "high": 2.7,
-   "highDate": "2026-09-22",
-   "maxGain": 3.4,
-   "finalGain": -4.2,
-   "day1ChangePct": 1.16,
-   "days": 17,
-   "lastDate": "2026-09-30",
-   "status": "OPEN",
-   "themes": [
-    "Semiconductor"
-   ],
-   "confluence": 3,
-   "slTrail": 2.377
   },
   {
    "id": "DNEX_2026-09-04_ADDON",
@@ -20023,7 +19885,7 @@ window.HOT_THEME_ALL_TRACKER = {
   {
    "id": "INARI_2026-07-10_ADDON",
    "name": "INARI",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryType": "⭐ ADD-ON A+",
    "entryDate": "2026-07-10",
    "entry": 2.18,
    "entryFloor": 2.15,
@@ -20140,7 +20002,7 @@ window.HOT_THEME_ALL_TRACKER = {
   {
    "id": "INARI_2026-07-09_ADDON",
    "name": "INARI",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryType": "⭐ ADD-ON A+",
    "entryDate": "2026-07-09",
    "entry": 2.23,
    "entryFloor": 2.16,
@@ -20309,7 +20171,7 @@ window.HOT_THEME_ALL_TRACKER = {
   {
    "id": "INARI_2026-07-08_ADDON",
    "name": "INARI",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryType": "⭐ ADD-ON A+",
    "entryDate": "2026-07-08",
    "entry": 2.19,
    "entryFloor": 2.16,
@@ -20504,7 +20366,7 @@ window.HOT_THEME_ALL_TRACKER = {
   {
    "id": "INARI_2026-07-07_ADDON",
    "name": "INARI",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryType": "⭐ ADD-ON A+",
    "entryDate": "2026-07-07",
    "entry": 2.19,
    "entryFloor": 2.16,
@@ -21304,6 +21166,31 @@ window.HOT_THEME_ALL_TRACKER = {
    ],
    "confluence": 3,
    "slTrail": 2.989
+  },
+  {
+   "id": "INARI_2026-06-23_NEW",
+   "name": "INARI",
+   "entryType": "🔥 NEW",
+   "entryDate": "2026-06-23",
+   "entry": 2.18,
+   "entryFloor": 2.22,
+   "currentFloor": 2.42,
+   "currentPrice": 2.29,
+   "high": 2.52,
+   "highDate": "2026-08-10",
+   "maxGain": 15.6,
+   "finalGain": 7.7,
+   "day1ChangePct": -3.96,
+   "days": 41,
+   "lastDate": "2026-08-19",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "slTrail": 2.347,
+   "exitDate": "2026-08-19",
+   "exitPrice": 2.347
   },
   {
    "id": "MI_2026-06-23_NEW",
@@ -22747,31 +22634,6 @@ window.HOT_THEME_ALL_TRACKER = {
    ],
    "confluence": 3,
    "slTrail": 2.989
-  },
-  {
-   "id": "INARI_2026-06-03_NEW",
-   "name": "INARI",
-   "entryType": "🔥 NEW",
-   "entryDate": "2026-06-03",
-   "entry": 2.36,
-   "entryFloor": 2.2,
-   "currentFloor": 2.32,
-   "currentPrice": 2.25,
-   "high": 2.36,
-   "highDate": "2026-06-03",
-   "maxGain": 0,
-   "finalGain": -4.6,
-   "day1ChangePct": 0.85,
-   "days": 3,
-   "lastDate": "2026-06-05",
-   "status": "CLOSED_SL",
-   "themes": [
-    "Semiconductor"
-   ],
-   "confluence": 2,
-   "slTrail": 2.25,
-   "exitDate": "2026-06-05",
-   "exitPrice": 2.25
   },
   {
    "id": "VITROX_2026-06-03_NEW",
