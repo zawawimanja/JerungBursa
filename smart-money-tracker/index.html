@@ -6808,11 +6808,13 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 : ((window.FRESH_RIDER_TRACKER && Array.isArray(window.FRESH_RIDER_TRACKER.trades)) ? window.FRESH_RIDER_TRACKER.trades : []);
             const curRefDate = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || new Date().toISOString().slice(0, 10);
             const frTrackMap = new Map();
-            frTrackSource.slice().reverse().forEach(t => {
-                const k = (t.name || '').toUpperCase();
-                if (!frTrackMap.has(k) || t.entryDate === curRefDate) {
-                    frTrackMap.set(k, t);
-                }
+            // 1. Masukkan closed trades dahulu
+            frTrackSource.filter(t => t.status !== 'OPEN').sort((a,b) => (a.entryDate || '').localeCompare(b.entryDate || '')).forEach(t => {
+                frTrackMap.set((t.name || '').toUpperCase(), t);
+            });
+            // 2. OPEN trades mengatasi closed trades (posisi aktif paling terkini diutamakan!)
+            frTrackSource.filter(t => t.status === 'OPEN').sort((a,b) => (a.entryDate || '').localeCompare(b.entryDate || '')).forEach(t => {
+                frTrackMap.set((t.name || '').toUpperCase(), t);
             });
             const frFreshness = (it) => {
                 const tr = frTrackMap.get((it.name || '').toUpperCase());
@@ -6832,8 +6834,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     const tight = typeof it.closeTightness === 'number' ? it.closeTightness : 99;
 
                     // ⭐ ADD-ON A+ (AWAL): Fresh Base 1 <= 20%
-                    // 🛡️ ADD-ON (LANTAI RAPAT): Solid Base 2 (Touches >= 3, Floor <= 4.5%, Squeeze <= 3.5%, Whale >= RM 2M)
-                    const isSolidBase2 = (touches >= 3 && tight <= 3.5 && fd <= 4.5 && (toVal >= 2000000 || toVal === 0));
+                    // 🛡️ ADD-ON (LANTAI RAPAT): Solid Base 2 (Touches >= 3, Floor <= 5.0%, Squeeze <= 4.85%, Whale >= RM 2M)
+                    const isSolidBase2 = (touches >= 3 && tight <= 4.85 && fd <= 5.0 && (toVal >= 2000000 || toVal === 0));
                     const isFreshBase1 = (pct >= 0 && pct <= 20 && fd <= 3.5 && (toVal >= 2000000 || toVal === 0));
                     if (isFreshBase1) return 1; // ⭐ ADD-ON A+ (AWAL)
                     if (isSolidBase2) return 2; // 🛡️ ADD-ON (LANTAI RAPAT)
@@ -6854,7 +6856,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 const isRealUpperWickDump = it.hasUpperWickRejection === true && (it.change < 0 || (it.changePct && it.changePct < 0));
 
                 const isTierAPlus = (toVal >= 2000000 && tightValNum <= 3.5 && fDistVal >= -1.0 && fDistVal <= 3.5 && isBlackSwanClean && !isRealUpperWickDump);
-                const isTierA = (!isTierAPlus && toVal >= 1000000 && tightValNum <= 4.8 && fDistVal >= -1.5 && fDistVal <= 4.8 && isBlackSwanClean && !isRealUpperWickDump);
+                const isTierA = (!isTierAPlus && toVal >= 1000000 && tightValNum <= 4.85 && fDistVal >= -1.5 && fDistVal <= 5.0 && isBlackSwanClean && !isRealUpperWickDump);
                 return { isTierAPlus, isTierA, toVal, fDistVal, tightValNum, isBlackSwanClean, isRealUpperWickDump, swanEval };
             };
 
@@ -6968,7 +6970,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     const nameKeyAO = (p.name || '').toUpperCase();
                     const trackedEntryAO = frTrackMap.get(nameKeyAO);
                     const isTrackerConfirmedTodayAO = !!(trackedEntryAO && trackedEntryAO.status === 'OPEN' && trackedEntryAO.entryDate === curRefDate);
-                    const isAddonValid = (fresh === 1 || fresh === 2) && t.fDistVal <= 4.5 && t.fDistVal >= -1.5 && (t.toVal >= 1500000 || isTrackerConfirmedTodayAO);
+                    const isAddonValid = (fresh === 1 || fresh === 2) && t.fDistVal <= 5.0 && t.fDistVal >= -1.5 && (t.toVal >= 1500000 || isTrackerConfirmedTodayAO);
                     return isAddonValid;
                 });
             } else if (filterMode === 'fusion_only') {
@@ -7012,16 +7014,16 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         return (t.fDistVal <= 10.0 && t.fDistVal >= -2.0 && t.tightValNum <= 10.0);
                     }
 
-                    // 5. LAYAK: ⭐ ADD-ON A+ / 🛡️ ADD-ON (LANTAI RAPAT) — lantai rapat wajib <= 4.8%
+                    // 5. LAYAK: ⭐ ADD-ON A+ / 🛡️ ADD-ON (LANTAI RAPAT) — lantai rapat wajib <= 5.0%
                     if (fresh === 1 || fresh === 2) {
-                        if (t.fDistVal > 4.8 || t.fDistVal < -2.0) return false;
-                        if (t.tightValNum <= 4.8) return true;
+                        if (t.fDistVal > 5.0 || t.fDistVal < -2.0) return false;
+                        if (t.tightValNum <= 4.85) return true;
                     }
 
                     // 6. LAYAK: Tier A+ / Tier A / Fusion
                     if (t.isTierAPlus || t.isTierA) return true;
                     const isFusion = getHotThemes(p.name).length > 0;
-                    if (isFusion && t.tightValNum <= 4.8 && t.fDistVal <= 4.8) return true;
+                    if (isFusion && t.tightValNum <= 4.85 && t.fDistVal <= 5.0) return true;
 
                     return false;
                 });
@@ -9099,11 +9101,11 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 ? window.ALL_TRACKER.trades
                 : ((window.FRESH_RIDER_TRACKER && Array.isArray(window.FRESH_RIDER_TRACKER.trades)) ? window.FRESH_RIDER_TRACKER.trades : []);
             const trackedTrades = new Map();
-            allFrTradesSource.slice().reverse().forEach(t => {
-                const k = (t.name || '').toUpperCase();
-                if (!trackedTrades.has(k) || t.entryDate === todayStr) {
-                    trackedTrades.set(k, t);
-                }
+            allFrTradesSource.filter(t => t.status !== 'OPEN').sort((a,b) => (a.entryDate || '').localeCompare(b.entryDate || '')).forEach(t => {
+                trackedTrades.set((t.name || '').toUpperCase(), t);
+            });
+            allFrTradesSource.filter(t => t.status === 'OPEN').sort((a,b) => (a.entryDate || '').localeCompare(b.entryDate || '')).forEach(t => {
+                trackedTrades.set((t.name || '').toUpperCase(), t);
             });
             const todayStr = hd || (window.FRESH_RIDER_TRACKER && window.FRESH_RIDER_TRACKER.summary && window.FRESH_RIDER_TRACKER.summary.generatedAt ? window.FRESH_RIDER_TRACKER.summary.generatedAt.slice(0, 10) : new Date().toISOString().slice(0, 10));
 
