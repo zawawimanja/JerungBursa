@@ -9,9 +9,74 @@
 // =============================================================
 const fs = require('fs');
 const path = require('path');
+const vm = require('vm');
 
 const HIST_DIR = path.join(path.join(__dirname, '..'), 'history');
 const OUT_FILE = path.join(path.join(__dirname, '..'), 'hot_theme_tracker.js');
+
+let newsData = {};
+try {
+    const newsPath = path.join(path.join(__dirname, '..'), 'news_data.js');
+    if (fs.existsSync(newsPath)) {
+        const rawNews = fs.readFileSync(newsPath, 'utf8');
+        const ctx = { window: {} };
+        vm.runInNewContext(rawNews, ctx);
+        newsData = ctx.window.NEWS_DATA || ctx.NEWS_DATA || {};
+    }
+} catch (e) {}
+
+function parseDateFlexible(dStr, defaultYear) {
+    if (!dStr) return null;
+    if (/^\d{4}-\d{2}-\d{2}$/.test(dStr)) return new Date(dStr + 'T00:00:00Z');
+    const parts = dStr.trim().split(/\s+/);
+    if (parts.length >= 2) {
+        const day = parseInt(parts[0], 10);
+        const months = { jan:0, feb:1, mar:2, apr:3, may:4, jun:5, jul:6, aug:7, sep:8, oct:9, nov:10, dec:11 };
+        const m = months[parts[1].slice(0,3).toLowerCase()];
+        const yr = parts[2] ? parseInt(parts[2], 10) : (defaultYear || 2026);
+        if (!isNaN(day) && m !== undefined) return new Date(Date.UTC(yr, m, day));
+    }
+    const d = new Date(dStr);
+    return isNaN(d.getTime()) ? null : d;
+}
+
+function isBlackSwanClean(name, item, dateStr) {
+    if (!dateStr) return true;
+    const refDate = parseDateFlexible(dateStr) || new Date();
+    const up = (name || '').toUpperCase();
+    const news = newsData[up];
+
+    // 1. Semakan Ex-Dividend Trap (-1 hingga +10 hari)
+    if (news && Array.isArray(news.entitlements)) {
+        for (const ent of news.entitlements) {
+            if (!ent.isDividend || !ent.exDate) continue;
+            const exD = parseDateFlexible(ent.exDate, refDate.getUTCFullYear());
+            if (!exD) continue;
+            const diffDays = Math.round((exD.getTime() - refDate.getTime()) / (24 * 3600 * 1000));
+            if (diffDays >= -1 && diffDays <= 10) return false;
+        }
+    }
+
+    // 2. Semakan QR / Financial Results (-3 hingga +5 hari)
+    if (news && Array.isArray(news.announcements)) {
+        for (const ann of news.announcements) {
+            const cat = (ann.category || '').toUpperCase();
+            const title = (ann.title || '').toUpperCase();
+            if (title.includes('QUARTERLY') || title.includes('FINANCIAL RESULTS') || cat.includes('FINANCIAL')) {
+                const annD = parseDateFlexible(ann.date, refDate.getUTCFullYear());
+                if (annD) {
+                    const diffDays = Math.round((annD.getTime() - refDate.getTime()) / (24 * 3600 * 1000));
+                    if (diffDays >= -3 && diffDays <= 5) return false;
+                }
+            }
+        }
+    }
+
+    // 3. Post-IPO Debut Dump (< 15 hari & touchCount < 2)
+    if (item && item.ipoAge != null && item.ipoAge < 15 && (item.touchCount || 0) < 2) return false;
+
+    return true;
+}
 
 // ---- Kanonikalkan nama stok ikut symbol_mappings.json ----
 const SYM_MAP = JSON.parse(fs.readFileSync(path.join(path.join(__dirname, '..'), 'symbol_mappings.json'), 'utf8'));
@@ -119,9 +184,10 @@ function confluenceCount(item) {
 }
 
 // ---- Rule Hot Theme NEW (Day 1) ----
-function isHotThemePick(item) {
+function isHotThemePick(item, dateStr) {
     if (!item || !item.name || item.price <= 0 || item.price > 10.0) return false;
     if (isSleepingOrAvoidStock(item) || item.isCombStock) return false;
+    if (dateStr && !isBlackSwanClean(item.name, item, dateStr)) return false;
     const themes = getHotThemes(item.name);
     if (themes.length === 0) return false;
 
@@ -142,10 +208,11 @@ function isHotThemePick(item) {
 }
 
 // ---- Rule ⭐ Hot Theme ADD-ON A+ (Base 1 / Base 2 Staircase) ----
-function isHotThemeAddOnPick(item, initialBasePrice, effFloor) {
+function isHotThemeAddOnPick(item, initialBasePrice, effFloor, dateStr) {
     if (!item || !item.name || item.price <= 0 || item.price > 50.0) return false;
     if (item.signal === 'avoid' || item.isCombStock) return false;
     if (isSleepingOrAvoidStock(item)) return false;
+    if (dateStr && !isBlackSwanClean(item.name, item, dateStr)) return false;
 
     const themes = getHotThemes(item.name);
     if (themes.length === 0) return false;
@@ -285,7 +352,7 @@ for (const day of dayList) {
         if (!it || !it.name || it.price <= 0) continue;
         const name = canonName(it.name).toUpperCase();
         if (openNEW[name] || tradesNEW.some(t => t.name.toUpperCase() === name)) continue;
-        if (!isHotThemePick(it)) continue;
+        if (!isHotThemePick(it, day.date)) continue;
 
         const recentArr = recentByName[name] || [];
         if (recentArr.length > 0) {
@@ -388,7 +455,7 @@ for (const day of dayList) {
         if (!base || day.date <= base.date) continue;
 
         const effFloor = dynamicFloorAddOn(name, it.price, it.floorLow);
-        if (!isHotThemeAddOnPick(it, base.price, effFloor)) continue;
+        if (!isHotThemeAddOnPick(it, base.price, effFloor, day.date)) continue;
 
         // SOP Realistik Staircase:
         // 1. Paras harga mesti beza >= 3.5% dari mana-mana open trade sedia ada (membentuk anak tangga Base 2/3 baharu)
@@ -508,7 +575,7 @@ for (let i = 0; i < dayList.length - 3; i++) {
     for (const it of dayList[i].rows) if (it && it.name && it.price > 0 && it.price < 500) dayMap[canonName(it.name)] = it;
     for (const [name, item] of Object.entries(dayMap)) {
         if (btSeen.has(name) || item.price < 0.10) continue;
-        if (!isHotThemePick(item)) continue;
+        if (!isHotThemePick(item, dayList[i].date)) continue;
         btSeen.add(name);
         const fut = [];
         let prev = item.price, ok = true;
