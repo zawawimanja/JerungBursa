@@ -6852,21 +6852,34 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     // 1. DILARANG SAMA SEKALI: Pucuk / Extended atau SL tepi jurang
                     if (!t.isBlackSwanClean || t.isRealUpperWickDump || fresh === 4) return false;
 
-                    // 2. DILARANG: Kaunter turnover lemau / runcit (< RM 1.0M)
-                    if (t.toVal < 1000000) return false;
+                    // 2. Semak sama ada kaunter ini SUDAH DISAHKAN dalam FR Tracker hari ini
+                    // (entryDate = today & status OPEN) — data penutupan semalam sudah sahkan signal ini.
+                    // Bypass tapisan turnover pagi untuk elak desync Tracker-vs-Scanner (fix EXSIMHB / XPB bug).
+                    const nameKey = (p.name || '').toUpperCase();
+                    const trackedEntry = frTrackMap.get(nameKey);
+                    const isTrackerConfirmedToday = !!(
+                        trackedEntry &&
+                        trackedEntry.status === 'OPEN' &&
+                        trackedEntry.entryDate === curRefDate
+                    );
 
-                    // 3. LAYAK: 🔥 NEW (Day 1 Breakout) — benarkan lilin breakout hijau
+                    // 3. DILARANG: Kaunter turnover lemau / runcit (< RM 1.0M)
+                    // PENGECUALIAN: Kaunter yang SUDAH DISAHKAN dalam Tracker hari ini dibenarkan walaupun
+                    // turnover pagi rendah (data live pagi belum muktamad — pasaran baru buka).
+                    if (t.toVal < 1000000 && !isTrackerConfirmedToday) return false;
+
+                    // 4. LAYAK: 🔥 NEW (Day 1 Breakout) — benarkan lilin breakout hijau
                     if (fresh === 0) {
                         return (t.fDistVal <= 10.0 && t.fDistVal >= -2.0 && t.tightValNum <= 10.0);
                     }
 
-                    // 4. LAYAK: ⭐ ADD-ON A+ / 🛡️ ADD-ON (LANTAI RAPAT) — lantai rapat wajib <= 4.8%
+                    // 5. LAYAK: ⭐ ADD-ON A+ / 🛡️ ADD-ON (LANTAI RAPAT) — lantai rapat wajib <= 4.8%
                     if (fresh === 1 || fresh === 2) {
                         if (t.fDistVal > 4.8 || t.fDistVal < -2.0) return false;
                         if (t.tightValNum <= 4.8) return true;
                     }
 
-                    // 5. LAYAK: Tier A+ / Tier A / Fusion
+                    // 6. LAYAK: Tier A+ / Tier A / Fusion
                     if (t.isTierAPlus || t.isTierA) return true;
                     const isFusion = getHotThemes(p.name).length > 0;
                     if (isFusion && t.tightValNum <= 4.8 && t.fDistVal <= 4.8) return true;
