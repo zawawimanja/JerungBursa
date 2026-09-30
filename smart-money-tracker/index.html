@@ -6413,7 +6413,9 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             }
 
             // Fallback dengan tracker data jika ada
-            const frTrades = (window.FRESH_RIDER_TRACKER && Array.isArray(window.FRESH_RIDER_TRACKER.trades)) ? window.FRESH_RIDER_TRACKER.trades : [];
+            const frTrades = (window.ALL_TRACKER && Array.isArray(window.ALL_TRACKER.trades) && window.ALL_TRACKER.trades.length > 0)
+                ? window.ALL_TRACKER.trades
+                : ((window.FRESH_RIDER_TRACKER && Array.isArray(window.FRESH_RIDER_TRACKER.trades)) ? window.FRESH_RIDER_TRACKER.trades : []);
             frTrades.forEach(t => {
                 if (t && t.name) {
                     const nm = t.name.toUpperCase();
@@ -6801,9 +6803,17 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
             // KESEGARAN: 0 = BARU (belum ditrack / entry hari ini), 1 = ⭐ ADD-ON A+ (Base ≤ 20% & Floor ≤ 3.5%),
             // 2 = ➕ ADD-ON (Standard), 3 = ⚠️ ADD-ON (> 20% Pucuk), 4 = 🟢 RE-ENTRY
-            const frTrackMap = new Map((window.FRESH_RIDER_TRACKER && Array.isArray(window.FRESH_RIDER_TRACKER.trades) ? window.FRESH_RIDER_TRACKER.trades : [])
-                .map(t => [(t.name || '').toUpperCase(), t]));
+            const frTrackSource = (window.ALL_TRACKER && Array.isArray(window.ALL_TRACKER.trades) && window.ALL_TRACKER.trades.length > 0)
+                ? window.ALL_TRACKER.trades
+                : ((window.FRESH_RIDER_TRACKER && Array.isArray(window.FRESH_RIDER_TRACKER.trades)) ? window.FRESH_RIDER_TRACKER.trades : []);
             const curRefDate = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || new Date().toISOString().slice(0, 10);
+            const frTrackMap = new Map();
+            frTrackSource.slice().reverse().forEach(t => {
+                const k = (t.name || '').toUpperCase();
+                if (!frTrackMap.has(k) || t.entryDate === curRefDate) {
+                    frTrackMap.set(k, t);
+                }
+            });
             const frFreshness = (it) => {
                 const tr = frTrackMap.get((it.name || '').toUpperCase());
                 if (!tr) return 0;
@@ -9053,7 +9063,9 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const refDateStr = base.toISOString().slice(0, 10);
 
             const names = new Set();
-            const frTrades = (window.FRESH_RIDER_TRACKER && Array.isArray(window.FRESH_RIDER_TRACKER.trades)) ? window.FRESH_RIDER_TRACKER.trades : [];
+            const frTrades = (window.ALL_TRACKER && Array.isArray(window.ALL_TRACKER.trades) && window.ALL_TRACKER.trades.length > 0)
+                ? window.ALL_TRACKER.trades
+                : ((window.FRESH_RIDER_TRACKER && Array.isArray(window.FRESH_RIDER_TRACKER.trades)) ? window.FRESH_RIDER_TRACKER.trades : []);
             frTrades.forEach(t => {
                 if (!t || !t.name) return;
                 const eDate = t.entryDate || '';
@@ -9083,8 +9095,16 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
             const prevSet = _freshRiderPrevCache.set;
             // name -> trade object (status & entryDate)
-            const trackedTrades = new Map((window.FRESH_RIDER_TRACKER && Array.isArray(window.FRESH_RIDER_TRACKER.trades) ? window.FRESH_RIDER_TRACKER.trades : [])
-                .map(t => [(t.name || '').toUpperCase(), t]));
+            const allFrTradesSource = (window.ALL_TRACKER && Array.isArray(window.ALL_TRACKER.trades) && window.ALL_TRACKER.trades.length > 0)
+                ? window.ALL_TRACKER.trades
+                : ((window.FRESH_RIDER_TRACKER && Array.isArray(window.FRESH_RIDER_TRACKER.trades)) ? window.FRESH_RIDER_TRACKER.trades : []);
+            const trackedTrades = new Map();
+            allFrTradesSource.slice().reverse().forEach(t => {
+                const k = (t.name || '').toUpperCase();
+                if (!trackedTrades.has(k) || t.entryDate === todayStr) {
+                    trackedTrades.set(k, t);
+                }
+            });
             const todayStr = hd || (window.FRESH_RIDER_TRACKER && window.FRESH_RIDER_TRACKER.summary && window.FRESH_RIDER_TRACKER.summary.generatedAt ? window.FRESH_RIDER_TRACKER.summary.generatedAt.slice(0, 10) : new Date().toISOString().slice(0, 10));
 
             // Create lookup map of current rendered picks for exact price, floor & tightness

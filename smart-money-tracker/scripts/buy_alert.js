@@ -344,12 +344,19 @@ function loadTrackerTrades(file) {
         const raw = fs.readFileSync(file, 'utf8');
         const sandbox = { window: {} };
         vm.runInNewContext(raw, sandbox);
+        const all = sandbox.window.ALL_TRACKER;
         const fr = sandbox.window.FRESH_RIDER_TRACKER;
         const addOn = sandbox.window.ADD_ON_TRACKER;
+        const floorAddOn = sandbox.window.FLOOR_ADDON_TRACKER;
         const ht = sandbox.window.HOT_THEME_TRACKER;
         const allTrades = [];
-        if (fr && Array.isArray(fr.trades)) allTrades.push(...fr.trades);
-        if (addOn && Array.isArray(addOn.trades)) allTrades.push(...addOn.trades);
+        if (all && Array.isArray(all.trades) && all.trades.length > 0) {
+            allTrades.push(...all.trades);
+        } else {
+            if (fr && Array.isArray(fr.trades)) allTrades.push(...fr.trades);
+            if (addOn && Array.isArray(addOn.trades)) allTrades.push(...addOn.trades);
+            if (floorAddOn && Array.isArray(floorAddOn.trades)) allTrades.push(...floorAddOn.trades);
+        }
         if (ht && Array.isArray(ht.trades)) allTrades.push(...ht.trades);
         return allTrades;
     } catch (e) {

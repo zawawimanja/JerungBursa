@@ -261,6 +261,7 @@ for (const day of dayList) {
         if (!it || !it.name || it.price <= 0) continue;
         const name = canonName(it.name).toUpperCase();
         if (openFR[name] || tradesFR.some(t => t.name.toUpperCase() === name)) continue;
+        it.effFloor = dynamicFloor(name, it.price, it.floorLow);
         if (!isFreshRiderPick(it, day.date)) continue;
         const t = {
             name: canonName(it.name),
@@ -316,6 +317,7 @@ for (const day of dayList) {
     for (const it of day.rows) {
         if (!it || !it.name || it.price <= 0) continue;
         const name = canonName(it.name).toUpperCase();
+        it.effFloor = dynamicFloor(name, it.price, it.floorLow);
         if (!initialBaseMap[name] && isFreshRiderPick(it, day.date)) {
             initialBaseMap[name] = { date: day.date, price: it.price };
         }
