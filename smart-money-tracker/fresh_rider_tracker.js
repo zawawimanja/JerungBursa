@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual
 window.FRESH_RIDER_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-30T09:53:40.853Z",
+  "generatedAt": "2026-09-30T12:39:55.726Z",
   "dataDays": 82,
   "totalTracked": 22,
   "openCount": 8,
@@ -495,7 +495,7 @@ window.FRESH_RIDER_TRACKER = {
 };
 window.ADD_ON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-30T09:53:40.856Z",
+  "generatedAt": "2026-09-30T12:39:55.726Z",
   "dataDays": 82,
   "totalTracked": 16,
   "openCount": 8,
@@ -864,7 +864,7 @@ window.ADD_ON_TRACKER = {
 };
 window.FLOOR_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-30T09:53:40.856Z",
+  "generatedAt": "2026-09-30T12:39:55.726Z",
   "dataDays": 82,
   "totalTracked": 31,
   "openCount": 16,
@@ -1560,7 +1560,7 @@ window.FLOOR_ADDON_TRACKER = {
 };
 window.ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-09-30T09:53:40.856Z",
+  "generatedAt": "2026-09-30T12:39:55.726Z",
   "dataDays": 82,
   "totalTracked": 69,
   "openCount": 32,
