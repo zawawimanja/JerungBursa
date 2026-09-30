@@ -7026,6 +7026,10 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     badgesHtml += `<span style="font-size: 0.58rem; background: rgba(148, 163, 184, 0.12); color: #94a3b8; padding: 0.05rem 0.25rem; border-radius: 3px; font-weight: 700; border: 1px solid rgba(148, 163, 184, 0.25); white-space: nowrap;" title="Tracked for ${trInfo.days} trading days. Filter per SOP.">⏳ ${trInfo.days}d</span>`;
                 }
 
+                if ((item.name || '').toUpperCase() === 'BUSCAP') {
+                    badgesHtml += `<span style="font-size:0.6rem; background:red; color:white; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800;">DEBUG_HTML_OK</span>`;
+                }
+
                 // 5b. Catalyst & Jerung Intelligence Fusion Badges (EV, AI, Contract Win, Jerung 5%+)
                 const upName = (item.name || '').toUpperCase();
                 const stockNews = (window.NEWS_DATA && window.NEWS_DATA[upName]) ? window.NEWS_DATA[upName] : null;
