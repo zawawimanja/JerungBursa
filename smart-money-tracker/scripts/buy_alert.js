@@ -436,26 +436,10 @@ function buildMessage(now, out) {
     const dateStr = myt.toISOString().slice(0, 10);
     const timeStr = myt.toISOString().slice(11, 16);
 
-    let dataTxt = 'Harga: Yahoo live (last trade, sebelum tutup 5:00pm)';
-    if (out.dataTime) {
-        const dt = new Date(out.dataTime + 8 * 3600 * 1000);
-        dataTxt = `Harga: Yahoo live · last trade ${dt.toISOString().slice(11, 16)} MYT (${dt.toISOString().slice(0, 10)})`;
-    }
-
     const lines = [];
     lines.push(`🔔 *SMART MONEY TRACKER — PRE-CLOSE BUY ALERT*`);
-    lines.push(`⏰ ${dateStr} ${timeStr} MYT · ${dataTxt}`);
+    lines.push(`⏰ ${dateStr} ${timeStr} MYT · Harga: Yahoo live`);
     lines.push('');
-
-    // ---- CS timing label (csGreen = breakout danger, csRed = prime entry) ----
-    function csTimingLabel(changePct) {
-        if (changePct === null || changePct === undefined) return '';
-        if (changePct >= 5.0) return '🔴 GREEN CS (Extended/Breakout)';
-        if (changePct >= 3.0) return '🟡 YELLOW CS (Extended)';
-        if (changePct <= -3.0) return '🟢 RED CS (Prime Dip)';
-        if (changePct <= -1.0) return '🟢 RED CS (Dip)';
-        return '⚪ FLAT CS (Neutral)';
-    }
 
     // ---- Fresh Rider Top Ranking VVIP ----
     const fr = out.freshRider;
@@ -464,91 +448,106 @@ function buildMessage(now, out) {
 
     if (fr.list.length === 0) {
         lines.push('Tiada setup Fresh Rider yang menepati kriteria hari ini.');
-        lines.push('💡 _Cash is a position — tunggu peluang terbaik!_');
     } else {
-        fr.list.forEach((s, i) => {
-            const medal = i === 0 ? '🥇' : (i === 1 ? '🥈' : (i === 2 ? '🥉' : '🔹'));
-            const themes = getHotThemes(s.name);
-            const themeTxt = themes.length > 0 ? ` · ${themes.join('/')}` : '';
+        fr.list.forEach((s) => {
+            const tvUrl = `https://www.tradingview.com/chart/?symbol=MYX:${s.name}&interval=D`;
+            const gradeStr = s.grade && s.grade !== '—' ? ` (${s.grade})` : '';
             const toVal = s.turnover || 0;
-            const toStr = toVal >= 1e6 ? `RM ${(toVal / 1e6).toFixed(2)}M` : `RM ${(toVal / 1e3).toFixed(0)}k`;
-            const toEmoji = toVal >= 2e6 ? ' 🔥' : '';
+            const toStr = toVal >= 1e6 ? `RM ${(toVal / 1e6).toFixed(2)}M 🔥` : toVal >= 500000 ? `RM ${(toVal / 1e3).toFixed(0)}k` : `RM ${(toVal / 1e3).toFixed(0)}k`;
             const tightStr = s.tight != null ? `${s.tight.toFixed(2)}%` : '—';
             const pbStr = s.pullback != null ? `${s.pullback.toFixed(1)}%` : '—';
-            const csTxt = csTimingLabel(s.changePct);
-            const gradeStr = s.grade && s.grade !== '—' ? ` · Gred ${s.grade}` : '';
+            const fDist = s.floorDist != null ? s.floorDist : 0;
+            const floorDistStr = (fDist >= 0 ? '+' : '') + fDist.toFixed(1) + '%';
+            const rrRatio = fDist > 0 ? (10.0 / fDist).toFixed(1) : '—';
+            const touchCount = s.touchCount || s.touch || 0;
+            const changeStr = (s.changePct > 0 ? '+' : '') + (s.changePct != null ? s.changePct.toFixed(2) : '0.00') + '%';
+            
+            // Catalyst badges — pisahkan positif dan risiko
             const POSITIVE_TYPES = new Set(['JERUNG_5PCT','EV_CATALYST','AI_CATALYST','CONTRACT_WIN']);
-            const positiveBadges = (s.newsBadges || []).filter(b => POSITIVE_TYPES.has(b.type));
-            const riskBadges     = (s.newsBadges || []).filter(b => !POSITIVE_TYPES.has(b.type));
-            const newsAlertTxt   = [
-                positiveBadges.length > 0 ? `\n   ✅ *Whale / Catalyst:* ${positiveBadges.map(b => b.label).join(' · ')}` : '',
-                riskBadges.length > 0     ? `\n   ⚠️ *Risk Alert:* ${riskBadges.map(b => b.label).join(' · ')}`          : ''
-            ].join('');
+            const positiveBadges = (s.newsBadges || []).filter(b => POSITIVE_TYPES.has(b.type)).map(b => b.label).join('');
+            const kumpulanBadge = s.isKumpulan ? '🏛️ KUMPULAN' : '';
+            const catalystTxt = `${kumpulanBadge}${positiveBadges}🟢 🛡️ Swan: PASS`;
 
-            const tierTxt = s.tierBadge ? ` [${s.tierBadge}]` : '';
-            lines.push(`${medal} *${s.name}*${tierTxt} (${s.label}${gradeStr}${themeTxt})`);
-            lines.push(`   💵 Harga: *RM ${fmtPrice(s.price)}* (${fmtPct(s.changePct)}) · ${csTxt}`);
-            lines.push(`   📐 Squeeze: Tight *${tightStr}* | PB *${pbStr}*`);
-            lines.push(`   🛡️ SL: *RM ${fmtPrice(s.sl)}* | Floor: *RM ${fmtPrice(s.floor)}*`);
-            lines.push(`   💰 Turnover: *${toStr}*${toEmoji}${newsAlertTxt}`);
+            // Dynamic dist from trigger (fresh=0 show DAY 1, else show % from floor)
+            const isFreshDay1 = (s._freshness === 0 || Math.abs(fDist) < 0.1);
+            const distBadge = isFreshDay1 ? '🟢 0.0% (DAY 1)' : (fDist <= 3.0 ? `🟢 +${fDist.toFixed(1)}%` : `⚪ +${fDist.toFixed(1)}%`);
+
+            // Sector tag
+            const sectorTag = s.sector ? ` · ${s.sector}` : '';
+
+            // Confluence
+            const confCount = s.confluence || 0;
+            const confStr = confCount >= 3 ? `🔥 TRIPLE (${confCount}x)` : confCount >= 2 ? `YES (${confCount}x)` : confCount >= 1 ? `YES (${confCount}x)` : '—';
+
+            lines.push(`[${s.name}🔗](${tvUrl})${gradeStr}${s.label}${sectorTag}`);
+            lines.push(`${catalystTxt}`);
+            lines.push(`tight ${tightStr}`);
+            lines.push(`RM ${s.floor.toFixed(3)}`);
+            lines.push(`${floorDistStr} (${touchCount}x)`);
+            lines.push(`R:R 1:${rrRatio}`);
+            lines.push(`RM ${s.price.toFixed(3)} (Hari Ini)`);
+            lines.push(`${distBadge}`);
+            lines.push(`${pbStr}`);
+            lines.push(`RM ${s.price.toFixed(3)}`);
+            lines.push(`${changeStr}`);
+            lines.push(`${toStr}`);
+            lines.push(`${confStr}`);
+            lines.push(`${s.confidenceScore || 0}/100📜✨ AI`);
             lines.push('');
         });
     }
 
-    // ---- Hot Theme Sector Riders (Semiconductors, Solar, AI) ----
+    // ---- Hot Theme Sector Riders ----
     const ht = out.hotTheme;
     if (ht && ht.list && ht.list.length > 0) {
-        // Ambil Top Hot Theme picks mengikut susunan rasmi Top Ranking web
-        const finalHtList = ht.list.slice(0, 4);
-
-        lines.push(`⚡ *HOT THEME RIDERS (${finalHtList.length} Top Sector Leaders)*`);
+        lines.push(`⚡ *HOT THEME RIDERS (${ht.list.length} Top Sector Leaders)*`);
         lines.push('──────────────────────────────');
 
-        finalHtList.forEach((s, i) => {
-            const medal = i === 0 ? '🥇' : (i === 1 ? '🥈' : (i === 2 ? '🥉' : '🔹'));
-            const themes = getHotThemes(s.name);
-            const themeTxt = themes.length > 0 ? ` · ${themes.join('/')}` : '';
+        ht.list.forEach((s) => {
+            const tvUrl = `https://www.tradingview.com/chart/?symbol=MYX:${s.name}&interval=D`;
             const toVal = s.turnover || 0;
-            const toStr = toVal >= 1e6 ? `RM ${(toVal / 1e6).toFixed(2)}M` : `RM ${(toVal / 1e3).toFixed(0)}k`;
-            const toEmoji = toVal >= 2e6 ? ' 🔥' : '';
+            const toStr = toVal >= 1e6 ? `RM ${(toVal / 1e6).toFixed(2)}M 🔥` : toVal >= 500000 ? `RM ${(toVal / 1e3).toFixed(0)}k` : `RM ${(toVal / 1e3).toFixed(0)}k`;
             const tightStr = s.tight != null ? `${s.tight.toFixed(2)}%` : '—';
             const pbStr = s.pullback != null ? `${s.pullback.toFixed(1)}%` : '—';
-            const csTxt = csTimingLabel(s.changePct);
-            const confTxt = s.confluence ? ` · Confluence ${s.confluence}x` : '';
+            const fDist = s.floorDist != null ? s.floorDist : 0;
+            const floorDistStr = (fDist >= 0 ? '+' : '') + fDist.toFixed(1) + '%';
+            const rrRatio = fDist > 0 ? (10.0 / fDist).toFixed(1) : '—';
+            const touchCount = s.touchCount || s.touch || 0;
+            const changeStr = (s.changePct > 0 ? '+' : '') + (s.changePct != null ? s.changePct.toFixed(2) : '0.00') + '%';
+            const gradeStr = s.grade && s.grade !== '—' ? ` (${s.grade})` : '';
+            
+            // Catalyst badges — same as FR
             const POSITIVE_TYPES_HT = new Set(['JERUNG_5PCT','EV_CATALYST','AI_CATALYST','CONTRACT_WIN']);
-            const positiveBadgesHT = (s.newsBadges || []).filter(b => POSITIVE_TYPES_HT.has(b.type));
-            const riskBadgesHT     = (s.newsBadges || []).filter(b => !POSITIVE_TYPES_HT.has(b.type));
-            const newsAlertTxt     = [
-                positiveBadgesHT.length > 0 ? `\n   ✅ *Whale / Catalyst:* ${positiveBadgesHT.map(b => b.label).join(' · ')}` : '',
-                riskBadgesHT.length > 0     ? `\n   ⚠️ *Risk Alert:* ${riskBadgesHT.map(b => b.label).join(' · ')}`          : ''
-            ].join('');
+            const positiveBadgesHT = (s.newsBadges || []).filter(b => POSITIVE_TYPES_HT.has(b.type)).map(b => b.label).join('');
+            const catalystTxt = `${positiveBadgesHT}🟢 🛡️ Swan: PASS`;
 
-            const tierTxt = s.tierBadge ? ` [${s.tierBadge}]` : '';
-            lines.push(`${medal} *${s.name}*${tierTxt} (${s.label}${themeTxt}${confTxt})`);
-            lines.push(`   💵 Harga: *RM ${fmtPrice(s.price)}* (${fmtPct(s.changePct)}) · ${csTxt}`);
-            lines.push(`   📐 Squeeze: Tight *${tightStr}* | PB *${pbStr}*`);
-            lines.push(`   🛡️ SL: *RM ${fmtPrice(s.sl)}* | Floor: *RM ${fmtPrice(s.floor)}*`);
-            lines.push(`   💰 Turnover: *${toStr}*${toEmoji}${newsAlertTxt}`);
+            // Sector tag + confluence
+            const sectorTag = s.sector ? ` · ${s.sector}` : '';
+            const confCount = s.confluence || 0;
+            const confStr = confCount >= 3 ? `🔥 TRIPLE (${confCount}x)` : confCount >= 2 ? `YES (${confCount}x)` : confCount >= 1 ? `YES (${confCount}x)` : '—';
+
+            // Dynamic dist badge
+            const isFreshDay1 = (s._freshness === 0 || Math.abs(fDist) < 0.1);
+            const distBadge = isFreshDay1 ? '🟢 0.0% (DAY 1)' : (fDist <= 3.0 ? `🟢 +${fDist.toFixed(1)}%` : `⚪ +${fDist.toFixed(1)}%`);
+
+            lines.push(`[${s.name}🔗](${tvUrl})${gradeStr}${s.label}${sectorTag}`);
+            lines.push(`${catalystTxt}`);
+            lines.push(`tight ${tightStr}`);
+            lines.push(`RM ${s.floor.toFixed(3)}`);
+            lines.push(`${floorDistStr} (${touchCount}x)`);
+            lines.push(`R:R 1:${rrRatio}`);
+            lines.push(`RM ${s.price.toFixed(3)} (Hari Ini)`);
+            lines.push(`${distBadge}`);
+            lines.push(`${pbStr}`);
+            lines.push(`RM ${s.price.toFixed(3)}`);
+            lines.push(`${changeStr}`);
+            lines.push(`${toStr}`);
+            lines.push(`${confStr}`);
+            lines.push(`${s.confidenceScore || 0}/100📜✨ AI`);
             lines.push('');
         });
     }
 
-    // ---- SL warning (hanya untuk kaunter FR / Portfolio) ----
-    const frSl = (out.slWarnings || []).filter(w => w.tracker === 'FR');
-    if (frSl.length > 0) {
-        lines.push('⚠️ *AMARAN STOP LOSS (FR Tracker)*:');
-        for (const w of frSl) {
-            lines.push(`   • *${w.name}*: RM ${w.price} vs SL RM ${w.slTrail}`);
-        }
-        lines.push('');
-    }
-
-    lines.push('🧭 *SOP 4-LANGKAH TAPISAN JERUNG & TEKNIK JUAL 50%*:');
-    lines.push('1. Utamakan *🔥 NEW (Day 1)* atau *⭐ TIER A+ SNIPER* — masuk zon selamat dari tapak.');
-    lines.push('2. *➕ ADD-ON*: Utamakan *⭐ ADD-ON A+* (Base ≤ 20%, Lantai ≤ 3.5%, Turnover ≥ RM 2M). Elak ADD-ON pucuk (> 20%) atau lemau.');
-    lines.push('3. Risiko SL wajib ≤ 5% (bawah lantai sokongan rapat).');
-    lines.push('4. *💰 TEKNIK JUAL 50% (Scale-Out)*: Capai TP1 (+10%), wajib tuai 50% lot masuk poket, naikkan SL baki ke modal (Free Trade), biarkan baki 50% menunggang ke TP2 (+20%+)!');
-    lines.push('');
     lines.push('Generated by buy_alert.js · JerungBursa');
     return lines.join('\n');
 }
@@ -652,27 +651,63 @@ function buildMessage(now, out) {
     if (refreshed) console.log(`🔄 ${refreshed} kaunter snapshot stale dikemas kini dari Yahoo 1y`);
 
     // 5. Lantai DINAMIK & Pengiraan Kesegaran (100% Selari dengan index.html)
-    const allCand = new Set(candidates.map(s => canonName(s.name).toUpperCase()));
-    const recentFloor = new Map();
-    let validDaysCount = 0;
-    for (let back = 1; back <= 15 && validDaysCount < 5; back++) {
-        const d = new Date(now.getTime() - back * 24 * 3600 * 1000);
-        const ds = d.toISOString().slice(0, 10);
-        if (!isTradingDay(ds)) continue;
-        validDaysCount++;
-        const day = loadHistoryDay(ds);
-        for (const it of day) {
-            if (!it || !it.name || !(it.price > 0)) continue;
-            const up = canonName(it.name).toUpperCase();
-            if (!allCand.has(up)) continue;
-            const cur = recentFloor.get(up);
-            if (cur === undefined || it.price < cur) recentFloor.set(up, it.price);
-        }
+    function getRecentFloorMap() {
+        const minMap = new Map();
+        try {
+            const eqFile = path.join(path.join(__dirname, '..'), 'daily_equity_tracker.js');
+            if (fs.existsSync(eqFile)) {
+                const eqCode = fs.readFileSync(eqFile, 'utf8');
+                const sandbox = { window: {} };
+                vm.runInNewContext(eqCode, sandbox);
+                const eqData = sandbox.window.DAILY_EQUITY_TRACKER;
+                if (eqData && Array.isArray(eqData.timeline) && eqData.timeline.length > 0) {
+                    const timeline = eqData.timeline;
+                    const startIdx = Math.max(0, timeline.length - 1 - 5);
+                    for (let i = startIdx; i < timeline.length; i++) {
+                        const snap = timeline[i];
+                        if (snap && Array.isArray(snap.trades)) {
+                            snap.trades.forEach(it => {
+                                if (!it || !it.name) return;
+                                const price = it.priceOnDay || it.currentPrice || it.entry;
+                                if (price > 0) {
+                                    const nm = (it.name || '').toUpperCase();
+                                    const cur = minMap.get(nm);
+                                    if (cur === undefined || price < cur) minMap.set(nm, price);
+                                }
+                            });
+                        }
+                    }
+                }
+            }
+        } catch (e) { /* fallback */ }
+
+        frTrades.forEach(t => {
+            if (t && t.name) {
+                const nm = (t.name || '').toUpperCase();
+                if (!minMap.has(nm)) {
+                    const fl = t.currentFloor || t.entryFloor || (t.entry ? t.entry * 0.95 : 0);
+                    if (fl > 0) minMap.set(nm, fl);
+                }
+            }
+        });
+        return minMap;
     }
+    const recentFloor = getRecentFloorMap();
     function effFloor(name, price, floorLow) {
-        const rf = recentFloor.get(canonName(name).toUpperCase());
+        const nm = canonName(name).toUpperCase();
+        const rf = recentFloor.get(nm) || 0;
         const f = floorLow || 0;
-        if (f > 0 && rf > 0 && ((price - f) / f) > 0.10) return Math.max(f, rf);
+        // Guna currentFloor dari FR Tracker sebagai lantai dinamik staircase (sama seperti web getRecentFloorMap)
+        const frTr = frTrackMap.get(nm);
+        const trFloor = (frTr && frTr.status === 'OPEN') ? (frTr.currentFloor || frTr.entryFloor || 0) : 0;
+        if (f > 0 && ((price - f) / f) > 0.10) {
+            // Breakout jauh (>10%) — guna max dari semua lantai sebagai staircase floor
+            let cands = [f, rf].filter(v => v > 0);
+            if (trFloor > 0 && trFloor <= price * 1.02) cands.push(trFloor);
+            return cands.length ? Math.max(...cands) : f;
+        }
+        // Dalam base asal — kekalkan floorLow atau tracker entryFloor
+        if (trFloor > 0 && trFloor <= price * 1.02) return Math.max(f, Math.min(trFloor, price * 1.0));
         return f || rf || 0;
     }
 
@@ -932,6 +967,9 @@ function buildMessage(now, out) {
             turnover: tier.toVal,
             grade: s.ipoGrade || s.ipoYear || '—',
             confidenceScore: s.confidenceScore || 0,
+            sector: s.sector || '',
+            confluence: confluenceCount(s),
+            isKumpulan: getHotThemes(s.name).length > 0,
             _tier: tier,
             _freshness: fresh
         };
@@ -955,6 +993,10 @@ function buildMessage(now, out) {
             isTierA: tier.isTierA,
             touch: s.touchCount || 0,
             turnover: tier.toVal,
+            grade: s.ipoGrade || s.ipoYear || '—',
+            confidenceScore: s.confidenceScore || 0,
+            sector: s.sector || '',
+            isKumpulan: false,
             _tier: tier,
             _freshness: fresh
         };
