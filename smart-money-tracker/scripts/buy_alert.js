@@ -464,9 +464,13 @@ function buildMessage(now, out) {
             const pbStr = s.pullback != null ? `${s.pullback.toFixed(1)}%` : '—';
             const csTxt = csTimingLabel(s.changePct);
             const gradeStr = s.grade && s.grade !== '—' ? ` · Gred ${s.grade}` : '';
-            const newsAlertTxt = (s.newsBadges && s.newsBadges.length > 0)
-                ? `\n   ⚠️ *BERITA / EX-DIV:* ${s.newsBadges.map(b => b.label).join(' · ')}`
-                : '';
+            const POSITIVE_TYPES = new Set(['JERUNG_5PCT','EV_CATALYST','AI_CATALYST','CONTRACT_WIN']);
+            const positiveBadges = (s.newsBadges || []).filter(b => POSITIVE_TYPES.has(b.type));
+            const riskBadges     = (s.newsBadges || []).filter(b => !POSITIVE_TYPES.has(b.type));
+            const newsAlertTxt   = [
+                positiveBadges.length > 0 ? `\n   ✅ *Whale / Catalyst:* ${positiveBadges.map(b => b.label).join(' · ')}` : '',
+                riskBadges.length > 0     ? `\n   ⚠️ *Risk Alert:* ${riskBadges.map(b => b.label).join(' · ')}`          : ''
+            ].join('');
 
             const tierTxt = s.tierBadge ? ` [${s.tierBadge}]` : '';
             lines.push(`${medal} *${s.name}*${tierTxt} (${s.label}${gradeStr}${themeTxt})`);
@@ -499,9 +503,13 @@ function buildMessage(now, out) {
             const pbStr = s.pullback != null ? `${s.pullback.toFixed(1)}%` : '—';
             const csTxt = csTimingLabel(s.changePct);
             const confTxt = s.confluence ? ` · Confluence ${s.confluence}x` : '';
-            const newsAlertTxt = (s.newsBadges && s.newsBadges.length > 0)
-                ? `\n   ⚠️ *BERITA / EX-DIV:* ${s.newsBadges.map(b => b.label).join(' · ')}`
-                : '';
+            const POSITIVE_TYPES_HT = new Set(['JERUNG_5PCT','EV_CATALYST','AI_CATALYST','CONTRACT_WIN']);
+            const positiveBadgesHT = (s.newsBadges || []).filter(b => POSITIVE_TYPES_HT.has(b.type));
+            const riskBadgesHT     = (s.newsBadges || []).filter(b => !POSITIVE_TYPES_HT.has(b.type));
+            const newsAlertTxt     = [
+                positiveBadgesHT.length > 0 ? `\n   ✅ *Whale / Catalyst:* ${positiveBadgesHT.map(b => b.label).join(' · ')}` : '',
+                riskBadgesHT.length > 0     ? `\n   ⚠️ *Risk Alert:* ${riskBadgesHT.map(b => b.label).join(' · ')}`          : ''
+            ].join('');
 
             const tierTxt = s.tierBadge ? ` [${s.tierBadge}]` : '';
             lines.push(`${medal} *${s.name}*${tierTxt} (${s.label}${themeTxt}${confTxt})`);
