@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-10-01T09:10:51.113Z",
+ "generatedAt": "2026-10-01T09:20:50.688Z",
  "totalDays": 83,
  "startDate": "2026-06-02",
  "endDate": "2026-10-01",
@@ -153036,7 +153036,7 @@ window.DAILY_EQUITY_TRACKER = {
    "frPnl": 452.4,
    "addOnPnl": 726.1,
    "htPnl": 3474.1,
-   "dailyPnlDelta": -111.7,
+   "dailyPnlDelta": -112.3,
    "winRate": 65,
    "avgGain": 11.9,
    "peakGainer": {
@@ -154472,8 +154472,8 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "OPEN",
      "priceOnDay": 7.68,
      "gainOnDay": 22.9,
-     "dayChangePct": 0.52,
-     "pnlDeltaToday": 0.6
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "name": "PENTA",

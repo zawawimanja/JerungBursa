@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-01T09:10:50.568Z",
+  "generatedAt": "2026-10-01T09:20:50.136Z",
   "dataDays": 87,
   "totalTracked": 319,
   "openCount": 175,
@@ -628,10 +628,10 @@ window.HOT_THEME_TRACKER = {
   },
   {
    "date": "2026-10-01",
-   "themePct": 27.4,
-   "themeCount": 76,
-   "totalCount": 309,
-   "ma5": 24.4
+   "themePct": 26.8,
+   "themeCount": 75,
+   "totalCount": 308,
+   "ma5": 24.2
   }
  ],
  "themeTrend": "FLAT/FALLING",
@@ -2625,14 +2625,14 @@ window.HOT_THEME_TRACKER = {
    "entryDate": "2026-08-21",
    "entry": 6.25,
    "entryFloor": 7.79,
-   "currentFloor": 7.52,
+   "currentFloor": 7.68,
    "currentPrice": 7.68,
    "high": 7.95,
    "highDate": "2026-09-15",
    "maxGain": 27.2,
    "finalGain": 22.9,
    "day1ChangePct": -1.11,
-   "days": 8,
+   "days": 30,
    "lastDate": "2026-10-01",
    "status": "OPEN",
    "themes": [
@@ -8269,7 +8269,7 @@ window.HOT_THEME_TRACKER = {
 };
 window.HOT_THEME_NEW_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-01T09:10:50.568Z",
+  "generatedAt": "2026-10-01T09:20:50.137Z",
   "dataDays": 87,
   "totalTracked": 49,
   "openCount": 11,
@@ -9379,14 +9379,14 @@ window.HOT_THEME_NEW_TRACKER = {
    "entryDate": "2026-08-21",
    "entry": 6.25,
    "entryFloor": 7.79,
-   "currentFloor": 7.52,
+   "currentFloor": 7.68,
    "currentPrice": 7.68,
    "high": 7.95,
    "highDate": "2026-09-15",
    "maxGain": 27.2,
    "finalGain": 22.9,
    "day1ChangePct": -1.11,
-   "days": 8,
+   "days": 30,
    "lastDate": "2026-10-01",
    "status": "OPEN",
    "themes": [
@@ -9489,7 +9489,7 @@ window.HOT_THEME_NEW_TRACKER = {
 };
 window.HOT_THEME_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-01T09:10:50.569Z",
+  "generatedAt": "2026-10-01T09:20:50.137Z",
   "dataDays": 87,
   "totalTracked": 116,
   "openCount": 61,
@@ -12283,7 +12283,7 @@ window.HOT_THEME_ADDON_TRACKER = {
 };
 window.HOT_THEME_FLOOR_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-01T09:10:50.569Z",
+  "generatedAt": "2026-10-01T09:20:50.137Z",
   "dataDays": 87,
   "totalTracked": 154,
   "openCount": 103,
@@ -15949,7 +15949,7 @@ window.HOT_THEME_FLOOR_TRACKER = {
 };
 window.HOT_THEME_ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-01T09:10:50.568Z",
+  "generatedAt": "2026-10-01T09:20:50.136Z",
   "dataDays": 87,
   "totalTracked": 319,
   "openCount": 175,
@@ -17951,14 +17951,14 @@ window.HOT_THEME_ALL_TRACKER = {
    "entryDate": "2026-08-21",
    "entry": 6.25,
    "entryFloor": 7.79,
-   "currentFloor": 7.52,
+   "currentFloor": 7.68,
    "currentPrice": 7.68,
    "high": 7.95,
    "highDate": "2026-09-15",
    "maxGain": 27.2,
    "finalGain": 22.9,
    "day1ChangePct": -1.11,
-   "days": 8,
+   "days": 30,
    "lastDate": "2026-10-01",
    "status": "OPEN",
    "themes": [
