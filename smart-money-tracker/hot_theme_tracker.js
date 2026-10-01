@@ -1,17 +1,17 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-01T06:01:03.640Z",
+  "generatedAt": "2026-10-01T06:10:51.722Z",
   "dataDays": 87,
-  "totalTracked": 319,
-  "openCount": 200,
+  "totalTracked": 320,
+  "openCount": 201,
   "closedCount": 119,
   "closedWins": 84,
   "closedWinRate": 71,
   "closedAvgGain": 14.4,
-  "openPnl": 1829.6,
+  "openPnl": 1839.7,
   "closedPnl": 1709.3,
-  "totalPnlNow": 3538.9
+  "totalPnlNow": 3549
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -2590,6 +2590,29 @@ window.HOT_THEME_TRACKER = {
    ],
    "confluence": 3,
    "slTrail": 4.85
+  },
+  {
+   "id": "SAM_2026-08-24_ADDON",
+   "name": "SAM",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-08-24",
+   "entry": 1.68,
+   "entryFloor": 1.67,
+   "currentFloor": 1.71,
+   "currentPrice": 1.85,
+   "high": 1.85,
+   "highDate": "2026-09-07",
+   "maxGain": 10.1,
+   "finalGain": 10.1,
+   "day1ChangePct": -2.89,
+   "days": 9,
+   "lastDate": "2026-09-07",
+   "status": "OPEN",
+   "themes": [
+    "Solar/RE"
+   ],
+   "confluence": 3,
+   "slTrail": 1.665
   },
   {
    "id": "CRPMATE_2026-08-21_NEW",
@@ -8219,7 +8242,7 @@ window.HOT_THEME_TRACKER = {
 };
 window.HOT_THEME_NEW_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-01T06:01:03.640Z",
+  "generatedAt": "2026-10-01T06:10:51.722Z",
   "dataDays": 87,
   "totalTracked": 48,
   "openCount": 10,
@@ -9417,7 +9440,7 @@ window.HOT_THEME_NEW_TRACKER = {
 };
 window.HOT_THEME_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-01T06:01:03.640Z",
+  "generatedAt": "2026-10-01T06:10:51.723Z",
   "dataDays": 87,
   "totalTracked": 117,
   "openCount": 77,
@@ -12203,17 +12226,17 @@ window.HOT_THEME_ADDON_TRACKER = {
 };
 window.HOT_THEME_FLOOR_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-01T06:01:03.640Z",
+  "generatedAt": "2026-10-01T06:10:51.723Z",
   "dataDays": 87,
-  "totalTracked": 154,
-  "openCount": 113,
+  "totalTracked": 155,
+  "openCount": 114,
   "closedCount": 41,
   "closedWins": 31,
   "closedWinRate": 76,
   "closedAvgGain": 14.2,
-  "openPnl": 858.1,
+  "openPnl": 868.2,
   "closedPnl": 582.4,
-  "totalPnlNow": 1440.5
+  "totalPnlNow": 1450.6
  },
  "trades": [
   {
@@ -14325,6 +14348,29 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "slTrail": 6.315
   },
   {
+   "id": "SAM_2026-08-24_ADDON",
+   "name": "SAM",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-08-24",
+   "entry": 1.68,
+   "entryFloor": 1.67,
+   "currentFloor": 1.71,
+   "currentPrice": 1.85,
+   "high": 1.85,
+   "highDate": "2026-09-07",
+   "maxGain": 10.1,
+   "finalGain": 10.1,
+   "day1ChangePct": -2.89,
+   "days": 9,
+   "lastDate": "2026-09-07",
+   "status": "OPEN",
+   "themes": [
+    "Solar/RE"
+   ],
+   "confluence": 3,
+   "slTrail": 1.665
+  },
+  {
    "id": "VITROX_2026-08-26_ADDON",
    "name": "VITROX",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -15849,17 +15895,17 @@ window.HOT_THEME_FLOOR_TRACKER = {
 };
 window.HOT_THEME_ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-01T06:01:03.640Z",
+  "generatedAt": "2026-10-01T06:10:51.722Z",
   "dataDays": 87,
-  "totalTracked": 319,
-  "openCount": 200,
+  "totalTracked": 320,
+  "openCount": 201,
   "closedCount": 119,
   "closedWins": 84,
   "closedWinRate": 71,
   "closedAvgGain": 14.4,
-  "openPnl": 1829.6,
+  "openPnl": 1839.7,
   "closedPnl": 1709.3,
-  "totalPnlNow": 3538.9
+  "totalPnlNow": 3549
  },
  "trades": [
   {
@@ -17816,6 +17862,29 @@ window.HOT_THEME_ALL_TRACKER = {
    ],
    "confluence": 3,
    "slTrail": 4.85
+  },
+  {
+   "id": "SAM_2026-08-24_ADDON",
+   "name": "SAM",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-08-24",
+   "entry": 1.68,
+   "entryFloor": 1.67,
+   "currentFloor": 1.71,
+   "currentPrice": 1.85,
+   "high": 1.85,
+   "highDate": "2026-09-07",
+   "maxGain": 10.1,
+   "finalGain": 10.1,
+   "day1ChangePct": -2.89,
+   "days": 9,
+   "lastDate": "2026-09-07",
+   "status": "OPEN",
+   "themes": [
+    "Solar/RE"
+   ],
+   "confluence": 3,
+   "slTrail": 1.665
   },
   {
    "id": "CRPMATE_2026-08-21_NEW",

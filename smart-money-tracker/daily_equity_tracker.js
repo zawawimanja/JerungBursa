@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-10-01T06:01:04.182Z",
+ "generatedAt": "2026-10-01T06:10:52.241Z",
  "totalDays": 83,
  "startDate": "2026-06-02",
  "endDate": "2026-10-01",
@@ -78387,8 +78387,8 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-24",
-   "totalSignals": 284,
-   "openCount": 209,
+   "totalSignals": 285,
+   "openCount": 210,
    "closedCount": 75,
    "openPnl": 1863.1,
    "closedPnl": 596.7,
@@ -78396,9 +78396,9 @@ window.DAILY_EQUITY_TRACKER = {
    "frPnl": 375.5,
    "addOnPnl": 507.9,
    "htPnl": 1576.4,
-   "dailyPnlDelta": -329.6,
+   "dailyPnlDelta": -332.6,
    "winRate": 61,
-   "avgGain": 8.7,
+   "avgGain": 8.6,
    "peakGainer": {
     "gain": 125.7,
     "name": "KEEMING"
@@ -78853,6 +78853,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 0,
      "dayChangePct": -3.36,
      "pnlDeltaToday": -3.5
+    },
+    {
+     "name": "SAM",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 1.68,
+     "gainOnDay": 0,
+     "dayChangePct": -2.89,
+     "pnlDeltaToday": -3
     },
     {
      "name": "CRPMATE",
@@ -80964,16 +80973,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-26",
-   "totalSignals": 287,
-   "openCount": 211,
+   "totalSignals": 288,
+   "openCount": 212,
    "closedCount": 76,
-   "openPnl": 2189.9,
+   "openPnl": 2191.1,
    "closedPnl": 591.1,
-   "totalPnl": 2781,
+   "totalPnl": 2782.2,
    "frPnl": 402.5,
    "addOnPnl": 584.9,
-   "htPnl": 1793.6,
-   "dailyPnlDelta": 338.1,
+   "htPnl": 1794.8,
+   "dailyPnlDelta": 339.3,
    "winRate": 63,
    "avgGain": 9.7,
    "peakGainer": {
@@ -81457,6 +81466,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 3.5,
      "dayChangePct": 3.48,
      "pnlDeltaToday": 3.5
+    },
+    {
+     "name": "SAM",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 1.7,
+     "gainOnDay": 1.2,
+     "dayChangePct": 1.19,
+     "pnlDeltaToday": 1.2
     },
     {
      "name": "CRPMATE",
@@ -83568,16 +83586,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-27",
-   "totalSignals": 288,
-   "openCount": 212,
+   "totalSignals": 289,
+   "openCount": 213,
    "closedCount": 76,
-   "openPnl": 2437.1,
+   "openPnl": 2442.5,
    "closedPnl": 591.1,
-   "totalPnl": 3028.2,
+   "totalPnl": 3033.6,
    "frPnl": 393,
    "addOnPnl": 555.4,
-   "htPnl": 2079.8,
-   "dailyPnlDelta": 249.6,
+   "htPnl": 2085.2,
+   "dailyPnlDelta": 253.8,
    "winRate": 70,
    "avgGain": 10.5,
    "peakGainer": {
@@ -84070,6 +84088,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 4.6,
      "dayChangePct": 1.12,
      "pnlDeltaToday": 1.2
+    },
+    {
+     "name": "SAM",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 1.77,
+     "gainOnDay": 5.4,
+     "dayChangePct": 4.12,
+     "pnlDeltaToday": 4.2
     },
     {
      "name": "CRPMATE",
@@ -86181,16 +86208,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-28",
-   "totalSignals": 291,
-   "openCount": 206,
+   "totalSignals": 292,
+   "openCount": 207,
    "closedCount": 85,
-   "openPnl": 1945.8,
+   "openPnl": 1947.6,
    "closedPnl": 817.9,
-   "totalPnl": 2763.7,
+   "totalPnl": 2765.5,
    "frPnl": 377.1,
    "addOnPnl": 499.7,
-   "htPnl": 1886.9,
-   "dailyPnlDelta": -265.7,
+   "htPnl": 1888.7,
+   "dailyPnlDelta": -269.3,
    "winRate": 68,
    "avgGain": 9.5,
    "peakGainer": {
@@ -86710,6 +86737,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 1.4,
      "dayChangePct": -3.14,
      "pnlDeltaToday": -3.3
+    },
+    {
+     "name": "SAM",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 1.71,
+     "gainOnDay": 1.8,
+     "dayChangePct": -3.39,
+     "pnlDeltaToday": -3.6
     },
     {
      "name": "CRPMATE",
@@ -88821,16 +88857,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-01",
-   "totalSignals": 294,
-   "openCount": 199,
+   "totalSignals": 295,
+   "openCount": 200,
    "closedCount": 95,
-   "openPnl": 1483.7,
+   "openPnl": 1486.7,
    "closedPnl": 952.6,
-   "totalPnl": 2436.3,
+   "totalPnl": 2439.3,
    "frPnl": 376.5,
    "addOnPnl": 440,
-   "htPnl": 1619.8,
-   "dailyPnlDelta": -353.3,
+   "htPnl": 1622.8,
+   "dailyPnlDelta": -352.1,
    "winRate": 64,
    "avgGain": 8.3,
    "peakGainer": {
@@ -89377,6 +89413,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 2.1,
      "dayChangePct": 0.76,
      "pnlDeltaToday": 0.8
+    },
+    {
+     "name": "SAM",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 1.73,
+     "gainOnDay": 3,
+     "dayChangePct": 1.17,
+     "pnlDeltaToday": 1.2
     },
     {
      "name": "CRPMATE",
@@ -91488,16 +91533,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-02",
-   "totalSignals": 298,
-   "openCount": 199,
+   "totalSignals": 299,
+   "openCount": 200,
    "closedCount": 99,
-   "openPnl": 1403.2,
+   "openPnl": 1408.6,
    "closedPnl": 909.2,
-   "totalPnl": 2312.4,
+   "totalPnl": 2317.8,
    "frPnl": 373.8,
    "addOnPnl": 439.2,
-   "htPnl": 1499.4,
-   "dailyPnlDelta": -179.5,
+   "htPnl": 1504.8,
+   "dailyPnlDelta": -177.1,
    "winRate": 61,
    "avgGain": 7.8,
    "peakGainer": {
@@ -92080,6 +92125,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 0.4,
      "dayChangePct": -1.7,
      "pnlDeltaToday": -1.7
+    },
+    {
+     "name": "SAM",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 1.77,
+     "gainOnDay": 5.4,
+     "dayChangePct": 2.31,
+     "pnlDeltaToday": 2.4
     },
     {
      "name": "CRPMATE",
@@ -94191,16 +94245,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-03",
-   "totalSignals": 299,
-   "openCount": 192,
+   "totalSignals": 300,
+   "openCount": 193,
    "closedCount": 107,
-   "openPnl": 1670.5,
+   "openPnl": 1680.6,
    "closedPnl": 928.6,
-   "totalPnl": 2599.1,
+   "totalPnl": 2609.2,
    "frPnl": 416.1,
    "addOnPnl": 477.5,
-   "htPnl": 1705.5,
-   "dailyPnlDelta": 275.4,
+   "htPnl": 1715.6,
+   "dailyPnlDelta": 280.2,
    "winRate": 63,
    "avgGain": 8.7,
    "peakGainer": {
@@ -94792,6 +94846,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -1.5,
      "dayChangePct": -1.93,
      "pnlDeltaToday": -1.9
+    },
+    {
+     "name": "SAM",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 1.85,
+     "gainOnDay": 10.1,
+     "dayChangePct": 4.52,
+     "pnlDeltaToday": 4.8
     },
     {
      "name": "CRPMATE",
@@ -96903,16 +96966,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-04",
-   "totalSignals": 304,
-   "openCount": 197,
+   "totalSignals": 305,
+   "openCount": 198,
    "closedCount": 107,
-   "openPnl": 1689.4,
+   "openPnl": 1698.3,
    "closedPnl": 928.6,
-   "totalPnl": 2618,
+   "totalPnl": 2626.9,
    "frPnl": 424.3,
    "addOnPnl": 492.9,
-   "htPnl": 1700.8,
-   "dailyPnlDelta": 17,
+   "htPnl": 1709.7,
+   "dailyPnlDelta": 15.8,
    "winRate": 62,
    "avgGain": 8.6,
    "peakGainer": {
@@ -97549,6 +97612,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -2.1,
      "dayChangePct": -0.59,
      "pnlDeltaToday": -0.6
+    },
+    {
+     "name": "SAM",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 1.83,
+     "gainOnDay": 8.9,
+     "dayChangePct": -1.08,
+     "pnlDeltaToday": -1.2
     },
     {
      "name": "CRPMATE",
@@ -99660,16 +99732,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-07",
-   "totalSignals": 311,
-   "openCount": 201,
+   "totalSignals": 312,
+   "openCount": 202,
    "closedCount": 110,
-   "openPnl": 1741.3,
+   "openPnl": 1751.4,
    "closedPnl": 880.6,
-   "totalPnl": 2621.9,
+   "totalPnl": 2632,
    "frPnl": 419.7,
    "addOnPnl": 514.6,
-   "htPnl": 1687.6,
-   "dailyPnlDelta": -5.3,
+   "htPnl": 1697.7,
+   "dailyPnlDelta": -4.1,
    "winRate": 60,
    "avgGain": 8.4,
    "peakGainer": {
@@ -100369,6 +100441,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -2.3,
      "dayChangePct": -0.2,
      "pnlDeltaToday": -0.2
+    },
+    {
+     "name": "SAM",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 1.85,
+     "gainOnDay": 10.1,
+     "dayChangePct": 1.09,
+     "pnlDeltaToday": 1.2
     },
     {
      "name": "CRPMATE",
@@ -102480,15 +102561,15 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-08",
-   "totalSignals": 317,
-   "openCount": 204,
+   "totalSignals": 318,
+   "openCount": 205,
    "closedCount": 113,
-   "openPnl": 2007,
+   "openPnl": 2017.1,
    "closedPnl": 904.5,
-   "totalPnl": 2911.5,
+   "totalPnl": 2921.6,
    "frPnl": 428.4,
    "addOnPnl": 529,
-   "htPnl": 1954.1,
+   "htPnl": 1964.2,
    "dailyPnlDelta": 188.8,
    "winRate": 63,
    "avgGain": 9.2,
@@ -103243,6 +103324,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -2.5,
      "dayChangePct": -0.2,
      "pnlDeltaToday": -0.2
+    },
+    {
+     "name": "SAM",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 1.85,
+     "gainOnDay": 10.1,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "name": "CRPMATE",
@@ -105354,17 +105444,17 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-09",
-   "totalSignals": 321,
-   "openCount": 207,
+   "totalSignals": 322,
+   "openCount": 208,
    "closedCount": 114,
-   "openPnl": 2642.8,
+   "openPnl": 2652.9,
    "closedPnl": 888.5,
-   "totalPnl": 3531.3,
+   "totalPnl": 3541.4,
    "frPnl": 432,
    "addOnPnl": 571.9,
-   "htPnl": 2527.4,
+   "htPnl": 2537.5,
    "dailyPnlDelta": 242.4,
-   "winRate": 64,
+   "winRate": 65,
    "avgGain": 11,
    "peakGainer": {
     "gain": 136.7,
@@ -106153,6 +106243,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 1,
      "dayChangePct": 3.57,
      "pnlDeltaToday": 3.5
+    },
+    {
+     "name": "SAM",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 1.85,
+     "gainOnDay": 10.1,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "name": "CRPMATE",
@@ -108264,18 +108363,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-10",
-   "totalSignals": 327,
-   "openCount": 213,
+   "totalSignals": 328,
+   "openCount": 214,
    "closedCount": 114,
-   "openPnl": 2725.7,
+   "openPnl": 2735.8,
    "closedPnl": 888.5,
-   "totalPnl": 3614.2,
+   "totalPnl": 3624.3,
    "frPnl": 447.2,
    "addOnPnl": 611.6,
-   "htPnl": 2555.4,
+   "htPnl": 2565.5,
    "dailyPnlDelta": 74.2,
    "winRate": 64,
-   "avgGain": 11.1,
+   "avgGain": 11,
    "peakGainer": {
     "gain": 138.5,
     "name": "KEEMING"
@@ -109117,6 +109216,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 4.4,
      "dayChangePct": 3.45,
      "pnlDeltaToday": 3.5
+    },
+    {
+     "name": "SAM",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 1.85,
+     "gainOnDay": 10.1,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "name": "CRPMATE",
@@ -111228,15 +111336,15 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-11",
-   "totalSignals": 334,
-   "openCount": 219,
+   "totalSignals": 335,
+   "openCount": 220,
    "closedCount": 115,
-   "openPnl": 2186.6,
+   "openPnl": 2196.7,
    "closedPnl": 895.3,
-   "totalPnl": 3081.9,
+   "totalPnl": 3092,
    "frPnl": 446.6,
    "addOnPnl": 588.3,
-   "htPnl": 2047,
+   "htPnl": 2057.1,
    "dailyPnlDelta": -580.5,
    "winRate": 59,
    "avgGain": 9.2,
@@ -112144,6 +112252,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 2.1,
      "dayChangePct": -2.22,
      "pnlDeltaToday": -2.3
+    },
+    {
+     "name": "SAM",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 1.85,
+     "gainOnDay": 10.1,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "name": "CRPMATE",
@@ -114255,15 +114372,15 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-14",
-   "totalSignals": 340,
-   "openCount": 225,
+   "totalSignals": 341,
+   "openCount": 226,
    "closedCount": 115,
-   "openPnl": 2186.6,
+   "openPnl": 2196.7,
    "closedPnl": 895.3,
-   "totalPnl": 3081.9,
+   "totalPnl": 3092,
    "frPnl": 446.6,
    "addOnPnl": 588.3,
-   "htPnl": 2047,
+   "htPnl": 2057.1,
    "dailyPnlDelta": -587.8,
    "winRate": 58,
    "avgGain": 9.1,
@@ -115225,6 +115342,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 2.1,
      "dayChangePct": -2.22,
      "pnlDeltaToday": -2.3
+    },
+    {
+     "name": "SAM",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 1.85,
+     "gainOnDay": 10.1,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "name": "CRPMATE",
@@ -117336,21 +117462,21 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-15",
-   "totalSignals": 342,
-   "openCount": 196,
+   "totalSignals": 343,
+   "openCount": 197,
    "closedCount": 146,
-   "openPnl": 1060.9,
+   "openPnl": 1200.2,
    "closedPnl": 1450.5,
-   "totalPnl": 2511.4,
+   "totalPnl": 2650.7,
    "frPnl": 394.2,
    "addOnPnl": 520.1,
-   "htPnl": 1597.1,
-   "dailyPnlDelta": -260.3,
-   "winRate": 54,
-   "avgGain": 7.3,
+   "htPnl": 1736.4,
+   "dailyPnlDelta": -267.4,
+   "winRate": 55,
+   "avgGain": 7.7,
    "peakGainer": {
-    "gain": 116.5,
-    "name": "KEEMING"
+    "gain": 139.3,
+    "name": "SAM"
    },
    "trades": [
     {
@@ -118324,6 +118450,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 0.6,
      "dayChangePct": 1.96,
      "pnlDeltaToday": 1.9
+    },
+    {
+     "name": "SAM",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 4.02,
+     "gainOnDay": 139.3,
+     "dayChangePct": -2.9,
+     "pnlDeltaToday": -7.1
     },
     {
      "name": "CRPMATE",
@@ -120435,21 +120570,21 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-17",
-   "totalSignals": 346,
-   "openCount": 195,
+   "totalSignals": 347,
+   "openCount": 196,
    "closedCount": 151,
-   "openPnl": 1412,
+   "openPnl": 1554.9,
    "closedPnl": 1415,
-   "totalPnl": 2827,
+   "totalPnl": 2969.9,
    "frPnl": 393.6,
    "addOnPnl": 528.3,
-   "htPnl": 1905.1,
-   "dailyPnlDelta": 321.5,
+   "htPnl": 2048,
+   "dailyPnlDelta": 325.1,
    "winRate": 58,
-   "avgGain": 8.2,
+   "avgGain": 8.6,
    "peakGainer": {
-    "gain": 117.4,
-    "name": "KEEMING"
+    "gain": 142.9,
+    "name": "SAM"
    },
    "trades": [
     {
@@ -121459,6 +121594,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 1,
      "dayChangePct": 0.38,
      "pnlDeltaToday": 0.4
+    },
+    {
+     "name": "SAM",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 4.08,
+     "gainOnDay": 142.9,
+     "dayChangePct": 1.49,
+     "pnlDeltaToday": 3.6
     },
     {
      "name": "CRPMATE",
@@ -123570,21 +123714,21 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-18",
-   "totalSignals": 348,
-   "openCount": 197,
+   "totalSignals": 349,
+   "openCount": 198,
    "closedCount": 151,
-   "openPnl": 1926.9,
+   "openPnl": 2072.7,
    "closedPnl": 1415,
-   "totalPnl": 3341.9,
+   "totalPnl": 3487.7,
    "frPnl": 428.9,
    "addOnPnl": 614.3,
-   "htPnl": 2298.7,
-   "dailyPnlDelta": 517.7,
+   "htPnl": 2444.5,
+   "dailyPnlDelta": 520.7,
    "winRate": 64,
-   "avgGain": 9.6,
+   "avgGain": 10,
    "peakGainer": {
-    "gain": 127.5,
-    "name": "KEEMING"
+    "gain": 145.8,
+    "name": "SAM"
    },
    "trades": [
     {
@@ -124612,6 +124756,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 7.2,
      "dayChangePct": 6.13,
      "pnlDeltaToday": 6.2
+    },
+    {
+     "name": "SAM",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 4.13,
+     "gainOnDay": 145.8,
+     "dayChangePct": 1.23,
+     "pnlDeltaToday": 3
     },
     {
      "name": "CRPMATE",
@@ -126723,21 +126876,21 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-21",
-   "totalSignals": 349,
-   "openCount": 198,
+   "totalSignals": 350,
+   "openCount": 199,
    "closedCount": 151,
-   "openPnl": 2378.7,
+   "openPnl": 2519.8,
    "closedPnl": 1415,
-   "totalPnl": 3793.7,
+   "totalPnl": 3934.8,
    "frPnl": 446.2,
    "addOnPnl": 637.9,
-   "htPnl": 2709.6,
-   "dailyPnlDelta": 453,
+   "htPnl": 2850.7,
+   "dailyPnlDelta": 448.2,
    "winRate": 67,
-   "avgGain": 10.9,
+   "avgGain": 11.2,
    "peakGainer": {
-    "gain": 133,
-    "name": "KEEMING"
+    "gain": 141.1,
+    "name": "SAM"
    },
    "trades": [
     {
@@ -127774,6 +127927,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 4.4,
      "dayChangePct": -2.53,
      "pnlDeltaToday": -2.7
+    },
+    {
+     "name": "SAM",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 4.05,
+     "gainOnDay": 141.1,
+     "dayChangePct": -1.94,
+     "pnlDeltaToday": -4.8
     },
     {
      "name": "CRPMATE",
@@ -129885,21 +130047,21 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-22",
-   "totalSignals": 350,
-   "openCount": 199,
+   "totalSignals": 351,
+   "openCount": 200,
    "closedCount": 151,
-   "openPnl": 2741.3,
+   "openPnl": 2888.9,
    "closedPnl": 1415,
-   "totalPnl": 4156.3,
+   "totalPnl": 4303.9,
    "frPnl": 464.7,
    "addOnPnl": 749.6,
-   "htPnl": 2942,
-   "dailyPnlDelta": 362.3,
+   "htPnl": 3089.6,
+   "dailyPnlDelta": 368.8,
    "winRate": 75,
-   "avgGain": 11.9,
+   "avgGain": 12.3,
    "peakGainer": {
-    "gain": 132.1,
-    "name": "KEEMING"
+    "gain": 147.6,
+    "name": "SAM"
    },
    "trades": [
     {
@@ -130945,6 +131107,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 5.4,
      "dayChangePct": 0.93,
      "pnlDeltaToday": 1
+    },
+    {
+     "name": "SAM",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 4.16,
+     "gainOnDay": 147.6,
+     "dayChangePct": 2.72,
+     "pnlDeltaToday": 6.5
     },
     {
      "name": "CRPMATE",
@@ -133056,21 +133227,21 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-23",
-   "totalSignals": 353,
-   "openCount": 201,
+   "totalSignals": 354,
+   "openCount": 202,
    "closedCount": 152,
-   "openPnl": 2811.7,
+   "openPnl": 2955.2,
    "closedPnl": 1424.6,
-   "totalPnl": 4236.3,
+   "totalPnl": 4379.8,
    "frPnl": 452.3,
    "addOnPnl": 716.8,
-   "htPnl": 3067.2,
-   "dailyPnlDelta": 69.4,
+   "htPnl": 3210.7,
+   "dailyPnlDelta": 65.2,
    "winRate": 72,
-   "avgGain": 12,
+   "avgGain": 12.4,
    "peakGainer": {
-    "gain": 134.9,
-    "name": "KEEMING"
+    "gain": 143.5,
+    "name": "SAM"
    },
    "trades": [
     {
@@ -134143,6 +134314,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 4.6,
      "dayChangePct": -0.73,
      "pnlDeltaToday": -0.8
+    },
+    {
+     "name": "SAM",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 4.09,
+     "gainOnDay": 143.5,
+     "dayChangePct": -1.68,
+     "pnlDeltaToday": -4.2
     },
     {
      "name": "CRPMATE",
@@ -136254,21 +136434,21 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-24",
-   "totalSignals": 358,
-   "openCount": 206,
+   "totalSignals": 359,
+   "openCount": 207,
    "closedCount": 152,
-   "openPnl": 2803.3,
+   "openPnl": 2943.2,
    "closedPnl": 1424.6,
-   "totalPnl": 4227.9,
+   "totalPnl": 4367.8,
    "frPnl": 444.4,
    "addOnPnl": 715.4,
-   "htPnl": 3068.1,
-   "dailyPnlDelta": -12.8,
+   "htPnl": 3208,
+   "dailyPnlDelta": -16.4,
    "winRate": 70,
-   "avgGain": 11.8,
+   "avgGain": 12.2,
    "peakGainer": {
-    "gain": 133,
-    "name": "KEEMING"
+    "gain": 139.9,
+    "name": "SAM"
    },
    "trades": [
     {
@@ -137386,6 +137566,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 0.2,
      "dayChangePct": -4.25,
      "pnlDeltaToday": -4.4
+    },
+    {
+     "name": "SAM",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 4.03,
+     "gainOnDay": 139.9,
+     "dayChangePct": -1.47,
+     "pnlDeltaToday": -3.6
     },
     {
      "name": "CRPMATE",
@@ -139497,21 +139686,21 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-25",
-   "totalSignals": 364,
-   "openCount": 211,
+   "totalSignals": 365,
+   "openCount": 212,
    "closedCount": 153,
-   "openPnl": 3254,
+   "openPnl": 3396.3,
    "closedPnl": 1419.7,
-   "totalPnl": 4673.7,
+   "totalPnl": 4816,
    "frPnl": 464.3,
    "addOnPnl": 741.5,
-   "htPnl": 3467.9,
-   "dailyPnlDelta": 449,
+   "htPnl": 3610.2,
+   "dailyPnlDelta": 451.4,
    "winRate": 73,
-   "avgGain": 12.8,
+   "avgGain": 13.2,
    "peakGainer": {
-    "gain": 137.6,
-    "name": "KEEMING"
+    "gain": 142.3,
+    "name": "SAM"
    },
    "trades": [
     {
@@ -140683,6 +140872,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 2.7,
      "dayChangePct": 2.51,
      "pnlDeltaToday": 2.5
+    },
+    {
+     "name": "SAM",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 4.07,
+     "gainOnDay": 142.3,
+     "dayChangePct": 0.99,
+     "pnlDeltaToday": 2.4
     },
     {
      "name": "CRPMATE",
@@ -142794,21 +142992,21 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-28",
-   "totalSignals": 369,
-   "openCount": 216,
+   "totalSignals": 370,
+   "openCount": 217,
    "closedCount": 153,
-   "openPnl": 2990.1,
+   "openPnl": 3125.8,
    "closedPnl": 1419.7,
-   "totalPnl": 4409.8,
+   "totalPnl": 4545.5,
    "frPnl": 442.5,
    "addOnPnl": 693.8,
-   "htPnl": 3273.5,
-   "dailyPnlDelta": -269.2,
+   "htPnl": 3409.2,
+   "dailyPnlDelta": -275.7,
    "winRate": 66,
-   "avgGain": 12,
+   "avgGain": 12.3,
    "peakGainer": {
-    "gain": 132.1,
-    "name": "KEEMING"
+    "gain": 135.7,
+    "name": "SAM"
    },
    "trades": [
     {
@@ -144025,6 +144223,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 0.6,
      "dayChangePct": -2.07,
      "pnlDeltaToday": -2.1
+    },
+    {
+     "name": "SAM",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.96,
+     "gainOnDay": 135.7,
+     "dayChangePct": -2.7,
+     "pnlDeltaToday": -6.5
     },
     {
      "name": "CRPMATE",
@@ -146136,18 +146343,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-29",
-   "totalSignals": 377,
-   "openCount": 224,
+   "totalSignals": 378,
+   "openCount": 225,
    "closedCount": 153,
-   "openPnl": 3505,
+   "openPnl": 3638.9,
    "closedPnl": 1419.7,
-   "totalPnl": 4924.7,
+   "totalPnl": 5058.6,
    "frPnl": 472.8,
    "addOnPnl": 753.2,
-   "htPnl": 3698.7,
-   "dailyPnlDelta": 507.8,
+   "htPnl": 3832.6,
+   "dailyPnlDelta": 506,
    "winRate": 67,
-   "avgGain": 13.1,
+   "avgGain": 13.4,
    "peakGainer": {
     "gain": 154.4,
     "name": "SAMAIDEN"
@@ -147439,6 +147646,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 0.2,
      "dayChangePct": -0.38,
      "pnlDeltaToday": -0.4
+    },
+    {
+     "name": "SAM",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.93,
+     "gainOnDay": 133.9,
+     "dayChangePct": -0.76,
+     "pnlDeltaToday": -1.8
     },
     {
      "name": "CRPMATE",
@@ -149550,18 +149766,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-30",
-   "totalSignals": 384,
-   "openCount": 231,
+   "totalSignals": 385,
+   "openCount": 232,
    "closedCount": 153,
-   "openPnl": 3210.3,
+   "openPnl": 3344.2,
    "closedPnl": 1419.7,
-   "totalPnl": 4630,
+   "totalPnl": 4763.9,
    "frPnl": 463.2,
    "addOnPnl": 743.3,
-   "htPnl": 3423.5,
+   "htPnl": 3557.4,
    "dailyPnlDelta": -291.5,
    "winRate": 66,
-   "avgGain": 12.1,
+   "avgGain": 12.4,
    "peakGainer": {
     "gain": 142.2,
     "name": "KEEMING"
@@ -150916,6 +151132,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -1.7,
      "dayChangePct": -1.93,
      "pnlDeltaToday": -1.9
+    },
+    {
+     "name": "SAM",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.93,
+     "gainOnDay": 133.9,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "name": "CRPMATE",
@@ -153027,15 +153252,15 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-10-01",
-   "totalSignals": 390,
-   "openCount": 234,
+   "totalSignals": 391,
+   "openCount": 235,
    "closedCount": 156,
-   "openPnl": 2966.6,
+   "openPnl": 2976.7,
    "closedPnl": 1808.4,
-   "totalPnl": 4775,
+   "totalPnl": 4785.1,
    "frPnl": 469.6,
    "addOnPnl": 766.5,
-   "htPnl": 3538.9,
+   "htPnl": 3549,
    "dailyPnlDelta": 43.3,
    "winRate": 68,
    "avgGain": 12.2,
@@ -154447,6 +154672,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -1.2,
      "dayChangePct": 0.59,
      "pnlDeltaToday": 0.6
+    },
+    {
+     "name": "SAM",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 1.85,
+     "gainOnDay": 10.1,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "name": "CRPMATE",
