@@ -331,7 +331,6 @@
   "INNATURE": "5295.KL",
   "KHJB": "0210.KL",
   "RT": "0461.KL",
-  "EXSIMHB": "1287.KL",
   "AAX": "5238.KL",
   "NESTLE": "4707.KL",
   "SOP": "5126.KL",
@@ -346,5 +345,7 @@
   "STRATUS": "5356.KL",
   "MI": "5286.KL",
   "UNIPAC": "0468.KL",
-  "PIONEER": "0471.KL"
+  "PIONEER": "0471.KL",
+  "NWEBHD": "0478.KL",
+  "EVOCOM": "0473.KL"
 }

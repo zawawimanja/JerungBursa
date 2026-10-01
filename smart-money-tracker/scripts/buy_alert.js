@@ -703,15 +703,57 @@ function buildMessage(now, out) {
         return 5; // RE-ENTRY
     }
 
-    // Filter Top Ranking VVIP (sepadan dengan paparan lalai Top Ranking di index.html):
-    // Lulus jika: FUSION (Semicon/Solar) ATAU Signal Baru (Day 1) ATAU ADD-ON A+ / Lantai Rapat ATAU Tightness <= 3.5% ATAU Score >= 80
+    // Filter Top Ranking VVIP — SELARAS 100% dengan scanner top_ranking dalam index.html
+    // Logik SAMA persis dengan verify_scanner_tracker_sync.js & renderConfluenceRadar
     function isTopRankingVvip(s) {
+        const nameKey = canonName(s.name).toUpperCase();
+        const tight = typeof s.closeTightness === 'number' ? s.closeTightness : 99;
+        const toVal = s.rawTurnover || s.turnover || 0;
+        const effF = effFloor(s.name, s.price, s.floorLow || s.price * 0.95);
+        const fDistVal = effF ? ((s.price - effF) / effF) * 100 : 99;
+        const isDump = s.hasUpperWickRejection === true && (s.change < 0 || (s.changePct && s.changePct < 0));
+        const isSwanClean = isBlackSwanClean(s);
+
+        // 1. Buang: Black Swan / Upper Wick Dump
+        if (!isSwanClean || isDump) return false;
+
+        // 2. Kira freshness (0=NEW, 1=ADD-ON A+, 2=LANTAI RAPAT, 3=STANDARD, 4=PUCUK/RE-ENTRY)
         const lbl = signalLabel(s, frTrackedStatus);
         const rank = freshnessRank(lbl);
+        if (rank === 4) return false; // ⚠️ ADD-ON Pucuk — disekat
+
+        // 3. Semak tracker confirmed hari ini (bypass turnover gate untuk data pagi rendah)
+        const trackedEntry = frTrackedStatus.get(nameKey);
+        const isTrackerConfirmedToday = !!(
+            trackedEntry &&
+            trackedEntry.status === 'OPEN' &&
+            trackedEntry.entryDate === snapDate
+        );
+
+        // 4. Buang: turnover lemau < RM 1M (kecuali dah disahkan tracker hari ini)
+        if (toVal < 1000000 && !isTrackerConfirmedToday) return false;
+
+        // 5. NEW (Day 1): lantai <= 10%, tightness <= 10%
+        if (rank === 0) {
+            return (fDistVal <= 10.0 && fDistVal >= -2.0 && tight <= 10.0);
+        }
+
+        // 6. ADD-ON A+ / LANTAI RAPAT: lantai <= 5%, tightness <= 4.85%
+        if (rank === 1 || rank === 2) {
+            if (fDistVal > 5.0 || fDistVal < -2.0) return false;
+            if (tight <= 4.85) return true;
+        }
+
+        // 7. Tier A+ / Tier A
+        const isTierAPlus = (toVal >= 2000000 && tight <= 3.5 && fDistVal >= -1.0 && fDistVal <= 3.5 && isSwanClean && !isDump);
+        const isTierA = (!isTierAPlus && toVal >= 1000000 && tight <= 4.85 && fDistVal >= -1.5 && fDistVal <= 5.0 && isSwanClean && !isDump);
+        if (isTierAPlus || isTierA) return true;
+
+        // 8. Fusion (FR + Hot Theme): bonus layak
         const isFusion = getHotThemes(s.name).length > 0;
-        const tight = typeof s.closeTightness === 'number' ? s.closeTightness : 99;
-        const isHighConfidence = (s.confidenceScore && s.confidenceScore >= 80);
-        return isFusion || rank <= 2 || tight <= 3.5 || isHighConfidence;
+        if (isFusion && tight <= 4.85 && fDistVal <= 5.0) return true;
+
+        return false;
     }
 
     let newsData = {};
