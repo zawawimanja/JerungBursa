@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-10-01T06:20:51.345Z",
+ "generatedAt": "2026-10-01T06:31:00.700Z",
  "totalDays": 83,
  "startDate": "2026-06-02",
  "endDate": "2026-10-01",
@@ -75837,8 +75837,8 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-21",
-   "totalSignals": 281,
-   "openCount": 214,
+   "totalSignals": 282,
+   "openCount": 215,
    "closedCount": 67,
    "openPnl": 2355.7,
    "closedPnl": 405.2,
@@ -75846,7 +75846,7 @@ window.DAILY_EQUITY_TRACKER = {
    "frPnl": 378.7,
    "addOnPnl": 492.8,
    "htPnl": 1889.4,
-   "dailyPnlDelta": -107.6,
+   "dailyPnlDelta": -106.2,
    "winRate": 62,
    "avgGain": 9.8,
    "peakGainer": {
@@ -76183,6 +76183,15 @@ window.DAILY_EQUITY_TRACKER = {
      "trackerType": "FLR",
      "statusOnDay": "OPEN",
      "priceOnDay": 2.91,
+     "gainOnDay": 0,
+     "dayChangePct": 1.39,
+     "pnlDeltaToday": 1.4
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.73,
      "gainOnDay": 0,
      "dayChangePct": 1.39,
      "pnlDeltaToday": 1.4
@@ -78387,18 +78396,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-24",
-   "totalSignals": 284,
-   "openCount": 209,
+   "totalSignals": 286,
+   "openCount": 211,
    "closedCount": 75,
-   "openPnl": 1863.1,
+   "openPnl": 1864.5,
    "closedPnl": 596.7,
-   "totalPnl": 2459.8,
+   "totalPnl": 2461.2,
    "frPnl": 375.5,
-   "addOnPnl": 507.9,
+   "addOnPnl": 509.3,
    "htPnl": 1576.4,
-   "dailyPnlDelta": -329.6,
+   "dailyPnlDelta": -326.8,
    "winRate": 61,
-   "avgGain": 8.7,
+   "avgGain": 8.6,
    "peakGainer": {
     "gain": 125.7,
     "name": "KEEMING"
@@ -78745,6 +78754,24 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 0,
      "dayChangePct": -1.03,
      "pnlDeltaToday": -1
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.74,
+     "gainOnDay": 1.4,
+     "dayChangePct": 1.37,
+     "pnlDeltaToday": 1.4
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.74,
+     "gainOnDay": 0,
+     "dayChangePct": 1.37,
+     "pnlDeltaToday": 1.4
     },
     {
      "name": "KEEMING",
@@ -80964,18 +80991,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-26",
-   "totalSignals": 287,
-   "openCount": 211,
+   "totalSignals": 289,
+   "openCount": 213,
    "closedCount": 76,
-   "openPnl": 2189.9,
+   "openPnl": 2191.3,
    "closedPnl": 591.1,
-   "totalPnl": 2781,
+   "totalPnl": 2782.4,
    "frPnl": 402.5,
-   "addOnPnl": 584.9,
+   "addOnPnl": 586.3,
    "htPnl": 1793.6,
    "dailyPnlDelta": 338.1,
    "winRate": 63,
-   "avgGain": 9.7,
+   "avgGain": 9.6,
    "peakGainer": {
     "gain": 134.9,
     "name": "KEEMING"
@@ -81322,6 +81349,24 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 4.2,
      "dayChangePct": 4.17,
      "pnlDeltaToday": 4.2
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.74,
+     "gainOnDay": 1.4,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.74,
+     "gainOnDay": 0,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "name": "KEEMING",
@@ -83568,16 +83613,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-27",
-   "totalSignals": 288,
-   "openCount": 212,
+   "totalSignals": 290,
+   "openCount": 214,
    "closedCount": 76,
-   "openPnl": 2437.1,
+   "openPnl": 2441.2,
    "closedPnl": 591.1,
-   "totalPnl": 3028.2,
+   "totalPnl": 3032.3,
    "frPnl": 393,
-   "addOnPnl": 555.4,
+   "addOnPnl": 559.5,
    "htPnl": 2079.8,
-   "dailyPnlDelta": 249.6,
+   "dailyPnlDelta": 252.4,
    "winRate": 70,
    "avgGain": 10.5,
    "peakGainer": {
@@ -83926,6 +83971,24 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 3.1,
      "dayChangePct": -1,
      "pnlDeltaToday": -1
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.75,
+     "gainOnDay": 2.7,
+     "dayChangePct": 1.35,
+     "pnlDeltaToday": 1.4
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.75,
+     "gainOnDay": 1.4,
+     "dayChangePct": 1.35,
+     "pnlDeltaToday": 1.4
     },
     {
      "name": "KEEMING",
@@ -86181,8 +86244,8 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-28",
-   "totalSignals": 291,
-   "openCount": 206,
+   "totalSignals": 293,
+   "openCount": 208,
    "closedCount": 85,
    "openPnl": 1945.8,
    "closedPnl": 817.9,
@@ -86190,9 +86253,9 @@ window.DAILY_EQUITY_TRACKER = {
    "frPnl": 377.1,
    "addOnPnl": 499.7,
    "htPnl": 1886.9,
-   "dailyPnlDelta": -265.7,
+   "dailyPnlDelta": -269.8,
    "winRate": 68,
-   "avgGain": 9.5,
+   "avgGain": 9.4,
    "peakGainer": {
     "gain": 124.8,
     "name": "KEEMING"
@@ -86548,6 +86611,24 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 2.1,
      "dayChangePct": -1.01,
      "pnlDeltaToday": -1
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.735,
+     "gainOnDay": 0.7,
+     "dayChangePct": -2,
+     "pnlDeltaToday": -2.1
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.735,
+     "gainOnDay": -0.7,
+     "dayChangePct": -2,
+     "pnlDeltaToday": -2
     },
     {
      "name": "KEEMING",
@@ -88821,8 +88902,8 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-01",
-   "totalSignals": 294,
-   "openCount": 199,
+   "totalSignals": 296,
+   "openCount": 201,
    "closedCount": 95,
    "openPnl": 1483.7,
    "closedPnl": 952.6,
@@ -88832,7 +88913,7 @@ window.DAILY_EQUITY_TRACKER = {
    "htPnl": 1619.8,
    "dailyPnlDelta": -353.3,
    "winRate": 64,
-   "avgGain": 8.3,
+   "avgGain": 8.2,
    "peakGainer": {
     "gain": 110.1,
     "name": "KEEMING"
@@ -89197,6 +89278,24 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -1.7,
      "dayChangePct": -3.74,
      "pnlDeltaToday": -3.8
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.735,
+     "gainOnDay": 0.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.735,
+     "gainOnDay": -0.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "name": "KEEMING",
@@ -91488,8 +91587,8 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-02",
-   "totalSignals": 298,
-   "openCount": 199,
+   "totalSignals": 300,
+   "openCount": 201,
    "closedCount": 99,
    "openPnl": 1403.2,
    "closedPnl": 909.2,
@@ -91499,7 +91598,7 @@ window.DAILY_EQUITY_TRACKER = {
    "htPnl": 1499.4,
    "dailyPnlDelta": -179.5,
    "winRate": 61,
-   "avgGain": 7.8,
+   "avgGain": 7.7,
    "peakGainer": {
     "gain": 100,
     "name": "KEEMING"
@@ -91864,6 +91963,24 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -2.8,
      "dayChangePct": -1.06,
      "pnlDeltaToday": -1
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.735,
+     "gainOnDay": 0.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.735,
+     "gainOnDay": -0.7,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "name": "ISF",
@@ -94191,16 +94308,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-03",
-   "totalSignals": 299,
-   "openCount": 192,
+   "totalSignals": 301,
+   "openCount": 194,
    "closedCount": 107,
-   "openPnl": 1670.5,
+   "openPnl": 1681.4,
    "closedPnl": 928.6,
-   "totalPnl": 2599.1,
+   "totalPnl": 2610,
    "frPnl": 416.1,
-   "addOnPnl": 477.5,
+   "addOnPnl": 488.4,
    "htPnl": 1705.5,
-   "dailyPnlDelta": 275.4,
+   "dailyPnlDelta": 286.3,
    "winRate": 63,
    "avgGain": 8.7,
    "peakGainer": {
@@ -94567,6 +94684,24 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -2.4,
      "dayChangePct": 0.36,
      "pnlDeltaToday": 0.3
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.775,
+     "gainOnDay": 6.2,
+     "dayChangePct": 5.44,
+     "pnlDeltaToday": 5.5
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.775,
+     "gainOnDay": 4.7,
+     "dayChangePct": 5.44,
+     "pnlDeltaToday": 5.4
     },
     {
      "name": "ISF",
@@ -96903,16 +97038,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-04",
-   "totalSignals": 304,
-   "openCount": 197,
+   "totalSignals": 306,
+   "openCount": 199,
    "closedCount": 107,
-   "openPnl": 1689.4,
+   "openPnl": 1699,
    "closedPnl": 928.6,
-   "totalPnl": 2618,
+   "totalPnl": 2627.6,
    "frPnl": 424.3,
-   "addOnPnl": 492.9,
+   "addOnPnl": 502.5,
    "htPnl": 1700.8,
-   "dailyPnlDelta": 17,
+   "dailyPnlDelta": 15.6,
    "winRate": 62,
    "avgGain": 8.6,
    "peakGainer": {
@@ -97278,6 +97413,24 @@ window.DAILY_EQUITY_TRACKER = {
      "priceOnDay": 2.79,
      "gainOnDay": -3.1,
      "dayChangePct": -0.71,
+     "pnlDeltaToday": -0.7
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.77,
+     "gainOnDay": 5.5,
+     "dayChangePct": -0.65,
+     "pnlDeltaToday": -0.7
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.77,
+     "gainOnDay": 4.1,
+     "dayChangePct": -0.65,
      "pnlDeltaToday": -0.7
     },
     {
@@ -99660,14 +99813,14 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-07",
-   "totalSignals": 311,
-   "openCount": 201,
+   "totalSignals": 313,
+   "openCount": 203,
    "closedCount": 110,
-   "openPnl": 1741.3,
+   "openPnl": 1750.9,
    "closedPnl": 880.6,
-   "totalPnl": 2621.9,
+   "totalPnl": 2631.5,
    "frPnl": 419.7,
-   "addOnPnl": 514.6,
+   "addOnPnl": 524.2,
    "htPnl": 1687.6,
    "dailyPnlDelta": -5.3,
    "winRate": 60,
@@ -100045,6 +100198,24 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 0,
      "dayChangePct": -2.13,
      "pnlDeltaToday": -2.2
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.77,
+     "gainOnDay": 5.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.77,
+     "gainOnDay": 4.1,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "name": "ISF",
@@ -102480,16 +102651,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-08",
-   "totalSignals": 317,
-   "openCount": 204,
+   "totalSignals": 319,
+   "openCount": 206,
    "closedCount": 113,
-   "openPnl": 2007,
+   "openPnl": 2017.9,
    "closedPnl": 904.5,
-   "totalPnl": 2911.5,
+   "totalPnl": 2922.4,
    "frPnl": 428.4,
-   "addOnPnl": 529,
+   "addOnPnl": 539.9,
    "htPnl": 1954.1,
-   "dailyPnlDelta": 188.8,
+   "dailyPnlDelta": 190.2,
    "winRate": 63,
    "avgGain": 9.2,
    "peakGainer": {
@@ -102874,6 +103045,24 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 0,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.775,
+     "gainOnDay": 6.2,
+     "dayChangePct": 0.65,
+     "pnlDeltaToday": 0.7
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.775,
+     "gainOnDay": 4.7,
+     "dayChangePct": 0.65,
+     "pnlDeltaToday": 0.7
     },
     {
      "name": "ISF",
@@ -105354,17 +105543,17 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-09",
-   "totalSignals": 321,
-   "openCount": 207,
+   "totalSignals": 323,
+   "openCount": 209,
    "closedCount": 114,
-   "openPnl": 2642.8,
+   "openPnl": 2661.9,
    "closedPnl": 888.5,
-   "totalPnl": 3531.3,
+   "totalPnl": 3550.4,
    "frPnl": 432,
-   "addOnPnl": 571.9,
+   "addOnPnl": 591,
    "htPnl": 2527.4,
-   "dailyPnlDelta": 242.4,
-   "winRate": 64,
+   "dailyPnlDelta": 250.6,
+   "winRate": 65,
    "avgGain": 11,
    "peakGainer": {
     "gain": 136.7,
@@ -105748,6 +105937,24 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -4.3,
      "dayChangePct": -4.35,
      "pnlDeltaToday": -4.3
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.805,
+     "gainOnDay": 10.3,
+     "dayChangePct": 3.87,
+     "pnlDeltaToday": 4.1
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.805,
+     "gainOnDay": 8.8,
+     "dayChangePct": 3.87,
+     "pnlDeltaToday": 4.1
     },
     {
      "name": "ISF",
@@ -108264,16 +108471,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-10",
-   "totalSignals": 327,
-   "openCount": 213,
+   "totalSignals": 329,
+   "openCount": 215,
    "closedCount": 114,
-   "openPnl": 2725.7,
+   "openPnl": 2748.8,
    "closedPnl": 888.5,
-   "totalPnl": 3614.2,
+   "totalPnl": 3637.3,
    "frPnl": 447.2,
-   "addOnPnl": 611.6,
+   "addOnPnl": 634.7,
    "htPnl": 2555.4,
-   "dailyPnlDelta": 74.2,
+   "dailyPnlDelta": 78.3,
    "winRate": 64,
    "avgGain": 11.1,
    "peakGainer": {
@@ -108658,6 +108865,24 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -5.4,
      "dayChangePct": -1.14,
      "pnlDeltaToday": -1.1
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.82,
+     "gainOnDay": 12.3,
+     "dayChangePct": 1.86,
+     "pnlDeltaToday": 2.1
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.82,
+     "gainOnDay": 10.8,
+     "dayChangePct": 1.86,
+     "pnlDeltaToday": 2
     },
     {
      "name": "ISF",
@@ -111228,17 +111453,17 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-11",
-   "totalSignals": 334,
+   "totalSignals": 336,
    "openCount": 219,
-   "closedCount": 115,
+   "closedCount": 117,
    "openPnl": 2186.6,
-   "closedPnl": 895.3,
-   "totalPnl": 3081.9,
+   "closedPnl": 908.9,
+   "totalPnl": 3095.5,
    "frPnl": 446.6,
-   "addOnPnl": 588.3,
+   "addOnPnl": 601.9,
    "htPnl": 2047,
-   "dailyPnlDelta": -580.5,
-   "winRate": 59,
+   "dailyPnlDelta": -590,
+   "winRate": 60,
    "avgGain": 9.2,
    "peakGainer": {
     "gain": 133.9,
@@ -111640,6 +111865,24 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -5.4,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED_TODAY",
+     "priceOnDay": 0.785,
+     "gainOnDay": 7.5,
+     "dayChangePct": -4.27,
+     "pnlDeltaToday": -4.8
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED_TODAY",
+     "priceOnDay": 0.785,
+     "gainOnDay": 6.1,
+     "dayChangePct": -4.27,
+     "pnlDeltaToday": -4.7
     },
     {
      "name": "ISF",
@@ -114255,14 +114498,14 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-14",
-   "totalSignals": 340,
+   "totalSignals": 342,
    "openCount": 225,
-   "closedCount": 115,
+   "closedCount": 117,
    "openPnl": 2186.6,
-   "closedPnl": 895.3,
-   "totalPnl": 3081.9,
+   "closedPnl": 908.9,
+   "totalPnl": 3095.5,
    "frPnl": 446.6,
-   "addOnPnl": 588.3,
+   "addOnPnl": 601.9,
    "htPnl": 2047,
    "dailyPnlDelta": -587.8,
    "winRate": 58,
@@ -114674,6 +114917,24 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "OPEN",
      "priceOnDay": 0.435,
      "gainOnDay": -5.4,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.785,
+     "gainOnDay": 7.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.785,
+     "gainOnDay": 6.1,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -117336,17 +117597,17 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-15",
-   "totalSignals": 342,
+   "totalSignals": 344,
    "openCount": 196,
-   "closedCount": 146,
+   "closedCount": 148,
    "openPnl": 1060.9,
-   "closedPnl": 1450.5,
-   "totalPnl": 2511.4,
+   "closedPnl": 1464.1,
+   "totalPnl": 2525,
    "frPnl": 394.2,
-   "addOnPnl": 520.1,
+   "addOnPnl": 533.7,
    "htPnl": 1597.1,
    "dailyPnlDelta": -260.3,
-   "winRate": 54,
+   "winRate": 55,
    "avgGain": 7.3,
    "peakGainer": {
     "gain": 116.5,
@@ -117766,6 +118027,24 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -12,
      "dayChangePct": -4.71,
      "pnlDeltaToday": -4.3
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.785,
+     "gainOnDay": 7.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.785,
+     "gainOnDay": 6.1,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "name": "ISF",
@@ -120435,14 +120714,14 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-17",
-   "totalSignals": 346,
+   "totalSignals": 348,
    "openCount": 195,
-   "closedCount": 151,
+   "closedCount": 153,
    "openPnl": 1412,
-   "closedPnl": 1415,
-   "totalPnl": 2827,
+   "closedPnl": 1428.6,
+   "totalPnl": 2840.6,
    "frPnl": 393.6,
-   "addOnPnl": 528.3,
+   "addOnPnl": 541.9,
    "htPnl": 1905.1,
    "dailyPnlDelta": 321.5,
    "winRate": 58,
@@ -120872,6 +121151,24 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 0.405,
      "gainOnDay": -12,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.785,
+     "gainOnDay": 7.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.785,
+     "gainOnDay": 6.1,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -123570,14 +123867,14 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-18",
-   "totalSignals": 348,
+   "totalSignals": 350,
    "openCount": 197,
-   "closedCount": 151,
+   "closedCount": 153,
    "openPnl": 1926.9,
-   "closedPnl": 1415,
-   "totalPnl": 3341.9,
+   "closedPnl": 1428.6,
+   "totalPnl": 3355.5,
    "frPnl": 428.9,
-   "addOnPnl": 614.3,
+   "addOnPnl": 627.9,
    "htPnl": 2298.7,
    "dailyPnlDelta": 517.7,
    "winRate": 64,
@@ -124016,6 +124313,24 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 0.405,
      "gainOnDay": -12,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.785,
+     "gainOnDay": 7.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.785,
+     "gainOnDay": 6.1,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -126723,18 +127038,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-21",
-   "totalSignals": 349,
+   "totalSignals": 351,
    "openCount": 198,
-   "closedCount": 151,
+   "closedCount": 153,
    "openPnl": 2378.7,
-   "closedPnl": 1415,
-   "totalPnl": 3793.7,
+   "closedPnl": 1428.6,
+   "totalPnl": 3807.3,
    "frPnl": 446.2,
-   "addOnPnl": 637.9,
+   "addOnPnl": 651.5,
    "htPnl": 2709.6,
    "dailyPnlDelta": 453,
    "winRate": 67,
-   "avgGain": 10.9,
+   "avgGain": 10.8,
    "peakGainer": {
     "gain": 133,
     "name": "KEEMING"
@@ -127169,6 +127484,24 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 0.405,
      "gainOnDay": -12,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.785,
+     "gainOnDay": 7.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.785,
+     "gainOnDay": 6.1,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -129885,18 +130218,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-22",
-   "totalSignals": 350,
+   "totalSignals": 352,
    "openCount": 199,
-   "closedCount": 151,
+   "closedCount": 153,
    "openPnl": 2741.3,
-   "closedPnl": 1415,
-   "totalPnl": 4156.3,
+   "closedPnl": 1428.6,
+   "totalPnl": 4169.9,
    "frPnl": 464.7,
-   "addOnPnl": 749.6,
+   "addOnPnl": 763.2,
    "htPnl": 2942,
    "dailyPnlDelta": 362.3,
    "winRate": 75,
-   "avgGain": 11.9,
+   "avgGain": 11.8,
    "peakGainer": {
     "gain": 132.1,
     "name": "KEEMING"
@@ -130331,6 +130664,24 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 0.405,
      "gainOnDay": -12,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.785,
+     "gainOnDay": 7.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.785,
+     "gainOnDay": 6.1,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -133056,14 +133407,14 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-23",
-   "totalSignals": 353,
+   "totalSignals": 355,
    "openCount": 201,
-   "closedCount": 152,
+   "closedCount": 154,
    "openPnl": 2811.7,
-   "closedPnl": 1424.6,
-   "totalPnl": 4236.3,
+   "closedPnl": 1438.2,
+   "totalPnl": 4249.9,
    "frPnl": 452.3,
-   "addOnPnl": 716.8,
+   "addOnPnl": 730.4,
    "htPnl": 3067.2,
    "dailyPnlDelta": 69.4,
    "winRate": 72,
@@ -133502,6 +133853,24 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 0.405,
      "gainOnDay": -12,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.785,
+     "gainOnDay": 7.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.785,
+     "gainOnDay": 6.1,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -136254,14 +136623,14 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-24",
-   "totalSignals": 358,
+   "totalSignals": 360,
    "openCount": 206,
-   "closedCount": 152,
+   "closedCount": 154,
    "openPnl": 2803.3,
-   "closedPnl": 1424.6,
-   "totalPnl": 4227.9,
+   "closedPnl": 1438.2,
+   "totalPnl": 4241.5,
    "frPnl": 444.4,
-   "addOnPnl": 715.4,
+   "addOnPnl": 729,
    "htPnl": 3068.1,
    "dailyPnlDelta": -12.8,
    "winRate": 70,
@@ -136709,6 +137078,24 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 0.405,
      "gainOnDay": -12,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.785,
+     "gainOnDay": 7.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.785,
+     "gainOnDay": 6.1,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -139497,14 +139884,14 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-25",
-   "totalSignals": 364,
+   "totalSignals": 366,
    "openCount": 211,
-   "closedCount": 153,
+   "closedCount": 155,
    "openPnl": 3254,
-   "closedPnl": 1419.7,
-   "totalPnl": 4673.7,
+   "closedPnl": 1433.3,
+   "totalPnl": 4687.3,
    "frPnl": 464.3,
-   "addOnPnl": 741.5,
+   "addOnPnl": 755.1,
    "htPnl": 3467.9,
    "dailyPnlDelta": 449,
    "winRate": 73,
@@ -139961,6 +140348,24 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 0.405,
      "gainOnDay": -12,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.785,
+     "gainOnDay": 7.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.785,
+     "gainOnDay": 6.1,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -142794,18 +143199,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-28",
-   "totalSignals": 369,
+   "totalSignals": 371,
    "openCount": 216,
-   "closedCount": 153,
+   "closedCount": 155,
    "openPnl": 2990.1,
-   "closedPnl": 1419.7,
-   "totalPnl": 4409.8,
+   "closedPnl": 1433.3,
+   "totalPnl": 4423.4,
    "frPnl": 442.5,
-   "addOnPnl": 693.8,
+   "addOnPnl": 707.4,
    "htPnl": 3273.5,
    "dailyPnlDelta": -269.2,
    "winRate": 66,
-   "avgGain": 12,
+   "avgGain": 11.9,
    "peakGainer": {
     "gain": 132.1,
     "name": "KEEMING"
@@ -143276,6 +143681,24 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 0.405,
      "gainOnDay": -12,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.785,
+     "gainOnDay": 7.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.785,
+     "gainOnDay": 6.1,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -146136,18 +146559,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-29",
-   "totalSignals": 377,
+   "totalSignals": 379,
    "openCount": 224,
-   "closedCount": 153,
+   "closedCount": 155,
    "openPnl": 3505,
-   "closedPnl": 1419.7,
-   "totalPnl": 4924.7,
+   "closedPnl": 1433.3,
+   "totalPnl": 4938.3,
    "frPnl": 472.8,
-   "addOnPnl": 753.2,
+   "addOnPnl": 766.8,
    "htPnl": 3698.7,
    "dailyPnlDelta": 507.8,
    "winRate": 67,
-   "avgGain": 13.1,
+   "avgGain": 13,
    "peakGainer": {
     "gain": 154.4,
     "name": "SAMAIDEN"
@@ -146654,6 +147077,24 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 0.405,
      "gainOnDay": -12,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.785,
+     "gainOnDay": 7.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.785,
+     "gainOnDay": 6.1,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -149550,18 +149991,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-30",
-   "totalSignals": 384,
+   "totalSignals": 386,
    "openCount": 231,
-   "closedCount": 153,
+   "closedCount": 155,
    "openPnl": 3210.3,
-   "closedPnl": 1419.7,
-   "totalPnl": 4630,
+   "closedPnl": 1433.3,
+   "totalPnl": 4643.6,
    "frPnl": 463.2,
-   "addOnPnl": 743.3,
+   "addOnPnl": 756.9,
    "htPnl": 3423.5,
    "dailyPnlDelta": -291.5,
    "winRate": 66,
-   "avgGain": 12.1,
+   "avgGain": 12,
    "peakGainer": {
     "gain": 142.2,
     "name": "KEEMING"
@@ -150104,6 +150545,24 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 0.405,
      "gainOnDay": -12,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.785,
+     "gainOnDay": 7.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.785,
+     "gainOnDay": 6.1,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -153027,14 +153486,14 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-10-01",
-   "totalSignals": 390,
+   "totalSignals": 392,
    "openCount": 234,
-   "closedCount": 156,
+   "closedCount": 158,
    "openPnl": 2966.6,
-   "closedPnl": 1808.4,
-   "totalPnl": 4775,
+   "closedPnl": 1822,
+   "totalPnl": 4788.6,
    "frPnl": 469.6,
-   "addOnPnl": 766.5,
+   "addOnPnl": 780.1,
    "htPnl": 3538.9,
    "dailyPnlDelta": 43.3,
    "winRate": 68,
@@ -153581,6 +154040,24 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 0.405,
      "gainOnDay": -12,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.785,
+     "gainOnDay": 7.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "ISF",
+     "trackerType": "FLR",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.785,
+     "gainOnDay": 6.1,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },

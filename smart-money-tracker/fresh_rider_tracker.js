@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual
 window.FRESH_RIDER_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-01T06:20:49.798Z",
+  "generatedAt": "2026-10-01T06:30:59.601Z",
   "dataDays": 83,
   "totalTracked": 24,
   "openCount": 10,
@@ -536,7 +536,7 @@ window.FRESH_RIDER_TRACKER = {
 };
 window.ADD_ON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-01T06:20:49.798Z",
+  "generatedAt": "2026-10-01T06:30:59.601Z",
   "dataDays": 83,
   "totalTracked": 16,
   "openCount": 8,
@@ -905,17 +905,17 @@ window.ADD_ON_TRACKER = {
 };
 window.FLOOR_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-01T06:20:49.798Z",
+  "generatedAt": "2026-10-01T06:30:59.601Z",
   "dataDays": 83,
-  "totalTracked": 31,
+  "totalTracked": 33,
   "openCount": 16,
-  "closedCount": 15,
-  "closedWins": 9,
-  "closedWinRate": 60,
-  "closedAvgGain": 2.4,
+  "closedCount": 17,
+  "closedWins": 11,
+  "closedWinRate": 65,
+  "closedAvgGain": 2.9,
   "openPnl": 433.2,
-  "closedPnl": 35.4,
-  "totalPnlNow": 468.6
+  "closedPnl": 49,
+  "totalPnlNow": 482.2
  },
  "trades": [
   {
@@ -1347,6 +1347,52 @@ window.FLOOR_ADDON_TRACKER = {
    "exitPrice": 0.405
   },
   {
+   "id": "ISF_2026-08-21_ADDON",
+   "name": "ISF",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-08-21",
+   "entry": 0.73,
+   "entryFloor": 0.72,
+   "currentFloor": 0.77,
+   "currentPrice": 0.785,
+   "high": 0.82,
+   "highDate": "2026-09-10",
+   "maxGain": 12.3,
+   "finalGain": 7.5,
+   "day1ChangePct": 1.39,
+   "days": 14,
+   "lastDate": "2026-09-11",
+   "status": "CLOSED_SL",
+   "ipoYear": 2026,
+   "sector": "Consumer",
+   "slTrail": 0.803,
+   "exitDate": "2026-09-11",
+   "exitPrice": 0.785
+  },
+  {
+   "id": "ISF_2026-08-24_ADDON",
+   "name": "ISF",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-08-24",
+   "entry": 0.74,
+   "entryFloor": 0.72,
+   "currentFloor": 0.77,
+   "currentPrice": 0.785,
+   "high": 0.82,
+   "highDate": "2026-09-10",
+   "maxGain": 10.8,
+   "finalGain": 6.1,
+   "day1ChangePct": 1.37,
+   "days": 13,
+   "lastDate": "2026-09-11",
+   "status": "CLOSED_SL",
+   "ipoYear": 2026,
+   "sector": "Consumer",
+   "slTrail": 0.814,
+   "exitDate": "2026-09-11",
+   "exitPrice": 0.785
+  },
+  {
    "id": "ISF_2026-09-02_ADDON",
    "name": "ISF",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -1603,17 +1649,17 @@ window.FLOOR_ADDON_TRACKER = {
 };
 window.ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-01T06:20:49.798Z",
+  "generatedAt": "2026-10-01T06:30:59.601Z",
   "dataDays": 83,
-  "totalTracked": 71,
+  "totalTracked": 73,
   "openCount": 34,
-  "closedCount": 37,
-  "closedWins": 21,
-  "closedWinRate": 57,
-  "closedAvgGain": 2.7,
+  "closedCount": 39,
+  "closedWins": 23,
+  "closedWinRate": 59,
+  "closedAvgGain": 2.9,
   "openPnl": 1137,
-  "closedPnl": 99.1,
-  "totalPnlNow": 1236.1
+  "closedPnl": 112.7,
+  "totalPnlNow": 1249.7
  },
  "trades": [
   {
@@ -2501,6 +2547,52 @@ window.ALL_TRACKER = {
    "slTrail": 0.432,
    "exitDate": "2026-09-15",
    "exitPrice": 0.405
+  },
+  {
+   "id": "ISF_2026-08-21_ADDON",
+   "name": "ISF",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-08-21",
+   "entry": 0.73,
+   "entryFloor": 0.72,
+   "currentFloor": 0.77,
+   "currentPrice": 0.785,
+   "high": 0.82,
+   "highDate": "2026-09-10",
+   "maxGain": 12.3,
+   "finalGain": 7.5,
+   "day1ChangePct": 1.39,
+   "days": 14,
+   "lastDate": "2026-09-11",
+   "status": "CLOSED_SL",
+   "ipoYear": 2026,
+   "sector": "Consumer",
+   "slTrail": 0.803,
+   "exitDate": "2026-09-11",
+   "exitPrice": 0.785
+  },
+  {
+   "id": "ISF_2026-08-24_ADDON",
+   "name": "ISF",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-08-24",
+   "entry": 0.74,
+   "entryFloor": 0.72,
+   "currentFloor": 0.77,
+   "currentPrice": 0.785,
+   "high": 0.82,
+   "highDate": "2026-09-10",
+   "maxGain": 10.8,
+   "finalGain": 6.1,
+   "day1ChangePct": 1.37,
+   "days": 13,
+   "lastDate": "2026-09-11",
+   "status": "CLOSED_SL",
+   "ipoYear": 2026,
+   "sector": "Consumer",
+   "slTrail": 0.814,
+   "exitDate": "2026-09-11",
+   "exitPrice": 0.785
   },
   {
    "id": "ISF_2026-09-02_ADDON",
