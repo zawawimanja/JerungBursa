@@ -23,6 +23,7 @@
 const fs = require('fs');
 const path = require('path');
 const https = require('https');
+const { execFileSync } = require('child_process');
 
 const HIST_DIR = path.join(path.join(__dirname, '..'), 'history');
 
@@ -194,12 +195,24 @@ function isCSMerah(item) {
     return !(item && item.hasVolumeSpike === true && (item.volumeSpike || 0) >= 1.5);
 }
 
-// ---- Rule Fresh VVIP Rider (A5) — sama macam generator/site ----
+// ---- Rule Fresh VVIP Rider (A5) — 100% Selari dengan index.html ----
 function isFreshRiderPick(item) {
-    return item.isVvip === true && item.signal !== 'avoid' && !item.isCombStock
-        && (item.ipoYear || 0) >= 2025 && (item.pullback ?? 99) <= 10 && (item.closeTightness ?? 99) <= 5.0
-        && item.price >= 0.10 && item.price <= 50
-        && isCSMerah(item);
+    if (!item || !item.name || item.price <= 0) return false;
+    if (item.price < 0.10 || item.price > 50) return false;
+    if (item.isVvip !== true || item.signal === 'avoid' || item.isCombStock) return false;
+    if ((item.ipoYear || 0) < 2025) return false;
+    const pb = item.pullback !== null && item.pullback !== undefined ? item.pullback : 99;
+    if (pb > 10.0) return false;
+    if (item.ipoAge != null && item.ipoAge < 15 && (item.touchCount || 0) < 2) return false;
+
+    const isGreenBreakout = (item.change >= 0 || (item.changePct || 0) >= 0);
+    const tight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
+    if (item.hasVolumeSpike === true) {
+        if (!isGreenBreakout || tight > 10.0) return false;
+    } else {
+        if (tight > 5.0) return false;
+    }
+    return true;
 }
 
 // ---- Rule Hot Theme (confluence 2+ + tema) ----
@@ -485,9 +498,8 @@ function buildMessage(now, out) {
     // ---- Hot Theme Sector Riders (Semiconductors, Solar, AI) ----
     const ht = out.hotTheme;
     if (ht && ht.list && ht.list.length > 0) {
-        // Ambil Top Hot Theme picks (utamakan Tier A+ & Tier A)
-        const htFocusList = ht.list.filter(s => s.isTierAPlus || s.isTierA).slice(0, 4);
-        const finalHtList = htFocusList.length > 0 ? htFocusList : ht.list.slice(0, 3);
+        // Ambil Top Hot Theme picks mengikut susunan rasmi Top Ranking web
+        const finalHtList = ht.list.slice(0, 4);
 
         lines.push(`⚡ *HOT THEME RIDERS (${finalHtList.length} Top Sector Leaders)*`);
         lines.push('──────────────────────────────');
@@ -555,16 +567,30 @@ function buildMessage(now, out) {
 
     console.log(`📦 Loaded ${rows.length} stocks dari live_data.json (${live.lastUpdated || '?'})`);
 
-    // 2. Load trackers (untuk badge + SL warning)
+    // 2. Load trackers (untuk badge + SL warning — susunan OPEN mengatasi CLOSED sama macam index.html)
     const frTrades = loadTrackerTrades(path.join(path.join(__dirname, '..'), 'fresh_rider_tracker.js'));
     const htTrades = loadTrackerTrades(path.join(path.join(__dirname, '..'), 'hot_theme_tracker.js'));
-    const frTrackedStatus = new Map(frTrades.map(t => [(t.name || '').toUpperCase(), t]));
-    const htTrackedStatus = new Map(htTrades.map(t => [(t.name || '').toUpperCase(), t]));
-    const frTrackedNames = new Set(frTrackedStatus.keys());
-    const htTrackedNames = new Set(htTrackedStatus.keys());
+
+    const frTrackMap = new Map();
+    frTrades.filter(t => t.status !== 'OPEN').sort((a,b) => (a.entryDate || '').localeCompare(b.entryDate || '')).forEach(t => {
+        frTrackMap.set(canonName(t.name).toUpperCase(), t);
+    });
+    frTrades.filter(t => t.status === 'OPEN').sort((a,b) => (a.entryDate || '').localeCompare(b.entryDate || '')).forEach(t => {
+        frTrackMap.set(canonName(t.name).toUpperCase(), t);
+    });
+
+    const htTrackMap = new Map();
+    for (const t of htTrades) {
+        const sym = canonName(t.name).toUpperCase();
+        if (!htTrackMap.has(sym) || t.entryDate > htTrackMap.get(sym).entryDate || (t.status === 'OPEN' && htTrackMap.get(sym).status !== 'OPEN')) {
+            htTrackMap.set(sym, t);
+        }
+    }
+    const frTrackedNames = new Set(frTrackMap.keys());
+    const htTrackedNames = new Set(htTrackMap.keys());
     const openFr = frTrades.filter(t => t.status === 'OPEN');
     const openHt = htTrades.filter(t => t.status === 'OPEN');
-    console.log(`📡 Tracker: FR ${frTrades.length} unik (${openFr.length} OPEN) / HT ${htTrades.length} unik (${openHt.length} OPEN)`);
+    console.log(`📡 Tracker: FR ${frTrades.length} rekod (${openFr.length} OPEN) / HT ${htTrades.length} rekod (${openHt.length} OPEN)`);
 
     // 3. Universe calon: semua baris topVolume (site pun guna topVolume utk list atas)
     const candidates = rows.slice();
@@ -625,8 +651,7 @@ function buildMessage(now, out) {
     }
     if (refreshed) console.log(`🔄 ${refreshed} kaunter snapshot stale dikemas kini dari Yahoo 1y`);
 
-    // 5. Lantai DINAMIK (sama macam list): selepas breakout, guna lantai BARU
-    // (min harga 5 hari dagangan terakhir) — bukan floorLow scanner yang ketinggalan.
+    // 5. Lantai DINAMIK & Pengiraan Kesegaran (100% Selari dengan index.html)
     const allCand = new Set(candidates.map(s => canonName(s.name).toUpperCase()));
     const recentFloor = new Map();
     let validDaysCount = 0;
@@ -651,109 +676,98 @@ function buildMessage(now, out) {
         return f || rf || 0;
     }
 
-    // Label signal (sama macam list di index.html):
-    // ⭐ ADD-ON A+ = MASIH OPEN dalam tracker & qualify semula, harga rapat base (≤ 20%), lantai rapat (≤ 3.5%), volume jerung (≥ RM 2M)
-    // ➕ ADD-ON = MASIH OPEN dalam tracker & qualify semula hari ini
-    // ⚠️ ADD-ON (+X%) = MASIH OPEN tapi harga dah naik tinggi (> 20%) dari tapak asal
-    // 🟢 RE-ENTRY = pernah ditrack tapi dah tutup, qualify semula — entry lewat, berhati-hati
-    // 🔥 NEW (Day 1) = belum pernah ditrack — signal pertama kali, entry penuh dari base
-    function signalLabel(stock, trackedMap) {
-        const name = typeof stock === 'string' ? stock : (stock.name || '');
-        const up = name.toUpperCase();
-        const tr = trackedMap.get(up);
-        if (!tr) return '🔥 NEW (Day 1)';
-        if (tr.entryDate && snapDate && tr.entryDate >= snapDate) return '🔥 NEW (Day 1)';
-        if (tr.status === 'OPEN') {
-            const entryP = tr.entry || 0;
-            const curP = (typeof stock === 'object' && stock.price) ? stock.price : 0;
-            const pctFromEntry = (entryP > 0 && curP > 0) ? ((curP - entryP) / entryP) * 100 : 0;
-            const effF = (typeof stock === 'object' && curP) ? effFloor(name, curP, stock.floorLow || curP * 0.95) : 0;
-            const floorDist = (effF && curP) ? ((curP - effF) / effF) * 100 : 99;
-            const toVal = (typeof stock === 'object') ? (stock.rawTurnover || stock.turnover || 0) : 0;
-            const touches = (typeof stock === 'object' && stock.touchCount) ? stock.touchCount : 0;
-            const tight = (typeof stock === 'object' && typeof stock.closeTightness === 'number') ? stock.closeTightness : 99;
+    function effFloorOfHT(item) {
+        const clean = canonName(item.name).toUpperCase();
+        const tr = htTrackMap.get(clean);
+        const trFloor = tr ? (tr.currentFloor || tr.entryFloor || 0) : 0;
+        const rf = recentFloor.get(clean) || 0;
+        const f = item.floorLow || 0;
+        let cands = [f, rf].filter(v => v > 0);
+        if (trFloor > 0 && trFloor <= item.price * 1.02) cands.push(trFloor);
+        return cands.length ? Math.max(...cands) : 0;
+    }
 
-            // ⭐ ADD-ON A+ (AWAL): Fresh Base 1 <= 20%, Floor <= 3.5%, Whale >= RM 2M
-            // 🛡️ ADD-ON (LANTAI RAPAT): Solid Base 2 (Touches >= 3, Floor <= 4.5%, Squeeze <= 3.5%, Whale >= RM 2M)
-            const isSolidBase2 = (touches >= 3 && tight <= 3.5 && floorDist <= 4.5 && toVal >= 2000000);
-            const isFreshBase1 = (pctFromEntry >= 0 && pctFromEntry <= 20 && floorDist <= 3.5 && toVal >= 2000000);
-            if (isFreshBase1) {
-                return '⭐ ADD-ON A+ (AWAL)';
+    // Status Kesegaran (SAMA SEBIJI DENGAN INDEX.HTML):
+    // 0 = 🔥 NEW (Day 1)
+    // 1 = ⭐ ADD-ON A+ (AWAL)
+    // 2 = 🛡️ ADD-ON (LANTAI RAPAT)
+    // 3 = ➕ ADD-ON (Standard)
+    // 4 = ⚠️ ADD-ON (+X% / Pucuk / Extended) — DILARANG SAMA SEKALI DALAM TOP RANKING
+    // 99 = 🟢 RE-ENTRY (Kaunter luar tracker)
+    function frFreshness(it) {
+        const clean = canonName(it.name).toUpperCase();
+        const tr = frTrackMap.get(clean);
+        if (!tr) return 0; // 🔥 NEW (Day 1)
+        if (tr.status === 'OPEN') {
+            if (tr.entryDate && snapDate && tr.entryDate >= snapDate) {
+                if (tr.entryType && tr.entryType.includes('LANTAI RAPAT')) return 2;
+                if (tr.entryType && tr.entryType.includes('ADD-ON')) return 1;
+                return 0;
             }
-            if (isSolidBase2) {
-                return '🛡️ ADD-ON (LANTAI RAPAT)';
+            const entryP = tr.entry || 0;
+            const pct = (entryP > 0 && it.price) ? ((it.price - entryP) / entryP) * 100 : 0;
+            const ef = effFloor(clean, it.price, it.floorLow || it.price * 0.95);
+            const fd = (ef && it.price) ? ((it.price - ef) / ef) * 100 : 99;
+            const toVal = it.turnover || it.rawTurnover || 0;
+            const touches = it.touchCount || 0;
+            const tight = typeof it.closeTightness === 'number' ? it.closeTightness : 99;
+
+            const isSolidBase2 = (touches >= 3 && tight <= 4.85 && fd <= 5.0 && (toVal >= 2000000 || toVal === 0));
+            const isFreshBase1 = (pct >= 0 && pct <= 20 && fd <= 3.5 && (toVal >= 2000000 || toVal === 0));
+            if (isFreshBase1) return 1; // ⭐ ADD-ON A+ (AWAL)
+            if (isSolidBase2) return 2; // 🛡️ ADD-ON (LANTAI RAPAT)
+            if (pct > 20 && fd > 5.0) return 4; // ⚠️ Dilarang / Pucuk (+X%)
+            return 3; // ➕ ADD-ON biasa
+        }
+        return 4; // Terkena SL / Tutup
+    }
+
+    function htFreshness(it) {
+        const clean = canonName(it.name).toUpperCase();
+        const tr = htTrackMap.get(clean);
+        const ef = effFloorOfHT(it);
+        const fd = (ef && it.price) ? ((it.price - ef) / ef) * 100 : 99;
+        const toVal = it.turnover || it.rawTurnover || 0;
+        const touches = it.touchCount || 0;
+        const tight = typeof it.closeTightness === 'number' ? it.closeTightness : 99;
+
+        if (!tr || tr.status !== 'OPEN') {
+            if (fd >= -1.0 && fd <= 3.5 && tight <= 3.5 && toVal >= 1500000) return 0;
+            return 99; // Standard un-tracked / Re-entry
+        }
+        if (tr.status === 'OPEN') {
+            if (tr.entryDate && snapDate && tr.entryDate >= snapDate) {
+                if (tr.entryType && tr.entryType.includes('LANTAI RAPAT')) return 2;
+                if (tr.entryType && tr.entryType.includes('ADD-ON')) return 1;
+                return 0;
             }
-            if (pctFromEntry < 0 && floorDist <= 3.5) {
-                return '🔻 RETEST BASE';
-            } else if (pctFromEntry > 20 && floorDist > 5.0) {
-                return `⚠️ ADD-ON (+${pctFromEntry.toFixed(0)}%)`;
+            const entryP = tr.entry || 0;
+            const pct = (entryP > 0 && it.price) ? ((it.price - entryP) / entryP) * 100 : 0;
+            const isSolidBase2 = (touches >= 3 && tight <= 3.5 && fd <= 4.5 && (toVal >= 2000000 || toVal === 0));
+            const isFreshBase1 = (pct >= 0 && pct <= 20 && fd <= 3.5 && (toVal >= 2000000 || toVal === 0));
+            if (isFreshBase1) return 1; // ⭐ ADD-ON A+ (AWAL)
+            if (isSolidBase2) return 2; // 🛡️ ADD-ON (LANTAI RAPAT)
+            if (pct > 20 && fd > 5.0) return 4; // ⚠️ Dilarang / Pucuk (+X%)
+            return 3; // ➕ ADD-ON biasa
+        }
+        return 4;
+    }
+
+    function formatFreshnessBadge(code, stock, trMap) {
+        if (code === 0) return '🔥 NEW (Day 1)';
+        if (code === 1) return '⭐ ADD-ON A+ (AWAL)';
+        if (code === 2) return '🛡️ ADD-ON (LANTAI RAPAT)';
+        if (code === 3) return '➕ ADD-ON';
+        if (code === 4) {
+            const clean = canonName(stock.name).toUpperCase();
+            const tr = trMap.get(clean);
+            if (tr && tr.entry) {
+                const gain = ((stock.price - tr.entry) / tr.entry) * 100;
+                return `⚠️ ADD-ON (+${gain.toFixed(0)}%)`;
             }
-            return '➕ ADD-ON';
+            return '⚠️ ADD-ON';
         }
         return '🟢 RE-ENTRY';
-    }
-
-    function freshnessRank(label) {
-        if (!label) return 5;
-        if (label.includes('NEW')) return 0;
-        if (label.includes('ADD-ON A+')) return 1;
-        if (label.includes('LANTAI RAPAT')) return 2;
-        if (label.includes('ADD-ON') && !label.includes('⚠️')) return 3;
-        if (label.includes('⚠️')) return 4;
-        return 5; // RE-ENTRY
-    }
-
-    // Filter Top Ranking VVIP — SELARAS 100% dengan scanner top_ranking dalam index.html
-    // Logik SAMA persis dengan verify_scanner_tracker_sync.js & renderConfluenceRadar
-    function isTopRankingVvip(s) {
-        const nameKey = canonName(s.name).toUpperCase();
-        const tight = typeof s.closeTightness === 'number' ? s.closeTightness : 99;
-        const toVal = s.rawTurnover || s.turnover || 0;
-        const effF = effFloor(s.name, s.price, s.floorLow || s.price * 0.95);
-        const fDistVal = effF ? ((s.price - effF) / effF) * 100 : 99;
-        const isDump = s.hasUpperWickRejection === true && (s.change < 0 || (s.changePct && s.changePct < 0));
-        const isSwanClean = isBlackSwanClean(s);
-
-        // 1. Buang: Black Swan / Upper Wick Dump
-        if (!isSwanClean || isDump) return false;
-
-        // 2. Kira freshness (0=NEW, 1=ADD-ON A+, 2=LANTAI RAPAT, 3=STANDARD, 4=PUCUK/RE-ENTRY)
-        const lbl = signalLabel(s, frTrackedStatus);
-        const rank = freshnessRank(lbl);
-        if (rank === 4) return false; // ⚠️ ADD-ON Pucuk — disekat
-
-        // 3. Semak tracker confirmed hari ini (bypass turnover gate untuk data pagi rendah)
-        const trackedEntry = frTrackedStatus.get(nameKey);
-        const isTrackerConfirmedToday = !!(
-            trackedEntry &&
-            trackedEntry.status === 'OPEN' &&
-            trackedEntry.entryDate === snapDate
-        );
-
-        // 4. Buang: turnover lemau < RM 1M (kecuali dah disahkan tracker hari ini)
-        if (toVal < 1000000 && !isTrackerConfirmedToday) return false;
-
-        // 5. NEW (Day 1): lantai <= 10%, tightness <= 10%
-        if (rank === 0) {
-            return (fDistVal <= 10.0 && fDistVal >= -2.0 && tight <= 10.0);
-        }
-
-        // 6. ADD-ON A+ / LANTAI RAPAT: lantai <= 5%, tightness <= 4.85%
-        if (rank === 1 || rank === 2) {
-            if (fDistVal > 5.0 || fDistVal < -2.0) return false;
-            if (tight <= 4.85) return true;
-        }
-
-        // 7. Tier A+ / Tier A
-        const isTierAPlus = (toVal >= 2000000 && tight <= 3.5 && fDistVal >= -1.0 && fDistVal <= 3.5 && isSwanClean && !isDump);
-        const isTierA = (!isTierAPlus && toVal >= 1000000 && tight <= 4.85 && fDistVal >= -1.5 && fDistVal <= 5.0 && isSwanClean && !isDump);
-        if (isTierAPlus || isTierA) return true;
-
-        // 8. Fusion (FR + Hot Theme): bonus layak
-        const isFusion = getHotThemes(s.name).length > 0;
-        if (isFusion && tight <= 4.85 && fDistVal <= 5.0) return true;
-
-        return false;
     }
 
     let newsData = {};
@@ -768,7 +782,7 @@ function buildMessage(now, out) {
     } catch (e) {}
 
     function isBlackSwanClean(s) {
-        const up = (s.name || '').toUpperCase();
+        const up = canonName(s.name || '').toUpperCase();
         const news = newsData[up];
         const refDate = now;
         if (news && Array.isArray(news.entitlements)) {
@@ -796,98 +810,226 @@ function buildMessage(now, out) {
         return true;
     }
 
-    // 6. Kira list FR (Top Ranking VVIP) & HT hari ini
-    const frList = candidates.filter(isFreshRiderPick).filter(isTopRankingVvip);
-    const htList = candidates.filter(isHotThemePick);
+    function getTierOfFR(s) {
+        const effF = effFloor(s.name, s.price, s.floorLow || s.price * 0.95);
+        const toVal = s.rawTurnover || s.turnover || 0;
+        const tightValNum = typeof s.closeTightness === 'number' ? s.closeTightness : 99;
+        const fDistVal = effF ? +(((s.price - effF) / effF) * 100).toFixed(2) : 99;
+        const isDump = s.hasUpperWickRejection === true && (s.change < 0 || (s.changePct && s.changePct < 0));
+        const isSwanClean = isBlackSwanClean(s);
+        const isTierAPlus = (toVal >= 2000000 && tightValNum <= 3.5 && fDistVal >= -1.0 && fDistVal <= 3.5 && isSwanClean && !isDump);
+        const isTierA = (!isTierAPlus && toVal >= 1000000 && tightValNum <= 4.85 && fDistVal >= -1.5 && fDistVal <= 5.0 && isSwanClean && !isDump);
+        const tierBadge = isTierAPlus ? '⭐ TIER A+ SNIPER' : (isTierA ? '🎯 TIER A' : '⚪ TIER B');
+        return { isTierAPlus, isTierA, tierBadge, toVal, tightValNum, fDistVal, isSwanClean, isDump, effF };
+    }
+
+    function getTierOfHT(s) {
+        const effF = effFloorOfHT(s);
+        const toVal = s.rawTurnover || s.turnover || 0;
+        const tightValNum = typeof s.closeTightness === 'number' ? s.closeTightness : 99;
+        const fDistVal = effF ? +(((s.price - effF) / effF) * 100).toFixed(2) : 99;
+        const isDump = s.hasUpperWickRejection === true && (s.change < 0 || (s.changePct && s.changePct < 0));
+        const isSwanClean = isBlackSwanClean(s);
+        const isTierAPlus = (toVal >= 2000000 && tightValNum <= 3.5 && fDistVal >= -1.0 && fDistVal <= 3.5 && isSwanClean && !isDump);
+        const isTierA = (!isTierAPlus && toVal >= 1000000 && tightValNum <= 4.85 && fDistVal >= -1.5 && fDistVal <= 5.0 && isSwanClean && !isDump);
+        const tierBadge = isTierAPlus ? '⭐ TIER A+ SNIPER' : (isTierA ? '🎯 TIER A' : '⚪ TIER B');
+        return { isTierAPlus, isTierA, tierBadge, toVal, tightValNum, fDistVal, isSwanClean, isDump, effF };
+    }
+
+    // 6. Penapis Top Ranking VVIP (100% Selari dengan index.html)
+    function passesTopRankingFR(p) {
+        const t = getTierOfFR(p);
+        const fresh = frFreshness(p);
+
+        // 1. DILARANG SAMA SEKALI: Pucuk / Extended atau SL tepi jurang
+        if (!t.isSwanClean || t.isDump || fresh === 4) return false;
+
+        // 2. Semak sama ada kaunter ini SUDAH DISAHKAN dalam FR Tracker hari ini
+        const nameKey = canonName(p.name).toUpperCase();
+        const trackedEntry = frTrackMap.get(nameKey);
+        const isTrackerConfirmedToday = !!(
+            trackedEntry &&
+            trackedEntry.status === 'OPEN' &&
+            trackedEntry.entryDate === snapDate
+        );
+
+        // 3. DILARANG: Kaunter turnover lemau / runcit (< RM 1.0M)
+        if (t.toVal < 1000000 && !isTrackerConfirmedToday) return false;
+
+        // 4. LAYAK: 🔥 NEW (Day 1 Breakout) — benarkan lilin breakout hijau
+        if (fresh === 0) {
+            return (t.fDistVal <= 10.0 && t.fDistVal >= -2.0 && t.tightValNum <= 10.0);
+        }
+
+        // 5. LAYAK: ⭐ ADD-ON A+ / 🛡️ ADD-ON (LANTAI RAPAT) — lantai rapat wajib <= 5.0%
+        if (fresh === 1 || fresh === 2) {
+            if (t.fDistVal > 5.0 || t.fDistVal < -2.0) return false;
+            if (t.tightValNum <= 4.85) return true;
+        }
+
+        // 6. LAYAK: Tier A+ / Tier A / Fusion
+        if (t.isTierAPlus || t.isTierA) return true;
+        const isFusion = getHotThemes(p.name).length > 0;
+        if (isFusion && t.tightValNum <= 4.85 && t.fDistVal <= 5.0) return true;
+
+        return false;
+    }
+
+    function passesTopRankingHT(p) {
+        const t = getTierOfHT(p);
+        const fresh = htFreshness(p);
+        const isFusion = isFreshRiderPick(p) && getHotThemes(p.name).length > 0;
+
+        // 1. DILARANG SAMA SEKALI: Pucuk / Extended atau SL tepi jurang
+        if (fresh === 4) return false;
+
+        // 2. Semak sama ada kaunter SUDAH DISAHKAN dalam HT Tracker hari ini
+        const nameKeyHT = canonName(p.name).toUpperCase();
+        const trackedEntryHT = htTrackMap.get(nameKeyHT);
+        const isHtConfirmedToday = !!(
+            trackedEntryHT &&
+            trackedEntryHT.status === 'OPEN' &&
+            trackedEntryHT.entryDate === snapDate
+        );
+
+        // 3. DILARANG: Kaunter turnover lemau / runcit (< RM 1.0M)
+        if (t.toVal < 1000000 && !isHtConfirmedToday) return false;
+
+        // 4. DILARANG: Terkena Black Swan Trap atau Selling Dump Merah
+        if (!t.isSwanClean || t.isDump) return false;
+
+        // 5. LAYAK: 🔥 NEW (Day 1 Breakout) — benarkan lilin breakout hijau
+        if (fresh === 0) {
+            return (t.fDistVal <= 10.0 && t.fDistVal >= -2.0 && t.tightValNum <= 10.0);
+        }
+
+        // 6. LAYAK: ⭐ ADD-ON A+ / 🛡️ ADD-ON (LANTAI RAPAT) — lantai rapat
+        const maxAllowedFloorDist = ((p.touchCount || 0) >= 5 && t.toVal >= 2000000 && t.tightValNum <= 3.5) ? 6.8 : 4.8;
+        if (t.fDistVal > maxAllowedFloorDist || t.fDistVal < -2.0) return false;
+
+        // Layak jika Tier A+ Sniper ATAU (ADD-ON A+/Lantai Rapat/Fusion mematuhi Syarat Emas)
+        const meetsGolden = (t.tightValNum <= 4.8 && t.fDistVal <= maxAllowedFloorDist && t.toVal >= 1000000);
+        return t.isTierAPlus || ((fresh === 1 || fresh === 2 || isFusion) && meetsGolden);
+    }
+
+    const frList = candidates.filter(isFreshRiderPick).filter(passesTopRankingFR);
+    const htList = candidates.filter(isHotThemePick).filter(passesTopRankingHT);
 
     const frOut = frList.map(s => {
-        const effF = effFloor(s.name, s.price, s.floorLow || s.price * 0.95);
-        const toVal = s.rawTurnover || s.turnover || 0;
-        const tight = typeof s.closeTightness === 'number' ? s.closeTightness : 99;
-        const floorDist = effF ? +(((s.price - effF) / effF) * 100).toFixed(2) : 99;
-        const isDump = s.hasUpperWickRejection === true && (s.change < 0 || (s.changePct && s.changePct < 0));
-        const isSwanClean = isBlackSwanClean(s);
-        const isTierAPlus = (toVal >= 2000000 && tight <= 3.5 && floorDist >= -1.0 && floorDist <= 3.5 && isSwanClean && !isDump);
-        const isTierA = (!isTierAPlus && toVal >= 1000000 && tight <= 4.8 && floorDist >= -1.5 && floorDist <= 4.8 && isSwanClean && !isDump);
-        const tierBadge = isTierAPlus ? '⭐ TIER A+ SNIPER' : (isTierA ? '🎯 TIER A' : '⚪ TIER B');
-
+        const tier = getTierOfFR(s);
+        const fresh = frFreshness(s);
         return {
             name: s.name, price: s.price, changePct: s.changePct, pullback: s.pullback,
             tight: typeof s.closeTightness === 'number' ? s.closeTightness : null,
-            floorDist: effF ? +(((s.price - effF) / effF) * 100).toFixed(2) : null, floor: effF,
-            // Sama macam generator tracker: SL = max(entry*0.89, trail high*0.80).
+            floorDist: tier.fDistVal, floor: tier.effF,
             sl: +Math.max(s.price * 0.89, s.price * 0.80).toFixed(3),
             inTracker: frTrackedNames.has(canonName(s.name).toUpperCase()),
-            label: signalLabel(s, frTrackedStatus),
-            tierBadge,
-            isTierAPlus,
+            label: formatFreshnessBadge(fresh, s, frTrackMap),
+            tierBadge: tier.tierBadge,
+            isTierAPlus: tier.isTierAPlus,
+            isTierA: tier.isTierA,
             touch: s.touchCount || 0,
-            turnover: s.rawTurnover || s.turnover || 0,
+            turnover: tier.toVal,
             grade: s.ipoGrade || s.ipoYear || '—',
-            confidenceScore: s.confidenceScore || 0
+            confidenceScore: s.confidenceScore || 0,
+            _tier: tier,
+            _freshness: fresh
         };
     });
-    const htOut = htList.map(s => {
-        const effF = effFloor(s.name, s.price, s.floorLow || s.price * 0.95);
-        const sl = Math.max(effF * 0.97, s.price * 0.80);
-        const toVal = s.rawTurnover || s.turnover || 0;
-        const tight = typeof s.closeTightness === 'number' ? s.closeTightness : 99;
-        const floorDist = effF ? +(((s.price - effF) / effF) * 100).toFixed(2) : 99;
-        const isDump = s.hasUpperWickRejection === true && (s.change < 0 || (s.changePct && s.changePct < 0));
-        const isSwanClean = isBlackSwanClean(s);
-        const isTierAPlus = (toVal >= 2000000 && tight <= 3.5 && floorDist >= -1.0 && floorDist <= 3.5 && isSwanClean && !isDump);
-        const isTierA = (!isTierAPlus && toVal >= 1000000 && tight <= 4.8 && floorDist >= -1.5 && floorDist <= 4.8 && isSwanClean && !isDump);
-        const tierBadge = isTierAPlus ? '⭐ TIER A+ SNIPER' : (isTierA ? '🎯 TIER A' : '⚪ TIER B');
 
+    const htOut = htList.map(s => {
+        const tier = getTierOfHT(s);
+        const fresh = htFreshness(s);
+        const effF = tier.effF;
+        const sl = Math.max(effF * 0.97, s.price * 0.80);
         return {
             name: s.name, price: s.price, changePct: s.changePct, pullback: s.pullback,
             tight: typeof s.closeTightness === 'number' ? s.closeTightness : null,
-            floorDist: effF ? +(((s.price - effF) / effF) * 100).toFixed(2) : null, floor: effF,
+            floorDist: tier.fDistVal, floor: effF,
             confluence: confluenceCount(s),
             sl: +sl.toFixed(3),
             inTracker: htTrackedNames.has(canonName(s.name).toUpperCase()),
-            label: signalLabel(s, htTrackedStatus),
-            tierBadge,
-            isTierAPlus,
-            isTierA,
+            label: formatFreshnessBadge(fresh, s, htTrackMap),
+            tierBadge: tier.tierBadge,
+            isTierAPlus: tier.isTierAPlus,
+            isTierA: tier.isTierA,
             touch: s.touchCount || 0,
-            turnover: s.rawTurnover || s.turnover || 0
+            turnover: tier.toVal,
+            _tier: tier,
+            _freshness: fresh
         };
     });
-    // Susun mengikut susunan Top Ranking VVIP di web:
-    // 0. ⭐ TIER A+ SNIPER mutlak ke atas
-    // 1. FUSION dulu (Semicon/Solar)
-    // 2. Freshness (🔥 NEW (Day 1) > ⭐ ADD-ON A+ > 🛡️ ADD-ON (LANTAI RAPAT) > ➕ ADD-ON > ⚠️ ADD-ON > 🟢 RE-ENTRY)
-    // 3. Tightness % (paling mampat/squeeze)
-    // 4. Floor dist % (SL nipis)
-    // 5. Pullback %
-    // 6. Turnover (paling besar)
-    const tieWhale = (a, b) => {
-        const wa = (a.turnover || 0) >= 2000000 ? 1 : 0;
-        const wb = (b.turnover || 0) >= 2000000 ? 1 : 0;
-        return wb - wa;
-    };
-    const tieTight = (a, b) => ((a.tight ?? 99) - (b.tight ?? 99));
-    const tieFloor = (a, b) => ((a.floorDist ?? 99) - (b.floorDist ?? 99));
-    const tiePb = (a, b) => ((a.pullback ?? 99) - (b.pullback ?? 99));
-    const tieTouch = (a, b) => (b.touch - a.touch);
-    const tieTurnover = (a, b) => (b.turnover - a.turnover);
+
+    // Susun mengikut susunan Top Ranking VVIP rasmi di web (index.html):
+    // 0. Keutamaan Mutlak #0: 🔥 NEW (Day 1 Breakout) sentiasa menduduki tangga teratas sebagai entri segar!
+    // 1. ⭐ TIER A+ SNIPER
+    // 2. 🎯 TIER A
+    // 3. Duit Jerung Aktif (Turnover >= RM 2.0M)
+    // 4. 🔥⚡ FUSION (Lulus FR + HT)
+    // 5. Freshness rank (0 = NEW < 1 = ADD-ON A+ < 2 = LANTAI RAPAT < 3 = STANDARD)
+    // 6. Tightness % (paling mampat/squeeze)
+    // 7. Floor dist % (SL nipis)
+    // 8. Pullback %
+    // 9. Turnover (paling besar)
     frOut.sort((a, b) => {
-        if (a.isTierAPlus !== b.isTierAPlus) return b.isTierAPlus ? 1 : -1;
-        const fusionA = getHotThemes(a.name).length > 0;
-        const fusionB = getHotThemes(b.name).length > 0;
-        if (fusionA !== fusionB) return fusionA ? -1 : 1;
-        return tieWhale(a, b) || (freshnessRank(a.label) - freshnessRank(b.label)) || tieTight(a, b) || tieFloor(a, b) || tiePb(a, b) || tieTouch(a, b) || tieTurnover(a, b);
-    });
-    htOut.sort((a, b) => {
-        if (a.isTierAPlus !== b.isTierAPlus) return b.isTierAPlus ? 1 : -1;
-        if (a.isTierA !== b.isTierA) return b.isTierA ? 1 : -1;
+        const tierA = a._tier;
+        const tierB = b._tier;
+        const fa = a._freshness, fb = b._freshness;
+
+        if (fa !== fb) {
+            if (fa === 0 || fb === 0) return fa - fb;
+        }
+        if (tierA.isTierAPlus !== tierB.isTierAPlus) return tierB.isTierAPlus ? 1 : -1;
+        if (tierA.isTierA !== tierB.isTierA) return tierB.isTierA ? 1 : -1;
+
+        const isWhaleA = tierA.toVal >= 2000000 ? 1 : 0;
+        const isWhaleB = tierB.toVal >= 2000000 ? 1 : 0;
+        if (isWhaleA !== isWhaleB) return isWhaleB - isWhaleA;
+
         const fusionA = isFreshRiderPick(a) && getHotThemes(a.name).length > 0;
         const fusionB = isFreshRiderPick(b) && getHotThemes(b.name).length > 0;
         if (fusionA !== fusionB) return fusionA ? -1 : 1;
-        return tieWhale(a, b) || (freshnessRank(a.label) - freshnessRank(b.label)) || tieTight(a, b) || tieFloor(a, b) || tiePb(a, b) || (b.confluence - a.confluence) || tieTouch(a, b) || tieTurnover(a, b);
+
+        if (fa !== fb) return fa - fb;
+        if (tierA.tightValNum !== tierB.tightValNum) return tierA.tightValNum - tierB.tightValNum;
+        if (tierA.fDistVal !== tierB.fDistVal) return tierA.fDistVal - tierB.fDistVal;
+
+        const pa = a.pullback ?? 99, pb = b.pullback ?? 99;
+        if (pa !== pb) return pa - pb;
+
+        return tierB.toVal - tierA.toVal;
     });
 
+    htOut.sort((a, b) => {
+        const tierA = a._tier;
+        const tierB = b._tier;
+        const fa = a._freshness, fb = b._freshness;
+
+        if (fa !== fb) {
+            if (fa === 0 || fb === 0) return fa - fb;
+        }
+        if (tierA.isTierAPlus !== tierB.isTierAPlus) return tierB.isTierAPlus ? 1 : -1;
+        if (tierA.isTierA !== tierB.isTierA) return tierB.isTierA ? 1 : -1;
+
+        const isWhaleA = tierA.toVal >= 2000000 ? 1 : 0;
+        const isWhaleB = tierB.toVal >= 2000000 ? 1 : 0;
+        if (isWhaleA !== isWhaleB) return isWhaleB - isWhaleA;
+
+        const fusionA = isFreshRiderPick(a) && getHotThemes(a.name).length > 0;
+        const fusionB = isFreshRiderPick(b) && getHotThemes(b.name).length > 0;
+        if (fusionA !== fusionB) return fusionA ? -1 : 1;
+
+        const ca = a.confluence || 0, cb = b.confluence || 0;
+        if (ca !== cb) return cb - ca;
+
+        if (tierA.tightValNum !== tierB.tightValNum) return tierA.tightValNum - tierB.tightValNum;
+        if (tierA.fDistVal !== tierB.fDistVal) return tierA.fDistVal - tierB.fDistVal;
+
+        const pa = a.pullback ?? 99, pb = b.pullback ?? 99;
+        if (pa !== pb) return pa - pb;
+
+        return tierB.toVal - tierA.toVal;
+    });
     // 7. SL warning — posisi OPEN tracker bawah trailing stop
     const slWarnings = [];
     for (const { t, tracker } of [...openFr.map(t => ({ t, tracker: 'FR' })), ...openHt.map(t => ({ t, tracker: 'HT' }))]) {
@@ -973,13 +1115,25 @@ function buildMessage(now, out) {
                 if (cur) chunks.push(cur);
             }
 
-            console.log(`📤 Menghantar ${chunks.length} bahagian mesej ke Telegram...`);
-            for (let i = 0; i < chunks.length; i++) {
-                const part = chunks[i];
-                const url = `https://api.telegram.org/bot${token}/sendMessage`;
-                const body = JSON.stringify({ chat_id: chatId, text: part });
-                const r = await new Promise((resolve, reject) => {
+            async function sendTelegramMessage(t, c, textPart) {
+                try {
+                    const out = execFileSync('curl', [
+                        '-4', '-s', '--max-time', '15', '-X', 'POST',
+                        `https://api.telegram.org/bot${t}/sendMessage`,
+                        '-H', 'Content-Type: application/json',
+                        '-d', JSON.stringify({ chat_id: c, text: textPart })
+                    ], { encoding: 'utf8' });
+                    const res = JSON.parse(out);
+                    if (res && res.ok) return res;
+                } catch (e) {
+                    // Fallback to https.request
+                }
+
+                const url = `https://api.telegram.org/bot${t}/sendMessage`;
+                const body = JSON.stringify({ chat_id: c, text: textPart });
+                return new Promise((resolve, reject) => {
                     const req = https.request(url, {
+                        family: 4,
                         method: 'POST',
                         headers: { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(body) }
                     }, (res) => {
@@ -991,6 +1145,12 @@ function buildMessage(now, out) {
                     req.write(body);
                     req.end();
                 });
+            }
+
+            console.log(`📤 Menghantar ${chunks.length} bahagian mesej ke Telegram...`);
+            for (let i = 0; i < chunks.length; i++) {
+                const part = chunks[i];
+                const r = await sendTelegramMessage(token, chatId, part);
                 if (r && r.ok) {
                     console.log(`✅ Telegram: bahagian ${i + 1}/${chunks.length} berjaya dihantar.`);
                 } else {
