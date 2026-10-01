@@ -431,6 +431,67 @@ function fmtPrice(v) {
     return (+v).toFixed(3);
 }
 
+function formatStockCard(s) {
+    const tvUrl = `https://www.tradingview.com/chart/?symbol=MYX:${s.name}&interval=D`;
+    const gradeStr = s.grade && s.grade !== '—' && s.grade !== 'Unrated' ? ` (${s.grade})` : (s.grade === 'Unrated' ? ' (Unrated)' : '');
+    
+    // 1. Freshness badge
+    const freshnessBadge = s.label || '';
+    
+    // 2. Kumpulan / Whale
+    let kumpulanBadge = '';
+    if (s.isKumpulan || s._whaleInst) {
+        const shortWhale = s._whaleInst ? s._whaleInst.split(' ')[0] : 'KUMPULAN';
+        kumpulanBadge = `🏛️ ${shortWhale}`;
+    }
+    
+    // 3. Positive catalysts
+    let catalystBadges = '';
+    const nbList = s.newsBadges || [];
+    for (const nb of nbList) {
+        if (nb.type === 'JERUNG_5PCT') catalystBadges += '🐋 Jerung 5%+';
+        else if (nb.type === 'EV_CATALYST') catalystBadges += '⚡ EV Catalyst';
+        else if (nb.type === 'AI_CATALYST') catalystBadges += '🤖 AI Catalyst';
+        else if (nb.type === 'CONTRACT_WIN') catalystBadges += '📜 Contract Win';
+    }
+    
+    // 4. Swan badge
+    const swanBadge = s.swanBadge || '🟢 🛡️ Swan: PASS';
+    
+    const header = `[${s.name}🔗](${tvUrl})${gradeStr}${freshnessBadge}${kumpulanBadge}${catalystBadges}${swanBadge}`;
+    const tightStr = `tight ${s.tight != null ? s.tight.toFixed(2) : '—'}%`;
+    const floorStr = `RM ${s.floor.toFixed(3)}`;
+    const fDist = s.floorDist != null ? s.floorDist : 0;
+    const floorDistStr = `${fDist >= 0 ? '+' : ''}${fDist.toFixed(1)}% (${s.touch || 0}x)`;
+    const rrStr = `R:R 1:${s.rrRatio || '—'}`;
+    const trPriceStr = `RM ${s.triggerPrice.toFixed(3)} (${s.triggerDate || 'Hari Ini'})`;
+    const distBadge = s.distBadge || '🟢 0.0% (DAY 1)';
+    const pbStr = `${s.pullback != null ? s.pullback.toFixed(1) : '—'}%`;
+    const priceStr = `RM ${s.price.toFixed(3)}`;
+    const changeStr = `${s.changePct >= 0 ? '+' : ''}${s.changePct != null ? s.changePct.toFixed(2) : '0.00'}%`;
+    const toVal = s.turnover || 0;
+    const toStr = toVal >= 1e6 ? `RM ${(toVal / 1e6).toFixed(2)}M 🔥` : `RM ${(toVal / 1e3).toFixed(0)}k`;
+    const confCount = s.confluence || 0;
+    const confStr = confCount >= 1 ? `YES (${confCount}x)` : 'NO';
+    const aiScoreStr = `${s.confidenceScore || 80}/100📜✨ AI`;
+    
+    return [
+        header,
+        tightStr,
+        floorStr,
+        floorDistStr,
+        rrStr,
+        trPriceStr,
+        distBadge,
+        pbStr,
+        priceStr,
+        changeStr,
+        toStr,
+        confStr,
+        aiScoreStr
+    ].join('\n');
+}
+
 function buildMessage(now, out) {
     const myt = new Date(now.getTime() + 8 * 3600 * 1000);
     const dateStr = myt.toISOString().slice(0, 10);
@@ -450,49 +511,7 @@ function buildMessage(now, out) {
         lines.push('Tiada setup Fresh Rider yang menepati kriteria hari ini.');
     } else {
         fr.list.forEach((s) => {
-            const tvUrl = `https://www.tradingview.com/chart/?symbol=MYX:${s.name}&interval=D`;
-            const gradeStr = s.grade && s.grade !== '—' ? ` (${s.grade})` : '';
-            const toVal = s.turnover || 0;
-            const toStr = toVal >= 1e6 ? `RM ${(toVal / 1e6).toFixed(2)}M 🔥` : toVal >= 500000 ? `RM ${(toVal / 1e3).toFixed(0)}k` : `RM ${(toVal / 1e3).toFixed(0)}k`;
-            const tightStr = s.tight != null ? `${s.tight.toFixed(2)}%` : '—';
-            const pbStr = s.pullback != null ? `${s.pullback.toFixed(1)}%` : '—';
-            const fDist = s.floorDist != null ? s.floorDist : 0;
-            const floorDistStr = (fDist >= 0 ? '+' : '') + fDist.toFixed(1) + '%';
-            const rrRatio = fDist > 0 ? (10.0 / fDist).toFixed(1) : '—';
-            const touchCount = s.touchCount || s.touch || 0;
-            const changeStr = (s.changePct > 0 ? '+' : '') + (s.changePct != null ? s.changePct.toFixed(2) : '0.00') + '%';
-            
-            // Catalyst badges — pisahkan positif dan risiko
-            const POSITIVE_TYPES = new Set(['JERUNG_5PCT','EV_CATALYST','AI_CATALYST','CONTRACT_WIN']);
-            const positiveBadges = (s.newsBadges || []).filter(b => POSITIVE_TYPES.has(b.type)).map(b => b.label).join('');
-            const kumpulanBadge = s.isKumpulan ? '🏛️ KUMPULAN' : '';
-            const catalystTxt = `${kumpulanBadge}${positiveBadges}🟢 🛡️ Swan: PASS`;
-
-            // Dynamic dist from trigger (fresh=0 show DAY 1, else show % from floor)
-            const isFreshDay1 = (s._freshness === 0 || Math.abs(fDist) < 0.1);
-            const distBadge = isFreshDay1 ? '🟢 0.0% (DAY 1)' : (fDist <= 3.0 ? `🟢 +${fDist.toFixed(1)}%` : `⚪ +${fDist.toFixed(1)}%`);
-
-            // Sector tag
-            const sectorTag = s.sector ? ` · ${s.sector}` : '';
-
-            // Confluence
-            const confCount = s.confluence || 0;
-            const confStr = confCount >= 3 ? `🔥 TRIPLE (${confCount}x)` : confCount >= 2 ? `YES (${confCount}x)` : confCount >= 1 ? `YES (${confCount}x)` : '—';
-
-            lines.push(`[${s.name}🔗](${tvUrl})${gradeStr}${s.label}${sectorTag}`);
-            lines.push(`${catalystTxt}`);
-            lines.push(`tight ${tightStr}`);
-            lines.push(`RM ${s.floor.toFixed(3)}`);
-            lines.push(`${floorDistStr} (${touchCount}x)`);
-            lines.push(`R:R 1:${rrRatio}`);
-            lines.push(`RM ${s.price.toFixed(3)} (Hari Ini)`);
-            lines.push(`${distBadge}`);
-            lines.push(`${pbStr}`);
-            lines.push(`RM ${s.price.toFixed(3)}`);
-            lines.push(`${changeStr}`);
-            lines.push(`${toStr}`);
-            lines.push(`${confStr}`);
-            lines.push(`${s.confidenceScore || 0}/100📜✨ AI`);
+            lines.push(formatStockCard(s));
             lines.push('');
         });
     }
@@ -504,46 +523,7 @@ function buildMessage(now, out) {
         lines.push('──────────────────────────────');
 
         ht.list.forEach((s) => {
-            const tvUrl = `https://www.tradingview.com/chart/?symbol=MYX:${s.name}&interval=D`;
-            const toVal = s.turnover || 0;
-            const toStr = toVal >= 1e6 ? `RM ${(toVal / 1e6).toFixed(2)}M 🔥` : toVal >= 500000 ? `RM ${(toVal / 1e3).toFixed(0)}k` : `RM ${(toVal / 1e3).toFixed(0)}k`;
-            const tightStr = s.tight != null ? `${s.tight.toFixed(2)}%` : '—';
-            const pbStr = s.pullback != null ? `${s.pullback.toFixed(1)}%` : '—';
-            const fDist = s.floorDist != null ? s.floorDist : 0;
-            const floorDistStr = (fDist >= 0 ? '+' : '') + fDist.toFixed(1) + '%';
-            const rrRatio = fDist > 0 ? (10.0 / fDist).toFixed(1) : '—';
-            const touchCount = s.touchCount || s.touch || 0;
-            const changeStr = (s.changePct > 0 ? '+' : '') + (s.changePct != null ? s.changePct.toFixed(2) : '0.00') + '%';
-            const gradeStr = s.grade && s.grade !== '—' ? ` (${s.grade})` : '';
-            
-            // Catalyst badges — same as FR
-            const POSITIVE_TYPES_HT = new Set(['JERUNG_5PCT','EV_CATALYST','AI_CATALYST','CONTRACT_WIN']);
-            const positiveBadgesHT = (s.newsBadges || []).filter(b => POSITIVE_TYPES_HT.has(b.type)).map(b => b.label).join('');
-            const catalystTxt = `${positiveBadgesHT}🟢 🛡️ Swan: PASS`;
-
-            // Sector tag + confluence
-            const sectorTag = s.sector ? ` · ${s.sector}` : '';
-            const confCount = s.confluence || 0;
-            const confStr = confCount >= 3 ? `🔥 TRIPLE (${confCount}x)` : confCount >= 2 ? `YES (${confCount}x)` : confCount >= 1 ? `YES (${confCount}x)` : '—';
-
-            // Dynamic dist badge
-            const isFreshDay1 = (s._freshness === 0 || Math.abs(fDist) < 0.1);
-            const distBadge = isFreshDay1 ? '🟢 0.0% (DAY 1)' : (fDist <= 3.0 ? `🟢 +${fDist.toFixed(1)}%` : `⚪ +${fDist.toFixed(1)}%`);
-
-            lines.push(`[${s.name}🔗](${tvUrl})${gradeStr}${s.label}${sectorTag}`);
-            lines.push(`${catalystTxt}`);
-            lines.push(`tight ${tightStr}`);
-            lines.push(`RM ${s.floor.toFixed(3)}`);
-            lines.push(`${floorDistStr} (${touchCount}x)`);
-            lines.push(`R:R 1:${rrRatio}`);
-            lines.push(`RM ${s.price.toFixed(3)} (Hari Ini)`);
-            lines.push(`${distBadge}`);
-            lines.push(`${pbStr}`);
-            lines.push(`RM ${s.price.toFixed(3)}`);
-            lines.push(`${changeStr}`);
-            lines.push(`${toStr}`);
-            lines.push(`${confStr}`);
-            lines.push(`${s.confidenceScore || 0}/100📜✨ AI`);
+            lines.push(formatStockCard(s));
             lines.push('');
         });
     }
@@ -693,33 +673,50 @@ function buildMessage(now, out) {
         return minMap;
     }
     const recentFloor = getRecentFloorMap();
+    function formatShortDate(dStr) {
+        if (!dStr) return '—';
+        const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+        const p = dStr.split('-');
+        if (p.length === 3) {
+            const mIdx = parseInt(p[1], 10) - 1;
+            return `${parseInt(p[2], 10)} ${months[mIdx] || p[1]}`;
+        }
+        return dStr;
+    }
+
+    function getRecentBaseTrigger(item, curRefDate, trackMap) {
+        if (!item) return { price: 0, dateStr: '—', distPct: 0, isDayOne: false, isBase2: false };
+        const nm = canonName(item.name).toUpperCase();
+        const trTrade = trackMap ? trackMap.get(nm) : null;
+
+        if (!trTrade || !trTrade.entry || (trTrade.entryDate && trTrade.entryDate >= curRefDate)) {
+            return { price: item.price, dateStr: 'Hari Ini', distPct: 0, isDayOne: true, isBase2: false };
+        }
+
+        const originDist = ((item.price - trTrade.entry) / trTrade.entry) * 100;
+        return {
+            price: trTrade.entry,
+            dateStr: trTrade.entryDate ? formatShortDate(trTrade.entryDate) : '—',
+            distPct: originDist,
+            isDayOne: false,
+            isBase2: false
+        };
+    }
+
     function effFloor(name, price, floorLow) {
         const nm = canonName(name).toUpperCase();
         const rf = recentFloor.get(nm) || 0;
         const f = floorLow || 0;
-        // Guna currentFloor dari FR Tracker sebagai lantai dinamik staircase (sama seperti web getRecentFloorMap)
-        const frTr = frTrackMap.get(nm);
-        const trFloor = (frTr && frTr.status === 'OPEN') ? (frTr.currentFloor || frTr.entryFloor || 0) : 0;
-        if (f > 0 && ((price - f) / f) > 0.10) {
-            // Breakout jauh (>10%) — guna max dari semua lantai sebagai staircase floor
-            let cands = [f, rf].filter(v => v > 0);
-            if (trFloor > 0 && trFloor <= price * 1.02) cands.push(trFloor);
-            return cands.length ? Math.max(...cands) : f;
-        }
-        // Dalam base asal — kekalkan floorLow atau tracker entryFloor
-        if (trFloor > 0 && trFloor <= price * 1.02) return Math.max(f, Math.min(trFloor, price * 1.0));
+        if (f > 0 && rf > 0 && ((price - f) / f) > 0.10) return Math.max(f, rf);
         return f || rf || 0;
     }
 
     function effFloorOfHT(item) {
         const clean = canonName(item.name).toUpperCase();
-        const tr = htTrackMap.get(clean);
-        const trFloor = tr ? (tr.currentFloor || tr.entryFloor || 0) : 0;
         const rf = recentFloor.get(clean) || 0;
         const f = item.floorLow || 0;
-        let cands = [f, rf].filter(v => v > 0);
-        if (trFloor > 0 && trFloor <= item.price * 1.02) cands.push(trFloor);
-        return cands.length ? Math.max(...cands) : 0;
+        if (f > 0 && rf > 0 && ((item.price - f) / f) > 0.10) return Math.max(f, rf);
+        return f || rf || 0;
     }
 
     // Status Kesegaran (SAMA SEBIJI DENGAN INDEX.HTML):
@@ -879,9 +876,19 @@ function buildMessage(now, out) {
         // 1. DILARANG SAMA SEKALI: Pucuk / Extended atau SL tepi jurang
         if (!t.isSwanClean || t.isDump || fresh === 4) return false;
 
-        // 2. Semak sama ada kaunter ini SUDAH DISAHKAN dalam FR Tracker hari ini
         const nameKey = canonName(p.name).toUpperCase();
         const trackedEntry = frTrackMap.get(nameKey);
+
+        // 2. DILARANG: Kaunter lama dalam FR Tracker yang sudah melepasi fasa Fresh Rider
+        // (sudah untung > 20% dari entry atau bukan fresh base Day 1/Add-on)
+        if (trackedEntry && trackedEntry.status === 'OPEN' && trackedEntry.entryDate < snapDate) {
+            const entryP = trackedEntry.entry || 0;
+            const pct = entryP > 0 ? ((p.price - entryP) / entryP) * 100 : 0;
+            if (pct > 20 && fresh !== 1 && fresh !== 2) return false;
+            if (fresh === 3) return false;
+        }
+
+        // 3. Semak sama ada kaunter ini SUDAH DISAHKAN dalam FR Tracker hari ini
         const isTrackerConfirmedToday = !!(
             trackedEntry &&
             trackedEntry.status === 'OPEN' &&
@@ -953,10 +960,28 @@ function buildMessage(now, out) {
     const frOut = frList.map(s => {
         const tier = getTierOfFR(s);
         const fresh = frFreshness(s);
+        const effF = tier.effF;
+        const trBase = getRecentBaseTrigger(s, snapDate, frTrackMap);
+        
+        const isWhale = getHotThemes(s.name).length > 0 || (s.touchCount || 0) >= 10 || passesJerungRadar(s) || ((newsData[canonName(s.name).toUpperCase()] || {}).newsBadges || []).some(b => b.type === 'JERUNG_5PCT');
+        let sniperScore = s.confidenceScore || 72;
+        if ((s.touchCount || 0) >= 3 && isWhale) sniperScore += 18;
+        else if (isWhale) sniperScore += 12;
+        if (typeof s.closeTightness === 'number' && s.closeTightness <= 4.0 && (s.touchCount || 0) >= 4) sniperScore += 10;
+        if (s.volumeDecline === true || (s.volumeSpike || 99) < 0.5) sniperScore += 6;
+        sniperScore = Math.min(99, sniperScore);
+
+        const fDist = tier.fDistVal;
+        const isFreshDay1 = (fresh === 0 || Math.abs(fDist) < 0.1);
+        const distBadge = isFreshDay1 ? '🟢 0.0% (DAY 1)' : (fDist <= 0 ? `⚪ ${fDist.toFixed(1)}% (At Base)` : (fDist <= 3.0 ? `🟢 +${fDist.toFixed(1)}%` : `⚪ +${fDist.toFixed(1)}%`));
+        const rrRatio = fDist > 0 ? (10.0 / fDist).toFixed(1) : '—';
+
+        const whaleInst = tier._whaleInst || (isWhale ? 'KUMPULAN' : '');
+
         return {
             name: s.name, price: s.price, changePct: s.changePct, pullback: s.pullback,
             tight: typeof s.closeTightness === 'number' ? s.closeTightness : null,
-            floorDist: tier.fDistVal, floor: tier.effF,
+            floorDist: fDist, floor: effF,
             sl: +Math.max(s.price * 0.89, s.price * 0.80).toFixed(3),
             inTracker: frTrackedNames.has(canonName(s.name).toUpperCase()),
             label: formatFreshnessBadge(fresh, s, frTrackMap),
@@ -966,10 +991,17 @@ function buildMessage(now, out) {
             touch: s.touchCount || 0,
             turnover: tier.toVal,
             grade: s.ipoGrade || s.ipoYear || '—',
-            confidenceScore: s.confidenceScore || 0,
+            confidenceScore: sniperScore,
             sector: s.sector || '',
             confluence: confluenceCount(s),
-            isKumpulan: getHotThemes(s.name).length > 0,
+            isKumpulan: isWhale,
+            _whaleInst: whaleInst,
+            newsBadges: (newsData[canonName(s.name).toUpperCase()] || {}).newsBadges || [],
+            swanBadge: isBlackSwanClean(s) ? '🟢 🛡️ Swan: PASS' : '⚠️ Swan: ALERT',
+            triggerPrice: trBase.price,
+            triggerDate: trBase.dateStr,
+            distBadge: distBadge,
+            rrRatio: rrRatio,
             _tier: tier,
             _freshness: fresh
         };
@@ -979,11 +1011,28 @@ function buildMessage(now, out) {
         const tier = getTierOfHT(s);
         const fresh = htFreshness(s);
         const effF = tier.effF;
+        const trBase = getRecentBaseTrigger(s, snapDate, htTrackMap);
+        
+        const isWhale = getHotThemes(s.name).length > 0 || (s.touchCount || 0) >= 10 || passesJerungRadar(s) || ((newsData[canonName(s.name).toUpperCase()] || {}).newsBadges || []).some(b => b.type === 'JERUNG_5PCT');
+        let sniperScore = s.confidenceScore || 72;
+        if ((s.touchCount || 0) >= 3 && isWhale) sniperScore += 18;
+        else if (isWhale) sniperScore += 12;
+        if (typeof s.closeTightness === 'number' && s.closeTightness <= 4.0 && (s.touchCount || 0) >= 4) sniperScore += 10;
+        if (s.volumeDecline === true || (s.volumeSpike || 99) < 0.5) sniperScore += 6;
+        sniperScore = Math.min(99, sniperScore);
+
+        const fDist = tier.fDistVal;
+        const isFreshDay1 = (fresh === 0 || Math.abs(fDist) < 0.1);
+        const distBadge = isFreshDay1 ? '🟢 0.0% (DAY 1)' : (fDist <= 0 ? `⚪ ${fDist.toFixed(1)}% (At Base)` : (fDist <= 3.0 ? `🟢 +${fDist.toFixed(1)}%` : `⚪ +${fDist.toFixed(1)}%`));
+        const rrRatio = fDist > 0 ? (10.0 / fDist).toFixed(1) : '—';
         const sl = Math.max(effF * 0.97, s.price * 0.80);
+
+        const whaleInst = tier._whaleInst || (isWhale ? 'KUMPULAN' : '');
+
         return {
             name: s.name, price: s.price, changePct: s.changePct, pullback: s.pullback,
             tight: typeof s.closeTightness === 'number' ? s.closeTightness : null,
-            floorDist: tier.fDistVal, floor: effF,
+            floorDist: fDist, floor: effF,
             confluence: confluenceCount(s),
             sl: +sl.toFixed(3),
             inTracker: htTrackedNames.has(canonName(s.name).toUpperCase()),
@@ -994,9 +1043,16 @@ function buildMessage(now, out) {
             touch: s.touchCount || 0,
             turnover: tier.toVal,
             grade: s.ipoGrade || s.ipoYear || '—',
-            confidenceScore: s.confidenceScore || 0,
+            confidenceScore: sniperScore,
             sector: s.sector || '',
-            isKumpulan: false,
+            isKumpulan: isWhale,
+            _whaleInst: whaleInst,
+            newsBadges: (newsData[canonName(s.name).toUpperCase()] || {}).newsBadges || [],
+            swanBadge: isBlackSwanClean(s) ? '🟢 🛡️ Swan: PASS' : '⚠️ Swan: ALERT',
+            triggerPrice: trBase.price,
+            triggerDate: trBase.dateStr,
+            distBadge: distBadge,
+            rrRatio: rrRatio,
             _tier: tier,
             _freshness: fresh
         };
