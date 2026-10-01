@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-01T09:20:48.288Z",
+  "lastUpdated": "2026-10-01T09:30:55.356Z",
   "source": "klse.i3investor.com",
   "topVolume": [
     {
@@ -9986,8 +9986,8 @@
       "price": 2.859999895095825,
       "change": -0.16000008583068848,
       "changePct": -5.3,
-      "turnover": 12793065.530753136,
-      "volume": 4473100,
+      "turnover": 12790205.53085804,
+      "volume": 4472100,
       "signal": "avoid",
       "reason": "⚠️ Overextended: Jauh dari Lantai Sokongan (+52.9% dari floor) (Healthy Dip)",
       "high52": 3.2100000381469727,
