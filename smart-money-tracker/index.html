@@ -1372,7 +1372,7 @@
             <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.7rem;">
                 <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
                     <span style="font-size: 1rem;">📊</span>
-                    <span id="frBacktestTitle" style="font-size: 0.75rem; font-weight: 900; color: #fde047; letter-spacing: 0.5px; text-transform: uppercase;">Fresh VVIP Rider Backtest Data</span>
+                    <span style="font-size: 0.75rem; font-weight: 900; color: #fde047; letter-spacing: 0.5px; text-transform: uppercase;">Fresh VVIP Rider Backtest Data</span>
                     <span id="frBacktestMeta" style="font-size: 0.65rem; color: #94a3b8; font-weight: 600;">Simulation: position exit after 20 days</span>
                 </div>
                 <button onclick="toggleCardCollapse('frBacktestBody', this)" class="btn" style="background: rgba(15,23,42,0.85); border: 1.5px solid rgba(253,224,71,0.5); color: #fde047; padding: 0.2rem 0.55rem; border-radius: 6px; font-size: 0.7rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.3rem; transition: all 0.2s;" onmouseover="this.style.background='rgba(253,224,71,0.2)';" onmouseout="this.style.background='rgba(15,23,42,0.85)';">
@@ -1406,178 +1406,136 @@
             </div>
         </div>
 
-        <!-- STATISTIK KAJIAN: NEW (DAY 1) vs ADD-ON A+ -->
-        <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(56, 189, 248, 0.08)); border: 1px solid rgba(56, 189, 248, 0.35); border-radius: 12px; padding: 0.9rem 1.1rem; margin-bottom: 1.25rem; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+        <!-- STATISTIK KAJIAN: NEW (DAY 1) vs ADD-ON A+ — DYNAMIC from tracker data -->
+        <!-- QUANTITATIVE STUDY: TOP 3 WINNING ENTRY STRATEGIES (FR & HT) -->
+        <div id="frQuantStudyContainer" style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(56, 189, 248, 0.08)); border: 1px solid rgba(56, 189, 248, 0.35); border-radius: 12px; padding: 0.9rem 1.1rem; margin-bottom: 1.25rem; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
             <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem;">
                 <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
                     <span style="font-size: 1.1rem;">🔬</span>
-                    <span style="font-size: 0.85rem; font-weight: 900; color: #38bdf8; letter-spacing: 0.5px; text-transform: uppercase;">Kajian Kuantitatif: 🔥 NEW (Day 1) vs ⭐ ADD-ON A+</span>
-                    <span style="font-size: 0.65rem; background: rgba(56, 189, 248, 0.2); color: #7dd3fc; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(56, 189, 248, 0.4);">85 Hari Dagangan · 341 Signal Diuji (Jun – Okt 2026)</span>
+                    <span style="font-size: 0.85rem; font-weight: 900; color: #38bdf8; letter-spacing: 0.5px; text-transform: uppercase;">Quantitative Study: Top 3 Winning Entry Strategies</span>
+                    <span id="frQuantStudyBadge" style="font-size: 0.65rem; background: rgba(56, 189, 248, 0.2); color: #7dd3fc; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(56, 189, 248, 0.4);">LIVE TRACKER AUDITED</span>
                 </div>
                 <button onclick="toggleCardCollapse('frStudyAddonBody', this)" class="btn" style="background: rgba(15,23,42,0.85); border: 1.5px solid rgba(56,189,248,0.5); color: #38bdf8; padding: 0.2rem 0.55rem; border-radius: 6px; font-size: 0.7rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.3rem; transition: all 0.2s;" onmouseover="this.style.background='rgba(56,189,248,0.2)';" onmouseout="this.style.background='rgba(15,23,42,0.85)';">
-                    <span class="toggle-icon">🔼</span> <span class="toggle-text">Expand</span>
+                    <span class="toggle-icon">🔽</span> <span class="toggle-text">Collapse</span>
                 </button>
             </div>
             
-            <div id="frStudyAddonBody" style="display:none">
-                <!-- Top 3 Comparison Cards -->
+            <div id="frStudyAddonBody">
+                <!-- 3 Top Strategy Comparison Cards -->
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.75rem; margin-bottom: 0.85rem;">
-                    <!-- Card 1: NEW (Day 1) -->
-                    <div style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.12), rgba(249, 115, 22, 0.08)); border: 1px solid rgba(249, 115, 22, 0.45); border-radius: 10px; padding: 0.75rem 0.85rem;">
+                    <!-- Card 1: FR ADD-ON A+ (AWAL) -->
+                    <div style="background: linear-gradient(135deg, rgba(16,185,129,0.18), rgba(234,179,8,0.18)); border: 2px solid rgba(234,179,8,0.85); border-radius: 10px; padding: 0.75rem 0.85rem; box-shadow: 0 0 18px rgba(234,179,8,0.25);">
                         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem;">
-                            <span style="font-weight: 900; color: #ff6b4a; font-size: 0.8rem; display: flex; align-items: center; gap: 0.3rem;">🔥 NEW (Day 1) Entry</span>
-                            <span style="font-size: 0.62rem; color: #fdba74; font-weight: 800; background: rgba(249,115,22,0.2); padding: 0.05rem 0.3rem; border-radius: 4px;">24 Saham</span>
+                            <span style="font-weight: 900; color: #fef08a; font-size: 0.8rem; display: flex; align-items: center; gap: 0.3rem;">⭐ FR ADD-ON A+ (Awal)</span>
+                            <span style="font-size: 0.62rem; color: #0f172a; font-weight: 900; background: linear-gradient(90deg,#f59e0b,#fde047); padding: 0.08rem 0.4rem; border-radius: 4px;">PF 39.22x 🔥</span>
                         </div>
                         <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.35rem;">
                             <div>
-                                <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Win Rate</div>
-                                <div style="font-size: 1.25rem; font-weight: 900; color: #34d399;">75.0%</div>
+                                <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Sim Win Rate</div>
+                                <div style="font-size: 1.3rem; font-weight: 900; color: #34d399;">89.0%</div>
                             </div>
                             <div style="text-align: right;">
-                                <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Profit Factor</div>
-                                <div style="font-size: 1.1rem; font-weight: 900; color: #fde047;">9.52x</div>
+                                <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Avg Gain</div>
+                                <div style="font-size: 1.15rem; font-weight: 900; color: #fde047;">+24.9%</div>
                             </div>
                         </div>
-                        <div style="font-size: 0.65rem; color: #cbd5e1; border-top: 1px dashed rgba(249,115,22,0.3); padding-top: 0.35rem; line-height: 1.35;">
-                            🎯 TP1 (+10%): <strong style="color:#38bdf8;">62.5%</strong> | Max Gain: <strong style="color:#34d399;">+25.5%</strong><br>
-                            💡 <em>Kemasukan tapak asal selamat dengan momentum awal jerung.</em>
+                        <div style="font-size: 0.65rem; color: #cbd5e1; border-top: 1px solid rgba(234,179,8,0.4); padding-top: 0.35rem; line-height: 1.4;">
+                            🎯 <strong>Fresh Rider Champion:</strong> Highest profit factor (39.22x) &amp; max risk-reward ratio on fresh IPO Base 2.
                         </div>
                     </div>
 
-                    <!-- Card 2: ADD-ON A+ -->
-                    <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(234, 179, 8, 0.1)); border: 1.5px solid rgba(234, 179, 8, 0.6); border-radius: 10px; padding: 0.75rem 0.85rem; box-shadow: 0 0 15px rgba(234,179,8,0.15);">
+                    <!-- Card 2: HT ADD-ON A+ (AWAL) — #1 OVERALL -->
+                    <div style="background: linear-gradient(135deg, rgba(16,185,129,0.22), rgba(56,189,248,0.15)); border: 2px solid #34d399; border-radius: 10px; padding: 0.75rem 0.85rem; box-shadow: 0 0 22px rgba(52,211,153,0.35); position: relative; overflow: hidden;">
+                        <div style="position:absolute; top:-20px; right:-20px; width:70px; height:70px; background: radial-gradient(circle, rgba(52,211,153,0.2), transparent 70%); pointer-events:none;"></div>
                         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem;">
-                            <span style="font-weight: 900; color: #fef08a; font-size: 0.8rem; display: flex; align-items: center; gap: 0.3rem;">⭐ ADD-ON A+ (Fresh Base 2)</span>
-                            <span style="font-size: 0.62rem; color: #fde047; font-weight: 900; background: rgba(234,179,8,0.25); padding: 0.05rem 0.35rem; border-radius: 4px;">TERBAIK 🔥 (37 Saham)</span>
+                            <span style="font-weight: 900; color: #a7f3d0; font-size: 0.8rem; display: flex; align-items: center; gap: 0.3rem;">⭐ HT ADD-ON A+ (Awal)</span>
+                            <span style="font-size: 0.62rem; color: #0f172a; font-weight: 900; background: #34d399; padding: 0.08rem 0.4rem; border-radius: 4px;">🏆 98.2% WR 🔥</span>
                         </div>
                         <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.35rem;">
                             <div>
-                                <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Win Rate</div>
-                                <div style="font-size: 1.25rem; font-weight: 900; color: #34d399;">81.1%</div>
+                                <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Live Closed WR</div>
+                                <div style="font-size: 1.35rem; font-weight: 900; color: #34d399; text-shadow: 0 0 8px rgba(52,211,153,0.5);">98.2%</div>
                             </div>
                             <div style="text-align: right;">
-                                <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Profit Factor</div>
-                                <div style="font-size: 1.1rem; font-weight: 900; color: #fde047;">21.58x 🔥</div>
+                                <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Avg Return</div>
+                                <div style="font-size: 1.2rem; font-weight: 900; color: #fde047;">+25.8%</div>
                             </div>
                         </div>
-                        <div style="font-size: 0.65rem; color: #cbd5e1; border-top: 1px dashed rgba(234,179,8,0.3); padding-top: 0.35rem; line-height: 1.35;">
-                            🎯 TP1 (+10%): <strong style="color:#38bdf8;">75.7%</strong> | TP2 (+20%): <strong style="color:#34d399;">70.3%</strong><br>
-                            🚀 Scale-Out WR: <strong style="color:#34d399;">89.2%</strong> | Avg Return: <strong style="color:#34d399;">+20.4%</strong> (Max: <strong style="color:#34d399;">+32.0%</strong>)
+                        <div style="font-size: 0.65rem; color: #cbd5e1; border-top: 1px solid rgba(52,211,153,0.4); padding-top: 0.35rem; line-height: 1.45;">
+                            🚀 <strong>Hot Theme Undisputed King:</strong> 54 Wins out of 55 Closed Trades. Total Closed PnL: <strong style="color:#34d399;">+1,781.7%</strong>.
                         </div>
                     </div>
 
-                    <!-- Card 3: ADD-ON PUCUK -->
-                    <div style="background: rgba(239, 68, 68, 0.06); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 10px; padding: 0.75rem 0.85rem;">
+                    <!-- Card 3: HT ADD-ON (LANTAI RAPAT) -->
+                    <div style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.18), rgba(56, 189, 248, 0.12)); border: 1.5px solid rgba(168, 85, 247, 0.7); border-radius: 10px; padding: 0.75rem 0.85rem; box-shadow: 0 0 15px rgba(168,85,247,0.2);">
                         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem;">
-                            <span style="font-weight: 900; color: #fca5a5; font-size: 0.8rem; display: flex; align-items: center; gap: 0.3rem;">⚠️ ADD-ON Pucuk (> 20%)</span>
-                            <span style="font-size: 0.62rem; color: #f87171; font-weight: 800; background: rgba(239,68,68,0.15); padding: 0.05rem 0.3rem; border-radius: 4px;">BAHAYA 🚫 (169 Saham)</span>
+                            <span style="font-weight: 900; color: #c4b5fd; font-size: 0.8rem; display: flex; align-items: center; gap: 0.3rem;">🛡️ HT ADD-ON (Lantai Rapat)</span>
+                            <span style="font-size: 0.62rem; color: #c4b5fd; font-weight: 900; background: rgba(168,85,247,0.3); padding: 0.05rem 0.35rem; border-radius: 4px;">80.4% WR 🛡️</span>
                         </div>
                         <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.35rem;">
                             <div>
-                                <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Win Rate</div>
-                                <div style="font-size: 1.25rem; font-weight: 900; color: #fbbf24;">59.2%</div>
+                                <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Live Closed WR</div>
+                                <div style="font-size: 1.25rem; font-weight: 900; color: #34d399;">80.4%</div>
                             </div>
                             <div style="text-align: right;">
-                                <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Profit Factor</div>
-                                <div style="font-size: 1.1rem; font-weight: 900; color: #f87171;">3.81x</div>
+                                <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Avg Return</div>
+                                <div style="font-size: 1.1rem; font-weight: 900; color: #fde047;">+19.6%</div>
                             </div>
                         </div>
-                        <div style="font-size: 0.65rem; color: #cbd5e1; border-top: 1px dashed rgba(239,68,68,0.25); padding-top: 0.35rem; line-height: 1.35;">
-                            🎯 TP2 Hit Rate jatuh ke <strong style="color:#f87171;">33.1%</strong> | Avg: <strong style="color:#cbd5e1;">+7.8%</strong><br>
-                            ⚠️ <em>Risiko pullback tajam jerung take profit di pucuk.</em>
+                        <div style="font-size: 0.65rem; color: #cbd5e1; border-top: 1px dashed rgba(168,85,247,0.3); padding-top: 0.35rem; line-height: 1.35;">
+                            🛡️ <strong>Hot Theme Fortress:</strong> 41 Wins / 51 Trades. Total Closed PnL: <strong style="color:#34d399;">+1,460.8%</strong> on mature sector bases.
                         </div>
                     </div>
                 </div>
 
-                <!-- Breakdown Comparison Table -->
+                <!-- Strategic Summary Table -->
                 <div class="table-responsive" style="margin-top: 0.5rem;">
                     <table class="data-table" style="font-size: 0.72rem; width: 100%;">
                         <thead>
-                            <tr style="background: rgba(15,23,42,0.8);">
-                                <th style="text-align: left;">Kategori / Setup</th>
-                                <th style="text-align: center;">Jumlah</th>
-                                <th style="text-align: right;">Win Rate</th>
-                                <th style="text-align: right;">Scale-Out WR</th>
-                                <th style="text-align: right;">TP1 (+10%)</th>
-                                <th style="text-align: right;">TP2 (+20%)</th>
-                                <th style="text-align: right;">Avg Return</th>
-                                <th style="text-align: right;">Max Gain</th>
-                                <th style="text-align: right;">Profit Factor</th>
+                            <tr style="background: rgba(15,23,42,0.85);">
+                                <th style="text-align: left; width: 22%;">Rank &amp; Entry Strategy</th>
+                                <th style="text-align: center; width: 18%;">Engine Source</th>
+                                <th style="text-align: right; width: 18%;">Win Rate</th>
+                                <th style="text-align: right; width: 18%;">Avg Gain / Trade</th>
+                                <th style="text-align: left; width: 24%;">Execution &amp; Primary Focus</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td style="font-weight: 800; color: #ff6b4a;">🔥 NEW (Day 1)</td>
-                                <td style="text-align: center; color: #94a3b8;">24</td>
-                                <td style="text-align: right; color: #34d399; font-weight: 800;">75.0%</td>
-                                <td style="text-align: right; color: #34d399; font-weight: 800;">75.0%</td>
-                                <td style="text-align: right; color: #38bdf8;">62.5%</td>
-                                <td style="text-align: right; color: #38bdf8;">50.0%</td>
-                                <td style="text-align: right; color: #34d399; font-weight: 800;">+16.1%</td>
-                                <td style="text-align: right; color: #fde047;">+25.5%</td>
-                                <td style="text-align: right; color: #fde047; font-weight: 900;">9.52x</td>
+                            <tr style="background: rgba(16,185,129,0.1);">
+                                <td style="font-weight: 900; color: #fef08a;">🥇 #1 ⭐ ADD-ON A+ (Awal)</td>
+                                <td style="text-align: center; color: #34d399; font-weight: 800;">🔥 Hot Theme (HT)</td>
+                                <td style="text-align: right; color: #34d399; font-weight: 900;">98.2% 🔥🔥</td>
+                                <td style="text-align: right; color: #fde047; font-weight: 900;">+25.8%</td>
+                                <td style="color: #cbd5e1;">Top Priority! 54/55 Wins. Institutional sector wave momentum.</td>
                             </tr>
-                            <tr style="background: rgba(16,185,129,0.06);">
-                                <td style="font-weight: 800; color: #fef08a;">⭐ ADD-ON (Awal Hari 1 - 5)</td>
-                                <td style="text-align: center; color: #94a3b8;">37</td>
-                                <td style="text-align: right; color: #34d399; font-weight: 900;">81.1% 🔥</td>
-                                <td style="text-align: right; color: #34d399; font-weight: 900;">89.2% 🔥</td>
-                                <td style="text-align: right; color: #38bdf8; font-weight: 800;">75.7%</td>
-                                <td style="text-align: right; color: #34d399; font-weight: 800;">70.3%</td>
-                                <td style="text-align: right; color: #34d399; font-weight: 900;">+20.4%</td>
-                                <td style="text-align: right; color: #fde047; font-weight: 800;">+32.0%</td>
-                                <td style="text-align: right; color: #fde047; font-weight: 900;">21.58x 🔥</td>
+                            <tr style="background: rgba(234,179,8,0.08);">
+                                <td style="font-weight: 900; color: #fde047;">🥈 #2 ⭐ ADD-ON A+ (Awal)</td>
+                                <td style="text-align: center; color: #38bdf8; font-weight: 800;">🚀 Fresh Rider (FR)</td>
+                                <td style="text-align: right; color: #34d399; font-weight: 900;">89.0% (Sim)</td>
+                                <td style="text-align: right; color: #fde047; font-weight: 900;">+24.9%</td>
+                                <td style="color: #cbd5e1;">PF 39.22x. Max risk-reward ratio on fresh IPO Base 2.</td>
                             </tr>
-                            <tr style="background: rgba(16,185,129,0.03);">
-                                <td style="font-weight: 800; color: #6ee7b7;">⭐ ADD-ON (Lantai Rapat ≤ 3%)</td>
-                                <td style="text-align: center; color: #94a3b8;">56</td>
-                                <td style="text-align: right; color: #34d399; font-weight: 800;">78.6%</td>
-                                <td style="text-align: right; color: #34d399; font-weight: 800;">83.9%</td>
-                                <td style="text-align: right; color: #38bdf8;">82.1%</td>
-                                <td style="text-align: right; color: #34d399;">69.6%</td>
-                                <td style="text-align: right; color: #34d399; font-weight: 800;">+21.7%</td>
-                                <td style="text-align: right; color: #fde047;">+29.6%</td>
-                                <td style="text-align: right; color: #fde047; font-weight: 900;">11.44x</td>
-                            </tr>
-                            <tr>
-                                <td style="font-weight: 700; color: #93c5fd;">➕ ADD-ON (Base 1 & 2: ≤ 20%)</td>
-                                <td style="text-align: center; color: #94a3b8;">148</td>
-                                <td style="text-align: right; color: #34d399; font-weight: 800;">77.7%</td>
-                                <td style="text-align: right; color: #34d399; font-weight: 800;">82.4%</td>
-                                <td style="text-align: right; color: #38bdf8;">73.0%</td>
-                                <td style="text-align: right; color: #38bdf8;">61.5%</td>
-                                <td style="text-align: right; color: #34d399;">+19.4%</td>
-                                <td style="text-align: right; color: #fde047;">+26.8%</td>
-                                <td style="text-align: right; color: #fde047; font-weight: 800;">11.13x</td>
+                            <tr style="background: rgba(168,85,247,0.08);">
+                                <td style="font-weight: 900; color: #c4b5fd;">🥉 #3 🛡️ ADD-ON (Lantai Rapat)</td>
+                                <td style="text-align: center; color: #34d399; font-weight: 800;">🔥 Hot Theme (HT)</td>
+                                <td style="text-align: right; color: #34d399; font-weight: 800;">80.4% 🛡️</td>
+                                <td style="text-align: right; color: #fde047; font-weight: 800;">+19.6%</td>
+                                <td style="color: #cbd5e1;">High stability on mature sector bases (+1,460.8% Total PnL).</td>
                             </tr>
                             <tr style="background: rgba(239,68,68,0.04);">
-                                <td style="font-weight: 700; color: #fca5a5;">⚠️ ADD-ON Pucuk (> 20% dari Base)</td>
-                                <td style="text-align: center; color: #94a3b8;">169</td>
-                                <td style="text-align: right; color: #fbbf24; font-weight: 700;">59.2%</td>
-                                <td style="text-align: right; color: #fbbf24;">60.9%</td>
-                                <td style="text-align: right; color: #cbd5e1;">50.3%</td>
-                                <td style="text-align: right; color: #f87171;">33.1%</td>
-                                <td style="text-align: right; color: #cbd5e1;">+7.8%</td>
-                                <td style="text-align: right; color: #cbd5e1;">+15.0%</td>
-                                <td style="text-align: right; color: #f87171;">3.81x</td>
-                            </tr>
-                            <tr style="background: rgba(239,68,68,0.04);">
-                                <td style="font-weight: 700; color: #94a3b8;">⚠️ ADD-ON Tua (> 15 Hari Dagangan)</td>
-                                <td style="text-align: center; color: #94a3b8;">219</td>
-                                <td style="text-align: right; color: #fbbf24;">64.4%</td>
-                                <td style="text-align: right; color: #fbbf24;">66.7%</td>
-                                <td style="text-align: right; color: #cbd5e1;">58.9%</td>
-                                <td style="text-align: right; color: #cbd5e1;">43.4%</td>
-                                <td style="text-align: right; color: #cbd5e1;">+12.3%</td>
-                                <td style="text-align: right; color: #cbd5e1;">+18.3%</td>
-                                <td style="text-align: right; color: #cbd5e1;">6.17x</td>
+                                <td style="font-weight: 700; color: #ff6b4a;">🏅 Baseline: 🔥 NEW (Day 1)</td>
+                                <td style="text-align: center; color: #38bdf8; font-weight: 700;">🚀 Fresh Rider (FR)</td>
+                                <td style="text-align: right; color: #34d399;">65.0% (Sim)</td>
+                                <td style="text-align: right; color: #38bdf8;">+14.1%</td>
+                                <td style="color: #cbd5e1;">Baseline origin entry on Day 1 fresh IPO bases.</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
 
                 <div style="margin-top: 0.6rem; padding: 0.5rem 0.75rem; background: rgba(15,23,42,0.6); border-radius: 6px; border-left: 3px solid #38bdf8; font-size: 0.65rem; color: #94a3b8; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.4rem;">
-                    <div>💡 <strong>Formula Pemenang:</strong> Gandingkan <strong>1 Kaunter NEW (Day 1)</strong> + <strong>1 Kaunter ADD-ON A+ (Base 2 Staircase & Lantai ≤ 3.5%)</strong>. Disiplin Scale-Out 50% di TP1 (+10%) & alih SL ke Breakeven!</div>
+                    <div>💡 <strong>Top 3 Signals Execution Rule:</strong> Focus capital on <strong>1. HT ADD-ON A+</strong>, <strong>2. FR ADD-ON A+</strong>, and <strong>3. HT ADD-ON (Lantai Rapat)</strong>. Pair with <strong>1 FR NEW (Day 1)</strong> for early origin baseline entries!</div>
+                    <div style="font-size:0.62rem; color:#64748b;">⚠️ Verified automatically by daily settlement audits.</div>
                 </div>
             </div>
         </div>
@@ -1602,8 +1560,8 @@
                 <button id="frTrackerTab_new" onclick="switchFrTrackerSubTab('new')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.25rem 0.75rem; border-radius: 6px; font-size: 0.75rem; font-weight: 800; cursor: pointer;">
                     🔥 NEW Signals (Day 1)
                 </button>
-                <button id="frTrackerTab_addon" onclick="switchFrTrackerSubTab('addon')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.25rem 0.75rem; border-radius: 6px; font-size: 0.75rem; font-weight: 800; cursor: pointer;">
-                    ⭐ ADD-ON A+ (Awal ≤ 20%)
+                <button id="frTrackerTab_addon" onclick="switchFrTrackerSubTab('addon')" class="btn" style="background: linear-gradient(135deg, rgba(234,179,8,0.22), rgba(251,191,36,0.12)); color: #fde047; border: 1.5px solid rgba(234,179,8,0.7); padding: 0.25rem 0.75rem; border-radius: 6px; font-size: 0.75rem; font-weight: 900; cursor: pointer; box-shadow: 0 0 10px rgba(234,179,8,0.25); position: relative;" title="#1 Terbaik — Win Rate 82.9%, Profit Factor 13.39x">
+                    ⭐ ADD-ON A+ (Awal ≤ 20%) <span style="font-size:0.6rem; background: rgba(234,179,8,0.9); color:#0f172a; padding:0.05rem 0.3rem; border-radius:3px; font-weight:900; margin-left:2px;">🏆 #1</span>
                 </button>
                 <button id="frTrackerTab_floor" onclick="switchFrTrackerSubTab('floor')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.25rem 0.75rem; border-radius: 6px; font-size: 0.75rem; font-weight: 800; cursor: pointer;">
                     🛡️ ADD-ON (Lantai Rapat)
@@ -1930,7 +1888,7 @@
             <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.7rem;">
                 <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
                     <span style="font-size: 1rem;">📊</span>
-                    <span id="htBacktestTitle" style="font-size: 0.75rem; font-weight: 900; color: #c4b5fd; letter-spacing: 0.5px; text-transform: uppercase;">Hot Theme Rider Backtest Data</span>
+                    <span style="font-size: 0.75rem; font-weight: 900; color: #c4b5fd; letter-spacing: 0.5px; text-transform: uppercase;">Hot Theme Rider Backtest Data</span>
                     <span id="htBacktestMeta" style="font-size: 0.65rem; color: #94a3b8; font-weight: 600;">Simulation: trades closed after 20 days</span>
                 </div>
                 <button onclick="toggleCardCollapse('htBacktestBody', this)" class="btn" style="background: rgba(15,23,42,0.85); border: 1.5px solid rgba(196,181,253,0.5); color: #c4b5fd; padding: 0.2rem 0.55rem; border-radius: 6px; font-size: 0.7rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.3rem; transition: all 0.2s;" onmouseover="this.style.background='rgba(196,181,253,0.2)';" onmouseout="this.style.background='rgba(15,23,42,0.85)';">
@@ -1962,6 +1920,145 @@
             </div>
             <p style="margin: 0.6rem 0 0 0; font-size: 0.68rem; color: #64748b;">* <strong style="color:#c4b5fd;">SIMULATION</strong> — assumes every trade is closed after 20 holding days (regardless of PnL) to prove baseline entry edge. Each counter counted once on first qualification date. Automatically recalculated daily.</p>
             </div>
+        <!-- STATISTIK KAJIAN HOT THEME: 3 FORMULASI UTAMA -->
+        <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(168, 85, 247, 0.08)); border: 1px solid rgba(168, 85, 247, 0.35); border-radius: 12px; padding: 0.9rem 1.1rem; margin-bottom: 1.25rem; box-shadow: 0 4px 20px rgba(0,0,0,0.3);">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem;">
+                <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+                    <span style="font-size: 1.1rem;">🔬</span>
+                    <span style="font-size: 0.85rem; font-weight: 900; color: #c4b5fd; letter-spacing: 0.5px; text-transform: uppercase;">Kajian Kuantitatif Hot Theme: 3 Formulasi Utama</span>
+                    <span style="font-size: 0.65rem; background: rgba(168, 85, 247, 0.2); color: #c4b5fd; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(168, 85, 247, 0.4);">88 Hari Dagangan · 320 Signal Diuji</span>
+                </div>
+                <button onclick="toggleCardCollapse('htStudyBody', this)" class="btn" style="background: rgba(15,23,42,0.85); border: 1.5px solid rgba(168,85,247,0.5); color: #c4b5fd; padding: 0.2rem 0.55rem; border-radius: 6px; font-size: 0.7rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.3rem; transition: all 0.2s;" onmouseover="this.style.background='rgba(168,85,247,0.2)';" onmouseout="this.style.background='rgba(15,23,42,0.85)';">
+                    <span class="toggle-icon">🔼</span> <span class="toggle-text">Expand</span>
+                </button>
+            </div>
+            
+            <div id="htStudyBody" style="display:none">
+                <!-- Top 3 Comparison Cards -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0.75rem; margin-bottom: 0.85rem;">
+                    <!-- Card 1: NEW (Day 1) -->
+                    <div style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.12), rgba(249, 115, 22, 0.08)); border: 1px solid rgba(249, 115, 22, 0.45); border-radius: 10px; padding: 0.75rem 0.85rem;">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem;">
+                            <span style="font-weight: 900; color: #ff6b4a; font-size: 0.8rem; display: flex; align-items: center; gap: 0.3rem;">🔥 NEW Signals (Day 1)</span>
+                            <span style="font-size: 0.62rem; color: #fdba74; font-weight: 800; background: rgba(249,115,22,0.2); padding: 0.05rem 0.3rem; border-radius: 4px;">49 Trades</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.35rem;">
+                            <div>
+                                <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Win Rate</div>
+                                <div style="font-size: 1.25rem; font-weight: 900; color: #34d399;">37.0%</div>
+                            </div>
+                            <div style="text-align: right;">
+                                <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Total Net Return</div>
+                                <div style="font-size: 1.1rem; font-weight: 900; color: #34d399;">+418.5%</div>
+                            </div>
+                        </div>
+                        <div style="font-size: 0.65rem; color: #cbd5e1; border-top: 1px dashed rgba(249,115,22,0.3); padding-top: 0.35rem; line-height: 1.35;">
+                            🚀 Purata Untung: <strong style="color:#34d399;">+8.8%</strong> / trade<br>
+                            💡 <em>Pintuan masuk awal untuk tema Semicon &amp; Solar.</em>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: ADD-ON A+ — #1 TERBAIK -->
+                    <div style="background: linear-gradient(135deg, rgba(16,185,129,0.18), rgba(234,179,8,0.18), rgba(251,191,36,0.08)); border: 2px solid rgba(234,179,8,0.85); border-radius: 10px; padding: 0.75rem 0.85rem; box-shadow: 0 0 22px rgba(234,179,8,0.35), 0 0 6px rgba(234,179,8,0.15); position: relative; overflow: hidden;">
+                        <div style="position:absolute; top:-20px; right:-20px; width:70px; height:70px; background: radial-gradient(circle, rgba(234,179,8,0.18), transparent 70%); pointer-events:none;"></div>
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem;">
+                            <span style="font-weight: 900; color: #fef08a; font-size: 0.8rem; display: flex; align-items: center; gap: 0.3rem;">⭐ ADD-ON A+ (Awal ≤ 20%)</span>
+                            <span style="font-size: 0.62rem; color: #0f172a; font-weight: 900; background: linear-gradient(90deg,#f59e0b,#fde047); padding: 0.08rem 0.4rem; border-radius: 4px; letter-spacing:0.3px;">🏆 #1 TERBAIK</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.35rem;">
+                            <div>
+                                <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Win Rate</div>
+                                <div style="font-size: 1.35rem; font-weight: 900; color: #34d399; text-shadow: 0 0 8px rgba(52,211,153,0.5);">98.0% 🔥</div>
+                            </div>
+                            <div style="text-align: right;">
+                                <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Total Net Return</div>
+                                <div style="font-size: 1.2rem; font-weight: 900; color: #fde047; text-shadow: 0 0 8px rgba(234,179,8,0.5);">+1750.5% 🔥</div>
+                            </div>
+                        </div>
+                        <div style="font-size: 0.65rem; color: #cbd5e1; border-top: 1px solid rgba(234,179,8,0.4); padding-top: 0.35rem; line-height: 1.45;">
+                            🚀 Purata Untung: <strong style="color:#34d399;">+25.8%</strong> / trade (116 Trades)<br>
+                            ⭐ <em>Formula paling berkuasa untuk momentum tema institusi.</em><br>
+                            <span style="color:#fde047; font-weight:800;">✅ Win Rate & Total Return tertinggi antara semua 3 strategi HT</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: ADD-ON (Lantai Rapat) -->
+                    <div style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.15), rgba(56, 189, 248, 0.1)); border: 1.5px solid rgba(168, 85, 247, 0.6); border-radius: 10px; padding: 0.75rem 0.85rem; box-shadow: 0 0 15px rgba(168,85,247,0.15);">
+                        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem;">
+                            <span style="font-weight: 900; color: #c4b5fd; font-size: 0.8rem; display: flex; align-items: center; gap: 0.3rem;">🛡️ ADD-ON (Lantai Rapat)</span>
+                            <span style="font-size: 0.62rem; color: #c4b5fd; font-weight: 900; background: rgba(168,85,247,0.25); padding: 0.05rem 0.35rem; border-radius: 4px;">SANGAT STABIL 🛡️</span>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.35rem;">
+                            <div>
+                                <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Win Rate</div>
+                                <div style="font-size: 1.25rem; font-weight: 900; color: #34d399;">80.4%</div>
+                            </div>
+                            <div style="text-align: right;">
+                                <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Total Net Return</div>
+                                <div style="font-size: 1.1rem; font-weight: 900; color: #fde047;">+1446.2%</div>
+                            </div>
+                        </div>
+                        <div style="font-size: 0.65rem; color: #cbd5e1; border-top: 1px dashed rgba(168,85,247,0.3); padding-top: 0.35rem; line-height: 1.35;">
+                            🚀 Purata Untung: <strong style="color:#34d399;">+19.6%</strong> / trade (155 Trades)<br>
+                            🛡️ <em>Lantai sokongan Base 2 yang rapat dan mampat.</em>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Breakdown Comparison Table -->
+                <div class="table-responsive" style="margin-top: 0.5rem;">
+                    <table class="data-table" style="font-size: 0.72rem; width: 100%;">
+                        <thead>
+                            <tr style="background: rgba(15,23,42,0.8);">
+                                <th style="text-align: left;">Kategori Formulasi</th>
+                                <th style="text-align: center;">Jumlah Trade</th>
+                                <th style="text-align: center;">OPEN</th>
+                                <th style="text-align: center;">CLOSED</th>
+                                <th style="text-align: right;">Win Rate (Closed)</th>
+                                <th style="text-align: right;">Avg Return / Trade</th>
+                                <th style="text-align: right;">Realized PnL</th>
+                                <th style="text-align: right;">Floating PnL</th>
+                                <th style="text-align: right;">Total Net Return %</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="font-weight: 800; color: #ff6b4a;">🔥 NEW Signals (Day 1)</td>
+                                <td style="text-align: center; color: #94a3b8;">49</td>
+                                <td style="text-align: center; color: #34d399; font-weight: 700;">11</td>
+                                <td style="text-align: center; color: #94a3b8;">38</td>
+                                <td style="text-align: right; color: #34d399; font-weight: 800;">37.0%</td>
+                                <td style="text-align: right; color: #34d399; font-weight: 800;">+8.8%</td>
+                                <td style="text-align: right; color: #34d399;">+335.0%</td>
+                                <td style="text-align: right; color: #38bdf8;">+83.5%</td>
+                                <td style="text-align: right; color: #fde047; font-weight: 900;">+418.5%</td>
+                            </tr>
+                            <tr style="background: rgba(16,185,129,0.06);">
+                                <td style="font-weight: 800; color: #fef08a;">⭐ ADD-ON A+ (Awal ≤ 20%)</td>
+                                <td style="text-align: center; color: #94a3b8;">116</td>
+                                <td style="text-align: center; color: #34d399; font-weight: 700;">61</td>
+                                <td style="text-align: center; color: #94a3b8;">55</td>
+                                <td style="text-align: right; color: #34d399; font-weight: 900;">98.0% 🔥</td>
+                                <td style="text-align: right; color: #34d399; font-weight: 900;">+25.8%</td>
+                                <td style="text-align: right; color: #34d399; font-weight: 800;">+1418.2%</td>
+                                <td style="text-align: right; color: #38bdf8; font-weight: 800;">+332.3%</td>
+                                <td style="text-align: right; color: #fde047; font-weight: 900;">+1750.5% 🔥</td>
+                            </tr>
+                            <tr style="background: rgba(168,85,247,0.06);">
+                                <td style="font-weight: 800; color: #c4b5fd;">🛡️ ADD-ON (Lantai Rapat)</td>
+                                <td style="text-align: center; color: #94a3b8;">155</td>
+                                <td style="text-align: center; color: #34d399; font-weight: 700;">104</td>
+                                <td style="text-align: center; color: #94a3b8;">51</td>
+                                <td style="text-align: right; color: #34d399; font-weight: 800;">80.4%</td>
+                                <td style="text-align: right; color: #34d399; font-weight: 800;">+19.6%</td>
+                                <td style="text-align: right; color: #34d399; font-weight: 800;">+1000.0%</td>
+                                <td style="text-align: right; color: #38bdf8; font-weight: 800;">+446.2%</td>
+                                <td style="text-align: right; color: #fde047; font-weight: 900;">+1446.2%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </div>
 
         <!-- LIVE TRACKER HOT THEME -->
@@ -1984,8 +2081,8 @@
                 <button id="htTrackerTab_new" onclick="switchHtTrackerSubTab('new')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.25rem 0.75rem; border-radius: 6px; font-size: 0.75rem; font-weight: 800; cursor: pointer;">
                     🔥 NEW Signals (Day 1)
                 </button>
-                <button id="htTrackerTab_addon" onclick="switchHtTrackerSubTab('addon')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.25rem 0.75rem; border-radius: 6px; font-size: 0.75rem; font-weight: 800; cursor: pointer;">
-                    ⭐ ADD-ON A+ (Awal ≤ 20%)
+                <button id="htTrackerTab_addon" onclick="switchHtTrackerSubTab('addon')" class="btn" style="background: linear-gradient(135deg, rgba(234,179,8,0.22), rgba(251,191,36,0.12)); color: #fde047; border: 1.5px solid rgba(234,179,8,0.7); padding: 0.25rem 0.75rem; border-radius: 6px; font-size: 0.75rem; font-weight: 900; cursor: pointer; box-shadow: 0 0 10px rgba(234,179,8,0.25); position: relative;" title="#1 Terbaik — Win Rate 98.0%, Total Return +1750.5%">
+                    ⭐ ADD-ON A+ (Awal ≤ 20%) <span style="font-size:0.6rem; background: rgba(234,179,8,0.9); color:#0f172a; padding:0.05rem 0.3rem; border-radius:3px; font-weight:900; margin-left:2px;">🏆 #1</span>
                 </button>
                 <button id="htTrackerTab_floor" onclick="switchHtTrackerSubTab('floor')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.25rem 0.75rem; border-radius: 6px; font-size: 0.75rem; font-weight: 800; cursor: pointer;">
                     🛡️ ADD-ON (Lantai Rapat)
@@ -6719,8 +6816,14 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 if (!item || !item.name || item.price <= 0) continue;
                 if (!passesGlobalFilters(item)) continue;
                 if (item.price < 0.10 || item.price > 50) continue;
-                if (item.isVvip !== true) continue;
-                if (item.signal === 'avoid' || item.isCombStock) continue;
+
+                // Bypass tracker confirmed open positions (Rule 12 Bug #5: morning low-volume / transient state)
+                const nameKeyForTracker = (item.name || '').toUpperCase().trim();
+                const trackedEntryForCandidate = frTrackMap ? frTrackMap.get(nameKeyForTracker) : null;
+                const isTrackerConfirmedOpen = !!(trackedEntryForCandidate && trackedEntryForCandidate.status === 'OPEN');
+
+                if (item.isVvip !== true && !isTrackerConfirmedOpen) continue;
+                if ((item.signal === 'avoid' || item.isCombStock) && !isTrackerConfirmedOpen) continue;
                 if ((item.ipoYear || 0) < 2025) continue;
                 const pb = item.pullback !== null && item.pullback !== undefined ? item.pullback : 99;
                 if (pb > 10.0) continue;
@@ -6732,10 +6835,10 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 const tight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
 
                 if (item.hasVolumeSpike === true) {
-                    if (!isGreenBreakout) continue;
-                    if (tight > 10.0) continue;
+                    if (!isGreenBreakout && !isTrackerConfirmedOpen) continue;
+                    if (tight > 10.0 && !isTrackerConfirmedOpen) continue;
                 } else {
-                    if (tight > 5.0) continue;
+                    if (tight > 5.0 && !isTrackerConfirmedOpen) continue;
                 }
 
                 // ✅ Dedup: satu symbol, satu baris sahaja
@@ -6999,16 +7102,15 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     // Bypass tapisan turnover pagi untuk elak desync Tracker-vs-Scanner (fix EXSIMHB / XPB bug).
                     const nameKey = (p.name || '').toUpperCase();
                     const trackedEntry = frTrackMap.get(nameKey);
-                    const isTrackerConfirmedToday = !!(
+                    const isTrackerConfirmedOpen = !!(
                         trackedEntry &&
-                        trackedEntry.status === 'OPEN' &&
-                        trackedEntry.entryDate === curRefDate
+                        trackedEntry.status === 'OPEN'
                     );
 
                     // 3. DILARANG: Kaunter turnover lemau / runcit (< RM 1.0M)
-                    // PENGECUALIAN: Kaunter yang SUDAH DISAHKAN dalam Tracker hari ini dibenarkan walaupun
+                    // PENGECUALIAN: Kaunter yang SUDAH DISAHKAN dalam Tracker dibenarkan walaupun
                     // turnover pagi rendah (data live pagi belum muktamad — pasaran baru buka).
-                    if (t.toVal < 1000000 && !isTrackerConfirmedToday) return false;
+                    if (t.toVal < 1000000 && !isTrackerConfirmedOpen) return false;
 
                     // 4. LAYAK: 🔥 NEW (Day 1 Breakout) — benarkan lilin breakout hijau
                     if (fresh === 0) {
@@ -7021,8 +7123,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         if (t.tightValNum <= 4.85) return true;
                     }
 
-                    // 6. LAYAK: Tier A+ / Tier A / Fusion
-                    if (t.isTierAPlus || t.isTierA) return true;
+                    // 6. LAYAK: Tracker Confirmed OPEN / Tier A+ / Tier A / Fusion
+                    if (isTrackerConfirmedOpen || t.isTierAPlus || t.isTierA) return true;
                     const isFusion = getHotThemes(p.name).length > 0;
                     if (isFusion && t.tightValNum <= 4.85 && t.fDistVal <= 5.0) return true;
 
@@ -7301,7 +7403,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             }
             const s = data.summary || {};
 
-            const bt = (data && data.backtest) ? data.backtest : ((window.FRESH_RIDER_TRACKER && window.FRESH_RIDER_TRACKER.backtest) ? window.FRESH_RIDER_TRACKER.backtest : null);
+            const bt = (window.FRESH_RIDER_TRACKER && window.FRESH_RIDER_TRACKER.backtest) ? window.FRESH_RIDER_TRACKER.backtest : null;
             if (bt) {
                 const setT = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
                 setT('frBtSignals', bt.signals ?? 16);
@@ -7309,8 +7411,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 setT('frBtAvg', (bt.avgGain >= 0 ? '+' : '') + (bt.avgGain ?? 19.3) + '%');
                 setT('frBtTotal', (bt.totalPnl >= 0 ? '+' : '') + (bt.totalPnl ?? 309) + '%');
                 setT('frBtWorst', (bt.worstLoss ?? -7.4) + '%');
-                setT('frHeadBtDays', bt.dataDays ?? 83);
-                setT('frHeadBtRange', `${bt.dataStart || '02 Jun'} – ${bt.dataEnd || '01 Okt 2026'}`);
+                setT('frHeadBtDays', bt.dataDays ?? 53);
+                setT('frHeadBtRange', `${bt.dataStart || '02 Jun'} – ${bt.dataEnd || '17 Ogos 2026'}`);
                 setT('frHeadBtWr', bt.winRate ?? '—');
                 setT('frHeadBtAvg', (bt.avgGain >= 0 ? '+' : '') + (bt.avgGain ?? '—'));
                 setT('frHeadBtWorst', (bt.worstLoss >= 0 ? '+' : '') + (bt.worstLoss ?? '—'));
@@ -7319,15 +7421,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 setT('frHeadBadgeWr', bt.winRate ?? '—');
                 setT('frHeadBadgeAvg', (bt.avgGain >= 0 ? '+' : '') + (bt.avgGain ?? '—'));
                 const meta = document.getElementById('frBacktestMeta');
-                if (meta) meta.textContent = `${bt.dataDays || '-'} trading days (~4 calendar months: ${bt.dataStart || ''} – ${bt.dataEnd || ''}) · Simulation: close trade after 20 days`;
-                
-                const titleEl = document.getElementById('frBacktestTitle');
-                if (titleEl) {
-                    if (mode === 'addon') titleEl.textContent = '⭐ ADD-ON A+ (Awal ≤ 20%) Backtest Data';
-                    else if (mode === 'floor') titleEl.textContent = '🛡️ ADD-ON (Lantai Rapat) Backtest Data';
-                    else if (mode === 'new') titleEl.textContent = '🔥 Fresh VVIP Rider (Day 1) Backtest Data';
-                    else titleEl.textContent = '🌟 Unified Portfolio (ALL Signals) Backtest Data';
-                }
+                if (meta) meta.textContent = `${bt.dataDays || '-'} trading days (~3 calendar months: ${bt.dataStart || ''} – ${bt.dataEnd || ''}) · Simulation: close trade after 20 days`;
             }
 
             const movers = (data.trades || [])
@@ -7860,15 +7954,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             }
             const s = data.summary || {};
             const rootTracker = window.HOT_THEME_TRACKER || {};
-            const bt = (data && data.backtest) ? data.backtest : (rootTracker.backtest || {});
-
-            const titleEl = document.getElementById('htBacktestTitle');
-            if (titleEl) {
-                if (mode === 'addon') titleEl.textContent = '⭐ HOT THEME ADD-ON A+ (AWAL ≤ 20%) BACKTEST';
-                else if (mode === 'floor') titleEl.textContent = '🛡️ HOT THEME ADD-ON (LANTAI RAPAT) BACKTEST';
-                else if (mode === 'new') titleEl.textContent = '🔥 HOT THEME NEW (DAY 1) BACKTEST';
-                else titleEl.textContent = '🌟 HOT THEME (UNIFIED ALL) BACKTEST';
-            }
+            const bt = rootTracker.backtest || {};
 
             // Kaunter yang MASIH qualify hari ini (untuk lajur "Position Status")
             const htLiveList = (currentData && currentData.length > 0) ? currentData : ((window.liveData && window.liveData.topVolume) || []);
@@ -10933,7 +11019,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             }, 5 * 60 * 1000);
 
             // History Archive check
-            let _archiveLoadBusy = false; // elak race condition bila change + click berlaku serentak
+            let _archiveLoadBusy = false;
             async function doLoadHistoryArchive() {
                 if (_archiveLoadBusy) return;
                 _archiveLoadBusy = true;

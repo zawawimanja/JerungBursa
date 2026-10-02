@@ -526,6 +526,8 @@ const dateMap = dayList.map(d => {
     for (const it of d.rows) if (it && it.name && it.price > 0 && it.price < 500) m[canonName(it.name)] = it;
     return { date: d.date, map: m };
 });
+
+// ---- Backtest 1: FR NEW (Day 1) ----
 const btSeen = new Set();
 const btRets = [];
 for (let i = 0; i < dateMap.length - 3; i++) {
@@ -561,10 +563,104 @@ const backtest = {
     worstLoss: btRets.length ? +Math.min(...btRets).toFixed(1) : 0,
 };
 
+// ---- Backtest 2: ADD-ON A+ & Lantai Rapat ----
+// Rebuild initial base map independently for clean backtest simulation
+const btBaseMap = {};
+const btAddOnRets = [];
+const btFloorRets = [];
+
+for (let i = 0; i < dateMap.length - 3; i++) {
+    const dayEntry = dateMap[i];
+
+    // Pass 1: track initial base price for stocks that first qualify as FR NEW
+    for (const [name, item] of Object.entries(dayEntry.map)) {
+        if (!btBaseMap[name] && item.price >= 0.10 && isFreshRiderPick(item, dayEntry.date)) {
+            btBaseMap[name] = { date: dayEntry.date, price: item.price };
+        }
+    }
+
+    // Pass 2: scan for ADD-ON A+ / Lantai Rapat signals on this day
+    for (const [name, item] of Object.entries(dayEntry.map)) {
+        const base = btBaseMap[name];
+        if (!base || dayEntry.date <= base.date) continue;
+        if (item.price < 0.10 || item.price > 50) continue;
+
+        const effFloor = item.floorLow || item.price * 0.95;
+        if (!isAddOnAPick(item, base.price, effFloor, dayEntry.date)) continue;
+
+        const gainFromBase = ((item.price - base.price) / base.price) * 100;
+        const touches = item.touchCount || 0;
+        const tight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
+        const fDist = effFloor > 0 ? ((item.price - effFloor) / effFloor * 100) : 99;
+        const toVal = item.turnover || item.rawTurnover || 0;
+
+        const isFreshBase1 = (gainFromBase >= 0 && gainFromBase <= 20 && fDist <= 3.5 && toVal >= 2000000);
+        const isSolidBase2 = (touches >= 3 && tight <= 3.5 && fDist <= 4.5 && toVal >= 2000000);
+        const isFloorAddon = (isSolidBase2 && !isFreshBase1);
+
+        // Simulate forward: hold up to 20 days with trailing stop
+        const fut = [];
+        let prev = item.price;
+        let ok = true;
+        for (let j = i + 1; j < Math.min(dateMap.length, i + 1 + 20); j++) {
+            const m = dateMap[j].map[name];
+            if (m && m.price > 0) {
+                const r = m.price / prev;
+                if (r > 1.5 || r < 0.5) { ok = false; break; }
+                fut.push({ price: m.price, floorLow: m.floorLow });
+                prev = m.price;
+            }
+        }
+        if (!ok || !fut.length) continue;
+
+        const ret = rideFloor20(item.price, effFloor, fut);
+        if (isFreshBase1) btAddOnRets.push(ret);
+        else if (isFloorAddon) btFloorRets.push(ret);
+    }
+}
+
+const btAddOnWins = btAddOnRets.filter(r => r > 0).length;
+const backtestAddOn = btAddOnRets.length > 0 ? {
+    dataStart: dayList[0].date,
+    dataEnd: dayList[dayList.length - 1].date,
+    dataDays: dayList.length,
+    signals: btAddOnRets.length,
+    winRate: Math.round(100 * btAddOnWins / btAddOnRets.length),
+    avgGain: +(btAddOnRets.reduce((a, b) => a + b, 0) / btAddOnRets.length).toFixed(1),
+    totalPnl: +btAddOnRets.reduce((a, b) => a + b, 0).toFixed(1),
+    worstLoss: +Math.min(...btAddOnRets).toFixed(1),
+    grossWin: +(btAddOnRets.filter(r => r > 0).reduce((a, b) => a + b, 0)).toFixed(1),
+    grossLoss: +(Math.abs(btAddOnRets.filter(r => r <= 0).reduce((a, b) => a + b, 0))).toFixed(1),
+    profitFactor: (() => {
+        const gw = btAddOnRets.filter(r => r > 0).reduce((a, b) => a + b, 0);
+        const gl = Math.abs(btAddOnRets.filter(r => r <= 0).reduce((a, b) => a + b, 0));
+        return gl > 0 ? +(gw / gl).toFixed(2) : 99;
+    })(),
+} : {};
+
+const btFloorWins = btFloorRets.filter(r => r > 0).length;
+const backtestFloor = btFloorRets.length > 0 ? {
+    dataStart: dayList[0].date,
+    dataEnd: dayList[dayList.length - 1].date,
+    dataDays: dayList.length,
+    signals: btFloorRets.length,
+    winRate: Math.round(100 * btFloorWins / btFloorRets.length),
+    avgGain: +(btFloorRets.reduce((a, b) => a + b, 0) / btFloorRets.length).toFixed(1),
+    totalPnl: +btFloorRets.reduce((a, b) => a + b, 0).toFixed(1),
+    worstLoss: +Math.min(...btFloorRets).toFixed(1),
+    grossWin: +(btFloorRets.filter(r => r > 0).reduce((a, b) => a + b, 0)).toFixed(1),
+    grossLoss: +(Math.abs(btFloorRets.filter(r => r <= 0).reduce((a, b) => a + b, 0))).toFixed(1),
+    profitFactor: (() => {
+        const gw = btFloorRets.filter(r => r > 0).reduce((a, b) => a + b, 0);
+        const gl = Math.abs(btFloorRets.filter(r => r <= 0).reduce((a, b) => a + b, 0));
+        return gl > 0 ? +(gw / gl).toFixed(2) : 99;
+    })(),
+} : {};
+
 const js = `// AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual\n`
     + `window.FRESH_RIDER_TRACKER = ${JSON.stringify({ summary: summaryFR, backtest, trades: allFR }, null, 1)};\n`
-    + `window.ADD_ON_TRACKER = ${JSON.stringify({ summary: summaryAddOnEarly, trades: allAddOnEarly }, null, 1)};\n`
-    + `window.FLOOR_ADDON_TRACKER = ${JSON.stringify({ summary: summaryAddOnFloor, trades: allAddOnFloor }, null, 1)};\n`
+    + `window.ADD_ON_TRACKER = ${JSON.stringify({ summary: summaryAddOnEarly, backtest: backtestAddOn, trades: allAddOnEarly }, null, 1)};\n`
+    + `window.FLOOR_ADDON_TRACKER = ${JSON.stringify({ summary: summaryAddOnFloor, backtest: backtestFloor, trades: allAddOnFloor }, null, 1)};\n`
     + `window.ALL_TRACKER = ${JSON.stringify({ summary: summaryUnified, trades: allUnified }, null, 1)};\n`;
 
 fs.writeFileSync(OUT_FILE, js);
@@ -572,5 +668,8 @@ fs.writeFileSync(OUT_FILE, js);
 console.log(`✅ Tracker dijana: ${OUT_FILE}`);
 console.log(`   🌟 UNIFIED ALL: Total ${summaryUnified.totalTracked} | OPEN ${summaryUnified.openCount} | CLOSED ${summaryUnified.closedCount} (WR ${summaryUnified.closedWinRate}%, avg ${summaryUnified.closedAvgGain}%)`);
 console.log(`   🔥 FRESH RIDER (Day 1): Total ${summaryFR.totalTracked} | OPEN ${summaryFR.openCount} | CLOSED ${summaryFR.closedCount} (WR ${summaryFR.closedWinRate}%, avg ${summaryFR.closedAvgGain}%)`);
+console.log(`      ↳ Backtest (sim): ${backtest.signals} signals | WR ${backtest.winRate}% | Avg ${backtest.avgGain >= 0 ? '+' : ''}${backtest.avgGain}% | Total +${backtest.totalPnl}%`);
 console.log(`   ⭐ ADD-ON A+ (Awal <= 20%): Total ${summaryAddOnEarly.totalTracked} | OPEN ${summaryAddOnEarly.openCount} | CLOSED ${summaryAddOnEarly.closedCount} (WR ${summaryAddOnEarly.closedWinRate}%, avg ${summaryAddOnEarly.closedAvgGain}%)`);
+console.log(`      ↳ Backtest (sim): ${backtestAddOn.signals ?? 0} signals | WR ${backtestAddOn.winRate ?? 0}% | Avg ${backtestAddOn.avgGain >= 0 ? '+' : ''}${backtestAddOn.avgGain ?? 0}% | PF ${backtestAddOn.profitFactor ?? 0}x | Total +${backtestAddOn.totalPnl ?? 0}%`);
 console.log(`   🛡️ ADD-ON (Lantai Rapat): Total ${summaryAddOnFloor.totalTracked} | OPEN ${summaryAddOnFloor.openCount} | CLOSED ${summaryAddOnFloor.closedCount} (WR ${summaryAddOnFloor.closedWinRate}%, avg ${summaryAddOnFloor.closedAvgGain}%)`);
+console.log(`      ↳ Backtest (sim): ${backtestFloor.signals ?? 0} signals | WR ${backtestFloor.winRate ?? 0}% | Avg ${backtestFloor.avgGain >= 0 ? '+' : ''}${backtestFloor.avgGain ?? 0}% | PF ${backtestFloor.profitFactor ?? 0}x | Total +${backtestFloor.totalPnl ?? 0}%`);
