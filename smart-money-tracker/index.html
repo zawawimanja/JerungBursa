@@ -914,9 +914,10 @@
         <div class="controls">
 
             <div class="history-input">
-                <label for="historyDate" style="color: #a5b4fc; font-size: 0.75rem; font-weight: 700; cursor: pointer;">Archive:</label>
-                <input type="date" id="historyDate">
-                <button id="loadHistoryBtn" class="btn btn-history">📂 Load</button>
+                <label for="historyDate" style="color: #a5b4fc; font-size: 0.75rem; font-weight: 700; cursor: pointer;" title="Pilih tarikh hari bekerja Bursa Malaysia (Isnin-Jumaat). Data tersedia: Mei 25 – Okt 1, 2026.">📂 Archive:</label>
+                <input type="date" id="historyDate" min="2026-05-25" max="2026-10-01" title="Pilih tarikh hari bekerja sahaja (Isnin-Jumaat). Hujung minggu &amp; cuti umum tiada data.">
+                <button id="loadHistoryBtn" class="btn btn-history">Load</button>
+                <button id="backToLiveBtn" class="btn" onclick="document.getElementById('historyDate').value=''; location.reload();" style="font-size:0.7rem; padding:0.2rem 0.5rem; background:rgba(52,211,153,0.15); border:1px solid rgba(52,211,153,0.4); color:#34d399; border-radius:6px; cursor:pointer; display:none;" title="Kembali ke data live">🔴 Live</button>
             </div>
 
             <div class="ipo-filter-container" style="display: inline-flex; align-items: center; gap: 0.4rem; background: rgba(30, 41, 59, 0.8); padding: 0.35rem 0.6rem; border-radius: 8px; border: 1px solid rgba(148, 163, 184, 0.3); transition: all 0.2s ease-in-out;">
@@ -1371,7 +1372,7 @@
             <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.7rem;">
                 <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
                     <span style="font-size: 1rem;">📊</span>
-                    <span style="font-size: 0.75rem; font-weight: 900; color: #fde047; letter-spacing: 0.5px; text-transform: uppercase;">Fresh VVIP Rider Backtest Data</span>
+                    <span id="frBacktestTitle" style="font-size: 0.75rem; font-weight: 900; color: #fde047; letter-spacing: 0.5px; text-transform: uppercase;">Fresh VVIP Rider Backtest Data</span>
                     <span id="frBacktestMeta" style="font-size: 0.65rem; color: #94a3b8; font-weight: 600;">Simulation: position exit after 20 days</span>
                 </div>
                 <button onclick="toggleCardCollapse('frBacktestBody', this)" class="btn" style="background: rgba(15,23,42,0.85); border: 1.5px solid rgba(253,224,71,0.5); color: #fde047; padding: 0.2rem 0.55rem; border-radius: 6px; font-size: 0.7rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.3rem; transition: all 0.2s;" onmouseover="this.style.background='rgba(253,224,71,0.2)';" onmouseout="this.style.background='rgba(15,23,42,0.85)';">
@@ -1411,7 +1412,7 @@
                 <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
                     <span style="font-size: 1.1rem;">🔬</span>
                     <span style="font-size: 0.85rem; font-weight: 900; color: #38bdf8; letter-spacing: 0.5px; text-transform: uppercase;">Kajian Kuantitatif: 🔥 NEW (Day 1) vs ⭐ ADD-ON A+</span>
-                    <span style="font-size: 0.65rem; background: rgba(56, 189, 248, 0.2); color: #7dd3fc; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(56, 189, 248, 0.4);">72 Hari Dagangan · 285 Signal Diuji</span>
+                    <span style="font-size: 0.65rem; background: rgba(56, 189, 248, 0.2); color: #7dd3fc; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(56, 189, 248, 0.4);">85 Hari Dagangan · 341 Signal Diuji (Jun – Okt 2026)</span>
                 </div>
                 <button onclick="toggleCardCollapse('frStudyAddonBody', this)" class="btn" style="background: rgba(15,23,42,0.85); border: 1.5px solid rgba(56,189,248,0.5); color: #38bdf8; padding: 0.2rem 0.55rem; border-radius: 6px; font-size: 0.7rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.3rem; transition: all 0.2s;" onmouseover="this.style.background='rgba(56,189,248,0.2)';" onmouseout="this.style.background='rgba(15,23,42,0.85)';">
                     <span class="toggle-icon">🔼</span> <span class="toggle-text">Expand</span>
@@ -1425,21 +1426,21 @@
                     <div style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.12), rgba(249, 115, 22, 0.08)); border: 1px solid rgba(249, 115, 22, 0.45); border-radius: 10px; padding: 0.75rem 0.85rem;">
                         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem;">
                             <span style="font-weight: 900; color: #ff6b4a; font-size: 0.8rem; display: flex; align-items: center; gap: 0.3rem;">🔥 NEW (Day 1) Entry</span>
-                            <span style="font-size: 0.62rem; color: #fdba74; font-weight: 800; background: rgba(249,115,22,0.2); padding: 0.05rem 0.3rem; border-radius: 4px;">22 Saham</span>
+                            <span style="font-size: 0.62rem; color: #fdba74; font-weight: 800; background: rgba(249,115,22,0.2); padding: 0.05rem 0.3rem; border-radius: 4px;">24 Saham</span>
                         </div>
                         <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.35rem;">
                             <div>
                                 <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Win Rate</div>
-                                <div style="font-size: 1.25rem; font-weight: 900; color: #34d399;">77.3%</div>
+                                <div style="font-size: 1.25rem; font-weight: 900; color: #34d399;">75.0%</div>
                             </div>
                             <div style="text-align: right;">
                                 <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Profit Factor</div>
-                                <div style="font-size: 1.1rem; font-weight: 900; color: #fde047;">7.91x</div>
+                                <div style="font-size: 1.1rem; font-weight: 900; color: #fde047;">9.52x</div>
                             </div>
                         </div>
                         <div style="font-size: 0.65rem; color: #cbd5e1; border-top: 1px dashed rgba(249,115,22,0.3); padding-top: 0.35rem; line-height: 1.35;">
-                            🎯 TP1 (+10%): <strong style="color:#38bdf8;">63.6%</strong> | Max Gain: <strong style="color:#34d399;">+26.7%</strong><br>
-                            💡 <em>Kemasukan selamat hari pertama dari tapak asal.</em>
+                            🎯 TP1 (+10%): <strong style="color:#38bdf8;">62.5%</strong> | Max Gain: <strong style="color:#34d399;">+25.5%</strong><br>
+                            💡 <em>Kemasukan tapak asal selamat dengan momentum awal jerung.</em>
                         </div>
                     </div>
 
@@ -1447,21 +1448,21 @@
                     <div style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(234, 179, 8, 0.1)); border: 1.5px solid rgba(234, 179, 8, 0.6); border-radius: 10px; padding: 0.75rem 0.85rem; box-shadow: 0 0 15px rgba(234,179,8,0.15);">
                         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem;">
                             <span style="font-weight: 900; color: #fef08a; font-size: 0.8rem; display: flex; align-items: center; gap: 0.3rem;">⭐ ADD-ON A+ (Fresh Base 2)</span>
-                            <span style="font-size: 0.62rem; color: #fde047; font-weight: 900; background: rgba(234,179,8,0.25); padding: 0.05rem 0.35rem; border-radius: 4px;">TERBAIK 🔥</span>
+                            <span style="font-size: 0.62rem; color: #fde047; font-weight: 900; background: rgba(234,179,8,0.25); padding: 0.05rem 0.35rem; border-radius: 4px;">TERBAIK 🔥 (37 Saham)</span>
                         </div>
                         <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.35rem;">
                             <div>
                                 <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Win Rate</div>
-                                <div style="font-size: 1.25rem; font-weight: 900; color: #34d399;">82.9%</div>
+                                <div style="font-size: 1.25rem; font-weight: 900; color: #34d399;">81.1%</div>
                             </div>
                             <div style="text-align: right;">
                                 <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Profit Factor</div>
-                                <div style="font-size: 1.1rem; font-weight: 900; color: #fde047;">13.39x</div>
+                                <div style="font-size: 1.1rem; font-weight: 900; color: #fde047;">21.58x 🔥</div>
                             </div>
                         </div>
                         <div style="font-size: 0.65rem; color: #cbd5e1; border-top: 1px dashed rgba(234,179,8,0.3); padding-top: 0.35rem; line-height: 1.35;">
-                            🎯 TP1 (+10%): <strong style="color:#38bdf8;">77.1%</strong> | TP2 (+20%): <strong style="color:#34d399;">71.4%</strong><br>
-                            🚀 Avg Return: <strong style="color:#34d399;">+20.1%</strong> (Max: <strong style="color:#34d399;">+32.9%</strong>)
+                            🎯 TP1 (+10%): <strong style="color:#38bdf8;">75.7%</strong> | TP2 (+20%): <strong style="color:#34d399;">70.3%</strong><br>
+                            🚀 Scale-Out WR: <strong style="color:#34d399;">89.2%</strong> | Avg Return: <strong style="color:#34d399;">+20.4%</strong> (Max: <strong style="color:#34d399;">+32.0%</strong>)
                         </div>
                     </div>
 
@@ -1469,21 +1470,21 @@
                     <div style="background: rgba(239, 68, 68, 0.06); border: 1px solid rgba(239, 68, 68, 0.3); border-radius: 10px; padding: 0.75rem 0.85rem;">
                         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem;">
                             <span style="font-weight: 900; color: #fca5a5; font-size: 0.8rem; display: flex; align-items: center; gap: 0.3rem;">⚠️ ADD-ON Pucuk (> 20%)</span>
-                            <span style="font-size: 0.62rem; color: #f87171; font-weight: 800; background: rgba(239,68,68,0.15); padding: 0.05rem 0.3rem; border-radius: 4px;">BAHAYA 🚫</span>
+                            <span style="font-size: 0.62rem; color: #f87171; font-weight: 800; background: rgba(239,68,68,0.15); padding: 0.05rem 0.3rem; border-radius: 4px;">BAHAYA 🚫 (169 Saham)</span>
                         </div>
                         <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.35rem;">
                             <div>
                                 <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Win Rate</div>
-                                <div style="font-size: 1.25rem; font-weight: 900; color: #fbbf24;">57.3%</div>
+                                <div style="font-size: 1.25rem; font-weight: 900; color: #fbbf24;">59.2%</div>
                             </div>
                             <div style="text-align: right;">
                                 <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Profit Factor</div>
-                                <div style="font-size: 1.1rem; font-weight: 900; color: #f87171;">3.06x</div>
+                                <div style="font-size: 1.1rem; font-weight: 900; color: #f87171;">3.81x</div>
                             </div>
                         </div>
                         <div style="font-size: 0.65rem; color: #cbd5e1; border-top: 1px dashed rgba(239,68,68,0.25); padding-top: 0.35rem; line-height: 1.35;">
-                            🎯 TP2 Hit Rate jatuh ke <strong style="color:#f87171;">37.1%</strong> | Avg: <strong style="color:#cbd5e1;">+7.6%</strong><br>
-                            ⚠️ <em>Risiko pullback tajam jerung take profit.</em>
+                            🎯 TP2 Hit Rate jatuh ke <strong style="color:#f87171;">33.1%</strong> | Avg: <strong style="color:#cbd5e1;">+7.8%</strong><br>
+                            ⚠️ <em>Risiko pullback tajam jerung take profit di pucuk.</em>
                         </div>
                     </div>
                 </div>
@@ -1507,69 +1508,69 @@
                         <tbody>
                             <tr>
                                 <td style="font-weight: 800; color: #ff6b4a;">🔥 NEW (Day 1)</td>
-                                <td style="text-align: center; color: #94a3b8;">22</td>
-                                <td style="text-align: right; color: #34d399; font-weight: 800;">77.3%</td>
-                                <td style="text-align: right; color: #34d399; font-weight: 800;">77.3%</td>
-                                <td style="text-align: right; color: #38bdf8;">63.6%</td>
+                                <td style="text-align: center; color: #94a3b8;">24</td>
+                                <td style="text-align: right; color: #34d399; font-weight: 800;">75.0%</td>
+                                <td style="text-align: right; color: #34d399; font-weight: 800;">75.0%</td>
+                                <td style="text-align: right; color: #38bdf8;">62.5%</td>
                                 <td style="text-align: right; color: #38bdf8;">50.0%</td>
                                 <td style="text-align: right; color: #34d399; font-weight: 800;">+16.1%</td>
-                                <td style="text-align: right; color: #fde047;">+26.7%</td>
-                                <td style="text-align: right; color: #fde047; font-weight: 900;">7.91x</td>
+                                <td style="text-align: right; color: #fde047;">+25.5%</td>
+                                <td style="text-align: right; color: #fde047; font-weight: 900;">9.52x</td>
                             </tr>
                             <tr style="background: rgba(16,185,129,0.06);">
                                 <td style="font-weight: 800; color: #fef08a;">⭐ ADD-ON (Awal Hari 1 - 5)</td>
-                                <td style="text-align: center; color: #94a3b8;">35</td>
-                                <td style="text-align: right; color: #34d399; font-weight: 900;">82.9% 🔥</td>
-                                <td style="text-align: right; color: #34d399; font-weight: 900;">82.9%</td>
-                                <td style="text-align: right; color: #38bdf8; font-weight: 800;">77.1%</td>
-                                <td style="text-align: right; color: #34d399; font-weight: 800;">71.4%</td>
-                                <td style="text-align: right; color: #34d399; font-weight: 900;">+20.1%</td>
-                                <td style="text-align: right; color: #fde047; font-weight: 800;">+32.9%</td>
-                                <td style="text-align: right; color: #fde047; font-weight: 900;">13.39x 🔥</td>
+                                <td style="text-align: center; color: #94a3b8;">37</td>
+                                <td style="text-align: right; color: #34d399; font-weight: 900;">81.1% 🔥</td>
+                                <td style="text-align: right; color: #34d399; font-weight: 900;">89.2% 🔥</td>
+                                <td style="text-align: right; color: #38bdf8; font-weight: 800;">75.7%</td>
+                                <td style="text-align: right; color: #34d399; font-weight: 800;">70.3%</td>
+                                <td style="text-align: right; color: #34d399; font-weight: 900;">+20.4%</td>
+                                <td style="text-align: right; color: #fde047; font-weight: 800;">+32.0%</td>
+                                <td style="text-align: right; color: #fde047; font-weight: 900;">21.58x 🔥</td>
                             </tr>
                             <tr style="background: rgba(16,185,129,0.03);">
                                 <td style="font-weight: 800; color: #6ee7b7;">⭐ ADD-ON (Lantai Rapat ≤ 3%)</td>
-                                <td style="text-align: center; color: #94a3b8;">55</td>
-                                <td style="text-align: right; color: #34d399; font-weight: 800;">78.2%</td>
-                                <td style="text-align: right; color: #34d399; font-weight: 800;">81.8%</td>
-                                <td style="text-align: right; color: #38bdf8;">80.0%</td>
-                                <td style="text-align: right; color: #34d399;">70.9%</td>
-                                <td style="text-align: right; color: #34d399; font-weight: 800;">+21.5%</td>
-                                <td style="text-align: right; color: #fde047;">+29.9%</td>
-                                <td style="text-align: right; color: #fde047; font-weight: 900;">10.57x</td>
+                                <td style="text-align: center; color: #94a3b8;">56</td>
+                                <td style="text-align: right; color: #34d399; font-weight: 800;">78.6%</td>
+                                <td style="text-align: right; color: #34d399; font-weight: 800;">83.9%</td>
+                                <td style="text-align: right; color: #38bdf8;">82.1%</td>
+                                <td style="text-align: right; color: #34d399;">69.6%</td>
+                                <td style="text-align: right; color: #34d399; font-weight: 800;">+21.7%</td>
+                                <td style="text-align: right; color: #fde047;">+29.6%</td>
+                                <td style="text-align: right; color: #fde047; font-weight: 900;">11.44x</td>
                             </tr>
                             <tr>
                                 <td style="font-weight: 700; color: #93c5fd;">➕ ADD-ON (Base 1 & 2: ≤ 20%)</td>
-                                <td style="text-align: center; color: #94a3b8;">139</td>
-                                <td style="text-align: right; color: #34d399; font-weight: 800;">76.3%</td>
-                                <td style="text-align: right; color: #34d399; font-weight: 800;">78.4%</td>
-                                <td style="text-align: right; color: #38bdf8;">73.4%</td>
-                                <td style="text-align: right; color: #38bdf8;">61.9%</td>
-                                <td style="text-align: right; color: #34d399;">+18.3%</td>
-                                <td style="text-align: right; color: #fde047;">+26.4%</td>
-                                <td style="text-align: right; color: #fde047; font-weight: 800;">10.42x</td>
+                                <td style="text-align: center; color: #94a3b8;">148</td>
+                                <td style="text-align: right; color: #34d399; font-weight: 800;">77.7%</td>
+                                <td style="text-align: right; color: #34d399; font-weight: 800;">82.4%</td>
+                                <td style="text-align: right; color: #38bdf8;">73.0%</td>
+                                <td style="text-align: right; color: #38bdf8;">61.5%</td>
+                                <td style="text-align: right; color: #34d399;">+19.4%</td>
+                                <td style="text-align: right; color: #fde047;">+26.8%</td>
+                                <td style="text-align: right; color: #fde047; font-weight: 800;">11.13x</td>
                             </tr>
                             <tr style="background: rgba(239,68,68,0.04);">
                                 <td style="font-weight: 700; color: #fca5a5;">⚠️ ADD-ON Pucuk (> 20% dari Base)</td>
-                                <td style="text-align: center; color: #94a3b8;">124</td>
-                                <td style="text-align: right; color: #fbbf24; font-weight: 700;">57.3%</td>
-                                <td style="text-align: right; color: #fbbf24;">59.7%</td>
-                                <td style="text-align: right; color: #cbd5e1;">54.8%</td>
-                                <td style="text-align: right; color: #f87171;">37.1%</td>
-                                <td style="text-align: right; color: #cbd5e1;">+7.6%</td>
-                                <td style="text-align: right; color: #cbd5e1;">+16.4%</td>
-                                <td style="text-align: right; color: #f87171;">3.06x</td>
+                                <td style="text-align: center; color: #94a3b8;">169</td>
+                                <td style="text-align: right; color: #fbbf24; font-weight: 700;">59.2%</td>
+                                <td style="text-align: right; color: #fbbf24;">60.9%</td>
+                                <td style="text-align: right; color: #cbd5e1;">50.3%</td>
+                                <td style="text-align: right; color: #f87171;">33.1%</td>
+                                <td style="text-align: right; color: #cbd5e1;">+7.8%</td>
+                                <td style="text-align: right; color: #cbd5e1;">+15.0%</td>
+                                <td style="text-align: right; color: #f87171;">3.81x</td>
                             </tr>
                             <tr style="background: rgba(239,68,68,0.04);">
                                 <td style="font-weight: 700; color: #94a3b8;">⚠️ ADD-ON Tua (> 15 Hari Dagangan)</td>
-                                <td style="text-align: center; color: #94a3b8;">173</td>
-                                <td style="text-align: right; color: #fbbf24;">62.4%</td>
-                                <td style="text-align: right; color: #fbbf24;">65.3%</td>
-                                <td style="text-align: right; color: #cbd5e1;">61.8%</td>
-                                <td style="text-align: right; color: #cbd5e1;">46.8%</td>
-                                <td style="text-align: right; color: #cbd5e1;">+11.9%</td>
-                                <td style="text-align: right; color: #cbd5e1;">+19.0%</td>
-                                <td style="text-align: right; color: #cbd5e1;">4.82x</td>
+                                <td style="text-align: center; color: #94a3b8;">219</td>
+                                <td style="text-align: right; color: #fbbf24;">64.4%</td>
+                                <td style="text-align: right; color: #fbbf24;">66.7%</td>
+                                <td style="text-align: right; color: #cbd5e1;">58.9%</td>
+                                <td style="text-align: right; color: #cbd5e1;">43.4%</td>
+                                <td style="text-align: right; color: #cbd5e1;">+12.3%</td>
+                                <td style="text-align: right; color: #cbd5e1;">+18.3%</td>
+                                <td style="text-align: right; color: #cbd5e1;">6.17x</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1929,7 +1930,7 @@
             <div style="display: flex; align-items: center; justify-content: space-between; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.7rem;">
                 <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
                     <span style="font-size: 1rem;">📊</span>
-                    <span style="font-size: 0.75rem; font-weight: 900; color: #c4b5fd; letter-spacing: 0.5px; text-transform: uppercase;">Hot Theme Rider Backtest Data</span>
+                    <span id="htBacktestTitle" style="font-size: 0.75rem; font-weight: 900; color: #c4b5fd; letter-spacing: 0.5px; text-transform: uppercase;">Hot Theme Rider Backtest Data</span>
                     <span id="htBacktestMeta" style="font-size: 0.65rem; color: #94a3b8; font-weight: 600;">Simulation: trades closed after 20 days</span>
                 </div>
                 <button onclick="toggleCardCollapse('htBacktestBody', this)" class="btn" style="background: rgba(15,23,42,0.85); border: 1.5px solid rgba(196,181,253,0.5); color: #c4b5fd; padding: 0.2rem 0.55rem; border-radius: 6px; font-size: 0.7rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.3rem; transition: all 0.2s;" onmouseover="this.style.background='rgba(196,181,253,0.2)';" onmouseout="this.style.background='rgba(15,23,42,0.85)';">
@@ -7300,7 +7301,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             }
             const s = data.summary || {};
 
-            const bt = (window.FRESH_RIDER_TRACKER && window.FRESH_RIDER_TRACKER.backtest) ? window.FRESH_RIDER_TRACKER.backtest : null;
+            const bt = (data && data.backtest) ? data.backtest : ((window.FRESH_RIDER_TRACKER && window.FRESH_RIDER_TRACKER.backtest) ? window.FRESH_RIDER_TRACKER.backtest : null);
             if (bt) {
                 const setT = (id, v) => { const el = document.getElementById(id); if (el) el.textContent = v; };
                 setT('frBtSignals', bt.signals ?? 16);
@@ -7308,8 +7309,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 setT('frBtAvg', (bt.avgGain >= 0 ? '+' : '') + (bt.avgGain ?? 19.3) + '%');
                 setT('frBtTotal', (bt.totalPnl >= 0 ? '+' : '') + (bt.totalPnl ?? 309) + '%');
                 setT('frBtWorst', (bt.worstLoss ?? -7.4) + '%');
-                setT('frHeadBtDays', bt.dataDays ?? 53);
-                setT('frHeadBtRange', `${bt.dataStart || '02 Jun'} – ${bt.dataEnd || '17 Ogos 2026'}`);
+                setT('frHeadBtDays', bt.dataDays ?? 83);
+                setT('frHeadBtRange', `${bt.dataStart || '02 Jun'} – ${bt.dataEnd || '01 Okt 2026'}`);
                 setT('frHeadBtWr', bt.winRate ?? '—');
                 setT('frHeadBtAvg', (bt.avgGain >= 0 ? '+' : '') + (bt.avgGain ?? '—'));
                 setT('frHeadBtWorst', (bt.worstLoss >= 0 ? '+' : '') + (bt.worstLoss ?? '—'));
@@ -7318,7 +7319,15 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 setT('frHeadBadgeWr', bt.winRate ?? '—');
                 setT('frHeadBadgeAvg', (bt.avgGain >= 0 ? '+' : '') + (bt.avgGain ?? '—'));
                 const meta = document.getElementById('frBacktestMeta');
-                if (meta) meta.textContent = `${bt.dataDays || '-'} trading days (~3 calendar months: ${bt.dataStart || ''} – ${bt.dataEnd || ''}) · Simulation: close trade after 20 days`;
+                if (meta) meta.textContent = `${bt.dataDays || '-'} trading days (~4 calendar months: ${bt.dataStart || ''} – ${bt.dataEnd || ''}) · Simulation: close trade after 20 days`;
+                
+                const titleEl = document.getElementById('frBacktestTitle');
+                if (titleEl) {
+                    if (mode === 'addon') titleEl.textContent = '⭐ ADD-ON A+ (Awal ≤ 20%) Backtest Data';
+                    else if (mode === 'floor') titleEl.textContent = '🛡️ ADD-ON (Lantai Rapat) Backtest Data';
+                    else if (mode === 'new') titleEl.textContent = '🔥 Fresh VVIP Rider (Day 1) Backtest Data';
+                    else titleEl.textContent = '🌟 Unified Portfolio (ALL Signals) Backtest Data';
+                }
             }
 
             const movers = (data.trades || [])
@@ -7851,7 +7860,15 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             }
             const s = data.summary || {};
             const rootTracker = window.HOT_THEME_TRACKER || {};
-            const bt = rootTracker.backtest || {};
+            const bt = (data && data.backtest) ? data.backtest : (rootTracker.backtest || {});
+
+            const titleEl = document.getElementById('htBacktestTitle');
+            if (titleEl) {
+                if (mode === 'addon') titleEl.textContent = '⭐ HOT THEME ADD-ON A+ (AWAL ≤ 20%) BACKTEST';
+                else if (mode === 'floor') titleEl.textContent = '🛡️ HOT THEME ADD-ON (LANTAI RAPAT) BACKTEST';
+                else if (mode === 'new') titleEl.textContent = '🔥 HOT THEME NEW (DAY 1) BACKTEST';
+                else titleEl.textContent = '🌟 HOT THEME (UNIFIED ALL) BACKTEST';
+            }
 
             // Kaunter yang MASIH qualify hari ini (untuk lajur "Position Status")
             const htLiveList = (currentData && currentData.length > 0) ? currentData : ((window.liveData && window.liveData.topVolume) || []);
@@ -10916,7 +10933,10 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             }, 5 * 60 * 1000);
 
             // History Archive check
-            document.getElementById('loadHistoryBtn').addEventListener('click', async function() {
+            let _archiveLoadBusy = false; // elak race condition bila change + click berlaku serentak
+            async function doLoadHistoryArchive() {
+                if (_archiveLoadBusy) return;
+                _archiveLoadBusy = true;
                 let dateVal = document.getElementById('historyDate').value;
                 if (dateVal) {
                     dateVal = dateVal.trim();
@@ -10935,8 +10955,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         }
                     }
                 }
-                const btn = this;
-                const originalText = btn.innerHTML;
+                const btn = document.getElementById('loadHistoryBtn');
+                const originalText = '📂 Load';
 
                 if (!dateVal) {
                     btn.innerHTML = '⚠️ Select Date';
@@ -10987,6 +11007,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                             currentData = data;
                             _viewingArchive = true; // tengah tengok arkib — auto-refresh kena berhenti
                             document.getElementById('dashboardSubtitle').innerHTML = `📂 Historical Archive: <strong>${dateVal}</strong>`;
+                            const liveBtn = document.getElementById('backToLiveBtn');
+                            if (liveBtn) liveBtn.style.display = 'inline-flex';
                             applyFilters();
                             
                             // Success feedback
@@ -11013,8 +11035,12 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         btn.style.background = '';
                         btn.style.color = '';
                     }, 2000);
+                } finally {
+                    _archiveLoadBusy = false;
                 }
-            });
+            }
+            document.getElementById('loadHistoryBtn').addEventListener('click', doLoadHistoryArchive);
+            document.getElementById('historyDate').addEventListener('change', doLoadHistoryArchive);
         });
 
         const DEFAULT_PORTFOLIO_ACTIVE = [

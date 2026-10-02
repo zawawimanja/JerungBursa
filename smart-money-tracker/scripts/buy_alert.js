@@ -459,37 +459,7 @@ function formatStockCard(s) {
     const swanBadge = s.swanBadge || '🟢 🛡️ Swan: PASS';
     
     const header = `[${s.name}🔗](${tvUrl})${gradeStr}${freshnessBadge}${kumpulanBadge}${catalystBadges}${swanBadge}`;
-    const tightStr = `tight ${s.tight != null ? s.tight.toFixed(2) : '—'}%`;
-    const floorStr = `RM ${s.floor.toFixed(3)}`;
-    const fDist = s.floorDist != null ? s.floorDist : 0;
-    const floorDistStr = `${fDist >= 0 ? '+' : ''}${fDist.toFixed(1)}% (${s.touch || 0}x)`;
-    const rrStr = `R:R 1:${s.rrRatio || '—'}`;
-    const trPriceStr = `RM ${s.triggerPrice.toFixed(3)} (${s.triggerDate || 'Hari Ini'})`;
-    const distBadge = s.distBadge || '🟢 0.0% (DAY 1)';
-    const pbStr = `${s.pullback != null ? s.pullback.toFixed(1) : '—'}%`;
-    const priceStr = `RM ${s.price.toFixed(3)}`;
-    const changeStr = `${s.changePct >= 0 ? '+' : ''}${s.changePct != null ? s.changePct.toFixed(2) : '0.00'}%`;
-    const toVal = s.turnover || 0;
-    const toStr = toVal >= 1e6 ? `RM ${(toVal / 1e6).toFixed(2)}M 🔥` : `RM ${(toVal / 1e3).toFixed(0)}k`;
-    const confCount = s.confluence || 0;
-    const confStr = confCount >= 1 ? `YES (${confCount}x)` : 'NO';
-    const aiScoreStr = `${s.confidenceScore || 80}/100📜✨ AI`;
-    
-    return [
-        header,
-        tightStr,
-        floorStr,
-        floorDistStr,
-        rrStr,
-        trPriceStr,
-        distBadge,
-        pbStr,
-        priceStr,
-        changeStr,
-        toStr,
-        confStr,
-        aiScoreStr
-    ].join('\n');
+    return header;
 }
 
 function buildMessage(now, out) {
