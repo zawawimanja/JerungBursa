@@ -11060,17 +11060,24 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 try {
                     const cacheBuster = new Date().getTime();
                     let res = null;
-                    try {
-                        res = await fetch(`history/data_${dateVal}.json?t=${cacheBuster}`);
-                    } catch (fetchErr) {
-                        console.warn("Local history fetch failed (CORS), trying GitHub raw fallback...", fetchErr);
+
+                    // Cuba GitHub raw dahulu (terbukti 200 OK, elak Vercel 308 redirect issue)
+                    const archiveUrls = [
+                        `https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/history/data_${dateVal}.json`,
+                        `/history/data_${dateVal}.json?t=${cacheBuster}`,
+                        `history/data_${dateVal}.json?t=${cacheBuster}`
+                    ];
+
+                    for (const url of archiveUrls) {
+                        try {
+                            const r = await fetch(url);
+                            if (r.ok) { res = r; break; }
+                        } catch (e) {
+                            console.warn('Archive fetch gagal:', url, e.message);
+                        }
                     }
-                    
-                    if (!res || !res.ok) {
-                        res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/history/data_${dateVal}.json?t=${cacheBuster}`);
-                    }
-                    
-                    if (res.ok) {
+
+                    if (res && res.ok) {
                         const raw = await res.json();
                         let data = [];
                         if (Array.isArray(raw)) {
