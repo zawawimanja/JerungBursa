@@ -390,30 +390,7 @@ function loadHistoryDay(dateStr) {
     } catch (e) { return []; }
 }
 
-const BURSA_MALAYSIA_HOLIDAYS = new Set([
-    '2026-01-01', // New Year's Day
-    '2026-01-28', '2026-01-29', '2026-01-30', // Chinese New Year
-    '2026-02-01', '2026-02-02', // Thaipusam / FT Day / Replacement
-    '2026-03-08', '2026-03-09', // Nuzul Al-Quran
-    '2026-03-20', '2026-03-21', '2026-03-22', '2026-03-23', // Hari Raya Aidilfitri
-    '2026-05-01', // Labour Day
-    '2026-05-27', // Hari Raya Haji / Aidiladha
-    '2026-05-31', '2026-06-01', // Wesak Day / Agong's Birthday
-    '2026-06-17', // Awal Muharram
-    '2026-08-25', // Maulidur Rasul
-    '2026-08-31', // Hari Kebangsaan (National Day)
-    '2026-09-16', // Hari Malaysia (Malaysia Day)
-    '2026-11-08', '2026-11-09', // Deepavali / Replacement
-    '2026-12-25'  // Christmas Day
-]);
-
-function isTradingDay(dateStr) {
-    if (!dateStr || BURSA_MALAYSIA_HOLIDAYS.has(dateStr)) return false;
-    const d = new Date(dateStr + 'T00:00:00');
-    if (isNaN(d.getTime())) return false;
-    const wd = d.getDay();
-    return wd !== 0 && wd !== 6;
-}
+const { BURSA_MALAYSIA_HOLIDAYS, isTradingDay } = require('./lib/bursa_calendar');
 
 // -------------------------------------------------------------
 // Format mesej Telegram
@@ -436,31 +413,46 @@ function formatStockCard(s) {
     const gradeStr = s.grade && s.grade !== '—' && s.grade !== 'Unrated' ? ` (${s.grade})` : (s.grade === 'Unrated' ? ' (Unrated)' : '');
     
     // 1. Freshness badge
-    const freshnessBadge = s.label || '';
+    const freshnessBadge = s.label ? ` ${s.label}` : '';
     
     // 2. Kumpulan / Whale
     let kumpulanBadge = '';
     if (s.isKumpulan || s._whaleInst) {
-        const shortWhale = s._whaleInst ? s._whaleInst.split(' ')[0] : 'KUMPULAN';
-        kumpulanBadge = `🏛️ ${shortWhale}`;
+        const shortWhale = s._whaleInst ? s._whaleInst.split(' ')[0] : 'JERUNG';
+        kumpulanBadge = ` 🏛️ ${shortWhale}`;
     }
     
     // 3. Positive catalysts
     let catalystBadges = '';
     const nbList = s.newsBadges || [];
     for (const nb of nbList) {
-        if (nb.type === 'JERUNG_5PCT') catalystBadges += '🐋 Jerung 5%+';
-        else if (nb.type === 'EV_CATALYST') catalystBadges += '⚡ EV Catalyst';
-        else if (nb.type === 'AI_CATALYST') catalystBadges += '🤖 AI Catalyst';
-        else if (nb.type === 'CONTRACT_WIN') catalystBadges += '📜 Contract Win';
+        if (nb.type === 'JERUNG_5PCT') catalystBadges += ' 🐋 Jerung 5%+';
+        else if (nb.type === 'EV_CATALYST') catalystBadges += ' ⚡ EV Catalyst';
+        else if (nb.type === 'AI_CATALYST') catalystBadges += ' 🤖 AI Catalyst';
+        else if (nb.type === 'CONTRACT_WIN') catalystBadges += ' 📜 Contract Win';
     }
     
     // 4. Swan badge
-    const swanBadge = s.swanBadge || '🟢 🛡️ Swan: PASS';
+    const swanBadge = s.swanBadge ? ` ${s.swanBadge}` : ' 🟢 🛡️ Swan: PASS';
+
+    // 5. Golden Combo Evaluation (Tightness <= 2.5%, Floor <= 3.5%, TO RM 2M-10M, Change >= -1.0%)
+    const isGoldenCombo = (
+        s.tight != null && s.tight <= 2.5 &&
+        s.floorDist != null && s.floorDist >= -1.0 && s.floorDist <= 3.5 &&
+        s.turnover >= 2000000 && s.turnover <= 10000000 &&
+        (s.changePct == null || s.changePct >= -1.0)
+    );
+    const goldenBadge = isGoldenCombo ? '\n  👑 *GOLDEN COMBO A++ (Quant WR 83%, Avg +23.7%)*' : '';
     
-    const header = `[${s.name}🔗](${tvUrl})${gradeStr}${freshnessBadge}${kumpulanBadge}${catalystBadges}${swanBadge}`;
-    return header;
+    const lines = [
+        `• *[${s.name}](${tvUrl})*${gradeStr}${freshnessBadge}${kumpulanBadge}${catalystBadges}${swanBadge}${goldenBadge}`,
+        `  💵 Harga: *RM ${fmtPrice(s.price)}* (${fmtPct(s.changePct)}) | TO: *RM ${(s.turnover / 1000000).toFixed(2)}M*`,
+        `  🛡️ Lantai: *RM ${fmtPrice(s.floor)}* (${fmtPlain(s.floorDist)} · ${s.touch}x) | Squeeze: *tight ${s.tight != null ? s.tight.toFixed(2) + '%' : '—'}*`,
+        `  🛑 SL Cadangan: *RM ${fmtPrice(s.sl)}* | Skor: *${s.confidenceScore || 80}/100*`
+    ];
+    return lines.join('\n');
 }
+
 
 function buildMessage(now, out) {
     const myt = new Date(now.getTime() + 8 * 3600 * 1000);
@@ -468,8 +460,8 @@ function buildMessage(now, out) {
     const timeStr = myt.toISOString().slice(11, 16);
 
     const lines = [];
-    lines.push(`🔔 *SMART MONEY TRACKER — PRE-CLOSE BUY ALERT*`);
-    lines.push(`⏰ ${dateStr} ${timeStr} MYT · Harga: Yahoo live`);
+    lines.push(`🔔 *SMART MONEY TRACKER — MARKET CLOSE BUY ALERT*`);
+    lines.push(`⏰ ${dateStr} ${timeStr} MYT · Sesi Pasaran Selesai (Post-Market Close)`);
     lines.push('');
 
     // ---- Fresh Rider Top Ranking VVIP ----
@@ -1165,6 +1157,21 @@ function buildMessage(now, out) {
     const chatId = process.env.TELEGRAM_CHAT_ID;
     if (token && chatId) {
         try {
+            const mytNow = new Date(now.getTime() + 8 * 3600 * 1000);
+            const mytDate = mytNow.toISOString().slice(0, 10);
+            const mytHour = mytNow.getUTCHours();
+
+            if (!isTradingDay(mytDate)) {
+                console.log(`🌙 [Telegram Guard] ${mytDate} bukan hari dagangan Bursa Malaysia — notifikasi Telegram diskip.`);
+                return;
+            }
+
+            // Elak mesej sampai lewat malam akibat GitHub Actions cron delay
+            if (mytHour >= 21) {
+                console.warn(`⏳ [Telegram Guard] Waktu sudah melepasi 9:00 PM MYT (${mytHour}:00). Notifikasi disekat untuk elak mesej basi.`);
+                return;
+            }
+
             // Pecahkan mesej jika melebihi had 4096 aksara Telegram
             const chunks = [];
             if (msg.length <= 3800) {

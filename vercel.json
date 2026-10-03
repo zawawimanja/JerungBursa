@@ -11,6 +11,10 @@
     { "src": "/api/cron-alert", "dest": "/smart-money-tracker/api/cron-scrape.js" },
     { "src": "/api/cron-dispatch", "dest": "/smart-money-tracker/api/cron-scrape.js" },
     {
+      "src": "/(user_portfolio|user_portfolio_realized|portfolio_alerts_history|morning_alert_latest|buy_alert_latest)\\.json",
+      "status": 404
+    },
+    {
       "src": "/(.*)\\.json",
       "headers": {
         "cache-control": "no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0"
@@ -28,12 +32,8 @@
   ],
   "crons": [
     {
-      "path": "/api/cron-scrape?job=morning_alert",
-      "schedule": "2 1 * * 1-5"
-    },
-    {
       "path": "/api/cron-scrape?job=buy_alert",
-      "schedule": "15 8 * * 1-5"
+      "schedule": "15 9 * * 1-5"
     }
   ]
 }

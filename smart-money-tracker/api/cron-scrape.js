@@ -12,6 +12,17 @@ module.exports = async (req, res) => {
     const token = process.env.GITHUB_TOKEN || process.env.GH_PAT;
     const repoOwner = 'zawawimanja';
     const repoName = 'JerungBursa';
+    const cronSecret = process.env.CRON_SECRET;
+
+    // 🔒 Auth Guard: Pastikan trigger datang dari Vercel Cron atau pihak yang ada secret
+    if (cronSecret) {
+        const authHeader = req.headers['authorization'] || '';
+        const querySecret = req.query.secret || '';
+        const isAuthorized = authHeader === `Bearer ${cronSecret}` || querySecret === cronSecret;
+        if (!isAuthorized) {
+            return res.status(401).json({ error: 'Unauthorized: Invalid CRON_SECRET' });
+        }
+    }
 
     // ✅ Diagnostic: Jika tiada token, kembalikan 401 dengan panduan
     if (!token) {
@@ -23,13 +34,19 @@ module.exports = async (req, res) => {
         });
     }
 
-    // Tentukan jenis tugasan: morning_alert, buy_alert, atau scrape_trigger (default)
+    // Tentukan jenis tugasan: buy_alert (lepas market close) atau scrape_trigger (default)
     const jobParam = String(req.query.job || req.query.type || req.query.event || '').toLowerCase();
-    let event_type = 'scrape_trigger';
-
+    
     if (jobParam.includes('morning')) {
-        event_type = 'morning_alert_trigger';
-    } else if (jobParam.includes('buy') || jobParam.includes('close')) {
+        return res.status(200).json({
+            success: true,
+            message: 'Morning alert telah dinyahaktifkan (retired). Gunakan buy_alert pasca penutupan pasaran.',
+            timestamp: new Date().toISOString()
+        });
+    }
+
+    let event_type = 'scrape_trigger';
+    if (jobParam.includes('buy') || jobParam.includes('close')) {
         event_type = 'buy_alert_trigger';
     } else {
         event_type = 'scrape_trigger';

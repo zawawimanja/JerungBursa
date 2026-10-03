@@ -170,5 +170,27 @@ Beban mengingati senarai kaunter, formula, dan memastikan tiada signal yang terc
     2. Kaunter pegangan aktif sedia ada (*STRATUS*, *CBHB*, *ISF*) kekal terpapar tanpa tercicir.
     3. Perangkap jualan lilin merah (*BUSCAP*, *SUNLOGY*) disekat dengan tepat.
     4. Hot Theme Leaders (*GREATEC*, *DUFU*, *MNHLDG*) selaras antara tracker dan scanner.
-  * **Pantang AI:** Jangan sesekali bertanya atau membiarkan Awang memeriksa manual atau mengingati senarai kaunter. Pastikan `npm test` mengeluarkan keputusan `18 PASSED, 0 FAILED` terlebih dahulu!
+  * **Pantang AI:** Jangan sesekali bertanya atau membiarkan Awang memeriksa manual atau mengingati senarai kaunter. Pastikan ujian automatik mengeluarkan keputusan 100% PASSED terlebih dahulu!
+
+---
+
+## 👑 14. Cop Kualiti Kombo Emas (Golden Combo A++ Filter & T+1 SOP)
+Dapatan kajian kuantitatif rasmi (data 2 Jun – 2 Okt 2026 merentasi 181 rekod transaksi) membuktikan **`👑 GOLDEN COMBO` adalah penapis kualiti tertinggi** (bukan jenis posisi berasingan, tetapi cop gred A++ ke atas mana-mana kaunter `🔥 NEW`, `⭐ ADD-ON A+`, atau `🛡️ LANTAI RAPAT`):
+
+1. **Empat Syarat Emas (The 4 Golden Combo Criteria):**
+   * **Tightness (Kepadatan Lilin):** $\le 2.5\%$ (ideal $< 2.0\%$ — memberi Win Rate 83% & Profit Factor 16.0x).
+   * **Jarak ke Lantai (Floor Distance):** $\le 3.5\%$ (ideal $0.0\% - 3.5\%$ — Win Rate ~80%).
+   * **Turnover Jerung (Sweet Spot):** **RM 2.0M hingga RM 10.0M** (elak penny lemau bawah RM 2M, dan elak perangkap distribusi borong di atas RM 10M).
+   * **Lilin Hari Signal:** Bukan lilin merah pekat (perubahan hari signal $> -1.0\%$).
+   * 👉 **Hasil Empirikal Sebenar:** 29 Kaunter, **Win Rate 83%, Purata Pulangan +23.7%** (berbanding kaunter tanpa kombo emas dengan purata +14.1%).
+
+2. **Realiti Pasaran: FR (Fresh Rider) vs HT (Hot Theme):**
+   * Statistik "WR 98% HT A+" lampau dipengaruhi oleh *hindsight bias* (tema Semicon/Solar dipilih 17 Ogos lalu diuji ke belakang) dan *clustered entries* (MNHLDG & SLVEST merangkumi 53% sampel). Selepas 17 Ogos, WR HT A+ pada T+10 jatuh ke 28%.
+   * Paling stabil dan kalis ujian pasaran ialah **`FR ADD-ON A+` dan `FR LANTAI RAPAT`** (IPO segar 2025–2026 tanpa rintangan lapuk, WR kekal stabil 63%–75%).
+
+3. **SOP Eksekusi Pembelian T+1 (Pasca Notifikasi Tutup Pasaran 5:00 PM):**
+   * Alert dihantar selepas jam 5:00 PM (selepas tutup pasaran).
+   * Data membuktikan **64% masa saham akan memberi harga sama atau lebih rendah pada hari T+1**.
+   * **Pantang:** Jangan kejar *market order* pada jam 9:00 AM jika saham buka gap-up tinggi.
+   * **SOP:** Pasang **Limit Order pada harga tutup hari signal (atau 1 bid di bawah)** semasa fasa pra-pembukaan (8:30 – 9:00 AM).
 

@@ -1,40 +1,35 @@
-name: BUY Alert 4:30 PM
+name: Market Close BUY Alert 5:15 PM
 
 # Kirim senarai "saham patut beli" (Fresh Rider + Hot Theme) ke Telegram
-# setiap hari dagangan ~4:15 petang MYT — cukup masa nak queue order
-# (limit "harga murah") sebelum closing call auction 4:45pm.
+# setiap hari dagangan ~5:15 petang MYT (selepas market tutup 5:00 petang).
 #
-# Nota: GitHub Actions cron ada delay (biasanya 1-10 minit, boleh sampai 15).
-# 8:15 UTC = 4:15 PM MYT -> mesej sampai ~4:15-4:30, masih sebelum 4:45.
-# Kalau nak lagi awal/lambat, tukar: '10 8' (4:10 PM) / '20 8' (4:20 PM).
-#
-# Setup Telegram (sekali sahaja, di repo Settings > Secrets and variables):
-#   TELEGRAM_BOT_TOKEN — token bot dari @BotFather
-#   TELEGRAM_CHAT_ID   — chat ID awak (cara dapat: mesej bot, then
-#                         https://api.telegram.org/bot<TOKEN>/getUpdates)
-# Tanpa dua secret ini, workflow tetap jalan tapi tiada notification
-# (mesej cuma dalam log Actions + buy_alert_latest.json).
+# Nota: GitHub Actions cron (09:15 UTC = 5:15 PM MYT).
+# Trigger utama dijana melalui Vercel cron (webhook dispatch) atau GitHub schedule fallback.
 
 on:
   schedule:
-    - cron: '15 8 * * 1-5'   # 8:15 UTC = 4:15 PM Malaysia, Isnin-Jumaat (fallback)
+    - cron: '15 9 * * 1-5'   # 09:15 UTC = 5:15 PM Malaysia, Isnin-Jumaat (fallback)
   workflow_dispatch:         # Butang 'Run workflow' di GitHub utk uji manual
   repository_dispatch:       # Webhook trigger (Vercel / cron-job.org)
     types: [buy_alert_trigger]
+
+concurrency:
+  group: buy-alert-group
+  cancel-in-progress: false
 
 jobs:
   alert:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
 
-      - name: Run Buy Alert (harga live + list FR/HT + Telegram)
+      - name: Run Buy Alert (harga penutupan + list FR/HT + Telegram)
         run: node scripts/buy_alert.js
         working-directory: smart-money-tracker
         env:

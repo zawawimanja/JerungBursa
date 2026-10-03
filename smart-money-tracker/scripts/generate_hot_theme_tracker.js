@@ -246,23 +246,7 @@ function isHotThemeAddOnPick(item, initialBasePrice, effFloor, dateStr) {
 
     return true;
 }
-
-const BURSA_MALAYSIA_HOLIDAYS = new Set([
-    '2026-01-01', '2026-01-28', '2026-01-29', '2026-01-30',
-    '2026-02-01', '2026-02-02', '2026-03-08', '2026-03-09',
-    '2026-03-20', '2026-03-21', '2026-03-22', '2026-03-23',
-    '2026-05-01', '2026-05-27', '2026-05-31', '2026-06-01',
-    '2026-06-17', '2026-08-25', '2026-08-31', '2026-09-16',
-    '2026-11-08', '2026-11-09', '2026-12-25'
-]);
-
-function isTradingDay(dateStr) {
-    if (!dateStr || BURSA_MALAYSIA_HOLIDAYS.has(dateStr)) return false;
-    const d = new Date(dateStr);
-    if (isNaN(d.getTime())) return false;
-    const wd = d.getDay();
-    return wd !== 0 && wd !== 6;
-}
+const { BURSA_MALAYSIA_HOLIDAYS, isTradingDay } = require('./lib/bursa_calendar');
 
 // ---- Load history ----
 const files = fs.readdirSync(HIST_DIR).filter(f => /^data_.*\.json$/.test(f))

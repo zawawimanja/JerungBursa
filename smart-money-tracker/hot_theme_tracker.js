@@ -1,17 +1,17 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-02T13:06:33.457Z",
+  "generatedAt": "2026-10-03T17:15:25.676Z",
   "dataDays": 88,
-  "totalTracked": 323,
+  "totalTracked": 321,
   "openCount": 177,
-  "closedCount": 146,
-  "closedWins": 111,
+  "closedCount": 144,
+  "closedWins": 109,
   "closedWinRate": 76,
-  "closedAvgGain": 19.3,
+  "closedAvgGain": 19.1,
   "openPnl": 1203.6,
-  "closedPnl": 2823.8,
-  "totalPnlNow": 4027.4
+  "closedPnl": 2753.2,
+  "totalPnlNow": 3956.8
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -2954,31 +2954,6 @@ window.HOT_THEME_TRACKER = {
    "slTrail": 2.435
   },
   {
-   "id": "SLVEST_2026-08-18_ADDON",
-   "name": "SLVEST",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
-   "entryDate": "2026-08-18",
-   "entry": 3.12,
-   "entryFloor": 2.99,
-   "currentFloor": 3.9,
-   "currentPrice": 4.2,
-   "high": 4.49,
-   "highDate": "2026-09-29",
-   "maxGain": 43.9,
-   "finalGain": 35.3,
-   "day1ChangePct": -0.64,
-   "days": 28,
-   "lastDate": "2026-10-01",
-   "status": "CLOSED_SL",
-   "themes": [
-    "Solar/RE"
-   ],
-   "confluence": 3,
-   "slTrail": 4.221,
-   "exitDate": "2026-10-01",
-   "exitPrice": 4.221
-  },
-  {
    "id": "MI_2026-08-18_ADDON",
    "name": "MI",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -3096,31 +3071,6 @@ window.HOT_THEME_TRACKER = {
    "slTrail": 0.791,
    "exitDate": "2026-08-19",
    "exitPrice": 0.791
-  },
-  {
-   "id": "SLVEST_2026-08-17_ADDON",
-   "name": "SLVEST",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
-   "entryDate": "2026-08-17",
-   "entry": 3.12,
-   "entryFloor": 2.99,
-   "currentFloor": 3.9,
-   "currentPrice": 4.2,
-   "high": 4.49,
-   "highDate": "2026-09-29",
-   "maxGain": 43.9,
-   "finalGain": 35.3,
-   "day1ChangePct": -0.64,
-   "days": 29,
-   "lastDate": "2026-10-01",
-   "status": "CLOSED_SL",
-   "themes": [
-    "Solar/RE"
-   ],
-   "confluence": 3,
-   "slTrail": 4.221,
-   "exitDate": "2026-10-01",
-   "exitPrice": 4.221
   },
   {
    "id": "NEXGRAM_2026-08-14_NEW",
@@ -8376,7 +8326,7 @@ window.HOT_THEME_TRACKER = {
 };
 window.HOT_THEME_NEW_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-02T13:06:33.457Z",
+  "generatedAt": "2026-10-03T17:15:25.676Z",
   "dataDays": 88,
   "totalTracked": 49,
   "openCount": 11,
@@ -9597,7 +9547,7 @@ window.HOT_THEME_NEW_TRACKER = {
 };
 window.HOT_THEME_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-02T13:06:33.457Z",
+  "generatedAt": "2026-10-03T17:15:25.676Z",
   "dataDays": 88,
   "totalTracked": 116,
   "openCount": 61,
@@ -12392,17 +12342,17 @@ window.HOT_THEME_ADDON_TRACKER = {
 };
 window.HOT_THEME_FLOOR_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-02T13:06:33.457Z",
+  "generatedAt": "2026-10-03T17:15:25.677Z",
   "dataDays": 88,
-  "totalTracked": 158,
+  "totalTracked": 156,
   "openCount": 105,
-  "closedCount": 53,
-  "closedWins": 43,
-  "closedWinRate": 81,
-  "closedAvgGain": 20.2,
+  "closedCount": 51,
+  "closedWins": 41,
+  "closedWinRate": 80,
+  "closedAvgGain": 19.6,
   "openPnl": 643.5,
-  "closedPnl": 1070.6,
-  "totalPnlNow": 1714.1
+  "closedPnl": 1000,
+  "totalPnlNow": 1643.5
  },
  "trades": [
   {
@@ -14344,31 +14294,6 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "exitPrice": 0.298
   },
   {
-   "id": "SLVEST_2026-08-17_ADDON",
-   "name": "SLVEST",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
-   "entryDate": "2026-08-17",
-   "entry": 3.12,
-   "entryFloor": 2.99,
-   "currentFloor": 3.9,
-   "currentPrice": 4.2,
-   "high": 4.49,
-   "highDate": "2026-09-29",
-   "maxGain": 43.9,
-   "finalGain": 35.3,
-   "day1ChangePct": -0.64,
-   "days": 29,
-   "lastDate": "2026-10-01",
-   "status": "CLOSED_SL",
-   "themes": [
-    "Solar/RE"
-   ],
-   "confluence": 3,
-   "slTrail": 4.221,
-   "exitDate": "2026-10-01",
-   "exitPrice": 4.221
-  },
-  {
    "id": "PENTA_2026-08-17_ADDON",
    "name": "PENTA",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -14413,31 +14338,6 @@ window.HOT_THEME_FLOOR_TRACKER = {
    ],
    "confluence": 3,
    "slTrail": 2.435
-  },
-  {
-   "id": "SLVEST_2026-08-18_ADDON",
-   "name": "SLVEST",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
-   "entryDate": "2026-08-18",
-   "entry": 3.12,
-   "entryFloor": 2.99,
-   "currentFloor": 3.9,
-   "currentPrice": 4.2,
-   "high": 4.49,
-   "highDate": "2026-09-29",
-   "maxGain": 43.9,
-   "finalGain": 35.3,
-   "day1ChangePct": -0.64,
-   "days": 28,
-   "lastDate": "2026-10-01",
-   "status": "CLOSED_SL",
-   "themes": [
-    "Solar/RE"
-   ],
-   "confluence": 3,
-   "slTrail": 4.221,
-   "exitDate": "2026-10-01",
-   "exitPrice": 4.221
   },
   {
    "id": "PENTA_2026-08-18_ADDON",
@@ -16156,17 +16056,17 @@ window.HOT_THEME_FLOOR_TRACKER = {
 };
 window.HOT_THEME_ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-02T13:06:33.457Z",
+  "generatedAt": "2026-10-03T17:15:25.676Z",
   "dataDays": 88,
-  "totalTracked": 323,
+  "totalTracked": 321,
   "openCount": 177,
-  "closedCount": 146,
-  "closedWins": 111,
+  "closedCount": 144,
+  "closedWins": 109,
   "closedWinRate": 76,
-  "closedAvgGain": 19.3,
+  "closedAvgGain": 19.1,
   "openPnl": 1203.6,
-  "closedPnl": 2823.8,
-  "totalPnlNow": 4027.4
+  "closedPnl": 2753.2,
+  "totalPnlNow": 3956.8
  },
  "trades": [
   {
@@ -18480,31 +18380,6 @@ window.HOT_THEME_ALL_TRACKER = {
    "slTrail": 2.435
   },
   {
-   "id": "SLVEST_2026-08-18_ADDON",
-   "name": "SLVEST",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
-   "entryDate": "2026-08-18",
-   "entry": 3.12,
-   "entryFloor": 2.99,
-   "currentFloor": 3.9,
-   "currentPrice": 4.2,
-   "high": 4.49,
-   "highDate": "2026-09-29",
-   "maxGain": 43.9,
-   "finalGain": 35.3,
-   "day1ChangePct": -0.64,
-   "days": 28,
-   "lastDate": "2026-10-01",
-   "status": "CLOSED_SL",
-   "themes": [
-    "Solar/RE"
-   ],
-   "confluence": 3,
-   "slTrail": 4.221,
-   "exitDate": "2026-10-01",
-   "exitPrice": 4.221
-  },
-  {
    "id": "MI_2026-08-18_ADDON",
    "name": "MI",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -18622,31 +18497,6 @@ window.HOT_THEME_ALL_TRACKER = {
    "slTrail": 0.791,
    "exitDate": "2026-08-19",
    "exitPrice": 0.791
-  },
-  {
-   "id": "SLVEST_2026-08-17_ADDON",
-   "name": "SLVEST",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
-   "entryDate": "2026-08-17",
-   "entry": 3.12,
-   "entryFloor": 2.99,
-   "currentFloor": 3.9,
-   "currentPrice": 4.2,
-   "high": 4.49,
-   "highDate": "2026-09-29",
-   "maxGain": 43.9,
-   "finalGain": 35.3,
-   "day1ChangePct": -0.64,
-   "days": 29,
-   "lastDate": "2026-10-01",
-   "status": "CLOSED_SL",
-   "themes": [
-    "Solar/RE"
-   ],
-   "confluence": 3,
-   "slTrail": 4.221,
-   "exitDate": "2026-10-01",
-   "exitPrice": 4.221
   },
   {
    "id": "NEXGRAM_2026-08-14_NEW",

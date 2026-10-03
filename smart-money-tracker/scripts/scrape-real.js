@@ -1515,17 +1515,16 @@ async function main() {
     console.log(`📂 Disimpan ke ${OUTPUT_FILE} dan live_data.js`);
     
     // Simpan rekod sejarah (history)
-    // Guard: skip pada hujung minggu MYT — run manual Sabtu/Ahad baca candle yang belum finalize
-    // (cth. Yahoo masih pulangkan candle Khamis pada 1:42am Sabtu) dan MENINDIH data tutup Jumaat yang betul,
-    // menyebabkan entry tracker direkod pada tarikh salah. live_data tetap dikemas kini.
-    const mytWeekday = new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Kuala_Lumpur', weekday: 'short' }).format(new Date());
-    if (mytWeekday === 'Sat' || mytWeekday === 'Sun') {
-        console.log('🌙 Hujung minggu (MYT) — rekod sejarah diskip (elak data stale menindih hari dagangan).');
+    // Guard: skip pada hari bukan dagangan Bursa Malaysia (Sabtu/Ahad & Cuti Umum)
+    // Menggunakan tarikh rasmi Malaysia Time (MYT) — elak isu UTC date offset
+    const { isTradingDay } = require('./lib/bursa_calendar');
+    const mytDateStr = new Intl.DateTimeFormat('en-CA', { timeZone: 'Asia/Kuala_Lumpur' }).format(new Date());
+    if (!isTradingDay(mytDateStr)) {
+        console.log(`🌙 [${mytDateStr}] Bukan hari dagangan Bursa Malaysia (hujung minggu / cuti umum) — rekod sejarah diskip.`);
     } else {
-        const dateStr = new Date().toISOString().split('T')[0];
         const histDir = path.join(path.join(__dirname, '..'), 'history');
         if (!fs.existsSync(histDir)) fs.mkdirSync(histDir);
-        fs.writeFileSync(path.join(histDir, `data_${dateStr}.json`), JSON.stringify(output, null, 2));
+        fs.writeFileSync(path.join(histDir, `data_${mytDateStr}.json`), JSON.stringify(output, null, 2));
     }
     
     // Paparan pratonton 5 terbaik

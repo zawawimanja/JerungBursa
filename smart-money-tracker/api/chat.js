@@ -74,17 +74,30 @@ module.exports = async (req, res) => {
         if (!body || typeof body !== 'object') body = {};
 
         const { prompt, systemPrompt, model, temperature, max_tokens } = body;
-        if (!prompt) return res.status(400).json({ error: 'No prompt provided.' });
+        if (!prompt || typeof prompt !== 'string') return res.status(400).json({ error: 'No prompt provided.' });
+        if (prompt.length > 15000) return res.status(400).json({ error: 'Prompt too long (max 15,000 characters).' });
 
-        const selectedModel = model || 'llama-3.3-70b-versatile';
-        const systemInstruction = systemPrompt || 'You are JerungBursa AI, a professional Bursa Malaysia trading assistant.';
-        const maxTokens = max_tokens || 1024;
-        const temp = typeof temperature === 'number' ? temperature : 0.5;
+        // Whitelist model yang dibenarkan untuk elak salah guna kos/sumber
+        const ALLOWED_MODELS = ['llama-3.3-70b-versatile', 'llama-3.1-8b-instant'];
+        const selectedModel = ALLOWED_MODELS.includes(model) ? model : 'llama-3.3-70b-versatile';
+
+        const safeSystemPrompt = (typeof systemPrompt === 'string' && systemPrompt.length < 5000)
+            ? systemPrompt
+            : 'You are JerungBursa AI, a professional Bursa Malaysia trading assistant.';
+
+        // Clamp max_tokens antara 64 dan 2048
+        const requestedTokens = parseInt(max_tokens, 10);
+        const maxTokens = (!isNaN(requestedTokens) && requestedTokens > 0)
+            ? Math.min(Math.max(requestedTokens, 64), 2048)
+            : 1024;
+
+        const rawTemp = typeof temperature === 'number' ? temperature : 0.5;
+        const temp = Math.min(Math.max(rawTemp, 0), 1.0);
 
         const response = await axios.post('https://api.groq.com/openai/v1/chat/completions', {
             model: selectedModel,
             messages: [
-                { role: 'system', content: systemInstruction },
+                { role: 'system', content: safeSystemPrompt },
                 { role: 'user', content: prompt }
             ],
             max_tokens: maxTokens,

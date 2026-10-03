@@ -1298,9 +1298,11 @@
                                 Fresh IPO (2025+) + VVIP + <strong style="color:#fde047;">pullback ≤ 10% from ATH</strong> + tight price action (tight ≤ 5%). Backtested (<span id="frHeadBtDays">—</span> days, <span id="frHeadBtRange">—</span>): <strong style="color:#34d399;"><span id="frHeadBtSignals">—</span> signals, Win Rate <span id="frHeadBtWr">—</span>%, avg <span id="frHeadBtAvg">—</span>%/trade, worst loss <span id="frHeadBtWorst">—</span>%</strong>. Exit: <strong style="color:#34d399;">HYBRID TRAILING STOP</strong> — SL high × 0.80, tightens to high × 0.90 after +20% gain locked. Recalculated automatically daily. 🔥 Historical gainers: <span id="frHeadMovers">—</span>
                             </p>
                             <details style="margin: 0.5rem 0 0 0; font-size: 0.78rem; color: #fbbf24; background: rgba(245,158,11,0.08); border: 1px dashed rgba(245,158,11,0.35); border-radius: 8px; padding: 0.45rem 0.7rem; line-height: 1.5;">
-                                <summary style="cursor: pointer; font-weight: 800; color: #fde047; outline: none; user-select: none;">⏰ SOP & Entry Strategy — click to expand</summary>
+                                <summary style="cursor: pointer; font-weight: 800; color: #fde047; outline: none; user-select: none;">⏰ SOP & Entry Strategy (Golden Combo & T+1 Rules) — click to expand</summary>
                                 <div style="margin-top: 0.4rem;">
-                                    Check <strong style="color:#fde047;">AFTER MARKET CLOSE (5:00–6:00 PM)</strong> — data represents closing prices. <strong style="color:#34d399;">Entry is SAFE as long as counter remains on the list (still qualifies: tight base near ATH)</strong> — late entries ≤5 days from initial signal maintain 81–88% Win Rate, avg +25–28%. <strong style="color:#f87171;">DO NOT CHASE</strong> stocks that have <strong style="color:#f87171;">dropped off the list</strong> (no longer qualify: pullback >10% from ATH / tightness >5% / volume breakout spike occurred) — entry window is closed. 🎯 BREAKOUT = tight ≤ 2.5% + touches ≥ 4 + quiet volume (research: 67% breakout success vs 25%).
+                                    Check <strong style="color:#fde047;">AFTER MARKET CLOSE (5:00–6:00 PM)</strong> — data represents closing prices. <strong style="color:#34d399;">Entry is SAFE as long as counter remains on the list (still qualifies: tight base near ATH)</strong>.<br>
+                                    👑 <strong style="color:#fde047;">GOLDEN COMBO FORMULA (Win Rate 83%, Avg +23.7%):</strong> Tightness ≤ 2.5% + Floor Distance ≤ 3.5% + Turnover RM 2.0M–10.0M + Candle Change &gt; -1.0%. Applies to both 🔥 NEW and ⭐ ADD-ON A+ / LANTAI RAPAT setups.<br>
+                                    ⏱️ <strong style="color:#38bdf8;">T+1 EXECUTION SOP:</strong> Empirical data shows 64% of counters retest at or below signal close price. <strong>DO NOT chase market open gap-ups (9:00 AM)</strong>. Place <strong>Limit Orders at signal close (or 1 bid lower)</strong> during pre-market 8:30–9:00 AM for maximum edge!
                                 </div>
                             </details>
                         </div>
@@ -1316,6 +1318,9 @@
                             <span style="font-weight: 900; color: #fde047; margin-right: 0.3rem;">🎯 Radar Display Mode:</span>
                             <button id="frTab_top" onclick="setFRFilterMode('top_ranking')" class="btn" style="background: linear-gradient(135deg, rgba(234,179,8,0.4), rgba(56,189,248,0.4)); color: #fde047; border: 1px solid rgba(253,224,71,0.8); padding: 0.22rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;" title="Filter Top Grade AAA+ choices ONLY (Mematuhi 3 Angka Emas: Tightness ≤ 3.5%, Lantai ≤ 4.5%, Turnover ≥ RM 1.5M)">
                                 🏆 Top Ranking VVIP
+                            </button>
+                            <button id="frTab_golden" onclick="setFRFilterMode('golden_combo')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.22rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;" title="Filter GOLDEN COMBO (A++): Tightness ≤ 2.5%, Floor ≤ 3.5%, TO RM 2M–10M, Change > -1.0% (Empirical Quant Win Rate 83%, Avg +23.7%)">
+                                👑 Golden Combo (A++)
                             </button>
                             <button id="frTab_sniper" onclick="setFRFilterMode('tier_a_plus')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.22rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;" title="Sniper Only (Tier A+): Turnover ≥ RM 2.0M, Tightness ≤ 3.5%, Lantai ≤ 3.5% & Bebas Black Swan">
                                 🎯 Sniper Only (Tier A+)
@@ -3964,16 +3969,6 @@
             }
         }
 
-        // Groq API client integration
-        function getGroqKey() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const urlKey = urlParams.get('groq');
-            if (urlKey) {
-                localStorage.setItem('gadisai_groq_key', urlKey);
-            }
-            return localStorage.getItem('gadisai_groq_key') || '';
-        }
-
         // Helper: call Groq via secure /api/chat proxy with auto-fallback (70b → 8b-instant)
         // API key is stored in Vercel Environment Variables — NEVER exposed to the browser.
         async function callGroqWithFallback(primaryModel, fallbackModel, systemPrompt, userPrompt) {
@@ -6533,6 +6528,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         function setFRFilterMode(mode) {
             window._frFilterMode = mode;
             const btnTop = document.getElementById('frTab_top');
+            const btnGolden = document.getElementById('frTab_golden');
             const btnSniper = document.getElementById('frTab_sniper');
             const btnNew = document.getElementById('frTab_new');
             const btnAddon = document.getElementById('frTab_addon');
@@ -6554,10 +6550,12 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 btn.style.fontWeight = '800';
             };
 
-            [btnTop, btnSniper, btnNew, btnAddon, btnFusion, btnAll].forEach(resetBtn);
+            [btnTop, btnGolden, btnSniper, btnNew, btnAddon, btnFusion, btnAll].forEach(resetBtn);
 
             if (mode === 'top_ranking') {
                 setBtnActive(btnTop, 'linear-gradient(135deg, rgba(234,179,8,0.4), rgba(56,189,248,0.4))', '1px solid rgba(253,224,71,0.8)', '#fde047');
+            } else if (mode === 'golden_combo') {
+                setBtnActive(btnGolden, 'linear-gradient(135deg, rgba(234,179,8,0.45), rgba(245,158,11,0.45))', '1.5px solid rgba(253,224,71,0.95)', '#fde047');
             } else if (mode === 'tier_a_plus') {
                 setBtnActive(btnSniper, 'linear-gradient(135deg, rgba(234,179,8,0.35), rgba(16,185,129,0.35))', '1.2px solid rgba(253,224,71,0.9)', '#fde047');
             } else if (mode === 'new_only') {
@@ -6806,9 +6804,10 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const effFloorOf = (item) => {
                 const rf = recentFloorMap.get((item.name || '').toUpperCase());
                 const f = item.floorLow || 0;
-                // Dah breakout (jauh dari lantai asal) => guna lantai BARU (recent low)
-                if (f > 0 && rf > 0 && ((item.price - f) / f) > 0.10) return Math.max(f, rf);
-                // Masih dalam base asal => kekal floorLow scanner
+                // Saham tangga kedua (Base 2): guna lantai konsolidasi terkini (rf) jika sah di bawah harga
+                if (rf > 0 && rf <= item.price) {
+                    if (f <= 0 || rf > f || ((item.price - f) / f) > 0.10) return Math.max(f, rf);
+                }
                 return f || rf || 0;
             };
 
@@ -7053,11 +7052,24 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 });
             }
 
-            // Filter mode handling (Top Ranking VVIP vs Tier A+ Sniper vs NEW vs ADD-ON vs Fusion vs All)
+            // Filter mode handling (Top Ranking VVIP vs Golden Combo vs Tier A+ Sniper vs NEW vs ADD-ON vs Fusion vs All)
             let displayPicks = picks;
             const filterMode = window._frFilterMode || 'top_ranking';
 
-            if (filterMode === 'tier_a_plus') {
+            if (filterMode === 'golden_combo') {
+                displayPicks = picks.filter(p => {
+                    const t = getTierOfFR(p);
+                    const chg = p.changePct !== undefined ? p.changePct : (p.change || 0);
+                    return (
+                        t.tightValNum <= 2.5 &&
+                        t.fDistVal >= -1.0 && t.fDistVal <= 3.5 &&
+                        t.toVal >= 2000000 && t.toVal <= 10000000 &&
+                        chg >= -1.0 &&
+                        t.isBlackSwanClean &&
+                        !t.isRealUpperWickDump
+                    );
+                });
+            } else if (filterMode === 'tier_a_plus') {
                 displayPicks = picks.filter(p => {
                     const t = getTierOfFR(p);
                     return t.isTierAPlus;
@@ -7137,7 +7149,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
             if (displayPicks.length === 0) {
                 let emptyMsg = '🔥 Tiada setup Fresh VVIP Rider dalam pandangan semasa.';
-                if (filterMode === 'tier_a_plus') emptyMsg = '⭐ Tiada setup <strong>🎯 Sniper Only (Tier A+)</strong> hari ini (Turnover ≥ RM2M, Tightness ≤ 3.5%, Lantai ≤ 3.5% & Bebas Black Swan). Sila klik butang <strong>🏆 Top Ranking VVIP</strong> atau <strong>🌐 All Qualified</strong> di atas.';
+                if (filterMode === 'golden_combo') emptyMsg = '👑 Tiada setup <strong>👑 Golden Combo (A++)</strong> hari ini (Tightness ≤ 2.5%, Lantai ≤ 3.5%, TO RM 2M–10M & Bebas Lilin Merah). Sila klik butang <strong>🏆 Top Ranking VVIP</strong> atau <strong>🌐 All Qualified</strong>.';
+                else if (filterMode === 'tier_a_plus') emptyMsg = '⭐ Tiada setup <strong>🎯 Sniper Only (Tier A+)</strong> hari ini (Turnover ≥ RM2M, Tightness ≤ 3.5%, Lantai ≤ 3.5% & Bebas Black Swan). Sila klik butang <strong>🏆 Top Ranking VVIP</strong> atau <strong>🌐 All Qualified</strong> di atas.';
                 else if (filterMode === 'new_only') emptyMsg = '🔥 Tiada signal <strong>🔥 NEW (Day 1)</strong> hari ini. Sila semak tab <strong>⭐ ADD-ON A+</strong> atau <strong>🏆 Top Ranking VVIP</strong>.';
                 else if (filterMode === 'addon_only') emptyMsg = '⭐ Tiada setup <strong>⭐ ADD-ON A+</strong> hari ini yang menepati syarat lantai rapat ≤ 4.5% & turnover institusi.';
                 else if (filterMode === 'fusion_only') emptyMsg = '⚡ Tiada signal <strong>🔥⚡ FUSION</strong> hari ini (Fresh Rider + Hot Theme Semicon/Solar).';
@@ -7221,12 +7234,21 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 const swanEval = tierFR.swanEval;
                 const isRealUpperWickDump = tierFR.isRealUpperWickDump;
 
-                if (isTierAPlus) {
-                    // Removed: ⭐ TIER A+ SNIPER badge from FR as per backtest winrate irrelevance
-                } else if (isTierA) {
-                    // Removed: 🎯 TIER A badge from FR
-                } else {
-                    // Removed: ⚪ TIER B badge from FR
+                // 0b. Golden Combo Badge (Empirical Quant WR 83%, Avg +23.7%)
+                const tightValNum = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
+                const fDistValNum = effFloor ? ((item.price - effFloor) / effFloor * 100) : 99;
+                const toValNum = item.turnover || item.rawTurnover || 0;
+                const chgValNum = item.changePct !== undefined ? item.changePct : (item.change || 0);
+                const isGoldenCombo = (
+                    tightValNum <= 2.5 &&
+                    fDistValNum >= -1.0 && fDistValNum <= 3.5 &&
+                    toValNum >= 2000000 && toValNum <= 10000000 &&
+                    chgValNum >= -1.0 &&
+                    (!swanEval || swanEval.status === 'pass') &&
+                    !isRealUpperWickDump
+                );
+                if (isGoldenCombo) {
+                    badgesHtml += `<span class="fr-new-badge golden-combo-badge" style="font-size: 0.62rem; background: linear-gradient(135deg, rgba(234,179,8,0.35), rgba(245,158,11,0.35)); color: #fde047; padding: 0.08rem 0.38rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(253,224,71,0.75); box-shadow: 0 0 8px rgba(234,179,8,0.3); white-space: nowrap;" title="👑 GOLDEN COMBO (A++): Tightness ≤ 2.5%, Floor ≤ 3.5%, TO RM 2M-10M, Change > -1.0% (Empirical Quant Win Rate 83%, Avg +23.7%)">👑 GOLDEN COMBO</span>`;
                 }
 
                 // Upper Wick Rejection Warning Badge hanya jika benar-benar selling dump merah
@@ -7605,7 +7627,10 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const effFloorOf = (item) => {
                 const rf = recentFloorMap.get((item.name || '').toUpperCase());
                 const f = item.floorLow || 0;
-                if (f > 0 && rf > 0 && ((item.price - f) / f) > 0.10) return Math.max(f, rf);
+                // Saham tangga kedua (Base 2): guna lantai konsolidasi terkini (rf) jika sah di bawah harga
+                if (rf > 0 && rf <= item.price) {
+                    if (f <= 0 || rf > f || ((item.price - f) / f) > 0.10) return Math.max(f, rf);
+                }
                 return f || rf || 0;
             };
 
@@ -10048,6 +10073,22 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     tierBadgeHtml = `<span style="font-size: 0.58rem; background: rgba(148,163,184,0.15); color: #94a3b8; padding: 0.06rem 0.3rem; border-radius: 4px; font-weight: 700; border: 1px solid rgba(148,163,184,0.3); white-space: nowrap;" title="⚪ TIER B: Kualiti standard / jauh dari lantai.">⚪ TIER B</span>`;
                 }
 
+                // Golden Combo Badge (Empirical Quant WR 83%, Avg +23.7%)
+                const tightValNumHT = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
+                const fDistValNumHT = effFloorHT ? ((item.price - effFloorHT) / effFloorHT * 100) : 99;
+                const toValNumHT = item.turnover || item.rawTurnover || 0;
+                const chgValNumHT = item.changePct !== undefined ? item.changePct : (item.change || 0);
+                const isGoldenComboHT = (
+                    tightValNumHT <= 2.5 &&
+                    fDistValNumHT >= -1.0 && fDistValNumHT <= 3.5 &&
+                    toValNumHT >= 2000000 && toValNumHT <= 10000000 &&
+                    chgValNumHT >= -1.0 &&
+                    (!swanEvalHT || swanEvalHT.status === 'pass')
+                );
+                const goldenBadgeHT = isGoldenComboHT
+                    ? `<span class="fr-new-badge golden-combo-badge" style="font-size: 0.62rem; background: linear-gradient(135deg, rgba(234,179,8,0.35), rgba(245,158,11,0.35)); color: #fde047; padding: 0.08rem 0.38rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(253,224,71,0.75); box-shadow: 0 0 8px rgba(234,179,8,0.3); white-space: nowrap;" title="👑 GOLDEN COMBO (A++): Tightness ≤ 2.5%, Floor ≤ 3.5%, TO RM 2M-10M, Change > -1.0% (Empirical Quant Win Rate 83%, Avg +23.7%)">👑 GOLDEN COMBO</span>`
+                    : '';
+
                 const themeBadge = themes.map(t => {
                     const color = t === 'Semiconductor' ? '#a78bfa' : '#4ade80';
                     return `<span style="font-size: 0.65rem; background: rgba(168,85,247,0.2); color: ${color}; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(168,85,247,0.4); white-space: nowrap; margin-right: 0.2rem;">${t}</span>`;
@@ -10120,7 +10161,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                                 ${getTradingViewAnchor(item.name)}
                             </div>
                             <div style="margin-top: 0.2rem; display: inline-flex; align-items: center; gap: 0.2rem; flex-wrap: wrap;">${themeBadge}</div>
-                            <div class="ht-badge-row" style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.25rem; flex-wrap: wrap;">${tierBadgeHtml}${csBadge}${vduBadgeHT}${baseTouchBadgeHT}${fusionBadgeHT}${swanBadgeHT}${catalystBadgesHT}</div>
+                            <div class="ht-badge-row" style="display: flex; align-items: center; gap: 0.3rem; margin-top: 0.25rem; flex-wrap: wrap;">${goldenBadgeHT}${tierBadgeHtml}${csBadge}${vduBadgeHT}${baseTouchBadgeHT}${fusionBadgeHT}${swanBadgeHT}${catalystBadgesHT}</div>
                         </td>
                         <td style="text-align: center; padding: 0.6rem 0.4rem; vertical-align: middle;">
                             ${trendStatusHtmlHT}

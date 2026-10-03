@@ -79,21 +79,11 @@ function runScraper() {
             console.log(`✅ Tracker FR + HT sudah dijana hari ini (${todayStr}). Tiada perlu jana semula.`);
         }
 
-        // ─── LANGKAH 3: Morning Alert (9:01–9:10 AM MYT) ─────────────────────
-        if (mytHour === 9 && mytMin >= 1 && mytMin <= 10 && global.lastMorningAlertSentDate !== todayStr) {
-            global.lastMorningAlertSentDate = todayStr;
-            console.log(`📢 Menjalankan Morning Open Execution Alert Telegram (9:02 AM)...`);
-            const morningScript = path.join(__dirname, 'morning_alert.js');
-            exec(`node "${morningScript}"`, { cwd: path.join(__dirname, '..') }, (mErr, mOut) => {
-                if (mErr) console.error(`⚠️ Ralat Morning Alert: ${mErr.message}`);
-                else if (mOut) console.log(`✅ Morning Alert Telegram Selesai dihantar.`);
-            });
-        }
-
-        // ─── LANGKAH 4: Pre-Close Buy Alert (4:25–4:40 PM MYT) ───────────────
-        if (mytHour === 16 && mytMin >= 25 && mytMin <= 40 && global.lastAlertSentDate !== todayStr) {
+        // ─── LANGKAH 3: Post-Market Close Buy Alert (5:15–5:35 PM MYT) ──────
+        // Dijalankan selepas pasaran tutup (5:00 PM) untuk senarai belian muktamad
+        if (mytHour === 17 && mytMin >= 15 && mytMin <= 35 && global.lastAlertSentDate !== todayStr) {
             global.lastAlertSentDate = todayStr;
-            console.log(`📢 Menjalankan Buy Alert Telegram (4:30 PM Pre-Close Alert)...`);
+            console.log(`📢 Menjalankan Post-Market Close Buy Alert Telegram (5:15 PM)...`);
             const alertScript = path.join(__dirname, 'buy_alert.js');
             exec(`node "${alertScript}"`, { cwd: path.join(__dirname, '..') }, (aErr, aOut) => {
                 if (aErr) console.error(`⚠️ Ralat Buy Alert: ${aErr.message}`);
