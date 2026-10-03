@@ -6812,6 +6812,19 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 return f || rf || 0;
             };
 
+            // 🔧 FIX: frTrackMap & curRefDate MESTI dideklarasikan SEBELUM for loop (elak TDZ ReferenceError)
+            const curRefDate = hdFloor || new Date().toISOString().slice(0, 10);
+            const frTrackSource = (window.ALL_TRACKER && Array.isArray(window.ALL_TRACKER.trades) && window.ALL_TRACKER.trades.length > 0)
+                ? window.ALL_TRACKER.trades
+                : ((window.FRESH_RIDER_TRACKER && Array.isArray(window.FRESH_RIDER_TRACKER.trades)) ? window.FRESH_RIDER_TRACKER.trades : []);
+            const frTrackMap = new Map();
+            frTrackSource.filter(t => t.status !== 'OPEN').sort((a,b) => (a.entryDate || '').localeCompare(b.entryDate || '')).forEach(t => {
+                frTrackMap.set((t.name || '').toUpperCase(), t);
+            });
+            frTrackSource.filter(t => t.status === 'OPEN').sort((a,b) => (a.entryDate || '').localeCompare(b.entryDate || '')).forEach(t => {
+                frTrackMap.set((t.name || '').toUpperCase(), t);
+            });
+
             for (const item of list) {
                 if (!item || !item.name || item.price <= 0) continue;
                 if (!passesGlobalFilters(item)) continue;
@@ -6907,19 +6920,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
             // KESEGARAN: 0 = BARU (belum ditrack / entry hari ini), 1 = ⭐ ADD-ON A+ (Base ≤ 20% & Floor ≤ 3.5%),
             // 2 = ➕ ADD-ON (Standard), 3 = ⚠️ ADD-ON (> 20% Pucuk), 4 = 🟢 RE-ENTRY
-            const frTrackSource = (window.ALL_TRACKER && Array.isArray(window.ALL_TRACKER.trades) && window.ALL_TRACKER.trades.length > 0)
-                ? window.ALL_TRACKER.trades
-                : ((window.FRESH_RIDER_TRACKER && Array.isArray(window.FRESH_RIDER_TRACKER.trades)) ? window.FRESH_RIDER_TRACKER.trades : []);
-            const curRefDate = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || new Date().toISOString().slice(0, 10);
-            const frTrackMap = new Map();
-            // 1. Masukkan closed trades dahulu
-            frTrackSource.filter(t => t.status !== 'OPEN').sort((a,b) => (a.entryDate || '').localeCompare(b.entryDate || '')).forEach(t => {
-                frTrackMap.set((t.name || '').toUpperCase(), t);
-            });
-            // 2. OPEN trades mengatasi closed trades (posisi aktif paling terkini diutamakan!)
-            frTrackSource.filter(t => t.status === 'OPEN').sort((a,b) => (a.entryDate || '').localeCompare(b.entryDate || '')).forEach(t => {
-                frTrackMap.set((t.name || '').toUpperCase(), t);
-            });
+            // (frTrackSource, curRefDate, frTrackMap already declared above before for loop — reused here)
             const frFreshness = (it) => {
                 const tr = frTrackMap.get((it.name || '').toUpperCase());
                 if (!tr) return 0;
