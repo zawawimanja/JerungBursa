@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "JerungBursa Smart Money Tracker — Bursa Malaysia Scanner",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node smart-money-tracker/scripts/verify_scanner_tracker_sync.js"
   },
   "dependencies": {
     "axios": "^1.16.0"

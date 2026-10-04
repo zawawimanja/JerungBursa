@@ -12,8 +12,7 @@ JerungBursa/
 ├── .github/
 │   └── workflows/                  # GitHub Actions for automated cron scrapers
 │       ├── scrape-bursa.yml        # Imbasan data live setiap 10 minit (Waktu Dagangan)
-│       ├── buy-alert.yml           # Notifikasi Telegram Isyarat Belian
-│       └── morning-alert.yml       # Notifikasi Telegram Ringkasan Pagi
+│       └── buy-alert.yml           # Notifikasi Telegram Isyarat Belian (Selepas Pasaran Tutup)
 │
 ├── vercel.json                     # Konfigurasi Vercel Routing & Serverless Functions
 ├── package.json                    # Root dependencies (Axios, dsb)
@@ -30,8 +29,7 @@ JerungBursa/
     │   ├── generate_hot_theme_tracker.js      # Enjin Jana Isyarat Hot Theme
     │   ├── generate_daily_equity_tracker.js   # Penjejak Ekuiti Harian & Portfolio
     │   ├── generate_news_data.js   # Pengumpul Berita & Sentimen Pasaran
-    │   ├── buy_alert.js            # Bot Notifikasi Belian Telegram
-    │   ├── morning_alert.js        # Bot Notifikasi Pagi Telegram
+    │   ├── buy_alert.js            # Bot Notifikasi Belian Telegram (Post-Close)
     │   └── portfolio_alert.js      # Bot Penjejak Portfolio Telegram
     │
     ├── history/                    # Arkib JSON Snapshot Data Harian (cth: data_2026-09-30.json)
@@ -71,4 +69,4 @@ JerungBursa/
 * **Prinsip Semakan 3-Sudut**: Setiap kemaskini formula atau paparan mesti mengesahkan:
   1. Backend Generator (`smart-money-tracker/scripts/`)
   2. Frontend UI (`smart-money-tracker/index.html`)
-  3. Telegram Bot (`buy_alert.js`, `morning_alert.js`)
+  3. Telegram Bot (`buy_alert.js`, `portfolio_alert.js`)

@@ -11,7 +11,7 @@
     { "src": "/api/cron-alert", "dest": "/smart-money-tracker/api/cron-scrape.js" },
     { "src": "/api/cron-dispatch", "dest": "/smart-money-tracker/api/cron-scrape.js" },
     {
-      "src": "/(user_portfolio|user_portfolio_realized|portfolio_alerts_history|morning_alert_latest|buy_alert_latest)\\.json",
+      "src": "/(user_portfolio|user_portfolio_realized|portfolio_alerts_history|buy_alert_latest)\\.json",
       "status": 404
     },
     {
