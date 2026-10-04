@@ -10073,6 +10073,9 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     tierBadgeHtml = `<span style="font-size: 0.58rem; background: rgba(148,163,184,0.15); color: #94a3b8; padding: 0.06rem 0.3rem; border-radius: 4px; font-weight: 700; border: 1px solid rgba(148,163,184,0.3); white-space: nowrap;" title="⚪ TIER B: Kualiti standard / jauh dari lantai.">⚪ TIER B</span>`;
                 }
 
+                // Black Swan Evaluation (WAJIB diisytihar sebelum Golden Combo — elak TDZ ReferenceError)
+                const swanEvalHT = typeof getBlackSwanEvaluation === 'function' ? getBlackSwanEvaluation(item.name, item, curRefDateHT) : null;
+
                 // Golden Combo Badge (Empirical Quant WR 83%, Avg +23.7%)
                 const tightValNumHT = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
                 const fDistValNumHT = effFloorHT ? ((item.price - effFloorHT) / effFloorHT * 100) : 99;
@@ -10119,7 +10122,6 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     : '';
 
                 // Black Swan Evaluation Badge
-                const swanEvalHT = typeof getBlackSwanEvaluation === 'function' ? getBlackSwanEvaluation(item.name, item, curRefDateHT) : null;
                 const swanBadgeHT = swanEvalHT ? swanEvalHT.badgeHtml : '';
 
                 // Catalyst & Jerung Intelligence Fusion Badges
