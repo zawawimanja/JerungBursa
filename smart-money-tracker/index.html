@@ -7137,11 +7137,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         if (t.tightValNum <= 4.85) return true;
                     }
 
-                    // 6. LAYAK: Tracker Confirmed OPEN / Tier A+ / Tier A / Fusion
-                    if (isTrackerConfirmedOpen || t.isTierAPlus || t.isTierA) return true;
-                    const isFusion = getHotThemes(p.name).length > 0;
-                    if (isFusion && t.tightValNum <= 4.85 && t.fDistVal <= 5.0) return true;
-
+                    // 6. SOP: Hanya 3 jenis entry (NEW / ADD-ON A+ / LANTAI RAPAT) layak.
+                    // Posisi OPEN lama yang sudah extended / Standard ADD-ON dipantau di Live Tracker, bukan signal entry.
                     return false;
                 });
             }

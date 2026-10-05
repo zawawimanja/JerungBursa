@@ -189,16 +189,16 @@ for (const item of liveData) {
     if (!item || !item.name || item.price <= 0) continue;
     if (item.price < 0.10 || item.price > 50) continue;
 
-    const nameKeyForTracker = (item.name || '').toUpperCase().trim();
-    const trackedEntryForCandidate = frTrackMap ? frTrackMap.get(nameKeyForTracker) : null;
-    const isTrackerConfirmedOpen = !!(trackedEntryForCandidate && trackedEntryForCandidate.status === 'OPEN');
+    const nameKey = (item.name || '').toUpperCase().trim();
+    const trackedEntry = frTrackMap ? frTrackMap.get(nameKey) : null;
+    const isTrackerConfirmedOpen = !!(trackedEntry && trackedEntry.status === 'OPEN');
 
     if (item.isVvip !== true && !isTrackerConfirmedOpen) continue;
     if ((item.signal === 'avoid' || item.isCombStock) && !isTrackerConfirmedOpen) continue;
     if ((item.ipoYear || 0) < 2025) continue;
     const pb = item.pullback !== null && item.pullback !== undefined ? item.pullback : 99;
-    if (pb > 10.0) continue;
-    if (item.ipoAge != null && item.ipoAge < 15 && (item.touchCount || 0) < 2) continue;
+    if (pb > 10.0 && !isTrackerConfirmedOpen) continue;
+    if (item.ipoAge != null && item.ipoAge < 15 && (item.touchCount || 0) < 2 && !isTrackerConfirmedOpen) continue;
 
     const isGreenBreakout = (item.change >= 0 || (item.changePct || 0) >= 0);
     const tight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
@@ -208,7 +208,7 @@ for (const item of liveData) {
     } else {
         if (tight > 5.0 && !isTrackerConfirmedOpen) continue;
     }
-    candidateMap.set(item.name.toUpperCase(), item);
+    candidateMap.set(nameKey, item);
 }
 
 // Top Ranking VVIP (exact match to index.html top_ranking filter)
@@ -234,9 +234,8 @@ for (const [name, p] of candidateMap.entries()) {
         if (t.fDistVal <= 5.0 && t.fDistVal >= -2.0 && t.tightValNum <= 4.85) {
             topRankingPicks.push(p);
         }
-    } else if (isTrackerConfirmedOpen || t.isTierAPlus || t.isTierA) {
-        topRankingPicks.push(p);
     }
+    // SOP: hanya NEW / ADD-ON A+ / LANTAI RAPAT layak (tiada pintu belakang Tracker OPEN / Tier A)
 }
 
 const topRankingNames = new Set(topRankingPicks.map(p => p.name.toUpperCase()));
@@ -247,25 +246,32 @@ console.log(`  🏆 Top Ranking VVIP Counters (${topRankingPicks.length}): ${[..
 // -------------------------------------------------------------
 console.log('\n[4] Cross-Verification of Mandatory Candidates...');
 
-// Check STRATUS explicitly (must appear in Top Ranking VVIP as active Add-on holding)
-const stratusPresent = topRankingNames.has('STRATUS');
-assert(stratusPresent, `Active Holding [STRATUS] must appear in Scanner Top Ranking VVIP`);
+// Every trade entered on the latest signal date MUST appear in Top Ranking VVIP,
+// unless it has since dipped deep (> 10%) or already run extended (> 10% above entry) — no longer an entry zone.
+for (const trade of tradesOnLatestDate) {
+    const sym = trade.name.toUpperCase();
+    const liveItem = liveData.find(x => (x.name || '').toUpperCase() === sym);
+    const isDippingDeep = liveItem && (liveItem.pullback > 10.0 || liveItem.changePct < -5.0);
+    const isExtended = liveItem && trade.entry > 0 && ((liveItem.price - trade.entry) / trade.entry) * 100 > 10.0;
+    if (isDippingDeep || isExtended) {
+        console.log(`  ℹ️  Skip [${sym}] — ${isExtended ? 'extended > 10% from entry' : 'deep dip'} (not an entry zone anymore)`);
+        continue;
+    }
+    assert(topRankingNames.has(sym), `Latest Tracker Entry [${sym}] (${trade.entryType}) must appear in Scanner Top Ranking VVIP`);
+}
 
-// Check CBHB explicitly
-const cbhbPresent = topRankingNames.has('CBHB');
-assert(cbhbPresent, `Active Entry [CBHB] must appear in Scanner Top Ranking VVIP`);
+// Every Top Ranking pick MUST be one of the 3 entry types (NEW / ADD-ON A+ / LANTAI RAPAT)
+const invalidTypePicks = topRankingPicks.filter(p => ![0, 1, 2].includes(frFreshness(p)));
+assert(invalidTypePicks.length === 0, `Top Ranking only contains NEW / ADD-ON A+ / LANTAI RAPAT (invalid: ${invalidTypePicks.map(p => p.name).join(', ') || 'none'})`);
 
-// Check ISF explicitly
-const isfPresent = topRankingNames.has('ISF');
-assert(isfPresent, `Active Entry [ISF] must appear in Scanner Top Ranking VVIP`);
-
-// Check PENTECH explicitly
-const pentechPresent = topRankingNames.has('PENTECH');
-assert(pentechPresent, `Active Entry [PENTECH] must appear in Scanner Top Ranking VVIP`);
-
-// Check EXSIMHB explicitly
-const exsimhbPresent = topRankingNames.has('EXSIMHB');
-assert(exsimhbPresent, `Active Entry [EXSIMHB] must appear in Scanner Top Ranking VVIP`);
+// Extended / loose-tightness holdings must NOT be shown as entry signals
+for (const sym of ['BUSCAP', 'STRATUS']) {
+    const it = liveData.find(x => (x.name || '').toUpperCase() === sym);
+    const tg = it && typeof it.closeTightness === 'number' ? it.closeTightness : 0;
+    if (tg > 4.85 && frFreshness(it) !== 0) {
+        assert(!topRankingNames.has(sym), `Extended holding [${sym}] (tightness ${tg.toFixed(2)}%) must NOT appear as entry signal`);
+    }
+}
 
 // -------------------------------------------------------------
 // TEST 5: Verify Traps are Properly Filtered Out (Negative Tests)
