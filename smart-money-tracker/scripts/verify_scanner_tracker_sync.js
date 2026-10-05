@@ -297,6 +297,12 @@ assert(htOpenNames.includes('GREATEC'), `Hot Theme Tracker contains active OPEN 
 assert(htOpenNames.includes('DUFU'), `Hot Theme Tracker contains active OPEN leader DUFU`);
 assert(htOpenNames.includes('MNHLDG'), `Hot Theme Tracker contains active OPEN leader MNHLDG`);
 
+// SOP Guard: HT & FR Top Ranking hanya NEW / ADD-ON A+ / LANTAI RAPAT (tiada pintu belakang Tier A+ / Fusion / Tracker OPEN)
+const indexSrc = fs.readFileSync(path.join(ROOT_DIR, 'index.html'), 'utf8');
+assert(!indexSrc.includes('return t.isTierAPlus || ((fresh === 1 || fresh === 2 || isFusion)'), `HT Top Ranking has no Tier A+ / Fusion backdoor`);
+assert(indexSrc.includes('return (fresh === 1 || fresh === 2) && meetsGolden;'), `HT Top Ranking only admits NEW / ADD-ON A+ / LANTAI RAPAT`);
+assert(!indexSrc.includes('if (isTrackerConfirmedOpen || t.isTierAPlus || t.isTierA) return true;'), `FR Top Ranking has no Tracker OPEN / Tier A backdoor`);
+
 // -------------------------------------------------------------
 // SUMMARY
 // -------------------------------------------------------------
