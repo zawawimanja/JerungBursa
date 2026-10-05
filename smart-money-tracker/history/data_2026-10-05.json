@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-05T06:10:44.952Z",
+  "lastUpdated": "2026-10-05T06:20:44.039Z",
   "source": "klse.i3investor.com",
   "topVolume": [
     {
@@ -13620,8 +13620,8 @@
       "price": 0.07999999821186066,
       "change": -0.03500000387430191,
       "changePct": -30.43,
-      "turnover": 69472214.44717497,
-      "volume": 868402700,
+      "turnover": 71072214.41141218,
+      "volume": 888402700,
       "signal": "avoid",
       "reason": "🧊 Downtrend Stock: Avoid Trading!",
       "high52": 0.9100000262260437,
@@ -13646,7 +13646,7 @@
       "wentUnderwater": true,
       "firstDayOpenPrice": 0.8500000238418579,
       "avgVolume20": 492241150,
-      "volumeSpike": 1.76,
+      "volumeSpike": 1.8,
       "hasVolumeSpike": true,
       "ipoAge": null,
       "isStaircaseIpo": false,
