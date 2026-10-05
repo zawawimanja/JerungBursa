@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-10-05T01:01:05.036Z",
+ "generatedAt": "2026-10-05T01:10:46.022Z",
  "totalDays": 85,
  "startDate": "2026-06-02",
  "endDate": "2026-10-05",
@@ -66042,8 +66042,8 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-17",
-   "totalSignals": 264,
-   "openCount": 217,
+   "totalSignals": 265,
+   "openCount": 218,
    "closedCount": 47,
    "openPnl": 2472.1,
    "closedPnl": 223.1,
@@ -66051,8 +66051,8 @@ window.DAILY_EQUITY_TRACKER = {
    "frPnl": 382.6,
    "addOnPnl": 390,
    "htPnl": 1922.6,
-   "dailyPnlDelta": 212,
-   "winRate": 72,
+   "dailyPnlDelta": 211.4,
+   "winRate": 71,
    "avgGain": 10.2,
    "peakGainer": {
     "gain": 120.2,
@@ -66490,6 +66490,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 0,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.12,
+     "gainOnDay": 0,
+     "dayChangePct": -0.64,
+     "pnlDeltaToday": -0.6
     },
     {
      "name": "NEXGRAM",
@@ -68439,8 +68448,8 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-18",
-   "totalSignals": 268,
-   "openCount": 221,
+   "totalSignals": 270,
+   "openCount": 223,
    "closedCount": 47,
    "openPnl": 2524.8,
    "closedPnl": 223.1,
@@ -68448,9 +68457,9 @@ window.DAILY_EQUITY_TRACKER = {
    "frPnl": 382.6,
    "addOnPnl": 390,
    "htPnl": 1975.3,
-   "dailyPnlDelta": 222,
-   "winRate": 71,
-   "avgGain": 10.3,
+   "dailyPnlDelta": 220.8,
+   "winRate": 70,
+   "avgGain": 10.2,
    "peakGainer": {
     "gain": 120.2,
     "name": "KEEMING"
@@ -68880,6 +68889,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 1.1
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.12,
+     "gainOnDay": 0,
+     "dayChangePct": -0.64,
+     "pnlDeltaToday": -0.6
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -68923,6 +68941,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 0,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.12,
+     "gainOnDay": 0,
+     "dayChangePct": -0.64,
+     "pnlDeltaToday": -0.6
     },
     {
      "name": "NEXGRAM",
@@ -70872,18 +70899,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-19",
-   "totalSignals": 272,
-   "openCount": 218,
+   "totalSignals": 274,
+   "openCount": 220,
    "closedCount": 54,
-   "openPnl": 2419.7,
+   "openPnl": 2413.9,
    "closedPnl": 278.7,
-   "totalPnl": 2698.4,
+   "totalPnl": 2692.6,
    "frPnl": 389.5,
    "addOnPnl": 442.5,
-   "htPnl": 1866.4,
-   "dailyPnlDelta": -92.2,
-   "winRate": 67,
-   "avgGain": 9.9,
+   "htPnl": 1860.6,
+   "dailyPnlDelta": -99.8,
+   "winRate": 66,
+   "avgGain": 9.8,
    "peakGainer": {
     "gain": 128.4,
     "name": "KEEMING"
@@ -71349,6 +71376,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -0.4
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.03,
+     "gainOnDay": -2.9,
+     "dayChangePct": -3.81,
+     "pnlDeltaToday": -3.8
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -71392,6 +71428,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3,
      "dayChangePct": -1.89,
      "pnlDeltaToday": -1.8
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.03,
+     "gainOnDay": -2.9,
+     "dayChangePct": -3.81,
+     "pnlDeltaToday": -3.8
     },
     {
      "name": "NEXGRAM",
@@ -73341,18 +73386,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-20",
-   "totalSignals": 275,
-   "openCount": 208,
+   "totalSignals": 277,
+   "openCount": 210,
    "closedCount": 67,
-   "openPnl": 2466,
+   "openPnl": 2460.2,
    "closedPnl": 405.2,
-   "totalPnl": 2871.2,
+   "totalPnl": 2865.4,
    "frPnl": 394.1,
    "addOnPnl": 470.6,
-   "htPnl": 2006.5,
+   "htPnl": 2000.7,
    "dailyPnlDelta": 143.1,
-   "winRate": 67,
-   "avgGain": 10.4,
+   "winRate": 66,
+   "avgGain": 10.3,
    "peakGainer": {
     "gain": 128.4,
     "name": "KEEMING"
@@ -73845,6 +73890,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -0.7
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.03,
+     "gainOnDay": -2.9,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -73886,6 +73940,15 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 0.791,
      "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.03,
+     "gainOnDay": -2.9,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -75837,18 +75900,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-21",
-   "totalSignals": 281,
-   "openCount": 214,
+   "totalSignals": 283,
+   "openCount": 216,
    "closedCount": 67,
-   "openPnl": 2355.7,
+   "openPnl": 2349.9,
    "closedPnl": 405.2,
-   "totalPnl": 2760.9,
+   "totalPnl": 2755.1,
    "frPnl": 378.7,
    "addOnPnl": 492.8,
-   "htPnl": 1889.4,
+   "htPnl": 1883.6,
    "dailyPnlDelta": -107.6,
    "winRate": 62,
-   "avgGain": 9.8,
+   "avgGain": 9.7,
    "peakGainer": {
     "gain": 124.8,
     "name": "KEEMING"
@@ -76395,6 +76458,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -1.8
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.03,
+     "gainOnDay": -2.9,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -76436,6 +76508,15 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 0.791,
      "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.03,
+     "gainOnDay": -2.9,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -78387,18 +78468,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-24",
-   "totalSignals": 284,
-   "openCount": 209,
+   "totalSignals": 286,
+   "openCount": 211,
    "closedCount": 75,
-   "openPnl": 1863.1,
+   "openPnl": 1857.9,
    "closedPnl": 596.7,
-   "totalPnl": 2459.8,
+   "totalPnl": 2454.6,
    "frPnl": 375.5,
    "addOnPnl": 507.9,
-   "htPnl": 1576.4,
-   "dailyPnlDelta": -329.6,
+   "htPnl": 1571.2,
+   "dailyPnlDelta": -329,
    "winRate": 61,
-   "avgGain": 8.7,
+   "avgGain": 8.6,
    "peakGainer": {
     "gain": 125.7,
     "name": "KEEMING"
@@ -78972,6 +79053,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -1.8
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.04,
+     "gainOnDay": -2.6,
+     "dayChangePct": 0.33,
+     "pnlDeltaToday": 0.3
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -79015,6 +79105,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.04,
+     "gainOnDay": -2.6,
+     "dayChangePct": 0.33,
+     "pnlDeltaToday": 0.3
     },
     {
      "name": "NEXGRAM",
@@ -80964,18 +81063,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-26",
-   "totalSignals": 287,
-   "openCount": 211,
+   "totalSignals": 289,
+   "openCount": 213,
    "closedCount": 76,
-   "openPnl": 2189.9,
+   "openPnl": 2184.1,
    "closedPnl": 591.1,
-   "totalPnl": 2781,
+   "totalPnl": 2775.2,
    "frPnl": 402.5,
    "addOnPnl": 584.9,
-   "htPnl": 1793.6,
-   "dailyPnlDelta": 338.1,
+   "htPnl": 1787.8,
+   "dailyPnlDelta": 337.5,
    "winRate": 63,
-   "avgGain": 9.7,
+   "avgGain": 9.6,
    "peakGainer": {
     "gain": 134.9,
     "name": "KEEMING"
@@ -81576,6 +81675,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 2.5
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.03,
+     "gainOnDay": -2.9,
+     "dayChangePct": -0.33,
+     "pnlDeltaToday": -0.3
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -81619,6 +81727,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.03,
+     "gainOnDay": -2.9,
+     "dayChangePct": -0.33,
+     "pnlDeltaToday": -0.3
     },
     {
      "name": "NEXGRAM",
@@ -83568,18 +83685,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-27",
-   "totalSignals": 288,
-   "openCount": 212,
+   "totalSignals": 290,
+   "openCount": 214,
    "closedCount": 76,
-   "openPnl": 2437.1,
+   "openPnl": 2432.7,
    "closedPnl": 591.1,
-   "totalPnl": 3028.2,
+   "totalPnl": 3023.8,
    "frPnl": 393,
    "addOnPnl": 555.4,
-   "htPnl": 2079.8,
-   "dailyPnlDelta": 249.6,
-   "winRate": 70,
-   "avgGain": 10.5,
+   "htPnl": 2075.4,
+   "dailyPnlDelta": 250.8,
+   "winRate": 69,
+   "avgGain": 10.4,
    "peakGainer": {
     "gain": 133.9,
     "name": "KEEMING"
@@ -84189,6 +84306,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -4.3
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.05,
+     "gainOnDay": -2.2,
+     "dayChangePct": 0.66,
+     "pnlDeltaToday": 0.6
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -84232,6 +84358,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.05,
+     "gainOnDay": -2.2,
+     "dayChangePct": 0.66,
+     "pnlDeltaToday": 0.6
     },
     {
      "name": "NEXGRAM",
@@ -86181,18 +86316,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-28",
-   "totalSignals": 291,
-   "openCount": 206,
+   "totalSignals": 293,
+   "openCount": 208,
    "closedCount": 85,
-   "openPnl": 1945.8,
+   "openPnl": 1944.6,
    "closedPnl": 817.9,
-   "totalPnl": 2763.7,
+   "totalPnl": 2762.5,
    "frPnl": 377.1,
    "addOnPnl": 499.7,
-   "htPnl": 1886.9,
-   "dailyPnlDelta": -265.7,
+   "htPnl": 1885.7,
+   "dailyPnlDelta": -262.5,
    "winRate": 68,
-   "avgGain": 9.5,
+   "avgGain": 9.4,
    "peakGainer": {
     "gain": 124.8,
     "name": "KEEMING"
@@ -86829,6 +86964,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 1.8
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.1,
+     "gainOnDay": -0.6,
+     "dayChangePct": 1.64,
+     "pnlDeltaToday": 1.6
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
@@ -86872,6 +87016,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.1,
+     "gainOnDay": -0.6,
+     "dayChangePct": 1.64,
+     "pnlDeltaToday": 1.6
     },
     {
      "name": "NEXGRAM",
@@ -88821,18 +88974,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-01",
-   "totalSignals": 294,
-   "openCount": 199,
+   "totalSignals": 296,
+   "openCount": 201,
    "closedCount": 95,
-   "openPnl": 1483.7,
+   "openPnl": 1478.5,
    "closedPnl": 952.6,
-   "totalPnl": 2436.3,
+   "totalPnl": 2431.1,
    "frPnl": 376.5,
    "addOnPnl": 440,
-   "htPnl": 1619.8,
-   "dailyPnlDelta": -353.3,
-   "winRate": 64,
-   "avgGain": 8.3,
+   "htPnl": 1614.6,
+   "dailyPnlDelta": -357.1,
+   "winRate": 63,
+   "avgGain": 8.2,
    "peakGainer": {
     "gain": 110.1,
     "name": "KEEMING"
@@ -89496,6 +89649,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -2.5
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.04,
+     "gainOnDay": -2.6,
+     "dayChangePct": -1.94,
+     "pnlDeltaToday": -1.9
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED_TODAY",
@@ -89539,6 +89701,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.04,
+     "gainOnDay": -2.6,
+     "dayChangePct": -1.94,
+     "pnlDeltaToday": -1.9
     },
     {
      "name": "NEXGRAM",
@@ -91488,18 +91659,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-02",
-   "totalSignals": 298,
-   "openCount": 199,
+   "totalSignals": 300,
+   "openCount": 201,
    "closedCount": 99,
-   "openPnl": 1403.2,
+   "openPnl": 1398.8,
    "closedPnl": 909.2,
-   "totalPnl": 2312.4,
+   "totalPnl": 2308,
    "frPnl": 373.8,
    "addOnPnl": 439.2,
-   "htPnl": 1499.4,
-   "dailyPnlDelta": -179.5,
-   "winRate": 61,
-   "avgGain": 7.8,
+   "htPnl": 1495,
+   "dailyPnlDelta": -178.9,
+   "winRate": 60,
+   "avgGain": 7.7,
    "peakGainer": {
     "gain": 100,
     "name": "KEEMING"
@@ -92199,6 +92370,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -1.4
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.05,
+     "gainOnDay": -2.2,
+     "dayChangePct": 0.33,
+     "pnlDeltaToday": 0.3
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -92242,6 +92422,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.05,
+     "gainOnDay": -2.2,
+     "dayChangePct": 0.33,
+     "pnlDeltaToday": 0.3
     },
     {
      "name": "NEXGRAM",
@@ -94191,16 +94380,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-03",
-   "totalSignals": 299,
-   "openCount": 192,
+   "totalSignals": 301,
+   "openCount": 194,
    "closedCount": 107,
-   "openPnl": 1670.5,
+   "openPnl": 1676.9,
    "closedPnl": 928.6,
-   "totalPnl": 2599.1,
+   "totalPnl": 2605.5,
    "frPnl": 416.1,
    "addOnPnl": 477.5,
-   "htPnl": 1705.5,
-   "dailyPnlDelta": 275.4,
+   "htPnl": 1711.9,
+   "dailyPnlDelta": 286.2,
    "winRate": 63,
    "avgGain": 8.7,
    "peakGainer": {
@@ -94911,6 +95100,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 2.2
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.22,
+     "gainOnDay": 3.2,
+     "dayChangePct": 5.57,
+     "pnlDeltaToday": 5.4
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -94954,6 +95152,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.22,
+     "gainOnDay": 3.2,
+     "dayChangePct": 5.57,
+     "pnlDeltaToday": 5.4
     },
     {
      "name": "NEXGRAM",
@@ -96903,16 +97110,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-04",
-   "totalSignals": 304,
-   "openCount": 197,
+   "totalSignals": 306,
+   "openCount": 199,
    "closedCount": 107,
-   "openPnl": 1689.4,
+   "openPnl": 1692.6,
    "closedPnl": 928.6,
-   "totalPnl": 2618,
+   "totalPnl": 2621.2,
    "frPnl": 424.3,
    "addOnPnl": 492.9,
-   "htPnl": 1700.8,
-   "dailyPnlDelta": 17,
+   "htPnl": 1704,
+   "dailyPnlDelta": 13.8,
    "winRate": 62,
    "avgGain": 8.6,
    "peakGainer": {
@@ -97668,6 +97875,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -0.4
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.17,
+     "gainOnDay": 1.6,
+     "dayChangePct": -1.55,
+     "pnlDeltaToday": -1.6
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -97711,6 +97927,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.17,
+     "gainOnDay": 1.6,
+     "dayChangePct": -1.55,
+     "pnlDeltaToday": -1.6
     },
     {
      "name": "NEXGRAM",
@@ -99660,15 +99885,15 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-07",
-   "totalSignals": 311,
-   "openCount": 201,
+   "totalSignals": 313,
+   "openCount": 203,
    "closedCount": 110,
-   "openPnl": 1741.3,
+   "openPnl": 1744.5,
    "closedPnl": 880.6,
-   "totalPnl": 2621.9,
+   "totalPnl": 2625.1,
    "frPnl": 419.7,
    "addOnPnl": 514.6,
-   "htPnl": 1687.6,
+   "htPnl": 1690.8,
    "dailyPnlDelta": -5.3,
    "winRate": 60,
    "avgGain": 8.4,
@@ -100488,6 +100713,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -0.7
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.17,
+     "gainOnDay": 1.6,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -100529,6 +100763,15 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 0.791,
      "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.17,
+     "gainOnDay": 1.6,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -102480,18 +102723,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-08",
-   "totalSignals": 317,
-   "openCount": 204,
+   "totalSignals": 319,
+   "openCount": 206,
    "closedCount": 113,
-   "openPnl": 2007,
+   "openPnl": 2010.2,
    "closedPnl": 904.5,
-   "totalPnl": 2911.5,
+   "totalPnl": 2914.7,
    "frPnl": 428.4,
    "addOnPnl": 529,
-   "htPnl": 1954.1,
+   "htPnl": 1957.3,
    "dailyPnlDelta": 188.8,
    "winRate": 63,
-   "avgGain": 9.2,
+   "avgGain": 9.1,
    "peakGainer": {
     "gain": 132.1,
     "name": "KEEMING"
@@ -103362,6 +103605,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 1.4
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.17,
+     "gainOnDay": 1.6,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -103403,6 +103655,15 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 0.791,
      "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.17,
+     "gainOnDay": 1.6,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -105354,17 +105615,17 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-09",
-   "totalSignals": 321,
-   "openCount": 207,
+   "totalSignals": 323,
+   "openCount": 209,
    "closedCount": 114,
-   "openPnl": 2642.8,
+   "openPnl": 2667.2,
    "closedPnl": 888.5,
-   "totalPnl": 3531.3,
+   "totalPnl": 3555.7,
    "frPnl": 432,
    "addOnPnl": 571.9,
-   "htPnl": 2527.4,
-   "dailyPnlDelta": 242.4,
-   "winRate": 64,
+   "htPnl": 2551.8,
+   "dailyPnlDelta": 239.2,
+   "winRate": 65,
    "avgGain": 11,
    "peakGainer": {
     "gain": 136.7,
@@ -106272,6 +106533,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.5,
+     "gainOnDay": 12.2,
+     "dayChangePct": -1.41,
+     "pnlDeltaToday": -1.6
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -106315,6 +106585,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.5,
+     "gainOnDay": 12.2,
+     "dayChangePct": -1.41,
+     "pnlDeltaToday": -1.6
     },
     {
      "name": "NEXGRAM",
@@ -108264,16 +108543,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-10",
-   "totalSignals": 327,
-   "openCount": 213,
+   "totalSignals": 329,
+   "openCount": 215,
    "closedCount": 114,
-   "openPnl": 2725.7,
+   "openPnl": 2749.5,
    "closedPnl": 888.5,
-   "totalPnl": 3614.2,
+   "totalPnl": 3638,
    "frPnl": 447.2,
    "addOnPnl": 611.6,
-   "htPnl": 2555.4,
-   "dailyPnlDelta": 74.2,
+   "htPnl": 2579.2,
+   "dailyPnlDelta": 73.6,
    "winRate": 64,
    "avgGain": 11.1,
    "peakGainer": {
@@ -109236,6 +109515,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -0.4
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.49,
+     "gainOnDay": 11.9,
+     "dayChangePct": -0.29,
+     "pnlDeltaToday": -0.3
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -109279,6 +109567,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.49,
+     "gainOnDay": 11.9,
+     "dayChangePct": -0.29,
+     "pnlDeltaToday": -0.3
     },
     {
      "name": "NEXGRAM",
@@ -111228,17 +111525,17 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-11",
-   "totalSignals": 334,
-   "openCount": 219,
+   "totalSignals": 336,
+   "openCount": 221,
    "closedCount": 115,
-   "openPnl": 2186.6,
+   "openPnl": 2201.4,
    "closedPnl": 895.3,
-   "totalPnl": 3081.9,
+   "totalPnl": 3096.7,
    "frPnl": 446.6,
    "addOnPnl": 588.3,
-   "htPnl": 2047,
-   "dailyPnlDelta": -580.5,
-   "winRate": 59,
+   "htPnl": 2061.8,
+   "dailyPnlDelta": -589.5,
+   "winRate": 60,
    "avgGain": 9.2,
    "peakGainer": {
     "gain": 133.9,
@@ -112263,6 +112560,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.35,
+     "gainOnDay": 7.4,
+     "dayChangePct": -4.01,
+     "pnlDeltaToday": -4.5
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -112306,6 +112612,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.35,
+     "gainOnDay": 7.4,
+     "dayChangePct": -4.01,
+     "pnlDeltaToday": -4.5
     },
     {
      "name": "NEXGRAM",
@@ -114255,16 +114570,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-14",
-   "totalSignals": 340,
-   "openCount": 225,
+   "totalSignals": 342,
+   "openCount": 227,
    "closedCount": 115,
-   "openPnl": 2186.6,
+   "openPnl": 2201.4,
    "closedPnl": 895.3,
-   "totalPnl": 3081.9,
+   "totalPnl": 3096.7,
    "frPnl": 446.6,
    "addOnPnl": 588.3,
-   "htPnl": 2047,
-   "dailyPnlDelta": -587.8,
+   "htPnl": 2061.8,
+   "dailyPnlDelta": -596.8,
    "winRate": 58,
    "avgGain": 9.1,
    "peakGainer": {
@@ -115344,6 +115659,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.35,
+     "gainOnDay": 7.4,
+     "dayChangePct": -4.01,
+     "pnlDeltaToday": -4.5
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -115387,6 +115711,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.35,
+     "gainOnDay": 7.4,
+     "dayChangePct": -4.01,
+     "pnlDeltaToday": -4.5
     },
     {
      "name": "NEXGRAM",
@@ -117336,17 +117669,17 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-15",
-   "totalSignals": 342,
-   "openCount": 196,
+   "totalSignals": 344,
+   "openCount": 198,
    "closedCount": 146,
-   "openPnl": 1060.9,
+   "openPnl": 1067.9,
    "closedPnl": 1450.5,
-   "totalPnl": 2511.4,
+   "totalPnl": 2518.4,
    "frPnl": 394.2,
    "addOnPnl": 520.1,
-   "htPnl": 1597.1,
-   "dailyPnlDelta": -260.3,
-   "winRate": 54,
+   "htPnl": 1604.1,
+   "dailyPnlDelta": -258.3,
+   "winRate": 55,
    "avgGain": 7.3,
    "peakGainer": {
     "gain": 116.5,
@@ -118443,6 +118776,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.23,
+     "gainOnDay": 3.5,
+     "dayChangePct": 0.94,
+     "pnlDeltaToday": 1
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -118486,6 +118828,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.23,
+     "gainOnDay": 3.5,
+     "dayChangePct": 0.94,
+     "pnlDeltaToday": 1
     },
     {
      "name": "NEXGRAM",
@@ -120435,16 +120786,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-17",
-   "totalSignals": 346,
-   "openCount": 195,
+   "totalSignals": 348,
+   "openCount": 197,
    "closedCount": 151,
-   "openPnl": 1412,
+   "openPnl": 1422.8,
    "closedPnl": 1415,
-   "totalPnl": 2827,
+   "totalPnl": 2837.8,
    "frPnl": 393.6,
    "addOnPnl": 528.3,
-   "htPnl": 1905.1,
-   "dailyPnlDelta": 321.5,
+   "htPnl": 1915.9,
+   "dailyPnlDelta": 325.3,
    "winRate": 58,
    "avgGain": 8.2,
    "peakGainer": {
@@ -121578,6 +121929,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 1.8
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.29,
+     "gainOnDay": 5.4,
+     "dayChangePct": 1.86,
+     "pnlDeltaToday": 1.9
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -121621,6 +121981,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.29,
+     "gainOnDay": 5.4,
+     "dayChangePct": 1.86,
+     "pnlDeltaToday": 1.9
     },
     {
      "name": "NEXGRAM",
@@ -123570,16 +123939,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-18",
-   "totalSignals": 348,
-   "openCount": 197,
+   "totalSignals": 350,
+   "openCount": 199,
    "closedCount": 151,
-   "openPnl": 1926.9,
+   "openPnl": 1940.3,
    "closedPnl": 1415,
-   "totalPnl": 3341.9,
+   "totalPnl": 3355.3,
    "frPnl": 428.9,
    "addOnPnl": 614.3,
-   "htPnl": 2298.7,
-   "dailyPnlDelta": 517.7,
+   "htPnl": 2312.1,
+   "dailyPnlDelta": 520.3,
    "winRate": 64,
    "avgGain": 9.6,
    "peakGainer": {
@@ -124731,6 +125100,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.33,
+     "gainOnDay": 6.7,
+     "dayChangePct": 1.22,
+     "pnlDeltaToday": 1.3
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -124774,6 +125152,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.33,
+     "gainOnDay": 6.7,
+     "dayChangePct": 1.22,
+     "pnlDeltaToday": 1.3
     },
     {
      "name": "NEXGRAM",
@@ -126723,16 +127110,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-21",
-   "totalSignals": 349,
-   "openCount": 198,
+   "totalSignals": 351,
+   "openCount": 200,
    "closedCount": 151,
-   "openPnl": 2378.7,
+   "openPnl": 2415.3,
    "closedPnl": 1415,
-   "totalPnl": 3793.7,
+   "totalPnl": 3830.3,
    "frPnl": 446.2,
    "addOnPnl": 637.9,
-   "htPnl": 2709.6,
-   "dailyPnlDelta": 453,
+   "htPnl": 2746.2,
+   "dailyPnlDelta": 476,
    "winRate": 67,
    "avgGain": 10.9,
    "peakGainer": {
@@ -127893,6 +128280,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 1.4
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.69,
+     "gainOnDay": 18.3,
+     "dayChangePct": 10.81,
+     "pnlDeltaToday": 11.5
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -127936,6 +128332,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.69,
+     "gainOnDay": 18.3,
+     "dayChangePct": 10.81,
+     "pnlDeltaToday": 11.5
     },
     {
      "name": "NEXGRAM",
@@ -129885,16 +130290,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-22",
-   "totalSignals": 350,
-   "openCount": 199,
+   "totalSignals": 352,
+   "openCount": 201,
    "closedCount": 151,
-   "openPnl": 2741.3,
+   "openPnl": 2778.5,
    "closedPnl": 1415,
-   "totalPnl": 4156.3,
+   "totalPnl": 4193.5,
    "frPnl": 464.7,
    "addOnPnl": 749.6,
-   "htPnl": 2942,
-   "dailyPnlDelta": 362.3,
+   "htPnl": 2979.2,
+   "dailyPnlDelta": 362.9,
    "winRate": 75,
    "avgGain": 11.9,
    "peakGainer": {
@@ -131064,6 +131469,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.7,
+     "gainOnDay": 18.6,
+     "dayChangePct": 0.27,
+     "pnlDeltaToday": 0.3
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -131107,6 +131521,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.7,
+     "gainOnDay": 18.6,
+     "dayChangePct": 0.27,
+     "pnlDeltaToday": 0.3
     },
     {
      "name": "NEXGRAM",
@@ -133056,18 +133479,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-23",
-   "totalSignals": 353,
-   "openCount": 201,
+   "totalSignals": 355,
+   "openCount": 203,
    "closedCount": 152,
-   "openPnl": 2811.7,
+   "openPnl": 2854.7,
    "closedPnl": 1424.6,
-   "totalPnl": 4236.3,
+   "totalPnl": 4279.3,
    "frPnl": 452.3,
    "addOnPnl": 716.8,
-   "htPnl": 3067.2,
-   "dailyPnlDelta": 69.4,
+   "htPnl": 3110.2,
+   "dailyPnlDelta": 75.2,
    "winRate": 72,
-   "avgGain": 12,
+   "avgGain": 12.1,
    "peakGainer": {
     "gain": 134.9,
     "name": "KEEMING"
@@ -134262,6 +134685,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 1.1
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.79,
+     "gainOnDay": 21.5,
+     "dayChangePct": 2.43,
+     "pnlDeltaToday": 2.9
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -134305,6 +134737,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.79,
+     "gainOnDay": 21.5,
+     "dayChangePct": 2.43,
+     "pnlDeltaToday": 2.9
     },
     {
      "name": "NEXGRAM",
@@ -136254,18 +136695,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-24",
-   "totalSignals": 358,
-   "openCount": 206,
+   "totalSignals": 360,
+   "openCount": 208,
    "closedCount": 152,
-   "openPnl": 2803.3,
+   "openPnl": 2853.3,
    "closedPnl": 1424.6,
-   "totalPnl": 4227.9,
+   "totalPnl": 4277.9,
    "frPnl": 444.4,
    "addOnPnl": 715.4,
-   "htPnl": 3068.1,
-   "dailyPnlDelta": -12.8,
+   "htPnl": 3118.1,
+   "dailyPnlDelta": -5.8,
    "winRate": 70,
-   "avgGain": 11.8,
+   "avgGain": 11.9,
    "peakGainer": {
     "gain": 133,
     "name": "KEEMING"
@@ -137505,6 +137946,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -2.2
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.9,
+     "gainOnDay": 25,
+     "dayChangePct": 2.9,
+     "pnlDeltaToday": 3.5
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -137548,6 +137998,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.9,
+     "gainOnDay": 25,
+     "dayChangePct": 2.9,
+     "pnlDeltaToday": 3.5
     },
     {
      "name": "NEXGRAM",
@@ -139497,18 +139956,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-25",
-   "totalSignals": 364,
-   "openCount": 211,
+   "totalSignals": 366,
+   "openCount": 213,
    "closedCount": 153,
-   "openPnl": 3254,
+   "openPnl": 3314.2,
    "closedPnl": 1419.7,
-   "totalPnl": 4673.7,
+   "totalPnl": 4733.9,
    "frPnl": 464.3,
    "addOnPnl": 741.5,
-   "htPnl": 3467.9,
-   "dailyPnlDelta": 449,
+   "htPnl": 3528.1,
+   "dailyPnlDelta": 459.2,
    "winRate": 73,
-   "avgGain": 12.8,
+   "avgGain": 12.9,
    "peakGainer": {
     "gain": 137.6,
     "name": "KEEMING"
@@ -140802,6 +141261,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 2.2
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 4.06,
+     "gainOnDay": 30.1,
+     "dayChangePct": 4.1,
+     "pnlDeltaToday": 5.1
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -140845,6 +141313,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 4.06,
+     "gainOnDay": 30.1,
+     "dayChangePct": 4.1,
+     "pnlDeltaToday": 5.1
     },
     {
      "name": "NEXGRAM",
@@ -142794,18 +143271,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-28",
-   "totalSignals": 369,
-   "openCount": 216,
+   "totalSignals": 371,
+   "openCount": 218,
    "closedCount": 153,
-   "openPnl": 2990.1,
+   "openPnl": 3056.7,
    "closedPnl": 1419.7,
-   "totalPnl": 4409.8,
+   "totalPnl": 4476.4,
    "frPnl": 442.5,
    "addOnPnl": 693.8,
-   "htPnl": 3273.5,
-   "dailyPnlDelta": -269.2,
+   "htPnl": 3340.1,
+   "dailyPnlDelta": -262.8,
    "winRate": 66,
-   "avgGain": 12,
+   "avgGain": 12.1,
    "peakGainer": {
     "gain": 132.1,
     "name": "KEEMING"
@@ -144144,6 +144621,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -2.5
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 4.16,
+     "gainOnDay": 33.3,
+     "dayChangePct": 2.46,
+     "pnlDeltaToday": 3.2
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -144187,6 +144673,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 4.16,
+     "gainOnDay": 33.3,
+     "dayChangePct": 2.46,
+     "pnlDeltaToday": 3.2
     },
     {
      "name": "NEXGRAM",
@@ -146136,18 +146631,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-29",
-   "totalSignals": 377,
-   "openCount": 224,
+   "totalSignals": 379,
+   "openCount": 226,
    "closedCount": 153,
-   "openPnl": 3505,
+   "openPnl": 3592.8,
    "closedPnl": 1419.7,
-   "totalPnl": 4924.7,
+   "totalPnl": 5012.5,
    "frPnl": 472.8,
    "addOnPnl": 753.2,
-   "htPnl": 3698.7,
-   "dailyPnlDelta": 507.8,
+   "htPnl": 3786.5,
+   "dailyPnlDelta": 529,
    "winRate": 67,
-   "avgGain": 13.1,
+   "avgGain": 13.2,
    "peakGainer": {
     "gain": 154.4,
     "name": "SAMAIDEN"
@@ -147558,6 +148053,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 4.49,
+     "gainOnDay": 43.9,
+     "dayChangePct": 7.93,
+     "pnlDeltaToday": 10.6
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -147601,6 +148105,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 4.49,
+     "gainOnDay": 43.9,
+     "dayChangePct": 7.93,
+     "pnlDeltaToday": 10.6
     },
     {
      "name": "NEXGRAM",
@@ -149550,18 +150063,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-30",
-   "totalSignals": 384,
-   "openCount": 231,
+   "totalSignals": 386,
+   "openCount": 233,
    "closedCount": 153,
-   "openPnl": 3210.3,
+   "openPnl": 3289.7,
    "closedPnl": 1419.7,
-   "totalPnl": 4630,
+   "totalPnl": 4709.4,
    "frPnl": 463.2,
    "addOnPnl": 743.3,
-   "htPnl": 3423.5,
-   "dailyPnlDelta": -291.5,
+   "htPnl": 3502.9,
+   "dailyPnlDelta": -299.9,
    "winRate": 66,
-   "avgGain": 12.1,
+   "avgGain": 12.2,
    "peakGainer": {
     "gain": 142.2,
     "name": "KEEMING"
@@ -151035,6 +151548,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 4.36,
+     "gainOnDay": 39.7,
+     "dayChangePct": -2.9,
+     "pnlDeltaToday": -4.2
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -151078,6 +151600,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 4.36,
+     "gainOnDay": 39.7,
+     "dayChangePct": -2.9,
+     "pnlDeltaToday": -4.2
     },
     {
      "name": "NEXGRAM",
@@ -153027,18 +153558,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-10-01",
-   "totalSignals": 391,
+   "totalSignals": 393,
    "openCount": 209,
-   "closedCount": 182,
+   "closedCount": 184,
    "openPnl": 1710.5,
-   "closedPnl": 2848.7,
-   "totalPnl": 4559.2,
+   "closedPnl": 2919.3,
+   "totalPnl": 4629.8,
    "frPnl": 452.4,
    "addOnPnl": 726.1,
-   "htPnl": 3380.7,
-   "dailyPnlDelta": -112.3,
+   "htPnl": 3451.3,
+   "dailyPnlDelta": -122.5,
    "winRate": 65,
-   "avgGain": 11.7,
+   "avgGain": 11.8,
    "peakGainer": {
     "gain": 139.1,
     "name": "SAMAIDEN"
@@ -154575,6 +155106,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED_TODAY",
+     "priceOnDay": 4.221,
+     "gainOnDay": 35.3,
+     "dayChangePct": -3.67,
+     "pnlDeltaToday": -5.1
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -154618,6 +155158,15 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED_TODAY",
+     "priceOnDay": 4.221,
+     "gainOnDay": 35.3,
+     "dayChangePct": -3.67,
+     "pnlDeltaToday": -5.1
     },
     {
      "name": "NEXGRAM",
@@ -156567,18 +157116,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-10-02",
-   "totalSignals": 393,
+   "totalSignals": 395,
    "openCount": 211,
-   "closedCount": 182,
+   "closedCount": 184,
    "openPnl": 2243,
-   "closedPnl": 2848.7,
-   "totalPnl": 5091.7,
+   "closedPnl": 2919.3,
+   "totalPnl": 5162.3,
    "frPnl": 472.8,
    "addOnPnl": 759.3,
-   "htPnl": 3859.6,
+   "htPnl": 3930.2,
    "dailyPnlDelta": 540.6,
    "winRate": 72,
-   "avgGain": 13,
+   "avgGain": 13.1,
    "peakGainer": {
     "gain": 139.1,
     "name": "SAMAIDEN"
@@ -158133,6 +158682,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0.7
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 4.221,
+     "gainOnDay": 35.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -158174,6 +158732,15 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 0.791,
      "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 4.221,
+     "gainOnDay": 35.3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -160125,18 +160692,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-10-05",
-   "totalSignals": 395,
+   "totalSignals": 397,
    "openCount": 213,
-   "closedCount": 182,
+   "closedCount": 184,
    "openPnl": 2340.2,
-   "closedPnl": 2848.7,
-   "totalPnl": 5188.9,
+   "closedPnl": 2919.3,
+   "totalPnl": 5259.5,
    "frPnl": 472.8,
    "addOnPnl": 759.3,
-   "htPnl": 3956.8,
+   "htPnl": 4027.4,
    "dailyPnlDelta": 546.5,
-   "winRate": 71,
-   "avgGain": 13.1,
+   "winRate": 72,
+   "avgGain": 13.2,
    "peakGainer": {
     "gain": 139.1,
     "name": "SAMAIDEN"
@@ -161709,6 +162276,15 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0.7
     },
     {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 4.221,
+     "gainOnDay": 35.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "name": "MI",
      "trackerType": "HT",
      "statusOnDay": "CLOSED",
@@ -161750,6 +162326,15 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 0.791,
      "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "name": "SLVEST",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 4.221,
+     "gainOnDay": 35.3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
