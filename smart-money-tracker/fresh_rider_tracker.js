@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual
 window.FRESH_RIDER_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-06T01:59:30.886Z",
+  "generatedAt": "2026-10-06T02:15:02.056Z",
   "dataDays": 86,
   "totalTracked": 25,
   "openCount": 11,
@@ -9,9 +9,9 @@ window.FRESH_RIDER_TRACKER = {
   "closedWins": 8,
   "closedWinRate": 57,
   "closedAvgGain": 4.4,
-  "openPnl": 468.9,
+  "openPnl": 473,
   "closedPnl": 61.5,
-  "totalPnlNow": 530.4
+  "totalPnlNow": 534.5
  },
  "backtest": {
   "dataStart": "2026-06-02",
@@ -19,8 +19,8 @@ window.FRESH_RIDER_TRACKER = {
   "dataDays": 86,
   "signals": 25,
   "winRate": 68,
-  "avgGain": 14.7,
-  "totalPnl": 368,
+  "avgGain": 14.9,
+  "totalPnl": 373.5,
   "worstLoss": -10.3
  },
  "trades": [
@@ -31,18 +31,18 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 0.54,
    "entryFloor": 0.505,
    "currentFloor": 0.525,
-   "currentPrice": 0.745,
-   "high": 0.745,
+   "currentPrice": 0.775,
+   "high": 0.775,
    "highDate": "2026-10-06",
-   "maxGain": 38,
-   "finalGain": 38,
+   "maxGain": 43.5,
+   "finalGain": 43.5,
    "day1ChangePct": 2.86,
    "days": 4,
    "lastDate": "2026-10-06",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Industrial",
-   "slTrail": 0.633
+   "slTrail": 0.659
   },
   {
    "name": "EXSIMHB",
@@ -71,18 +71,18 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 0.355,
    "entryFloor": 0.325,
    "currentFloor": 0.33,
-   "currentPrice": 0.37,
-   "high": 0.37,
+   "currentPrice": 0.365,
+   "high": 0.365,
    "highDate": "2026-10-06",
-   "maxGain": 4.2,
-   "finalGain": 4.2,
+   "maxGain": 2.8,
+   "finalGain": 2.8,
    "day1ChangePct": 7.58,
    "days": 5,
    "lastDate": "2026-10-06",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Industrial",
-   "slTrail": 0.326
+   "slTrail": 0.321
   },
   {
    "name": "XPB",
@@ -556,7 +556,7 @@ window.FRESH_RIDER_TRACKER = {
 };
 window.ADD_ON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-06T01:59:30.886Z",
+  "generatedAt": "2026-10-06T02:15:02.056Z",
   "dataDays": 86,
   "totalTracked": 16,
   "openCount": 8,
@@ -564,9 +564,9 @@ window.ADD_ON_TRACKER = {
   "closedWins": 4,
   "closedWinRate": 50,
   "closedAvgGain": 0.3,
-  "openPnl": 316.7,
+  "openPnl": 315.4,
   "closedPnl": 2.2,
-  "totalPnlNow": 318.9
+  "totalPnlNow": 317.6
  },
  "backtest": {
   "dataStart": "2026-06-02",
@@ -632,11 +632,11 @@ window.ADD_ON_TRACKER = {
    "entry": 0.795,
    "entryFloor": 0.77,
    "currentFloor": 0.97,
-   "currentPrice": 1.02,
+   "currentPrice": 1.01,
    "high": 1.08,
    "highDate": "2026-09-30",
    "maxGain": 35.8,
-   "finalGain": 28.3,
+   "finalGain": 27,
    "day1ChangePct": -1.24,
    "days": 15,
    "lastDate": "2026-10-06",
@@ -938,7 +938,7 @@ window.ADD_ON_TRACKER = {
 };
 window.FLOOR_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-06T01:59:30.886Z",
+  "generatedAt": "2026-10-06T02:15:02.056Z",
   "dataDays": 86,
   "totalTracked": 31,
   "openCount": 15,
@@ -1651,7 +1651,7 @@ window.FLOOR_ADDON_TRACKER = {
 };
 window.ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-06T01:59:30.886Z",
+  "generatedAt": "2026-10-06T02:15:02.056Z",
   "dataDays": 86,
   "totalTracked": 72,
   "openCount": 34,
@@ -1659,9 +1659,9 @@ window.ALL_TRACKER = {
   "closedWins": 21,
   "closedWinRate": 55,
   "closedAvgGain": 2.5,
-  "openPnl": 1282.3,
+  "openPnl": 1285.1,
   "closedPnl": 95.5,
-  "totalPnlNow": 1377.8
+  "totalPnlNow": 1380.6
  },
  "trades": [
   {
@@ -1671,18 +1671,18 @@ window.ALL_TRACKER = {
    "entry": 0.54,
    "entryFloor": 0.505,
    "currentFloor": 0.525,
-   "currentPrice": 0.745,
-   "high": 0.745,
+   "currentPrice": 0.775,
+   "high": 0.775,
    "highDate": "2026-10-06",
-   "maxGain": 38,
-   "finalGain": 38,
+   "maxGain": 43.5,
+   "finalGain": 43.5,
    "day1ChangePct": 2.86,
    "days": 4,
    "lastDate": "2026-10-06",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Industrial",
-   "slTrail": 0.633
+   "slTrail": 0.659
   },
   {
    "name": "EXSIMHB",
@@ -1711,18 +1711,18 @@ window.ALL_TRACKER = {
    "entry": 0.355,
    "entryFloor": 0.325,
    "currentFloor": 0.33,
-   "currentPrice": 0.37,
-   "high": 0.37,
+   "currentPrice": 0.365,
+   "high": 0.365,
    "highDate": "2026-10-06",
-   "maxGain": 4.2,
-   "finalGain": 4.2,
+   "maxGain": 2.8,
+   "finalGain": 2.8,
    "day1ChangePct": 7.58,
    "days": 5,
    "lastDate": "2026-10-06",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Industrial",
-   "slTrail": 0.326
+   "slTrail": 0.321
   },
   {
    "id": "CBHB_2026-09-30_ADDON",
@@ -1961,11 +1961,11 @@ window.ALL_TRACKER = {
    "entry": 0.795,
    "entryFloor": 0.77,
    "currentFloor": 0.97,
-   "currentPrice": 1.02,
+   "currentPrice": 1.01,
    "high": 1.08,
    "highDate": "2026-09-30",
    "maxGain": 35.8,
-   "finalGain": 28.3,
+   "finalGain": 27,
    "day1ChangePct": -1.24,
    "days": 15,
    "lastDate": "2026-10-06",
