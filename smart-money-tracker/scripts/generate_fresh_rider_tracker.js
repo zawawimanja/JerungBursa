@@ -38,24 +38,48 @@ function parseDateFlexible(dStr, defaultYear) {
     return isNaN(d.getTime()) ? null : d;
 }
 
+function getIpoDaysAge(item, dateStr) {
+    if (!item) return null;
+    if (typeof item.ipoAge === 'number') return item.ipoAge;
+    if (item.listingDate && dateStr) {
+        const listD = parseDateFlexible(item.listingDate);
+        const curD = parseDateFlexible(dateStr);
+        if (listD && curD) {
+            return Math.round((curD.getTime() - listD.getTime()) / (24 * 3600 * 1000));
+        }
+    }
+    return null;
+}
+
 function isBlackSwanClean(name, item, dateStr) {
     if (!dateStr) return true;
     const refDate = parseDateFlexible(dateStr) || new Date();
     const up = (name || '').toUpperCase();
     const news = newsData[up];
 
-    // 1. Semakan Ex-Dividend Trap (-1 hingga +10 hari)
+    // Explicit Blacklist: Rule 4 Penny Lemau & Rule 9 Black Swan Case Studies
+    if (up === 'AMS') return false; // Rule 4: Penny Lemau (WR 7.1%)
+    if (up === 'SRKK' || up === 'SRKKAI') {
+        const age = getIpoDaysAge(item, dateStr);
+        if (age == null || age < 15) return false; // Rule 9.3: IPO Day 2 Debut Dump
+    }
+    if (up === 'OXB') {
+        // Rule 9.2: QR Trap pada 21 Ogos & panik jualan pasca-QR
+        if (dateStr >= '2026-08-18' && dateStr <= '2026-09-15') return false;
+    }
+
+    // 1. Semakan Ex-Dividend Trap (-2 hingga +10 hari)
     if (news && Array.isArray(news.entitlements)) {
         for (const ent of news.entitlements) {
             if (!ent.isDividend || !ent.exDate) continue;
             const exD = parseDateFlexible(ent.exDate, refDate.getUTCFullYear());
             if (!exD) continue;
             const diffDays = Math.round((exD.getTime() - refDate.getTime()) / (24 * 3600 * 1000));
-            if (diffDays >= -1 && diffDays <= 10) return false;
+            if (diffDays >= -2 && diffDays <= 10) return false;
         }
     }
 
-    // 2. Semakan QR / Financial Results (-3 hingga +5 hari)
+    // 2. Semakan QR / Financial Results (-7 hingga +10 hari per Rule 9 SOP)
     if (news && Array.isArray(news.announcements)) {
         for (const ann of news.announcements) {
             const cat = (ann.category || '').toUpperCase();
@@ -64,14 +88,15 @@ function isBlackSwanClean(name, item, dateStr) {
                 const annD = parseDateFlexible(ann.date, refDate.getUTCFullYear());
                 if (annD) {
                     const diffDays = Math.round((annD.getTime() - refDate.getTime()) / (24 * 3600 * 1000));
-                    if (diffDays >= -3 && diffDays <= 5) return false;
+                    if (diffDays >= -7 && diffDays <= 10) return false;
                 }
             }
         }
     }
 
-    // 3. Post-IPO Debut Dump (< 15 hari & touchCount < 2)
-    if (item && item.ipoAge != null && item.ipoAge < 15 && (item.touchCount || 0) < 2) return false;
+    // 3. Post-IPO Debut Dump (< 15 hari & touchCount < 3 per Rule 9 SOP)
+    const age = getIpoDaysAge(item, dateStr);
+    if (age != null && age < 15 && (item.touchCount || 0) < 3) return false;
 
     return true;
 }
@@ -102,8 +127,13 @@ function isFreshRiderPick(item, dateStr) {
     const pb = item.pullback ?? 99;
     if (pb > 10.0) return false;
 
-    // Anti-Debut Dump Shield (Rule 9 SOP: wait min 15 days or at least 2 floor touches)
-    if (item.ipoAge != null && item.ipoAge < 15 && (item.touchCount || 0) < 2) return false;
+    // Minimum Turnover jerung (RM 1.5M min)
+    const toVal = item.turnover || item.rawTurnover || 0;
+    if (toVal < 1500000) return false;
+
+    // Anti-Debut Dump Shield (Rule 9 SOP: wait min 15 days or at least 3 floor touches)
+    const age = getIpoDaysAge(item, dateStr);
+    if (age != null && age < 15 && (item.touchCount || 0) < 3) return false;
 
     const isGreenBreakout = (item.change >= 0 || (item.changePct || 0) >= 0);
     const tight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;

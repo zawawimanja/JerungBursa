@@ -44,6 +44,7 @@ function isBlackSwanClean(name, item, dateStr) {
     if (!dateStr) return true;
     const refDate = parseDateFlexible(dateStr) || new Date();
     const up = (name || '').toUpperCase();
+    if (up === 'AMS') return false; // Rule 4: Penny Lemau (WR 7.1%)
     const news = newsData[up];
 
     // 1. Semakan Ex-Dividend Trap (-1 hingga +10 hari)
