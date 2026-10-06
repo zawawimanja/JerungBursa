@@ -1834,26 +1834,20 @@
                             </p>
                         </div>
                     </div>
-                    <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
-                    <div style="display: flex; gap: 0.3rem; align-items: center; background: rgba(15,23,42,0.6); padding: 0.2rem; border-radius: 8px; border: 1px solid rgba(168,85,247,0.3); flex-wrap: wrap;">
-                            <span style="font-size: 0.72rem; color: #64748b; font-weight: 600; padding: 0 0.3rem;">Focus:</span>
-                            <button id="htFilterTop" onclick="setHotThemeFilter('top_ranking')" style="background: linear-gradient(135deg, rgba(234,179,8,0.3), rgba(168,85,247,0.3)); color: #fde047; border: 1px solid rgba(253,224,71,0.6); padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer;">🏆 Top Ranking VVIP</button>
-                            <button id="htFilterNew" onclick="setHotThemeFilter('new_only')" style="background: transparent; color: #64748b; border: 1px solid transparent; padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">🔥 NEW (Day 1)</button>
-                            <button id="htFilterAddon" onclick="setHotThemeFilter('addon_only')" style="background: transparent; color: #64748b; border: 1px solid transparent; padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">⭐ ADD-ON A+</button>
-                            <button id="htFilterTierAPlus" onclick="setHotThemeFilter('tier_a_plus')" style="background: transparent; color: #64748b; border: 1px solid transparent; padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">🎯 Sniper Only</button>
-                            <button id="htFilterAll" onclick="setHotThemeFilter('all')" style="background: transparent; color: #64748b; border: 1px solid transparent; padding: 0.3rem 0.75rem; border-radius: 6px; font-size: 0.72rem; font-weight: 700; cursor: pointer;">🌐 All (2+)</button>
-                        </div>
-                        <button onclick="toggleCardCollapse('htScannerBody', this)" class="btn" style="background: rgba(15,23,42,0.85); border: 1.5px solid rgba(196,181,253,0.5); color: #c4b5fd; padding: 0.25rem 0.65rem; border-radius: 8px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; transition: all 0.2s;" onmouseover="this.style.background='rgba(196,181,253,0.2)';" onmouseout="this.style.background='rgba(15,23,42,0.85)';">
-                            <span class="toggle-icon">🔽</span> <span class="toggle-text">Collapse</span>
-                        </button>
-                    </div>
+                    <button onclick="toggleCardCollapse('htScannerBody', this)" class="btn" style="background: rgba(15,23,42,0.85); border: 1.5px solid rgba(196,181,253,0.5); color: #c4b5fd; padding: 0.25rem 0.65rem; border-radius: 8px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; transition: all 0.2s;" onmouseover="this.style.background='rgba(196,181,253,0.2)';" onmouseout="this.style.background='rgba(15,23,42,0.85)';">
+                        <span class="toggle-icon">🔽</span> <span class="toggle-text">Collapse</span>
+                    </button>
                 </div>
 
                 <div id="htScannerBody">
-                    <div style="background: rgba(168, 85, 247, 0.08); border: 1px solid rgba(168, 85, 247, 0.25); border-radius: 8px; padding: 0.5rem 0.8rem; margin-bottom: 0.75rem; font-size: 0.75rem; color: #cbd5e1; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+                    <div style="background: rgba(168, 85, 247, 0.08); border: 1px solid rgba(168, 85, 247, 0.25); border-radius: 8px; padding: 0.6rem 0.9rem; margin-bottom: 0.75rem; font-size: 0.75rem; color: #cbd5e1; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.6rem;">
                         <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
-                            <span style="font-weight: 900; color: #c4b5fd;">🏷️ Default Sort Hierarchy:</span>
-                            <span style="color: #94a3b8; font-size: 0.72rem; font-weight: 600;">1. New Signal ➔ 2. Tightness % ➔ 3. Floor Distance (Low Risk) ➔ 4. Pullback % ➔ 5. Institutional Turnover</span>
+                            <span style="font-weight: 900; color: #c4b5fd; margin-right: 0.3rem;">🎯 Radar Display Mode:</span>
+                            <button id="htFilterTop" onclick="setHotThemeFilter('top_ranking')" class="btn" style="background: linear-gradient(135deg, rgba(234,179,8,0.4), rgba(168,85,247,0.4)); color: #fde047; border: 1px solid rgba(253,224,71,0.8); padding: 0.22rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;" title="Filter Top Grade AAA+ choices ONLY (Mematuhi Syarat Emas)">🏆 Top Ranking VVIP</button>
+                            <button id="htFilterNew" onclick="setHotThemeFilter('new_only')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.22rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;" title="Filter NEW Signals (Day 1) Fresh dari tapak">🔥 NEW (Day 1)</button>
+                            <button id="htFilterAddon" onclick="setHotThemeFilter('addon_only')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.22rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;" title="Filter ADD-ON A+ Sahaja">⭐ ADD-ON A+</button>
+                            <button id="htFilterTierAPlus" onclick="setHotThemeFilter('tier_a_plus')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.22rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;" title="Sniper Only (Tier A+)">🎯 Sniper Only</button>
+                            <button id="htFilterAll" onclick="setHotThemeFilter('all')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.22rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;" title="Papar semua kaunter yang melepasi penapis asas">🌐 All (2+)</button>
                         </div>
                         <div style="font-size: 0.7rem; color: #38bdf8; font-weight: 700;">
                             💡 Click any column header below to sort table dynamically!
@@ -9730,9 +9724,9 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const btnAll = document.getElementById('htFilterAll');
             const resetBtn = (btn) => {
                 if (!btn) return;
-                btn.style.background = 'transparent';
-                btn.style.color = '#64748b';
-                btn.style.borderColor = 'transparent';
+                btn.style.background = 'rgba(15,23,42,0.8)';
+                btn.style.color = '#94a3b8';
+                btn.style.borderColor = 'rgba(148,163,184,0.3)';
                 btn.style.fontWeight = '700';
             };
             [btnTop, btnNew, btnAddon, btnTierAPlus, btnAll].forEach(resetBtn);
