@@ -706,7 +706,7 @@ function buildMessage(now, out) {
             const touches = it.touchCount || 0;
             const tight = typeof it.closeTightness === 'number' ? it.closeTightness : 99;
 
-            const isSolidBase2 = (touches >= 3 && tight <= 4.85 && fd <= 5.0 && (toVal >= 2000000 || toVal === 0));
+            const isSolidBase2 = (touches >= 3 && tight <= 3.5 && fd <= 4.5 && (toVal >= 2000000 || toVal === 0));
             const isFreshBase1 = (pct >= 0 && pct <= 20 && fd <= 3.5 && (toVal >= 2000000 || toVal === 0));
             if (isFreshBase1) return 1; // ⭐ ADD-ON A+ (AWAL)
             if (isSolidBase2) return 2; // 🛡️ ADD-ON (LANTAI RAPAT)
@@ -865,17 +865,13 @@ function buildMessage(now, out) {
             return (t.fDistVal <= 10.0 && t.fDistVal >= -2.0 && t.tightValNum <= 10.0);
         }
 
-        // 5. LAYAK: ⭐ ADD-ON A+ / 🛡️ ADD-ON (LANTAI RAPAT) — lantai rapat wajib <= 5.0%
+        // 5. LAYAK: ⭐ ADD-ON A+ / 🛡️ ADD-ON (LANTAI RAPAT) — lantai rapat wajib <= 4.5%
         if (fresh === 1 || fresh === 2) {
-            if (t.fDistVal > 5.0 || t.fDistVal < -2.0) return false;
-            if (t.tightValNum <= 4.85) return true;
+            if (t.fDistVal > 4.5 || t.fDistVal < -2.0) return false;
+            if (t.tightValNum <= 3.5) return true;
         }
 
-        // 6. LAYAK: Tier A+ / Tier A / Fusion
-        if (t.isTierAPlus || t.isTierA) return true;
-        const isFusion = getHotThemes(p.name).length > 0;
-        if (isFusion && t.tightValNum <= 4.85 && t.fDistVal <= 5.0) return true;
-
+        // 6. SOP: Hanya 3 jenis entry (NEW / ADD-ON A+ / LANTAI RAPAT) layak
         return false;
     }
 

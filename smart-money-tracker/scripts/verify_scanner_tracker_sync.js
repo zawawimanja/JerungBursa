@@ -160,7 +160,7 @@ const frFreshness = (it) => {
         const touches = it.touchCount || 0;
         const tight = typeof it.closeTightness === 'number' ? it.closeTightness : 99;
 
-        const isSolidBase2 = (touches >= 3 && tight <= 4.85 && fd <= 5.0 && (toVal >= 2000000 || toVal === 0));
+        const isSolidBase2 = (touches >= 3 && tight <= 3.5 && fd <= 4.5 && (toVal >= 2000000 || toVal === 0));
         const isFreshBase1 = (pct >= 0 && pct <= 20 && fd <= 3.5 && (toVal >= 2000000 || toVal === 0));
         if (isFreshBase1) return 1;
         if (isSolidBase2) return 2;
@@ -231,7 +231,7 @@ for (const [name, p] of candidateMap.entries()) {
             topRankingPicks.push(p);
         }
     } else if (fresh === 1 || fresh === 2) {
-        if (t.fDistVal <= 5.0 && t.fDistVal >= -2.0 && t.tightValNum <= 4.85) {
+        if (t.fDistVal <= 4.5 && t.fDistVal >= -2.0 && t.tightValNum <= 3.5) {
             topRankingPicks.push(p);
         }
     }
