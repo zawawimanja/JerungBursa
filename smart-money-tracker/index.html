@@ -9506,6 +9506,19 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     badgeRow.prepend(badge);
                 } else if (!prevSet.has(name)) {
                     const isReEntry = trackedTrades.has(nameUpper);
+                    
+                    let effF = 0;
+                    const curP = (item && item.price) ? item.price : 0;
+                    if (item) {
+                        const rf = recentFloorMap.get(nameUpper);
+                        const f = item.floorLow || 0;
+                        if (f > 0 && rf > 0 && ((curP - f) / f) > 0.10) effF = Math.max(f, rf);
+                        else effF = f || rf || 0;
+                    }
+                    const floorDist = effF > 0 ? ((curP - effF) / effF) * 100 : 99;
+                    const toVal = (item && (item.turnover || item.rawTurnover)) || 0;
+                    const tight = (item && typeof item.closeTightness === 'number') ? item.closeTightness : 99;
+                    
                     const isTrueNew = (!effF || floorDist <= 3.5) && tight <= 3.5 && toVal >= 1500000;
                     if (isReEntry) {
                         const badge = document.createElement('span');
@@ -10043,15 +10056,20 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             if (displayPicks.length === 0) {
                 let emptyMsg = '⚡ Tiada saham Semicon/Solar yang layak 2+ Konfluens hari ini.';
                 if (htFilter === 'top_ranking') {
-                    emptyMsg = '🏆 Tiada setup <strong>🏆 Top Ranking VVIP</strong> dalam tema Semicon/Solar hari ini (Mematuhi Syarat Emas: Tightness ≤ 4.8%, Lantai ≤ 4.8%, Turnover ≥ RM 1.0M). Sila pilih mod <strong>🌐 All (2+)</strong> di atas.';
+                    emptyMsg = '🏆 Tiada setup <strong>🏆 Top Ranking VVIP</strong> dalam tema Semicon/Solar hari ini (Mematuhi Syarat Emas: Tightness &le; 4.8%, Lantai &le; 4.8%, Turnover &ge; RM 1.0M). Sila pilih mod <strong>🌐 All (2+)</strong> di atas.';
                 } else if (htFilter === 'new_only') {
-                    emptyMsg = '🔥 Tiada signal <strong>🔥 NEW (Day 1)</strong> dalam tema Semicon/Solar hari ini.';
+                    emptyMsg = '🔥 Tiada signal <strong>🔥 NEW (Day 1)</strong> dalam tema Semicon/Solar hari ini. Sila semak tab <strong>⭐ ADD-ON A+</strong> atau <strong>🏆 Top Ranking VVIP</strong>.';
                 } else if (htFilter === 'addon_only') {
-                    emptyMsg = '⭐ Tiada setup <strong>⭐ ADD-ON A+</strong> dalam tema Semicon/Solar hari ini yang menepati syarat lantai rapat ≤ 4.5% & turnover institusi.';
+                    emptyMsg = '⭐ Tiada setup <strong>⭐ ADD-ON A+</strong> dalam tema Semicon/Solar hari ini yang menepati syarat lantai rapat &le; 4.5% & turnover institusi.';
                 } else if (htFilter === 'tier_a_plus') {
                     emptyMsg = '⭐ Tiada setup <strong>🎯 Sniper Only (Tier A+)</strong> dalam tema Semicon/Solar hari ini (Turnover &ge; RM2M, Tightness &le; 3.5%, Lantai &le; 3.5% &amp; Bebas Black Swan). Sila klik butang <strong>🏆 Top Ranking VVIP</strong> atau <strong>🌐 All (2+)</strong> di atas.';
                 }
                 tbody.innerHTML = `<tr><td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">${emptyMsg}</td></tr>`;
+                
+                // Panggil render tracker supaya ia tidak tersangkut bila senarai scanner kosong
+                if (typeof renderHotThemeTracker === 'function') {
+                    renderHotThemeTracker();
+                }
                 return;
             }
 
