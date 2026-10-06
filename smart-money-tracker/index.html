@@ -914,8 +914,8 @@
         <div class="controls">
 
             <div class="history-input">
-                <label for="historyDate" style="color: #a5b4fc; font-size: 0.75rem; font-weight: 700; cursor: pointer;" title="Pilih tarikh hari bekerja Bursa Malaysia (Isnin-Jumaat). Data tersedia: Mei 25 – Okt 1, 2026.">📂 Archive:</label>
-                <input type="date" id="historyDate" min="2026-05-25" max="2026-10-01" title="Pilih tarikh hari bekerja sahaja (Isnin-Jumaat). Hujung minggu &amp; cuti umum tiada data.">
+                <label for="historyDate" style="color: #a5b4fc; font-size: 0.75rem; font-weight: 700; cursor: pointer;" title="Pilih tarikh hari bekerja Bursa Malaysia (Isnin-Jumaat). Data arkib tersedia untuk hari-hari dagangan yang lepas.">📂 Archive:</label>
+                <input type="date" id="historyDate" min="2026-05-25" title="Pilih tarikh hari bekerja sahaja (Isnin-Jumaat). Hujung minggu &amp; cuti umum tiada data.">
                 <button id="loadHistoryBtn" class="btn btn-history">Load</button>
                 <button id="backToLiveBtn" class="btn" onclick="document.getElementById('historyDate').value=''; location.reload();" style="font-size:0.7rem; padding:0.2rem 0.5rem; background:rgba(52,211,153,0.15); border:1px solid rgba(52,211,153,0.4); color:#34d399; border-radius:6px; cursor:pointer; display:none;" title="Kembali ke data live">🔴 Live</button>
             </div>
@@ -11031,6 +11031,10 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
         // Page setup and event listeners
         window.addEventListener('DOMContentLoaded', () => {
+            // Set dynamic max date to today so users can pick any recent date
+            const histDateInput = document.getElementById('historyDate');
+            if (histDateInput) histDateInput.max = new Date().toISOString().slice(0, 10);
+
             renderFreshRiderTracker();
             if (typeof switchHtTrackerSubTab === 'function') switchHtTrackerSubTab('all');
             else if (typeof renderHotThemeTracker === 'function') renderHotThemeTracker();
@@ -11137,7 +11141,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
                     // Cuba GitHub raw dahulu (terbukti 200 OK, elak Vercel 308 redirect issue)
                     const archiveUrls = [
-                        `https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/history/data_${dateVal}.json`,
+                        `https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/history/data_${dateVal}.json?t=${cacheBuster}`,
                         `/history/data_${dateVal}.json?t=${cacheBuster}`,
                         `history/data_${dateVal}.json?t=${cacheBuster}`
                     ];
