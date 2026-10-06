@@ -907,9 +907,10 @@ function buildMessage(now, out) {
         const maxAllowedFloorDist = ((p.touchCount || 0) >= 5 && t.toVal >= 2000000 && t.tightValNum <= 3.5) ? 6.8 : 4.8;
         if (t.fDistVal > maxAllowedFloorDist || t.fDistVal < -2.0) return false;
 
-        // Layak jika Tier A+ Sniper ATAU (ADD-ON A+/Lantai Rapat/Fusion mematuhi Syarat Emas)
+        // SOP: Hanya ⭐ ADD-ON A+ / 🛡️ LANTAI RAPAT (NEW sudah dikendalikan di atas).
+        // Tier A+ & Fusion kekal sebagai cop kualiti (lencana / susunan), bukan pintu masuk.
         const meetsGolden = (t.tightValNum <= 4.8 && t.fDistVal <= maxAllowedFloorDist && t.toVal >= 1000000);
-        return t.isTierAPlus || ((fresh === 1 || fresh === 2 || isFusion) && meetsGolden);
+        return (fresh === 1 || fresh === 2) && meetsGolden;
     }
 
     const frList = candidates.filter(isFreshRiderPick).filter(passesTopRankingFR);
