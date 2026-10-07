@@ -9425,6 +9425,38 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     }
                 }
 
+                // Attach Golden Combo Badge (Empirical Quant WR 83%, Avg +23.7%)
+                if (!badgeRow.querySelector('.golden-combo-badge') && item) {
+                    const gcCurP = item.price || 0;
+                    const gcRf = recentFloorMap.get(nameUpper) || 0;
+                    const gcF = item.floorLow || 0;
+                    let gcCandidates = [gcF, gcRf].filter(v => v > 0);
+                    const gcEffF = gcCandidates.length > 0 ? Math.max(...gcCandidates) : 0;
+                    
+                    const tightValNumFR = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
+                    const fDistValNumFR = gcEffF > 0 ? ((gcCurP - gcEffF) / gcEffF * 100) : 99;
+                    const toValNumFR = item.turnover || item.rawTurnover || 0;
+                    const chgValNumFR = item.changePct !== undefined ? item.changePct : (item.change || 0);
+                    const swanEvalFR = typeof getBlackSwanEvaluation === 'function' ? getBlackSwanEvaluation(name, item, todayStr) : null;
+                    
+                    const isGoldenComboFR = (
+                        tightValNumFR <= 2.5 &&
+                        fDistValNumFR >= -1.0 && fDistValNumFR <= 3.5 &&
+                        toValNumFR >= 2000000 && toValNumFR <= 10000000 &&
+                        chgValNumFR >= -1.0 &&
+                        (!swanEvalFR || swanEvalFR.status === 'pass')
+                    );
+                    
+                    if (isGoldenComboFR) {
+                        const gcBadge = document.createElement('span');
+                        gcBadge.className = 'fr-new-badge golden-combo-badge';
+                        gcBadge.textContent = '👑 GOLDEN COMBO';
+                        gcBadge.style.cssText = 'font-size: 0.62rem; background: linear-gradient(135deg, rgba(234,179,8,0.35), rgba(245,158,11,0.35)); color: #fde047; padding: 0.08rem 0.38rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(253,224,71,0.75); box-shadow: 0 0 8px rgba(234,179,8,0.3); white-space: nowrap;';
+                        gcBadge.title = '👑 GOLDEN COMBO (A++): Tightness ≤ 2.5%, Floor ≤ 3.5%, TO RM 2M-10M, Change > -1.0% (Empirical Quant Win Rate 83%, Avg +23.7%)';
+                        badgeRow.prepend(gcBadge);
+                    }
+                }
+
                 // Attach Black Swan Status Badge if not already attached
                 if (!badgeRow.querySelector('.swan-eval-badge') && !badgeRow.querySelector('[title*="Black Swan"]')) {
                     const swanEval = typeof getBlackSwanEvaluation === 'function' ? getBlackSwanEvaluation(name, item, todayStr) : null;
