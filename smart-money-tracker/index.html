@@ -2111,6 +2111,9 @@
                 <button id="htTrackerTab_floor" onclick="switchHtTrackerSubTab('floor')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.25rem 0.75rem; border-radius: 6px; font-size: 0.75rem; font-weight: 800; cursor: pointer;">
                     🛡️ ADD-ON (Lantai Rapat)
                 </button>
+                <button id="htTrackerTab_golden" onclick="switchHtTrackerSubTab('golden')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.25rem 0.75rem; border-radius: 6px; font-size: 0.75rem; font-weight: 800; cursor: pointer;" title="Backtest untuk signal yang lulus 4 Syarat Emas (A++) pada hari Entry">
+                    👑 Golden Combo (A++)
+                </button>
             </div>
             <div id="htTrackerStats" style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.7rem;"></div>
             <div class="table-responsive">
@@ -7975,7 +7978,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         // ===== SUB-TAB HOT THEME LIVE TRACKER =====
         function switchHtTrackerSubTab(mode) {
             window._htTrackerSubTab = mode;
-            ['all', 'new', 'addon', 'floor'].forEach(m => {
+            ['all', 'new', 'addon', 'floor', 'golden'].forEach(m => {
                 const btn = document.getElementById('htTrackerTab_' + m);
                 if (!btn) return;
                 if (m === mode) {
@@ -7991,6 +7994,10 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         btn.style.background = 'linear-gradient(135deg, rgba(239,68,68,0.3), rgba(249,115,22,0.3))';
                         btn.style.color = '#ff6b4a';
                         btn.style.border = '1.5px solid rgba(249,115,22,0.6)';
+                    } else if (m === 'golden') {
+                        btn.style.background = 'linear-gradient(135deg, rgba(234,179,8,0.35), rgba(245,158,11,0.35))';
+                        btn.style.color = '#fde047';
+                        btn.style.border = '1.5px solid rgba(253,224,71,0.7)';
                     } else {
                         btn.style.background = 'linear-gradient(135deg, rgba(168,85,247,0.3), rgba(56,189,248,0.3))';
                         btn.style.color = '#c4b5fd';
@@ -8015,17 +8022,31 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
             const mode = window._htTrackerSubTab || 'all';
             let data;
+            let isGoldenMode = false;
             if (mode === 'addon') data = window.HOT_THEME_ADDON_TRACKER;
             else if (mode === 'floor') data = window.HOT_THEME_FLOOR_TRACKER;
             else if (mode === 'new') data = window.HOT_THEME_NEW_TRACKER;
+            else if (mode === 'golden') { data = window.HOT_THEME_TRACKER || window.HOT_THEME_ALL_TRACKER; isGoldenMode = true; }
             else data = window.HOT_THEME_TRACKER || window.HOT_THEME_ALL_TRACKER;
 
             if (!data || !Array.isArray(data.trades) || data.trades.length === 0) {
-                const emptyName = mode === 'floor' ? 'ADD-ON Lantai Rapat' : (mode === 'addon' ? 'ADD-ON A+' : (mode === 'new' ? 'Hot Theme NEW' : 'Semua'));
+                const emptyName = mode === 'golden' ? 'Golden Combo' : (mode === 'floor' ? 'ADD-ON Lantai Rapat' : (mode === 'addon' ? 'ADD-ON A+' : (mode === 'new' ? 'Hot Theme NEW' : 'Semua')));
                 tbody.innerHTML = `<tr><td colspan="13" style="text-align: center; color: var(--text-secondary); padding: 1.2rem;">Tiada data penjejak ${emptyName} lagi — akan dijana pada kemaskini data seterusnya.</td></tr>`;
                 return;
             }
-            const s = data.summary || {};
+            
+            let s = { ...(data.summary || {}) };
+            let tradesList = data.trades || [];
+            if (isGoldenMode) {
+                tradesList = tradesList.filter(t => t.isGoldenCombo === true);
+                const openTrades = tradesList.filter(t => t.status === 'OPEN');
+                const closedTrades = tradesList.filter(t => t.status !== 'OPEN');
+                s.openCount = openTrades.length;
+                s.closedCount = closedTrades.length;
+                s.openPnl = openTrades.reduce((acc, t) => acc + (t.finalGain || 0), 0);
+                s.closedPnl = closedTrades.reduce((acc, t) => acc + (t.finalGain || 0), 0);
+                s.totalPnlNow = s.openPnl + s.closedPnl;
+            }
             const rootTracker = window.HOT_THEME_TRACKER || {};
             const bt = rootTracker.backtest || {};
 
@@ -8068,7 +8089,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 }
             }
 
-            const modeLabel = mode === 'floor' ? '🛡️ ADD-ON (Lantai Rapat ≤ 3.5%)' : (mode === 'addon' ? '⭐ ADD-ON A+ (Fresh Base ≤ 20%)' : (mode === 'new' ? '🔥 NEW Signals (Day 1)' : '🌟 ALL Signals (Unified Portfolio)'));
+            const modeLabel = mode === 'golden' ? '👑 Golden Combo (A++)' : (mode === 'floor' ? '🛡️ ADD-ON (Lantai Rapat ≤ 3.5%)' : (mode === 'addon' ? '⭐ ADD-ON A+ (Fresh Base ≤ 20%)' : (mode === 'new' ? '🔥 NEW Signals (Day 1)' : '🌟 ALL Signals (Unified Portfolio)')));
             if (metaEl) metaEl.textContent = `${s.dataDays || '-'} days of data · Mode: ${modeLabel} · Generated ${new Date(s.generatedAt || Date.now()).toLocaleString('en-US')}`;
 
             const entryCapital = 2000;
@@ -8094,7 +8115,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
             // Render trades table
             // Susun: Entry Date TERKINI di atas sekali (chronological latest first).
-            const sortedTrades = [...data.trades].sort((a, b) => {
+            const sortedTrades = [...tradesList].sort((a, b) => {
                 const dateCmp = (b.entryDate || '').localeCompare(a.entryDate || '');
                 if (dateCmp !== 0) return dateCmp;
                 const aOpen = a.status === 'OPEN' ? 0 : 1;
