@@ -127,9 +127,9 @@ function isFreshRiderPick(item, dateStr) {
     const pb = item.pullback ?? 99;
     if (pb > 10.0) return false;
 
-    // Minimum Turnover jerung (RM 1.5M min)
+    // Allow early breakouts before Jerung fully injects capital
     const toVal = item.turnover || item.rawTurnover || 0;
-    if (toVal < 1500000) return false;
+    // Removed toVal < 1.5M restriction to catch early explosive signals (BUSCAP/EXSIMHB)
 
     // Anti-Debut Dump Shield (Rule 9 SOP: wait min 15 days or at least 3 floor touches)
     const age = getIpoDaysAge(item, dateStr);

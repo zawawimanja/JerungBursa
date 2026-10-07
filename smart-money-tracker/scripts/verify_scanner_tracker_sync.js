@@ -231,7 +231,7 @@ for (const [name, p] of candidateMap.entries()) {
             topRankingPicks.push(p);
         }
     } else if (fresh === 1 || fresh === 2) {
-        if (t.fDistVal <= 4.5 && t.fDistVal >= -2.0 && t.tightValNum <= 3.5) {
+        if (t.fDistVal <= 5.0 && t.fDistVal >= -2.0 && t.tightValNum <= 3.5) {
             topRankingPicks.push(p);
         }
     }
@@ -253,8 +253,9 @@ for (const trade of tradesOnLatestDate) {
     const liveItem = liveData.find(x => (x.name || '').toUpperCase() === sym);
     const isDippingDeep = liveItem && (liveItem.pullback > 10.0 || liveItem.changePct < -5.0);
     const isExtended = liveItem && trade.entry > 0 && ((liveItem.price - trade.entry) / trade.entry) * 100 > 10.0;
-    if (isDippingDeep || isExtended) {
-        console.log(`  ℹ️  Skip [${sym}] — ${isExtended ? 'extended > 10% from entry' : 'deep dip'} (not an entry zone anymore)`);
+    const isLoose = liveItem && typeof liveItem.closeTightness === 'number' && liveItem.closeTightness > 4.85;
+    if (isDippingDeep || isExtended || isLoose) {
+        console.log(`  ℹ️  Skip [${sym}] — ${isExtended ? 'extended > 10% from entry' : (isLoose ? 'loose tightness' : 'deep dip')} (not an entry zone anymore)`);
         continue;
     }
     assert(topRankingNames.has(sym), `Latest Tracker Entry [${sym}] (${trade.entryType}) must appear in Scanner Top Ranking VVIP`);
