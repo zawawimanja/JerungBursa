@@ -270,24 +270,33 @@ for (const day of dayList) {
         if (openFR[name] || tradesFR.some(t => t.name.toUpperCase() === name)) continue;
         it.effFloor = dynamicFloor(name, it.price, it.floorLow);
         if (!isFreshRiderPick(it, day.date)) continue;
+        
+        const tight = typeof it.closeTightness === 'number' ? it.closeTightness : 99;
+        const effF = it.effFloor;
+        const fDist = effF > 0 ? ((it.price - effF) / effF * 100) : 99;
+        const toVal = it.turnover || it.rawTurnover || 0;
+        const chgVal = typeof it.changePct === 'number' ? it.changePct : ((it.change && it.price) ? (it.change / (it.price - it.change)) * 100 : 0);
+        const isGC = tight <= 2.5 && fDist >= -1.0 && fDist <= 3.5 && toVal >= 2000000 && toVal <= 10000000 && chgVal >= -1.0;
+
         const t = {
             name: canonName(it.name),
             entryType: '🔥 NEW',
             entryDate: day.date,
             entry: +it.price.toFixed(3),
-            entryFloor: +dynamicFloor(name, it.price, it.floorLow || it.price * 0.95).toFixed(3),
-            currentFloor: +dynamicFloor(name, it.price, it.floorLow || it.price * 0.95).toFixed(3),
+            entryFloor: +effF.toFixed(3),
+            currentFloor: +effF.toFixed(3),
             currentPrice: +it.price.toFixed(3),
             high: +it.price.toFixed(3),
             highDate: day.date,
             maxGain: 0,
             finalGain: 0,
-            day1ChangePct: +(typeof it.changePct === 'number' ? it.changePct : ((it.change && it.price) ? (it.change / (it.price - it.change)) * 100 : 0)).toFixed(2),
+            day1ChangePct: +chgVal.toFixed(2),
             days: 1,
             lastDate: day.date,
             status: 'OPEN',
             ipoYear: it.ipoYear || null,
             sector: it.sector || '',
+            isGoldenCombo: isGC,
         };
         openFR[name] = t;
         tradesFR.push(t);
@@ -398,6 +407,8 @@ for (const day of dayList) {
         // Selaras 100% dengan logik scanner (index.html / buy_alert.js)
         const isFloorAddon = (isSolidBase2 && !isFreshBase1);
         const entryType = isFloorAddon ? '🛡️ ADD-ON (LANTAI RAPAT)' : '⭐ ADD-ON A+';
+        const chgVal = typeof it.changePct === 'number' ? it.changePct : ((it.change && it.price) ? (it.change / (it.price - it.change)) * 100 : 0);
+        const isGC = tight <= 2.5 && fDist >= -1.0 && fDist <= 3.5 && toVal >= 2000000 && toVal <= 10000000 && chgVal >= -1.0;
 
         const t = {
             id: `${name}_${day.date}_ADDON`,
@@ -412,12 +423,13 @@ for (const day of dayList) {
             highDate: day.date,
             maxGain: 0,
             finalGain: 0,
-            day1ChangePct: +(typeof it.changePct === 'number' ? it.changePct : ((it.change && it.price) ? (it.change / (it.price - it.change)) * 100 : 0)).toFixed(2),
+            day1ChangePct: +chgVal.toFixed(2),
             days: 1,
             lastDate: day.date,
             status: 'OPEN',
             ipoYear: it.ipoYear || null,
             sector: it.sector || '',
+            isGoldenCombo: isGC,
         };
         openAddOn.push(t);
         tradesAddOn.push(t);
