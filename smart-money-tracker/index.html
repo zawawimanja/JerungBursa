@@ -901,12 +901,24 @@
                 </span>
                 <span id="navTotalPnlBadge" style="font-size: 1.15rem; font-weight: 900; color: #34d399; text-shadow: 0 0 12px rgba(52, 211, 153, 0.8);">—</span>
                 <span id="navTotalRmBadge" style="font-size: 0.88rem; font-weight: 900; color: #fde047; text-shadow: 0 0 10px rgba(253, 224, 71, 0.6); white-space: nowrap;">—</span>
-                <div style="display: inline-flex; gap: 0.35rem; font-size: 0.78rem; border-left: 1.5px solid rgba(255,255,255,0.25); padding-left: 0.6rem; align-items: center;">
-                    <span id="navFrTotalPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('all');" style="color: #34d399; font-weight: 900; font-size: 0.78rem; cursor: pointer; padding: 0.15rem 0.45rem; background: rgba(52, 211, 153, 0.18); border: 1px solid rgba(52,211,153,0.45); border-radius: 6px; transition: all 0.2s;" onmouseover="this.style.background='rgba(52,211,153,0.35)'" onmouseout="this.style.background='rgba(52,211,153,0.18)'" title="Total FR Unified (NEW + A+ + LANTAI)">FR TOTAL: —</span>
-                    <span id="navFrPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('new');" style="color: #fde047; font-weight: 900; font-size: 0.78rem; cursor: pointer; padding: 0.15rem 0.42rem; background: rgba(253, 224, 71, 0.15); border: 1px solid rgba(253,224,71,0.3); border-radius: 6px; transition: all 0.2s;" onmouseover="this.style.background='rgba(253,224,71,0.35)'" onmouseout="this.style.background='rgba(253,224,71,0.15)'" title="Click to view Fresh Rider (Day 1 NEW) Live Tracker">NEW: —</span>
-                    <span id="navAddonPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('addon');" style="color: #67e8f9; font-weight: 900; font-size: 0.78rem; cursor: pointer; padding: 0.15rem 0.42rem; background: rgba(103, 232, 249, 0.15); border: 1px solid rgba(103,232,249,0.3); border-radius: 6px; transition: all 0.2s;" onmouseover="this.style.background='rgba(103,232,249,0.35)'" onmouseout="this.style.background='rgba(103,232,249,0.15)'" title="Click to view ADD-ON A+ (Fresh Base ≤ 20%) Live Tracker">A+: —</span>
-                    <span id="navFloorPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('floor');" style="color: #c4b5fd; font-weight: 900; font-size: 0.78rem; cursor: pointer; padding: 0.15rem 0.42rem; background: rgba(168, 85, 247, 0.15); border: 1px solid rgba(168,85,247,0.3); border-radius: 6px; transition: all 0.2s;" onmouseover="this.style.background='rgba(168,85,247,0.35)'" onmouseout="this.style.background='rgba(168,85,247,0.15)'" title="Click to view ADD-ON (Lantai Rapat) Live Tracker">LANTAI: —</span>
-                    <span id="navHtPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('ht');" style="color: #cbd5e1; font-weight: 900; font-size: 0.78rem; cursor: pointer; padding: 0.15rem 0.42rem; background: rgba(148, 163, 184, 0.15); border: 1px solid rgba(148,163,184,0.3); border-radius: 6px; transition: all 0.2s;" onmouseover="this.style.background='rgba(148,163,184,0.35)'" onmouseout="this.style.background='rgba(148,163,184,0.15)'" title="Click to view Hot Theme Live Tracker">HT: —</span>
+                <div style="display: inline-flex; gap: 0.5rem; font-size: 0.72rem; border-left: 1.5px solid rgba(255,255,255,0.25); padding-left: 0.6rem; align-items: center; flex-wrap: wrap;">
+                    <!-- FR GROUP -->
+                    <div style="display: inline-flex; align-items: center; gap: 0.25rem; background: rgba(52,211,153,0.08); border: 1px solid rgba(52,211,153,0.25); padding: 0.15rem 0.35rem; border-radius: 8px;">
+                        <span style="color: #34d399; font-weight: 900; margin-right: 0.2rem; text-shadow: 0 0 8px rgba(52,211,153,0.4);">🔥 FR :</span>
+                        <span id="navFrTotalPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('all');" style="color: #34d399; font-weight: 800; cursor: pointer; padding: 0.1rem 0.4rem; background: rgba(52,211,153,0.15); border-radius: 5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(52,211,153,0.3)'" onmouseout="this.style.background='rgba(52,211,153,0.15)'" title="Total FR Unified">ALL: —</span>
+                        <span id="navFrPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('new');" style="color: #fde047; font-weight: 800; cursor: pointer; padding: 0.1rem 0.4rem; background: rgba(253,224,71,0.1); border-radius: 5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(253,224,71,0.25)'" onmouseout="this.style.background='rgba(253,224,71,0.1)'" title="Fresh Rider (Day 1 NEW)">NEW: —</span>
+                        <span id="navAddonPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('addon');" style="color: #67e8f9; font-weight: 800; cursor: pointer; padding: 0.1rem 0.4rem; background: rgba(103,232,249,0.1); border-radius: 5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(103,232,249,0.25)'" onmouseout="this.style.background='rgba(103,232,249,0.1)'" title="ADD-ON A+ (Fresh Base ≤ 20%)">A+: —</span>
+                        <span id="navFloorPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('floor');" style="color: #c4b5fd; font-weight: 800; cursor: pointer; padding: 0.1rem 0.4rem; background: rgba(168,85,247,0.1); border-radius: 5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(168,85,247,0.25)'" onmouseout="this.style.background='rgba(168,85,247,0.1)'" title="ADD-ON (Lantai Rapat)">LANTAI: —</span>
+                    </div>
+
+                    <!-- HT GROUP -->
+                    <div style="display: inline-flex; align-items: center; gap: 0.25rem; background: rgba(168,85,247,0.08); border: 1px solid rgba(168,85,247,0.25); padding: 0.15rem 0.35rem; border-radius: 8px;">
+                        <span style="color: #c4b5fd; font-weight: 900; margin-right: 0.2rem; text-shadow: 0 0 8px rgba(168,85,247,0.4);">⚡ HT :</span>
+                        <span id="navHtPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('ht');" style="color: #c4b5fd; font-weight: 800; cursor: pointer; padding: 0.1rem 0.4rem; background: rgba(168,85,247,0.15); border-radius: 5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(168,85,247,0.3)'" onmouseout="this.style.background='rgba(168,85,247,0.15)'" title="Hot Theme Unified">ALL: —</span>
+                        <span id="navHtNewPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('ht');" style="color: #fde047; font-weight: 800; cursor: pointer; padding: 0.1rem 0.4rem; background: rgba(253,224,71,0.1); border-radius: 5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(253,224,71,0.25)'" onmouseout="this.style.background='rgba(253,224,71,0.1)'" title="Hot Theme (Day 1 NEW)">NEW: —</span>
+                        <span id="navHtAddonPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('ht');" style="color: #67e8f9; font-weight: 800; cursor: pointer; padding: 0.1rem 0.4rem; background: rgba(103,232,249,0.1); border-radius: 5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(103,232,249,0.25)'" onmouseout="this.style.background='rgba(103,232,249,0.1)'" title="Hot Theme A+">A+: —</span>
+                        <span id="navHtFloorPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('ht');" style="color: #cbd5e1; font-weight: 800; cursor: pointer; padding: 0.1rem 0.4rem; background: rgba(148,163,184,0.15); border-radius: 5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(148,163,184,0.3)'" onmouseout="this.style.background='rgba(148,163,184,0.15)'" title="Hot Theme (Lantai Rapat)">LANTAI: —</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1294,15 +1306,15 @@
                                 <h2 style="margin: 0; font-size: 1.3rem; color: #fde047; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem;">Fresh VVIP Rider</h2>
                                 <span id="frHeadBadge" style="font-size: 0.7rem; background: rgba(234, 179, 8, 0.2); color: #fde047; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(234, 179, 8, 0.3); white-space: nowrap;">🎯 BACKTEST: <span id="frHeadBadgeSignals">—</span> signals | WR <span id="frHeadBadgeWr">—</span>% | <span id="frHeadBadgeAvg">—</span>%/trade</span>
                             </div>
-                            <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
-                                Fresh IPO (2025+) + VVIP + <strong style="color:#fde047;">pullback ≤ 10% from ATH</strong> + tight price action (tight ≤ 5%). Backtested (<span id="frHeadBtDays">—</span> days, <span id="frHeadBtRange">—</span>): <strong style="color:#34d399;"><span id="frHeadBtSignals">—</span> signals, Win Rate <span id="frHeadBtWr">—</span>%, avg <span id="frHeadBtAvg">—</span>%/trade, worst loss <span id="frHeadBtWorst">—</span>%</strong>. Exit: <strong style="color:#34d399;">HYBRID TRAILING STOP</strong> — SL high × 0.80, tightens to high × 0.90 after +20% gain locked. Recalculated automatically daily. 🔥 Historical gainers: <span id="frHeadMovers">—</span>
+                            <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8; line-height: 1.4;">
+                                <strong style="color:#fde047;">Fresh Rider Core Filters:</strong> 🆕 <strong style="color:#e2e8f0;">Fresh IPO (2025+)</strong> • 🐋 <strong style="color:#38bdf8;">VVIP Accumulation</strong> (Turnover ≥ RM 2.0M) • 🛡️ <strong style="color:#34d399;">Anti-Debut Dump</strong> (Age > 15 days OR ≥ 3 floor touches) • 🦢 <strong style="color:#c084fc;">Black Swan Shield</strong> (Free from QR & Ex-Div Traps) • 🎯 <strong style="color:#fde047;">Ultra-Tight Base</strong> (Risk ≤ 10%, Tightness ≤ 5%). Scanned continuously.
                             </p>
                             <details style="margin: 0.5rem 0 0 0; font-size: 0.78rem; color: #fbbf24; background: rgba(245,158,11,0.08); border: 1px dashed rgba(245,158,11,0.35); border-radius: 8px; padding: 0.45rem 0.7rem; line-height: 1.5;">
-                                <summary style="cursor: pointer; font-weight: 800; color: #fde047; outline: none; user-select: none;">⏰ SOP & Entry Strategy (Golden Combo & T+1 Rules) — click to expand</summary>
+                                <summary style="cursor: pointer; font-weight: 800; color: #fde047; outline: none; user-select: none;">⏰ SOP & Execution Rules (Golden Combo & T+1) — click to expand</summary>
                                 <div style="margin-top: 0.4rem;">
-                                    Check <strong style="color:#fde047;">AFTER MARKET CLOSE (5:00–6:00 PM)</strong> — data represents closing prices. <strong style="color:#34d399;">Entry is SAFE as long as counter remains on the list (still qualifies: tight base near ATH)</strong>.<br>
-                                    👑 <strong style="color:#fde047;">GOLDEN COMBO FORMULA (Win Rate 83%, Avg +23.7%):</strong> Tightness ≤ 2.5% + Floor Distance ≤ 3.5% + Turnover RM 2.0M–10.0M + Candle Change &gt; -1.0%. Applies to both 🔥 NEW and ⭐ ADD-ON A+ / LANTAI RAPAT setups.<br>
-                                    ⏱️ <strong style="color:#38bdf8;">T+1 EXECUTION SOP:</strong> Empirical data shows 64% of counters retest at or below signal close price. <strong>DO NOT chase market open gap-ups (9:00 AM)</strong>. Place <strong>Limit Orders at signal close (or 1 bid lower)</strong> during pre-market 8:30–9:00 AM for maximum edge!
+                                    ⚡ <strong style="color:#fde047;">Check AFTER 5:00 PM:</strong> Entry is SAFE as long as counter remains on the list.<br>
+                                    👑 <strong style="color:#fde047;">GOLDEN COMBO:</strong> Tightness ≤ 2.5% + Floor Dist ≤ 3.5% + Vol RM 2.0M–10.0M + Candle &gt; -1.0%.<br>
+                                    ⏱️ <strong style="color:#38bdf8;">T+1 LIMIT ORDER:</strong> Do NOT chase gap-ups. Queue Limit Order at signal close price during 8:30-9:00 AM.
                                 </div>
                             </details>
                         </div>
@@ -1826,12 +1838,17 @@
                                 <h2 style="margin: 0; font-size: 1.3rem; color: #c4b5fd; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; display: inline-flex; align-items: center; gap: 0.5rem;">Hot Theme Rider: Semicon & Solar</h2>
                                 <span id="htHeadBadge" style="font-size: 0.7rem; background: rgba(168, 85, 247, 0.2); color: #c4b5fd; padding: 0.15rem 0.5rem; border-radius: 20px; font-weight: 800; border: 1px solid rgba(168, 85, 247, 0.3); white-space: nowrap;">🎯 BACKTEST: <span id="htHeadBadgeSignals">—</span> signals | WR <span id="htHeadBadgeWr">—</span>% | <span id="htHeadBadgeAvg">—</span>%/trade</span>
                             </div>
-                            <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8;">
-                                <strong style="color:#c4b5fd;">Semiconductor & Solar/RE</strong> counters qualifying <strong style="color:#38bdf8;">Confluence 2+ strategies</strong> (Jerung Radar / VCP / Trend Rider / Early Spring / Bottom Fishing). Backtested (<span id="htHeadBtDays">—</span> days, <span id="htHeadBtRange">—</span>): <strong style="color:#34d399;"><span id="htHeadBtSignals">—</span> signals, Win Rate <span id="htHeadBtWr">—</span>%, avg <span id="htHeadBtAvg">—</span>%/trade, total <span id="htHeadBtTotal">—</span>, max loss <span id="htHeadBtWorst">—</span></strong>.
+                            <p style="margin: 0.25rem 0 0 0; font-size: 0.8rem; color: #94a3b8; line-height: 1.4;">
+                                <strong style="color:#c4b5fd;">Hot Theme Core Filters:</strong> 🏭 <strong style="color:#e2e8f0;">Active Thematic</strong> (Semicon/Solar) • ⚡ <strong style="color:#38bdf8;">Confluence Signal</strong> (Turnover ≥ RM 2.0M) • 🛡️ <strong style="color:#34d399;">Anti-Debut Dump</strong> (Age > 15 days OR ≥ 2 floor touches) • 🦢 <strong style="color:#c084fc;">Black Swan Shield</strong> (Free from QR & Ex-Div Traps) • 🎯 <strong style="color:#fde047;">Ultra-Tight Base</strong> (Risk ≤ 10%, Tightness ≤ 5%). Scanned continuously.
                             </p>
-                            <p style="margin: 0.5rem 0 0 0; font-size: 0.78rem; color: #fbbf24; background: rgba(245,158,11,0.08); border: 1px dashed rgba(245,158,11,0.35); border-radius: 8px; padding: 0.5rem 0.7rem; line-height: 1.5;">
-                                ⚡ <strong style="color:#c4b5fd;">SOP: Check AFTER MARKET CLOSE (5:00–6:00 PM)</strong> — data reflects daily closing prices. Current active themes (Aug 2026): <strong style="color:#38bdf8;">Semicon (AI/Data Center boom) & Solar (RE push)</strong>. Review monthly — if new thematic stocks dominate top volume, add to watchlist.
-                            </p>
+                            <details style="margin: 0.5rem 0 0 0; font-size: 0.78rem; color: #fbbf24; background: rgba(245,158,11,0.08); border: 1px dashed rgba(245,158,11,0.35); border-radius: 8px; padding: 0.45rem 0.7rem; line-height: 1.5;">
+                                <summary style="cursor: pointer; font-weight: 800; color: #c4b5fd; outline: none; user-select: none;">⏰ SOP & Execution Rules (Golden Combo & T+1) — click to expand</summary>
+                                <div style="margin-top: 0.4rem;">
+                                    ⚡ <strong style="color:#c4b5fd;">Check AFTER 5:00 PM:</strong> Active Themes: <strong style="color:#38bdf8;">Semicon (AI) & Solar (RE)</strong>. Review monthly.<br>
+                                    👑 <strong style="color:#fde047;">GOLDEN COMBO:</strong> Tightness ≤ 2.5% + Floor Dist ≤ 3.5% + Vol RM 2.0M–10.0M + Candle &gt; -1.0%.<br>
+                                    ⏱️ <strong style="color:#38bdf8;">T+1 LIMIT ORDER:</strong> Do NOT chase gap-ups. Queue Limit Order at signal close price during 8:30-9:00 AM.
+                                </div>
+                            </details>
                         </div>
                     </div>
                     <button onclick="toggleCardCollapse('htScannerBody', this)" class="btn" style="background: rgba(15,23,42,0.85); border: 1.5px solid rgba(196,181,253,0.5); color: #c4b5fd; padding: 0.25rem 0.65rem; border-radius: 8px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.35rem; transition: all 0.2s;" onmouseover="this.style.background='rgba(196,181,253,0.2)';" onmouseout="this.style.background='rgba(15,23,42,0.85)';">
@@ -8171,14 +8188,23 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const frData = window.FRESH_RIDER_TRACKER && window.FRESH_RIDER_TRACKER.summary;
             const addOnData = window.ADD_ON_TRACKER && window.ADD_ON_TRACKER.summary;
             const floorData = window.FLOOR_ADDON_TRACKER && window.FLOOR_ADDON_TRACKER.summary;
+            
             const htData = window.HOT_THEME_TRACKER && window.HOT_THEME_TRACKER.summary;
+            const htNewData = window.HOT_THEME_NEW_TRACKER && window.HOT_THEME_NEW_TRACKER.summary;
+            const htAddonData = window.HOT_THEME_ADDON_TRACKER && window.HOT_THEME_ADDON_TRACKER.summary;
+            const htFloorData = window.HOT_THEME_FLOOR_TRACKER && window.HOT_THEME_FLOOR_TRACKER.summary;
+            
             if (!frData && !addOnData && !floorData && !htData) return;
 
             const frOnlyPnl = frData ? (typeof frData.totalPnlNow === 'number' ? frData.totalPnlNow : (frData.openPnl || 0)) : 0;
             const addOnPnl = addOnData ? (typeof addOnData.totalPnlNow === 'number' ? addOnData.totalPnlNow : (addOnData.openPnl || 0)) : 0;
             const floorPnl = floorData ? (typeof floorData.totalPnlNow === 'number' ? floorData.totalPnlNow : (floorData.openPnl || 0)) : 0;
             const unifiedFrPnl = allFrData ? (typeof allFrData.totalPnlNow === 'number' ? allFrData.totalPnlNow : (allFrData.openPnl || 0)) : (frOnlyPnl + addOnPnl + floorPnl);
+            
             const htPnl = htData ? (typeof htData.totalPnlNow === 'number' ? htData.totalPnlNow : (htData.openPnl || 0)) : 0;
+            const htNewPnl = htNewData ? (typeof htNewData.totalPnlNow === 'number' ? htNewData.totalPnlNow : (htNewData.openPnl || 0)) : 0;
+            const htAddonPnl = htAddonData ? (typeof htAddonData.totalPnlNow === 'number' ? htAddonData.totalPnlNow : (htAddonData.openPnl || 0)) : 0;
+            const htFloorPnl = htFloorData ? (typeof htFloorData.totalPnlNow === 'number' ? htFloorData.totalPnlNow : (htFloorData.openPnl || 0)) : 0;
 
             const grandTotal = unifiedFrPnl + htPnl;
             const entryCapital = 2000;
@@ -8203,14 +8229,21 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const navAddon = document.getElementById('navAddonPnlBadge');
             const navFloor = document.getElementById('navFloorPnlBadge');
             const navHt = document.getElementById('navHtPnlBadge');
+            const navHtNew = document.getElementById('navHtNewPnlBadge');
+            const navHtAddon = document.getElementById('navHtAddonPnlBadge');
+            const navHtFloor = document.getElementById('navHtFloorPnlBadge');
 
             if (navTotal) navTotal.textContent = `${grandTotal >= 0 ? '+' : ''}${grandTotal.toFixed(1)}%`;
             if (navTotalRm) navTotalRm.textContent = `(${grandTotalRm >= 0 ? '+' : '-'}RM ${Math.abs(grandTotalRm).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 })})`;
-            if (navFrTotal) navFrTotal.textContent = `FR TOTAL: ${unifiedFrPnl >= 0 ? '+' : ''}${unifiedFrPnl.toFixed(1)}% (${fmtCompactRm(unifiedFrRm)})`;
-            if (navFr) navFr.textContent = `NEW: ${frOnlyPnl >= 0 ? '+' : ''}${frOnlyPnl.toFixed(1)}% (${fmtCompactRm(frOnlyRm)})`;
-            if (navAddon) navAddon.textContent = `A+: ${addOnPnl >= 0 ? '+' : ''}${addOnPnl.toFixed(1)}% (${fmtCompactRm(addOnRm)})`;
-            if (navFloor) navFloor.textContent = `LANTAI: ${floorPnl >= 0 ? '+' : ''}${floorPnl.toFixed(1)}% (${fmtCompactRm(floorRm)})`;
-            if (navHt) navHt.textContent = `HT: ${htPnl >= 0 ? '+' : ''}${htPnl.toFixed(1)}% (${fmtCompactRm(htRm)})`;
+            if (navFrTotal) navFrTotal.textContent = `ALL: ${unifiedFrPnl >= 0 ? '+' : ''}${unifiedFrPnl.toFixed(1)}% (${fmtCompactRm(unifiedFrRm)})`;
+            if (navFr) navFr.textContent = `NEW: ${frOnlyPnl >= 0 ? '+' : ''}${frOnlyPnl.toFixed(1)}%`;
+            if (navAddon) navAddon.textContent = `A+: ${addOnPnl >= 0 ? '+' : ''}${addOnPnl.toFixed(1)}%`;
+            if (navFloor) navFloor.textContent = `LANTAI: ${floorPnl >= 0 ? '+' : ''}${floorPnl.toFixed(1)}%`;
+            
+            if (navHt) navHt.textContent = `ALL: ${htPnl >= 0 ? '+' : ''}${htPnl.toFixed(1)}% (${fmtCompactRm(htRm)})`;
+            if (navHtNew) navHtNew.textContent = `NEW: ${htNewPnl >= 0 ? '+' : ''}${htNewPnl.toFixed(1)}%`;
+            if (navHtAddon) navHtAddon.textContent = `A+: ${htAddonPnl >= 0 ? '+' : ''}${htAddonPnl.toFixed(1)}%`;
+            if (navHtFloor) navHtFloor.textContent = `LANTAI: ${htFloorPnl >= 0 ? '+' : ''}${htFloorPnl.toFixed(1)}%`;
         }
         window.updateTopTrackerPnlBadge = updateTopTrackerPnlBadge;
         try { updateTopTrackerPnlBadge(); } catch(e) {}
