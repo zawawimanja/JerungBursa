@@ -1863,6 +1863,7 @@
                         <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
                             <span style="font-weight: 900; color: #c4b5fd; margin-right: 0.3rem;">🎯 Radar Display Mode:</span>
                             <button id="htFilterTop" onclick="setHotThemeFilter('top_ranking')" class="btn" style="background: linear-gradient(135deg, rgba(234,179,8,0.4), rgba(168,85,247,0.4)); color: #fde047; border: 1px solid rgba(253,224,71,0.8); padding: 0.22rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;" title="Filter Top Grade AAA+ choices ONLY (Mematuhi Syarat Emas)">🏆 Top Ranking VVIP</button>
+                            <button id="htFilterGolden" onclick="setHotThemeFilter('golden_combo')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.22rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;" title="Filter GOLDEN COMBO (A++): Tightness ≤ 2.5%, Floor ≤ 3.5%, TO RM 2M–10M, Change > -1.0%">👑 Golden Combo (A++)</button>
                             <button id="htFilterNew" onclick="setHotThemeFilter('new_only')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.22rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;" title="Filter NEW Signals (Day 1) Fresh dari tapak">🔥 NEW (Day 1)</button>
                             <button id="htFilterAddon" onclick="setHotThemeFilter('addon_only')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.22rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;" title="Filter ADD-ON A+ Sahaja">⭐ ADD-ON A+</button>
                             <button id="htFilterTierAPlus" onclick="setHotThemeFilter('tier_a_plus')" class="btn" style="background: rgba(15,23,42,0.8); color: #94a3b8; border: 1px solid rgba(148,163,184,0.3); padding: 0.22rem 0.65rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; transition: all 0.2s;" title="Sniper Only (Tier A+)">🎯 Sniper Only</button>
@@ -9876,6 +9877,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         function setHotThemeFilter(mode) {
             window._hotThemeFilterMode = mode;
             const btnTop = document.getElementById('htFilterTop');
+            const btnGolden = document.getElementById('htFilterGolden');
             const btnNew = document.getElementById('htFilterNew');
             const btnAddon = document.getElementById('htFilterAddon');
             const btnTierAPlus = document.getElementById('htFilterTierAPlus');
@@ -9887,12 +9889,17 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 btn.style.borderColor = 'rgba(148,163,184,0.3)';
                 btn.style.fontWeight = '700';
             };
-            [btnTop, btnNew, btnAddon, btnTierAPlus, btnAll].forEach(resetBtn);
+            [btnTop, btnGolden, btnNew, btnAddon, btnTierAPlus, btnAll].forEach(resetBtn);
             if (mode === 'top_ranking' && btnTop) {
                 btnTop.style.background = 'linear-gradient(135deg, rgba(234,179,8,0.3), rgba(168,85,247,0.3))';
                 btnTop.style.color = '#fde047';
                 btnTop.style.borderColor = 'rgba(253,224,71,0.6)';
                 btnTop.style.fontWeight = '800';
+            } else if (mode === 'golden_combo' && btnGolden) {
+                btnGolden.style.background = 'linear-gradient(135deg, rgba(234,179,8,0.35), rgba(245,158,11,0.35))';
+                btnGolden.style.color = '#fde047';
+                btnGolden.style.borderColor = 'rgba(253,224,71,0.7)';
+                btnGolden.style.fontWeight = '900';
             } else if (mode === 'new_only' && btnNew) {
                 btnNew.style.background = 'linear-gradient(135deg, rgba(239,68,68,0.3), rgba(249,115,22,0.3))';
                 btnNew.style.color = '#ff6b4a';
@@ -10185,6 +10192,19 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     // Tier A+ & Fusion kekal sebagai cop kualiti (lencana / susunan), bukan pintu masuk.
                     const meetsGolden = (t.tightValNum <= 4.8 && t.fDistVal <= maxAllowedFloorDist && t.toVal >= 1000000);
                     return (fresh === 1 || fresh === 2) && meetsGolden;
+                });
+            } else if (htFilter === 'golden_combo') {
+                displayPicks = picks.filter(p => {
+                    const t = getTierOfHT(p.item);
+                    const swanEvalHT = typeof getBlackSwanEvaluation === 'function' ? getBlackSwanEvaluation(p.item.name, p.item, curRefDateHT) : null;
+                    const chgValHT = p.item.changePct !== undefined ? p.item.changePct : (p.item.change || 0);
+                    return (
+                        t.tightValNum <= 2.5 &&
+                        t.fDistVal >= -1.0 && t.fDistVal <= 3.5 &&
+                        t.toVal >= 2000000 && t.toVal <= 10000000 &&
+                        chgValHT >= -1.0 &&
+                        (!swanEvalHT || swanEvalHT.status === 'pass')
+                    );
                 });
             } else if (htFilter === 'new_only') {
                 displayPicks = picks.filter(p => htFreshness(p.item) === 0);
