@@ -7523,9 +7523,9 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 statsEl.innerHTML = [
                     { label: 'OPEN Positions', val: s.openCount ?? 0, color: '#34d399' },
                     { label: 'CLOSED Positions', val: s.closedCount ?? 0, color: '#94a3b8' },
-                    { label: '🔒 Realized PnL (Closed)', val: (s.closedPnl >= 0 ? '+' : '') + (s.closedPnl ?? 0) + '%', sub: fmtRm(closedRm), color: (s.closedPnl || 0) >= 0 ? '#34d399' : '#f87171' },
-                    { label: '🟢 Floating PnL (Open)', val: (s.openPnl >= 0 ? '+' : '') + (s.openPnl ?? 0) + '%', sub: fmtRm(openRm), color: '#34d399' },
-                    { label: '📊 Total Return (Net %)', val: (s.totalPnlNow >= 0 ? '+' : '') + (s.totalPnlNow ?? 0) + '%', sub: fmtRm(totalRm), color: '#fde047' },
+                    { label: '🔒 Realized PnL (Closed)', val: (s.closedPnl >= 0 ? '+' : '') + (s.closedPnl || 0).toFixed(1) + '%', sub: fmtRm(closedRm), color: (s.closedPnl || 0) >= 0 ? '#34d399' : '#f87171' },
+                    { label: '🟢 Floating PnL (Open)', val: (s.openPnl >= 0 ? '+' : '') + (s.openPnl || 0).toFixed(1) + '%', sub: fmtRm(openRm), color: '#34d399' },
+                    { label: '📊 Total Return (Net %)', val: (s.totalPnlNow >= 0 ? '+' : '') + (s.totalPnlNow || 0).toFixed(1) + '%', sub: fmtRm(totalRm), color: '#fde047' },
                     { label: '💰 Total Net Profit (@ RM2k / trade)', val: fmtRm(totalRm), sub: `Realized (${fmtRm(closedRm)}) + Floating (${fmtRm(openRm)})`, color: '#34d399', highlight: true }
                 ].map(c => `<div style="background: ${c.highlight ? 'linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(15, 23, 42, 0.9))' : 'rgba(15,23,42,0.7)'}; border: 1.5px solid ${c.highlight ? '#10b981' : (mode === 'addon' ? 'rgba(234,179,8,0.3)' : (mode === 'new' ? 'rgba(249,115,22,0.3)' : 'rgba(16,185,129,0.25)'))}; border-radius: 8px; padding: 0.35rem 0.7rem; min-width: 100px; text-align: center; flex: 1; box-shadow: ${c.highlight ? '0 0 14px rgba(16,185,129,0.25)' : 'none'};">
                     <div style="font-size: 0.58rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">${c.label}</div>
@@ -8116,9 +8116,9 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 statsEl.innerHTML = [
                     { label: 'OPEN Positions', val: s.openCount ?? 0, color: '#34d399' },
                     { label: 'CLOSED Positions', val: s.closedCount ?? 0, color: '#94a3b8' },
-                    { label: '🔒 Realized PnL (Closed)', val: (s.closedPnl >= 0 ? '+' : '') + (s.closedPnl ?? 0) + '%', sub: fmtRm(closedRm), color: (s.closedPnl || 0) >= 0 ? '#34d399' : '#f87171' },
-                    { label: '🟢 Floating PnL (Open)', val: (s.openPnl >= 0 ? '+' : '') + (s.openPnl ?? 0) + '%', sub: fmtRm(openRm), color: '#34d399' },
-                    { label: '📊 Total Return (Net %)', val: (s.totalPnlNow >= 0 ? '+' : '') + (s.totalPnlNow ?? 0) + '%', sub: fmtRm(totalRm), color: '#fde047' },
+                    { label: '🔒 Realized PnL (Closed)', val: (s.closedPnl >= 0 ? '+' : '') + (s.closedPnl || 0).toFixed(1) + '%', sub: fmtRm(closedRm), color: (s.closedPnl || 0) >= 0 ? '#34d399' : '#f87171' },
+                    { label: '🟢 Floating PnL (Open)', val: (s.openPnl >= 0 ? '+' : '') + (s.openPnl || 0).toFixed(1) + '%', sub: fmtRm(openRm), color: '#34d399' },
+                    { label: '📊 Total Return (Net %)', val: (s.totalPnlNow >= 0 ? '+' : '') + (s.totalPnlNow || 0).toFixed(1) + '%', sub: fmtRm(totalRm), color: '#fde047' },
                     { label: '💰 Total Net Profit (@ RM2k / trade)', val: fmtRm(totalRm), sub: `Realized (${fmtRm(closedRm)}) + Floating (${fmtRm(openRm)})`, color: '#34d399', highlight: true }
                 ].map(c => `<div style="background: ${c.highlight ? 'linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(15, 23, 42, 0.9))' : 'rgba(15,23,42,0.7)'}; border: 1.5px solid ${c.highlight ? '#10b981' : (mode === 'addon' ? 'rgba(234,179,8,0.3)' : (mode === 'new' ? 'rgba(249,115,22,0.3)' : 'rgba(168,85,247,0.25)'))}; border-radius: 8px; padding: 0.35rem 0.7rem; min-width: 100px; text-align: center; flex: 1; box-shadow: ${c.highlight ? '0 0 14px rgba(16,185,129,0.25)' : 'none'};">
                     <div style="font-size: 0.58rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">${c.label}</div>
