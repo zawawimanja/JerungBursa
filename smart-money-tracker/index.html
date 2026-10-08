@@ -7326,11 +7326,14 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 const maxStr = '+' + (t.maxGain || 0).toFixed(1) + '%';
                 const isFloorAddon = (t.entryType || '').includes('LANTAI RAPAT');
                 const isAddOn = (t.entryType || '').includes('ADD-ON');
-                const typeBadge = isFloorAddon
+                let typeBadge = isFloorAddon
                     ? `<span style="font-size: 0.6rem; background: rgba(168,85,247,0.25); color: #c4b5fd; padding: 0.05rem 0.35rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(168,85,247,0.6); white-space: nowrap;">🛡️ ADD-ON (Lantai Rapat)</span>`
                     : (isAddOn
                         ? `<span style="font-size: 0.6rem; background: rgba(234,179,8,0.25); color: #fef08a; padding: 0.05rem 0.35rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(234,179,8,0.6); white-space: nowrap;">⭐ ADD-ON A+</span>`
                         : `<span style="font-size: 0.6rem; background: rgba(239,68,68,0.25); color: #ff6b4a; padding: 0.05rem 0.35rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(249,115,22,0.6); white-space: nowrap;">🔥 NEW (Day 1)</span>`);
+                if (t.isGoldenCombo) {
+                    typeBadge += ` <span style="font-size: 0.55rem; background: linear-gradient(135deg, rgba(234,179,8,0.2), rgba(245,158,11,0.2)); color: #fde047; padding: 0.05rem 0.25rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(253,224,71,0.6); box-shadow: 0 0 6px rgba(234,179,8,0.2); white-space: nowrap; margin-left: 0.2rem;" title="👑 GOLDEN COMBO: Kualiti A++ (Tightness ≤ 2.5%, Floor ≤ 3.5%, Turnover Jerung)">👑 GC</span>`;
+                }
                 const statusBadge = isOpen
                     ? `<span style="font-size: 0.62rem; background: ${isFloorAddon ? 'rgba(168,85,247,0.2)' : (isAddOn ? 'rgba(234,179,8,0.2)' : 'rgba(16,185,129,0.2)')}; color: ${isFloorAddon ? '#c4b5fd' : (isAddOn ? '#fde047' : '#34d399')}; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 900; border: 1px solid ${isFloorAddon ? 'rgba(168,85,247,0.5)' : (isAddOn ? 'rgba(234,179,8,0.5)' : 'rgba(16,185,129,0.4)')};">🟢 OPEN</span>`
                     : '<span style="font-size: 0.62rem; background: rgba(148,163,184,0.15); color: #94a3b8; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 800; border: 1px solid rgba(148,163,184,0.3);">⚪ ' + t.status.replace('CLOSED_', '') + '</span>';
@@ -7922,11 +7925,14 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
                 const isFloorAddon = (t.entryType || '').includes('LANTAI RAPAT');
                 const isAddOn = (t.entryType || '').includes('ADD-ON');
-                const typeBadge = isFloorAddon
+                let typeBadge = isFloorAddon
                     ? `<span style="font-size: 0.6rem; background: rgba(168,85,247,0.25); color: #c4b5fd; padding: 0.05rem 0.35rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(168,85,247,0.6); white-space: nowrap;">🛡️ ADD-ON (Lantai Rapat)</span>`
                     : (isAddOn
                         ? `<span style="font-size: 0.6rem; background: rgba(234,179,8,0.25); color: #fef08a; padding: 0.05rem 0.35rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(234,179,8,0.6); white-space: nowrap;">⭐ ADD-ON A+</span>`
                         : `<span style="font-size: 0.6rem; background: rgba(239,68,68,0.25); color: #ff6b4a; padding: 0.05rem 0.35rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(249,115,22,0.6); white-space: nowrap;">🔥 NEW (Day 1)</span>`);
+                if (t.isGoldenCombo) {
+                    typeBadge += ` <span style="font-size: 0.55rem; background: linear-gradient(135deg, rgba(234,179,8,0.2), rgba(245,158,11,0.2)); color: #fde047; padding: 0.05rem 0.25rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(253,224,71,0.6); box-shadow: 0 0 6px rgba(234,179,8,0.2); white-space: nowrap; margin-left: 0.2rem;" title="👑 GOLDEN COMBO: Kualiti A++ (Tightness ≤ 2.5%, Floor ≤ 3.5%, Turnover Jerung)">👑 GC</span>`;
+                }
 
                 const statusBadge = isOpen
                     ? `<span style="font-size: 0.62rem; background: ${isFloorAddon ? 'rgba(168,85,247,0.2)' : (isAddOn ? 'rgba(234,179,8,0.2)' : 'rgba(16,185,129,0.2)')}; color: ${isFloorAddon ? '#c4b5fd' : (isAddOn ? '#fde047' : '#34d399')}; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 900; border: 1px solid ${isFloorAddon ? 'rgba(168,85,247,0.5)' : (isAddOn ? 'rgba(234,179,8,0.5)' : 'rgba(16,185,129,0.4)')};">🟢 OPEN</span>`
