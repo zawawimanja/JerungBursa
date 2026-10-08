@@ -8054,8 +8054,9 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
               }
 
               let frGcPnl = 0;
-              if (Array.isArray(window.ALL_TRACKER)) {
-                  window.ALL_TRACKER.forEach(t => {
+              const allFrTrades = Array.isArray(window.ALL_TRACKER) ? window.ALL_TRACKER : (window.ALL_TRACKER && window.ALL_TRACKER.trades ? window.ALL_TRACKER.trades : []);
+              if (Array.isArray(allFrTrades)) {
+                  allFrTrades.forEach(t => {
                       if (checkIsGC(t)) {
                           if (t.status === 'OPEN') {
                               frGcPnl += (parseFloat(t.currentPnl) || 0);
@@ -8069,8 +8070,9 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
               }
 
               let htGcPnl = 0;
-              if (Array.isArray(window.HOT_THEME_TRACKER)) {
-                  window.HOT_THEME_TRACKER.forEach(t => {
+              const allHtTrades = Array.isArray(window.HOT_THEME_TRACKER) ? window.HOT_THEME_TRACKER : (window.HOT_THEME_TRACKER && window.HOT_THEME_TRACKER.trades ? window.HOT_THEME_TRACKER.trades : []);
+              if (Array.isArray(allHtTrades)) {
+                  allHtTrades.forEach(t => {
                       if (checkIsGC(t)) {
                           if (t.status === 'OPEN') {
                               htGcPnl += (parseFloat(t.currentPnl) || 0);
