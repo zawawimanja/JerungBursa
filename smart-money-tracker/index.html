@@ -12088,17 +12088,33 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 ];
             }
 
-            function generateHTML(titleText, groups) {
+            function generateHTML(titleText, groups, type = 'FR') {
                 let cardsHTML = '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 0.75rem; margin-bottom: 0.85rem;">';
                 let rowsHTML = '';
                 
                 groups.forEach(g => {
+                    let rankBadge = '';
+                    if (type === 'FR') {
+                        if (g.id === 'GC') rankBadge = '<span style="background: rgba(253,224,71,0.25); color: #fde047; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.65rem; border: 1px solid rgba(253,224,71,0.5);">🏅 No 1 (Elit)</span>';
+                        else if (g.id === 'LANTAI') rankBadge = '<span style="background: rgba(168,85,247,0.25); color: #c4b5fd; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.65rem; border: 1px solid rgba(168,85,247,0.5);">🥈 No 2 (Selamat)</span>';
+                        else if (g.id === 'NEW') rankBadge = '<span style="background: rgba(249,115,22,0.25); color: #fdba74; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.65rem; border: 1px solid rgba(249,115,22,0.5);">🥉 No 3 (Sederhana)</span>';
+                        else if (g.id === 'ADD') rankBadge = '<span style="background: rgba(239,68,68,0.25); color: #fca5a5; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.65rem; border: 1px solid rgba(239,68,68,0.5);">⚠️ No 4 (Berisiko)</span>';
+                    } else if (type === 'HT') {
+                        if (g.id === 'LANTAI') rankBadge = '<span style="background: rgba(168,85,247,0.25); color: #c4b5fd; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.65rem; border: 1px solid rgba(168,85,247,0.5);">🏅 No 1 (Lantai Tadah)</span>';
+                        else if (g.id === 'GC') rankBadge = '<span style="background: rgba(253,224,71,0.25); color: #fde047; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.65rem; border: 1px solid rgba(253,224,71,0.5);">🥈 No 2 (Jaga SL)</span>';
+                        else if (g.id === 'NEW') rankBadge = '<span style="background: rgba(239,68,68,0.25); color: #fca5a5; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.65rem; border: 1px solid rgba(239,68,68,0.5);">⚠️ No 3 (Sangat Bahaya)</span>';
+                        else if (g.id === 'ADD') rankBadge = '<span style="background: rgba(220,38,38,0.25); color: #f87171; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.65rem; border: 1px solid rgba(220,38,38,0.5);">❌ No 4 (Perangkap Maut)</span>';
+                    }
+
                     const stats = calcStats(g.trades);
                     cardsHTML += `
                         <div style="background: ${g.colors[2]}; border: 1.5px solid ${g.colors[3]}; border-radius: 10px; padding: 0.75rem 0.85rem; box-shadow: 0 0 15px ${g.colors[2]};">
-                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem;">
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem; flex-wrap: wrap; gap: 0.3rem;">
                                 <span style="font-weight: 900; color: ${g.colors[0]}; font-size: 0.8rem; display: flex; align-items: center; gap: 0.3rem;">${g.name}</span>
-                                <span style="font-size: 0.62rem; color: #0f172a; font-weight: 900; background: ${g.colors[1]}; padding: 0.05rem 0.35rem; border-radius: 4px;">PF ${stats.pf.toFixed(2)}x</span>
+                                <div style="display: flex; gap: 0.3rem; align-items: center;">
+                                    ${rankBadge}
+                                    <span style="font-size: 0.62rem; color: #0f172a; font-weight: 900; background: ${g.colors[1]}; padding: 0.1rem 0.35rem; border-radius: 4px;">PF ${stats.pf.toFixed(2)}x</span>
+                                </div>
                             </div>
                             <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.35rem;">
                                 <div>
@@ -12154,11 +12170,11 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             
             if (frContainer && window.ALL_TRACKER) {
                 const frGroups = processTracker(window.ALL_TRACKER);
-                frContainer.innerHTML = generateHTML('Formulasi (FRESH RIDER SAHAJA)', frGroups);
+                frContainer.innerHTML = generateHTML('Formulasi (FRESH RIDER SAHAJA)', frGroups, 'FR');
             }
             if (htContainer && window.HOT_THEME_TRACKER) {
                 const htGroups = processTracker(window.HOT_THEME_TRACKER);
-                htContainer.innerHTML = generateHTML('Formulasi (HOT THEME SAHAJA)', htGroups);
+                htContainer.innerHTML = generateHTML('Formulasi (HOT THEME SAHAJA)', htGroups, 'HT');
             }
         }
 
