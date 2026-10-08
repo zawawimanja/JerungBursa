@@ -11984,10 +11984,10 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 // EXCLUDE OPEN STATUS FOR REAL CLOSED STATS
                 const tracker = Array.isArray(trackerData) ? trackerData : (trackerData.trades || []);
                 const closed = tracker.filter(t => t.status !== 'OPEN');
-                const gc = closed.filter(t => isGC(t));
-                const addAplus = closed.filter(t => t.entryType === '⭐ ADD-ON A+' && !isGC(t));
-                const lantaiRapat = closed.filter(t => t.entryType === '🛡️ ADD-ON (LANTAI RAPAT)' && !isGC(t));
-                const newTrades = closed.filter(t => t.entryType === '🔥 NEW' && !isGC(t));
+                const gc = closed.filter(t => t.isGoldenCombo);
+                const addAplus = closed.filter(t => t.entryType === '⭐ ADD-ON A+' && !t.isGoldenCombo);
+                const lantaiRapat = closed.filter(t => t.entryType === '🛡️ ADD-ON (LANTAI RAPAT)' && !t.isGoldenCombo);
+                const newTrades = closed.filter(t => t.entryType === '🔥 NEW' && !t.isGoldenCombo);
                 
                 return [
                     { id: 'GC', name: '👑 GOLDEN COMBO', trades: gc, colors: ['#fef08a', '#fde047', 'rgba(234,179,8,0.18)', 'rgba(234,179,8,0.85)'] },
@@ -12061,8 +12061,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const frContainer = document.getElementById('frStudyAddonBody');
             const htContainer = document.getElementById('htStudyBody');
             
-            if (frContainer && window.FRESH_RIDER_TRACKER) {
-                const frGroups = processTracker(window.FRESH_RIDER_TRACKER);
+            if (frContainer && window.ALL_TRACKER) {
+                const frGroups = processTracker(window.ALL_TRACKER);
                 frContainer.innerHTML = generateHTML('Formulasi (FRESH RIDER SAHAJA)', frGroups);
             }
             if (htContainer && window.HOT_THEME_TRACKER) {
