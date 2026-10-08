@@ -903,6 +903,9 @@
                     </span>
                     <span id="navTotalPnlBadge" style="font-size: 1.25rem; font-weight: 900; color: #34d399; text-shadow: 0 0 12px rgba(52, 211, 153, 0.8);">—</span>
                     <span id="navTotalRmBadge" style="font-size: 0.9rem; font-weight: 900; color: #fde047; text-shadow: 0 0 10px rgba(253, 224, 71, 0.6); white-space: nowrap;">—</span>
+                    <span id="navTrackerPeriodBadge" style="font-size: 0.68rem; color: #a7f3d0; font-weight: 800; background: rgba(16, 185, 129, 0.18); border: 1px solid rgba(52, 211, 153, 0.45); padding: 0.15rem 0.55rem; border-radius: 20px; letter-spacing: 0.3px; display: inline-flex; align-items: center; gap: 0.3rem;" title="Tracking period dynamically calculated from earliest entry to latest market data">
+                        📅 <span id="navTrackerPeriodText">—</span>
+                    </span>
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 0.4rem; width: 100%; align-items: center;">
                     <!-- FR GROUP -->
@@ -7283,7 +7286,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             }).map(it => (it.name || '').toUpperCase()));
 
             const modeLabel = mode === 'golden' ? '👑 Golden Combo (A++)' : (mode === 'floor' ? '🛡️ ADD-ON (Lantai Rapat ≤ 3.5%)' : (mode === 'addon' ? '⭐ ADD-ON A+ (Fresh Base ≤ 20%)' : (mode === 'new' ? '🔥 NEW Signals (Day 1)' : '🌟 ALL Signals (Unified Portfolio)')));
-            if (metaEl) metaEl.textContent = `${s.dataDays || '-'} days of data · Mode: ${modeLabel} · Generated ${new Date(s.generatedAt).toLocaleString('en-US')}`;
+            const frDateRangeStr = (bt && bt.dataStart && bt.dataEnd) ? ` (${bt.dataStart} – ${bt.dataEnd})` : '';
+            if (metaEl) metaEl.textContent = `${s.dataDays || '-'} days of data${frDateRangeStr} · Mode: ${modeLabel} · Generated ${new Date(s.generatedAt).toLocaleString('en-US')}`;
 
             const entryCapital = 2000;
             const openRm = ((s.openPnl || 0) / 100) * entryCapital;
@@ -7879,7 +7883,9 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             }
 
             const modeLabel = mode === 'golden' ? '👑 Golden Combo (A++)' : (mode === 'floor' ? '🛡️ ADD-ON (Lantai Rapat ≤ 3.5%)' : (mode === 'addon' ? '⭐ ADD-ON A+ (Fresh Base ≤ 20%)' : (mode === 'new' ? '🔥 NEW Signals (Day 1)' : '🌟 ALL Signals (Unified Portfolio)')));
-            if (metaEl) metaEl.textContent = `${s.dataDays || '-'} days of data · Mode: ${modeLabel} · Generated ${new Date(s.generatedAt || Date.now()).toLocaleString('en-US')}`;
+            const htBt = (window.HOT_THEME_TRACKER && window.HOT_THEME_TRACKER.backtest) || {};
+            const htDateRangeStr = (htBt.dataStart && htBt.dataEnd) ? ` (${htBt.dataStart} – ${htBt.dataEnd})` : '';
+            if (metaEl) metaEl.textContent = `${s.dataDays || '-'} days of data${htDateRangeStr} · Mode: ${modeLabel} · Generated ${new Date(s.generatedAt || Date.now()).toLocaleString('en-US')}`;
 
             const entryCapital = 2000;
             const openRm = ((s.openPnl || 0) / 100) * entryCapital;
@@ -8138,6 +8144,68 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             if (navHtNew) navHtNew.textContent = `NEW: ${htNewPnl >= 0 ? '+' : ''}${htNewPnl.toFixed(1)}%`;
             if (navHtAddon) navHtAddon.textContent = `A+: ${htAddonPnl >= 0 ? '+' : ''}${htAddonPnl.toFixed(1)}%`;
             if (navHtFloor) navHtFloor.textContent = `LANTAI: ${htFloorPnl >= 0 ? '+' : ''}${htFloorPnl.toFixed(1)}%`;
+
+            // Dynamically calculate tracking date range
+            let periodStart = null;
+            let periodEnd = null;
+            let totalTradingDays = 0;
+
+            if (window.FRESH_RIDER_TRACKER && window.FRESH_RIDER_TRACKER.backtest) {
+                const bt = window.FRESH_RIDER_TRACKER.backtest;
+                if (bt.dataStart) periodStart = (!periodStart || bt.dataStart < periodStart) ? bt.dataStart : periodStart;
+                if (bt.dataEnd) periodEnd = (!periodEnd || bt.dataEnd > periodEnd) ? bt.dataEnd : periodEnd;
+                if (bt.dataDays && bt.dataDays > totalTradingDays) totalTradingDays = bt.dataDays;
+            }
+            if (window.HOT_THEME_TRACKER && window.HOT_THEME_TRACKER.backtest) {
+                const bt = window.HOT_THEME_TRACKER.backtest;
+                if (bt.dataStart) periodStart = (!periodStart || bt.dataStart < periodStart) ? bt.dataStart : periodStart;
+                if (bt.dataEnd) periodEnd = (!periodEnd || bt.dataEnd > periodEnd) ? bt.dataEnd : periodEnd;
+                if (bt.dataDays && bt.dataDays > totalTradingDays) totalTradingDays = bt.dataDays;
+            }
+            if (window.ALL_TRACKER && window.ALL_TRACKER.summary && window.ALL_TRACKER.summary.dataDays) {
+                if (window.ALL_TRACKER.summary.dataDays > totalTradingDays) totalTradingDays = window.ALL_TRACKER.summary.dataDays;
+            }
+
+            const checkTradesDates = (trades) => {
+                if (!Array.isArray(trades)) return;
+                trades.forEach(t => {
+                    if (t.entryDate) {
+                        if (!periodStart || t.entryDate < periodStart) periodStart = t.entryDate;
+                        if (!periodEnd || t.entryDate > periodEnd) periodEnd = t.entryDate;
+                    }
+                    if (t.lastDate) {
+                        if (!periodEnd || t.lastDate > periodEnd) periodEnd = t.lastDate;
+                    }
+                    if (t.exitDate) {
+                        if (!periodEnd || t.exitDate > periodEnd) periodEnd = t.exitDate;
+                    }
+                });
+            };
+            if (window.ALL_TRACKER) checkTradesDates(window.ALL_TRACKER.trades);
+            if (window.HOT_THEME_TRACKER) checkTradesDates(window.HOT_THEME_TRACKER.trades);
+
+            const formatPeriodDate = (dStr) => {
+                if (!dStr) return '';
+                const parts = dStr.split('-');
+                if (parts.length !== 3) return dStr;
+                const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+                const mIdx = parseInt(parts[1], 10) - 1;
+                return `${parts[2]} ${months[mIdx] || parts[1]} ${parts[0]}`;
+            };
+
+            const navTrackerPeriodText = document.getElementById('navTrackerPeriodText');
+            if (navTrackerPeriodText && periodStart && periodEnd) {
+                const sFmt = formatPeriodDate(periodStart);
+                const eFmt = formatPeriodDate(periodEnd);
+                navTrackerPeriodText.textContent = `${sFmt} – ${eFmt}${totalTradingDays ? ` (${totalTradingDays} Days)` : ''}`;
+            }
+
+            const heroBadge = document.getElementById('top-tracker-pnl-badge');
+            if (heroBadge && periodStart && periodEnd) {
+                const sFmt = formatPeriodDate(periodStart);
+                const eFmt = formatPeriodDate(periodEnd);
+                heroBadge.title = `Live Tracker PnL: ${grandTotal >= 0 ? '+' : ''}${grandTotal.toFixed(1)}% (${sFmt} to ${eFmt} · ${totalTradingDays} trading days · RM 2,000 / entry)`;
+            }
         }
         window.updateTopTrackerPnlBadge = updateTopTrackerPnlBadge;
         try { updateTopTrackerPnlBadge(); } catch(e) {}
