@@ -11978,8 +11978,9 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 };
             }
 
-            function processTracker(tracker) {
+            function processTracker(trackerData) {
                 // EXCLUDE OPEN STATUS FOR REAL CLOSED STATS
+                const tracker = Array.isArray(trackerData) ? trackerData : (trackerData.trades || []);
                 const closed = tracker.filter(t => t.status !== 'OPEN');
                 const gc = closed.filter(t => isGC(t));
                 const addAplus = closed.filter(t => t.entryType === '⭐ ADD-ON A+' && !isGC(t));
