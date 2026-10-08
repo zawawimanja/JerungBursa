@@ -1,22 +1,22 @@
 // AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual
 window.FRESH_RIDER_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-07T14:28:55.892Z",
-  "dataDays": 87,
+  "generatedAt": "2026-10-08T01:03:08.218Z",
+  "dataDays": 88,
   "totalTracked": 23,
-  "openCount": 11,
-  "closedCount": 12,
+  "openCount": 10,
+  "closedCount": 13,
   "closedWins": 8,
-  "closedWinRate": 67,
-  "closedAvgGain": 7.6,
-  "openPnl": 470.1,
-  "closedPnl": 90.7,
+  "closedWinRate": 62,
+  "closedAvgGain": 6.6,
+  "openPnl": 474.7,
+  "closedPnl": 86.1,
   "totalPnlNow": 560.8
  },
  "backtest": {
   "dataStart": "2026-06-02",
-  "dataEnd": "2026-10-07",
-  "dataDays": 87,
+  "dataEnd": "2026-10-08",
+  "dataDays": 88,
   "signals": 25,
   "winRate": 68,
   "avgGain": 15.6,
@@ -30,18 +30,19 @@ window.FRESH_RIDER_TRACKER = {
    "entryDate": "2026-10-01",
    "entry": 0.54,
    "entryFloor": 0.505,
-   "currentFloor": 0.525,
+   "currentFloor": 0.54,
    "currentPrice": 0.815,
    "high": 0.825,
    "highDate": "2026-10-06",
    "maxGain": 52.8,
    "finalGain": 50.9,
    "day1ChangePct": 2.86,
-   "days": 5,
-   "lastDate": "2026-10-07",
+   "days": 6,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Industrial",
+   "isGoldenCombo": false,
    "slTrail": 0.701
   },
   {
@@ -57,11 +58,12 @@ window.FRESH_RIDER_TRACKER = {
    "maxGain": 1,
    "finalGain": 1,
    "day1ChangePct": 1.01,
-   "days": 6,
-   "lastDate": "2026-10-07",
+   "days": 7,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Consumer",
+   "isGoldenCombo": false,
    "slTrail": 0.475
   },
   {
@@ -77,11 +79,12 @@ window.FRESH_RIDER_TRACKER = {
    "maxGain": 2.8,
    "finalGain": -2.8,
    "day1ChangePct": 7.58,
-   "days": 6,
-   "lastDate": "2026-10-07",
+   "days": 7,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Industrial",
+   "isGoldenCombo": false,
    "slTrail": 0.321
   },
   {
@@ -97,11 +100,12 @@ window.FRESH_RIDER_TRACKER = {
    "maxGain": 0,
    "finalGain": -4.3,
    "day1ChangePct": 6.98,
-   "days": 7,
-   "lastDate": "2026-10-07",
+   "days": 8,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Industrial",
+   "isGoldenCombo": false,
    "slTrail": 0.204
   },
   {
@@ -117,11 +121,12 @@ window.FRESH_RIDER_TRACKER = {
    "maxGain": 1.3,
    "finalGain": -7.5,
    "day1ChangePct": 3.67,
-   "days": 14,
-   "lastDate": "2026-10-07",
+   "days": 15,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Healthcare",
+   "isGoldenCombo": false,
    "slTrail": 2.015
   },
   {
@@ -137,11 +142,12 @@ window.FRESH_RIDER_TRACKER = {
    "maxGain": 36.9,
    "finalGain": 36.9,
    "day1ChangePct": 0,
-   "days": 18,
-   "lastDate": "2026-10-07",
+   "days": 19,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Technology",
+   "isGoldenCombo": false,
    "slTrail": 0.71
   },
   {
@@ -157,32 +163,13 @@ window.FRESH_RIDER_TRACKER = {
    "maxGain": 55.1,
    "finalGain": 49.3,
    "day1ChangePct": 0.98,
-   "days": 45,
-   "lastDate": "2026-10-07",
+   "days": 46,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Factory",
+   "isGoldenCombo": false,
    "slTrail": 2.728
-  },
-  {
-   "name": "ECOSHOP",
-   "entryType": "🔥 NEW",
-   "entryDate": "2026-07-13",
-   "entry": 1.51,
-   "entryFloor": 1.43,
-   "currentFloor": 1.4,
-   "currentPrice": 1.44,
-   "high": 1.51,
-   "highDate": "2026-07-13",
-   "maxGain": 0,
-   "finalGain": -4.6,
-   "day1ChangePct": 0.67,
-   "days": 59,
-   "lastDate": "2026-10-07",
-   "status": "OPEN",
-   "ipoYear": 2025,
-   "sector": "Consumer",
-   "slTrail": 1.387
   },
   {
    "name": "HEGROUP",
@@ -197,11 +184,12 @@ window.FRESH_RIDER_TRACKER = {
    "maxGain": 114.7,
    "finalGain": 114.7,
    "day1ChangePct": 0,
-   "days": 62,
-   "lastDate": "2026-10-07",
+   "days": 63,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Utilities",
+   "isGoldenCombo": false,
    "slTrail": 0.994
   },
   {
@@ -217,11 +205,12 @@ window.FRESH_RIDER_TRACKER = {
    "maxGain": 123.5,
    "finalGain": 97.1,
    "day1ChangePct": -1.45,
-   "days": 83,
-   "lastDate": "2026-10-07",
+   "days": 84,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Consumer",
+   "isGoldenCombo": false,
    "slTrail": 1.292
   },
   {
@@ -237,12 +226,36 @@ window.FRESH_RIDER_TRACKER = {
    "maxGain": 151.4,
    "finalGain": 139.4,
    "day1ChangePct": 3.81,
-   "days": 86,
-   "lastDate": "2026-10-07",
+   "days": 87,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Consumer",
+   "isGoldenCombo": false,
    "slTrail": 2.329
+  },
+  {
+   "name": "ECOSHOP",
+   "entryType": "🔥 NEW",
+   "entryDate": "2026-07-13",
+   "entry": 1.51,
+   "entryFloor": 1.43,
+   "currentFloor": 1.4,
+   "currentPrice": 1.44,
+   "high": 1.51,
+   "highDate": "2026-07-13",
+   "maxGain": 0,
+   "finalGain": -4.6,
+   "day1ChangePct": 0.67,
+   "days": 60,
+   "lastDate": "2026-10-08",
+   "status": "CLOSED_TIME",
+   "ipoYear": 2025,
+   "sector": "Consumer",
+   "isGoldenCombo": false,
+   "slTrail": 1.387,
+   "exitDate": "2026-10-08",
+   "exitPrice": 1.44
   },
   {
    "name": "SUNLOGY",
@@ -262,6 +275,7 @@ window.FRESH_RIDER_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Industrial",
+   "isGoldenCombo": false,
    "slTrail": 0.446,
    "exitDate": "2026-09-17",
    "exitPrice": 0.415
@@ -284,6 +298,7 @@ window.FRESH_RIDER_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Transportation",
+   "isGoldenCombo": false,
    "slTrail": 1.199,
    "exitDate": "2026-09-08",
    "exitPrice": 1.18
@@ -306,6 +321,7 @@ window.FRESH_RIDER_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Technology",
+   "isGoldenCombo": false,
    "slTrail": 0.529,
    "exitDate": "2026-09-01",
    "exitPrice": 0.515
@@ -328,6 +344,7 @@ window.FRESH_RIDER_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Technology",
+   "isGoldenCombo": false,
    "slTrail": 0.383,
    "exitDate": "2026-08-24",
    "exitPrice": 0.38
@@ -350,6 +367,7 @@ window.FRESH_RIDER_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Technology",
+   "isGoldenCombo": false,
    "slTrail": 0.22,
    "exitDate": "2026-08-06",
    "exitPrice": 0.22
@@ -372,6 +390,7 @@ window.FRESH_RIDER_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Industrial",
+   "isGoldenCombo": false,
    "slTrail": 0.68,
    "exitDate": "2026-07-17",
    "exitPrice": 0.655
@@ -394,6 +413,7 @@ window.FRESH_RIDER_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Bursa",
+   "isGoldenCombo": false,
    "slTrail": 0.522,
    "exitDate": "2026-06-30",
    "exitPrice": 0.52
@@ -416,6 +436,7 @@ window.FRESH_RIDER_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Technology",
+   "isGoldenCombo": false,
    "slTrail": 0.62,
    "exitDate": "2026-06-29",
    "exitPrice": 0.555
@@ -438,6 +459,7 @@ window.FRESH_RIDER_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": false,
    "slTrail": 0.655,
    "exitDate": "2026-06-22",
    "exitPrice": 0.65
@@ -460,6 +482,7 @@ window.FRESH_RIDER_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Bursa",
+   "isGoldenCombo": false,
    "slTrail": 1.859,
    "exitDate": "2026-06-18",
    "exitPrice": 1.85
@@ -482,6 +505,7 @@ window.FRESH_RIDER_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Industrial",
+   "isGoldenCombo": false,
    "slTrail": 0.506,
    "exitDate": "2026-06-18",
    "exitPrice": 0.47
@@ -504,6 +528,7 @@ window.FRESH_RIDER_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Consumer",
+   "isGoldenCombo": false,
    "slTrail": 0.555,
    "exitDate": "2026-06-08",
    "exitPrice": 0.53
@@ -512,8 +537,8 @@ window.FRESH_RIDER_TRACKER = {
 };
 window.ADD_ON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-07T14:28:55.892Z",
-  "dataDays": 87,
+  "generatedAt": "2026-10-08T01:03:08.218Z",
+  "dataDays": 88,
   "totalTracked": 12,
   "openCount": 5,
   "closedCount": 7,
@@ -526,8 +551,8 @@ window.ADD_ON_TRACKER = {
  },
  "backtest": {
   "dataStart": "2026-06-02",
-  "dataEnd": "2026-10-07",
-  "dataDays": 87,
+  "dataEnd": "2026-10-08",
+  "dataDays": 88,
   "signals": 6,
   "winRate": 83,
   "avgGain": 16.8,
@@ -552,11 +577,12 @@ window.ADD_ON_TRACKER = {
    "maxGain": 16,
    "finalGain": 16,
    "day1ChangePct": -0.69,
-   "days": 8,
-   "lastDate": "2026-10-07",
+   "days": 9,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Technology",
+   "isGoldenCombo": true,
    "slTrail": 0.792
   },
   {
@@ -573,11 +599,12 @@ window.ADD_ON_TRACKER = {
    "maxGain": 15.2,
    "finalGain": 15.2,
    "day1ChangePct": 1.4,
-   "days": 9,
-   "lastDate": "2026-10-07",
+   "days": 10,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Technology",
+   "isGoldenCombo": true,
    "slTrail": 0.797
   },
   {
@@ -594,11 +621,12 @@ window.ADD_ON_TRACKER = {
    "maxGain": 35.8,
    "finalGain": 25.8,
    "day1ChangePct": -1.24,
-   "days": 16,
-   "lastDate": "2026-10-07",
+   "days": 17,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Industrial",
+   "isGoldenCombo": false,
    "slTrail": 0.918
   },
   {
@@ -615,11 +643,12 @@ window.ADD_ON_TRACKER = {
    "maxGain": 41,
    "finalGain": 36.9,
    "day1ChangePct": -3.17,
-   "days": 49,
-   "lastDate": "2026-10-07",
+   "days": 50,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Consumer",
+   "isGoldenCombo": false,
    "slTrail": 0.731
   },
   {
@@ -636,11 +665,12 @@ window.ADD_ON_TRACKER = {
    "maxGain": 70.8,
    "finalGain": 63.5,
    "day1ChangePct": -0.72,
-   "days": 50,
-   "lastDate": "2026-10-07",
+   "days": 51,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": false,
    "slTrail": 0.994
   },
   {
@@ -662,6 +692,7 @@ window.ADD_ON_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Industrial",
+   "isGoldenCombo": false,
    "slTrail": 0.456,
    "exitDate": "2026-09-17",
    "exitPrice": 0.415
@@ -685,6 +716,7 @@ window.ADD_ON_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Industrial",
+   "isGoldenCombo": false,
    "slTrail": 0.456,
    "exitDate": "2026-09-17",
    "exitPrice": 0.415
@@ -708,6 +740,7 @@ window.ADD_ON_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Transportation",
+   "isGoldenCombo": true,
    "slTrail": 1.21,
    "exitDate": "2026-09-08",
    "exitPrice": 1.18
@@ -731,6 +764,7 @@ window.ADD_ON_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Transportation",
+   "isGoldenCombo": true,
    "slTrail": 1.199,
    "exitDate": "2026-09-08",
    "exitPrice": 1.18
@@ -754,6 +788,7 @@ window.ADD_ON_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Factory",
+   "isGoldenCombo": true,
    "slTrail": 2.31,
    "exitDate": "2026-08-04",
    "exitPrice": 2.31
@@ -777,6 +812,7 @@ window.ADD_ON_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": true,
    "slTrail": 0.675,
    "exitDate": "2026-07-28",
    "exitPrice": 0.665
@@ -800,6 +836,7 @@ window.ADD_ON_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": false,
    "slTrail": 0.635,
    "exitDate": "2026-06-23",
    "exitPrice": 0.63
@@ -808,10 +845,10 @@ window.ADD_ON_TRACKER = {
 };
 window.FLOOR_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-07T14:28:55.892Z",
-  "dataDays": 87,
-  "totalTracked": 26,
-  "openCount": 11,
+  "generatedAt": "2026-10-08T01:03:08.218Z",
+  "dataDays": 88,
+  "totalTracked": 27,
+  "openCount": 12,
   "closedCount": 15,
   "closedWins": 10,
   "closedWinRate": 67,
@@ -822,8 +859,8 @@ window.FLOOR_ADDON_TRACKER = {
  },
  "backtest": {
   "dataStart": "2026-06-02",
-  "dataEnd": "2026-10-07",
-  "dataDays": 87,
+  "dataEnd": "2026-10-08",
+  "dataDays": 88,
   "signals": 15,
   "winRate": 73,
   "avgGain": 9,
@@ -834,6 +871,27 @@ window.FLOOR_ADDON_TRACKER = {
   "profitFactor": 8.45
  },
  "trades": [
+  {
+   "id": "EIPOWER_2026-10-08_ADDON",
+   "name": "EIPOWER",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-10-08",
+   "entry": 1,
+   "entryFloor": 0.97,
+   "currentFloor": 0.97,
+   "currentPrice": 1,
+   "high": 1,
+   "highDate": "2026-10-08",
+   "maxGain": 0,
+   "finalGain": 0,
+   "day1ChangePct": -0.99,
+   "days": 1,
+   "lastDate": "2026-10-08",
+   "status": "OPEN",
+   "ipoYear": 2026,
+   "sector": "Industrial",
+   "isGoldenCombo": true
+  },
   {
    "id": "EIPOWER_2026-10-07_ADDON",
    "name": "EIPOWER",
@@ -848,11 +906,13 @@ window.FLOOR_ADDON_TRACKER = {
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": -0.99,
-   "days": 1,
-   "lastDate": "2026-10-07",
+   "days": 2,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
-   "sector": "Industrial"
+   "sector": "Industrial",
+   "isGoldenCombo": true,
+   "slTrail": 0.941
   },
   {
    "id": "CBHB_2026-09-30_ADDON",
@@ -868,11 +928,12 @@ window.FLOOR_ADDON_TRACKER = {
    "maxGain": 7.3,
    "finalGain": 2.8,
    "day1ChangePct": 0,
-   "days": 6,
-   "lastDate": "2026-10-07",
+   "days": 7,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": true,
    "slTrail": 1.09
   },
   {
@@ -889,11 +950,12 @@ window.FLOOR_ADDON_TRACKER = {
    "maxGain": 7.4,
    "finalGain": 3.3,
    "day1ChangePct": 3.1,
-   "days": 7,
-   "lastDate": "2026-10-07",
+   "days": 8,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Factory",
+   "isGoldenCombo": false,
    "slTrail": 2.99
   },
   {
@@ -910,11 +972,12 @@ window.FLOOR_ADDON_TRACKER = {
    "maxGain": 7.3,
    "finalGain": 2.8,
    "day1ChangePct": 0.93,
-   "days": 7,
-   "lastDate": "2026-10-07",
+   "days": 8,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": true,
    "slTrail": 1.09
   },
   {
@@ -931,11 +994,12 @@ window.FLOOR_ADDON_TRACKER = {
    "maxGain": 8.3,
    "finalGain": 3.7,
    "day1ChangePct": -1.82,
-   "days": 8,
-   "lastDate": "2026-10-07",
+   "days": 9,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": false,
    "slTrail": 1.08
   },
   {
@@ -952,11 +1016,12 @@ window.FLOOR_ADDON_TRACKER = {
    "maxGain": 16.8,
    "finalGain": 16.8,
    "day1ChangePct": -1.38,
-   "days": 10,
-   "lastDate": "2026-10-07",
+   "days": 11,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Technology",
+   "isGoldenCombo": false,
    "slTrail": 0.786
   },
   {
@@ -973,11 +1038,12 @@ window.FLOOR_ADDON_TRACKER = {
    "maxGain": 37.6,
    "finalGain": 33.6,
    "day1ChangePct": -3.1,
-   "days": 41,
-   "lastDate": "2026-10-07",
+   "days": 42,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Consumer",
+   "isGoldenCombo": false,
    "slTrail": 0.731
   },
   {
@@ -994,11 +1060,12 @@ window.FLOOR_ADDON_TRACKER = {
    "maxGain": 68.3,
    "finalGain": 61.2,
    "day1ChangePct": -1.42,
-   "days": 52,
-   "lastDate": "2026-10-07",
+   "days": 53,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": false,
    "slTrail": 0.994
   },
   {
@@ -1015,11 +1082,12 @@ window.FLOOR_ADDON_TRACKER = {
    "maxGain": 101.7,
    "finalGain": 101.7,
    "day1ChangePct": -0.85,
-   "days": 56,
-   "lastDate": "2026-10-07",
+   "days": 57,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Utilities",
+   "isGoldenCombo": false,
    "slTrail": 0.994
   },
   {
@@ -1036,11 +1104,12 @@ window.FLOOR_ADDON_TRACKER = {
    "maxGain": 100,
    "finalGain": 100,
    "day1ChangePct": 0.86,
-   "days": 57,
-   "lastDate": "2026-10-07",
+   "days": 58,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Utilities",
+   "isGoldenCombo": false,
    "slTrail": 0.994
   },
   {
@@ -1057,11 +1126,12 @@ window.FLOOR_ADDON_TRACKER = {
    "maxGain": 64.8,
    "finalGain": 57.7,
    "day1ChangePct": 0.71,
-   "days": 61,
-   "lastDate": "2026-10-07",
+   "days": 62,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": false,
    "slTrail": 0.994
   },
   {
@@ -1083,6 +1153,7 @@ window.FLOOR_ADDON_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": false,
    "slTrail": 1.122,
    "exitDate": "2026-10-07",
    "exitPrice": 1.12
@@ -1106,6 +1177,7 @@ window.FLOOR_ADDON_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Consumer",
+   "isGoldenCombo": false,
    "slTrail": 0.81,
    "exitDate": "2026-10-01",
    "exitPrice": 0.805
@@ -1129,6 +1201,7 @@ window.FLOOR_ADDON_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Factory",
+   "isGoldenCombo": false,
    "slTrail": 3.08,
    "exitDate": "2026-09-23",
    "exitPrice": 3.07
@@ -1152,6 +1225,7 @@ window.FLOOR_ADDON_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Factory",
+   "isGoldenCombo": false,
    "slTrail": 2.726,
    "exitDate": "2026-09-17",
    "exitPrice": 2.71
@@ -1175,6 +1249,7 @@ window.FLOOR_ADDON_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Factory",
+   "isGoldenCombo": false,
    "slTrail": 2.726,
    "exitDate": "2026-09-17",
    "exitPrice": 2.71
@@ -1198,6 +1273,7 @@ window.FLOOR_ADDON_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Consumer",
+   "isGoldenCombo": false,
    "slTrail": 0.808,
    "exitDate": "2026-09-11",
    "exitPrice": 0.785
@@ -1221,6 +1297,7 @@ window.FLOOR_ADDON_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Consumer",
+   "isGoldenCombo": false,
    "slTrail": 2.376,
    "exitDate": "2026-09-01",
    "exitPrice": 2.29
@@ -1244,6 +1321,7 @@ window.FLOOR_ADDON_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Consumer",
+   "isGoldenCombo": false,
    "slTrail": 2.365,
    "exitDate": "2026-09-01",
    "exitPrice": 2.29
@@ -1267,6 +1345,7 @@ window.FLOOR_ADDON_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Consumer",
+   "isGoldenCombo": true,
    "slTrail": 2.343,
    "exitDate": "2026-09-01",
    "exitPrice": 2.29
@@ -1290,6 +1369,7 @@ window.FLOOR_ADDON_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Industrial",
+   "isGoldenCombo": true,
    "slTrail": 0.697,
    "exitDate": "2026-08-28",
    "exitPrice": 0.69
@@ -1313,6 +1393,7 @@ window.FLOOR_ADDON_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Industrial",
+   "isGoldenCombo": false,
    "slTrail": 0.655,
    "exitDate": "2026-07-28",
    "exitPrice": 0.645
@@ -1336,6 +1417,7 @@ window.FLOOR_ADDON_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": false,
    "slTrail": 0.71,
    "exitDate": "2026-07-13",
    "exitPrice": 0.69
@@ -1359,6 +1441,7 @@ window.FLOOR_ADDON_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": true,
    "slTrail": 0.71,
    "exitDate": "2026-07-13",
    "exitPrice": 0.69
@@ -1382,6 +1465,7 @@ window.FLOOR_ADDON_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": false,
    "slTrail": 0.715,
    "exitDate": "2026-07-10",
    "exitPrice": 0.715
@@ -1405,6 +1489,7 @@ window.FLOOR_ADDON_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": false,
    "slTrail": 0.65,
    "exitDate": "2026-06-22",
    "exitPrice": 0.65
@@ -1413,19 +1498,40 @@ window.FLOOR_ADDON_TRACKER = {
 };
 window.ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-07T14:28:55.892Z",
-  "dataDays": 87,
-  "totalTracked": 61,
+  "generatedAt": "2026-10-08T01:03:08.218Z",
+  "dataDays": 88,
+  "totalTracked": 62,
   "openCount": 27,
-  "closedCount": 34,
+  "closedCount": 35,
   "closedWins": 21,
-  "closedWinRate": 62,
-  "closedAvgGain": 4.1,
-  "openPnl": 1011.1,
-  "closedPnl": 141,
+  "closedWinRate": 60,
+  "closedAvgGain": 3.9,
+  "openPnl": 1015.7,
+  "closedPnl": 136.4,
   "totalPnlNow": 1152.1
  },
  "trades": [
+  {
+   "id": "EIPOWER_2026-10-08_ADDON",
+   "name": "EIPOWER",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-10-08",
+   "entry": 1,
+   "entryFloor": 0.97,
+   "currentFloor": 0.97,
+   "currentPrice": 1,
+   "high": 1,
+   "highDate": "2026-10-08",
+   "maxGain": 0,
+   "finalGain": 0,
+   "day1ChangePct": -0.99,
+   "days": 1,
+   "lastDate": "2026-10-08",
+   "status": "OPEN",
+   "ipoYear": 2026,
+   "sector": "Industrial",
+   "isGoldenCombo": true
+  },
   {
    "id": "EIPOWER_2026-10-07_ADDON",
    "name": "EIPOWER",
@@ -1440,11 +1546,13 @@ window.ALL_TRACKER = {
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": -0.99,
-   "days": 1,
-   "lastDate": "2026-10-07",
+   "days": 2,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
-   "sector": "Industrial"
+   "sector": "Industrial",
+   "isGoldenCombo": true,
+   "slTrail": 0.941
   },
   {
    "name": "BUSCAP",
@@ -1452,18 +1560,19 @@ window.ALL_TRACKER = {
    "entryDate": "2026-10-01",
    "entry": 0.54,
    "entryFloor": 0.505,
-   "currentFloor": 0.525,
+   "currentFloor": 0.54,
    "currentPrice": 0.815,
    "high": 0.825,
    "highDate": "2026-10-06",
    "maxGain": 52.8,
    "finalGain": 50.9,
    "day1ChangePct": 2.86,
-   "days": 5,
-   "lastDate": "2026-10-07",
+   "days": 6,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Industrial",
+   "isGoldenCombo": false,
    "slTrail": 0.701
   },
   {
@@ -1479,11 +1588,12 @@ window.ALL_TRACKER = {
    "maxGain": 1,
    "finalGain": 1,
    "day1ChangePct": 1.01,
-   "days": 6,
-   "lastDate": "2026-10-07",
+   "days": 7,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Consumer",
+   "isGoldenCombo": false,
    "slTrail": 0.475
   },
   {
@@ -1499,11 +1609,12 @@ window.ALL_TRACKER = {
    "maxGain": 2.8,
    "finalGain": -2.8,
    "day1ChangePct": 7.58,
-   "days": 6,
-   "lastDate": "2026-10-07",
+   "days": 7,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Industrial",
+   "isGoldenCombo": false,
    "slTrail": 0.321
   },
   {
@@ -1520,11 +1631,12 @@ window.ALL_TRACKER = {
    "maxGain": 7.3,
    "finalGain": 2.8,
    "day1ChangePct": 0,
-   "days": 6,
-   "lastDate": "2026-10-07",
+   "days": 7,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": true,
    "slTrail": 1.09
   },
   {
@@ -1540,11 +1652,12 @@ window.ALL_TRACKER = {
    "maxGain": 0,
    "finalGain": -4.3,
    "day1ChangePct": 6.98,
-   "days": 7,
-   "lastDate": "2026-10-07",
+   "days": 8,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Industrial",
+   "isGoldenCombo": false,
    "slTrail": 0.204
   },
   {
@@ -1561,11 +1674,12 @@ window.ALL_TRACKER = {
    "maxGain": 7.4,
    "finalGain": 3.3,
    "day1ChangePct": 3.1,
-   "days": 7,
-   "lastDate": "2026-10-07",
+   "days": 8,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Factory",
+   "isGoldenCombo": false,
    "slTrail": 2.99
   },
   {
@@ -1582,11 +1696,12 @@ window.ALL_TRACKER = {
    "maxGain": 7.3,
    "finalGain": 2.8,
    "day1ChangePct": 0.93,
-   "days": 7,
-   "lastDate": "2026-10-07",
+   "days": 8,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": true,
    "slTrail": 1.09
   },
   {
@@ -1603,11 +1718,12 @@ window.ALL_TRACKER = {
    "maxGain": 16,
    "finalGain": 16,
    "day1ChangePct": -0.69,
-   "days": 8,
-   "lastDate": "2026-10-07",
+   "days": 9,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Technology",
+   "isGoldenCombo": true,
    "slTrail": 0.792
   },
   {
@@ -1624,11 +1740,12 @@ window.ALL_TRACKER = {
    "maxGain": 8.3,
    "finalGain": 3.7,
    "day1ChangePct": -1.82,
-   "days": 8,
-   "lastDate": "2026-10-07",
+   "days": 9,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": false,
    "slTrail": 1.08
   },
   {
@@ -1645,11 +1762,12 @@ window.ALL_TRACKER = {
    "maxGain": 15.2,
    "finalGain": 15.2,
    "day1ChangePct": 1.4,
-   "days": 9,
-   "lastDate": "2026-10-07",
+   "days": 10,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Technology",
+   "isGoldenCombo": true,
    "slTrail": 0.797
   },
   {
@@ -1666,11 +1784,12 @@ window.ALL_TRACKER = {
    "maxGain": 16.8,
    "finalGain": 16.8,
    "day1ChangePct": -1.38,
-   "days": 10,
-   "lastDate": "2026-10-07",
+   "days": 11,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Technology",
+   "isGoldenCombo": false,
    "slTrail": 0.786
   },
   {
@@ -1686,11 +1805,12 @@ window.ALL_TRACKER = {
    "maxGain": 1.3,
    "finalGain": -7.5,
    "day1ChangePct": 3.67,
-   "days": 14,
-   "lastDate": "2026-10-07",
+   "days": 15,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Healthcare",
+   "isGoldenCombo": false,
    "slTrail": 2.015
   },
   {
@@ -1707,11 +1827,12 @@ window.ALL_TRACKER = {
    "maxGain": 35.8,
    "finalGain": 25.8,
    "day1ChangePct": -1.24,
-   "days": 16,
-   "lastDate": "2026-10-07",
+   "days": 17,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Industrial",
+   "isGoldenCombo": false,
    "slTrail": 0.918
   },
   {
@@ -1727,11 +1848,12 @@ window.ALL_TRACKER = {
    "maxGain": 36.9,
    "finalGain": 36.9,
    "day1ChangePct": 0,
-   "days": 18,
-   "lastDate": "2026-10-07",
+   "days": 19,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Technology",
+   "isGoldenCombo": false,
    "slTrail": 0.71
   },
   {
@@ -1748,11 +1870,12 @@ window.ALL_TRACKER = {
    "maxGain": 37.6,
    "finalGain": 33.6,
    "day1ChangePct": -3.1,
-   "days": 41,
-   "lastDate": "2026-10-07",
+   "days": 42,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Consumer",
+   "isGoldenCombo": false,
    "slTrail": 0.731
   },
   {
@@ -1768,11 +1891,12 @@ window.ALL_TRACKER = {
    "maxGain": 55.1,
    "finalGain": 49.3,
    "day1ChangePct": 0.98,
-   "days": 45,
-   "lastDate": "2026-10-07",
+   "days": 46,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Factory",
+   "isGoldenCombo": false,
    "slTrail": 2.728
   },
   {
@@ -1789,11 +1913,12 @@ window.ALL_TRACKER = {
    "maxGain": 41,
    "finalGain": 36.9,
    "day1ChangePct": -3.17,
-   "days": 49,
-   "lastDate": "2026-10-07",
+   "days": 50,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Consumer",
+   "isGoldenCombo": false,
    "slTrail": 0.731
   },
   {
@@ -1810,11 +1935,12 @@ window.ALL_TRACKER = {
    "maxGain": 70.8,
    "finalGain": 63.5,
    "day1ChangePct": -0.72,
-   "days": 50,
-   "lastDate": "2026-10-07",
+   "days": 51,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": false,
    "slTrail": 0.994
   },
   {
@@ -1831,11 +1957,12 @@ window.ALL_TRACKER = {
    "maxGain": 68.3,
    "finalGain": 61.2,
    "day1ChangePct": -1.42,
-   "days": 52,
-   "lastDate": "2026-10-07",
+   "days": 53,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": false,
    "slTrail": 0.994
   },
   {
@@ -1852,11 +1979,12 @@ window.ALL_TRACKER = {
    "maxGain": 101.7,
    "finalGain": 101.7,
    "day1ChangePct": -0.85,
-   "days": 56,
-   "lastDate": "2026-10-07",
+   "days": 57,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Utilities",
+   "isGoldenCombo": false,
    "slTrail": 0.994
   },
   {
@@ -1873,32 +2001,13 @@ window.ALL_TRACKER = {
    "maxGain": 100,
    "finalGain": 100,
    "day1ChangePct": 0.86,
-   "days": 57,
-   "lastDate": "2026-10-07",
+   "days": 58,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Utilities",
+   "isGoldenCombo": false,
    "slTrail": 0.994
-  },
-  {
-   "name": "ECOSHOP",
-   "entryType": "🔥 NEW",
-   "entryDate": "2026-07-13",
-   "entry": 1.51,
-   "entryFloor": 1.43,
-   "currentFloor": 1.4,
-   "currentPrice": 1.44,
-   "high": 1.51,
-   "highDate": "2026-07-13",
-   "maxGain": 0,
-   "finalGain": -4.6,
-   "day1ChangePct": 0.67,
-   "days": 59,
-   "lastDate": "2026-10-07",
-   "status": "OPEN",
-   "ipoYear": 2025,
-   "sector": "Consumer",
-   "slTrail": 1.387
   },
   {
    "id": "CBHB_2026-07-09_ADDON",
@@ -1914,11 +2023,12 @@ window.ALL_TRACKER = {
    "maxGain": 64.8,
    "finalGain": 57.7,
    "day1ChangePct": 0.71,
-   "days": 61,
-   "lastDate": "2026-10-07",
+   "days": 62,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": false,
    "slTrail": 0.994
   },
   {
@@ -1934,11 +2044,12 @@ window.ALL_TRACKER = {
    "maxGain": 114.7,
    "finalGain": 114.7,
    "day1ChangePct": 0,
-   "days": 62,
-   "lastDate": "2026-10-07",
+   "days": 63,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Utilities",
+   "isGoldenCombo": false,
    "slTrail": 0.994
   },
   {
@@ -1954,11 +2065,12 @@ window.ALL_TRACKER = {
    "maxGain": 123.5,
    "finalGain": 97.1,
    "day1ChangePct": -1.45,
-   "days": 83,
-   "lastDate": "2026-10-07",
+   "days": 84,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Consumer",
+   "isGoldenCombo": false,
    "slTrail": 1.292
   },
   {
@@ -1974,12 +2086,36 @@ window.ALL_TRACKER = {
    "maxGain": 151.4,
    "finalGain": 139.4,
    "day1ChangePct": 3.81,
-   "days": 86,
-   "lastDate": "2026-10-07",
+   "days": 87,
+   "lastDate": "2026-10-08",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Consumer",
+   "isGoldenCombo": false,
    "slTrail": 2.329
+  },
+  {
+   "name": "ECOSHOP",
+   "entryType": "🔥 NEW",
+   "entryDate": "2026-07-13",
+   "entry": 1.51,
+   "entryFloor": 1.43,
+   "currentFloor": 1.4,
+   "currentPrice": 1.44,
+   "high": 1.51,
+   "highDate": "2026-07-13",
+   "maxGain": 0,
+   "finalGain": -4.6,
+   "day1ChangePct": 0.67,
+   "days": 60,
+   "lastDate": "2026-10-08",
+   "status": "CLOSED_TIME",
+   "ipoYear": 2025,
+   "sector": "Consumer",
+   "isGoldenCombo": false,
+   "slTrail": 1.387,
+   "exitDate": "2026-10-08",
+   "exitPrice": 1.44
   },
   {
    "id": "CBHB_2026-09-17_ADDON",
@@ -2000,6 +2136,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": false,
    "slTrail": 1.122,
    "exitDate": "2026-10-07",
    "exitPrice": 1.12
@@ -2023,6 +2160,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Consumer",
+   "isGoldenCombo": false,
    "slTrail": 0.81,
    "exitDate": "2026-10-01",
    "exitPrice": 0.805
@@ -2046,6 +2184,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Factory",
+   "isGoldenCombo": false,
    "slTrail": 3.08,
    "exitDate": "2026-09-23",
    "exitPrice": 3.07
@@ -2068,6 +2207,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Industrial",
+   "isGoldenCombo": false,
    "slTrail": 0.446,
    "exitDate": "2026-09-17",
    "exitPrice": 0.415
@@ -2091,6 +2231,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Factory",
+   "isGoldenCombo": false,
    "slTrail": 2.726,
    "exitDate": "2026-09-17",
    "exitPrice": 2.71
@@ -2114,6 +2255,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Factory",
+   "isGoldenCombo": false,
    "slTrail": 2.726,
    "exitDate": "2026-09-17",
    "exitPrice": 2.71
@@ -2137,6 +2279,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Industrial",
+   "isGoldenCombo": false,
    "slTrail": 0.456,
    "exitDate": "2026-09-17",
    "exitPrice": 0.415
@@ -2160,6 +2303,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Industrial",
+   "isGoldenCombo": false,
    "slTrail": 0.456,
    "exitDate": "2026-09-17",
    "exitPrice": 0.415
@@ -2183,6 +2327,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Consumer",
+   "isGoldenCombo": false,
    "slTrail": 0.808,
    "exitDate": "2026-09-11",
    "exitPrice": 0.785
@@ -2205,6 +2350,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Transportation",
+   "isGoldenCombo": false,
    "slTrail": 1.199,
    "exitDate": "2026-09-08",
    "exitPrice": 1.18
@@ -2228,6 +2374,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Transportation",
+   "isGoldenCombo": true,
    "slTrail": 1.21,
    "exitDate": "2026-09-08",
    "exitPrice": 1.18
@@ -2251,6 +2398,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Transportation",
+   "isGoldenCombo": true,
    "slTrail": 1.199,
    "exitDate": "2026-09-08",
    "exitPrice": 1.18
@@ -2273,6 +2421,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Technology",
+   "isGoldenCombo": false,
    "slTrail": 0.529,
    "exitDate": "2026-09-01",
    "exitPrice": 0.515
@@ -2296,6 +2445,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Consumer",
+   "isGoldenCombo": false,
    "slTrail": 2.376,
    "exitDate": "2026-09-01",
    "exitPrice": 2.29
@@ -2319,6 +2469,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Consumer",
+   "isGoldenCombo": false,
    "slTrail": 2.365,
    "exitDate": "2026-09-01",
    "exitPrice": 2.29
@@ -2342,6 +2493,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Consumer",
+   "isGoldenCombo": true,
    "slTrail": 2.343,
    "exitDate": "2026-09-01",
    "exitPrice": 2.29
@@ -2365,6 +2517,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Industrial",
+   "isGoldenCombo": true,
    "slTrail": 0.697,
    "exitDate": "2026-08-28",
    "exitPrice": 0.69
@@ -2387,6 +2540,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Technology",
+   "isGoldenCombo": false,
    "slTrail": 0.383,
    "exitDate": "2026-08-24",
    "exitPrice": 0.38
@@ -2409,6 +2563,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Technology",
+   "isGoldenCombo": false,
    "slTrail": 0.22,
    "exitDate": "2026-08-06",
    "exitPrice": 0.22
@@ -2432,6 +2587,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Factory",
+   "isGoldenCombo": true,
    "slTrail": 2.31,
    "exitDate": "2026-08-04",
    "exitPrice": 2.31
@@ -2455,6 +2611,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": true,
    "slTrail": 0.675,
    "exitDate": "2026-07-28",
    "exitPrice": 0.665
@@ -2478,6 +2635,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Industrial",
+   "isGoldenCombo": false,
    "slTrail": 0.655,
    "exitDate": "2026-07-28",
    "exitPrice": 0.645
@@ -2500,6 +2658,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Industrial",
+   "isGoldenCombo": false,
    "slTrail": 0.68,
    "exitDate": "2026-07-17",
    "exitPrice": 0.655
@@ -2523,6 +2682,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": false,
    "slTrail": 0.71,
    "exitDate": "2026-07-13",
    "exitPrice": 0.69
@@ -2546,6 +2706,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": true,
    "slTrail": 0.71,
    "exitDate": "2026-07-13",
    "exitPrice": 0.69
@@ -2569,6 +2730,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": false,
    "slTrail": 0.715,
    "exitDate": "2026-07-10",
    "exitPrice": 0.715
@@ -2591,6 +2753,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Bursa",
+   "isGoldenCombo": false,
    "slTrail": 0.522,
    "exitDate": "2026-06-30",
    "exitPrice": 0.52
@@ -2613,6 +2776,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Technology",
+   "isGoldenCombo": false,
    "slTrail": 0.62,
    "exitDate": "2026-06-29",
    "exitPrice": 0.555
@@ -2636,6 +2800,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": false,
    "slTrail": 0.635,
    "exitDate": "2026-06-23",
    "exitPrice": 0.63
@@ -2658,6 +2823,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": false,
    "slTrail": 0.655,
    "exitDate": "2026-06-22",
    "exitPrice": 0.65
@@ -2681,6 +2847,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Property",
+   "isGoldenCombo": false,
    "slTrail": 0.65,
    "exitDate": "2026-06-22",
    "exitPrice": 0.65
@@ -2703,6 +2870,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2025,
    "sector": "Bursa",
+   "isGoldenCombo": false,
    "slTrail": 1.859,
    "exitDate": "2026-06-18",
    "exitPrice": 1.85
@@ -2725,6 +2893,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Industrial",
+   "isGoldenCombo": false,
    "slTrail": 0.506,
    "exitDate": "2026-06-18",
    "exitPrice": 0.47
@@ -2747,6 +2916,7 @@ window.ALL_TRACKER = {
    "status": "CLOSED_SL",
    "ipoYear": 2026,
    "sector": "Consumer",
+   "isGoldenCombo": false,
    "slTrail": 0.555,
    "exitDate": "2026-06-08",
    "exitPrice": 0.53

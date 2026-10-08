@@ -1,5 +1,24 @@
 [
   {
+    "id": "klse-TOP-07-Oct-2026-kumpulan-wang-persaraan",
+    "stockId": "top",
+    "stockName": "TOP GLOVE CORPORATION BHD",
+    "symbol": "TOP",
+    "code": "TOP",
+    "market": "Main / ACE Market",
+    "sector": "General Bursa Equities",
+    "institution": "KUMPULAN WANG PERSARAAN (KWAP)",
+    "institutionCategory": "GLIC",
+    "action": "Acquired",
+    "sharesChanged": 1000000,
+    "totalHolding": 50000000,
+    "percentage": 5,
+    "filingDate": "07-Oct-2026",
+    "signal": "🔥 Heavy Accumulation",
+    "announcementUrl": "https://www.klsescreener.com/v2/announcements/view/11680913",
+    "insight": "Pemfailan rasmi Seksyen 138 Akta Syarikat 2016 oleh KUMPULAN WANG PERSARAAN (KWAP)."
+  },
+  {
     "id": "klse-TENAGA-07-Oct-2026-kumpulan-wang-persaraan",
     "stockId": "tenaga",
     "stockName": "TENAGA NASIONAL BHD",
