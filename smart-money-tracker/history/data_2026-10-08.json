@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-08T06:06:36.113Z",
+  "lastUpdated": "2026-10-08T06:23:41.483Z",
   "source": "klse.i3investor.com",
   "topVolume": [
     {
@@ -7711,8 +7711,8 @@
       "price": 0.33500000834465027,
       "change": -0.004999995231628418,
       "changePct": -1.47,
-      "turnover": 14907.500371336937,
-      "volume": 44500,
+      "turnover": 19698.000490665436,
+      "volume": 58800,
       "signal": "avoid",
       "reason": "⚠️ Illiquid / Comb Stock: Unsuitable Chart Pattern (Avoid Trading!)",
       "high52": 0.4350000023841858,
@@ -7737,7 +7737,7 @@
       "wentUnderwater": true,
       "firstDayOpenPrice": 0.38999998569488525,
       "avgVolume20": 813575,
-      "volumeSpike": 0.05,
+      "volumeSpike": 0.07,
       "hasVolumeSpike": false,
       "ipoAge": 1108,
       "isStaircaseIpo": false,
