@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual
 window.FRESH_RIDER_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-08T04:25:26.795Z",
+  "generatedAt": "2026-10-08T04:26:23.123Z",
   "dataDays": 88,
   "totalTracked": 23,
   "openCount": 10,
@@ -9,18 +9,18 @@ window.FRESH_RIDER_TRACKER = {
   "closedWins": 8,
   "closedWinRate": 62,
   "closedAvgGain": 6.6,
-  "openPnl": 499.6,
+  "openPnl": 498.8,
   "closedPnl": 86.1,
-  "totalPnlNow": 585.7
+  "totalPnlNow": 584.9
  },
  "backtest": {
   "dataStart": "2026-06-02",
   "dataEnd": "2026-10-08",
   "dataDays": 88,
   "signals": 25,
-  "winRate": 64,
+  "winRate": 68,
   "avgGain": 17,
-  "totalPnl": 425.2,
+  "totalPnl": 426.2,
   "worstLoss": -10.3
  },
  "trades": [
@@ -52,11 +52,11 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 0.5,
    "entryFloor": 0.49,
    "currentFloor": 0.49,
-   "currentPrice": 0.5,
+   "currentPrice": 0.505,
    "high": 0.505,
    "highDate": "2026-10-07",
    "maxGain": 1,
-   "finalGain": 0,
+   "finalGain": 1,
    "day1ChangePct": 1.01,
    "days": 7,
    "lastDate": "2026-10-08",
@@ -178,11 +178,11 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 0.545,
    "entryFloor": 0.52,
    "currentFloor": 1.07,
-   "currentPrice": 1.18,
-   "high": 1.18,
-   "highDate": "2026-10-08",
-   "maxGain": 116.5,
-   "finalGain": 116.5,
+   "currentPrice": 1.17,
+   "high": 1.17,
+   "highDate": "2026-10-07",
+   "maxGain": 114.7,
+   "finalGain": 114.7,
    "day1ChangePct": 0,
    "days": 63,
    "lastDate": "2026-10-08",
@@ -190,7 +190,7 @@ window.FRESH_RIDER_TRACKER = {
    "ipoYear": 2025,
    "sector": "Utilities",
    "isGoldenCombo": false,
-   "slTrail": 1.003
+   "slTrail": 0.994
   },
   {
    "name": "AMBEST",
@@ -537,7 +537,7 @@ window.FRESH_RIDER_TRACKER = {
 };
 window.ADD_ON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-08T04:25:26.796Z",
+  "generatedAt": "2026-10-08T04:26:23.124Z",
   "dataDays": 88,
   "totalTracked": 12,
   "openCount": 5,
@@ -845,7 +845,7 @@ window.ADD_ON_TRACKER = {
 };
 window.FLOOR_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-08T04:25:26.796Z",
+  "generatedAt": "2026-10-08T04:26:23.124Z",
   "dataDays": 88,
   "totalTracked": 26,
   "openCount": 10,
@@ -853,9 +853,9 @@ window.FLOOR_ADDON_TRACKER = {
   "closedWins": 10,
   "closedWinRate": 63,
   "closedAvgGain": 3.6,
-  "openPnl": 361.4,
+  "openPnl": 358,
   "closedPnl": 56.8,
-  "totalPnlNow": 418.2
+  "totalPnlNow": 414.8
  },
  "backtest": {
   "dataStart": "2026-06-02",
@@ -1033,11 +1033,11 @@ window.FLOOR_ADDON_TRACKER = {
    "entry": 0.58,
    "entryFloor": 0.56,
    "currentFloor": 1.07,
-   "currentPrice": 1.18,
-   "high": 1.18,
-   "highDate": "2026-10-08",
-   "maxGain": 103.4,
-   "finalGain": 103.4,
+   "currentPrice": 1.17,
+   "high": 1.17,
+   "highDate": "2026-10-07",
+   "maxGain": 101.7,
+   "finalGain": 101.7,
    "day1ChangePct": -0.85,
    "days": 57,
    "lastDate": "2026-10-08",
@@ -1045,7 +1045,7 @@ window.FLOOR_ADDON_TRACKER = {
    "ipoYear": 2025,
    "sector": "Utilities",
    "isGoldenCombo": false,
-   "slTrail": 1.003
+   "slTrail": 0.994
   },
   {
    "id": "HEGROUP_2026-07-15_ADDON",
@@ -1055,11 +1055,11 @@ window.FLOOR_ADDON_TRACKER = {
    "entry": 0.585,
    "entryFloor": 0.56,
    "currentFloor": 1.07,
-   "currentPrice": 1.18,
-   "high": 1.18,
-   "highDate": "2026-10-08",
-   "maxGain": 101.7,
-   "finalGain": 101.7,
+   "currentPrice": 1.17,
+   "high": 1.17,
+   "highDate": "2026-10-07",
+   "maxGain": 100,
+   "finalGain": 100,
    "day1ChangePct": 0.86,
    "days": 58,
    "lastDate": "2026-10-08",
@@ -1067,7 +1067,7 @@ window.FLOOR_ADDON_TRACKER = {
    "ipoYear": 2025,
    "sector": "Utilities",
    "isGoldenCombo": false,
-   "slTrail": 1.003
+   "slTrail": 0.994
   },
   {
    "id": "CBHB_2026-07-09_ADDON",
@@ -1479,7 +1479,7 @@ window.FLOOR_ADDON_TRACKER = {
 };
 window.ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-08T04:25:26.796Z",
+  "generatedAt": "2026-10-08T04:26:23.124Z",
   "dataDays": 88,
   "totalTracked": 61,
   "openCount": 25,
@@ -1487,9 +1487,9 @@ window.ALL_TRACKER = {
   "closedWins": 21,
   "closedWinRate": 58,
   "closedAvgGain": 3.8,
-  "openPnl": 1006.8,
+  "openPnl": 1002.6,
   "closedPnl": 135.1,
-  "totalPnlNow": 1141.9
+  "totalPnlNow": 1137.7
  },
  "trades": [
   {
@@ -1542,11 +1542,11 @@ window.ALL_TRACKER = {
    "entry": 0.5,
    "entryFloor": 0.49,
    "currentFloor": 0.49,
-   "currentPrice": 0.5,
+   "currentPrice": 0.505,
    "high": 0.505,
    "highDate": "2026-10-07",
    "maxGain": 1,
-   "finalGain": 0,
+   "finalGain": 1,
    "day1ChangePct": 1.01,
    "days": 7,
    "lastDate": "2026-10-08",
@@ -1911,11 +1911,11 @@ window.ALL_TRACKER = {
    "entry": 0.58,
    "entryFloor": 0.56,
    "currentFloor": 1.07,
-   "currentPrice": 1.18,
-   "high": 1.18,
-   "highDate": "2026-10-08",
-   "maxGain": 103.4,
-   "finalGain": 103.4,
+   "currentPrice": 1.17,
+   "high": 1.17,
+   "highDate": "2026-10-07",
+   "maxGain": 101.7,
+   "finalGain": 101.7,
    "day1ChangePct": -0.85,
    "days": 57,
    "lastDate": "2026-10-08",
@@ -1923,7 +1923,7 @@ window.ALL_TRACKER = {
    "ipoYear": 2025,
    "sector": "Utilities",
    "isGoldenCombo": false,
-   "slTrail": 1.003
+   "slTrail": 0.994
   },
   {
    "id": "HEGROUP_2026-07-15_ADDON",
@@ -1933,11 +1933,11 @@ window.ALL_TRACKER = {
    "entry": 0.585,
    "entryFloor": 0.56,
    "currentFloor": 1.07,
-   "currentPrice": 1.18,
-   "high": 1.18,
-   "highDate": "2026-10-08",
-   "maxGain": 101.7,
-   "finalGain": 101.7,
+   "currentPrice": 1.17,
+   "high": 1.17,
+   "highDate": "2026-10-07",
+   "maxGain": 100,
+   "finalGain": 100,
    "day1ChangePct": 0.86,
    "days": 58,
    "lastDate": "2026-10-08",
@@ -1945,7 +1945,7 @@ window.ALL_TRACKER = {
    "ipoYear": 2025,
    "sector": "Utilities",
    "isGoldenCombo": false,
-   "slTrail": 1.003
+   "slTrail": 0.994
   },
   {
    "id": "CBHB_2026-07-09_ADDON",
@@ -1976,11 +1976,11 @@ window.ALL_TRACKER = {
    "entry": 0.545,
    "entryFloor": 0.52,
    "currentFloor": 1.07,
-   "currentPrice": 1.18,
-   "high": 1.18,
-   "highDate": "2026-10-08",
-   "maxGain": 116.5,
-   "finalGain": 116.5,
+   "currentPrice": 1.17,
+   "high": 1.17,
+   "highDate": "2026-10-07",
+   "maxGain": 114.7,
+   "finalGain": 114.7,
    "day1ChangePct": 0,
    "days": 63,
    "lastDate": "2026-10-08",
@@ -1988,7 +1988,7 @@ window.ALL_TRACKER = {
    "ipoYear": 2025,
    "sector": "Utilities",
    "isGoldenCombo": false,
-   "slTrail": 1.003
+   "slTrail": 0.994
   },
   {
    "name": "AMBEST",
