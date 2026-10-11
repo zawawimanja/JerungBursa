@@ -838,7 +838,18 @@ async function main() {
                         if (((d.low - floor40) / floor40) * 100 <= 2.0) touch40++;
                     });
 
-                    const lookback10 = Math.min(20, validDays.length);
+                    const lookback20 = Math.min(20, validDays.length);
+                    const dailyLookback20 = validDays.slice(-lookback20);
+                    const lows20 = dailyLookback20.map(d => d.low);
+                    const floor20 = Math.min(...lows20);
+                    const dist20 = ((currentPrice - floor20) / floor20) * 100;
+                    
+                    let touch20 = 0;
+                    dailyLookback20.forEach(d => {
+                        if (((d.low - floor20) / floor20) * 100 <= 2.0) touch20++;
+                    });
+                    
+                    const lookback10 = Math.min(10, validDays.length);
                     const dailyLookback10 = validDays.slice(-lookback10);
                     const lows10 = dailyLookback10.map(d => d.low);
                     const floor10 = Math.min(...lows10);
@@ -849,27 +860,34 @@ async function main() {
                         if (((d.low - floor10) / floor10) * 100 <= 2.0) touch10++;
                     });
                     
-                    const lookback5 = Math.min(10, validDays.length);
+                    const lookback5 = Math.min(5, validDays.length);
                     const dailyLookback5 = validDays.slice(-lookback5);
                     const lows5 = dailyLookback5.map(d => d.low);
                     const floor5 = Math.min(...lows5);
                     const dist5 = ((currentPrice - floor5) / floor5) * 100;
                     
+                    // Kira sentuhan pada paras floor terkini dalam TINGKAP YANG SAMA seperti floor itu
+                    // (sebelum ini touch5 dikira merentas 40 hari — overcount yang meluluskan
+                    //  lantai tak matang sebagai "Lantai Rapat").
                     let touch5 = 0;
-                    dailyLookback40.forEach(d => {
+                    dailyLookback10.forEach(d => {
                         if (Math.abs(((d.low - floor5) / floor5) * 100) <= 2.0) touch5++;
                     });
-
-                    const lookback3 = Math.min(3, validDays.length);
-                    const dailyLookback3 = validDays.slice(-lookback3);
-                    const lows3 = dailyLookback3.map(d => d.low);
-                    const floor3 = Math.min(...lows3);
 
                     // Determine which floor to use: prefer the highest (most recent) stable floor cluster
                     let minLow = floor40;
                     let touchCount = touch40;
                     
-                    // If recent 10-day floor is significantly higher (newer higher base), use it
+                    // If recent 20-day floor is significantly higher (newer higher base), use it
+                    if (floor20 >= floor40 * 1.02) {
+                        minLow = floor20;
+                        let t20 = 0;
+                        dailyLookback40.forEach(d => {
+                            if (Math.abs(((d.low - floor20) / floor20) * 100) <= 2.5) t20++;
+                        });
+                        touchCount = Math.max(t20, touch20);
+                    }
+                    // If recent 10-day floor is significantly higher still, use it
                     if (floor10 >= floor40 * 1.02) {
                         minLow = floor10;
                         let t10 = 0;
@@ -882,14 +900,14 @@ async function main() {
                     if (floor5 >= minLow * 1.02) {
                         minLow = floor5;
                         let t5 = 0;
-                        dailyLookback40.forEach(d => {
+                        dailyLookback10.forEach(d => {
                             if (Math.abs(((d.low - floor5) / floor5) * 100) <= 2.5) t5++;
                         });
                         touchCount = Math.max(t5, touch5);
                     }
                     
                     const floorDist = ((currentPrice - minLow) / minLow) * 100;
-                    const maxLow = Math.max(...lows10);
+                    const maxLow = Math.max(...lows20);
                     const lowTightness = ((maxLow - minLow) / minLow) * 100;
 
 

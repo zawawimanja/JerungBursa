@@ -5949,8 +5949,12 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     ? `<span style="background: rgba(16,185,129,0.15); color: #10b981; border: 1px solid rgba(16,185,129,0.3); padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 800; font-size: 0.72rem;">🔥 Net Buy</span>`
                     : `<span style="background: rgba(99,102,241,0.15); color: #a5b4fc; border: 1px solid rgba(99,102,241,0.3); padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 800; font-size: 0.72rem;">🛡️ Hold</span>`;
 
-                const sharesStr = tx.sharesChanged > 0 ? `+${(tx.sharesChanged / 1000000).toFixed(2)}M units` : 'Maintained';
-                const totalHoldingStr = `${(tx.totalHolding / 1000000).toFixed(1)}M units (${tx.percentage.toFixed(2)}%)`;
+                const sharesStr = (tx.sharesChanged === null || tx.sharesChanged === undefined)
+                    ? '—'
+                    : (tx.sharesChanged > 0 ? `+${(tx.sharesChanged / 1000000).toFixed(2)}M units` : 'Maintained');
+                const totalHoldingStr = (tx.totalHolding === null || tx.totalHolding === undefined || tx.percentage === null || tx.percentage === undefined)
+                    ? '—'
+                    : `${(tx.totalHolding / 1000000).toFixed(1)}M units (${tx.percentage.toFixed(2)}%)`;
 
                 return `
                     <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.25);">

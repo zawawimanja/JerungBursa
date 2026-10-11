@@ -124,14 +124,25 @@ function getRecentFloorMap() {
 }
 
 const recentFloorMap = getRecentFloorMap();
+const frTrackSource = (allTracker && Array.isArray(allTracker.trades)) ? allTracker.trades : [];
+const frTrackMapFloor = new Map();
+frTrackSource.filter(t => t.status !== 'OPEN').sort((a,b) => (a.entryDate || '').localeCompare(b.entryDate || '')).forEach(t => {
+    frTrackMapFloor.set((t.name || '').toUpperCase(), t);
+});
+frTrackSource.filter(t => t.status === 'OPEN').sort((a,b) => (a.entryDate || '').localeCompare(b.entryDate || '')).forEach(t => {
+    frTrackMapFloor.set((t.name || '').toUpperCase(), t);
+});
 const effFloorOf = (item) => {
-    const rf = recentFloorMap.get((item.name || '').toUpperCase());
+    // SELARAS 100% dengan index.html effFloorOf()
+    const clean = (item.name || '').toUpperCase().trim();
+    const tr = frTrackMapFloor.get(clean);
+    const trFloor = tr ? (tr.currentFloor || tr.entryFloor || 0) : 0;
+    const rf = recentFloorMap.get(clean) || 0;
     const f = item.floorLow || 0;
-    // Saham tangga kedua (Base 2): guna lantai konsolidasi terkini (rf) jika sah di bawah harga
-    if (rf > 0 && rf <= item.price) {
-        if (f <= 0 || rf > f || ((item.price - f) / f) > 0.10) return Math.max(f, rf);
-    }
-    return f || rf || 0;
+    const candidates = [f, rf].filter(v => v > 0);
+    if (trFloor > 0 && trFloor <= item.price * 1.02) candidates.push(trFloor);
+    if (candidates.length === 0) return 0;
+    return Math.max(...candidates);
 };
 
 // frTrackMap with OPEN precedence (exact match to index.html)

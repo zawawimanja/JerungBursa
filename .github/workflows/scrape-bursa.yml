@@ -46,6 +46,11 @@ jobs:
           node scripts/generate_daily_equity_tracker.js
           node scripts/scrape-jerung.js
           node scripts/generate_news_data.js
+
+      - name: Run Scanner-Tracker Sync Audit (npm test)
+        run: |
+          cd smart-money-tracker
+          npm test
           
       - name: Commit and Push changes
         run: |
@@ -60,6 +65,7 @@ jobs:
           git add smart-money-tracker/jerung-data.js
           git add smart-money-tracker/news_data.js
           git add smart-money-tracker/history/
+          git add smart-money-tracker/symbol_mappings.json
           # Only commit if there are changes
           if ! git diff --quiet || ! git diff --staged --quiet; then
             git commit -m "Auto-update live_data.json/js, trackers & news_data.js"

@@ -141,7 +141,7 @@ function passesJerungRadar(item) {
     if (!item || !item.price || item.price <= 0 || item.price > 10.0) return false;
     if (isSleepingOrAvoidStock(item) || item.isCombStock || item.signal === 'avoid') return false;
     const changeVal = item.changePct !== undefined ? item.changePct : item.change;
-    if (changeVal > 5.0) return false;
+    if (changeVal > 8.0) return false;
     const pullback = item.pullback; if (pullback == null) return false;
     const closeTight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
     const touches = item.touchCount || 0;
@@ -152,7 +152,7 @@ function passesJerungRadar(item) {
     if ((item.turnover || 0) < 300000) return false;
     if (isNearAthPath && touches < 2) return false;
     const t1 = isNearAthPath && !item.hasVolumeSpike && item.isConsolidation === true && touches >= 3 && closeTight <= 5.0;
-    const t2 = isNearAthPath && item.hasVolumeSpike && (item.volumeSpike || 0) < 3.0 && changeVal < 3.5 && closeTight <= 10.0;
+    const t2 = isNearAthPath && item.hasVolumeSpike && (item.volumeSpike || 0) < 5.0 && changeVal >= 0 && closeTight <= 10.0;
     return t1 || t2 || isSecondaryBasePath;
 }
 function passesVcpStaircase(item) {
@@ -666,19 +666,29 @@ function buildMessage(now, out) {
     }
 
     function effFloor(name, price, floorLow) {
+        // SELARAS 100% dengan index.html effFloorOf():
+        //   candidates = [floorLow, recentFloor, trackerFloor (jika <= price*1.02)] -> Math.max
         const nm = canonName(name).toUpperCase();
+        const tr = frTrackMap.get(nm);
+        const trFloor = tr ? (tr.currentFloor || tr.entryFloor || 0) : 0;
         const rf = recentFloor.get(nm) || 0;
         const f = floorLow || 0;
-        if (f > 0 && rf > 0 && ((price - f) / f) > 0.10) return Math.max(f, rf);
-        return f || rf || 0;
+        const candidates = [f, rf].filter(v => v > 0);
+        if (trFloor > 0 && trFloor <= price * 1.02) candidates.push(trFloor);
+        if (candidates.length === 0) return 0;
+        return Math.max(...candidates);
     }
 
     function effFloorOfHT(item) {
         const clean = canonName(item.name).toUpperCase();
+        const tr = htTrackMap.get(clean);
+        const trFloor = tr ? (tr.currentFloor || tr.entryFloor || 0) : 0;
         const rf = recentFloor.get(clean) || 0;
         const f = item.floorLow || 0;
-        if (f > 0 && rf > 0 && ((item.price - f) / f) > 0.10) return Math.max(f, rf);
-        return f || rf || 0;
+        const candidates = [f, rf].filter(v => v > 0);
+        if (trFloor > 0 && trFloor <= item.price * 1.02) candidates.push(trFloor);
+        if (candidates.length === 0) return 0;
+        return Math.max(...candidates);
     }
 
     // Status Kesegaran (SAMA SEBIJI DENGAN INDEX.HTML):
@@ -941,7 +951,9 @@ function buildMessage(now, out) {
             name: s.name, price: s.price, changePct: s.changePct, pullback: s.pullback,
             tight: typeof s.closeTightness === 'number' ? s.closeTightness : null,
             floorDist: fDist, floor: effF,
-            sl: +Math.max(s.price * 0.89, s.price * 0.80).toFixed(3),
+            // SL rapat di bawah lantai sokongan (effF) = SL ketat & risiko kecil.
+            // Fallback ke -11% harga jika lantai tiada data.
+            sl: effF > 0 ? +Math.min(effF * 0.97, s.price * 0.92).toFixed(3) : +Math.max(s.price * 0.89, s.price * 0.80).toFixed(3),
             inTracker: frTrackedNames.has(canonName(s.name).toUpperCase()),
             label: formatFreshnessBadge(fresh, s, frTrackMap),
             tierBadge: tier.tierBadge,

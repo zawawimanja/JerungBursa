@@ -157,10 +157,17 @@ async function getCorporateNewsRisk(stockCode, stockName) {
     if (divEntitlements.length > 0) {
         const latestEnt = divEntitlements[0];
         if (latestEnt.exDate) {
-            const exDateObj = new Date(latestEnt.exDate);
-            const now = new Date();
-            let isRelevant = true;
+            // Format dari klsescreener ialah "DD MMM" (cth "01 Jan") tanpa tahun.
+            // Tambah tahun semasa supaya parse konsisten; jika masih tak sah, JANGAN flag
+            // (elak false-positive ex-dividend alert).
+            let exDateObj = new Date(latestEnt.exDate);
+            if (isNaN(exDateObj.getTime())) {
+                const withYear = `${latestEnt.exDate} ${new Date().getFullYear()}`;
+                exDateObj = new Date(withYear);
+            }
+            let isRelevant = false;
             if (!isNaN(exDateObj.getTime())) {
+                const now = new Date();
                 const diffDays = Math.round((exDateObj.getTime() - now.getTime()) / (24 * 3600 * 1000));
                 // Only alert if ex-date is within last 5 days or next 30 days
                 isRelevant = (diffDays >= -5 && diffDays <= 30);

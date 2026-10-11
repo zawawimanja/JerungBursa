@@ -209,11 +209,14 @@ if (fs.existsSync(liveFile)) {
 
 const recentByName = {};
 function dynamicFloor(name, price, floorLow) {
+    // SELARAS dengan index.html effFloorOf(): ambil lantai TERTINGGI yang sah
+    // (lantai konsolidasi terkini mengatasi lantai lama) tanpa syarat jarak >10%.
     const rfArr = recentByName[name] || [];
     const rf = rfArr.length ? Math.min(...rfArr) : 0;
     const f = floorLow || 0;
-    if (f > 0 && rf > 0 && ((price - f) / f) > 0.10) return Math.max(f, rf);
-    return f || rf;
+    const candidates = [f, rf].filter(v => v > 0);
+    if (candidates.length === 0) return 0;
+    return Math.max(...candidates);
 }
 
 // -------------------------------------------------------------
@@ -318,11 +321,13 @@ const initialBaseMap = {};
 const recentByNameAddOn = {};
 
 function dynamicFloorAddOn(name, price, floorLow) {
+    // SELARAS dengan index.html effFloorOf(): lantai tertinggi yang sah.
     const rfArr = recentByNameAddOn[name] || [];
     const rf = rfArr.length ? Math.min(...rfArr) : 0;
     const f = floorLow || 0;
-    if (f > 0 && rf > 0 && ((price - f) / f) > 0.10) return Math.max(f, rf);
-    return f || rf;
+    const candidates = [f, rf].filter(v => v > 0);
+    if (candidates.length === 0) return 0;
+    return Math.max(...candidates);
 }
 
 for (const day of dayList) {

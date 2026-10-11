@@ -165,9 +165,11 @@ async function scrapeKlseAnnouncements(existingData) {
                             institution: matchedInst.name,
                             institutionCategory: matchedInst.category,
                             action: isAcquired ? 'Acquired' : 'Disposed',
-                            sharesChanged: 1000000,
-                            totalHolding: 50000000,
-                            percentage: 5.0,
+                            // Data kuantiti sebenar TIDAK tersedia dari feed ringkasan — jangan reka.
+                            // null bermakna UI akan papar "—". Isi hanya jika sumber beri nilai sebenar.
+                            sharesChanged: null,
+                            totalHolding: null,
+                            percentage: null,
                             filingDate: dateStr,
                             signal: isAcquired ? '🔥 Heavy Accumulation' : '⚠️ Rebalancing',
                             announcementUrl: link || 'https://www.bursamalaysia.com/market_information/announcements/company_announcement',
@@ -227,9 +229,10 @@ async function scrapeBursaApi(existingData) {
                             institution: matchedInst.name,
                             institutionCategory: matchedInst.category,
                             action: isAcquired ? 'Acquired' : 'Disposed',
-                            sharesChanged: 1000000,
-                            totalHolding: 50000000,
-                            percentage: 5.0,
+                            // Data kuantiti sebenar tidak tersedia dari API ringkasan — jangan reka (null -> UI "—").
+                            sharesChanged: null,
+                            totalHolding: null,
+                            percentage: null,
                             filingDate: dateStr,
                             signal: isAcquired ? '🔥 Heavy Accumulation' : '⚠️ Rebalancing',
                             announcementUrl,

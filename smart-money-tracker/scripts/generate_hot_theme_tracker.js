@@ -400,11 +400,13 @@ const tradesADD = [];
 const recentByNameADD = {};
 
 function dynamicFloorAddOn(name, price, floorLow) {
+    // SELARAS dengan dynamicFloor (NEW) & index.html effFloorOf(): lantai tertinggi yang sah.
     const rfArr = recentByNameADD[name] || [];
     const rf = rfArr.length ? Math.min(...rfArr) : 0;
     const f = floorLow || 0;
-    if (f > 0 && rf > 0 && ((price - f) / f) > 0.10) return Math.max(f, rf);
-    return f || rf;
+    const candidates = [f, rf].filter(v => v > 0);
+    if (candidates.length === 0) return 0;
+    return Math.max(...candidates);
 }
 
 for (const day of dayList) {
@@ -450,14 +452,11 @@ for (const day of dayList) {
         const effFloor = dynamicFloorAddOn(name, it.price, it.floorLow);
         if (!isHotThemeAddOnPick(it, base.price, effFloor, day.date)) continue;
 
-        // SOP Realistik Staircase:
-        // 1. Paras harga mesti beza >= 3.5% dari mana-mana open trade sedia ada (membentuk anak tangga Base 2/3 baharu)
+        // 1. Elak entry berganda pada tarikh sama (setiap tarikh = satu anak tangga)
         const sameStockOpen = openADD.filter(ot => ot.name.toUpperCase() === name);
         const tooClose = sameStockOpen.some(ot => ot.entryDate === day.date);
         if (tooClose) continue;
-        // 2. Cooldown: Maksimum 1 open trade aktif dalam tempoh 10 hari dagangan terakhir
-        const recentSame = sameStockOpen.filter(ot => ot.entryDate === day.date || (new Date(day.date) - new Date(ot.entryDate)) < 10 * 86400000);
-        // Rule 8: Multi-entry allowed on new dates
+        // Rule 8: Multi-entry dibenarkan pada tarikh baharu (membentuk anak tangga Base 2/3).
 
         const gainFromBase = ((it.price - base.price) / base.price) * 100;
         const touches = it.touchCount || 0;
@@ -558,8 +557,12 @@ function bt20(entry, floor, fut) {
         if (d.floorLow) curFloor = d.floorLow;
         const floorSL = curFloor * 0.97;
         const gain = ((high - entry) / entry) * 100;
-        const trail = gain >= 20 ? high * 0.94 : high * 0.80;
-        const sl = Math.max(floorSL, trail, entry * 0.84);
+        // SELARAS dengan hotThemeExit(): 20%+ -> trail 6%, 10%+ -> trail 10%, lain -> trail 20%
+        const trail = gain >= 20 ? high * 0.94 : (gain >= 10 ? high * 0.90 : high * 0.80);
+        // Hard stop aktif hanya selepas hari ke-5 (sama seperti hotThemeExit)
+        const daysHeld = fut.indexOf(d) + 1;
+        const hardStop = daysHeld > 5 ? entry * 0.84 : 0;
+        const sl = Math.max(floorSL, trail, hardStop);
         if (d.price <= sl) return ((sl - entry) / entry) * 100;
     }
     return ((fut[fut.length - 1].price - entry) / entry) * 100;
