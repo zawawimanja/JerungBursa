@@ -273,9 +273,18 @@ for (const trade of tradesOnLatestDate) {
 
     const isDippingDeep = liveItem.pullback > 10.0 || liveItem.changePct < -5.0;
     const isExtended = trade.entry > 0 && ((liveItem.price - trade.entry) / trade.entry) * 100 > 10.0;
-    const isLoose = typeof liveItem.closeTightness === 'number' && liveItem.closeTightness > 4.85;
-    if (isDippingDeep || isExtended || isLoose) {
-        console.log(`  ℹ️  Skip [${sym}] — ${isExtended ? 'extended >10% from entry' : (isLoose ? `loose tightness ${liveItem.closeTightness.toFixed(2)}% > 4.85%` : `deep dip pullback ${liveItem.pullback?.toFixed(1)}%`)} (not an entry zone)`);
+    const tightThreshold = (trade.entryType && trade.entryType.includes('ADD-ON')) ? 3.5 : 10.0;
+    const isLoose = typeof liveItem.closeTightness === 'number' && liveItem.closeTightness > tightThreshold;
+    const effF = effFloorOf(liveItem);
+    const fDist = effF ? ((liveItem.price - effF) / effF * 100) : 99;
+    const isFloorTooFar = fDist > 5.0 || fDist < -2.0;
+
+    if (isDippingDeep || isExtended || isLoose || isFloorTooFar) {
+        const reason = isExtended ? 'extended >10% from entry' : 
+                       isLoose ? `loose tightness ${liveItem.closeTightness.toFixed(2)}% > ${tightThreshold}%` : 
+                       isFloorTooFar ? `floor dist ${fDist.toFixed(1)}% outside [-2%, 5%]` :
+                       `deep dip pullback ${liveItem.pullback?.toFixed(1)}%`;
+        console.log(`  ℹ️  Skip [${sym}] — ${reason} (not an entry zone)`);
         continue;
     }
     assert(topRankingNames.has(sym), `Latest Tracker Entry [${sym}] (${trade.entryType}) must appear in Scanner Top Ranking VVIP`);
