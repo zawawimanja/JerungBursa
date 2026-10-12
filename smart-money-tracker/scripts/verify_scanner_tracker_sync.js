@@ -86,11 +86,13 @@ assert(htTracker && Array.isArray(htTracker.trades) && htTracker.trades.length >
 // TEST 2: Latest Entry Date & Active Positions
 // -------------------------------------------------------------
 console.log('\n[2] Checking Latest Entry Date & Active Signals...');
-const sortedDates = [...new Set(allTracker.trades.map(t => t.entryDate).filter(Boolean))].sort();
-const latestDate = sortedDates[sortedDates.length - 1];
-console.log(`  📅 Latest recorded entry date in tracker: ${latestDate}`);
+// Use OPEN trades only for latestDate — avoids highDate/lastDate contamination from closed trades.
+const openTrades = allTracker.trades.filter(t => t.status === 'OPEN');
+const sortedOpenDates = [...new Set(openTrades.map(t => t.entryDate).filter(Boolean))].sort();
+const latestDate = sortedOpenDates[sortedOpenDates.length - 1];
+console.log(`  📅 Latest recorded entry date in tracker (OPEN trades): ${latestDate}`);
 
-const tradesOnLatestDate = allTracker.trades.filter(t => t.entryDate === latestDate && t.status === 'OPEN');
+const tradesOnLatestDate = openTrades.filter(t => t.entryDate === latestDate);
 console.log(`  🎯 Trades entered on ${latestDate}: ${tradesOnLatestDate.map(t => `${t.name} (${t.entryType})`).join(', ')}`);
 
 assert(tradesOnLatestDate.length > 0, `At least 1 active signal entered on ${latestDate}`);
@@ -262,11 +264,18 @@ console.log('\n[4] Cross-Verification of Mandatory Candidates...');
 for (const trade of tradesOnLatestDate) {
     const sym = trade.name.toUpperCase();
     const liveItem = liveData.find(x => (x.name || '').toUpperCase() === sym);
-    const isDippingDeep = liveItem && (liveItem.pullback > 10.0 || liveItem.changePct < -5.0);
-    const isExtended = liveItem && trade.entry > 0 && ((liveItem.price - trade.entry) / trade.entry) * 100 > 10.0;
-    const isLoose = liveItem && typeof liveItem.closeTightness === 'number' && liveItem.closeTightness > 4.85;
+
+    // Skip if stock not found in live_data (no volume/trading that day — stale data scenario)
+    if (!liveItem) {
+        console.log(`  ℹ️  Skip [${sym}] — not found in live_data (no trading data available, possibly stale snapshot)`);
+        continue;
+    }
+
+    const isDippingDeep = liveItem.pullback > 10.0 || liveItem.changePct < -5.0;
+    const isExtended = trade.entry > 0 && ((liveItem.price - trade.entry) / trade.entry) * 100 > 10.0;
+    const isLoose = typeof liveItem.closeTightness === 'number' && liveItem.closeTightness > 4.85;
     if (isDippingDeep || isExtended || isLoose) {
-        console.log(`  ℹ️  Skip [${sym}] — ${isExtended ? 'extended > 10% from entry' : (isLoose ? 'loose tightness' : 'deep dip')} (not an entry zone anymore)`);
+        console.log(`  ℹ️  Skip [${sym}] — ${isExtended ? 'extended >10% from entry' : (isLoose ? `loose tightness ${liveItem.closeTightness.toFixed(2)}% > 4.85%` : `deep dip pullback ${liveItem.pullback?.toFixed(1)}%`)} (not an entry zone)`);
         continue;
     }
     assert(topRankingNames.has(sym), `Latest Tracker Entry [${sym}] (${trade.entryType}) must appear in Scanner Top Ranking VVIP`);

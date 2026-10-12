@@ -248,9 +248,10 @@ async function main() {
     let allRawStocks = new Map();
     
     // 1. Ambil data pasaran utama
+    let i3Failed = false;
     try {
         console.log('🌐 Menarik data dari klse.i3investor.com...');
-        const res = await axios.get('https://klse.i3investor.com/web/market/mostactive', { headers: HEADERS });
+        const res = await axios.get('https://klse.i3investor.com/web/market/mostactive', { headers: HEADERS, timeout: 20000 });
         const $ = cheerio.load(res.data);
         
         const activeStocks = parseTab($, '#tab-active');
@@ -259,15 +260,24 @@ async function main() {
         
         console.log(`✅ Berjaya menarik: ${activeStocks.length} Aktif, ${gainerStocks.length} Gainer, ${loserStocks.length} Loser.`);
         
-        // Gabungkan semua ke dalam Map unik untuk mengelakkan pertindihan data
-        [...activeStocks, ...gainerStocks, ...loserStocks].forEach(s => {
-            allRawStocks.set(s.name, s);
-        });
+        // Guard: jika semua tab kosong, HTML structure mungkin berubah (HTTP 200 tapi tiada data)
+        if (activeStocks.length + gainerStocks.length + loserStocks.length === 0) {
+            console.warn('⚠️ i3investor berjaya dicapai tapi semua tab kosong — HTML structure mungkin berubah. Beralih ke fallback...');
+            i3Failed = true;
+        } else {
+            // Gabungkan semua ke dalam Map unik untuk mengelakkan pertindihan data
+            [...activeStocks, ...gainerStocks, ...loserStocks].forEach(s => {
+                allRawStocks.set(s.name, s);
+            });
+        }
         
     } catch (e) {
         console.warn('⚠️ Gagal menarik data pasaran dari i3investor:', e.message);
-        
-        // Fallback ke Bursa Malaysia via Puppeteer
+        i3Failed = true;
+    }
+
+    // Fallback ke Bursa Malaysia via Puppeteer (jika i3investor gagal atau kosong)
+    if (i3Failed) {
         const fallbackStocks = await scrapeBursaMalaysia();
         if (fallbackStocks.length > 0) {
             console.log(`✅ Berjaya menarik ${fallbackStocks.length} saham dari fallback Bursa Malaysia.`);
