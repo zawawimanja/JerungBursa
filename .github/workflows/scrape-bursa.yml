@@ -40,7 +40,7 @@ jobs:
           PUPPETEER_EXECUTABLE_PATH: '/usr/bin/chromium-browser'
         run: |
           cd smart-money-tracker
-          npm install
+          npm ci
           
       - name: Run API Scraper & Trackers Generator
         env:
@@ -82,7 +82,7 @@ jobs:
             git commit -m "Auto-update live_data.json/js, trackers & news_data.js"
             pushed=false
             for i in 1 2 3 4 5; do
-              git pull --rebase origin main
+              git pull --rebase --autostash origin main
               if git push origin main; then
                 pushed=true
                 echo "Successfully pushed changes to main."
