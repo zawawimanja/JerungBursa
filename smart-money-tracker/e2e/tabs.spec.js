@@ -3,7 +3,7 @@ const { test, expect } = require('@playwright/test');
 const { loadDashboard, TABS } = require('./helpers');
 
 test.describe('Penukaran tab', () => {
-  test('semua 16 tab boleh dibuka dan papar view masing-masing', async ({ page }) => {
+  test('semua 15 tab boleh dibuka dan papar view masing-masing', async ({ page }) => {
     // Render setiap tab berat (data 5.7MB) — beri bajet masa besar.
     test.setTimeout(300_000);
     const { pageErrors } = await loadDashboard(page);

@@ -24,8 +24,8 @@ test.describe('Paparan telefon', () => {
     await expect(tabsNav).toBeVisible();
 
     // Buka satu tab pada telefon.
-    await page.locator('#tab-portfolio').click();
-    await expect(page.locator('#view-portfolio')).toBeVisible();
+    await page.locator('#tab-calculator').click();
+    await expect(page.locator('#view-calculator')).toBeVisible();
 
     expect(pageErrors, pageErrors.join(' | ')).toEqual([]);
   });
