@@ -5,7 +5,8 @@ on:
     # Run every 10 minutes during Bursa trading hours and market settlement
     # 01:00 to 10:15 UTC = 09:00 to 18:15 Malaysia Time (covers 5:50 PM settlement)
     # This runs Monday to Friday
-    - cron: '*/10 1-10 * * 1-5'
+    - cron: '*/10 1-9 * * 1-5'
+    - cron: '0,10 10 * * 1-5'
   workflow_dispatch: # Allows manual trigger from GitHub UI
   repository_dispatch: # Allows external webhook triggers (e.g. cron-job.org / Telegram bot)
     types: [scrape_trigger]
@@ -29,35 +30,21 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Use stable LTS version
+          node-version: '22' # Puppeteer 25 requires Node >=22.12
           
-      - name: Install Chromium (for Puppeteer fallback)
-        run: sudo apt-get install -y chromium-browser
-
       - name: Install dependencies
-        env:
-          PUPPETEER_SKIP_DOWNLOAD: 'true'
-          PUPPETEER_EXECUTABLE_PATH: '/usr/bin/chromium-browser'
         run: |
           cd smart-money-tracker
           npm ci
           
       - name: Run API Scraper & Trackers Generator
-        env:
-          PUPPETEER_EXECUTABLE_PATH: '/usr/bin/chromium-browser'
         run: |
           cd smart-money-tracker
           echo "[DEBUG] Testing i3investor connectivity..."
           curl -s -o /dev/null -w "i3investor HTTP status: %{http_code}\n" \
             "https://klse.i3investor.com/web/market/mostactive" \
             -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36" || true
-          node scripts/scrape-real.js
-          # Trackers must evaluate the news fetched in this run, not the previous snapshot.
-          node scripts/generate_news_data.js
-          node scripts/generate_fresh_rider_tracker.js
-          node scripts/generate_hot_theme_tracker.js
-          node scripts/generate_daily_equity_tracker.js
-          node scripts/scrape-jerung.js
+          node scripts/run_market_pipeline.js
 
       - name: Run Scanner-Tracker Sync Audit (npm test)
         run: |
@@ -73,13 +60,15 @@ jobs:
           git add smart-money-tracker/fresh_rider_tracker.js
           git add smart-money-tracker/hot_theme_tracker.js
           git add smart-money-tracker/daily_equity_tracker.js
+          git add smart-money-tracker/scanner_history.js
+          git add smart-money-tracker/execution_backtest.js
           git add smart-money-tracker/jerung-data.json
           git add smart-money-tracker/jerung-data.js
           git add smart-money-tracker/news_data.js
           git add smart-money-tracker/history/
           git add smart-money-tracker/symbol_mappings.json
           # Only commit if there are changes
-          if ! git diff --quiet || ! git diff --staged --quiet; then
+          if ! git diff --staged --quiet; then
             git commit -m "Auto-update live_data.json/js, trackers & news_data.js"
             pushed=false
             for i in 1 2 3 4 5; do

@@ -21,9 +21,11 @@
 //       tiada, mesej dicetak ke console & ditulis buy_alert_latest.json)
 // =============================================================
 const fs = require('fs');
+const StrategyRules = require('./lib/strategy_rules');
 const path = require('path');
 const https = require('https');
-const { execFileSync } = require('child_process');
+const { parseEventDate, isEarningsAnnouncement, buildCorporateNewsRisk } = require('./lib/corporate_risk');
+const { sendTelegram } = require('./portfolio_alert');
 
 const HIST_DIR = path.join(path.join(__dirname, '..'), 'history');
 
@@ -197,31 +199,13 @@ function isCSMerah(item) {
 
 // ---- Rule Fresh VVIP Rider (A5) — 100% Selari dengan index.html ----
 function isFreshRiderPick(item) {
-    if (!item || !item.name || item.price <= 0) return false;
-    if (item.price < 0.10 || item.price > 50) return false;
-    if (item.isVvip !== true || item.signal === 'avoid' || item.isCombStock) return false;
-    if ((item.ipoYear || 0) < 2025) return false;
-    const pb = item.pullback !== null && item.pullback !== undefined ? item.pullback : 99;
-    if (pb > 10.0) return false;
-    if (item.ipoAge != null && item.ipoAge < 15 && (item.touchCount || 0) < 2) return false;
-
-    const isGreenBreakout = (item.change >= 0 || (item.changePct || 0) >= 0);
-    const tight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
-    if (item.hasVolumeSpike === true) {
-        if (!isGreenBreakout || tight > 10.0) return false;
-    } else {
-        if (tight > 5.0) return false;
-    }
-    return true;
+    return StrategyRules.evaluateFreshRider(item, {stage:'candidate'}).eligible;
 }
 
 // ---- Rule Hot Theme (confluence 2+ + tema) ----
 function isHotThemePick(item) {
-    if (!item || !item.name || item.price <= 0 || item.price > 10.0) return false;
-    if (isSleepingOrAvoidStock(item) || item.isCombStock) return false;
-    if (getHotThemes(item.name).length === 0) return false;
-    if (!isCSMerah(item)) return false;
-    return confluenceCount(item) >= 2;
+    if (!item) return false;
+    return StrategyRules.evaluateHotTheme(item, {stage:'candidate',themeCount:getHotThemes(item.name).length,confluence:confluenceCount(item),sleepingOrAvoid:isSleepingOrAvoidStock(item)}).eligible;
 }
 
 // -------------------------------------------------------------
@@ -499,6 +483,10 @@ function buildMessage(now, out) {
 // -------------------------------------------------------------
 (async () => {
     const now = new Date();
+    if (process.env.BUY_ALERT_REQUIRE_DELIVERY === 'true' &&
+        (!process.env.TELEGRAM_BOT_TOKEN || !process.env.TELEGRAM_CHAT_ID)) {
+        throw new Error('Telegram credentials are required for scheduled buy alert delivery.');
+    }
 
     // 1. Load live_data.json
     const liveFile = path.join(path.join(__dirname, '..'), 'live_data.json');
@@ -521,12 +509,12 @@ function buildMessage(now, out) {
     });
 
     const htTrackMap = new Map();
-    for (const t of htTrades) {
-        const sym = canonName(t.name).toUpperCase();
-        if (!htTrackMap.has(sym) || t.entryDate > htTrackMap.get(sym).entryDate || (t.status === 'OPEN' && htTrackMap.get(sym).status !== 'OPEN')) {
-            htTrackMap.set(sym, t);
-        }
-    }
+    htTrades.filter(t => t.status !== 'OPEN').sort((a,b) => (a.entryDate || '').localeCompare(b.entryDate || '')).forEach(t => {
+        htTrackMap.set(canonName(t.name).toUpperCase(), t);
+    });
+    htTrades.filter(t => t.status === 'OPEN').sort((a,b) => (a.entryDate || '').localeCompare(b.entryDate || '')).forEach(t => {
+        htTrackMap.set(canonName(t.name).toUpperCase(), t);
+    });
     const frTrackedNames = new Set(frTrackMap.keys());
     const htTrackedNames = new Set(htTrackMap.keys());
     const openFr = frTrades.filter(t => t.status === 'OPEN');
@@ -716,8 +704,8 @@ function buildMessage(now, out) {
             const touches = it.touchCount || 0;
             const tight = typeof it.closeTightness === 'number' ? it.closeTightness : 99;
 
-            const isSolidBase2 = (touches >= 3 && tight <= 3.5 && fd <= 4.5 && (toVal >= 2000000 || toVal === 0));
-            const isFreshBase1 = (pct >= 0 && pct <= 20 && fd <= 3.5 && (toVal >= 2000000 || toVal === 0));
+            const isSolidBase2 = StrategyRules.classifyMetrics({gainFromBase:null,floorDistance:fd,turnover:toVal,tightness:tight,touches:touches},{family:'fr',context:'scanner',allowZeroTurnover:true}).isSolidBase2;
+            const isFreshBase1 = StrategyRules.classifyMetrics({gainFromBase:pct,floorDistance:fd,turnover:toVal,tightness:0,touches:0},{family:'fr',context:'scanner',allowZeroTurnover:true}).isFreshBase1;
             if (isFreshBase1) return 1; // ⭐ ADD-ON A+ (AWAL)
             if (isSolidBase2) return 2; // 🛡️ ADD-ON (LANTAI RAPAT)
             if (pct > 20 && fd > 5.0) return 4; // ⚠️ Dilarang / Pucuk (+X%)
@@ -747,8 +735,8 @@ function buildMessage(now, out) {
             }
             const entryP = tr.entry || 0;
             const pct = (entryP > 0 && it.price) ? ((it.price - entryP) / entryP) * 100 : 0;
-            const isSolidBase2 = (touches >= 3 && tight <= 3.5 && fd <= 4.5 && (toVal >= 2000000 || toVal === 0));
-            const isFreshBase1 = (pct >= 0 && pct <= 20 && fd <= 3.5 && (toVal >= 2000000 || toVal === 0));
+            const isSolidBase2 = StrategyRules.classifyMetrics({gainFromBase:null,floorDistance:fd,turnover:toVal,tightness:tight,touches:touches},{family:'fr',context:'scanner',allowZeroTurnover:true}).isSolidBase2;
+            const isFreshBase1 = StrategyRules.classifyMetrics({gainFromBase:pct,floorDistance:fd,turnover:toVal,tightness:0,touches:0},{family:'fr',context:'scanner',allowZeroTurnover:true}).isFreshBase1;
             if (isFreshBase1) return 1; // ⭐ ADD-ON A+ (AWAL)
             if (isSolidBase2) return 2; // 🛡️ ADD-ON (LANTAI RAPAT)
             if (pct > 20 && fd > 5.0) return 4; // ⚠️ Dilarang / Pucuk (+X%)
@@ -788,23 +776,21 @@ function buildMessage(now, out) {
     function isBlackSwanClean(s) {
         const up = canonName(s.name || '').toUpperCase();
         const news = newsData[up];
-        const refDate = now;
+        const refDate = parseEventDate(snapDate || getMytDate(now));
         if (news && Array.isArray(news.entitlements)) {
             for (const ent of news.entitlements) {
                 if (!ent.isDividend || !ent.exDate) continue;
-                const exD = new Date(ent.exDate);
-                if (isNaN(exD.getTime())) continue;
+                const exD = parseEventDate(ent.exDate, refDate);
+                if (!exD) continue;
                 const diffDays = Math.round((exD.getTime() - refDate.getTime()) / (24 * 3600 * 1000));
                 if (diffDays >= -1 && diffDays <= 10) return false;
             }
         }
         if (news && Array.isArray(news.announcements)) {
             for (const ann of news.announcements) {
-                const cat = (ann.category || '').toUpperCase();
-                const title = (ann.title || '').toUpperCase();
-                if (title.includes('QUARTERLY') || title.includes('FINANCIAL RESULTS') || cat.includes('FINANCIAL')) {
-                    const annD = new Date(ann.date);
-                    if (!isNaN(annD.getTime())) {
+                if (isEarningsAnnouncement(ann)) {
+                    const annD = parseEventDate(ann.date, refDate);
+                    if (annD) {
                         const diffDays = Math.round((annD.getTime() - refDate.getTime()) / (24 * 3600 * 1000));
                         if (diffDays >= -3 && diffDays <= 5) return false;
                     }
@@ -843,84 +829,14 @@ function buildMessage(now, out) {
     // 6. Penapis Top Ranking VVIP (100% Selari dengan index.html)
     function passesTopRankingFR(p) {
         const t = getTierOfFR(p);
-        const fresh = frFreshness(p);
-
-        // 1. DILARANG SAMA SEKALI: Pucuk / Extended atau SL tepi jurang
-        if (!t.isSwanClean || t.isDump || fresh === 4) return false;
-
-        const nameKey = canonName(p.name).toUpperCase();
-        const trackedEntry = frTrackMap.get(nameKey);
-
-        // 2. DILARANG: Kaunter lama dalam FR Tracker yang sudah melepasi fasa Fresh Rider
-        // (sudah untung > 20% dari entry atau bukan fresh base Day 1/Add-on)
-        if (trackedEntry && trackedEntry.status === 'OPEN' && trackedEntry.entryDate < snapDate) {
-            const entryP = trackedEntry.entry || 0;
-            const pct = entryP > 0 ? ((p.price - entryP) / entryP) * 100 : 0;
-            if (pct > 20 && fresh !== 1 && fresh !== 2) return false;
-            if (fresh === 3) return false;
-        }
-
-        // 3. Semak sama ada kaunter ini SUDAH DISAHKAN dalam FR Tracker hari ini
-        const isTrackerConfirmedToday = !!(
-            trackedEntry &&
-            trackedEntry.status === 'OPEN' &&
-            trackedEntry.entryDate === snapDate
-        );
-
-        // 3. DILARANG: Kaunter turnover lemau / runcit (< RM 1.0M)
-        if (t.toVal < 1000000 && !isTrackerConfirmedToday) return false;
-
-        // 4. LAYAK: 🔥 NEW (Day 1 Breakout) — benarkan lilin breakout hijau
-        if (fresh === 0) {
-            return (t.fDistVal <= 10.0 && t.fDistVal >= -2.0 && t.tightValNum <= 10.0);
-        }
-
-        // 5. LAYAK: ⭐ ADD-ON A+ / 🛡️ ADD-ON (LANTAI RAPAT) — lantai rapat wajib <= 4.5%
-        if (fresh === 1 || fresh === 2) {
-            if (t.fDistVal > 4.5 || t.fDistVal < -2.0) return false;
-            if (t.tightValNum <= 3.5) return true;
-        }
-
-        // 6. SOP: Hanya 3 jenis entry (NEW / ADD-ON A+ / LANTAI RAPAT) layak
-        return false;
+        const tracked = frTrackMap.get(canonName(p.name).toUpperCase());
+        return StrategyRules.evaluateTopRanking(p, {family:'fr', freshness:frFreshness(p), floor:t.effF, blackSwanClean:t.isSwanClean, upperWickDump:t.isDump, trackerConfirmed:tracked?.status === 'OPEN'}).eligible;
     }
 
     function passesTopRankingHT(p) {
         const t = getTierOfHT(p);
-        const fresh = htFreshness(p);
-        const isFusion = isFreshRiderPick(p) && getHotThemes(p.name).length > 0;
-
-        // 1. DILARANG SAMA SEKALI: Pucuk / Extended atau SL tepi jurang
-        if (fresh === 4) return false;
-
-        // 2. Semak sama ada kaunter SUDAH DISAHKAN dalam HT Tracker hari ini
-        const nameKeyHT = canonName(p.name).toUpperCase();
-        const trackedEntryHT = htTrackMap.get(nameKeyHT);
-        const isHtConfirmedToday = !!(
-            trackedEntryHT &&
-            trackedEntryHT.status === 'OPEN' &&
-            trackedEntryHT.entryDate === snapDate
-        );
-
-        // 3. DILARANG: Kaunter turnover lemau / runcit (< RM 1.0M)
-        if (t.toVal < 1000000 && !isHtConfirmedToday) return false;
-
-        // 4. DILARANG: Terkena Black Swan Trap atau Selling Dump Merah
-        if (!t.isSwanClean || t.isDump) return false;
-
-        // 5. LAYAK: 🔥 NEW (Day 1 Breakout) — benarkan lilin breakout hijau
-        if (fresh === 0) {
-            return (t.fDistVal <= 10.0 && t.fDistVal >= -2.0 && t.tightValNum <= 10.0);
-        }
-
-        // 6. LAYAK: ⭐ ADD-ON A+ / 🛡️ ADD-ON (LANTAI RAPAT) — lantai rapat
-        const maxAllowedFloorDist = ((p.touchCount || 0) >= 5 && t.toVal >= 2000000 && t.tightValNum <= 3.5) ? 6.8 : 4.8;
-        if (t.fDistVal > maxAllowedFloorDist || t.fDistVal < -2.0) return false;
-
-        // SOP: Hanya ⭐ ADD-ON A+ / 🛡️ LANTAI RAPAT (NEW sudah dikendalikan di atas).
-        // Tier A+ & Fusion kekal sebagai cop kualiti (lencana / susunan), bukan pintu masuk.
-        const meetsGolden = (t.tightValNum <= 4.8 && t.fDistVal <= maxAllowedFloorDist && t.toVal >= 1000000);
-        return (fresh === 1 || fresh === 2) && meetsGolden;
+        const tracked = htTrackMap.get(canonName(p.name).toUpperCase());
+        return StrategyRules.evaluateTopRanking(p, {family:'ht', freshness:htFreshness(p), floor:t.effF, blackSwanClean:t.isSwanClean, upperWickDump:t.isDump, trackerConfirmed:tracked?.status === 'OPEN' && tracked.entryDate === snapDate}).eligible;
     }
 
     const frList = candidates.filter(isFreshRiderPick).filter(passesTopRankingFR);
@@ -1130,20 +1046,30 @@ function buildMessage(now, out) {
                 code = symbolMap[item.name.toUpperCase()].replace(/\.KL$/i, '');
             }
             if (code) {
-                const newsData = await getCorporateNewsRisk(code, item.name);
-                item.newsAlert = newsData.hasNewsAlert;
-                item.newsBadges = newsData.newsBadges;
-                item.announcements = newsData.announcements;
-                item.entitlements = newsData.entitlements;
-            } else {
-                item.newsAlert = false;
-                item.newsBadges = [];
+                const freshNews = await getCorporateNewsRisk(code, item.name);
+                const nameKey = canonName(item.name).toUpperCase();
+                const cached = newsData[nameKey] || {};
+                const merged = buildCorporateNewsRisk(
+                    freshNews.fetchStatus?.announcements === 'error' ? (cached.announcements || []) : freshNews.announcements,
+                    freshNews.fetchStatus?.entitlements === 'error' ? (cached.entitlements || []) : freshNews.entitlements,
+                    snapDate || now
+                );
+                newsData[nameKey] = merged;
+                item.newsAlert = merged.hasNewsAlert;
+                item.newsBadges = merged.newsBadges;
+                item.announcements = merged.announcements;
+                item.entitlements = merged.entitlements;
             }
         }
     }
 
     await enrichListWithNews(frOut);
     await enrichListWithNews(htOut);
+    // Fresh corporate events discovered during enrichment must still block a buy signal.
+    for (const list of [frOut, htOut]) {
+        const clean = list.filter(isBlackSwanClean);
+        list.splice(0, list.length, ...clean);
+    }
     console.log('✅ Semakan Berita & Ex-Dividen selesai untuk senarai signal.');
 
     // 8. Format & hantar
@@ -1199,58 +1125,22 @@ function buildMessage(now, out) {
                 if (cur) chunks.push(cur);
             }
 
-            async function sendTelegramMessage(t, c, textPart) {
-                try {
-                    const out = execFileSync('curl', [
-                        '-4', '-s', '--max-time', '15', '-X', 'POST',
-                        `https://api.telegram.org/bot${t}/sendMessage`,
-                        '-H', 'Content-Type: application/json',
-                        '-d', JSON.stringify({ chat_id: c, text: textPart })
-                    ], { encoding: 'utf8' });
-                    const res = JSON.parse(out);
-                    if (res && res.ok) return res;
-                } catch (e) {
-                    // Fallback to https.request
-                }
-
-                const url = `https://api.telegram.org/bot${t}/sendMessage`;
-                const body = JSON.stringify({ chat_id: c, text: textPart });
-                return new Promise((resolve, reject) => {
-                    const req = https.request(url, {
-                        family: 4,
-                        method: 'POST',
-                        headers: { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(body) }
-                    }, (res) => {
-                        let s = '';
-                        res.on('data', d => s += d);
-                        res.on('end', () => { try { resolve(JSON.parse(s)); } catch (e) { reject(e); } });
-                    });
-                    req.on('error', reject);
-                    req.write(body);
-                    req.end();
-                });
-            }
-
             console.log(`📤 Menghantar ${chunks.length} bahagian mesej ke Telegram...`);
             for (let i = 0; i < chunks.length; i++) {
                 const part = chunks[i];
-                const r = await sendTelegramMessage(token, chatId, part);
-                if (r && r.ok) {
-                    console.log(`✅ Telegram: bahagian ${i + 1}/${chunks.length} berjaya dihantar.`);
-                } else {
-                    console.error(`❌ Telegram gagal (bahagian ${i + 1}):`, JSON.stringify(r));
-                }
+                await sendTelegram(token, chatId, part);
+                console.log(`✅ Telegram: bahagian ${i + 1}/${chunks.length} berjaya dihantar.`);
                 if (i < chunks.length - 1) {
                     await new Promise(res => setTimeout(res, 800));
                 }
             }
         } catch (e) {
-            console.error('❌ Telegram error:', e.message);
+            throw new Error('Telegram buy alert delivery failed; this alert remains pending.');
         }
     } else {
         console.log('ℹ️ TELEGRAM_BOT_TOKEN/TELEGRAM_CHAT_ID tidak diset — mesej dicetak di atas (no notification).');
     }
 })().catch(e => {
-    console.error('❌ buy_alert.js gagal:', e);
+    console.error('❌ buy_alert.js gagal:', e.message);
     process.exit(1);
 });

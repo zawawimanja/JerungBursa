@@ -8,3 +8,9 @@ scratch/
 node_modules/
 auto_runner.log
 
+# Playwright artifacts
+/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+

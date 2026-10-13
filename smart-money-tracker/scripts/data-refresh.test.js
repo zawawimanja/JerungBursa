@@ -166,3 +166,26 @@ test('Partial bundle failure keeps previous trackers and retries on the next che
     assert.equal(context.window.ALL_TRACKER.marker, 'updated');
     assert.doesNotMatch(nodes.dashboardSubtitle.textContent, /Tracker refresh pending/);
 });
+
+test('Tracker-only corrections refresh even when the market timestamp is unchanged', async () => {
+    let version = 0;
+    const { context } = dashboardContext({
+        loadSnapshot: async () => ({ raw: snapshot('2026-10-13T07:59:00Z'), base: 'source/', checked: true }),
+        loadBundle: async () => ({ ALL_TRACKER: { version: ++version } })
+    });
+    await context.fetchLiveData();
+    await context.fetchLiveData();
+    assert.equal(context.window.ALL_TRACKER.version, 2);
+});
+
+test('Older fetched snapshots do not replace the saved snapshot or its trackers', async () => {
+    let bundleRequests = 0;
+    const { context } = dashboardContext({
+        loadSnapshot: async () => ({ raw: snapshot('2026-10-13T07:59:00Z'), base: 'saved/', checked: true, fetched: false }),
+        loadBundle: async () => { bundleRequests++; return { ALL_TRACKER: { version: 'older' } }; }
+    });
+    context.window.ALL_TRACKER = { version: 'saved' };
+    await context.fetchLiveData();
+    assert.equal(bundleRequests, 0);
+    assert.equal(context.window.ALL_TRACKER.version, 'saved');
+});

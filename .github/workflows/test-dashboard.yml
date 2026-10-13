@@ -1,0 +1,31 @@
+name: Dashboard regression checks
+on:
+  workflow_dispatch:
+  pull_request:
+    paths: ['smart-money-tracker/index.html', 'smart-money-tracker/live-refresh.js', 'smart-money-tracker/scripts/**', 'smart-money-tracker/api/**', 'smart-money-tracker/e2e/**', 'smart-money-tracker/package*.json', '.github/workflows/test-dashboard.yml']
+  push:
+    paths: ['smart-money-tracker/index.html', 'smart-money-tracker/live-refresh.js', 'smart-money-tracker/scripts/**', 'smart-money-tracker/api/**', 'smart-money-tracker/e2e/**', 'smart-money-tracker/package*.json', '.github/workflows/test-dashboard.yml']
+permissions:
+  contents: read
+jobs:
+  dashboard:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install dependencies
+        working-directory: smart-money-tracker
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: 'true'
+        run: npm ci
+      - name: Unit and scanner checks
+        run: npm test
+      - name: Install test browser
+        working-directory: smart-money-tracker
+        run: npx playwright install --with-deps chromium
+      - name: Desktop and mobile browser journeys
+        working-directory: smart-money-tracker
+        run: npm run test:e2e

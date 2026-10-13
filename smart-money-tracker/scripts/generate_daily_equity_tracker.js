@@ -97,7 +97,7 @@ if (fs.existsSync(livePath)) {
 
 // 3. Replay Day-by-Day
 const lastPriceByName = {};
-const timelineByDate = {};
+const lastGainByTrade = new Map();
 const dailyTimeline = [];
 
 historyDays.forEach((day, dayIdx) => {
@@ -127,24 +127,35 @@ historyDays.forEach((day, dayIdx) => {
         if (t.entryDate > day.date) return; // Belum masuk lagi pada tarikh ini
 
         const nameKey = t.name.toUpperCase().trim();
+        const tradeId = `${t.trackerType}:${t.id || `${nameKey}_${t.entryDate}_${t.entryType || ''}`}`;
+        const deltaForGain = gain => {
+            const previous = lastGainByTrade.get(tradeId);
+            lastGainByTrade.set(tradeId, gain);
+            // A close-price entry has no portfolio return before that entry.
+            return previous === undefined ? 0 : +(gain - previous).toFixed(1);
+        };
         const isClosedBefore = t.status !== 'OPEN' && t.exitDate && t.exitDate < day.date;
         const isClosedToday = t.status !== 'OPEN' && t.exitDate && t.exitDate === day.date;
 
         if (isClosedBefore) {
             closedCount++;
             const g = (t.finalGain || 0);
+            const pnlDeltaToday = deltaForGain(g);
+            dailyPnlDelta += pnlDeltaToday;
             closedPnl += g;
             if (t.trackerType === 'FR') frPnlOnDay += g;
             else if (t.trackerType === 'ADD' || t.trackerType === 'FLR') addOnPnlOnDay += g;
             else htPnlOnDay += g;
             tradesOnDay.push({
+                id: tradeId,
                 name: t.name,
+                entryDate: t.entryDate,
                 trackerType: t.trackerType,
                 statusOnDay: 'CLOSED',
                 priceOnDay: +(t.exitPrice || t.currentPrice || 0).toFixed(3),
                 gainOnDay: g,
                 dayChangePct: 0,
-                pnlDeltaToday: 0
+                pnlDeltaToday
             });
             return;
         }
@@ -173,18 +184,20 @@ historyDays.forEach((day, dayIdx) => {
 
         const changeRm = curRow ? (curRow.change || 0) : 0;
         const changePct = curRow ? (typeof curRow.changePct === 'number' ? curRow.changePct : (changeRm / (priceOnDay - changeRm)) * 100) : 0;
-        const pnlDeltaToday = t.entry > 0 ? +((changeRm / t.entry) * 100).toFixed(1) : 0;
 
         if (isClosedToday) {
             closedCount++;
             const g = (t.finalGain !== undefined ? t.finalGain : gainOnDay);
+            const pnlDeltaToday = deltaForGain(g);
             closedPnl += g;
             if (t.trackerType === 'FR') frPnlOnDay += g;
             else if (t.trackerType === 'ADD' || t.trackerType === 'FLR') addOnPnlOnDay += g;
             else htPnlOnDay += g;
             dailyPnlDelta += pnlDeltaToday;
             tradesOnDay.push({
+                id: tradeId,
                 name: t.name,
+                entryDate: t.entryDate,
                 trackerType: t.trackerType,
                 statusOnDay: 'CLOSED_TODAY',
                 priceOnDay: +(t.exitPrice || priceOnDay || 0).toFixed(3),
@@ -193,6 +206,7 @@ historyDays.forEach((day, dayIdx) => {
                 pnlDeltaToday
             });
         } else {
+            const pnlDeltaToday = deltaForGain(gainOnDay);
             openCount++;
             openPnl += gainOnDay;
             if (t.trackerType === 'FR') frPnlOnDay += gainOnDay;
@@ -200,7 +214,9 @@ historyDays.forEach((day, dayIdx) => {
             else htPnlOnDay += gainOnDay;
             dailyPnlDelta += pnlDeltaToday;
             tradesOnDay.push({
+                id: tradeId,
                 name: t.name,
+                entryDate: t.entryDate,
                 trackerType: t.trackerType,
                 statusOnDay: 'OPEN',
                 priceOnDay: +priceOnDay.toFixed(3),

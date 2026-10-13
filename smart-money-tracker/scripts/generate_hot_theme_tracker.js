@@ -8,8 +8,10 @@
 //         window.HOT_THEME_ADDON_TRACKER dalam hot_theme_tracker.js
 // =============================================================
 const fs = require('fs');
+const StrategyRules = require('./lib/strategy_rules');
 const path = require('path');
 const vm = require('vm');
+const { parseEventDate, isEarningsAnnouncement } = require('./lib/corporate_risk');
 
 const HIST_DIR = path.join(path.join(__dirname, '..'), 'history');
 const OUT_FILE = path.join(path.join(__dirname, '..'), 'hot_theme_tracker.js');
@@ -25,19 +27,8 @@ try {
     }
 } catch (e) {}
 
-function parseDateFlexible(dStr, defaultYear) {
-    if (!dStr) return null;
-    if (/^\d{4}-\d{2}-\d{2}$/.test(dStr)) return new Date(dStr + 'T00:00:00Z');
-    const parts = dStr.trim().split(/\s+/);
-    if (parts.length >= 2) {
-        const day = parseInt(parts[0], 10);
-        const months = { jan:0, feb:1, mar:2, apr:3, may:4, jun:5, jul:6, aug:7, sep:8, oct:9, nov:10, dec:11 };
-        const m = months[parts[1].slice(0,3).toLowerCase()];
-        const yr = parts[2] ? parseInt(parts[2], 10) : (defaultYear || 2026);
-        if (!isNaN(day) && m !== undefined) return new Date(Date.UTC(yr, m, day));
-    }
-    const d = new Date(dStr);
-    return isNaN(d.getTime()) ? null : d;
+function parseDateFlexible(dStr, reference) {
+    return parseEventDate(dStr, reference || new Date());
 }
 
 function isBlackSwanClean(name, item, dateStr) {
@@ -51,7 +42,7 @@ function isBlackSwanClean(name, item, dateStr) {
     if (news && Array.isArray(news.entitlements)) {
         for (const ent of news.entitlements) {
             if (!ent.isDividend || !ent.exDate) continue;
-            const exD = parseDateFlexible(ent.exDate, refDate.getUTCFullYear());
+            const exD = parseDateFlexible(ent.exDate, refDate);
             if (!exD) continue;
             const diffDays = Math.round((exD.getTime() - refDate.getTime()) / (24 * 3600 * 1000));
             if (diffDays >= -1 && diffDays <= 10) return false;
@@ -61,10 +52,8 @@ function isBlackSwanClean(name, item, dateStr) {
     // 2. Semakan QR / Financial Results (-3 hingga +5 hari)
     if (news && Array.isArray(news.announcements)) {
         for (const ann of news.announcements) {
-            const cat = (ann.category || '').toUpperCase();
-            const title = (ann.title || '').toUpperCase();
-            if (title.includes('QUARTERLY') || title.includes('FINANCIAL RESULTS') || cat.includes('FINANCIAL')) {
-                const annD = parseDateFlexible(ann.date, refDate.getUTCFullYear());
+            if (isEarningsAnnouncement(ann)) {
+                const annD = parseDateFlexible(ann.date, refDate);
                 if (annD) {
                     const diffDays = Math.round((annD.getTime() - refDate.getTime()) / (24 * 3600 * 1000));
                     if (diffDays >= -3 && diffDays <= 5) return false;
@@ -186,66 +175,14 @@ function confluenceCount(item) {
 
 // ---- Rule Hot Theme NEW (Day 1) ----
 function isHotThemePick(item, dateStr) {
-    if (!item || !item.name || item.price <= 0 || item.price > 10.0) return false;
-    if (isSleepingOrAvoidStock(item) || item.isCombStock) return false;
-    if (dateStr && !isBlackSwanClean(item.name, item, dateStr)) return false;
-    const themes = getHotThemes(item.name);
-    if (themes.length === 0) return false;
-
-    // Anti-Debut Dump Shield (Rule 9 SOP)
-    if (item.ipoAge != null && item.ipoAge < 15 && (item.touchCount || 0) < 2) return false;
-
-    const isGreenBreakout = (item.change >= 0 || (item.changePct || 0) >= 0);
-    const tight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
-
-    if (item.hasVolumeSpike === true) {
-        if (!isGreenBreakout) return false;
-        if (tight > 10.0) return false;
-    } else {
-        if (tight > 5.0) return false;
-    }
-
-    return confluenceCount(item) >= 2;
+    if (!item) return false;
+    return StrategyRules.evaluateHotTheme(item, {stage:'new', themeCount:getHotThemes(item.name).length, confluence:confluenceCount(item), sleepingOrAvoid:isSleepingOrAvoidStock(item), blackSwanClean:!dateStr || isBlackSwanClean(item.name,item,dateStr)}).eligible;
 }
 
 // ---- Rule ⭐ Hot Theme ADD-ON A+ (Base 1 / Base 2 Staircase) ----
 function isHotThemeAddOnPick(item, initialBasePrice, effFloor, dateStr) {
-    if (!item || !item.name || item.price <= 0 || item.price > 50.0) return false;
-    if (item.signal === 'avoid' || item.isCombStock) return false;
-    if (isSleepingOrAvoidStock(item)) return false;
-    if (dateStr && !isBlackSwanClean(item.name, item, dateStr)) return false;
-
-    const themes = getHotThemes(item.name);
-    if (themes.length === 0) return false;
-    if (item.hasVolumeSpike === true) return false; // CS Merah
-
-    const conf = confluenceCount(item);
-    if (conf < 2) return false;
-
-    const pb = item.pullback ?? 99;
-    if (pb > 25.0) return false;
-
-    const tight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
-    if (tight > 3.5) return false;
-
-    const turnover = item.turnover || item.rawTurnover || 0;
-    if (turnover < 2000000) return false;
-
-    const f = effFloor || item.floorLow || 0;
-    const floorDist = f > 0 ? ((item.price - f) / f * 100) : 99;
-
-    const touches = item.touchCount || 0;
-    const maxAllowedFloorDist = (touches >= 5 && turnover >= 2000000 && tight <= 3.5) ? 6.8 : 4.5;
-    const isSolidBase2 = (touches >= 3 && tight <= 3.5 && floorDist <= maxAllowedFloorDist && turnover >= 2000000);
-
-    if (floorDist > 3.5 && !isSolidBase2) return false;
-
-    if (initialBasePrice > 0) {
-        const gainFromBase = ((item.price - initialBasePrice) / initialBasePrice * 100);
-        if (gainFromBase > 20.0 && !isSolidBase2) return false;
-    }
-
-    return true;
+    if (!item) return false;
+    return StrategyRules.evaluateHotTheme(item, {stage:'addon', initialBasePrice, floor:effFloor || item.floorLow, themeCount:getHotThemes(item.name).length, confluence:confluenceCount(item), sleepingOrAvoid:isSleepingOrAvoidStock(item), blackSwanClean:!dateStr || isBlackSwanClean(item.name,item,dateStr)}).eligible;
 }
 const { BURSA_MALAYSIA_HOLIDAYS, isTradingDay, getMytDate, upsertTradingDay } = require('./lib/bursa_calendar');
 
@@ -464,9 +401,9 @@ for (const day of dayList) {
         const fDist = effFloor > 0 ? ((it.price - effFloor) / effFloor * 100) : 99;
         const toVal = it.turnover || it.rawTurnover || 0;
 
-        const isFreshBase1 = (gainFromBase >= 0 && gainFromBase <= 20 && fDist <= 3.5 && toVal >= 2000000);
+        const isFreshBase1 = StrategyRules.classifyMetrics({gainFromBase:gainFromBase,floorDistance:fDist,turnover:toVal,tightness:0,touches:0},{family:'ht',context:'generator',allowZeroTurnover:false}).isFreshBase1;
         const maxAllowedFloorDist = (touches >= 5 && toVal >= 2000000 && tight <= 3.5) ? 6.8 : 4.5;
-        const isSolidBase2 = (touches >= 3 && tight <= 3.5 && fDist <= maxAllowedFloorDist && toVal >= 2000000);
+        const isSolidBase2 = StrategyRules.classifyMetrics({gainFromBase:null,floorDistance:fDist,turnover:toVal,tightness:tight,touches:touches},{family:'ht',context:'generator',allowZeroTurnover:false}).isSolidBase2;
         const isFloorAddon = (isSolidBase2 && !isFreshBase1);
         const entryType = isFloorAddon ? '🛡️ ADD-ON (LANTAI RAPAT)' : '⭐ ADD-ON A+';
         const chgVal = typeof it.changePct === 'number' ? it.changePct : ((it.change && it.price) ? (it.change / (it.price - it.change)) * 100 : 0);

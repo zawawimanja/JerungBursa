@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-13T15:18:20.402Z",
+  "generatedAt": "2026-10-13T15:31:52.671Z",
   "dataDays": 95,
   "totalTracked": 379,
   "openCount": 92,
@@ -3012,7 +3012,8 @@ window.HOT_THEME_TRACKER = {
     "Semiconductor"
    ],
    "confluence": 3,
-   "isGoldenCombo": false
+   "isGoldenCombo": false,
+   "slTrail": 5.277
   },
   {
    "id": "VITROX_2026-09-07_ADDON",
@@ -4284,7 +4285,7 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 0.9,
    "finalGain": -3.4,
    "day1ChangePct": -1.69,
-   "days": 3,
+   "days": 4,
    "lastDate": "2026-08-19",
    "status": "OPEN",
    "themes": [
@@ -10377,7 +10378,7 @@ window.HOT_THEME_TRACKER = {
 };
 window.HOT_THEME_NEW_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-13T15:18:20.402Z",
+  "generatedAt": "2026-10-13T15:31:52.671Z",
   "dataDays": 95,
   "totalTracked": 49,
   "openCount": 9,
@@ -11414,7 +11415,7 @@ window.HOT_THEME_NEW_TRACKER = {
    "maxGain": 0.9,
    "finalGain": -3.4,
    "day1ChangePct": -1.69,
-   "days": 3,
+   "days": 4,
    "lastDate": "2026-08-19",
    "status": "OPEN",
    "themes": [
@@ -11545,7 +11546,8 @@ window.HOT_THEME_NEW_TRACKER = {
     "Semiconductor"
    ],
    "confluence": 3,
-   "isGoldenCombo": false
+   "isGoldenCombo": false,
+   "slTrail": 5.277
   },
   {
    "id": "NATGATE_2026-09-10_NEW",
@@ -11651,7 +11653,7 @@ window.HOT_THEME_NEW_TRACKER = {
 };
 window.HOT_THEME_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-13T15:18:20.403Z",
+  "generatedAt": "2026-10-13T15:31:52.672Z",
   "dataDays": 95,
   "totalTracked": 173,
   "openCount": 35,
@@ -16097,7 +16099,7 @@ window.HOT_THEME_ADDON_TRACKER = {
 };
 window.HOT_THEME_FLOOR_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-13T15:18:20.403Z",
+  "generatedAt": "2026-10-13T15:31:52.672Z",
   "dataDays": 95,
   "totalTracked": 157,
   "openCount": 48,
@@ -20109,7 +20111,7 @@ window.HOT_THEME_FLOOR_TRACKER = {
 };
 window.HOT_THEME_ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-13T15:18:20.402Z",
+  "generatedAt": "2026-10-13T15:31:52.671Z",
   "dataDays": 95,
   "totalTracked": 379,
   "openCount": 92,
@@ -22442,7 +22444,8 @@ window.HOT_THEME_ALL_TRACKER = {
     "Semiconductor"
    ],
    "confluence": 3,
-   "isGoldenCombo": false
+   "isGoldenCombo": false,
+   "slTrail": 5.277
   },
   {
    "id": "VITROX_2026-09-07_ADDON",
@@ -23714,7 +23717,7 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 0.9,
    "finalGain": -3.4,
    "day1ChangePct": -1.69,
-   "days": 3,
+   "days": 4,
    "lastDate": "2026-08-19",
    "status": "OPEN",
    "themes": [

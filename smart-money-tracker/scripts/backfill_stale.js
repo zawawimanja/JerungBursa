@@ -94,9 +94,10 @@ function tradingDaysBetween(from, to) {
  * @param {Array} trades - senarai semua trade (diubah in-place)
  * @param {string} latestDate - tarikh dagangan terkini (YYYY-MM-DD)
  * @param {Function} exitFn - fungsi exit (t, price) -> SL; null = guna trail high*0.80
+ * @param {Object} options - exitAtClose preserves FR close-price exits; quotes supports verified offline observations
  * @returns {number} bilangan posisi yang dikemas kini
  */
-function backfillStaleTrades(trades, latestDate, exitFn) {
+function backfillStaleTrades(trades, latestDate, exitFn, { exitAtClose = false, quotes: cachedQuotes } = {}) {
     const stale = trades.filter(t =>
         t.status === 'OPEN' &&
         t.lastDate < latestDate &&
@@ -105,8 +106,8 @@ function backfillStaleTrades(trades, latestDate, exitFn) {
     if (!stale.length) return 0;
 
     const symbols = stale.map(t => VERIFIED_SYMBOLS[t.name.toUpperCase()]);
-    const quotes = fetchYahooQuotes(symbols);
-    if (!Object.keys(quotes).length) return 0;
+    const quotes = cachedQuotes === undefined ? fetchYahooQuotes(symbols) : cachedQuotes;
+    if (!quotes || typeof quotes !== 'object' || !Object.keys(quotes).length) return 0;
 
     let updated = 0;
     for (const t of stale) {
@@ -135,8 +136,8 @@ function backfillStaleTrades(trades, latestDate, exitFn) {
         if (q.close <= sl) {
             t.status = 'CLOSED_SL';
             t.exitDate = q.date;
-            t.exitPrice = sl;
-            t.finalGain = +(((sl - t.entry) / t.entry) * 100).toFixed(1);
+            t.exitPrice = exitAtClose ? t.currentPrice : sl;
+            t.finalGain = +(((t.exitPrice - t.entry) / t.entry) * 100).toFixed(1);
         } else {
             t.finalGain = +(((q.close - t.entry) / t.entry) * 100).toFixed(1);
         }

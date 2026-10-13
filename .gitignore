@@ -11,6 +11,7 @@ old_tests/
 **/scratch/
 scratch/
 *.log
+**/portfolio_alerts_state.json
 *_log.txt
 
 # Secrets & Environment variables

@@ -14,10 +14,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <script src="live-refresh.js"></script>
+    <script src="scripts/lib/corporate_risk.js"></script>
+    <script src="scripts/lib/strategy_rules.js"></script>
+    <script src="scripts/lib/data_quality.js"></script>
+    <script src="scripts/lib/trade_costs.js"></script>
     <script>
       (function() {
         const cb = '?t=' + Date.now();
-        ['live_data.js', 'fresh_rider_tracker.js', 'hot_theme_tracker.js', 'daily_equity_tracker.js', 'jerung-data.js', 'news_data.js'].forEach(function(src) {
+        ['live_data.js', 'fresh_rider_tracker.js', 'hot_theme_tracker.js', 'scanner_history.js', 'jerung-data.js', 'news_data.js'].forEach(function(src) {
           document.write('<script src="' + src + cb + '"><\/script>');
         });
       })();
@@ -2038,6 +2042,7 @@
 
     <!-- TAB: LIVE TRACKER PER DAILY (COHORT & DAILY BREAKDOWN) -->
     <div id="view-trackerdaily" style="display: none;">
+        <section id="executionModelPanel" style="padding:1rem; margin-bottom:1rem; border:1px solid #334155; border-radius:12px; color:#cbd5e1;" aria-live="polite">Execution model loads when this tab opens.</section>
         <div style="margin-bottom: 1.25rem;">
             <!-- Hero Card: Cumulative Tracker Overview -->
             <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.96), rgba(16, 185, 129, 0.12)); border: 2px dashed #10b981; border-radius: 16px; padding: 1.25rem; box-shadow: 0 10px 30px rgba(16, 185, 129, 0.2); position: relative; overflow: hidden; margin-bottom: 1.25rem;">
@@ -3029,6 +3034,13 @@
 
     <!-- TAB 5: GLOSARI & PANDUAN -->
     <div id="view-info" style="display: none;">
+        <section style="padding:1rem; margin-bottom:1rem; border:1px solid #334155; border-radius:12px;">
+            <h3>Data status and signal explanation</h3>
+            <p id="dataQualitySummary" aria-live="polite">Checking available data.</p>
+            <label for="signalExplainTicker">Inspect a counter</label>
+            <select id="signalExplainTicker" onchange="renderSignalExplanation()" style="max-width:100%; padding:0.5rem; background:#131722; color:#f8fafc;"></select>
+            <div id="signalExplanation" aria-live="polite" style="margin-top:0.8rem;"></div>
+        </section>
         <div style="background: linear-gradient(135deg, rgba(30, 41, 59, 0.7), rgba(15, 23, 42, 0.8)); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px; padding: 1.5rem; box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); backdrop-filter: blur(8px); margin-bottom: 2rem;">
             
             <div style="text-align: center; margin-bottom: 1.5rem;">
@@ -3608,6 +3620,8 @@
 
         // Tab switching logic
         function switchTab(tabId) {
+            window._activeTab = tabId;
+            void ensureTabData(tabId);
 
             const viewVcp = document.getElementById('view-vcp');
             const viewJerung = document.getElementById('view-jerung');
@@ -3688,6 +3702,7 @@
                 if (tabVcp) tabVcp.classList.add('active');
             } else if (tabId === 'trend') {
                 viewTrend.style.display = 'block';
+                renderTrendRiders();
                 tabTrend.classList.add('active');
             } else if (tabId === 'jerung') {
                 if (viewJerung) {
@@ -3744,6 +3759,7 @@
                 if (tabTrackerDaily) tabTrackerDaily.classList.add('active');
             } else if (tabId === 'spring') {
                 viewSpring.style.display = 'block';
+                renderReclaimRadar();
                 tabSpring.classList.add('active');
             } else if (tabId === 'phoenix') {
                 if (viewPhoenix) {
@@ -3753,9 +3769,12 @@
                 if (tabPhoenix) tabPhoenix.classList.add('active');
             } else if (tabId === 'fishing') {
                 viewFishing.style.display = 'block';
+                renderBottomFishing();
                 tabFishing.classList.add('active');
             } else if (tabId === 'calculator') {
                 viewCalculator.style.display = 'block';
+                populateCalculatorDropdown(currentData);
+                calculatePlan();
                 tabCalculator.classList.add('active');
             } else if (tabId === 'info') {
                 if (viewInfo) viewInfo.style.display = 'block';
@@ -4691,7 +4710,6 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         }
 
         // Anti-Freeze & Self-Healing: Rekod masa trigger bot terakhir supaya tak spam
-        window._lastSelfHealTrigger = window._lastSelfHealTrigger || 0;
 
         function updateLiveStatus() {
             if (_viewingArchive) return;
@@ -4709,24 +4727,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const checked = _lastDataCheck ? new Date(_lastDataCheck).toLocaleTimeString('en-GB', { timeZone: 'Asia/Kuala_Lumpur', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }) + ' MYT' : 'pending';
             const label = state.delayed ? `Data delayed (${state.age} min)` : (state.updating ? 'Market snapshot' : 'Last available snapshot');
             notice.textContent = `${label} • Last Updated: ${updated} MYT • Last checked: ${checked} • Auto-check: 5 min` +
-                (_refreshIssue ? ` • ${_refreshIssue}` : '') + (state.delayed && _selfHealStatus ? ` • ${_selfHealStatus}` : '');
+                (_refreshIssue ? ` • ${_refreshIssue}` : '');
             notice.style.color = state.delayed || _refreshIssue ? '#fbbf24' : '';
-        }
-
-        async function requestStaleUpdate() {
-            if (window.location.protocol === 'file:' || !JerungLive.freshness(window.liveData.lastUpdated).delayed) return;
-            const now = Date.now();
-            if (now - window._lastSelfHealTrigger < 10 * 60000) return;
-            window._lastSelfHealTrigger = now;
-            try {
-                const result = JSON.parse(await JerungLive.request('/api/cron-scrape'));
-                if (result.success !== true) throw new Error(result.error || 'Update was not accepted');
-                _selfHealStatus = 'Update requested';
-            } catch (error) {
-                _selfHealStatus = 'Automatic update request failed';
-                console.warn('[Data update request]', error);
-            }
-            updateLiveStatus();
         }
 
         async function fetchLiveData({ forceLive = false } = {}) {
@@ -4749,9 +4751,11 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     let bundle = null;
                     let issue = selected.checked ? '' : 'Connection failed; showing saved data';
                     const version = selected.base + selected.raw.lastUpdated;
-                    if (selected.checked && version !== _lastBundleVersion) {
+                    // News or trackers may be corrected without changing the price timestamp.
+                    if (selected.checked && selected.fetched !== false) {
                         try {
-                            bundle = await JerungLive.loadBundle(selected.base);
+                            bundle = await JerungLive.loadBundle(selected.base, undefined, undefined,
+                                Object.keys(JerungLive.DATA_FILES).filter(file => !['daily_equity_tracker.js', 'execution_backtest.js'].includes(file)));
                         } catch (error) {
                             issue = 'Tracker refresh pending';
                             console.warn('[Tracker refresh]', error);
@@ -4783,7 +4787,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     renderFreshRiderTracker();
                     renderHotThemeTracker();
                     updateTopTrackerPnlBadge();
-                    void requestStaleUpdate();
+                    if (window._activeTab === 'trackerdaily' && typeof ensureTabData === 'function') void ensureTabData('trackerdaily', true);
+                    if (typeof renderDataQuality === 'function') renderDataQuality();
                 } catch (error) {
                     if (_viewingArchive || revision !== _dataViewRevision) return;
                     _refreshIssue = 'Connection failed; retrying';
@@ -4914,21 +4919,19 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             }
 
             updateSentiment(currentData);
-            renderJerungRadar();
             renderConfluenceRadar();
-            renderAllMarketUniverse();
-            renderRealConfluenceRadar();
-            renderTopGainers();
-            renderVcpStaircase();
-            renderTrendRiders();
-            renderReclaimRadar();
-            renderBottomFishing();
-            renderPhoenixSpring();
+            const activeRenderers = {
+                jerung:renderJerungRadar, allmarket:renderAllMarketUniverse,
+                realconfluence:renderRealConfluenceRadar, topgainers:renderTopGainers,
+                vcp:renderVcpStaircase, trend:renderTrendRiders, spring:renderReclaimRadar,
+                fishing:renderBottomFishing, phoenix:renderPhoenixSpring,
+                portfolio:renderPortfolio, hottheme:renderHotTheme, fusion:renderFusionElite,
+                trackerdaily:renderTrackerDaily
+            };
+            const renderer = activeRenderers[window._activeTab];
+            if (renderer) renderer();
             updateSpecialPicks();
-            renderPortfolio();
-            if (typeof renderHotTheme === 'function') renderHotTheme();
-            if (typeof renderFusionElite === 'function') renderFusionElite();
-            if (typeof renderTrackerDaily === 'function') renderTrackerDaily();
+            if (typeof renderDataQuality === 'function') renderDataQuality();
         }
 
         // Render Daily Top Gainers % Table
@@ -6277,7 +6280,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             if (_recentFloorCache && _recentFloorCache.key === key) return _recentFloorCache.map;
             const minMap = new Map(); // name -> harga terendah dalam window
 
-            const eqData = window.DAILY_EQUITY_TRACKER;
+            const eqData = window.SCANNER_HISTORY || window.DAILY_EQUITY_TRACKER;
             if (eqData && Array.isArray(eqData.timeline) && eqData.timeline.length > 0) {
                 const timeline = eqData.timeline;
                 let targetIdx = timeline.length - 1;
@@ -6288,6 +6291,11 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 const startIdx = Math.max(0, targetIdx - lookbackDays);
                 for (let i = startIdx; i <= targetIdx; i++) {
                     const snap = timeline[i];
+                    if (snap && snap.prices) {
+                        Object.entries(snap.prices).forEach(([name, price]) => {
+                            if (price > 0) minMap.set(name, Math.min(minMap.get(name) ?? Infinity, price));
+                        });
+                    }
                     if (snap && Array.isArray(snap.trades)) {
                         snap.trades.forEach(it => {
                             if (!it || !it.name) return;
@@ -6493,6 +6501,104 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         }
         window.updateHeaderSortIndicators = updateHeaderSortIndicators;
 
+        async function ensureTabData(tabId, force = false) {
+            if (tabId !== 'trackerdaily') return;
+            const version = (window.liveData?.lastUpdated || '') + _liveSourceBase;
+            if (!force && window.DAILY_EQUITY_TRACKER && window.EXECUTION_BACKTEST && window._lazyDataVersion === version) return;
+            if (window._lazyDataPromise) return window._lazyDataPromise;
+            const panel = document.getElementById('executionModelPanel');
+            if (panel) panel.textContent = 'Loading daily timeline and execution model…';
+            window._lazyDataPromise = (async () => {
+                try {
+                    const base = _liveSourceBase || (window.location.protocol === 'file:' ? JerungLive.GITHUB_BASE : '');
+                    const bundle = await JerungLive.loadBundle(base, undefined, undefined, ['daily_equity_tracker.js', 'execution_backtest.js']);
+                    Object.assign(window, bundle);
+                    window._lazyDataVersion = version;
+                    renderTrackerDaily();
+                    renderExecutionModel();
+                } catch (error) {
+                    if (panel) panel.innerHTML = 'Daily data is unavailable. <button onclick="ensureTabData(\'trackerdaily\',true)">Retry</button>';
+                    console.warn('[Daily view]', error.message);
+                } finally { window._lazyDataPromise = null; }
+            })();
+            return window._lazyDataPromise;
+        }
+
+        function renderExecutionModel() {
+            const panel = document.getElementById('executionModelPanel');
+            const model = window.EXECUTION_BACKTEST;
+            if (!panel || !model) return;
+            const s = model.summary, c = model.coverage, a = model.assumptions;
+            const costs = window._executionCosts || a;
+            const filled = model.trades.filter(trade => Number.isFinite(trade.grossPnl));
+            const estimatedFee = trade => TradeCosts.roundTripCost(trade.quantity * trade.entryPrice, trade.quantity * (trade.exitPrice || trade.markPrice), costs);
+            const totalCosts = filled.reduce((total, trade) => total + estimatedFee(trade), 0);
+            const closed = filled.filter(trade => trade.status === 'CLOSED');
+            const netWinRate = closed.length ? (closed.filter(trade => trade.grossPnl - estimatedFee(trade) > 0).length / closed.length * 100).toFixed(1) : '—';
+            panel.innerHTML = `<h3>T+1 execution study</h3>
+                <p>${s.signalCount.toLocaleString()} archived signals · ${s.filledCount.toLocaleString()} modeled entries · ${s.unconfirmedFillCount.toLocaleString()} unconfirmed fills.</p>
+                <p>Closed trades after costs: <strong>${netWinRate}% profitable</strong>. Illustrative costs total <span id="executionCostTotal">RM ${totalCosts.toLocaleString('en-MY',{maximumFractionDigits:2})}</span>.</p>
+                <div style="display:flex;flex-wrap:wrap;gap:1rem;"><label>Fee per side (%) <input id="executionFeePct" type="number" min="0" step="0.01" value="${costs.feePct}" onchange="updateExecutionCosts()" style="width:5rem;"></label><label>Minimum per side (RM) <input id="executionMinFee" type="number" min="0" step="0.10" value="${costs.minimumFee}" onchange="updateExecutionCosts()" style="width:5rem;"></label></div>
+                <p>Cost sensitivity keeps the same modeled positions and prices. Adjusting costs recalculates net results; it does not recreate historical fills.</p>
+                <p>${c.newsKnownSignals} signals have archived news coverage; ${c.newsUnknownSignals.toLocaleString()} have unknown historical news coverage. ${c.closeOnlyTrades.toLocaleString()} fills use a close-only approximation.</p>
+                <details><summary>Execution assumptions</summary><p>${escapeHtml(a.strategy)}. Allocation RM ${a.allocation}; lot size ${a.lotSize}; holding limit ${a.holdingDays} sessions; stop ${a.stopPct}%; slippage ${a.slippagePct}%. Fee ${a.feePct}% per side, minimum RM ${a.minimumFee}; clearing assumption ${a.clearingPct}%; stamp assumption RM ${a.stampPer1000} per RM 1,000.</p><p>${escapeHtml(a.costs)} ${escapeHtml(a.capital)} ${escapeHtml(a.openValuations)}</p></details>`;
+        }
+
+        function updateExecutionCosts() {
+            const feePct = Number(document.getElementById('executionFeePct').value);
+            const minimumFee = Number(document.getElementById('executionMinFee').value);
+            if (![feePct,minimumFee].every(value=>Number.isFinite(value) && value >= 0)) return;
+            window._executionCosts = {...window.EXECUTION_BACKTEST.assumptions, feePct, minimumFee};
+            renderExecutionModel();
+        }
+
+        function renderDataQuality() {
+            const panel = document.getElementById('dataQualitySummary');
+            if (!panel || !window.liveData || typeof JerungDataQuality === 'undefined') return;
+            const snapshot = _viewingArchive && window._archiveSnapshot ? window._archiveSnapshot : window.liveData;
+            const quality = snapshot.quality || JerungDataQuality.evaluateSnapshot(snapshot);
+            const failedFeeds = Object.values(window.NEWS_DATA || {}).filter(record => Object.values(record.fetchStatus || {}).includes('error')).length;
+            panel.textContent = `${quality.stockCount} quotes · ${quality.verifiedCount} metadata checks passed · ${quality.warningCount} need confirmation · ${quality.rejectedCount} contradictory or invalid. ${failedFeeds} counters have a failed news feed. Snapshot time records collection time; unavailable market quote times remain unknown.`;
+            const select = document.getElementById('signalExplainTicker');
+            if (select) {
+                const previous = select.value;
+                select.replaceChildren(...(currentData || []).slice().sort((a,b)=>a.name.localeCompare(b.name)).map(stock => {
+                    const option = document.createElement('option'); option.value = stock.name; option.textContent = stock.name; return option;
+                }));
+                if ([...select.options].some(option => option.value === previous)) select.value = previous;
+                renderSignalExplanation();
+            }
+        }
+
+        function renderSignalExplanation() {
+            const panel = document.getElementById('signalExplanation');
+            const name = document.getElementById('signalExplainTicker')?.value;
+            const stock = (currentData || []).find(stock => stock.name === name);
+            if (!panel || !stock) return;
+            const swan = getBlackSwanEvaluation(name, stock);
+            const decision = StrategyRules.evaluateFreshRider(stock, { stage:'candidate', blackSwanClean:swan.status === 'pass' });
+            const snapshot = _viewingArchive && window._archiveSnapshot ? window._archiveSnapshot : window.liveData;
+            const quality = snapshot?.quality?.stocks?.[stock.name.toUpperCase()] || JerungDataQuality.assessStock(stock, {snapshotAt:snapshot?.lastUpdated});
+            const displayed = (window._latestFreshRiderPicks || []).some(item => item.name === name);
+            const reasons = [...decision.reasons.map(reason=>reason.message), ...quality.issues.map(issue=>issue.message)];
+            panel.innerHTML = `<strong>${escapeHtml(name)} — ${displayed ? 'shown in Fresh Rider results' : 'outside the current Fresh Rider results'}</strong><p>Price RM ${stock.price.toFixed(3)} · Tightness ${Number.isFinite(stock.closeTightness) ? stock.closeTightness.toFixed(2)+'%' : 'unknown'} · Corporate event check: ${escapeHtml(swan.label)}.</p>` +
+                (reasons.length ? `<ul>${reasons.map(reason=>`<li>${escapeHtml(reason)}</li>`).join('')}</ul>` : '<p>Core candidate checks pass. Entry classification, floor distance and your selected filters also determine the displayed ranking.</p>');
+        }
+
+        function getDashboardDate() {
+            return new Date(Date.now() + 8 * 3600000).toISOString().slice(0, 10);
+        }
+
+        function isGreenCandle(item) {
+            return StrategyRules.isGreenCandle(item);
+        }
+
+        function escapeHtml(value) {
+            return String(value ?? '').replace(/[&<>"']/g, char => ({
+                '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+            }[char]));
+        }
+
         function parseDateFlexible(dStr, defaultYear) {
             if (!dStr) return null;
             if (/^\d{4}-\d{2}-\d{2}$/.test(dStr)) return new Date(dStr + 'T00:00:00Z');
@@ -6509,7 +6615,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         }
 
         function getBlackSwanEvaluation(name, item, viewDateStr) {
-            const curDateStr = viewDateStr || (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || new Date().toISOString().slice(0, 10);
+            const curDateStr = viewDateStr || (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || getDashboardDate();
             const refDate = parseDateFlexible(curDateStr) || new Date();
             const up = (name || '').toUpperCase();
             const news = (window.NEWS_DATA && window.NEWS_DATA[up]) ? window.NEWS_DATA[up] : null;
@@ -6518,18 +6624,18 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             if (news && Array.isArray(news.entitlements)) {
                 for (const ent of news.entitlements) {
                     if (!ent.isDividend || !ent.exDate) continue;
-                    const exD = parseDateFlexible(ent.exDate, refDate.getUTCFullYear());
+                    const exD = CorporateRisk.parseEventDate(ent.exDate, refDate);
                     if (!exD) continue;
                     const diffDays = Math.round((exD.getTime() - refDate.getTime()) / (24 * 3600 * 1000));
                     // Jika Ex-Date jatuh antara -1 hingga +10 hari daripada tarikh paparan
                     if (diffDays >= -1 && diffDays <= 10) {
-                        const dayTxt = diffDays === 0 ? 'HARI INI' : (diffDays > 0 ? (diffDays + ' hari lagi') : 'Semalam');
+                        const dayTxt = diffDays === 0 ? 'Today' : (diffDays > 0 ? (diffDays + ' days ahead') : 'Yesterday');
                         return {
                             status: 'ex_div',
                             severity: 'danger',
                             label: 'EX-DIV TRAP',
                             icon: '🔴 ⚠️',
-                            badgeHtml: `<span class="fr-new-badge swan-eval-badge" style="font-size:0.62rem; background:rgba(239,68,68,0.28); color:#fca5a5; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid rgba(239,68,68,0.7); white-space:nowrap; cursor:help;" title="[Black Swan 1: Ex-Dividend Trap] Ex-Date: ${ent.exDate} (${dayTxt}) | ${ent.type || 'Dividen'} ${ent.amount || ''}. AMARAN: Jangan masuk sebelum Ex-Date kerana risiko kejatuhan harga automatik & lambakan jualan dividen!">🔴 ⚠️ EX-DIV TRAP</span>`
+                            badgeHtml: `<span class="fr-new-badge swan-eval-badge" style="font-size:0.62rem; background:rgba(239,68,68,0.28); color:#fca5a5; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid rgba(239,68,68,0.7); white-space:nowrap; cursor:help;" title="[Black Swan 1: Ex-Dividend Trap] Ex-Date: ${escapeHtml(ent.exDate)} (${dayTxt}) | ${escapeHtml(ent.type || 'Dividen')} ${escapeHtml(ent.amount || '')}. AMARAN: Jangan masuk sebelum Ex-Date kerana risiko kejatuhan harga automatik & lambakan jualan dividen!">🔴 ⚠️ EX-DIV TRAP</span>`
                         };
                     }
                 }
@@ -6538,10 +6644,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             // 2. Semakan Musim / Pengumuman Quarterly Report (QR)
             if (news && Array.isArray(news.announcements)) {
                 for (const ann of news.announcements) {
-                    const cat = (ann.category || '').toUpperCase();
-                    const title = (ann.title || '').toUpperCase();
-                    if (title.includes('QUARTERLY') || title.includes('FINANCIAL RESULTS') || cat.includes('FINANCIAL')) {
-                        const annD = parseDateFlexible(ann.date, refDate.getUTCFullYear());
+                    if (CorporateRisk.isEarningsAnnouncement(ann)) {
+                        const annD = CorporateRisk.parseEventDate(ann.date, refDate, { pastOnly: true });
                         if (annD) {
                             const diffDays = Math.round((annD.getTime() - refDate.getTime()) / (24 * 3600 * 1000));
                             if (diffDays >= -3 && diffDays <= 5) {
@@ -6550,7 +6654,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                                     severity: 'warning',
                                     label: 'QR RISK',
                                     icon: '🟡 ⚠️',
-                                    badgeHtml: `<span class="fr-new-badge swan-eval-badge" style="font-size:0.62rem; background:rgba(245,158,11,0.25); color:#fef08a; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid rgba(245,158,11,0.7); white-space:nowrap; cursor:help;" title="[Black Swan 2: Earnings Binary Risk] Tarikh QR: ${ann.date} (${ann.title}). AMARAN: Elak masuk menjelang laporan kewangan bagi mengelak fenomena Sell on News atau kejatuhan margin keuntungan!">🟡 ⚠️ QR RISK</span>`
+                                    badgeHtml: `<span class="fr-new-badge swan-eval-badge" style="font-size:0.62rem; background:rgba(245,158,11,0.25); color:#fef08a; padding:0.08rem 0.35rem; border-radius:4px; font-weight:800; border:1px solid rgba(245,158,11,0.7); white-space:nowrap; cursor:help;" title="[Black Swan 2: Earnings Binary Risk] Tarikh QR: ${escapeHtml(ann.date)} (${escapeHtml(ann.title)}). AMARAN: Elak masuk menjelang laporan kewangan bagi mengelak fenomena Sell on News atau kejatuhan margin keuntungan!">🟡 ⚠️ QR RISK</span>`
                                 };
                             }
                         }
@@ -6599,7 +6703,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const recentFloorMap = getRecentFloorMap(hdFloor, 5);
             if (seq !== _confluenceRenderSeq) return; // render lama — jangan overwrite
             // 🔧 FIX: frTrackMap & curRefDate MESTI dideklarasikan SEBELUM effFloorOf & for loop (elak TDZ ReferenceError)
-            const curRefDate = hdFloor || new Date().toISOString().slice(0, 10);
+            const curRefDate = hdFloor || getDashboardDate();
             const frTrackSource = (window.ALL_TRACKER && Array.isArray(window.ALL_TRACKER.trades) && window.ALL_TRACKER.trades.length > 0)
                 ? window.ALL_TRACKER.trades
                 : ((window.FRESH_RIDER_TRACKER && Array.isArray(window.FRESH_RIDER_TRACKER.trades)) ? window.FRESH_RIDER_TRACKER.trades : []);
@@ -6644,7 +6748,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 // Anti-Debut Dump Shield
                 if (item.ipoAge != null && item.ipoAge < 15 && (item.touchCount || 0) < 2) continue;
 
-                const isGreenBreakout = (item.change >= 0 || (item.changePct || 0) >= 0);
+                const isGreenBreakout = isGreenCandle(item);
                 const tight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
 
                 if (item.hasVolumeSpike === true) {
@@ -6748,8 +6852,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
                     // ⭐ ADD-ON A+ (AWAL): Fresh Base 1 <= 20%
                     // 🛡️ ADD-ON (LANTAI RAPAT): Solid Base 2 (Touches >= 3, Floor <= 4.5%, Squeeze <= 3.5%, Whale >= RM 2M)
-                    const isSolidBase2 = (touches >= 3 && tight <= 3.5 && fd <= 4.5 && (toVal >= 2000000 || toVal === 0));
-                    const isFreshBase1 = (pct >= 0 && pct <= 20 && fd <= 3.5 && (toVal >= 2000000 || toVal === 0));
+                    const isSolidBase2 = StrategyRules.classifyMetrics({gainFromBase:null,floorDistance:fd,turnover:toVal,tightness:tight,touches:touches},{family:'fr',context:'scanner',allowZeroTurnover:true}).isSolidBase2;
+                    const isFreshBase1 = StrategyRules.classifyMetrics({gainFromBase:pct,floorDistance:fd,turnover:toVal,tightness:0,touches:0},{family:'fr',context:'scanner',allowZeroTurnover:true}).isFreshBase1;
                     if (isFreshBase1) return 1; // ⭐ ADD-ON A+ (AWAL)
                     if (isSolidBase2) return 2; // 🛡️ ADD-ON (LANTAI RAPAT)
                     if (pct > 20 && fd > 5.0) return 4; // ⚠️ ADD-ON Pucuk (jauh dari lantai)
@@ -6914,40 +7018,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             } else if (filterMode === 'top_ranking') {
                 displayPicks = picks.filter(p => {
                     const t = getTierOfFR(p);
-                    const fresh = frFreshness(p); // 0 = NEW, 1 = ADD-ON A+, 2 = LANTAI RAPAT, 3 = STANDARD, 4 = PUCUK
-
-                    // 1. DILARANG SAMA SEKALI: Pucuk / Extended atau SL tepi jurang
-                    if (!t.isBlackSwanClean || t.isRealUpperWickDump || fresh === 4) return false;
-
-                    // 2. Semak sama ada kaunter ini SUDAH DISAHKAN dalam FR Tracker hari ini
-                    // (entryDate = today & status OPEN) — data penutupan semalam sudah sahkan signal ini.
-                    // Bypass tapisan turnover pagi untuk elak desync Tracker-vs-Scanner (fix EXSIMHB / XPB bug).
-                    const nameKey = (p.name || '').toUpperCase();
-                    const trackedEntry = frTrackMap.get(nameKey);
-                    const isTrackerConfirmedOpen = !!(
-                        trackedEntry &&
-                        trackedEntry.status === 'OPEN'
-                    );
-
-                    // 3. DILARANG: Kaunter turnover lemau / runcit (< RM 1.0M)
-                    // PENGECUALIAN: Kaunter yang SUDAH DISAHKAN dalam Tracker dibenarkan walaupun
-                    // turnover pagi rendah (data live pagi belum muktamad — pasaran baru buka).
-                    if (t.toVal < 1000000 && !isTrackerConfirmedOpen) return false;
-
-                    // 4. LAYAK: 🔥 NEW (Day 1 Breakout) — benarkan lilin breakout hijau
-                    if (fresh === 0) {
-                        return (t.fDistVal <= 10.0 && t.fDistVal >= -2.0 && t.tightValNum <= 10.0);
-                    }
-
-                    // 5. LAYAK: ⭐ ADD-ON A+ / 🛡️ ADD-ON (LANTAI RAPAT) — lantai rapat wajib <= 4.5%
-                    if (fresh === 1 || fresh === 2) {
-                        if (t.fDistVal > 4.5 || t.fDistVal < -2.0) return false;
-                        if (t.tightValNum <= 3.5) return true;
-                    }
-
-                    // 6. SOP: Hanya 3 jenis entry (NEW / ADD-ON A+ / LANTAI RAPAT) layak.
-                    // Posisi OPEN lama yang sudah extended / Standard ADD-ON dipantau di Live Tracker, bukan signal entry.
-                    return false;
+                    const tracked = frTrackMap.get((p.name || '').toUpperCase());
+                    return StrategyRules.evaluateTopRanking(p, {family:'fr', freshness:frFreshness(p), floor:effFloorOf(p), blackSwanClean:t.isBlackSwanClean, upperWickDump:t.isRealUpperWickDump, trackerConfirmed:tracked?.status === 'OPEN'}).eligible;
                 });
             }
 
@@ -6958,9 +7030,9 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 if (filterMode === 'golden_combo') emptyMsg = '👑 Tiada setup <strong>👑 Golden Combo (A++)</strong> hari ini (Tightness ≤ 2.5%, Lantai ≤ 3.5%, TO RM 2M–10M & Bebas Lilin Merah). Sila klik butang <strong>🏆 Top Ranking VVIP</strong> atau <strong>🌐 All Qualified</strong>.';
                 else if (filterMode === 'tier_a_plus') emptyMsg = '⭐ Tiada setup <strong>🎯 Sniper Only (Tier A+)</strong> hari ini (Turnover ≥ RM2M, Tightness ≤ 3.5%, Lantai ≤ 3.5% & Bebas Black Swan). Sila klik butang <strong>🏆 Top Ranking VVIP</strong> atau <strong>🌐 All Qualified</strong> di atas.';
                 else if (filterMode === 'new_only') emptyMsg = '🔥 Tiada signal <strong>🔥 NEW (Day 1)</strong> hari ini. Sila semak tab <strong>⭐ ADD-ON A+</strong> atau <strong>🏆 Top Ranking VVIP</strong>.';
-                else if (filterMode === 'addon_only') emptyMsg = '⭐ Tiada setup <strong>⭐ ADD-ON A+</strong> hari ini yang menepati syarat lantai rapat ≤ 4.5% & turnover institusi.';
+                else if (filterMode === 'addon_only') emptyMsg = '⭐ No qualified ADD-ON setup today with floor distance ≤ 5.0% and sufficient turnover.';
                 else if (filterMode === 'fusion_only') emptyMsg = '⚡ Tiada signal <strong>🔥⚡ FUSION</strong> hari ini (Fresh Rider + Hot Theme Semicon/Solar).';
-                else if (filterMode === 'top_ranking') emptyMsg = '🏆 Tiada signal <strong>🏆 Top Ranking VVIP</strong> hari ini (Mematuhi 3 Angka Emas: Tightness ≤ 3.5%, Lantai ≤ 4.5%, Turnover ≥ RM 1.5M). Sila pilih mod <strong>🌐 All Qualified</strong>.';
+                else if (filterMode === 'top_ranking') emptyMsg = '🏆 No qualified Top Ranking signal today. ADD-ON setups require tightness ≤ 3.5% and floor distance ≤ 5.0%; NEW breakouts use their entry criteria. Select All Qualified to inspect other setups.';
                 else if (!currentData || currentData.length === 0) {
                     emptyMsg = '⚠️ Data belum dimuat naik — sila klik <strong>🔄 Muat Data</strong> di atas.';
                 }
@@ -7098,13 +7170,13 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 if (stockNews && Array.isArray(stockNews.newsBadges)) {
                     for (const nb of stockNews.newsBadges) {
                         if (nb.type === 'EV_CATALYST') {
-                            badgesHtml += `<span class="fr-new-badge catalyst-badge" style="font-size:0.6rem; background:rgba(6,182,212,0.25); color:#67e8f9; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(6,182,212,0.6); white-space:nowrap; cursor:help;" title="${nb.title || 'EV / Green Mobility Catalyst'}">⚡ EV Catalyst</span>`;
+                            badgesHtml += `<span class="fr-new-badge catalyst-badge" style="font-size:0.6rem; background:rgba(6,182,212,0.25); color:#67e8f9; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(6,182,212,0.6); white-space:nowrap; cursor:help;" title="${escapeHtml(nb.title || 'EV / Green Mobility Catalyst')}">⚡ EV Catalyst</span>`;
                         } else if (nb.type === 'AI_CATALYST') {
-                            badgesHtml += `<span class="fr-new-badge catalyst-badge" style="font-size:0.6rem; background:rgba(168,85,247,0.25); color:#e9d5ff; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(168,85,247,0.6); white-space:nowrap; cursor:help;" title="${nb.title || 'AI / Data Centre Catalyst'}">🤖 AI Catalyst</span>`;
+                            badgesHtml += `<span class="fr-new-badge catalyst-badge" style="font-size:0.6rem; background:rgba(168,85,247,0.25); color:#e9d5ff; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(168,85,247,0.6); white-space:nowrap; cursor:help;" title="${escapeHtml(nb.title || 'AI / Data Centre Catalyst')}">🤖 AI Catalyst</span>`;
                         } else if (nb.type === 'CONTRACT_WIN') {
-                            badgesHtml += `<span class="fr-new-badge catalyst-badge" style="font-size:0.6rem; background:rgba(234,179,8,0.25); color:#fef08a; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(234,179,8,0.6); white-space:nowrap; cursor:help;" title="${nb.title || 'Contract Award Win'}">📜 Contract Win</span>`;
+                            badgesHtml += `<span class="fr-new-badge catalyst-badge" style="font-size:0.6rem; background:rgba(234,179,8,0.25); color:#fef08a; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(234,179,8,0.6); white-space:nowrap; cursor:help;" title="${escapeHtml(nb.title || 'Contract Award Win')}">📜 Contract Win</span>`;
                         } else if (nb.type === 'JERUNG_5PCT') {
-                            badgesHtml += `<span class="fr-new-badge catalyst-badge" style="font-size:0.6rem; background:rgba(16,185,129,0.25); color:#6ee7b7; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(16,185,129,0.6); white-space:nowrap; cursor:help;" title="${nb.title || 'Substantial Shareholder Jerung Acquisition (5%+)'}">🐋 Jerung 5%+</span>`;
+                            badgesHtml += `<span class="fr-new-badge catalyst-badge" style="font-size:0.6rem; background:rgba(16,185,129,0.25); color:#6ee7b7; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(16,185,129,0.6); white-space:nowrap; cursor:help;" title="${escapeHtml(nb.title || 'Substantial Shareholder Jerung Acquisition (5%+)')}">🐋 Jerung 5%+</span>`;
                         }
                     }
                 }
@@ -7317,7 +7389,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 return aOpen - bOpen;
             });
 
-            const todayStr = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || new Date().toISOString().slice(0, 10);
+            const todayStr = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || getDashboardDate();
 
             tbody.innerHTML = sortedTrades.map((t, idx) => {
                 const isOpen = t.status === 'OPEN';
@@ -7744,7 +7816,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         function isCSMerah(item) {
             if (!item) return false;
             if (!item.hasVolumeSpike || (item.volumeSpike || 0) < 1.5) return true;
-            const isGreen = (item.change >= 0 || (item.changePct || 0) >= 0);
+            const isGreen = isGreenCandle(item);
             const tight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
             return isGreen && tight <= 10.0;
         }
@@ -7917,7 +7989,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 return aOpen - bOpen;
             });
 
-            const todayStr = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || new Date().toISOString().slice(0, 10);
+            const todayStr = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || getDashboardDate();
 
             tbody.innerHTML = sortedTrades.map((t, idx) => {
                 const isOpen = t.status === 'OPEN';
@@ -9168,7 +9240,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             // Anti-Debut Dump Shield
             if (item.ipoAge != null && item.ipoAge < 15 && (item.touchCount || 0) < 2) return false;
 
-            const isGreenBreakout = (item.change >= 0 || (item.changePct || 0) >= 0);
+            const isGreenBreakout = isGreenCandle(item);
             const tight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
 
             if (item.hasVolumeSpike === true) {
@@ -9236,7 +9308,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             allFrTradesSource.filter(t => t.status === 'OPEN').sort((a,b) => (a.entryDate || '').localeCompare(b.entryDate || '')).forEach(t => {
                 trackedTrades.set((t.name || '').toUpperCase(), t);
             });
-            const todayStr = hd || (window.FRESH_RIDER_TRACKER && window.FRESH_RIDER_TRACKER.summary && window.FRESH_RIDER_TRACKER.summary.generatedAt ? window.FRESH_RIDER_TRACKER.summary.generatedAt.slice(0, 10) : new Date().toISOString().slice(0, 10));
+            const todayStr = hd || (window.FRESH_RIDER_TRACKER && window.FRESH_RIDER_TRACKER.summary && window.FRESH_RIDER_TRACKER.summary.generatedAt ? window.FRESH_RIDER_TRACKER.summary.generatedAt.slice(0, 10) : getDashboardDate());
 
             // Create lookup map of current rendered picks for exact price, floor & tightness
             const currentPicksMap = new Map((window._latestFreshRiderPicks || currentData || []).map(it => [(it.name || '').toUpperCase(), it]));
@@ -9311,8 +9383,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     const touches = (item && item.touchCount) || 0;
                     const tight = (item && typeof item.closeTightness === 'number') ? item.closeTightness : 99;
 
-                    const isSolidBase2 = (touches >= 3 && tight <= 3.5 && floorDist <= 4.5 && (toVal >= 2000000 || toVal === 0));
-                    const isFreshBase1 = (pctFromEntry >= 0 && pctFromEntry <= 20 && floorDist <= 3.5 && (toVal >= 2000000 || toVal === 0));
+                    const isSolidBase2 = StrategyRules.classifyMetrics({gainFromBase:null,floorDistance:floorDist,turnover:toVal,tightness:tight,touches:touches},{family:'fr',context:'scanner',allowZeroTurnover:true}).isSolidBase2;
+                    const isFreshBase1 = StrategyRules.classifyMetrics({gainFromBase:pctFromEntry,floorDistance:floorDist,turnover:toVal,tightness:0,touches:0},{family:'fr',context:'scanner',allowZeroTurnover:true}).isFreshBase1;
 
                     if (isFreshBase1) {
                         badge.textContent = '⭐ ADD-ON A+ (AWAL)';
@@ -9504,7 +9576,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 }
             }
 
-            const todayStr = hd || (window.HOT_THEME_TRACKER && window.HOT_THEME_TRACKER.summary && window.HOT_THEME_TRACKER.summary.generatedAt ? window.HOT_THEME_TRACKER.summary.generatedAt.slice(0, 10) : new Date().toISOString().slice(0, 10));
+            const todayStr = hd || (window.HOT_THEME_TRACKER && window.HOT_THEME_TRACKER.summary && window.HOT_THEME_TRACKER.summary.generatedAt ? window.HOT_THEME_TRACKER.summary.generatedAt.slice(0, 10) : getDashboardDate());
 
             // Clear old badges
             tbody.querySelectorAll('.ht-new-badge').forEach(el => el.remove());
@@ -9573,8 +9645,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     const touches = (item && item.touchCount) || 0;
                     const tight = (item && typeof item.closeTightness === 'number') ? item.closeTightness : 99;
 
-                    const isSolidBase2 = (touches >= 3 && tight <= 3.5 && floorDist <= 4.5 && (toVal >= 2000000 || toVal === 0));
-                    const isFreshBase1 = (pctFromEntry >= 0 && pctFromEntry <= 20 && floorDist <= 3.5 && (toVal >= 2000000 || toVal === 0));
+                    const isSolidBase2 = StrategyRules.classifyMetrics({gainFromBase:null,floorDistance:floorDist,turnover:toVal,tightness:tight,touches:touches},{family:'fr',context:'scanner',allowZeroTurnover:true}).isSolidBase2;
+                    const isFreshBase1 = StrategyRules.classifyMetrics({gainFromBase:pctFromEntry,floorDistance:floorDist,turnover:toVal,tightness:0,touches:0},{family:'fr',context:'scanner',allowZeroTurnover:true}).isFreshBase1;
 
                     if (isFreshBase1) {
                         badge.textContent = '⭐ ADD-ON A+ (AWAL)';
@@ -9929,7 +10001,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     htTrackMap.set(sym, t);
                 }
             }
-            const curRefDateHT = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || (window.HOT_THEME_TRACKER && window.HOT_THEME_TRACKER.summary && window.HOT_THEME_TRACKER.summary.generatedAt ? window.HOT_THEME_TRACKER.summary.generatedAt.slice(0, 10) : new Date().toISOString().slice(0, 10));
+            const curRefDateHT = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || (window.HOT_THEME_TRACKER && window.HOT_THEME_TRACKER.summary && window.HOT_THEME_TRACKER.summary.generatedAt ? window.HOT_THEME_TRACKER.summary.generatedAt.slice(0, 10) : getDashboardDate());
 
             const effFloorOfHT = (item) => {
                 const clean = (item.name || '').toUpperCase().trim();
@@ -9995,8 +10067,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     const entryP = tr.entry || 0;
                     const pct = (entryP > 0 && it.price) ? ((it.price - entryP) / entryP) * 100 : 0;
 
-                    const isSolidBase2 = (touches >= 3 && tight <= 3.5 && fd <= 4.5 && (toVal >= 2000000 || toVal === 0));
-                    const isFreshBase1 = (pct >= 0 && pct <= 20 && fd <= 3.5 && (toVal >= 2000000 || toVal === 0));
+                    const isSolidBase2 = StrategyRules.classifyMetrics({gainFromBase:null,floorDistance:fd,turnover:toVal,tightness:tight,touches:touches},{family:'fr',context:'scanner',allowZeroTurnover:true}).isSolidBase2;
+                    const isFreshBase1 = StrategyRules.classifyMetrics({gainFromBase:pct,floorDistance:fd,turnover:toVal,tightness:0,touches:0},{family:'fr',context:'scanner',allowZeroTurnover:true}).isFreshBase1;
                     if (isFreshBase1) return 1; // ⭐ ADD-ON A+ (AWAL)
                     if (isSolidBase2) return 2; // 🛡️ ADD-ON (LANTAI RAPAT)
                     if (pct > 20 && fd > 5.0) return 4; // ⚠️ ADD-ON Pucuk
@@ -10111,45 +10183,9 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             if (htFilter === 'top_ranking') {
                 displayPicks = picks.filter(p => {
                     const t = getTierOfHT(p.item);
-                    const fresh = htFreshness(p.item);
-                    const isFusion = isFreshRiderPick(p.item) && (p.themes || []).length > 0;
-
-                    // 1. DILARANG SAMA SEKALI: Pucuk / Extended atau SL tepi jurang
-                    if (fresh === 4) return false;
-
-                    // 2. Semak sama ada kaunter SUDAH DISAHKAN dalam HT Tracker hari ini
-                    // Bypass tapisan turnover pagi untuk elak desync Tracker-vs-Scanner
-                    const nameKeyHT = (p.item.name || '').toUpperCase();
-                    const trackedEntryHT = htTrackMap.get(nameKeyHT);
-                    const isHtConfirmedToday = !!(
-                        trackedEntryHT &&
-                        trackedEntryHT.status === 'OPEN' &&
-                        trackedEntryHT.entryDate === curRefDateHT
-                    );
-
-                    // 3. DILARANG: Kaunter turnover lemau / runcit (< RM 1.0M)
-                    // PENGECUALIAN: Kaunter yang SUDAH DISAHKAN dalam Tracker hari ini dibenarkan
-                    if (t.toVal < 1000000 && !isHtConfirmedToday) return false;
-
-                    // 4. DILARANG: Terkena Black Swan Trap atau Selling Dump Merah
-                    const swanEval = typeof getBlackSwanEvaluation === 'function' ? getBlackSwanEvaluation(p.item.name, p.item, curRefDateHT) : null;
-                    const isBlackSwanClean = !swanEval || (swanEval.status && String(swanEval.status).toLowerCase() === 'pass');
-                    const isRealUpperWickDump = p.item.hasUpperWickRejection === true && (p.item.change < 0 || (p.item.changePct && p.item.changePct < 0));
-                    if (!isBlackSwanClean || isRealUpperWickDump) return false;
-
-                    // 5. LAYAK: 🔥 NEW (Day 1 Breakout) — benarkan lilin breakout hijau
-                    if (fresh === 0) {
-                        return (t.fDistVal <= 10.0 && t.fDistVal >= -2.0 && t.tightValNum <= 10.0);
-                    }
-
-                    // 6. LAYAK: ⭐ ADD-ON A+ / 🛡️ ADD-ON (LANTAI RAPAT) — lantai rapat
-                    const maxAllowedFloorDist = ((p.item.touchCount || 0) >= 5 && t.toVal >= 2000000 && t.tightValNum <= 3.5) ? 6.8 : 4.8;
-                    if (t.fDistVal > maxAllowedFloorDist || t.fDistVal < -2.0) return false;
-
-                    // SOP: Hanya ⭐ ADD-ON A+ / 🛡️ LANTAI RAPAT (NEW sudah dikendalikan di atas).
-                    // Tier A+ & Fusion kekal sebagai cop kualiti (lencana / susunan), bukan pintu masuk.
-                    const meetsGolden = (t.tightValNum <= 4.8 && t.fDistVal <= maxAllowedFloorDist && t.toVal >= 1000000);
-                    return (fresh === 1 || fresh === 2) && meetsGolden;
+                    const tracked = htTrackMap.get((p.item.name || '').toUpperCase());
+                    const swan = getBlackSwanEvaluation(p.item.name, p.item, curRefDateHT);
+                    return StrategyRules.evaluateTopRanking(p.item, {family:'ht', freshness:htFreshness(p.item), floor:p.item.price / (1 + t.fDistVal / 100), blackSwanClean:swan.status === 'pass', upperWickDump:p.item.hasUpperWickRejection === true && !isGreenCandle(p.item), trackerConfirmed:tracked?.status === 'OPEN' && tracked.entryDate === curRefDateHT}).eligible;
                 });
             } else if (htFilter === 'golden_combo') {
                 displayPicks = picks.filter(p => {
@@ -10285,13 +10321,13 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 if (stockNewsHT && Array.isArray(stockNewsHT.newsBadges)) {
                     for (const nb of stockNewsHT.newsBadges) {
                         if (nb.type === 'EV_CATALYST') {
-                            catalystBadgesHT += `<span class="fr-new-badge" style="font-size:0.6rem; background:rgba(6,182,212,0.25); color:#67e8f9; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(6,182,212,0.6); white-space:nowrap; cursor:help;" title="${nb.title || 'EV / Green Mobility Catalyst'}">⚡ EV Catalyst</span>`;
+                            catalystBadgesHT += `<span class="fr-new-badge" style="font-size:0.6rem; background:rgba(6,182,212,0.25); color:#67e8f9; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(6,182,212,0.6); white-space:nowrap; cursor:help;" title="${escapeHtml(nb.title || 'EV / Green Mobility Catalyst')}">⚡ EV Catalyst</span>`;
                         } else if (nb.type === 'AI_CATALYST') {
-                            catalystBadgesHT += `<span class="fr-new-badge" style="font-size:0.6rem; background:rgba(168,85,247,0.25); color:#e9d5ff; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(168,85,247,0.6); white-space:nowrap; cursor:help;" title="${nb.title || 'AI / Data Centre Catalyst'}">🤖 AI Catalyst</span>`;
+                            catalystBadgesHT += `<span class="fr-new-badge" style="font-size:0.6rem; background:rgba(168,85,247,0.25); color:#e9d5ff; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(168,85,247,0.6); white-space:nowrap; cursor:help;" title="${escapeHtml(nb.title || 'AI / Data Centre Catalyst')}">🤖 AI Catalyst</span>`;
                         } else if (nb.type === 'CONTRACT_WIN') {
-                            catalystBadgesHT += `<span class="fr-new-badge" style="font-size:0.6rem; background:rgba(234,179,8,0.25); color:#fef08a; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(234,179,8,0.6); white-space:nowrap; cursor:help;" title="${nb.title || 'Contract Award Win'}">📜 Contract Win</span>`;
+                            catalystBadgesHT += `<span class="fr-new-badge" style="font-size:0.6rem; background:rgba(234,179,8,0.25); color:#fef08a; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(234,179,8,0.6); white-space:nowrap; cursor:help;" title="${escapeHtml(nb.title || 'Contract Award Win')}">📜 Contract Win</span>`;
                         } else if (nb.type === 'JERUNG_5PCT') {
-                            catalystBadgesHT += `<span class="fr-new-badge" style="font-size:0.6rem; background:rgba(16,185,129,0.25); color:#6ee7b7; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(16,185,129,0.6); white-space:nowrap; cursor:help;" title="${nb.title || 'Substantial Shareholder Jerung Acquisition (5%+)'}">🐋 Jerung 5%+</span>`;
+                            catalystBadgesHT += `<span class="fr-new-badge" style="font-size:0.6rem; background:rgba(16,185,129,0.25); color:#6ee7b7; padding:0.06rem 0.32rem; border-radius:3px; font-weight:800; border:1px solid rgba(16,185,129,0.6); white-space:nowrap; cursor:help;" title="${escapeHtml(nb.title || 'Substantial Shareholder Jerung Acquisition (5%+)')}">🐋 Jerung 5%+</span>`;
                         }
                     }
                 }
@@ -10464,7 +10500,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 return f || rf || +(item.price * 0.95).toFixed(3);
             };
 
-            const curRefDate = hdHT || new Date().toISOString().slice(0, 10);
+            const curRefDate = hdHT || getDashboardDate();
 
             // Syarat Fusion: MESTI ada Hot Themes (Semicon/Solar/AI) + MESTI Fresh Rider / Multi-Strategy Confluence / Whale Radar
             const picks = [];
@@ -11273,6 +11309,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 const originalText = '📂 Load';
 
                 if (!dateVal) {
+                    _archiveLoadBusy = false;
                     btn.innerHTML = '⚠️ Select Date';
                     btn.style.background = '#f59e0b';
                     btn.style.color = '#0f172a';
@@ -11325,6 +11362,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                             data = unique;
                         }
                         if (data && data.length > 0) {
+                            window._archiveSnapshot = Array.isArray(raw) ? {topVolume:raw,lastUpdated:dateVal+'T09:00:00Z'} : raw;
                             currentData = data;
                             _viewingArchive = true; // tengah tengok arkib — auto-refresh kena berhenti
                             document.getElementById('dashboardSubtitle').innerHTML = `📂 Historical Archive: <strong>${dateVal}</strong>`;

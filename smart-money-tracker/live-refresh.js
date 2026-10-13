@@ -8,6 +8,8 @@
         'fresh_rider_tracker.js': ['FRESH_RIDER_TRACKER', 'ADD_ON_TRACKER', 'FLOOR_ADDON_TRACKER', 'ALL_TRACKER'],
         'hot_theme_tracker.js': ['HOT_THEME_TRACKER', 'HOT_THEME_NEW_TRACKER', 'HOT_THEME_ADDON_TRACKER', 'HOT_THEME_FLOOR_TRACKER', 'HOT_THEME_ALL_TRACKER'],
         'daily_equity_tracker.js': ['DAILY_EQUITY_TRACKER'],
+        'scanner_history.js': ['SCANNER_HISTORY'],
+        'execution_backtest.js': ['EXECUTION_BACKTEST'],
         'jerung-data.js': ['jerungData'],
         'news_data.js': ['NEWS_DATA']
     };
@@ -93,9 +95,10 @@
         return data;
     }
 
-    async function loadBundle(base, fetchImpl = fetch, now = Date.now()) {
-        const parts = await Promise.all(Object.entries(DATA_FILES).map(async ([file, keys]) =>
-            parseDataScript(await request(`${base}${file}?t=${now}`, fetchImpl), keys)));
+    async function loadBundle(base, fetchImpl = fetch, now = Date.now(), files = Object.keys(DATA_FILES)) {
+        if (files.some(file => !Object.hasOwn(DATA_FILES, file))) throw new Error('Unknown data file');
+        const parts = await Promise.all(files.map(async file =>
+            parseDataScript(await request(`${base}${file}?t=${now}`, fetchImpl), DATA_FILES[file])));
         return Object.assign({}, ...parts);
     }
 

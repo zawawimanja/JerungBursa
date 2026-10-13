@@ -2,6 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const axios = require('axios');
 const cheerio = require('cheerio');
+const { quoteMetadata } = require('./lib/data_quality');
 
 const OUTPUT_FILE = path.join(path.join(__dirname, '..'), 'live_data.json');
 
@@ -79,7 +80,7 @@ function parseTab($, tabSelector) {
                     price,
                     change: isNaN(change) ? 0 : change,
                     volume,
-                    code
+                    code, providerCode:code || null,priceSource:'i3investor market table'
                 });
             }
         }
@@ -104,8 +105,8 @@ async function scrapeBursaMalaysia() {
             headless: true,
             args: ['--no-sandbox', '--disable-setuid-sandbox']
         };
-        if (process.platform === 'linux') {
-            launchOptions.executablePath = '/usr/bin/google-chrome';
+        if (process.env.PUPPETEER_EXECUTABLE_PATH) {
+            launchOptions.executablePath = process.env.PUPPETEER_EXECUTABLE_PATH;
         }
         browser = await puppeteer.launch(launchOptions);
         const page = await browser.newPage();
@@ -670,7 +671,7 @@ async function main() {
         if (!stock.code) return;
         const symbol = `${stock.code}.KL`;
         try {
-            const yRes = await axios.get(`https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?interval=1d&range=1y`, { headers: HEADERS });
+            const yRes = await axios.get(`https://query1.finance.yahoo.com/v8/finance/chart/${symbol}?interval=1d&range=1y`, { headers: HEADERS, timeout:15000 });
             if (yRes.data && yRes.data.chart && yRes.data.chart.result && yRes.data.chart.result[0]) {
                  const result = yRes.data.chart.result[0];
                  const timestamp = result.timestamp || [];
@@ -688,6 +689,7 @@ async function main() {
                          high[i] !== null && high[i] !== undefined &&
                          open[i] !== null && open[i] !== undefined) {
                          validDays.push({
+                             timestamp: timestamp[i],
                              open: open[i],
                              close: close[i],
                              low: low[i],
@@ -751,9 +753,20 @@ async function main() {
                     const prevClose = prevDay ? prevDay.close : result.meta.chartPreviousClose || currentPrice;
                     
                     // Kemas kini data harga semasa
+                    const barAt = Number.isFinite(lastDay.timestamp) ? new Date(lastDay.timestamp * 1000).toISOString() : null;
+                    const { shouldUseDailyQuote } = require('./lib/data_quality');
+                    if (shouldUseDailyQuote(barAt, new Date().toISOString(), stock.price)) {
                     stock.price = currentPrice;
+                    stock.priceSource = 'Yahoo Finance daily chart';
+                    const marketTime = result.meta?.regularMarketTime;
+                    stock.quoteAt = Number.isFinite(marketTime) && marketTime > 0 &&
+                        Math.abs((result.meta?.regularMarketPrice ?? Infinity) - currentPrice) < 0.0000001
+                        ? new Date(marketTime * 1000).toISOString() : null;
+                    stock.barAt = Number.isFinite(lastDay.timestamp) ? new Date(lastDay.timestamp * 1000).toISOString() : null;
+                    stock.dailyOHLC = {open:lastDay.open,high:lastDay.high,low:lastDay.low,close:lastDay.close};
                     stock.change = currentPrice - prevClose;
                     stock.volume = lastDay.volume || result.meta.regularMarketVolume || 0;
+                    }
 
                     // ==========================================
                     // IMPROVEMENT 1: VOLUME SPIKE FILTER
@@ -1354,6 +1367,7 @@ async function main() {
         else if (confidenceScore >= 40) confidenceTier = '⚠️ WEAK';
 
         const dataObj = {
+            ...quoteMetadata(stock),
             name: stock.name,
             sector: stock.sector || 'Bursa',
             category,
@@ -1415,6 +1429,7 @@ async function main() {
         // KLSE Screener — kaunter-kacang 1-2 sen yang "naik 100%" tak boleh trade.
         if (stock.change > 0 && stock.price >= 0.10 && turnover >= 100000) {
             topGainers.push({
+                ...quoteMetadata(stock),
                 name: stock.name,
                 price: stock.price,
                 changePct: parseFloat(changePct.toFixed(2)),
@@ -1530,12 +1545,24 @@ async function main() {
     const droppedCount = processedData.length - cleanData.length;
     if (droppedCount > 0) console.log(`⚠️ Membuang ${droppedCount} kaunter tanpa harga (price 0) — tiada data dagangan sahih.`);
 
+    const observedAt = new Date().toISOString();
+    for (const stock of [...cleanData, ...topGainers]) stock.provenance = {
+        priceSource: stock.priceSource || null, observedAt,
+        quoteAt: stock.quoteAt || null, barAt: stock.barAt || null
+    };
     const output = {
         lastUpdated: new Date().toISOString(),
         source: 'klse.i3investor.com',
         topVolume: cleanData,
         topGainers: topGainers.slice(0, 20),
     };
+    const qualityMappings = JSON.parse(fs.readFileSync(path.join(__dirname, '..', 'symbol_mappings.json'), 'utf8'));
+    const { evaluateSnapshot } = require('./lib/data_quality');
+    const quality = evaluateSnapshot(output, { mappings: qualityMappings });
+    output.quality = quality;
+    output.topVolume = output.topVolume.filter(stock => quality.stocks[stock.name.toUpperCase().trim()]?.status !== 'reject');
+    output.topGainers = output.topGainers.filter(stock => quality.stocks[stock.name.toUpperCase().trim()]?.status !== 'reject');
+    if (!output.topVolume.length) throw new Error('Data quality rejected every market quote; previous published snapshot retained.');
     
     fs.writeFileSync(OUTPUT_FILE, JSON.stringify(output, null, 2));
     fs.writeFileSync(path.join(path.join(__dirname, '..'), 'live_data.js'), `window.liveData = ${JSON.stringify(output)};`);

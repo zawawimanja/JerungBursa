@@ -3,18 +3,19 @@
  * 
  * AUTOMATED AUDIT & SYNC VERIFICATION SYSTEM FOR JERUNGBURSA
  * -----------------------------------------------------------
- * Ensures 100% synchronization across:
- * 1. Backend Generators (ALL_TRACKER & HOT_THEME_TRACKER)
- * 2. Frontend Scanner UI (renderConfluenceRadar & renderHotTheme)
- * 3. Telegram Alerts (buy_alert.js & morning_alert.js)
- * 
- * Awang (awi) NEVER has to remember or manually audit counters again!
+ * Checks tracker structure, default Fresh Rider scanner rules and sampled guardrails across:
+ * 1. Backend record and summary invariants (ALL_TRACKER & HOT_THEME_TRACKER)
+ * 2. Actual default Fresh Rider candidate, floor, risk and Top Ranking rules
+ * 3. Sampled Hot Theme source guards; related unit tests cover alert paths
  */
 
 const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
 const { trackerIssues } = require('./lib/tracker_audit');
+const CorporateRisk = require('./lib/corporate_risk');
+const StrategyRules = require('./lib/strategy_rules');
+const { getMytDate } = require('./lib/bursa_calendar');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
 
@@ -54,6 +55,8 @@ const liveWindow = loadJsInContext('live_data.js');
 const frWindow = loadJsInContext('fresh_rider_tracker.js');
 const htWindow = loadJsInContext('hot_theme_tracker.js');
 const newsWindow = loadJsInContext('news_data.js');
+const equityWindow = loadJsInContext('daily_equity_tracker.js');
+const indexSrc = fs.readFileSync(path.join(ROOT_DIR, 'index.html'), 'utf8');
 
 let passCount = 0;
 let failCount = 0;
@@ -98,174 +101,83 @@ const sortedOpenDates = [...new Set(openTrades.map(t => t.entryDate).filter(Bool
 const latestDate = sortedOpenDates[sortedOpenDates.length - 1];
 console.log(`  📅 Latest recorded entry date in tracker (OPEN trades): ${latestDate}`);
 
-const tradesOnLatestDate = openTrades.filter(t => t.entryDate === latestDate);
-console.log(`  🎯 Trades entered on ${latestDate}: ${tradesOnLatestDate.map(t => `${t.name} (${t.entryType})`).join(', ')}`);
+const snapshotDate = getMytDate(liveWindow.liveData.lastUpdated);
+assert(!!snapshotDate, 'Live snapshot has a valid Malaysia trading date');
+const tradesOnLatestDate = openTrades.filter(t => t.entryDate === snapshotDate);
+console.log(`  🎯 Active entries on snapshot day ${snapshotDate}: ${tradesOnLatestDate.map(t => `${t.name} (${t.entryType})`).join(', ') || 'none'}`);
 
 if (!openTrades.length) console.log('  ℹ️ No OPEN Fresh Rider positions; closed positions remain valid.');
 
 // -------------------------------------------------------------
 // TEST 3: Scanner Top Ranking Simulation & Sync
 // -------------------------------------------------------------
-console.log('\n[3] Simulating Scanner UI "Top Ranking VVIP" Filter on Live Data...');
+console.log('\n[3] Evaluating Saved Dashboard "Top Ranking VVIP" Rules on Live Data...');
 
-// Replicate recentFloorMap from histo// Replicate recentFloorMap from tracker bases & historical consolidation
-function getRecentFloorMap() {
-    const map = new Map();
-    // Ambil paras lantai konsolidasi terkini (maksimum base floor di bawah harga)
-    allTracker.trades.forEach(t => {
-        if (t && t.name) {
-            const nm = t.name.toUpperCase();
-            const fl = t.currentFloor || t.entryFloor;
-            if (fl > 0) {
-                const prev = map.get(nm) || 0;
-                if (fl > prev) map.set(nm, fl);
-            }
-        }
-    });
-    // Fallback baseline consolidation floors
-    if (!map.has('STRATUS') || map.get('STRATUS') < 2.90) map.set('STRATUS', 2.90);
-    if (!map.has('CBHB') || map.get('CBHB') < 1.08) map.set('CBHB', 1.08);
-    if (!map.has('ISF') || map.get('ISF') < 0.80) map.set('ISF', 0.80);
-    if (!map.has('PENTECH') || map.get('PENTECH') < 0.325) map.set('PENTECH', 0.325);
-    if (!map.has('EXSIMHB') || map.get('EXSIMHB') < 0.49) map.set('EXSIMHB', 0.49);
-    return map;
+// Evaluate the saved dashboard's actual functions rather than copied risk/floor rules.
+// Global filter preferences are left at their unfiltered defaults for this audit.
+function dashboardSection(startMarker, endMarker, from = 0) {
+    const start = indexSrc.indexOf(startMarker, from);
+    const end = indexSrc.indexOf(endMarker, start);
+    if (start < 0 || end <= start) throw new Error('Dashboard audit section missing: ' + startMarker);
+    return indexSrc.slice(start, end);
 }
-
-const recentFloorMap = getRecentFloorMap();
-const frTrackSource = (allTracker && Array.isArray(allTracker.trades)) ? allTracker.trades : [];
-const frTrackMapFloor = new Map();
-frTrackSource.filter(t => t.status !== 'OPEN').sort((a,b) => (a.entryDate || '').localeCompare(b.entryDate || '')).forEach(t => {
-    frTrackMapFloor.set((t.name || '').toUpperCase(), t);
-});
-frTrackSource.filter(t => t.status === 'OPEN').sort((a,b) => (a.entryDate || '').localeCompare(b.entryDate || '')).forEach(t => {
-    frTrackMapFloor.set((t.name || '').toUpperCase(), t);
-});
-const effFloorOf = (item) => {
-    // SELARAS 100% dengan index.html effFloorOf()
-    const clean = (item.name || '').toUpperCase().trim();
-    const tr = frTrackMapFloor.get(clean);
-    const trFloor = tr ? (tr.currentFloor || tr.entryFloor || 0) : 0;
-    const rf = recentFloorMap.get(clean) || 0;
-    const f = item.floorLow || 0;
-    const candidates = [f, rf].filter(v => v > 0);
-    if (trFloor > 0 && trFloor <= item.price * 1.02) candidates.push(trFloor);
-    if (candidates.length === 0) return 0;
-    return Math.max(...candidates);
-};
-
-// frTrackMap with OPEN precedence (exact match to index.html)
+const renderStart = indexSrc.indexOf('        function renderConfluenceRadar()');
 const frTrackMap = new Map();
-allTracker.trades.filter(t => t.status !== 'OPEN').sort((a,b) => (a.entryDate || '').localeCompare(b.entryDate || '')).forEach(t => {
-    frTrackMap.set((t.name || '').toUpperCase(), t);
-});
-allTracker.trades.filter(t => t.status === 'OPEN').sort((a,b) => (a.entryDate || '').localeCompare(b.entryDate || '')).forEach(t => {
-    frTrackMap.set((t.name || '').toUpperCase(), t);
-});
-
-const frFreshness = (it) => {
-    const tr = frTrackMap.get((it.name || '').toUpperCase());
-    if (!tr) return 0;
-    if (tr.status === 'OPEN') {
-        if (tr.entryDate && tr.entryDate >= latestDate) {
-            if (tr.entryType && tr.entryType.includes('LANTAI RAPAT')) return 2;
-            if (tr.entryType && tr.entryType.includes('ADD-ON')) return 1;
-            return 0;
-        }
-        const entryP = tr.entry || 0;
-        const pct = (entryP > 0 && it.price) ? ((it.price - entryP) / entryP) * 100 : 0;
-        const ef = effFloorOf(it);
-        const fd = (ef && it.price) ? ((it.price - ef) / ef) * 100 : 99;
-        const toVal = it.turnover || it.rawTurnover || 0;
-        const touches = it.touchCount || 0;
-        const tight = typeof it.closeTightness === 'number' ? it.closeTightness : 99;
-
-        const isSolidBase2 = (touches >= 3 && tight <= 3.5 && fd <= 4.5 && (toVal >= 2000000 || toVal === 0));
-        const isFreshBase1 = (pct >= 0 && pct <= 20 && fd <= 3.5 && (toVal >= 2000000 || toVal === 0));
-        if (isFreshBase1) return 1;
-        if (isSolidBase2) return 2;
-        if (pct > 20 && fd > 5.0) return 4;
-        return 3;
-    }
-    return 4;
-};
-
-const getTierOfFR = (it) => {
-    const toVal = it.turnover || it.rawTurnover || 0;
-    const effF = effFloorOf(it);
-    const fDistVal = effF ? ((it.price - effF) / effF * 100) : 99;
-    const tightValNum = typeof it.closeTightness === 'number' ? it.closeTightness : 99;
-    const isBlackSwanClean = true;
-    const isRealUpperWickDump = false;
-
-    const isTierAPlus = (toVal >= 2000000 && tightValNum <= 3.5 && fDistVal >= -1.0 && fDistVal <= 3.5 && isBlackSwanClean && !isRealUpperWickDump);
-    const isTierA = (!isTierAPlus && toVal >= 1000000 && tightValNum <= 4.85 && fDistVal >= -1.5 && fDistVal <= 5.0 && isBlackSwanClean && !isRealUpperWickDump);
-    return { isTierAPlus, isTierA, toVal, fDistVal, tightValNum, isBlackSwanClean, isRealUpperWickDump };
-};
-
-// Filter live data into scanner candidates (exact match to index.html with tracker confirmed bypass)
-const candidateMap = new Map();
-for (const item of liveData) {
-    if (!item || !item.name || item.price <= 0) continue;
-    if (item.price < 0.10 || item.price > 50) continue;
-
-    const nameKey = (item.name || '').toUpperCase().trim();
-    const trackedEntry = frTrackMap ? frTrackMap.get(nameKey) : null;
-    const isTrackerConfirmedOpen = !!(trackedEntry && trackedEntry.status === 'OPEN');
-
-    if (item.isVvip !== true && !isTrackerConfirmedOpen) continue;
-    if ((item.signal === 'avoid' || item.isCombStock) && !isTrackerConfirmedOpen) continue;
-    if ((item.ipoYear || 0) < 2025) continue;
-    const pb = item.pullback !== null && item.pullback !== undefined ? item.pullback : 99;
-    if (pb > 10.0 && !isTrackerConfirmedOpen) continue;
-    if (item.ipoAge != null && item.ipoAge < 15 && (item.touchCount || 0) < 2 && !isTrackerConfirmedOpen) continue;
-
-    const isGreenBreakout = (item.change >= 0 || (item.changePct || 0) >= 0);
-    const tight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
-    if (item.hasVolumeSpike === true) {
-        if (!isGreenBreakout && !isTrackerConfirmedOpen) continue;
-        if (tight > 10.0 && !isTrackerConfirmedOpen) continue;
-    } else {
-        if (tight > 5.0 && !isTrackerConfirmedOpen) continue;
-    }
-    candidateMap.set(nameKey, item);
+for (const status of [false, true]) {
+    allTracker.trades.filter(t => (t.status === 'OPEN') === status)
+        .sort((a, b) => (a.entryDate || '').localeCompare(b.entryDate || ''))
+        .forEach(t => frTrackMap.set((t.name || '').toUpperCase(), t));
 }
+const scannerRules = vm.createContext({
+    CorporateRisk, StrategyRules,
+    window: { ...frWindow, ...newsWindow, ...equityWindow },
+    document: { getElementById: () => ({ value: snapshotDate }) },
+    curRefDate: snapshotDate, _recentFloorCache: null, _crPickedNames: new Set(),
+    frTrackMap, list: liveData, picks: [], passesGlobalFilters: () => true
+});
+vm.runInContext(dashboardSection('        function getDashboardDate()', '        window.getBlackSwanEvaluation'), scannerRules);
+vm.runInContext(dashboardSection('        function getRecentFloorMap(', '        // Global Filter Mode for Fresh Rider'), scannerRules);
+vm.runInContext('const recentFloorMap = getRecentFloorMap(curRefDate, 5);', scannerRules);
+vm.runInContext(dashboardSection('            const effFloorOf = (item) => {', '            for (const item of list)', renderStart), scannerRules);
+vm.runInContext(dashboardSection('            const frFreshness = (it) => {', '            // Klasifikasi Tier A+', renderStart), scannerRules);
+vm.runInContext(dashboardSection('            const getTierOfFR = (it) => {', "            if (typeof updateHeaderSortIndicators", renderStart), scannerRules);
+vm.runInContext('globalThis.auditTier = getTierOfFR; globalThis.auditFreshness = frFreshness; globalThis.auditFloor = effFloorOf;', scannerRules);
+vm.runInContext(dashboardSection('            for (const item of list)', '            // Penalaan Ketepatan Tinggi:', renderStart), scannerRules);
+const topFilterStart = indexSrc.indexOf("} else if (filterMode === 'top_ranking')", renderStart);
+const filterStart = indexSrc.indexOf('                displayPicks = picks.filter(p => {', topFilterStart);
+const filterEnd = indexSrc.indexOf('\n                });', filterStart);
+if (topFilterStart < 0 || filterStart < 0 || filterEnd <= filterStart) throw new Error('Fresh Rider Top Ranking audit filter missing');
+vm.runInContext(indexSrc.slice(filterStart, filterEnd + '\n                });'.length), scannerRules);
+const getTierOfFR = scannerRules.auditTier;
+const frFreshness = scannerRules.auditFreshness;
+const effFloorOf = scannerRules.auditFloor;
+const candidateMap = new Map(scannerRules.picks.map(item => [item.name.toUpperCase(), item]));
+const topRankingPicks = scannerRules.displayPicks;
 
-// Top Ranking VVIP (exact match to index.html top_ranking filter)
-const topRankingPicks = [];
-for (const [name, p] of candidateMap.entries()) {
-    const t = getTierOfFR(p);
-    const fresh = frFreshness(p);
-    if (!t.isBlackSwanClean || t.isRealUpperWickDump || fresh === 4) continue;
-
-    const trackedEntry = frTrackMap.get(name);
-    const isTrackerConfirmedOpen = !!(
-        trackedEntry &&
-        trackedEntry.status === 'OPEN'
-    );
-
-    if (t.toVal < 1000000 && !isTrackerConfirmedOpen) continue;
-
-    if (fresh === 0) {
-        if (t.fDistVal <= 10.0 && t.fDistVal >= -2.0 && t.tightValNum <= 10.0) {
-            topRankingPicks.push(p);
-        }
-    } else if (fresh === 1 || fresh === 2) {
-        if (t.fDistVal <= 5.0 && t.fDistVal >= -2.0 && t.tightValNum <= 3.5) {
-            topRankingPicks.push(p);
-        }
-    }
-    // SOP: hanya NEW / ADD-ON A+ / LANTAI RAPAT layak (tiada pintu belakang Tracker OPEN / Tier A)
-}
+// These fixtures ensure risk checks were actually evaluated instead of stubbed as PASS.
+const riskFixture = { name: '__AUDIT_RISK', price: 1, floorLow: 0.99, turnover: 3000000, closeTightness: 2, ipoYear: 2025, touchCount: 4 };
+scannerRules.window.NEWS_DATA ||= {};
+scannerRules.window.NEWS_DATA[riskFixture.name] = { entitlements: [{ isDividend: true, exDate: snapshotDate }] };
+assert(getTierOfFR(riskFixture).isBlackSwanClean === false, 'Actual scanner rejects a same-day ex-dividend event');
+scannerRules.window.NEWS_DATA[riskFixture.name] = { announcements: [{ category: 'Financial Results', title: 'Quarterly report', date: snapshotDate }] };
+assert(getTierOfFR(riskFixture).isBlackSwanClean === false, 'Actual scanner rejects a same-day earnings release');
+scannerRules.window.NEWS_DATA[riskFixture.name] = { announcements: [{ category: 'Change in Financial Year End', title: 'Change in Financial Year End', date: snapshotDate }] };
+assert(getTierOfFR(riskFixture).isBlackSwanClean === true, 'Actual scanner permits a financial year-end notice');
+assert(scannerRules.isGreenCandle({ change: -0.01 }) === false && scannerRules.isGreenCandle({}) === false,
+    'Actual scanner does not turn red or unknown candles green');
+assert(!!getTierOfFR({ ...riskFixture, hasUpperWickRejection: true, changePct: -2 }).isRealUpperWickDump,
+    'Actual scanner identifies a red upper-wick rejection');
+delete scannerRules.window.NEWS_DATA[riskFixture.name];
 
 const topRankingNames = new Set(topRankingPicks.map(p => p.name.toUpperCase()));
-console.log(`  🏆 Top Ranking VVIP Counters (${topRankingPicks.length}): ${[...topRankingNames].join(', ')}`);
+console.log(`  🏆 Top Ranking VVIP Counters (${topRankingPicks.length}): ${[...topRankingNames].join(', ') || 'none'}`);
 
 // -------------------------------------------------------------
 // TEST 4: Cross-Verification of Mandatory Active Holdings
 // -------------------------------------------------------------
 console.log('\n[4] Cross-Verification of Mandatory Candidates...');
 
-// Every trade entered on the latest signal date MUST appear in Top Ranking VVIP,
+// Only active trades entered on the current snapshot day are cross-checked for entry eligibility,
 // unless it has since dipped deep (> 10%) or already run extended (> 10% above entry) — no longer an entry zone.
 for (const trade of tradesOnLatestDate) {
     const sym = trade.name.toUpperCase();
@@ -337,9 +249,8 @@ assert(htParts.length === htTracker.trades.length && htParts.every(t => htCombin
     'Hot Theme unified tracker matches NEW / ADD-ON / FLOOR records, including legitimate exits');
 
 // SOP Guard: HT & FR Top Ranking hanya NEW / ADD-ON A+ / LANTAI RAPAT (tiada pintu belakang Tier A+ / Fusion / Tracker OPEN)
-const indexSrc = fs.readFileSync(path.join(ROOT_DIR, 'index.html'), 'utf8');
 assert(!indexSrc.includes('return t.isTierAPlus || ((fresh === 1 || fresh === 2 || isFusion)'), `HT Top Ranking has no Tier A+ / Fusion backdoor`);
-assert(indexSrc.includes('return (fresh === 1 || fresh === 2) && meetsGolden;'), `HT Top Ranking only admits NEW / ADD-ON A+ / LANTAI RAPAT`);
+assert(indexSrc.includes("family:'ht', freshness:htFreshness(p.item)"), `HT Top Ranking uses the shared entry evaluator`);
 assert(!indexSrc.includes('if (isTrackerConfirmedOpen || t.isTierAPlus || t.isTierA) return true;'), `FR Top Ranking has no Tracker OPEN / Tier A backdoor`);
 
 // -------------------------------------------------------------
@@ -350,10 +261,10 @@ console.log(`📊 FINAL SYNC AUDIT RESULT: ${passCount} PASSED, ${failCount} FAI
 console.log('='.repeat(70));
 
 if (failCount > 0) {
-    console.error(`\n🚨 AUDIT FAILED! There are ${failCount} desynchronization issues. Fix them before pushing!`);
+    console.error(`\n🚨 AUDIT FAILED! There are ${failCount} failed checks. Fix them before pushing!`);
     process.exit(1);
 } else {
-    console.log(`\n🎉 ALL CHECKS PASSED 100%! Tracker and Scanner are perfectly synchronized.`);
-    console.log(`   Awang can rest easy — zero manual auditing needed.\n`);
+    console.log(`\n✅ Tracker structure and evaluated scanner filter checks passed.`);
+    console.log(`   Coverage: current default Fresh Rider filters, tracker records and sampled Hot Theme guards.\n`);
     process.exit(0);
 }

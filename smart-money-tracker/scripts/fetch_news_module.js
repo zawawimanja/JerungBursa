@@ -1,324 +1,128 @@
 const https = require('https');
-const { getMytDate } = require('./lib/bursa_calendar');
+const cheerio = require('cheerio');
+const corporateRisk = require('./lib/corporate_risk');
 
-function parseEventDate(value, reference = new Date()) {
-    if (typeof value !== 'string') return null;
-    const clean = value.trim();
-    const ref = new Date(getMytDate(reference) + 'T00:00:00Z');
-    const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
-    const short = /^(\d{1,2})\s+([a-z]{3,9})(?:\s+(\d{4}))?$/i.exec(clean);
-    const iso = /^(\d{4})-(\d{2})-(\d{2})$/.exec(clean);
-    let day, month, year;
-    if (short) {
-        day = Number(short[1]);
-        month = months.indexOf(short[2].slice(0, 3).toLowerCase());
-        year = short[3] ? Number(short[3]) : null;
-    } else if (iso) {
-        year = Number(iso[1]); month = Number(iso[2]) - 1; day = Number(iso[3]);
-    } else return null;
-    if (month < 0 || month > 11 || day < 1 || day > 31 || !Number.isFinite(ref.getTime())) return null;
-    const years = year !== null ? [year] : [ref.getUTCFullYear() - 1, ref.getUTCFullYear(), ref.getUTCFullYear() + 1];
-    const dates = years.map(y => new Date(Date.UTC(y, month, day))).filter(d =>
-        d.getUTCMonth() === month && d.getUTCDate() === day);
-    dates.sort((a, b) => Math.abs(a - ref) - Math.abs(b - ref));
-    return dates[0] || null;
-}
-
-/**
- * Helper to fetch HTTPS URL content cleanly
- */
-function fetchUrl(url) {
+function fetchUrl(url, { timeoutMs = 5000, requestImpl = https.get } = {}) {
     return new Promise((resolve) => {
-        const req = https.get(url, {
+        let req;
+        let settled = false;
+        const finish = result => {
+            if (settled) return;
+            settled = true;
+            clearTimeout(deadline);
+            resolve(result);
+        };
+        const expire = () => {
+            finish({ status: 408, error: 'Timeout', data: '' });
+            if (req) req.destroy();
+        };
+        // Socket timeouts reset on each chunk; the absolute deadline also bounds a drip-fed response.
+        const deadline = setTimeout(expire, timeoutMs);
+        try { req = requestImpl(url, {
             headers: {
                 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
                 'X-Requested-With': 'XMLHttpRequest'
             },
-            timeout: 5000
-        }, (res) => {
+            timeout: timeoutMs
+        }, res => {
             let data = '';
+            res.setEncoding('utf8');
             res.on('data', chunk => data += chunk);
-            res.on('end', () => resolve({ status: res.statusCode, data }));
+            res.on('end', () => finish({ status: res.statusCode, data }));
+            res.on('error', err => finish({ status: 500, error: err.message, data: '' }));
+            res.on('aborted', () => finish({ status: 502, error: 'Response aborted', data: '' }));
         });
-        req.on('error', err => resolve({ status: 500, error: err.message, data: '' }));
-        req.on('timeout', () => { req.destroy(); resolve({ status: 408, error: 'Timeout', data: '' }); });
+        req.on('error', err => finish({ status: 500, error: err.message, data: '' }));
+        req.on('timeout', expire);
+        } catch (error) { finish({ status: 500, error: error.message, data: '' }); }
     });
 }
 
-function cleanHtmlText(str) {
-    if (!str) return '';
-    return str.replace(/<[^>]+>/g, '').trim().replace(/\s+/g, ' ');
-}
+const textOf = element => element.text().replace(/\s+/g, ' ').trim();
 
-/**
- * Parses raw announcements from KLSE Screener AJAX API
- */
-async function fetchAnnouncements(code) {
-    const url = `https://www.klsescreener.com/v2/announcements/stock/${code}`;
-    const res = await fetchUrl(url);
-    if (res.status !== 200 || !res.data) return [];
-
-    try {
-        const json = JSON.parse(res.data);
-        if (!json || !json.html) return [];
-
-        const announcements = [];
-        // Format baharu KLSE Screener: <a ... class="announcement-item">
-        const itemRegex = /<a[^>]*class=\"announcement-item\"[^>]*>([\s\S]*?)<\/a>/gi;
-        let itemMatch;
-        while ((itemMatch = itemRegex.exec(json.html)) !== null) {
-            const block = itemMatch[1];
-            const day = (block.match(/<span class=\"day\">([^<]+)<\/span>/i) || [])[1] || '';
-            const month = (block.match(/<span class=\"month\">([^<]+)<\/span>/i) || [])[1] || '';
-            const cat = (block.match(/<span class=\"category-tag[^\"]*\">([^<]+)<\/span>/i) || [])[1] || '';
-            const title = (block.match(/<div class=\"title\">([\s\S]*?)<\/div>/i) || [])[1] || '';
-            if (day && month && title) {
-                announcements.push({
-                    date: `${day.trim()} ${month.trim()}`,
-                    category: cat.trim(),
-                    title: cleanHtmlText(title)
-                });
-            }
+function parseAnnouncements(html, reference = new Date()) {
+    if (typeof html !== 'string') throw new Error('Invalid announcements HTML');
+    if (!html.trim()) throw new Error('Empty announcements HTML');
+    const $ = cheerio.load(html);
+    const announcements = [];
+    $('.announcement-item').each((_, item) => {
+        const block = $(item);
+        const date = `${textOf(block.find('.day'))} ${textOf(block.find('.month'))} ${textOf(block.find('.year'))}`.trim();
+        const title = textOf(block.find('.title'));
+        if (date && title) {
+            if (!corporateRisk.parseEventDate(date, reference, { pastOnly: true })) throw new Error(`Invalid announcement date: ${date}`);
+            announcements.push({ date, category: textOf(block.find('.category-tag')), title });
         }
-
-        // Fallback untuk format jadual lama <tr><td>
-        if (announcements.length === 0) {
-            const trRegex = /<tr[^>]*>([\s\S]*?)<\/tr>/gi;
-            let match;
-            while ((match = trRegex.exec(json.html)) !== null) {
-                const row = match[1];
-                const tdRegex = /<td[^>]*>([\s\S]*?)<\/td>/gi;
-                const tds = [];
-                let tdMatch;
-                while ((tdMatch = tdRegex.exec(row)) !== null) {
-                    tds.push(cleanHtmlText(tdMatch[1]));
-                }
-                if (tds.length >= 2) {
-                    announcements.push({
-                        date: tds[0] || '',
-                        category: tds[1] || '',
-                        title: tds[2] || tds[1] || ''
-                    });
-                }
+    });
+    if (!announcements.length) {
+        $('tr').each((_, row) => {
+            const tds = $(row).find('td').map((__, cell) => textOf($(cell))).get();
+            if (tds.length >= 2 && corporateRisk.parseEventDate(tds[0], reference, { pastOnly: true })) {
+                announcements.push({ date: tds[0], category: tds[1], title: tds[2] || tds[1] });
             }
-        }
-        return announcements.slice(0, 40);
-    } catch (e) {
-        return [];
+        });
     }
+    if (!announcements.length && !/\bno\s+(?:announcements?|records?|data|results?)\b/i.test($.text())) {
+        throw new Error('Unrecognized announcements markup');
+    }
+    return corporateRisk.normalizeAnnouncements(announcements.slice(0, 40), reference, { descending: true });
 }
 
-/**
- * Parses dividends and entitlements from KLSE Screener overview page
- */
-async function fetchEntitlements(code) {
-    const url = `https://www.klsescreener.com/v2/stocks/view/${code}`;
-    const res = await fetchUrl(url);
-    if (res.status !== 200 || !res.data) return [];
-
-    const html = res.data;
-    const idx = html.indexOf('id="dividends"');
-    if (idx === -1) return [];
-
-    const section = html.substring(idx, idx + 10000);
+function parseEntitlements(html, reference = new Date()) {
+    if (typeof html !== 'string' || !html.trim()) throw new Error('Invalid stock overview HTML');
+    const $ = cheerio.load(html);
+    const dividends = $('#dividends');
+    if (!dividends.length) throw new Error('Dividends section is missing');
+    // The old fixed-length substring also consumed the following shareholder table.
+    const table = dividends.is('table') ? dividends : dividends.find('table').first();
+    if (!table.length && !/\bno\s+(?:dividends?|entitlements?|records?|data|results?)\b/i.test(textOf(dividends))) {
+        throw new Error('Dividends table is missing');
+    }
     const entitlements = [];
-    const trRegex = /<tr[^>]*>([\s\S]*?)<\/tr>/gi;
-    let match;
-
-    while ((match = trRegex.exec(section)) !== null) {
-        const rowContent = match[1];
-        const tdRegex = /<td[^>]*>([\s\S]*?)<\/td>/gi;
-        const tds = [];
-        let tdMatch;
-        while ((tdMatch = tdRegex.exec(rowContent)) !== null) {
-            tds.push(cleanHtmlText(tdMatch[1]));
+    table.find('tr').each((_, row) => {
+        const tds = $(row).find('td').map((__, cell) => textOf($(cell))).get();
+        if (tds.length < 4) return;
+        const [annDate, financialYear, type, exDate, paymentDate = '', amount = ''] = tds;
+        const parsed = corporateRisk.parseEventDate(exDate, reference);
+        if (!parsed) {
+            if (/ex[ -]?date|ann\.? date/i.test(exDate) || exDate === '-' || !exDate) return;
+            throw new Error(`Invalid entitlement ex-date: ${exDate}`);
         }
-        if (tds.length >= 4) {
-            const annDate = tds[0] || '';
-            const financialYear = tds[1] || '';
-            const type = tds[2] || '';
-            const exDate = tds[3] || '';
-            const paymentDate = tds[4] || '';
-            const amount = tds[5] || '';
-
-            if (!annDate.toLowerCase().includes('ann. date') && !exDate.toLowerCase().includes('ex-date')) {
-                const typeLower = type.toLowerCase();
-                const isDiv = typeLower.includes('dividend') || typeLower.includes('interim') || typeLower.includes('final') || typeLower.includes('special') || typeLower.includes('distribution');
-                
-                entitlements.push({
-                    annDate,
-                    financialYear,
-                    type,
-                    exDate,
-                    paymentDate,
-                    amount,
-                    isDividend: isDiv
-                });
-            }
-        }
-    }
+        entitlements.push({
+            annDate, financialYear, type, exDate: parsed.toISOString().slice(0, 10), paymentDate, amount,
+            isDividend: /\b(?:dividend|interim|final|special|distribution)\b/i.test(type)
+        });
+    });
     return entitlements.slice(0, 5);
 }
 
-/**
- * Main module function: Enriches a stock candidate object with corporate event risks
- */
-async function getCorporateNewsRisk(stockCode, stockName) {
-    if (!stockCode) {
-        return { hasNewsAlert: false, newsBadges: [], announcements: [], entitlements: [] };
-    }
-
-    const [announcements, entitlements] = await Promise.all([
-        fetchAnnouncements(stockCode),
-        fetchEntitlements(stockCode)
-    ]);
-
-    return buildCorporateNewsRisk(announcements, entitlements);
+async function fetchAnnouncements(code, { fetchImpl = fetchUrl, reference = new Date() } = {}) {
+    const res = await fetchImpl(`https://www.klsescreener.com/v2/announcements/stock/${encodeURIComponent(code)}`);
+    if (res.status !== 200 || !res.data) throw new Error(`Announcements fetch failed (${res.status})`);
+    const json = JSON.parse(res.data);
+    if (!json || typeof json.html !== 'string') throw new Error('Announcements response has no HTML');
+    return parseAnnouncements(json.html, reference);
 }
 
-function buildCorporateNewsRisk(announcements, entitlements, reference = new Date()) {
+async function fetchEntitlements(code, { fetchImpl = fetchUrl, reference = new Date() } = {}) {
+    const res = await fetchImpl(`https://www.klsescreener.com/v2/stocks/view/${encodeURIComponent(code)}`);
+    if (res.status !== 200 || !res.data) throw new Error(`Entitlements fetch failed (${res.status})`);
+    return parseEntitlements(res.data, reference);
+}
 
-    const newsBadges = [];
-    let hasNewsAlert = false;
-
-    // 1. Analyze Entitlements (Ex-Dividend) - Only flag active & upcoming dividends (within -5 days to +30 days)
-    const divEntitlements = entitlements.filter(e => e.isDividend);
-    if (divEntitlements.length > 0) {
-        const latestEnt = divEntitlements[0];
-        if (latestEnt.exDate) {
-            // Format dari klsescreener ialah "DD MMM" (cth "01 Jan") tanpa tahun.
-            // Tambah tahun semasa supaya parse konsisten; jika masih tak sah, JANGAN flag
-            // (elak false-positive ex-dividend alert).
-            const exDateObj = parseEventDate(latestEnt.exDate, reference);
-            let isRelevant = false;
-            if (exDateObj) {
-                const now = new Date(getMytDate(reference) + 'T00:00:00Z');
-                const diffDays = Math.round((exDateObj.getTime() - now.getTime()) / (24 * 3600 * 1000));
-                // Only alert if ex-date is within last 5 days or next 30 days
-                isRelevant = (diffDays >= -5 && diffDays <= 30);
-            }
-            if (isRelevant) {
-                newsBadges.push({
-                    type: 'EX_DIVIDEND',
-                    label: `Ex-Div: ${latestEnt.exDate}`,
-                    severity: 'warning',
-                    title: `${latestEnt.type} (${latestEnt.amount || 'Dividend'}) | Ex-Date: ${latestEnt.exDate}`
-                });
-                hasNewsAlert = true;
-            }
-        }
-    }
-
-    // 2. Analyze Recent Announcements (QR, Rights, Placement, Shareholding)
-    if (announcements.length > 0) {
-        for (const ann of announcements) {
-            const catUpper = ann.category.toUpperCase();
-            const titleUpper = ann.title.toUpperCase();
-
-            // 1. EV / Green Mobility / Tenaga Baharu / MOU Partnership (BYD, MOU, Solar, RE)
-            if (titleUpper.includes('BYD') || titleUpper.includes('MEMORANDUM OF UNDERSTANDING') || titleUpper.includes('MOU') || titleUpper.includes('PARTNERSHIP') || titleUpper.includes('ELECTRIC VEHICLE') || titleUpper.includes('EV BUS') || titleUpper.includes('GREEN MOBILITY') || titleUpper.includes('SOLAR') || titleUpper.includes('RENEWABLE')) {
-                if (!newsBadges.some(b => b.type === 'EV_CATALYST')) {
-                    newsBadges.push({
-                        type: 'EV_CATALYST',
-                        label: `⚡ MOU / EV Catalyst`,
-                        severity: 'success',
-                        title: `[${ann.date}] ${ann.title}`
-                    });
-                }
-            }
-
-            // 2. AI / Data Centre / Semicon Catalyst
-            if (titleUpper.includes('ARTIFICIAL INTELLIGENCE') || titleUpper.includes('DATA CENTRE') || titleUpper.includes('NVIDIA') || titleUpper.includes('CHIP') || titleUpper.includes('SEMICONDUCTOR')) {
-                if (!newsBadges.some(b => b.type === 'AI_CATALYST')) {
-                    newsBadges.push({
-                        type: 'AI_CATALYST',
-                        label: `🤖 AI / Data Centre`,
-                        severity: 'success',
-                        title: `[${ann.date}] ${ann.title}`
-                    });
-                }
-            }
-
-            // 3. Contract / Award Win
-            if (titleUpper.includes('LETTER OF AWARD') || titleUpper.includes('CONTRACT AWARD') || titleUpper.includes('PROJECT AWARD') || (titleUpper.includes('CONTRACT') && titleUpper.includes('AWARD'))) {
-                if (!newsBadges.some(b => b.type === 'CONTRACT_WIN')) {
-                    newsBadges.push({
-                        type: 'CONTRACT_WIN',
-                        label: `📜 Contract Award`,
-                        severity: 'success',
-                        title: `[${ann.date}] ${ann.title}`
-                    });
-                }
-            }
-
-            // 4. Jerung Pemegang Saham 5%+ (Substantial Shareholder / Sec 138)
-            if (titleUpper.includes('SUBSTANTIAL') || titleUpper.includes('SECTION 138') || titleUpper.includes('ACQUISITION OF SHARES') || catUpper.includes('CHANGES IN SHAREHOLDINGS')) {
-                if (!newsBadges.some(b => b.type === 'JERUNG_5PCT')) {
-                    newsBadges.push({
-                        type: 'JERUNG_5PCT',
-                        label: `🐋 Jerung 5%+ Action`,
-                        severity: 'success',
-                        title: `[${ann.date}] ${ann.title}`
-                    });
-                }
-            }
-
-            if (titleUpper.includes('QUARTERLY') || titleUpper.includes('FINANCIAL RESULTS') || catUpper.includes('FINANCIAL')) {
-                if (!newsBadges.some(b => b.type === 'EARNINGS_QR')) {
-                    newsBadges.push({
-                        type: 'EARNINGS_QR',
-                        label: `Earnings Release`,
-                        severity: 'danger',
-                        title: `[${ann.date}] ${ann.title}`
-                    });
-                    hasNewsAlert = true;
-                }
-            } else if (titleUpper.includes('RIGHTS ISSUE') || titleUpper.includes('PRIVATE PLACEMENT') || titleUpper.includes('BONUS ISSUE')) {
-                if (!newsBadges.some(b => b.type === 'CORP_ACTION')) {
-                    newsBadges.push({
-                        type: 'CORP_ACTION',
-                        label: `Corp Action`,
-                        severity: 'danger',
-                        title: `[${ann.date}] ${ann.title}`
-                    });
-                    hasNewsAlert = true;
-                }
-            } else if (titleUpper.includes('SHAREHOLDINGS') || titleUpper.includes('SUBSTANTIAL')) {
-                if (!newsBadges.some(b => b.type === 'SHAREHOLDING')) {
-                    newsBadges.push({
-                        type: 'SHAREHOLDING',
-                        label: `Insider Action`,
-                        severity: 'info',
-                        title: `[${ann.date}] ${ann.title}`
-                    });
-                }
-            }
-        }
-
-        // Add top announcement badge if no high-severity badge was added yet
-        if (newsBadges.length === 0 && announcements.length > 0) {
-            const topAnn = announcements[0];
-            newsBadges.push({
-                type: 'RECENT_NEWS',
-                label: `News: ${topAnn.date}`,
-                severity: 'info',
-                title: `[${topAnn.date}] ${topAnn.category} - ${topAnn.title}`
-            });
-        }
-    }
-
-    return {
-        hasNewsAlert,
-        newsBadges,
-        announcements,
-        entitlements
+async function getCorporateNewsRisk(stockCode, stockName, options = {}) {
+    if (!stockCode) throw new Error('Stock code is required for corporate news');
+    const results = await Promise.allSettled([fetchAnnouncements(stockCode, options), fetchEntitlements(stockCode, options)]);
+    const risk = corporateRisk.buildCorporateNewsRisk(
+        results[0].status === 'fulfilled' ? results[0].value : [],
+        results[1].status === 'fulfilled' ? results[1].value : [],
+        options.reference
+    );
+    risk.fetchStatus = {
+        announcements: results[0].status === 'fulfilled' ? 'ok' : 'error',
+        entitlements: results[1].status === 'fulfilled' ? 'ok' : 'error'
     };
+    return risk;
 }
 
-module.exports = {
-    getCorporateNewsRisk,
-    buildCorporateNewsRisk,
-    parseEventDate,
-    fetchAnnouncements,
-    fetchEntitlements
-};
+module.exports = { ...corporateRisk, getCorporateNewsRisk, fetchAnnouncements, fetchEntitlements, parseAnnouncements, parseEntitlements, fetchUrl };

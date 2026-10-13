@@ -27,7 +27,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
+
+      - name: Install news parser dependencies
+        working-directory: smart-money-tracker
+        env:
+          PUPPETEER_SKIP_DOWNLOAD: 'true'
+        run: npm ci
 
       - name: Run Buy Alert (harga penutupan + list FR/HT + Telegram)
         run: node scripts/buy_alert.js
@@ -35,3 +41,4 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          BUY_ALERT_REQUIRE_DELIVERY: 'true'

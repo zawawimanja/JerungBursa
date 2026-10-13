@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "node --test scripts/*.test.js && node scripts/verify_scanner_tracker_sync.js",
-    "verify": "node scripts/verify_scanner_tracker_sync.js"
+    "verify": "node scripts/verify_scanner_tracker_sync.js",
+    "test:e2e": "playwright test",
+    "test:e2e:desktop": "playwright test --project=desktop",
+    "test:e2e:mobile": "playwright test --project=mobile",
+    "data:quality": "node scripts/check_data_quality.js"
   },
   "keywords": [],
   "author": "",
@@ -19,5 +23,8 @@
     "puppeteer-extra": "^3.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2",
     "yahoo-finance2": "^2.14.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.64.0"
   }
 }

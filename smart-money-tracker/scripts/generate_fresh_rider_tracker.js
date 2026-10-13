@@ -6,8 +6,10 @@
 // Output: window.FRESH_RIDER_TRACKER & window.ADD_ON_TRACKER dalam fresh_rider_tracker.js
 // =============================================================
 const fs = require('fs');
+const StrategyRules = require('./lib/strategy_rules');
 const path = require('path');
 const vm = require('vm');
+const { parseEventDate, isEarningsAnnouncement } = require('./lib/corporate_risk');
 
 const HIST_DIR = path.join(path.join(__dirname, '..'), 'history');
 const OUT_FILE = path.join(path.join(__dirname, '..'), 'fresh_rider_tracker.js');
@@ -23,19 +25,8 @@ try {
     }
 } catch (e) {}
 
-function parseDateFlexible(dStr, defaultYear) {
-    if (!dStr) return null;
-    if (/^\d{4}-\d{2}-\d{2}$/.test(dStr)) return new Date(dStr + 'T00:00:00Z');
-    const parts = dStr.trim().split(/\s+/);
-    if (parts.length >= 2) {
-        const day = parseInt(parts[0], 10);
-        const months = { jan:0, feb:1, mar:2, apr:3, may:4, jun:5, jul:6, aug:7, sep:8, oct:9, nov:10, dec:11 };
-        const m = months[parts[1].slice(0,3).toLowerCase()];
-        const yr = parts[2] ? parseInt(parts[2], 10) : (defaultYear || 2026);
-        if (!isNaN(day) && m !== undefined) return new Date(Date.UTC(yr, m, day));
-    }
-    const d = new Date(dStr);
-    return isNaN(d.getTime()) ? null : d;
+function parseDateFlexible(dStr, reference) {
+    return parseEventDate(dStr, reference || new Date());
 }
 
 function getIpoDaysAge(item, dateStr) {
@@ -72,7 +63,7 @@ function isBlackSwanClean(name, item, dateStr) {
     if (news && Array.isArray(news.entitlements)) {
         for (const ent of news.entitlements) {
             if (!ent.isDividend || !ent.exDate) continue;
-            const exD = parseDateFlexible(ent.exDate, refDate.getUTCFullYear());
+            const exD = parseDateFlexible(ent.exDate, refDate);
             if (!exD) continue;
             const diffDays = Math.round((exD.getTime() - refDate.getTime()) / (24 * 3600 * 1000));
             if (diffDays >= -2 && diffDays <= 10) return false;
@@ -82,10 +73,8 @@ function isBlackSwanClean(name, item, dateStr) {
     // 2. Semakan QR / Financial Results (-7 hingga +10 hari per Rule 9 SOP)
     if (news && Array.isArray(news.announcements)) {
         for (const ann of news.announcements) {
-            const cat = (ann.category || '').toUpperCase();
-            const title = (ann.title || '').toUpperCase();
-            if (title.includes('QUARTERLY') || title.includes('FINANCIAL RESULTS') || cat.includes('FINANCIAL')) {
-                const annD = parseDateFlexible(ann.date, refDate.getUTCFullYear());
+            if (isEarningsAnnouncement(ann)) {
+                const annD = parseDateFlexible(ann.date, refDate);
                 if (annD) {
                     const diffDays = Math.round((annD.getTime() - refDate.getTime()) / (24 * 3600 * 1000));
                     if (diffDays >= -7 && diffDays <= 10) return false;
@@ -120,68 +109,14 @@ function canonName(name) {
 
 // ---- Rule Fresh VVIP Rider (Day 1) ----
 function isFreshRiderPick(item, dateStr) {
-    if (!item || item.price < 0.10 || item.price > 50) return false;
-    if (item.isVvip !== true || item.signal === 'avoid' || item.isCombStock) return false;
-    if ((item.ipoYear || 0) < 2025) return false;
-    if (dateStr && !isBlackSwanClean(item.name, item, dateStr)) return false;
-    const pb = item.pullback ?? 99;
-    if (pb > 10.0) return false;
-
-    // Allow early breakouts before Jerung fully injects capital
-    const toVal = item.turnover || item.rawTurnover || 0;
-    // Removed toVal < 1.5M restriction to catch early explosive signals (BUSCAP/EXSIMHB)
-
-    // Anti-Debut Dump Shield (Rule 9 SOP: wait min 15 days or at least 3 floor touches)
-    const age = getIpoDaysAge(item, dateStr);
-    if (age != null && age < 15 && (item.touchCount || 0) < 3) return false;
-
-    const isGreenBreakout = (item.change >= 0 || (item.changePct || 0) >= 0);
-    const tight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
-
-    if (item.hasVolumeSpike === true) {
-        if (!isGreenBreakout) return false; // CS Merah spike / dump rejected
-        if (tight > 10.0) return false; // Breakout candle max tightness 10%
-    } else {
-        if (tight > 5.0) return false;
-    }
-
-    // SL Risk (Floor Distance) must be <= 10.0% (Align with Scanner)
-    const f = item.effFloor || item.floorLow || 0;
-    const fDistVal = f > 0 ? ((item.price - f) / f * 100) : 99;
-    if (fDistVal > 10.0 || fDistVal < -2.0) return false;
-
-    return true;
+    if (!item) return false;
+    return StrategyRules.evaluateFreshRider(item, {stage:'new', floor:item.effFloor || item.floorLow, ipoAge:getIpoDaysAge(item,dateStr), blackSwanClean:!dateStr || isBlackSwanClean(item.name,item,dateStr)}).eligible;
 }
 
 // ---- Rule ⭐ ADD-ON A+ (Base 1 / Base 2 Staircase) ----
 function isAddOnAPick(item, initialBasePrice, effFloor, dateStr) {
-    if (!item || !item.name || item.price <= 0 || item.price > 50) return false;
-    if (item.isVvip !== true || item.signal === 'avoid' || item.isCombStock) return false;
-    if ((item.ipoYear || 0) < 2025) return false;
-    if (dateStr && !isBlackSwanClean(item.name, item, dateStr)) return false;
-    const pb = item.pullback ?? 99;
-    if (pb > 10.0) return false;
-    
-    const tight = typeof item.closeTightness === 'number' ? item.closeTightness : 99;
-    if (tight > 3.5) return false;
-
-    const turnover = item.turnover || item.rawTurnover || 0;
-    if (turnover < 2000000) return false;
-
-    const f = effFloor || item.floorLow || 0;
-    const floorDist = f > 0 ? ((item.price - f) / f * 100) : 99;
-
-    const touches = item.touchCount || 0;
-    const isSolidBase2 = (touches >= 3 && tight <= 3.5 && floorDist <= 4.5 && turnover >= 2000000);
-
-    if (floorDist > 3.5 && !isSolidBase2) return false;
-    if (item.hasVolumeSpike === true) return false;
-
-    if (initialBasePrice > 0) {
-        const gainFromBase = ((item.price - initialBasePrice) / initialBasePrice * 100);
-        if (gainFromBase > 20.0 && !isSolidBase2) return false;
-    }
-    return true;
+    if (!item) return false;
+    return StrategyRules.evaluateFreshRider(item, {stage:'addon', initialBasePrice, floor:effFloor || item.floorLow, blackSwanClean:!dateStr || isBlackSwanClean(item.name,item,dateStr)}).eligible;
 }
 const { BURSA_MALAYSIA_HOLIDAYS, isTradingDay, getMytDate, upsertTradingDay } = require('./lib/bursa_calendar');
 
@@ -225,6 +160,14 @@ function dynamicFloor(name, price, floorLow) {
 const openFR = {};
 const tradesFR = [];
 
+// Use one exit rule for daily replay and stale-price backfills.
+function freshRiderExit(t) {
+    let sl = t.entryFloor > 0 ? t.entryFloor * 0.97 : t.entry * 0.89;
+    if (t.maxGain >= 10) return Math.max(t.entry * 1.10, t.high * 0.85);
+    if (t.maxGain >= 5) return Math.max(t.entry, t.high * 0.88);
+    return Math.max(sl, t.high * 0.88);
+}
+
 for (const day of dayList) {
     const map = {};
     for (const it of day.rows) if (it && it.name && it.price > 0) map[canonName(it.name).toUpperCase()] = it;
@@ -240,14 +183,8 @@ for (const day of dayList) {
         t.maxGain = +(((t.high - t.entry) / t.entry) * 100).toFixed(1);
 
         // Rule 6: Kunci Bebas Risiko & Scale-Out
-        let slTrail = t.entryFloor > 0 ? t.entryFloor * 0.97 : t.entry * 0.89; // Initial SL bawah lantai
-        if (t.maxGain >= 10) {
-            slTrail = Math.max(t.entry * 1.10, t.high * 0.85); // Lock di TP1 (+10%), trail 15% dari puncak
-        } else if (t.maxGain >= 5) {
-            slTrail = Math.max(t.entry, t.high * 0.88); // Free Trade: Breakeven
-        } else {
-            slTrail = Math.max(slTrail, t.high * 0.88); // Default trail 12%
-        }
+        const slTrail = freshRiderExit(t);
+        const currentGain = +(((cur.price - t.entry) / t.entry) * 100).toFixed(1);
         
         t.slTrail = +slTrail.toFixed(3);
         if (cur.price <= slTrail) {
@@ -256,7 +193,7 @@ for (const day of dayList) {
             t.exitPrice = +cur.price.toFixed(3);
             t.finalGain = +(((cur.price - t.entry) / t.entry) * 100).toFixed(1);
             delete openFR[name];
-        } else if (t.days >= 60 && t.maxGain < 10 && t.finalGain < 5) { // Time Stop: Lemau lepas 60 hari
+        } else if (t.days >= 60 && t.maxGain < 10 && currentGain < 5) { // Time Stop: Lemau lepas 60 hari
             t.status = 'CLOSED_TIME';
             t.exitDate = day.date;
             t.exitPrice = +cur.price.toFixed(3);
@@ -338,7 +275,7 @@ for (const day of dayList) {
     for (const it of day.rows) {
         if (!it || !it.name || it.price <= 0) continue;
         const name = canonName(it.name).toUpperCase();
-        it.effFloor = dynamicFloor(name, it.price, it.floorLow);
+        it.effFloor = dynamicFloorAddOn(name, it.price, it.floorLow);
         if (!initialBaseMap[name] && isFreshRiderPick(it, day.date)) {
             initialBaseMap[name] = { date: day.date, price: it.price };
         }
@@ -361,14 +298,8 @@ for (const day of dayList) {
         t.maxGain = +(((t.high - t.entry) / t.entry) * 100).toFixed(1);
 
         // Rule 6: Kunci Bebas Risiko & Scale-Out
-        let slTrail = t.entryFloor > 0 ? t.entryFloor * 0.97 : t.entry * 0.89;
-        if (t.maxGain >= 10) {
-            slTrail = Math.max(t.entry * 1.10, t.high * 0.85); // Lock di TP1 (+10%), trail 15% dari puncak
-        } else if (t.maxGain >= 5) {
-            slTrail = Math.max(t.entry, t.high * 0.88); // Free Trade: Breakeven
-        } else {
-            slTrail = Math.max(slTrail, t.high * 0.88); // Default trail 12%
-        }
+        const slTrail = freshRiderExit(t);
+        const currentGain = +(((cur.price - t.entry) / t.entry) * 100).toFixed(1);
         
         t.slTrail = +slTrail.toFixed(3);
         if (cur.price <= slTrail) {
@@ -376,7 +307,7 @@ for (const day of dayList) {
             t.exitDate = day.date;
             t.exitPrice = +cur.price.toFixed(3);
             t.finalGain = +(((cur.price - t.entry) / t.entry) * 100).toFixed(1);
-        } else if (t.days >= 60 && t.maxGain < 10 && t.finalGain < 5) {
+        } else if (t.days >= 60 && t.maxGain < 10 && currentGain < 5) {
             t.status = 'CLOSED_TIME';
             t.exitDate = day.date;
             t.exitPrice = +cur.price.toFixed(3);
@@ -405,9 +336,9 @@ for (const day of dayList) {
         const fDist = effFloor > 0 ? ((it.price - effFloor) / effFloor * 100) : 99;
         const toVal = it.turnover || it.rawTurnover || 0;
         // isFreshBase1 = ADD-ON A+ (Awal): kenaikan ≤ 20% dari base, lantai rapat ≤ 3.5%, jerung ≥ 2M
-        const isFreshBase1 = (gainFromBase >= 0 && gainFromBase <= 20 && fDist <= 3.5 && toVal >= 2000000);
+        const isFreshBase1 = StrategyRules.classifyMetrics({gainFromBase:gainFromBase,floorDistance:fDist,turnover:toVal,tightness:0,touches:0},{family:'fr',context:'generator',allowZeroTurnover:false}).isFreshBase1;
         // isSolidBase2 = LANTAI RAPAT: tangga solid (sentuhan ≥ 3x, tight ≤ 3.5%, lantai ≤ 4.5%, jerung ≥ 2M)
-        const isSolidBase2 = (touches >= 3 && tight <= 3.5 && fDist <= 4.5 && toVal >= 2000000);
+        const isSolidBase2 = StrategyRules.classifyMetrics({gainFromBase:null,floorDistance:fDist,turnover:toVal,tightness:tight,touches:touches},{family:'fr',context:'generator',allowZeroTurnover:false}).isSolidBase2;
         // LANTAI RAPAT = lulus isSolidBase2 TAPI GAGAL isFreshBase1 (lantai jarak 3.5%-4.5%)
         // Selaras 100% dengan logik scanner (index.html / buy_alert.js)
         const isFloorAddon = (isSolidBase2 && !isFreshBase1);
@@ -451,8 +382,8 @@ for (const day of dayList) {
 const { backfillStaleTrades } = require('./backfill_stale.js');
 const latestDay = dayList.length ? dayList[dayList.length - 1].date : '';
 
-backfillStaleTrades(tradesFR, latestDay, (t) => Math.max(t.entry * 0.89, t.high * 0.80));
-backfillStaleTrades(tradesAddOn, latestDay, (t) => Math.max(t.entry * 0.89, t.high * 0.80));
+backfillStaleTrades(tradesFR, latestDay, freshRiderExit, { exitAtClose: true });
+backfillStaleTrades(tradesAddOn, latestDay, freshRiderExit, { exitAtClose: true });
 
 const openFRTrades = tradesFR.filter(t => t.status === 'OPEN').sort((a, b) => b.entryDate.localeCompare(a.entryDate));
 const closedFRTrades = tradesFR.filter(t => t.status !== 'OPEN').sort((a, b) => b.exitDate.localeCompare(a.exitDate));
@@ -618,8 +549,8 @@ for (let i = 0; i < dateMap.length - 3; i++) {
         const fDist = effFloor > 0 ? ((item.price - effFloor) / effFloor * 100) : 99;
         const toVal = item.turnover || item.rawTurnover || 0;
 
-        const isFreshBase1 = (gainFromBase >= 0 && gainFromBase <= 20 && fDist <= 3.5 && toVal >= 2000000);
-        const isSolidBase2 = (touches >= 3 && tight <= 3.5 && fDist <= 4.5 && toVal >= 2000000);
+        const isFreshBase1 = StrategyRules.classifyMetrics({gainFromBase:gainFromBase,floorDistance:fDist,turnover:toVal,tightness:0,touches:0},{family:'fr',context:'generator',allowZeroTurnover:false}).isFreshBase1;
+        const isSolidBase2 = StrategyRules.classifyMetrics({gainFromBase:null,floorDistance:fDist,turnover:toVal,tightness:tight,touches:touches},{family:'fr',context:'generator',allowZeroTurnover:false}).isSolidBase2;
         const isFloorAddon = (isSolidBase2 && !isFreshBase1);
 
         // Simulate forward: hold up to 20 days with trailing stop

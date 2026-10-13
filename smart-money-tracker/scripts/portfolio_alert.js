@@ -24,57 +24,33 @@ function loadEnvFile() {
         }
     } catch (e) { /* abaikan */ }
 }
-loadEnvFile();
-
-const portfolioFile = path.join(path.join(__dirname, '..'), 'user_portfolio.json');
-const historyAlertsFile = path.join(path.join(__dirname, '..'), 'portfolio_alerts_history.json');
-const liveFile = path.join(path.join(__dirname, '..'), 'live_data.json');
 
 function fmtPrice(p) { return p == null ? '—' : Number(p).toFixed(3); }
 function fmtPct(p) { return p == null ? '—' : (p > 0 ? '+' : '') + Number(p).toFixed(2) + '%'; }
 
-(async () => {
-    if (!fs.existsSync(portfolioFile)) return;
-    const portfolio = JSON.parse(fs.readFileSync(portfolioFile, 'utf8'));
-    if (!Array.isArray(portfolio) || portfolio.length === 0) return;
-
-    let liveRows = [];
-    if (fs.existsSync(liveFile)) {
-        try {
-            const liveData = JSON.parse(fs.readFileSync(liveFile, 'utf8'));
-            liveRows = liveData.topVolume || [];
-        } catch (e) { /* fallback */ }
-    }
-    const liveMap = new Map(liveRows.map(r => [(r.name || '').toUpperCase(), r]));
-
-    // Baca sejarah alert yang telah dihantar untuk elak spam berulang
-    let alertHistory = {};
-    if (fs.existsSync(historyAlertsFile)) {
-        try { alertHistory = JSON.parse(fs.readFileSync(historyAlertsFile, 'utf8')); } catch (e) { alertHistory = {}; }
-    }
-
-    const now = new Date();
-    const todayStr = now.toLocaleDateString('en-MY', { timeZone: 'Asia/Kuala_Lumpur', year: 'numeric', month: '2-digit', day: '2-digit' }).split('/').reverse().join('-');
-    const timeStr = now.toLocaleTimeString('en-US', { timeZone: 'Asia/Kuala_Lumpur', hour: '2-digit', minute: '2-digit', hour12: false });
-
+function collectPortfolioAlerts(portfolio, liveRows, alertHistory, todayStr) {
+    const liveMap = new Map(liveRows.filter(r => r && typeof r.name === 'string' && Number.isFinite(r.price) && r.price > 0).map(r => [r.name.toUpperCase(), r]));
     const triggeredAlerts = [];
 
     for (const pos of portfolio) {
-        const nm = (pos.name || '').toUpperCase();
+        if (!pos || typeof pos.name !== 'string' || !Number.isFinite(pos.buyPrice) || pos.buyPrice <= 0) continue;
+        const nm = pos.name.toUpperCase();
         const live = liveMap.get(nm);
-        const curPrice = live ? live.price : pos.buyPrice;
-        if (!curPrice || curPrice <= 0) continue;
+        // Missing quotes are unknown prices, never a synthetic trade at the entry price.
+        const curPrice = live?.price;
+        if (!Number.isFinite(curPrice) || curPrice <= 0) continue;
 
         const gainPct = +(((curPrice - pos.buyPrice) / pos.buyPrice) * 100).toFixed(2);
         const distToSl = +(((curPrice - pos.slPrice) / pos.slPrice) * 100).toFixed(2);
-        const grossPnl = +(((curPrice - pos.buyPrice) / pos.buyPrice) * pos.allocation).toFixed(2);
+        const grossPnl = Number.isFinite(pos.allocation) ? +(((curPrice - pos.buyPrice) / pos.buyPrice) * pos.allocation).toFixed(2) : undefined;
+        const stopHit = Number.isFinite(pos.slPrice) && pos.slPrice > 0 && curPrice <= pos.slPrice;
 
         // 1. Semakan TP2
-        if (pos.tp2 && curPrice >= pos.tp2) {
+        if (!stopHit && Number.isFinite(pos.tp2) && pos.tp2 > 0 && curPrice >= pos.tp2) {
             const key = `${todayStr}_${nm}_TP2`;
             if (!alertHistory[key]) {
-                alertHistory[key] = true;
                 triggeredAlerts.push({
+                    key,
                     type: 'TP2',
                     badge: '🚀 TARGET TP2 TERCAPAI (MAX GAIN)!',
                     name: pos.name,
@@ -87,11 +63,11 @@ function fmtPct(p) { return p == null ? '—' : (p > 0 ? '+' : '') + Number(p).t
             }
         }
         // 2. Semakan TP1
-        else if (pos.tp1 && curPrice >= pos.tp1) {
+        else if (!stopHit && Number.isFinite(pos.tp1) && pos.tp1 > 0 && curPrice >= pos.tp1) {
             const key = `${todayStr}_${nm}_TP1`;
             if (!alertHistory[key]) {
-                alertHistory[key] = true;
                 triggeredAlerts.push({
+                    key,
                     type: 'TP1',
                     badge: '🎉 TARGET TP1 TERCAPAI (+10% LOCK)!',
                     name: pos.name,
@@ -99,16 +75,16 @@ function fmtPct(p) { return p == null ? '—' : (p > 0 ? '+' : '') + Number(p).t
                     target: pos.tp1,
                     gainPct,
                     grossPnl,
-                    advice: `Harga mencecah sasaran TP1 RM ${fmtPrice(pos.tp1)} (${fmtPct(gainPct)})! Tindakan Wajib SOP Jual 50%: 1. Jual 50% lot sekarang (+RM ${(grossPnl*0.5).toFixed(2)} tunai masuk poket) · 2. Naikkan Stop Loss baki 50% ke harga modal RM ${fmtPrice(pos.buyPrice)} (Free Trade) · 3. Biarkan baki 50% menunggang ke sasaran TP2 RM ${fmtPrice(pos.tp2)} (+20%+).`
+                    advice: `Harga mencecah sasaran TP1 RM ${fmtPrice(pos.tp1)} (${fmtPct(gainPct)})! Tindakan Wajib SOP Jual 50%: 1. Jual 50% lot sekarang${grossPnl === undefined ? '' : ` (+RM ${(grossPnl * 0.5).toFixed(2)} tunai masuk poket)`} · 2. Naikkan Stop Loss baki 50% ke paras TP1 RM ${fmtPrice(pos.tp1)} · 3. Biarkan baki 50% menunggang ke sasaran TP2 RM ${fmtPrice(pos.tp2)} (+20%+).`
                 });
             }
         }
         // 3. Semakan Breakeven Trigger (+5% gain)
-        else if (gainPct >= 5.0 && gainPct < 9.5) {
+        else if (!stopHit && gainPct >= 5.0) {
             const key = `${todayStr}_${nm}_BE`;
             if (!alertHistory[key]) {
-                alertHistory[key] = true;
                 triggeredAlerts.push({
+                    key,
                     type: 'BE',
                     badge: '🛡️ ALERT RISK-FREE (NAIKKAN STOP LOSS KE MODAL)!',
                     name: pos.name,
@@ -121,11 +97,11 @@ function fmtPct(p) { return p == null ? '—' : (p > 0 ? '+' : '') + Number(p).t
         }
 
         // 4. Semakan Stop Loss Terlanggar
-        if (pos.slPrice && curPrice <= pos.slPrice) {
+        if (stopHit) {
             const key = `${todayStr}_${nm}_SL_HIT`;
             if (!alertHistory[key]) {
-                alertHistory[key] = true;
                 triggeredAlerts.push({
+                    key,
                     type: 'SL_HIT',
                     badge: '🛑 STOP LOSS TERLANGGAR (CUT LOSS DISIPLIN)!',
                     name: pos.name,
@@ -138,11 +114,11 @@ function fmtPct(p) { return p == null ? '—' : (p > 0 ? '+' : '') + Number(p).t
             }
         }
         // 5. Semakan Hampir Stop Loss (< 1.5% dari SL)
-        else if (pos.slPrice && distToSl > 0 && distToSl <= 1.5) {
+        else if (Number.isFinite(pos.slPrice) && pos.slPrice > 0 && distToSl > 0 && distToSl <= 1.5) {
             const key = `${todayStr}_${nm}_SL_NEAR`;
             if (!alertHistory[key]) {
-                alertHistory[key] = true;
                 triggeredAlerts.push({
+                    key,
                     type: 'SL_NEAR',
                     badge: '⚠️ AMARAN KAWAL RISIKO (HAMPIR PARAS SL)!',
                     name: pos.name,
@@ -157,11 +133,10 @@ function fmtPct(p) { return p == null ? '—' : (p > 0 ? '+' : '') + Number(p).t
         }
     }
 
-    if (triggeredAlerts.length === 0) {
-        // Tiada alert milestone baharu dalam pusingan 5-minit ini
-        return;
-    }
+    return triggeredAlerts;
+}
 
+function portfolioMessage(triggeredAlerts, todayStr, timeStr) {
     // Bina teks Telegram
     const lines = [];
     lines.push(`🔔 *SMART MONEY TRACKER — PORTFOLIO INTRADAY ALERT*`);
@@ -179,39 +154,107 @@ function fmtPct(p) { return p == null ? '—' : (p > 0 ? '+' : '') + Number(p).t
     });
 
     lines.push('Generated by portfolio_alert.js · JerungBursa');
-    const msg = lines.join('\n');
+    return lines.join('\n');
+}
 
-    console.log(`📢 Menghantar ${triggeredAlerts.length} alert portfolio ke Telegram...`);
+function readAlertHistory(file) {
+    try {
+        const history = JSON.parse(fs.readFileSync(file, 'utf8'));
+        return history && typeof history === 'object' && !Array.isArray(history) ? history : {};
+    } catch (error) { return {}; }
+}
 
-    // Simpan alertHistory
-    fs.writeFileSync(historyAlertsFile, JSON.stringify(alertHistory, null, 2), 'utf8');
-
-    // Hantar ke Telegram
-    const token = process.env.TELEGRAM_BOT_TOKEN;
-    const chatId = process.env.TELEGRAM_CHAT_ID;
-    if (token && chatId) {
-        try {
-            const url = `https://api.telegram.org/bot${token}/sendMessage`;
-            const body = JSON.stringify({ chat_id: chatId, text: msg });
-            const r = await new Promise((resolve, reject) => {
-                const req = https.request(url, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(body) }
-                }, (res) => {
-                    let s = '';
-                    res.on('data', d => s += d);
-                    res.on('end', () => { try { resolve(JSON.parse(s)); } catch (e) { reject(e); } });
-                });
-                req.on('error', reject);
-                req.write(body);
-                req.end();
+function sendTelegram(token, chatId, text, { httpsClient = https, timeoutMs = 15000 } = {}) {
+    const body = JSON.stringify({ chat_id: chatId, text });
+    return new Promise((resolve, reject) => {
+        let timer;
+        let settled = false;
+        const finish = (error, reply) => {
+            if (settled) return;
+            settled = true;
+            clearTimeout(timer);
+            if (error) reject(error);
+            else resolve(reply);
+        };
+        const request = httpsClient.request(`https://api.telegram.org/bot${token}/sendMessage`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(body) }
+        }, response => {
+            let data = '';
+            response.on('data', chunk => { data += chunk; });
+            response.on('error', error => finish(error));
+            response.on('end', () => {
+                try {
+                    const reply = JSON.parse(data);
+                    if (!Number.isInteger(response.statusCode) || response.statusCode < 200 || response.statusCode >= 300 || reply?.ok !== true) {
+                        return finish(new Error('Telegram did not accept the alert.'));
+                    }
+                    finish(null, reply);
+                } catch (error) { finish(new Error('Telegram returned an invalid response.')); }
             });
-            if (r && r.ok) console.log('✅ Telegram Portfolio Alert berjaya dihantar.');
-            else console.error('❌ Telegram gagal:', JSON.stringify(r));
-        } catch (e) {
-            console.error('❌ Telegram error:', e.message);
+        });
+        request.on('error', error => finish(error));
+        timer = setTimeout(() => {
+            finish(new Error('Telegram request timed out.'));
+            request.destroy();
+        }, timeoutMs);
+        request.write(body);
+        request.end();
+    });
+}
+
+async function runPortfolioAlerts({ appDir = path.resolve(__dirname, '..'), now = new Date(),
+    env = process.env, send = sendTelegram, logger = console } = {}) {
+    const portfolioFile = path.join(appDir, 'user_portfolio.json');
+    if (!fs.existsSync(portfolioFile)) return { sent: false, alerts: 0 };
+    const portfolio = JSON.parse(fs.readFileSync(portfolioFile, 'utf8'));
+    if (!Array.isArray(portfolio) || portfolio.length === 0) return { sent: false, alerts: 0 };
+    let liveRows = [];
+    try {
+        const live = JSON.parse(fs.readFileSync(path.join(appDir, 'live_data.json'), 'utf8'));
+        for (const key of ['topVolume', 'topGainers', 'topLosers']) {
+            if (Array.isArray(live[key])) liveRows.push(...live[key]);
         }
+    } catch (error) { /* Missing live data cannot trigger an alert. */ }
+
+    // Legacy tracked history is a read-only seed. New delivery state stays local
+    // so portfolio alerts cannot dirty the updater's checkout after publication.
+    const stateFile = path.join(appDir, 'portfolio_alerts_state.json');
+    const alertHistory = { ...readAlertHistory(path.join(appDir, 'portfolio_alerts_history.json')), ...readAlertHistory(stateFile) };
+    const shifted = new Date(now.getTime() + 8 * 3600000);
+    const todayStr = shifted.toISOString().slice(0, 10);
+    const timeStr = shifted.toISOString().slice(11, 16);
+    const alerts = collectPortfolioAlerts(portfolio, liveRows, alertHistory, todayStr);
+    if (!alerts.length) return { sent: false, alerts: 0 };
+
+    const token = env.TELEGRAM_BOT_TOKEN;
+    const chatId = env.TELEGRAM_CHAT_ID;
+    if (!token || !chatId) {
+        logger.warn('Telegram credentials missing; portfolio alerts remain pending.');
+        return { sent: false, alerts: alerts.length, reason: 'missing-credentials' };
     }
-})().catch(e => {
-    console.error('❌ portfolio_alert.js error:', e);
-});
+    try {
+        const reply = await send(token, chatId, portfolioMessage(alerts, todayStr, timeStr));
+        if (reply?.ok !== true) throw new Error('Telegram did not accept the alert.');
+    } catch (error) {
+        // Transport errors can include a bot token in the request URL.
+        logger.error('Telegram delivery failed; portfolio alerts remain pending.');
+        return { sent: false, alerts: alerts.length, reason: 'send-failed' };
+    }
+    for (const alert of alerts) alertHistory[alert.key] = true;
+    const temporaryState = `${stateFile}.${process.pid}.tmp`;
+    fs.writeFileSync(temporaryState, JSON.stringify(alertHistory, null, 2), 'utf8');
+    fs.renameSync(temporaryState, stateFile);
+    logger.log(`Telegram delivered ${alerts.length} portfolio alert(s).`);
+    return { sent: true, alerts: alerts.length };
+}
+
+if (require.main === module) {
+    loadEnvFile();
+    runPortfolioAlerts().catch(error => {
+        console.error('Portfolio alert processing failed:', error.message);
+        process.exitCode = 1;
+    });
+}
+
+module.exports = { collectPortfolioAlerts, portfolioMessage, sendTelegram, runPortfolioAlerts };
