@@ -91,7 +91,7 @@ module.exports = async (req, res) => {
             ? Math.min(Math.max(requestedTokens, 64), 2048)
             : 1024;
 
-        const rawTemp = typeof temperature === 'number' ? temperature : 0.5;
+        const rawTemp = Number.isFinite(temperature) ? temperature : 0.5;
         const temp = Math.min(Math.max(rawTemp, 0), 1.0);
 
         const response = await axios.post('https://api.groq.com/openai/v1/chat/completions', {
@@ -103,6 +103,7 @@ module.exports = async (req, res) => {
             max_tokens: maxTokens,
             temperature: temp
         }, {
+            timeout: 20000,
             headers: {
                 'Authorization': `Bearer ${GROQ_KEY}`,
                 'Content-Type': 'application/json'
@@ -113,8 +114,14 @@ module.exports = async (req, res) => {
         return res.status(200).json({ text });
 
     } catch (err) {
-        console.error('Proxy error:', err);
-        const errMsg = err.response?.data?.error?.message || err.message || err;
-        return res.status(500).json({ error: `Ralat pelayan: ${errMsg}` });
+        // Axios errors contain request headers, including the provider API key.
+        console.error('Chat provider request failed', { code: err.code, status: err.response?.status });
+        if (err.code === 'ECONNABORTED' || err.code === 'ETIMEDOUT') {
+            return res.status(504).json({ error: 'AI request timed out. Please try again.' });
+        }
+        if (err.response?.status === 429) {
+            return res.status(429).json({ error: 'AI service is busy. Please try again later.' });
+        }
+        return res.status(502).json({ error: 'AI service is unavailable. Please try again later.' });
     }
 };

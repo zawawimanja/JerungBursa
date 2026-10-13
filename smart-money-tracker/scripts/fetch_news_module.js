@@ -1,4 +1,28 @@
 const https = require('https');
+const { getMytDate } = require('./lib/bursa_calendar');
+
+function parseEventDate(value, reference = new Date()) {
+    if (typeof value !== 'string') return null;
+    const clean = value.trim();
+    const ref = new Date(getMytDate(reference) + 'T00:00:00Z');
+    const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+    const short = /^(\d{1,2})\s+([a-z]{3,9})(?:\s+(\d{4}))?$/i.exec(clean);
+    const iso = /^(\d{4})-(\d{2})-(\d{2})$/.exec(clean);
+    let day, month, year;
+    if (short) {
+        day = Number(short[1]);
+        month = months.indexOf(short[2].slice(0, 3).toLowerCase());
+        year = short[3] ? Number(short[3]) : null;
+    } else if (iso) {
+        year = Number(iso[1]); month = Number(iso[2]) - 1; day = Number(iso[3]);
+    } else return null;
+    if (month < 0 || month > 11 || day < 1 || day > 31 || !Number.isFinite(ref.getTime())) return null;
+    const years = year !== null ? [year] : [ref.getUTCFullYear() - 1, ref.getUTCFullYear(), ref.getUTCFullYear() + 1];
+    const dates = years.map(y => new Date(Date.UTC(y, month, day))).filter(d =>
+        d.getUTCMonth() === month && d.getUTCDate() === day);
+    dates.sort((a, b) => Math.abs(a - ref) - Math.abs(b - ref));
+    return dates[0] || null;
+}
 
 /**
  * Helper to fetch HTTPS URL content cleanly
@@ -149,6 +173,11 @@ async function getCorporateNewsRisk(stockCode, stockName) {
         fetchEntitlements(stockCode)
     ]);
 
+    return buildCorporateNewsRisk(announcements, entitlements);
+}
+
+function buildCorporateNewsRisk(announcements, entitlements, reference = new Date()) {
+
     const newsBadges = [];
     let hasNewsAlert = false;
 
@@ -160,14 +189,10 @@ async function getCorporateNewsRisk(stockCode, stockName) {
             // Format dari klsescreener ialah "DD MMM" (cth "01 Jan") tanpa tahun.
             // Tambah tahun semasa supaya parse konsisten; jika masih tak sah, JANGAN flag
             // (elak false-positive ex-dividend alert).
-            let exDateObj = new Date(latestEnt.exDate);
-            if (isNaN(exDateObj.getTime())) {
-                const withYear = `${latestEnt.exDate} ${new Date().getFullYear()}`;
-                exDateObj = new Date(withYear);
-            }
+            const exDateObj = parseEventDate(latestEnt.exDate, reference);
             let isRelevant = false;
-            if (!isNaN(exDateObj.getTime())) {
-                const now = new Date();
+            if (exDateObj) {
+                const now = new Date(getMytDate(reference) + 'T00:00:00Z');
                 const diffDays = Math.round((exDateObj.getTime() - now.getTime()) / (24 * 3600 * 1000));
                 // Only alert if ex-date is within last 5 days or next 30 days
                 isRelevant = (diffDays >= -5 && diffDays <= 30);
@@ -292,6 +317,8 @@ async function getCorporateNewsRisk(stockCode, stockName) {
 
 module.exports = {
     getCorporateNewsRisk,
+    buildCorporateNewsRisk,
+    parseEventDate,
     fetchAnnouncements,
     fetchEntitlements
 };

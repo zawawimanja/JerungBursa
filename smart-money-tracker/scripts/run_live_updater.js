@@ -6,7 +6,7 @@ const INTERVAL = 5 * 60 * 1000;
 const APP_DIR = path.resolve(__dirname, '..');
 const PROJECT_ROOT = path.resolve(APP_DIR, '..');
 const DATA_PATHS = ['live_data.json', 'live_data.js', 'fresh_rider_tracker.js', 'hot_theme_tracker.js',
-    'daily_equity_tracker.js', 'history/'].map(file => `smart-money-tracker/${file}`);
+    'daily_equity_tracker.js', 'news_data.js', 'symbol_mappings.json', 'history/'].map(file => `smart-money-tracker/${file}`);
 let isRunning = false;
 let lastTrackerGeneratedDate = null;
 let lastAlertSentDate = null;
@@ -61,7 +61,7 @@ async function runScraper() {
 
         const postClose = minutes >= 17 * 60 + 50;
         if (postClose && lastTrackerGeneratedDate !== dateStr) {
-            for (const script of ['generate_fresh_rider_tracker.js', 'generate_hot_theme_tracker.js', 'generate_daily_equity_tracker.js']) {
+            for (const script of ['generate_news_data.js', 'generate_fresh_rider_tracker.js', 'generate_hot_theme_tracker.js', 'generate_daily_equity_tracker.js']) {
                 await run(process.execPath, [path.join(__dirname, script)]);
             }
         }

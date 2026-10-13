@@ -52,11 +52,12 @@ jobs:
             "https://klse.i3investor.com/web/market/mostactive" \
             -H "User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36" || true
           node scripts/scrape-real.js
+          # Trackers must evaluate the news fetched in this run, not the previous snapshot.
+          node scripts/generate_news_data.js
           node scripts/generate_fresh_rider_tracker.js
           node scripts/generate_hot_theme_tracker.js
           node scripts/generate_daily_equity_tracker.js
           node scripts/scrape-jerung.js
-          node scripts/generate_news_data.js
 
       - name: Run Scanner-Tracker Sync Audit (npm test)
         run: |

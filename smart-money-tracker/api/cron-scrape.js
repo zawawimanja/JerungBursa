@@ -59,6 +59,7 @@ module.exports = async (req, res) => {
             `https://api.github.com/repos/${repoOwner}/${repoName}/dispatches`,
             { event_type },
             {
+                timeout: 15000,
                 headers: {
                     'Accept': 'application/vnd.github+json',
                     'Authorization': `Bearer ${token}`,
