@@ -1,16 +1,31 @@
 [
   {
+    "name": "PENTECH",
+    "symbol": "0457.KL",
+    "buyPrice": 0.350,
+    "sellPrice": 0.385,
+    "allocation": 2000,
+    "shares": 5700,
+    "gainPct": 10.0,
+    "profit": 199.50,
+    "entryDate": "2026-09-08",
+    "exitDate": "2026-10-12",
+    "technique": "Top 1 VVIP (Day 1 Fusion)",
+    "notes": "TP1 kena pada 12 Okt @ 0.385 (+10%, jual penuh 5,700 unit bukannya 50% ikut SOP). Kasar +RM 199.50, bersih ~+RM 182.60 selepas kos broker ~RM 16.90."
+  },
+  {
     "name": "EIPOWER",
     "symbol": "0377.KL",
     "buyPrice": 1.450,
     "sellPrice": 1.630,
     "allocation": 2000,
+    "shares": 1379,
     "gainPct": 12.41,
     "profit": 248.16,
     "entryDate": "2026-08-28",
     "exitDate": "2026-09-08",
     "technique": "Top 1 VVIP Breakout",
-    "notes": "Untung RM 248.16 telah dipusingkan (snowball) ke PENTECH & STRATUS."
+    "notes": "Kasar +RM 248.16, bersih ~+RM 226.97. Untung dipusingkan (snowball) ke PENTECH & STRATUS."
   },
   {
     "name": "STRATUS",
@@ -18,11 +33,12 @@
     "buyPrice": 2.760,
     "sellPrice": 3.170,
     "allocation": 2000,
+    "shares": 724,
     "gainPct": 14.86,
-    "profit": 287.00,
+    "profit": 296.84,
     "entryDate": "2026-07-24",
     "exitDate": "2026-09-23",
     "technique": "Top 2 VVIP (Base 2 Rider)",
-    "notes": "Jual pada 3.170 (+14.86%)."
+    "notes": "Kasar +RM 296.84 (jual 724 unit @ 3.170), bersih ~+RM 275.89. Beli semula pada 13 Okt @ 2.700."
   }
 ]

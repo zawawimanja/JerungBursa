@@ -1,18 +1,18 @@
 [
   {
-    "name": "PENTECH",
-    "symbol": "0457.KL",
-    "buyPrice": 0.350,
-    "slPrice": 0.325,
+    "name": "STRATUS",
+    "symbol": "5356.KL",
+    "buyPrice": 2.700,
+    "slPrice": 2.520,
     "allocation": 2000,
-    "shares": 5700,
-    "technique": "Top 1 VVIP (Day 1 Fusion)",
-    "rankTag": "🥇 TOP 1 VVIP",
+    "shares": 740,
+    "technique": "Re-entry 2nd Ride (Top 2 VVIP)",
+    "rankTag": "🥈 TOP 2 VVIP",
     "isKental": true,
-    "tp1": 0.385,
-    "tp2": 0.420,
-    "entryDate": "2026-09-08",
-    "notes": "Day 1 Trigger (Semicon Theme). Modal RM 2,000 @ 0.350. SL rapat di Lantai RM 0.325."
+    "tp1": 2.970,
+    "tp2": 3.240,
+    "entryDate": "2026-10-13",
+    "notes": "Beli semula petang 13 Okt @ RM 2.700 (kaunter −6.57% hari ini). SL di RM 2.520 (−6.7%). TP1 RM 2.970 wajib tuai 50%, baki free ride ke TP2 RM 3.240."
   },
   {
     "name": "SRKK",
