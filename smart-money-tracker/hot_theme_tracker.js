@@ -1,10 +1,10 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-12T16:51:07.080Z",
-  "dataDays": 96,
-  "totalTracked": 378,
-  "openCount": 134,
+  "generatedAt": "2026-10-13T09:05:19.680Z",
+  "dataDays": 95,
+  "totalTracked": 377,
+  "openCount": 133,
   "closedCount": 244,
   "closedWins": 132,
   "closedWinRate": 54,
@@ -15,8 +15,8 @@ window.HOT_THEME_TRACKER = {
  },
  "backtest": {
   "dataStart": "2026-05-25",
-  "dataEnd": "2026-10-12",
-  "dataDays": 96,
+  "dataEnd": "2026-10-13",
+  "dataDays": 95,
   "signals": 44,
   "winRate": 64,
   "avgGain": 8.7,
@@ -688,13 +688,6 @@ window.HOT_THEME_TRACKER = {
    "themeCount": 76,
    "totalCount": 312,
    "ma5": 31.5
-  },
-  {
-   "date": "2026-10-12",
-   "themePct": 28.2,
-   "themeCount": 76,
-   "totalCount": 312,
-   "ma5": 31.7
   }
  ],
  "themeTrend": "FLAT/FALLING",
@@ -709,19 +702,18 @@ window.HOT_THEME_TRACKER = {
    "currentFloor": 3.91,
    "currentPrice": 3.93,
    "high": 3.93,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": 0.51,
-   "days": 2,
-   "lastDate": "2026-10-12",
+   "days": 1,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
    ],
    "confluence": 3,
-   "isGoldenCombo": true,
-   "slTrail": 3.793
+   "isGoldenCombo": true
   },
   {
    "id": "PWRWELL_2026-10-13_ADDON",
@@ -733,19 +725,18 @@ window.HOT_THEME_TRACKER = {
    "currentFloor": 1.17,
    "currentPrice": 1.2,
    "high": 1.2,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": 2.56,
-   "days": 2,
-   "lastDate": "2026-10-12",
+   "days": 1,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
    ],
    "confluence": 3,
-   "isGoldenCombo": false,
-   "slTrail": 1.135
+   "isGoldenCombo": false
   },
   {
    "id": "PEKAT_2026-10-12_ADDON",
@@ -761,8 +752,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 0,
    "finalGain": -0.4,
    "day1ChangePct": 0.35,
-   "days": 3,
-   "lastDate": "2026-10-12",
+   "days": 2,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -778,15 +769,15 @@ window.HOT_THEME_TRACKER = {
    "entryDate": "2026-10-12",
    "entry": 0.51,
    "entryFloor": 0.5,
-   "currentFloor": 0.51,
+   "currentFloor": 0.5,
    "currentPrice": 0.52,
    "high": 0.52,
    "highDate": "2026-10-13",
    "maxGain": 2,
    "finalGain": 2,
    "day1ChangePct": -1.92,
-   "days": 3,
-   "lastDate": "2026-10-12",
+   "days": 2,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor",
@@ -794,7 +785,7 @@ window.HOT_THEME_TRACKER = {
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 0.495
+   "slTrail": 0.485
   },
   {
    "id": "SAMAIDEN_2026-10-12_ADDON",
@@ -810,8 +801,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 0.7,
    "finalGain": 0.7,
    "day1ChangePct": -0.66,
-   "days": 3,
-   "lastDate": "2026-10-12",
+   "days": 2,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -830,12 +821,12 @@ window.HOT_THEME_TRACKER = {
    "currentFloor": 3.91,
    "currentPrice": 3.93,
    "high": 3.93,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0.3,
    "finalGain": 0.3,
    "day1ChangePct": -0.25,
-   "days": 3,
-   "lastDate": "2026-10-12",
+   "days": 2,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -858,8 +849,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 1,
    "finalGain": 1,
    "day1ChangePct": -0.94,
-   "days": 3,
-   "lastDate": "2026-10-12",
+   "days": 2,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -878,12 +869,12 @@ window.HOT_THEME_TRACKER = {
    "currentFloor": 7.95,
    "currentPrice": 7.96,
    "high": 7.96,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0.1,
    "finalGain": 0.1,
    "day1ChangePct": -0.13,
-   "days": 3,
-   "lastDate": "2026-10-12",
+   "days": 2,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -891,29 +882,6 @@ window.HOT_THEME_TRACKER = {
    "confluence": 3,
    "isGoldenCombo": false,
    "slTrail": 7.712
-  },
-  {
-   "id": "PWRWELL_2026-10-12_ADDON",
-   "name": "PWRWELL",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
-   "entryDate": "2026-10-12",
-   "entry": 1.2,
-   "entryFloor": 1.17,
-   "currentFloor": 1.17,
-   "currentPrice": 1.2,
-   "high": 1.2,
-   "highDate": "2026-10-12",
-   "maxGain": 0,
-   "finalGain": 0,
-   "day1ChangePct": 2.56,
-   "days": 1,
-   "lastDate": "2026-10-12",
-   "status": "OPEN",
-   "themes": [
-    "Solar/RE"
-   ],
-   "confluence": 3,
-   "isGoldenCombo": false
   },
   {
    "id": "MNHLDG_2026-10-09_ADDON",
@@ -925,12 +893,12 @@ window.HOT_THEME_TRACKER = {
    "currentFloor": 3.91,
    "currentPrice": 3.93,
    "high": 3.93,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": 0.51,
-   "days": 4,
-   "lastDate": "2026-10-12",
+   "days": 3,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -949,12 +917,12 @@ window.HOT_THEME_TRACKER = {
    "currentFloor": 1.17,
    "currentPrice": 1.2,
    "high": 1.2,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": 2.56,
-   "days": 4,
-   "lastDate": "2026-10-12",
+   "days": 3,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -973,12 +941,12 @@ window.HOT_THEME_TRACKER = {
    "currentFloor": 7.95,
    "currentPrice": 7.96,
    "high": 7.96,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": -0.38,
-   "days": 4,
-   "lastDate": "2026-10-12",
+   "days": 3,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -997,12 +965,12 @@ window.HOT_THEME_TRACKER = {
    "currentFloor": 1.17,
    "currentPrice": 1.2,
    "high": 1.2,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 2.6,
    "finalGain": 2.6,
    "day1ChangePct": -2.5,
-   "days": 5,
-   "lastDate": "2026-10-12",
+   "days": 4,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -1021,12 +989,12 @@ window.HOT_THEME_TRACKER = {
    "currentFloor": 3.91,
    "currentPrice": 3.93,
    "high": 3.93,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0.5,
    "finalGain": 0.5,
    "day1ChangePct": -2.25,
-   "days": 5,
-   "lastDate": "2026-10-12",
+   "days": 4,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -1049,8 +1017,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 14.8,
    "finalGain": 14.8,
    "day1ChangePct": 0,
-   "days": 6,
-   "lastDate": "2026-10-12",
+   "days": 5,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -1073,8 +1041,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 8.3,
    "finalGain": 0,
    "day1ChangePct": -1.64,
-   "days": 6,
-   "lastDate": "2026-10-12",
+   "days": 5,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -1090,15 +1058,15 @@ window.HOT_THEME_TRACKER = {
    "entryDate": "2026-10-07",
    "entry": 1.86,
    "entryFloor": 1.76,
-   "currentFloor": 1.86,
+   "currentFloor": 1.82,
    "currentPrice": 2.11,
    "high": 2.24,
    "highDate": "2026-10-12",
    "maxGain": 20.4,
    "finalGain": 13.4,
    "day1ChangePct": 2.2,
-   "days": 6,
-   "lastDate": "2026-10-12",
+   "days": 5,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -1117,12 +1085,12 @@ window.HOT_THEME_TRACKER = {
    "currentFloor": 1.17,
    "currentPrice": 1.2,
    "high": 1.2,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": 0,
-   "days": 6,
-   "lastDate": "2026-10-12",
+   "days": 5,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -1138,15 +1106,15 @@ window.HOT_THEME_TRACKER = {
    "entryDate": "2026-10-07",
    "entry": 0.51,
    "entryFloor": 0.485,
-   "currentFloor": 0.51,
+   "currentFloor": 0.5,
    "currentPrice": 0.52,
    "high": 0.525,
    "highDate": "2026-10-08",
    "maxGain": 2.9,
    "finalGain": 2,
    "day1ChangePct": 2,
-   "days": 6,
-   "lastDate": "2026-10-12",
+   "days": 5,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor",
@@ -1154,7 +1122,7 @@ window.HOT_THEME_TRACKER = {
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 0.495
+   "slTrail": 0.485
   },
   {
    "id": "NATGATE_2026-10-06_ADDON",
@@ -1163,15 +1131,15 @@ window.HOT_THEME_TRACKER = {
    "entryDate": "2026-10-06",
    "entry": 1.82,
    "entryFloor": 1.76,
-   "currentFloor": 1.86,
+   "currentFloor": 1.82,
    "currentPrice": 2.11,
    "high": 2.24,
    "highDate": "2026-10-12",
    "maxGain": 23.1,
    "finalGain": 15.9,
    "day1ChangePct": -0.55,
-   "days": 7,
-   "lastDate": "2026-10-12",
+   "days": 6,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -1190,12 +1158,12 @@ window.HOT_THEME_TRACKER = {
    "currentFloor": 1.17,
    "currentPrice": 1.2,
    "high": 1.2,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": 0,
-   "days": 7,
-   "lastDate": "2026-10-12",
+   "days": 6,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -1211,22 +1179,22 @@ window.HOT_THEME_TRACKER = {
    "entryDate": "2026-10-05",
    "entry": 2.57,
    "entryFloor": 2.5,
-   "currentFloor": 2.77,
+   "currentFloor": 2.67,
    "currentPrice": 2.77,
    "high": 2.86,
    "highDate": "2026-10-12",
    "maxGain": 11.3,
    "finalGain": 7.8,
    "day1ChangePct": -0.39,
-   "days": 8,
-   "lastDate": "2026-10-12",
+   "days": 7,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 2.687
+   "slTrail": 2.59
   },
   {
    "id": "CEB_2026-10-05_ADDON",
@@ -1242,8 +1210,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 8.3,
    "finalGain": 0,
    "day1ChangePct": 0,
-   "days": 8,
-   "lastDate": "2026-10-12",
+   "days": 7,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -1262,12 +1230,12 @@ window.HOT_THEME_TRACKER = {
    "currentFloor": 1.17,
    "currentPrice": 1.2,
    "high": 1.2,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": 1.69,
-   "days": 8,
-   "lastDate": "2026-10-12",
+   "days": 7,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -1290,8 +1258,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 9.7,
    "finalGain": 5.1,
    "day1ChangePct": 0.78,
-   "days": 9,
-   "lastDate": "2026-10-12",
+   "days": 8,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -1314,8 +1282,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 6.4,
    "finalGain": 0.9,
    "day1ChangePct": 2.8,
-   "days": 9,
-   "lastDate": "2026-10-12",
+   "days": 8,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -1331,22 +1299,22 @@ window.HOT_THEME_TRACKER = {
    "entryDate": "2026-10-02",
    "entry": 2.58,
    "entryFloor": 2.5,
-   "currentFloor": 2.77,
+   "currentFloor": 2.67,
    "currentPrice": 2.77,
    "high": 2.86,
    "highDate": "2026-10-12",
    "maxGain": 10.9,
    "finalGain": 7.4,
    "day1ChangePct": 2.79,
-   "days": 9,
-   "lastDate": "2026-10-12",
+   "days": 8,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 2.687
+   "slTrail": 2.59
   },
   {
    "id": "CEB_2026-10-01_NEW",
@@ -1362,8 +1330,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 8.3,
    "finalGain": 0,
    "day1ChangePct": 1.69,
-   "days": 10,
-   "lastDate": "2026-10-12",
+   "days": 9,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -1379,15 +1347,15 @@ window.HOT_THEME_TRACKER = {
    "entryDate": "2026-10-01",
    "entry": 1.77,
    "entryFloor": 1.76,
-   "currentFloor": 1.86,
+   "currentFloor": 1.82,
    "currentPrice": 2.11,
    "high": 2.24,
    "highDate": "2026-10-12",
    "maxGain": 26.6,
    "finalGain": 19.2,
    "day1ChangePct": 0.57,
-   "days": 10,
-   "lastDate": "2026-10-12",
+   "days": 9,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -1403,22 +1371,22 @@ window.HOT_THEME_TRACKER = {
    "entryDate": "2026-10-01",
    "entry": 2.51,
    "entryFloor": 2.5,
-   "currentFloor": 2.77,
+   "currentFloor": 2.67,
    "currentPrice": 2.77,
    "high": 2.86,
    "highDate": "2026-10-12",
    "maxGain": 13.9,
    "finalGain": 10.4,
    "day1ChangePct": 0.4,
-   "days": 10,
-   "lastDate": "2026-10-12",
+   "days": 9,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 2.687
+   "slTrail": 2.59
   },
   {
    "id": "VITROX_2026-10-01_ADDON",
@@ -1434,8 +1402,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 12.2,
    "finalGain": 10,
    "day1ChangePct": 0.91,
-   "days": 10,
-   "lastDate": "2026-10-12",
+   "days": 9,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -1510,8 +1478,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 10.6,
    "finalGain": 5.9,
    "day1ChangePct": 0,
-   "days": 11,
-   "lastDate": "2026-10-12",
+   "days": 10,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -1534,8 +1502,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 13.2,
    "finalGain": 11,
    "day1ChangePct": -0.9,
-   "days": 11,
-   "lastDate": "2026-10-12",
+   "days": 10,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -1610,8 +1578,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 10.6,
    "finalGain": 5.9,
    "day1ChangePct": 0,
-   "days": 12,
-   "lastDate": "2026-10-12",
+   "days": 11,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -1634,8 +1602,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 18.9,
    "finalGain": 11.9,
    "day1ChangePct": 1.06,
-   "days": 12,
-   "lastDate": "2026-10-12",
+   "days": 11,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -1658,8 +1626,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 12.2,
    "finalGain": 10,
    "day1ChangePct": 1.42,
-   "days": 12,
-   "lastDate": "2026-10-12",
+   "days": 11,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -1701,22 +1669,22 @@ window.HOT_THEME_TRACKER = {
    "entryDate": "2026-09-28",
    "entry": 0.72,
    "entryFloor": 0.71,
-   "currentFloor": 0.815,
+   "currentFloor": 0.81,
    "currentPrice": 0.835,
    "high": 0.84,
    "highDate": "2026-10-08",
    "maxGain": 16.7,
    "finalGain": 16,
    "day1ChangePct": -0.69,
-   "days": 13,
-   "lastDate": "2026-10-12",
+   "days": 12,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": true,
-   "slTrail": 0.791
+   "slTrail": 0.786
   },
   {
    "id": "VITROX_2026-09-28_ADDON",
@@ -1732,8 +1700,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 13.8,
    "finalGain": 11.6,
    "day1ChangePct": -0.5,
-   "days": 13,
-   "lastDate": "2026-10-12",
+   "days": 12,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -1752,12 +1720,12 @@ window.HOT_THEME_TRACKER = {
    "currentFloor": 1.17,
    "currentPrice": 1.2,
    "high": 1.2,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 2.6,
    "finalGain": 2.6,
    "day1ChangePct": -2.5,
-   "days": 13,
-   "lastDate": "2026-10-12",
+   "days": 12,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -1773,22 +1741,22 @@ window.HOT_THEME_TRACKER = {
    "entryDate": "2026-09-25",
    "entry": 2.66,
    "entryFloor": 2.61,
-   "currentFloor": 2.77,
+   "currentFloor": 2.67,
    "currentPrice": 2.77,
    "high": 2.86,
    "highDate": "2026-10-12",
    "maxGain": 7.5,
    "finalGain": 4.1,
    "day1ChangePct": 1.92,
-   "days": 14,
-   "lastDate": "2026-10-12",
+   "days": 13,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 2.687
+   "slTrail": 2.59
   },
   {
    "id": "SUM_2026-09-25_ADDON",
@@ -1797,22 +1765,22 @@ window.HOT_THEME_TRACKER = {
    "entryDate": "2026-09-25",
    "entry": 0.725,
    "entryFloor": 0.705,
-   "currentFloor": 0.815,
+   "currentFloor": 0.81,
    "currentPrice": 0.835,
    "high": 0.84,
    "highDate": "2026-10-08",
    "maxGain": 15.9,
    "finalGain": 15.2,
    "day1ChangePct": 1.4,
-   "days": 14,
-   "lastDate": "2026-10-12",
+   "days": 13,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": true,
-   "slTrail": 0.791
+   "slTrail": 0.786
   },
   {
    "id": "GREATEC_2026-09-25_ADDON",
@@ -1828,8 +1796,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 7.6,
    "finalGain": 3.1,
    "day1ChangePct": 2.34,
-   "days": 14,
-   "lastDate": "2026-10-12",
+   "days": 13,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -1852,8 +1820,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 13.2,
    "finalGain": 11,
    "day1ChangePct": 0.3,
-   "days": 14,
-   "lastDate": "2026-10-12",
+   "days": 13,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -1869,15 +1837,15 @@ window.HOT_THEME_TRACKER = {
    "entryDate": "2026-09-25",
    "entry": 0.475,
    "entryFloor": 0.455,
-   "currentFloor": 0.51,
+   "currentFloor": 0.5,
    "currentPrice": 0.52,
    "high": 0.525,
    "highDate": "2026-10-08",
    "maxGain": 10.5,
    "finalGain": 9.5,
    "day1ChangePct": -1.04,
-   "days": 14,
-   "lastDate": "2026-10-12",
+   "days": 13,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor",
@@ -1885,7 +1853,7 @@ window.HOT_THEME_TRACKER = {
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 0.495
+   "slTrail": 0.485
   },
   {
    "id": "INARI_2026-09-24_ADDON",
@@ -1894,22 +1862,22 @@ window.HOT_THEME_TRACKER = {
    "entryDate": "2026-09-24",
    "entry": 2.61,
    "entryFloor": 2.54,
-   "currentFloor": 2.77,
+   "currentFloor": 2.67,
    "currentPrice": 2.77,
    "high": 2.86,
    "highDate": "2026-10-12",
    "maxGain": 9.6,
    "finalGain": 6.1,
    "day1ChangePct": -2.61,
-   "days": 15,
-   "lastDate": "2026-10-12",
+   "days": 14,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 2.687
+   "slTrail": 2.59
   },
   {
    "id": "SUM_2026-09-24_ADDON",
@@ -1918,22 +1886,22 @@ window.HOT_THEME_TRACKER = {
    "entryDate": "2026-09-24",
    "entry": 0.715,
    "entryFloor": 0.69,
-   "currentFloor": 0.815,
+   "currentFloor": 0.81,
    "currentPrice": 0.835,
    "high": 0.84,
    "highDate": "2026-10-08",
    "maxGain": 17.5,
    "finalGain": 16.8,
    "day1ChangePct": -1.38,
-   "days": 15,
-   "lastDate": "2026-10-12",
+   "days": 14,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 0.791
+   "slTrail": 0.786
   },
   {
    "id": "VITROX_2026-09-24_ADDON",
@@ -1949,8 +1917,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 13.6,
    "finalGain": 11.3,
    "day1ChangePct": 0,
-   "days": 15,
-   "lastDate": "2026-10-12",
+   "days": 14,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -1973,8 +1941,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 23.5,
    "finalGain": 22.3,
    "day1ChangePct": -2.25,
-   "days": 15,
-   "lastDate": "2026-10-12",
+   "days": 14,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -2023,8 +1991,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 7.6,
    "finalGain": 3.1,
    "day1ChangePct": 1.16,
-   "days": 16,
-   "lastDate": "2026-10-12",
+   "days": 15,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -2040,22 +2008,22 @@ window.HOT_THEME_TRACKER = {
    "entryDate": "2026-09-23",
    "entry": 2.68,
    "entryFloor": 2.54,
-   "currentFloor": 2.77,
+   "currentFloor": 2.67,
    "currentPrice": 2.77,
    "high": 2.86,
    "highDate": "2026-10-12",
    "maxGain": 6.7,
    "finalGain": 3.4,
    "day1ChangePct": -0.74,
-   "days": 16,
-   "lastDate": "2026-10-12",
+   "days": 15,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 2.687
+   "slTrail": 2.59
   },
   {
    "id": "PENTA_2026-09-23_ADDON",
@@ -2071,8 +2039,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 12.4,
    "finalGain": 9.1,
    "day1ChangePct": -0.73,
-   "days": 16,
-   "lastDate": "2026-10-12",
+   "days": 15,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -2095,8 +2063,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 8.9,
    "finalGain": 4.2,
    "day1ChangePct": 0,
-   "days": 17,
-   "lastDate": "2026-10-12",
+   "days": 16,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -2145,8 +2113,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 10.6,
    "finalGain": 5.9,
    "day1ChangePct": 0,
-   "days": 19,
-   "lastDate": "2026-10-12",
+   "days": 18,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -2169,8 +2137,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 4.2,
    "finalGain": -1.4,
    "day1ChangePct": 2.58,
-   "days": 19,
-   "lastDate": "2026-10-12",
+   "days": 18,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -2186,15 +2154,15 @@ window.HOT_THEME_TRACKER = {
    "entryDate": "2026-09-17",
    "entry": 1.68,
    "entryFloor": 1.68,
-   "currentFloor": 1.86,
+   "currentFloor": 1.82,
    "currentPrice": 2.11,
    "high": 2.24,
    "highDate": "2026-10-12",
    "maxGain": 33.3,
    "finalGain": 25.6,
    "day1ChangePct": 0,
-   "days": 20,
-   "lastDate": "2026-10-12",
+   "days": 19,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -2217,8 +2185,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 10.6,
    "finalGain": 5.9,
    "day1ChangePct": 2,
-   "days": 20,
-   "lastDate": "2026-10-12",
+   "days": 19,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -2241,8 +2209,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 6.9,
    "finalGain": 1.2,
    "day1ChangePct": 0.59,
-   "days": 20,
-   "lastDate": "2026-10-12",
+   "days": 19,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -2258,15 +2226,15 @@ window.HOT_THEME_TRACKER = {
    "entryDate": "2026-09-15",
    "entry": 1.68,
    "entryFloor": 1.68,
-   "currentFloor": 1.86,
+   "currentFloor": 1.82,
    "currentPrice": 2.11,
    "high": 2.24,
    "highDate": "2026-10-12",
    "maxGain": 33.3,
    "finalGain": 25.6,
    "day1ChangePct": 1.2,
-   "days": 21,
-   "lastDate": "2026-10-12",
+   "days": 20,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -2289,8 +2257,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 10.6,
    "finalGain": 5.9,
    "day1ChangePct": 0,
-   "days": 22,
-   "lastDate": "2026-10-12",
+   "days": 21,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -2313,8 +2281,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 7.8,
    "finalGain": 2,
    "day1ChangePct": -2.2,
-   "days": 22,
-   "lastDate": "2026-10-12",
+   "days": 21,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -2337,8 +2305,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 22.6,
    "finalGain": 20.2,
    "day1ChangePct": -3.38,
-   "days": 22,
-   "lastDate": "2026-10-12",
+   "days": 21,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -2406,22 +2374,22 @@ window.HOT_THEME_TRACKER = {
    "entryDate": "2026-09-11",
    "entry": 0.61,
    "entryFloor": 0.58,
-   "currentFloor": 0.815,
+   "currentFloor": 0.81,
    "currentPrice": 0.835,
    "high": 0.84,
    "highDate": "2026-10-08",
    "maxGain": 37.7,
    "finalGain": 36.9,
    "day1ChangePct": 0,
-   "days": 23,
-   "lastDate": "2026-10-12",
+   "days": 22,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 0.791
+   "slTrail": 0.79
   },
   {
    "id": "GREATEC_2026-09-11_ADDON",
@@ -2437,8 +2405,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 10.6,
    "finalGain": 5.9,
    "day1ChangePct": 0,
-   "days": 23,
-   "lastDate": "2026-10-12",
+   "days": 22,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -2461,8 +2429,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 7.8,
    "finalGain": 2,
    "day1ChangePct": -2.2,
-   "days": 23,
-   "lastDate": "2026-10-12",
+   "days": 22,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -2485,8 +2453,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 22.6,
    "finalGain": 20.2,
    "day1ChangePct": -3.38,
-   "days": 23,
-   "lastDate": "2026-10-12",
+   "days": 22,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -2528,15 +2496,15 @@ window.HOT_THEME_TRACKER = {
    "entryDate": "2026-09-10",
    "entry": 1.68,
    "entryFloor": 1.7,
-   "currentFloor": 1.86,
+   "currentFloor": 1.82,
    "currentPrice": 2.11,
    "high": 2.24,
    "highDate": "2026-10-12",
    "maxGain": 33.3,
    "finalGain": 25.6,
    "day1ChangePct": -2.89,
-   "days": 24,
-   "lastDate": "2026-10-12",
+   "days": 23,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -2559,8 +2527,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 5.4,
    "finalGain": -0.2,
    "day1ChangePct": 0,
-   "days": 24,
-   "lastDate": "2026-10-12",
+   "days": 23,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -2583,8 +2551,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 10.6,
    "finalGain": 5.9,
    "day1ChangePct": -0.39,
-   "days": 24,
-   "lastDate": "2026-10-12",
+   "days": 23,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -2712,8 +2680,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 5.4,
    "finalGain": -0.2,
    "day1ChangePct": -0.46,
-   "days": 25,
-   "lastDate": "2026-10-12",
+   "days": 24,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -2736,8 +2704,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 10.2,
    "finalGain": 5.5,
    "day1ChangePct": 0,
-   "days": 25,
-   "lastDate": "2026-10-12",
+   "days": 24,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -2813,8 +2781,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 4.9,
    "finalGain": -0.7,
    "day1ChangePct": 1.64,
-   "days": 26,
-   "lastDate": "2026-10-12",
+   "days": 25,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -2837,8 +2805,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 10.2,
    "finalGain": 5.5,
    "day1ChangePct": 1.59,
-   "days": 26,
-   "lastDate": "2026-10-12",
+   "days": 25,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -2861,8 +2829,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 20.9,
    "finalGain": 18.5,
    "day1ChangePct": 2.65,
-   "days": 26,
-   "lastDate": "2026-10-12",
+   "days": 25,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -2881,12 +2849,12 @@ window.HOT_THEME_TRACKER = {
    "currentFloor": 1.15,
    "currentPrice": 1.22,
    "high": 1.22,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 35.6,
    "finalGain": 35.6,
    "day1ChangePct": 0.56,
-   "days": 26,
-   "lastDate": "2026-10-12",
+   "days": 25,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -2958,8 +2926,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 24.1,
    "finalGain": 21.7,
    "day1ChangePct": -1.31,
-   "days": 27,
-   "lastDate": "2026-10-12",
+   "days": 26,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -2982,8 +2950,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 6.7,
    "finalGain": 0.9,
    "day1ChangePct": -1.61,
-   "days": 27,
-   "lastDate": "2026-10-12",
+   "days": 26,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -3006,8 +2974,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 11.9,
    "finalGain": 7.1,
    "day1ChangePct": -0.79,
-   "days": 27,
-   "lastDate": "2026-10-12",
+   "days": 26,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -3026,12 +2994,12 @@ window.HOT_THEME_TRACKER = {
    "currentFloor": 1.15,
    "currentPrice": 1.22,
    "high": 1.22,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 36.3,
    "finalGain": 36.3,
    "day1ChangePct": -0.56,
-   "days": 27,
-   "lastDate": "2026-10-12",
+   "days": 26,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -3081,8 +3049,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 11,
    "finalGain": 6.3,
    "day1ChangePct": -0.39,
-   "days": 28,
-   "lastDate": "2026-10-12",
+   "days": 27,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -3105,8 +3073,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 4.9,
    "finalGain": -0.7,
    "day1ChangePct": -0.69,
-   "days": 28,
-   "lastDate": "2026-10-12",
+   "days": 27,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -3364,8 +3332,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 15.2,
    "finalGain": 11.7,
    "day1ChangePct": 0.76,
-   "days": 31,
-   "lastDate": "2026-10-12",
+   "days": 30,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -3518,8 +3486,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 23,
    "finalGain": 20.6,
    "day1ChangePct": 1.33,
-   "days": 34,
-   "lastDate": "2026-10-12",
+   "days": 33,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -3542,8 +3510,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 13.6,
    "finalGain": 10.3,
    "day1ChangePct": 3.48,
-   "days": 34,
-   "lastDate": "2026-10-12",
+   "days": 33,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -3592,8 +3560,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 17.6,
    "finalGain": 14.1,
    "day1ChangePct": -3.36,
-   "days": 35,
-   "lastDate": "2026-10-12",
+   "days": 34,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -3642,8 +3610,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 0,
    "finalGain": -14,
    "day1ChangePct": 2.38,
-   "days": 36,
-   "lastDate": "2026-10-12",
+   "days": 35,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -3666,8 +3634,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 28.6,
    "finalGain": 21.4,
    "day1ChangePct": -1.11,
-   "days": 11,
-   "lastDate": "2026-10-12",
+   "days": 10,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -3690,8 +3658,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 13.6,
    "finalGain": 10.3,
    "day1ChangePct": 0,
-   "days": 36,
-   "lastDate": "2026-10-12",
+   "days": 35,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -3740,8 +3708,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 13.6,
    "finalGain": 10.3,
    "day1ChangePct": 0.94,
-   "days": 37,
-   "lastDate": "2026-10-12",
+   "days": 36,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -3764,8 +3732,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 21.2,
    "finalGain": 18.8,
    "day1ChangePct": -0.96,
-   "days": 37,
-   "lastDate": "2026-10-12",
+   "days": 36,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -3814,8 +3782,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 20,
    "finalGain": 17.6,
    "day1ChangePct": -0.95,
-   "days": 38,
-   "lastDate": "2026-10-12",
+   "days": 37,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -3838,8 +3806,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 3.7,
    "finalGain": -0.7,
    "day1ChangePct": -0.37,
-   "days": 38,
-   "lastDate": "2026-10-12",
+   "days": 37,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -3888,8 +3856,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 12.2,
    "finalGain": 8.9,
    "day1ChangePct": -1.63,
-   "days": 39,
-   "lastDate": "2026-10-12",
+   "days": 38,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -3912,8 +3880,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 20.5,
    "finalGain": 18.2,
    "day1ChangePct": 0.22,
-   "days": 39,
-   "lastDate": "2026-10-12",
+   "days": 38,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -3936,8 +3904,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 2.2,
    "finalGain": -2.2,
    "day1ChangePct": 1.1,
-   "days": 39,
-   "lastDate": "2026-10-12",
+   "days": 38,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -4038,8 +4006,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 12.2,
    "finalGain": 8.9,
    "day1ChangePct": -1.63,
-   "days": 40,
-   "lastDate": "2026-10-12",
+   "days": 39,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -4062,8 +4030,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 20.5,
    "finalGain": 18.2,
    "day1ChangePct": 0.22,
-   "days": 40,
-   "lastDate": "2026-10-12",
+   "days": 39,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -4086,8 +4054,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 2.2,
    "finalGain": -2.2,
    "day1ChangePct": 1.1,
-   "days": 40,
-   "lastDate": "2026-10-12",
+   "days": 39,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -4212,8 +4180,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 5.7,
    "finalGain": -0.8,
    "day1ChangePct": -0.34,
-   "days": 41,
-   "lastDate": "2026-10-12",
+   "days": 40,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -4236,8 +4204,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 3.3,
    "finalGain": -1.1,
    "day1ChangePct": 0.37,
-   "days": 41,
-   "lastDate": "2026-10-12",
+   "days": 40,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -4260,8 +4228,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 20.8,
    "finalGain": 18.4,
    "day1ChangePct": -1.17,
-   "days": 41,
-   "lastDate": "2026-10-12",
+   "days": 40,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -4362,8 +4330,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 5.4,
    "finalGain": -1.1,
    "day1ChangePct": -0.34,
-   "days": 42,
-   "lastDate": "2026-10-12",
+   "days": 41,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -4464,8 +4432,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 5,
    "finalGain": -1.5,
    "day1ChangePct": 1.51,
-   "days": 43,
-   "lastDate": "2026-10-12",
+   "days": 42,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -4488,8 +4456,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 9.5,
    "finalGain": 6.3,
    "day1ChangePct": -0.89,
-   "days": 43,
-   "lastDate": "2026-10-12",
+   "days": 42,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -4512,8 +4480,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 18.9,
    "finalGain": 16.5,
    "day1ChangePct": -1.05,
-   "days": 43,
-   "lastDate": "2026-10-12",
+   "days": 42,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -4666,8 +4634,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 6.6,
    "finalGain": 0,
    "day1ChangePct": -0.8,
-   "days": 44,
-   "lastDate": "2026-10-12",
+   "days": 43,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -4768,8 +4736,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 5.7,
    "finalGain": -0.8,
    "day1ChangePct": -0.91,
-   "days": 45,
-   "lastDate": "2026-10-12",
+   "days": 44,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -5387,8 +5355,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 40.3,
    "finalGain": 37.5,
    "day1ChangePct": -0.62,
-   "days": 52,
-   "lastDate": "2026-10-12",
+   "days": 51,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -5515,8 +5483,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 39.4,
    "finalGain": 36.6,
    "day1ChangePct": 2.42,
-   "days": 53,
-   "lastDate": "2026-10-12",
+   "days": 52,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -5617,8 +5585,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 42.7,
    "finalGain": 39.9,
    "day1ChangePct": -1.63,
-   "days": 54,
-   "lastDate": "2026-10-12",
+   "days": 53,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -5719,8 +5687,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 40.4,
    "finalGain": 37.7,
    "day1ChangePct": -0.13,
-   "days": 55,
-   "lastDate": "2026-10-12",
+   "days": 54,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -5743,8 +5711,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 12.1,
    "finalGain": 5.1,
    "day1ChangePct": 2.5,
-   "days": 55,
-   "lastDate": "2026-10-12",
+   "days": 54,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -5871,8 +5839,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 40.3,
    "finalGain": 37.5,
    "day1ChangePct": 2.43,
-   "days": 56,
-   "lastDate": "2026-10-12",
+   "days": 55,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -5895,8 +5863,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 14.9,
    "finalGain": 7.7,
    "day1ChangePct": -0.12,
-   "days": 56,
-   "lastDate": "2026-10-12",
+   "days": 55,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -5998,8 +5966,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 43.7,
    "finalGain": 40.8,
    "day1ChangePct": -1.76,
-   "days": 57,
-   "lastDate": "2026-10-12",
+   "days": 56,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -6048,8 +6016,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 33.3,
    "finalGain": 31.9,
    "day1ChangePct": -1.4,
-   "days": 59,
-   "lastDate": "2026-10-12",
+   "days": 58,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -6150,8 +6118,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 7.7,
    "finalGain": 3.2,
    "day1ChangePct": 1.31,
-   "days": 61,
-   "lastDate": "2026-10-12",
+   "days": 60,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -6174,8 +6142,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 17.5,
    "finalGain": 10.2,
    "day1ChangePct": 0.77,
-   "days": 61,
-   "lastDate": "2026-10-12",
+   "days": 60,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -6430,8 +6398,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 52.2,
    "finalGain": 49.3,
    "day1ChangePct": -0.27,
-   "days": 64,
-   "lastDate": "2026-10-12",
+   "days": 63,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -6662,8 +6630,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 48.8,
    "finalGain": 45.9,
    "day1ChangePct": 1.21,
-   "days": 66,
-   "lastDate": "2026-10-12",
+   "days": 65,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -6895,8 +6863,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 18.4,
    "finalGain": 11.1,
    "day1ChangePct": -0.38,
-   "days": 67,
-   "lastDate": "2026-10-12",
+   "days": 66,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -7102,8 +7070,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 18.4,
    "finalGain": 11.1,
    "day1ChangePct": -0.38,
-   "days": 68,
-   "lastDate": "2026-10-12",
+   "days": 67,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -7309,8 +7277,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 47.1,
    "finalGain": 44.2,
    "day1ChangePct": -2.18,
-   "days": 69,
-   "lastDate": "2026-10-12",
+   "days": 68,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -7411,8 +7379,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 43.8,
    "finalGain": 41,
    "day1ChangePct": 1.04,
-   "days": 70,
-   "lastDate": "2026-10-12",
+   "days": 69,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -7435,8 +7403,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 15,
    "finalGain": 7.9,
    "day1ChangePct": 0.25,
-   "days": 70,
-   "lastDate": "2026-10-12",
+   "days": 69,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -8599,12 +8567,12 @@ window.HOT_THEME_TRACKER = {
    "currentFloor": 0.865,
    "currentPrice": 0.87,
    "high": 0.87,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 1.8,
    "finalGain": 1.8,
    "day1ChangePct": 0,
-   "days": 82,
-   "lastDate": "2026-10-12",
+   "days": 81,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -8727,12 +8695,12 @@ window.HOT_THEME_TRACKER = {
    "currentFloor": 0.865,
    "currentPrice": 0.87,
    "high": 0.87,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 1.8,
    "finalGain": 1.8,
    "day1ChangePct": 0,
-   "days": 83,
-   "lastDate": "2026-10-12",
+   "days": 82,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -8959,12 +8927,12 @@ window.HOT_THEME_TRACKER = {
    "currentFloor": 0.865,
    "currentPrice": 0.87,
    "high": 0.87,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 1.8,
    "finalGain": 1.8,
    "day1ChangePct": 0.59,
-   "days": 85,
-   "lastDate": "2026-10-12",
+   "days": 84,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -9295,12 +9263,12 @@ window.HOT_THEME_TRACKER = {
    "currentFloor": 0.865,
    "currentPrice": 0.87,
    "high": 0.87,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 1.8,
    "finalGain": 1.8,
    "day1ChangePct": 0.59,
-   "days": 88,
-   "lastDate": "2026-10-12",
+   "days": 87,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -9816,12 +9784,12 @@ window.HOT_THEME_TRACKER = {
    "currentFloor": 0.865,
    "currentPrice": 0.87,
    "high": 0.87,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 1.8,
    "finalGain": 1.8,
    "day1ChangePct": -0.58,
-   "days": 91,
-   "lastDate": "2026-10-12",
+   "days": 90,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -10277,8 +10245,8 @@ window.HOT_THEME_TRACKER = {
 };
 window.HOT_THEME_NEW_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-12T16:51:07.080Z",
-  "dataDays": 96,
+  "generatedAt": "2026-10-13T09:05:19.680Z",
+  "dataDays": 95,
   "totalTracked": 49,
   "openCount": 11,
   "closedCount": 38,
@@ -10587,12 +10555,12 @@ window.HOT_THEME_NEW_TRACKER = {
    "currentFloor": 0.865,
    "currentPrice": 0.87,
    "high": 0.87,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 1.8,
    "finalGain": 1.8,
    "day1ChangePct": -0.58,
-   "days": 91,
-   "lastDate": "2026-10-12",
+   "days": 90,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -11136,8 +11104,8 @@ window.HOT_THEME_NEW_TRACKER = {
    "maxGain": 7.7,
    "finalGain": 3.2,
    "day1ChangePct": 1.31,
-   "days": 61,
-   "lastDate": "2026-10-12",
+   "days": 60,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -11186,8 +11154,8 @@ window.HOT_THEME_NEW_TRACKER = {
    "maxGain": 33.3,
    "finalGain": 31.9,
    "day1ChangePct": -1.4,
-   "days": 59,
-   "lastDate": "2026-10-12",
+   "days": 58,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -11364,8 +11332,8 @@ window.HOT_THEME_NEW_TRACKER = {
    "maxGain": 0,
    "finalGain": -14,
    "day1ChangePct": 2.38,
-   "days": 36,
-   "lastDate": "2026-10-12",
+   "days": 35,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -11414,8 +11382,8 @@ window.HOT_THEME_NEW_TRACKER = {
    "maxGain": 28.6,
    "finalGain": 21.4,
    "day1ChangePct": -1.11,
-   "days": 11,
-   "lastDate": "2026-10-12",
+   "days": 10,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -11454,15 +11422,15 @@ window.HOT_THEME_NEW_TRACKER = {
    "entryDate": "2026-09-10",
    "entry": 1.68,
    "entryFloor": 1.7,
-   "currentFloor": 1.86,
+   "currentFloor": 1.82,
    "currentPrice": 2.11,
    "high": 2.24,
    "highDate": "2026-10-12",
    "maxGain": 33.3,
    "finalGain": 25.6,
    "day1ChangePct": -2.89,
-   "days": 24,
-   "lastDate": "2026-10-12",
+   "days": 23,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -11478,22 +11446,22 @@ window.HOT_THEME_NEW_TRACKER = {
    "entryDate": "2026-09-11",
    "entry": 0.61,
    "entryFloor": 0.58,
-   "currentFloor": 0.815,
+   "currentFloor": 0.81,
    "currentPrice": 0.835,
    "high": 0.84,
    "highDate": "2026-10-08",
    "maxGain": 37.7,
    "finalGain": 36.9,
    "day1ChangePct": 0,
-   "days": 23,
-   "lastDate": "2026-10-12",
+   "days": 22,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 0.791
+   "slTrail": 0.79
   },
   {
    "id": "CEB_2026-10-01_NEW",
@@ -11509,8 +11477,8 @@ window.HOT_THEME_NEW_TRACKER = {
    "maxGain": 8.3,
    "finalGain": 0,
    "day1ChangePct": 1.69,
-   "days": 10,
-   "lastDate": "2026-10-12",
+   "days": 9,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -11533,8 +11501,8 @@ window.HOT_THEME_NEW_TRACKER = {
    "maxGain": 14.8,
    "finalGain": 14.8,
    "day1ChangePct": 0,
-   "days": 6,
-   "lastDate": "2026-10-12",
+   "days": 5,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -11547,8 +11515,8 @@ window.HOT_THEME_NEW_TRACKER = {
 };
 window.HOT_THEME_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-12T16:51:07.081Z",
-  "dataDays": 96,
+  "generatedAt": "2026-10-13T09:05:19.680Z",
+  "dataDays": 95,
   "totalTracked": 173,
   "openCount": 45,
   "closedCount": 128,
@@ -11727,12 +11695,12 @@ window.HOT_THEME_ADDON_TRACKER = {
    "currentFloor": 0.865,
    "currentPrice": 0.87,
    "high": 0.87,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 1.8,
    "finalGain": 1.8,
    "day1ChangePct": 0.59,
-   "days": 88,
-   "lastDate": "2026-10-12",
+   "days": 87,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -11933,12 +11901,12 @@ window.HOT_THEME_ADDON_TRACKER = {
    "currentFloor": 0.865,
    "currentPrice": 0.87,
    "high": 0.87,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 1.8,
    "finalGain": 1.8,
    "day1ChangePct": 0.59,
-   "days": 85,
-   "lastDate": "2026-10-12",
+   "days": 84,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -12061,12 +12029,12 @@ window.HOT_THEME_ADDON_TRACKER = {
    "currentFloor": 0.865,
    "currentPrice": 0.87,
    "high": 0.87,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 1.8,
    "finalGain": 1.8,
    "day1ChangePct": 0,
-   "days": 83,
-   "lastDate": "2026-10-12",
+   "days": 82,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -12137,12 +12105,12 @@ window.HOT_THEME_ADDON_TRACKER = {
    "currentFloor": 0.865,
    "currentPrice": 0.87,
    "high": 0.87,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 1.8,
    "finalGain": 1.8,
    "day1ChangePct": 0,
-   "days": 82,
-   "lastDate": "2026-10-12",
+   "days": 81,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -12841,8 +12809,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 43.8,
    "finalGain": 41,
    "day1ChangePct": 1.04,
-   "days": 70,
-   "lastDate": "2026-10-12",
+   "days": 69,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -12865,8 +12833,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 15,
    "finalGain": 7.9,
    "day1ChangePct": 0.25,
-   "days": 70,
-   "lastDate": "2026-10-12",
+   "days": 69,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -12967,8 +12935,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 47.1,
    "finalGain": 44.2,
    "day1ChangePct": -2.18,
-   "days": 69,
-   "lastDate": "2026-10-12",
+   "days": 68,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -13407,8 +13375,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 48.8,
    "finalGain": 45.9,
    "day1ChangePct": 1.21,
-   "days": 66,
-   "lastDate": "2026-10-12",
+   "days": 65,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -13587,8 +13555,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 52.2,
    "finalGain": 49.3,
    "day1ChangePct": -0.27,
-   "days": 64,
-   "lastDate": "2026-10-12",
+   "days": 63,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -13819,8 +13787,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 43.7,
    "finalGain": 40.8,
    "day1ChangePct": -1.76,
-   "days": 57,
-   "lastDate": "2026-10-12",
+   "days": 56,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -13869,8 +13837,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 14.9,
    "finalGain": 7.7,
    "day1ChangePct": -0.12,
-   "days": 56,
-   "lastDate": "2026-10-12",
+   "days": 55,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -14023,8 +13991,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 42.7,
    "finalGain": 39.9,
    "day1ChangePct": -1.63,
-   "days": 54,
-   "lastDate": "2026-10-12",
+   "days": 53,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -14125,8 +14093,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 39.4,
    "finalGain": 36.6,
    "day1ChangePct": 2.42,
-   "days": 53,
-   "lastDate": "2026-10-12",
+   "days": 52,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -14227,8 +14195,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 40.3,
    "finalGain": 37.5,
    "day1ChangePct": -0.62,
-   "days": 52,
-   "lastDate": "2026-10-12",
+   "days": 51,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -14667,8 +14635,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 6.6,
    "finalGain": 0,
    "day1ChangePct": -0.8,
-   "days": 44,
-   "lastDate": "2026-10-12",
+   "days": 43,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -14743,8 +14711,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 5,
    "finalGain": -1.5,
    "day1ChangePct": 1.51,
-   "days": 43,
-   "lastDate": "2026-10-12",
+   "days": 42,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -14793,8 +14761,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 5.4,
    "finalGain": -1.1,
    "day1ChangePct": -0.34,
-   "days": 42,
-   "lastDate": "2026-10-12",
+   "days": 41,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -14869,8 +14837,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 5.7,
    "finalGain": -0.8,
    "day1ChangePct": -0.34,
-   "days": 41,
-   "lastDate": "2026-10-12",
+   "days": 40,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -15023,8 +14991,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 2.2,
    "finalGain": -2.2,
    "day1ChangePct": 1.1,
-   "days": 39,
-   "lastDate": "2026-10-12",
+   "days": 38,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -15047,8 +15015,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 3.7,
    "finalGain": -0.7,
    "day1ChangePct": -0.37,
-   "days": 38,
-   "lastDate": "2026-10-12",
+   "days": 37,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -15071,8 +15039,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 13.6,
    "finalGain": 10.3,
    "day1ChangePct": 0.94,
-   "days": 37,
-   "lastDate": "2026-10-12",
+   "days": 36,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -15095,8 +15063,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 13.6,
    "finalGain": 10.3,
    "day1ChangePct": 0,
-   "days": 36,
-   "lastDate": "2026-10-12",
+   "days": 35,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -15145,8 +15113,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 17.6,
    "finalGain": 14.1,
    "day1ChangePct": -3.36,
-   "days": 35,
-   "lastDate": "2026-10-12",
+   "days": 34,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -15195,8 +15163,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 13.6,
    "finalGain": 10.3,
    "day1ChangePct": 3.48,
-   "days": 34,
-   "lastDate": "2026-10-12",
+   "days": 33,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -15323,8 +15291,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 15.2,
    "finalGain": 11.7,
    "day1ChangePct": 0.76,
-   "days": 31,
-   "lastDate": "2026-10-12",
+   "days": 30,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -15399,8 +15367,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 4.9,
    "finalGain": -0.7,
    "day1ChangePct": -0.69,
-   "days": 28,
-   "lastDate": "2026-10-12",
+   "days": 27,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -15449,8 +15417,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 6.7,
    "finalGain": 0.9,
    "day1ChangePct": -1.61,
-   "days": 27,
-   "lastDate": "2026-10-12",
+   "days": 26,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -15499,8 +15467,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 4.9,
    "finalGain": -0.7,
    "day1ChangePct": 1.64,
-   "days": 26,
-   "lastDate": "2026-10-12",
+   "days": 25,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -15523,8 +15491,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 5.4,
    "finalGain": -0.2,
    "day1ChangePct": -0.46,
-   "days": 25,
-   "lastDate": "2026-10-12",
+   "days": 24,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -15573,8 +15541,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 5.4,
    "finalGain": -0.2,
    "day1ChangePct": 0,
-   "days": 24,
-   "lastDate": "2026-10-12",
+   "days": 23,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -15623,8 +15591,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 7.8,
    "finalGain": 2,
    "day1ChangePct": -2.2,
-   "days": 23,
-   "lastDate": "2026-10-12",
+   "days": 22,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -15647,8 +15615,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 7.8,
    "finalGain": 2,
    "day1ChangePct": -2.2,
-   "days": 22,
-   "lastDate": "2026-10-12",
+   "days": 21,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -15671,8 +15639,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 6.9,
    "finalGain": 1.2,
    "day1ChangePct": 0.59,
-   "days": 20,
-   "lastDate": "2026-10-12",
+   "days": 19,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -15695,8 +15663,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 4.2,
    "finalGain": -1.4,
    "day1ChangePct": 2.58,
-   "days": 19,
-   "lastDate": "2026-10-12",
+   "days": 18,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -15712,22 +15680,22 @@ window.HOT_THEME_ADDON_TRACKER = {
    "entryDate": "2026-09-24",
    "entry": 2.61,
    "entryFloor": 2.54,
-   "currentFloor": 2.77,
+   "currentFloor": 2.67,
    "currentPrice": 2.77,
    "high": 2.86,
    "highDate": "2026-10-12",
    "maxGain": 9.6,
    "finalGain": 6.1,
    "day1ChangePct": -2.61,
-   "days": 15,
-   "lastDate": "2026-10-12",
+   "days": 14,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 2.687
+   "slTrail": 2.59
   },
   {
    "id": "SUM_2026-09-25_ADDON",
@@ -15736,22 +15704,22 @@ window.HOT_THEME_ADDON_TRACKER = {
    "entryDate": "2026-09-25",
    "entry": 0.725,
    "entryFloor": 0.705,
-   "currentFloor": 0.815,
+   "currentFloor": 0.81,
    "currentPrice": 0.835,
    "high": 0.84,
    "highDate": "2026-10-08",
    "maxGain": 15.9,
    "finalGain": 15.2,
    "day1ChangePct": 1.4,
-   "days": 14,
-   "lastDate": "2026-10-12",
+   "days": 13,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": true,
-   "slTrail": 0.791
+   "slTrail": 0.786
   },
   {
    "id": "GREATEC_2026-09-25_ADDON",
@@ -15767,8 +15735,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 7.6,
    "finalGain": 3.1,
    "day1ChangePct": 2.34,
-   "days": 14,
-   "lastDate": "2026-10-12",
+   "days": 13,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -15784,22 +15752,22 @@ window.HOT_THEME_ADDON_TRACKER = {
    "entryDate": "2026-09-28",
    "entry": 0.72,
    "entryFloor": 0.71,
-   "currentFloor": 0.815,
+   "currentFloor": 0.81,
    "currentPrice": 0.835,
    "high": 0.84,
    "highDate": "2026-10-08",
    "maxGain": 16.7,
    "finalGain": 16,
    "day1ChangePct": -0.69,
-   "days": 13,
-   "lastDate": "2026-10-12",
+   "days": 12,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": true,
-   "slTrail": 0.791
+   "slTrail": 0.786
   },
   {
    "id": "NATGATE_2026-10-01_ADDON",
@@ -15808,15 +15776,15 @@ window.HOT_THEME_ADDON_TRACKER = {
    "entryDate": "2026-10-01",
    "entry": 1.77,
    "entryFloor": 1.76,
-   "currentFloor": 1.86,
+   "currentFloor": 1.82,
    "currentPrice": 2.11,
    "high": 2.24,
    "highDate": "2026-10-12",
    "maxGain": 26.6,
    "finalGain": 19.2,
    "day1ChangePct": 0.57,
-   "days": 10,
-   "lastDate": "2026-10-12",
+   "days": 9,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -15832,22 +15800,22 @@ window.HOT_THEME_ADDON_TRACKER = {
    "entryDate": "2026-10-01",
    "entry": 2.51,
    "entryFloor": 2.5,
-   "currentFloor": 2.77,
+   "currentFloor": 2.67,
    "currentPrice": 2.77,
    "high": 2.86,
    "highDate": "2026-10-12",
    "maxGain": 13.9,
    "finalGain": 10.4,
    "day1ChangePct": 0.4,
-   "days": 10,
-   "lastDate": "2026-10-12",
+   "days": 9,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 2.687
+   "slTrail": 2.59
   },
   {
    "id": "INARI_2026-10-02_ADDON",
@@ -15856,22 +15824,22 @@ window.HOT_THEME_ADDON_TRACKER = {
    "entryDate": "2026-10-02",
    "entry": 2.58,
    "entryFloor": 2.5,
-   "currentFloor": 2.77,
+   "currentFloor": 2.67,
    "currentPrice": 2.77,
    "high": 2.86,
    "highDate": "2026-10-12",
    "maxGain": 10.9,
    "finalGain": 7.4,
    "day1ChangePct": 2.79,
-   "days": 9,
-   "lastDate": "2026-10-12",
+   "days": 8,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 2.687
+   "slTrail": 2.59
   },
   {
    "id": "INARI_2026-10-05_ADDON",
@@ -15880,22 +15848,22 @@ window.HOT_THEME_ADDON_TRACKER = {
    "entryDate": "2026-10-05",
    "entry": 2.57,
    "entryFloor": 2.5,
-   "currentFloor": 2.77,
+   "currentFloor": 2.67,
    "currentPrice": 2.77,
    "high": 2.86,
    "highDate": "2026-10-12",
    "maxGain": 11.3,
    "finalGain": 7.8,
    "day1ChangePct": -0.39,
-   "days": 8,
-   "lastDate": "2026-10-12",
+   "days": 7,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 2.687
+   "slTrail": 2.59
   },
   {
    "id": "CEB_2026-10-05_ADDON",
@@ -15911,8 +15879,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 8.3,
    "finalGain": 0,
    "day1ChangePct": 0,
-   "days": 8,
-   "lastDate": "2026-10-12",
+   "days": 7,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -15928,15 +15896,15 @@ window.HOT_THEME_ADDON_TRACKER = {
    "entryDate": "2026-10-06",
    "entry": 1.82,
    "entryFloor": 1.76,
-   "currentFloor": 1.86,
+   "currentFloor": 1.82,
    "currentPrice": 2.11,
    "high": 2.24,
    "highDate": "2026-10-12",
    "maxGain": 23.1,
    "finalGain": 15.9,
    "day1ChangePct": -0.55,
-   "days": 7,
-   "lastDate": "2026-10-12",
+   "days": 6,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -15959,8 +15927,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 8.3,
    "finalGain": 0,
    "day1ChangePct": -1.64,
-   "days": 6,
-   "lastDate": "2026-10-12",
+   "days": 5,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -15973,10 +15941,10 @@ window.HOT_THEME_ADDON_TRACKER = {
 };
 window.HOT_THEME_FLOOR_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-12T16:51:07.081Z",
-  "dataDays": 96,
-  "totalTracked": 156,
-  "openCount": 78,
+  "generatedAt": "2026-10-13T09:05:19.681Z",
+  "dataDays": 95,
+  "totalTracked": 155,
+  "openCount": 77,
   "closedCount": 78,
   "closedWins": 27,
   "closedWinRate": 35,
@@ -16677,8 +16645,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 18.4,
    "finalGain": 11.1,
    "day1ChangePct": -0.38,
-   "days": 68,
-   "lastDate": "2026-10-12",
+   "days": 67,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -16728,8 +16696,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 18.4,
    "finalGain": 11.1,
    "day1ChangePct": -0.38,
-   "days": 67,
-   "lastDate": "2026-10-12",
+   "days": 66,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -17014,8 +16982,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 17.5,
    "finalGain": 10.2,
    "day1ChangePct": 0.77,
-   "days": 61,
-   "lastDate": "2026-10-12",
+   "days": 60,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -17088,8 +17056,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 40.3,
    "finalGain": 37.5,
    "day1ChangePct": 2.43,
-   "days": 56,
-   "lastDate": "2026-10-12",
+   "days": 55,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -17139,8 +17107,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 40.4,
    "finalGain": 37.7,
    "day1ChangePct": -0.13,
-   "days": 55,
-   "lastDate": "2026-10-12",
+   "days": 54,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -17189,8 +17157,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 12.1,
    "finalGain": 5.1,
    "day1ChangePct": 2.5,
-   "days": 55,
-   "lastDate": "2026-10-12",
+   "days": 54,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -17444,8 +17412,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 5.7,
    "finalGain": -0.8,
    "day1ChangePct": -0.91,
-   "days": 45,
-   "lastDate": "2026-10-12",
+   "days": 44,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -17572,8 +17540,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 9.5,
    "finalGain": 6.3,
    "day1ChangePct": -0.89,
-   "days": 43,
-   "lastDate": "2026-10-12",
+   "days": 42,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -17596,8 +17564,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 18.9,
    "finalGain": 16.5,
    "day1ChangePct": -1.05,
-   "days": 43,
-   "lastDate": "2026-10-12",
+   "days": 42,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -17646,8 +17614,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 3.3,
    "finalGain": -1.1,
    "day1ChangePct": 0.37,
-   "days": 41,
-   "lastDate": "2026-10-12",
+   "days": 40,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -17670,8 +17638,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 20.8,
    "finalGain": 18.4,
    "day1ChangePct": -1.17,
-   "days": 41,
-   "lastDate": "2026-10-12",
+   "days": 40,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -17720,8 +17688,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 12.2,
    "finalGain": 8.9,
    "day1ChangePct": -1.63,
-   "days": 40,
-   "lastDate": "2026-10-12",
+   "days": 39,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -17744,8 +17712,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 20.5,
    "finalGain": 18.2,
    "day1ChangePct": 0.22,
-   "days": 40,
-   "lastDate": "2026-10-12",
+   "days": 39,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -17768,8 +17736,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 2.2,
    "finalGain": -2.2,
    "day1ChangePct": 1.1,
-   "days": 40,
-   "lastDate": "2026-10-12",
+   "days": 39,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -17792,8 +17760,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 12.2,
    "finalGain": 8.9,
    "day1ChangePct": -1.63,
-   "days": 39,
-   "lastDate": "2026-10-12",
+   "days": 38,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -17842,8 +17810,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 20.5,
    "finalGain": 18.2,
    "day1ChangePct": 0.22,
-   "days": 39,
-   "lastDate": "2026-10-12",
+   "days": 38,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -17892,8 +17860,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 20,
    "finalGain": 17.6,
    "day1ChangePct": -0.95,
-   "days": 38,
-   "lastDate": "2026-10-12",
+   "days": 37,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -17916,8 +17884,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 21.2,
    "finalGain": 18.8,
    "day1ChangePct": -0.96,
-   "days": 37,
-   "lastDate": "2026-10-12",
+   "days": 36,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -17966,8 +17934,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 23,
    "finalGain": 20.6,
    "day1ChangePct": 1.33,
-   "days": 34,
-   "lastDate": "2026-10-12",
+   "days": 33,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -18147,8 +18115,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 11,
    "finalGain": 6.3,
    "day1ChangePct": -0.39,
-   "days": 28,
-   "lastDate": "2026-10-12",
+   "days": 27,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -18197,8 +18165,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 24.1,
    "finalGain": 21.7,
    "day1ChangePct": -1.31,
-   "days": 27,
-   "lastDate": "2026-10-12",
+   "days": 26,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -18221,8 +18189,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 11.9,
    "finalGain": 7.1,
    "day1ChangePct": -0.79,
-   "days": 27,
-   "lastDate": "2026-10-12",
+   "days": 26,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -18268,12 +18236,12 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "currentFloor": 1.15,
    "currentPrice": 1.22,
    "high": 1.22,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 36.3,
    "finalGain": 36.3,
    "day1ChangePct": -0.56,
-   "days": 27,
-   "lastDate": "2026-10-12",
+   "days": 26,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -18296,8 +18264,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 10.2,
    "finalGain": 5.5,
    "day1ChangePct": 1.59,
-   "days": 26,
-   "lastDate": "2026-10-12",
+   "days": 25,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -18320,8 +18288,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 20.9,
    "finalGain": 18.5,
    "day1ChangePct": 2.65,
-   "days": 26,
-   "lastDate": "2026-10-12",
+   "days": 25,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -18340,12 +18308,12 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "currentFloor": 1.15,
    "currentPrice": 1.22,
    "high": 1.22,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 35.6,
    "finalGain": 35.6,
    "day1ChangePct": 0.56,
-   "days": 26,
-   "lastDate": "2026-10-12",
+   "days": 25,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -18368,8 +18336,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 10.2,
    "finalGain": 5.5,
    "day1ChangePct": 0,
-   "days": 25,
-   "lastDate": "2026-10-12",
+   "days": 24,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -18419,8 +18387,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 10.6,
    "finalGain": 5.9,
    "day1ChangePct": -0.39,
-   "days": 24,
-   "lastDate": "2026-10-12",
+   "days": 23,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -18522,8 +18490,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 10.6,
    "finalGain": 5.9,
    "day1ChangePct": 0,
-   "days": 23,
-   "lastDate": "2026-10-12",
+   "days": 22,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -18546,8 +18514,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 22.6,
    "finalGain": 20.2,
    "day1ChangePct": -3.38,
-   "days": 23,
-   "lastDate": "2026-10-12",
+   "days": 22,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -18596,8 +18564,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 10.6,
    "finalGain": 5.9,
    "day1ChangePct": 0,
-   "days": 22,
-   "lastDate": "2026-10-12",
+   "days": 21,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -18620,8 +18588,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 22.6,
    "finalGain": 20.2,
    "day1ChangePct": -3.38,
-   "days": 22,
-   "lastDate": "2026-10-12",
+   "days": 21,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -18689,15 +18657,15 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "entryDate": "2026-09-15",
    "entry": 1.68,
    "entryFloor": 1.68,
-   "currentFloor": 1.86,
+   "currentFloor": 1.82,
    "currentPrice": 2.11,
    "high": 2.24,
    "highDate": "2026-10-12",
    "maxGain": 33.3,
    "finalGain": 25.6,
    "day1ChangePct": 1.2,
-   "days": 21,
-   "lastDate": "2026-10-12",
+   "days": 20,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -18713,15 +18681,15 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "entryDate": "2026-09-17",
    "entry": 1.68,
    "entryFloor": 1.68,
-   "currentFloor": 1.86,
+   "currentFloor": 1.82,
    "currentPrice": 2.11,
    "high": 2.24,
    "highDate": "2026-10-12",
    "maxGain": 33.3,
    "finalGain": 25.6,
    "day1ChangePct": 0,
-   "days": 20,
-   "lastDate": "2026-10-12",
+   "days": 19,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -18744,8 +18712,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 10.6,
    "finalGain": 5.9,
    "day1ChangePct": 2,
-   "days": 20,
-   "lastDate": "2026-10-12",
+   "days": 19,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -18768,8 +18736,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 10.6,
    "finalGain": 5.9,
    "day1ChangePct": 0,
-   "days": 19,
-   "lastDate": "2026-10-12",
+   "days": 18,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -18818,8 +18786,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 8.9,
    "finalGain": 4.2,
    "day1ChangePct": 0,
-   "days": 17,
-   "lastDate": "2026-10-12",
+   "days": 16,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -18842,8 +18810,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 7.6,
    "finalGain": 3.1,
    "day1ChangePct": 1.16,
-   "days": 16,
-   "lastDate": "2026-10-12",
+   "days": 15,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -18859,22 +18827,22 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "entryDate": "2026-09-23",
    "entry": 2.68,
    "entryFloor": 2.54,
-   "currentFloor": 2.77,
+   "currentFloor": 2.67,
    "currentPrice": 2.77,
    "high": 2.86,
    "highDate": "2026-10-12",
    "maxGain": 6.7,
    "finalGain": 3.4,
    "day1ChangePct": -0.74,
-   "days": 16,
-   "lastDate": "2026-10-12",
+   "days": 15,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 2.687
+   "slTrail": 2.59
   },
   {
    "id": "PENTA_2026-09-23_ADDON",
@@ -18890,8 +18858,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 12.4,
    "finalGain": 9.1,
    "day1ChangePct": -0.73,
-   "days": 16,
-   "lastDate": "2026-10-12",
+   "days": 15,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -18907,22 +18875,22 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "entryDate": "2026-09-24",
    "entry": 0.715,
    "entryFloor": 0.69,
-   "currentFloor": 0.815,
+   "currentFloor": 0.81,
    "currentPrice": 0.835,
    "high": 0.84,
    "highDate": "2026-10-08",
    "maxGain": 17.5,
    "finalGain": 16.8,
    "day1ChangePct": -1.38,
-   "days": 15,
-   "lastDate": "2026-10-12",
+   "days": 14,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 0.791
+   "slTrail": 0.786
   },
   {
    "id": "VITROX_2026-09-24_ADDON",
@@ -18938,8 +18906,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 13.6,
    "finalGain": 11.3,
    "day1ChangePct": 0,
-   "days": 15,
-   "lastDate": "2026-10-12",
+   "days": 14,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -18988,8 +18956,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 23.5,
    "finalGain": 22.3,
    "day1ChangePct": -2.25,
-   "days": 15,
-   "lastDate": "2026-10-12",
+   "days": 14,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -19005,22 +18973,22 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "entryDate": "2026-09-25",
    "entry": 2.66,
    "entryFloor": 2.61,
-   "currentFloor": 2.77,
+   "currentFloor": 2.67,
    "currentPrice": 2.77,
    "high": 2.86,
    "highDate": "2026-10-12",
    "maxGain": 7.5,
    "finalGain": 4.1,
    "day1ChangePct": 1.92,
-   "days": 14,
-   "lastDate": "2026-10-12",
+   "days": 13,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 2.687
+   "slTrail": 2.59
   },
   {
    "id": "VITROX_2026-09-25_ADDON",
@@ -19036,8 +19004,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 13.2,
    "finalGain": 11,
    "day1ChangePct": 0.3,
-   "days": 14,
-   "lastDate": "2026-10-12",
+   "days": 13,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -19053,15 +19021,15 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "entryDate": "2026-09-25",
    "entry": 0.475,
    "entryFloor": 0.455,
-   "currentFloor": 0.51,
+   "currentFloor": 0.5,
    "currentPrice": 0.52,
    "high": 0.525,
    "highDate": "2026-10-08",
    "maxGain": 10.5,
    "finalGain": 9.5,
    "day1ChangePct": -1.04,
-   "days": 14,
-   "lastDate": "2026-10-12",
+   "days": 13,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor",
@@ -19069,7 +19037,7 @@ window.HOT_THEME_FLOOR_TRACKER = {
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 0.495
+   "slTrail": 0.485
   },
   {
    "id": "VITROX_2026-09-28_ADDON",
@@ -19085,8 +19053,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 13.8,
    "finalGain": 11.6,
    "day1ChangePct": -0.5,
-   "days": 13,
-   "lastDate": "2026-10-12",
+   "days": 12,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -19105,12 +19073,12 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "currentFloor": 1.17,
    "currentPrice": 1.2,
    "high": 1.2,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 2.6,
    "finalGain": 2.6,
    "day1ChangePct": -2.5,
-   "days": 13,
-   "lastDate": "2026-10-12",
+   "days": 12,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -19133,8 +19101,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 10.6,
    "finalGain": 5.9,
    "day1ChangePct": 0,
-   "days": 12,
-   "lastDate": "2026-10-12",
+   "days": 11,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -19157,8 +19125,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 18.9,
    "finalGain": 11.9,
    "day1ChangePct": 1.06,
-   "days": 12,
-   "lastDate": "2026-10-12",
+   "days": 11,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -19181,8 +19149,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 12.2,
    "finalGain": 10,
    "day1ChangePct": 1.42,
-   "days": 12,
-   "lastDate": "2026-10-12",
+   "days": 11,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -19231,8 +19199,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 10.6,
    "finalGain": 5.9,
    "day1ChangePct": 0,
-   "days": 11,
-   "lastDate": "2026-10-12",
+   "days": 10,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -19255,8 +19223,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 13.2,
    "finalGain": 11,
    "day1ChangePct": -0.9,
-   "days": 11,
-   "lastDate": "2026-10-12",
+   "days": 10,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -19331,8 +19299,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 12.2,
    "finalGain": 10,
    "day1ChangePct": 0.91,
-   "days": 10,
-   "lastDate": "2026-10-12",
+   "days": 9,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -19407,8 +19375,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 9.7,
    "finalGain": 5.1,
    "day1ChangePct": 0.78,
-   "days": 9,
-   "lastDate": "2026-10-12",
+   "days": 8,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -19431,8 +19399,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 6.4,
    "finalGain": 0.9,
    "day1ChangePct": 2.8,
-   "days": 9,
-   "lastDate": "2026-10-12",
+   "days": 8,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -19451,12 +19419,12 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "currentFloor": 1.17,
    "currentPrice": 1.2,
    "high": 1.2,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": 1.69,
-   "days": 8,
-   "lastDate": "2026-10-12",
+   "days": 7,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -19475,12 +19443,12 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "currentFloor": 1.17,
    "currentPrice": 1.2,
    "high": 1.2,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": 0,
-   "days": 7,
-   "lastDate": "2026-10-12",
+   "days": 6,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -19496,15 +19464,15 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "entryDate": "2026-10-07",
    "entry": 1.86,
    "entryFloor": 1.76,
-   "currentFloor": 1.86,
+   "currentFloor": 1.82,
    "currentPrice": 2.11,
    "high": 2.24,
    "highDate": "2026-10-12",
    "maxGain": 20.4,
    "finalGain": 13.4,
    "day1ChangePct": 2.2,
-   "days": 6,
-   "lastDate": "2026-10-12",
+   "days": 5,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -19523,12 +19491,12 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "currentFloor": 1.17,
    "currentPrice": 1.2,
    "high": 1.2,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": 0,
-   "days": 6,
-   "lastDate": "2026-10-12",
+   "days": 5,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -19544,15 +19512,15 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "entryDate": "2026-10-07",
    "entry": 0.51,
    "entryFloor": 0.485,
-   "currentFloor": 0.51,
+   "currentFloor": 0.5,
    "currentPrice": 0.52,
    "high": 0.525,
    "highDate": "2026-10-08",
    "maxGain": 2.9,
    "finalGain": 2,
    "day1ChangePct": 2,
-   "days": 6,
-   "lastDate": "2026-10-12",
+   "days": 5,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor",
@@ -19560,7 +19528,7 @@ window.HOT_THEME_FLOOR_TRACKER = {
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 0.495
+   "slTrail": 0.485
   },
   {
    "id": "PWRWELL_2026-10-08_ADDON",
@@ -19572,12 +19540,12 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "currentFloor": 1.17,
    "currentPrice": 1.2,
    "high": 1.2,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 2.6,
    "finalGain": 2.6,
    "day1ChangePct": -2.5,
-   "days": 5,
-   "lastDate": "2026-10-12",
+   "days": 4,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -19596,12 +19564,12 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "currentFloor": 3.91,
    "currentPrice": 3.93,
    "high": 3.93,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0.5,
    "finalGain": 0.5,
    "day1ChangePct": -2.25,
-   "days": 5,
-   "lastDate": "2026-10-12",
+   "days": 4,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -19620,12 +19588,12 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "currentFloor": 3.91,
    "currentPrice": 3.93,
    "high": 3.93,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": 0.51,
-   "days": 4,
-   "lastDate": "2026-10-12",
+   "days": 3,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -19644,12 +19612,12 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "currentFloor": 1.17,
    "currentPrice": 1.2,
    "high": 1.2,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": 2.56,
-   "days": 4,
-   "lastDate": "2026-10-12",
+   "days": 3,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -19668,12 +19636,12 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "currentFloor": 7.95,
    "currentPrice": 7.96,
    "high": 7.96,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": -0.38,
-   "days": 4,
-   "lastDate": "2026-10-12",
+   "days": 3,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -19696,8 +19664,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 0,
    "finalGain": -0.4,
    "day1ChangePct": 0.35,
-   "days": 3,
-   "lastDate": "2026-10-12",
+   "days": 2,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -19713,15 +19681,15 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "entryDate": "2026-10-12",
    "entry": 0.51,
    "entryFloor": 0.5,
-   "currentFloor": 0.51,
+   "currentFloor": 0.5,
    "currentPrice": 0.52,
    "high": 0.52,
    "highDate": "2026-10-13",
    "maxGain": 2,
    "finalGain": 2,
    "day1ChangePct": -1.92,
-   "days": 3,
-   "lastDate": "2026-10-12",
+   "days": 2,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor",
@@ -19729,7 +19697,7 @@ window.HOT_THEME_FLOOR_TRACKER = {
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 0.495
+   "slTrail": 0.485
   },
   {
    "id": "SAMAIDEN_2026-10-12_ADDON",
@@ -19745,8 +19713,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 0.7,
    "finalGain": 0.7,
    "day1ChangePct": -0.66,
-   "days": 3,
-   "lastDate": "2026-10-12",
+   "days": 2,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -19765,12 +19733,12 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "currentFloor": 3.91,
    "currentPrice": 3.93,
    "high": 3.93,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0.3,
    "finalGain": 0.3,
    "day1ChangePct": -0.25,
-   "days": 3,
-   "lastDate": "2026-10-12",
+   "days": 2,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -19793,8 +19761,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 1,
    "finalGain": 1,
    "day1ChangePct": -0.94,
-   "days": 3,
-   "lastDate": "2026-10-12",
+   "days": 2,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -19813,12 +19781,12 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "currentFloor": 7.95,
    "currentPrice": 7.96,
    "high": 7.96,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0.1,
    "finalGain": 0.1,
    "day1ChangePct": -0.13,
-   "days": 3,
-   "lastDate": "2026-10-12",
+   "days": 2,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -19837,19 +19805,18 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "currentFloor": 3.91,
    "currentPrice": 3.93,
    "high": 3.93,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": 0.51,
-   "days": 2,
-   "lastDate": "2026-10-12",
+   "days": 1,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
    ],
    "confluence": 3,
-   "isGoldenCombo": true,
-   "slTrail": 3.793
+   "isGoldenCombo": true
   },
   {
    "id": "PWRWELL_2026-10-13_ADDON",
@@ -19861,36 +19828,12 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "currentFloor": 1.17,
    "currentPrice": 1.2,
    "high": 1.2,
-   "highDate": "2026-10-12",
-   "maxGain": 0,
-   "finalGain": 0,
-   "day1ChangePct": 2.56,
-   "days": 2,
-   "lastDate": "2026-10-12",
-   "status": "OPEN",
-   "themes": [
-    "Solar/RE"
-   ],
-   "confluence": 3,
-   "isGoldenCombo": false,
-   "slTrail": 1.135
-  },
-  {
-   "id": "PWRWELL_2026-10-12_ADDON",
-   "name": "PWRWELL",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
-   "entryDate": "2026-10-12",
-   "entry": 1.2,
-   "entryFloor": 1.17,
-   "currentFloor": 1.17,
-   "currentPrice": 1.2,
-   "high": 1.2,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": 2.56,
    "days": 1,
-   "lastDate": "2026-10-12",
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -19902,10 +19845,10 @@ window.HOT_THEME_FLOOR_TRACKER = {
 };
 window.HOT_THEME_ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-12T16:51:07.080Z",
-  "dataDays": 96,
-  "totalTracked": 378,
-  "openCount": 134,
+  "generatedAt": "2026-10-13T09:05:19.680Z",
+  "dataDays": 95,
+  "totalTracked": 377,
+  "openCount": 133,
   "closedCount": 244,
   "closedWins": 132,
   "closedWinRate": 54,
@@ -19925,19 +19868,18 @@ window.HOT_THEME_ALL_TRACKER = {
    "currentFloor": 3.91,
    "currentPrice": 3.93,
    "high": 3.93,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": 0.51,
-   "days": 2,
-   "lastDate": "2026-10-12",
+   "days": 1,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
    ],
    "confluence": 3,
-   "isGoldenCombo": true,
-   "slTrail": 3.793
+   "isGoldenCombo": true
   },
   {
    "id": "PWRWELL_2026-10-13_ADDON",
@@ -19949,19 +19891,18 @@ window.HOT_THEME_ALL_TRACKER = {
    "currentFloor": 1.17,
    "currentPrice": 1.2,
    "high": 1.2,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": 2.56,
-   "days": 2,
-   "lastDate": "2026-10-12",
+   "days": 1,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
    ],
    "confluence": 3,
-   "isGoldenCombo": false,
-   "slTrail": 1.135
+   "isGoldenCombo": false
   },
   {
    "id": "PEKAT_2026-10-12_ADDON",
@@ -19977,8 +19918,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 0,
    "finalGain": -0.4,
    "day1ChangePct": 0.35,
-   "days": 3,
-   "lastDate": "2026-10-12",
+   "days": 2,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -19994,15 +19935,15 @@ window.HOT_THEME_ALL_TRACKER = {
    "entryDate": "2026-10-12",
    "entry": 0.51,
    "entryFloor": 0.5,
-   "currentFloor": 0.51,
+   "currentFloor": 0.5,
    "currentPrice": 0.52,
    "high": 0.52,
    "highDate": "2026-10-13",
    "maxGain": 2,
    "finalGain": 2,
    "day1ChangePct": -1.92,
-   "days": 3,
-   "lastDate": "2026-10-12",
+   "days": 2,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor",
@@ -20010,7 +19951,7 @@ window.HOT_THEME_ALL_TRACKER = {
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 0.495
+   "slTrail": 0.485
   },
   {
    "id": "SAMAIDEN_2026-10-12_ADDON",
@@ -20026,8 +19967,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 0.7,
    "finalGain": 0.7,
    "day1ChangePct": -0.66,
-   "days": 3,
-   "lastDate": "2026-10-12",
+   "days": 2,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -20046,12 +19987,12 @@ window.HOT_THEME_ALL_TRACKER = {
    "currentFloor": 3.91,
    "currentPrice": 3.93,
    "high": 3.93,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0.3,
    "finalGain": 0.3,
    "day1ChangePct": -0.25,
-   "days": 3,
-   "lastDate": "2026-10-12",
+   "days": 2,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -20074,8 +20015,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 1,
    "finalGain": 1,
    "day1ChangePct": -0.94,
-   "days": 3,
-   "lastDate": "2026-10-12",
+   "days": 2,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -20094,12 +20035,12 @@ window.HOT_THEME_ALL_TRACKER = {
    "currentFloor": 7.95,
    "currentPrice": 7.96,
    "high": 7.96,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0.1,
    "finalGain": 0.1,
    "day1ChangePct": -0.13,
-   "days": 3,
-   "lastDate": "2026-10-12",
+   "days": 2,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -20107,29 +20048,6 @@ window.HOT_THEME_ALL_TRACKER = {
    "confluence": 3,
    "isGoldenCombo": false,
    "slTrail": 7.712
-  },
-  {
-   "id": "PWRWELL_2026-10-12_ADDON",
-   "name": "PWRWELL",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
-   "entryDate": "2026-10-12",
-   "entry": 1.2,
-   "entryFloor": 1.17,
-   "currentFloor": 1.17,
-   "currentPrice": 1.2,
-   "high": 1.2,
-   "highDate": "2026-10-12",
-   "maxGain": 0,
-   "finalGain": 0,
-   "day1ChangePct": 2.56,
-   "days": 1,
-   "lastDate": "2026-10-12",
-   "status": "OPEN",
-   "themes": [
-    "Solar/RE"
-   ],
-   "confluence": 3,
-   "isGoldenCombo": false
   },
   {
    "id": "MNHLDG_2026-10-09_ADDON",
@@ -20141,12 +20059,12 @@ window.HOT_THEME_ALL_TRACKER = {
    "currentFloor": 3.91,
    "currentPrice": 3.93,
    "high": 3.93,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": 0.51,
-   "days": 4,
-   "lastDate": "2026-10-12",
+   "days": 3,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -20165,12 +20083,12 @@ window.HOT_THEME_ALL_TRACKER = {
    "currentFloor": 1.17,
    "currentPrice": 1.2,
    "high": 1.2,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": 2.56,
-   "days": 4,
-   "lastDate": "2026-10-12",
+   "days": 3,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -20189,12 +20107,12 @@ window.HOT_THEME_ALL_TRACKER = {
    "currentFloor": 7.95,
    "currentPrice": 7.96,
    "high": 7.96,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": -0.38,
-   "days": 4,
-   "lastDate": "2026-10-12",
+   "days": 3,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -20213,12 +20131,12 @@ window.HOT_THEME_ALL_TRACKER = {
    "currentFloor": 1.17,
    "currentPrice": 1.2,
    "high": 1.2,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 2.6,
    "finalGain": 2.6,
    "day1ChangePct": -2.5,
-   "days": 5,
-   "lastDate": "2026-10-12",
+   "days": 4,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -20237,12 +20155,12 @@ window.HOT_THEME_ALL_TRACKER = {
    "currentFloor": 3.91,
    "currentPrice": 3.93,
    "high": 3.93,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0.5,
    "finalGain": 0.5,
    "day1ChangePct": -2.25,
-   "days": 5,
-   "lastDate": "2026-10-12",
+   "days": 4,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -20265,8 +20183,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 14.8,
    "finalGain": 14.8,
    "day1ChangePct": 0,
-   "days": 6,
-   "lastDate": "2026-10-12",
+   "days": 5,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -20289,8 +20207,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 8.3,
    "finalGain": 0,
    "day1ChangePct": -1.64,
-   "days": 6,
-   "lastDate": "2026-10-12",
+   "days": 5,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -20306,15 +20224,15 @@ window.HOT_THEME_ALL_TRACKER = {
    "entryDate": "2026-10-07",
    "entry": 1.86,
    "entryFloor": 1.76,
-   "currentFloor": 1.86,
+   "currentFloor": 1.82,
    "currentPrice": 2.11,
    "high": 2.24,
    "highDate": "2026-10-12",
    "maxGain": 20.4,
    "finalGain": 13.4,
    "day1ChangePct": 2.2,
-   "days": 6,
-   "lastDate": "2026-10-12",
+   "days": 5,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -20333,12 +20251,12 @@ window.HOT_THEME_ALL_TRACKER = {
    "currentFloor": 1.17,
    "currentPrice": 1.2,
    "high": 1.2,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": 0,
-   "days": 6,
-   "lastDate": "2026-10-12",
+   "days": 5,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -20354,15 +20272,15 @@ window.HOT_THEME_ALL_TRACKER = {
    "entryDate": "2026-10-07",
    "entry": 0.51,
    "entryFloor": 0.485,
-   "currentFloor": 0.51,
+   "currentFloor": 0.5,
    "currentPrice": 0.52,
    "high": 0.525,
    "highDate": "2026-10-08",
    "maxGain": 2.9,
    "finalGain": 2,
    "day1ChangePct": 2,
-   "days": 6,
-   "lastDate": "2026-10-12",
+   "days": 5,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor",
@@ -20370,7 +20288,7 @@ window.HOT_THEME_ALL_TRACKER = {
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 0.495
+   "slTrail": 0.485
   },
   {
    "id": "NATGATE_2026-10-06_ADDON",
@@ -20379,15 +20297,15 @@ window.HOT_THEME_ALL_TRACKER = {
    "entryDate": "2026-10-06",
    "entry": 1.82,
    "entryFloor": 1.76,
-   "currentFloor": 1.86,
+   "currentFloor": 1.82,
    "currentPrice": 2.11,
    "high": 2.24,
    "highDate": "2026-10-12",
    "maxGain": 23.1,
    "finalGain": 15.9,
    "day1ChangePct": -0.55,
-   "days": 7,
-   "lastDate": "2026-10-12",
+   "days": 6,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -20406,12 +20324,12 @@ window.HOT_THEME_ALL_TRACKER = {
    "currentFloor": 1.17,
    "currentPrice": 1.2,
    "high": 1.2,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": 0,
-   "days": 7,
-   "lastDate": "2026-10-12",
+   "days": 6,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -20427,22 +20345,22 @@ window.HOT_THEME_ALL_TRACKER = {
    "entryDate": "2026-10-05",
    "entry": 2.57,
    "entryFloor": 2.5,
-   "currentFloor": 2.77,
+   "currentFloor": 2.67,
    "currentPrice": 2.77,
    "high": 2.86,
    "highDate": "2026-10-12",
    "maxGain": 11.3,
    "finalGain": 7.8,
    "day1ChangePct": -0.39,
-   "days": 8,
-   "lastDate": "2026-10-12",
+   "days": 7,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 2.687
+   "slTrail": 2.59
   },
   {
    "id": "CEB_2026-10-05_ADDON",
@@ -20458,8 +20376,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 8.3,
    "finalGain": 0,
    "day1ChangePct": 0,
-   "days": 8,
-   "lastDate": "2026-10-12",
+   "days": 7,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -20478,12 +20396,12 @@ window.HOT_THEME_ALL_TRACKER = {
    "currentFloor": 1.17,
    "currentPrice": 1.2,
    "high": 1.2,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": 1.69,
-   "days": 8,
-   "lastDate": "2026-10-12",
+   "days": 7,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -20506,8 +20424,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 9.7,
    "finalGain": 5.1,
    "day1ChangePct": 0.78,
-   "days": 9,
-   "lastDate": "2026-10-12",
+   "days": 8,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -20530,8 +20448,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 6.4,
    "finalGain": 0.9,
    "day1ChangePct": 2.8,
-   "days": 9,
-   "lastDate": "2026-10-12",
+   "days": 8,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -20547,22 +20465,22 @@ window.HOT_THEME_ALL_TRACKER = {
    "entryDate": "2026-10-02",
    "entry": 2.58,
    "entryFloor": 2.5,
-   "currentFloor": 2.77,
+   "currentFloor": 2.67,
    "currentPrice": 2.77,
    "high": 2.86,
    "highDate": "2026-10-12",
    "maxGain": 10.9,
    "finalGain": 7.4,
    "day1ChangePct": 2.79,
-   "days": 9,
-   "lastDate": "2026-10-12",
+   "days": 8,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 2.687
+   "slTrail": 2.59
   },
   {
    "id": "CEB_2026-10-01_NEW",
@@ -20578,8 +20496,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 8.3,
    "finalGain": 0,
    "day1ChangePct": 1.69,
-   "days": 10,
-   "lastDate": "2026-10-12",
+   "days": 9,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -20595,15 +20513,15 @@ window.HOT_THEME_ALL_TRACKER = {
    "entryDate": "2026-10-01",
    "entry": 1.77,
    "entryFloor": 1.76,
-   "currentFloor": 1.86,
+   "currentFloor": 1.82,
    "currentPrice": 2.11,
    "high": 2.24,
    "highDate": "2026-10-12",
    "maxGain": 26.6,
    "finalGain": 19.2,
    "day1ChangePct": 0.57,
-   "days": 10,
-   "lastDate": "2026-10-12",
+   "days": 9,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -20619,22 +20537,22 @@ window.HOT_THEME_ALL_TRACKER = {
    "entryDate": "2026-10-01",
    "entry": 2.51,
    "entryFloor": 2.5,
-   "currentFloor": 2.77,
+   "currentFloor": 2.67,
    "currentPrice": 2.77,
    "high": 2.86,
    "highDate": "2026-10-12",
    "maxGain": 13.9,
    "finalGain": 10.4,
    "day1ChangePct": 0.4,
-   "days": 10,
-   "lastDate": "2026-10-12",
+   "days": 9,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 2.687
+   "slTrail": 2.59
   },
   {
    "id": "VITROX_2026-10-01_ADDON",
@@ -20650,8 +20568,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 12.2,
    "finalGain": 10,
    "day1ChangePct": 0.91,
-   "days": 10,
-   "lastDate": "2026-10-12",
+   "days": 9,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -20726,8 +20644,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 10.6,
    "finalGain": 5.9,
    "day1ChangePct": 0,
-   "days": 11,
-   "lastDate": "2026-10-12",
+   "days": 10,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -20750,8 +20668,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 13.2,
    "finalGain": 11,
    "day1ChangePct": -0.9,
-   "days": 11,
-   "lastDate": "2026-10-12",
+   "days": 10,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -20826,8 +20744,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 10.6,
    "finalGain": 5.9,
    "day1ChangePct": 0,
-   "days": 12,
-   "lastDate": "2026-10-12",
+   "days": 11,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -20850,8 +20768,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 18.9,
    "finalGain": 11.9,
    "day1ChangePct": 1.06,
-   "days": 12,
-   "lastDate": "2026-10-12",
+   "days": 11,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -20874,8 +20792,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 12.2,
    "finalGain": 10,
    "day1ChangePct": 1.42,
-   "days": 12,
-   "lastDate": "2026-10-12",
+   "days": 11,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -20917,22 +20835,22 @@ window.HOT_THEME_ALL_TRACKER = {
    "entryDate": "2026-09-28",
    "entry": 0.72,
    "entryFloor": 0.71,
-   "currentFloor": 0.815,
+   "currentFloor": 0.81,
    "currentPrice": 0.835,
    "high": 0.84,
    "highDate": "2026-10-08",
    "maxGain": 16.7,
    "finalGain": 16,
    "day1ChangePct": -0.69,
-   "days": 13,
-   "lastDate": "2026-10-12",
+   "days": 12,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": true,
-   "slTrail": 0.791
+   "slTrail": 0.786
   },
   {
    "id": "VITROX_2026-09-28_ADDON",
@@ -20948,8 +20866,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 13.8,
    "finalGain": 11.6,
    "day1ChangePct": -0.5,
-   "days": 13,
-   "lastDate": "2026-10-12",
+   "days": 12,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -20968,12 +20886,12 @@ window.HOT_THEME_ALL_TRACKER = {
    "currentFloor": 1.17,
    "currentPrice": 1.2,
    "high": 1.2,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 2.6,
    "finalGain": 2.6,
    "day1ChangePct": -2.5,
-   "days": 13,
-   "lastDate": "2026-10-12",
+   "days": 12,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -20989,22 +20907,22 @@ window.HOT_THEME_ALL_TRACKER = {
    "entryDate": "2026-09-25",
    "entry": 2.66,
    "entryFloor": 2.61,
-   "currentFloor": 2.77,
+   "currentFloor": 2.67,
    "currentPrice": 2.77,
    "high": 2.86,
    "highDate": "2026-10-12",
    "maxGain": 7.5,
    "finalGain": 4.1,
    "day1ChangePct": 1.92,
-   "days": 14,
-   "lastDate": "2026-10-12",
+   "days": 13,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 2.687
+   "slTrail": 2.59
   },
   {
    "id": "SUM_2026-09-25_ADDON",
@@ -21013,22 +20931,22 @@ window.HOT_THEME_ALL_TRACKER = {
    "entryDate": "2026-09-25",
    "entry": 0.725,
    "entryFloor": 0.705,
-   "currentFloor": 0.815,
+   "currentFloor": 0.81,
    "currentPrice": 0.835,
    "high": 0.84,
    "highDate": "2026-10-08",
    "maxGain": 15.9,
    "finalGain": 15.2,
    "day1ChangePct": 1.4,
-   "days": 14,
-   "lastDate": "2026-10-12",
+   "days": 13,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": true,
-   "slTrail": 0.791
+   "slTrail": 0.786
   },
   {
    "id": "GREATEC_2026-09-25_ADDON",
@@ -21044,8 +20962,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 7.6,
    "finalGain": 3.1,
    "day1ChangePct": 2.34,
-   "days": 14,
-   "lastDate": "2026-10-12",
+   "days": 13,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -21068,8 +20986,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 13.2,
    "finalGain": 11,
    "day1ChangePct": 0.3,
-   "days": 14,
-   "lastDate": "2026-10-12",
+   "days": 13,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -21085,15 +21003,15 @@ window.HOT_THEME_ALL_TRACKER = {
    "entryDate": "2026-09-25",
    "entry": 0.475,
    "entryFloor": 0.455,
-   "currentFloor": 0.51,
+   "currentFloor": 0.5,
    "currentPrice": 0.52,
    "high": 0.525,
    "highDate": "2026-10-08",
    "maxGain": 10.5,
    "finalGain": 9.5,
    "day1ChangePct": -1.04,
-   "days": 14,
-   "lastDate": "2026-10-12",
+   "days": 13,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor",
@@ -21101,7 +21019,7 @@ window.HOT_THEME_ALL_TRACKER = {
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 0.495
+   "slTrail": 0.485
   },
   {
    "id": "INARI_2026-09-24_ADDON",
@@ -21110,22 +21028,22 @@ window.HOT_THEME_ALL_TRACKER = {
    "entryDate": "2026-09-24",
    "entry": 2.61,
    "entryFloor": 2.54,
-   "currentFloor": 2.77,
+   "currentFloor": 2.67,
    "currentPrice": 2.77,
    "high": 2.86,
    "highDate": "2026-10-12",
    "maxGain": 9.6,
    "finalGain": 6.1,
    "day1ChangePct": -2.61,
-   "days": 15,
-   "lastDate": "2026-10-12",
+   "days": 14,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 2.687
+   "slTrail": 2.59
   },
   {
    "id": "SUM_2026-09-24_ADDON",
@@ -21134,22 +21052,22 @@ window.HOT_THEME_ALL_TRACKER = {
    "entryDate": "2026-09-24",
    "entry": 0.715,
    "entryFloor": 0.69,
-   "currentFloor": 0.815,
+   "currentFloor": 0.81,
    "currentPrice": 0.835,
    "high": 0.84,
    "highDate": "2026-10-08",
    "maxGain": 17.5,
    "finalGain": 16.8,
    "day1ChangePct": -1.38,
-   "days": 15,
-   "lastDate": "2026-10-12",
+   "days": 14,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 0.791
+   "slTrail": 0.786
   },
   {
    "id": "VITROX_2026-09-24_ADDON",
@@ -21165,8 +21083,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 13.6,
    "finalGain": 11.3,
    "day1ChangePct": 0,
-   "days": 15,
-   "lastDate": "2026-10-12",
+   "days": 14,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -21189,8 +21107,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 23.5,
    "finalGain": 22.3,
    "day1ChangePct": -2.25,
-   "days": 15,
-   "lastDate": "2026-10-12",
+   "days": 14,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -21239,8 +21157,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 7.6,
    "finalGain": 3.1,
    "day1ChangePct": 1.16,
-   "days": 16,
-   "lastDate": "2026-10-12",
+   "days": 15,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -21256,22 +21174,22 @@ window.HOT_THEME_ALL_TRACKER = {
    "entryDate": "2026-09-23",
    "entry": 2.68,
    "entryFloor": 2.54,
-   "currentFloor": 2.77,
+   "currentFloor": 2.67,
    "currentPrice": 2.77,
    "high": 2.86,
    "highDate": "2026-10-12",
    "maxGain": 6.7,
    "finalGain": 3.4,
    "day1ChangePct": -0.74,
-   "days": 16,
-   "lastDate": "2026-10-12",
+   "days": 15,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 2.687
+   "slTrail": 2.59
   },
   {
    "id": "PENTA_2026-09-23_ADDON",
@@ -21287,8 +21205,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 12.4,
    "finalGain": 9.1,
    "day1ChangePct": -0.73,
-   "days": 16,
-   "lastDate": "2026-10-12",
+   "days": 15,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -21311,8 +21229,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 8.9,
    "finalGain": 4.2,
    "day1ChangePct": 0,
-   "days": 17,
-   "lastDate": "2026-10-12",
+   "days": 16,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -21361,8 +21279,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 10.6,
    "finalGain": 5.9,
    "day1ChangePct": 0,
-   "days": 19,
-   "lastDate": "2026-10-12",
+   "days": 18,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -21385,8 +21303,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 4.2,
    "finalGain": -1.4,
    "day1ChangePct": 2.58,
-   "days": 19,
-   "lastDate": "2026-10-12",
+   "days": 18,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -21402,15 +21320,15 @@ window.HOT_THEME_ALL_TRACKER = {
    "entryDate": "2026-09-17",
    "entry": 1.68,
    "entryFloor": 1.68,
-   "currentFloor": 1.86,
+   "currentFloor": 1.82,
    "currentPrice": 2.11,
    "high": 2.24,
    "highDate": "2026-10-12",
    "maxGain": 33.3,
    "finalGain": 25.6,
    "day1ChangePct": 0,
-   "days": 20,
-   "lastDate": "2026-10-12",
+   "days": 19,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -21433,8 +21351,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 10.6,
    "finalGain": 5.9,
    "day1ChangePct": 2,
-   "days": 20,
-   "lastDate": "2026-10-12",
+   "days": 19,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -21457,8 +21375,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 6.9,
    "finalGain": 1.2,
    "day1ChangePct": 0.59,
-   "days": 20,
-   "lastDate": "2026-10-12",
+   "days": 19,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -21474,15 +21392,15 @@ window.HOT_THEME_ALL_TRACKER = {
    "entryDate": "2026-09-15",
    "entry": 1.68,
    "entryFloor": 1.68,
-   "currentFloor": 1.86,
+   "currentFloor": 1.82,
    "currentPrice": 2.11,
    "high": 2.24,
    "highDate": "2026-10-12",
    "maxGain": 33.3,
    "finalGain": 25.6,
    "day1ChangePct": 1.2,
-   "days": 21,
-   "lastDate": "2026-10-12",
+   "days": 20,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -21505,8 +21423,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 10.6,
    "finalGain": 5.9,
    "day1ChangePct": 0,
-   "days": 22,
-   "lastDate": "2026-10-12",
+   "days": 21,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -21529,8 +21447,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 7.8,
    "finalGain": 2,
    "day1ChangePct": -2.2,
-   "days": 22,
-   "lastDate": "2026-10-12",
+   "days": 21,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -21553,8 +21471,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 22.6,
    "finalGain": 20.2,
    "day1ChangePct": -3.38,
-   "days": 22,
-   "lastDate": "2026-10-12",
+   "days": 21,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -21622,22 +21540,22 @@ window.HOT_THEME_ALL_TRACKER = {
    "entryDate": "2026-09-11",
    "entry": 0.61,
    "entryFloor": 0.58,
-   "currentFloor": 0.815,
+   "currentFloor": 0.81,
    "currentPrice": 0.835,
    "high": 0.84,
    "highDate": "2026-10-08",
    "maxGain": 37.7,
    "finalGain": 36.9,
    "day1ChangePct": 0,
-   "days": 23,
-   "lastDate": "2026-10-12",
+   "days": 22,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 0.791
+   "slTrail": 0.79
   },
   {
    "id": "GREATEC_2026-09-11_ADDON",
@@ -21653,8 +21571,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 10.6,
    "finalGain": 5.9,
    "day1ChangePct": 0,
-   "days": 23,
-   "lastDate": "2026-10-12",
+   "days": 22,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -21677,8 +21595,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 7.8,
    "finalGain": 2,
    "day1ChangePct": -2.2,
-   "days": 23,
-   "lastDate": "2026-10-12",
+   "days": 22,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -21701,8 +21619,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 22.6,
    "finalGain": 20.2,
    "day1ChangePct": -3.38,
-   "days": 23,
-   "lastDate": "2026-10-12",
+   "days": 22,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -21744,15 +21662,15 @@ window.HOT_THEME_ALL_TRACKER = {
    "entryDate": "2026-09-10",
    "entry": 1.68,
    "entryFloor": 1.7,
-   "currentFloor": 1.86,
+   "currentFloor": 1.82,
    "currentPrice": 2.11,
    "high": 2.24,
    "highDate": "2026-10-12",
    "maxGain": 33.3,
    "finalGain": 25.6,
    "day1ChangePct": -2.89,
-   "days": 24,
-   "lastDate": "2026-10-12",
+   "days": 23,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -21775,8 +21693,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 5.4,
    "finalGain": -0.2,
    "day1ChangePct": 0,
-   "days": 24,
-   "lastDate": "2026-10-12",
+   "days": 23,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -21799,8 +21717,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 10.6,
    "finalGain": 5.9,
    "day1ChangePct": -0.39,
-   "days": 24,
-   "lastDate": "2026-10-12",
+   "days": 23,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -21928,8 +21846,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 5.4,
    "finalGain": -0.2,
    "day1ChangePct": -0.46,
-   "days": 25,
-   "lastDate": "2026-10-12",
+   "days": 24,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -21952,8 +21870,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 10.2,
    "finalGain": 5.5,
    "day1ChangePct": 0,
-   "days": 25,
-   "lastDate": "2026-10-12",
+   "days": 24,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -22029,8 +21947,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 4.9,
    "finalGain": -0.7,
    "day1ChangePct": 1.64,
-   "days": 26,
-   "lastDate": "2026-10-12",
+   "days": 25,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -22053,8 +21971,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 10.2,
    "finalGain": 5.5,
    "day1ChangePct": 1.59,
-   "days": 26,
-   "lastDate": "2026-10-12",
+   "days": 25,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -22077,8 +21995,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 20.9,
    "finalGain": 18.5,
    "day1ChangePct": 2.65,
-   "days": 26,
-   "lastDate": "2026-10-12",
+   "days": 25,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -22097,12 +22015,12 @@ window.HOT_THEME_ALL_TRACKER = {
    "currentFloor": 1.15,
    "currentPrice": 1.22,
    "high": 1.22,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 35.6,
    "finalGain": 35.6,
    "day1ChangePct": 0.56,
-   "days": 26,
-   "lastDate": "2026-10-12",
+   "days": 25,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -22174,8 +22092,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 24.1,
    "finalGain": 21.7,
    "day1ChangePct": -1.31,
-   "days": 27,
-   "lastDate": "2026-10-12",
+   "days": 26,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -22198,8 +22116,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 6.7,
    "finalGain": 0.9,
    "day1ChangePct": -1.61,
-   "days": 27,
-   "lastDate": "2026-10-12",
+   "days": 26,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -22222,8 +22140,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 11.9,
    "finalGain": 7.1,
    "day1ChangePct": -0.79,
-   "days": 27,
-   "lastDate": "2026-10-12",
+   "days": 26,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -22242,12 +22160,12 @@ window.HOT_THEME_ALL_TRACKER = {
    "currentFloor": 1.15,
    "currentPrice": 1.22,
    "high": 1.22,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 36.3,
    "finalGain": 36.3,
    "day1ChangePct": -0.56,
-   "days": 27,
-   "lastDate": "2026-10-12",
+   "days": 26,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -22297,8 +22215,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 11,
    "finalGain": 6.3,
    "day1ChangePct": -0.39,
-   "days": 28,
-   "lastDate": "2026-10-12",
+   "days": 27,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -22321,8 +22239,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 4.9,
    "finalGain": -0.7,
    "day1ChangePct": -0.69,
-   "days": 28,
-   "lastDate": "2026-10-12",
+   "days": 27,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -22580,8 +22498,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 15.2,
    "finalGain": 11.7,
    "day1ChangePct": 0.76,
-   "days": 31,
-   "lastDate": "2026-10-12",
+   "days": 30,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -22734,8 +22652,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 23,
    "finalGain": 20.6,
    "day1ChangePct": 1.33,
-   "days": 34,
-   "lastDate": "2026-10-12",
+   "days": 33,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -22758,8 +22676,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 13.6,
    "finalGain": 10.3,
    "day1ChangePct": 3.48,
-   "days": 34,
-   "lastDate": "2026-10-12",
+   "days": 33,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -22808,8 +22726,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 17.6,
    "finalGain": 14.1,
    "day1ChangePct": -3.36,
-   "days": 35,
-   "lastDate": "2026-10-12",
+   "days": 34,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -22858,8 +22776,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 0,
    "finalGain": -14,
    "day1ChangePct": 2.38,
-   "days": 36,
-   "lastDate": "2026-10-12",
+   "days": 35,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -22882,8 +22800,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 28.6,
    "finalGain": 21.4,
    "day1ChangePct": -1.11,
-   "days": 11,
-   "lastDate": "2026-10-12",
+   "days": 10,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -22906,8 +22824,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 13.6,
    "finalGain": 10.3,
    "day1ChangePct": 0,
-   "days": 36,
-   "lastDate": "2026-10-12",
+   "days": 35,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -22956,8 +22874,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 13.6,
    "finalGain": 10.3,
    "day1ChangePct": 0.94,
-   "days": 37,
-   "lastDate": "2026-10-12",
+   "days": 36,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -22980,8 +22898,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 21.2,
    "finalGain": 18.8,
    "day1ChangePct": -0.96,
-   "days": 37,
-   "lastDate": "2026-10-12",
+   "days": 36,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -23030,8 +22948,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 20,
    "finalGain": 17.6,
    "day1ChangePct": -0.95,
-   "days": 38,
-   "lastDate": "2026-10-12",
+   "days": 37,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -23054,8 +22972,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 3.7,
    "finalGain": -0.7,
    "day1ChangePct": -0.37,
-   "days": 38,
-   "lastDate": "2026-10-12",
+   "days": 37,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -23104,8 +23022,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 12.2,
    "finalGain": 8.9,
    "day1ChangePct": -1.63,
-   "days": 39,
-   "lastDate": "2026-10-12",
+   "days": 38,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -23128,8 +23046,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 20.5,
    "finalGain": 18.2,
    "day1ChangePct": 0.22,
-   "days": 39,
-   "lastDate": "2026-10-12",
+   "days": 38,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -23152,8 +23070,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 2.2,
    "finalGain": -2.2,
    "day1ChangePct": 1.1,
-   "days": 39,
-   "lastDate": "2026-10-12",
+   "days": 38,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -23254,8 +23172,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 12.2,
    "finalGain": 8.9,
    "day1ChangePct": -1.63,
-   "days": 40,
-   "lastDate": "2026-10-12",
+   "days": 39,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -23278,8 +23196,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 20.5,
    "finalGain": 18.2,
    "day1ChangePct": 0.22,
-   "days": 40,
-   "lastDate": "2026-10-12",
+   "days": 39,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -23302,8 +23220,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 2.2,
    "finalGain": -2.2,
    "day1ChangePct": 1.1,
-   "days": 40,
-   "lastDate": "2026-10-12",
+   "days": 39,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -23428,8 +23346,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 5.7,
    "finalGain": -0.8,
    "day1ChangePct": -0.34,
-   "days": 41,
-   "lastDate": "2026-10-12",
+   "days": 40,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -23452,8 +23370,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 3.3,
    "finalGain": -1.1,
    "day1ChangePct": 0.37,
-   "days": 41,
-   "lastDate": "2026-10-12",
+   "days": 40,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -23476,8 +23394,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 20.8,
    "finalGain": 18.4,
    "day1ChangePct": -1.17,
-   "days": 41,
-   "lastDate": "2026-10-12",
+   "days": 40,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -23578,8 +23496,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 5.4,
    "finalGain": -1.1,
    "day1ChangePct": -0.34,
-   "days": 42,
-   "lastDate": "2026-10-12",
+   "days": 41,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -23680,8 +23598,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 5,
    "finalGain": -1.5,
    "day1ChangePct": 1.51,
-   "days": 43,
-   "lastDate": "2026-10-12",
+   "days": 42,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -23704,8 +23622,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 9.5,
    "finalGain": 6.3,
    "day1ChangePct": -0.89,
-   "days": 43,
-   "lastDate": "2026-10-12",
+   "days": 42,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -23728,8 +23646,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 18.9,
    "finalGain": 16.5,
    "day1ChangePct": -1.05,
-   "days": 43,
-   "lastDate": "2026-10-12",
+   "days": 42,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -23882,8 +23800,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 6.6,
    "finalGain": 0,
    "day1ChangePct": -0.8,
-   "days": 44,
-   "lastDate": "2026-10-12",
+   "days": 43,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -23984,8 +23902,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 5.7,
    "finalGain": -0.8,
    "day1ChangePct": -0.91,
-   "days": 45,
-   "lastDate": "2026-10-12",
+   "days": 44,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -24603,8 +24521,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 40.3,
    "finalGain": 37.5,
    "day1ChangePct": -0.62,
-   "days": 52,
-   "lastDate": "2026-10-12",
+   "days": 51,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -24731,8 +24649,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 39.4,
    "finalGain": 36.6,
    "day1ChangePct": 2.42,
-   "days": 53,
-   "lastDate": "2026-10-12",
+   "days": 52,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -24833,8 +24751,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 42.7,
    "finalGain": 39.9,
    "day1ChangePct": -1.63,
-   "days": 54,
-   "lastDate": "2026-10-12",
+   "days": 53,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -24935,8 +24853,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 40.4,
    "finalGain": 37.7,
    "day1ChangePct": -0.13,
-   "days": 55,
-   "lastDate": "2026-10-12",
+   "days": 54,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -24959,8 +24877,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 12.1,
    "finalGain": 5.1,
    "day1ChangePct": 2.5,
-   "days": 55,
-   "lastDate": "2026-10-12",
+   "days": 54,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -25087,8 +25005,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 40.3,
    "finalGain": 37.5,
    "day1ChangePct": 2.43,
-   "days": 56,
-   "lastDate": "2026-10-12",
+   "days": 55,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -25111,8 +25029,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 14.9,
    "finalGain": 7.7,
    "day1ChangePct": -0.12,
-   "days": 56,
-   "lastDate": "2026-10-12",
+   "days": 55,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -25214,8 +25132,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 43.7,
    "finalGain": 40.8,
    "day1ChangePct": -1.76,
-   "days": 57,
-   "lastDate": "2026-10-12",
+   "days": 56,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -25264,8 +25182,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 33.3,
    "finalGain": 31.9,
    "day1ChangePct": -1.4,
-   "days": 59,
-   "lastDate": "2026-10-12",
+   "days": 58,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -25366,8 +25284,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 7.7,
    "finalGain": 3.2,
    "day1ChangePct": 1.31,
-   "days": 61,
-   "lastDate": "2026-10-12",
+   "days": 60,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -25390,8 +25308,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 17.5,
    "finalGain": 10.2,
    "day1ChangePct": 0.77,
-   "days": 61,
-   "lastDate": "2026-10-12",
+   "days": 60,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -25646,8 +25564,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 52.2,
    "finalGain": 49.3,
    "day1ChangePct": -0.27,
-   "days": 64,
-   "lastDate": "2026-10-12",
+   "days": 63,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -25878,8 +25796,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 48.8,
    "finalGain": 45.9,
    "day1ChangePct": 1.21,
-   "days": 66,
-   "lastDate": "2026-10-12",
+   "days": 65,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -26111,8 +26029,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 18.4,
    "finalGain": 11.1,
    "day1ChangePct": -0.38,
-   "days": 67,
-   "lastDate": "2026-10-12",
+   "days": 66,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -26318,8 +26236,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 18.4,
    "finalGain": 11.1,
    "day1ChangePct": -0.38,
-   "days": 68,
-   "lastDate": "2026-10-12",
+   "days": 67,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -26525,8 +26443,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 47.1,
    "finalGain": 44.2,
    "day1ChangePct": -2.18,
-   "days": 69,
-   "lastDate": "2026-10-12",
+   "days": 68,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -26627,8 +26545,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 43.8,
    "finalGain": 41,
    "day1ChangePct": 1.04,
-   "days": 70,
-   "lastDate": "2026-10-12",
+   "days": 69,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -26651,8 +26569,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 15,
    "finalGain": 7.9,
    "day1ChangePct": 0.25,
-   "days": 70,
-   "lastDate": "2026-10-12",
+   "days": 69,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -27815,12 +27733,12 @@ window.HOT_THEME_ALL_TRACKER = {
    "currentFloor": 0.865,
    "currentPrice": 0.87,
    "high": 0.87,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 1.8,
    "finalGain": 1.8,
    "day1ChangePct": 0,
-   "days": 82,
-   "lastDate": "2026-10-12",
+   "days": 81,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -27943,12 +27861,12 @@ window.HOT_THEME_ALL_TRACKER = {
    "currentFloor": 0.865,
    "currentPrice": 0.87,
    "high": 0.87,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 1.8,
    "finalGain": 1.8,
    "day1ChangePct": 0,
-   "days": 83,
-   "lastDate": "2026-10-12",
+   "days": 82,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -28175,12 +28093,12 @@ window.HOT_THEME_ALL_TRACKER = {
    "currentFloor": 0.865,
    "currentPrice": 0.87,
    "high": 0.87,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 1.8,
    "finalGain": 1.8,
    "day1ChangePct": 0.59,
-   "days": 85,
-   "lastDate": "2026-10-12",
+   "days": 84,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -28511,12 +28429,12 @@ window.HOT_THEME_ALL_TRACKER = {
    "currentFloor": 0.865,
    "currentPrice": 0.87,
    "high": 0.87,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 1.8,
    "finalGain": 1.8,
    "day1ChangePct": 0.59,
-   "days": 88,
-   "lastDate": "2026-10-12",
+   "days": 87,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -29032,12 +28950,12 @@ window.HOT_THEME_ALL_TRACKER = {
    "currentFloor": 0.865,
    "currentPrice": 0.87,
    "high": 0.87,
-   "highDate": "2026-10-12",
+   "highDate": "2026-10-13",
    "maxGain": 1.8,
    "finalGain": 1.8,
    "day1ChangePct": -0.58,
-   "days": 91,
-   "lastDate": "2026-10-12",
+   "days": 90,
+   "lastDate": "2026-10-13",
    "status": "OPEN",
    "themes": [
     "Semiconductor"

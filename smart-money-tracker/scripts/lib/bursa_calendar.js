@@ -75,7 +75,22 @@ function isTradingDay(dateStr) {
     return wd !== 0 && wd !== 6;
 }
 
+// Snapshot timestamps are UTC; trading-day labels must use Malaysia time.
+function getMytDate(timestamp) {
+    const time = new Date(timestamp).getTime();
+    return Number.isFinite(time) ? new Date(time + 8 * 3600000).toISOString().slice(0, 10) : '';
+}
+
+function upsertTradingDay(days, day) {
+    const index = days.findIndex(existing => existing.date === day.date);
+    if (index >= 0) days[index] = day;
+    else days.push(day);
+    days.sort((a, b) => a.date.localeCompare(b.date));
+}
+
 module.exports = {
     BURSA_MALAYSIA_HOLIDAYS,
-    isTradingDay
+    isTradingDay,
+    getMytDate,
+    upsertTradingDay
 };

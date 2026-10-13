@@ -183,7 +183,7 @@ function isAddOnAPick(item, initialBasePrice, effFloor, dateStr) {
     }
     return true;
 }
-const { BURSA_MALAYSIA_HOLIDAYS, isTradingDay } = require('./lib/bursa_calendar');
+const { BURSA_MALAYSIA_HOLIDAYS, isTradingDay, getMytDate, upsertTradingDay } = require('./lib/bursa_calendar');
 
 const files = fs.readdirSync(HIST_DIR).filter(f => /^data_.*\.json$/.test(f))
     .filter(f => fs.statSync(path.join(HIST_DIR, f)).size > 100000)
@@ -200,9 +200,9 @@ const liveFile = path.join(path.join(__dirname, '..'), 'live_data.json');
 if (fs.existsSync(liveFile)) {
     try {
         const live = JSON.parse(fs.readFileSync(liveFile, 'utf8'));
-        const today = (live.lastUpdated || '').slice(0, 10);
-        if (today && isTradingDay(today) && (!dayList.length || dayList[dayList.length - 1].date !== today)) {
-            dayList.push({ date: today, rows: live.topVolume || [], isLive: true });
+        const today = getMytDate(live.lastUpdated);
+        if (today && isTradingDay(today)) {
+            upsertTradingDay(dayList, { date: today, rows: live.topVolume || [], isLive: true });
         }
     } catch (e) { /* abaikan */ }
 }

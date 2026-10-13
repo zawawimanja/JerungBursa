@@ -56,7 +56,7 @@ const htTrades = (window.HOT_THEME_TRACKER.trades || []).map(t => ({
 const allTrades = [...frTrades, ...addOnTrades, ...floorTrades, ...htTrades];
 
 // 2. Kumpul fail history
-const { BURSA_MALAYSIA_HOLIDAYS, isTradingDay } = require('./lib/bursa_calendar');
+const { BURSA_MALAYSIA_HOLIDAYS, isTradingDay, getMytDate, upsertTradingDay } = require('./lib/bursa_calendar');
 
 const files = fs.readdirSync(HIST_DIR).filter(f => /^data_.*\.json$/.test(f))
     .filter(f => fs.statSync(path.join(HIST_DIR, f)).size > 50000)
@@ -84,13 +84,13 @@ const livePath = path.join(ROOT_DIR, 'live_data.json');
 if (fs.existsSync(livePath)) {
     try {
         const live = JSON.parse(fs.readFileSync(livePath, 'utf8'));
-        const today = (live.lastUpdated || '').slice(0, 10);
-        if (today && isTradingDay(today) && (!historyDays.length || historyDays[historyDays.length - 1].date !== today)) {
+        const today = getMytDate(live.lastUpdated);
+        if (today && isTradingDay(today)) {
             const map = {};
             (live.topVolume || []).forEach(r => {
                 if (r && r.name && r.price > 0) map[r.name.toUpperCase().trim()] = r;
             });
-            historyDays.push({ date: today, map, raw: live.topVolume || [], isLive: true });
+            upsertTradingDay(historyDays, { date: today, map, raw: live.topVolume || [], isLive: true });
         }
     } catch (e) {}
 }

@@ -61,6 +61,10 @@ JerungBursa/
    * Menjana fail data terkini secara automatik dan menolak (*push*) terus ke cawangan `main`.
 3. **Penyampaian Web (Vercel)**:
    * Routing dikawal oleh `vercel.json` di mana semua data `.js` / `.json` disajikan dengan header `no-cache` untuk memastikan paparan web sentiasa real-time.
+   * Dashboard menyemak snapshot hos dan GitHub setiap **5 minit**; scraper cloud dijadualkan setiap **10 minit**. Harga, tracker dan berita disegarkan bersama apabila ada snapshot baharu.
+   * `Last Updated` ialah masa snapshot data (MYT), manakala `Last checked` ialah masa semakan browser. Status `Data delayed` muncul apabila snapshot melebihi 20 minit dalam waktu kemas kini.
+   * `npm test` menyemak aliran refresh dan integriti tracker. Saham boleh beralih daripada `OPEN` kepada `CLOSED_SL` / `CLOSED_TIME`; audit tidak memaksa saham tertentu kekal `OPEN`.
+   * Semua generator menggunakan tarikh Malaysia, mengganti snapshot pada hari yang sama dan memainkan semula sejarah mengikut turutan tarikh.
 
 ---
 

@@ -390,7 +390,7 @@ function loadHistoryDay(dateStr) {
     } catch (e) { return []; }
 }
 
-const { BURSA_MALAYSIA_HOLIDAYS, isTradingDay } = require('./lib/bursa_calendar');
+const { BURSA_MALAYSIA_HOLIDAYS, isTradingDay, getMytDate } = require('./lib/bursa_calendar');
 
 // -------------------------------------------------------------
 // Format mesej Telegram
@@ -564,7 +564,7 @@ function buildMessage(now, out) {
     // Tarikh snapshot (live_data.json) — elak Yahoo data LAGGING timpa harga yang lebih baru.
     // Contoh: Yahoo chart utk sesetengah penny stock terhenti 14-Ogos, snapshot dah 17-Ogos —
     // kalau diterapkan, alert guna harga lama dan list tak sama dengan web.
-    const snapDate = (live.lastUpdated || '').slice(0, 10);
+    const snapDate = getMytDate(live.lastUpdated);
     let updated = 0;
     let skippedStale = 0;
     for (const stock of candidates) {

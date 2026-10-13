@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <script src="live-refresh.js"></script>
     <script>
       (function() {
         const cb = '?t=' + Date.now();
@@ -4301,6 +4302,13 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         // Auto-refresh senyap (5 minit) — flag kawalan
         let _viewingArchive = false;   // user tengok arkib → jangan auto-refresh (elak ganti data arkib)
         let _autoRefreshBusy = false;  // elak refresh bertindih bila fetch lambat
+        let _liveRefreshPromise = null;
+        let _dataViewRevision = 0;
+        let _liveSourceBase = '';
+        let _lastBundleVersion = '';
+        let _lastDataCheck = 0;
+        let _refreshIssue = '';
+        let _selfHealStatus = '';
 
         // Dynamically map IPO Grades for live and historical data (in case JSON doesn't contain ipoGrade)
         const ipoMap = {
@@ -4684,124 +4692,110 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         // Anti-Freeze & Self-Healing: Rekod masa trigger bot terakhir supaya tak spam
         window._lastSelfHealTrigger = window._lastSelfHealTrigger || 0;
 
-        // Fetch Live Data
-        async function fetchLiveData() {
-            const cacheBuster = Date.now();
-            let raw = null;
+        function updateLiveStatus() {
+            if (_viewingArchive) return;
+            const notice = document.getElementById('dashboardSubtitle');
+            if (!notice) return;
+            const raw = window.liveData;
+            if (!raw || !raw.lastUpdated) {
+                notice.textContent = 'Market data unavailable • Retrying every 5 min';
+                notice.style.color = '#fbbf24';
+                return;
+            }
+            const state = JerungLive.freshness(raw.lastUpdated);
+            const dateOptions = { timeZone: 'Asia/Kuala_Lumpur', day: '2-digit', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' };
+            const updated = new Date(raw.lastUpdated).toLocaleString('en-GB', dateOptions);
+            const checked = _lastDataCheck ? new Date(_lastDataCheck).toLocaleTimeString('en-GB', { timeZone: 'Asia/Kuala_Lumpur', hour: '2-digit', minute: '2-digit', hourCycle: 'h23' }) + ' MYT' : 'pending';
+            const label = state.delayed ? `Data delayed (${state.age} min)` : (state.updating ? 'Market snapshot' : 'Last available snapshot');
+            notice.textContent = `${label} • Last Updated: ${updated} MYT • Last checked: ${checked} • Auto-check: 5 min` +
+                (_refreshIssue ? ` • ${_refreshIssue}` : '') + (state.delayed && _selfHealStatus ? ` • ${_selfHealStatus}` : '');
+            notice.style.color = state.delayed || _refreshIssue ? '#fbbf24' : '';
+        }
 
-            // Semak status waktu pasaran Bursa (Isnin - Jumaat, 9:00 AM - 5:00 PM MYT)
-            const mytNow = new Date(Date.now() + 8 * 3600000);
-            const mytDay = mytNow.getUTCDay(); // 1 = Isnin, 5 = Jumaat
-            const mytHour = mytNow.getUTCHours();
-            const isMarketOpen = (mytDay >= 1 && mytDay <= 5 && mytHour >= 9 && mytHour < 17);
+        async function requestStaleUpdate() {
+            if (window.location.protocol === 'file:' || !JerungLive.freshness(window.liveData.lastUpdated).delayed) return;
+            const now = Date.now();
+            if (now - window._lastSelfHealTrigger < 10 * 60000) return;
+            window._lastSelfHealTrigger = now;
+            try {
+                const result = JSON.parse(await JerungLive.request('/api/cron-scrape'));
+                if (result.success !== true) throw new Error(result.error || 'Update was not accepted');
+                _selfHealStatus = 'Update requested';
+            } catch (error) {
+                _selfHealStatus = 'Automatic update request failed';
+                console.warn('[Data update request]', error);
+            }
+            updateLiveStatus();
+        }
 
-            let vercelData = null;
-            let githubData = null;
-
-            // 1. Dapatkan data daripada Vercel / server hos
-            if (window.location.protocol !== 'file:') {
+        async function fetchLiveData({ forceLive = false } = {}) {
+            if (_liveRefreshPromise) {
+                await _liveRefreshPromise;
+                return forceLive ? fetchLiveData({ forceLive: true }) : undefined;
+            }
+            if (_viewingArchive && !forceLive) return;
+            if (forceLive) {
+                _dataViewRevision++;
+                _viewingArchive = false;
+                document.getElementById('historyDate').value = '';
+                document.getElementById('backToLiveBtn').style.display = 'none';
+            }
+            const revision = _dataViewRevision;
+            _autoRefreshBusy = true;
+            _liveRefreshPromise = (async () => {
                 try {
-                    const res = await fetch(`live_data.json?t=${cacheBuster}`, { cache: 'no-store' });
-                    if (res.ok) vercelData = await res.json();
-                } catch (e) {
-                    console.warn("[Data Fetch] Vercel fetch failed:", e);
-                }
-            } else if (window.liveData) {
-                vercelData = window.liveData;
-            }
-
-            const nowMs = Date.now();
-            const vTime = (vercelData && vercelData.lastUpdated) ? new Date(vercelData.lastUpdated).getTime() : 0;
-            const vAgeMin = vTime ? (nowMs - vTime) / 60000 : 999999;
-
-            // 2. Jika data Vercel tiada, atau lapuk (> 10 minit waktu market, atau bukan hari ini selepas market tutup),
-            // tarik data segar terus dari GitHub Raw
-            const todayMYT = mytNow.toISOString().slice(0, 10);
-            const vDate = vTime ? new Date(vTime + 8 * 3600000).toISOString().slice(0, 10) : '';
-            const needGitHubFallback = !vercelData || (isMarketOpen && vAgeMin > 10) || (!isMarketOpen && vDate < todayMYT);
-
-            if (needGitHubFallback || window.location.protocol === 'file:') {
-                try {
-                    const res = await fetch(`https://raw.githubusercontent.com/zawawimanja/JerungBursa/main/smart-money-tracker/live_data.json?t=${cacheBuster}`, { cache: 'no-store' });
-                    if (res.ok) githubData = await res.json();
-                } catch (e) {
-                    console.warn("[Data Fetch] GitHub Raw fetch failed:", e);
-                }
-            }
-
-            const gTime = (githubData && githubData.lastUpdated) ? new Date(githubData.lastUpdated).getTime() : 0;
-
-            // 3. Smart Picker: Pilih data yang paling baru timestamp
-            if (gTime > vTime) {
-                raw = githubData;
-                console.log(`[Smart Picker] Menggunakan data GitHub Raw (${new Date(gTime).toLocaleTimeString('en-MY', { timeZone: 'Asia/Kuala_Lumpur' })}) — lebih segar.`);
-            } else {
-                raw = vercelData || githubData;
-            }
-
-            // 4. ── BENTENG SELF-HEALING ANTI-FREEZE ──
-            // Jika waktu pasaran dibuka (9:00 - 17:00), tetapi data yang didapati > 15 minit lapuk,
-            // bangunkan GitHub Actions scraper automatik di cloud!
-            if (isMarketOpen) {
-                const activeTime = Math.max(vTime, gTime);
-                const activeAgeMin = activeTime ? (nowMs - activeTime) / 60000 : 999999;
-
-                if (activeAgeMin > 15 && (nowMs - window._lastSelfHealTrigger > 8 * 60 * 1000)) {
-                    window._lastSelfHealTrigger = nowMs;
-                    console.warn(`[Self-Healing] Data pasaran dikesan lapuk (${activeAgeMin.toFixed(0)} min). Mengaktifkan bot imbasan automatik...`);
-
-                    const notice = document.getElementById('dashboardSubtitle');
-                    if (notice) {
-                        const existingText = notice.innerHTML.replace(/<span id="selfHealBadge".*<\/span>/, '');
-                        notice.innerHTML = existingText + ` <span id="selfHealBadge" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.4); padding: 2px 8px; border-radius: 4px; font-size: 11px; margin-left: 6px;">⚡ Memperbaharui data di cloud...</span>`;
-                    }
-
-                    fetch('/api/cron-scrape')
-                        .then(r => r.json())
-                        .then(res => {
-                            console.log("[Self-Healing] Bot cloud berjaya digerakkan:", res);
-                            // Tunggu 35 saat untuk bot siap scrape & commit, kemudian auto-refresh
-                            setTimeout(async () => {
-                                console.log("[Self-Healing] Memuat semula paparan dengan data pasaran terkini...");
-                                await fetchLiveData();
-                            }, 35000);
-                        })
-                        .catch(err => console.warn("[Self-Healing Error]:", err));
-                }
-            }
-
-            if (raw) {
-                let data = [];
-                if (Array.isArray(raw)) {
-                    data = raw;
-                } else if (raw && raw.topVolume && Array.isArray(raw.topVolume)) {
-                    // Combine topVolume and topGainers, removing duplicates
-                    const volList = raw.topVolume;
-                    const gainerList = raw.topGainers || [];
-                    const combined = [...volList, ...gainerList];
-                    const unique = [];
-                    const seen = new Set();
-                    combined.forEach(item => {
-                        if (item && item.name && !seen.has(item.name)) {
-                            seen.add(item.name);
-                            unique.push(item);
+                    const selected = await JerungLive.loadSnapshot({ previous: window.liveData, previousBase: _liveSourceBase, fileMode: window.location.protocol === 'file:' });
+                    let bundle = null;
+                    let issue = selected.checked ? '' : 'Connection failed; showing saved data';
+                    const version = selected.base + selected.raw.lastUpdated;
+                    if (selected.checked && version !== _lastBundleVersion) {
+                        try {
+                            bundle = await JerungLive.loadBundle(selected.base);
+                        } catch (error) {
+                            issue = 'Tracker refresh pending';
+                            console.warn('[Tracker refresh]', error);
                         }
-                    });
-                    data = unique;
-                    if (raw.lastUpdated) {
-                        const d = new Date(raw.lastUpdated);
-                        const timeStr = d.toLocaleString('en-US', { timeZone: 'Asia/Kuala_Lumpur', hour12: false });
-                        document.getElementById('dashboardSubtitle').innerHTML = `<span class="pulse"></span> Live Market Scanner • Source: ${raw.source || 'i3investor'} • Last Updated: ${timeStr}`;
                     }
+                    // An archive selected while requests were in flight takes precedence.
+                    if (_viewingArchive || revision !== _dataViewRevision) return;
+                    if (bundle) {
+                        Object.assign(window, bundle);
+                        _lastBundleVersion = version;
+                    }
+                    window.liveData = selected.raw;
+                    _liveSourceBase = selected.base;
+                    if (selected.checked) _lastDataCheck = Date.now();
+                    _refreshIssue = issue;
+                    const seen = new Set();
+                    currentData = [...selected.raw.topVolume, ...(selected.raw.topGainers || [])].filter(item => {
+                        if (!item || !item.name) return false;
+                        const key = item.name.trim().toUpperCase();
+                        if (seen.has(key)) return false;
+                        seen.add(key);
+                        return true;
+                    });
+                    _recentFloorCache = null;
+                    _freshRiderPrevCache = null;
+                    _hotThemePrevCache = null;
+                    updateLiveStatus();
+                    applyFilters();
+                    renderFreshRiderTracker();
+                    renderHotThemeTracker();
+                    updateTopTrackerPnlBadge();
+                    void requestStaleUpdate();
+                } catch (error) {
+                    if (_viewingArchive || revision !== _dataViewRevision) return;
+                    _refreshIssue = 'Connection failed; retrying';
+                    updateLiveStatus();
+                    console.warn('[Live refresh]', error);
                 }
-                
-                if (data && data.length > 0) {
-                    currentData = data;
-                    _viewingArchive = false; // balik ke data live — auto-refresh boleh jalan semula
-                    console.log(`Loaded ${data.length} counters successfully.`);
-                }
+            })();
+            try {
+                await _liveRefreshPromise;
+            } finally {
+                _liveRefreshPromise = null;
+                _autoRefreshBusy = false;
             }
-            applyFilters();
         }
 
         function passesGlobalFilters(item) {
@@ -11187,7 +11181,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         window.addEventListener('DOMContentLoaded', () => {
             // Set dynamic max date to today so users can pick any recent date
             const histDateInput = document.getElementById('historyDate');
-            if (histDateInput) histDateInput.max = new Date().toISOString().slice(0, 10);
+            if (histDateInput) histDateInput.max = new Date(Date.now() + 8 * 3600000).toISOString().slice(0, 10);
 
             renderFreshRiderTracker();
             if (typeof switchHtTrackerSubTab === 'function') switchHtTrackerSubTab('all');
@@ -11231,30 +11225,31 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             document.getElementById('refreshBtn').addEventListener('click', async function() {
                 const text = this.textContent;
                 this.textContent = '⏳ Loading...';
-                await fetchLiveData();
-                this.textContent = text;
+                this.disabled = true;
+                try {
+                    await fetchLiveData({ forceLive: true });
+                } finally {
+                    this.textContent = text;
+                    this.disabled = false;
+                }
             });
 
-            // Auto-refresh senyap: tarik live_data.json baru setiap 5 minit & re-render semua tab
-            // (server-side bot memang update setiap 5 minit — page ni ikut sama tanpa perlu reload).
-            // Tak ganggu kalau: user tengok arkib / tab browser tak aktif / refresh lain sedang jalan.
-            setInterval(async () => {
+            // Browser checks every 5 min; the cloud scraper is scheduled every 10 min.
+            const autoRefresh = () => {
                 if (_autoRefreshBusy || _viewingArchive || document.hidden) return;
-                _autoRefreshBusy = true;
-                try {
-                    await fetchLiveData();
-                } catch (e) {
-                    console.warn('Auto-refresh senyap gagal:', e);
-                } finally {
-                    _autoRefreshBusy = false;
-                }
-            }, 5 * 60 * 1000);
+                void fetchLiveData();
+            };
+            setInterval(autoRefresh, 5 * 60 * 1000);
+            setInterval(updateLiveStatus, 60000);
+            document.addEventListener('visibilitychange', autoRefresh);
+            window.addEventListener('online', autoRefresh);
 
             // History Archive check
             let _archiveLoadBusy = false;
             async function doLoadHistoryArchive() {
                 if (_archiveLoadBusy) return;
                 _archiveLoadBusy = true;
+                _dataViewRevision++;
                 let dateVal = document.getElementById('historyDate').value;
                 if (dateVal) {
                     dateVal = dateVal.trim();

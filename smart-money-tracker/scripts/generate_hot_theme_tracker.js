@@ -247,7 +247,7 @@ function isHotThemeAddOnPick(item, initialBasePrice, effFloor, dateStr) {
 
     return true;
 }
-const { BURSA_MALAYSIA_HOLIDAYS, isTradingDay } = require('./lib/bursa_calendar');
+const { BURSA_MALAYSIA_HOLIDAYS, isTradingDay, getMytDate, upsertTradingDay } = require('./lib/bursa_calendar');
 
 // ---- Load history ----
 const files = fs.readdirSync(HIST_DIR).filter(f => /^data_.*\.json$/.test(f))
@@ -272,9 +272,9 @@ if (fs.existsSync(liveFile)) {
 
 const dayList = dates.map(d => ({ date: d, rows: Object.values(allData[d]) }));
 if (liveData && liveData.topVolume) {
-    const today = (liveData.lastUpdated || '').slice(0, 10);
-    if (today && isTradingDay(today) && (!dayList.length || dayList[dayList.length - 1].date !== today)) {
-        dayList.push({ date: today, rows: liveData.topVolume, isLive: true });
+    const today = getMytDate(liveData.lastUpdated);
+    if (today && isTradingDay(today)) {
+        upsertTradingDay(dayList, { date: today, rows: liveData.topVolume, isLive: true });
     }
 }
 

@@ -20,6 +20,7 @@ permissions:
 jobs:
   scrape-and-update:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     
     steps:
       - name: Checkout repository
@@ -79,13 +80,17 @@ jobs:
           # Only commit if there are changes
           if ! git diff --quiet || ! git diff --staged --quiet; then
             git commit -m "Auto-update live_data.json/js, trackers & news_data.js"
+            pushed=false
             for i in 1 2 3 4 5; do
-              git pull --rebase origin main || true
+              git pull --rebase origin main
               if git push origin main; then
+                pushed=true
                 echo "Successfully pushed changes to main."
                 break
               fi
               echo "Push attempt $i failed, retrying in 3 seconds..."
               sleep 3
             done
+            # Do not report success if all push attempts failed.
+            test "$pushed" = true
           fi

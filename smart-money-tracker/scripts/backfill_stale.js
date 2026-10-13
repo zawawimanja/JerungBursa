@@ -113,6 +113,8 @@ function backfillStaleTrades(trades, latestDate, exitFn) {
         const sym = VERIFIED_SYMBOLS[t.name.toUpperCase()];
         const q = quotes[sym];
         if (!q || !q.close || q.close <= 0 || q.close > 500) continue;
+        // A delayed Yahoo quote must never move a tracker backwards in time.
+        if (!q.date || q.date < t.lastDate || q.date < t.entryDate || q.date > latestDate) continue;
 
         // Guard anomaly: harga Yahoo terlalu jauh dari harga rekod terakhir
         // (elak salah padan syarikat — nama pendek bertembung).
