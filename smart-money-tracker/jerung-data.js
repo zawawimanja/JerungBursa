@@ -3,6 +3,25 @@
 
 window.jerungData = [
   {
+    "id": "klse-UNISEM-14-Oct-2026-kumpulan-wang-persaraan",
+    "stockId": "unisem",
+    "stockName": "UNISEM (M) BERHAD",
+    "symbol": "UNISEM",
+    "code": "UNISEM",
+    "market": "Main / ACE Market",
+    "sector": "General Bursa Equities",
+    "institution": "KUMPULAN WANG PERSARAAN (KWAP)",
+    "institutionCategory": "GLIC",
+    "action": "Acquired",
+    "sharesChanged": null,
+    "totalHolding": null,
+    "percentage": null,
+    "filingDate": "14-Oct-2026",
+    "signal": "🔥 Heavy Accumulation",
+    "announcementUrl": "https://www.klsescreener.com/v2/announcements/view/11684143",
+    "insight": "Pemfailan rasmi Seksyen 138 Akta Syarikat 2016 oleh KUMPULAN WANG PERSARAAN (KWAP)."
+  },
+  {
     "id": "klse-AXIS-13-Oct-2026-employees-provident-fund",
     "stockId": "axis",
     "stockName": "AXIS REAL ESTATE INVESTMENT TRUST",

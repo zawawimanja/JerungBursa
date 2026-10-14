@@ -1,5 +1,5 @@
 // Auto-generated Corporate News & Ex-Dividend Database
-// Generated At: 2026-10-13T15:17:58.089Z
+// Generated At: 2026-10-14T05:54:48.192Z
 window.NEWS_DATA = {
   "3REN": {
     "hasNewsAlert": false,
@@ -176,9 +176,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:01.428Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:01.428Z",
+      "entitlements": "2026-10-14T05:55:01.428Z"
     }
   },
   "5ER": {
@@ -354,9 +359,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:57.504Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:57.504Z",
+      "entitlements": "2026-10-14T05:54:57.504Z"
     }
   },
   "99 SPEED MART RETAIL": {
@@ -534,19 +544,19 @@ window.NEWS_DATA = {
       {
         "annDate": "17 Nov 2025",
         "financialYear": "31 Dec 2025",
-        "type": "Special Dividend",
+        "type": "Second Interim Dividend",
         "exDate": "2025-12-01",
         "paymentDate": "12 Dec 2025",
-        "amount": "0.0025",
+        "amount": "0.0200",
         "isDividend": true
       },
       {
         "annDate": "17 Nov 2025",
         "financialYear": "31 Dec 2025",
-        "type": "Second Interim Dividend",
+        "type": "Special Dividend",
         "exDate": "2025-12-01",
         "paymentDate": "12 Dec 2025",
-        "amount": "0.0200",
+        "amount": "0.0025",
         "isDividend": true
       },
       {
@@ -559,9 +569,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:01.131Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:01.131Z",
+      "entitlements": "2026-10-14T05:55:01.131Z"
     }
   },
   "A1AKK": {
@@ -730,9 +745,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:06.371Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:06.371Z",
+      "entitlements": "2026-10-14T05:55:06.371Z"
     }
   },
   "AAX": {
@@ -898,9 +918,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:04.866Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:04.866Z",
+      "entitlements": "2026-10-14T05:55:04.866Z"
     }
   },
   "ACO": {
@@ -1094,11 +1119,25 @@ window.NEWS_DATA = {
         "paymentDate": "06 Sep 2023",
         "amount": "0.0020",
         "isDividend": true
+      },
+      {
+        "annDate": "28 Jul 2022",
+        "financialYear": "28 Feb 2023",
+        "type": "Interim Dividend",
+        "exDate": "2022-08-15",
+        "paymentDate": "30 Aug 2022",
+        "amount": "0.0020",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:06.953Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:06.953Z",
+      "entitlements": "2026-10-14T05:55:06.953Z"
     }
   },
   "ADB": {
@@ -1299,11 +1338,25 @@ window.NEWS_DATA = {
         "paymentDate": "26 Jun 2025",
         "amount": "0.0200",
         "isDividend": true
+      },
+      {
+        "annDate": "26 Feb 2025",
+        "financialYear": "31 Dec 2024",
+        "type": "Interim Dividend",
+        "exDate": "2025-03-11",
+        "paymentDate": "26 Mar 2025",
+        "amount": "0.0200",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:05.978Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:05.978Z",
+      "entitlements": "2026-10-14T05:55:05.978Z"
     }
   },
   "ADNEX": {
@@ -1459,9 +1512,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:53.737Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:53.737Z",
+      "entitlements": "2026-10-14T05:54:53.737Z"
     }
   },
   "AGMO": {
@@ -1637,9 +1695,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:57.217Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:57.217Z",
+      "entitlements": "2026-10-14T05:54:57.217Z"
     }
   },
   "AGRICOR": {
@@ -1817,9 +1880,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:58.939Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:58.939Z",
+      "entitlements": "2026-10-14T05:54:58.939Z"
     }
   },
   "AGX": {
@@ -2013,9 +2081,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:05.945Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:05.945Z",
+      "entitlements": "2026-10-14T05:55:05.945Z"
     }
   },
   "AIMFLEX": {
@@ -2193,9 +2266,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:05.656Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:05.656Z",
+      "entitlements": "2026-10-14T05:55:05.656Z"
     }
   },
   "AJI": {
@@ -2396,11 +2474,25 @@ window.NEWS_DATA = {
         "paymentDate": "06 Jun 2018",
         "amount": "0.0100",
         "isDividend": true
+      },
+      {
+        "annDate": "29 Mar 2017",
+        "financialYear": "30 Nov 2016",
+        "type": "Final Dividend",
+        "exDate": "2017-05-17",
+        "paymentDate": "06 Jun 2017",
+        "amount": "0.0200",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:54.011Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:54.011Z",
+      "entitlements": "2026-10-14T05:54:54.011Z"
     }
   },
   "ALPHA": {
@@ -2601,11 +2693,25 @@ window.NEWS_DATA = {
         "paymentDate": "31 Dec 2024",
         "amount": "0.0050",
         "isDividend": true
+      },
+      {
+        "annDate": "17 Jul 2024",
+        "financialYear": "31 May 2024",
+        "type": "Interim Dividend",
+        "exDate": "2024-07-30",
+        "paymentDate": "15 Aug 2024",
+        "amount": "0.0045",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:53.247Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:53.247Z",
+      "entitlements": "2026-10-14T05:54:53.247Z"
     }
   },
   "AMBEST": {
@@ -2771,9 +2877,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:49.032Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:49.032Z",
+      "entitlements": "2026-10-14T05:54:49.032Z"
     }
   },
   "AMEREIT": {
@@ -2974,11 +3085,25 @@ window.NEWS_DATA = {
         "paymentDate": "10 Dec 2025",
         "amount": "0.0216",
         "isDividend": true
+      },
+      {
+        "annDate": "23 Jul 2025",
+        "financialYear": "31 Mar 2026",
+        "type": "Income Distribution",
+        "exDate": "2025-08-07",
+        "paymentDate": "29 Aug 2025",
+        "amount": "0.0196",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:57.342Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:57.342Z",
+      "entitlements": "2026-10-14T05:54:57.342Z"
     }
   },
   "AMS": {
@@ -3154,9 +3279,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:55.489Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:55.489Z",
+      "entitlements": "2026-10-14T05:54:55.489Z"
     }
   },
   "ANEKA": {
@@ -3322,9 +3452,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:06.093Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:06.093Z",
+      "entitlements": "2026-10-14T05:55:06.093Z"
     }
   },
   "AQUAWALK": {
@@ -3509,9 +3644,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:05.301Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:05.301Z",
+      "entitlements": "2026-10-14T05:55:05.301Z"
     }
   },
   "ASM": {
@@ -3670,9 +3810,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:58.470Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:58.470Z",
+      "entitlements": "2026-10-14T05:54:58.470Z"
     }
   },
   "ATECH": {
@@ -3873,11 +4018,25 @@ window.NEWS_DATA = {
         "paymentDate": "08 Jan 2026",
         "amount": "0.0095",
         "isDividend": true
+      },
+      {
+        "annDate": "29 Aug 2025",
+        "financialYear": "31 Dec 2025",
+        "type": "Second Interim Dividend",
+        "exDate": "2025-09-23",
+        "paymentDate": "22 Oct 2025",
+        "amount": "0.0085",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:51.541Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:51.541Z",
+      "entitlements": "2026-10-14T05:54:51.541Z"
     }
   },
   "AXIATA": {
@@ -4095,9 +4254,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:04.086Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:04.086Z",
+      "entitlements": "2026-10-14T05:55:04.086Z"
     }
   },
   "AZAMJAYA": {
@@ -4266,9 +4430,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:56.452Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:56.452Z",
+      "entitlements": "2026-10-14T05:54:56.452Z"
     }
   },
   "BETA": {
@@ -4288,6 +4457,11 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-14",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
       {
         "date": "2026-10-12",
         "category": "Changes in Shareholdings",
@@ -4432,11 +4606,6 @@ window.NEWS_DATA = {
         "date": "2026-07-28",
         "category": "General Meetings",
         "title": "General Meetings: Notice of Meeting"
-      },
-      {
-        "date": "2026-07-24",
-        "category": "Listing Circulars",
-        "title": "BETA - Notice of Book Closure"
       }
     ],
     "entitlements": [
@@ -4475,11 +4644,25 @@ window.NEWS_DATA = {
         "paymentDate": "12 Mar 2026",
         "amount": "0.0125",
         "isDividend": true
+      },
+      {
+        "annDate": "18 Nov 2025",
+        "financialYear": "31 Mar 2026",
+        "type": "Second Interim Dividend",
+        "exDate": "2025-12-01",
+        "paymentDate": "12 Dec 2025",
+        "amount": "0.0125",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:01.804Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:01.804Z",
+      "entitlements": "2026-10-14T05:55:01.804Z"
     }
   },
   "BFIELD": {
@@ -4590,9 +4773,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:54.652Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:54.652Z",
+      "entitlements": "2026-10-14T05:54:54.652Z"
     }
   },
   "BMGREEN": {
@@ -4804,9 +4992,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:03.155Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:03.155Z",
+      "entitlements": "2026-10-14T05:55:03.155Z"
     }
   },
   "BMS": {
@@ -4991,9 +5184,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:59.825Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:59.825Z",
+      "entitlements": "2026-10-14T05:54:59.825Z"
     }
   },
   "BUSCAP": {
@@ -5159,9 +5357,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:55.355Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:55.355Z",
+      "entitlements": "2026-10-14T05:54:55.355Z"
     }
   },
   "BWYS": {
@@ -5337,9 +5540,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:01.420Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:01.420Z",
+      "entitlements": "2026-10-14T05:55:01.420Z"
     }
   },
   "CAMAROE": {
@@ -5498,9 +5706,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:04.350Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:04.350Z",
+      "entitlements": "2026-10-14T05:55:04.350Z"
     }
   },
   "CARLSBG": {
@@ -5701,11 +5914,25 @@ window.NEWS_DATA = {
         "paymentDate": "12 Jan 2026",
         "amount": "0.2500",
         "isDividend": true
+      },
+      {
+        "annDate": "12 Aug 2025",
+        "financialYear": "31 Dec 2025",
+        "type": "Second Interim Dividend",
+        "exDate": "2025-09-11",
+        "paymentDate": "10 Oct 2025",
+        "amount": "0.2000",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:04.917Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:04.917Z",
+      "entitlements": "2026-10-14T05:55:04.917Z"
     }
   },
   "CBHB": {
@@ -5890,9 +6117,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:48.951Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:48.951Z",
+      "entitlements": "2026-10-14T05:54:48.951Z"
     }
   },
   "CEB": {
@@ -6086,9 +6318,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:52.493Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:52.493Z",
+      "entitlements": "2026-10-14T05:54:52.493Z"
     }
   },
   "CEKD": {
@@ -6282,11 +6519,25 @@ window.NEWS_DATA = {
         "paymentDate": "20 Dec 2024",
         "amount": "0.0075",
         "isDividend": true
+      },
+      {
+        "annDate": "24 Jul 2024",
+        "financialYear": "31 Aug 2024",
+        "type": "Third Interim Dividend",
+        "exDate": "2024-08-29",
+        "paymentDate": "27 Sep 2024",
+        "amount": "0.0075",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:06.715Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:06.715Z",
+      "entitlements": "2026-10-14T05:55:06.715Z"
     }
   },
   "CENGILD": {
@@ -6498,9 +6749,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:06.031Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:06.031Z",
+      "entitlements": "2026-10-14T05:55:06.031Z"
     }
   },
   "CHB": {
@@ -6520,6 +6776,11 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-14",
+        "category": "Listing Circulars",
+        "title": "CHB - Notice of Book Closure"
+      },
       {
         "date": "2026-10-13",
         "category": "General Announcement",
@@ -6664,11 +6925,6 @@ window.NEWS_DATA = {
         "date": "2025-11-26",
         "category": "General Announcement",
         "title": "OTHERS"
-      },
-      {
-        "date": "2025-11-26",
-        "category": "General Meetings",
-        "title": "General Meetings: Outcome of Meeting"
       }
     ],
     "entitlements": [
@@ -6700,9 +6956,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:52.948Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:52.948Z",
+      "entitlements": "2026-10-14T05:54:52.948Z"
     }
   },
   "CHEEDING": {
@@ -6887,9 +7148,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:01.239Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:01.239Z",
+      "entitlements": "2026-10-14T05:55:01.239Z"
     }
   },
   "CIMB": {
@@ -7090,11 +7356,25 @@ window.NEWS_DATA = {
         "paymentDate": "30 Sep 2025",
         "amount": "0.1975",
         "isDividend": true
+      },
+      {
+        "annDate": "28 Feb 2025",
+        "financialYear": "31 Dec 2024",
+        "type": "Second Interim Dividend",
+        "exDate": "2025-03-14",
+        "paymentDate": "27 Mar 2025",
+        "amount": "0.2000",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:04.901Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:04.901Z",
+      "entitlements": "2026-10-14T05:55:04.901Z"
     }
   },
   "CKI": {
@@ -7270,9 +7550,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:56.135Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:56.135Z",
+      "entitlements": "2026-10-14T05:54:56.135Z"
     }
   },
   "CLITE": {
@@ -7441,9 +7726,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:51.894Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:51.894Z",
+      "entitlements": "2026-10-14T05:54:51.894Z"
     }
   },
   "CLOUDPT": {
@@ -7661,9 +7951,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:55.391Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:55.391Z",
+      "entitlements": "2026-10-14T05:54:55.391Z"
     }
   },
   "CNERGEN": {
@@ -7866,9 +8161,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:52.664Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:52.664Z",
+      "entitlements": "2026-10-14T05:54:52.664Z"
     }
   },
   "COLFORM": {
@@ -8053,9 +8353,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:06.961Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:06.961Z",
+      "entitlements": "2026-10-14T05:55:06.961Z"
     }
   },
   "CORAZA": {
@@ -8221,9 +8526,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:53.238Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:53.238Z",
+      "entitlements": "2026-10-14T05:54:53.238Z"
     }
   },
   "CPETECH": {
@@ -8417,9 +8727,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:49.751Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:49.751Z",
+      "entitlements": "2026-10-14T05:54:49.751Z"
     }
   },
   "CREST": {
@@ -8620,11 +8935,25 @@ window.NEWS_DATA = {
         "paymentDate": "03 Aug 2018",
         "amount": "0.0400",
         "isDividend": true
+      },
+      {
+        "annDate": "26 Apr 2017",
+        "financialYear": "31 Dec 2016",
+        "type": "First and Final Dividend",
+        "exDate": "2017-06-21",
+        "paymentDate": "14 Jul 2017",
+        "amount": "4.0000",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:52.123Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:52.123Z",
+      "entitlements": "2026-10-14T05:54:52.123Z"
     }
   },
   "CRPMATE": {
@@ -8809,9 +9138,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:05.773Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:05.773Z",
+      "entitlements": "2026-10-14T05:55:05.773Z"
     }
   },
   "CTOS": {
@@ -9012,11 +9346,25 @@ window.NEWS_DATA = {
         "paymentDate": "28 Apr 2026",
         "amount": "0.0086",
         "isDividend": true
+      },
+      {
+        "annDate": "30 Oct 2025",
+        "financialYear": "31 Dec 2025",
+        "type": "Third Interim Dividend",
+        "exDate": "2025-12-29",
+        "paymentDate": "28 Jan 2026",
+        "amount": "0.0075",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:04.957Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:04.957Z",
+      "entitlements": "2026-10-14T05:55:04.957Z"
     }
   },
   "DAY3": {
@@ -9203,9 +9551,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:56.115Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:56.115Z",
+      "entitlements": "2026-10-14T05:54:56.115Z"
     }
   },
   "DCHCARE": {
@@ -9364,9 +9717,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:06.562Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:06.562Z",
+      "entitlements": "2026-10-14T05:55:06.562Z"
     }
   },
   "DENGKIL": {
@@ -9532,9 +9890,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:54.194Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:54.194Z",
+      "entitlements": "2026-10-14T05:54:54.194Z"
     }
   },
   "DESTINI": {
@@ -9716,9 +10079,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:04.335Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:04.335Z",
+      "entitlements": "2026-10-14T05:55:04.335Z"
     }
   },
   "DLADY": {
@@ -9912,11 +10280,25 @@ window.NEWS_DATA = {
         "paymentDate": "13 Dec 2024",
         "amount": "0.2500",
         "isDividend": true
+      },
+      {
+        "annDate": "27 May 2024",
+        "financialYear": "31 Dec 2024",
+        "type": "First Interim Dividend",
+        "exDate": "2024-06-11",
+        "paymentDate": "20 Jun 2024",
+        "amount": "0.2500",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:57.630Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:57.630Z",
+      "entitlements": "2026-10-14T05:54:57.630Z"
     }
   },
   "DNEX": {
@@ -9930,6 +10312,11 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-14",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
       {
         "date": "2026-10-09",
         "category": "Additional Listing",
@@ -10074,11 +10461,6 @@ window.NEWS_DATA = {
         "date": "2026-08-20",
         "category": "Additional Listing",
         "title": "Additional Listing Announcement /Subdivision of Shares"
-      },
-      {
-        "date": "2026-08-20",
-        "category": "Additional Listing",
-        "title": "Additional Listing Announcement /Subdivision of Shares"
       }
     ],
     "entitlements": [
@@ -10128,9 +10510,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:58.178Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:58.178Z",
+      "entitlements": "2026-10-14T05:54:58.178Z"
     }
   },
   "DPIH": {
@@ -10331,11 +10718,25 @@ window.NEWS_DATA = {
         "paymentDate": "28 Aug 2024",
         "amount": "0.0010",
         "isDividend": true
+      },
+      {
+        "annDate": "21 Aug 2023",
+        "financialYear": "31 May 2023",
+        "type": "First Interim Dividend",
+        "exDate": "2023-09-06",
+        "paymentDate": "22 Sep 2023",
+        "amount": "0.0015",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:54.615Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:54.615Z",
+      "entitlements": "2026-10-14T05:54:54.615Z"
     }
   },
   "DSS": {
@@ -10529,9 +10930,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:02.670Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:02.670Z",
+      "entitlements": "2026-10-14T05:55:02.670Z"
     }
   },
   "DUFU": {
@@ -10743,9 +11149,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:52.758Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:52.758Z",
+      "entitlements": "2026-10-14T05:54:52.758Z"
     }
   },
   "DXN": {
@@ -10957,9 +11368,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:58.064Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:58.064Z",
+      "entitlements": "2026-10-14T05:54:58.064Z"
     }
   },
   "ECA": {
@@ -11125,9 +11541,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:05.920Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:05.920Z",
+      "entitlements": "2026-10-14T05:55:05.920Z"
     }
   },
   "ECKEM": {
@@ -11211,9 +11632,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:06.229Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:06.229Z",
+      "entitlements": "2026-10-14T05:55:06.229Z"
     }
   },
   "ECOMATE": {
@@ -11407,9 +11833,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:51.734Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:51.734Z",
+      "entitlements": "2026-10-14T05:54:51.734Z"
     }
   },
   "ECOSHOP": {
@@ -11610,11 +12041,73 @@ window.NEWS_DATA = {
         "paymentDate": "26 Nov 2025",
         "amount": "0.0050",
         "isDividend": true
+      },
+      {
+        "annDate": "28 Jul 2025",
+        "financialYear": "31 May 2025",
+        "type": "Interim Dividend",
+        "exDate": "2025-08-11",
+        "paymentDate": "26 Aug 2025",
+        "amount": "0.0100",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:54.065Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:54.065Z",
+      "entitlements": "2026-10-14T05:54:54.065Z"
+    }
+  },
+  "ECOSYS": {
+    "hasNewsAlert": false,
+    "newsBadges": [
+      {
+        "type": "RECENT_NEWS",
+        "label": "News: 2026-10-08",
+        "severity": "info",
+        "title": "[2026-10-08] IPO Announcement - Initial Public Offering"
+      }
+    ],
+    "announcements": [
+      {
+        "date": "2026-10-08",
+        "category": "IPO Announcement",
+        "title": "Initial Public Offering"
+      },
+      {
+        "date": "2026-10-01",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-09-23",
+        "category": "Financial Results",
+        "title": "Quarterly rpt on consolidated results for the financial period ended 30/06/2026"
+      },
+      {
+        "date": "2026-09-23",
+        "category": "IPO Announcement",
+        "title": "Timetable for IPO"
+      },
+      {
+        "date": "2026-09-23",
+        "category": "IPO Announcement",
+        "title": "INITIAL PUBLIC OFFERING (\"IPO\") IN CONJUNCTION WITH OUR LISTING ON THE ACE MARKET OF BURSA MALAYSIA SECURITIES BERHAD (\"BURSA SECURITIES\") COMPRISING PUBLIC ISSUE OF 145,696,000 NEW ORDINARY SHARES IN OUR COMPANY (\"SHARES\") IN THE FOLLOWING MANNER: (I) 28,568,000 NEW SHARES AVAILABLE FOR APPLICATION"
+      }
+    ],
+    "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:58.618Z",
+    "lastSuccessfulAt": {
+      "announcements": "2026-10-14T05:54:58.618Z",
+      "entitlements": "2026-10-14T05:54:58.618Z"
     }
   },
   "EDELTEQ": {
@@ -11790,9 +12283,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:55.869Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:55.869Z",
+      "entitlements": "2026-10-14T05:54:55.869Z"
     }
   },
   "EFRAME": {
@@ -11977,9 +12475,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:56.996Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:56.996Z",
+      "entitlements": "2026-10-14T05:54:56.996Z"
     }
   },
   "EIB": {
@@ -12138,9 +12641,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:06.825Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:06.825Z",
+      "entitlements": "2026-10-14T05:55:06.825Z"
     }
   },
   "EIPOWER": {
@@ -12291,9 +12799,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:50.368Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:50.368Z",
+      "entitlements": "2026-10-14T05:54:50.368Z"
     }
   },
   "ELRIDGE": {
@@ -12459,9 +12972,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:54.969Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:54.969Z",
+      "entitlements": "2026-10-14T05:54:54.969Z"
     }
   },
   "ELSA": {
@@ -12622,9 +13140,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:59.412Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:59.412Z",
+      "entitlements": "2026-10-14T05:54:59.412Z"
     }
   },
   "EMCC": {
@@ -12811,9 +13334,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:55.992Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:55.992Z",
+      "entitlements": "2026-10-14T05:54:55.992Z"
     }
   },
   "EMPIRE": {
@@ -12989,9 +13517,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:58.728Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:58.728Z",
+      "entitlements": "2026-10-14T05:54:58.728Z"
     }
   },
   "ENEST": {
@@ -13055,9 +13588,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:59.298Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:59.298Z",
+      "entitlements": "2026-10-14T05:54:59.298Z"
     }
   },
   "ENPRO": {
@@ -13223,9 +13761,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:52.764Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:52.764Z",
+      "entitlements": "2026-10-14T05:54:52.764Z"
     }
   },
   "EPB": {
@@ -13401,9 +13944,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:57.513Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:57.513Z",
+      "entitlements": "2026-10-14T05:54:57.513Z"
     }
   },
   "EVOCOM": {
@@ -13464,9 +14012,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:54.879Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:54.879Z",
+      "entitlements": "2026-10-14T05:54:54.879Z"
     }
   },
   "EXSIMHB": {
@@ -13632,9 +14185,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:52.201Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:52.201Z",
+      "entitlements": "2026-10-14T05:54:52.201Z"
     }
   },
   "F&N": {
@@ -13835,11 +14393,25 @@ window.NEWS_DATA = {
         "paymentDate": "10 Feb 2025",
         "amount": "0.3300",
         "isDividend": true
+      },
+      {
+        "annDate": "30 Apr 2024",
+        "financialYear": "30 Sep 2024",
+        "type": "Interim Dividend",
+        "exDate": "2024-05-15",
+        "paymentDate": "31 May 2024",
+        "amount": "0.3000",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:00.914Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:00.914Z",
+      "entitlements": "2026-10-14T05:55:00.914Z"
     }
   },
   "FAMIERA": {
@@ -13968,9 +14540,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:52.086Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:52.086Z",
+      "entitlements": "2026-10-14T05:54:52.086Z"
     }
   },
   "FEYTECH": {
@@ -14155,9 +14732,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:05.610Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:05.610Z",
+      "entitlements": "2026-10-14T05:55:05.610Z"
     }
   },
   "FFB": {
@@ -14358,11 +14940,25 @@ window.NEWS_DATA = {
         "paymentDate": "10 Oct 2024",
         "amount": "0.0120",
         "isDividend": true
+      },
+      {
+        "annDate": "28 Jul 2023",
+        "financialYear": "31 Mar 2023",
+        "type": "Final Dividend",
+        "exDate": "2023-09-27",
+        "paymentDate": "10 Oct 2023",
+        "amount": "0.0100",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:03.883Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:03.883Z",
+      "entitlements": "2026-10-14T05:55:03.883Z"
     }
   },
   "FIBRO": {
@@ -14528,9 +15124,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:01.359Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:01.359Z",
+      "entitlements": "2026-10-14T05:55:01.359Z"
     }
   },
   "FLEXI": {
@@ -14706,9 +15307,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:06.598Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:06.598Z",
+      "entitlements": "2026-10-14T05:55:06.598Z"
     }
   },
   "FOODIE": {
@@ -14893,9 +15499,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:05.366Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:05.366Z",
+      "entitlements": "2026-10-14T05:55:05.366Z"
     }
   },
   "FPHB": {
@@ -15077,9 +15688,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:56.420Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:56.420Z",
+      "entitlements": "2026-10-14T05:54:56.420Z"
     }
   },
   "GBBOND": {
@@ -15165,9 +15781,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:56.795Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:56.795Z",
+      "entitlements": "2026-10-14T05:54:56.795Z"
     }
   },
   "GDGROUP": {
@@ -15338,9 +15959,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:50.907Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:50.907Z",
+      "entitlements": "2026-10-14T05:54:50.907Z"
     }
   },
   "GENERGY": {
@@ -15525,9 +16151,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:58.872Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:58.872Z",
+      "entitlements": "2026-10-14T05:54:58.872Z"
     }
   },
   "GEOHAN": {
@@ -15686,9 +16317,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:02.541Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:02.541Z",
+      "entitlements": "2026-10-14T05:55:02.541Z"
     }
   },
   "GIIB": {
@@ -15900,9 +16536,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:56.670Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:56.670Z",
+      "entitlements": "2026-10-14T05:54:56.670Z"
     }
   },
   "GLXT": {
@@ -16103,11 +16744,25 @@ window.NEWS_DATA = {
         "paymentDate": "16 Dec 2024",
         "amount": "0.0075",
         "isDividend": true
+      },
+      {
+        "annDate": "30 Jan 2024",
+        "financialYear": "31 Mar 2024",
+        "type": "Interim Dividend",
+        "exDate": "2024-02-15",
+        "paymentDate": "29 Feb 2024",
+        "amount": "0.0050",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:01.488Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:01.488Z",
+      "entitlements": "2026-10-14T05:55:01.488Z"
     }
   },
   "GOHUB": {
@@ -16273,9 +16928,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:52.779Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:52.779Z",
+      "entitlements": "2026-10-14T05:54:52.779Z"
     }
   },
   "GOLDLI": {
@@ -16376,9 +17036,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:57.921Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:57.921Z",
+      "entitlements": "2026-10-14T05:54:57.921Z"
     }
   },
   "GREATEC": {
@@ -16544,9 +17209,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:56.049Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:56.049Z",
+      "entitlements": "2026-10-14T05:54:56.049Z"
     }
   },
   "HAILY": {
@@ -16747,11 +17417,25 @@ window.NEWS_DATA = {
         "paymentDate": "11 Oct 2024",
         "amount": "0.0031",
         "isDividend": true
+      },
+      {
+        "annDate": "27 Mar 2024",
+        "financialYear": "31 Dec 2023",
+        "type": "Second Interim Dividend",
+        "exDate": "2024-04-19",
+        "paymentDate": "21 May 2024",
+        "amount": "0.0068",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:02.194Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:02.194Z",
+      "entitlements": "2026-10-14T05:55:02.194Z"
     }
   },
   "HAWK": {
@@ -16917,9 +17601,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:06.643Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:06.643Z",
+      "entitlements": "2026-10-14T05:55:06.643Z"
     }
   },
   "HEGROUP": {
@@ -17113,9 +17802,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:52.247Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:52.247Z",
+      "entitlements": "2026-10-14T05:54:52.247Z"
     }
   },
   "HEIM": {
@@ -17309,11 +18003,25 @@ window.NEWS_DATA = {
         "paymentDate": "23 Jul 2025",
         "amount": "1.1500",
         "isDividend": true
+      },
+      {
+        "annDate": "07 Aug 2024",
+        "financialYear": "31 Dec 2024",
+        "type": "Interim Dividend",
+        "exDate": "2024-10-08",
+        "paymentDate": "30 Oct 2024",
+        "amount": "0.4000",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:59.356Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:59.356Z",
+      "entitlements": "2026-10-14T05:54:59.356Z"
     }
   },
   "HHRG": {
@@ -17489,9 +18197,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:03.732Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:03.732Z",
+      "entitlements": "2026-10-14T05:55:03.732Z"
     }
   },
   "HKB": {
@@ -17667,9 +18380,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:53.583Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:53.583Z",
+      "entitlements": "2026-10-14T05:54:53.583Z"
     }
   },
   "HLBANK": {
@@ -17870,11 +18588,25 @@ window.NEWS_DATA = {
         "paymentDate": "26 Mar 2025",
         "amount": "0.2800",
         "isDividend": true
+      },
+      {
+        "annDate": "27 Sep 2024",
+        "financialYear": "30 Jun 2024",
+        "type": "Final Dividend",
+        "exDate": "2024-10-29",
+        "paymentDate": "19 Nov 2024",
+        "amount": "0.4300",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:59.814Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:59.814Z",
+      "entitlements": "2026-10-14T05:54:59.814Z"
     }
   },
   "HLFG": {
@@ -18075,11 +18807,25 @@ window.NEWS_DATA = {
         "paymentDate": "27 Mar 2025",
         "amount": "0.2000",
         "isDividend": true
+      },
+      {
+        "annDate": "30 Sep 2024",
+        "financialYear": "30 Jun 2024",
+        "type": "Final Dividend",
+        "exDate": "2024-10-30",
+        "paymentDate": "21 Nov 2024",
+        "amount": "0.3600",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:05.549Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:05.549Z",
+      "entitlements": "2026-10-14T05:55:05.549Z"
     }
   },
   "HLIND": {
@@ -18280,11 +19026,25 @@ window.NEWS_DATA = {
         "paymentDate": "25 Jun 2025",
         "amount": "0.5500",
         "isDividend": true
+      },
+      {
+        "annDate": "25 Nov 2024",
+        "financialYear": "30 Jun 2025",
+        "type": "Interim Dividend",
+        "exDate": "2024-12-09",
+        "paymentDate": "24 Dec 2024",
+        "amount": "0.2500",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:02.702Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:02.702Z",
+      "entitlements": "2026-10-14T05:55:02.702Z"
     }
   },
   "HOCKSOON": {
@@ -18398,9 +19158,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:02.653Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:02.653Z",
+      "entitlements": "2026-10-14T05:55:02.653Z"
     }
   },
   "HONGSENG": {
@@ -18594,9 +19359,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:03.010Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:03.010Z",
+      "entitlements": "2026-10-14T05:55:03.010Z"
     }
   },
   "HPMT": {
@@ -18801,9 +19571,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:55.564Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:55.564Z",
+      "entitlements": "2026-10-14T05:54:55.564Z"
     }
   },
   "HPPHB": {
@@ -19015,9 +19790,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:02.277Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:02.277Z",
+      "entitlements": "2026-10-14T05:55:02.277Z"
     }
   },
   "HSSBAKERY": {
@@ -19126,9 +19906,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:02.786Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:02.786Z",
+      "entitlements": "2026-10-14T05:55:02.786Z"
     }
   },
   "IAB": {
@@ -19294,9 +20079,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:03.518Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:03.518Z",
+      "entitlements": "2026-10-14T05:55:03.518Z"
     }
   },
   "ICENTS": {
@@ -19462,19 +20252,24 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:51.097Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:51.097Z",
+      "entitlements": "2026-10-14T05:54:51.097Z"
     }
   },
   "ICTZONE": {
-    "hasNewsAlert": true,
+    "hasNewsAlert": false,
     "newsBadges": [
       {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 2026-10-08",
-        "severity": "warning",
-        "title": "Second Interim Dividend (0.0022) | Ex-Date: 2026-10-08"
+        "type": "RECENT_NEWS",
+        "label": "News: 2026-09-25",
+        "severity": "info",
+        "title": "[2026-09-25] Listing Circulars - ICTZONE - Notice of Book Closure"
       }
     ],
     "announcements": [
@@ -19658,9 +20453,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:01.765Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:01.765Z",
+      "entitlements": "2026-10-14T05:55:01.765Z"
     }
   },
   "IJM": {
@@ -19838,19 +20638,19 @@ window.NEWS_DATA = {
       {
         "annDate": "28 May 2026",
         "financialYear": "31 Mar 2026",
-        "type": "Special Dividend",
+        "type": "Second Interim Dividend",
         "exDate": "2026-06-29",
         "paymentDate": "24 Jul 2026",
-        "amount": "0.0100",
+        "amount": "0.0500",
         "isDividend": true
       },
       {
         "annDate": "28 May 2026",
         "financialYear": "31 Mar 2026",
-        "type": "Second Interim Dividend",
+        "type": "Special Dividend",
         "exDate": "2026-06-29",
         "paymentDate": "24 Jul 2026",
-        "amount": "0.0500",
+        "amount": "0.0100",
         "isDividend": true
       },
       {
@@ -19861,11 +20661,25 @@ window.NEWS_DATA = {
         "paymentDate": "07 Jan 2026",
         "amount": "0.0200",
         "isDividend": true
+      },
+      {
+        "annDate": "29 May 2025",
+        "financialYear": "31 Mar 2025",
+        "type": "Second Interim Dividend",
+        "exDate": "2025-06-26",
+        "paymentDate": "18 Jul 2025",
+        "amount": "0.0500",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:55.036Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:55.036Z",
+      "entitlements": "2026-10-14T05:54:55.036Z"
     }
   },
   "INARI": {
@@ -20066,11 +20880,25 @@ window.NEWS_DATA = {
         "paymentDate": "08 Jan 2026",
         "amount": "0.0133",
         "isDividend": true
+      },
+      {
+        "annDate": "28 Aug 2025",
+        "financialYear": "30 Jun 2025",
+        "type": "Fourth Interim Dividend",
+        "exDate": "2025-09-17",
+        "paymentDate": "10 Oct 2025",
+        "amount": "0.0120",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:49.982Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:49.982Z",
+      "entitlements": "2026-10-14T05:54:49.982Z"
     }
   },
   "INFOM": {
@@ -20264,9 +21092,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:51.508Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:51.508Z",
+      "entitlements": "2026-10-14T05:54:51.508Z"
     }
   },
   "INFOTEC": {
@@ -20467,11 +21300,25 @@ window.NEWS_DATA = {
         "paymentDate": "28 Jun 2024",
         "amount": "0.0138",
         "isDividend": true
+      },
+      {
+        "annDate": "20 Nov 2023",
+        "financialYear": "31 Dec 2023",
+        "type": "Interim Dividend",
+        "exDate": "2023-12-07",
+        "paymentDate": "22 Dec 2023",
+        "amount": "0.0094",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:06.483Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:06.483Z",
+      "entitlements": "2026-10-14T05:55:06.483Z"
     }
   },
   "INNATURE": {
@@ -20676,9 +21523,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:01.796Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:01.796Z",
+      "entitlements": "2026-10-14T05:55:01.796Z"
     }
   },
   "INSPACE": {
@@ -20844,9 +21696,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:57.779Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:57.779Z",
+      "entitlements": "2026-10-14T05:54:57.779Z"
     }
   },
   "ISF": {
@@ -21012,9 +21869,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:50.625Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:50.625Z",
+      "entitlements": "2026-10-14T05:54:50.625Z"
     }
   },
   "ITMAX": {
@@ -21215,11 +22077,25 @@ window.NEWS_DATA = {
         "paymentDate": "25 Mar 2024",
         "amount": "0.0120",
         "isDividend": true
+      },
+      {
+        "annDate": "27 Feb 2023",
+        "financialYear": "31 Dec 2022",
+        "type": "Interim Dividend",
+        "exDate": "2023-03-13",
+        "paymentDate": "24 Mar 2023",
+        "amount": "0.0080",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:51.387Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:51.387Z",
+      "entitlements": "2026-10-14T05:54:51.387Z"
     }
   },
   "JAKS": {
@@ -21395,9 +22271,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:53.506Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:53.506Z",
+      "entitlements": "2026-10-14T05:54:53.506Z"
     }
   },
   "JCY": {
@@ -21598,11 +22479,25 @@ window.NEWS_DATA = {
         "paymentDate": "10 Oct 2017",
         "amount": "0.0075",
         "isDividend": true
+      },
+      {
+        "annDate": "26 May 2017",
+        "financialYear": "30 Sep 2017",
+        "type": "Second interim dividend",
+        "exDate": "2017-06-15",
+        "paymentDate": "11 Jul 2017",
+        "amount": "0.0125",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:51.365Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:51.365Z",
+      "entitlements": "2026-10-14T05:54:51.365Z"
     }
   },
   "JPG": {
@@ -21814,9 +22709,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:59.853Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:59.853Z",
+      "entitlements": "2026-10-14T05:54:59.853Z"
     }
   },
   "JSSOLAR": {
@@ -21975,9 +22875,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:54.179Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:54.179Z",
+      "entitlements": "2026-10-14T05:54:54.179Z"
     }
   },
   "JTGROUP": {
@@ -22143,9 +23048,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:51.225Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:51.225Z",
+      "entitlements": "2026-10-14T05:54:51.225Z"
     }
   },
   "KEEMING": {
@@ -22306,9 +23216,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:49.731Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:49.731Z",
+      "entitlements": "2026-10-14T05:54:49.731Z"
     }
   },
   "KENERGY": {
@@ -22493,9 +23408,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:04.228Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:04.228Z",
+      "entitlements": "2026-10-14T05:55:04.228Z"
     }
   },
   "KEYFIELD": {
@@ -22696,11 +23616,25 @@ window.NEWS_DATA = {
         "paymentDate": "27 Mar 2026",
         "amount": "0.0300",
         "isDividend": true
+      },
+      {
+        "annDate": "13 Nov 2025",
+        "financialYear": "31 Dec 2025",
+        "type": "Third Interim Dividend",
+        "exDate": "2025-11-27",
+        "paymentDate": "11 Dec 2025",
+        "amount": "0.0200",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:54.486Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:54.486Z",
+      "entitlements": "2026-10-14T05:54:54.486Z"
     }
   },
   "KGB": {
@@ -22887,6 +23821,15 @@ window.NEWS_DATA = {
       {
         "annDate": "25 Feb 2026",
         "financialYear": "31 Dec 2025",
+        "type": "Fourth Interim Dividend",
+        "exDate": "2026-04-09",
+        "paymentDate": "21 Apr 2026",
+        "amount": "0.0250",
+        "isDividend": true
+      },
+      {
+        "annDate": "25 Feb 2026",
+        "financialYear": "31 Dec 2025",
         "type": "Special Dividend",
         "exDate": "2026-04-09",
         "paymentDate": "21 Apr 2026",
@@ -22894,18 +23837,23 @@ window.NEWS_DATA = {
         "isDividend": true
       },
       {
-        "annDate": "25 Feb 2026",
+        "annDate": "24 Nov 2025",
         "financialYear": "31 Dec 2025",
-        "type": "Fourth Interim Dividend",
-        "exDate": "2026-04-09",
-        "paymentDate": "21 Apr 2026",
-        "amount": "0.0250",
+        "type": "Special Dividend",
+        "exDate": "2026-01-09",
+        "paymentDate": "21 Jan 2026",
+        "amount": "0.0150",
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:55.654Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:55.654Z",
+      "entitlements": "2026-10-14T05:54:55.654Z"
     }
   },
   "KGW": {
@@ -23064,9 +24012,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:58.884Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:58.884Z",
+      "entitlements": "2026-10-14T05:54:58.884Z"
     }
   },
   "KHB": {
@@ -23235,9 +24188,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:04.203Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:04.203Z",
+      "entitlements": "2026-10-14T05:55:04.203Z"
     }
   },
   "KHJB": {
@@ -23449,9 +24407,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:52.899Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:52.899Z",
+      "entitlements": "2026-10-14T05:54:52.899Z"
     }
   },
   "KITACON": {
@@ -23645,11 +24608,25 @@ window.NEWS_DATA = {
         "paymentDate": "22 Dec 2025",
         "amount": "0.0100",
         "isDividend": true
+      },
+      {
+        "annDate": "28 Aug 2025",
+        "financialYear": "31 Dec 2025",
+        "type": "First Interim Dividend",
+        "exDate": "2025-09-25",
+        "paymentDate": "10 Oct 2025",
+        "amount": "0.0100",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:55.342Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:55.342Z",
+      "entitlements": "2026-10-14T05:54:55.342Z"
     }
   },
   "KJTS": {
@@ -23843,9 +24820,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:56.468Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:56.468Z",
+      "entitlements": "2026-10-14T05:54:56.468Z"
     }
   },
   "KLCC": {
@@ -24046,11 +25028,25 @@ window.NEWS_DATA = {
         "paymentDate": "30 Jun 2026",
         "amount": "0.0188",
         "isDividend": true
+      },
+      {
+        "annDate": "29 Jan 2026",
+        "financialYear": "31 Dec 2025",
+        "type": "Income Distribution",
+        "exDate": "2026-02-13",
+        "paymentDate": "27 Feb 2026",
+        "amount": "0.0731",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:00.686Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:00.686Z",
+      "entitlements": "2026-10-14T05:55:00.686Z"
     }
   },
   "KLK": {
@@ -24262,9 +25258,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:56.961Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:56.961Z",
+      "entitlements": "2026-10-14T05:54:56.961Z"
     }
   },
   "KOPI": {
@@ -24433,9 +25434,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:56.787Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:56.787Z",
+      "entitlements": "2026-10-14T05:54:56.787Z"
     }
   },
   "KTI": {
@@ -24613,9 +25619,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:58.187Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:58.187Z",
+      "entitlements": "2026-10-14T05:54:58.187Z"
     }
   },
   "KUCINGKO": {
@@ -24784,9 +25795,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:06.282Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:06.282Z",
+      "entitlements": "2026-10-14T05:55:06.282Z"
     }
   },
   "L&PBHD": {
@@ -24973,9 +25989,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:54.625Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:54.625Z",
+      "entitlements": "2026-10-14T05:54:54.625Z"
     }
   },
   "LACMED": {
@@ -25151,15 +26172,171 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:57.603Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:57.603Z",
+      "entitlements": "2026-10-14T05:54:57.603Z"
     }
   },
   "LEFORM": {
     "hasNewsAlert": false,
     "newsBadges": [],
-    "announcements": [],
+    "announcements": [
+      {
+        "date": "2026-08-27",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-08-27",
+        "category": "Financial Results",
+        "title": "Quarterly rpt on consolidated results for the financial period ended 30/06/2026"
+      },
+      {
+        "date": "2026-08-20",
+        "category": "General Announcement",
+        "title": "MEMORANDUM OF UNDERSTANDING"
+      },
+      {
+        "date": "2026-06-23",
+        "category": "General Meetings",
+        "title": "General Meetings: Outcome of Meeting"
+      },
+      {
+        "date": "2026-05-26",
+        "category": "Financial Results",
+        "title": "Quarterly rpt on consolidated results for the financial period ended 31/03/2026"
+      },
+      {
+        "date": "2026-05-04",
+        "category": "General Meetings",
+        "title": "General Meetings: Notice of Meeting"
+      },
+      {
+        "date": "2026-04-30",
+        "category": "Circular/Notice",
+        "title": "CIRCULAR TO SHAREHOLDERS IN RELATION TO THE PROPOSED RENEWAL OF SHAREHOLDERS' MANDATE FOR EXISTING RECURRENT RELATED PARTY TRANSACTIONS OF A REVENUE OR TRADING NATURE"
+      },
+      {
+        "date": "2026-04-30",
+        "category": "Annual Report",
+        "title": "Annual Report & CG Report - 2025"
+      },
+      {
+        "date": "2026-04-29",
+        "category": "General Meetings",
+        "title": "General Meetings: Notice of Meeting"
+      },
+      {
+        "date": "2026-04-28",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-04-22",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-04-22",
+        "category": "General Announcement",
+        "title": "MEMORANDUM OF UNDERSTANDING"
+      },
+      {
+        "date": "2026-04-16",
+        "category": "Change of Corp Info",
+        "title": "Change in Boardroom - MR LAW KAR HOU"
+      },
+      {
+        "date": "2026-03-16",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR LAW KAR HOU"
+      },
+      {
+        "date": "2026-03-16",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR TAN JIN YIK"
+      },
+      {
+        "date": "2026-03-16",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MISS LEE WEE LENG"
+      },
+      {
+        "date": "2026-03-16",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATUK SERI AKHIL BIN BULAT"
+      },
+      {
+        "date": "2026-03-16",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MISS CHUA LENG LEEK"
+      },
+      {
+        "date": "2026-03-16",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - PUAN ESMARIZA BINTI ISMAIL"
+      },
+      {
+        "date": "2026-03-16",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR LAW KOK THYE"
+      },
+      {
+        "date": "2026-03-16",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LAW KOK THYE"
+      },
+      {
+        "date": "2026-03-16",
+        "category": "Changes in Shareholdings",
+        "title": "Notice of Interest Sub. S-hldr (Section 137 of CA 2016) - NST TRADING MALAYSIA SDN BHD"
+      },
+      {
+        "date": "2026-03-16",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - TIANWEN HOLDINGS SDN BHD"
+      },
+      {
+        "date": "2026-03-16",
+        "category": "General Announcement",
+        "title": "NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : FUND RAISING"
+      },
+      {
+        "date": "2026-03-13",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
+      {
+        "date": "2026-03-06",
+        "category": "General Announcement",
+        "title": "NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : FUND RAISING"
+      },
+      {
+        "date": "2026-03-06",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-03-06",
+        "category": "General Announcement",
+        "title": "NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : FUND RAISING"
+      },
+      {
+        "date": "2026-02-27",
+        "category": "Financial Results",
+        "title": "Quarterly rpt on consolidated results for the financial period ended 31/12/2025"
+      },
+      {
+        "date": "2025-12-31",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      }
+    ],
     "entitlements": [
       {
         "annDate": "30 Nov 2022",
@@ -25171,9 +26348,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:53.443Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:53.443Z",
+      "entitlements": "2026-10-14T05:54:53.443Z"
     }
   },
   "LGMS": {
@@ -25374,11 +26556,25 @@ window.NEWS_DATA = {
         "paymentDate": "31 Dec 2024",
         "amount": "0.0050",
         "isDividend": true
+      },
+      {
+        "annDate": "28 Aug 2024",
+        "financialYear": "31 Dec 2024",
+        "type": "First Interim Dividend",
+        "exDate": "2024-09-11",
+        "paymentDate": "27 Sep 2024",
+        "amount": "0.0050",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:50.573Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:50.573Z",
+      "entitlements": "2026-10-14T05:54:50.573Z"
     }
   },
   "LHI": {
@@ -25579,11 +26775,25 @@ window.NEWS_DATA = {
         "paymentDate": "30 Dec 2024",
         "amount": "0.0145",
         "isDividend": true
+      },
+      {
+        "annDate": "25 Apr 2024",
+        "financialYear": "31 Dec 2024",
+        "type": "Interim Dividend",
+        "exDate": "2024-05-14",
+        "paymentDate": "27 May 2024",
+        "amount": "0.0130",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:04.497Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:04.497Z",
+      "entitlements": "2026-10-14T05:55:04.497Z"
     }
   },
   "LIFTECH": {
@@ -25692,9 +26902,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:03.032Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:03.032Z",
+      "entitlements": "2026-10-14T05:55:03.032Z"
     }
   },
   "LSH": {
@@ -25895,11 +27110,25 @@ window.NEWS_DATA = {
         "paymentDate": "22 Dec 2025",
         "amount": "0.0155",
         "isDividend": true
+      },
+      {
+        "annDate": "27 Aug 2025",
+        "financialYear": "30 Sep 2025",
+        "type": "Interim Dividend",
+        "exDate": "2025-09-12",
+        "paymentDate": "26 Sep 2025",
+        "amount": "0.0089",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:55.659Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:55.659Z",
+      "entitlements": "2026-10-14T05:54:55.659Z"
     }
   },
   "LWSABAH": {
@@ -26084,9 +27313,215 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:58.506Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:58.506Z",
+      "entitlements": "2026-10-14T05:54:58.506Z"
+    }
+  },
+  "MAG": {
+    "hasNewsAlert": false,
+    "newsBadges": [
+      {
+        "type": "RECENT_NEWS",
+        "label": "News: 2026-10-01",
+        "severity": "info",
+        "title": "[2026-10-01] General Announcement - OTHERS"
+      }
+    ],
+    "announcements": [
+      {
+        "date": "2026-10-01",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-08-28",
+        "category": "Financial Results",
+        "title": "Quarterly rpt on consolidated results for the financial period ended 30/06/2026"
+      },
+      {
+        "date": "2026-08-18",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR NG MIN LIN"
+      },
+      {
+        "date": "2026-08-18",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR NG MIN LIN"
+      },
+      {
+        "date": "2026-08-18",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings During Closed Period"
+      },
+      {
+        "date": "2026-07-23",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
+      {
+        "date": "2026-06-25",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-06-04",
+        "category": "General Meetings",
+        "title": "General Meetings: Outcome of Meeting"
+      },
+      {
+        "date": "2026-05-29",
+        "category": "Financial Results",
+        "title": "Quarterly rpt on consolidated results for the financial period ended 31/03/2026"
+      },
+      {
+        "date": "2026-05-21",
+        "category": "Annual Report",
+        "title": "Annual Report & CG Report - 2025"
+      },
+      {
+        "date": "2026-05-04",
+        "category": "Change of Corp Info",
+        "title": "Change in Boardroom - MR MELVIN LIM CHUN WOEI"
+      },
+      {
+        "date": "2026-05-04",
+        "category": "Annual Report",
+        "title": "Annual Report & CG Report - 2025"
+      },
+      {
+        "date": "2026-05-01",
+        "category": "",
+        "title": "Annual Report & CG Report - 2025"
+      },
+      {
+        "date": "2026-04-30",
+        "category": "",
+        "title": "CIRCULAR TO SHAREHOLDERS IN RELATION TO PROPOSED SHARE BUY-BACK AUTHORITY FOR PURCHASE OF ITS OWN ORDINARY SHARES"
+      },
+      {
+        "date": "2026-04-29",
+        "category": "General Meetings",
+        "title": "General Meetings: Notice of Meeting"
+      },
+      {
+        "date": "2026-04-29",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-04-17",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
+      {
+        "date": "2026-04-01",
+        "category": "Change of Corp Info",
+        "title": "Change in Nomination Committee - MR WAN MOHD HAZRIE BIN WAN MOKHTAR"
+      },
+      {
+        "date": "2026-04-01",
+        "category": "Change of Corp Info",
+        "title": "Change in Remuneration Committee - MR WAN MOHD HAZRIE BIN WAN MOKHTAR"
+      },
+      {
+        "date": "2026-04-01",
+        "category": "Change of Corp Info",
+        "title": "Change in Remuneration Committee - MR YEOH WOOI KIA"
+      },
+      {
+        "date": "2026-03-27",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR MELVIN LIM CHUN WOEI"
+      },
+      {
+        "date": "2026-03-27",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-02-27",
+        "category": "Financial Results",
+        "title": "Consolidated results for the financial period ended 31/12/2025"
+      },
+      {
+        "date": "2026-01-23",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
+      {
+        "date": "2026-01-21",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-01-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR YEOH WOOI KIA"
+      },
+      {
+        "date": "2025-11-28",
+        "category": "Financial Results",
+        "title": "Consolidated results for the financial period ended 30/09/2025"
+      },
+      {
+        "date": "2025-10-24",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
+      {
+        "date": "2025-08-29",
+        "category": "Financial Results",
+        "title": "Consolidated results for the financial period ended 30/06/2025"
+      },
+      {
+        "date": "2025-07-24",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR NG MIN LIN"
+      }
+    ],
+    "entitlements": [
+      {
+        "annDate": "29 Oct 2024",
+        "financialYear": "30 Jun 2024",
+        "type": "Final Dividend",
+        "exDate": "2025-01-13",
+        "paymentDate": "23 Jan 2025",
+        "amount": "0.0010",
+        "isDividend": true
+      },
+      {
+        "annDate": "31 Oct 2023",
+        "financialYear": "30 Jun 2023",
+        "type": "Final Dividend",
+        "exDate": "2024-01-03",
+        "paymentDate": "24 Jan 2024",
+        "amount": "0.0010",
+        "isDividend": true
+      },
+      {
+        "annDate": "28 May 2015",
+        "financialYear": "31 Dec 2014",
+        "type": "Final Dividend",
+        "exDate": "2015-08-20",
+        "paymentDate": "21 Sep 2015",
+        "amount": "0.0020",
+        "isDividend": true
+      }
+    ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:03.231Z",
+    "lastSuccessfulAt": {
+      "announcements": "2026-10-14T05:55:03.231Z",
+      "entitlements": "2026-10-14T05:55:03.231Z"
     }
   },
   "MAHSING": {
@@ -26287,11 +27722,25 @@ window.NEWS_DATA = {
         "paymentDate": "21 Sep 2023",
         "amount": "0.0300",
         "isDividend": true
+      },
+      {
+        "annDate": "28 Apr 2022",
+        "financialYear": "31 Dec 2021",
+        "type": "First and Final Dividend",
+        "exDate": "2022-09-15",
+        "paymentDate": "29 Sep 2022",
+        "amount": "0.0265",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:56.378Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:56.378Z",
+      "entitlements": "2026-10-14T05:54:56.378Z"
     }
   },
   "MAYBANK": {
@@ -26492,11 +27941,25 @@ window.NEWS_DATA = {
         "paymentDate": "26 Mar 2025",
         "amount": "0.3200",
         "isDividend": true
+      },
+      {
+        "annDate": "29 Aug 2024",
+        "financialYear": "31 Dec 2024",
+        "type": "First Interim Dividend",
+        "exDate": "2024-09-11",
+        "paymentDate": "26 Sep 2024",
+        "amount": "0.2900",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:59.889Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:59.889Z",
+      "entitlements": "2026-10-14T05:54:59.889Z"
     }
   },
   "MBN": {
@@ -26662,9 +28125,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:54.479Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:54.479Z",
+      "entitlements": "2026-10-14T05:54:54.479Z"
     }
   },
   "MCEMENT": {
@@ -26865,11 +28333,25 @@ window.NEWS_DATA = {
         "paymentDate": "27 Mar 2025",
         "amount": "0.0500",
         "isDividend": true
+      },
+      {
+        "annDate": "21 Aug 2024",
+        "financialYear": "30 Jun 2024",
+        "type": "Second Interim Dividend",
+        "exDate": "2024-10-29",
+        "paymentDate": "15 Nov 2024",
+        "amount": "0.0600",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:04.934Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:04.934Z",
+      "entitlements": "2026-10-14T05:55:04.934Z"
     }
   },
   "MCLEAN": {
@@ -27038,9 +28520,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:58.053Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:58.053Z",
+      "entitlements": "2026-10-14T05:54:58.053Z"
     }
   },
   "MEGAFB": {
@@ -27231,9 +28718,233 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:51.885Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:51.885Z",
+      "entitlements": "2026-10-14T05:54:51.885Z"
+    }
+  },
+  "MENTIGA": {
+    "hasNewsAlert": false,
+    "newsBadges": [
+      {
+        "type": "RECENT_NEWS",
+        "label": "News: 2026-10-13",
+        "severity": "info",
+        "title": "[2026-10-13] General Announcement - OTHERS"
+      }
+    ],
+    "announcements": [
+      {
+        "date": "2026-10-13",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-10-13",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-09-21",
+        "category": "General Announcement",
+        "title": "MONTHLY PRODUCTION FIGURES (MINING / PLANTATION / TIMBER)"
+      },
+      {
+        "date": "2026-08-20",
+        "category": "Financial Results",
+        "title": "Quarterly rpt on consolidated results for the financial period ended 30/06/2026"
+      },
+      {
+        "date": "2026-08-18",
+        "category": "General Announcement",
+        "title": "MONTHLY PRODUCTION FIGURES (MINING / PLANTATION / TIMBER)"
+      },
+      {
+        "date": "2026-07-22",
+        "category": "General Announcement",
+        "title": "MONTHLY PRODUCTION FIGURES (MINING / PLANTATION / TIMBER)"
+      },
+      {
+        "date": "2026-07-22",
+        "category": "Quarterly Production",
+        "title": "DISCLOSURE ON QUARTERLY PRODUCTION"
+      },
+      {
+        "date": "2026-06-16",
+        "category": "General Announcement",
+        "title": "MONTHLY PRODUCTION FIGURES (MINING / PLANTATION / TIMBER)"
+      },
+      {
+        "date": "2026-06-10",
+        "category": "General Meetings",
+        "title": "General Meetings: Outcome of Meeting"
+      },
+      {
+        "date": "2026-05-25",
+        "category": "General Announcement",
+        "title": "MONTHLY PRODUCTION FIGURES (MINING / PLANTATION / TIMBER)"
+      },
+      {
+        "date": "2026-05-21",
+        "category": "Financial Results",
+        "title": "Quarterly rpt on consolidated results for the financial period ended 31/03/2026"
+      },
+      {
+        "date": "2026-04-30",
+        "category": "Annual Report",
+        "title": "Annual Report & CG Report - 2025"
+      },
+      {
+        "date": "2026-04-29",
+        "category": "General Meetings",
+        "title": "General Meetings: Notice of Meeting"
+      },
+      {
+        "date": "2026-04-20",
+        "category": "Quarterly Production",
+        "title": "DISCLOSURE ON QUARTERLY PRODUCTION"
+      },
+      {
+        "date": "2026-04-20",
+        "category": "General Announcement",
+        "title": "MONTHLY PRODUCTION FIGURES (MINING / PLANTATION / TIMBER)"
+      },
+      {
+        "date": "2026-03-16",
+        "category": "General Announcement",
+        "title": "MONTHLY PRODUCTION FIGURES (MINING / PLANTATION / TIMBER)"
+      },
+      {
+        "date": "2026-02-26",
+        "category": "Financial Results",
+        "title": "Quarterly rpt on consolidated results for the financial period ended 31/12/2025"
+      },
+      {
+        "date": "2026-02-23",
+        "category": "General Announcement",
+        "title": "MONTHLY PRODUCTION FIGURES (MINING / PLANTATION / TIMBER)"
+      },
+      {
+        "date": "2026-01-16",
+        "category": "Quarterly Production",
+        "title": "DISCLOSURE ON QUARTERLY PRODUCTION"
+      },
+      {
+        "date": "2026-01-16",
+        "category": "General Announcement",
+        "title": "MONTHLY PRODUCTION FIGURES (MINING / PLANTATION / TIMBER)"
+      },
+      {
+        "date": "2025-12-16",
+        "category": "General Announcement",
+        "title": "MONTHLY PRODUCTION FIGURES (MINING / PLANTATION / TIMBER)"
+      },
+      {
+        "date": "2025-11-27",
+        "category": "Financial Results",
+        "title": "Quarterly rpt on consolidated results for the financial period ended 30/09/2025"
+      },
+      {
+        "date": "2025-11-19",
+        "category": "General Announcement",
+        "title": "MONTHLY PRODUCTION FIGURES (MINING / PLANTATION / TIMBER)"
+      },
+      {
+        "date": "2025-10-22",
+        "category": "Quarterly Production",
+        "title": "DISCLOSURE ON QUARTERLY PRODUCTION"
+      },
+      {
+        "date": "2025-10-22",
+        "category": "General Announcement",
+        "title": "MONTHLY PRODUCTION FIGURES (MINING / PLANTATION / TIMBER)"
+      },
+      {
+        "date": "2025-09-10",
+        "category": "General Announcement",
+        "title": "MONTHLY PRODUCTION FIGURES (MINING / PLANTATION / TIMBER)"
+      },
+      {
+        "date": "2025-08-26",
+        "category": "Financial Results",
+        "title": "Quarterly rpt on consolidated results for the financial period ended 30/06/2025"
+      },
+      {
+        "date": "2025-08-13",
+        "category": "General Announcement",
+        "title": "MONTHLY PRODUCTION FIGURES (MINING / PLANTATION / TIMBER)"
+      },
+      {
+        "date": "2025-07-15",
+        "category": "Quarterly Production",
+        "title": "DISCLOSURE ON QUARTERLY PRODUCTION"
+      },
+      {
+        "date": "2025-07-15",
+        "category": "General Announcement",
+        "title": "MONTHLY PRODUCTION FIGURES (MINING / PLANTATION / TIMBER)"
+      }
+    ],
+    "entitlements": [
+      {
+        "annDate": "27 Apr 2017",
+        "financialYear": "31 Dec 2016",
+        "type": "First and Final Dividend",
+        "exDate": "2017-05-26",
+        "paymentDate": "14 Jun 2017",
+        "amount": "0.0100",
+        "isDividend": true
+      },
+      {
+        "annDate": "28 Apr 2016",
+        "financialYear": "31 Dec 2015",
+        "type": "First and Final Dividend",
+        "exDate": "2016-06-03",
+        "paymentDate": "21 Jun 2016",
+        "amount": "0.0100",
+        "isDividend": true
+      },
+      {
+        "annDate": "20 May 2014",
+        "financialYear": "31 Dec 2013",
+        "type": "First and Final Dividend",
+        "exDate": "2014-06-25",
+        "paymentDate": "25 Jul 2014",
+        "amount": "0.0400",
+        "isDividend": true
+      },
+      {
+        "annDate": "03 Jun 2013",
+        "financialYear": "31 Dec 2012",
+        "type": "First and Final Dividend",
+        "exDate": "2013-07-03",
+        "paymentDate": "02 Aug 2013",
+        "amount": "0.0400",
+        "isDividend": true
+      },
+      {
+        "annDate": "04 Jun 2012",
+        "financialYear": "31 Dec 2011",
+        "type": "First and Final Dividend",
+        "exDate": "2012-07-11",
+        "paymentDate": "10 Aug 2012",
+        "amount": "0.0200",
+        "isDividend": true
+      }
+    ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:07.238Z",
+    "lastSuccessfulAt": {
+      "announcements": "2026-10-14T05:55:07.238Z",
+      "entitlements": "2026-10-14T05:55:07.238Z"
     }
   },
   "MERSEC": {
@@ -27418,9 +29129,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:59.685Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:59.685Z",
+      "entitlements": "2026-10-14T05:54:59.685Z"
     }
   },
   "MESTRON": {
@@ -27623,9 +29339,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:05.376Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:05.376Z",
+      "entitlements": "2026-10-14T05:55:05.376Z"
     }
   },
   "METRO": {
@@ -27791,9 +29512,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:59.314Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:59.314Z",
+      "entitlements": "2026-10-14T05:54:59.314Z"
     }
   },
   "MFGROUP": {
@@ -27952,9 +29678,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:55.104Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:55.104Z",
+      "entitlements": "2026-10-14T05:54:55.104Z"
     }
   },
   "MI": {
@@ -28166,9 +29897,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:54.048Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:54.048Z",
+      "entitlements": "2026-10-14T05:54:54.048Z"
     }
   },
   "MINOX": {
@@ -28362,9 +30098,233 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:06.721Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:06.721Z",
+      "entitlements": "2026-10-14T05:55:06.721Z"
+    }
+  },
+  "MISC": {
+    "hasNewsAlert": false,
+    "newsBadges": [
+      {
+        "type": "RECENT_NEWS",
+        "label": "News: 2026-10-09",
+        "severity": "info",
+        "title": "[2026-10-09] General Announcement - OTHERS"
+      }
+    ],
+    "announcements": [
+      {
+        "date": "2026-10-09",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-10-08",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-09-25",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-08-28",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-08-28",
+        "category": "Listing Circulars",
+        "title": "MISC - Notice of Book Closure"
+      },
+      {
+        "date": "2026-08-27",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-08-27",
+        "category": "Financial Results",
+        "title": "Quarterly rpt on consolidated results for the financial period ended 30/06/2026"
+      },
+      {
+        "date": "2026-08-27",
+        "category": "Entitlements",
+        "title": "Interim Dividend"
+      },
+      {
+        "date": "2026-08-26",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-08-24",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-08-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-08-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-08-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-08-18",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-08-17",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-08-14",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-08-13",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-08-12",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-08-11",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-08-10",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-08-07",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-08-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-07-31",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-07-30",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-07-24",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-07-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-07-16",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-07-14",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-07-08",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-07-03",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      }
+    ],
+    "entitlements": [
+      {
+        "annDate": "27 Aug 2026",
+        "financialYear": "31 Dec 2026",
+        "type": "Interim Dividend",
+        "exDate": "2026-09-14",
+        "paymentDate": "24 Sep 2026",
+        "amount": "0.0800",
+        "isDividend": true
+      },
+      {
+        "annDate": "25 May 2026",
+        "financialYear": "31 Dec 2026",
+        "type": "Interim Dividend",
+        "exDate": "2026-06-11",
+        "paymentDate": "25 Jun 2026",
+        "amount": "0.0800",
+        "isDividend": true
+      },
+      {
+        "annDate": "24 Feb 2026",
+        "financialYear": "31 Dec 2025",
+        "type": "Interim Dividend",
+        "exDate": "2026-03-11",
+        "paymentDate": "26 Mar 2026",
+        "amount": "0.1400",
+        "isDividend": true
+      },
+      {
+        "annDate": "24 Nov 2025",
+        "financialYear": "31 Dec 2025",
+        "type": "Interim Dividend",
+        "exDate": "2025-12-08",
+        "paymentDate": "18 Dec 2025",
+        "amount": "0.0800",
+        "isDividend": true
+      },
+      {
+        "annDate": "25 Aug 2025",
+        "financialYear": "31 Dec 2025",
+        "type": "Interim Dividend",
+        "exDate": "2025-09-09",
+        "paymentDate": "25 Sep 2025",
+        "amount": "0.0800",
+        "isDividend": true
+      }
+    ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:53.982Z",
+    "lastSuccessfulAt": {
+      "announcements": "2026-10-14T05:54:53.982Z",
+      "entitlements": "2026-10-14T05:54:53.982Z"
     }
   },
   "MKHOP": {
@@ -28571,11 +30531,25 @@ window.NEWS_DATA = {
         "paymentDate": "30 Dec 2024",
         "amount": "0.0200",
         "isDividend": true
+      },
+      {
+        "annDate": "08 May 2024",
+        "financialYear": "30 Sep 2024",
+        "type": "First Interim Dividend",
+        "exDate": "2024-05-30",
+        "paymentDate": "12 Jun 2024",
+        "amount": "0.0200",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:57.079Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:57.079Z",
+      "entitlements": "2026-10-14T05:54:57.079Z"
     }
   },
   "MMCS": {
@@ -28706,9 +30680,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:03.213Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:03.213Z",
+      "entitlements": "2026-10-14T05:55:03.213Z"
     }
   },
   "MNHLDG": {
@@ -28728,6 +30707,11 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-14",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
       {
         "date": "2026-10-12",
         "category": "General Announcement",
@@ -28872,11 +30856,6 @@ window.NEWS_DATA = {
         "date": "2026-08-27",
         "category": "General Announcement",
         "title": "OTHERS"
-      },
-      {
-        "date": "2026-08-27",
-        "category": "Additional Listing",
-        "title": "Additional Listing Announcement /Subdivision of Shares"
       }
     ],
     "entitlements": [
@@ -28899,9 +30878,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:50.031Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:50.031Z",
+      "entitlements": "2026-10-14T05:54:50.031Z"
     }
   },
   "MOBILIA": {
@@ -29104,9 +31088,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:54.360Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:54.360Z",
+      "entitlements": "2026-10-14T05:54:54.360Z"
     }
   },
   "MPI": {
@@ -29307,11 +31296,25 @@ window.NEWS_DATA = {
         "paymentDate": "24 Dec 2024",
         "amount": "0.1000",
         "isDividend": true
+      },
+      {
+        "annDate": "16 May 2024",
+        "financialYear": "30 Jun 2024",
+        "type": "Second Interim Dividend",
+        "exDate": "2024-06-04",
+        "paymentDate": "26 Jun 2024",
+        "amount": "0.2500",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:00.093Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:00.093Z",
+      "entitlements": "2026-10-14T05:55:00.093Z"
     }
   },
   "MRDIY": {
@@ -29518,11 +31521,25 @@ window.NEWS_DATA = {
         "paymentDate": "22 May 2026",
         "amount": "0.0200",
         "isDividend": true
+      },
+      {
+        "annDate": "24 Feb 2026",
+        "financialYear": "31 Dec 2025",
+        "type": "Interim Dividend",
+        "exDate": "2026-03-09",
+        "paymentDate": "20 Mar 2026",
+        "amount": "0.0180",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:04.833Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:04.833Z",
+      "entitlements": "2026-10-14T05:55:04.833Z"
     }
   },
   "MSB": {
@@ -29681,9 +31698,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:04.104Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:04.104Z",
+      "entitlements": "2026-10-14T05:55:04.104Z"
     }
   },
   "MSTGOLF": {
@@ -29879,9 +31901,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:06.988Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:06.988Z",
+      "entitlements": "2026-10-14T05:55:06.988Z"
     }
   },
   "MTAG": {
@@ -30082,11 +32109,25 @@ window.NEWS_DATA = {
         "paymentDate": "22 Jun 2023",
         "amount": "0.0200",
         "isDividend": true
+      },
+      {
+        "annDate": "23 Nov 2022",
+        "financialYear": "30 Jun 2023",
+        "type": "First Interim Dividend",
+        "exDate": "2022-12-07",
+        "paymentDate": "20 Dec 2022",
+        "amount": "0.0100",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:06.276Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:06.276Z",
+      "entitlements": "2026-10-14T05:55:06.276Z"
     }
   },
   "MTEC": {
@@ -30298,9 +32339,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:05.647Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:05.647Z",
+      "entitlements": "2026-10-14T05:55:05.647Z"
     }
   },
   "MTTSL": {
@@ -30476,9 +32522,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:51.344Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:51.344Z",
+      "entitlements": "2026-10-14T05:54:51.344Z"
     }
   },
   "NADIBHD": {
@@ -30674,8 +32725,13 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "error"
+    },
+    "checkedAt": "2026-10-14T05:55:06.805Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
+      "announcements": "2026-10-14T05:55:06.805Z",
       "entitlements": "2026-10-13T15:18:17.780Z"
     }
   },
@@ -30877,11 +32933,25 @@ window.NEWS_DATA = {
         "paymentDate": "26 Mar 2026",
         "amount": "0.0025",
         "isDividend": true
+      },
+      {
+        "annDate": "26 Nov 2025",
+        "financialYear": "31 Dec 2025",
+        "type": "Interim Dividend",
+        "exDate": "2025-12-09",
+        "paymentDate": "23 Dec 2025",
+        "amount": "0.0025",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:53.519Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:53.519Z",
+      "entitlements": "2026-10-14T05:54:53.519Z"
     }
   },
   "NE": {
@@ -31047,9 +33117,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:58.382Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:58.382Z",
+      "entitlements": "2026-10-14T05:54:58.382Z"
     }
   },
   "NESTCON": {
@@ -31215,9 +33290,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:56.027Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:56.027Z",
+      "entitlements": "2026-10-14T05:54:56.027Z"
     }
   },
   "NESTLE": {
@@ -31429,9 +33509,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:58.817Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:58.817Z",
+      "entitlements": "2026-10-14T05:54:58.817Z"
     }
   },
   "NEXG": {
@@ -31632,11 +33717,265 @@ window.NEWS_DATA = {
         "paymentDate": "29 Mar 2024",
         "amount": "0.0050",
         "isDividend": true
+      },
+      {
+        "annDate": "30 Nov 2023",
+        "financialYear": "31 Mar 2024",
+        "type": "Second Interim Dividend",
+        "exDate": "2023-12-14",
+        "paymentDate": "29 Dec 2023",
+        "amount": "0.0060",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:53.890Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:53.890Z",
+      "entitlements": "2026-10-14T05:54:53.890Z"
+    }
+  },
+  "NEXGRAM": {
+    "hasNewsAlert": false,
+    "newsBadges": [],
+    "announcements": [],
+    "entitlements": [],
+    "fetchStatus": {
+      "announcements": "error",
+      "entitlements": "error"
+    },
+    "checkedAt": "2026-10-14T05:55:06.806Z",
+    "lastSuccessfulAt": {
+      "announcements": null,
+      "entitlements": null
+    }
+  },
+  "NIHSIN": {
+    "hasNewsAlert": false,
+    "newsBadges": [
+      {
+        "type": "JERUNG_5PCT",
+        "label": "🐋 Major Shareholder Activity",
+        "severity": "info",
+        "title": "[2026-09-29] Changes in Director's Interest (Section 219 of CA 2016) - MISS NG SHWU CHING"
+      },
+      {
+        "type": "EV_CATALYST",
+        "label": "⚡ MOU / EV Catalyst",
+        "severity": "success",
+        "title": "[2026-09-18] MEMORANDUM OF UNDERSTANDING"
+      }
+    ],
+    "announcements": [
+      {
+        "date": "2026-09-29",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-09-29",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MISS NG SHWU CHING"
+      },
+      {
+        "date": "2026-09-18",
+        "category": "General Announcement",
+        "title": "MEMORANDUM OF UNDERSTANDING"
+      },
+      {
+        "date": "2026-09-18",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-09-15",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-09-11",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-09-11",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MISS KHOO WUAN RU"
+      },
+      {
+        "date": "2026-09-11",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR KHOO CHEE KONG"
+      },
+      {
+        "date": "2026-09-08",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-09-04",
+        "category": "General Announcement",
+        "title": "MEMORANDUM OF UNDERSTANDING"
+      },
+      {
+        "date": "2026-08-28",
+        "category": "General Announcement",
+        "title": "MEMORANDUM OF UNDERSTANDING"
+      },
+      {
+        "date": "2026-08-28",
+        "category": "Financial Results",
+        "title": "Quarterly rpt on consolidated results for the financial period ended 30/06/2026"
+      },
+      {
+        "date": "2026-08-11",
+        "category": "General Announcement",
+        "title": "MEMORANDUM OF UNDERSTANDING"
+      },
+      {
+        "date": "2026-08-11",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings During Closed Period"
+      },
+      {
+        "date": "2026-08-11",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MISS KHOO WUAN RU"
+      },
+      {
+        "date": "2026-08-11",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR KHOO CHEE KONG"
+      },
+      {
+        "date": "2026-07-29",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
+      {
+        "date": "2026-07-29",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-07-29",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MISS KHOO WUAN RU"
+      },
+      {
+        "date": "2026-07-29",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR KHOO CHEE KONG"
+      },
+      {
+        "date": "2026-07-09",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-07-09",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MISS KHOO WUAN RU"
+      },
+      {
+        "date": "2026-07-09",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR KHOO CHEE KONG"
+      },
+      {
+        "date": "2026-07-02",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-07-02",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MISS KHOO WUAN RU"
+      },
+      {
+        "date": "2026-07-02",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR KHOO CHEE KONG"
+      },
+      {
+        "date": "2026-06-26",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-06-26",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MISS KHOO WUAN RU"
+      },
+      {
+        "date": "2026-06-26",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR KHOO CHEE KONG"
+      },
+      {
+        "date": "2026-06-22",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      }
+    ],
+    "entitlements": [
+      {
+        "annDate": "21 Aug 2014",
+        "financialYear": "31 Dec 2014",
+        "type": "Interim Dividend",
+        "exDate": "2014-10-16",
+        "paymentDate": "13 Nov 2014",
+        "amount": "0.0050",
+        "isDividend": true
+      },
+      {
+        "annDate": "19 Aug 2013",
+        "financialYear": "31 Dec 2013",
+        "type": "Interim Dividend",
+        "exDate": "2013-10-16",
+        "paymentDate": "13 Nov 2013",
+        "amount": "0.0050",
+        "isDividend": true
+      },
+      {
+        "annDate": "29 Apr 2013",
+        "financialYear": "31 Dec 2012",
+        "type": "Final Dividend",
+        "exDate": "2013-06-19",
+        "paymentDate": "18 Jul 2013",
+        "amount": "0.0050",
+        "isDividend": true
+      },
+      {
+        "annDate": "21 Nov 2011",
+        "financialYear": "31 Dec 2011",
+        "type": "Interim Dividend",
+        "exDate": "2011-12-19",
+        "paymentDate": "18 Jan 2012",
+        "amount": "0.0100",
+        "isDividend": true
+      },
+      {
+        "annDate": "26 Apr 2010",
+        "financialYear": "31 Dec 2009",
+        "type": "Final Dividend",
+        "exDate": "2010-06-04",
+        "paymentDate": "30 Jun 2010",
+        "amount": "0.0067",
+        "isDividend": true
+      }
+    ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:51.331Z",
+    "lastSuccessfulAt": {
+      "announcements": "2026-10-14T05:54:51.331Z",
+      "entitlements": "2026-10-14T05:54:51.331Z"
     }
   },
   "NORTHERN": {
@@ -31808,9 +34147,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:53.051Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:53.051Z",
+      "entitlements": "2026-10-14T05:54:53.051Z"
     }
   },
   "OBHB": {
@@ -32013,9 +34357,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:55.185Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:55.185Z",
+      "entitlements": "2026-10-14T05:54:55.185Z"
     }
   },
   "OFB": {
@@ -32191,9 +34540,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:55.581Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:55.581Z",
+      "entitlements": "2026-10-14T05:54:55.581Z"
     }
   },
   "OGM": {
@@ -32352,9 +34706,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:54.691Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:54.691Z",
+      "entitlements": "2026-10-14T05:54:54.691Z"
     }
   },
   "OGX": {
@@ -32530,9 +34889,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:51.691Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:51.691Z",
+      "entitlements": "2026-10-14T05:54:51.691Z"
     }
   },
   "OHM": {
@@ -32726,9 +35090,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:03.116Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:03.116Z",
+      "entitlements": "2026-10-14T05:55:03.116Z"
     }
   },
   "OPPSTAR": {
@@ -32922,9 +35291,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:55.857Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:55.857Z",
+      "entitlements": "2026-10-14T05:54:55.857Z"
     }
   },
   "OPTIMAX": {
@@ -33136,9 +35510,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:00.812Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:00.812Z",
+      "entitlements": "2026-10-14T05:55:00.812Z"
     }
   },
   "ORGABIO": {
@@ -33307,9 +35686,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:56.644Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:56.644Z",
+      "entitlements": "2026-10-14T05:54:56.644Z"
     }
   },
   "ORKIM": {
@@ -33494,9 +35878,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:02.119Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:02.119Z",
+      "entitlements": "2026-10-14T05:55:02.119Z"
     }
   },
   "OVH": {
@@ -33662,9 +36051,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:54.983Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:54.983Z",
+      "entitlements": "2026-10-14T05:54:54.983Z"
     }
   },
   "OXB": {
@@ -33840,9 +36234,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:49.888Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:49.888Z",
+      "entitlements": "2026-10-14T05:54:49.888Z"
     }
   },
   "PANDA": {
@@ -34038,9 +36437,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:01.166Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:01.166Z",
+      "entitlements": "2026-10-14T05:55:01.166Z"
     }
   },
   "PARADIGM": {
@@ -34227,9 +36631,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:57.152Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:57.152Z",
+      "entitlements": "2026-10-14T05:54:57.152Z"
     }
   },
   "PCHEM": {
@@ -34441,9 +36850,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:04.259Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:04.259Z",
+      "entitlements": "2026-10-14T05:55:04.259Z"
     }
   },
   "PEKAT": {
@@ -34637,9 +37051,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:53.153Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:53.153Z",
+      "entitlements": "2026-10-14T05:54:53.153Z"
     }
   },
   "PENTA": {
@@ -34851,9 +37270,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:51.080Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:51.080Z",
+      "entitlements": "2026-10-14T05:54:51.080Z"
     }
   },
   "PENTECH": {
@@ -34982,9 +37406,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:50.766Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:50.766Z",
+      "entitlements": "2026-10-14T05:54:50.766Z"
     }
   },
   "PEOPLE": {
@@ -35153,9 +37582,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:57.574Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:57.574Z",
+      "entitlements": "2026-10-14T05:54:57.574Z"
     }
   },
   "PETDAG": {
@@ -35342,6 +37776,15 @@ window.NEWS_DATA = {
       {
         "annDate": "24 Feb 2026",
         "financialYear": "31 Dec 2025",
+        "type": "Special Dividend",
+        "exDate": "2026-03-10",
+        "paymentDate": "25 Mar 2026",
+        "amount": "0.2000",
+        "isDividend": true
+      },
+      {
+        "annDate": "24 Feb 2026",
+        "financialYear": "31 Dec 2025",
         "type": "Interim Dividend",
         "exDate": "2026-03-10",
         "paymentDate": "25 Mar 2026",
@@ -35349,18 +37792,23 @@ window.NEWS_DATA = {
         "isDividend": true
       },
       {
-        "annDate": "24 Feb 2026",
+        "annDate": "26 Nov 2025",
         "financialYear": "31 Dec 2025",
-        "type": "Special Dividend",
-        "exDate": "2026-03-10",
-        "paymentDate": "25 Mar 2026",
-        "amount": "0.2000",
+        "type": "Interim Dividend",
+        "exDate": "2025-12-10",
+        "paymentDate": "24 Dec 2025",
+        "amount": "0.2400",
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:00.165Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:00.165Z",
+      "entitlements": "2026-10-14T05:55:00.165Z"
     }
   },
   "PETGAS": {
@@ -35572,9 +38020,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:58.274Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:58.274Z",
+      "entitlements": "2026-10-14T05:54:58.274Z"
     }
   },
   "PGLOBAL": {
@@ -35777,9 +38230,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:52.999Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:52.999Z",
+      "entitlements": "2026-10-14T05:54:52.999Z"
     }
   },
   "PIONEER": {
@@ -35830,9 +38288,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:53.509Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:53.509Z",
+      "entitlements": "2026-10-14T05:54:53.509Z"
     }
   },
   "PLINTAS": {
@@ -36033,11 +38496,25 @@ window.NEWS_DATA = {
         "paymentDate": "25 Mar 2025",
         "amount": "0.0318",
         "isDividend": true
+      },
+      {
+        "annDate": "19 Aug 2024",
+        "financialYear": "31 Dec 2024",
+        "type": "Income Distribution",
+        "exDate": "2024-09-02",
+        "paymentDate": "18 Sep 2024",
+        "amount": "0.0318",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:01.084Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:01.084Z",
+      "entitlements": "2026-10-14T05:55:01.084Z"
     }
   },
   "PLYTEC": {
@@ -36213,9 +38690,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:02.021Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:02.021Z",
+      "entitlements": "2026-10-14T05:55:02.021Z"
     }
   },
   "PMCK": {
@@ -36406,9 +38888,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:59.214Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:59.214Z",
+      "entitlements": "2026-10-14T05:54:59.214Z"
     }
   },
   "PMETAL": {
@@ -36609,11 +39096,25 @@ window.NEWS_DATA = {
         "paymentDate": "24 Dec 2025",
         "amount": "0.0200",
         "isDividend": true
+      },
+      {
+        "annDate": "21 Aug 2025",
+        "financialYear": "31 Dec 2025",
+        "type": "Second Interim Dividend",
+        "exDate": "2025-09-10",
+        "paymentDate": "29 Sep 2025",
+        "amount": "0.0200",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:01.974Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:01.974Z",
+      "entitlements": "2026-10-14T05:55:01.974Z"
     }
   },
   "PMIBHD": {
@@ -36782,9 +39283,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:57.353Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:57.353Z",
+      "entitlements": "2026-10-14T05:54:57.353Z"
     }
   },
   "PMW": {
@@ -36960,9 +39466,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:54.400Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:54.400Z",
+      "entitlements": "2026-10-14T05:54:54.400Z"
     }
   },
   "POLYMER": {
@@ -37140,9 +39651,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:05.107Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:05.107Z",
+      "entitlements": "2026-10-14T05:55:05.107Z"
     }
   },
   "POWER": {
@@ -37281,9 +39797,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:56.703Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:56.703Z",
+      "entitlements": "2026-10-14T05:54:56.703Z"
     }
   },
   "PPB": {
@@ -37495,9 +40016,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:58.217Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:58.217Z",
+      "entitlements": "2026-10-14T05:54:58.217Z"
     }
   },
   "PPJACK": {
@@ -37698,11 +40224,25 @@ window.NEWS_DATA = {
         "paymentDate": "23 Dec 2025",
         "amount": "0.0050",
         "isDividend": true
+      },
+      {
+        "annDate": "25 Aug 2025",
+        "financialYear": "31 Dec 2025",
+        "type": "Second Interim Dividend",
+        "exDate": "2025-09-09",
+        "paymentDate": "26 Sep 2025",
+        "amount": "0.0050",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:58.551Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:58.551Z",
+      "entitlements": "2026-10-14T05:54:58.551Z"
     }
   },
   "PSP": {
@@ -37887,9 +40427,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:57.158Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:57.158Z",
+      "entitlements": "2026-10-14T05:54:57.158Z"
     }
   },
   "PTRB": {
@@ -38083,9 +40628,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:06.629Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:06.629Z",
+      "entitlements": "2026-10-14T05:55:06.629Z"
     }
   },
   "PWRWELL": {
@@ -38297,9 +40847,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:48.906Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:48.906Z",
+      "entitlements": "2026-10-14T05:54:48.906Z"
     }
   },
   "QL": {
@@ -38500,11 +41055,25 @@ window.NEWS_DATA = {
         "paymentDate": "28 Mar 2025",
         "amount": "0.0250",
         "isDividend": true
+      },
+      {
+        "annDate": "26 Jul 2024",
+        "financialYear": "31 Mar 2024",
+        "type": "Final Dividend",
+        "exDate": "2024-09-10",
+        "paymentDate": "23 Sep 2024",
+        "amount": "0.0350",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:57.335Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:57.335Z",
+      "entitlements": "2026-10-14T05:54:57.335Z"
     }
   },
   "RADIUM": {
@@ -38698,9 +41267,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:50.804Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:50.804Z",
+      "entitlements": "2026-10-14T05:54:50.804Z"
     }
   },
   "RAMSSOL": {
@@ -38876,9 +41450,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:52.388Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:52.388Z",
+      "entitlements": "2026-10-14T05:54:52.388Z"
     }
   },
   "RANHILL": {
@@ -39090,9 +41669,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:50.211Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:50.211Z",
+      "entitlements": "2026-10-14T05:54:50.211Z"
     }
   },
   "REACHTEN": {
@@ -39286,9 +41870,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:02.857Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:02.857Z",
+      "entitlements": "2026-10-14T05:55:02.857Z"
     }
   },
   "RESTNGO": {
@@ -39419,9 +42008,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:03.964Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:03.964Z",
+      "entitlements": "2026-10-14T05:55:03.964Z"
     }
   },
   "RL": {
@@ -39624,9 +42218,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:00.107Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:00.107Z",
+      "entitlements": "2026-10-14T05:55:00.107Z"
     }
   },
   "RT": {
@@ -39675,9 +42274,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:55.108Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:55.108Z",
+      "entitlements": "2026-10-14T05:54:55.108Z"
     }
   },
   "RTECH": {
@@ -39853,9 +42457,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:49.791Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:49.791Z",
+      "entitlements": "2026-10-14T05:54:49.791Z"
     }
   },
   "SAG": {
@@ -40040,9 +42649,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:58.537Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:58.537Z",
+      "entitlements": "2026-10-14T05:54:58.537Z"
     }
   },
   "SALIRAN": {
@@ -40208,9 +42822,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:52.633Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:52.633Z",
+      "entitlements": "2026-10-14T05:54:52.633Z"
     }
   },
   "SAM": {
@@ -40411,11 +43030,25 @@ window.NEWS_DATA = {
         "paymentDate": "08 Aug 2023",
         "amount": "0.0250",
         "isDividend": true
+      },
+      {
+        "annDate": "24 May 2022",
+        "financialYear": "31 Mar 2022",
+        "type": "First Interim Dividend",
+        "exDate": "2022-07-21",
+        "paymentDate": "18 Aug 2022",
+        "amount": "0.0350",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:00.355Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:00.355Z",
+      "entitlements": "2026-10-14T05:55:00.355Z"
     }
   },
   "SAMAIDEN": {
@@ -40616,11 +43249,25 @@ window.NEWS_DATA = {
         "paymentDate": "25 Oct 2024",
         "amount": "0.0070",
         "isDividend": true
+      },
+      {
+        "annDate": "30 Aug 2023",
+        "financialYear": "30 Jun 2023",
+        "type": "First Interim Dividend",
+        "exDate": "2023-09-21",
+        "paymentDate": "16 Oct 2023",
+        "amount": "0.0050",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:54.566Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:54.566Z",
+      "entitlements": "2026-10-14T05:54:54.566Z"
     }
   },
   "SBH": {
@@ -40814,9 +43461,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:56.986Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:56.986Z",
+      "entitlements": "2026-10-14T05:54:56.986Z"
     }
   },
   "SBS": {
@@ -40982,9 +43634,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:58.826Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:58.826Z",
+      "entitlements": "2026-10-14T05:54:58.826Z"
     }
   },
   "SCB": {
@@ -41150,9 +43807,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:02.388Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:02.388Z",
+      "entitlements": "2026-10-14T05:55:02.388Z"
     }
   },
   "SCGBHD": {
@@ -41353,11 +44015,25 @@ window.NEWS_DATA = {
         "paymentDate": "25 Jul 2025",
         "amount": "0.0085",
         "isDividend": true
+      },
+      {
+        "annDate": "26 Nov 2024",
+        "financialYear": "31 Dec 2024",
+        "type": "Interim Dividend",
+        "exDate": "2024-12-10",
+        "paymentDate": "18 Dec 2024",
+        "amount": "0.0075",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:50.273Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:50.273Z",
+      "entitlements": "2026-10-14T05:54:50.273Z"
     }
   },
   "SDCG": {
@@ -41542,9 +44218,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:52.067Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:52.067Z",
+      "entitlements": "2026-10-14T05:54:52.067Z"
     }
   },
   "SDG": {
@@ -41751,11 +44432,25 @@ window.NEWS_DATA = {
         "paymentDate": "23 May 2025",
         "amount": "0.1171",
         "isDividend": true
+      },
+      {
+        "annDate": "21 Aug 2024",
+        "financialYear": "31 Dec 2024",
+        "type": "Interim Dividend",
+        "exDate": "2024-10-30",
+        "paymentDate": "15 Nov 2024",
+        "amount": "0.0465",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:59.495Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:59.495Z",
+      "entitlements": "2026-10-14T05:54:59.495Z"
     }
   },
   "SDS": {
@@ -41956,11 +44651,25 @@ window.NEWS_DATA = {
         "paymentDate": "24 Dec 2024",
         "amount": "0.0060",
         "isDividend": true
+      },
+      {
+        "annDate": "23 Aug 2024",
+        "financialYear": "31 Mar 2025",
+        "type": "First Interim Dividend",
+        "exDate": "2024-09-10",
+        "paymentDate": "24 Sep 2024",
+        "amount": "0.0040",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:02.914Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:02.914Z",
+      "entitlements": "2026-10-14T05:55:02.914Z"
     }
   },
   "SEMICO": {
@@ -42154,9 +44863,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:52.135Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:52.135Z",
+      "entitlements": "2026-10-14T05:54:52.135Z"
     }
   },
   "SENFONG": {
@@ -42357,11 +45071,25 @@ window.NEWS_DATA = {
         "paymentDate": "11 Apr 2025",
         "amount": "0.0100",
         "isDividend": true
+      },
+      {
+        "annDate": "14 Nov 2024",
+        "financialYear": "30 Jun 2025",
+        "type": "First Interim Dividend",
+        "exDate": "2024-12-05",
+        "paymentDate": "27 Dec 2024",
+        "amount": "0.0125",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:51.093Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:51.093Z",
+      "entitlements": "2026-10-14T05:54:51.093Z"
     }
   },
   "SENHENG": {
@@ -42566,9 +45294,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:06.293Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:06.293Z",
+      "entitlements": "2026-10-14T05:55:06.293Z"
     }
   },
   "SET": {
@@ -42744,9 +45477,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:52.676Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:52.676Z",
+      "entitlements": "2026-10-14T05:54:52.676Z"
     }
   },
   "SFPTECH": {
@@ -42947,11 +45685,25 @@ window.NEWS_DATA = {
         "paymentDate": "23 Mar 2023",
         "amount": "0.0050",
         "isDividend": true
+      },
+      {
+        "annDate": "19 Aug 2022",
+        "financialYear": "31 Dec 2022",
+        "type": "Interim Dividend",
+        "exDate": "2022-09-09",
+        "paymentDate": "28 Sep 2022",
+        "amount": "0.0050",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:05.242Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:05.242Z",
+      "entitlements": "2026-10-14T05:55:05.242Z"
     }
   },
   "SIME": {
@@ -43163,9 +45915,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:55.180Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:55.180Z",
+      "entitlements": "2026-10-14T05:54:55.180Z"
     }
   },
   "SINKUNG": {
@@ -43324,9 +46081,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:06.324Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:06.324Z",
+      "entitlements": "2026-10-14T05:55:06.324Z"
     }
   },
   "SKPRES": {
@@ -43538,9 +46300,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:57.914Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:57.914Z",
+      "entitlements": "2026-10-14T05:54:57.914Z"
     }
   },
   "SKYECHIP": {
@@ -43686,9 +46453,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:58.489Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:58.489Z",
+      "entitlements": "2026-10-14T05:54:58.489Z"
     }
   },
   "SKYWLD": {
@@ -43889,11 +46661,25 @@ window.NEWS_DATA = {
         "paymentDate": "30 Dec 2024",
         "amount": "0.0050",
         "isDividend": true
+      },
+      {
+        "annDate": "21 May 2024",
+        "financialYear": "31 Mar 2024",
+        "type": "Final Dividend",
+        "exDate": "2024-07-01",
+        "paymentDate": "15 Jul 2024",
+        "amount": "0.0100",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:01.586Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:01.586Z",
+      "entitlements": "2026-10-14T05:55:01.586Z"
     }
   },
   "SLG": {
@@ -43969,9 +46755,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:53.227Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:53.227Z",
+      "entitlements": "2026-10-14T05:54:53.227Z"
     }
   },
   "SLVEST": {
@@ -44147,9 +46938,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:51.880Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:51.880Z",
+      "entitlements": "2026-10-14T05:54:51.880Z"
     }
   },
   "SNS": {
@@ -44356,11 +47152,25 @@ window.NEWS_DATA = {
         "paymentDate": "26 Nov 2025",
         "amount": "0.0025",
         "isDividend": true
+      },
+      {
+        "annDate": "25 Jun 2025",
+        "financialYear": "31 Jan 2026",
+        "type": "First Interim Dividend",
+        "exDate": "2025-07-29",
+        "paymentDate": "28 Aug 2025",
+        "amount": "0.0025",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:00.202Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:00.202Z",
+      "entitlements": "2026-10-14T05:55:00.202Z"
     }
   },
   "SOP": {
@@ -44561,11 +47371,25 @@ window.NEWS_DATA = {
         "paymentDate": "17 Oct 2025",
         "amount": "0.0400",
         "isDividend": true
+      },
+      {
+        "annDate": "25 Apr 2025",
+        "financialYear": "31 Dec 2024",
+        "type": "Final Dividend",
+        "exDate": "2025-06-30",
+        "paymentDate": "18 Jul 2025",
+        "amount": "0.0400",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:59.957Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:59.957Z",
+      "entitlements": "2026-10-14T05:54:59.957Z"
     }
   },
   "SORENTO": {
@@ -44759,11 +47583,25 @@ window.NEWS_DATA = {
         "paymentDate": "19 Sep 2025",
         "amount": "0.0050",
         "isDividend": true
+      },
+      {
+        "annDate": "27 Feb 2025",
+        "financialYear": "30 Jun 2025",
+        "type": "Interim Dividend",
+        "exDate": "2025-03-13",
+        "paymentDate": "21 Mar 2025",
+        "amount": "0.0050",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:52.425Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:52.425Z",
+      "entitlements": "2026-10-14T05:54:52.425Z"
     }
   },
   "SPRING": {
@@ -44959,9 +47797,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:03.449Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:03.449Z",
+      "entitlements": "2026-10-14T05:55:03.449Z"
     }
   },
   "SRKK": {
@@ -44971,7 +47814,7 @@ window.NEWS_DATA = {
         "type": "EX_DIVIDEND",
         "label": "Ex-Div: 2026-10-22",
         "severity": "warning",
-        "title": "Special Dividend (0.0070) | Ex-Date: 2026-10-22"
+        "title": "Interim Dividend (0.0030) | Ex-Date: 2026-10-22"
       }
     ],
     "announcements": [
@@ -45130,25 +47973,30 @@ window.NEWS_DATA = {
       {
         "annDate": "24 Aug 2026",
         "financialYear": "31 Dec 2026",
-        "type": "Special Dividend",
-        "exDate": "2026-10-22",
-        "paymentDate": "19 Nov 2026",
-        "amount": "0.0070",
-        "isDividend": true
-      },
-      {
-        "annDate": "24 Aug 2026",
-        "financialYear": "31 Dec 2026",
         "type": "Interim Dividend",
         "exDate": "2026-10-22",
         "paymentDate": "19 Nov 2026",
         "amount": "0.0030",
         "isDividend": true
+      },
+      {
+        "annDate": "24 Aug 2026",
+        "financialYear": "31 Dec 2026",
+        "type": "Special Dividend",
+        "exDate": "2026-10-22",
+        "paymentDate": "19 Nov 2026",
+        "amount": "0.0070",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:57.483Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:57.483Z",
+      "entitlements": "2026-10-14T05:54:57.483Z"
     }
   },
   "SSF": {
@@ -45351,9 +48199,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:58.288Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:58.288Z",
+      "entitlements": "2026-10-14T05:54:58.288Z"
     }
   },
   "STRATUS": {
@@ -45504,9 +48357,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:55.679Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:55.679Z",
+      "entitlements": "2026-10-14T05:54:55.679Z"
     }
   },
   "SUM": {
@@ -45627,9 +48485,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:49.179Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:49.179Z",
+      "entitlements": "2026-10-14T05:54:49.179Z"
     }
   },
   "SUMI": {
@@ -45798,9 +48661,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:53.847Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:53.847Z",
+      "entitlements": "2026-10-14T05:54:53.847Z"
     }
   },
   "SUNCON": {
@@ -45978,19 +48846,19 @@ window.NEWS_DATA = {
       {
         "annDate": "18 May 2026",
         "financialYear": "31 Dec 2026",
-        "type": "Special Dividend",
+        "type": "First Interim Dividend",
         "exDate": "2026-06-09",
         "paymentDate": "25 Jun 2026",
-        "amount": "0.1520",
+        "amount": "0.0760",
         "isDividend": true
       },
       {
         "annDate": "18 May 2026",
         "financialYear": "31 Dec 2026",
-        "type": "First Interim Dividend",
+        "type": "Special Dividend",
         "exDate": "2026-06-09",
         "paymentDate": "25 Jun 2026",
-        "amount": "0.0760",
+        "amount": "0.1520",
         "isDividend": true
       },
       {
@@ -46001,11 +48869,25 @@ window.NEWS_DATA = {
         "paymentDate": "31 Mar 2026",
         "amount": "0.0900",
         "isDividend": true
+      },
+      {
+        "annDate": "20 Nov 2025",
+        "financialYear": "31 Dec 2025",
+        "type": "Special Dividend",
+        "exDate": "2025-12-17",
+        "paymentDate": "08 Jan 2026",
+        "amount": "0.2300",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:59.404Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:59.404Z",
+      "entitlements": "2026-10-14T05:54:59.404Z"
     }
   },
   "SUNLOGY": {
@@ -46171,9 +49053,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:49.715Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:49.715Z",
+      "entitlements": "2026-10-14T05:54:49.715Z"
     }
   },
   "SUNMED": {
@@ -46339,9 +49226,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:49.291Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:49.291Z",
+      "entitlements": "2026-10-14T05:54:49.291Z"
     }
   },
   "SUNVIEW": {
@@ -46507,9 +49399,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:54.522Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:54.522Z",
+      "entitlements": "2026-10-14T05:54:54.522Z"
     }
   },
   "SUPREME": {
@@ -46705,9 +49602,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:05.982Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:05.982Z",
+      "entitlements": "2026-10-14T05:55:05.982Z"
     }
   },
   "SWIFT": {
@@ -46908,11 +49810,25 @@ window.NEWS_DATA = {
         "paymentDate": "10 Apr 2025",
         "amount": "0.0080",
         "isDividend": true
+      },
+      {
+        "annDate": "09 Aug 2024",
+        "financialYear": "31 Dec 2024",
+        "type": "Interim Dividend",
+        "exDate": "2024-09-18",
+        "paymentDate": "03 Oct 2024",
+        "amount": "0.0080",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:03.245Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:03.245Z",
+      "entitlements": "2026-10-14T05:55:03.245Z"
     }
   },
   "SYNERGY": {
@@ -47108,9 +50024,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:01.509Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:01.509Z",
+      "entitlements": "2026-10-14T05:55:01.509Z"
     }
   },
   "TAGHILL": {
@@ -47276,9 +50197,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:53.197Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:53.197Z",
+      "entitlements": "2026-10-14T05:54:53.197Z"
     }
   },
   "TANCO": {
@@ -47444,9 +50370,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:05.504Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:05.504Z",
+      "entitlements": "2026-10-14T05:55:05.504Z"
     }
   },
   "TASHIN": {
@@ -47647,11 +50578,25 @@ window.NEWS_DATA = {
         "paymentDate": "15 Jul 2022",
         "amount": "0.0300",
         "isDividend": true
+      },
+      {
+        "annDate": "02 Dec 2021",
+        "financialYear": "31 Dec 2021",
+        "type": "Interim Dividend",
+        "exDate": "2021-12-02",
+        "paymentDate": "16 Dec 2021",
+        "amount": "0.0200",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:03.610Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:03.610Z",
+      "entitlements": "2026-10-14T05:55:03.610Z"
     }
   },
   "TCS": {
@@ -47829,9 +50774,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:03.785Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:03.785Z",
+      "entitlements": "2026-10-14T05:55:03.785Z"
     }
   },
   "TEAMSTR": {
@@ -48007,9 +50957,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:05.714Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:05.714Z",
+      "entitlements": "2026-10-14T05:55:05.714Z"
     }
   },
   "TECHSTORE": {
@@ -48178,9 +51133,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:01.842Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:01.842Z",
+      "entitlements": "2026-10-14T05:55:01.842Z"
     }
   },
   "TELADAN": {
@@ -48381,11 +51341,25 @@ window.NEWS_DATA = {
         "paymentDate": "19 Sep 2022",
         "amount": "0.0060",
         "isDividend": true
+      },
+      {
+        "annDate": "21 Mar 2022",
+        "financialYear": "31 Dec 2022",
+        "type": "Interim Dividend",
+        "exDate": "2022-04-05",
+        "paymentDate": "20 Apr 2022",
+        "amount": "0.0070",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:01.740Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:01.740Z",
+      "entitlements": "2026-10-14T05:55:01.740Z"
     }
   },
   "TFP": {
@@ -48561,9 +51535,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:07.164Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:07.164Z",
+      "entitlements": "2026-10-14T05:55:07.164Z"
     }
   },
   "THMY": {
@@ -48729,9 +51708,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:49.244Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:49.244Z",
+      "entitlements": "2026-10-14T05:54:49.244Z"
     }
   },
   "TJSETIA": {
@@ -48934,9 +51918,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:06.915Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:06.915Z",
+      "entitlements": "2026-10-14T05:55:06.915Z"
     }
   },
   "TMK": {
@@ -49139,9 +52128,233 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:02.442Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:02.442Z",
+      "entitlements": "2026-10-14T05:55:02.442Z"
+    }
+  },
+  "TOPGLOV": {
+    "hasNewsAlert": false,
+    "newsBadges": [
+      {
+        "type": "JERUNG_5PCT",
+        "label": "🐋 Major Shareholder Activity",
+        "severity": "info",
+        "title": "[2026-10-13] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      }
+    ],
+    "announcements": [
+      {
+        "date": "2026-10-13",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-12",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-09",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-08",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-08",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
+      {
+        "date": "2026-10-07",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-07",
+        "category": "Listing Circulars",
+        "title": "TOPGLOV - Notice of Book Closure"
+      },
+      {
+        "date": "2026-10-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-06",
+        "category": "Entitlements",
+        "title": "Final Dividend"
+      },
+      {
+        "date": "2026-10-06",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-10-06",
+        "category": "Financial Results",
+        "title": "Quarterly rpt on consolidated results for the financial period ended 31/08/2026"
+      },
+      {
+        "date": "2026-10-05",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-01",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-09-29",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-09-29",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-09-28",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-09-25",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-09-23",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
+      {
+        "date": "2026-09-18",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-09-17",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-09-15",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-09-14",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-09-11",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-09-07",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
+      {
+        "date": "2026-09-03",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-08-28",
+        "category": "Change of Corp Info",
+        "title": "Change in Nomination and Remuneration Committee - PUAN EMELIA BINTI MATRAHAH"
+      },
+      {
+        "date": "2026-08-28",
+        "category": "Change of Corp Info",
+        "title": "Change in Risk Committee - PUAN AZRINA BINTI ARSHAD"
+      },
+      {
+        "date": "2026-08-28",
+        "category": "Change of Corp Info",
+        "title": "Change in Nomination and Remuneration Committee - MR LEE AH TOO"
+      },
+      {
+        "date": "2026-08-28",
+        "category": "Change of Corp Info",
+        "title": "Change in Risk Committee - MR LEE AH TOO"
+      },
+      {
+        "date": "2026-08-28",
+        "category": "Change of Corp Info",
+        "title": "Change in Audit Committee - PROF DATO' DR YANG FARIDAH BINTI ABDUL AZIZ"
+      }
+    ],
+    "entitlements": [
+      {
+        "annDate": "06 Oct 2026",
+        "financialYear": "31 Aug 2026",
+        "type": "Final Dividend",
+        "exDate": "2026-11-23",
+        "paymentDate": "15 Dec 2026",
+        "amount": "0.0150",
+        "isDividend": true
+      },
+      {
+        "annDate": "17 Oct 2025",
+        "financialYear": "31 Aug 2025",
+        "type": "Final Dividend",
+        "exDate": "2025-11-24",
+        "paymentDate": "15 Dec 2025",
+        "amount": "0.0048",
+        "isDividend": true
+      },
+      {
+        "annDate": "10 Dec 2021",
+        "financialYear": "31 Aug 2022",
+        "type": "First Interim Dividend",
+        "exDate": "2021-12-24",
+        "paymentDate": "10 Jan 2022",
+        "amount": "0.0120",
+        "isDividend": true
+      },
+      {
+        "annDate": "17 Sep 2021",
+        "financialYear": "31 Aug 2021",
+        "type": "Final Dividend",
+        "exDate": "2021-10-01",
+        "paymentDate": "15 Oct 2021",
+        "amount": "0.0540",
+        "isDividend": true
+      },
+      {
+        "annDate": "09 Jun 2021",
+        "financialYear": "31 Aug 2021",
+        "type": "Third Interim Dividend",
+        "exDate": "2021-06-23",
+        "paymentDate": "07 Jul 2021",
+        "amount": "0.1800",
+        "isDividend": true
+      }
+    ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:53.710Z",
+    "lastSuccessfulAt": {
+      "announcements": "2026-10-14T05:54:53.710Z",
+      "entitlements": "2026-10-14T05:54:53.710Z"
     }
   },
   "TOPMIX": {
@@ -49342,11 +52555,25 @@ window.NEWS_DATA = {
         "paymentDate": "21 Mar 2025",
         "amount": "0.0050",
         "isDividend": true
+      },
+      {
+        "annDate": "22 Aug 2024",
+        "financialYear": "31 Dec 2024",
+        "type": "First Interim Dividend",
+        "exDate": "2024-09-05",
+        "paymentDate": "03 Oct 2024",
+        "amount": "0.0025",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:56.503Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:56.503Z",
+      "entitlements": "2026-10-14T05:54:56.503Z"
     }
   },
   "TOPVISN": {
@@ -49540,9 +52767,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:50.118Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:50.118Z",
+      "entitlements": "2026-10-14T05:54:50.118Z"
     }
   },
   "TSA": {
@@ -49736,11 +52968,25 @@ window.NEWS_DATA = {
         "paymentDate": "30 Dec 2025",
         "amount": "0.0100",
         "isDividend": true
+      },
+      {
+        "annDate": "20 Aug 2025",
+        "financialYear": "31 Dec 2025",
+        "type": "Interim Dividend",
+        "exDate": "2025-09-04",
+        "paymentDate": "24 Sep 2025",
+        "amount": "0.0100",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:51.833Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:51.833Z",
+      "entitlements": "2026-10-14T05:54:51.833Z"
     }
   },
   "TTVHB": {
@@ -49899,9 +53145,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:00.181Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:00.181Z",
+      "entitlements": "2026-10-14T05:55:00.181Z"
     }
   },
   "UMC": {
@@ -50077,9 +53328,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:01.115Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:01.115Z",
+      "entitlements": "2026-10-14T05:55:01.115Z"
     }
   },
   "UMCCA": {
@@ -50089,10 +53345,20 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-13] Notice of Person Ceasing (Section 139 of CA 2016) - OVERSEA-CHINESE BANKING CORPORATION LIMITED [\"OCBC\"]"
+        "title": "[2026-10-14] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PROSPER TRADING SDN. BHD."
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-14",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PROSPER TRADING SDN. BHD."
+      },
+      {
+        "date": "2026-10-14",
+        "category": "General Announcement",
+        "title": "TAKE-OVERS & MERGERS (PARAGRAPH/RULE 9.19 (47A))"
+      },
       {
         "date": "2026-10-13",
         "category": "Changes in Shareholdings",
@@ -50232,16 +53498,6 @@ window.NEWS_DATA = {
         "date": "2026-08-21",
         "category": "Annual Report",
         "title": "Annual Report & CG Report - 2026"
-      },
-      {
-        "date": "2026-08-21",
-        "category": "General Meetings",
-        "title": "General Meetings: Notice of Meeting"
-      },
-      {
-        "date": "2026-08-13",
-        "category": "General Announcement",
-        "title": "MONTHLY PRODUCTION FIGURES (MINING / PLANTATION / TIMBER)"
       }
     ],
     "entitlements": [
@@ -50291,9 +53547,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:51.686Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:51.686Z",
+      "entitlements": "2026-10-14T05:54:51.686Z"
     }
   },
   "UMSINT": {
@@ -50494,11 +53755,25 @@ window.NEWS_DATA = {
         "paymentDate": "18 Jan 2021",
         "amount": "0.0350",
         "isDividend": true
+      },
+      {
+        "annDate": "21 Oct 2019",
+        "financialYear": "30 Jun 2019",
+        "type": "First and Final Dividend",
+        "exDate": "2020-01-02",
+        "paymentDate": "15 Jan 2020",
+        "amount": "0.0350",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:02.103Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:02.103Z",
+      "entitlements": "2026-10-14T05:55:02.103Z"
     }
   },
   "UNIPAC": {
@@ -50584,9 +53859,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:02.424Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:02.424Z",
+      "entitlements": "2026-10-14T05:55:02.424Z"
     }
   },
   "UNIQUE": {
@@ -50787,11 +54067,25 @@ window.NEWS_DATA = {
         "paymentDate": "27 Dec 2024",
         "amount": "0.0060",
         "isDividend": true
+      },
+      {
+        "annDate": "20 Aug 2024",
+        "financialYear": "31 Mar 2025",
+        "type": "Interim Dividend",
+        "exDate": "2024-10-24",
+        "paymentDate": "08 Nov 2024",
+        "amount": "0.0080",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:59.290Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:59.290Z",
+      "entitlements": "2026-10-14T05:54:59.290Z"
     }
   },
   "UNISEM": {
@@ -50801,10 +54095,30 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-09] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+        "title": "[2026-10-14] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR JOHN CHIA SIN TET"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-14",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR JOHN CHIA SIN TET"
+      },
+      {
+        "date": "2026-10-14",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-14",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR JOHN CHIA SIN TET"
+      },
+      {
+        "date": "2026-10-14",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings During Closed Period"
+      },
       {
         "date": "2026-10-09",
         "category": "Changes in Shareholdings",
@@ -50934,26 +54248,6 @@ window.NEWS_DATA = {
         "date": "2026-08-20",
         "category": "Changes in Shareholdings",
         "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR JOHN CHIA SIN TET"
-      },
-      {
-        "date": "2026-08-20",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR JOHN CHIA SIN TET"
-      },
-      {
-        "date": "2026-08-18",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-08-17",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-08-17",
-        "category": "General Announcement",
-        "title": "OTHERS"
       }
     ],
     "entitlements": [
@@ -50992,11 +54286,25 @@ window.NEWS_DATA = {
         "paymentDate": "04 Jul 2025",
         "amount": "0.0200",
         "isDividend": true
+      },
+      {
+        "annDate": "28 Feb 2025",
+        "financialYear": "31 Dec 2024",
+        "type": "Fourth Interim Dividend",
+        "exDate": "2025-03-14",
+        "paymentDate": "03 Apr 2025",
+        "amount": "0.0200",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:03.940Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:03.940Z",
+      "entitlements": "2026-10-14T05:55:03.940Z"
     }
   },
   "UNITRAD": {
@@ -51192,9 +54500,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:55.740Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:55.740Z",
+      "entitlements": "2026-10-14T05:54:55.740Z"
     }
   },
   "UTDPLT": {
@@ -51363,19 +54676,19 @@ window.NEWS_DATA = {
       {
         "annDate": "23 Feb 2026",
         "financialYear": "31 Dec 2025",
-        "type": "Special Dividend",
+        "type": "Final Dividend",
         "exDate": "2026-04-24",
         "paymentDate": "08 May 2026",
-        "amount": "0.3000",
+        "amount": "0.5100",
         "isDividend": true
       },
       {
         "annDate": "23 Feb 2026",
         "financialYear": "31 Dec 2025",
-        "type": "Final Dividend",
+        "type": "Special Dividend",
         "exDate": "2026-04-24",
         "paymentDate": "08 May 2026",
-        "amount": "0.5100",
+        "amount": "0.3000",
         "isDividend": true
       },
       {
@@ -51395,11 +54708,25 @@ window.NEWS_DATA = {
         "paymentDate": "08 Dec 2025",
         "amount": "0.1400",
         "isDividend": true
+      },
+      {
+        "annDate": "24 Feb 2025",
+        "financialYear": "31 Dec 2024",
+        "type": "Special Dividend",
+        "exDate": "2025-04-25",
+        "paymentDate": "09 May 2025",
+        "amount": "0.2700",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:58.025Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:58.025Z",
+      "entitlements": "2026-10-14T05:54:58.025Z"
     }
   },
   "UUE": {
@@ -51565,9 +54892,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:49.225Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:49.225Z",
+      "entitlements": "2026-10-14T05:54:49.225Z"
     }
   },
   "UWC": {
@@ -51770,9 +55102,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:50.762Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:50.762Z",
+      "entitlements": "2026-10-14T05:54:50.762Z"
     }
   },
   "VANZO": {
@@ -51957,9 +55294,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:04.099Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:04.099Z",
+      "entitlements": "2026-10-14T05:55:04.099Z"
     }
   },
   "VERDANT": {
@@ -52125,9 +55467,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:50.984Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:50.984Z",
+      "entitlements": "2026-10-14T05:54:50.984Z"
     }
   },
   "VINVEST": {
@@ -52293,9 +55640,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:03.692Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:03.692Z",
+      "entitlements": "2026-10-14T05:55:03.692Z"
     }
   },
   "VITROX": {
@@ -52496,11 +55848,25 @@ window.NEWS_DATA = {
         "paymentDate": "17 Jan 2025",
         "amount": "0.0050",
         "isDividend": true
+      },
+      {
+        "annDate": "23 Apr 2024",
+        "financialYear": "31 Dec 2023",
+        "type": "Final Dividend",
+        "exDate": "2024-06-27",
+        "paymentDate": "15 Jul 2024",
+        "amount": "0.0110",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:49.493Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:49.493Z",
+      "entitlements": "2026-10-14T05:54:49.493Z"
     }
   },
   "VLB": {
@@ -52666,9 +56032,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:49.550Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:49.550Z",
+      "entitlements": "2026-10-14T05:54:49.550Z"
     }
   },
   "VOLCANO": {
@@ -52869,11 +56240,25 @@ window.NEWS_DATA = {
         "paymentDate": "20 Mar 2024",
         "amount": "0.0050",
         "isDividend": true
+      },
+      {
+        "annDate": "16 Oct 2023",
+        "financialYear": "30 Jun 2023",
+        "type": "Final Dividend",
+        "exDate": "2023-11-30",
+        "paymentDate": "15 Dec 2023",
+        "amount": "0.0032",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:54.765Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:54.765Z",
+      "entitlements": "2026-10-14T05:54:54.765Z"
     }
   },
   "VS": {
@@ -53074,11 +56459,25 @@ window.NEWS_DATA = {
         "paymentDate": "28 Jan 2025",
         "amount": "0.0060",
         "isDividend": true
+      },
+      {
+        "annDate": "24 Sep 2024",
+        "financialYear": "31 Jul 2024",
+        "type": "Fourth Interim Dividend",
+        "exDate": "2024-10-10",
+        "paymentDate": "25 Oct 2024",
+        "amount": "0.0060",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:56.100Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:56.100Z",
+      "entitlements": "2026-10-14T05:54:56.100Z"
     }
   },
   "VSTECS": {
@@ -53274,6 +56673,15 @@ window.NEWS_DATA = {
       {
         "annDate": "26 Feb 2025",
         "financialYear": "31 Dec 2024",
+        "type": "Second Interim Dividend",
+        "exDate": "2025-04-21",
+        "paymentDate": "13 May 2025",
+        "amount": "0.0410",
+        "isDividend": true
+      },
+      {
+        "annDate": "26 Feb 2025",
+        "financialYear": "31 Dec 2024",
         "type": "Special Dividend",
         "exDate": "2025-04-21",
         "paymentDate": "13 May 2025",
@@ -53281,9 +56689,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:59.042Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:59.042Z",
+      "entitlements": "2026-10-14T05:54:59.042Z"
     }
   },
   "VTC": {
@@ -53452,9 +56865,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:58.960Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:58.960Z",
+      "entitlements": "2026-10-14T05:54:58.960Z"
     }
   },
   "WELLCHIP": {
@@ -53639,9 +57057,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:01.470Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:01.470Z",
+      "entitlements": "2026-10-14T05:55:01.470Z"
     }
   },
   "WELLS": {
@@ -53800,9 +57223,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:05.294Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:05.294Z",
+      "entitlements": "2026-10-14T05:55:05.294Z"
     }
   },
   "WENTEL": {
@@ -53968,9 +57396,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:02.321Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:02.321Z",
+      "entitlements": "2026-10-14T05:55:02.321Z"
     }
   },
   "WESTRVR": {
@@ -54136,9 +57569,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:49.185Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:49.185Z",
+      "entitlements": "2026-10-14T05:54:49.185Z"
     }
   },
   "WINSTAR": {
@@ -54304,9 +57742,14 @@ window.NEWS_DATA = {
       }
     ],
     "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:50.324Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:50.324Z",
+      "entitlements": "2026-10-14T05:54:50.324Z"
     }
   },
   "WTEC": {
@@ -54482,9 +57925,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:54.017Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:54.017Z",
+      "entitlements": "2026-10-14T05:54:54.017Z"
     }
   },
   "WTK": {
@@ -54685,11 +58133,25 @@ window.NEWS_DATA = {
         "paymentDate": "28 Jul 2023",
         "amount": "0.0150",
         "isDividend": true
+      },
+      {
+        "annDate": "15 Jun 2022",
+        "financialYear": "31 Dec 2021",
+        "type": "Final Dividend",
+        "exDate": "2022-06-30",
+        "paymentDate": "25 Jul 2022",
+        "amount": "0.0150",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:04.531Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:04.531Z",
+      "entitlements": "2026-10-14T05:55:04.531Z"
     }
   },
   "XPB": {
@@ -54858,9 +58320,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:50.285Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:50.285Z",
+      "entitlements": "2026-10-14T05:54:50.285Z"
     }
   },
   "YENHER": {
@@ -55061,11 +58528,25 @@ window.NEWS_DATA = {
         "paymentDate": "11 Apr 2025",
         "amount": "0.0150",
         "isDividend": true
+      },
+      {
+        "annDate": "02 Sep 2024",
+        "financialYear": "31 Dec 2024",
+        "type": "Interim Dividend",
+        "exDate": "2024-09-20",
+        "paymentDate": "11 Oct 2024",
+        "amount": "0.0150",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:56.390Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:56.390Z",
+      "entitlements": "2026-10-14T05:54:56.390Z"
     }
   },
   "YEWLEE": {
@@ -55241,9 +58722,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:49.874Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:49.874Z",
+      "entitlements": "2026-10-14T05:54:49.874Z"
     }
   },
   "YTL": {
@@ -55444,11 +58930,25 @@ window.NEWS_DATA = {
         "paymentDate": "10 Jul 2025",
         "amount": "0.0400",
         "isDividend": true
+      },
+      {
+        "annDate": "21 Aug 2024",
+        "financialYear": "30 Jun 2024",
+        "type": "Second Interim Dividend",
+        "exDate": "2024-11-12",
+        "paymentDate": "29 Nov 2024",
+        "amount": "0.0400",
+        "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:50.558Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:50.558Z",
+      "entitlements": "2026-10-14T05:54:50.558Z"
     }
   },
   "YXPM": {
@@ -55644,9 +59144,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:04.591Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:04.591Z",
+      "entitlements": "2026-10-14T05:55:04.591Z"
     }
   },
   "ZANTAT": {
@@ -55822,9 +59327,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:54:56.213Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:54:56.213Z",
+      "entitlements": "2026-10-14T05:54:56.213Z"
     }
   },
   "ZETRIX": {
@@ -56042,9 +59552,14 @@ window.NEWS_DATA = {
         "isDividend": true
       }
     ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-14T05:55:05.024Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-13T15:18:17.780Z",
-      "entitlements": "2026-10-13T15:18:17.780Z"
+      "announcements": "2026-10-14T05:55:05.024Z",
+      "entitlements": "2026-10-14T05:55:05.024Z"
     }
   }
 };
