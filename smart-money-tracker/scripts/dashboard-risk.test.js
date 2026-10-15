@@ -71,3 +71,12 @@ test('Actual dashboard Top Ranking honors the shared 5% ADD-ON floor limit', () 
     vm.runInContext(html.slice(filterStart, filterEnd), ctx);
     assert.equal(ctx.displayPicks.length, 0);
 });
+
+test('IPO debut risk uses listing age, including missing age and mature high-volume counters', () => {
+    const ctx = context();
+    const stock = {ipoYear:2026,touchCount:1,hasVolumeSpike:true,listingDate:'03-Jun-2026'};
+    assert.equal(ctx.getBlackSwanEvaluation('BUSCAP',{...stock,ipoAge:133},'2026-10-14').status,'pass');
+    assert.equal(ctx.getBlackSwanEvaluation('BUSCAP',stock,'2026-10-14').status,'pass');
+    assert.equal(ctx.getBlackSwanEvaluation('NEW',{...stock,listingDate:'12-Oct-2026',daysHeld:100},'2026-10-14').status,'ipo_debut');
+    assert.equal(ctx.getBlackSwanEvaluation('UNKNOWN',{...stock,listingDate:null},'2026-10-14').status,'pass');
+});

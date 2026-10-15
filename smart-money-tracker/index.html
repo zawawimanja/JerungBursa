@@ -18,6 +18,7 @@
     <script src="scripts/lib/strategy_rules.js"></script>
     <script src="scripts/lib/data_quality.js"></script>
     <script src="scripts/lib/trade_costs.js"></script>
+    <script src="scripts/lib/dashboard_state.js"></script>
     <script>
       (function() {
         const cb = '?t=' + Date.now();
@@ -1491,6 +1492,7 @@
                 </button>
             </div>
             <div id="frTrackerStats" style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.7rem;"></div>
+            <p style="font-size:0.7rem;color:#94a3b8;">Totals sum individual trade returns in percentage points (pp), before fees and slippage. RM figures assume RM2,000 per trade; these are not portfolio ROI. This Live Tracker shows the latest positions, including when the scanner above displays an archive.</p>
             <div class="table-responsive">
                 <table class="data-table" style="font-size: 0.78rem;">
                     <thead>
@@ -1896,6 +1898,7 @@
                 </button>
             </div>
             <div id="htTrackerStats" style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 0.7rem;"></div>
+            <p style="font-size:0.7rem;color:#94a3b8;">Totals sum individual trade returns in percentage points (pp), before fees and slippage. RM figures assume RM2,000 per trade; these are not portfolio ROI. This Live Tracker shows the latest positions, including when the scanner above displays an archive.</p>
             <div class="table-responsive">
                 <table class="data-table" style="font-size: 0.78rem;">
                     <thead>
@@ -2211,7 +2214,7 @@
                             <select id="tdStrategyFilter" onchange="onTrackerDailyFilterChange()" style="background: rgba(15, 23, 42, 0.95); color: #f8fafc; border: 1px solid rgba(52, 211, 153, 0.4); border-radius: 6px; padding: 0.25rem 0.5rem; font-size: 0.75rem; font-weight: 700; cursor: pointer; outline: none;">
                                 <option value="all" selected>Semua Strategi (FR + ADD + HT)</option>
                                 <option value="fr">🔥 Fresh Rider (NEW) Sahaja</option>
-                                <option value="addon">⭐ ADD-ON A+ Sahaja</option>
+                                <option value="addon">ADD-ON A+ &amp; Floor ADD-ON</option>
                                 <option value="ht">⚡ Hot Theme Sahaja</option>
                             </select>
                         </div>
@@ -3347,19 +3350,21 @@
 
         // Pautan carta TradingView — jika kaunter tak wujud di TradingView, papar nama sahaja (tiada pautan rosak)
         function getTradingViewAnchor(name) {
-            const sym = getTradingViewSymbol(name);
-            if (!sym) return name;
-            return `<a href="https://www.tradingview.com/chart/?symbol=MYX:${sym}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Open TradingView Chart">${name} <span style="font-size: 0.75rem; color: #22d3ee;">🔗</span></a>`;
+            const sym = encodeURIComponent(getTradingViewSymbol(name));
+            const label = escapeHtml(name);
+            if (!sym) return label;
+            return `<a href="https://www.tradingview.com/chart/?symbol=MYX:${sym}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Open TradingView Chart">${label} <span style="font-size: 0.75rem; color: #22d3ee;">🔗</span></a>`;
         }
 
         function getTradingViewAnchorSmall(name) {
-            const sym = getTradingViewSymbol(name);
-            if (!sym) return name;
-            return `<a href="https://www.tradingview.com/chart/?symbol=MYX:${sym}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 0.95rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.3rem;" title="Open TradingView Chart (${name})">${name} <span style="font-size: 0.75rem; color: #38bdf8;">🔗</span></a>`;
+            const sym = encodeURIComponent(getTradingViewSymbol(name));
+            const label = escapeHtml(name);
+            if (!sym) return label;
+            return `<a href="https://www.tradingview.com/chart/?symbol=MYX:${sym}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 0.95rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.3rem;" title="Open TradingView Chart (${label})">${label} <span style="font-size: 0.75rem; color: #38bdf8;">🔗</span></a>`;
         }
 
         function getTradingViewButton(name) {
-            const sym = getTradingViewSymbol(name);
+            const sym = encodeURIComponent(getTradingViewSymbol(name));
             if (!sym) return '';
             return `<a href="https://www.tradingview.com/chart/?symbol=MYX:${sym}&interval=D" target="_blank" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; text-decoration: none; display: inline-flex; align-items: center; gap: 0.25rem; transition: all 0.2s;" onmouseover="this.style.transform='scale(1.05)'; this.style.background='rgba(56, 189, 248, 0.25)';" onmouseout="this.style.transform='scale(1)'; this.style.background='rgba(56, 189, 248, 0.15)';" title="Open TradingView Chart">📈 TV</a>`;
         }
@@ -3805,7 +3810,7 @@ Sila tentukan teknik mana yang paling sesuai untuk saham ini dan bandingkan deng
                 );
                 
                 // Format markdown headings & bullet points cleanly
-                let formattedText = resText
+                let formattedText = escapeHtml(resText)
                     .replace(/### (.*?)\n/g, '<h4 style="color: #a78bfa; font-weight: 800; font-size: 0.95rem; margin-top: 1.25rem; margin-bottom: 0.4rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.25rem; display: flex; align-items: center; gap: 0.3rem;">$1</h4>')
                     .replace(/\*\*(.*?)\*\*/g, '<strong style="color: white; font-weight: 700;">$1</strong>')
                     .replace(/\*(.*?)\*/g, '<em style="color: #cbd5e1;">$1</em>')
@@ -3835,9 +3840,9 @@ Sila tentukan teknik mana yang paling sesuai untuk saham ini dan bandingkan deng
                 const isInvalidKey = err.message.toLowerCase().includes('api key') || err.message.toLowerCase().includes('unauthorized') || err.message.toLowerCase().includes('forbidden') || err.message.toLowerCase().includes('key not found');
                 verdictBox.innerHTML = `
                     <div style="color: #f87171; text-align: center; font-size: 0.8rem; padding: 1rem 0;">
-                        ⚠️ Ralat AI: ${err.message}<br><br>
+                        ⚠️ Ralat AI: ${escapeHtml(err.message)}<br><br>
                         ${isInvalidKey ? `
-                        <button onclick="promptResetGroqKey('${ticker}', 'Calculator', 'calculator')" class="btn" style="background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); color: #f87171; padding: 0.35rem 0.9rem; border-radius: 6px; font-size: 0.75rem; font-weight: 700; cursor: pointer; margin-right: 0.5rem;">
+                        <button onclick="promptResetGroqKey(${jsArg(ticker)}, 'Calculator', 'calculator')" class="btn" style="background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); color: #f87171; padding: 0.35rem 0.9rem; border-radius: 6px; font-size: 0.75rem; font-weight: 700; cursor: pointer; margin-right: 0.5rem;">
                             🔑 Change API Key
                         </button>
                         ` : ''}
@@ -3977,7 +3982,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     systemPrompt,
                     userPrompt
                 );
-                let formattedText = resText
+                let formattedText = escapeHtml(resText)
                     .replace(/### (.*?)\n/g, '<h4 style="color: #a78bfa; font-weight: 800; font-size: 0.95rem; margin-top: 1.25rem; margin-bottom: 0.4rem; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 0.25rem; display: flex; align-items: center; gap: 0.3rem;">$1</h4>')
                     .replace(/\*\*(.*?)\*\*/g, '<strong style="color: white; font-weight: 700;">$1</strong>')
                     .replace(/\*(.*?)\*/g, '<em style="color: #cbd5e1;">$1</em>')
@@ -3999,13 +4004,13 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 const isInvalidKey = err.message.toLowerCase().includes('api key') || err.message.toLowerCase().includes('unauthorized') || err.message.toLowerCase().includes('forbidden') || err.message.toLowerCase().includes('key not found');
                 bodyEl.innerHTML = `
                     <div style="color: #f87171; text-align: center; font-size: 0.85rem; padding: 1.5rem 0;">
-                        ⚠️ Ralat AI: ${err.message}<br><br>
+                        ⚠️ Ralat AI: ${escapeHtml(err.message)}<br><br>
                         ${isInvalidKey ? `
-                        <button onclick="promptResetGroqKey('${ticker}', '${technique}', 'modal')" class="btn" style="background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); color: #f87171; padding: 0.45rem 1.2rem; border-radius: 8px; font-weight: 700; cursor: pointer; margin-right: 0.5rem;">
+                        <button onclick="promptResetGroqKey(${jsArg(ticker)}, ${jsArg(technique)}, 'modal')" class="btn" style="background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); color: #f87171; padding: 0.45rem 1.2rem; border-radius: 8px; font-weight: 700; cursor: pointer; margin-right: 0.5rem;">
                             🔑 Change API Key
                         </button>
                         ` : ''}
-                        <button onclick="triggerAIAnalysisModal('${ticker}', '${technique}')" class="btn" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #cbd5e1; padding: 0.45rem 1.2rem; border-radius: 8px; font-weight: 700; cursor: pointer;">
+                        <button onclick="triggerAIAnalysisModal(${jsArg(ticker)}, ${jsArg(technique)})" class="btn" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #cbd5e1; padding: 0.45rem 1.2rem; border-radius: 8px; font-weight: 700; cursor: pointer;">
                             🔄 Try Again
                         </button>
                     </div>
@@ -4035,7 +4040,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 </div>
             `;
 
-            const activeDateVal = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || '';
+            const activeDateVal = getArchiveDate();
             const baseDate = activeDateVal ? new Date(activeDateVal) : new Date();
             
             const dates = [];
@@ -4171,6 +4176,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         let _autoRefreshBusy = false;  // elak refresh bertindih bila fetch lambat
         let _liveRefreshPromise = null;
         let _dataViewRevision = 0;
+        let _archiveLoadPending = false;
         let _liveSourceBase = '';
         let _lastBundleVersion = '';
         let _lastDataCheck = 0;
@@ -4579,18 +4585,20 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         }
 
         async function fetchLiveData({ forceLive = false } = {}) {
-            if (_liveRefreshPromise) {
-                await _liveRefreshPromise;
-                return forceLive ? fetchLiveData({ forceLive: true }) : undefined;
-            }
-            if (_viewingArchive && !forceLive) return;
+            if ((_viewingArchive || _archiveLoadPending) && !forceLive) return;
             if (forceLive) {
                 _dataViewRevision++;
                 _viewingArchive = false;
+                _archiveLoadPending = false;
+                window._archiveViewDate = '';
                 document.getElementById('historyDate').value = '';
                 document.getElementById('backToLiveBtn').style.display = 'none';
             }
             const revision = _dataViewRevision;
+            if (_liveRefreshPromise) {
+                await _liveRefreshPromise;
+                if (!forceLive || revision !== _dataViewRevision) return;
+            }
             _autoRefreshBusy = true;
             _liveRefreshPromise = (async () => {
                 try {
@@ -4833,14 +4841,14 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
             if (statTop1) {
                 const pct1 = (typeof statTop1.changePct === 'number' ? statTop1.changePct : ((statTop1.change / (statTop1.price - statTop1.change)) * 100)).toFixed(2);
-                document.getElementById('statTopGainer1').innerHTML = `${statTop1.name} <span style="font-size:0.8rem; color:#34d399;">(+${pct1}%)</span>`;
+                document.getElementById('statTopGainer1').innerHTML = `${escapeHtml(statTop1.name)} <span style="font-size:0.8rem; color:#34d399;">(+${pct1}%)</span>`;
             } else {
                 document.getElementById('statTopGainer1').innerText = '-';
             }
 
             if (statTopPenny) {
                 const pctP = (typeof statTopPenny.changePct === 'number' ? statTopPenny.changePct : ((statTopPenny.change / (statTopPenny.price - statTopPenny.change)) * 100)).toFixed(2);
-                document.getElementById('statTopPennyGainer').innerHTML = `${statTopPenny.name} <span style="font-size:0.8rem; color:#38bdf8;">(+${pctP}%)</span>`;
+                document.getElementById('statTopPennyGainer').innerHTML = `${escapeHtml(statTopPenny.name)} <span style="font-size:0.8rem; color:#38bdf8;">(+${pctP}%)</span>`;
             } else {
                 document.getElementById('statTopPennyGainer').innerText = '-';
             }
@@ -5049,7 +5057,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                             <td style="text-align: right; color: #ef4444; font-weight: 700;">RM ${stopLoss.toFixed(3)}</td>
                             <td style="text-align: right; color: #f59e0b; font-weight: 700;">RM ${turnoverM}M</td>
                             <td style="text-align: center;">
-                                <button onclick="triggerAIAnalysisModal('${item.name}', 'VCP Staircase (Teknik Minervini + Mamat)')" class="btn" style="background: linear-gradient(135deg, #06b6d4, #0891b2); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                <button onclick="triggerAIAnalysisModal(${jsArg(item.name)}, 'VCP Staircase (Teknik Minervini + Mamat)')" class="btn" style="background: linear-gradient(135deg, #06b6d4, #0891b2); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                                     ✨ Ask AI
                                 </button>
                             </td>
@@ -5116,7 +5124,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         sgHtml += `
                             <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.02); padding: 0.45rem 0.6rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.03);">
                                 <div>
-                                    <span style="font-weight: 800; font-size: 0.8rem; color: #a78bfa; display: inline-flex; align-items: center; gap: 0.2rem; flex-wrap: wrap;">${s.name}${vcpBadge}</span>
+                                    <span style="font-weight: 800; font-size: 0.8rem; color: #a78bfa; display: inline-flex; align-items: center; gap: 0.2rem; flex-wrap: wrap;">${escapeHtml(s.name)}${vcpBadge}</span>
                                     <span style="font-size: 0.6rem; color: var(--text-muted); display: block; margin-top: 0.1rem;">(Lantai: ${s.touchCount}x | Jarak: ${floorDist.toFixed(1)}%)</span>
                                 </div>
                                 <span style="font-size: 0.78rem; color: white; font-weight: 800; white-space: nowrap;">
@@ -5164,7 +5172,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         csHtml += `
                             <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.02); padding: 0.45rem 0.6rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.03);">
                                 <div>
-                                    <span style="font-weight: 800; font-size: 0.8rem; color: #a78bfa;">${s.name}</span>
+                                    <span style="font-weight: 800; font-size: 0.8rem; color: #a78bfa;">${escapeHtml(s.name)}</span>
                                     <span style="font-size: 0.6rem; color: var(--text-muted); margin-left: 0.25rem;">(Open: +${distToOpen.toFixed(1)}% | Lantai: ${s.touchCount}x)</span>
                                 </div>
                                 <span style="font-size: 0.78rem; color: white; font-weight: 800;">
@@ -5210,7 +5218,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         vcpHtml += `
                             <div style="display: flex; justify-content: space-between; align-items: center; background: rgba(255,255,255,0.02); padding: 0.45rem 0.6rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.03);">
                                 <div>
-                                    <span style="font-weight: 800; font-size: 0.8rem; color: #a78bfa;">${s.name}</span>
+                                    <span style="font-weight: 800; font-size: 0.8rem; color: #a78bfa;">${escapeHtml(s.name)}</span>
                                     <span style="font-size: 0.6rem; color: var(--text-muted); margin-left: 0.25rem;">(Lantai: ${s.touchCount}x | Jarak: ${floorDist.toFixed(1)}%)</span>
                                 </div>
                                 <span style="font-size: 0.78rem; color: white; font-weight: 800;">
@@ -6129,12 +6137,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
             const eqData = window.SCANNER_HISTORY || window.DAILY_EQUITY_TRACKER;
             if (eqData && Array.isArray(eqData.timeline) && eqData.timeline.length > 0) {
-                const timeline = eqData.timeline;
-                let targetIdx = timeline.length - 1;
-                if (baseDateStr) {
-                    const idx = timeline.findIndex(snap => snap.date === baseDateStr);
-                    if (idx !== -1) targetIdx = idx;
-                }
+                const timeline = eqData.timeline.filter(snap => !baseDateStr || snap.date <= baseDateStr);
+                const targetIdx = timeline.length - 1;
                 const startIdx = Math.max(0, targetIdx - lookbackDays);
                 for (let i = startIdx; i <= targetIdx; i++) {
                     const snap = timeline[i];
@@ -6161,7 +6165,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const frTrades = (window.ALL_TRACKER && Array.isArray(window.ALL_TRACKER.trades) && window.ALL_TRACKER.trades.length > 0)
                 ? window.ALL_TRACKER.trades
                 : ((window.FRESH_RIDER_TRACKER && Array.isArray(window.FRESH_RIDER_TRACKER.trades)) ? window.FRESH_RIDER_TRACKER.trades : []);
-            frTrades.forEach(t => {
+            DashboardState.scannerTradesAsOf(frTrades, baseDateStr).forEach(t => {
                 if (t && t.name) {
                     const nm = t.name.toUpperCase();
                     if (!minMap.has(nm)) {
@@ -6249,32 +6253,23 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             // 2. Semak adakah kaunter berada di Base 2 (Tapak Baru):
             // Jika harga/lantai dah naik > 15% dari entry asal, cari tapak dalam window terkini (timeline 7 hari terakhir)
             const gainFromOrigin = ((item.price - trTrade.entry) / trTrade.entry) * 100;
-            const eqData = window.DAILY_EQUITY_TRACKER;
+            const eqData = window.SCANNER_HISTORY || window.DAILY_EQUITY_TRACKER;
             if (gainFromOrigin > 15 && eqData && Array.isArray(eqData.timeline) && eqData.timeline.length > 0) {
-                const timeline = eqData.timeline;
-                let targetIdx = timeline.length - 1;
-                if (curRefDate) {
-                    const idx = timeline.findIndex(s => s.date === curRefDate);
-                    if (idx !== -1) targetIdx = idx;
-                }
+                const timeline = eqData.timeline.filter(snap => !curRefDate || snap.date <= curRefDate);
+                const targetIdx = timeline.length - 1;
                 const startIdx = Math.max(0, targetIdx - 6);
 
                 let basePrice = null;
                 let baseDate = null;
                 for (let i = startIdx; i <= targetIdx; i++) {
                     const snap = timeline[i];
-                    if (!snap || !Array.isArray(snap.trades)) continue;
-                    const match = snap.trades.find(t => (t.name || '').toUpperCase() === nm);
-                    if (match && match.priceOnDay > 0) {
+                    const price = snap?.prices?.[nm] || snap?.trades?.find(t => (t.name || '').toUpperCase() === nm)?.priceOnDay;
+                    if (price > 0) {
                         if (basePrice === null) {
-                            basePrice = match.priceOnDay;
+                            basePrice = price;
                             baseDate = snap.date;
                         }
                     }
-                }
-                if (nm === 'STRATUS') {
-                    basePrice = 2.79;
-                    baseDate = '2026-09-04';
                 }
                 if (basePrice !== null && basePrice > 0) {
                     const dist = ((item.price - basePrice) / basePrice) * 100;
@@ -6436,6 +6431,23 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             return new Date(Date.now() + 8 * 3600000).toISOString().slice(0, 10);
         }
 
+        function getArchiveDate() {
+            return window._archiveViewDate || '';
+        }
+
+        function getLiveMarketDate() {
+            const timestamp = Date.parse(window.liveData?.lastUpdated);
+            return Number.isFinite(timestamp) ? new Date(timestamp + 8 * 3600000).toISOString().slice(0, 10) : getDashboardDate();
+        }
+
+        function getMarketViewDate() {
+            return getArchiveDate() || getLiveMarketDate();
+        }
+
+        function getLiveMarketData() {
+            return [...(window.liveData?.topVolume || []), ...(window.liveData?.topGainers || [])];
+        }
+
         function isGreenCandle(item) {
             return StrategyRules.isGreenCandle(item);
         }
@@ -6444,6 +6456,10 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             return String(value ?? '').replace(/[&<>"']/g, char => ({
                 '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
             }[char]));
+        }
+        // Inline handlers decode HTML entities before running JS, so quote as a JS literal first.
+        function jsArg(value) {
+            return escapeHtml(JSON.stringify(String(value ?? '')));
         }
 
         function parseDateFlexible(dStr, defaultYear) {
@@ -6462,7 +6478,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         }
 
         function getBlackSwanEvaluation(name, item, viewDateStr) {
-            const curDateStr = viewDateStr || (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || getDashboardDate();
+            const curDateStr = viewDateStr || getMarketViewDate();
             const refDate = parseDateFlexible(curDateStr) || new Date();
             const up = (name || '').toUpperCase();
             const news = (window.NEWS_DATA && window.NEWS_DATA[up]) ? window.NEWS_DATA[up] : null;
@@ -6509,8 +6525,11 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 }
             }
 
-            // 3. Semakan Kematangan IPO Mentah (< 15 hari dagangan)
-            const isFreshIpo = item && (item.ipoYear === refDate.getUTCFullYear() || item.ipoYear === (refDate.getUTCFullYear() - 1)) && (item.touchCount || 0) < 2 && (item.daysHeld || 0) < 15;
+            // ipoAge is calendar age since listing; holding duration is unrelated.
+            const listingDate = CorporateRisk.parseEventDate(item?.listingDate, curDateStr);
+            const ipoAge = Number.isFinite(item?.ipoAge) ? item.ipoAge :
+                (listingDate ? Math.floor((refDate - listingDate) / 86400000) : null);
+            const isFreshIpo = ipoAge !== null && ipoAge >= 0 && ipoAge < 15 && (item.touchCount || 0) < 2;
             if (isFreshIpo && (item.hasVolumeSpike || (item.volumeSpike || 0) > 3.0)) {
                 return {
                     status: 'ipo_debut',
@@ -6546,21 +6565,15 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const list = currentData || [];
 
             // Kira lantai dinamik (lantai baru selepas breakout) untuk semua kaunter dalam list
-            const hdFloor = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || '';
+            const hdFloor = getArchiveDate();
             const recentFloorMap = getRecentFloorMap(hdFloor, 5);
             if (seq !== _confluenceRenderSeq) return; // render lama — jangan overwrite
             // 🔧 FIX: frTrackMap & curRefDate MESTI dideklarasikan SEBELUM effFloorOf & for loop (elak TDZ ReferenceError)
-            const curRefDate = hdFloor || getDashboardDate();
+            const curRefDate = hdFloor || getMarketViewDate();
             const frTrackSource = (window.ALL_TRACKER && Array.isArray(window.ALL_TRACKER.trades) && window.ALL_TRACKER.trades.length > 0)
                 ? window.ALL_TRACKER.trades
                 : ((window.FRESH_RIDER_TRACKER && Array.isArray(window.FRESH_RIDER_TRACKER.trades)) ? window.FRESH_RIDER_TRACKER.trades : []);
-            const frTrackMap = new Map();
-            frTrackSource.filter(t => t.status !== 'OPEN').sort((a,b) => (a.entryDate || '').localeCompare(b.entryDate || '')).forEach(t => {
-                frTrackMap.set((t.name || '').toUpperCase(), t);
-            });
-            frTrackSource.filter(t => t.status === 'OPEN').sort((a,b) => (a.entryDate || '').localeCompare(b.entryDate || '')).forEach(t => {
-                frTrackMap.set((t.name || '').toUpperCase(), t);
-            });
+            const frTrackMap = DashboardState.latestTradeMap(frTrackSource, hdFloor);
 
             const effFloorOf = (item) => {
                 const clean = (item.name || '').toUpperCase().trim();
@@ -7044,7 +7057,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
                 const freshValFR = frFreshness(item);
                 html += `
-                    <tr data-fr-name="${item.name}" data-fr-fresh="${freshValFR}">
+                    <tr data-fr-name="${escapeHtml(item.name)}" data-fr-fresh="${freshValFR}">
                         <td style="text-align: center; font-weight: 800; color: #facc15;" class="font-mono">#${idx + 1}</td>
                         <td style="font-weight: 700; color: white; padding: 0.6rem 0.8rem;">
                             ${getTradingViewAnchor(item.name)} <span style="font-size: 0.68rem; color: #a5b4fc; font-weight: 800;" class="font-mono">(${grade})</span>
@@ -7081,8 +7094,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         <td style="text-align: center; padding: 0.6rem 0.4rem;">
                             <div style="display: flex; align-items: center; justify-content: center; gap: 0.3rem; flex-wrap: wrap;">
                                 <span style="color: ${tierColor}; font-weight: 800; font-size: 0.75rem;">${confidenceText}</span>
-                                <button onclick="triggerStockHistoryModal('${item.name}')" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.15rem 0.4rem; border-radius: 5px; font-size: 0.68rem; font-weight: 800; cursor: pointer;" title="History">📜</button>
-                                <button onclick="triggerAIAnalysisModal('${item.name}', 'Fresh VVIP Rider')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.15rem 0.4rem; border-radius: 5px; font-size: 0.68rem; font-weight: 800; cursor: pointer;" title="Ask AI">✨ AI</button>
+                                <button onclick="triggerStockHistoryModal(${jsArg(item.name)})" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.15rem 0.4rem; border-radius: 5px; font-size: 0.68rem; font-weight: 800; cursor: pointer;" title="History">📜</button>
+                                <button onclick="triggerAIAnalysisModal(${jsArg(item.name)}, 'Fresh VVIP Rider')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.15rem 0.4rem; border-radius: 5px; font-size: 0.68rem; font-weight: 800; cursor: pointer;" title="Ask AI">✨ AI</button>
                             </div>
                         </td>
                     </tr>`;
@@ -7198,7 +7211,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const moversEl = document.getElementById('frHeadMovers');
             if (moversEl) moversEl.textContent = movers.length ? movers.join(' · ') : '—';
 
-            const liveList = (currentData && currentData.length > 0) ? currentData : ((window.liveData && window.liveData.topVolume) || []);
+            const liveList = getLiveMarketData();
             const stillQualifies = new Set(liveList.filter(it => {
                 try { return typeof qualifiesFreshRider === 'function' && qualifiesFreshRider(it) && passesGlobalFilters(it); } catch (e) { return false; }
             }).map(it => (it.name || '').toUpperCase()));
@@ -7219,8 +7232,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     { label: 'CLOSED Positions', val: s.closedCount ?? 0, color: '#94a3b8' },
                     { label: '🔒 Realized PnL (Closed)', val: (s.closedPnl >= 0 ? '+' : '') + (s.closedPnl || 0).toFixed(1) + '%', sub: fmtRm(closedRm), color: (s.closedPnl || 0) >= 0 ? '#34d399' : '#f87171' },
                     { label: '🟢 Floating PnL (Open)', val: (s.openPnl >= 0 ? '+' : '') + (s.openPnl || 0).toFixed(1) + '%', sub: fmtRm(openRm), color: '#34d399' },
-                    { label: '📊 Total Return (Net %)', val: (s.totalPnlNow >= 0 ? '+' : '') + (s.totalPnlNow || 0).toFixed(1) + '%', sub: fmtRm(totalRm), color: '#fde047' },
-                    { label: '💰 Total Net Profit (@ RM2k / trade)', val: fmtRm(totalRm), sub: `Realized (${fmtRm(closedRm)}) + Floating (${fmtRm(openRm)})`, color: '#34d399', highlight: true }
+                    { label: '📊 Sum of Gross Returns (pp)', val: (s.totalPnlNow >= 0 ? '+' : '') + (s.totalPnlNow || 0).toFixed(1) + ' pp', sub: fmtRm(totalRm), color: '#fde047' },
+                    { label: '💰 Gross PnL (@ RM2k / trade)', val: fmtRm(totalRm), sub: `Realized (${fmtRm(closedRm)}) + Floating (${fmtRm(openRm)})`, color: '#34d399', highlight: true }
                 ].map(c => `<div style="background: ${c.highlight ? 'linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(15, 23, 42, 0.9))' : 'rgba(15,23,42,0.7)'}; border: 1.5px solid ${c.highlight ? '#10b981' : (mode === 'addon' ? 'rgba(234,179,8,0.3)' : (mode === 'new' ? 'rgba(249,115,22,0.3)' : 'rgba(16,185,129,0.25)'))}; border-radius: 8px; padding: 0.35rem 0.7rem; min-width: 100px; text-align: center; flex: 1; box-shadow: ${c.highlight ? '0 0 14px rgba(16,185,129,0.25)' : 'none'};">
                     <div style="font-size: 0.58rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">${c.label}</div>
                     <div style="font-size: 1rem; color: ${c.color}; font-weight: 900;">${c.val}</div>
@@ -7236,7 +7249,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 return aOpen - bOpen;
             });
 
-            const todayStr = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || getDashboardDate();
+            const todayStr = getLiveMarketDate();
 
             tbody.innerHTML = sortedTrades.map((t, idx) => {
                 const isOpen = t.status === 'OPEN';
@@ -7370,7 +7383,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const sectorFilter = document.getElementById('allMarketSectorFilter');
             const secVal = sectorFilter ? sectorFilter.value : 'all';
 
-            const hdFloor = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || '';
+            const hdFloor = getArchiveDate();
             const recentFloorMap = getRecentFloorMap(hdFloor, 5);
             const effFloorOf = (item) => {
                 const rf = recentFloorMap.get((item.name || '').toUpperCase());
@@ -7382,7 +7395,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 return f || rf || 0;
             };
 
-            const curRefDate = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || '';
+            const curRefDate = getArchiveDate();
             const frTrackMap = (typeof getRecentFrTrackMap === 'function') ? getRecentFrTrackMap(curRefDate, 30) : new Map();
 
             const jerungList = Array.isArray(window.jerungData) ? window.jerungData : [];
@@ -7646,8 +7659,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         <td style="text-align: center; padding: 0.6rem 0.4rem;">
                             <div style="display: flex; align-items: center; justify-content: center; gap: 0.3rem; flex-wrap: wrap;">
                                 <span style="color: ${tierColor}; font-weight: 800; font-size: 0.75rem;">${sniperScore}/100</span>
-                                <button onclick="triggerStockHistoryModal('${item.name}')" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.15rem 0.4rem; border-radius: 5px; font-size: 0.68rem; font-weight: 800; cursor: pointer;" title="History">📜</button>
-                                <button onclick="triggerAIAnalysisModal('${item.name}', 'All Market Scanner')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.15rem 0.4rem; border-radius: 5px; font-size: 0.68rem; font-weight: 800; cursor: pointer;" title="Ask AI">✨ AI</button>
+                                <button onclick="triggerStockHistoryModal(${jsArg(item.name)})" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.15rem 0.4rem; border-radius: 5px; font-size: 0.68rem; font-weight: 800; cursor: pointer;" title="History">📜</button>
+                                <button onclick="triggerAIAnalysisModal(${jsArg(item.name)}, 'All Market Scanner')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.15rem 0.4rem; border-radius: 5px; font-size: 0.68rem; font-weight: 800; cursor: pointer;" title="Ask AI">✨ AI</button>
                             </div>
                         </td>
                     </tr>`;
@@ -7762,7 +7775,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const bt = rootTracker.backtest || {};
 
             // Kaunter yang MASIH qualify hari ini (untuk lajur "Position Status")
-            const htLiveList = (currentData && currentData.length > 0) ? currentData : ((window.liveData && window.liveData.topVolume) || []);
+            const htLiveList = getLiveMarketData();
             const stillQualifiesHT = new Set(htLiveList.filter(it => {
                 try { return qualifiesHotTheme(it); } catch (e) { return false; }
             }).map(it => (it.name || '').toUpperCase()));
@@ -7817,8 +7830,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     { label: 'CLOSED Positions', val: s.closedCount ?? 0, color: '#94a3b8' },
                     { label: '🔒 Realized PnL (Closed)', val: (s.closedPnl >= 0 ? '+' : '') + (s.closedPnl || 0).toFixed(1) + '%', sub: fmtRm(closedRm), color: (s.closedPnl || 0) >= 0 ? '#34d399' : '#f87171' },
                     { label: '🟢 Floating PnL (Open)', val: (s.openPnl >= 0 ? '+' : '') + (s.openPnl || 0).toFixed(1) + '%', sub: fmtRm(openRm), color: '#34d399' },
-                    { label: '📊 Total Return (Net %)', val: (s.totalPnlNow >= 0 ? '+' : '') + (s.totalPnlNow || 0).toFixed(1) + '%', sub: fmtRm(totalRm), color: '#fde047' },
-                    { label: '💰 Total Net Profit (@ RM2k / trade)', val: fmtRm(totalRm), sub: `Realized (${fmtRm(closedRm)}) + Floating (${fmtRm(openRm)})`, color: '#34d399', highlight: true }
+                    { label: '📊 Sum of Gross Returns (pp)', val: (s.totalPnlNow >= 0 ? '+' : '') + (s.totalPnlNow || 0).toFixed(1) + ' pp', sub: fmtRm(totalRm), color: '#fde047' },
+                    { label: '💰 Gross PnL (@ RM2k / trade)', val: fmtRm(totalRm), sub: `Realized (${fmtRm(closedRm)}) + Floating (${fmtRm(openRm)})`, color: '#34d399', highlight: true }
                 ].map(c => `<div style="background: ${c.highlight ? 'linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(15, 23, 42, 0.9))' : 'rgba(15,23,42,0.7)'}; border: 1.5px solid ${c.highlight ? '#10b981' : (mode === 'addon' ? 'rgba(234,179,8,0.3)' : (mode === 'new' ? 'rgba(249,115,22,0.3)' : 'rgba(168,85,247,0.25)'))}; border-radius: 8px; padding: 0.35rem 0.7rem; min-width: 100px; text-align: center; flex: 1; box-shadow: ${c.highlight ? '0 0 14px rgba(16,185,129,0.25)' : 'none'};">
                     <div style="font-size: 0.58rem; color: #94a3b8; font-weight: 700; text-transform: uppercase;">${c.label}</div>
                     <div style="font-size: 1rem; color: ${c.color}; font-weight: 900;">${c.val}</div>
@@ -7836,7 +7849,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 return aOpen - bOpen;
             });
 
-            const todayStr = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || getDashboardDate();
+            const todayStr = getLiveMarketDate();
 
             tbody.innerHTML = sortedTrades.map((t, idx) => {
                 const isOpen = t.status === 'OPEN';
@@ -8329,7 +8342,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const allTrades = [...frTrades, ...addOnTrades, ...floorTrades, ...htTrades];
 
             // 1. Build live map of prices and movements today
-            const liveList = (currentData && currentData.length > 0) ? currentData : ((window.liveData && window.liveData.topVolume) || []);
+            const liveList = getLiveMarketData();
             const liveMap = {};
             liveList.forEach(it => {
                 if (it && it.name) liveMap[it.name.toUpperCase().trim()] = it;
@@ -8340,7 +8353,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 const nameKey = t.name.toUpperCase().trim();
                 const live = liveMap[nameKey];
                 const isOpen = t.status === 'OPEN';
-                t.livePrice = live ? live.price : (isOpen ? t.currentPrice : t.exitPrice);
+                t.livePrice = isOpen ? (live ? live.price : t.currentPrice) : t.exitPrice;
                 t.changeRmToday = (isOpen && live) ? (live.change || 0) : 0;
                 t.changePctToday = (isOpen && live) ? (live.changePct !== undefined ? live.changePct : live.change) : 0;
                 t.pnlDeltaToday = (isOpen && t.entry > 0) ? ((t.changeRmToday / t.entry) * 100) : 0;
@@ -8377,47 +8390,16 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             // 5. Select active trades list (Historical Snapshot or Live Trades)
             let baseTradesList = allTrades;
             if (histSnap && Array.isArray(histSnap.trades)) {
-                baseTradesList = histSnap.trades.map(t => {
-                    const orig = allTrades.find(x => x.name.toUpperCase().trim() === t.name.toUpperCase().trim() && x.trackerType === t.trackerType) || {};
-                    return {
-                        ...orig,
-                        ...t,
-                        livePrice: t.priceOnDay,
-                        finalGain: t.gainOnDay,
-                        changePctToday: t.dayChangePct,
-                        pnlDeltaToday: t.pnlDeltaToday,
-                        status: t.statusOnDay === 'OPEN' ? 'OPEN' : (t.statusOnDay || 'CLOSED')
-                    };
-                });
-
-                // ✅ FIX: Recalculate pnlDeltaToday from consecutive day snapshots
-                // (Stored pnlDeltaToday in history is 0 for stocks not in scanner that day)
                 const timelineArr = eqData.timeline || [];
                 const snapDayIdx = timelineArr.findIndex(x => x.date === dateFilterVal);
                 const prevDaySnap = snapDayIdx > 0 ? timelineArr[snapDayIdx - 1] : null;
-                const prevGainMap = {};
-                if (prevDaySnap && Array.isArray(prevDaySnap.trades)) {
-                    prevDaySnap.trades.forEach(pt => {
-                        const k = (pt.name || '').toUpperCase().trim() + '|' + (pt.trackerType || '');
-                        prevGainMap[k] = pt.gainOnDay || 0;
-                    });
-                }
-                baseTradesList.forEach(t => {
-                    const k = (t.name || '').toUpperCase().trim() + '|' + (t.trackerType || '');
-                    if (k in prevGainMap) {
-                        // Delta = today's gain minus previous day's gain
-                        t.pnlDeltaToday = +((t.finalGain || 0) - prevGainMap[k]).toFixed(1);
-                    } else {
-                        // New trade: entry was on this day, delta = full gain so far
-                        t.pnlDeltaToday = +(t.finalGain || 0).toFixed(1);
-                    }
-                });
+                baseTradesList = DashboardState.mergeSnapshotTrades(allTrades, histSnap, prevDaySnap);
             }
 
             // Apply filters
             let filteredTrades = baseTradesList.filter(t => {
                 if (strategyFilter === 'fr' && t.trackerType !== 'FR') return false;
-                if (strategyFilter === 'addon' && t.trackerType !== 'ADD') return false;
+                if (strategyFilter === 'addon' && !['ADD', 'FLR'].includes(t.trackerType)) return false;
                 if (strategyFilter === 'ht' && t.trackerType !== 'HT') return false;
                 if (statusFilter === 'open' && t.status !== 'OPEN') return false;
                 if (statusFilter === 'closed' && t.status === 'OPEN') return false;
@@ -8427,30 +8409,12 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
             // 6. Metrics Calculations
             const frTradesSubset = filteredTrades.filter(t => t.trackerType === 'FR');
-            const addOnTradesSubset = filteredTrades.filter(t => t.trackerType === 'ADD');
+            const addOnTradesSubset = filteredTrades.filter(t => ['ADD', 'FLR'].includes(t.trackerType));
             const htTradesSubset = filteredTrades.filter(t => t.trackerType === 'HT');
 
-            let grandTotalPnl = 0;
-            let frPnl = 0;
-            let addOnPnl = 0;
-            let htPnl = 0;
-
-            if (histSnap && strategyFilter === 'all' && statusFilter === 'all' && !searchKeyword) {
-                grandTotalPnl = histSnap.totalPnl;
-                frPnl = histSnap.frPnl || 0;
-                addOnPnl = histSnap.addOnPnl || 0;
-                htPnl = histSnap.htPnl || 0;
-            } else if (dateFilterVal === 'all' && strategyFilter === 'all' && statusFilter === 'all' && !searchKeyword) {
-                frPnl = frData.summary ? (typeof frData.summary.totalPnlNow === 'number' ? frData.summary.totalPnlNow : (frData.summary.openPnl || 0)) : 0;
-                addOnPnl = addOnData.summary ? (typeof addOnData.summary.totalPnlNow === 'number' ? addOnData.summary.totalPnlNow : (addOnData.summary.openPnl || 0)) : 0;
-                htPnl = htData.summary ? (typeof htData.summary.totalPnlNow === 'number' ? htData.summary.totalPnlNow : (htData.summary.openPnl || 0)) : 0;
-                grandTotalPnl = frPnl + addOnPnl + htPnl;
-            } else {
-                frPnl = frTradesSubset.reduce((acc, t) => acc + (t.finalGain || 0), 0);
-                addOnPnl = addOnTradesSubset.reduce((acc, t) => acc + (t.finalGain || 0), 0);
-                htPnl = htTradesSubset.reduce((acc, t) => acc + (t.finalGain || 0), 0);
-                grandTotalPnl = frPnl + addOnPnl + htPnl;
-            }
+            const totals = DashboardState.pnlTotals(filteredTrades);
+            const { total: grandTotalPnl, fr: frPnl, addon: addOnPnl, ht: htPnl } = totals;
+            const dailyPnlDelta = filteredTrades.reduce((sum, trade) => sum + (trade.pnlDeltaToday || 0), 0);
 
             const openTrades = filteredTrades.filter(t => t.status === 'OPEN');
             const closedTrades = filteredTrades.filter(t => t.status !== 'OPEN');
@@ -8482,10 +8446,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             };
 
             // Global benchmark references
-            const globalFrPnl = frData.summary ? (typeof frData.summary.totalPnlNow === 'number' ? frData.summary.totalPnlNow : (frData.summary.openPnl || 0)) : 0;
-            const globalAddOnPnl = addOnData.summary ? (typeof addOnData.summary.totalPnlNow === 'number' ? addOnData.summary.totalPnlNow : (addOnData.summary.openPnl || 0)) : 0;
-            const globalHtPnl = htData.summary ? (typeof htData.summary.totalPnlNow === 'number' ? htData.summary.totalPnlNow : (htData.summary.openPnl || 0)) : 0;
-            const globalGrandTotal = globalFrPnl + globalAddOnPnl + globalHtPnl;
+            const { fr: globalFrPnl, addon: globalAddOnPnl, ht: globalHtPnl, total: globalGrandTotal } = DashboardState.pnlTotals(allTrades);
 
             const globalGrandTotalRm = (globalGrandTotal / 100) * entryCapital;
             const globalFrRm = (globalFrPnl / 100) * entryCapital;
@@ -8507,7 +8468,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const cohortContextBadge = document.getElementById('tdCohortContextBadge');
             if (cohortContextBadge) {
                 if (histSnap) {
-                    cohortContextBadge.innerHTML = `📅 <strong>Snapshot Tarikh ${formatTrackerDateMalay(dateFilterVal)}:</strong> Nilai Portfolio = <span style="color:#34d399; font-weight:900;">${grandTotalPnl >= 0 ? '+' : ''}${grandTotalPnl.toFixed(1)}% PnL (${fmtRm(grandTotalRm)})</span> • Perubahan Bersih Tarikh Ini: <span style="color:${histSnap.dailyPnlDelta >= 0 ? '#34d399' : '#f87171'}; font-weight:900;">${histSnap.dailyPnlDelta >= 0 ? '+' : ''}${histSnap.dailyPnlDelta.toFixed(1)}% pts</span> • ${openTrades.length} Posisi Aktif`;
+                    cohortContextBadge.innerHTML = `📅 <strong>Snapshot Tarikh ${formatTrackerDateMalay(dateFilterVal)}:</strong> Jumlah PnL kasar = <span style="color:#34d399; font-weight:900;">${grandTotalPnl >= 0 ? '+' : ''}${grandTotalPnl.toFixed(1)} mata peratusan (${fmtRm(grandTotalRm)})</span> • Perubahan Tarikh Ini: <span style="color:${dailyPnlDelta >= 0 ? '#34d399' : '#f87171'}; font-weight:900;">${dailyPnlDelta >= 0 ? '+' : ''}${dailyPnlDelta.toFixed(1)}% pts</span> • ${openTrades.length} Posisi Aktif`;
                     cohortContextBadge.style.background = 'rgba(56, 189, 248, 0.18)';
                     cohortContextBadge.style.borderColor = 'rgba(56, 189, 248, 0.5)';
                 } else if (dateFilterVal !== 'all') {
@@ -8558,7 +8519,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             setEl('tdPeakName', peakGainer.name);
 
             // 7. Calculate MOVERS & DRIVERS FOR SELECTED DATE
-            const totalDailyDelta = histSnap ? histSnap.dailyPnlDelta : openTrades.reduce((acc, t) => acc + (t.pnlDeltaToday || 0), 0);
+            const totalDailyDelta = dailyPnlDelta;
             const gainersToday = openTrades.filter(t => (t.changePctToday || 0) > 0).sort((a, b) => b.changePctToday - a.changePctToday);
             const losersToday = openTrades.filter(t => (t.changePctToday || 0) < 0).sort((a, b) => a.changePctToday - b.changePctToday);
             const flatToday = openTrades.filter(t => (t.changePctToday || 0) === 0);
@@ -8585,7 +8546,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     topGainersList.innerHTML = '<div style="font-size: 0.72rem; color: #94a3b8; font-weight: 600;">Tiada saham mencatat kenaikan pada tarikh ini.</div>';
                 } else {
                     topGainersList.innerHTML = gainersToday.slice(0, 4).map((m, idx) => {
-                        const stratTag = m.trackerType === 'FR' ? '🔥 FR' : (m.trackerType === 'ADD' ? '⭐ ADD' : '⚡ HT');
+                        const stratTag = ({ FR: 'FR', ADD: 'ADD-ON A+', FLR: 'Lantai Rapat', HT: 'HT' })[m.trackerType];
                         const changeStr = (m.changePctToday >= 0 ? '+' : '') + m.changePctToday.toFixed(2) + '%';
                         const deltaStr = (m.pnlDeltaToday >= 0 ? '+' : '') + m.pnlDeltaToday.toFixed(1) + '% pts';
                         return `
@@ -8612,7 +8573,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     topPnlDriversList.innerHTML = '<div style="font-size: 0.72rem; color: #94a3b8; font-weight: 600;">Tiada sumbangan positif pada tarikh ini.</div>';
                 } else {
                     const renderPnlDriverRow = (m, idx) => {
-                        const stratTag = m.trackerType === 'FR' ? '🔥 FR' : (m.trackerType === 'ADD' ? '⭐ ADD' : '⚡ HT');
+                        const stratTag = ({ FR: 'FR', ADD: 'ADD-ON A+', FLR: 'Lantai Rapat', HT: 'HT' })[m.trackerType];
                         const deltaStr = (m.pnlDeltaToday >= 0 ? '+' : '') + (m.pnlDeltaToday || 0).toFixed(1) + '% pts';
                         const totalStr = (m.finalGain >= 0 ? '+' : '') + (m.finalGain || 0).toFixed(1) + '%';
                         const isKeeming = m.name === 'KEEMING';
@@ -8650,7 +8611,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     topLosersList.innerHTML = '<div style="font-size: 0.72rem; color: #34d399; font-weight: 600;">✨ Tiada saham yang jatuh pada tarikh ini.</div>';
                 } else {
                     const renderLoserRow = (m, idx) => {
-                        const stratTag = m.trackerType === 'FR' ? '🔥 FR' : (m.trackerType === 'ADD' ? '⭐ ADD' : '⚡ HT');
+                        const stratTag = ({ FR: 'FR', ADD: 'ADD-ON A+', FLR: 'Lantai Rapat', HT: 'HT' })[m.trackerType];
                         const changeStr = (m.changePctToday || 0).toFixed(2) + '%';
                         const deltaStr = (m.pnlDeltaToday || 0).toFixed(1) + '% pts';
                         return `
@@ -8727,9 +8688,9 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         const pnlText = (pnl >= 0 ? '+' : '') + pnl.toFixed(1) + '%';
                         const tradeRm = (pnl / 100) * 2000;
                         const tradeRmStr = `${tradeRm >= 0 ? '+' : '-'}RM ${Math.abs(tradeRm).toFixed(2)}`;
-                        const maxText = '+' + (t.maxGain || t.finalGain || 0).toFixed(1) + '%';
+                        const maxText = t.maxGain != null ? '+' + t.maxGain.toFixed(1) + '%' : '—';
 
-                        const stratBadge = `<span style="font-size: 0.65rem; background: ${t.badgeBg}; color: ${t.badgeColor}; padding: 0.12rem 0.45rem; border-radius: 4px; font-weight: 800; border: 1px solid ${t.badgeBorder};">${t.trackerType === 'FR' ? '🔥 FR' : (t.trackerType === 'ADD' ? '⭐ ADD' : '⚡ HT')}</span>`;
+                        const stratBadge = `<span style="font-size: 0.65rem; background: ${t.badgeBg}; color: ${t.badgeColor}; padding: 0.12rem 0.45rem; border-radius: 4px; font-weight: 800; border: 1px solid ${t.badgeBorder};">${escapeHtml(t.trackerTitle)}</span>`;
 
                         const todayChg = t.changePctToday || 0;
                         const todayColor = todayChg > 0 ? '#34d399' : (todayChg < 0 ? '#f87171' : '#94a3b8');
@@ -8742,11 +8703,11 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         const pnlDeltaChip = `<span style="color: ${pnlDeltaCol}; font-weight: 900; font-size: 0.76rem;">${pnlDeltaSign}${pnlDelta.toFixed(1)}% pts</span>`;
 
                         const exitPx = isOpen ? t.livePrice : (t.exitPrice || t.livePrice);
-                        const slTrail = (t.slTrail != null ? t.slTrail : (t.entry * 0.89)).toFixed(3);
+                        const slTrailText = t.slTrail != null ? `RM ${t.slTrail.toFixed(3)}` : '—';
 
                         let stillRadar = '';
                         if (isOpen) {
-                            const qualifies = t.trackerType === 'FR' ? stillQualifiesFR.has(t.name.toUpperCase()) : stillQualifiesHT.has(t.name.toUpperCase());
+                            const qualifies = t.trackerType === 'HT' ? stillQualifiesHT.has(t.name.toUpperCase()) : stillQualifiesFR.has(t.name.toUpperCase());
                             stillRadar = qualifies
                                 ? '<span style="font-size: 0.62rem; color: #34d399; font-weight: 800;" title="Still qualifies on scan list — VALID ENTRY">🟢 VALID</span>'
                                 : '<span style="font-size: 0.62rem; color: #fbbf24; font-weight: 700;" title="Price moved >10% from base — HOLD ONLY until trailing SL">🟡 HOLD</span>';
@@ -8782,7 +8743,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                                 <div style="color: ${pnlCol}; font-weight: 800; font-size: 0.68rem; margin-top: 0.1rem;">${tradeRmStr}</div>
                             </td>
                             <td style="text-align: right; color: #38bdf8; font-weight: 700;">${maxText}</td>
-                            <td style="text-align: right; color: #f87171; font-weight: 700;">RM ${slTrail}</td>
+                            <td style="text-align: right; color: #f87171; font-weight: 700;">${slTrailText}</td>
                             <td style="text-align: center;">${stillRadar}</td>
                             <td style="text-align: center;">${getTradingViewButton(t.name)}</td>
                         </tr>`;
@@ -8815,7 +8776,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         const day1CohortAvg = tradesForDay.length > 0 ? (day1CohortSum / tradesForDay.length) : 0;
                         const dayTodayDelta = tradesForDay.reduce((acc, t) => acc + (t.pnlDeltaToday || 0), 0);
                         const dayFrCount = tradesForDay.filter(t => t.trackerType === 'FR').length;
-                        const dayAddCount = tradesForDay.filter(t => t.trackerType === 'ADD').length;
+                        const dayAddCount = tradesForDay.filter(t => ['ADD', 'FLR'].includes(t.trackerType)).length;
                         const dayHtCount = tradesForDay.filter(t => t.trackerType === 'HT').length;
                         const dayOpenCount = tradesForDay.filter(t => t.status === 'OPEN').length;
                         const dayClosedCount = tradesForDay.filter(t => t.status !== 'OPEN').length;
@@ -8878,7 +8839,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
                                     ${dayBest ? `
                                     <div style="background: rgba(15,23,42,0.8); border: 1px solid rgba(236,72,153,0.3); border-radius: 8px; padding: 0.25rem 0.55rem; font-size: 0.72rem; color: #ec4899; font-weight: 800;" title="Peak gainer in this day's cohort">
-                                        Top: ${dayBest.name} (+${(dayBest.maxGain || dayBest.finalGain || 0).toFixed(1)}%)
+                                        Top: ${escapeHtml(dayBest.name)} (+${(dayBest.maxGain || dayBest.finalGain || 0).toFixed(1)}%)
                                     </div>` : ''}
 
                                     <button onclick="toggleCardCollapse('${collapseBodyId}', this)" class="btn td-cohort-btn" style="background: rgba(15,23,42,0.9); border: 1.5px solid rgba(52,211,153,0.4); color: #34d399; padding: 0.22rem 0.6rem; border-radius: 8px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.3rem;">
@@ -8917,9 +8878,9 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                                                 const pnlText = (pnl >= 0 ? '+' : '') + pnl.toFixed(1) + '%';
                                                 const tradeRm = (pnl / 100) * 2000;
                                                 const tradeRmStr = `${tradeRm >= 0 ? '+' : '-'}RM ${Math.abs(tradeRm).toFixed(2)}`;
-                                                const maxText = '+' + (t.maxGain || 0).toFixed(1) + '%';
+                                                const maxText = t.maxGain != null ? '+' + t.maxGain.toFixed(1) + '%' : '—';
 
-                                                const stratBadge = `<span style="font-size: 0.65rem; background: ${t.badgeBg}; color: ${t.badgeColor}; padding: 0.12rem 0.45rem; border-radius: 4px; font-weight: 800; border: 1px solid ${t.badgeBorder};">${t.trackerType === 'FR' ? '🔥 Fresh Rider' : (t.trackerType === 'ADD' ? '⭐ ADD-ON A+' : '⚡ Hot Theme')}</span>`;
+                                                const stratBadge = `<span style="font-size: 0.65rem; background: ${t.badgeBg}; color: ${t.badgeColor}; padding: 0.12rem 0.45rem; border-radius: 4px; font-weight: 800; border: 1px solid ${t.badgeBorder};">${escapeHtml(t.trackerTitle)}</span>`;
 
                                                 const statusBadge = isOpen
                                                     ? '<span style="font-size: 0.62rem; background: rgba(16,185,129,0.2); color: #34d399; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(16,185,129,0.4);">🟢 OPEN</span>'
@@ -8933,11 +8894,12 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                                                     : '<span style="color: #64748b; font-size: 0.65rem;">—</span>';
 
                                                 const exitPx = isOpen ? t.livePrice : (t.exitPrice || t.livePrice);
-                                                const slTrail = (t.slTrail != null ? t.slTrail : 0).toFixed(3);
+                                                const slTrailText = t.slTrail != null ? `RM ${t.slTrail.toFixed(3)}` : '—';
+                                                const daysText = t.days != null ? t.days : '—';
 
                                                 let stillRadar = '';
                                                 if (isOpen) {
-                                                    const qualifies = t.trackerType === 'FR' ? stillQualifiesFR.has(t.name.toUpperCase()) : stillQualifiesHT.has(t.name.toUpperCase());
+                                                    const qualifies = t.trackerType === 'HT' ? stillQualifiesHT.has(t.name.toUpperCase()) : stillQualifiesFR.has(t.name.toUpperCase());
                                                     stillRadar = qualifies
                                                         ? '<span style="font-size: 0.62rem; color: #34d399; font-weight: 800;" title="Still qualifies on scan list — VALID ENTRY">🟢 VALID ENTRY</span>'
                                                         : '<span style="font-size: 0.62rem; color: #fbbf24; font-weight: 700;" title="Price moved >10% from base — HOLD ONLY until trailing SL">🟡 HOLD ONLY</span>';
@@ -8976,9 +8938,9 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                                                         <div style="color: ${pnlCol}; font-weight: 800; font-size: 0.68rem; margin-top: 0.1rem;">${tradeRmStr}</div>
                                                     </td>
                                                     <td style="text-align: right; color: #38bdf8; font-weight: 700;">${maxText}</td>
-                                                    <td style="text-align: center; color: #fde047; font-weight: 700;">${t.days || 0}</td>
+                                                    <td style="text-align: center; color: #fde047; font-weight: 700;">${daysText}</td>
                                                     <td style="text-align: center;">${stillRadar}</td>
-                                                    <td style="text-align: right; color: #f87171; font-weight: 700;">RM ${slTrail}</td>
+                                                    <td style="text-align: right; color: #f87171; font-weight: 700;">${slTrailText}</td>
                                                     <td style="text-align: center;">${getTradingViewButton(t.name)}</td>
                                                 </tr>`;
                                             }).join('')}
@@ -9135,7 +9097,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const tbody = document.getElementById('confluenceRadarTableBody');
             if (!tbody) return;
 
-            const hd = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || '';
+            const hd = getArchiveDate();
             const key = hd || 'live';
 
             if (!_freshRiderPrevCache || _freshRiderPrevCache.key !== key) {
@@ -9148,13 +9110,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const allFrTradesSource = (window.ALL_TRACKER && Array.isArray(window.ALL_TRACKER.trades) && window.ALL_TRACKER.trades.length > 0)
                 ? window.ALL_TRACKER.trades
                 : ((window.FRESH_RIDER_TRACKER && Array.isArray(window.FRESH_RIDER_TRACKER.trades)) ? window.FRESH_RIDER_TRACKER.trades : []);
-            const trackedTrades = new Map();
-            allFrTradesSource.filter(t => t.status !== 'OPEN').sort((a,b) => (a.entryDate || '').localeCompare(b.entryDate || '')).forEach(t => {
-                trackedTrades.set((t.name || '').toUpperCase(), t);
-            });
-            allFrTradesSource.filter(t => t.status === 'OPEN').sort((a,b) => (a.entryDate || '').localeCompare(b.entryDate || '')).forEach(t => {
-                trackedTrades.set((t.name || '').toUpperCase(), t);
-            });
+            const trackedTrades = DashboardState.latestTradeMap(allFrTradesSource, hd);
             const todayStr = hd || (window.FRESH_RIDER_TRACKER && window.FRESH_RIDER_TRACKER.summary && window.FRESH_RIDER_TRACKER.summary.generatedAt ? window.FRESH_RIDER_TRACKER.summary.generatedAt.slice(0, 10) : getDashboardDate());
 
             // Create lookup map of current rendered picks for exact price, floor & tightness
@@ -9397,7 +9353,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const tbody = document.getElementById('hotThemeTableBody');
             if (!tbody) return;
 
-            const hd = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || '';
+            const hd = getArchiveDate();
             const key = hd || 'live';
 
             if (!_hotThemePrevCache || _hotThemePrevCache.key !== key) {
@@ -9414,14 +9370,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             }
 
             // name -> latest trade object
-            const trackedTrades = new Map();
             const htTrades = (window.HOT_THEME_TRACKER && Array.isArray(window.HOT_THEME_TRACKER.trades)) ? window.HOT_THEME_TRACKER.trades : [];
-            for (const t of htTrades) {
-                const sym = (t.name || '').toUpperCase().trim();
-                if (!trackedTrades.has(sym) || t.entryDate > trackedTrades.get(sym).entryDate || (t.status === 'OPEN' && trackedTrades.get(sym).status !== 'OPEN')) {
-                    trackedTrades.set(sym, t);
-                }
-            }
+            const trackedTrades = DashboardState.latestTradeMap(htTrades, hd);
 
             const todayStr = hd || (window.HOT_THEME_TRACKER && window.HOT_THEME_TRACKER.summary && window.HOT_THEME_TRACKER.summary.generatedAt ? window.HOT_THEME_TRACKER.summary.generatedAt.slice(0, 10) : getDashboardDate());
 
@@ -9717,14 +9667,14 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         </td>
                         <td style="text-align: center; color: var(--${changeClass}); font-weight: 800;">${changeSign}${changeVal !== undefined ? changeVal.toFixed(2) : '0.00'}%</td>
                         <td style="text-align: center;">
-                            <button onclick="triggerStockHistoryModal('${item.name}')" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                            <button onclick="triggerStockHistoryModal(${jsArg(item.name)})" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                                 📜 History
                             </button>
                         </td>
                         <td style="text-align: center; padding: 0.5rem 0.2rem;">
                             <div style="display: flex; flex-direction: column; align-items: center; gap: 0.25rem;">
                                 <span style="color: ${tierColor}; font-weight: 800; font-size: 0.78rem;">${confidenceText}</span>
-                                <button onclick="triggerAIAnalysisModal('${item.name}', 'Confluence VVIP')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.7rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                <button onclick="triggerAIAnalysisModal(${jsArg(item.name)}, 'Confluence VVIP')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.7rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                                     ✨ Ask AI
                                 </button>
                             </div>
@@ -9833,7 +9783,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
             // Lantai dinamik (sama macam Fresh Rider): selepas breakout, guna lantai BARU
             // (min 5 trading days terakhir) atau lantai tangga Base 2 dari live tracker — bukan lantai asal yang lapuk.
-            const hdHT = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || '';
+            const hdHT = getArchiveDate();
             const recentFloorMapHT = typeof getRecentFloorMap === 'function' ? getRecentFloorMap(hdHT, 5) : new Map();
             if (seq !== _hotThemeRenderSeq) return; // render lama — jangan overwrite
 
@@ -9841,14 +9791,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const htTrackTrades = (window.HOT_THEME_TRACKER && Array.isArray(window.HOT_THEME_TRACKER.trades))
                 ? window.HOT_THEME_TRACKER.trades
                 : ((window.HOT_THEME_ALL_TRACKER && Array.isArray(window.HOT_THEME_ALL_TRACKER.trades)) ? window.HOT_THEME_ALL_TRACKER.trades : []);
-            const htTrackMap = new Map();
-            for (const t of htTrackTrades) {
-                const sym = (t.name || '').toUpperCase().trim();
-                if (!htTrackMap.has(sym) || t.entryDate > htTrackMap.get(sym).entryDate || (t.status === 'OPEN' && htTrackMap.get(sym).status !== 'OPEN')) {
-                    htTrackMap.set(sym, t);
-                }
-            }
-            const curRefDateHT = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || (window.HOT_THEME_TRACKER && window.HOT_THEME_TRACKER.summary && window.HOT_THEME_TRACKER.summary.generatedAt ? window.HOT_THEME_TRACKER.summary.generatedAt.slice(0, 10) : getDashboardDate());
+            const htTrackMap = DashboardState.latestTradeMap(htTrackTrades, hdHT);
+            const curRefDateHT = getMarketViewDate();
 
             const effFloorOfHT = (item) => {
                 const clean = (item.name || '').toUpperCase().trim();
@@ -10214,7 +10158,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
                 const freshValHT = htFreshness(item);
                 html += `
-                    <tr data-ht-name="${item.name}" data-ht-fresh="${freshValHT}">
+                    <tr data-ht-name="${escapeHtml(item.name)}" data-ht-fresh="${freshValHT}">
                         <td style="text-align: center; font-weight: 800; color: #a78bfa;">#${idx + 1}</td>
                         <td style="font-weight: 700; color: white; padding: 0.6rem 0.8rem;">
                             <div style="display: flex; align-items: center; gap: 0.35rem; flex-wrap: wrap;">
@@ -10252,8 +10196,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         <td style="text-align: center; padding: 0.6rem 0.4rem;">
                             <div style="display: flex; align-items: center; justify-content: center; gap: 0.3rem; flex-wrap: wrap;">
                                 <span style="color: ${tierColor}; font-weight: 800; font-size: 0.75rem;">${confidenceText}</span>
-                                <button onclick="triggerStockHistoryModal('${item.name}')" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.15rem 0.4rem; border-radius: 5px; font-size: 0.68rem; font-weight: 800; cursor: pointer;" title="History">📜</button>
-                                <button onclick="triggerAIAnalysisModal('${item.name}', 'Hot Theme Rider')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.15rem 0.4rem; border-radius: 5px; font-size: 0.68rem; font-weight: 800; cursor: pointer;" title="Ask AI">✨ AI</button>
+                                <button onclick="triggerStockHistoryModal(${jsArg(item.name)})" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.15rem 0.4rem; border-radius: 5px; font-size: 0.68rem; font-weight: 800; cursor: pointer;" title="History">📜</button>
+                                <button onclick="triggerAIAnalysisModal(${jsArg(item.name)}, 'Hot Theme Rider')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.15rem 0.4rem; border-radius: 5px; font-size: 0.68rem; font-weight: 800; cursor: pointer;" title="Ask AI">✨ AI</button>
                             </div>
                         </td>
                     </tr>`;
@@ -10321,20 +10265,17 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 });
             }
 
-            const hdHT = (document.getElementById('historyDate') ? document.getElementById('historyDate').value : '') || '';
+            const hdHT = getArchiveDate();
             const recentFloorMap = typeof getRecentFloorMap === 'function' ? getRecentFloorMap(hdHT, 5) : new Map();
 
             // Peta trades tracked untuk rujuk paras lantai terkini (Base 2 Staircase / Add-On)
-            const trackedMap = new Map();
             const allTrackedList = [
                 ...(window.FRESH_RIDER_TRACKER?.trades || []),
                 ...(window.ADD_ON_TRACKER?.trades || []),
                 ...(window.FLOOR_ADDON_TRACKER?.trades || []),
                 ...(window.HOT_THEME_TRACKER?.trades || [])
             ];
-            allTrackedList.forEach(t => {
-                if (t && t.name) trackedMap.set((t.name || '').toUpperCase().trim(), t);
-            });
+            const trackedMap = DashboardState.latestTradeMap(allTrackedList, hdHT);
 
             const effFloorOfFusion = (item) => {
                 const clean = (item.name || '').toUpperCase().trim();
@@ -10712,7 +10653,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                             <td style="text-align: right; color: #ef4444; font-weight: 700;">RM ${stopLoss.toFixed(3)}</td>
                             <td style="text-align: right; color: #f59e0b; font-weight: 700;">RM ${turnoverM}M</td>
                             <td style="text-align: center;">
-                                <button onclick="triggerAIAnalysisModal('${item.name}', 'Trend Rider')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                <button onclick="triggerAIAnalysisModal(${jsArg(item.name)}, 'Trend Rider')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                                     ✨ Ask AI
                                 </button>
                             </td>
@@ -10886,7 +10827,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                             <td style="text-align: right; color: #10b981; font-weight: 700;">RM ${floor.toFixed(3)}</td>
                             <td style="text-align: right; color: #f59e0b; font-weight: 700;">RM ${turnoverM}M</td>
                             <td style="text-align: center;">
-                                <button onclick="triggerAIAnalysisModal('${item.name}', 'Early Spring (Open Reclaim)')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                <button onclick="triggerAIAnalysisModal(${jsArg(item.name)}, 'Early Spring (Open Reclaim)')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                                     ✨ Ask AI
                                 </button>
                             </td>
@@ -11000,7 +10941,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                             <td style="text-align: right; color: #fb7185; font-weight: 700;">-${item.pullback.toFixed(1)}%</td>
                             <td style="text-align: right; color: #f59e0b; font-weight: 700;">RM ${turnoverM}M</td>
                             <td style="text-align: center;">
-                                <button onclick="triggerAIAnalysisModal('${item.name}', 'Bottom Fishing (Floor Accumulation)')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+                                <button onclick="triggerAIAnalysisModal(${jsArg(item.name)}, 'Bottom Fishing (Floor Accumulation)')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                                     ✨ Ask AI
                                 </button>
                             </td>
@@ -11129,11 +11070,9 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             window.addEventListener('online', autoRefresh);
 
             // History Archive check
-            let _archiveLoadBusy = false;
             async function doLoadHistoryArchive() {
-                if (_archiveLoadBusy) return;
-                _archiveLoadBusy = true;
-                _dataViewRevision++;
+                const revision = ++_dataViewRevision;
+                _archiveLoadPending = true;
                 let dateVal = document.getElementById('historyDate').value;
                 if (dateVal) {
                     dateVal = dateVal.trim();
@@ -11156,11 +11095,13 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 const originalText = '📂 Load';
 
                 if (!dateVal) {
-                    _archiveLoadBusy = false;
+                    _archiveLoadPending = false;
+                    document.getElementById('historyDate').value = getArchiveDate();
                     btn.innerHTML = '⚠️ Select Date';
                     btn.style.background = '#f59e0b';
                     btn.style.color = '#0f172a';
                     setTimeout(() => {
+                        if (revision !== _dataViewRevision) return;
                         btn.innerHTML = originalText;
                         btn.style.background = '';
                         btn.style.color = '';
@@ -11171,7 +11112,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 btn.innerHTML = '⏳ Loading...';
                 try {
                     const cacheBuster = new Date().getTime();
-                    let res = null;
+                    let raw = null;
 
                     // Cuba GitHub raw dahulu (terbukti 200 OK, elak Vercel 308 redirect issue)
                     const archiveUrls = [
@@ -11181,16 +11122,20 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     ];
 
                     for (const url of archiveUrls) {
+                        if (revision !== _dataViewRevision) return;
                         try {
-                            const r = await fetch(url);
-                            if (r.ok) { res = r; break; }
+                            const candidate = JSON.parse(await JerungLive.request(url));
+                            const rows = Array.isArray(candidate) ? candidate : candidate.topVolume;
+                            if (!Array.isArray(rows) || !rows.some(item => item?.name && item.price > 0)) throw new Error('Invalid archive');
+                            raw = candidate;
+                            break;
                         } catch (e) {
                             console.warn('Archive fetch gagal:', url, e.message);
                         }
                     }
 
-                    if (res && res.ok) {
-                        const raw = await res.json();
+                    if (revision !== _dataViewRevision) return;
+                    if (raw) {
                         let data = [];
                         if (Array.isArray(raw)) {
                             data = raw;
@@ -11210,18 +11155,25 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         }
                         if (data && data.length > 0) {
                             window._archiveSnapshot = Array.isArray(raw) ? {topVolume:raw,lastUpdated:dateVal+'T09:00:00Z'} : raw;
+                            window._archiveViewDate = dateVal;
+                            document.getElementById('historyDate').value = dateVal;
                             currentData = data;
                             _viewingArchive = true; // tengah tengok arkib — auto-refresh kena berhenti
+                            _recentFloorCache = null;
+                            _freshRiderPrevCache = null;
+                            _hotThemePrevCache = null;
                             document.getElementById('dashboardSubtitle').innerHTML = `📂 Historical Archive: <strong>${dateVal}</strong>`;
                             const liveBtn = document.getElementById('backToLiveBtn');
                             if (liveBtn) liveBtn.style.display = 'inline-flex';
                             applyFilters();
+                            renderDataQuality();
                             
                             // Success feedback
                             btn.innerHTML = '✅ Loaded!';
                             btn.style.background = '#10b981';
                             btn.style.color = 'white';
                             setTimeout(() => {
+                                if (revision !== _dataViewRevision) return;
                                 btn.innerHTML = originalText;
                                 btn.style.background = '';
                                 btn.style.color = '';
@@ -11233,16 +11185,19 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         throw new Error('Not found');
                     }
                 } catch(e) {
+                    if (revision !== _dataViewRevision) return;
+                    document.getElementById('historyDate').value = getArchiveDate();
                     btn.innerHTML = '❌ Not Found';
                     btn.style.background = '#ef4444';
                     btn.style.color = 'white';
                     setTimeout(() => {
+                        if (revision !== _dataViewRevision) return;
                         btn.innerHTML = originalText;
                         btn.style.background = '';
                         btn.style.color = '';
                     }, 2000);
                 } finally {
-                    _archiveLoadBusy = false;
+                    if (revision === _dataViewRevision) _archiveLoadPending = false;
                 }
             }
             document.getElementById('loadHistoryBtn').addEventListener('click', doLoadHistoryArchive);
@@ -11420,7 +11375,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         <td style="text-align: center; font-weight: 800; color: ${isReclaim ? '#34d399' : '#f97316'}; padding: 0.8rem 0.5rem; border-left: 3px solid ${isReclaim ? '#34d399' : 'transparent'};">#${idx + 1}</td>
                         <td style="font-weight: 700; color: white; padding: 0.8rem 1rem;">
                             <div style="display: flex; align-items: center; gap: 0.4rem; flex-wrap: wrap;">
-                                ${getTradingViewSymbol(m.name) ? `<a href="https://www.tradingview.com/chart/?symbol=MYX:${getTradingViewSymbol(m.name)}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Open TradingView Chart">${m.name} <span style="font-size: 0.75rem; color: #f97316;">🔗</span></a>` : m.name}
+                                ${getTradingViewSymbol(m.name) ? `<a href="https://www.tradingview.com/chart/?symbol=MYX:${encodeURIComponent(getTradingViewSymbol(m.name))}&interval=D" target="_blank" style="color: white; text-decoration: none; font-size: 1.05rem; font-weight: 800; display: inline-flex; align-items: center; gap: 0.25rem;" title="Open TradingView Chart">${escapeHtml(m.name)} <span style="font-size: 0.75rem; color: #f97316;">🔗</span></a>` : escapeHtml(m.name)}
                                 ${isReclaim ? `<span style="font-size:0.68rem; background:linear-gradient(135deg,#34d399,#059669); color:white; padding:0.1rem 0.35rem; border-radius:4px; font-weight:800; box-shadow:0 0 8px rgba(52,211,153,0.3);">🔥 Reclaim</span>` : ''}
                             </div>
                             <div style="font-size: 0.76rem; color: var(--text-muted); font-weight: 600; margin-top: 0.3rem;">
@@ -11440,7 +11395,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                             <span style="${statusStyle} padding:0.2rem 0.6rem; border-radius:4px; font-weight:800; font-size:0.7rem;">${m.status}</span>
                         </td>
                         <td style="text-align: center; white-space: nowrap; padding: 0.75rem;">
-                            <button onclick="triggerAIAnalysisModal('${m.name}', 'Phoenix Spring (1st Day Close Reclaim)')" class="btn" style="background: linear-gradient(135deg, #ef4444, #f97316); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s; white-space: nowrap;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">✨ Ask AI</button>
+                            <button onclick="triggerAIAnalysisModal(${jsArg(m.name)}, 'Phoenix Spring (1st Day Close Reclaim)')" class="btn" style="background: linear-gradient(135deg, #ef4444, #f97316); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s; white-space: nowrap;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">✨ Ask AI</button>
                         </td>
                     </tr>
                 `;
@@ -11558,8 +11513,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                                     <div style="font-size: 1.25rem; font-weight: 900; color: #34d399;">${stats.wr.toFixed(1)}%</div>
                                 </div>
                                 <div style="text-align: right;">
-                                    <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Net Return</div>
-                                    <div style="font-size: 1.1rem; font-weight: 900; color: ${g.colors[1]};">+${stats.pnl.toFixed(1)}%</div>
+                                    <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Sum of Gross Returns (pp)</div>
+                                    <div style="font-size: 1.1rem; font-weight: 900; color: ${g.colors[1]};">${stats.pnl >= 0 ? '+' : ''}${stats.pnl.toFixed(1)} pp</div>
                                 </div>
                             </div>
                             <div style="font-size: 0.65rem; color: #cbd5e1; border-top: 1px dashed ${g.colors[3]}; padding-top: 0.35rem; line-height: 1.35;">
@@ -11576,7 +11531,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                             <td style="text-align: right; color: #34d399; font-weight: 800;">${stats.wr.toFixed(1)}%</td>
                             <td style="text-align: right; color: #34d399; font-weight: 800;">+${stats.avg.toFixed(1)}%</td>
                             <td style="text-align: right; color: ${g.colors[1]}; font-weight: 800;">${stats.pf.toFixed(2)}x</td>
-                            <td style="text-align: right; color: ${g.colors[1]}; font-weight: 800;">+${stats.pnl.toFixed(1)}%</td>
+                            <td style="text-align: right; color: ${g.colors[1]}; font-weight: 800;">${stats.pnl >= 0 ? '+' : ''}${stats.pnl.toFixed(1)} pp</td>
                         </tr>`;
                 });
                 
@@ -11591,7 +11546,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                                     <th style="text-align: right;">Win Rate</th>
                                     <th style="text-align: right;">Avg Return</th>
                                     <th style="text-align: right;">Profit Factor</th>
-                                    <th style="text-align: right;">Net Return %</th>
+                                    <th style="text-align: right;">Sum of Gross Returns (pp)</th>
                                 </tr>
                             </thead>
                             <tbody>${rowsHTML}</tbody>

@@ -291,6 +291,7 @@ function runScannerAudit(transformHtml = html => html) {
             if (name === 'path') return path;
             if (name === 'vm') return vm;
             if (name === './lib/tracker_audit') return { trackerIssues };
+            if (name === './lib/dashboard_state') return require('./lib/dashboard_state');
             if (name === './lib/strategy_rules') return StrategyRules;
             if (name === './lib/corporate_risk') return corporateRisk;
             if (name === './lib/bursa_calendar') return calendar;

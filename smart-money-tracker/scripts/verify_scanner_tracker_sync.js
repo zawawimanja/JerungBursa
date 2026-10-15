@@ -15,6 +15,7 @@ const vm = require('vm');
 const { trackerIssues } = require('./lib/tracker_audit');
 const CorporateRisk = require('./lib/corporate_risk');
 const StrategyRules = require('./lib/strategy_rules');
+const DashboardState = require('./lib/dashboard_state');
 const { getMytDate } = require('./lib/bursa_calendar');
 
 const ROOT_DIR = path.resolve(__dirname, '..');
@@ -129,7 +130,7 @@ for (const status of [false, true]) {
         .forEach(t => frTrackMap.set((t.name || '').toUpperCase(), t));
 }
 const scannerRules = vm.createContext({
-    CorporateRisk, StrategyRules,
+    CorporateRisk, StrategyRules, DashboardState,
     window: { ...frWindow, ...newsWindow, ...equityWindow },
     document: { getElementById: () => ({ value: snapshotDate }) },
     curRefDate: snapshotDate, _recentFloorCache: null, _crPickedNames: new Set(),
@@ -137,7 +138,7 @@ const scannerRules = vm.createContext({
 });
 vm.runInContext(dashboardSection('        function getDashboardDate()', '        window.getBlackSwanEvaluation'), scannerRules);
 vm.runInContext(dashboardSection('        function getRecentFloorMap(', '        // Global Filter Mode for Fresh Rider'), scannerRules);
-vm.runInContext('const recentFloorMap = getRecentFloorMap(curRefDate, 5);', scannerRules);
+vm.runInContext("const recentFloorMap = getRecentFloorMap('', 5);", scannerRules);
 vm.runInContext(dashboardSection('            const effFloorOf = (item) => {', '            for (const item of list)', renderStart), scannerRules);
 vm.runInContext(dashboardSection('            const frFreshness = (it) => {', '            // Klasifikasi Tier A+', renderStart), scannerRules);
 vm.runInContext(dashboardSection('            const getTierOfFR = (it) => {', "            if (typeof updateHeaderSortIndicators", renderStart), scannerRules);

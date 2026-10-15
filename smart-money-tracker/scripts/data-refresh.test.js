@@ -114,7 +114,7 @@ function dashboardContext(overrides = {}) {
         updateTopTrackerPnlBadge: () => renders.push('pnl')
     };
     vm.createContext(context);
-    vm.runInContext(`let currentData = [], _viewingArchive = false, _autoRefreshBusy = false,
+    vm.runInContext(`let currentData = [], _viewingArchive = false, _autoRefreshBusy = false, _archiveLoadPending = false,
         _liveRefreshPromise = null, _dataViewRevision = 0, _liveSourceBase = '', _lastBundleVersion = '',
         _lastDataCheck = 0, _refreshIssue = '', _selfHealStatus = '',
         _recentFloorCache = {}, _freshRiderPrevCache = {}, _hotThemePrevCache = {};`, context);
