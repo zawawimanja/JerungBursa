@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-10-16T10:05:38.902Z",
+  "lastUpdated": "2026-10-16T14:43:26.500Z",
   "source": "klse.i3investor.com",
   "topVolume": [
     {
@@ -68,7 +68,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:51.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -133,7 +133,7 @@
       "isVvip": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": null,
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -204,7 +204,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:52:52.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -275,7 +275,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:52:25.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -346,7 +346,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -416,7 +416,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:53:48.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -487,7 +487,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -557,7 +557,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -628,7 +628,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:35.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -698,7 +698,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:30:16.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -769,7 +769,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:55:48.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -839,7 +839,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:56:27.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -909,7 +909,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:40:26.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -980,7 +980,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:55:27.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -1045,7 +1045,7 @@
       "isVvip": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:53:24.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -1116,7 +1116,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:42.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -1186,7 +1186,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:34:38.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -1257,7 +1257,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:42:00.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -1328,7 +1328,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:25.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -1399,7 +1399,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:58:40.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -1470,7 +1470,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:04.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -1535,7 +1535,7 @@
       "isVvip": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": null,
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -1600,7 +1600,7 @@
       "isVvip": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:26.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -1670,7 +1670,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:56:32.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -1741,7 +1741,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": null,
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -1811,7 +1811,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:58:52.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -1881,7 +1881,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -1951,7 +1951,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:33:57.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -2016,7 +2016,7 @@
       "isVvip": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:51:54.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -2087,7 +2087,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:55:35.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -2157,7 +2157,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -2227,7 +2227,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:58:02.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -2297,7 +2297,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -2368,7 +2368,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": null,
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -2438,7 +2438,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:00.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -2509,7 +2509,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -2580,7 +2580,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:57:47.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -2648,7 +2648,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:55:09.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -2718,7 +2718,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:44:53.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -2788,7 +2788,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T03:27:35.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -2858,7 +2858,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:39:08.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -2929,7 +2929,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:58:49.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -3000,7 +3000,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:53:01.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -3070,7 +3070,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T03:36:05.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -3141,7 +3141,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:30.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -3212,7 +3212,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:20.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -3277,7 +3277,7 @@
       "isVvip": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:38.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -3348,7 +3348,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:43.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -3419,7 +3419,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:42:04.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -3489,7 +3489,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:31:58.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -3559,7 +3559,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T03:50:31.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -3629,7 +3629,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -3693,7 +3693,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:43:56.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -3764,7 +3764,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:03.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -3835,7 +3835,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:50.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -3905,7 +3905,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:53:36.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -3975,7 +3975,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:54:37.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -4046,7 +4046,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:58:19.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -4117,7 +4117,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:58:56.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -4188,7 +4188,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:57:39.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -4253,7 +4253,7 @@
       "isVvip": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:54:03.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -4317,7 +4317,7 @@
       "goldenCrossAge": 32,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:08.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -4388,7 +4388,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:56:34.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -4452,7 +4452,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:48.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -4516,7 +4516,7 @@
       "goldenCrossAge": 33,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:58:56.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -4586,7 +4586,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -4657,7 +4657,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:53:29.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -4727,7 +4727,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:44:22.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -4797,7 +4797,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T07:39:31.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -4867,7 +4867,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T06:48:29.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -4938,7 +4938,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -5009,7 +5009,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:41:02.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -5073,7 +5073,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T02:53:34.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -5138,7 +5138,7 @@
       "isVvip": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:43.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -5203,7 +5203,7 @@
       "isVvip": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:54:00.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -5273,7 +5273,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:58:53.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -5343,7 +5343,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -5413,7 +5413,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -5484,7 +5484,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": null,
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -5555,7 +5555,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:58:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -5619,7 +5619,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": null,
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -5689,7 +5689,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:03.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -5759,7 +5759,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:08:43.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -5830,7 +5830,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:57:36.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -5900,7 +5900,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:55:33.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -5964,7 +5964,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": null,
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -6034,7 +6034,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T07:09:20.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -6104,7 +6104,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:15:52.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -6174,7 +6174,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T01:00:01.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -6245,7 +6245,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:32.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -6316,7 +6316,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:58:21.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -6386,7 +6386,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:44:05.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -6456,7 +6456,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-15T08:34:50.000Z",
         "barAt": "2026-10-15T01:00:00.000Z"
       }
@@ -6527,7 +6527,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:58:18.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -6598,7 +6598,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:52:30.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -6668,7 +6668,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-14T06:36:25.000Z",
         "barAt": "2026-10-15T01:00:00.000Z"
       }
@@ -6739,7 +6739,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:34.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -6809,7 +6809,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:27:28.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -6879,7 +6879,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:30:16.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -6949,7 +6949,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:57:00.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -7013,7 +7013,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:53:29.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -7083,7 +7083,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -7153,7 +7153,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -7223,7 +7223,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T03:21:12.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -7293,7 +7293,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:44:18.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -7357,7 +7357,7 @@
       "goldenCrossAge": 41,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": null,
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -7427,7 +7427,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:28:20.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -7497,7 +7497,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:52:03.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -7561,7 +7561,7 @@
       "goldenCrossAge": 26,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": null,
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -7631,7 +7631,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:03.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -7701,7 +7701,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T03:05:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -7765,7 +7765,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:57:52.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -7829,7 +7829,7 @@
       "goldenCrossAge": 33,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:02.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -7899,7 +7899,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:03.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -7963,7 +7963,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:17:13.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -8027,7 +8027,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": null,
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -8097,7 +8097,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -8167,7 +8167,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -8237,7 +8237,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T02:07:05.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -8307,7 +8307,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:02.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -8377,7 +8377,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:58:46.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -8447,7 +8447,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:39:44.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -8517,7 +8517,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:53:48.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -8587,7 +8587,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:51:06.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -8657,7 +8657,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:36:44.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -8727,7 +8727,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:03.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -8798,7 +8798,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:51:14.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -8862,7 +8862,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:54:24.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -8932,7 +8932,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:57.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -9002,7 +9002,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:56:36.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -9073,7 +9073,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:55:02.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -9143,7 +9143,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:57:31.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -9207,7 +9207,7 @@
       "goldenCrossAge": 27,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:58:32.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -9277,7 +9277,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:54:42.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -9347,7 +9347,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:25:00.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -9417,7 +9417,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:17:42.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -9487,7 +9487,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:32:39.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -9557,7 +9557,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T01:02:24.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -9621,7 +9621,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:58:42.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -9691,7 +9691,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:00:52.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -9761,7 +9761,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T04:10:59.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -9831,7 +9831,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -9901,7 +9901,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:38:02.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -9971,7 +9971,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:52.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -10041,7 +10041,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:01:38.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -10111,7 +10111,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-15T08:50:07.000Z",
         "barAt": "2026-10-15T01:00:00.000Z"
       }
@@ -10181,7 +10181,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T07:42:58.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -10251,7 +10251,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -10321,7 +10321,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:57:11.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -10391,7 +10391,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:09.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -10461,7 +10461,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:56.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -10531,7 +10531,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:52.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -10601,7 +10601,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:03.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -10671,7 +10671,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:28:24.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -10741,7 +10741,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:02.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -10811,7 +10811,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T07:46:22.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -10881,7 +10881,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -10951,7 +10951,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:03.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -11021,7 +11021,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T01:29:19.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -11091,7 +11091,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:36:03.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -11161,7 +11161,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T07:19:27.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -11231,7 +11231,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:29:45.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -11301,7 +11301,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -11371,7 +11371,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:55.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -11441,7 +11441,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T06:45:35.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -11505,7 +11505,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:58:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -11569,7 +11569,7 @@
       "goldenCrossAge": 40,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": null,
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -11639,7 +11639,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:54:37.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -11703,7 +11703,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": null,
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -11767,7 +11767,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:03.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -11837,7 +11837,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:55:48.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -11907,7 +11907,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:01.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -11977,7 +11977,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -12047,7 +12047,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -12117,7 +12117,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:51:31.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -12181,7 +12181,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:02:14.000Z",
         "barAt": "2026-10-16T08:02:14.000Z"
       }
@@ -12251,7 +12251,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T07:38:26.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -12321,7 +12321,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:09:06.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -12391,7 +12391,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-15T08:06:45.000Z",
         "barAt": "2026-10-15T01:00:00.000Z"
       }
@@ -12461,7 +12461,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T04:08:29.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -12531,7 +12531,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T06:30:02.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -12601,7 +12601,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T06:30:02.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -12671,7 +12671,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:51.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -12735,7 +12735,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": null,
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -12799,7 +12799,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": null,
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -12863,7 +12863,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:36.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -12927,7 +12927,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:09.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -12997,7 +12997,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:09:35.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -13067,7 +13067,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T06:30:02.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -13131,7 +13131,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": null,
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -13201,7 +13201,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:54:36.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -13271,7 +13271,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -13341,7 +13341,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T04:24:47.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -13411,7 +13411,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:32:53.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -13481,7 +13481,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T07:37:05.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -13551,7 +13551,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:25:06.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -13621,7 +13621,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-15T03:14:21.000Z",
         "barAt": "2026-10-15T01:00:00.000Z"
       }
@@ -13691,7 +13691,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:39.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -13761,7 +13761,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:51:33.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -13831,7 +13831,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:24.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -13901,7 +13901,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:41:26.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -13971,7 +13971,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:52:53.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -14041,7 +14041,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:08:16.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -14111,7 +14111,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:03.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -14181,7 +14181,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-12T08:44:48.000Z",
         "barAt": "2026-10-15T01:00:00.000Z"
       }
@@ -14251,7 +14251,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-14T08:56:46.000Z",
         "barAt": "2026-10-15T01:00:00.000Z"
       }
@@ -14315,7 +14315,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:55:10.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -14385,7 +14385,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:51:34.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -14455,7 +14455,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -14525,7 +14525,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T03:44:13.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -14595,7 +14595,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T06:31:53.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -14665,7 +14665,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T02:56:36.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -14729,7 +14729,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": null,
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -14799,7 +14799,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:53:53.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -14863,7 +14863,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": null,
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -14927,7 +14927,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": null,
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -14991,7 +14991,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:51:08.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -15055,7 +15055,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:51:46.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -15125,7 +15125,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:41:35.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -15195,7 +15195,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T04:28:47.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -15265,7 +15265,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T07:00:00.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -15329,7 +15329,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-14T07:17:27.000Z",
         "barAt": "2026-10-15T01:00:00.000Z"
       }
@@ -15399,7 +15399,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:52:29.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -15469,7 +15469,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:54:43.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -15533,7 +15533,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -15603,7 +15603,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:34:38.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -15673,7 +15673,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:51:02.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -15743,7 +15743,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T07:01:14.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -15813,7 +15813,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -15883,7 +15883,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -15953,7 +15953,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:40:37.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -16023,7 +16023,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T03:35:37.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -16093,7 +16093,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:10.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -16163,7 +16163,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -16227,7 +16227,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": null,
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -16291,7 +16291,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:22.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -16361,7 +16361,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:12:38.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -16431,7 +16431,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:36:01.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -16500,7 +16500,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:53:31.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -16570,7 +16570,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T03:15:54.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -16640,7 +16640,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:58:14.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -16710,7 +16710,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:54:49.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -16780,7 +16780,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T06:30:02.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -16850,7 +16850,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -16920,7 +16920,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:56:58.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -16990,7 +16990,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -17060,7 +17060,7 @@
       "outlier": true,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -17130,7 +17130,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-13T02:26:30.000Z",
         "barAt": "2026-10-15T01:00:00.000Z"
       }
@@ -17200,7 +17200,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:52:23.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -17270,7 +17270,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:55:40.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -17340,7 +17340,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-15T08:59:52.000Z",
         "barAt": "2026-10-15T01:00:00.000Z"
       }
@@ -17404,7 +17404,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:52:02.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -17468,7 +17468,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": null,
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -17532,7 +17532,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:55:56.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -17596,7 +17596,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -17660,7 +17660,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:58:50.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -17724,7 +17724,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:29.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -17794,7 +17794,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T07:06:35.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -17864,7 +17864,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-15T07:05:57.000Z",
         "barAt": "2026-10-15T01:00:00.000Z"
       }
@@ -17934,7 +17934,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:31:30.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -17998,7 +17998,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:58:55.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -18068,7 +18068,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:24:08.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -18138,7 +18138,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T06:42:12.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -18208,7 +18208,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:36:00.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -18278,7 +18278,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:58:15.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -18348,7 +18348,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -18418,7 +18418,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:35:52.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -18482,7 +18482,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:48.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -18546,7 +18546,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -18610,7 +18610,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:58:16.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -18674,7 +18674,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:15.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -18738,7 +18738,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:52.000Z",
         "barAt": "2026-10-16T08:59:52.000Z"
       }
@@ -18802,7 +18802,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:03.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -18866,7 +18866,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:59.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -18930,7 +18930,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": null,
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -19000,7 +19000,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:54:09.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -19064,7 +19064,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": null,
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -19128,7 +19128,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:58:45.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -19198,7 +19198,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:37:32.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -19268,7 +19268,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:34:58.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -19338,7 +19338,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:43:34.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -19408,7 +19408,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -19478,7 +19478,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -19548,7 +19548,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:58:51.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -19618,7 +19618,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -19688,7 +19688,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -19758,7 +19758,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T02:45:09.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -19828,7 +19828,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:54:57.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -19898,7 +19898,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T07:32:02.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -19968,7 +19968,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:52:43.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -20038,7 +20038,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -20108,7 +20108,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:57:49.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -20178,7 +20178,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:51:14.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -20248,7 +20248,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:53:38.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -20318,7 +20318,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -20388,7 +20388,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -20458,7 +20458,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -20528,7 +20528,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T06:50:30.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -20598,7 +20598,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:05:21.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -20668,7 +20668,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T04:03:13.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -20738,7 +20738,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:38:46.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -20808,7 +20808,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -20872,7 +20872,7 @@
       "goldenCrossAge": null,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:36:24.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -20942,7 +20942,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:22:03.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -21012,7 +21012,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -21082,7 +21082,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T03:38:57.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -21152,7 +21152,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T03:59:37.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -21222,7 +21222,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -21292,7 +21292,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T03:27:56.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -21362,7 +21362,7 @@
       "outlier": false,
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-14T08:22:24.000Z",
         "barAt": "2026-10-15T01:00:00.000Z"
       }
@@ -21391,7 +21391,7 @@
       "setupName": "🔥 RBS Retest / Near ATH",
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:58:49.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -21418,7 +21418,7 @@
       "setupName": "📉 Healthy Dip",
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:58:02.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -21445,7 +21445,7 @@
       "setupName": "📉 Healthy Dip",
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:58:18.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -21472,7 +21472,7 @@
       "setupName": "📉 Healthy Dip",
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:58:19.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -21499,7 +21499,7 @@
       "setupName": "📉 Healthy Dip",
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:43.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -21526,7 +21526,7 @@
       "setupName": "📉 Healthy Dip",
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:51:14.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -21553,7 +21553,7 @@
       "setupName": "🔥 RBS Retest / Near ATH",
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:50:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -21580,7 +21580,7 @@
       "setupName": "📉 Healthy Dip",
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:52:30.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -21607,7 +21607,7 @@
       "setupName": "📉 Healthy Dip",
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T01:02:24.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -21634,7 +21634,7 @@
       "setupName": "🔻 Buy Support / Deep Pullback",
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:00.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -21661,7 +21661,7 @@
       "setupName": "📉 Healthy Dip",
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:50.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -21688,7 +21688,7 @@
       "setupName": "🧊 Downtrend / Avoid",
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:56:58.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -21715,7 +21715,7 @@
       "setupName": "🔥 RBS Retest / Near ATH",
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": null,
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -21742,7 +21742,7 @@
       "setupName": "📉 Healthy Dip",
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": null,
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -21769,7 +21769,7 @@
       "setupName": "🔻 Buy Support / Deep Pullback",
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:58:07.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -21796,7 +21796,7 @@
       "setupName": "🧊 Downtrend / Avoid",
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:37:32.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -21823,7 +21823,7 @@
       "setupName": "🔻 Buy Support / Deep Pullback",
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:41:35.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -21850,7 +21850,7 @@
       "setupName": "📉 Healthy Dip",
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:59:20.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -21877,7 +21877,7 @@
       "setupName": "🧊 Downtrend / Avoid",
       "provenance": {
         "priceSource": "Yahoo Finance daily chart",
-        "observedAt": "2026-10-16T10:05:38.901Z",
+        "observedAt": "2026-10-16T14:43:26.500Z",
         "quoteAt": "2026-10-16T08:34:58.000Z",
         "barAt": "2026-10-16T01:00:00.000Z"
       }
@@ -21901,7 +21901,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:51.000Z"
         }
       },
@@ -21921,7 +21921,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": null
         }
       },
@@ -21935,7 +21935,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:52:52.000Z"
         }
       },
@@ -21949,7 +21949,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:52:25.000Z"
         }
       },
@@ -21963,7 +21963,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -21977,7 +21977,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:53:48.000Z"
         }
       },
@@ -21991,7 +21991,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -22005,7 +22005,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -22019,7 +22019,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:35.000Z"
         }
       },
@@ -22033,7 +22033,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:30:16.000Z"
         }
       },
@@ -22047,7 +22047,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:55:48.000Z"
         }
       },
@@ -22061,7 +22061,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:56:27.000Z"
         }
       },
@@ -22075,7 +22075,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:40:26.000Z"
         }
       },
@@ -22089,7 +22089,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:55:27.000Z"
         }
       },
@@ -22103,7 +22103,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:53:24.000Z"
         }
       },
@@ -22117,7 +22117,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:42.000Z"
         }
       },
@@ -22131,7 +22131,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:34:38.000Z"
         }
       },
@@ -22145,7 +22145,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:42:00.000Z"
         }
       },
@@ -22159,7 +22159,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:25.000Z"
         }
       },
@@ -22173,7 +22173,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:58:40.000Z"
         }
       },
@@ -22187,7 +22187,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:04.000Z"
         }
       },
@@ -22207,7 +22207,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": null
         }
       },
@@ -22221,7 +22221,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:26.000Z"
         }
       },
@@ -22235,7 +22235,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:56:32.000Z"
         }
       },
@@ -22255,7 +22255,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": null
         }
       },
@@ -22269,7 +22269,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:58:52.000Z"
         }
       },
@@ -22283,7 +22283,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -22297,7 +22297,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:33:57.000Z"
         }
       },
@@ -22311,7 +22311,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:51:54.000Z"
         }
       },
@@ -22325,7 +22325,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:55:35.000Z"
         }
       },
@@ -22339,7 +22339,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -22353,7 +22353,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:58:02.000Z"
         }
       },
@@ -22367,7 +22367,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -22387,7 +22387,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": null
         }
       },
@@ -22401,7 +22401,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:00.000Z"
         }
       },
@@ -22415,7 +22415,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -22429,7 +22429,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:57:47.000Z"
         }
       },
@@ -22443,7 +22443,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:55:09.000Z"
         }
       },
@@ -22457,7 +22457,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:44:53.000Z"
         }
       },
@@ -22471,7 +22471,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T03:27:35.000Z"
         }
       },
@@ -22485,7 +22485,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:39:08.000Z"
         }
       },
@@ -22499,7 +22499,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:58:49.000Z"
         }
       },
@@ -22513,7 +22513,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:53:01.000Z"
         }
       },
@@ -22527,7 +22527,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T03:36:05.000Z"
         }
       },
@@ -22541,7 +22541,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:30.000Z"
         }
       },
@@ -22555,7 +22555,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:20.000Z"
         }
       },
@@ -22569,7 +22569,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:38.000Z"
         }
       },
@@ -22583,7 +22583,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:43.000Z"
         }
       },
@@ -22597,7 +22597,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:42:04.000Z"
         }
       },
@@ -22611,7 +22611,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:31:58.000Z"
         }
       },
@@ -22625,7 +22625,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T03:50:31.000Z"
         }
       },
@@ -22639,7 +22639,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -22653,7 +22653,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:43:56.000Z"
         }
       },
@@ -22667,7 +22667,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:03.000Z"
         }
       },
@@ -22681,7 +22681,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:50.000Z"
         }
       },
@@ -22695,7 +22695,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:53:36.000Z"
         }
       },
@@ -22709,7 +22709,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:54:37.000Z"
         }
       },
@@ -22723,7 +22723,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:58:19.000Z"
         }
       },
@@ -22737,7 +22737,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:58:56.000Z"
         }
       },
@@ -22751,7 +22751,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:57:39.000Z"
         }
       },
@@ -22765,7 +22765,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:54:03.000Z"
         }
       },
@@ -22785,7 +22785,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:08.000Z"
         }
       },
@@ -22799,7 +22799,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:56:34.000Z"
         }
       },
@@ -22813,7 +22813,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:48.000Z"
         }
       },
@@ -22827,7 +22827,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:58:56.000Z"
         }
       },
@@ -22841,7 +22841,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -22855,7 +22855,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:53:29.000Z"
         }
       },
@@ -22869,7 +22869,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:44:22.000Z"
         }
       },
@@ -22883,7 +22883,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T07:39:31.000Z"
         }
       },
@@ -22897,7 +22897,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T06:48:29.000Z"
         }
       },
@@ -22911,7 +22911,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -22925,7 +22925,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:41:02.000Z"
         }
       },
@@ -22939,7 +22939,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T02:53:34.000Z"
         }
       },
@@ -22959,7 +22959,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:43.000Z"
         }
       },
@@ -22973,7 +22973,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:54:00.000Z"
         }
       },
@@ -22987,7 +22987,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:58:53.000Z"
         }
       },
@@ -23001,7 +23001,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -23015,7 +23015,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -23035,7 +23035,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": null
         }
       },
@@ -23049,7 +23049,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:58:07.000Z"
         }
       },
@@ -23074,7 +23074,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": null
         }
       },
@@ -23088,7 +23088,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:03.000Z"
         }
       },
@@ -23102,7 +23102,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:08:43.000Z"
         }
       },
@@ -23116,7 +23116,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:57:36.000Z"
         }
       },
@@ -23130,7 +23130,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:55:33.000Z"
         }
       },
@@ -23150,7 +23150,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": null
         }
       },
@@ -23164,7 +23164,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T07:09:20.000Z"
         }
       },
@@ -23178,7 +23178,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:15:52.000Z"
         }
       },
@@ -23192,7 +23192,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T01:00:01.000Z"
         }
       },
@@ -23206,7 +23206,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:32.000Z"
         }
       },
@@ -23220,7 +23220,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:58:21.000Z"
         }
       },
@@ -23234,7 +23234,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:44:05.000Z"
         }
       },
@@ -23254,7 +23254,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-15T08:34:50.000Z"
         }
       },
@@ -23268,7 +23268,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:58:18.000Z"
         }
       },
@@ -23282,7 +23282,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:52:30.000Z"
         }
       },
@@ -23302,7 +23302,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-14T06:36:25.000Z"
         }
       },
@@ -23316,7 +23316,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:34.000Z"
         }
       },
@@ -23330,7 +23330,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:27:28.000Z"
         }
       },
@@ -23344,7 +23344,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:30:16.000Z"
         }
       },
@@ -23358,7 +23358,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:57:00.000Z"
         }
       },
@@ -23372,7 +23372,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:53:29.000Z"
         }
       },
@@ -23386,7 +23386,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -23400,7 +23400,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -23414,7 +23414,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T03:21:12.000Z"
         }
       },
@@ -23428,7 +23428,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:44:18.000Z"
         }
       },
@@ -23448,7 +23448,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": null
         }
       },
@@ -23462,7 +23462,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:28:20.000Z"
         }
       },
@@ -23476,7 +23476,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:52:03.000Z"
         }
       },
@@ -23496,7 +23496,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": null
         }
       },
@@ -23510,7 +23510,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:03.000Z"
         }
       },
@@ -23524,7 +23524,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T03:05:07.000Z"
         }
       },
@@ -23538,7 +23538,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:57:52.000Z"
         }
       },
@@ -23552,7 +23552,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:02.000Z"
         }
       },
@@ -23566,7 +23566,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:03.000Z"
         }
       },
@@ -23580,7 +23580,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:17:13.000Z"
         }
       },
@@ -23600,7 +23600,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": null
         }
       },
@@ -23614,7 +23614,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -23628,7 +23628,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -23642,7 +23642,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T02:07:05.000Z"
         }
       },
@@ -23667,7 +23667,7 @@
         },
         "provenance": {
           "priceSource": "i3investor market table",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": null
         }
       },
@@ -23681,7 +23681,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:02.000Z"
         }
       },
@@ -23695,7 +23695,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:58:46.000Z"
         }
       },
@@ -23709,7 +23709,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:39:44.000Z"
         }
       },
@@ -23723,7 +23723,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:53:48.000Z"
         }
       },
@@ -23737,7 +23737,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:51:06.000Z"
         }
       },
@@ -23751,7 +23751,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:36:44.000Z"
         }
       },
@@ -23765,7 +23765,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:03.000Z"
         }
       },
@@ -23779,7 +23779,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:51:14.000Z"
         }
       },
@@ -23793,7 +23793,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:54:24.000Z"
         }
       },
@@ -23807,7 +23807,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:57.000Z"
         }
       },
@@ -23821,7 +23821,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:56:36.000Z"
         }
       },
@@ -23835,7 +23835,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:55:02.000Z"
         }
       },
@@ -23849,7 +23849,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:57:31.000Z"
         }
       },
@@ -23863,7 +23863,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:58:32.000Z"
         }
       },
@@ -23877,7 +23877,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:54:42.000Z"
         }
       },
@@ -23891,7 +23891,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:25:00.000Z"
         }
       },
@@ -23905,7 +23905,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:17:42.000Z"
         }
       },
@@ -23919,7 +23919,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:32:39.000Z"
         }
       },
@@ -23933,7 +23933,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T01:02:24.000Z"
         }
       },
@@ -23953,7 +23953,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:58:42.000Z"
         }
       },
@@ -23967,7 +23967,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:00:52.000Z"
         }
       },
@@ -23981,7 +23981,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T04:10:59.000Z"
         }
       },
@@ -23995,7 +23995,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -24009,7 +24009,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:38:02.000Z"
         }
       },
@@ -24023,7 +24023,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:52.000Z"
         }
       },
@@ -24037,7 +24037,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:01:38.000Z"
         }
       },
@@ -24057,7 +24057,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-15T08:50:07.000Z"
         }
       },
@@ -24071,7 +24071,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T07:42:58.000Z"
         }
       },
@@ -24085,7 +24085,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -24099,7 +24099,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:57:11.000Z"
         }
       },
@@ -24113,7 +24113,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:09.000Z"
         }
       },
@@ -24127,7 +24127,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:56.000Z"
         }
       },
@@ -24141,7 +24141,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:52.000Z"
         }
       },
@@ -24155,7 +24155,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:03.000Z"
         }
       },
@@ -24169,7 +24169,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:28:24.000Z"
         }
       },
@@ -24183,7 +24183,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:02.000Z"
         }
       },
@@ -24197,7 +24197,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T07:46:22.000Z"
         }
       },
@@ -24211,7 +24211,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -24225,7 +24225,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:03.000Z"
         }
       },
@@ -24239,7 +24239,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T01:29:19.000Z"
         }
       },
@@ -24253,7 +24253,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:36:03.000Z"
         }
       },
@@ -24267,7 +24267,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T07:19:27.000Z"
         }
       },
@@ -24281,7 +24281,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:29:45.000Z"
         }
       },
@@ -24295,7 +24295,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -24309,7 +24309,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:55.000Z"
         }
       },
@@ -24323,7 +24323,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T06:45:35.000Z"
         }
       },
@@ -24337,7 +24337,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:58:07.000Z"
         }
       },
@@ -24357,7 +24357,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": null
         }
       },
@@ -24371,7 +24371,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:54:37.000Z"
         }
       },
@@ -24391,7 +24391,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": null
         }
       },
@@ -24405,7 +24405,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:03.000Z"
         }
       },
@@ -24419,7 +24419,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:55:48.000Z"
         }
       },
@@ -24433,7 +24433,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:01.000Z"
         }
       },
@@ -24447,7 +24447,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -24461,7 +24461,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -24475,7 +24475,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:51:31.000Z"
         }
       },
@@ -24489,7 +24489,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:02:14.000Z"
         }
       },
@@ -24503,7 +24503,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T07:38:26.000Z"
         }
       },
@@ -24517,7 +24517,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:09:06.000Z"
         }
       },
@@ -24537,7 +24537,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-15T08:06:45.000Z"
         }
       },
@@ -24551,7 +24551,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T04:08:29.000Z"
         }
       },
@@ -24565,7 +24565,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T06:30:02.000Z"
         }
       },
@@ -24579,7 +24579,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T06:30:02.000Z"
         }
       },
@@ -24593,7 +24593,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:51.000Z"
         }
       },
@@ -24613,7 +24613,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": null
         }
       },
@@ -24633,7 +24633,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": null
         }
       },
@@ -24647,7 +24647,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:36.000Z"
         }
       },
@@ -24661,7 +24661,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:09.000Z"
         }
       },
@@ -24675,7 +24675,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:09:35.000Z"
         }
       },
@@ -24689,7 +24689,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T06:30:02.000Z"
         }
       },
@@ -24709,7 +24709,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": null
         }
       },
@@ -24723,7 +24723,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:54:36.000Z"
         }
       },
@@ -24737,7 +24737,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -24751,7 +24751,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T04:24:47.000Z"
         }
       },
@@ -24765,7 +24765,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:32:53.000Z"
         }
       },
@@ -24779,7 +24779,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T07:37:05.000Z"
         }
       },
@@ -24793,7 +24793,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:25:06.000Z"
         }
       },
@@ -24813,7 +24813,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-15T03:14:21.000Z"
         }
       },
@@ -24827,7 +24827,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:39.000Z"
         }
       },
@@ -24841,7 +24841,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:51:33.000Z"
         }
       },
@@ -24855,7 +24855,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:24.000Z"
         }
       },
@@ -24869,7 +24869,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:41:26.000Z"
         }
       },
@@ -24883,7 +24883,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:52:53.000Z"
         }
       },
@@ -24897,7 +24897,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:08:16.000Z"
         }
       },
@@ -24911,7 +24911,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:03.000Z"
         }
       },
@@ -24931,7 +24931,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-12T08:44:48.000Z"
         }
       },
@@ -24951,7 +24951,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-14T08:56:46.000Z"
         }
       },
@@ -24965,7 +24965,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:55:10.000Z"
         }
       },
@@ -24979,7 +24979,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:51:34.000Z"
         }
       },
@@ -24993,7 +24993,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -25007,7 +25007,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T03:44:13.000Z"
         }
       },
@@ -25021,7 +25021,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T06:31:53.000Z"
         }
       },
@@ -25035,7 +25035,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T02:56:36.000Z"
         }
       },
@@ -25055,7 +25055,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": null
         }
       },
@@ -25069,7 +25069,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:53:53.000Z"
         }
       },
@@ -25089,7 +25089,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": null
         }
       },
@@ -25109,7 +25109,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": null
         }
       },
@@ -25123,7 +25123,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:51:08.000Z"
         }
       },
@@ -25137,7 +25137,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:51:46.000Z"
         }
       },
@@ -25151,7 +25151,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:41:35.000Z"
         }
       },
@@ -25165,7 +25165,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T04:28:47.000Z"
         }
       },
@@ -25179,7 +25179,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T07:00:00.000Z"
         }
       },
@@ -25199,7 +25199,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-14T07:17:27.000Z"
         }
       },
@@ -25213,7 +25213,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:52:29.000Z"
         }
       },
@@ -25227,7 +25227,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:54:43.000Z"
         }
       },
@@ -25241,7 +25241,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -25255,7 +25255,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:34:38.000Z"
         }
       },
@@ -25269,7 +25269,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:51:02.000Z"
         }
       },
@@ -25283,7 +25283,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T07:01:14.000Z"
         }
       },
@@ -25297,7 +25297,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -25311,7 +25311,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -25325,7 +25325,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:40:37.000Z"
         }
       },
@@ -25339,7 +25339,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T03:35:37.000Z"
         }
       },
@@ -25353,7 +25353,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:10.000Z"
         }
       },
@@ -25367,7 +25367,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -25387,7 +25387,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": null
         }
       },
@@ -25401,7 +25401,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:22.000Z"
         }
       },
@@ -25415,7 +25415,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:12:38.000Z"
         }
       },
@@ -25429,7 +25429,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:36:01.000Z"
         }
       },
@@ -25443,7 +25443,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:53:31.000Z"
         }
       },
@@ -25457,7 +25457,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T03:15:54.000Z"
         }
       },
@@ -25471,7 +25471,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:58:14.000Z"
         }
       },
@@ -25485,7 +25485,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:54:49.000Z"
         }
       },
@@ -25499,7 +25499,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T06:30:02.000Z"
         }
       },
@@ -25513,7 +25513,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -25527,7 +25527,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:56:58.000Z"
         }
       },
@@ -25541,7 +25541,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -25555,7 +25555,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -25575,7 +25575,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-13T02:26:30.000Z"
         }
       },
@@ -25589,7 +25589,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:52:23.000Z"
         }
       },
@@ -25603,7 +25603,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:55:40.000Z"
         }
       },
@@ -25623,7 +25623,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-15T08:59:52.000Z"
         }
       },
@@ -25637,7 +25637,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:52:02.000Z"
         }
       },
@@ -25657,7 +25657,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": null
         }
       },
@@ -25671,7 +25671,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:55:56.000Z"
         }
       },
@@ -25685,7 +25685,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -25699,7 +25699,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:58:50.000Z"
         }
       },
@@ -25713,7 +25713,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:29.000Z"
         }
       },
@@ -25727,7 +25727,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T07:06:35.000Z"
         }
       },
@@ -25747,7 +25747,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-15T07:05:57.000Z"
         }
       },
@@ -25761,7 +25761,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:31:30.000Z"
         }
       },
@@ -25775,7 +25775,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:58:55.000Z"
         }
       },
@@ -25789,7 +25789,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:24:08.000Z"
         }
       },
@@ -25803,7 +25803,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T06:42:12.000Z"
         }
       },
@@ -25817,7 +25817,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:36:00.000Z"
         }
       },
@@ -25831,7 +25831,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:58:15.000Z"
         }
       },
@@ -25845,7 +25845,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -25859,7 +25859,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:35:52.000Z"
         }
       },
@@ -25873,7 +25873,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:48.000Z"
         }
       },
@@ -25887,7 +25887,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -25901,7 +25901,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:58:16.000Z"
         }
       },
@@ -25915,7 +25915,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:15.000Z"
         }
       },
@@ -25935,7 +25935,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:52.000Z"
         }
       },
@@ -25949,7 +25949,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:03.000Z"
         }
       },
@@ -25963,7 +25963,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:59:59.000Z"
         }
       },
@@ -25983,7 +25983,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": null
         }
       },
@@ -25997,7 +25997,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:54:09.000Z"
         }
       },
@@ -26017,7 +26017,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": null
         }
       },
@@ -26031,7 +26031,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:58:45.000Z"
         }
       },
@@ -26045,7 +26045,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:37:32.000Z"
         }
       },
@@ -26059,7 +26059,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:34:58.000Z"
         }
       },
@@ -26073,7 +26073,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:43:34.000Z"
         }
       },
@@ -26087,7 +26087,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -26101,7 +26101,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -26115,7 +26115,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:58:51.000Z"
         }
       },
@@ -26129,7 +26129,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -26143,7 +26143,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -26157,7 +26157,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T02:45:09.000Z"
         }
       },
@@ -26171,7 +26171,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:54:57.000Z"
         }
       },
@@ -26185,7 +26185,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T07:32:02.000Z"
         }
       },
@@ -26199,7 +26199,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:52:43.000Z"
         }
       },
@@ -26213,7 +26213,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -26227,7 +26227,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:57:49.000Z"
         }
       },
@@ -26241,7 +26241,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:51:14.000Z"
         }
       },
@@ -26255,7 +26255,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:53:38.000Z"
         }
       },
@@ -26269,7 +26269,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -26283,7 +26283,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -26297,7 +26297,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -26311,7 +26311,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T06:50:30.000Z"
         }
       },
@@ -26325,7 +26325,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:05:21.000Z"
         }
       },
@@ -26339,7 +26339,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T04:03:13.000Z"
         }
       },
@@ -26353,7 +26353,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:38:46.000Z"
         }
       },
@@ -26367,7 +26367,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -26381,7 +26381,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:36:24.000Z"
         }
       },
@@ -26395,7 +26395,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:22:03.000Z"
         }
       },
@@ -26409,7 +26409,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -26423,7 +26423,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T03:38:57.000Z"
         }
       },
@@ -26437,7 +26437,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T03:59:37.000Z"
         }
       },
@@ -26451,7 +26451,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T08:50:07.000Z"
         }
       },
@@ -26465,7 +26465,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-16T03:27:56.000Z"
         }
       },
@@ -26485,7 +26485,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": "2026-10-14T08:22:24.000Z"
         }
       },
@@ -26510,7 +26510,7 @@
         },
         "provenance": {
           "priceSource": "Yahoo Finance daily chart",
-          "observedAt": "2026-10-16T10:05:38.901Z",
+          "observedAt": "2026-10-16T14:43:26.500Z",
           "quoteAt": null
         }
       }
