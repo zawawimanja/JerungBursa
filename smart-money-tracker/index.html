@@ -21,7 +21,7 @@
     <script src="scripts/lib/dashboard_state.js"></script>
     <script>
       (function() {
-        const cb = '?t=' + Date.now();
+        const cb = (window.location.protocol === 'file:') ? '' : ('?t=' + Math.floor(Date.now() / 60000));
         ['live_data.js', 'fresh_rider_tracker.js', 'hot_theme_tracker.js', 'scanner_history.js', 'jerung-data.js', 'news_data.js'].forEach(function(src) {
           document.write('<script src="' + src + cb + '"><\/script>');
         });
@@ -918,7 +918,7 @@
                     <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 0.3rem; background: rgba(52,211,153,0.08); border: 1px solid rgba(52,211,153,0.25); padding: 0.25rem 0.5rem; border-radius: 8px; font-size: 0.75rem; width: 100%;">
                         <span style="color: #34d399; font-weight: 900; margin-right: 0.2rem; text-shadow: 0 0 8px rgba(52,211,153,0.4);">🔥 FR :</span>
                         <span id="navFrTotalPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('all');" style="color: #34d399; font-weight: 800; cursor: pointer; padding: 0.15rem 0.5rem; background: rgba(52,211,153,0.15); border-radius: 5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(52,211,153,0.3)'" onmouseout="this.style.background='rgba(52,211,153,0.15)'" title="Total FR Unified">ALL: —</span>
-                        <span id="navFrGcPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('all');" style="color: #fef08a; font-weight: 800; cursor: pointer; padding: 0.15rem 0.5rem; background: rgba(234,179,8,0.15); border-radius: 5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(234,179,8,0.3)'" onmouseout="this.style.background='rgba(234,179,8,0.15)'" title="Golden Combo (FR)">👑 GC: -</span>
+                        <span id="navFrGcPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('golden');" style="color: #fef08a; font-weight: 800; cursor: pointer; padding: 0.15rem 0.5rem; background: rgba(234,179,8,0.15); border-radius: 5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(234,179,8,0.3)'" onmouseout="this.style.background='rgba(234,179,8,0.15)'" title="Golden Combo (FR)">👑 GC: -</span>
                           <span id="navFrPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('new');" style="color: #fde047; font-weight: 800; cursor: pointer; padding: 0.15rem 0.5rem; background: rgba(253,224,71,0.1); border-radius: 5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(253,224,71,0.25)'" onmouseout="this.style.background='rgba(253,224,71,0.1)'" title="Fresh Rider (Day 1 NEW)">NEW: —</span>
                         <span id="navAddonPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('addon');" style="color: #67e8f9; font-weight: 800; cursor: pointer; padding: 0.15rem 0.5rem; background: rgba(103,232,249,0.1); border-radius: 5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(103,232,249,0.25)'" onmouseout="this.style.background='rgba(103,232,249,0.1)'" title="ADD-ON A+ (Fresh Base ≤ 20%)">A+: —</span>
                         <span id="navFloorPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('floor');" style="color: #c4b5fd; font-weight: 800; cursor: pointer; padding: 0.15rem 0.5rem; background: rgba(168,85,247,0.1); border-radius: 5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(168,85,247,0.25)'" onmouseout="this.style.background='rgba(168,85,247,0.1)'" title="ADD-ON (Lantai Rapat)">LANTAI: —</span>
@@ -927,11 +927,11 @@
                     <!-- HT GROUP -->
                     <div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 0.3rem; background: rgba(168,85,247,0.08); border: 1px solid rgba(168,85,247,0.25); padding: 0.25rem 0.5rem; border-radius: 8px; font-size: 0.75rem; width: 100%;">
                         <span style="color: #c4b5fd; font-weight: 900; margin-right: 0.2rem; text-shadow: 0 0 8px rgba(168,85,247,0.4);">⚡ HT :</span>
-                        <span id="navHtPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('ht');" style="color: #c4b5fd; font-weight: 800; cursor: pointer; padding: 0.15rem 0.5rem; background: rgba(168,85,247,0.15); border-radius: 5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(168,85,247,0.3)'" onmouseout="this.style.background='rgba(168,85,247,0.15)'" title="Hot Theme Unified">ALL: —</span>
-                        <span id="navHtGcPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('ht');" style="color: #fef08a; font-weight: 800; cursor: pointer; padding: 0.15rem 0.5rem; background: rgba(234,179,8,0.15); border-radius: 5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(234,179,8,0.3)'" onmouseout="this.style.background='rgba(234,179,8,0.15)'" title="Golden Combo (HT)">👑 GC: -</span>
-                          <span id="navHtNewPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('ht');" style="color: #fde047; font-weight: 800; cursor: pointer; padding: 0.15rem 0.5rem; background: rgba(253,224,71,0.1); border-radius: 5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(253,224,71,0.25)'" onmouseout="this.style.background='rgba(253,224,71,0.1)'" title="Hot Theme (Day 1 NEW)">NEW: —</span>
-                        <span id="navHtAddonPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('ht');" style="color: #67e8f9; font-weight: 800; cursor: pointer; padding: 0.15rem 0.5rem; background: rgba(103,232,249,0.1); border-radius: 5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(103,232,249,0.25)'" onmouseout="this.style.background='rgba(103,232,249,0.1)'" title="Hot Theme A+">A+: —</span>
-                        <span id="navHtFloorPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('ht');" style="color: #cbd5e1; font-weight: 800; cursor: pointer; padding: 0.15rem 0.5rem; background: rgba(148,163,184,0.15); border-radius: 5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(148,163,184,0.3)'" onmouseout="this.style.background='rgba(148,163,184,0.15)'" title="Hot Theme (Lantai Rapat)">LANTAI: —</span>
+                        <span id="navHtPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('ht_all');" style="color: #c4b5fd; font-weight: 800; cursor: pointer; padding: 0.15rem 0.5rem; background: rgba(168,85,247,0.15); border-radius: 5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(168,85,247,0.3)'" onmouseout="this.style.background='rgba(168,85,247,0.15)'" title="Hot Theme Unified">ALL: —</span>
+                        <span id="navHtGcPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('ht_golden');" style="color: #fef08a; font-weight: 800; cursor: pointer; padding: 0.15rem 0.5rem; background: rgba(234,179,8,0.15); border-radius: 5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(234,179,8,0.3)'" onmouseout="this.style.background='rgba(234,179,8,0.15)'" title="Golden Combo (HT)">👑 GC: -</span>
+                          <span id="navHtNewPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('ht_new');" style="color: #fde047; font-weight: 800; cursor: pointer; padding: 0.15rem 0.5rem; background: rgba(253,224,71,0.1); border-radius: 5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(253,224,71,0.25)'" onmouseout="this.style.background='rgba(253,224,71,0.1)'" title="Hot Theme (Day 1 NEW)">NEW: —</span>
+                        <span id="navHtAddonPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('ht_addon');" style="color: #67e8f9; font-weight: 800; cursor: pointer; padding: 0.15rem 0.5rem; background: rgba(103,232,249,0.1); border-radius: 5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(103,232,249,0.25)'" onmouseout="this.style.background='rgba(103,232,249,0.1)'" title="Hot Theme A+">A+: —</span>
+                        <span id="navHtFloorPnlBadge" onclick="event.stopPropagation(); navigateToLiveTracker('ht_floor');" style="color: #cbd5e1; font-weight: 800; cursor: pointer; padding: 0.15rem 0.5rem; background: rgba(148,163,184,0.15); border-radius: 5px; transition: all 0.2s;" onmouseover="this.style.background='rgba(148,163,184,0.3)'" onmouseout="this.style.background='rgba(148,163,184,0.15)'" title="Hot Theme (Lantai Rapat)">LANTAI: —</span>
                     </div>
                 </div>
             </div>
@@ -1084,7 +1084,7 @@
                                 <th style="text-align: right;">Volatiliti</th>
                                 <th style="text-align: right;">Stop Loss (SL)</th>
                                 <th style="text-align: right;">Turnover</th>
-                                <th style="text-align: center;">Analisis AI (Skor)</th>
+                                <th style="text-align: center;">History</th>
                             </tr>
                         </thead>
                         <tbody id="vcpPicksTableBody">
@@ -1127,23 +1127,23 @@
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.75rem; margin-bottom: 1.25rem;">
                     <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: 10px; padding: 0.75rem 1rem;">
                         <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">📈 30-Day Whale Inflow</div>
-                        <div style="font-size: 1.3rem; font-weight: 900; color: #34d399; font-family: 'Outfit', sans-serif;">RM +485.2M</div>
-                        <div style="font-size: 0.68rem; color: #cbd5e1;">Accumulated Net Buying</div>
+                        <div id="sec138StatInflow" style="font-size: 1.3rem; font-weight: 900; color: #34d399; font-family: 'Outfit', sans-serif;">RM +485.2M</div>
+                        <div id="sec138StatInflowSub" style="font-size: 0.68rem; color: #cbd5e1;">Accumulated Net Buying</div>
                     </div>
                     <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(96, 165, 250, 0.3); border-radius: 10px; padding: 0.75rem 1rem;">
                         <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">🏛️ Most Active Whales</div>
-                        <div style="font-size: 1.3rem; font-weight: 900; color: #60a5fa; font-family: 'Outfit', sans-serif;">KWSP / EPF</div>
-                        <div style="font-size: 0.68rem; color: #cbd5e1;">18 Stock Filings</div>
+                        <div id="sec138StatTopInst" style="font-size: 1.3rem; font-weight: 900; color: #60a5fa; font-family: 'Outfit', sans-serif;">KWSP / EPF</div>
+                        <div id="sec138StatTopInstSub" style="font-size: 0.68rem; color: #cbd5e1;">18 Stock Filings</div>
                     </div>
                     <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(167, 139, 250, 0.3); border-radius: 10px; padding: 0.75rem 1rem;">
                         <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">💎 Top Accumulated Stocks</div>
-                        <div style="font-size: 1.05rem; font-weight: 900; color: #a78bfa; font-family: 'Outfit', sans-serif;">99SMART / CTOS / FFB</div>
-                        <div style="font-size: 0.68rem; color: #cbd5e1;">>5% Substantial Holding</div>
+                        <div id="sec138StatTopStock" style="font-size: 1.05rem; font-weight: 900; color: #a78bfa; font-family: 'Outfit', sans-serif;">99SMART / CTOS / FFB</div>
+                        <div id="sec138StatTopStockSub" style="font-size: 0.68rem; color: #cbd5e1;">>5% Substantial Holding</div>
                     </div>
                     <div style="background: rgba(15, 23, 42, 0.7); border: 1px solid rgba(245, 158, 11, 0.3); border-radius: 10px; padding: 0.75rem 1rem;">
                         <div style="font-size: 0.7rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">🛡️ Data Integrity</div>
-                        <div style="font-size: 1.3rem; font-weight: 900; color: #f59e0b; font-family: 'Outfit', sans-serif;">100% Verified</div>
-                        <div style="font-size: 0.68rem; color: #cbd5e1;">Bursa Sec 138 Filings</div>
+                        <div id="sec138StatIntegrity" style="font-size: 1.3rem; font-weight: 900; color: #f59e0b; font-family: 'Outfit', sans-serif;">100% Verified</div>
+                        <div id="sec138StatIntegritySub" style="font-size: 0.68rem; color: #cbd5e1;">Bursa Sec 138 Filings</div>
                     </div>
                 </div>
 
@@ -1278,12 +1278,12 @@
                                 <th style="text-align: center;">Volume Status</th>
                                 <th style="text-align: center;">Change %</th>
                                 <th style="text-align: center;">History</th>
-                                <th style="text-align: center;">AI Analysis (Score)</th>
+                                <th style="text-align: center;">Score</th>
                             </tr>
                         </thead>
                         <tbody id="jerungRadarTableBody">
                             <tr>
-                                <td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
+                                <td colspan="13" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">
                                     ⏳ Loading whale radar...
                                 </td>
                             </tr>
@@ -1381,7 +1381,7 @@
                                 <th style="text-align: right; cursor: pointer;" onclick="sortFR('price')" title="Click to sort by Current Price & Change %">Price &amp; Change % <span id="frSort_price" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: right; cursor: pointer;" onclick="sortFR('turnover')" title="Click to sort by Whale Turnover (Hierarchy 5: Turnover)">Turnover <span id="frSort_turnover" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: center; cursor: pointer;" onclick="sortFR('confluence')" title="Click to sort by Signal Confluence Count">Confluence <span id="frSort_confluence" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: center; cursor: pointer;" onclick="sortFR('score')" title="Click to sort by AI Score">Score &amp; Action <span id="frSort_score" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: center; cursor: pointer;" onclick="sortFR('score')" title="Click to sort by Score">Score &amp; History <span id="frSort_score" style="color:#64748b;">↕</span></th>
                             </tr>
                         </thead>
                         <tbody id="confluenceRadarTableBody">
@@ -1593,7 +1593,7 @@
                                     <th style="text-align: right; cursor: pointer;" onclick="sortAM('price')" title="Click to sort by Price">Price &amp; Change % <span id="amSort_price" style="color:#64748b;">↕</span></th>
                                     <th style="text-align: right; cursor: pointer;" onclick="sortAM('turnover')" title="Click to sort by Turnover">Turnover <span id="amSort_turnover" style="color:#64748b;">↕</span></th>
                                     <th style="text-align: center; cursor: pointer;" onclick="sortAM('confluence')" title="Click to sort by Confluence Count">Confluence <span id="amSort_confluence" style="color:#64748b;">↕</span></th>
-                                    <th style="text-align: center; cursor: pointer;" onclick="sortAM('score')" title="Click to sort by Score">Score &amp; Action <span id="amSort_score" style="color:#64748b;">↕</span></th>
+                                    <th style="text-align: center; cursor: pointer;" onclick="sortAM('score')" title="Click to sort by Score">Score &amp; History <span id="amSort_score" style="color:#64748b;">↕</span></th>
                                 </tr>
                             </thead>
                             <tbody id="allMarketUniverseTableBody">
@@ -1651,7 +1651,7 @@
                                 <th style="text-align: right;">Turnover</th>
                                 <th style="text-align: center;">Change %</th>
                                 <th style="text-align: center;">History</th>
-                                <th style="text-align: center;">AI Score &amp; Action</th>
+                                <th style="text-align: center;">Score</th>
                             </tr>
                         </thead>
                         <tbody id="realConfluenceTableBody">
@@ -1794,7 +1794,7 @@
                                 <th style="text-align: right; cursor: pointer;" onclick="sortHT('price')" title="Click to sort by Current Price &amp; Change %">Price &amp; Change % <span id="htSort_price" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: right; cursor: pointer;" onclick="sortHT('turnover')" title="Click to sort by Turnover">Turnover <span id="htSort_turnover" style="color:#64748b;">↕</span></th>
                                 <th style="text-align: center; cursor: pointer;" onclick="sortHT('confluence')" title="Click to sort by Confluence Count">Confluence <span id="htSort_confluence" style="color:#64748b;">↕</span></th>
-                                <th style="text-align: center; cursor: pointer;" onclick="sortHT('score')" title="Click to sort by AI Score">AI Score &amp; Action <span id="htSort_score" style="color:#64748b;">↕</span></th>
+                                <th style="text-align: center; cursor: pointer;" onclick="sortHT('score')" title="Click to sort by Score">Score &amp; History <span id="htSort_score" style="color:#64748b;">↕</span></th>
                             </tr>
                         </thead>
                         <tbody id="hotThemeTableBody">
@@ -2517,7 +2517,7 @@
                                 <th style="text-align: right; color: #3b82f6;">Volatiliti</th>
                                 <th style="text-align: right; color: #3b82f6;">Stop Loss (SL)</th>
                                 <th style="text-align: right; color: #3b82f6;">Turnover</th>
-                                <th style="text-align: center; color: #3b82f6;">Analisis AI (Skor)</th>
+                                <th style="text-align: center; color: #3b82f6;">History</th>
                             </tr>
                         </thead>
                         <tbody id="hybridPicksTableBody">
@@ -2601,7 +2601,7 @@
                                 <th style="text-align: right; color: #fb7185;">Volatiliti</th>
                                 <th style="text-align: right; color: #fb7185;">Support Floor Price</th>
                                 <th style="text-align: right; color: #fb7185;">Turnover</th>
-                                <th style="text-align: center; color: #fb7185;">Analisis AI (Skor)</th>
+                                <th style="text-align: center; color: #fb7185;">History</th>
                             </tr>
                         </thead>
                         <tbody id="reclaimRadarTableBody">
@@ -2696,7 +2696,7 @@
                                 <th style="text-align: right; color: #f97316;">Support Floor Price</th>
                                 <th style="text-align: right; color: #f59e0b;">Turnover</th>
                                 <th style="text-align: center; color: #f97316;">Setup Status</th>
-                                <th style="text-align: center; color: #f97316;">Analisis AI (Skor)</th>
+                                <th style="text-align: center; color: #f97316;">History</th>
                             </tr>
                         </thead>
                         <tbody id="phoenixTableBody">
@@ -2791,7 +2791,7 @@
                                 <th style="text-align: right; color: #f59e0b;">Volatiliti</th>
                                 <th style="text-align: right; color: #f59e0b;">Pullback %</th>
                                 <th style="text-align: right; color: #f59e0b;">Turnover</th>
-                                <th style="text-align: center; color: #f59e0b;">Analisis AI (Skor)</th>
+                                <th style="text-align: center; color: #f59e0b;">History</th>
                             </tr>
                         </thead>
                         <tbody id="bottomFishingTableBody">
@@ -3017,19 +3017,6 @@
                     <span class="result-label">Profit Target 2 (TP2) (+20.0%)</span>
                     <span class="result-value success" style="color: #a78bfa;" id="calcTp2">RM 0.00 (Profit RM 0.00)</span>
                 </div>
-            </div>
-        </div>
-
-        <!-- AI Decision Section -->
-        <div style="background: rgba(15, 23, 42, 0.5); border: 1px solid rgba(167, 139, 250, 0.25); border-radius: 12px; padding: 1.25rem; margin-top: 1.5rem; display: flex; flex-direction: column; gap: 0.75rem;">
-            <h4 style="margin: 0; display: flex; align-items: center; gap: 0.4rem; color: #a78bfa; font-size: 0.95rem; font-weight: 800;">
-                ✨ Groq AI Smart Analysis
-            </h4>
-            <div id="ai-verdict-box" style="background: rgba(30, 41, 59, 0.3); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 8px; padding: 1rem; min-height: 80px; display: flex; flex-direction: column; justify-content: center; align-items: center; font-size: 0.85rem; line-height: 1.5; color: #e2e8f0;">
-                <button onclick="generateAIAnalysis()" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.5rem 1.2rem; border-radius: 8px; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.03)'" onmouseout="this.style.transform='scale(1)'">
-                    ⚡ Generate AI Verdict (Risk Check & Backtest)
-                </button>
-                <div style="font-size: 0.7rem; color: var(--text-muted); margin-top: 0.5rem; text-align: center;">Powered by Groq Llama 3 to assess breakdown risks & historical win rates.</div>
             </div>
         </div>
     </div> <!-- End of view-calculator -->
@@ -3837,18 +3824,15 @@ Sila tentukan teknik mana yang paling sesuai untuk saham ini dan bandingkan deng
                     </div>
                 `;
             } catch (err) {
-                const isInvalidKey = err.message.toLowerCase().includes('api key') || err.message.toLowerCase().includes('unauthorized') || err.message.toLowerCase().includes('forbidden') || err.message.toLowerCase().includes('key not found');
                 verdictBox.innerHTML = `
                     <div style="color: #f87171; text-align: center; font-size: 0.8rem; padding: 1rem 0;">
                         ⚠️ Ralat AI: ${escapeHtml(err.message)}<br><br>
-                        ${isInvalidKey ? `
-                        <button onclick="promptResetGroqKey(${jsArg(ticker)}, 'Calculator', 'calculator')" class="btn" style="background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); color: #f87171; padding: 0.35rem 0.9rem; border-radius: 6px; font-size: 0.75rem; font-weight: 700; cursor: pointer; margin-right: 0.5rem;">
-                            🔑 Change API Key
-                        </button>
-                        ` : ''}
-                        <button onclick="generateAIAnalysis()" class="btn" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #cbd5e1; padding: 0.35rem 0.9rem; border-radius: 6px; font-size: 0.75rem; font-weight: 700; cursor: pointer;">
-                            🔄 Try Again
-                        </button>
+                        ${buildLocalQuantDiagnosticHtml(item, 'Calculator')}
+                        <div style="margin-top: 0.75rem;">
+                            <button onclick="generateAIAnalysis()" class="btn" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #cbd5e1; padding: 0.35rem 0.9rem; border-radius: 6px; font-size: 0.75rem; font-weight: 700; cursor: pointer;">
+                                🔄 Try Again
+                            </button>
+                        </div>
                     </div>
                 `;
             }
@@ -4001,21 +3985,65 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     </div>
                 `;
             } catch (err) {
-                const isInvalidKey = err.message.toLowerCase().includes('api key') || err.message.toLowerCase().includes('unauthorized') || err.message.toLowerCase().includes('forbidden') || err.message.toLowerCase().includes('key not found');
                 bodyEl.innerHTML = `
-                    <div style="color: #f87171; text-align: center; font-size: 0.85rem; padding: 1.5rem 0;">
+                    <div style="color: #f87171; text-align: center; font-size: 0.85rem; padding: 1rem 0;">
                         ⚠️ Ralat AI: ${escapeHtml(err.message)}<br><br>
-                        ${isInvalidKey ? `
-                        <button onclick="promptResetGroqKey(${jsArg(ticker)}, ${jsArg(technique)}, 'modal')" class="btn" style="background: rgba(239, 68, 68, 0.15); border: 1px solid rgba(239, 68, 68, 0.3); color: #f87171; padding: 0.45rem 1.2rem; border-radius: 8px; font-weight: 700; cursor: pointer; margin-right: 0.5rem;">
-                            🔑 Change API Key
-                        </button>
-                        ` : ''}
-                        <button onclick="triggerAIAnalysisModal(${jsArg(ticker)}, ${jsArg(technique)})" class="btn" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #cbd5e1; padding: 0.45rem 1.2rem; border-radius: 8px; font-weight: 700; cursor: pointer;">
-                            🔄 Try Again
-                        </button>
+                        ${buildLocalQuantDiagnosticHtml(item, technique)}
+                        <div style="margin-top: 1rem;">
+                            <button onclick="triggerAIAnalysisModal(${jsArg(ticker)}, ${jsArg(technique)})" class="btn" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); color: #cbd5e1; padding: 0.45rem 1.2rem; border-radius: 8px; font-weight: 700; cursor: pointer;">
+                                🔄 Try Again
+                            </button>
+                        </div>
                     </div>
                 `;
             }
+        }
+
+        function buildLocalQuantDiagnosticHtml(item, technique = 'Umum') {
+            if (!item || !item.price) return '';
+            const price = item.price;
+            const floor = item.floorLow || (price * 0.97);
+            const distToFloor = ((price - floor) / floor) * 100;
+            const touches = item.touchCount || 0;
+            const tight = typeof item.closeTightness === 'number' ? item.closeTightness : (item.lowTightness !== null ? item.lowTightness : 5.0);
+            const noUpperWick = !item.hasUpperWickRejection;
+            const turnover = item.turnover || 0;
+            const slPrice = Math.max(price * 0.90, floor * 0.97);
+            const tp1Price = price * 1.10;
+            const tp2Price = price * 1.20;
+            const checks = [
+                { pass: distToFloor <= 5.0, label: `Floor Distance: +${distToFloor.toFixed(1)}% (Target ≤ 5.0%)` },
+                { pass: touches >= 3, label: `Support Touches: ${touches}x (Target ≥ 3x)` },
+                { pass: tight <= 5.0, label: `Base Tightness: ${tight.toFixed(2)}% (Target ≤ 5.0%)` },
+                { pass: noUpperWick, label: `Upper Wick Check: ${noUpperWick ? 'Clean (No heavy selling)' : 'Upper Wick Detected'}` },
+                { pass: !item.isCombStock && turnover >= 300000, label: `Liquidity & Structure: RM ${(turnover / 1e6).toFixed(2)}M (${item.isCombStock ? 'Comb Chart' : 'Normal'})` }
+            ];
+            const passedCount = checks.filter(c => c.pass).length;
+            const verdict = passedCount >= 4 ? 'BUY / WATCH (80% Rule Met)' : (passedCount >= 3 ? 'HOLD / WAIT PULLBACK' : 'AVOID / HIGH RISK');
+            const verdictColor = passedCount >= 4 ? '#34d399' : (passedCount >= 3 ? '#fbbf24' : '#fb7185');
+            return `
+                <div style="text-align: left; background: rgba(15, 23, 42, 0.75); border: 1px solid rgba(167, 139, 250, 0.25); border-radius: 10px; padding: 1rem; margin-top: 0.75rem; color: #cbd5e1; font-size: 0.8rem;">
+                    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.5rem; margin-bottom: 0.65rem;">
+                        <strong style="color: #a78bfa;">📊 Instant Quant Diagnostic (${escapeHtml(technique)})</strong>
+                        <span style="color: ${verdictColor}; font-weight: 800; background: rgba(255,255,255,0.05); padding: 0.15rem 0.5rem; border-radius: 4px;">${verdict} (${passedCount}/5)</span>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 0.3rem; margin-bottom: 0.75rem;">
+                        ${checks.map(c => `<div style="color: ${c.pass ? '#34d399' : '#94a3b8'};">${c.pass ? '✅' : '⚪'} ${escapeHtml(c.label)}</div>`).join('')}
+                    </div>
+                    <div style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; background: rgba(0,0,0,0.25); padding: 0.5rem 0.75rem; border-radius: 6px; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem;">
+                        <span>Entry: <strong style="color:white;">RM ${price.toFixed(3)}</strong></span>
+                        <span>Floor: <strong style="color:#38bdf8;">RM ${floor.toFixed(3)}</strong></span>
+                        <span>SL: <strong style="color:#fb7185;">RM ${slPrice.toFixed(3)}</strong></span>
+                        <span>TP1: <strong style="color:#34d399;">RM ${tp1Price.toFixed(3)}</strong></span>
+                        <span>TP2: <strong style="color:#c4b5fd;">RM ${tp2Price.toFixed(3)}</strong></span>
+                    </div>
+                </div>
+            `;
+        }
+
+        function promptResetGroqKey(ticker, technique = 'Umum', mode = 'modal') {
+            if (mode === 'calculator') return generateAIAnalysis();
+            return triggerAIAnalysisModal(ticker, technique);
         }
 
         
@@ -4642,6 +4670,9 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     renderFreshRiderTracker();
                     renderHotThemeTracker();
                     updateTopTrackerPnlBadge();
+                    if (typeof renderPhoenixSpring === 'function') renderPhoenixSpring();
+                    if (typeof renderFusionElite === 'function') renderFusionElite();
+                    if (typeof renderDynamicQuantStudies === 'function') renderDynamicQuantStudies();
                     if (window._activeTab === 'trackerdaily' && typeof ensureTabData === 'function') void ensureTabData('trackerdaily', true);
                     if (typeof renderDataQuality === 'function') renderDataQuality();
                 } catch (error) {
@@ -5057,8 +5088,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                             <td style="text-align: right; color: #ef4444; font-weight: 700;">RM ${stopLoss.toFixed(3)}</td>
                             <td style="text-align: right; color: #f59e0b; font-weight: 700;">RM ${turnoverM}M</td>
                             <td style="text-align: center;">
-                                <button onclick="triggerAIAnalysisModal(${jsArg(item.name)}, 'VCP Staircase (Teknik Minervini + Mamat)')" class="btn" style="background: linear-gradient(135deg, #06b6d4, #0891b2); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                                    ✨ Ask AI
+                                <button onclick="triggerStockHistoryModal(${jsArg(item.name)})" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem;">
+                                    📜 History
                                 </button>
                             </td>
                         </tr>
@@ -5763,16 +5794,80 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             return new Date(0);
         }
 
+        function updateSec138Metrics() {
+            const data = window.jerungData || [];
+            if (!data.length) return;
+            const setEl = (id, text) => { const el = document.getElementById(id); if (el) el.textContent = text; };
+            const fmtMoney = (v) => {
+                if (v >= 1e9) return 'RM +' + (v / 1e9).toFixed(2) + 'B';
+                if (v >= 1e6) return 'RM +' + (v / 1e6).toFixed(1) + 'M';
+                return 'RM +' + Math.round(v / 1e3).toLocaleString() + 'K';
+            };
+            const instShort = (n) => {
+                if (/EMPLOYEES|KWSP/.test(n)) return 'KWSP / EPF';
+                if (/AMANAH SAHAM|PERMODALAN|PNB/.test(n)) return 'PNB / ASB';
+                if (/PERSARAAN|KWAP/.test(n)) return 'KWAP';
+                if (/KHAZANAH|AGRIFOOD/.test(n)) return 'Khazanah';
+                return n.length > 22 ? n.slice(0, 20) + '…' : n;
+            };
+
+            const now = new Date();
+            const cutoff = new Date(now.getFullYear(), now.getMonth(), now.getDate() - 30);
+            const buys = data.filter(tx => tx.action === 'Acquired' && (tx.totalValueMYR || 0) > 0);
+            const recentBuys = buys.filter(tx => parseSec138Date(tx.filingDate) >= cutoff);
+            const pool = recentBuys.length ? recentBuys : buys;
+            const inflow = pool.reduce((a, b) => a + (b.totalValueMYR || 0), 0);
+            setEl('sec138StatInflow', fmtMoney(inflow));
+            setEl('sec138StatInflowSub', recentBuys.length
+                ? `Net buy · ${recentBuys.length} filings (30 days)`
+                : `Net buy · ${buys.length} filings (all data)`);
+
+            const byInst = {};
+            data.forEach(tx => {
+                const key = (tx.institution || 'Other').split('/')[0].trim();
+                byInst[key] = byInst[key] || { count: 0, value: 0 };
+                byInst[key].count++;
+                if (tx.action === 'Acquired') byInst[key].value += tx.totalValueMYR || 0;
+            });
+            const topInst = Object.entries(byInst).sort((a, b) => b[1].count - a[1].count || b[1].value - a[1].value)[0];
+            if (topInst) {
+                setEl('sec138StatTopInst', instShort(topInst[0]));
+                setEl('sec138StatTopInstSub', `${topInst[1].count} Stock Filings`);
+            }
+
+            const byStock = {};
+            data.forEach(tx => {
+                if (tx.action !== 'Acquired') return;
+                const key = tx.symbol || tx.stockName || '?';
+                byStock[key] = byStock[key] || { value: 0, pct: 0 };
+                byStock[key].value += tx.totalValueMYR || 0;
+                if ((tx.percentage || 0) > byStock[key].pct) byStock[key].pct = tx.percentage;
+            });
+            const topStocks = Object.entries(byStock).sort((a, b) => b[1].value - a[1].value).slice(0, 3);
+            if (topStocks.length) {
+                const topPct = Math.max(0, ...topStocks.map(x => x[1].pct));
+                setEl('sec138StatTopStock', topStocks.map(x => x[0]).join(' / '));
+                setEl('sec138StatTopStockSub', topPct > 0 ? `Stake up to ${topPct.toFixed(2)}%` : '>5% Substantial Holding');
+            }
+
+            const complete = data.filter(tx => tx.filingDate && tx.percentage && tx.institution && tx.symbol && tx.code);
+            const integrity = data.length ? Math.round(100 * complete.length / data.length) : 100;
+            setEl('sec138StatIntegrity', `${integrity}% Verified`);
+            setEl('sec138StatIntegritySub', `${data.length} Bursa Sec 138 Filings`);
+        }
+
         function applySec138Filters() {
+            updateSec138Metrics();
             const query = (document.getElementById('sec138Search') ? document.getElementById('sec138Search').value : '').toLowerCase().trim();
             const data = window.jerungData || [];
 
             const filtered = data.filter(item => {
                 if (currentSec138Inst !== 'ALL') {
-                    if (currentSec138Inst === 'KWSP' && !item.institution.includes('KWSP') && !item.institution.includes('EMPLOYEES')) return false;
-                    if (currentSec138Inst === 'PNB' && !item.institution.includes('PNB') && !item.institution.includes('AMANAH SAHAM')) return false;
-                    if (currentSec138Inst === 'KWAP' && !item.institution.includes('KWAP') && !item.institution.includes('PERSARAAN')) return false;
-                    if (currentSec138Inst === 'KHAZANAH' && !item.institution.includes('KHAZANAH') && !item.institution.includes('AGRIFOOD')) return false;
+                    const inst = (item.institution || '').toUpperCase();
+                    if (currentSec138Inst === 'KWSP' && !inst.includes('KWSP') && !inst.includes('EMPLOYEES')) return false;
+                    if (currentSec138Inst === 'PNB' && !inst.includes('PNB') && !inst.includes('AMANAH SAHAM')) return false;
+                    if (currentSec138Inst === 'KWAP' && !inst.includes('KWAP') && !inst.includes('PERSARAAN')) return false;
+                    if (currentSec138Inst === 'KHAZANAH' && !inst.includes('KHAZANAH') && !inst.includes('AGRIFOOD')) return false;
                 }
                 if (query) {
                     const matchName = (item.stockName || '').toLowerCase().includes(query);
@@ -5800,28 +5895,49 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             tbody.innerHTML = list.map(tx => {
                 const actionBadge = tx.action === 'Acquired'
                     ? `<span style="background: rgba(16,185,129,0.15); color: #10b981; border: 1px solid rgba(16,185,129,0.3); padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 800; font-size: 0.72rem;">🔥 Net Buy</span>`
+                    : tx.action === 'Disposed'
+                    ? `<span style="background: rgba(244,63,94,0.15); color: #fb7185; border: 1px solid rgba(244,63,94,0.3); padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 800; font-size: 0.72rem;">🔻 Disposed</span>`
                     : `<span style="background: rgba(99,102,241,0.15); color: #a5b4fc; border: 1px solid rgba(99,102,241,0.3); padding: 0.15rem 0.45rem; border-radius: 4px; font-weight: 800; font-size: 0.72rem;">🛡️ Hold</span>`;
 
-                const sharesStr = (tx.sharesChanged === null || tx.sharesChanged === undefined)
+                const hasShares = typeof tx.sharesChanged === 'number' && Number.isFinite(tx.sharesChanged);
+                const sharesStr = !hasShares
                     ? '—'
-                    : (tx.sharesChanged > 0 ? `+${(tx.sharesChanged / 1000000).toFixed(2)}M units` : 'Maintained');
-                const totalHoldingStr = (tx.totalHolding === null || tx.totalHolding === undefined || tx.percentage === null || tx.percentage === undefined)
-                    ? '—'
-                    : `${(tx.totalHolding / 1000000).toFixed(1)}M units (${tx.percentage.toFixed(2)}%)`;
+                    : (tx.sharesChanged > 0
+                        ? `+${(tx.sharesChanged / 1000000).toFixed(2)}M units`
+                        : tx.sharesChanged < 0
+                            ? `${(tx.sharesChanged / 1000000).toFixed(2)}M units`
+                            : 'Maintained');
+                const sharesColor = !hasShares ? '#94a3b8' : (tx.sharesChanged < 0 ? '#fb7185' : '#34d399');
+
+                const hasHolding = typeof tx.totalHolding === 'number' && Number.isFinite(tx.totalHolding);
+                const hasPct = typeof tx.percentage === 'number' && Number.isFinite(tx.percentage);
+                const totalHoldingStr = (hasHolding && hasPct)
+                    ? `${(tx.totalHolding / 1000000).toFixed(1)}M units (${tx.percentage.toFixed(2)}%)`
+                    : hasHolding
+                        ? `${(tx.totalHolding / 1000000).toFixed(1)}M units`
+                        : hasPct
+                            ? `${tx.percentage.toFixed(2)}%`
+                            : '—';
+
+                const rawUrl = typeof tx.announcementUrl === 'string' ? tx.announcementUrl.trim() : '';
+                const safeFilingUrl = /^https?:\/\//i.test(rawUrl)
+                    ? escapeHtml(rawUrl)
+                    : 'https://www.bursamalaysia.com/market_information/announcements/company_announcement?keyword=' + encodeURIComponent(tx.stockName || tx.symbol || '');
+                const signalColor = tx.action === 'Disposed' ? '#fb7185' : '#34d399';
 
                 return `
                     <tr style="border-bottom: 1px solid rgba(51, 65, 85, 0.25);">
-                        <td style="font-size: 0.75rem; color: #94a3b8; white-space: nowrap;">📅 ${tx.filingDate}</td>
+                        <td style="font-size: 0.75rem; color: #94a3b8; white-space: nowrap;">📅 ${escapeHtml(tx.filingDate || '—')}</td>
                         <td style="font-weight: 800; color: #f8fafc;">
-                            ${tx.stockName} <span style="font-size: 0.7rem; color: #94a3b8;">(${tx.symbol} • ${tx.code})</span>
+                            ${escapeHtml(tx.stockName || tx.symbol || '—')} <span style="font-size: 0.7rem; color: #94a3b8;">(${escapeHtml(tx.symbol || '—')} • ${escapeHtml(tx.code || '—')})</span>
                         </td>
-                        <td><span style="background: rgba(255,255,255,0.05); padding: 0.15rem 0.45rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; color: #e2e8f0;">${tx.institution}</span></td>
+                        <td><span style="background: rgba(255,255,255,0.05); padding: 0.15rem 0.45rem; border-radius: 4px; font-size: 0.75rem; font-weight: 700; color: #e2e8f0;">${escapeHtml(tx.institution || '—')}</span></td>
                         <td style="text-align: center;">${actionBadge}</td>
-                        <td style="text-align: right; color: #34d399; font-weight: 800;">${sharesStr}</td>
+                        <td style="text-align: right; color: ${sharesColor}; font-weight: 800;">${sharesStr}</td>
                         <td style="text-align: right; color: #60a5fa; font-weight: 800;">${totalHoldingStr}</td>
-                        <td style="text-align: center; color: #34d399; font-size: 0.75rem; font-weight: 800;">${tx.signal}</td>
+                        <td style="text-align: center; color: ${signalColor}; font-size: 0.75rem; font-weight: 800;">${escapeHtml(tx.signal || '—')}</td>
                         <td style="text-align: center;">
-                            <a href="${tx.announcementUrl}" target="_blank" style="color: #60a5fa; text-decoration: none; font-size: 0.75rem; background: rgba(96,165,250,0.1); padding: 0.2rem 0.45rem; border-radius: 4px; border: 1px solid rgba(96,165,250,0.25); font-weight: 700;">
+                            <a href="${safeFilingUrl}" target="_blank" rel="noopener noreferrer" style="color: #60a5fa; text-decoration: none; font-size: 0.75rem; background: rgba(96,165,250,0.1); padding: 0.2rem 0.45rem; border-radius: 4px; border: 1px solid rgba(96,165,250,0.25); font-weight: 700;">
                                 ↗ Bursa Filing
                             </a>
                         </td>
@@ -6002,7 +6118,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             });
 
             if (validPicks.length === 0) {
-                tbody.innerHTML = `<tr><td colspan="11" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">🦈 Tiada saham dalam fasa pengumpulan Jerung hari ini.</td></tr>`;
+                tbody.innerHTML = `<tr><td colspan="13" style="text-align: center; color: var(--text-secondary); padding: 1.5rem;">🦈 Tiada saham dalam fasa pengumpulan Jerung hari ini.</td></tr>`;
                 return;
             }
 
@@ -6018,7 +6134,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 const changeVal = item.changePct !== undefined ? item.changePct : item.change;
                 const changeClass = changeVal >= 0 ? 'success' : 'danger';
                 const changeSign = changeVal > 0 ? '+' : '';
-                const style = item.setupStyle || 'SWING PLAY';
+                const style = escapeHtml(item.setupStyle || 'SWING PLAY');
                 const tierNum = item._jerungTier || 2;
                 const tierBadge = tierNum === 1
                     ? `<span style="font-size: 0.62rem; background: rgba(16, 185, 129, 0.15); color: #34d399; padding: 0.1rem 0.4rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(16, 185, 129, 0.35); white-space: nowrap;">🔇 QUIET ACCUM</span>`
@@ -6060,7 +6176,16 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         </td>
                         <td style="text-align: center;"><span style="color: ${volumeQuietColor}; font-weight: 800; font-size: 0.75rem;">${volumeQuiet}</span></td>
                         <td style="text-align: center; color: var(--${changeClass}); font-weight: 800;">${changeSign}${changeVal !== undefined ? changeVal.toFixed(2) : '0.00'}%</td>
-                        <td style="text-align: center;"><span style="color: ${tierColor}; font-weight: 800;">${confidenceText}</span></td>
+                        <td style="text-align: center;">
+                            <button onclick="triggerStockHistoryModal(${jsArg(item.name)})" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem;">
+                                📜 History
+                            </button>
+                        </td>
+                        <td style="text-align: center;">
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: 0.25rem;">
+                                <span style="color: ${tierColor}; font-weight: 800;">${confidenceText}</span>
+                            </div>
+                        </td>
                     </tr>`;
             });
 
@@ -7095,7 +7220,6 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                             <div style="display: flex; align-items: center; justify-content: center; gap: 0.3rem; flex-wrap: wrap;">
                                 <span style="color: ${tierColor}; font-weight: 800; font-size: 0.75rem;">${confidenceText}</span>
                                 <button onclick="triggerStockHistoryModal(${jsArg(item.name)})" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.15rem 0.4rem; border-radius: 5px; font-size: 0.68rem; font-weight: 800; cursor: pointer;" title="History">📜</button>
-                                <button onclick="triggerAIAnalysisModal(${jsArg(item.name)}, 'Fresh VVIP Rider')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.15rem 0.4rem; border-radius: 5px; font-size: 0.68rem; font-weight: 800; cursor: pointer;" title="Ask AI">✨ AI</button>
                             </div>
                         </td>
                     </tr>`;
@@ -7226,10 +7350,16 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const totalRm = ((s.totalPnlNow || 0) / 100) * entryCapital;
             const fmtRm = (rm) => `${rm >= 0 ? '+' : '-'}RM ${Math.abs(rm).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 
+            const totalTradesCount = tradesList.length;
+            const winningTradesCount = tradesList.filter(t => (typeof t.finalGain === 'number' ? t.finalGain : 0) > 0).length;
+            const subTabWinRate = totalTradesCount > 0 ? ((winningTradesCount / totalTradesCount) * 100).toFixed(1) : '0.0';
+            const subTabAvgGain = totalTradesCount > 0 ? ((s.totalPnlNow || 0) / totalTradesCount) : 0;
+
             if (statsEl) {
                 statsEl.innerHTML = [
                     { label: 'OPEN Positions', val: s.openCount ?? 0, color: '#34d399' },
                     { label: 'CLOSED Positions', val: s.closedCount ?? 0, color: '#94a3b8' },
+                    { label: '🏆 Win Rate & Avg Gain', val: `${subTabWinRate}%`, sub: `Avg: ${subTabAvgGain >= 0 ? '+' : ''}${subTabAvgGain.toFixed(1)}% / trade (${winningTradesCount}/${totalTradesCount})`, color: parseFloat(subTabWinRate) >= 60 ? '#34d399' : '#fde047' },
                     { label: '🔒 Realized PnL (Closed)', val: (s.closedPnl >= 0 ? '+' : '') + (s.closedPnl || 0).toFixed(1) + '%', sub: fmtRm(closedRm), color: (s.closedPnl || 0) >= 0 ? '#34d399' : '#f87171' },
                     { label: '🟢 Floating PnL (Open)', val: (s.openPnl >= 0 ? '+' : '') + (s.openPnl || 0).toFixed(1) + '%', sub: fmtRm(openRm), color: '#34d399' },
                     { label: '📊 Sum of Gross Returns (pp)', val: (s.totalPnlNow >= 0 ? '+' : '') + (s.totalPnlNow || 0).toFixed(1) + ' pp', sub: fmtRm(totalRm), color: '#fde047' },
@@ -7660,7 +7790,6 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                             <div style="display: flex; align-items: center; justify-content: center; gap: 0.3rem; flex-wrap: wrap;">
                                 <span style="color: ${tierColor}; font-weight: 800; font-size: 0.75rem;">${sniperScore}/100</span>
                                 <button onclick="triggerStockHistoryModal(${jsArg(item.name)})" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.15rem 0.4rem; border-radius: 5px; font-size: 0.68rem; font-weight: 800; cursor: pointer;" title="History">📜</button>
-                                <button onclick="triggerAIAnalysisModal(${jsArg(item.name)}, 'All Market Scanner')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.15rem 0.4rem; border-radius: 5px; font-size: 0.68rem; font-weight: 800; cursor: pointer;" title="Ask AI">✨ AI</button>
                             </div>
                         </td>
                     </tr>`;
@@ -7824,10 +7953,16 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             const totalRm = ((s.totalPnlNow || 0) / 100) * entryCapital;
             const fmtRm = (rm) => `${rm >= 0 ? '+' : '-'}RM ${Math.abs(rm).toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 
+            const totalTradesCount = tradesList.length;
+            const winningTradesCount = tradesList.filter(t => (typeof t.finalGain === 'number' ? t.finalGain : 0) > 0).length;
+            const subTabWinRate = totalTradesCount > 0 ? ((winningTradesCount / totalTradesCount) * 100).toFixed(1) : '0.0';
+            const subTabAvgGain = totalTradesCount > 0 ? ((s.totalPnlNow || 0) / totalTradesCount) : 0;
+
             if (statsEl) {
                 statsEl.innerHTML = [
                     { label: 'OPEN Positions', val: s.openCount ?? 0, color: '#34d399' },
                     { label: 'CLOSED Positions', val: s.closedCount ?? 0, color: '#94a3b8' },
+                    { label: '🏆 Win Rate & Avg Gain', val: `${subTabWinRate}%`, sub: `Avg: ${subTabAvgGain >= 0 ? '+' : ''}${subTabAvgGain.toFixed(1)}% / trade (${winningTradesCount}/${totalTradesCount})`, color: parseFloat(subTabWinRate) >= 60 ? '#34d399' : '#fde047' },
                     { label: '🔒 Realized PnL (Closed)', val: (s.closedPnl >= 0 ? '+' : '') + (s.closedPnl || 0).toFixed(1) + '%', sub: fmtRm(closedRm), color: (s.closedPnl || 0) >= 0 ? '#34d399' : '#f87171' },
                     { label: '🟢 Floating PnL (Open)', val: (s.openPnl >= 0 ? '+' : '') + (s.openPnl || 0).toFixed(1) + '%', sub: fmtRm(openRm), color: '#34d399' },
                     { label: '📊 Sum of Gross Returns (pp)', val: (s.totalPnlNow >= 0 ? '+' : '') + (s.totalPnlNow || 0).toFixed(1) + ' pp', sub: fmtRm(totalRm), color: '#fde047' },
@@ -8142,8 +8277,13 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         try { updateTopTrackerPnlBadge(); } catch(e) {}
 
         function navigateToLiveTracker(target) {
-            if (target === 'ht') {
+            if (target === 'ht' || (typeof target === 'string' && target.startsWith('ht_'))) {
                 if (typeof switchTab === 'function') switchTab('hottheme');
+                const htRawMode = target === 'ht' ? 'all' : target.replace('ht_', '');
+                const htSubTabMode = (htRawMode === 'new' || htRawMode === 'addon' || htRawMode === 'floor' || htRawMode === 'golden') ? htRawMode : 'all';
+                if (typeof switchHtTrackerSubTab === 'function') {
+                    switchHtTrackerSubTab(htSubTabMode);
+                }
                 setTimeout(() => {
                     const sec = document.getElementById('htLiveTrackerSection');
                     const body = document.getElementById('htTrackerBody');
@@ -8159,9 +8299,9 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 return;
             }
 
-            // Default or 'all', 'new', 'addon', 'floor': navigate to Fresh Rider Live Tracker
+            // Default or 'all', 'new', 'addon', 'floor', 'golden': navigate to Fresh Rider Live Tracker
             if (typeof switchTab === 'function') switchTab('confluence');
-            const subTabMode = (target === 'new' || target === 'addon' || target === 'floor') ? target : 'all';
+            const subTabMode = (target === 'new' || target === 'addon' || target === 'floor' || target === 'golden') ? target : 'all';
             if (typeof switchFrTrackerSubTab === 'function') {
                 switchFrTrackerSubTab(subTabMode);
             }
@@ -9674,9 +9814,6 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         <td style="text-align: center; padding: 0.5rem 0.2rem;">
                             <div style="display: flex; flex-direction: column; align-items: center; gap: 0.25rem;">
                                 <span style="color: ${tierColor}; font-weight: 800; font-size: 0.78rem;">${confidenceText}</span>
-                                <button onclick="triggerAIAnalysisModal(${jsArg(item.name)}, 'Confluence VVIP')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.7rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                                    ✨ Ask AI
-                                </button>
                             </div>
                         </td>
                     </tr>`;
@@ -9880,7 +10017,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
 
                 const isTierAPlus = (toVal >= 2000000 && tightValNum <= 3.5 && fDistVal >= -1.0 && fDistVal <= 3.5 && isBlackSwanClean && !isRealUpperWickDump);
                 const isTierA = (!isTierAPlus && toVal >= 1000000 && tightValNum <= 4.8 && fDistVal >= -1.5 && fDistVal <= 4.8 && isBlackSwanClean && !isRealUpperWickDump);
-                return { isTierAPlus, isTierA, toVal, fDistVal, tightValNum };
+                return { isTierAPlus, isTierA, toVal, fDistVal, tightValNum, isBlackSwanClean, isRealUpperWickDump };
             };
 
             if (typeof updateHeaderSortIndicators === 'function') {
@@ -9988,7 +10125,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         t.fDistVal >= -1.0 && t.fDistVal <= 3.5 &&
                         t.toVal >= 2000000 && t.toVal <= 10000000 &&
                         chgValHT >= -1.0 &&
-                        (!swanEvalHT || swanEvalHT.status === 'pass')
+                        (!swanEvalHT || swanEvalHT.status === 'pass') &&
+                        !t.isRealUpperWickDump
                     );
                 });
             } else if (htFilter === 'new_only') {
@@ -10067,7 +10205,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     fDistValNumHT >= -1.0 && fDistValNumHT <= 3.5 &&
                     toValNumHT >= 2000000 && toValNumHT <= 10000000 &&
                     chgValNumHT >= -1.0 &&
-                    (!swanEvalHT || swanEvalHT.status === 'pass')
+                    (!swanEvalHT || swanEvalHT.status === 'pass') &&
+                    !tierInfo.isRealUpperWickDump
                 );
                 const goldenBadgeHT = isGoldenComboHT
                     ? `<span class="fr-new-badge golden-combo-badge" style="font-size: 0.62rem; background: linear-gradient(135deg, rgba(234,179,8,0.35), rgba(245,158,11,0.35)); color: #fde047; padding: 0.08rem 0.38rem; border-radius: 4px; font-weight: 900; border: 1px solid rgba(253,224,71,0.75); box-shadow: 0 0 8px rgba(234,179,8,0.3); white-space: nowrap;" title="👑 GOLDEN COMBO (A++): Tightness ≤ 2.5%, Floor ≤ 3.5%, TO RM 2M-10M, Change > -1.0% (Empirical Quant Win Rate 83%, Avg +23.7%)">👑 GOLDEN COMBO</span>`
@@ -10197,7 +10336,6 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                             <div style="display: flex; align-items: center; justify-content: center; gap: 0.3rem; flex-wrap: wrap;">
                                 <span style="color: ${tierColor}; font-weight: 800; font-size: 0.75rem;">${confidenceText}</span>
                                 <button onclick="triggerStockHistoryModal(${jsArg(item.name)})" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.15rem 0.4rem; border-radius: 5px; font-size: 0.68rem; font-weight: 800; cursor: pointer;" title="History">📜</button>
-                                <button onclick="triggerAIAnalysisModal(${jsArg(item.name)}, 'Hot Theme Rider')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.15rem 0.4rem; border-radius: 5px; font-size: 0.68rem; font-weight: 800; cursor: pointer;" title="Ask AI">✨ AI</button>
                             </div>
                         </td>
                     </tr>`;
@@ -10653,8 +10791,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                             <td style="text-align: right; color: #ef4444; font-weight: 700;">RM ${stopLoss.toFixed(3)}</td>
                             <td style="text-align: right; color: #f59e0b; font-weight: 700;">RM ${turnoverM}M</td>
                             <td style="text-align: center;">
-                                <button onclick="triggerAIAnalysisModal(${jsArg(item.name)}, 'Trend Rider')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                                    ✨ Ask AI
+                                <button onclick="triggerStockHistoryModal(${jsArg(item.name)})" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem;">
+                                    📜 History
                                 </button>
                             </td>
                         </tr>
@@ -10827,8 +10965,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                             <td style="text-align: right; color: #10b981; font-weight: 700;">RM ${floor.toFixed(3)}</td>
                             <td style="text-align: right; color: #f59e0b; font-weight: 700;">RM ${turnoverM}M</td>
                             <td style="text-align: center;">
-                                <button onclick="triggerAIAnalysisModal(${jsArg(item.name)}, 'Early Spring (Open Reclaim)')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                                    ✨ Ask AI
+                                <button onclick="triggerStockHistoryModal(${jsArg(item.name)})" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem;">
+                                    📜 History
                                 </button>
                             </td>
                         </tr>
@@ -10941,8 +11079,8 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                             <td style="text-align: right; color: #fb7185; font-weight: 700;">-${item.pullback.toFixed(1)}%</td>
                             <td style="text-align: right; color: #f59e0b; font-weight: 700;">RM ${turnoverM}M</td>
                             <td style="text-align: center;">
-                                <button onclick="triggerAIAnalysisModal(${jsArg(item.name)}, 'Bottom Fishing (Floor Accumulation)')" class="btn" style="background: linear-gradient(135deg, #a78bfa, #8b5cf6); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
-                                    ✨ Ask AI
+                                <button onclick="triggerStockHistoryModal(${jsArg(item.name)})" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem;">
+                                    📜 History
                                 </button>
                             </td>
                         </tr>
@@ -11015,6 +11153,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             renderPhoenixSpring();
             updateTopTrackerPnlBadge();
             if (typeof renderFusionElite === 'function') renderFusionElite();
+            if (typeof renderDynamicQuantStudies === 'function') renderDynamicQuantStudies();
 
             const hash = window.location.hash.replace('#', '');
             if (hash && ['vcp', 'trend', 'spring', 'phoenix', 'fishing', 'calculator', 'info', 'jerung', 'confluence', 'realconfluence', 'hottheme', 'fusion', 'trackerdaily', 'topgainers'].includes(hash)) {
@@ -11280,23 +11419,23 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 });
 
                 applyGlobalSort(phoenixCandidates);
-            }
-
-            // Fallback if liveList is empty
-            if (phoenixCandidates.length === 0) {
-                phoenixCandidates = [
-                    { name: 'SRKK', code: '0466.KL', price: 0.545, change: 5.83, close1st: 0.555, distPct: -1.8, touches: 2, turnover: 'RM 7.26M 🔥', status: '🎯 2ND RETEST GREEN CS', setup: '🔥 PHOENIX REBOUND (SRKK DNA)', score: 14, is2ndRetestJackpot: true },
-                    { name: 'ECKEM', code: '0348.KL', price: 0.120, change: 0.0, close1st: 0.120, distPct: 0.0, touches: 8, turnover: 'RM 317k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 11, is2ndRetestJackpot: false },
-                    { name: 'RESTNGO', code: '0465.KL', price: 0.130, change: -3.7, close1st: 0.130, distPct: 0.0, touches: 5, turnover: 'RM 271k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 10, is2ndRetestJackpot: false },
-                    { name: 'WENTEL', code: '0298.KL', price: 0.260, change: 0.0, close1st: 0.260, distPct: 0.0, touches: 4, turnover: 'RM 216k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 9, is2ndRetestJackpot: false },
-                    { name: 'BUSCAP', code: '0342.KL', price: 0.265, change: 1.92, close1st: 0.260, distPct: 1.92, touches: 3, turnover: 'RM 382k', status: '🎯 2ND RETEST GREEN CS', setup: '🔥 PHOENIX REBOUND (SRKK DNA)', score: 12, is2ndRetestJackpot: true },
-                    { name: 'SAG', code: '0336.KL', price: 0.695, change: 2.2, close1st: 0.680, distPct: 2.2, touches: 2, turnover: 'RM 30k', status: '🎯 2ND RETEST GREEN CS', setup: '🔥 PHOENIX REBOUND (SRKK DNA)', score: 8, is2ndRetestJackpot: true },
-                    { name: 'MKHOP', code: '0303.KL', price: 0.645, change: 2.38, close1st: 0.630, distPct: 2.38, touches: 5, turnover: 'RM 2.55M 🔥', status: '🎯 2ND RETEST GREEN CS', setup: '🔥 PHOENIX REBOUND (SRKK DNA)', score: 13, is2ndRetestJackpot: true },
-                    { name: 'CNERGEN', code: '0246.KL', price: 0.620, change: 1.6, close1st: 0.600, distPct: 3.33, touches: 4, turnover: 'RM 154k', status: '🎯 2ND RETEST GREEN CS', setup: '🔥 PHOENIX REBOUND (SRKK DNA)', score: 10, is2ndRetestJackpot: true },
-                    { name: 'FOODIE', code: '0355.KL', price: 0.340, change: -1.2, close1st: 0.355, distPct: -4.22, touches: 3, turnover: 'RM 157k', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 9, is2ndRetestJackpot: false },
-                    { name: 'PENTECH', code: '0350.KL', price: 0.275, change: -1.8, close1st: 0.290, distPct: -5.17, touches: 6, turnover: 'RM 1.52M', status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 11, is2ndRetestJackpot: false },
-                    { name: 'STRATUS', code: '0349.KL', price: 2.050, change: 4.59, close1st: 1.960, distPct: 4.59, touches: 1, turnover: 'RM 19.7M 🔥', status: '🟢 FRESH RECLAIM', setup: '🔥 PHOENIX RECLAIM', score: 14, is2ndRetestJackpot: false }
+            } else {
+                // Fallback only when liveList itself is completely empty (offline mode)
+                const fallbackRaw = [
+                    { name: 'SRKK', code: '0466.KL', price: 0.545, change: 5.83, close1st: 0.555, distPct: -1.8, touches: 2, turnover: 'RM 7.26M 🔥', rawTurnover: 7260000, status: '🎯 2ND RETEST GREEN CS', setup: '🔥 PHOENIX REBOUND (SRKK DNA)', score: 14, is2ndRetestJackpot: true, ipoYear: 2026, ipoGrade: 'A' },
+                    { name: 'ECKEM', code: '0348.KL', price: 0.120, change: 0.0, close1st: 0.120, distPct: 0.0, touches: 8, turnover: 'RM 317k', rawTurnover: 317000, status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 11, is2ndRetestJackpot: false, ipoYear: 2025, ipoGrade: 'B' },
+                    { name: 'RESTNGO', code: '0465.KL', price: 0.130, change: -3.7, close1st: 0.130, distPct: 0.0, touches: 5, turnover: 'RM 271k', rawTurnover: 271000, status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 10, is2ndRetestJackpot: false, ipoYear: 2026, ipoGrade: 'B' },
+                    { name: 'WENTEL', code: '0298.KL', price: 0.260, change: 0.0, close1st: 0.260, distPct: 0.0, touches: 4, turnover: 'RM 216k', rawTurnover: 216000, status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 9, is2ndRetestJackpot: false, ipoYear: 2024, ipoGrade: 'B' },
+                    { name: 'BUSCAP', code: '0342.KL', price: 0.265, change: 1.92, close1st: 0.260, distPct: 1.92, touches: 3, turnover: 'RM 382k', rawTurnover: 382000, status: '🎯 2ND RETEST GREEN CS', setup: '🔥 PHOENIX REBOUND (SRKK DNA)', score: 12, is2ndRetestJackpot: true, ipoYear: 2025, ipoGrade: 'A' },
+                    { name: 'SAG', code: '0336.KL', price: 0.695, change: 2.2, close1st: 0.680, distPct: 2.2, touches: 2, turnover: 'RM 30k', rawTurnover: 30000, status: '🎯 2ND RETEST GREEN CS', setup: '🔥 PHOENIX REBOUND (SRKK DNA)', score: 8, is2ndRetestJackpot: true, ipoYear: 2025, ipoGrade: 'B' },
+                    { name: 'MKHOP', code: '0303.KL', price: 0.645, change: 2.38, close1st: 0.630, distPct: 2.38, touches: 5, turnover: 'RM 2.55M 🔥', rawTurnover: 2550000, status: '🎯 2ND RETEST GREEN CS', setup: '🔥 PHOENIX REBOUND (SRKK DNA)', score: 13, is2ndRetestJackpot: true, ipoYear: 2024, ipoGrade: 'A' },
+                    { name: 'CNERGEN', code: '0246.KL', price: 0.620, change: 1.6, close1st: 0.600, distPct: 3.33, touches: 4, turnover: 'RM 154k', rawTurnover: 154000, status: '🎯 2ND RETEST GREEN CS', setup: '🔥 PHOENIX REBOUND (SRKK DNA)', score: 10, is2ndRetestJackpot: true, ipoYear: 2024, ipoGrade: 'B' },
+                    { name: 'FOODIE', code: '0355.KL', price: 0.340, change: -1.2, close1st: 0.355, distPct: -4.22, touches: 3, turnover: 'RM 157k', rawTurnover: 157000, status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 9, is2ndRetestJackpot: false, ipoYear: 2025, ipoGrade: 'B' },
+                    { name: 'PENTECH', code: '0350.KL', price: 0.275, change: -1.8, close1st: 0.290, distPct: -5.17, touches: 6, turnover: 'RM 1.52M', rawTurnover: 1520000, status: '🟡 TESTING FLOOR SPRING', setup: '🛡️ PHOENIX FLOOR', score: 11, is2ndRetestJackpot: false, ipoYear: 2025, ipoGrade: 'A' },
+                    { name: 'STRATUS', code: '0349.KL', price: 2.050, change: 4.59, close1st: 1.960, distPct: 4.59, touches: 1, turnover: 'RM 19.7M 🔥', rawTurnover: 19700000, status: '🟢 FRESH RECLAIM', setup: '🔥 PHOENIX RECLAIM', score: 14, is2ndRetestJackpot: false, ipoYear: 2025, ipoGrade: 'A' }
                 ];
+                phoenixCandidates = fallbackRaw.filter(item => passesGlobalFilters(item));
+                applyGlobalSort(phoenixCandidates);
             }
 
             let html = '';
@@ -11395,7 +11534,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                             <span style="${statusStyle} padding:0.2rem 0.6rem; border-radius:4px; font-weight:800; font-size:0.7rem;">${m.status}</span>
                         </td>
                         <td style="text-align: center; white-space: nowrap; padding: 0.75rem;">
-                            <button onclick="triggerAIAnalysisModal(${jsArg(m.name)}, 'Phoenix Spring (1st Day Close Reclaim)')" class="btn" style="background: linear-gradient(135deg, #ef4444, #f97316); border: none; color: white; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem; transition: transform 0.2s; white-space: nowrap;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">✨ Ask AI</button>
+                            <button onclick="triggerStockHistoryModal(${jsArg(m.name)})" class="btn" style="background: rgba(56, 189, 248, 0.15); border: 1px solid rgba(56, 189, 248, 0.4); color: #38bdf8; padding: 0.25rem 0.55rem; border-radius: 6px; font-size: 0.72rem; font-weight: 800; cursor: pointer; display: inline-flex; align-items: center; gap: 0.2rem;">📜 History</button>
                         </td>
                     </tr>
                 `;
@@ -11405,18 +11544,11 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
         }
         
         function renderDynamicQuantStudies() {
-            function isGC(t) {
-                const tight = parseFloat(t.tightness) || 0;
-                const floor = parseFloat(t.floorDist) || 0;
-                const tv = parseFloat(t.turnover) || 0;
-                const isRed = t.dayChange && typeof t.dayChange === 'string' && t.dayChange.includes('-');
-                return (tight <= 2.5 && floor <= 3.5 && tv >= 2.0 && tv <= 10.0 && !isRed);
-            }
-
             function calcStats(trades) {
-                if (!trades || trades.length === 0) return { wr: 0, pnl: 0, avg: 0, pf: 0, rr: 0, hold: 0, streak: 0, maxLoss: 0, count: 0 };
+                if (!trades || trades.length === 0) return { wr: 0, closedWr: 0, closedCount: 0, openCount: 0, pnl: 0, avg: 0, pf: 0, rr: 0, hold: 0, streak: 0, maxLoss: 0, count: 0 };
                 let grossProfit = 0, grossLoss = 0, totalPnl = 0;
                 let wins = 0, losses = 0;
+                let closedWins = 0, closedCount = 0, openCount = 0;
                 let totalHold = 0;
                 let streak = 0, maxStreak = 0;
                 let maxLoss = 0;
@@ -11426,10 +11558,18 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                     if (typeof t.finalGain === 'number') {
                         pnl = t.finalGain;
                     } else {
-                        if (t.status === 'CLOSED_TP') pnl = parseFloat(t.pnl) || 0;
+                        if (t.status === 'OPEN') pnl = parseFloat(t.currentPnl) || 0;
+                        else if (t.status === 'CLOSED_TP') pnl = parseFloat(t.pnl) || 0;
                         else if (t.status === 'CLOSED_SL') pnl = -(parseFloat(t.slPct) || 5.0);
                     }
                     
+                    if (t.status === 'OPEN') {
+                        openCount++;
+                    } else {
+                        closedCount++;
+                        if (pnl > 0) closedWins++;
+                    }
+
                     totalPnl += pnl;
                     totalHold += (parseInt(t.days) || parseInt(t.daysHeld) || 0);
                     
@@ -11451,11 +11591,14 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                 
                 return {
                     count: trades.length,
+                    closedCount: closedCount,
+                    openCount: openCount,
                     wr: trades.length > 0 ? (wins / trades.length) * 100 : 0,
+                    closedWr: closedCount > 0 ? (closedWins / closedCount) * 100 : 0,
                     pnl: totalPnl,
                     avg: trades.length > 0 ? totalPnl / trades.length : 0,
-                    pf: grossLoss > 0 ? (grossProfit / grossLoss) : 99.99,
-                    rr: avgLoss > 0 ? (avgWin / avgLoss) : 99.99,
+                    pf: grossLoss > 0 ? (grossProfit / grossLoss) : (grossProfit > 0 ? 99.99 : 0),
+                    rr: avgLoss > 0 ? (avgWin / avgLoss) : (avgWin > 0 ? 99.99 : 0),
                     hold: trades.length > 0 ? totalHold / trades.length : 0,
                     streak: maxStreak,
                     maxLoss: maxLoss
@@ -11463,41 +11606,54 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             }
 
             function processTracker(trackerData) {
-                // EXCLUDE OPEN STATUS FOR REAL CLOSED STATS
                 const tracker = Array.isArray(trackerData) ? trackerData : (trackerData.trades || []);
-                const closed = tracker.filter(t => t.status !== 'OPEN');
-                const gc = closed.filter(t => t.isGoldenCombo);
-                const addAplus = closed.filter(t => t.entryType === '⭐ ADD-ON A+');
-                const lantaiRapat = closed.filter(t => t.entryType === '🛡️ ADD-ON (LANTAI RAPAT)');
-                const newTrades = closed.filter(t => t.entryType === '🔥 NEW');
+                const gc = tracker.filter(t => t.isGoldenCombo === true);
+                const addAplus = tracker.filter(t => t.entryType === '⭐ ADD-ON A+');
+                const lantaiRapat = tracker.filter(t => t.entryType === '🛡️ ADD-ON (LANTAI RAPAT)');
+                const newTrades = tracker.filter(t => t.entryType === '🔥 NEW');
                 
-                return [
+                const groups = [
                     { id: 'GC', name: '👑 GOLDEN COMBO', trades: gc, colors: ['#fef08a', '#fde047', 'rgba(234,179,8,0.18)', 'rgba(234,179,8,0.85)'] },
                     { id: 'ADD', name: '⭐ ADD-ON A+', trades: addAplus, colors: ['#bae6fd', '#38bdf8', 'rgba(56, 189, 248, 0.15)', 'rgba(56, 189, 248, 0.6)'] },
                     { id: 'LANTAI', name: '🛡️ LANTAI RAPAT', trades: lantaiRapat, colors: ['#c4b5fd', '#c4b5fd', 'rgba(168, 85, 247, 0.15)', 'rgba(168, 85, 247, 0.6)'] },
                     { id: 'NEW', name: '🔥 NEW (Day 1)', trades: newTrades, colors: ['#ff6b4a', '#fdba74', 'rgba(239, 68, 68, 0.12)', 'rgba(249, 115, 22, 0.45)'] }
-                ];
+                ].map(g => ({ ...g, stats: calcStats(g.trades) }));
+
+                // Sort dynamically by Profit Factor & Win Rate (with sample size guard) so Rank #1-#4 always matches live data
+                const ranked = [...groups].sort((a, b) => {
+                    if (b.stats.pf !== a.stats.pf) return b.stats.pf - a.stats.pf;
+                    return b.stats.pnl - a.stats.pnl;
+                });
+                const rankMap = new Map();
+                ranked.forEach((g, idx) => rankMap.set(g.id, idx + 1));
+
+                return groups.map(g => ({ ...g, rank: rankMap.get(g.id) || 4 }));
             }
 
-            function generateHTML(titleText, groups, type = 'FR') {
+            function getDynamicRankBadge(rank, stats) {
+                if (rank === 1) {
+                    return '<span style="background: rgba(253,224,71,0.25); color: #fde047; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.65rem; border: 1px solid rgba(253,224,71,0.5);">🏅 No 1 (Elit)</span>';
+                }
+                if (rank === 2) {
+                    return '<span style="background: rgba(52,211,153,0.22); color: #34d399; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.65rem; border: 1px solid rgba(52,211,153,0.5);">🥈 No 2 (Kukuh)</span>';
+                }
+                if (rank === 3) {
+                    return '<span style="background: rgba(56,189,248,0.22); color: #7dd3fc; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.65rem; border: 1px solid rgba(56,189,248,0.5);">🥉 No 3 (Aktif)</span>';
+                }
+                const label = stats.pf >= 1.5 ? '📊 No 4 (Positif)' : '⚠️ No 4 (Jaga SL)';
+                const color = stats.pf >= 1.5 ? '#cbd5e1' : '#fca5a5';
+                const bg = stats.pf >= 1.5 ? 'rgba(148,163,184,0.2)' : 'rgba(239,68,68,0.22)';
+                const border = stats.pf >= 1.5 ? 'rgba(148,163,184,0.45)' : 'rgba(239,68,68,0.5)';
+                return `<span style="background: ${bg}; color: ${color}; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.65rem; border: 1px solid ${border};">${label}</span>`;
+            }
+
+            function generateHTML(titleText, groups) {
                 let cardsHTML = '<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 0.75rem; margin-bottom: 0.85rem;">';
                 let rowsHTML = '';
                 
                 groups.forEach(g => {
-                    let rankBadge = '';
-                    if (type === 'FR') {
-                        if (g.id === 'GC') rankBadge = '<span style="background: rgba(253,224,71,0.25); color: #fde047; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.65rem; border: 1px solid rgba(253,224,71,0.5);">🏅 No 1 (Elit)</span>';
-                        else if (g.id === 'LANTAI') rankBadge = '<span style="background: rgba(168,85,247,0.25); color: #c4b5fd; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.65rem; border: 1px solid rgba(168,85,247,0.5);">🥈 No 2 (Selamat)</span>';
-                        else if (g.id === 'NEW') rankBadge = '<span style="background: rgba(249,115,22,0.25); color: #fdba74; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.65rem; border: 1px solid rgba(249,115,22,0.5);">🥉 No 3 (Sederhana)</span>';
-                        else if (g.id === 'ADD') rankBadge = '<span style="background: rgba(239,68,68,0.25); color: #fca5a5; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.65rem; border: 1px solid rgba(239,68,68,0.5);">⚠️ No 4 (Berisiko)</span>';
-                    } else if (type === 'HT') {
-                        if (g.id === 'LANTAI') rankBadge = '<span style="background: rgba(168,85,247,0.25); color: #c4b5fd; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.65rem; border: 1px solid rgba(168,85,247,0.5);">🏅 No 1 (Lantai Tadah)</span>';
-                        else if (g.id === 'GC') rankBadge = '<span style="background: rgba(253,224,71,0.25); color: #fde047; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.65rem; border: 1px solid rgba(253,224,71,0.5);">🥈 No 2 (Jaga SL)</span>';
-                        else if (g.id === 'NEW') rankBadge = '<span style="background: rgba(239,68,68,0.25); color: #fca5a5; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.65rem; border: 1px solid rgba(239,68,68,0.5);">⚠️ No 3 (Sangat Bahaya)</span>';
-                        else if (g.id === 'ADD') rankBadge = '<span style="background: rgba(220,38,38,0.25); color: #f87171; padding: 0.1rem 0.4rem; border-radius: 4px; font-size: 0.65rem; border: 1px solid rgba(220,38,38,0.5);">❌ No 4 (Perangkap Maut)</span>';
-                    }
-
-                    const stats = calcStats(g.trades);
+                    const stats = g.stats;
+                    const rankBadge = getDynamicRankBadge(g.rank, stats);
                     cardsHTML += `
                         <div style="background: ${g.colors[2]}; border: 1.5px solid ${g.colors[3]}; border-radius: 10px; padding: 0.75rem 0.85rem; box-shadow: 0 0 15px ${g.colors[2]};">
                             <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.4rem; flex-wrap: wrap; gap: 0.3rem;">
@@ -11509,7 +11665,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                             </div>
                             <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.35rem;">
                                 <div>
-                                    <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Closed WR</div>
+                                    <div style="font-size: 0.58rem; color: #94a3b8; text-transform: uppercase; font-weight: 700;">Total WR (Closed: ${stats.closedWr.toFixed(0)}%)</div>
                                     <div style="font-size: 1.25rem; font-weight: 900; color: #34d399;">${stats.wr.toFixed(1)}%</div>
                                 </div>
                                 <div style="text-align: right;">
@@ -11518,7 +11674,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                                 </div>
                             </div>
                             <div style="font-size: 0.65rem; color: #cbd5e1; border-top: 1px dashed ${g.colors[3]}; padding-top: 0.35rem; line-height: 1.35;">
-                                🚀 Avg Gain: <strong style="color:#34d399;">+${stats.avg.toFixed(1)}%</strong> / (${stats.count} Trades)<br>
+                                🚀 Avg Gain: <strong style="color:#34d399;">${stats.avg >= 0 ? '+' : ''}${stats.avg.toFixed(1)}%</strong> / (${stats.count} Trades: ${stats.openCount} Open, ${stats.closedCount} Closed)<br>
                                 ⚖️ RR: <strong>1:${stats.rr.toFixed(1)}</strong> | ⏱️ Hold: <strong>${stats.hold.toFixed(0)}d</strong><br>
                                 🔥 Streak: ${stats.streak} | 📉 Max Loss: ${stats.maxLoss.toFixed(1)}%
                             </div>
@@ -11526,10 +11682,10 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                         
                     rowsHTML += `
                         <tr style="background: ${g.colors[2]};">
-                            <td style="font-weight: 800; color: ${g.colors[0]};">${g.name}</td>
-                            <td style="text-align: center; color: #94a3b8;">${stats.count}</td>
+                            <td style="font-weight: 800; color: ${g.colors[0]};">${g.name} ${rankBadge}</td>
+                            <td style="text-align: center; color: #94a3b8;">${stats.count} (${stats.openCount} Open)</td>
                             <td style="text-align: right; color: #34d399; font-weight: 800;">${stats.wr.toFixed(1)}%</td>
-                            <td style="text-align: right; color: #34d399; font-weight: 800;">+${stats.avg.toFixed(1)}%</td>
+                            <td style="text-align: right; color: #34d399; font-weight: 800;">${stats.avg >= 0 ? '+' : ''}${stats.avg.toFixed(1)}%</td>
                             <td style="text-align: right; color: ${g.colors[1]}; font-weight: 800;">${stats.pf.toFixed(2)}x</td>
                             <td style="text-align: right; color: ${g.colors[1]}; font-weight: 800;">${stats.pnl >= 0 ? '+' : ''}${stats.pnl.toFixed(1)} pp</td>
                         </tr>`;
@@ -11542,7 +11698,7 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
                             <thead>
                                 <tr style="background: rgba(15,23,42,0.8);">
                                     <th style="text-align: left;">${titleText}</th>
-                                    <th style="text-align: center;">Trades</th>
+                                    <th style="text-align: center;">Trades (All Tracked)</th>
                                     <th style="text-align: right;">Win Rate</th>
                                     <th style="text-align: right;">Avg Return</th>
                                     <th style="text-align: right;">Profit Factor</th>
@@ -11561,11 +11717,12 @@ Specifically compare this stock with the 3 technique examples of ${technique} li
             
             if (frContainer && window.ALL_TRACKER) {
                 const frGroups = processTracker(window.ALL_TRACKER);
-                frContainer.innerHTML = generateHTML('Formulasi (FRESH RIDER SAHAJA)', frGroups, 'FR');
+                frContainer.innerHTML = generateHTML('Formulasi (FRESH RIDER SAHAJA)', frGroups);
             }
-            if (htContainer && window.HOT_THEME_TRACKER) {
-                const htGroups = processTracker(window.HOT_THEME_TRACKER);
-                htContainer.innerHTML = generateHTML('Formulasi (HOT THEME SAHAJA)', htGroups, 'HT');
+            const htTrackerSource = window.HOT_THEME_ALL_TRACKER || window.HOT_THEME_TRACKER;
+            if (htContainer && htTrackerSource) {
+                const htGroups = processTracker(htTrackerSource);
+                htContainer.innerHTML = generateHTML('Formulasi (HOT THEME SAHAJA)', htGroups);
             }
         }
 

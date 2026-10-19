@@ -17,7 +17,7 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         (function() {
-            var cb = (window.location.protocol === 'file:') ? '' : ('?t=' + Date.now());
+            var cb = (window.location.protocol === 'file:') ? '' : ('?t=' + Math.floor(Date.now() / 300000));
             document.write('<script src="jerung-data.js' + cb + '"><\/script>');
         })();
     </script>
@@ -468,6 +468,7 @@
                 <button class="filter-btn active" data-action="ALL" onclick="setActionFilter('ALL')">All</button>
                 <button class="filter-btn" data-action="Acquired" onclick="setActionFilter('Acquired')">🔥 Net Buy</button>
                 <button class="filter-btn" data-action="Steady Hold" onclick="setActionFilter('Steady Hold')">🛡️ Core Hold</button>
+                <button class="filter-btn" data-action="Disposed" onclick="setActionFilter('Disposed')">🔻 Disposed</button>
             </div>
         </div>
 
@@ -595,11 +596,22 @@
             setText('stat-integrity-sub', data.length + ' filings' + (latestStr ? ' · updated ' + latestStr : ''));
         }
 
+        function escapeHtml(value) {
+            return String(value ?? '').replace(/[&<>"']/g, ch => ({
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#39;'
+            }[ch]));
+        }
+
         function getBursaLink(tx) {
-            const url = tx.announcementUrl || '';
-            const hasAnnId = /[?&]ann_id=[^&\s]/.test(url);
+            const url = typeof tx.announcementUrl === 'string' ? tx.announcementUrl.trim() : '';
+            const isSafeHttp = /^https?:\/\//i.test(url);
+            const hasAnnId = isSafeHttp && /[?&]ann_id=[^&\s]/.test(url);
             if (hasAnnId) {
-                return { href: url, label: '📄 Bursa Filing', specific: true };
+                return { href: escapeHtml(url), label: '📄 Bursa Filing', specific: true };
             }
             const keyword = encodeURIComponent(tx.stockName || tx.symbol || '');
             return {
@@ -711,6 +723,7 @@
                 if (currentAction !== 'ALL') {
                     if (currentAction === 'Acquired' && item.action !== 'Acquired') return false;
                     if (currentAction === 'Steady Hold' && item.action !== 'Steady Hold') return false;
+                    if (currentAction === 'Disposed' && item.action !== 'Disposed') return false;
                 }
 
                 if (query) {
@@ -737,34 +750,53 @@
             }
 
             tbody.innerHTML = list.map(tx => {
-                const actionBadge = tx.action === 'Acquired' 
+                const actionBadge = tx.action === 'Acquired'
                     ? `<span class="badge-buy"><i data-lucide="arrow-up-right" style="width:12px;height:12px;"></i> Net Buy</span>`
+                    : tx.action === 'Disposed'
+                    ? `<span style="background:rgba(244,63,94,0.15);color:#fb7185;border:1px solid rgba(244,63,94,0.3);padding:0.2rem 0.5rem;border-radius:4px;font-weight:700;font-size:0.72rem;display:inline-flex;align-items:center;gap:0.25rem;"><i data-lucide="arrow-down-right" style="width:12px;height:12px;"></i> Disposed</span>`
                     : `<span class="badge-hold"><i data-lucide="shield" style="width:12px;height:12px;"></i> Core Hold</span>`;
 
-                const sharesStr = tx.sharesChanged > 0 ? `+${(tx.sharesChanged / 1000000).toFixed(2)}M units` : 'Unchanged';
-                const totalHoldingStr = `${(tx.totalHolding / 1000000).toFixed(1)}M units (${tx.percentage.toFixed(2)}%)`;
+                const hasShares = typeof tx.sharesChanged === 'number' && Number.isFinite(tx.sharesChanged);
+                const sharesStr = !hasShares
+                    ? '—'
+                    : tx.sharesChanged > 0
+                        ? `+${(tx.sharesChanged / 1000000).toFixed(2)}M units`
+                        : tx.sharesChanged < 0
+                            ? `${(tx.sharesChanged / 1000000).toFixed(2)}M units`
+                            : 'Unchanged';
+                const sharesColor = !hasShares ? '#94a3b8' : (tx.sharesChanged < 0 ? '#fb7185' : '#34d399');
+
+                const hasHolding = typeof tx.totalHolding === 'number' && Number.isFinite(tx.totalHolding);
+                const hasPct = typeof tx.percentage === 'number' && Number.isFinite(tx.percentage);
+                const totalHoldingStr = hasHolding && hasPct
+                    ? `${(tx.totalHolding / 1000000).toFixed(1)}M units (${tx.percentage.toFixed(2)}%)`
+                    : hasHolding
+                        ? `${(tx.totalHolding / 1000000).toFixed(1)}M units`
+                        : hasPct
+                            ? `${tx.percentage.toFixed(2)}%`
+                            : '—';
+
+                const signalColor = tx.action === 'Disposed' ? '#fb7185' : '#34d399';
+                const bl = getBursaLink(tx);
 
                 return `
                     <tr>
-                        <td style="font-size:0.8rem;white-space:nowrap;color:#94a3b8;"><i data-lucide="calendar" style="width:12px;height:12px;display:inline;"></i> ${tx.filingDate}</td>
+                        <td style="font-size:0.8rem;white-space:nowrap;color:#94a3b8;"><i data-lucide="calendar" style="width:12px;height:12px;display:inline;"></i> ${escapeHtml(tx.filingDate || '—')}</td>
                         <td>
-                            <div style="font-weight:700;color:#f8fafc;">${tx.stockName}</div>
-                            <div style="font-size:0.75rem;color:var(--text-dim);">${tx.symbol} (${tx.code}) • <span style="color:#a5b4fc;">${tx.market}</span></div>
+                            <div style="font-weight:700;color:#f8fafc;">${escapeHtml(tx.stockName || tx.symbol || '—')}</div>
+                            <div style="font-size:0.75rem;color:var(--text-dim);">${escapeHtml(tx.symbol || '—')} (${escapeHtml(tx.code || '—')}) • <span style="color:#a5b4fc;">${escapeHtml(tx.market || 'Main Market')}</span></div>
                         </td>
                         <td>
-                            <div class="badge-inst">${tx.institution}</div>
+                            <div class="badge-inst">${escapeHtml(tx.institution || '—')}</div>
                         </td>
                         <td>${actionBadge}</td>
-                        <td><strong style="color:#34d399;">${sharesStr}</strong></td>
+                        <td><strong style="color:${sharesColor};">${sharesStr}</strong></td>
                         <td><span style="font-weight:700;color:#60a5fa;">${totalHoldingStr}</span></td>
-                        <td><span style="font-size:0.75rem;font-weight:700;color:#34d399;">${tx.signal}</span></td>
+                        <td><span style="font-size:0.75rem;font-weight:700;color:${signalColor};">${escapeHtml(tx.signal || '—')}</span></td>
                         <td>
-                            ${(function() {
-                                const bl = getBursaLink(tx);
-                                return `<a href="${bl.href}" target="_blank" title="${bl.specific ? 'Open specific Bursa filing (Sec 138)' : 'Search Bursa filings for this company'}" style="text-decoration:none;color:#60a5fa;font-size:0.78rem;display:inline-flex;align-items:center;gap:0.25rem;background:rgba(96,165,250,0.1);padding:0.25rem 0.5rem;border-radius:4px;border:1px solid rgba(96,165,250,0.2);white-space:nowrap;">
-                                    <i data-lucide="external-link" style="width:12px;height:12px;"></i> ${bl.label}
-                                </a>`;
-                            })()}
+                            <a href="${bl.href}" target="_blank" rel="noopener noreferrer" title="${bl.specific ? 'Open specific Bursa filing (Sec 138)' : 'Search Bursa filings for this company'}" style="text-decoration:none;color:#60a5fa;font-size:0.78rem;display:inline-flex;align-items:center;gap:0.25rem;background:rgba(96,165,250,0.1);padding:0.25rem 0.5rem;border-radius:4px;border:1px solid rgba(96,165,250,0.2);white-space:nowrap;">
+                                <i data-lucide="external-link" style="width:12px;height:12px;"></i> ${bl.label}
+                            </a>
                         </td>
                     </tr>
                 `;

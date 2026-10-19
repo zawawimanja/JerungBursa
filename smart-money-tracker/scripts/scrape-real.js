@@ -89,83 +89,10 @@ function parseTab($, tabSelector) {
 }
 
 async function scrapeBursaMalaysia() {
-    console.log('\n🔄 Menggunakan fallback: Menarik data dari bursamalaysia.com via Puppeteer...');
-    const puppeteer = require('puppeteer-extra');
-    const StealthPlugin = require('puppeteer-extra-plugin-stealth');
-    try {
-        puppeteer.use(StealthPlugin());
-    } catch (e) {
-        // stealth plugin might already be registered
-    }
-    
-    let browser;
-    const stocks = [];
-    try {
-        const launchOptions = {
-            headless: true,
-            args: ['--no-sandbox', '--disable-setuid-sandbox']
-        };
-        if (process.env.PUPPETEER_EXECUTABLE_PATH) {
-            launchOptions.executablePath = process.env.PUPPETEER_EXECUTABLE_PATH;
-        }
-        browser = await puppeteer.launch(launchOptions);
-        const page = await browser.newPage();
-        await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
-        
-        const modes = ['top_active', 'top_gainers', 'top_losers'];
-        for (const mode of modes) {
-            console.log(`   - Melawat Bursa Malaysia mode=${mode}...`);
-            await page.goto(`https://www.bursamalaysia.com/market_information/equities_prices?mode=${mode}`, {
-                waitUntil: 'networkidle2',
-                timeout: 60000
-            });
-            
-            await page.waitForSelector('table tbody tr', { timeout: 15000 }).catch(() => {});
-            
-            const scraped = await page.evaluate(() => {
-                const rows = document.querySelectorAll('table tbody tr');
-                let list = [];
-                rows.forEach(r => {
-                    const cols = r.querySelectorAll('td');
-                    if (cols.length >= 8) {
-                        const nameText = cols[1].innerText.trim();
-                        const code = cols[2].innerText.trim();
-                        const priceVal = parseFloat(cols[4].innerText.trim().replace(/,/g, ''));
-                        const changeVal = parseFloat(cols[6].innerText.trim().replace(/,/g, ''));
-                        const volumeVal = parseInt(cols[8].innerText.trim().replace(/,/g, ''), 10) * 100;
-                        
-                        if (nameText && !isNaN(priceVal) && !isNaN(volumeVal)) {
-                            list.push({
-                                nameText,
-                                code,
-                                price: priceVal,
-                                change: isNaN(changeVal) ? 0 : changeVal,
-                                volume: volumeVal
-                            });
-                        }
-                    }
-                });
-                return list;
-            });
-            
-            console.log(`     -> Dijumpai ${scraped.length} saham.`);
-            scraped.forEach(s => {
-                const cleanName = s.nameText.replace(/\s*\[S\]\s*$/, '').trim();
-                stocks.push({
-                    name: cleanName,
-                    price: s.price,
-                    change: s.change,
-                    volume: s.volume,
-                    code: s.code
-                });
-            });
-        }
-    } catch (err) {
-        console.error('❌ Gagal menarik data dari Bursa Malaysia:', err.message);
-    } finally {
-        if (browser) await browser.close();
-    }
-    return stocks;
+    console.log('\n🔄 Fallback Puppeteer disabled in container environment.');
+    // const puppeteer = require('puppeteer-extra');
+    // const StealthPlugin = require('puppeteer-extra-plugin-stealth');
+    return [];
 }
 
 async function pLimit(concurrency, items, fn) {

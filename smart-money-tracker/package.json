@@ -16,12 +16,8 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "@vercel/analytics": "^2.0.1",
     "axios": "^1.16.1",
     "cheerio": "^1.2.0",
-    "puppeteer": "^25.1.0",
-    "puppeteer-extra": "^3.3.6",
-    "puppeteer-extra-plugin-stealth": "^2.11.2",
     "yahoo-finance2": "^2.14.0"
   },
   "devDependencies": {
