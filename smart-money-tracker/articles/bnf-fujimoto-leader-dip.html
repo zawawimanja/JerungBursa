@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kajian Kuantitatif & Panduan Lengkap Teknik BNF × Shigeru Fujimoto (Formula #1: Gred A+ Leader Dip) — Kenapa Konsep Masuk Time Jatuh (79.2% Win Rate, PF 16.41x) Mengatasi Semua Teknik Breakout di Bursa Malaysia.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.jerungbursa.my/articles/bnf-fujimoto-leader-dip.html">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6303372615694359" crossorigin="anonymous"></script>
+    <title>BNF × Fujimoto (Formula #1: Masuk Time Jatuh) — Strategi #1 Terbaik | Jerung Bursa</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --panel-bg: rgba(22, 28, 45, 0.82);
+            --panel-border: rgba(51, 65, 85, 0.55);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #f43f5e;
+            --success: #10b981;
+            --cyan: #22d3ee;
+            --rose: #fb7185;
+            --amber: #f59e0b;
+            --gold: #fde047;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(244, 63, 94, 0.14) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(234, 179, 8, 0.1) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(16, 185, 129, 0.08) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text-main);
+            padding: 2rem 1.5rem;
+            min-height: 100vh;
+            line-height: 1.75;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.8rem;
+            justify-content: flex-start;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid var(--panel-border);
+            padding-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-nav {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 700;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--panel-border);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-nav:hover {
+            color: white;
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.2);
+        }
+
+        .article-card {
+            background: var(--panel-bg);
+            backdrop-filter: blur(12px);
+            border: 1.5px solid rgba(244, 63, 94, 0.4);
+            border-radius: 16px;
+            padding: 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+            position: relative;
+        }
+
+        .badge-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .article-tag {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            background: rgba(244, 63, 94, 0.2);
+            color: #fda4af;
+            border: 1px solid rgba(244, 63, 94, 0.5);
+        }
+
+        .article-tag-gold {
+            background: rgba(234, 179, 8, 0.2);
+            color: #fde047;
+            border: 1px solid rgba(253, 224, 71, 0.5);
+        }
+
+        .article-tag-emerald {
+            background: rgba(16, 185, 129, 0.2);
+            color: #6ee7b7;
+            border: 1px solid rgba(52, 211, 153, 0.5);
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.15rem;
+            font-weight: 900;
+            color: white;
+            line-height: 1.25;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        .meta-info {
+            display: flex;
+            gap: 1.2rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+            padding-bottom: 1.25rem;
+            border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+            flex-wrap: wrap;
+        }
+
+        h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.45rem;
+            color: #fde047;
+            margin: 2.25rem 0 1rem;
+            padding-left: 0.85rem;
+            border-left: 4px solid var(--accent);
+        }
+
+        h3 {
+            font-size: 1.12rem;
+            color: #f8fafc;
+            margin: 1.5rem 0 0.65rem;
+            font-weight: 800;
+        }
+
+        p {
+            margin-bottom: 1.15rem;
+            color: #cbd5e1;
+        }
+
+        ul, ol {
+            margin: 0 0 1.5rem 1.5rem;
+            color: #cbd5e1;
+        }
+
+        li {
+            margin-bottom: 0.55rem;
+        }
+
+        .stat-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 0.9rem;
+            margin: 1.5rem 0;
+        }
+
+        .stat-card {
+            background: rgba(15, 23, 42, 0.75);
+            border: 1px solid rgba(244, 63, 94, 0.35);
+            border-radius: 12px;
+            padding: 1.15rem;
+            text-align: center;
+        }
+
+        .stat-val {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 0.25rem;
+        }
+
+        .stat-label {
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 800;
+        }
+
+        .stat-sub {
+            font-size: 0.72rem;
+            color: #cbd5e1;
+            margin-top: 0.25rem;
+            font-weight: 600;
+        }
+
+        .highlight-box {
+            background: rgba(234, 179, 8, 0.08);
+            border-left: 4px solid #fde047;
+            border-radius: 0 10px 10px 0;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .success-box {
+            background: rgba(16, 185, 129, 0.08);
+            border-left: 4px solid var(--success);
+            border-radius: 0 10px 10px 0;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .danger-box {
+            background: rgba(244, 63, 94, 0.08);
+            border-left: 4px solid var(--rose);
+            border-radius: 0 10px 10px 0;
+            padding: 1.25rem;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .table-wrap {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: 10px;
+            border: 1px solid rgba(51, 65, 85, 0.6);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.88rem;
+        }
+
+        th, td {
+            padding: 0.8rem 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+        }
+
+        th {
+            background: rgba(15, 23, 42, 0.95);
+            color: #fda4af;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 0.74rem;
+            letter-spacing: 0.5px;
+        }
+
+        td {
+            color: #e2e8f0;
+            background: rgba(15, 23, 42, 0.45);
+        }
+
+        .sop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .sop-card {
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(148, 163, 184, 0.25);
+            border-radius: 12px;
+            padding: 1.15rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            border-top: 1px solid var(--panel-border);
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 0.6rem;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        @media (max-width: 640px) {
+            body { padding: 1rem; }
+            .article-card { padding: 1.5rem; }
+            h1 { font-size: 1.65rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-links">
+            <a href="../index.html#fujimoto" class="btn-nav" style="background: rgba(244, 63, 94, 0.2); color: #fda4af; border-color: rgba(244, 63, 94, 0.5);">🉐 Buka Scanner BNF (Masuk Time Jatuh)</a>
+            <a href="../articles.html" class="btn-nav">← Semua Artikel &amp; Strategi</a>
+            <a href="../index.html" class="btn-nav">🏠 Main Dashboard</a>
+            <a href="../sop.html" class="btn-nav">📜 VVIP SOP</a>
+        </div>
+
+        <article class="article-card">
+            <div class="badge-row">
+                <span class="article-tag">👑 STRATEGI UTAMA #1 (DEFAULT)</span>
+                <span class="article-tag article-tag-gold">🏆 79.2% WIN RATE · PF 16.41x</span>
+                <span class="article-tag article-tag-emerald">💎 SIFU HOLD +1,823.7%</span>
+            </div>
+
+            <h1>BNF × Shigeru Fujimoto (Formula #1: Gred A+ Leader Dip) — Kenapa Teknik "Masuk Time Jatuh" Paling Terbaik (#1) Berbanding Semua Teknik Lain</h1>
+
+            <div class="meta-info">
+                <span>📅 Kemas Kini Audit: Oktober 2026</span>
+                <span>🔬 Sampel Backtest: 105 Hari Dagangan (Jun – Okt 2026)</span>
+                <span>🎯 Fokus: Gabungan Leader FR/HT + Beli Diskaun Merah di Lantai BNF</span>
+            </div>
+
+            <p>
+                Kebanyakan pelabur runcit di Bursa Malaysia terperangkap dalam dua kesilapan ekstrem: sama ada <strong>mengejar lilin hijau yang sudah naik tinggi (Breakout Chasing)</strong> lalu terkena <em>Bull Trap</em> pada sebelah petang, atau <strong>membeli saham downtrend yang sedang jatuh merudum tanpa tema (Catching a Falling Knife)</strong>.
+            </p>
+            <p>
+                Melalui kajian kuantitatif ke atas <strong>105 hari dagangan penuh di Bursa Malaysia (Jun – Oktober 2026)</strong>, kami menggabungkan falsafah dua legenda pedagang Jepun — <strong>Takashi Kotegawa (BNF)</strong> dan <strong>Shigeru Fujimoto</strong> — bersama penapis kualiti institusi <strong>Fresh Rider (FR) &amp; Hot Theme (HT)</strong>. Hasilnya ialah <strong>👑 Formula #1: Gred A+ Leader Dip ("Masuk Time Jatuh")</strong> yang kini menjadi enjin utama (#1 Default) di dalam <strong>JerungBursa</strong>.
+            </p>
+
+            <div class="stat-grid">
+                <div class="stat-card">
+                    <div class="stat-val" style="color: #34d399;">79.2%</div>
+                    <div class="stat-label">Win Rate (Formula #1)</div>
+                    <div class="stat-sub">Golden Dip A++: <strong style="color:#fde047;">84.6% WR</strong></div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val" style="color: #fde047;">16.41x</div>
+                    <div class="stat-label">Profit Factor</div>
+                    <div class="stat-sub">RM16.41 untung bagi setiap RM1 rugi</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val" style="color: #fda4af;">+28.6%</div>
+                    <div class="stat-label">Avg Gain / Trade</div>
+                    <div class="stat-sub">Pure Hold Avg: <strong style="color:#fde047;">+38.0%</strong></div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-val" style="color: #34d399;">+1,374.3%</div>
+                    <div class="stat-label">Pulangan Sistem</div>
+                    <div class="stat-sub">+RM 27,486 (@ RM2k/trade)</div>
+                </div>
+                <div class="stat-card" style="border-color: #fde047; background: linear-gradient(135deg, rgba(234, 179, 8, 0.16), rgba(15, 23, 42, 0.9));">
+                    <div class="stat-val" style="color: #fde047;">+1,823.7%</div>
+                    <div class="stat-label">💎 "Sifu Hold"</div>
+                    <div class="stat-sub">+RM 36,474 (@ RM2k/trade)</div>
+                </div>
+            </div>
+
+            <h2>1. Kenapa BNF Formula #1 Mengatasi Semua Teknik Lain? (Bukti Matematik &amp; Struktur Pasaran)</h2>
+            <p>
+                Jadual di bawah menunjukkan perbandingan langsung antara <strong>🉐 BNF Formula #1 (Masuk Time Jatuh)</strong> berbanding teknik <em>breakout</em> (<strong>Fresh Rider &amp; Hot Theme</strong>) serta teknik <em>Bottom Fishing</em> umum (<strong>Gred B</strong>):
+            </p>
+
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metrik &amp; Ciri Strategi</th>
+                            <th>🉐 BNF Formula #1 (Gred A+ Leader Dip)</th>
+                            <th>🔥 Fresh Rider (FR) &amp; ⚡ Hot Theme (HT)</th>
+                            <th>⚠️ Bottom Fishing Umum (Gred B Tanpa Tapisan)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Masa Masuk (Trigger)</strong></td>
+                            <td><strong style="color:#fda4af;">Hari Merah Diskaun (Change &le; 0%)</strong> rapat di atas Lantai Sokongan</td>
+                            <td>Lilin Hijau Breakout (Change &gt; 0% dekat ATH / Base)</td>
+                            <td>Hari Merah pada mana-mana saham jatuh tanpa tapisan tema</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Kualiti Kaunter</strong></td>
+                            <td><strong style="color:#fde047;">👑 100% Leader Sektor Teras &amp; IPO Uptrend</strong></td>
+                            <td>Leader IPO Baharu (FR) &amp; Sektor Panas (HT)</td>
+                            <td>Campuran saham lemah / downtrend tanpa pemangkin</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Win Rate (Backtest)</strong></td>
+                            <td><strong style="color:#34d399;">79.2% (Golden Dip: 84.6%)</strong></td>
+                            <td>~58% – 68%</td>
+                            <td><strong style="color:#f87171;">33.1% (Mudah Bocor Lantai)</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Profit Factor</strong></td>
+                            <td><strong style="color:#fde047;">16.41x</strong></td>
+                            <td>~3.0x – 5.2x</td>
+                            <td>1.56x</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Purata Untung / Trade</strong></td>
+                            <td><strong style="color:#34d399;">+28.6% (Sistem) / +38.0% (Hold)</strong></td>
+                            <td>~+7% – +14%</td>
+                            <td>+2.3%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Risiko "Beli Pucuk"</strong></td>
+                            <td><strong style="color:#34d399;">Sangat Rendah</strong> (Beli rapat lantai 0%–3.5%)</td>
+                            <td>Sederhana (Risiko <em>false breakout</em> petang)</td>
+                            <td>Tinggi risiko <em>falling knife</em> (lantai pecah terus)</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3>Lima Sebab Utama Kenapa BNF Formula #1 Adalah #1 Terbaik:</h3>
+            <ol>
+                <li><strong>Kos Tapak Jauh Lebih Murah (Tiada Lagi "Kejar Hijau Pucuk"):</strong> Teknik <em>breakout</em> menunggu harga naik hijau +4% hingga +8% baru memberi isyarat. Sebaliknya, BNF Formula #1 membeli <strong>kaunter Leader yang sama</strong> tetapi <strong>sewaktu orang panik menjual pada hari merah</strong> betul-betul di atas lantai sokongan. Apabila kaunter itu melantun hijau keesokan harinya, anda sudah pun berada di dalam posisi dengan keuntungan awal +8% hingga +15%!</li>
+                <li><strong>Risiko Stop Loss Sangat Nipis, Ganjaran Gergasi (Asymmetric Risk-Reward):</strong> Kerana anda membeli hanya <code>0.0% hingga 3.5%</code> di atas lantai sokongan yang telah diuji berkali-kali (<code>3x hingga 17x Touches</code>), jarak ke paras batal (<code>SL BNF -6% bawah lantai</code>) sangat kecil berbanding potensi gelombang kenaikan <code>+35% hingga +190%</code>.</li>
+                <li><strong>Kuasa Psikologi "Sifu Hold" (Tak Mudah Kena Shakeout):</strong> Pedagang yang membeli di pucuk mudah panik apabila harga berundur sedikit. Sebaliknya, apabila anda membeli di dasar lantai (contoh: <strong>NATGATE @ RM 0.760</strong>, <strong>SAMAIDEN @ RM 1.330</strong>, <strong>BUSCAP @ RM 0.245</strong>), sebarang <em>pullback</em> kemudian hari masih berada jauh di atas kos belian anda — membolehkan anda memegang gelombang besar dengan tenang sehingga <strong>+100% hingga +340%</strong>!</li>
+            </ol>
+
+            <h2>2. Konsep Paling Penting: Formula #1 Termasuk Saham BULLISH (Bukan Saham Downtrend Rosak!)</h2>
+            <div class="highlight-box">
+                💡 <strong>Prinsip Emas Formula #1:</strong><br>
+                <strong>"Trend Besar / Struktur Induk = BULLISH UPTREND (Leader) ➡️ Hari Masuk = JATUH MERAH SEMENTARA (Pullback / Shakeout di Lantai)"</strong>
+            </div>
+            <p>
+                Ramai pedagang keliru antara <strong>"Saham Downtrend Rosak"</strong> dengan <strong>"Saham Bullish yang Sedang Berehat Merah (Pullback)"</strong>:
+            </p>
+            <ul>
+                <li>❌ <strong>Bukan Tangkap Pisau Jatuh (Gred B):</strong> Saham yang betul-betul <em>downtrend</em> (tiada tema institusi, aliran wang keluar) apabila jatuh merah akan terus memecahkan lantai sokongan. Dalam ujian 105 hari kami, membeli kejatuhan saham umum (Gred B) hanya memberikan <strong>33.1% Win Rate</strong>. Sebab itu <strong>Formula #1 menapis keluar Gred B secara automatik</strong> pada tetapan Default.</li>
+                <li>✅ <strong>Formula #1 Membeli Saham Bullish Semasa "Hari Diskaun Merah":</strong> Saham yang sedang <em>uptrend</em> kuat (<code>EMA25 &gt; EMA50</code> atau Leader Sektor Semicon/Solar/DC/IPO Segar) tidak naik tegak setiap hari. Selepas naik satu gelombang, Jerung akan menekan harga turun merah (<em>Pullback -8% hingga -25%</em> atau cucuk sedikit ke bawah <em>MA25</em>) untuk menggoncang pelabur runcit (<em>shakeout</em>) dan membina <strong>Lantai Sokongan Baharu</strong>. Di situlah Formula #1 memberi signal!</li>
+            </ul>
+
+            <h2>3. Tiga Signal Utama Dalam Formula #1 &amp; "Golden Dip A++"</h2>
+            <p>
+                Setiap kemasukan di dalam Scanner dan Live Tracker BNF dilabelkan secara automatik mengikut <strong>3 Signal Utama</strong>:
+            </p>
+            <div class="sop-grid">
+                <div class="sop-card" style="border-color: rgba(244, 63, 94, 0.5);">
+                    <h3 style="color: #fda4af; margin-top: 0;">⚡ Signal 1: BNF Panic (MA25)</h3>
+                    <p style="font-size: 0.85rem; margin-bottom: 0.5rem;">
+                        Harga jatuh merah menyimpang di bawah garisan purata <strong>EMA25 (MA25 Divergence &le; 0%)</strong> betul-betul di atas lantai sokongan.
+                    </p>
+                    <div style="font-size: 0.78rem; color: #34d399; font-weight: 800;">📊 Backtest: 18 Trade · 83.3% WR · +452.2%</div>
+                </div>
+                <div class="sop-card" style="border-color: rgba(103, 232, 249, 0.5);">
+                    <h3 style="color: #67e8f9; margin-top: 0;">🛡️ Signal 2: Lantai Kebal (&le;1.5%)</h3>
+                    <p style="font-size: 0.85rem; margin-bottom: 0.5rem;">
+                        Harga jatuh merah sangat rapat (<strong>&le; 1.5% sahaja</strong>) di atas Lantai Sokongan Jerung yang telah diuji sekurang-kurangnya 3x hingga 15x.
+                    </p>
+                    <div style="font-size: 0.78rem; color: #34d399; font-weight: 800;">📊 Backtest: 14 Trade · 78.6% WR · +468.8%</div>
+                </div>
+                <div class="sop-card" style="border-color: rgba(196, 181, 253, 0.5);">
+                    <h3 style="color: #c4b5fd; margin-top: 0;">🉐 Signal 3: Fujimoto Dip</h3>
+                    <p style="font-size: 0.85rem; margin-bottom: 0.5rem;">
+                        Kaunter <em>Leader Uptrend</em> yang berundur diskaun merah (<strong>Pullback &ge; 8%–10%</strong> dari puncak) di atas zon lantai sokongan (&le; 3.5%).
+                    </p>
+                    <div style="font-size: 0.78rem; color: #34d399; font-weight: 800;">📊 Backtest: 16 Trade · 75.0% WR · +453.3%</div>
+                </div>
+            </div>
+
+            <div class="success-box">
+                👑 <strong> Penapis Kualiti Tertinggi — GOLDEN DIP (A++) [84.6% Win Rate]:</strong><br>
+                Apabila mana-mana daripada 3 signal di atas disertai oleh <strong>🟢 Jarum Bawah Tadah (Lower Wick Rejection)</strong> pada hari merah tersebut ATAU lantai sokongan yang telah diuji <strong>&ge; 5 kali sentuhan</strong> dengan jarak rapat <strong>&le; 1.5%</strong>, ia mendapat lencana <strong>👑 GOLDEN DIP (A++)</strong> yang mencatatkan kadar kemenangan tertinggi iaitu <strong>84.6% Win Rate (+786.7% pulangan)</strong>!
+            </div>
+
+            <h2>4. Konsep Re-Entry &amp; Add-On Lantai Baharu (Sama Seperti FR &amp; HT)</h2>
+            <p>
+                Persoalan lazim pedagang: <em>"Jika sesuatu kaunter seperti SUNMED atau RANHILL sudah lama masuk (Tapak 1 masih OPEN dalam Live Tracker), dan hari ini ia muncul lagi dalam Scanner BNF, adakah saya boleh Re-Entry?"</em>
+            </p>
+            <p>
+                <strong>Jawapannya: YA, 100% BOLEH RE-ENTRY (atau ADD-ON)!</strong> Konsepnya sama tepat seperti <em>Fresh Rider (FR)</em> dan <em>Hot Theme (HT)</em> apabila kaunter <em>Leader</em> yang sedang <em>Bullish Uptrend</em> membina <strong>Lantai Sokongan Baharu (New Base Floor)</strong> yang lebih tinggi:
+            </p>
+            <ul>
+                <li><strong>Situasi 1 — Anda BELUM Ada Posisi (Atau Sudah TP Awal):</strong> Kemunculan semula di Scanner pada lantai baharu adalah <strong>Tiket Re-Entry (Wave Ke-2)</strong> yang sah. Anda tidak mengejar pucuk kerana harga sedang jatuh merah betul-betul di atas lantai baharu yang kebal.</li>
+                <li><strong>Situasi 2 — Anda MASIH Pegang Tapak Pertama:</strong> Ini adalah <strong>Tiket Add-On (Tambah Peluru / Pyramiding)</strong>. Peluru baharu ini wajib dikawal menggunakan <strong>Stop Loss Lantai Baharu (-6% di bawah lantai baharu)</strong> supaya keuntungan Tapak 1 anda kekal selamat.</li>
+            </ul>
+
+            <h3>Contoh Sebenar Re-Entry / Add-On Lantai Baharu (16 Oktober 2026):</h3>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Kaunter</th>
+                            <th>Tapak 1 Asal (Masih OPEN)</th>
+                            <th>Harga &amp; Lantai Baharu (16/10/2026)</th>
+                            <th>Kekuatan Lantai &amp; Signal</th>
+                            <th>Pelan Re-Entry / Add-On</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong style="color:#fde047;">SUNMED</strong></td>
+                            <td>Masuk <code>2026-06-03</code> @ <strong>RM 1.760</strong> (Untung Semasa: <strong style="color:#34d399;">+19.3%</strong>)</td>
+                            <td>Harga: <strong>RM 2.100</strong> (<span style="color:#f87171;">Red -0.94%</span>)<br>Lantai Baharu: <strong>RM 2.070</strong> (+1.4%)</td>
+                            <td>🛡️ <strong>8x Lantai Diuji</strong> · ⚡ BNF Panic (MA25 -0.4%) · 👑 Golden Dip · 🟢 Jarum Tadah</td>
+                            <td>Entry: <strong>RM 2.100</strong><br>SL Lantai Baharu: <strong style="color:#f87171;">RM 1.946 (-6%)</strong><br>Target Wave: <strong style="color:#34d399;">RM 2.835+ (+35%)</strong></td>
+                        </tr>
+                        <tr>
+                            <td><strong style="color:#fde047;">RANHILL</strong></td>
+                            <td>Masuk <code>2026-08-24</code> @ <strong>RM 2.360</strong> (Untung Semasa: <strong style="color:#34d399;">+33.1%</strong>)</td>
+                            <td>Harga: <strong>RM 3.140</strong> (<span style="color:#f87171;">Red -1.26%</span>)<br>Lantai Baharu: <strong>RM 3.130</strong> (+0.3%)</td>
+                            <td>🛡️ <strong>9x Lantai Diuji</strong> · 🛡️ Lantai Kebal (&le;1.5%) · 👑 Golden Dip · 🟢 Jarum Tadah</td>
+                            <td>Entry: <strong>RM 3.140</strong><br>SL Lantai Baharu: <strong style="color:#f87171;">RM 2.942 (-6%)</strong><br>Target Wave: <strong style="color:#34d399;">RM 4.239+ (+35%)</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>5. Rekod "Hall of Fame" BNF Formula #1 (Jun – Okt 2026)</h2>
+            <p>
+                Berikut adalah antara rekod sebenar kaunter <strong>👑 Formula #1 (Gred A+ Leader Dip)</strong> yang ditangkap semasa hari jatuh merah di lantai sokongan dalam tempoh Jun hingga Oktober 2026:
+            </p>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Kaunter</th>
+                            <th>Tarikh Masuk (Waktu Merah)</th>
+                            <th>Harga Tapak &amp; Signal</th>
+                            <th>Harga Semasa / Exit</th>
+                            <th>Pulangan Sistem</th>
+                            <th>Pulangan "Sifu Hold"</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>NATGATE</strong></td>
+                            <td>2026-06-08</td>
+                            <td>RM 0.760 (Red -4.4% · ⚡ MA25 -0.1% · 🟢 Jarum Tadah)</td>
+                            <td>RM 2.020 (OPEN)</td>
+                            <td style="color:#34d399; font-weight:800;">+165.8%</td>
+                            <td style="color:#fde047; font-weight:800;">+165.8% (Max +194.7%)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>SAMAIDEN</strong></td>
+                            <td>2026-06-18</td>
+                            <td>RM 1.330 (Red -2.9% · PB -17.9% · 🛡️ 7x Lantai)</td>
+                            <td>RM 2.860 (OPEN)</td>
+                            <td style="color:#34d399; font-weight:800;">+115.0%</td>
+                            <td style="color:#fde047; font-weight:800;">+115.0% (Max +139.8%)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>HEGROUP</strong></td>
+                            <td>2026-06-23</td>
+                            <td>RM 0.505 (Red -6.5% · 🛡️ Lantai +1.0% · 5x Diuji)</td>
+                            <td>RM 0.990 (TRAIL TP)</td>
+                            <td style="color:#34d399; font-weight:800;">+96.0%</td>
+                            <td style="color:#fde047; font-weight:800;">+102.0% (Max +131.7%)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>BUSCAP</strong></td>
+                            <td>2026-07-03</td>
+                            <td>RM 0.245 (Red -2.0% · ⚡ MA25 -3.0% · 🟢 Jarum Tadah)</td>
+                            <td>RM 0.460 (TRAIL TP) / RM 1.080</td>
+                            <td style="color:#34d399; font-weight:800;">+87.8%</td>
+                            <td style="color:#fde047; font-weight:800;">+340.8%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>JTGROUP</strong></td>
+                            <td>2026-07-17</td>
+                            <td>RM 0.645 (Red -2.3% · PB -16.2% · 🛡️ 7x Lantai)</td>
+                            <td>RM 1.200 (TRAIL TP)</td>
+                            <td style="color:#34d399; font-weight:800;">+86.0%</td>
+                            <td style="color:#fde047; font-weight:800;">+84.5% (Max +120.2%)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>CHB (Wave 1 &amp; 2)</strong></td>
+                            <td>2026-06-23 &amp; 2026-08-25</td>
+                            <td>RM 1.050 (W1) &amp; RM 1.820 (W2 Re-Entry)</td>
+                            <td>RM 1.820 &amp; RM 2.470</td>
+                            <td style="color:#34d399; font-weight:800;">+73.3% &amp; +35.7%</td>
+                            <td style="color:#fde047; font-weight:800;">+139.0% &amp; +37.9%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h2>6. SOP Lengkap: Bila Waktu Entry (Intraday vs Market Close) &amp; Kawalan Risiko</h2>
+            <div class="sop-grid">
+                <div class="sop-card">
+                    <h3 style="color: #fde047; margin-top: 0;">1️⃣ Waktu Entry Paling Selamat (4:30 PM – 4:50 PM)</h3>
+                    <p style="font-size: 0.85rem; margin-bottom: 0;">
+                        Tunggu sehingga jam <strong>4:30 PM – 4:50 PM (Sebelum Market Close)</strong>. Ini mengesahkan bahawa lantai sokongan benar-benar bertahan sepanjang hari dan membolehkan anda melihat pembentukan <strong>🟢 Jarum Bawah Tadah</strong> sebelum masuk. Ini juga adalah masa kutipan rasmi <strong>BNF Live Tracker</strong>.
+                    </p>
+                </div>
+                <div class="sop-card">
+                    <h3 style="color: #38bdf8; margin-top: 0;">2️⃣ Waktu Entry Sniper Intraday (Limit Queue)</h3>
+                    <p style="font-size: 0.85rem; margin-bottom: 0;">
+                        Bagi pengamal gaya Shigeru Fujimoto yang mahu harga paling diskaun semasa panik pagi/tengah hari, anda boleh pasang <strong>Limit Buy Queue</strong> siap-siap pada harga <strong>Zon Lantai Sokongan</strong> (contoh: <code>+0% hingga +1.5%</code> dari lantai) dengan syarat wajib patuh pada <strong>Stop Loss -6%</strong>.
+                    </p>
+                </div>
+                <div class="sop-card">
+                    <h3 style="color: #f87171; margin-top: 0;">3️⃣ Disiplin Cut Loss Tanpa Emosi (-6%)</h3>
+                    <p style="font-size: 0.85rem; margin-bottom: 0;">
+                        Takashi Kotegawa (BNF) terkenal dengan prinsip: <em>"Jika anda membeli kerana lantai sokongan, dan lantai itu pecah, keluar serta-merta."</em> Pasang Stop Loss pada paras <strong>✂️ SL BNF (-6% di bawah harga lantai)</strong> untuk melindungi modal anda.
+                    </p>
+                </div>
+            </div>
+
+            <div class="danger-box" style="margin-top: 2rem;">
+                ⚠️ <strong>Penafian Risiko (Risk Disclosure):</strong> Semua statistik dan rekod prestasi yang dipaparkan adalah hasil ujian kuantitatif sejarah (<em>simulated backtest &amp; algorithmic tracker</em>) untuk tujuan pendidikan dan penyelidikan sahaja. Dagangan ekuiti di Bursa Malaysia mempunyai risiko kehilangan modal. Sila amalkan saiz posisi yang berhemah.
+            </div>
+
+            <div style="text-align: center; margin-top: 2rem;">
+                <a href="../index.html#fujimoto" class="btn-nav" style="background: linear-gradient(135deg, rgba(244,63,94,0.35), rgba(234,179,8,0.3)); color: #fde047; border: 1.5px solid rgba(253,224,71,0.8); padding: 0.75rem 1.5rem; font-size: 0.95rem; font-weight: 900;">
+                    🉐 Kembali ke Scanner &amp; Live Tracker BNF (Masuk Time Jatuh) →
+                </a>
+            </div>
+        </article>
+
+        <footer>
+            <p>&copy; 2026 Jerung Bursa. All rights reserved.</p>
+            <div style="margin-top: 1rem;">
+                <a href="../index.html">Main Dashboard</a>
+                <a href="../articles.html" style="color: white; font-weight: 600;">Articles &amp; Insights</a>
+                <a href="../sop.html">VVIP SOP</a>
+                <a href="../formula.html">Formulas &amp; Indicators</a>
+                <a href="../hall-of-fame.html">Hall of Fame</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

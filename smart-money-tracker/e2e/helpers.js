@@ -45,8 +45,9 @@ async function loadDashboard(page) {
   return { pageErrors, consoleErrors };
 }
 
-/** Senarai 15 tab: [tabButtonId, viewId]. */
+/** Senarai 16 tab: [tabButtonId, viewId]. */
 const TABS = [
+  ['tab-fujimoto', 'view-fujimoto'],
   ['tab-confluence', 'view-confluence'],
   ['tab-hottheme', 'view-hottheme'],
   ['tab-fusion', 'view-fusion'],
