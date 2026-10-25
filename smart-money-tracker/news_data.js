@@ -1,5 +1,5 @@
 // Auto-generated Corporate News & Ex-Dividend Database
-// Generated At: 2026-10-16T14:43:26.830Z
+// Generated At: 2026-10-25T13:17:08.986Z
 window.NEWS_DATA = {
   "3REN": {
     "hasNewsAlert": false,
@@ -187,10 +187,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:45.332Z",
+    "checkedAt": "2026-10-25T13:17:43.164Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:45.332Z",
-      "entitlements": "2026-10-16T14:43:45.332Z"
+      "announcements": "2026-10-25T13:17:43.164Z",
+      "entitlements": "2026-10-25T13:17:43.164Z"
     }
   },
   "5ER": {
@@ -363,10 +363,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:39.354Z",
+    "checkedAt": "2026-10-25T13:17:33.187Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:39.354Z",
-      "entitlements": "2026-10-16T14:43:39.354Z"
+      "announcements": "2026-10-25T13:17:33.187Z",
+      "entitlements": "2026-10-25T13:17:33.187Z"
     }
   },
   "99 SPEED MART RETAIL": {
@@ -376,10 +376,30 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-10-22] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -509,26 +529,6 @@ window.NEWS_DATA = {
         "date": "2026-08-10",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-08-07",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-08-06",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-07-30",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-07-29",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -571,11 +571,11 @@ window.NEWS_DATA = {
     ],
     "fetchStatus": {
       "announcements": "ok",
-      "entitlements": "ok"
+      "entitlements": "error"
     },
-    "checkedAt": "2026-10-16T14:43:44.171Z",
+    "checkedAt": "2026-10-25T13:17:59.039Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:44.171Z",
+      "announcements": "2026-10-25T13:17:59.039Z",
       "entitlements": "2026-10-16T14:43:44.171Z"
     }
   },
@@ -584,12 +584,22 @@ window.NEWS_DATA = {
     "newsBadges": [
       {
         "type": "RECENT_NEWS",
-        "label": "News: 2026-10-14",
+        "label": "News: 2026-10-21",
         "severity": "info",
-        "title": "[2026-10-14] General Announcement - TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
+        "title": "[2026-10-21] General Announcement - MATERIAL LITIGATION"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-21",
+        "category": "General Announcement",
+        "title": "MATERIAL LITIGATION"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "General Announcement",
+        "title": "MATERIAL LITIGATION"
+      },
       {
         "date": "2026-10-14",
         "category": "General Announcement",
@@ -729,16 +739,6 @@ window.NEWS_DATA = {
         "date": "2025-10-31",
         "category": "Annual Report",
         "title": "Annual Report & CG Report - 2025"
-      },
-      {
-        "date": "2025-10-30",
-        "category": "General Meetings",
-        "title": "General Meetings: Notice of Meeting"
-      },
-      {
-        "date": "2025-10-21",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
       }
     ],
     "entitlements": [
@@ -756,10 +756,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:39.255Z",
+    "checkedAt": "2026-10-25T13:17:28.184Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:39.255Z",
-      "entitlements": "2026-10-16T14:43:39.255Z"
+      "announcements": "2026-10-25T13:17:28.184Z",
+      "entitlements": "2026-10-25T13:17:28.184Z"
     }
   },
   "AAX": {
@@ -929,10 +929,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:48.220Z",
+    "checkedAt": "2026-10-25T13:18:11.362Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:48.220Z",
-      "entitlements": "2026-10-16T14:43:48.220Z"
+      "announcements": "2026-10-25T13:18:11.362Z",
+      "entitlements": "2026-10-25T13:18:11.362Z"
     }
   },
   "ACO": {
@@ -1139,11 +1139,11 @@ window.NEWS_DATA = {
     ],
     "fetchStatus": {
       "announcements": "ok",
-      "entitlements": "ok"
+      "entitlements": "error"
     },
-    "checkedAt": "2026-10-16T14:43:49.599Z",
+    "checkedAt": "2026-10-25T13:18:00.778Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:49.599Z",
+      "announcements": "2026-10-25T13:18:00.778Z",
       "entitlements": "2026-10-16T14:43:49.599Z"
     }
   },
@@ -1360,10 +1360,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:44.348Z",
+    "checkedAt": "2026-10-25T13:18:07.676Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:44.348Z",
-      "entitlements": "2026-10-16T14:43:44.348Z"
+      "announcements": "2026-10-25T13:18:07.676Z",
+      "entitlements": "2026-10-25T13:18:07.676Z"
     }
   },
   "ADNEX": {
@@ -1528,20 +1528,20 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:31.023Z",
+    "checkedAt": "2026-10-25T13:17:11.825Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:31.023Z",
-      "entitlements": "2026-10-16T14:43:31.023Z"
+      "announcements": "2026-10-25T13:17:11.825Z",
+      "entitlements": "2026-10-25T13:17:11.825Z"
     }
   },
   "AGMO": {
     "hasNewsAlert": false,
     "newsBadges": [
       {
-        "type": "JERUNG_5PCT",
-        "label": "🐋 Major Shareholder Activity",
+        "type": "RECENT_NEWS",
+        "label": "News: 2026-10-09",
         "severity": "info",
-        "title": "[2026-09-21] Changes in Director's Interest (Section 219 of CA 2016) - MR TAN AIK KEONG"
+        "title": "[2026-10-09] Change of Corp Info - Change in Nomination Committee - MISS TAN MEI XUAN"
       }
     ],
     "announcements": [
@@ -1711,10 +1711,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:46.349Z",
+    "checkedAt": "2026-10-25T13:18:03.984Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:46.349Z",
-      "entitlements": "2026-10-16T14:43:46.349Z"
+      "announcements": "2026-10-25T13:18:03.984Z",
+      "entitlements": "2026-10-25T13:18:03.984Z"
     }
   },
   "AGRICOR": {
@@ -1896,10 +1896,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:41.654Z",
+    "checkedAt": "2026-10-25T13:17:42.506Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:41.654Z",
-      "entitlements": "2026-10-16T14:43:41.654Z"
+      "announcements": "2026-10-25T13:17:42.506Z",
+      "entitlements": "2026-10-25T13:17:42.506Z"
     }
   },
   "AGX": {
@@ -2097,16 +2097,28 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:47.076Z",
+    "checkedAt": "2026-10-25T13:17:42.526Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:47.076Z",
-      "entitlements": "2026-10-16T14:43:47.076Z"
+      "announcements": "2026-10-25T13:17:42.526Z",
+      "entitlements": "2026-10-25T13:17:42.526Z"
     }
   },
   "AIMFLEX": {
     "hasNewsAlert": false,
-    "newsBadges": [],
+    "newsBadges": [
+      {
+        "type": "RECENT_NEWS",
+        "label": "News: 2026-10-20",
+        "severity": "info",
+        "title": "[2026-10-20] Dealings in Listed Securities - DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      }
+    ],
     "announcements": [
+      {
+        "date": "2026-10-20",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
       {
         "date": "2026-09-09",
         "category": "General Announcement",
@@ -2251,11 +2263,6 @@ window.NEWS_DATA = {
         "date": "2026-03-13",
         "category": "Shares Buy Back",
         "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-03-12",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
       }
     ],
     "entitlements": [
@@ -2282,10 +2289,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:48.294Z",
+    "checkedAt": "2026-10-25T13:18:17.071Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:48.294Z",
-      "entitlements": "2026-10-16T14:43:48.294Z"
+      "announcements": "2026-10-25T13:18:17.071Z",
+      "entitlements": "2026-10-25T13:18:17.071Z"
     }
   },
   "AJI": {
@@ -2293,12 +2300,17 @@ window.NEWS_DATA = {
     "newsBadges": [
       {
         "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 2026-10-16",
+        "label": "Ex-Div: 2026-10-20",
         "severity": "warning",
-        "title": "Second Interim Dividend (0.0200) | Ex-Date: 2026-10-16"
+        "title": "Third Interim Dividend (0.0300) | Ex-Date: 2026-10-20"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
       {
         "date": "2026-10-07",
         "category": "Listing Circulars",
@@ -2443,11 +2455,6 @@ window.NEWS_DATA = {
         "date": "2026-06-29",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PP CHIN HIN REALTY SDN BHD"
-      },
-      {
-        "date": "2026-06-26",
-        "category": "General Announcement",
-        "title": "OTHERS"
       }
     ],
     "entitlements": [
@@ -2501,10 +2508,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:33.599Z",
+    "checkedAt": "2026-10-25T13:17:44.133Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:33.599Z",
-      "entitlements": "2026-10-16T14:43:33.599Z"
+      "announcements": "2026-10-25T13:17:44.133Z",
+      "entitlements": "2026-10-25T13:17:44.133Z"
     }
   },
   "ALPHA": {
@@ -2514,10 +2521,50 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ACE SPECIALISTS SDN BHD"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO DR LEE SOON SOO"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO DR LEE SOON SOO"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ACE SPECIALISTS SDN BHD"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' DR LEE SOON SOO"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings During Closed Period"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO DR LEE SOON SOO"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ACE SPECIALISTS SDN BHD"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' DR LEE SOON SOO"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings During Closed Period"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -2627,46 +2674,6 @@ window.NEWS_DATA = {
         "date": "2026-09-10",
         "category": "General Announcement",
         "title": "OTHERS"
-      },
-      {
-        "date": "2026-07-24",
-        "category": "Listing Circulars",
-        "title": "ALPHA - Notice of Book Closure"
-      },
-      {
-        "date": "2026-07-23",
-        "category": "Financial Results",
-        "title": "Quarterly rpt on consolidated results for the financial period ended 31/05/2026"
-      },
-      {
-        "date": "2026-07-23",
-        "category": "Entitlements",
-        "title": "Interim Dividend"
-      },
-      {
-        "date": "2026-07-23",
-        "category": "Financial Results",
-        "title": "Quarterly rpt on consolidated results for the financial period ended 31/05/2026"
-      },
-      {
-        "date": "2026-07-09",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-06-11",
-        "category": "Shares Buy Back",
-        "title": "Notice of SBB by a Company Pursuant to Section 127 (16) of CA 2016"
-      },
-      {
-        "date": "2026-06-04",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-05-21",
-        "category": "Shares Buy Back",
-        "title": "Notice of SBB by a Company Pursuant to Section 127 (16) of CA 2016"
       }
     ],
     "entitlements": [
@@ -2720,22 +2727,15 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:34.419Z",
+    "checkedAt": "2026-10-25T13:17:25.380Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:34.419Z",
-      "entitlements": "2026-10-16T14:43:34.419Z"
+      "announcements": "2026-10-25T13:17:25.380Z",
+      "entitlements": "2026-10-25T13:17:25.380Z"
     }
   },
   "AMBEST": {
     "hasNewsAlert": false,
-    "newsBadges": [
-      {
-        "type": "RECENT_NEWS",
-        "label": "News: 2026-09-23",
-        "severity": "info",
-        "title": "[2026-09-23] Financial Results - Change in Financial Year End"
-      }
-    ],
+    "newsBadges": [],
     "announcements": [
       {
         "date": "2026-09-23",
@@ -2893,23 +2893,49 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:29.770Z",
+    "checkedAt": "2026-10-25T13:17:49.230Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:29.770Z",
-      "entitlements": "2026-10-16T14:43:29.770Z"
+      "announcements": "2026-10-25T13:17:49.230Z",
+      "entitlements": "2026-10-25T13:17:49.230Z"
     }
   },
   "AMEREIT": {
-    "hasNewsAlert": false,
+    "hasNewsAlert": true,
     "newsBadges": [
       {
-        "type": "RECENT_NEWS",
-        "label": "News: 2026-09-21",
-        "severity": "info",
-        "title": "[2026-09-21] Dealings in Listed Securities - DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+        "type": "EX_DIVIDEND",
+        "label": "Ex-Div: 2026-11-05",
+        "severity": "warning",
+        "title": "Income Distribution (0.0219) | Ex-Date: 2026-11-05"
+      },
+      {
+        "type": "EARNINGS_QR",
+        "label": "Earnings Release",
+        "severity": "danger",
+        "title": "[2026-10-21] Quarterly rpt on consolidated results for the financial period ended 30/09/2026"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Listing Circulars",
+        "title": "AMEREIT - Notice of Book Closure"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Entitlements",
+        "title": "Income Distribution"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Financial Results",
+        "title": "Quarterly rpt on consolidated results for the financial period ended 30/09/2026"
+      },
       {
         "date": "2026-09-21",
         "category": "Dealings in Listed Securities",
@@ -3039,29 +3065,18 @@ window.NEWS_DATA = {
         "date": "2026-05-06",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LEE CHAI"
-      },
-      {
-        "date": "2026-05-06",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AME ELITE CONSORTIUM BERHAD"
-      },
-      {
-        "date": "2026-05-06",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LIM YOOK KIM"
-      },
-      {
-        "date": "2026-05-06",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-05-05",
-        "category": "Additional Listing",
-        "title": "Additional Listing Announcement /Subdivision of Shares"
       }
     ],
     "entitlements": [
+      {
+        "annDate": "21 Oct 2026",
+        "financialYear": "31 Mar 2027",
+        "type": "Income Distribution",
+        "exDate": "2026-11-05",
+        "paymentDate": "26 Nov 2026",
+        "amount": "0.0219",
+        "isDividend": true
+      },
       {
         "annDate": "29 Jul 2026",
         "financialYear": "31 Mar 2027",
@@ -3097,37 +3112,21 @@ window.NEWS_DATA = {
         "paymentDate": "10 Dec 2025",
         "amount": "0.0216",
         "isDividend": true
-      },
-      {
-        "annDate": "23 Jul 2025",
-        "financialYear": "31 Mar 2026",
-        "type": "Income Distribution",
-        "exDate": "2025-08-07",
-        "paymentDate": "29 Aug 2025",
-        "amount": "0.0196",
-        "isDividend": true
       }
     ],
     "fetchStatus": {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:41.735Z",
+    "checkedAt": "2026-10-25T13:17:26.580Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:41.735Z",
-      "entitlements": "2026-10-16T14:43:41.735Z"
+      "announcements": "2026-10-25T13:17:26.580Z",
+      "entitlements": "2026-10-25T13:17:26.580Z"
     }
   },
   "AMS": {
     "hasNewsAlert": false,
-    "newsBadges": [
-      {
-        "type": "RECENT_NEWS",
-        "label": "News: 2026-09-23",
-        "severity": "info",
-        "title": "[2026-09-23] General Announcement - TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : RELATED PARTY TRANSACTIONS"
-      }
-    ],
+    "newsBadges": [],
     "announcements": [
       {
         "date": "2026-09-23",
@@ -3295,22 +3294,15 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:36.501Z",
+    "checkedAt": "2026-10-25T13:17:40.027Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:36.501Z",
-      "entitlements": "2026-10-16T14:43:36.501Z"
+      "announcements": "2026-10-25T13:17:40.027Z",
+      "entitlements": "2026-10-25T13:17:40.027Z"
     }
   },
   "ANEKA": {
     "hasNewsAlert": false,
-    "newsBadges": [
-      {
-        "type": "RECENT_NEWS",
-        "label": "News: 2026-09-23",
-        "severity": "info",
-        "title": "[2026-09-23] General Announcement - OTHERS"
-      }
-    ],
+    "newsBadges": [],
     "announcements": [
       {
         "date": "2026-09-23",
@@ -3468,10 +3460,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:49.868Z",
+    "checkedAt": "2026-10-25T13:18:20.150Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:49.868Z",
-      "entitlements": "2026-10-16T14:43:49.868Z"
+      "announcements": "2026-10-25T13:18:20.150Z",
+      "entitlements": "2026-10-25T13:18:20.150Z"
     }
   },
   "AQUAWALK": {
@@ -3481,159 +3473,159 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Director's Interest (Section 219 of CA 2016) - DATO' FOONG CHOONG HENG"
+        "title": "[2026-10-23] Changes in Director's Interest (Section 219 of CA 2016) - DATO' FOONG CHOONG HENG"
       }
     ],
     "announcements": [
       {
-        "date": "2026-10-16",
+        "date": "2026-10-23",
         "category": "Changes in Shareholdings",
         "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' FOONG CHOONG HENG"
       },
       {
-        "date": "2026-10-16",
+        "date": "2026-10-23",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' FOONG CHOONG HENG"
       },
       {
-        "date": "2026-10-16",
+        "date": "2026-10-23",
         "category": "Dealings in Listed Securities",
         "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
       },
       {
-        "date": "2026-10-08",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-10-08",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' FOONG CHOONG HENG"
-      },
-      {
-        "date": "2026-10-08",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' FOONG CHOONG HENG"
-      },
-      {
-        "date": "2026-10-02",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-10-02",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' FOONG CHOONG HENG"
-      },
-      {
-        "date": "2026-10-02",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' FOONG CHOONG HENG"
-      },
-      {
-        "date": "2026-09-28",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' FOONG CHOONG HENG"
-      },
-      {
-        "date": "2026-09-28",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' FOONG CHOONG HENG"
-      },
-      {
-        "date": "2026-09-28",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-09-21",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' FOONG CHOONG HENG"
-      },
-      {
-        "date": "2026-09-21",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-09-21",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' FOONG CHOONG HENG"
-      },
-      {
-        "date": "2026-09-17",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' FOONG CHOONG HENG"
-      },
-      {
-        "date": "2026-09-17",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-09-17",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' FOONG CHOONG HENG"
-      },
-      {
-        "date": "2026-09-10",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' FOONG CHOONG HENG"
-      },
-      {
-        "date": "2026-09-10",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-09-10",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' FOONG CHOONG HENG"
-      },
-      {
-        "date": "2026-09-09",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-09-09",
+        "date": "2026-10-22",
         "category": "Changes in Shareholdings",
         "title": "Changes in Director's Interest (Section 219 of CA 2016) - FOONG CHUEN HOE"
       },
       {
-        "date": "2026-08-28",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' FOONG CHOONG HENG"
-      },
-      {
-        "date": "2026-08-28",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' FOONG CHOONG HENG"
-      },
-      {
-        "date": "2026-08-28",
+        "date": "2026-10-22",
         "category": "Dealings in Listed Securities",
         "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
       },
       {
-        "date": "2026-08-26",
-        "category": "Listing Circulars",
-        "title": "AQUAWALK - Notice of Book Closure"
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' FOONG CHOONG HENG"
       },
       {
-        "date": "2026-08-24",
-        "category": "Financial Results",
-        "title": "Quarterly rpt on consolidated results for the financial period ended 30/06/2026"
+        "date": "2026-10-19",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
       },
       {
-        "date": "2026-08-24",
-        "category": "General Announcement",
-        "title": "OTHERS"
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' FOONG CHOONG HENG"
       },
       {
-        "date": "2026-08-24",
-        "category": "Entitlements",
-        "title": "Interim Dividend"
+        "date": "2026-10-16",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' FOONG CHOONG HENG"
+      },
+      {
+        "date": "2026-10-16",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' FOONG CHOONG HENG"
+      },
+      {
+        "date": "2026-10-16",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-08",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-08",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' FOONG CHOONG HENG"
+      },
+      {
+        "date": "2026-10-08",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' FOONG CHOONG HENG"
+      },
+      {
+        "date": "2026-10-02",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-02",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' FOONG CHOONG HENG"
+      },
+      {
+        "date": "2026-10-02",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' FOONG CHOONG HENG"
+      },
+      {
+        "date": "2026-09-28",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' FOONG CHOONG HENG"
+      },
+      {
+        "date": "2026-09-28",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' FOONG CHOONG HENG"
+      },
+      {
+        "date": "2026-09-28",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-09-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' FOONG CHOONG HENG"
+      },
+      {
+        "date": "2026-09-21",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-09-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' FOONG CHOONG HENG"
+      },
+      {
+        "date": "2026-09-17",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' FOONG CHOONG HENG"
+      },
+      {
+        "date": "2026-09-17",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-09-17",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' FOONG CHOONG HENG"
+      },
+      {
+        "date": "2026-09-10",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' FOONG CHOONG HENG"
+      },
+      {
+        "date": "2026-09-10",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-09-10",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' FOONG CHOONG HENG"
+      },
+      {
+        "date": "2026-09-09",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
       }
     ],
     "entitlements": [
@@ -3660,10 +3652,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:48.647Z",
+    "checkedAt": "2026-10-25T13:17:35.932Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:48.647Z",
-      "entitlements": "2026-10-16T14:43:48.647Z"
+      "announcements": "2026-10-25T13:17:35.932Z",
+      "entitlements": "2026-10-25T13:17:35.932Z"
     }
   },
   "ASM": {
@@ -3826,10 +3818,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:43.453Z",
+    "checkedAt": "2026-10-25T13:17:33.815Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:43.453Z",
-      "entitlements": "2026-10-16T14:43:43.453Z"
+      "announcements": "2026-10-25T13:17:33.815Z",
+      "entitlements": "2026-10-25T13:17:33.815Z"
     }
   },
   "ATECH": {
@@ -3839,10 +3831,15 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-13] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-10-20] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-10-13",
         "category": "Changes in Shareholdings",
@@ -3987,11 +3984,6 @@ window.NEWS_DATA = {
         "date": "2026-08-28",
         "category": "Financial Results",
         "title": "Quarterly rpt on consolidated results for the financial period ended 30/06/2026"
-      },
-      {
-        "date": "2026-08-28",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -4045,29 +4037,48 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:29.797Z",
+    "checkedAt": "2026-10-25T13:17:36.328Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:29.797Z",
-      "entitlements": "2026-10-16T14:43:29.797Z"
+      "announcements": "2026-10-25T13:17:36.328Z",
+      "entitlements": "2026-10-25T13:17:36.328Z"
     }
   },
   "AXIATA": {
-    "hasNewsAlert": true,
+    "hasNewsAlert": false,
     "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 2026-10-13",
-        "severity": "warning",
-        "title": "First Interim Dividend (0.0550) | Ex-Date: 2026-10-13"
-      },
       {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -4192,31 +4203,6 @@ window.NEWS_DATA = {
         "date": "2026-08-28",
         "category": "Financial Results",
         "title": "Quarterly rpt on consolidated results for the financial period ended 30/06/2026"
-      },
-      {
-        "date": "2026-08-26",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-08-24",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-08-20",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-08-17",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-08-14",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -4270,10 +4256,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:47.700Z",
+    "checkedAt": "2026-10-25T13:17:40.362Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:47.700Z",
-      "entitlements": "2026-10-16T14:43:47.700Z"
+      "announcements": "2026-10-25T13:17:40.362Z",
+      "entitlements": "2026-10-25T13:17:40.362Z"
     }
   },
   "AZAMJAYA": {
@@ -4453,10 +4439,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:38.196Z",
+    "checkedAt": "2026-10-25T13:17:50.167Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:38.196Z",
-      "entitlements": "2026-10-16T14:43:38.196Z"
+      "announcements": "2026-10-25T13:17:50.167Z",
+      "entitlements": "2026-10-25T13:17:50.167Z"
     }
   },
   "BETA": {
@@ -4476,6 +4462,11 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-21",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
       {
         "date": "2026-10-15",
         "category": "Annual Report",
@@ -4620,11 +4611,6 @@ window.NEWS_DATA = {
         "date": "2026-07-29",
         "category": "Annual Report",
         "title": "Annual Report & CG Report - 2026"
-      },
-      {
-        "date": "2026-07-29",
-        "category": "Additional Listing",
-        "title": "Additional Listing Announcement /Subdivision of Shares"
       }
     ],
     "entitlements": [
@@ -4678,22 +4664,15 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:45.302Z",
+    "checkedAt": "2026-10-25T13:17:48.370Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:45.302Z",
-      "entitlements": "2026-10-16T14:43:45.302Z"
+      "announcements": "2026-10-25T13:17:48.370Z",
+      "entitlements": "2026-10-25T13:17:48.370Z"
     }
   },
   "BFIELD": {
     "hasNewsAlert": false,
-    "newsBadges": [
-      {
-        "type": "JERUNG_5PCT",
-        "label": "🐋 Major Shareholder Activity",
-        "severity": "info",
-        "title": "[2026-09-18] Notice of Interest Sub. S-hldr (Section 137 of CA 2016) - DATO' OOI ENG LEONG"
-      }
-    ],
+    "newsBadges": [],
     "announcements": [
       {
         "date": "2026-09-18",
@@ -4796,10 +4775,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:45.699Z",
+    "checkedAt": "2026-10-25T13:18:01.637Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:45.699Z",
-      "entitlements": "2026-10-16T14:43:45.699Z"
+      "announcements": "2026-10-25T13:18:01.637Z",
+      "entitlements": "2026-10-25T13:18:01.637Z"
     }
   },
   "BMGREEN": {
@@ -5015,10 +4994,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:48.286Z",
+    "checkedAt": "2026-10-25T13:18:14.843Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:48.286Z",
-      "entitlements": "2026-10-16T14:43:48.286Z"
+      "announcements": "2026-10-25T13:18:14.843Z",
+      "entitlements": "2026-10-25T13:18:14.843Z"
     }
   },
   "BMS": {
@@ -5026,12 +5005,17 @@ window.NEWS_DATA = {
     "newsBadges": [
       {
         "type": "RECENT_NEWS",
-        "label": "News: 2026-10-14",
+        "label": "News: 2026-10-22",
         "severity": "info",
-        "title": "[2026-10-14] General Announcement - OTHERS"
+        "title": "[2026-10-22] General Announcement - TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "General Announcement",
+        "title": "TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
+      },
       {
         "date": "2026-10-14",
         "category": "General Announcement",
@@ -5176,11 +5160,6 @@ window.NEWS_DATA = {
         "date": "2026-05-29",
         "category": "Financial Results",
         "title": "Quarterly rpt on consolidated results for the financial period ended 31/03/2026"
-      },
-      {
-        "date": "2026-03-30",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
       }
     ],
     "entitlements": [
@@ -5207,15 +5186,21 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:39.734Z",
+    "checkedAt": "2026-10-25T13:17:43.981Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:39.734Z",
-      "entitlements": "2026-10-16T14:43:39.734Z"
+      "announcements": "2026-10-25T13:17:43.981Z",
+      "entitlements": "2026-10-25T13:17:43.981Z"
     }
   },
   "BUSCAP": {
     "hasNewsAlert": false,
     "newsBadges": [
+      {
+        "type": "EV_CATALYST",
+        "label": "⚡ MOU / EV Catalyst",
+        "severity": "success",
+        "title": "[2026-10-20] MEMORANDUM OF UNDERSTANDING"
+      },
       {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
@@ -5224,6 +5209,11 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-20",
+        "category": "General Announcement",
+        "title": "MEMORANDUM OF UNDERSTANDING"
+      },
       {
         "date": "2026-10-16",
         "category": "Change of Corp Info",
@@ -5368,11 +5358,6 @@ window.NEWS_DATA = {
         "date": "2026-06-03",
         "category": "Changes in Shareholdings",
         "title": "Changes in Director's Interest (Section 219 of CA 2016) - MADAM ALIZA BINTI ASHARI"
-      },
-      {
-        "date": "2026-06-03",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MADAM ROSE ZILAWATI BINTI MOHAMED ARIFIN"
       }
     ],
     "entitlements": [],
@@ -5380,10 +5365,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:34.701Z",
+    "checkedAt": "2026-10-25T13:17:18.505Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:34.701Z",
-      "entitlements": "2026-10-16T14:43:34.701Z"
+      "announcements": "2026-10-25T13:17:18.505Z",
+      "entitlements": "2026-10-25T13:17:18.505Z"
     }
   },
   "BWYS": {
@@ -5563,10 +5548,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:42.954Z",
+    "checkedAt": "2026-10-25T13:18:20.249Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:42.954Z",
-      "entitlements": "2026-10-16T14:43:42.954Z"
+      "announcements": "2026-10-25T13:18:20.249Z",
+      "entitlements": "2026-10-25T13:18:20.249Z"
     }
   },
   "CAMAROE": {
@@ -5729,22 +5714,15 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:43.552Z",
+    "checkedAt": "2026-10-25T13:18:18.712Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:43.552Z",
-      "entitlements": "2026-10-16T14:43:43.552Z"
+      "announcements": "2026-10-25T13:18:18.712Z",
+      "entitlements": "2026-10-25T13:18:18.712Z"
     }
   },
   "CARLSBG": {
-    "hasNewsAlert": true,
-    "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 2026-10-13",
-        "severity": "warning",
-        "title": "Second Interim Dividend (0.2100) | Ex-Date: 2026-10-13"
-      }
-    ],
+    "hasNewsAlert": false,
+    "newsBadges": [],
     "announcements": [
       {
         "date": "2026-09-10",
@@ -5948,10 +5926,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:48.259Z",
+    "checkedAt": "2026-10-25T13:17:43.027Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:48.259Z",
-      "entitlements": "2026-10-16T14:43:48.259Z"
+      "announcements": "2026-10-25T13:17:43.027Z",
+      "entitlements": "2026-10-25T13:17:43.027Z"
     }
   },
   "CBHB": {
@@ -5961,10 +5939,45 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-09-18] Changes in Director's Interest (Section 219 of CA 2016) - MR CHEAH BOON HWA"
+        "title": "[2026-10-22] Changes in Director's Interest (Section 219 of CA 2016) - MR CHEAH BOON HWA"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings During Closed Period"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR CHEAH BOON HWA"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR CHEAH BOON HWA"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR CHEAH BOON HWA"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR CHEAH BOON HWA"
+      },
       {
         "date": "2026-09-18",
         "category": "Dealings in Listed Securities",
@@ -6079,41 +6092,6 @@ window.NEWS_DATA = {
         "date": "2026-08-20",
         "category": "Listing Circulars",
         "title": "CBHB - Notice of Book Closure"
-      },
-      {
-        "date": "2026-08-19",
-        "category": "Financial Results",
-        "title": "Quarterly rpt on consolidated results for the financial period ended 30/06/2026"
-      },
-      {
-        "date": "2026-08-19",
-        "category": "Entitlements",
-        "title": "Interim Dividend"
-      },
-      {
-        "date": "2026-08-19",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-08-06",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-07-17",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
-      },
-      {
-        "date": "2026-06-24",
-        "category": "General Meetings",
-        "title": "General Meetings: Outcome of Meeting"
-      },
-      {
-        "date": "2026-06-08",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
       }
     ],
     "entitlements": [
@@ -6140,10 +6118,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:30.766Z",
+    "checkedAt": "2026-10-25T13:17:24.421Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:30.766Z",
-      "entitlements": "2026-10-16T14:43:30.766Z"
+      "announcements": "2026-10-25T13:17:24.421Z",
+      "entitlements": "2026-10-25T13:17:24.421Z"
     }
   },
   "CEB": {
@@ -6151,12 +6129,32 @@ window.NEWS_DATA = {
     "newsBadges": [
       {
         "type": "RECENT_NEWS",
-        "label": "News: 2026-10-16",
+        "label": "News: 2026-10-22",
         "severity": "info",
-        "title": "[2026-10-16] Annual Report - Annual Report & CG Report - 2026"
+        "title": "[2026-10-22] Additional Listing - Additional Listing Announcement /Subdivision of Shares"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "General Announcement",
+        "title": "MULTIPLE PROPOSALS"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Annual Report",
+        "title": "Annual Report & CG Report - 2026"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
       {
         "date": "2026-10-16",
         "category": "Annual Report",
@@ -6286,26 +6284,6 @@ window.NEWS_DATA = {
         "date": "2026-05-12",
         "category": "Reply to Query",
         "title": "CAPE EMS BERHAD (\"CEB\" OR \"THE COMPANY\") - LEGAL PROCEEDINGS BETWEEN CAPE MANUFACTURING (M) SDN. BHD. (A WHOLLY OWNED SUBSIDIARY OF THE COMPANY) AND AERONAS AEROCRAFT SDN. BHD. AND FOUR OTHERS ARISING FROM A PROPOSED AIRCRAFT MANUFACTURING COLLABORATION"
-      },
-      {
-        "date": "2026-05-11",
-        "category": "Financial Results",
-        "title": "Quarterly rpt on consolidated results for the financial period ended 31/03/2026"
-      },
-      {
-        "date": "2026-05-08",
-        "category": "General Announcement",
-        "title": "MATERIAL LITIGATION"
-      },
-      {
-        "date": "2026-05-05",
-        "category": "General Announcement",
-        "title": "MULTIPLE PROPOSALS"
-      },
-      {
-        "date": "2026-04-21",
-        "category": "General Announcement",
-        "title": "OTHERS"
       }
     ],
     "entitlements": [
@@ -6341,10 +6319,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:28.919Z",
+    "checkedAt": "2026-10-25T13:17:51.489Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:28.919Z",
-      "entitlements": "2026-10-16T14:43:28.919Z"
+      "announcements": "2026-10-25T13:17:51.489Z",
+      "entitlements": "2026-10-25T13:17:51.489Z"
     }
   },
   "CEKD": {
@@ -6553,23 +6531,28 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:46.950Z",
+    "checkedAt": "2026-10-25T13:17:59.765Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:46.950Z",
-      "entitlements": "2026-10-16T14:43:46.950Z"
+      "announcements": "2026-10-25T13:17:59.765Z",
+      "entitlements": "2026-10-25T13:17:59.765Z"
     }
   },
   "CENGILD": {
     "hasNewsAlert": false,
     "newsBadges": [
       {
-        "type": "RECENT_NEWS",
-        "label": "News: 2026-10-06",
+        "type": "JERUNG_5PCT",
+        "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-06] General Announcement - OTHERS"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ANNE MARIE LOH FOONG HAN"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ANNE MARIE LOH FOONG HAN"
+      },
       {
         "date": "2026-10-06",
         "category": "General Announcement",
@@ -6714,11 +6697,6 @@ window.NEWS_DATA = {
         "date": "2026-02-09",
         "category": "Financial Results",
         "title": "Quarterly rpt on consolidated results for the financial period ended 31/12/2025"
-      },
-      {
-        "date": "2025-11-28",
-        "category": "General Meetings",
-        "title": "General Meetings: Outcome of Meeting"
       }
     ],
     "entitlements": [
@@ -6772,10 +6750,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:49.068Z",
+    "checkedAt": "2026-10-25T13:18:02.648Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:49.068Z",
-      "entitlements": "2026-10-16T14:43:49.068Z"
+      "announcements": "2026-10-25T13:18:02.648Z",
+      "entitlements": "2026-10-25T13:18:02.648Z"
     }
   },
   "CHB": {
@@ -6973,10 +6951,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:28.646Z",
+    "checkedAt": "2026-10-25T13:17:11.394Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:28.646Z",
-      "entitlements": "2026-10-16T14:43:28.646Z"
+      "announcements": "2026-10-25T13:17:11.394Z",
+      "entitlements": "2026-10-25T13:17:11.394Z"
     }
   },
   "CHEEDING": {
@@ -7165,10 +7143,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:46.679Z",
+    "checkedAt": "2026-10-25T13:18:13.203Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:46.679Z",
-      "entitlements": "2026-10-16T14:43:46.679Z"
+      "announcements": "2026-10-25T13:18:13.203Z",
+      "entitlements": "2026-10-25T13:18:13.203Z"
     }
   },
   "CIMB": {
@@ -7178,10 +7156,75 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Change of Corp Info",
+        "title": "Change in Risk Committee - TAN SRI DATO' DR WEE HOE SOON @ GOOI HOE SOON"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Change of Corp Info",
+        "title": "Change in Audit Committee - TAN SRI DATO' DR WEE HOE SOON @ GOOI HOE SOON"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Change of Corp Info",
+        "title": "Change in Boardroom - TAN SRI DATO' DR WEE HOE SOON @ GOOI HOE SOON"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
       {
         "date": "2026-10-16",
         "category": "Shares Buy Back",
@@ -7266,71 +7309,6 @@ window.NEWS_DATA = {
         "date": "2026-10-12",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-10-09",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-10-09",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-10-09",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-08",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-10-08",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-10-08",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-07",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-10-07",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-10-06",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-10-06",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-10-05",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-10-05",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-05",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
       }
     ],
     "entitlements": [
@@ -7382,11 +7360,11 @@ window.NEWS_DATA = {
     ],
     "fetchStatus": {
       "announcements": "ok",
-      "entitlements": "ok"
+      "entitlements": "error"
     },
-    "checkedAt": "2026-10-16T14:43:37.602Z",
+    "checkedAt": "2026-10-25T13:17:54.134Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:37.602Z",
+      "announcements": "2026-10-25T13:17:54.134Z",
       "entitlements": "2026-10-16T14:43:37.602Z"
     }
   },
@@ -7567,10 +7545,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:39.484Z",
+    "checkedAt": "2026-10-25T13:17:36.899Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:39.484Z",
-      "entitlements": "2026-10-16T14:43:39.484Z"
+      "announcements": "2026-10-25T13:17:36.899Z",
+      "entitlements": "2026-10-25T13:17:36.899Z"
     }
   },
   "CLITE": {
@@ -7743,29 +7721,64 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:31.583Z",
+    "checkedAt": "2026-10-25T13:17:30.465Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:31.583Z",
-      "entitlements": "2026-10-16T14:43:31.583Z"
+      "announcements": "2026-10-25T13:17:30.465Z",
+      "entitlements": "2026-10-25T13:17:30.465Z"
     }
   },
   "CLOUDPT": {
     "hasNewsAlert": true,
     "newsBadges": [
       {
-        "type": "JERUNG_5PCT",
-        "label": "🐋 Major Shareholder Activity",
-        "severity": "info",
-        "title": "[2026-10-01] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK WIRA CHOONG WAI HOONG"
-      },
-      {
         "type": "CORP_ACTION",
         "label": "Corp Action",
         "severity": "danger",
-        "title": "[2026-10-01] CIRCULAR TO SHAREHOLDERS IN RELATION TO THE PROPOSED BONUS ISSUE OF UP TO 265,800,000 WARRANTS IN CLOUDPOINT TECHNOLOGY BERHAD (\"WARRANT(S)\") ON THE BASIS OF 1 WARRANT FOR EVERY 2 EXISTING ORDINARY SHARES IN CLOUDPOINT TECHNOLOGY BERHAD HELD BY THE ENTITLED SHAREHOLDERS OF CLOUDPOINT TECHNOLOGY BERH"
+        "title": "[2026-10-23] Bonus Issue"
+      },
+      {
+        "type": "JERUNG_5PCT",
+        "label": "🐋 Major Shareholder Activity",
+        "severity": "info",
+        "title": "[2026-10-20] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK WIRA CHOONG WAI HOONG"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Entitlements",
+        "title": "Bonus Issue"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "General Announcement",
+        "title": "NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : BONUS ISSUES"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "General Announcement",
+        "title": "NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : BONUS ISSUES"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK WIRA CHOONG WAI HOONG"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATUK WIRA CHOONG WAI HOONG"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "General Meetings",
+        "title": "General Meetings: Outcome of Meeting"
+      },
       {
         "date": "2026-10-01",
         "category": "Changes in Shareholdings",
@@ -7880,41 +7893,6 @@ window.NEWS_DATA = {
         "date": "2026-05-06",
         "category": "General Announcement",
         "title": "TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
-      },
-      {
-        "date": "2026-04-30",
-        "category": "Annual Report",
-        "title": "Annual Report & CG Report - 2025"
-      },
-      {
-        "date": "2026-04-30",
-        "category": "General Meetings",
-        "title": "General Meetings: Notice of Meeting"
-      },
-      {
-        "date": "2026-04-29",
-        "category": "General Meetings",
-        "title": "General Meetings: Notice of Meeting"
-      },
-      {
-        "date": "2026-04-24",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR YEW CHOONG CHEONG"
-      },
-      {
-        "date": "2026-04-24",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR YEW CHOONG CHEONG"
-      },
-      {
-        "date": "2026-04-24",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
-      },
-      {
-        "date": "2026-04-24",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
       }
     ],
     "entitlements": [
@@ -7968,10 +7946,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:33.863Z",
+    "checkedAt": "2026-10-25T13:17:30.453Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:33.863Z",
-      "entitlements": "2026-10-16T14:43:33.863Z"
+      "announcements": "2026-10-25T13:17:30.453Z",
+      "entitlements": "2026-10-25T13:17:30.453Z"
     }
   },
   "CNERGEN": {
@@ -8178,10 +8156,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:38.214Z",
+    "checkedAt": "2026-10-25T13:17:20.298Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:38.214Z",
-      "entitlements": "2026-10-16T14:43:38.214Z"
+      "announcements": "2026-10-25T13:17:20.298Z",
+      "entitlements": "2026-10-25T13:17:20.298Z"
     }
   },
   "COLFORM": {
@@ -8189,12 +8167,17 @@ window.NEWS_DATA = {
     "newsBadges": [
       {
         "type": "RECENT_NEWS",
-        "label": "News: 2026-09-18",
+        "label": "News: 2026-10-21",
         "severity": "info",
-        "title": "[2026-09-18] General Announcement - OTHERS"
+        "title": "[2026-10-21] General Announcement - OTHERS"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-21",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
       {
         "date": "2026-09-18",
         "category": "General Announcement",
@@ -8339,11 +8322,6 @@ window.NEWS_DATA = {
         "date": "2025-05-29",
         "category": "Change of Corp Info",
         "title": "Change in Audit Committee - MR TAN VUN SU"
-      },
-      {
-        "date": "2025-05-29",
-        "category": "Change of Corp Info",
-        "title": "Change in Boardroom - MR TAN VUN SU"
       }
     ],
     "entitlements": [
@@ -8370,10 +8348,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:34.891Z",
+    "checkedAt": "2026-10-25T13:17:49.883Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:34.891Z",
-      "entitlements": "2026-10-16T14:43:34.891Z"
+      "announcements": "2026-10-25T13:17:49.883Z",
+      "entitlements": "2026-10-25T13:17:49.883Z"
     }
   },
   "CORAZA": {
@@ -8543,10 +8521,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:35.355Z",
+    "checkedAt": "2026-10-25T13:17:17.573Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:35.355Z",
-      "entitlements": "2026-10-16T14:43:35.355Z"
+      "announcements": "2026-10-25T13:17:17.573Z",
+      "entitlements": "2026-10-25T13:17:17.573Z"
     }
   },
   "CPETECH": {
@@ -8560,6 +8538,41 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "Circular/Notice",
+        "title": "STATEMENT TO SHAREHOLDERS IN RELATION TO THE PROPOSED RENEWAL OF AUTHORITY FOR SHARE BUY BACK"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Annual Report",
+        "title": "Annual Report & CG Report - 2026"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Listing Circulars",
+        "title": "CPETECH - Notice of Book Closure"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "General Meetings",
+        "title": "General Meetings: Notice of Meeting"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Entitlements",
+        "title": "Final Dividend"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
       {
         "date": "2026-10-06",
         "category": "Changes in Shareholdings",
@@ -8674,44 +8687,18 @@ window.NEWS_DATA = {
         "date": "2026-04-06",
         "category": "Dealings in Listed Securities",
         "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-04-02",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR LEE CHEN YEONG"
-      },
-      {
-        "date": "2026-04-02",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LEE CHEN YEONG"
-      },
-      {
-        "date": "2026-04-02",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-04-01",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR HUN JIANG YANN"
-      },
-      {
-        "date": "2026-04-01",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-03-12",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR LEE CHEN YEONG"
-      },
-      {
-        "date": "2026-03-12",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LEE CHEN YEONG"
       }
     ],
     "entitlements": [
+      {
+        "annDate": "21 Oct 2026",
+        "financialYear": "30 Jun 2026",
+        "type": "Final Dividend",
+        "exDate": "2026-12-09",
+        "paymentDate": "23 Dec 2026",
+        "amount": "0.0150",
+        "isDividend": true
+      },
       {
         "annDate": "22 Oct 2025",
         "financialYear": "30 Jun 2025",
@@ -8744,10 +8731,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:31.650Z",
+    "checkedAt": "2026-10-25T13:17:20.322Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:31.650Z",
-      "entitlements": "2026-10-16T14:43:31.650Z"
+      "announcements": "2026-10-25T13:17:20.322Z",
+      "entitlements": "2026-10-25T13:17:20.322Z"
     }
   },
   "CREST": {
@@ -8956,10 +8943,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:31.412Z",
+    "checkedAt": "2026-10-25T13:17:17.387Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:31.412Z",
-      "entitlements": "2026-10-16T14:43:31.412Z"
+      "announcements": "2026-10-25T13:17:17.387Z",
+      "entitlements": "2026-10-25T13:17:17.387Z"
     }
   },
   "CRPMATE": {
@@ -9148,10 +9135,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:46.312Z",
+    "checkedAt": "2026-10-25T13:17:52.495Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:46.312Z",
-      "entitlements": "2026-10-16T14:43:46.312Z"
+      "announcements": "2026-10-25T13:17:52.495Z",
+      "entitlements": "2026-10-25T13:17:52.495Z"
     }
   },
   "CTOS": {
@@ -9161,10 +9148,55 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -9269,51 +9301,6 @@ window.NEWS_DATA = {
         "date": "2026-09-29",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABRDN MALAYSIA SDN BHD"
-      },
-      {
-        "date": "2026-09-29",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABERDEEN GROUP PLC"
-      },
-      {
-        "date": "2026-09-29",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABRDN HOLDINGS LIMITED"
-      },
-      {
-        "date": "2026-09-28",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-25",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-09-24",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-23",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-09-23",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-09-22",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-21",
-        "category": "General Announcement",
-        "title": "OTHERS"
       }
     ],
     "entitlements": [
@@ -9367,10 +9354,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:48.276Z",
+    "checkedAt": "2026-10-25T13:18:12.783Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:48.276Z",
-      "entitlements": "2026-10-16T14:43:48.276Z"
+      "announcements": "2026-10-25T13:18:12.783Z",
+      "entitlements": "2026-10-25T13:18:12.783Z"
     }
   },
   "DAY3": {
@@ -9561,10 +9548,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:43.715Z",
+    "checkedAt": "2026-10-25T13:17:41.987Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:43.715Z",
-      "entitlements": "2026-10-16T14:43:43.715Z"
+      "announcements": "2026-10-25T13:17:41.987Z",
+      "entitlements": "2026-10-25T13:17:41.987Z"
     }
   },
   "DCHCARE": {
@@ -9727,10 +9714,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:49.358Z",
+    "checkedAt": "2026-10-25T13:18:16.970Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:49.358Z",
-      "entitlements": "2026-10-16T14:43:49.358Z"
+      "announcements": "2026-10-25T13:18:16.970Z",
+      "entitlements": "2026-10-25T13:18:16.970Z"
     }
   },
   "DENGKIL": {
@@ -9738,12 +9725,22 @@ window.NEWS_DATA = {
     "newsBadges": [
       {
         "type": "RECENT_NEWS",
-        "label": "News: 2026-10-13",
+        "label": "News: 2026-10-21",
         "severity": "info",
-        "title": "[2026-10-13] Change of Corp Info - Change in Remuneration Committee - MR OW CHEN LUN"
+        "title": "[2026-10-21] Annual Report - Annual Report & CG Report - 2026"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-21",
+        "category": "Annual Report",
+        "title": "Annual Report & CG Report - 2026"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "General Meetings",
+        "title": "General Meetings: Notice of Meeting"
+      },
       {
         "date": "2026-10-13",
         "category": "Change of Corp Info",
@@ -9883,16 +9880,6 @@ window.NEWS_DATA = {
         "date": "2025-12-19",
         "category": "General Meetings",
         "title": "General Meetings: Outcome of Meeting"
-      },
-      {
-        "date": "2025-12-04",
-        "category": "Circular/Notice",
-        "title": "CIRCULAR TO SHAREHOLDERS IN RELATION TO THE: PART A - PROPOSED JOINT VENTURE BETWEEN WAWASAN DENGKIL SDN BHD, A WHOLLY-OWNED SUBSIDIARY OF WAWASAN DENGKIL HOLDINGS BERHAD (\"WDHB\"), NESTCON INFRA SDN BHD AND WD SOLAR KEDAH SDN BHD, FOR THE PURPOSE OF CO-INVESTING IN WD SOLAR KEDAH SDN BHD AND DEVELOP"
-      },
-      {
-        "date": "2025-12-03",
-        "category": "General Meetings",
-        "title": "General Meetings: Notice of Meeting"
       }
     ],
     "entitlements": [],
@@ -9900,10 +9887,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:40.352Z",
+    "checkedAt": "2026-10-25T13:18:04.178Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:40.352Z",
-      "entitlements": "2026-10-16T14:43:40.352Z"
+      "announcements": "2026-10-25T13:18:04.178Z",
+      "entitlements": "2026-10-25T13:18:04.178Z"
     }
   },
   "DESTINI": {
@@ -9914,12 +9901,6 @@ window.NEWS_DATA = {
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
         "title": "[2026-10-13] Changes in Director's Interest (Section 219 of CA 2016) - DATO' SRI DR SHAHRIL BIN MOKHTAR"
-      },
-      {
-        "type": "EV_CATALYST",
-        "label": "⚡ MOU / EV Catalyst",
-        "severity": "success",
-        "title": "[2026-09-23] MEMORANDUM OF UNDERSTANDING"
       }
     ],
     "announcements": [
@@ -10089,10 +10070,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:41.242Z",
+    "checkedAt": "2026-10-25T13:18:16.180Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:41.242Z",
-      "entitlements": "2026-10-16T14:43:41.242Z"
+      "announcements": "2026-10-25T13:18:16.180Z",
+      "entitlements": "2026-10-25T13:18:16.180Z"
     }
   },
   "DLADY": {
@@ -10301,10 +10282,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:38.384Z",
+    "checkedAt": "2026-10-25T13:17:57.851Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:38.384Z",
-      "entitlements": "2026-10-16T14:43:38.384Z"
+      "announcements": "2026-10-25T13:17:57.851Z",
+      "entitlements": "2026-10-25T13:17:57.851Z"
     }
   },
   "DNEX": {
@@ -10318,6 +10299,16 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
       {
         "date": "2026-10-16",
         "category": "Additional Listing",
@@ -10457,16 +10448,6 @@ window.NEWS_DATA = {
         "date": "2026-08-24",
         "category": "Additional Listing",
         "title": "Additional Listing Announcement /Subdivision of Shares"
-      },
-      {
-        "date": "2026-08-21",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-08-21",
-        "category": "Financial Results",
-        "title": "Quarterly rpt on consolidated results for the financial period ended 30/06/2026"
       }
     ],
     "entitlements": [
@@ -10518,25 +10499,30 @@ window.NEWS_DATA = {
     ],
     "fetchStatus": {
       "announcements": "ok",
-      "entitlements": "ok"
+      "entitlements": "error"
     },
-    "checkedAt": "2026-10-16T14:43:40.039Z",
+    "checkedAt": "2026-10-25T13:18:14.804Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:40.039Z",
+      "announcements": "2026-10-25T13:18:14.804Z",
       "entitlements": "2026-10-16T14:43:40.039Z"
     }
   },
   "DPIH": {
-    "hasNewsAlert": false,
+    "hasNewsAlert": true,
     "newsBadges": [
       {
-        "type": "RECENT_NEWS",
-        "label": "News: 2026-10-06",
-        "severity": "info",
-        "title": "[2026-10-06] General Announcement - TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
+        "type": "EARNINGS_QR",
+        "label": "Earnings Release",
+        "severity": "danger",
+        "title": "[2026-10-22] Quarterly rpt on consolidated results for the financial period ended 31/08/2026"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "Financial Results",
+        "title": "Quarterly rpt on consolidated results for the financial period ended 31/08/2026"
+      },
       {
         "date": "2026-10-06",
         "category": "General Announcement",
@@ -10681,11 +10667,6 @@ window.NEWS_DATA = {
         "date": "2025-01-24",
         "category": "General Announcement",
         "title": "TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : RELATED PARTY TRANSACTIONS"
-      },
-      {
-        "date": "2025-01-20",
-        "category": "Financial Results",
-        "title": "Quarterly rpt on consolidated results for the financial period ended 30/11/2024"
       }
     ],
     "entitlements": [
@@ -10739,10 +10720,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:45.905Z",
+    "checkedAt": "2026-10-25T13:18:19.781Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:45.905Z",
-      "entitlements": "2026-10-16T14:43:45.905Z"
+      "announcements": "2026-10-25T13:18:19.781Z",
+      "entitlements": "2026-10-25T13:18:19.781Z"
     }
   },
   "DSS": {
@@ -10940,10 +10921,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:43.908Z",
+    "checkedAt": "2026-10-25T13:18:18.894Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:43.908Z",
-      "entitlements": "2026-10-16T14:43:43.908Z"
+      "announcements": "2026-10-25T13:18:18.894Z",
+      "entitlements": "2026-10-25T13:18:18.894Z"
     }
   },
   "DUFU": {
@@ -11159,10 +11140,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:32.633Z",
+    "checkedAt": "2026-10-25T13:17:14.417Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:32.633Z",
-      "entitlements": "2026-10-16T14:43:32.633Z"
+      "announcements": "2026-10-25T13:17:14.417Z",
+      "entitlements": "2026-10-25T13:17:14.417Z"
     }
   },
   "DXN": {
@@ -11176,6 +11157,36 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement on Shares Buy Back"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Shares Buy Back",
+        "title": "Notice of SBB by a Company Pursuant to Section 127 (16) of CA 2016"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement on Shares Buy Back"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement on Shares Buy Back"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement on Shares Buy Back"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement on Shares Buy Back"
+      },
       {
         "date": "2026-10-16",
         "category": "Shares Buy Back",
@@ -11295,36 +11306,6 @@ window.NEWS_DATA = {
         "date": "2026-09-21",
         "category": "Shares Buy Back",
         "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-09-18",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-09-17",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-09-15",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-09-14",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-09-11",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-09-11",
-        "category": "Shares Buy Back",
-        "title": "Notice of SBB by a Company Pursuant to Section 127 (16) of CA 2016"
       }
     ],
     "entitlements": [
@@ -11378,10 +11359,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:40.072Z",
+    "checkedAt": "2026-10-25T13:17:32.740Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:40.072Z",
-      "entitlements": "2026-10-16T14:43:40.072Z"
+      "announcements": "2026-10-25T13:17:32.740Z",
+      "entitlements": "2026-10-25T13:17:32.740Z"
     }
   },
   "ECA": {
@@ -11551,10 +11532,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:46.211Z",
+    "checkedAt": "2026-10-25T13:18:04.663Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:46.211Z",
-      "entitlements": "2026-10-16T14:43:46.211Z"
+      "announcements": "2026-10-25T13:18:04.663Z",
+      "entitlements": "2026-10-25T13:18:04.663Z"
     }
   },
   "ECKEM": {
@@ -11642,10 +11623,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:49.255Z",
+    "checkedAt": "2026-10-25T13:18:17.459Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:49.255Z",
-      "entitlements": "2026-10-16T14:43:49.255Z"
+      "announcements": "2026-10-25T13:18:17.459Z",
+      "entitlements": "2026-10-25T13:18:17.459Z"
     }
   },
   "ECOGRP": {
@@ -11769,14 +11750,7 @@ window.NEWS_DATA = {
   },
   "ECOMATE": {
     "hasNewsAlert": false,
-    "newsBadges": [
-      {
-        "type": "RECENT_NEWS",
-        "label": "News: 2026-09-23",
-        "severity": "info",
-        "title": "[2026-09-23] General Announcement - OTHERS"
-      }
-    ],
+    "newsBadges": [],
     "announcements": [
       {
         "date": "2026-09-23",
@@ -11962,10 +11936,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:30.394Z",
+    "checkedAt": "2026-10-25T13:17:15.393Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:30.394Z",
-      "entitlements": "2026-10-16T14:43:30.394Z"
+      "announcements": "2026-10-25T13:17:15.393Z",
+      "entitlements": "2026-10-25T13:17:15.393Z"
     }
   },
   "ECOSHOP": {
@@ -11975,10 +11949,30 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Director's Interest (Section 219 of CA 2016) - MISS NG KIM TENG"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-10-16",
         "category": "Dealings in Listed Securities",
@@ -12108,26 +12102,6 @@ window.NEWS_DATA = {
         "date": "2026-09-17",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-15",
-        "category": "General Announcement",
-        "title": "NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : ESOS"
-      },
-      {
-        "date": "2026-09-11",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-09-10",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MISS CHEN THAI FOONG"
-      },
-      {
-        "date": "2026-09-10",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
       }
     ],
     "entitlements": [
@@ -12181,10 +12155,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:32.171Z",
+    "checkedAt": "2026-10-25T13:17:35.129Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:32.171Z",
-      "entitlements": "2026-10-16T14:43:32.171Z"
+      "announcements": "2026-10-25T13:17:35.129Z",
+      "entitlements": "2026-10-25T13:17:35.129Z"
     }
   },
   "ECOSYS": {
@@ -12254,10 +12228,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:35.241Z",
+    "checkedAt": "2026-10-25T13:17:24.500Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:35.241Z",
-      "entitlements": "2026-10-16T14:43:35.241Z"
+      "announcements": "2026-10-25T13:17:24.500Z",
+      "entitlements": "2026-10-25T13:17:24.500Z"
     }
   },
   "EDELTEQ": {
@@ -12265,12 +12239,22 @@ window.NEWS_DATA = {
     "newsBadges": [
       {
         "type": "RECENT_NEWS",
-        "label": "News: 2026-10-15",
+        "label": "News: 2026-10-23",
         "severity": "info",
-        "title": "[2026-10-15] General Announcement - NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : FUND RAISING"
+        "title": "[2026-10-23] General Announcement - NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : FUND RAISING"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "General Announcement",
+        "title": "NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : FUND RAISING"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "General Announcement",
+        "title": "NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : FUND RAISING"
+      },
       {
         "date": "2026-10-15",
         "category": "General Announcement",
@@ -12410,16 +12394,6 @@ window.NEWS_DATA = {
         "date": "2025-12-23",
         "category": "General Announcement",
         "title": "NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : BONUS ISSUES"
-      },
-      {
-        "date": "2025-12-16",
-        "category": "General Announcement",
-        "title": "NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : BONUS ISSUES"
-      },
-      {
-        "date": "2025-12-10",
-        "category": "General Announcement",
-        "title": "NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : BONUS ISSUES"
       }
     ],
     "entitlements": [
@@ -12437,10 +12411,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:35.066Z",
+    "checkedAt": "2026-10-25T13:17:20.425Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:35.066Z",
-      "entitlements": "2026-10-16T14:43:35.066Z"
+      "announcements": "2026-10-25T13:17:20.425Z",
+      "entitlements": "2026-10-25T13:17:20.425Z"
     }
   },
   "EFRAME": {
@@ -12629,10 +12603,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:37.800Z",
+    "checkedAt": "2026-10-25T13:17:40.123Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:37.800Z",
-      "entitlements": "2026-10-16T14:43:37.800Z"
+      "announcements": "2026-10-25T13:17:40.123Z",
+      "entitlements": "2026-10-25T13:17:40.123Z"
     }
   },
   "EIB": {
@@ -12795,10 +12769,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:50.298Z",
+    "checkedAt": "2026-10-25T13:18:19.741Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:50.298Z",
-      "entitlements": "2026-10-16T14:43:50.298Z"
+      "announcements": "2026-10-25T13:18:19.741Z",
+      "entitlements": "2026-10-25T13:18:19.741Z"
     }
   },
   "EIPOWER": {
@@ -12946,10 +12920,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:34.033Z",
+    "checkedAt": "2026-10-25T13:17:50.360Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:34.033Z",
-      "entitlements": "2026-10-16T14:43:34.033Z"
+      "announcements": "2026-10-25T13:17:50.360Z",
+      "entitlements": "2026-10-25T13:17:50.360Z"
     }
   },
   "ELRIDGE": {
@@ -12959,11 +12933,71 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR YEO HOCK CHEONG"
+        "title": "[2026-10-23] Changes in Director's Interest (Section 219 of CA 2016) - MR YEO HOCK CHEONG"
       }
     ],
     "announcements": [
       {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR YEO HOCK CHEONG"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR YEO HOCK CHEONG"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR YEO HOCK CHEONG"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR YEO HOCK CHEONG"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR YEO HOCK CHEONG"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR YEO HOCK CHEONG"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR YEO HOCK CHEONG"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR YEO HOCK CHEONG"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR YEO HOCK CHEONG"
@@ -13052,66 +13086,6 @@ window.NEWS_DATA = {
         "date": "2026-10-09",
         "category": "Changes in Shareholdings",
         "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR YEO HOCK CHEONG"
-      },
-      {
-        "date": "2026-10-08",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR YEO HOCK CHEONG"
-      },
-      {
-        "date": "2026-10-08",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR YEO HOCK CHEONG"
-      },
-      {
-        "date": "2026-10-08",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-10-07",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR YEO HOCK CHEONG"
-      },
-      {
-        "date": "2026-10-07",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR YEO HOCK CHEONG"
-      },
-      {
-        "date": "2026-10-07",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-10-06",
-        "category": "General Announcement",
-        "title": "TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
-      },
-      {
-        "date": "2026-09-28",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - URUSHARTA JAMAAH SDN. BHD."
-      },
-      {
-        "date": "2026-09-22",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-09-09",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - URUSHARTA JAMAAH SDN. BHD."
-      },
-      {
-        "date": "2026-09-03",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - URUSHARTA JAMAAH SDN. BHD."
-      },
-      {
-        "date": "2026-09-02",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - URUSHARTA JAMAAH SDN. BHD."
       }
     ],
     "entitlements": [],
@@ -13119,10 +13093,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:32.321Z",
+    "checkedAt": "2026-10-25T13:17:13.791Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:32.321Z",
-      "entitlements": "2026-10-16T14:43:32.321Z"
+      "announcements": "2026-10-25T13:17:13.791Z",
+      "entitlements": "2026-10-25T13:17:13.791Z"
     }
   },
   "ELSA": {
@@ -13136,6 +13110,11 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
       {
         "date": "2026-10-01",
         "category": "Changes in Shareholdings",
@@ -13287,10 +13266,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:34.307Z",
+    "checkedAt": "2026-10-25T13:17:56.448Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:34.307Z",
-      "entitlements": "2026-10-16T14:43:34.307Z"
+      "announcements": "2026-10-25T13:17:56.448Z",
+      "entitlements": "2026-10-25T13:17:56.448Z"
     }
   },
   "EMCC": {
@@ -13481,10 +13460,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:41.098Z",
+    "checkedAt": "2026-10-25T13:17:32.534Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:41.098Z",
-      "entitlements": "2026-10-16T14:43:41.098Z"
+      "announcements": "2026-10-25T13:17:32.534Z",
+      "entitlements": "2026-10-25T13:17:32.534Z"
     }
   },
   "EMPIRE": {
@@ -13494,10 +13473,45 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-13] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PRUDENTIAL PLC"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EASTSPRING INVESTMENTS BERHAD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EASTSPRING INVESTMENTS BERHAD"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PRUDENTIAL PLC"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EASTSPRING INVESTMENTS BERHAD"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PRUDENTIAL PLC"
+      },
       {
         "date": "2026-10-13",
         "category": "Changes in Shareholdings",
@@ -13612,41 +13626,6 @@ window.NEWS_DATA = {
         "date": "2026-09-03",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MISS LIM XUI JHI"
-      },
-      {
-        "date": "2026-09-03",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MISS LIM XUI JHI"
-      },
-      {
-        "date": "2026-09-03",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-09-03",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-09-01",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-08-28",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MISS LIM XUI JHI"
-      },
-      {
-        "date": "2026-08-28",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MISS LIM XUI JHI"
-      },
-      {
-        "date": "2026-08-28",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
       }
     ],
     "entitlements": [
@@ -13664,10 +13643,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:37.608Z",
+    "checkedAt": "2026-10-25T13:17:39.430Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:37.608Z",
-      "entitlements": "2026-10-16T14:43:37.608Z"
+      "announcements": "2026-10-25T13:17:39.430Z",
+      "entitlements": "2026-10-25T13:17:39.430Z"
     }
   },
   "ENEST": {
@@ -13733,11 +13712,11 @@ window.NEWS_DATA = {
     "entitlements": [],
     "fetchStatus": {
       "announcements": "ok",
-      "entitlements": "ok"
+      "entitlements": "error"
     },
-    "checkedAt": "2026-10-16T14:43:39.415Z",
+    "checkedAt": "2026-10-25T13:18:05.817Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:39.415Z",
+      "announcements": "2026-10-25T13:18:05.817Z",
       "entitlements": "2026-10-16T14:43:39.415Z"
     }
   },
@@ -13748,11 +13727,31 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-13] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ENCIK AZMAN BIN YUSOF"
+        "title": "[2026-10-19] Changes in Director's Interest (Section 219 of CA 2016) - ENCIK AZMAN BIN YUSOF"
       }
     ],
     "announcements": [
       {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - ENCIK AZMAN BIN YUSOF"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - 299 GLOBAL SDN BHD"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ENCIK AZMAN BIN YUSOF"
+      },
+      {
         "date": "2026-10-13",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ENCIK AZMAN BIN YUSOF"
@@ -13881,26 +13880,6 @@ window.NEWS_DATA = {
         "date": "2026-09-29",
         "category": "Changes in Shareholdings",
         "title": "Changes in Director's Interest (Section 219 of CA 2016) - ENCIK AZMAN BIN YUSOF"
-      },
-      {
-        "date": "2026-09-29",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ENCIK AZMAN BIN YUSOF"
-      },
-      {
-        "date": "2026-09-29",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-09-23",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-09-23",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - PUAN KARWINDA NURINI BINTI KASSIM"
       }
     ],
     "entitlements": [],
@@ -13908,10 +13887,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:32.158Z",
+    "checkedAt": "2026-10-25T13:17:12.287Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:32.158Z",
-      "entitlements": "2026-10-16T14:43:32.158Z"
+      "announcements": "2026-10-25T13:17:12.287Z",
+      "entitlements": "2026-10-25T13:17:12.287Z"
     }
   },
   "EPB": {
@@ -13921,10 +13900,30 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Director's Interest (Section 219 of CA 2016) - MR YEOH CHEE MIN"
+        "title": "[2026-10-21] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR YEOH CHEE MIN"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR YEOH CHEE MIN"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MADAM OOI KIM KEW"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR YEOH CHEE MIN"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -14054,26 +14053,6 @@ window.NEWS_DATA = {
         "date": "2026-09-02",
         "category": "Dealings in Listed Securities",
         "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-09-02",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LIEW MENG HOOI"
-      },
-      {
-        "date": "2026-09-02",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR LIEW MENG HOOI"
-      },
-      {
-        "date": "2026-09-01",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR YEOH CHEE MIN"
-      },
-      {
-        "date": "2026-09-01",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MADAM OOI KIM KEW"
       }
     ],
     "entitlements": [
@@ -14091,10 +14070,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:40.722Z",
+    "checkedAt": "2026-10-25T13:17:39.128Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:40.722Z",
-      "entitlements": "2026-10-16T14:43:40.722Z"
+      "announcements": "2026-10-25T13:17:39.128Z",
+      "entitlements": "2026-10-25T13:17:39.128Z"
     }
   },
   "EVOCOM": {
@@ -14169,10 +14148,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:48.105Z",
+    "checkedAt": "2026-10-25T13:18:15.217Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:48.105Z",
-      "entitlements": "2026-10-16T14:43:48.105Z"
+      "announcements": "2026-10-25T13:18:15.217Z",
+      "entitlements": "2026-10-25T13:18:15.217Z"
     }
   },
   "EXSIMHB": {
@@ -14186,6 +14165,16 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -14325,16 +14314,6 @@ window.NEWS_DATA = {
         "date": "2026-08-05",
         "category": "General Announcement",
         "title": "OTHERS"
-      },
-      {
-        "date": "2026-08-05",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-07-30",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LIM AIK FU"
       }
     ],
     "entitlements": [],
@@ -14342,20 +14321,20 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:31.041Z",
+    "checkedAt": "2026-10-25T13:17:18.830Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:31.041Z",
-      "entitlements": "2026-10-16T14:43:31.041Z"
+      "announcements": "2026-10-25T13:17:18.830Z",
+      "entitlements": "2026-10-25T13:17:18.830Z"
     }
   },
   "F&N": {
     "hasNewsAlert": false,
     "newsBadges": [
       {
-        "type": "JERUNG_5PCT",
-        "label": "🐋 Major Shareholder Activity",
+        "type": "RECENT_NEWS",
+        "label": "News: 2026-10-14",
         "severity": "info",
-        "title": "[2026-09-18] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-10-14] General Announcement - TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
       }
     ],
     "announcements": [
@@ -14561,10 +14540,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:44.573Z",
+    "checkedAt": "2026-10-25T13:17:34.598Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:44.573Z",
-      "entitlements": "2026-10-16T14:43:44.573Z"
+      "announcements": "2026-10-25T13:17:34.598Z",
+      "entitlements": "2026-10-25T13:17:34.598Z"
     }
   },
   "FAMIERA": {
@@ -14697,10 +14676,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:35.410Z",
+    "checkedAt": "2026-10-25T13:17:15.368Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:35.410Z",
-      "entitlements": "2026-10-16T14:43:35.410Z"
+      "announcements": "2026-10-25T13:17:15.368Z",
+      "entitlements": "2026-10-25T13:17:15.368Z"
     }
   },
   "FEYTECH": {
@@ -14889,10 +14868,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:48.402Z",
+    "checkedAt": "2026-10-25T13:17:52.316Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:48.402Z",
-      "entitlements": "2026-10-16T14:43:48.402Z"
+      "announcements": "2026-10-25T13:17:52.316Z",
+      "entitlements": "2026-10-25T13:17:52.316Z"
     }
   },
   "FFB": {
@@ -14902,10 +14881,60 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LOI TUAN EE"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR LOI TUAN EE"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LOI TUAN EE"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MISS LOI FOON KION"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MISS LOI FOON KION"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -15005,56 +15034,6 @@ window.NEWS_DATA = {
         "date": "2026-09-29",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-28",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-25",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-24",
-        "category": "General Meetings",
-        "title": "General Meetings: Outcome of Meeting"
-      },
-      {
-        "date": "2026-09-24",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-23",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-22",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-21",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-18",
-        "category": "General Announcement",
-        "title": "NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : FUND RAISING"
-      },
-      {
-        "date": "2026-09-18",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-18",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
       }
     ],
     "entitlements": [
@@ -15108,10 +15087,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:40.808Z",
+    "checkedAt": "2026-10-25T13:18:06.591Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:40.808Z",
-      "entitlements": "2026-10-16T14:43:40.808Z"
+      "announcements": "2026-10-25T13:18:06.591Z",
+      "entitlements": "2026-10-25T13:18:06.591Z"
     }
   },
   "FIBRO": {
@@ -15281,10 +15260,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:49.612Z",
+    "checkedAt": "2026-10-25T13:17:38.692Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:49.612Z",
-      "entitlements": "2026-10-16T14:43:49.612Z"
+      "announcements": "2026-10-25T13:17:38.692Z",
+      "entitlements": "2026-10-25T13:17:38.692Z"
     }
   },
   "FLEXI": {
@@ -15464,23 +15443,106 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:49.233Z",
+    "checkedAt": "2026-10-25T13:18:09.482Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:49.233Z",
-      "entitlements": "2026-10-16T14:43:49.233Z"
+      "announcements": "2026-10-25T13:18:09.482Z",
+      "entitlements": "2026-10-25T13:18:09.482Z"
     }
   },
   "FOODIE": {
-    "hasNewsAlert": false,
+    "hasNewsAlert": true,
     "newsBadges": [
+      {
+        "type": "EX_DIVIDEND",
+        "label": "Ex-Div: 2026-11-05",
+        "severity": "warning",
+        "title": "Special Dividend (0.0061) | Ex-Date: 2026-11-05"
+      },
       {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Notice of Person Ceasing (Section 139 of CA 2016) - PRUDENTIAL PLC"
+        "title": "[2026-10-23] Changes in Director's Interest (Section 219 of CA 2016) - MR LOO WOI LIP"
+      },
+      {
+        "type": "EV_CATALYST",
+        "label": "⚡ MOU / EV Catalyst",
+        "severity": "success",
+        "title": "[2026-10-22] MEMORANDUM OF UNDERSTANDING"
+      },
+      {
+        "type": "EARNINGS_QR",
+        "label": "Earnings Release",
+        "severity": "danger",
+        "title": "[2026-10-22] Quarterly rpt on consolidated results for the financial period ended 31/08/2026"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR LOO WOI LIP"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LOO WOI LIP"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MISS ANG RUI MEI"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MISS ANG RUI MEI"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR NICHOLAS LIM PINN YANG"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR NICHOLAS LIM PINN YANG"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Listing Circulars",
+        "title": "FOODIE - Notice of Book Closure"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Listing Circulars",
+        "title": "FOODIE - Notice of Book Closure"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Entitlements",
+        "title": "Special Dividend"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Entitlements",
+        "title": "Second Interim Dividend"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "General Announcement",
+        "title": "MEMORANDUM OF UNDERSTANDING"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Financial Results",
+        "title": "Quarterly rpt on consolidated results for the financial period ended 31/08/2026"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -15565,81 +15627,25 @@ window.NEWS_DATA = {
         "date": "2026-09-11",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PRUDENTIAL PLC"
-      },
-      {
-        "date": "2026-09-11",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EASTSPRING INVESTMENTS BERHAD"
-      },
-      {
-        "date": "2026-09-11",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PRUDENTIAL PLC"
-      },
-      {
-        "date": "2026-09-11",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EASTSPRING INVESTMENTS BERHAD"
-      },
-      {
-        "date": "2026-08-24",
-        "category": "General Announcement",
-        "title": "MEMORANDUM OF UNDERSTANDING"
-      },
-      {
-        "date": "2026-07-14",
-        "category": "General Announcement",
-        "title": "MEMORANDUM OF UNDERSTANDING"
-      },
-      {
-        "date": "2026-07-14",
-        "category": "Financial Results",
-        "title": "Quarterly rpt on consolidated results for the financial period ended 31/05/2026"
-      },
-      {
-        "date": "2026-06-30",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EASTSPRING INVESTMENTS BERHAD"
-      },
-      {
-        "date": "2026-06-30",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PRUDENTIAL PLC"
-      },
-      {
-        "date": "2026-06-15",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MISS LOO CHEE LENG"
-      },
-      {
-        "date": "2026-06-15",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MISS LOO CHEE LENG"
-      },
-      {
-        "date": "2026-06-15",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-06-12",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
-      },
-      {
-        "date": "2026-06-04",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR YEOH CHEN CHOW"
       }
     ],
     "entitlements": [
       {
-        "annDate": "22 Apr 2026",
+        "annDate": "22 Oct 2026",
         "financialYear": "31 Aug 2026",
-        "type": "First Interim Dividend",
-        "exDate": "2026-05-08",
-        "paymentDate": "25 May 2026",
-        "amount": "0.0032",
+        "type": "Special Dividend",
+        "exDate": "2026-11-05",
+        "paymentDate": "19 Nov 2026",
+        "amount": "0.0061",
+        "isDividend": true
+      },
+      {
+        "annDate": "22 Oct 2026",
+        "financialYear": "31 Aug 2026",
+        "type": "Second Interim Dividend",
+        "exDate": "2026-11-05",
+        "paymentDate": "19 Nov 2026",
+        "amount": "0.0039",
         "isDividend": true
       },
       {
@@ -15650,27 +15656,30 @@ window.NEWS_DATA = {
         "paymentDate": "25 May 2026",
         "amount": "0.0021",
         "isDividend": true
+      },
+      {
+        "annDate": "22 Apr 2026",
+        "financialYear": "31 Aug 2026",
+        "type": "First Interim Dividend",
+        "exDate": "2026-05-08",
+        "paymentDate": "25 May 2026",
+        "amount": "0.0032",
+        "isDividend": true
       }
     ],
     "fetchStatus": {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:48.850Z",
+    "checkedAt": "2026-10-25T13:17:56.214Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:48.850Z",
-      "entitlements": "2026-10-16T14:43:48.850Z"
+      "announcements": "2026-10-25T13:17:56.214Z",
+      "entitlements": "2026-10-25T13:17:56.214Z"
     }
   },
   "FPHB": {
-    "hasNewsAlert": true,
+    "hasNewsAlert": false,
     "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 2026-10-16",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0060) | Ex-Date: 2026-10-16"
-      },
       {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
@@ -15845,10 +15854,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:47.090Z",
+    "checkedAt": "2026-10-25T13:17:40.144Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:47.090Z",
-      "entitlements": "2026-10-16T14:43:47.090Z"
+      "announcements": "2026-10-25T13:17:40.144Z",
+      "entitlements": "2026-10-25T13:17:40.144Z"
     }
   },
   "GBBOND": {
@@ -15938,22 +15947,15 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:41.246Z",
+    "checkedAt": "2026-10-25T13:17:22.400Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:41.246Z",
-      "entitlements": "2026-10-16T14:43:41.246Z"
+      "announcements": "2026-10-25T13:17:22.400Z",
+      "entitlements": "2026-10-25T13:17:22.400Z"
     }
   },
   "GDGROUP": {
     "hasNewsAlert": false,
-    "newsBadges": [
-      {
-        "type": "RECENT_NEWS",
-        "label": "News: 2026-09-17",
-        "severity": "info",
-        "title": "[2026-09-17] General Meetings - General Meetings: Outcome of Meeting"
-      }
-    ],
+    "newsBadges": [],
     "announcements": [
       {
         "date": "2026-09-17",
@@ -16116,23 +16118,33 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:29.801Z",
+    "checkedAt": "2026-10-25T13:17:33.641Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:29.801Z",
-      "entitlements": "2026-10-16T14:43:29.801Z"
+      "announcements": "2026-10-25T13:17:33.641Z",
+      "entitlements": "2026-10-25T13:17:33.641Z"
     }
   },
   "GENERGY": {
     "hasNewsAlert": false,
     "newsBadges": [
       {
-        "type": "RECENT_NEWS",
-        "label": "News: 2026-09-29",
+        "type": "JERUNG_5PCT",
+        "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-09-29] General Announcement - OTHERS"
+        "title": "[2026-10-22] Changes in Director's Interest (Section 219 of CA 2016) - MR WONG YIN KEE"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR WONG YIN KEE"
+      },
       {
         "date": "2026-09-29",
         "category": "General Announcement",
@@ -16272,16 +16284,6 @@ window.NEWS_DATA = {
         "date": "2025-12-11",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - TEE KIAN LIM"
-      },
-      {
-        "date": "2025-12-11",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - TEMA ENERGY VENTURES SDN. BHD."
-      },
-      {
-        "date": "2025-12-11",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - TONY TAN CHOON KEAT"
       }
     ],
     "entitlements": [
@@ -16308,10 +16310,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:39.860Z",
+    "checkedAt": "2026-10-25T13:17:55.516Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:39.860Z",
-      "entitlements": "2026-10-16T14:43:39.860Z"
+      "announcements": "2026-10-25T13:17:55.516Z",
+      "entitlements": "2026-10-25T13:17:55.516Z"
     }
   },
   "GEOHAN": {
@@ -16474,10 +16476,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:40.056Z",
+    "checkedAt": "2026-10-25T13:17:38.761Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:40.056Z",
-      "entitlements": "2026-10-16T14:43:40.056Z"
+      "announcements": "2026-10-25T13:17:38.761Z",
+      "entitlements": "2026-10-25T13:17:38.761Z"
     }
   },
   "GIIB": {
@@ -16693,10 +16695,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:37.185Z",
+    "checkedAt": "2026-10-25T13:17:33.372Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:37.185Z",
-      "entitlements": "2026-10-16T14:43:37.185Z"
+      "announcements": "2026-10-25T13:17:33.372Z",
+      "entitlements": "2026-10-25T13:17:33.372Z"
     }
   },
   "GLXT": {
@@ -16912,10 +16914,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:49.807Z",
+    "checkedAt": "2026-10-25T13:18:09.543Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:49.807Z",
-      "entitlements": "2026-10-16T14:43:49.807Z"
+      "announcements": "2026-10-25T13:18:09.543Z",
+      "entitlements": "2026-10-25T13:18:09.543Z"
     }
   },
   "GOHUB": {
@@ -17085,22 +17087,15 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:42.689Z",
+    "checkedAt": "2026-10-25T13:17:54.038Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:42.689Z",
-      "entitlements": "2026-10-16T14:43:42.689Z"
+      "announcements": "2026-10-25T13:17:54.038Z",
+      "entitlements": "2026-10-25T13:17:54.038Z"
     }
   },
   "GOLDLI": {
     "hasNewsAlert": false,
-    "newsBadges": [
-      {
-        "type": "RECENT_NEWS",
-        "label": "News: 2026-09-23",
-        "severity": "info",
-        "title": "[2026-09-23] Financial Results - Quarterly rpt on consolidated results for the financial period ended 31/07/2026"
-      }
-    ],
+    "newsBadges": [],
     "announcements": [
       {
         "date": "2026-09-23",
@@ -17193,10 +17188,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:49.243Z",
+    "checkedAt": "2026-10-25T13:17:36.823Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:49.243Z",
-      "entitlements": "2026-10-16T14:43:49.243Z"
+      "announcements": "2026-10-25T13:17:36.823Z",
+      "entitlements": "2026-10-25T13:17:36.823Z"
     }
   },
   "GREATEC": {
@@ -17206,10 +17201,35 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -17334,31 +17354,6 @@ window.NEWS_DATA = {
         "date": "2026-09-22",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-21",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-18",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-17",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-15",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-14",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [],
@@ -17366,10 +17361,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:40.016Z",
+    "checkedAt": "2026-10-25T13:17:46.405Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:40.016Z",
-      "entitlements": "2026-10-16T14:43:40.016Z"
+      "announcements": "2026-10-25T13:17:46.405Z",
+      "entitlements": "2026-10-25T13:17:46.405Z"
     }
   },
   "HAILY": {
@@ -17585,20 +17580,20 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:44.876Z",
+    "checkedAt": "2026-10-25T13:18:04.646Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:44.876Z",
-      "entitlements": "2026-10-16T14:43:44.876Z"
+      "announcements": "2026-10-25T13:18:04.646Z",
+      "entitlements": "2026-10-25T13:18:04.646Z"
     }
   },
   "HAWK": {
     "hasNewsAlert": false,
     "newsBadges": [
       {
-        "type": "JERUNG_5PCT",
-        "label": "🐋 Major Shareholder Activity",
+        "type": "RECENT_NEWS",
+        "label": "News: 2026-10-02",
         "severity": "info",
-        "title": "[2026-09-21] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO SHARMAN KRISTY A/L MICHAEL"
+        "title": "[2026-10-02] Change of Corp Info - Change in Nomination Committee - PUAN ZARINER BINTI ISMAIL"
       }
     ],
     "announcements": [
@@ -17758,10 +17753,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:48.721Z",
+    "checkedAt": "2026-10-25T13:18:15.799Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:48.721Z",
-      "entitlements": "2026-10-16T14:43:48.721Z"
+      "announcements": "2026-10-25T13:18:15.799Z",
+      "entitlements": "2026-10-25T13:18:15.799Z"
     }
   },
   "HEGROUP": {
@@ -17959,10 +17954,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:31.476Z",
+    "checkedAt": "2026-10-25T13:17:17.756Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:31.476Z",
-      "entitlements": "2026-10-16T14:43:31.476Z"
+      "announcements": "2026-10-25T13:17:17.756Z",
+      "entitlements": "2026-10-25T13:17:17.756Z"
     }
   },
   "HEIM": {
@@ -18171,20 +18166,20 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:46.748Z",
+    "checkedAt": "2026-10-25T13:17:55.885Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:46.748Z",
-      "entitlements": "2026-10-16T14:43:46.748Z"
+      "announcements": "2026-10-25T13:17:55.885Z",
+      "entitlements": "2026-10-25T13:17:55.885Z"
     }
   },
   "HHRG": {
     "hasNewsAlert": false,
     "newsBadges": [
       {
-        "type": "JERUNG_5PCT",
-        "label": "🐋 Major Shareholder Activity",
+        "type": "RECENT_NEWS",
+        "label": "News: 2026-10-15",
         "severity": "info",
-        "title": "[2026-09-24] Notice of Person Ceasing (Section 139 of CA 2016) - MR NG KOK MING"
+        "title": "[2026-10-15] Additional Listing - Additional Listing Announcement /Subdivision of Shares"
       }
     ],
     "announcements": [
@@ -18354,10 +18349,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:46.709Z",
+    "checkedAt": "2026-10-25T13:18:14.437Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:46.709Z",
-      "entitlements": "2026-10-16T14:43:46.709Z"
+      "announcements": "2026-10-25T13:18:14.437Z",
+      "entitlements": "2026-10-25T13:18:14.437Z"
     }
   },
   "HKB": {
@@ -18537,10 +18532,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:28.312Z",
+    "checkedAt": "2026-10-25T13:17:12.501Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:28.312Z",
-      "entitlements": "2026-10-16T14:43:28.312Z"
+      "announcements": "2026-10-25T13:17:12.501Z",
+      "entitlements": "2026-10-25T13:17:12.501Z"
     }
   },
   "HLBANK": {
@@ -18550,10 +18545,35 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -18678,31 +18698,6 @@ window.NEWS_DATA = {
         "date": "2026-09-18",
         "category": "General Announcement",
         "title": "OTHERS"
-      },
-      {
-        "date": "2026-09-17",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-14",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-11",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-10",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-09",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -18754,11 +18749,11 @@ window.NEWS_DATA = {
     ],
     "fetchStatus": {
       "announcements": "ok",
-      "entitlements": "ok"
+      "entitlements": "error"
     },
-    "checkedAt": "2026-10-16T14:43:36.812Z",
+    "checkedAt": "2026-10-25T13:17:37.548Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:36.812Z",
+      "announcements": "2026-10-25T13:17:37.548Z",
       "entitlements": "2026-10-16T14:43:36.812Z"
     }
   },
@@ -18975,10 +18970,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:48.382Z",
+    "checkedAt": "2026-10-25T13:17:48.160Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:48.382Z",
-      "entitlements": "2026-10-16T14:43:48.382Z"
+      "announcements": "2026-10-25T13:17:48.160Z",
+      "entitlements": "2026-10-25T13:17:48.160Z"
     }
   },
   "HLIND": {
@@ -19194,10 +19189,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:45.017Z",
+    "checkedAt": "2026-10-25T13:17:47.248Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:45.017Z",
-      "entitlements": "2026-10-16T14:43:45.017Z"
+      "announcements": "2026-10-25T13:17:47.248Z",
+      "entitlements": "2026-10-25T13:17:47.248Z"
     }
   },
   "HOCKSOON": {
@@ -19315,10 +19310,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:49.072Z",
+    "checkedAt": "2026-10-25T13:18:15.643Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:49.072Z",
-      "entitlements": "2026-10-16T14:43:49.072Z"
+      "announcements": "2026-10-25T13:18:15.643Z",
+      "entitlements": "2026-10-25T13:18:15.643Z"
     }
   },
   "HONGSENG": {
@@ -19516,10 +19511,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:41.726Z",
+    "checkedAt": "2026-10-25T13:18:09.113Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:41.726Z",
-      "entitlements": "2026-10-16T14:43:41.726Z"
+      "announcements": "2026-10-25T13:18:09.113Z",
+      "entitlements": "2026-10-25T13:18:09.113Z"
     }
   },
   "HPMT": {
@@ -19728,23 +19723,54 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:36.006Z",
+    "checkedAt": "2026-10-25T13:17:33.111Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:36.006Z",
-      "entitlements": "2026-10-16T14:43:36.006Z"
+      "announcements": "2026-10-25T13:17:33.111Z",
+      "entitlements": "2026-10-25T13:17:33.111Z"
     }
   },
   "HPPHB": {
-    "hasNewsAlert": false,
+    "hasNewsAlert": true,
     "newsBadges": [
       {
-        "type": "RECENT_NEWS",
-        "label": "News: 2026-09-29",
-        "severity": "info",
-        "title": "[2026-09-29] Annual Report - Annual Report & CG Report - 2026"
+        "type": "EX_DIVIDEND",
+        "label": "Ex-Div: 2026-11-12",
+        "severity": "warning",
+        "title": "Interim Dividend (0.0075) | Ex-Date: 2026-11-12"
+      },
+      {
+        "type": "EARNINGS_QR",
+        "label": "Earnings Release",
+        "severity": "danger",
+        "title": "[2026-10-21] Quarterly rpt on consolidated results for the financial period ended 31/08/2026"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "Listing Circulars",
+        "title": "HPPHB - Notice of Book Closure"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Entitlements",
+        "title": "Interim Dividend"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Financial Results",
+        "title": "Quarterly rpt on consolidated results for the financial period ended 31/08/2026"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "General Meetings",
+        "title": "General Meetings: Notice of Meeting"
+      },
       {
         "date": "2026-09-29",
         "category": "Annual Report",
@@ -19869,34 +19895,18 @@ window.NEWS_DATA = {
         "date": "2026-08-14",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MADAM CHONG FEA CHIN"
-      },
-      {
-        "date": "2026-08-14",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LAU TEE TEE @ LAU KIM WAH"
-      },
-      {
-        "date": "2026-08-14",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MADAM NG SOH HOON (DECEASED)"
-      },
-      {
-        "date": "2026-08-14",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR KOK HON SENG"
-      },
-      {
-        "date": "2026-08-14",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AURORA MEADOW SDN. BHD."
-      },
-      {
-        "date": "2026-07-31",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
       }
     ],
     "entitlements": [
+      {
+        "annDate": "21 Oct 2026",
+        "financialYear": "31 May 2027",
+        "type": "Interim Dividend",
+        "exDate": "2026-11-12",
+        "paymentDate": "27 Nov 2026",
+        "amount": "0.0075",
+        "isDividend": true
+      },
       {
         "annDate": "22 Apr 2026",
         "financialYear": "31 May 2026",
@@ -19932,25 +19942,16 @@ window.NEWS_DATA = {
         "paymentDate": "01 Mar 2024",
         "amount": "0.0050",
         "isDividend": true
-      },
-      {
-        "annDate": "21 Sep 2023",
-        "financialYear": "31 May 2023",
-        "type": "Final Dividend",
-        "exDate": "2023-11-15",
-        "paymentDate": "30 Nov 2023",
-        "amount": "0.0075",
-        "isDividend": true
       }
     ],
     "fetchStatus": {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:50.002Z",
+    "checkedAt": "2026-10-25T13:17:47.629Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:50.002Z",
-      "entitlements": "2026-10-16T14:43:50.002Z"
+      "announcements": "2026-10-25T13:17:47.629Z",
+      "entitlements": "2026-10-25T13:17:47.629Z"
     }
   },
   "HSSBAKERY": {
@@ -20061,11 +20062,11 @@ window.NEWS_DATA = {
     "entitlements": [],
     "fetchStatus": {
       "announcements": "ok",
-      "entitlements": "ok"
+      "entitlements": "error"
     },
-    "checkedAt": "2026-10-16T14:43:46.720Z",
+    "checkedAt": "2026-10-25T13:18:00.816Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:46.720Z",
+      "announcements": "2026-10-25T13:18:00.816Z",
       "entitlements": "2026-10-16T14:43:46.720Z"
     }
   },
@@ -20236,10 +20237,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:43.065Z",
+    "checkedAt": "2026-10-25T13:17:40.827Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:43.065Z",
-      "entitlements": "2026-10-16T14:43:43.065Z"
+      "announcements": "2026-10-25T13:17:40.827Z",
+      "entitlements": "2026-10-25T13:17:40.827Z"
     }
   },
   "ICENTS": {
@@ -20409,10 +20410,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:28.113Z",
+    "checkedAt": "2026-10-25T13:17:31.167Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:28.113Z",
-      "entitlements": "2026-10-16T14:43:28.113Z"
+      "announcements": "2026-10-25T13:17:31.167Z",
+      "entitlements": "2026-10-25T13:17:31.167Z"
     }
   },
   "ICTZONE": {
@@ -20610,10 +20611,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:48.954Z",
+    "checkedAt": "2026-10-25T13:18:07.284Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:48.954Z",
-      "entitlements": "2026-10-16T14:43:48.954Z"
+      "announcements": "2026-10-25T13:18:07.284Z",
+      "entitlements": "2026-10-25T13:18:07.284Z"
     }
   },
   "IJM": {
@@ -20623,10 +20624,35 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-10-21] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -20751,31 +20777,6 @@ window.NEWS_DATA = {
         "date": "2026-09-18",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-09-17",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-09-15",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-09-11",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-09-10",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-09-09",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
       }
     ],
     "entitlements": [
@@ -20829,10 +20830,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:41.137Z",
+    "checkedAt": "2026-10-25T13:17:30.812Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:41.137Z",
-      "entitlements": "2026-10-16T14:43:41.137Z"
+      "announcements": "2026-10-25T13:17:30.812Z",
+      "entitlements": "2026-10-25T13:17:30.812Z"
     }
   },
   "INARI": {
@@ -20842,10 +20843,75 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Circular/Notice",
+        "title": "CIRCULAR/STATEMENT TO SHAREHOLDERS IN RELATION TO:- PART A - PROPOSED RENEWAL OF SHAREHOLDERS' MANDATE FOR RECURRENT RELATED PARTY TRANSACTIONS OF A REVENUE OR TRADING NATURE; PART B - PROPOSED RENEWAL OF AUTHORITY FOR THE COMPANY TO PURCHASE ITS OWN SHARES"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Annual Report",
+        "title": "Annual Report & CG Report - 2026"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "General Meetings",
+        "title": "General Meetings: Notice of Meeting"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -20930,71 +20996,6 @@ window.NEWS_DATA = {
         "date": "2026-10-09",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-08",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-08",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-10-07",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-10-07",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-06",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-06",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-10-05",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-05",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-10-02",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-01",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-01",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-09-30",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-09-30",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -21046,31 +21047,35 @@ window.NEWS_DATA = {
     ],
     "fetchStatus": {
       "announcements": "ok",
-      "entitlements": "ok"
+      "entitlements": "error"
     },
-    "checkedAt": "2026-10-16T14:43:31.992Z",
+    "checkedAt": "2026-10-25T13:18:09.180Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:31.992Z",
+      "announcements": "2026-10-25T13:18:09.180Z",
       "entitlements": "2026-10-16T14:43:31.992Z"
     }
   },
   "INFOM": {
-    "hasNewsAlert": true,
+    "hasNewsAlert": false,
     "newsBadges": [
       {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
         "title": "[2026-10-16] Changes in Director's Interest (Section 219 of CA 2016) - ENCIK NOR'AZAMIN BIN SALLEH"
-      },
-      {
-        "type": "EARNINGS_QR",
-        "label": "Earnings Release",
-        "severity": "danger",
-        "title": "[2026-10-14] Quarterly rpt on consolidated results for the financial period ended 31/08/2026"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-20",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement on Shares Buy Back"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement on Shares Buy Back"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -21210,16 +21215,6 @@ window.NEWS_DATA = {
         "date": "2026-08-28",
         "category": "Shares Buy Back",
         "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-08-21",
-        "category": "General Announcement",
-        "title": "TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
-      },
-      {
-        "date": "2026-08-20",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
       }
     ],
     "entitlements": [
@@ -21255,20 +21250,20 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:31.001Z",
+    "checkedAt": "2026-10-25T13:17:12.835Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:31.001Z",
-      "entitlements": "2026-10-16T14:43:31.001Z"
+      "announcements": "2026-10-25T13:17:12.835Z",
+      "entitlements": "2026-10-25T13:17:12.835Z"
     }
   },
   "INFOTEC": {
-    "hasNewsAlert": true,
+    "hasNewsAlert": false,
     "newsBadges": [
       {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 2026-10-14",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0023) | Ex-Date: 2026-10-14"
+        "type": "RECENT_NEWS",
+        "label": "News: 2026-10-08",
+        "severity": "info",
+        "title": "[2026-10-08] General Announcement - OTHERS"
       }
     ],
     "announcements": [
@@ -21474,10 +21469,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:49.715Z",
+    "checkedAt": "2026-10-25T13:18:17.625Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:49.715Z",
-      "entitlements": "2026-10-16T14:43:49.715Z"
+      "announcements": "2026-10-25T13:18:17.625Z",
+      "entitlements": "2026-10-25T13:18:17.625Z"
     }
   },
   "INNATURE": {
@@ -21686,22 +21681,15 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:43.472Z",
+    "checkedAt": "2026-10-25T13:18:19.587Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:43.472Z",
-      "entitlements": "2026-10-16T14:43:43.472Z"
+      "announcements": "2026-10-25T13:18:19.587Z",
+      "entitlements": "2026-10-25T13:18:19.587Z"
     }
   },
   "INSPACE": {
     "hasNewsAlert": false,
-    "newsBadges": [
-      {
-        "type": "CONTRACT_WIN",
-        "label": "📜 Contract Award",
-        "severity": "success",
-        "title": "[2026-09-23] ACCEPTANCE OF LETTER OF AWARD BY IDPM BUILDER SDN. BHD., AN INDIRECT WHOLLY-OWNED SUBSIDIARY OF THE COMPANY, FOR SUBCONTRACT WORKS IN RELATION TO RENOVATION AND ADDITION WORKS FOR COMMERCIAL PROPERTIES"
-      }
-    ],
+    "newsBadges": [],
     "announcements": [
       {
         "date": "2026-09-23",
@@ -21859,10 +21847,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:42.884Z",
+    "checkedAt": "2026-10-25T13:17:47.726Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:42.884Z",
-      "entitlements": "2026-10-16T14:43:42.884Z"
+      "announcements": "2026-10-25T13:17:47.726Z",
+      "entitlements": "2026-10-25T13:17:47.726Z"
     }
   },
   "ISF": {
@@ -22032,10 +22020,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:32.412Z",
+    "checkedAt": "2026-10-25T13:17:10.980Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:32.412Z",
-      "entitlements": "2026-10-16T14:43:32.412Z"
+      "announcements": "2026-10-25T13:17:10.980Z",
+      "entitlements": "2026-10-25T13:17:10.980Z"
     }
   },
   "ITMAX": {
@@ -22045,10 +22033,25 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Director's Interest (Section 219 of CA 2016) - TAN SRI DATO' SERI DR. IR. AHMAD TAJUDDIN BIN ALI"
+        "title": "[2026-10-22] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
       {
         "date": "2026-10-16",
         "category": "Dealings in Listed Securities",
@@ -22183,21 +22186,6 @@ window.NEWS_DATA = {
         "date": "2026-09-10",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-10",
-        "category": "Additional Listing",
-        "title": "Additional Listing Announcement /Subdivision of Shares"
-      },
-      {
-        "date": "2026-09-07",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - TAN SRI DATO' DR TAN BOON HOCK"
-      },
-      {
-        "date": "2026-09-07",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
       }
     ],
     "entitlements": [
@@ -22251,10 +22239,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:30.221Z",
+    "checkedAt": "2026-10-25T13:17:50.954Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:30.221Z",
-      "entitlements": "2026-10-16T14:43:30.221Z"
+      "announcements": "2026-10-25T13:17:50.954Z",
+      "entitlements": "2026-10-25T13:17:50.954Z"
     }
   },
   "JAKS": {
@@ -22262,12 +22250,17 @@ window.NEWS_DATA = {
     "newsBadges": [
       {
         "type": "RECENT_NEWS",
-        "label": "News: 2026-10-15",
+        "label": "News: 2026-10-22",
         "severity": "info",
-        "title": "[2026-10-15] General Announcement - NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : FUND RAISING"
+        "title": "[2026-10-22] General Announcement - NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : FUND RAISING"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "General Announcement",
+        "title": "NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : FUND RAISING"
+      },
       {
         "date": "2026-10-15",
         "category": "General Announcement",
@@ -22412,11 +22405,6 @@ window.NEWS_DATA = {
         "date": "2025-06-26",
         "category": "General Meetings",
         "title": "General Meetings: Outcome of Meeting"
-      },
-      {
-        "date": "2025-05-30",
-        "category": "Financial Results",
-        "title": "Quarterly rpt on consolidated results for the financial period ended 31/03/2025"
       }
     ],
     "entitlements": [
@@ -22434,10 +22422,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:32.984Z",
+    "checkedAt": "2026-10-25T13:17:24.785Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:32.984Z",
-      "entitlements": "2026-10-16T14:43:32.984Z"
+      "announcements": "2026-10-25T13:17:24.785Z",
+      "entitlements": "2026-10-25T13:17:24.785Z"
     }
   },
   "JCY": {
@@ -22653,10 +22641,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:32.974Z",
+    "checkedAt": "2026-10-25T13:17:18.783Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:32.974Z",
-      "entitlements": "2026-10-16T14:43:32.974Z"
+      "announcements": "2026-10-25T13:17:18.783Z",
+      "entitlements": "2026-10-25T13:17:18.783Z"
     }
   },
   "JPG": {
@@ -22666,10 +22654,65 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement on Shares Buy Back"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -22764,61 +22807,6 @@ window.NEWS_DATA = {
         "date": "2026-09-30",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-30",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-09-29",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-09-29",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-09-29",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - ENCIK FAWZI BIN AHMAD"
-      },
-      {
-        "date": "2026-09-29",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-29",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-09-28",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-09-28",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-09-28",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-25",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-09-25",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
       }
     ],
     "entitlements": [
@@ -22872,16 +22860,58 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:40.484Z",
+    "checkedAt": "2026-10-25T13:17:44.571Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:40.484Z",
-      "entitlements": "2026-10-16T14:43:40.484Z"
+      "announcements": "2026-10-25T13:17:44.571Z",
+      "entitlements": "2026-10-25T13:17:44.571Z"
     }
   },
   "JSSOLAR": {
     "hasNewsAlert": false,
-    "newsBadges": [],
+    "newsBadges": [
+      {
+        "type": "RECENT_NEWS",
+        "label": "News: 2026-10-19",
+        "severity": "info",
+        "title": "[2026-10-19] Change of Corp Info - Change in Audit Committee - MISS YONG SHIEW SUN"
+      }
+    ],
     "announcements": [
+      {
+        "date": "2026-10-19",
+        "category": "Change of Corp Info",
+        "title": "Change in Audit Committee - MISS YONG SHIEW SUN"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Change of Corp Info",
+        "title": "Change in Nomination and Remuneration Committee - MISS WENDY KAM"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Change of Corp Info",
+        "title": "Change in Audit Committee - MISS WENDY KAM"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Change of Corp Info",
+        "title": "Change in Nomination and Remuneration Committee - MISS YONG SHIEW SUN"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Change of Corp Info",
+        "title": "Change in Boardroom - MISS WENDY KAM"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Change of Corp Info",
+        "title": "Change in Audit Committee - MISS WONG PHAIT LEE"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Change of Corp Info",
+        "title": "Change in Boardroom - MISS YONG SHIEW SUN"
+      },
       {
         "date": "2026-09-09",
         "category": "General Announcement",
@@ -22996,41 +23026,6 @@ window.NEWS_DATA = {
         "date": "2026-02-10",
         "category": "General Announcement",
         "title": "MEMORANDUM OF UNDERSTANDING"
-      },
-      {
-        "date": "2025-11-21",
-        "category": "Financial Results",
-        "title": "Quarterly rpt on consolidated results for the financial period ended 30/09/2025"
-      },
-      {
-        "date": "2025-10-01",
-        "category": "Change of Corp Info",
-        "title": "Change in Principal Officer - MR TAN THONG GUAN"
-      },
-      {
-        "date": "2025-10-01",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2025-09-25",
-        "category": "General Announcement",
-        "title": "TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : RECURRENT RELATED PARTY TRANSACTIONS"
-      },
-      {
-        "date": "2025-09-23",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2025-09-23",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR CHAI JEUN SIAN"
-      },
-      {
-        "date": "2025-09-23",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATUK IR AHMAD FAUZI BIN HASAN"
       }
     ],
     "entitlements": [],
@@ -23038,10 +23033,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:35.670Z",
+    "checkedAt": "2026-10-25T13:17:24.246Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:35.670Z",
-      "entitlements": "2026-10-16T14:43:35.670Z"
+      "announcements": "2026-10-25T13:17:24.246Z",
+      "entitlements": "2026-10-25T13:17:24.246Z"
     }
   },
   "JTGROUP": {
@@ -23055,6 +23050,16 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
       {
         "date": "2026-10-05",
         "category": "General Announcement",
@@ -23194,16 +23199,6 @@ window.NEWS_DATA = {
         "date": "2026-07-10",
         "category": "Change of Corp Info",
         "title": "Change in Principal Officer - MR LEE KIM VUN"
-      },
-      {
-        "date": "2026-07-10",
-        "category": "Change of Corp Info",
-        "title": "Change in Principal Officer - MR LEE TUCK WAI"
-      },
-      {
-        "date": "2026-07-03",
-        "category": "General Announcement",
-        "title": "OTHERS"
       }
     ],
     "entitlements": [],
@@ -23211,22 +23206,15 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:33.352Z",
+    "checkedAt": "2026-10-25T13:17:23.201Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:33.352Z",
-      "entitlements": "2026-10-16T14:43:33.352Z"
+      "announcements": "2026-10-25T13:17:23.201Z",
+      "entitlements": "2026-10-25T13:17:23.201Z"
     }
   },
   "KEEMING": {
     "hasNewsAlert": false,
-    "newsBadges": [
-      {
-        "type": "JERUNG_5PCT",
-        "label": "🐋 Major Shareholder Activity",
-        "severity": "info",
-        "title": "[2026-09-24] Changes in Director's Interest (Section 219 of CA 2016) - MISS SUSIE CHUNG KIM LAN"
-      }
-    ],
+    "newsBadges": [],
     "announcements": [
       {
         "date": "2026-09-24",
@@ -23379,10 +23367,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:28.670Z",
+    "checkedAt": "2026-10-25T13:17:27.343Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:28.670Z",
-      "entitlements": "2026-10-16T14:43:28.670Z"
+      "announcements": "2026-10-25T13:17:27.343Z",
+      "entitlements": "2026-10-25T13:17:27.343Z"
     }
   },
   "KENERGY": {
@@ -23571,22 +23559,15 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:44.704Z",
+    "checkedAt": "2026-10-25T13:17:53.654Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:44.704Z",
-      "entitlements": "2026-10-16T14:43:44.704Z"
+      "announcements": "2026-10-25T13:17:53.654Z",
+      "entitlements": "2026-10-25T13:17:53.654Z"
     }
   },
   "KESM": {
     "hasNewsAlert": false,
-    "newsBadges": [
-      {
-        "type": "RECENT_NEWS",
-        "label": "News: 2026-09-23",
-        "severity": "info",
-        "title": "[2026-09-23] Listing Circulars - KESM - Notice of Book Closure"
-      }
-    ],
+    "newsBadges": [],
     "announcements": [
       {
         "date": "2026-09-23",
@@ -23808,6 +23789,11 @@ window.NEWS_DATA = {
     ],
     "announcements": [
       {
+        "date": "2026-10-20",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
+      {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATIN OOI SOO PING"
@@ -23951,11 +23937,6 @@ window.NEWS_DATA = {
         "date": "2026-09-11",
         "category": "Dealings in Listed Securities",
         "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-09-11",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATIN OOI SOO PING"
       }
     ],
     "entitlements": [
@@ -24009,10 +23990,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:44.395Z",
+    "checkedAt": "2026-10-25T13:17:20.658Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:44.395Z",
-      "entitlements": "2026-10-16T14:43:44.395Z"
+      "announcements": "2026-10-25T13:17:20.658Z",
+      "entitlements": "2026-10-25T13:17:20.658Z"
     }
   },
   "KGB": {
@@ -24228,10 +24209,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:36.387Z",
+    "checkedAt": "2026-10-25T13:17:44.987Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:36.387Z",
-      "entitlements": "2026-10-16T14:43:36.387Z"
+      "announcements": "2026-10-25T13:17:44.987Z",
+      "entitlements": "2026-10-25T13:17:44.987Z"
     }
   },
   "KGW": {
@@ -24394,16 +24375,38 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:41.657Z",
+    "checkedAt": "2026-10-25T13:18:19.267Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:41.657Z",
-      "entitlements": "2026-10-16T14:43:41.657Z"
+      "announcements": "2026-10-25T13:18:19.267Z",
+      "entitlements": "2026-10-25T13:18:19.267Z"
     }
   },
   "KHB": {
     "hasNewsAlert": false,
-    "newsBadges": [],
+    "newsBadges": [
+      {
+        "type": "JERUNG_5PCT",
+        "label": "🐋 Major Shareholder Activity",
+        "severity": "info",
+        "title": "[2026-10-21] Changes in Director's Interest (Section 219 of CA 2016) - MR ANG YOKE KEE"
+      }
+    ],
     "announcements": [
+      {
+        "date": "2026-10-21",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR ANG YOKE KEE"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
       {
         "date": "2026-08-20",
         "category": "General Announcement",
@@ -24538,21 +24541,6 @@ window.NEWS_DATA = {
         "date": "2025-11-19",
         "category": "Change of Corp Info",
         "title": "Change of Company Secretary - TAI YIT CHAN"
-      },
-      {
-        "date": "2025-11-19",
-        "category": "Change of Corp Info",
-        "title": "Change of Company Secretary - TAN AI NING"
-      },
-      {
-        "date": "2025-11-14",
-        "category": "Change of Corp Info",
-        "title": "Change in Boardroom - MR HIDEKI NOMURA"
-      },
-      {
-        "date": "2025-08-19",
-        "category": "General Announcement",
-        "title": "OTHERS"
       }
     ],
     "entitlements": [
@@ -24570,10 +24558,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:47.013Z",
+    "checkedAt": "2026-10-25T13:17:41.024Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:47.013Z",
-      "entitlements": "2026-10-16T14:43:47.013Z"
+      "announcements": "2026-10-25T13:17:41.024Z",
+      "entitlements": "2026-10-25T13:17:41.024Z"
     }
   },
   "KHJB": {
@@ -24789,10 +24777,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:33.323Z",
+    "checkedAt": "2026-10-25T13:17:25.867Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:33.323Z",
-      "entitlements": "2026-10-16T14:43:33.323Z"
+      "announcements": "2026-10-25T13:17:25.867Z",
+      "entitlements": "2026-10-25T13:17:25.867Z"
     }
   },
   "KITACON": {
@@ -25001,10 +24989,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:43.098Z",
+    "checkedAt": "2026-10-25T13:18:08.498Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:43.098Z",
-      "entitlements": "2026-10-16T14:43:43.098Z"
+      "announcements": "2026-10-25T13:18:08.498Z",
+      "entitlements": "2026-10-25T13:18:08.498Z"
     }
   },
   "KJTS": {
@@ -25202,10 +25190,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:38.175Z",
+    "checkedAt": "2026-10-25T13:18:14.215Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:38.175Z",
-      "entitlements": "2026-10-16T14:43:38.175Z"
+      "announcements": "2026-10-25T13:18:14.215Z",
+      "entitlements": "2026-10-25T13:18:14.215Z"
     }
   },
   "KLCC": {
@@ -25215,11 +25203,31 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
       {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
         "date": "2026-10-06",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
@@ -25346,26 +25354,6 @@ window.NEWS_DATA = {
       },
       {
         "date": "2026-09-09",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-04",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-04",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-03",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-03",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
@@ -25392,19 +25380,19 @@ window.NEWS_DATA = {
       {
         "annDate": "26 May 2026",
         "financialYear": "31 Dec 2026",
-        "type": "First Interim Dividend",
+        "type": "Income Distribution",
         "exDate": "2026-06-11",
         "paymentDate": "30 Jun 2026",
-        "amount": "0.0188",
+        "amount": "0.0742",
         "isDividend": true
       },
       {
         "annDate": "26 May 2026",
         "financialYear": "31 Dec 2026",
-        "type": "Income Distribution",
+        "type": "First Interim Dividend",
         "exDate": "2026-06-11",
         "paymentDate": "30 Jun 2026",
-        "amount": "0.0742",
+        "amount": "0.0188",
         "isDividend": true
       },
       {
@@ -25421,10 +25409,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-15T05:38:59.807Z",
+    "checkedAt": "2026-10-25T13:17:59.382Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-15T05:38:59.807Z",
-      "entitlements": "2026-10-15T05:38:59.807Z"
+      "announcements": "2026-10-25T13:17:59.382Z",
+      "entitlements": "2026-10-25T13:17:59.382Z"
     }
   },
   "KLK": {
@@ -25434,10 +25422,25 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-10-22] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -25572,21 +25575,6 @@ window.NEWS_DATA = {
         "date": "2026-09-09",
         "category": "Change of Corp Info",
         "title": "Change in Boardroom - MR LEE JIA ZHANG"
-      },
-      {
-        "date": "2026-09-09",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-08",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-07",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -25640,16 +25628,28 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:47.874Z",
+    "checkedAt": "2026-10-25T13:18:06.981Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:47.874Z",
-      "entitlements": "2026-10-16T14:43:47.874Z"
+      "announcements": "2026-10-25T13:18:06.981Z",
+      "entitlements": "2026-10-25T13:18:06.981Z"
     }
   },
   "KOPI": {
     "hasNewsAlert": false,
-    "newsBadges": [],
+    "newsBadges": [
+      {
+        "type": "RECENT_NEWS",
+        "label": "News: 2026-10-20",
+        "severity": "info",
+        "title": "[2026-10-20] General Announcement - TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
+      }
+    ],
     "announcements": [
+      {
+        "date": "2026-10-20",
+        "category": "General Announcement",
+        "title": "TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
+      },
       {
         "date": "2026-09-09",
         "category": "General Announcement",
@@ -25794,11 +25794,6 @@ window.NEWS_DATA = {
         "date": "2026-02-06",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - UNITED GOMAX SDN. BHD."
-      },
-      {
-        "date": "2026-02-06",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MISS CHAN YEN MIN"
       }
     ],
     "entitlements": [
@@ -25816,10 +25811,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:37.811Z",
+    "checkedAt": "2026-10-25T13:17:40.042Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:37.811Z",
-      "entitlements": "2026-10-16T14:43:37.811Z"
+      "announcements": "2026-10-25T13:17:40.042Z",
+      "entitlements": "2026-10-25T13:17:40.042Z"
     }
   },
   "KTI": {
@@ -25829,10 +25824,35 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATIN CHIN MEE LEEN"
+        "title": "[2026-10-23] Changes in Director's Interest (Section 219 of CA 2016) - LOKE THEEN FATT"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - LOKE THEEN FATT"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK LOKE THEEN FATT"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATIN CHIN MEE LEEN"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -25957,31 +25977,6 @@ window.NEWS_DATA = {
         "date": "2026-03-13",
         "category": "Changes in Shareholdings",
         "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATUK LOKE THEEN FATT"
-      },
-      {
-        "date": "2026-03-02",
-        "category": "Listing Circulars",
-        "title": "KTI - Notice of Book Closure"
-      },
-      {
-        "date": "2026-02-27",
-        "category": "Entitlements",
-        "title": "Interim Dividend"
-      },
-      {
-        "date": "2026-02-27",
-        "category": "Financial Results",
-        "title": "Quarterly rpt on consolidated results for the financial period ended 31/12/2025"
-      },
-      {
-        "date": "2025-11-27",
-        "category": "Financial Results",
-        "title": "Quarterly rpt on consolidated results for the financial period ended 30/09/2025"
-      },
-      {
-        "date": "2025-10-14",
-        "category": "General Announcement",
-        "title": "OTHERS"
       }
     ],
     "entitlements": [
@@ -26008,10 +26003,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:35.729Z",
+    "checkedAt": "2026-10-25T13:17:51.499Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:35.729Z",
-      "entitlements": "2026-10-16T14:43:35.729Z"
+      "announcements": "2026-10-25T13:17:51.499Z",
+      "entitlements": "2026-10-25T13:17:51.499Z"
     }
   },
   "KUCINGKO": {
@@ -26184,10 +26179,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:49.327Z",
+    "checkedAt": "2026-10-25T13:17:48.683Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:49.327Z",
-      "entitlements": "2026-10-16T14:43:49.327Z"
+      "announcements": "2026-10-25T13:17:48.683Z",
+      "entitlements": "2026-10-25T13:17:48.683Z"
     }
   },
   "L&PBHD": {
@@ -26378,10 +26373,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:38.548Z",
+    "checkedAt": "2026-10-25T13:17:23.326Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:38.548Z",
-      "entitlements": "2026-10-16T14:43:38.548Z"
+      "announcements": "2026-10-25T13:17:23.326Z",
+      "entitlements": "2026-10-25T13:17:23.326Z"
     }
   },
   "LACMED": {
@@ -26561,10 +26556,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:39.454Z",
+    "checkedAt": "2026-10-25T13:17:47.284Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:39.454Z",
-      "entitlements": "2026-10-16T14:43:39.454Z"
+      "announcements": "2026-10-25T13:17:47.284Z",
+      "entitlements": "2026-10-25T13:17:47.284Z"
     }
   },
   "LEFORM": {
@@ -26737,10 +26732,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:34.558Z",
+    "checkedAt": "2026-10-25T13:17:28.649Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:34.558Z",
-      "entitlements": "2026-10-16T14:43:34.558Z"
+      "announcements": "2026-10-25T13:17:28.649Z",
+      "entitlements": "2026-10-25T13:17:28.649Z"
     }
   },
   "LGMS": {
@@ -26754,6 +26749,21 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-20",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
       {
         "date": "2026-10-16",
         "category": "Dealings in Listed Securities",
@@ -26888,21 +26898,6 @@ window.NEWS_DATA = {
         "date": "2026-09-04",
         "category": "Changes in Shareholdings",
         "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR FONG CHOONG FOOK"
-      },
-      {
-        "date": "2026-09-04",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR FONG CHOONG FOOK"
-      },
-      {
-        "date": "2026-09-04",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MISS GOH SOON SEI"
-      },
-      {
-        "date": "2026-09-04",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
       }
     ],
     "entitlements": [
@@ -26956,10 +26951,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:28.122Z",
+    "checkedAt": "2026-10-25T13:17:26.096Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:28.122Z",
-      "entitlements": "2026-10-16T14:43:28.122Z"
+      "announcements": "2026-10-25T13:17:26.096Z",
+      "entitlements": "2026-10-25T13:17:26.096Z"
     }
   },
   "LHI": {
@@ -26969,11 +26964,66 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-15] Changes in Director's Interest (Section 219 of CA 2016) - MR LAU JOO HAN"
+        "title": "[2026-10-19] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LAU JOO HAN"
       }
     ],
     "announcements": [
       {
+        "date": "2026-10-20",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LAU JOO HAN"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR LAU JOO HAN"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATUK LAU JOO HONG"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK LAU JOO HONG"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LAU JOO HENG"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LAU JUI PENG"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - CW LAU & SONS SDN BHD"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMERGING GLORY SDN BHD"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
+      {
         "date": "2026-10-15",
         "category": "Changes in Shareholdings",
         "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR LAU JOO HAN"
@@ -27067,61 +27117,6 @@ window.NEWS_DATA = {
         "date": "2026-10-08",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK LAU JOO HONG"
-      },
-      {
-        "date": "2026-10-08",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATUK LAU JOO HONG"
-      },
-      {
-        "date": "2026-10-08",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LAU JOO HENG"
-      },
-      {
-        "date": "2026-10-08",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LAU JUI PENG"
-      },
-      {
-        "date": "2026-10-08",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - CW LAU & SONS SDN BHD"
-      },
-      {
-        "date": "2026-10-08",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMERGING GLORY SDN BHD"
-      },
-      {
-        "date": "2026-10-05",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LAU JOO HAN"
-      },
-      {
-        "date": "2026-10-05",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR LAU JOO HAN"
-      },
-      {
-        "date": "2026-10-05",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK LAU JOO HONG"
-      },
-      {
-        "date": "2026-10-05",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATUK LAU JOO HONG"
-      },
-      {
-        "date": "2026-10-05",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LAU JOO HENG"
-      },
-      {
-        "date": "2026-10-05",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LAU JUI PENG"
       }
     ],
     "entitlements": [
@@ -27175,10 +27170,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:42.140Z",
+    "checkedAt": "2026-10-25T13:17:35.037Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:42.140Z",
-      "entitlements": "2026-10-16T14:43:42.140Z"
+      "announcements": "2026-10-25T13:17:35.037Z",
+      "entitlements": "2026-10-25T13:17:35.037Z"
     }
   },
   "LIFTECH": {
@@ -27291,10 +27286,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:45.021Z",
+    "checkedAt": "2026-10-25T13:18:17.683Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:45.021Z",
-      "entitlements": "2026-10-16T14:43:45.021Z"
+      "announcements": "2026-10-25T13:18:17.683Z",
+      "entitlements": "2026-10-25T13:18:17.683Z"
     }
   },
   "LSH": {
@@ -27304,10 +27299,115 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Director's Interest (Section 219 of CA 2016) - MR LIM DING SHYONG"
+        "title": "[2026-10-23] Changes in Director's Interest (Section 219 of CA 2016) - MR LIM DING SHYONG"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR LIM DING SHYONG"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - TAN SRI DATUK SERI LIM KENG CHENG"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - TAN SRI DATUK SERI LIM KENG CHENG"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR LIM DING SHYONG"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATUK LIM KENG GUAN"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - TAN SRI DATUK SERI LIM KENG CHENG"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK LIM KENG GUAN"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - TAN SRI DATUK SERI LIM KENG CHENG"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR LIM DING SHYONG"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATUK LIM KENG GUAN"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK LIM KENG GUAN"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR LIM DING SHYONG"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR LIM DING SHYONG"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATUK LIM KENG GUAN"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK LIM KENG GUAN"
+      },
       {
         "date": "2026-10-16",
         "category": "Dealings in Listed Securities",
@@ -27352,111 +27452,6 @@ window.NEWS_DATA = {
         "date": "2026-09-10",
         "category": "General Announcement",
         "title": "OTHERS"
-      },
-      {
-        "date": "2026-09-10",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-08-28",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-08-27",
-        "category": "Listing Circulars",
-        "title": "LSH - Notice of Book Closure"
-      },
-      {
-        "date": "2026-08-26",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-08-26",
-        "category": "Entitlements",
-        "title": "Interim Dividend"
-      },
-      {
-        "date": "2026-08-26",
-        "category": "Financial Results",
-        "title": "Quarterly rpt on consolidated results for the financial period ended 30/06/2026"
-      },
-      {
-        "date": "2026-08-10",
-        "category": "General Announcement",
-        "title": "MATERIAL LITIGATION"
-      },
-      {
-        "date": "2026-07-20",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-07-14",
-        "category": "General Announcement",
-        "title": "MATERIAL LITIGATION"
-      },
-      {
-        "date": "2026-07-10",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-07-10",
-        "category": "General Announcement",
-        "title": "TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
-      },
-      {
-        "date": "2026-07-09",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-06-24",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-05-28",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-05-25",
-        "category": "Listing Circulars",
-        "title": "LSH - Notice of Book Closure"
-      },
-      {
-        "date": "2026-05-22",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-05-22",
-        "category": "Entitlements",
-        "title": "Interim Dividend"
-      },
-      {
-        "date": "2026-05-22",
-        "category": "Financial Results",
-        "title": "Quarterly rpt on consolidated results for the financial period ended 31/03/2026"
-      },
-      {
-        "date": "2026-05-15",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-04-08",
-        "category": "General Announcement",
-        "title": "TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : RELATED PARTY TRANSACTIONS"
-      },
-      {
-        "date": "2026-04-03",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
       }
     ],
     "entitlements": [
@@ -27510,20 +27505,20 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:43.175Z",
+    "checkedAt": "2026-10-25T13:17:34.463Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:43.175Z",
-      "entitlements": "2026-10-16T14:43:43.175Z"
+      "announcements": "2026-10-25T13:17:34.463Z",
+      "entitlements": "2026-10-25T13:17:34.463Z"
     }
   },
   "LWSABAH": {
-    "hasNewsAlert": true,
+    "hasNewsAlert": false,
     "newsBadges": [
       {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 2026-10-15",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0180) | Ex-Date: 2026-10-15"
+        "type": "RECENT_NEWS",
+        "label": "News: 2026-10-09",
+        "severity": "info",
+        "title": "[2026-10-09] General Announcement - TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
       }
     ],
     "announcements": [
@@ -27702,10 +27697,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:44.497Z",
+    "checkedAt": "2026-10-25T13:17:45.627Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:44.497Z",
-      "entitlements": "2026-10-16T14:43:44.497Z"
+      "announcements": "2026-10-25T13:17:45.627Z",
+      "entitlements": "2026-10-25T13:17:45.627Z"
     }
   },
   "MAG": {
@@ -27713,12 +27708,17 @@ window.NEWS_DATA = {
     "newsBadges": [
       {
         "type": "RECENT_NEWS",
-        "label": "News: 2026-10-01",
+        "label": "News: 2026-10-22",
         "severity": "info",
-        "title": "[2026-10-01] General Announcement - OTHERS"
+        "title": "[2026-10-22] Dealings in Listed Securities - DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
       {
         "date": "2026-10-01",
         "category": "General Announcement",
@@ -27863,11 +27863,6 @@ window.NEWS_DATA = {
         "date": "2025-08-29",
         "category": "Financial Results",
         "title": "Consolidated results for the financial period ended 30/06/2025"
-      },
-      {
-        "date": "2025-07-24",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR NG MIN LIN"
       }
     ],
     "entitlements": [
@@ -27903,10 +27898,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-14T14:59:20.624Z",
+    "checkedAt": "2026-10-25T13:17:24.114Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-14T14:59:20.624Z",
-      "entitlements": "2026-10-14T14:59:20.624Z"
+      "announcements": "2026-10-25T13:17:24.114Z",
+      "entitlements": "2026-10-25T13:17:24.114Z"
     }
   },
   "MAHSING": {
@@ -27914,12 +27909,22 @@ window.NEWS_DATA = {
     "newsBadges": [
       {
         "type": "RECENT_NEWS",
-        "label": "News: 2026-09-18",
+        "label": "News: 2026-10-22",
         "severity": "info",
-        "title": "[2026-09-18] General Announcement - TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : RELATED PARTY TRANSACTIONS"
+        "title": "[2026-10-22] General Announcement - OTHERS"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
       {
         "date": "2026-09-18",
         "category": "General Announcement",
@@ -28059,16 +28064,6 @@ window.NEWS_DATA = {
         "date": "2025-12-23",
         "category": "General Announcement",
         "title": "TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
-      },
-      {
-        "date": "2025-12-19",
-        "category": "General Announcement",
-        "title": "TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
-      },
-      {
-        "date": "2025-11-27",
-        "category": "Financial Results",
-        "title": "Quarterly rpt on consolidated results for the financial period ended 30/09/2025"
       }
     ],
     "entitlements": [
@@ -28120,11 +28115,11 @@ window.NEWS_DATA = {
     ],
     "fetchStatus": {
       "announcements": "ok",
-      "entitlements": "ok"
+      "entitlements": "error"
     },
-    "checkedAt": "2026-10-16T14:43:38.885Z",
+    "checkedAt": "2026-10-25T13:18:09.665Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:38.885Z",
+      "announcements": "2026-10-25T13:18:09.665Z",
       "entitlements": "2026-10-16T14:43:38.885Z"
     }
   },
@@ -28135,10 +28130,120 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - YAYASAN PELABURAN BUMIPUTRA"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - YAYASAN PELABURAN BUMIPUTRA"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN) (\"KWAP\")"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PERMODALAN NASIONAL BERHAD"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "General Announcement",
+        "title": "NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : OTHER ISSUE OF SECURITIES"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN) (\"KWAP\")"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PERMODALAN NASIONAL BERHAD"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - YAYASAN PELABURAN BUMIPUTRA"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PERMODALAN NASIONAL BERHAD"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - YAYASAN PELABURAN BUMIPUTRA"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - YAYASAN PELABURAN BUMIPUTRA"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PERMODALAN NASIONAL BERHAD"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN) (\"KWAP\")"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN) (\"KWAP\")"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -28178,116 +28283,6 @@ window.NEWS_DATA = {
         "date": "2026-10-13",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
-      },
-      {
-        "date": "2026-10-13",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-13",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN) (\"KWAP\")"
-      },
-      {
-        "date": "2026-10-12",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-12",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
-      },
-      {
-        "date": "2026-10-09",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN) (\"KWAP\")"
-      },
-      {
-        "date": "2026-10-09",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-09",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
-      },
-      {
-        "date": "2026-10-08",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN) (\"KWAP\")"
-      },
-      {
-        "date": "2026-10-08",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-08",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
-      },
-      {
-        "date": "2026-10-07",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN) (\"KWAP\")"
-      },
-      {
-        "date": "2026-10-06",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN) (\"KWAP\")"
-      },
-      {
-        "date": "2026-10-06",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
-      },
-      {
-        "date": "2026-10-06",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-05",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN) (\"KWAP\")"
-      },
-      {
-        "date": "2026-10-02",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
-      },
-      {
-        "date": "2026-10-02",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN) (\"KWAP\")"
-      },
-      {
-        "date": "2026-10-01",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN) (\"KWAP\")"
-      },
-      {
-        "date": "2026-10-01",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-01",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
-      },
-      {
-        "date": "2026-09-30",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-29",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
       }
     ],
     "entitlements": [
@@ -28341,10 +28336,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:45.633Z",
+    "checkedAt": "2026-10-25T13:17:55.778Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:45.633Z",
-      "entitlements": "2026-10-16T14:43:45.633Z"
+      "announcements": "2026-10-25T13:17:55.778Z",
+      "entitlements": "2026-10-25T13:17:55.778Z"
     }
   },
   "MBN": {
@@ -28514,10 +28509,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:34.921Z",
+    "checkedAt": "2026-10-25T13:17:22.583Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:34.921Z",
-      "entitlements": "2026-10-16T14:43:34.921Z"
+      "announcements": "2026-10-25T13:17:22.583Z",
+      "entitlements": "2026-10-25T13:17:22.583Z"
     }
   },
   "MCEMENT": {
@@ -28527,10 +28522,35 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-13] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PRUDENTIAL PLC"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EASTSPRING INVESTMENT BERHAD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EASTSPRING INVESTMENT BERHAD"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PRUDENTIAL PLC"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PRUDENTIAL PLC"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EASTSPRING INVESTMENT BERHAD"
+      },
       {
         "date": "2026-10-16",
         "category": "Additional Listing",
@@ -28655,31 +28675,6 @@ window.NEWS_DATA = {
         "date": "2026-09-17",
         "category": "Additional Listing",
         "title": "Additional Listing Announcement /Subdivision of Shares"
-      },
-      {
-        "date": "2026-09-14",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - YEOH TIONG LAY & SONS FAMILY HOLDINGS LIMITED"
-      },
-      {
-        "date": "2026-09-14",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - YEOH TIONG LAY & SONS TRUST COMPANY LIMITED"
-      },
-      {
-        "date": "2026-09-14",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - YEOH TIONG LAY & SONS HOLDINGS SDN BHD"
-      },
-      {
-        "date": "2026-09-14",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PUAN SRI DATIN TAN KAI YONG @ TAN KAY NEONG"
-      },
-      {
-        "date": "2026-09-14",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - YTL CORPORATION BERHAD"
       }
     ],
     "entitlements": [
@@ -28733,16 +28728,43 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:46.672Z",
+    "checkedAt": "2026-10-25T13:17:49.767Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:46.672Z",
-      "entitlements": "2026-10-16T14:43:46.672Z"
+      "announcements": "2026-10-25T13:17:49.767Z",
+      "entitlements": "2026-10-25T13:17:49.767Z"
     }
   },
   "MCLEAN": {
     "hasNewsAlert": false,
-    "newsBadges": [],
+    "newsBadges": [
+      {
+        "type": "JERUNG_5PCT",
+        "label": "🐋 Major Shareholder Activity",
+        "severity": "info",
+        "title": "[2026-10-21] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK DR TERENCE TEA YEOK KIAN"
+      }
+    ],
     "announcements": [
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK DR TERENCE TEA YEOK KIAN"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATUK DR TERENCE TEA YEOK KIAN"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ACCRELIST CROWDFUNDING PTE. LTD.`"
+      },
       {
         "date": "2026-09-10",
         "category": "General Announcement",
@@ -28872,26 +28894,6 @@ window.NEWS_DATA = {
         "date": "2026-06-19",
         "category": "Changes in Shareholdings",
         "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATUK DR TERENCE TEA YEOK KIAN"
-      },
-      {
-        "date": "2026-06-18",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK DR TERENCE TEA YEOK KIAN"
-      },
-      {
-        "date": "2026-06-18",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATUK DR TERENCE TEA YEOK KIAN"
-      },
-      {
-        "date": "2026-06-18",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-06-18",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ACCRELIST CROWDFUNDING PTE. LTD."
       }
     ],
     "entitlements": [
@@ -28909,10 +28911,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:46.757Z",
+    "checkedAt": "2026-10-25T13:18:14.874Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:46.757Z",
-      "entitlements": "2026-10-16T14:43:46.757Z"
+      "announcements": "2026-10-25T13:18:14.874Z",
+      "entitlements": "2026-10-25T13:18:14.874Z"
     }
   },
   "MEGAFB": {
@@ -28932,6 +28934,16 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "General Announcement",
+        "title": "MATERIAL LITIGATION"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
       {
         "date": "2026-10-08",
         "category": "Changes in Shareholdings",
@@ -29071,16 +29083,6 @@ window.NEWS_DATA = {
         "date": "2026-03-26",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' NG MENG KEE"
-      },
-      {
-        "date": "2026-03-26",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-03-26",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' NG MENG KEE"
       }
     ],
     "entitlements": [
@@ -29107,10 +29109,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:32.010Z",
+    "checkedAt": "2026-10-25T13:17:18.856Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:32.010Z",
-      "entitlements": "2026-10-16T14:43:32.010Z"
+      "announcements": "2026-10-25T13:17:18.856Z",
+      "entitlements": "2026-10-25T13:17:18.856Z"
     }
   },
   "MENTIGA": {
@@ -29518,23 +29520,28 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:42.655Z",
+    "checkedAt": "2026-10-25T13:17:46.705Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:42.655Z",
-      "entitlements": "2026-10-16T14:43:42.655Z"
+      "announcements": "2026-10-25T13:17:46.705Z",
+      "entitlements": "2026-10-25T13:17:46.705Z"
     }
   },
   "MESTRON": {
     "hasNewsAlert": false,
     "newsBadges": [
       {
-        "type": "JERUNG_5PCT",
-        "label": "🐋 Major Shareholder Activity",
+        "type": "RECENT_NEWS",
+        "label": "News: 2026-10-19",
         "severity": "info",
-        "title": "[2026-09-22] Changes in Director's Interest (Section 219 of CA 2016) - MR POR TEONG ENG"
+        "title": "[2026-10-19] Shares Buy Back - Immediate Announcement on Shares Buy Back"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-19",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement on Shares Buy Back"
+      },
       {
         "date": "2026-10-15",
         "category": "Dealings in Listed Securities",
@@ -29679,11 +29686,6 @@ window.NEWS_DATA = {
         "date": "2026-09-01",
         "category": "Shares Buy Back",
         "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-09-01",
-        "category": "Shares Buy Back",
-        "title": "Notice of SBB by a Company Pursuant to Section 127 (16) of CA 2016"
       }
     ],
     "entitlements": [
@@ -29728,10 +29730,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:37.791Z",
+    "checkedAt": "2026-10-25T13:18:17.787Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:37.791Z",
-      "entitlements": "2026-10-16T14:43:37.791Z"
+      "announcements": "2026-10-25T13:18:17.787Z",
+      "entitlements": "2026-10-25T13:18:17.787Z"
     }
   },
   "METRO": {
@@ -29899,11 +29901,11 @@ window.NEWS_DATA = {
     "entitlements": [],
     "fetchStatus": {
       "announcements": "ok",
-      "entitlements": "ok"
+      "entitlements": "error"
     },
-    "checkedAt": "2026-10-16T14:43:41.771Z",
+    "checkedAt": "2026-10-25T13:17:47.511Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:41.771Z",
+      "announcements": "2026-10-25T13:17:47.511Z",
       "entitlements": "2026-10-16T14:43:41.771Z"
     }
   },
@@ -30067,10 +30069,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:34.512Z",
+    "checkedAt": "2026-10-25T13:17:40.497Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:34.512Z",
-      "entitlements": "2026-10-16T14:43:34.512Z"
+      "announcements": "2026-10-25T13:17:40.497Z",
+      "entitlements": "2026-10-25T13:17:40.497Z"
     }
   },
   "MI": {
@@ -30084,6 +30086,16 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement on Shares Buy Back"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
       {
         "date": "2026-10-05",
         "category": "General Announcement",
@@ -30223,16 +30235,6 @@ window.NEWS_DATA = {
         "date": "2026-07-28",
         "category": "Shares Buy Back",
         "title": "Notice of SBB by a Company Pursuant to Section 127 (16) of CA 2016"
-      },
-      {
-        "date": "2026-07-24",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MADAM YONG SHIAO VOON"
-      },
-      {
-        "date": "2026-07-24",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
       }
     ],
     "entitlements": [
@@ -30286,20 +30288,20 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:29.493Z",
+    "checkedAt": "2026-10-25T13:17:14.498Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:29.493Z",
-      "entitlements": "2026-10-16T14:43:29.493Z"
+      "announcements": "2026-10-25T13:17:14.498Z",
+      "entitlements": "2026-10-25T13:17:14.498Z"
     }
   },
   "MINOX": {
     "hasNewsAlert": false,
     "newsBadges": [
       {
-        "type": "JERUNG_5PCT",
-        "label": "🐋 Major Shareholder Activity",
+        "type": "RECENT_NEWS",
+        "label": "News: 2026-10-16",
         "severity": "info",
-        "title": "[2026-09-21] Changes in Director's Interest (Section 219 of CA 2016) - MR NG KUAN HUA"
+        "title": "[2026-10-16] General Announcement - OTHERS"
       }
     ],
     "announcements": [
@@ -30487,10 +30489,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:49.440Z",
+    "checkedAt": "2026-10-25T13:17:45.727Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:49.440Z",
-      "entitlements": "2026-10-16T14:43:49.440Z"
+      "announcements": "2026-10-25T13:17:45.727Z",
+      "entitlements": "2026-10-25T13:17:45.727Z"
     }
   },
   "MISC": {
@@ -30703,10 +30705,10 @@ window.NEWS_DATA = {
       }
     ],
     "fetchStatus": {
-      "announcements": "ok",
+      "announcements": "error",
       "entitlements": "error"
     },
-    "checkedAt": "2026-10-16T14:43:38.600Z",
+    "checkedAt": "2026-10-25T13:18:19.560Z",
     "lastSuccessfulAt": {
       "announcements": "2026-10-16T14:43:38.600Z",
       "entitlements": "2026-10-16T10:05:45.207Z"
@@ -30720,12 +30722,6 @@ window.NEWS_DATA = {
         "label": "Insider Action",
         "severity": "info",
         "title": "[2026-10-13] PUBLIC SHAREHOLDINGS SPREAD"
-      },
-      {
-        "type": "JERUNG_5PCT",
-        "label": "🐋 Major Shareholder Activity",
-        "severity": "info",
-        "title": "[2026-09-22] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DI-YI SDN. BHD."
       }
     ],
     "announcements": [
@@ -30931,22 +30927,15 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:38.561Z",
+    "checkedAt": "2026-10-25T13:17:32.104Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:38.561Z",
-      "entitlements": "2026-10-16T14:43:38.561Z"
+      "announcements": "2026-10-25T13:17:32.104Z",
+      "entitlements": "2026-10-25T13:17:32.104Z"
     }
   },
   "MMCS": {
     "hasNewsAlert": false,
-    "newsBadges": [
-      {
-        "type": "JERUNG_5PCT",
-        "label": "🐋 Major Shareholder Activity",
-        "severity": "info",
-        "title": "[2026-09-24] Notice of Interest Sub. S-hldr (Section 137 of CA 2016) - UNIRUBBER (HONG KONG) INVESTMENT CO LIMITED"
-      }
-    ],
+    "newsBadges": [],
     "announcements": [
       {
         "date": "2026-09-24",
@@ -31069,10 +31058,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:48.561Z",
+    "checkedAt": "2026-10-25T13:18:09.802Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:48.561Z",
-      "entitlements": "2026-10-16T14:43:48.561Z"
+      "announcements": "2026-10-25T13:18:09.802Z",
+      "entitlements": "2026-10-25T13:18:09.802Z"
     }
   },
   "MNHLDG": {
@@ -31082,10 +31071,65 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-15] Changes in Director's Interest (Section 219 of CA 2016) - DATUK LOY SIONG HAY"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK DANG SIONG DIANG"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK DANG SIONG DIANG"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATUK DANG SIONG DIANG"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' TOH ENG KEAT"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' TOH ENG KEAT"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK DANG SIONG DIANG"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATUK DANG SIONG DIANG"
+      },
       {
         "date": "2026-10-15",
         "category": "Changes in Shareholdings",
@@ -31180,61 +31224,6 @@ window.NEWS_DATA = {
         "date": "2026-09-30",
         "category": "Additional Listing",
         "title": "Additional Listing Announcement /Subdivision of Shares"
-      },
-      {
-        "date": "2026-09-24",
-        "category": "Additional Listing",
-        "title": "Additional Listing Announcement /Subdivision of Shares"
-      },
-      {
-        "date": "2026-09-17",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK LOY SIONG HAY"
-      },
-      {
-        "date": "2026-09-17",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-09-17",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATUK LOY SIONG HAY"
-      },
-      {
-        "date": "2026-09-17",
-        "category": "Additional Listing",
-        "title": "Additional Listing Announcement /Subdivision of Shares"
-      },
-      {
-        "date": "2026-09-14",
-        "category": "General Announcement",
-        "title": "MEMORANDUM OF UNDERSTANDING"
-      },
-      {
-        "date": "2026-09-09",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-09-08",
-        "category": "Additional Listing",
-        "title": "Additional Listing Announcement /Subdivision of Shares"
-      },
-      {
-        "date": "2026-09-07",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-09-02",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-09-02",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' TOH ENG KEAT"
       }
     ],
     "entitlements": [
@@ -31261,10 +31250,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:29.363Z",
+    "checkedAt": "2026-10-25T13:17:28.677Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:29.363Z",
-      "entitlements": "2026-10-16T14:43:29.363Z"
+      "announcements": "2026-10-25T13:17:28.677Z",
+      "entitlements": "2026-10-25T13:17:28.677Z"
     }
   },
   "MOBILIA": {
@@ -31471,10 +31460,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:36.424Z",
+    "checkedAt": "2026-10-25T13:17:49.592Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:36.424Z",
-      "entitlements": "2026-10-16T14:43:36.424Z"
+      "announcements": "2026-10-25T13:17:49.592Z",
+      "entitlements": "2026-10-25T13:17:49.592Z"
     }
   },
   "MPI": {
@@ -31484,10 +31473,30 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "General Announcement",
+        "title": "TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -31617,26 +31626,6 @@ window.NEWS_DATA = {
         "date": "2026-09-03",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-02",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-01",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-08-28",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-08-27",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -31688,31 +31677,40 @@ window.NEWS_DATA = {
     ],
     "fetchStatus": {
       "announcements": "ok",
-      "entitlements": "ok"
+      "entitlements": "error"
     },
-    "checkedAt": "2026-10-16T14:43:41.176Z",
+    "checkedAt": "2026-10-25T13:17:54.232Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:41.176Z",
+      "announcements": "2026-10-25T13:17:54.232Z",
       "entitlements": "2026-10-16T14:43:41.176Z"
     }
   },
   "MRDIY": {
-    "hasNewsAlert": true,
+    "hasNewsAlert": false,
     "newsBadges": [
-      {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 2026-10-14",
-        "severity": "warning",
-        "title": "Interim Dividend (0.0200) | Ex-Date: 2026-10-14"
-      },
       {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -31847,21 +31845,6 @@ window.NEWS_DATA = {
         "date": "2026-09-03",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-08-26",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-08-24",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-08-21",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -31915,10 +31898,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:42.263Z",
+    "checkedAt": "2026-10-25T13:18:02.475Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:42.263Z",
-      "entitlements": "2026-10-16T14:43:42.263Z"
+      "announcements": "2026-10-25T13:18:02.475Z",
+      "entitlements": "2026-10-25T13:18:02.475Z"
     }
   },
   "MSB": {
@@ -32081,10 +32064,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:49.992Z",
+    "checkedAt": "2026-10-25T13:18:18.768Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:49.992Z",
-      "entitlements": "2026-10-16T14:43:49.992Z"
+      "announcements": "2026-10-25T13:18:18.768Z",
+      "entitlements": "2026-10-25T13:18:18.768Z"
     }
   },
   "MSTGOLF": {
@@ -32284,10 +32267,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:38.722Z",
+    "checkedAt": "2026-10-25T13:17:44.095Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:38.722Z",
-      "entitlements": "2026-10-16T14:43:38.722Z"
+      "announcements": "2026-10-25T13:17:44.095Z",
+      "entitlements": "2026-10-25T13:17:44.095Z"
     }
   },
   "MTAG": {
@@ -32503,22 +32486,15 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:47.305Z",
+    "checkedAt": "2026-10-25T13:18:16.118Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:47.305Z",
-      "entitlements": "2026-10-16T14:43:47.305Z"
+      "announcements": "2026-10-25T13:18:16.118Z",
+      "entitlements": "2026-10-25T13:18:16.118Z"
     }
   },
   "MTEC": {
     "hasNewsAlert": false,
-    "newsBadges": [
-      {
-        "type": "RECENT_NEWS",
-        "label": "News: 2026-09-22",
-        "severity": "info",
-        "title": "[2026-09-22] General Announcement - OTHERS"
-      }
-    ],
+    "newsBadges": [],
     "announcements": [
       {
         "date": "2026-09-22",
@@ -32722,10 +32698,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:34.824Z",
+    "checkedAt": "2026-10-25T13:18:07.877Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:34.824Z",
-      "entitlements": "2026-10-16T14:43:34.824Z"
+      "announcements": "2026-10-25T13:18:07.877Z",
+      "entitlements": "2026-10-25T13:18:07.877Z"
     }
   },
   "MTTSL": {
@@ -32735,10 +32711,100 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-07] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABERDEEN GROUP PLC"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABERDEEN GROUP PLC"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABERDEEN GROUP PLC"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABRDN HOLDINGS LIMITED"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABRDN MALAYSIA SDN. BHD."
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR OOI LEAN HIN"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR OOI LEAN HIN"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABERDEEN GROUP PLC"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABRDN HOLDINGS LIMITED"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABRDN MALAYSIA SDN. BHD."
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABERDEEN GROUP PLC"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABRDN HOLDINGS LIMITED"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABRDN MALAYSIA SDN. BHD."
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABERDEEN GROUP PLC"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABRDN HOLDINGS LIMITED"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABRDN MALAYSIA SDN. BHD."
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABRDN HOLDINGS LIMITED"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABRDN MALAYSIA SDN. BHD."
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABERDEEN GROUP PLC"
+      },
       {
         "date": "2026-10-08",
         "category": "Circular/Notice",
@@ -32798,96 +32864,6 @@ window.NEWS_DATA = {
         "date": "2026-10-02",
         "category": "Changes in Shareholdings",
         "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' SERI ONG KEAN LEE"
-      },
-      {
-        "date": "2026-10-02",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-10-02",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MISS ONG GUAT EE"
-      },
-      {
-        "date": "2026-10-02",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO’ SERI ONG KEAN LEE"
-      },
-      {
-        "date": "2026-09-21",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-09-21",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - OOI LEAN HIN"
-      },
-      {
-        "date": "2026-09-21",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-09-21",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR OOI LEAN HIN"
-      },
-      {
-        "date": "2026-09-18",
-        "category": "Change of Corp Info",
-        "title": "Change of Company Secretary - CHRIS TAN SONG EN"
-      },
-      {
-        "date": "2026-09-18",
-        "category": "Change of Corp Info",
-        "title": "Change of Address"
-      },
-      {
-        "date": "2026-09-18",
-        "category": "Change of Corp Info",
-        "title": "Change of Company Secretary - YENG SHI MEI"
-      },
-      {
-        "date": "2026-08-24",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABRDN HOLDINGS LIMITED"
-      },
-      {
-        "date": "2026-08-24",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABRDN MALAYSIA SDN BHD"
-      },
-      {
-        "date": "2026-08-24",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABERDEEN GROUP PLC"
-      },
-      {
-        "date": "2026-08-21",
-        "category": "Listing Circulars",
-        "title": "MTTSL - Notice of Book Closure"
-      },
-      {
-        "date": "2026-08-20",
-        "category": "Entitlements",
-        "title": "Interim Dividend"
-      },
-      {
-        "date": "2026-08-20",
-        "category": "Financial Results",
-        "title": "Quarterly rpt on consolidated results for the financial period ended 30/06/2026"
-      },
-      {
-        "date": "2026-08-17",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABERDEEN GROUP PLC"
-      },
-      {
-        "date": "2026-08-17",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABRDN HOLDINGS LIMITED"
       }
     ],
     "entitlements": [
@@ -32905,10 +32881,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:33.060Z",
+    "checkedAt": "2026-10-25T13:17:10.934Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:33.060Z",
-      "entitlements": "2026-10-16T14:43:33.060Z"
+      "announcements": "2026-10-25T13:17:10.934Z",
+      "entitlements": "2026-10-25T13:17:10.934Z"
     }
   },
   "NADIBHD": {
@@ -33108,10 +33084,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:44.881Z",
+    "checkedAt": "2026-10-25T13:17:23.553Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:44.881Z",
-      "entitlements": "2026-10-16T14:43:44.881Z"
+      "announcements": "2026-10-25T13:17:23.553Z",
+      "entitlements": "2026-10-25T13:17:23.553Z"
     }
   },
   "NATGATE": {
@@ -33327,10 +33303,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:29.584Z",
+    "checkedAt": "2026-10-25T13:17:12.534Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:29.584Z",
-      "entitlements": "2026-10-16T14:43:29.584Z"
+      "announcements": "2026-10-25T13:17:12.534Z",
+      "entitlements": "2026-10-25T13:17:12.534Z"
     }
   },
   "NE": {
@@ -33500,22 +33476,15 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:30.148Z",
+    "checkedAt": "2026-10-25T13:17:40.799Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:30.148Z",
-      "entitlements": "2026-10-16T14:43:30.148Z"
+      "announcements": "2026-10-25T13:17:40.799Z",
+      "entitlements": "2026-10-25T13:17:40.799Z"
     }
   },
   "NESTCON": {
     "hasNewsAlert": false,
-    "newsBadges": [
-      {
-        "type": "RECENT_NEWS",
-        "label": "News: 2026-09-22",
-        "severity": "info",
-        "title": "[2026-09-22] General Announcement - OTHERS"
-      }
-    ],
+    "newsBadges": [],
     "announcements": [
       {
         "date": "2026-09-22",
@@ -33673,10 +33642,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:32.689Z",
+    "checkedAt": "2026-10-25T13:17:30.538Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:32.689Z",
-      "entitlements": "2026-10-16T14:43:32.689Z"
+      "announcements": "2026-10-25T13:17:30.538Z",
+      "entitlements": "2026-10-25T13:17:30.538Z"
     }
   },
   "NESTLE": {
@@ -33686,10 +33655,15 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-10-20] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -33834,11 +33808,6 @@ window.NEWS_DATA = {
         "date": "2026-06-11",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-06-10",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -33892,10 +33861,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:42.731Z",
+    "checkedAt": "2026-10-25T13:17:32.589Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:42.731Z",
-      "entitlements": "2026-10-16T14:43:42.731Z"
+      "announcements": "2026-10-25T13:17:32.589Z",
+      "entitlements": "2026-10-25T13:17:32.589Z"
     }
   },
   "NEXG": {
@@ -33903,12 +33872,17 @@ window.NEWS_DATA = {
     "newsBadges": [
       {
         "type": "RECENT_NEWS",
-        "label": "News: 2026-10-13",
+        "label": "News: 2026-10-19",
         "severity": "info",
-        "title": "[2026-10-13] General Announcement - TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
+        "title": "[2026-10-19] Additional Listing - Additional Listing Announcement /Subdivision of Shares"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-19",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
       {
         "date": "2026-10-13",
         "category": "General Announcement",
@@ -34053,11 +34027,6 @@ window.NEWS_DATA = {
         "date": "2026-07-22",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' HAJI ISHAK BIN ISMAIL"
-      },
-      {
-        "date": "2026-07-22",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' HAJI ISHAK BIN ISMAIL"
       }
     ],
     "entitlements": [
@@ -34111,10 +34080,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:29.116Z",
+    "checkedAt": "2026-10-25T13:17:26.080Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:29.116Z",
-      "entitlements": "2026-10-16T14:43:29.116Z"
+      "announcements": "2026-10-25T13:17:26.080Z",
+      "entitlements": "2026-10-25T13:17:26.080Z"
     }
   },
   "NEXGRAM": {
@@ -34126,7 +34095,7 @@ window.NEWS_DATA = {
       "announcements": "error",
       "entitlements": "error"
     },
-    "checkedAt": "2026-10-16T14:43:49.715Z",
+    "checkedAt": "2026-10-25T13:18:19.560Z",
     "lastSuccessfulAt": {
       "announcements": null,
       "entitlements": null
@@ -34140,15 +34109,19 @@ window.NEWS_DATA = {
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
         "title": "[2026-09-29] Changes in Director's Interest (Section 219 of CA 2016) - MISS NG SHWU CHING"
-      },
-      {
-        "type": "EV_CATALYST",
-        "label": "⚡ MOU / EV Catalyst",
-        "severity": "success",
-        "title": "[2026-09-18] MEMORANDUM OF UNDERSTANDING"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
       {
         "date": "2026-09-29",
         "category": "Dealings in Listed Securities",
@@ -34288,16 +34261,6 @@ window.NEWS_DATA = {
         "date": "2026-06-26",
         "category": "Changes in Shareholdings",
         "title": "Changes in Director's Interest (Section 219 of CA 2016) - MISS KHOO WUAN RU"
-      },
-      {
-        "date": "2026-06-26",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR KHOO CHEE KONG"
-      },
-      {
-        "date": "2026-06-22",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
       }
     ],
     "entitlements": [
@@ -34351,10 +34314,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:32.775Z",
+    "checkedAt": "2026-10-25T13:17:23.669Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:32.775Z",
-      "entitlements": "2026-10-16T14:43:32.775Z"
+      "announcements": "2026-10-25T13:17:23.669Z",
+      "entitlements": "2026-10-25T13:17:23.669Z"
     }
   },
   "NORTHERN": {
@@ -34530,10 +34493,89 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:32.602Z",
+    "checkedAt": "2026-10-25T13:17:12.457Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:32.602Z",
-      "entitlements": "2026-10-16T14:43:32.602Z"
+      "announcements": "2026-10-25T13:17:12.457Z",
+      "entitlements": "2026-10-25T13:17:12.457Z"
+    }
+  },
+  "NWEBHD": {
+    "hasNewsAlert": true,
+    "newsBadges": [
+      {
+        "type": "JERUNG_5PCT",
+        "label": "🐋 Major Shareholder Activity",
+        "severity": "info",
+        "title": "[2026-10-21] Changes in Director's Interest (Section 219 of CA 2016) - MISS MAH YING YING"
+      },
+      {
+        "type": "EARNINGS_QR",
+        "label": "Earnings Release",
+        "severity": "danger",
+        "title": "[2026-10-19] Quarterly rpt on consolidated results for the financial period ended 30/06/2026"
+      }
+    ],
+    "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MISS MAH YING YING"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' YEOW WAH CHIN"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - YAM TUNKU ZAIN AL-ABIDIN IBNI TUANKU MUHRIZ"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "IPO Announcement",
+        "title": "Initial Public Offering"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Financial Results",
+        "title": "Quarterly rpt on consolidated results for the financial period ended 30/06/2026"
+      },
+      {
+        "date": "2026-10-13",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-09-29",
+        "category": "IPO Announcement",
+        "title": "Timetable for IPO"
+      },
+      {
+        "date": "2026-09-29",
+        "category": "IPO Announcement",
+        "title": "INITIAL PUBLIC OFFERING IN CONJUNCTION WITH THE LISTING OF NWE RESOURCES GROUP BERHAD (\"NWE RESOURCES\" OR \"COMPANY\") ON THE ACE MARKET OF BURSA MALAYSIA SECURITIES BERHAD COMPRISING PUBLIC ISSUE OF 143,145,540 NEW ORDINARY SHARES IN NWE RESOURCES (\"ISSUE SHARES\") IN THE FOLLOWING MANNER: (A) 27,0"
+      }
+    ],
+    "entitlements": [],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-10-25T13:17:28.524Z",
+    "lastSuccessfulAt": {
+      "announcements": "2026-10-25T13:17:28.524Z",
+      "entitlements": "2026-10-25T13:17:28.524Z"
     }
   },
   "OBHB": {
@@ -34740,10 +34782,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:30.363Z",
+    "checkedAt": "2026-10-25T13:17:14.226Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:30.363Z",
-      "entitlements": "2026-10-16T14:43:30.363Z"
+      "announcements": "2026-10-25T13:17:14.226Z",
+      "entitlements": "2026-10-25T13:17:14.226Z"
     }
   },
   "OFB": {
@@ -34923,10 +34965,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:42.517Z",
+    "checkedAt": "2026-10-25T13:17:22.158Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:42.517Z",
-      "entitlements": "2026-10-16T14:43:42.517Z"
+      "announcements": "2026-10-25T13:17:22.158Z",
+      "entitlements": "2026-10-25T13:17:22.158Z"
     }
   },
   "OGM": {
@@ -35089,10 +35131,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:33.757Z",
+    "checkedAt": "2026-10-25T13:17:34.232Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:33.757Z",
-      "entitlements": "2026-10-16T14:43:33.757Z"
+      "announcements": "2026-10-25T13:17:34.232Z",
+      "entitlements": "2026-10-25T13:17:34.232Z"
     }
   },
   "OGX": {
@@ -35272,10 +35314,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:30.522Z",
+    "checkedAt": "2026-10-25T13:17:14.453Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:30.522Z",
-      "entitlements": "2026-10-16T14:43:30.522Z"
+      "announcements": "2026-10-25T13:17:14.453Z",
+      "entitlements": "2026-10-25T13:17:14.453Z"
     }
   },
   "OHM": {
@@ -35289,6 +35331,11 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "General Meetings",
+        "title": "General Meetings: Notice of Meeting"
+      },
       {
         "date": "2026-10-08",
         "category": "Dealings in Listed Securities",
@@ -35433,11 +35480,6 @@ window.NEWS_DATA = {
         "date": "2026-06-15",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK TEOH YEE SEANG"
-      },
-      {
-        "date": "2026-06-12",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK TEOH YEE SEANG"
       }
     ],
     "entitlements": [
@@ -35473,10 +35515,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:45.192Z",
+    "checkedAt": "2026-10-25T13:17:44.595Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:45.192Z",
-      "entitlements": "2026-10-16T14:43:45.192Z"
+      "announcements": "2026-10-25T13:17:44.595Z",
+      "entitlements": "2026-10-25T13:17:44.595Z"
     }
   },
   "OPPSTAR": {
@@ -35674,10 +35716,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:38.403Z",
+    "checkedAt": "2026-10-25T13:17:45.400Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:38.403Z",
-      "entitlements": "2026-10-16T14:43:38.403Z"
+      "announcements": "2026-10-25T13:17:45.400Z",
+      "entitlements": "2026-10-25T13:17:45.400Z"
     }
   },
   "OPTIMAX": {
@@ -35893,16 +35935,28 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:43.371Z",
+    "checkedAt": "2026-10-25T13:18:04.999Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:43.371Z",
-      "entitlements": "2026-10-16T14:43:43.371Z"
+      "announcements": "2026-10-25T13:18:04.999Z",
+      "entitlements": "2026-10-25T13:18:04.999Z"
     }
   },
   "ORGABIO": {
     "hasNewsAlert": false,
-    "newsBadges": [],
+    "newsBadges": [
+      {
+        "type": "RECENT_NEWS",
+        "label": "News: 2026-10-19",
+        "severity": "info",
+        "title": "[2026-10-19] General Announcement - TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : RECURRENT RELATED PARTY TRANSACTIONS"
+      }
+    ],
     "announcements": [
+      {
+        "date": "2026-10-19",
+        "category": "General Announcement",
+        "title": "TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : RECURRENT RELATED PARTY TRANSACTIONS"
+      },
       {
         "date": "2026-09-09",
         "category": "General Announcement",
@@ -36047,11 +36101,6 @@ window.NEWS_DATA = {
         "date": "2025-09-12",
         "category": "Changes in Shareholdings",
         "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR EAN YONG HIEN VOON"
-      },
-      {
-        "date": "2025-09-12",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' EAN YONG TIN SIN"
       }
     ],
     "entitlements": [
@@ -36069,10 +36118,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:46.321Z",
+    "checkedAt": "2026-10-25T13:17:49.807Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:46.321Z",
-      "entitlements": "2026-10-16T14:43:46.321Z"
+      "announcements": "2026-10-25T13:17:49.807Z",
+      "entitlements": "2026-10-25T13:17:49.807Z"
     }
   },
   "ORKIM": {
@@ -36082,10 +36131,20 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-12] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-10-12",
         "category": "Changes in Shareholdings",
@@ -36225,16 +36284,6 @@ window.NEWS_DATA = {
         "date": "2026-09-02",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-09-01",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EASTSPRING INVESTMENTS BERHAD"
-      },
-      {
-        "date": "2026-09-01",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PRUDENTIAL PLC"
       }
     ],
     "entitlements": [
@@ -36261,20 +36310,20 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:40.070Z",
+    "checkedAt": "2026-10-25T13:17:23.880Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:40.070Z",
-      "entitlements": "2026-10-16T14:43:40.070Z"
+      "announcements": "2026-10-25T13:17:23.880Z",
+      "entitlements": "2026-10-25T13:17:23.880Z"
     }
   },
   "OVH": {
     "hasNewsAlert": false,
     "newsBadges": [
       {
-        "type": "JERUNG_5PCT",
-        "label": "🐋 Major Shareholder Activity",
+        "type": "RECENT_NEWS",
+        "label": "News: 2026-10-12",
         "severity": "info",
-        "title": "[2026-09-24] Changes in Director's Interest (Section 219 of CA 2016) - MR WILLIE HO HUAT VOON"
+        "title": "[2026-10-12] General Announcement - OTHERS"
       }
     ],
     "announcements": [
@@ -36434,16 +36483,33 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:39.040Z",
+    "checkedAt": "2026-10-25T13:17:21.705Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:39.040Z",
-      "entitlements": "2026-10-16T14:43:39.040Z"
+      "announcements": "2026-10-25T13:17:21.705Z",
+      "entitlements": "2026-10-25T13:17:21.705Z"
     }
   },
   "OXB": {
     "hasNewsAlert": false,
-    "newsBadges": [],
+    "newsBadges": [
+      {
+        "type": "RECENT_NEWS",
+        "label": "News: 2026-10-23",
+        "severity": "info",
+        "title": "[2026-10-23] Dealings in Listed Securities - DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      }
+    ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
       {
         "date": "2026-09-14",
         "category": "Dealings in Listed Securities",
@@ -36583,16 +36649,6 @@ window.NEWS_DATA = {
         "date": "2026-09-04",
         "category": "Changes in Shareholdings",
         "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR NG THEAN GIN"
-      },
-      {
-        "date": "2026-09-04",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR OH YEN SAN"
-      },
-      {
-        "date": "2026-08-21",
-        "category": "Financial Results",
-        "title": "Quarterly rpt on consolidated results for the financial period ended 30/06/2026"
       }
     ],
     "entitlements": [
@@ -36610,10 +36666,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:30.954Z",
+    "checkedAt": "2026-10-25T13:17:11.427Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:30.954Z",
-      "entitlements": "2026-10-16T14:43:30.954Z"
+      "announcements": "2026-10-25T13:17:11.427Z",
+      "entitlements": "2026-10-25T13:17:11.427Z"
     }
   },
   "PANDA": {
@@ -36813,10 +36869,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:43.724Z",
+    "checkedAt": "2026-10-25T13:18:07.908Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:43.724Z",
-      "entitlements": "2026-10-16T14:43:43.724Z"
+      "announcements": "2026-10-25T13:18:07.908Z",
+      "entitlements": "2026-10-25T13:18:07.908Z"
     }
   },
   "PARADIGM": {
@@ -37014,10 +37070,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:38.810Z",
+    "checkedAt": "2026-10-25T13:17:40.928Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:38.810Z",
-      "entitlements": "2026-10-16T14:43:38.810Z"
+      "announcements": "2026-10-25T13:17:40.928Z",
+      "entitlements": "2026-10-25T13:17:40.928Z"
     }
   },
   "PBBANK": {
@@ -37246,10 +37302,15 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD (\"EPF BOARD\")"
+        "title": "[2026-10-21] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD (\"EPF BOARD\")"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD (\"EPF BOARD\")"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -37394,11 +37455,6 @@ window.NEWS_DATA = {
         "date": "2026-07-17",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD (\"EPF BOARD\")"
-      },
-      {
-        "date": "2026-07-16",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD (\"EPF BOARD\")"
       }
     ],
     "entitlements": [
@@ -37452,10 +37508,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:44.371Z",
+    "checkedAt": "2026-10-25T13:17:20.021Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:44.371Z",
-      "entitlements": "2026-10-16T14:43:44.371Z"
+      "announcements": "2026-10-25T13:17:20.021Z",
+      "entitlements": "2026-10-25T13:17:20.021Z"
     }
   },
   "PEKAT": {
@@ -37469,6 +37525,11 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-20",
+        "category": "General Announcement",
+        "title": "NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : FUND RAISING"
+      },
       {
         "date": "2026-10-07",
         "category": "Dealings in Listed Securities",
@@ -37613,11 +37674,6 @@ window.NEWS_DATA = {
         "date": "2026-06-10",
         "category": "Additional Listing",
         "title": "Additional Listing Announcement /Subdivision of Shares"
-      },
-      {
-        "date": "2026-06-04",
-        "category": "General Meetings",
-        "title": "General Meetings: Outcome of Meeting"
       }
     ],
     "entitlements": [
@@ -37653,10 +37709,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:35.165Z",
+    "checkedAt": "2026-10-25T13:17:12.400Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:35.165Z",
-      "entitlements": "2026-10-16T14:43:35.165Z"
+      "announcements": "2026-10-25T13:17:12.400Z",
+      "entitlements": "2026-10-25T13:17:12.400Z"
     }
   },
   "PENTA": {
@@ -37666,10 +37722,45 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PRUDENTIAL PLC"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -37784,41 +37875,6 @@ window.NEWS_DATA = {
         "date": "2026-10-02",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-01",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-10-01",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-30",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-09-29",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-28",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-28",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PRUDENTIAL PLC"
-      },
-      {
-        "date": "2026-09-25",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PRUDENTIAL PLC"
       }
     ],
     "entitlements": [
@@ -37872,10 +37928,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:30.321Z",
+    "checkedAt": "2026-10-25T13:17:18.665Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:30.321Z",
-      "entitlements": "2026-10-16T14:43:30.321Z"
+      "announcements": "2026-10-25T13:17:18.665Z",
+      "entitlements": "2026-10-25T13:17:18.665Z"
     }
   },
   "PENTECH": {
@@ -38025,10 +38081,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:28.760Z",
+    "checkedAt": "2026-10-25T13:17:51.232Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:28.760Z",
-      "entitlements": "2026-10-16T14:43:28.760Z"
+      "announcements": "2026-10-25T13:17:51.232Z",
+      "entitlements": "2026-10-25T13:17:51.232Z"
     }
   },
   "PEOPLE": {
@@ -38201,10 +38257,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:33.659Z",
+    "checkedAt": "2026-10-25T13:17:31.146Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:33.659Z",
-      "entitlements": "2026-10-16T14:43:33.659Z"
+      "announcements": "2026-10-25T13:17:31.146Z",
+      "entitlements": "2026-10-25T13:17:31.146Z"
     }
   },
   "PETDAG": {
@@ -38214,10 +38270,20 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-09-22] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD (\"EPF BOARD\")"
+        "title": "[2026-10-22] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD (\"EPF BOARD\")"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD (\"EPF BOARD\")"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD (\"EPF BOARD\")"
+      },
       {
         "date": "2026-09-22",
         "category": "Changes in Shareholdings",
@@ -38357,16 +38423,6 @@ window.NEWS_DATA = {
         "date": "2026-05-29",
         "category": "Change of Corp Info",
         "title": "Change in Nomination and Remuneration Committee - ENCIK RUSLAN HALIM ISLAHUDIN"
-      },
-      {
-        "date": "2026-05-29",
-        "category": "Change of Corp Info",
-        "title": "Change in Risk Committee - ENCIK RUSLAN HALIM ISLAHUDIN"
-      },
-      {
-        "date": "2026-05-29",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD (\"EPF BOARD\")"
       }
     ],
     "entitlements": [
@@ -38420,10 +38476,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:42.878Z",
+    "checkedAt": "2026-10-25T13:17:47.392Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:42.878Z",
-      "entitlements": "2026-10-16T14:43:42.878Z"
+      "announcements": "2026-10-25T13:17:47.392Z",
+      "entitlements": "2026-10-25T13:17:47.392Z"
     }
   },
   "PETGAS": {
@@ -38433,10 +38489,35 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-14] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-10-14",
         "category": "General Announcement",
@@ -38561,31 +38642,6 @@ window.NEWS_DATA = {
         "date": "2026-08-18",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN) (\"KWAP\")"
-      },
-      {
-        "date": "2026-08-17",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN) (\"KWAP\")"
-      },
-      {
-        "date": "2026-08-14",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN) (\"KWAP\")"
-      },
-      {
-        "date": "2026-08-13",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN) (\"KWAP\")"
-      },
-      {
-        "date": "2026-08-12",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN) (\"KWAP\")"
-      },
-      {
-        "date": "2026-08-11",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN) (\"KWAP\")"
       }
     ],
     "entitlements": [
@@ -38639,23 +38695,38 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:42.309Z",
+    "checkedAt": "2026-10-25T13:17:20.258Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:42.309Z",
-      "entitlements": "2026-10-16T14:43:42.309Z"
+      "announcements": "2026-10-25T13:17:20.258Z",
+      "entitlements": "2026-10-25T13:17:20.258Z"
     }
   },
   "PGLOBAL": {
-    "hasNewsAlert": false,
+    "hasNewsAlert": true,
     "newsBadges": [
       {
-        "type": "RECENT_NEWS",
-        "label": "News: 2026-10-13",
-        "severity": "info",
-        "title": "[2026-10-13] General Announcement - TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
+        "type": "EARNINGS_QR",
+        "label": "Earnings Release",
+        "severity": "danger",
+        "title": "[2026-10-21] Quarterly rpt on consolidated results for the financial period ended 31/08/2026"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "Listing Circulars",
+        "title": "PGLOBAL - Notice of Book Closure"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Entitlements",
+        "title": "First Interim Dividend"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Financial Results",
+        "title": "Quarterly rpt on consolidated results for the financial period ended 31/08/2026"
+      },
       {
         "date": "2026-10-13",
         "category": "General Announcement",
@@ -38790,24 +38861,18 @@ window.NEWS_DATA = {
         "date": "2026-04-23",
         "category": "Financial Results",
         "title": "Quarterly rpt on consolidated results for the financial period ended 28/02/2026"
-      },
-      {
-        "date": "2026-04-23",
-        "category": "Entitlements",
-        "title": "Second Interim Dividend"
-      },
-      {
-        "date": "2026-03-24",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
-      },
-      {
-        "date": "2026-03-12",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
       }
     ],
     "entitlements": [
+      {
+        "annDate": "21 Oct 2026",
+        "financialYear": "28 Feb 2027",
+        "type": "First Interim Dividend",
+        "exDate": "2026-11-27",
+        "paymentDate": "16 Dec 2026",
+        "amount": "0.0220",
+        "isDividend": true
+      },
       {
         "annDate": "23 Apr 2026",
         "financialYear": "28 Feb 2026",
@@ -38849,10 +38914,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:28.160Z",
+    "checkedAt": "2026-10-25T13:17:16.039Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:28.160Z",
-      "entitlements": "2026-10-16T14:43:28.160Z"
+      "announcements": "2026-10-25T13:17:16.039Z",
+      "entitlements": "2026-10-25T13:17:16.039Z"
     }
   },
   "PIONEER": {
@@ -38907,10 +38972,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:32.289Z",
+    "checkedAt": "2026-10-25T13:17:19.488Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:32.289Z",
-      "entitlements": "2026-10-16T14:43:32.289Z"
+      "announcements": "2026-10-25T13:17:19.488Z",
+      "entitlements": "2026-10-25T13:17:19.488Z"
     }
   },
   "PLINTAS": {
@@ -39119,10 +39184,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:43.865Z",
+    "checkedAt": "2026-10-25T13:17:30.715Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:43.865Z",
-      "entitlements": "2026-10-16T14:43:43.865Z"
+      "announcements": "2026-10-25T13:17:30.715Z",
+      "entitlements": "2026-10-25T13:17:30.715Z"
     }
   },
   "PLYTEC": {
@@ -39302,29 +39367,34 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:42.276Z",
+    "checkedAt": "2026-10-25T13:18:19.559Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:42.276Z",
-      "entitlements": "2026-10-16T14:43:42.276Z"
+      "announcements": "2026-10-25T13:18:19.559Z",
+      "entitlements": "2026-10-25T13:18:19.559Z"
     }
   },
   "PMCK": {
     "hasNewsAlert": false,
     "newsBadges": [
       {
+        "type": "JERUNG_5PCT",
+        "label": "🐋 Major Shareholder Activity",
+        "severity": "info",
+        "title": "[2026-10-19] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ENCIK HASSAN BIN HUSSAIN"
+      },
+      {
         "type": "SHAREHOLDING",
         "label": "Insider Action",
         "severity": "info",
         "title": "[2026-10-09] PUBLIC SHAREHOLDINGS SPREAD"
-      },
-      {
-        "type": "JERUNG_5PCT",
-        "label": "🐋 Major Shareholder Activity",
-        "severity": "info",
-        "title": "[2026-09-25] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ENCIK HASSAN BIN HUSSAIN"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ENCIK HASSAN BIN HUSSAIN"
+      },
       {
         "date": "2026-10-09",
         "category": "General Announcement",
@@ -39469,11 +39539,6 @@ window.NEWS_DATA = {
         "date": "2026-06-26",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ENCIK HASSAN BIN HUSSAIN"
-      },
-      {
-        "date": "2026-06-10",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ENCIK HASSAN BIN HUSSAIN"
       }
     ],
     "entitlements": [
@@ -39500,10 +39565,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:42.155Z",
+    "checkedAt": "2026-10-25T13:17:47.597Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:42.155Z",
-      "entitlements": "2026-10-16T14:43:42.155Z"
+      "announcements": "2026-10-25T13:17:47.597Z",
+      "entitlements": "2026-10-25T13:17:47.597Z"
     }
   },
   "PMETAL": {
@@ -39513,10 +39578,70 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK KOON POH MING"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATUK KOON POH MING"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATIN ONG SOO FAN"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - TAN SRI DATO' KOON POH KEONG"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - TAN SRI DATO' KOON POH KEONG"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR KOON POH WENG"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' KOON POH TAT"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -39606,66 +39731,6 @@ window.NEWS_DATA = {
         "date": "2026-09-22",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-21",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-18",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-17",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-14",
-        "category": "General Announcement",
-        "title": "TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : RELATED PARTY TRANSACTIONS"
-      },
-      {
-        "date": "2026-09-14",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-09",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-09-08",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-07",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-04",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-03",
-        "category": "General Meetings",
-        "title": "General Meetings: Outcome of Meeting"
-      },
-      {
-        "date": "2026-09-03",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-02",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -39717,11 +39782,11 @@ window.NEWS_DATA = {
     ],
     "fetchStatus": {
       "announcements": "ok",
-      "entitlements": "ok"
+      "entitlements": "error"
     },
-    "checkedAt": "2026-10-16T14:43:41.714Z",
+    "checkedAt": "2026-10-25T13:18:14.180Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:41.714Z",
+      "announcements": "2026-10-25T13:18:14.180Z",
       "entitlements": "2026-10-16T14:43:41.714Z"
     }
   },
@@ -39895,10 +39960,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:40.592Z",
+    "checkedAt": "2026-10-25T13:17:27.365Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:40.592Z",
-      "entitlements": "2026-10-16T14:43:40.592Z"
+      "announcements": "2026-10-25T13:17:27.365Z",
+      "entitlements": "2026-10-25T13:17:27.365Z"
     }
   },
   "PMW": {
@@ -40078,10 +40143,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:33.268Z",
+    "checkedAt": "2026-10-25T13:17:23.170Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:33.268Z",
-      "entitlements": "2026-10-16T14:43:33.268Z"
+      "announcements": "2026-10-25T13:17:23.170Z",
+      "entitlements": "2026-10-25T13:17:23.170Z"
     }
   },
   "POLYMER": {
@@ -40263,10 +40328,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:47.055Z",
+    "checkedAt": "2026-10-25T13:18:15.250Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:47.055Z",
-      "entitlements": "2026-10-16T14:43:47.055Z"
+      "announcements": "2026-10-25T13:18:15.250Z",
+      "entitlements": "2026-10-25T13:18:15.250Z"
     }
   },
   "POWER": {
@@ -40409,10 +40474,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:40.469Z",
+    "checkedAt": "2026-10-25T13:17:23.589Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:40.469Z",
-      "entitlements": "2026-10-16T14:43:40.469Z"
+      "announcements": "2026-10-25T13:17:23.589Z",
+      "entitlements": "2026-10-25T13:17:23.589Z"
     }
   },
   "PPB": {
@@ -40426,6 +40491,16 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement on Shares Buy Back"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement on Shares Buy Back"
+      },
       {
         "date": "2026-10-09",
         "category": "Changes in Shareholdings",
@@ -40565,16 +40640,6 @@ window.NEWS_DATA = {
         "date": "2026-06-03",
         "category": "Shares Buy Back",
         "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-06-03",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-06-03",
-        "category": "Change of Corp Info",
-        "title": "Change in Boardroom - MR LIM SOON HUAT"
       }
     ],
     "entitlements": [
@@ -40628,23 +40693,113 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:43.795Z",
+    "checkedAt": "2026-10-25T13:17:41.827Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:43.795Z",
-      "entitlements": "2026-10-16T14:43:43.795Z"
+      "announcements": "2026-10-25T13:17:41.827Z",
+      "entitlements": "2026-10-25T13:17:41.827Z"
     }
   },
   "PPJACK": {
-    "hasNewsAlert": true,
+    "hasNewsAlert": false,
     "newsBadges": [
       {
-        "type": "EX_DIVIDEND",
-        "label": "Ex-Div: 2026-10-15",
-        "severity": "warning",
-        "title": "Second Interim Dividend (0.0050) | Ex-Date: 2026-10-15"
+        "type": "JERUNG_5PCT",
+        "label": "🐋 Major Shareholder Activity",
+        "severity": "info",
+        "title": "[2026-10-20] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MADAM LIM SIEW FANG"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-20",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MADAM LIM SIEW FANG"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR LAW BOOK CHING"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LAW BOOK CHING"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LIM BOON HUA"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR LIM BOON HUA"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MADAM LEE KOOI LAN"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - TSE SEJAHTERA SDN BHD"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR LAW BOOK CHING"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR LIM BOON HUA"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - TSE SEJAHTERA SDN BHD"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MADAM LEE KOOI LAN"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MADAM LIM SIEW FANG"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LAW BOOK CHING"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LIM BOON HUA"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
       {
         "date": "2026-09-11",
         "category": "Dealings in Listed Securities",
@@ -40704,96 +40859,6 @@ window.NEWS_DATA = {
         "date": "2026-08-21",
         "category": "Entitlements",
         "title": "Second Interim Dividend"
-      },
-      {
-        "date": "2026-08-18",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MADAM LEE KOOI LAN"
-      },
-      {
-        "date": "2026-08-18",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LIM BOON HUA"
-      },
-      {
-        "date": "2026-08-18",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR LIM BOON HUA"
-      },
-      {
-        "date": "2026-08-18",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings During Closed Period"
-      },
-      {
-        "date": "2026-07-21",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
-      },
-      {
-        "date": "2026-07-21",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
-      },
-      {
-        "date": "2026-06-30",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MADAM LEE KOOI LAN"
-      },
-      {
-        "date": "2026-06-30",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LIM BOON HUA"
-      },
-      {
-        "date": "2026-06-30",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR LIM BOON HUA"
-      },
-      {
-        "date": "2026-06-30",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-06-19",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MADAM LEE KOOI LAN"
-      },
-      {
-        "date": "2026-06-19",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LIM BOON HUA"
-      },
-      {
-        "date": "2026-06-19",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR LIM BOON HUA"
-      },
-      {
-        "date": "2026-06-19",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-06-16",
-        "category": "General Meetings",
-        "title": "General Meetings: Outcome of Meeting"
-      },
-      {
-        "date": "2026-05-14",
-        "category": "Listing Circulars",
-        "title": "PPJACK - Notice of Book Closure"
-      },
-      {
-        "date": "2026-05-13",
-        "category": "Entitlements",
-        "title": "First Interim Dividend"
-      },
-      {
-        "date": "2026-05-13",
-        "category": "Financial Results",
-        "title": "Quarterly rpt on consolidated results for the financial period ended 31/03/2026"
       }
     ],
     "entitlements": [
@@ -40847,10 +40912,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:43.302Z",
+    "checkedAt": "2026-10-25T13:17:25.343Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:43.302Z",
-      "entitlements": "2026-10-16T14:43:43.302Z"
+      "announcements": "2026-10-25T13:17:25.343Z",
+      "entitlements": "2026-10-25T13:17:25.343Z"
     }
   },
   "PSP": {
@@ -41039,20 +41104,20 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:39.087Z",
+    "checkedAt": "2026-10-25T13:17:43.726Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:39.087Z",
-      "entitlements": "2026-10-16T14:43:39.087Z"
+      "announcements": "2026-10-25T13:17:43.726Z",
+      "entitlements": "2026-10-25T13:17:43.726Z"
     }
   },
   "PTRB": {
     "hasNewsAlert": false,
     "newsBadges": [
       {
-        "type": "EV_CATALYST",
-        "label": "⚡ MOU / EV Catalyst",
-        "severity": "success",
-        "title": "[2026-09-24] MEMORANDUM OF UNDERSTANDING"
+        "type": "RECENT_NEWS",
+        "label": "News: 2026-10-16",
+        "severity": "info",
+        "title": "[2026-10-16] Change of Corp Info - Change in Nomination and Remuneration Committee - PUAN MAZNIDA BINTI MOKHTAR"
       }
     ],
     "announcements": [
@@ -41240,10 +41305,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:40.600Z",
+    "checkedAt": "2026-10-25T13:17:57.944Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:40.600Z",
-      "entitlements": "2026-10-16T14:43:40.600Z"
+      "announcements": "2026-10-25T13:17:57.944Z",
+      "entitlements": "2026-10-25T13:17:57.944Z"
     }
   },
   "PWRWELL": {
@@ -41459,10 +41524,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:29.238Z",
+    "checkedAt": "2026-10-25T13:17:38.717Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:29.238Z",
-      "entitlements": "2026-10-16T14:43:29.238Z"
+      "announcements": "2026-10-25T13:17:38.717Z",
+      "entitlements": "2026-10-25T13:17:38.717Z"
     }
   },
   "QL": {
@@ -41472,10 +41537,45 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-13] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - CHIA SONG KOOI"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - CHIA SEONG POW"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR CHIA SEONG POW"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - CHIA SEONG FATT"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - CHIA SEONG FATT"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
       {
         "date": "2026-10-13",
         "category": "Changes in Shareholdings",
@@ -41590,41 +41690,6 @@ window.NEWS_DATA = {
         "date": "2026-07-24",
         "category": "Entitlements",
         "title": "Final Dividend"
-      },
-      {
-        "date": "2026-07-24",
-        "category": "General Meetings",
-        "title": "General Meetings: Notice of Meeting"
-      },
-      {
-        "date": "2026-07-23",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-07-22",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-07-21",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-07-20",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-07-17",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-07-16",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - CHIA SONG KUN"
       }
     ],
     "entitlements": [
@@ -41678,10 +41743,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:37.175Z",
+    "checkedAt": "2026-10-25T13:17:28.471Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:37.175Z",
-      "entitlements": "2026-10-16T14:43:37.175Z"
+      "announcements": "2026-10-25T13:17:28.471Z",
+      "entitlements": "2026-10-25T13:17:28.471Z"
     }
   },
   "RADIUM": {
@@ -41879,10 +41944,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:31.021Z",
+    "checkedAt": "2026-10-25T13:17:11.860Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:31.021Z",
-      "entitlements": "2026-10-16T14:43:31.021Z"
+      "announcements": "2026-10-25T13:17:11.860Z",
+      "entitlements": "2026-10-25T13:17:11.860Z"
     }
   },
   "RAMSSOL": {
@@ -41896,6 +41961,11 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-21",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
       {
         "date": "2026-10-14",
         "category": "Dealings in Listed Securities",
@@ -42040,11 +42110,6 @@ window.NEWS_DATA = {
         "date": "2026-07-24",
         "category": "General Announcement",
         "title": "TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
-      },
-      {
-        "date": "2026-07-23",
-        "category": "Additional Listing",
-        "title": "Additional Listing Announcement /Subdivision of Shares"
       }
     ],
     "entitlements": [
@@ -42060,11 +42125,11 @@ window.NEWS_DATA = {
     ],
     "fetchStatus": {
       "announcements": "ok",
-      "entitlements": "ok"
+      "entitlements": "error"
     },
-    "checkedAt": "2026-10-16T14:43:44.035Z",
+    "checkedAt": "2026-10-25T13:17:56.233Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:44.035Z",
+      "announcements": "2026-10-25T13:17:56.233Z",
       "entitlements": "2026-10-16T14:43:44.035Z"
     }
   },
@@ -42079,6 +42144,11 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-19",
+        "category": "Change of Corp Info",
+        "title": "Change of Registrar - YTL CORPORATION BHD"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -42223,11 +42293,6 @@ window.NEWS_DATA = {
         "date": "2026-09-14",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EASTSPRING INVESTMENTS BERHAD"
-      },
-      {
-        "date": "2026-09-11",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EASTSPRING INVESTMENTS BERHAD"
       }
     ],
     "entitlements": [
@@ -42281,10 +42346,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:27.737Z",
+    "checkedAt": "2026-10-25T13:17:15.331Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:27.737Z",
-      "entitlements": "2026-10-16T14:43:27.737Z"
+      "announcements": "2026-10-25T13:17:15.331Z",
+      "entitlements": "2026-10-25T13:17:15.331Z"
     }
   },
   "REACHTEN": {
@@ -42482,10 +42547,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:35.804Z",
+    "checkedAt": "2026-10-25T13:17:38.247Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:35.804Z",
-      "entitlements": "2026-10-16T14:43:35.804Z"
+      "announcements": "2026-10-25T13:17:38.247Z",
+      "entitlements": "2026-10-25T13:17:38.247Z"
     }
   },
   "RESTNGO": {
@@ -42620,10 +42685,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:44.968Z",
+    "checkedAt": "2026-10-25T13:18:17.382Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:44.968Z",
-      "entitlements": "2026-10-16T14:43:44.968Z"
+      "announcements": "2026-10-25T13:18:17.382Z",
+      "entitlements": "2026-10-25T13:18:17.382Z"
     }
   },
   "RL": {
@@ -42633,10 +42698,40 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' SRI CHIANG FONG YEE"
+        "title": "[2026-10-22] Changes in Director's Interest (Section 219 of CA 2016) - DATO' SRI CHIANG FONG YEE"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "General Meetings",
+        "title": "General Meetings: Notice of Meeting"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' SRI CHIANG FONG YEE"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' SRI CHIANG FONG YEE"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' SRI CHIANG FONG YEE"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' SRI CHIANG FONG YEE"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -42756,36 +42851,6 @@ window.NEWS_DATA = {
         "date": "2026-09-10",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' SRI CHIANG FONG YEE"
-      },
-      {
-        "date": "2026-09-07",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' SRI CHIANG FONG YEE"
-      },
-      {
-        "date": "2026-09-07",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' SRI CHIANG FONG YEE"
-      },
-      {
-        "date": "2026-08-26",
-        "category": "Listing Circulars",
-        "title": "CARLORINO - Notice of Book Closure"
-      },
-      {
-        "date": "2026-08-24",
-        "category": "Financial Results",
-        "title": "Quarterly rpt on consolidated results for the financial period ended 30/06/2026"
-      },
-      {
-        "date": "2026-08-24",
-        "category": "Entitlements",
-        "title": "Interim Dividend"
-      },
-      {
-        "date": "2026-08-06",
-        "category": "General Announcement",
-        "title": "OTHERS"
       }
     ],
     "entitlements": [
@@ -42830,10 +42895,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:41.632Z",
+    "checkedAt": "2026-10-25T13:17:53.158Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:41.632Z",
-      "entitlements": "2026-10-16T14:43:41.632Z"
+      "announcements": "2026-10-25T13:17:53.158Z",
+      "entitlements": "2026-10-25T13:17:53.158Z"
     }
   },
   "RT": {
@@ -42886,10 +42951,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:49.310Z",
+    "checkedAt": "2026-10-25T13:18:03.287Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:49.310Z",
-      "entitlements": "2026-10-16T14:43:49.310Z"
+      "announcements": "2026-10-25T13:18:03.287Z",
+      "entitlements": "2026-10-25T13:18:03.287Z"
     }
   },
   "RTECH": {
@@ -43069,22 +43134,15 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:28.701Z",
+    "checkedAt": "2026-10-25T13:17:13.497Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:28.701Z",
-      "entitlements": "2026-10-16T14:43:28.701Z"
+      "announcements": "2026-10-25T13:17:13.497Z",
+      "entitlements": "2026-10-25T13:17:13.497Z"
     }
   },
   "SAG": {
     "hasNewsAlert": false,
-    "newsBadges": [
-      {
-        "type": "JERUNG_5PCT",
-        "label": "🐋 Major Shareholder Activity",
-        "severity": "info",
-        "title": "[2026-09-21] Changes in Director's Interest (Section 219 of CA 2016) - DATO' BOEY CHIN GAN"
-      }
-    ],
+    "newsBadges": [],
     "announcements": [
       {
         "date": "2026-09-21",
@@ -43261,10 +43319,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:45.769Z",
+    "checkedAt": "2026-10-25T13:17:36.548Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:45.769Z",
-      "entitlements": "2026-10-16T14:43:45.769Z"
+      "announcements": "2026-10-25T13:17:36.548Z",
+      "entitlements": "2026-10-25T13:17:36.548Z"
     }
   },
   "SALIRAN": {
@@ -43274,10 +43332,30 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-13] Changes in Director's Interest (Section 219 of CA 2016) - DATUK LIAW CHOON WEI"
+        "title": "[2026-10-22] Changes in Director's Interest (Section 219 of CA 2016) - DATUK LIAW CHOON WEI"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATUK LIAW CHOON WEI"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK LIAW CHOON WEI"
+      },
       {
         "date": "2026-10-13",
         "category": "Changes in Shareholdings",
@@ -43407,26 +43485,6 @@ window.NEWS_DATA = {
         "date": "2026-06-19",
         "category": "General Meetings",
         "title": "General Meetings: Outcome of Meeting"
-      },
-      {
-        "date": "2026-06-18",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-06-18",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR LIAW CHOON WEI"
-      },
-      {
-        "date": "2026-06-18",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LIAW CHOON WEI"
-      },
-      {
-        "date": "2026-06-15",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LIAW CHOON WEI"
       }
     ],
     "entitlements": [],
@@ -43434,10 +43492,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:31.802Z",
+    "checkedAt": "2026-10-25T13:17:16.939Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:31.802Z",
-      "entitlements": "2026-10-16T14:43:31.802Z"
+      "announcements": "2026-10-25T13:17:16.939Z",
+      "entitlements": "2026-10-25T13:17:16.939Z"
     }
   },
   "SAM": {
@@ -43447,10 +43505,20 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-09] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-10-22] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-10-09",
         "category": "Changes in Shareholdings",
@@ -43590,16 +43658,6 @@ window.NEWS_DATA = {
         "date": "2026-07-29",
         "category": "General Meetings",
         "title": "General Meetings: Notice of Meeting"
-      },
-      {
-        "date": "2026-07-28",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-07-27",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -43651,11 +43709,11 @@ window.NEWS_DATA = {
     ],
     "fetchStatus": {
       "announcements": "ok",
-      "entitlements": "ok"
+      "entitlements": "error"
     },
-    "checkedAt": "2026-10-16T14:43:42.501Z",
+    "checkedAt": "2026-10-25T13:18:11.982Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:42.501Z",
+      "announcements": "2026-10-25T13:18:11.982Z",
       "entitlements": "2026-10-16T14:43:42.501Z"
     }
   },
@@ -43670,6 +43728,11 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement of Changes in Treasury Shares"
+      },
       {
         "date": "2026-10-07",
         "category": "General Announcement",
@@ -43814,11 +43877,6 @@ window.NEWS_DATA = {
         "date": "2026-06-29",
         "category": "Dealings in Listed Securities",
         "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-06-29",
-        "category": "Additional Listing",
-        "title": "Additional Listing Announcement /Subdivision of Shares"
       }
     ],
     "entitlements": [
@@ -43872,10 +43930,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:33.844Z",
+    "checkedAt": "2026-10-25T13:17:12.192Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:33.844Z",
-      "entitlements": "2026-10-16T14:43:33.844Z"
+      "announcements": "2026-10-25T13:17:12.192Z",
+      "entitlements": "2026-10-25T13:17:12.192Z"
     }
   },
   "SBH": {
@@ -43885,10 +43943,30 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-09] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR TAN BOO NAM"
+        "title": "[2026-10-23] Changes in Director's Interest (Section 219 of CA 2016) - MR TAN BOO NAM"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR TAN BOO NAM"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR TAN BOO NAM"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
       {
         "date": "2026-10-09",
         "category": "Changes in Shareholdings",
@@ -44018,26 +44096,6 @@ window.NEWS_DATA = {
         "date": "2026-07-31",
         "category": "Dealings in Listed Securities",
         "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
-      },
-      {
-        "date": "2026-07-23",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-07-23",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR TAN BOO NAM"
-      },
-      {
-        "date": "2026-07-23",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR TAN BOO NAM"
-      },
-      {
-        "date": "2026-07-23",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - TAN BOO NAM HOLDINGS SDN. BHD."
       }
     ],
     "entitlements": [
@@ -44073,10 +44131,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:43.760Z",
+    "checkedAt": "2026-10-25T13:17:34.946Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:43.760Z",
-      "entitlements": "2026-10-16T14:43:43.760Z"
+      "announcements": "2026-10-25T13:17:34.946Z",
+      "entitlements": "2026-10-25T13:17:34.946Z"
     }
   },
   "SBS": {
@@ -44246,10 +44304,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:39.808Z",
+    "checkedAt": "2026-10-25T13:18:17.667Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:39.808Z",
-      "entitlements": "2026-10-16T14:43:39.808Z"
+      "announcements": "2026-10-25T13:18:17.667Z",
+      "entitlements": "2026-10-25T13:18:17.667Z"
     }
   },
   "SCB": {
@@ -44419,10 +44477,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:40.139Z",
+    "checkedAt": "2026-10-25T13:17:55.815Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:40.139Z",
-      "entitlements": "2026-10-16T14:43:40.139Z"
+      "announcements": "2026-10-25T13:17:55.815Z",
+      "entitlements": "2026-10-25T13:17:55.815Z"
     }
   },
   "SCGBHD": {
@@ -44432,10 +44490,40 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "General Announcement",
+        "title": "NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : FUND RAISING"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -44555,36 +44643,6 @@ window.NEWS_DATA = {
         "date": "2026-09-25",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-24",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-24",
-        "category": "Additional Listing",
-        "title": "Additional Listing Announcement /Subdivision of Shares"
-      },
-      {
-        "date": "2026-09-23",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-22",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-21",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-18",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -44638,23 +44696,38 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:32.959Z",
+    "checkedAt": "2026-10-25T13:17:14.760Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:32.959Z",
-      "entitlements": "2026-10-16T14:43:32.959Z"
+      "announcements": "2026-10-25T13:17:14.760Z",
+      "entitlements": "2026-10-25T13:17:14.760Z"
     }
   },
   "SDCG": {
     "hasNewsAlert": false,
     "newsBadges": [
       {
-        "type": "RECENT_NEWS",
-        "label": "News: 2026-09-30",
+        "type": "JERUNG_5PCT",
+        "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-09-30] Change of Corp Info - Change in Principal Officer - CIK WAN RATIMA AKMAR BINTI WAN SAUDI"
+        "title": "[2026-10-19] Changes in Director's Interest (Section 219 of CA 2016) - MR EDISON KONG"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR EDISON KONG"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR EDISON KONG"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
       {
         "date": "2026-09-30",
         "category": "Change of Corp Info",
@@ -44789,21 +44862,6 @@ window.NEWS_DATA = {
         "date": "2026-04-07",
         "category": "Changes in Shareholdings",
         "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR EDISON KONG"
-      },
-      {
-        "date": "2026-04-07",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR EDISON KONG"
-      },
-      {
-        "date": "2026-04-07",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-03-04",
-        "category": "Circular/Notice",
-        "title": "CIRCULAR TO SHAREHOLDERS IN RELATION TO THE: (I) PROPOSED BONUS ISSUE OF 211,911,230 WARRANTS (\"WARRANT(S)\") ON THE BASIS OF 1 WARRANT FOR EVERY 2 EXISTING ORDINARY SHARES HELD BY THE ENTITLED SHAREHOLDERS ON AN ENTITLEMENT DATE TO BE DETERMINED AND ANNOUNCED LATER (\"PROPOSED BONUS ISSUE OF WARRA"
       }
     ],
     "entitlements": [
@@ -44830,10 +44888,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:28.902Z",
+    "checkedAt": "2026-10-25T13:17:19.262Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:28.902Z",
-      "entitlements": "2026-10-16T14:43:28.902Z"
+      "announcements": "2026-10-25T13:17:19.262Z",
+      "entitlements": "2026-10-25T13:17:19.262Z"
     }
   },
   "SDG": {
@@ -44849,10 +44907,55 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
       {
         "date": "2026-10-16",
         "category": "Quarterly Production",
@@ -44957,51 +45060,6 @@ window.NEWS_DATA = {
         "date": "2026-09-30",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-30",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-09-30",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-30",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
-      },
-      {
-        "date": "2026-09-29",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-29",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
-      },
-      {
-        "date": "2026-09-29",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-09-29",
-        "category": "Circular/Notice",
-        "title": "PROPOSED DISPOSAL OF FREEHOLD LAND WITH A TOTAL LAND AREA MEASURING APPROXIMATELY 556.96 ACRES LOCATED IN MUKIM SENAI, DISTRICT KULAI, STATE OF JOHOR DARUL TA'ZIM TO SIME DARBY PROPERTY (KULAI) SDN. BHD. FOR A TOTAL CASH CONSIDERATION OF APPROXIMATELY RM418.51 MILLION (\"PROPOSED DISPOSAL\")"
-      },
-      {
-        "date": "2026-09-28",
-        "category": "General Meetings",
-        "title": "General Meetings: Notice of Meeting"
-      },
-      {
-        "date": "2026-09-25",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
       }
     ],
     "entitlements": [
@@ -45055,10 +45113,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:47.656Z",
+    "checkedAt": "2026-10-25T13:17:43.464Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:47.656Z",
-      "entitlements": "2026-10-16T14:43:47.656Z"
+      "announcements": "2026-10-25T13:17:43.464Z",
+      "entitlements": "2026-10-25T13:17:43.464Z"
     }
   },
   "SDS": {
@@ -45066,12 +45124,17 @@ window.NEWS_DATA = {
     "newsBadges": [
       {
         "type": "RECENT_NEWS",
-        "label": "News: 2026-10-09",
+        "label": "News: 2026-10-23",
         "severity": "info",
-        "title": "[2026-10-09] Shares Buy Back - Notice of SBB by a Company Pursuant to Section 127 (16) of CA 2016"
+        "title": "[2026-10-23] Shares Buy Back - Immediate Announcement on Shares Buy Back"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement on Shares Buy Back"
+      },
       {
         "date": "2026-10-09",
         "category": "Shares Buy Back",
@@ -45216,11 +45279,6 @@ window.NEWS_DATA = {
         "date": "2026-06-22",
         "category": "Changes in Shareholdings",
         "title": "Changes in Director's Interest (Section 219 of CA 2016) - DR LIM PANG KIAM"
-      },
-      {
-        "date": "2026-06-19",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
       }
     ],
     "entitlements": [
@@ -45274,10 +45332,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:45.995Z",
+    "checkedAt": "2026-10-25T13:18:00.881Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:45.995Z",
-      "entitlements": "2026-10-16T14:43:45.995Z"
+      "announcements": "2026-10-25T13:18:00.881Z",
+      "entitlements": "2026-10-25T13:18:00.881Z"
     }
   },
   "SEMICO": {
@@ -45287,10 +45345,40 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Director's Interest (Section 219 of CA 2016) - MR TAI LEE CHUEN"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR TAI LEE CHUEN"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR TAI LEE CHUEN"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MARC EXPERIENCE VENTURES SDN. BHD."
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR TAI LEE CHUEN"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Annual Report",
+        "title": "Annual Report & CG Report - 2026"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "General Meetings",
+        "title": "General Meetings: Notice of Meeting"
+      },
       {
         "date": "2026-10-16",
         "category": "Dealings in Listed Securities",
@@ -45410,36 +45498,6 @@ window.NEWS_DATA = {
         "date": "2026-04-09",
         "category": "Changes in Shareholdings",
         "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR TAI LEE CHUEN"
-      },
-      {
-        "date": "2026-04-09",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MARC EXPERIENCE VENTURES SDN. BHD."
-      },
-      {
-        "date": "2026-04-09",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR TAI LEE CHUEN"
-      },
-      {
-        "date": "2026-04-09",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-04-08",
-        "category": "Change of Corp Info",
-        "title": "Change of Registrar - ALDPRO CORPORATE SERVICES SDN BHD"
-      },
-      {
-        "date": "2026-03-19",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-03-03",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' SRI RAMLI BIN MOHAMED YOOSUF"
       }
     ],
     "entitlements": [
@@ -45475,23 +45533,38 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:28.607Z",
+    "checkedAt": "2026-10-25T13:17:15.603Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:28.607Z",
-      "entitlements": "2026-10-16T14:43:28.607Z"
+      "announcements": "2026-10-25T13:17:15.603Z",
+      "entitlements": "2026-10-25T13:17:15.603Z"
     }
   },
   "SENFONG": {
     "hasNewsAlert": false,
     "newsBadges": [
       {
-        "type": "RECENT_NEWS",
-        "label": "News: 2026-10-15",
+        "type": "JERUNG_5PCT",
+        "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-15] Annual Report - Annual Report & CG Report - 2026"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - SUMBER PANJI SDN. BHD."
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - SUMBER PANJI SDN. BHD."
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR ER HOCK LAI"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR ER HOCK LAI"
+      },
       {
         "date": "2026-10-15",
         "category": "Annual Report",
@@ -45626,21 +45699,6 @@ window.NEWS_DATA = {
         "date": "2026-04-10",
         "category": "Dealings in Listed Securities",
         "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
-      },
-      {
-        "date": "2026-04-03",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - SUMBER PANJI SDN. BHD."
-      },
-      {
-        "date": "2026-04-03",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR ER HOCK LAI"
-      },
-      {
-        "date": "2026-04-03",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR ER HOCK LAI"
       }
     ],
     "entitlements": [
@@ -45694,10 +45752,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:34.263Z",
+    "checkedAt": "2026-10-25T13:17:23.441Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:34.263Z",
-      "entitlements": "2026-10-16T14:43:34.263Z"
+      "announcements": "2026-10-25T13:17:23.441Z",
+      "entitlements": "2026-10-25T13:17:23.441Z"
     }
   },
   "SENHENG": {
@@ -45906,10 +45964,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:49.215Z",
+    "checkedAt": "2026-10-25T13:18:04.790Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:49.215Z",
-      "entitlements": "2026-10-16T14:43:49.215Z"
+      "announcements": "2026-10-25T13:18:04.790Z",
+      "entitlements": "2026-10-25T13:18:04.790Z"
     }
   },
   "SET": {
@@ -46089,10 +46147,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:37.990Z",
+    "checkedAt": "2026-10-25T13:17:28.462Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:37.990Z",
-      "entitlements": "2026-10-16T14:43:37.990Z"
+      "announcements": "2026-10-25T13:17:28.462Z",
+      "entitlements": "2026-10-25T13:17:28.462Z"
     }
   },
   "SFPTECH": {
@@ -46106,6 +46164,11 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-21",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
       {
         "date": "2026-10-13",
         "category": "Additional Listing",
@@ -46250,11 +46313,6 @@ window.NEWS_DATA = {
         "date": "2026-08-20",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LIM ZEE YANG"
-      },
-      {
-        "date": "2026-08-20",
-        "category": "General Announcement",
-        "title": "OTHERS"
       }
     ],
     "entitlements": [
@@ -46308,10 +46366,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:45.680Z",
+    "checkedAt": "2026-10-25T13:18:06.389Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:45.680Z",
-      "entitlements": "2026-10-16T14:43:45.680Z"
+      "announcements": "2026-10-25T13:18:06.389Z",
+      "entitlements": "2026-10-25T13:18:06.389Z"
     }
   },
   "SIME": {
@@ -46321,10 +46379,80 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "General Announcement",
+        "title": "NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : OTHER ISSUE OF SECURITIES"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -46404,76 +46532,6 @@ window.NEWS_DATA = {
         "date": "2026-10-12",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
-      },
-      {
-        "date": "2026-10-09",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-09",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
-      },
-      {
-        "date": "2026-10-08",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
-      },
-      {
-        "date": "2026-10-08",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-07",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-06",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
-      },
-      {
-        "date": "2026-10-06",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-06",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-10-05",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-05",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
-      },
-      {
-        "date": "2026-10-02",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-10-02",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-02",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
-      },
-      {
-        "date": "2026-10-01",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -46527,10 +46585,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:36.494Z",
+    "checkedAt": "2026-10-25T13:17:25.979Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:36.494Z",
-      "entitlements": "2026-10-16T14:43:36.494Z"
+      "announcements": "2026-10-25T13:17:25.979Z",
+      "entitlements": "2026-10-25T13:17:25.979Z"
     }
   },
   "SINKUNG": {
@@ -46693,10 +46751,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:40.179Z",
+    "checkedAt": "2026-10-25T13:18:20.050Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:40.179Z",
-      "entitlements": "2026-10-16T14:43:40.179Z"
+      "announcements": "2026-10-25T13:18:20.050Z",
+      "entitlements": "2026-10-25T13:18:20.050Z"
     }
   },
   "SKPRES": {
@@ -46706,10 +46764,20 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - LEMBAGA TABUNG HAJI"
+        "title": "[2026-10-20] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - LEMBAGA TABUNG HAJI"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - LEMBAGA TABUNG HAJI"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - LEMBAGA TABUNG HAJI"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -46849,16 +46917,6 @@ window.NEWS_DATA = {
         "date": "2026-09-07",
         "category": "Shares Buy Back",
         "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-09-07",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-09-07",
-        "category": "Shares Buy Back",
-        "title": "Notice of SBB by a Company Pursuant to Section 127 (16) of CA 2016"
       }
     ],
     "entitlements": [
@@ -46912,10 +46970,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:36.150Z",
+    "checkedAt": "2026-10-25T13:17:38.392Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:36.150Z",
-      "entitlements": "2026-10-16T14:43:36.150Z"
+      "announcements": "2026-10-25T13:17:38.392Z",
+      "entitlements": "2026-10-25T13:17:38.392Z"
     }
   },
   "SKYECHIP": {
@@ -47075,10 +47133,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:43.131Z",
+    "checkedAt": "2026-10-25T13:17:39.297Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:43.131Z",
-      "entitlements": "2026-10-16T14:43:43.131Z"
+      "announcements": "2026-10-25T13:17:39.297Z",
+      "entitlements": "2026-10-25T13:17:39.297Z"
     }
   },
   "SKYWLD": {
@@ -47294,10 +47352,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:48.928Z",
+    "checkedAt": "2026-10-25T13:18:16.890Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:48.928Z",
-      "entitlements": "2026-10-16T14:43:48.928Z"
+      "announcements": "2026-10-25T13:18:16.890Z",
+      "entitlements": "2026-10-25T13:18:16.890Z"
     }
   },
   "SLG": {
@@ -47377,10 +47435,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:33.246Z",
+    "checkedAt": "2026-10-25T13:17:24.560Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:33.246Z",
-      "entitlements": "2026-10-16T14:43:33.246Z"
+      "announcements": "2026-10-25T13:17:24.560Z",
+      "entitlements": "2026-10-25T13:17:24.560Z"
     }
   },
   "SLVEST": {
@@ -47390,10 +47448,20 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-08] Notice of Person Ceasing (Section 139 of CA 2016) - URUSHARTA JAMAAH SDN. BHD."
+        "title": "[2026-10-23] Notice of Interest Sub. S-hldr (Section 137 of CA 2016) - PRUDENTIAL PLC"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Notice of Interest Sub. S-hldr (Section 137 of CA 2016) - PRUDENTIAL PLC"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
       {
         "date": "2026-10-09",
         "category": "Dealings in Listed Securities",
@@ -47533,16 +47601,6 @@ window.NEWS_DATA = {
         "date": "2026-09-11",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - URUSHARTA JAMAAH SDN. BHD."
-      },
-      {
-        "date": "2026-09-10",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - URUSHARTA JAMAAH SDN. BHD."
-      },
-      {
-        "date": "2026-09-10",
-        "category": "Additional Listing",
-        "title": "Additional Listing Announcement /Subdivision of Shares"
       }
     ],
     "entitlements": [
@@ -47560,10 +47618,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:34.450Z",
+    "checkedAt": "2026-10-25T13:17:13.762Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:34.450Z",
-      "entitlements": "2026-10-16T14:43:34.450Z"
+      "announcements": "2026-10-25T13:17:13.762Z",
+      "entitlements": "2026-10-25T13:17:13.762Z"
     }
   },
   "SNS": {
@@ -47579,10 +47637,20 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-09-28] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PRUDENTIAL PLC"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PRUDENTIAL PLC"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PRUDENTIAL PLC"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EASTSPRING INVESTMENTS BERHAD"
+      },
       {
         "date": "2026-09-30",
         "category": "Change of Corp Info",
@@ -47722,16 +47790,6 @@ window.NEWS_DATA = {
         "date": "2026-07-06",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PRUDENTIAL PLC"
-      },
-      {
-        "date": "2026-07-03",
-        "category": "General Announcement",
-        "title": "TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
-      },
-      {
-        "date": "2026-06-30",
-        "category": "Financial Results",
-        "title": "Quarterly rpt on consolidated results for the financial period ended 30/04/2026"
       }
     ],
     "entitlements": [
@@ -47785,10 +47843,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:46.217Z",
+    "checkedAt": "2026-10-25T13:17:42.022Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:46.217Z",
-      "entitlements": "2026-10-16T14:43:46.217Z"
+      "announcements": "2026-10-25T13:17:42.022Z",
+      "entitlements": "2026-10-25T13:17:42.022Z"
     }
   },
   "SOP": {
@@ -48004,10 +48062,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:44.671Z",
+    "checkedAt": "2026-10-25T13:18:02.383Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:44.671Z",
-      "entitlements": "2026-10-16T14:43:44.671Z"
+      "announcements": "2026-10-25T13:18:02.383Z",
+      "entitlements": "2026-10-25T13:18:02.383Z"
     }
   },
   "SORENTO": {
@@ -48216,10 +48274,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:30.879Z",
+    "checkedAt": "2026-10-25T13:17:15.749Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:30.879Z",
-      "entitlements": "2026-10-16T14:43:30.879Z"
+      "announcements": "2026-10-25T13:17:15.749Z",
+      "entitlements": "2026-10-25T13:17:15.749Z"
     }
   },
   "SPRING": {
@@ -48419,10 +48477,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:49.654Z",
+    "checkedAt": "2026-10-25T13:18:09.881Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:49.654Z",
-      "entitlements": "2026-10-16T14:43:49.654Z"
+      "announcements": "2026-10-25T13:18:09.881Z",
+      "entitlements": "2026-10-25T13:18:09.881Z"
     }
   },
   "SRKK": {
@@ -48611,10 +48669,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:38.746Z",
+    "checkedAt": "2026-10-25T13:18:10.278Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:38.746Z",
-      "entitlements": "2026-10-16T14:43:38.746Z"
+      "announcements": "2026-10-25T13:18:10.278Z",
+      "entitlements": "2026-10-25T13:18:10.278Z"
     }
   },
   "SSF": {
@@ -48628,6 +48686,21 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Circular/Notice",
+        "title": "CIRCULAR TO SHAREHOLDERS IN RELATION TO THE PROPOSED RENEWAL OF EXISTING SHAREHOLDERS' MANDATE FOR RECURRENT RELATED PARTY TRANSACTIONS OF A REVENUE AND/OR TRADING NATURE"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Annual Report",
+        "title": "Annual Report & CG Report - 2026"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "General Meetings",
+        "title": "General Meetings: Notice of Meeting"
+      },
       {
         "date": "2026-10-15",
         "category": "General Announcement",
@@ -48762,21 +48835,6 @@ window.NEWS_DATA = {
         "date": "2026-07-06",
         "category": "Dealings in Listed Securities",
         "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-07-02",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-07-02",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR WONG CHOONG LOONG"
-      },
-      {
-        "date": "2026-07-02",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR WONG CHOONG LOONG"
       }
     ],
     "entitlements": [
@@ -48821,10 +48879,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:35.321Z",
+    "checkedAt": "2026-10-25T13:17:26.037Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:35.321Z",
-      "entitlements": "2026-10-16T14:43:35.321Z"
+      "announcements": "2026-10-25T13:17:26.037Z",
+      "entitlements": "2026-10-25T13:17:26.037Z"
     }
   },
   "STRATUS": {
@@ -48979,10 +49037,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:40.846Z",
+    "checkedAt": "2026-10-25T13:18:10.296Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:40.846Z",
-      "entitlements": "2026-10-16T14:43:40.846Z"
+      "announcements": "2026-10-25T13:18:10.296Z",
+      "entitlements": "2026-10-25T13:18:10.296Z"
     }
   },
   "SUM": {
@@ -48992,10 +49050,35 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-14] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR NG YEW SUM"
+        "title": "[2026-10-22] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR NG YEW SUM"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR NG YEW SUM"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO SRI MOHAMMAD NADJION BIN NASIR"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO SRI MOHAMMAD NADJION BIN NASIR"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR NG YEW SUM"
+      },
       {
         "date": "2026-10-14",
         "category": "Changes in Shareholdings",
@@ -49112,10 +49195,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:27.945Z",
+    "checkedAt": "2026-10-25T13:17:36.833Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:27.945Z",
-      "entitlements": "2026-10-16T14:43:27.945Z"
+      "announcements": "2026-10-25T13:17:36.833Z",
+      "entitlements": "2026-10-25T13:17:36.833Z"
     }
   },
   "SUMI": {
@@ -49295,10 +49378,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:37.956Z",
+    "checkedAt": "2026-10-25T13:17:21.755Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:37.956Z",
-      "entitlements": "2026-10-16T14:43:37.956Z"
+      "announcements": "2026-10-25T13:17:21.755Z",
+      "entitlements": "2026-10-25T13:17:21.755Z"
     }
   },
   "SUNCON": {
@@ -49308,10 +49391,40 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -49431,36 +49544,6 @@ window.NEWS_DATA = {
         "date": "2026-09-14",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-14",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-09-11",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-10",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-09",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-09-09",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-08",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -49514,10 +49597,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:37.049Z",
+    "checkedAt": "2026-10-25T13:17:30.482Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:37.049Z",
-      "entitlements": "2026-10-16T14:43:37.049Z"
+      "announcements": "2026-10-25T13:17:30.482Z",
+      "entitlements": "2026-10-25T13:17:30.482Z"
     }
   },
   "SUNLOGY": {
@@ -49531,6 +49614,21 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-21",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "General Meetings",
+        "title": "General Meetings: Outcome of Meeting"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "General Announcement",
+        "title": "MATERIAL LITIGATION"
+      },
       {
         "date": "2026-10-13",
         "category": "General Announcement",
@@ -49665,21 +49763,6 @@ window.NEWS_DATA = {
         "date": "2026-08-19",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' TEE ENG SENG"
-      },
-      {
-        "date": "2026-08-17",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KERJAYA PROSPEK GROUP BERHAD"
-      },
-      {
-        "date": "2026-08-17",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EGOVISION SDN. BHD."
-      },
-      {
-        "date": "2026-08-17",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATIN SERI TOH SIEW CHUON"
       }
     ],
     "entitlements": [],
@@ -49687,10 +49770,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:37.134Z",
+    "checkedAt": "2026-10-25T13:17:28.579Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:37.134Z",
-      "entitlements": "2026-10-16T14:43:37.134Z"
+      "announcements": "2026-10-25T13:17:28.579Z",
+      "entitlements": "2026-10-25T13:17:28.579Z"
     }
   },
   "SUNMED": {
@@ -49700,10 +49783,40 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-15] Changes in Director's Interest (Section 219 of CA 2016) - (DR.) KHOO CHOW HUAT, DBA"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "General Announcement",
+        "title": "TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "General Announcement",
+        "title": "TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : RELATED PARTY TRANSACTIONS"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
       {
         "date": "2026-10-16",
         "category": "Additional Listing",
@@ -49823,36 +49936,6 @@ window.NEWS_DATA = {
         "date": "2026-09-23",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-22",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-18",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' LAU BENG LONG"
-      },
-      {
-        "date": "2026-09-18",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-09-18",
-        "category": "Additional Listing",
-        "title": "Additional Listing Announcement /Subdivision of Shares"
-      },
-      {
-        "date": "2026-09-17",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-09-14",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [],
@@ -49860,10 +49943,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:28.306Z",
+    "checkedAt": "2026-10-25T13:17:10.673Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:28.306Z",
-      "entitlements": "2026-10-16T14:43:28.306Z"
+      "announcements": "2026-10-25T13:17:10.673Z",
+      "entitlements": "2026-10-25T13:17:10.673Z"
     }
   },
   "SUNVIEW": {
@@ -49871,12 +49954,17 @@ window.NEWS_DATA = {
     "newsBadges": [
       {
         "type": "RECENT_NEWS",
-        "label": "News: 2026-10-09",
+        "label": "News: 2026-10-20",
         "severity": "info",
-        "title": "[2026-10-09] General Announcement - TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
+        "title": "[2026-10-20] General Announcement - OTHERS"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-20",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
       {
         "date": "2026-10-09",
         "category": "General Announcement",
@@ -50021,11 +50109,6 @@ window.NEWS_DATA = {
         "date": "2026-07-23",
         "category": "General Announcement",
         "title": "NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : FUND RAISING"
-      },
-      {
-        "date": "2026-07-22",
-        "category": "Additional Listing",
-        "title": "Additional Listing Announcement /Subdivision of Shares"
       }
     ],
     "entitlements": [],
@@ -50033,16 +50116,28 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:37.392Z",
+    "checkedAt": "2026-10-25T13:17:13.818Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:37.392Z",
-      "entitlements": "2026-10-16T14:43:37.392Z"
+      "announcements": "2026-10-25T13:17:13.818Z",
+      "entitlements": "2026-10-25T13:17:13.818Z"
     }
   },
   "SUPREME": {
     "hasNewsAlert": false,
-    "newsBadges": [],
+    "newsBadges": [
+      {
+        "type": "JERUNG_5PCT",
+        "label": "🐋 Major Shareholder Activity",
+        "severity": "info",
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LIM AH TED"
+      }
+    ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LIM AH TED"
+      },
       {
         "date": "2026-08-24",
         "category": "Financial Results",
@@ -50187,11 +50282,6 @@ window.NEWS_DATA = {
         "date": "2025-12-29",
         "category": "Dealings in Listed Securities",
         "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2025-12-23",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO SRI RICHARD WEE LIANG HUAT @ RICHARD WEE LIANG CHIAT"
       }
     ],
     "entitlements": [
@@ -50236,10 +50326,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:43.628Z",
+    "checkedAt": "2026-10-25T13:17:42.751Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:43.628Z",
-      "entitlements": "2026-10-16T14:43:43.628Z"
+      "announcements": "2026-10-25T13:17:42.751Z",
+      "entitlements": "2026-10-25T13:17:42.751Z"
     }
   },
   "SWIFT": {
@@ -50247,12 +50337,27 @@ window.NEWS_DATA = {
     "newsBadges": [
       {
         "type": "RECENT_NEWS",
-        "label": "News: 2026-10-14",
+        "label": "News: 2026-10-21",
         "severity": "info",
-        "title": "[2026-10-14] Dealings in Listed Securities - DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+        "title": "[2026-10-21] Shares Buy Back - Immediate Announcement on Shares Buy Back"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-21",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement on Shares Buy Back"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement on Shares Buy Back"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement on Shares Buy Back"
+      },
       {
         "date": "2026-10-14",
         "category": "Dealings in Listed Securities",
@@ -50387,21 +50492,6 @@ window.NEWS_DATA = {
         "date": "2026-05-22",
         "category": "Shares Buy Back",
         "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-05-21",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-05-20",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-05-20",
-        "category": "Shares Buy Back",
-        "title": "Notice of SBB by a Company Pursuant to Section 127 (16) of CA 2016"
       }
     ],
     "entitlements": [
@@ -50455,10 +50545,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:40.537Z",
+    "checkedAt": "2026-10-25T13:18:00.570Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:40.537Z",
-      "entitlements": "2026-10-16T14:43:40.537Z"
+      "announcements": "2026-10-25T13:18:00.570Z",
+      "entitlements": "2026-10-25T13:18:00.570Z"
     }
   },
   "SYNERGY": {
@@ -50658,23 +50748,28 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:46.376Z",
+    "checkedAt": "2026-10-25T13:18:20.128Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:46.376Z",
-      "entitlements": "2026-10-16T14:43:46.376Z"
+      "announcements": "2026-10-25T13:18:20.128Z",
+      "entitlements": "2026-10-25T13:18:20.128Z"
     }
   },
   "TAGHILL": {
     "hasNewsAlert": false,
     "newsBadges": [
       {
-        "type": "RECENT_NEWS",
-        "label": "News: 2026-09-25",
+        "type": "JERUNG_5PCT",
+        "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-09-25] General Announcement - TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
+        "title": "[2026-10-19] Notice of Person Ceasing (Section 139 of CA 2016) - MR NG WAI HOE"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Notice of Person Ceasing (Section 139 of CA 2016) - MR NG WAI HOE"
+      },
       {
         "date": "2026-09-25",
         "category": "General Announcement",
@@ -50819,11 +50914,6 @@ window.NEWS_DATA = {
         "date": "2026-07-07",
         "category": "Changes in Shareholdings",
         "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR CHU YEE HONG"
-      },
-      {
-        "date": "2026-07-07",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR YAP KEK SIUNG"
       }
     ],
     "entitlements": [],
@@ -50831,10 +50921,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:36.324Z",
+    "checkedAt": "2026-10-25T13:17:28.684Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:36.324Z",
-      "entitlements": "2026-10-16T14:43:36.324Z"
+      "announcements": "2026-10-25T13:17:28.684Z",
+      "entitlements": "2026-10-25T13:17:28.684Z"
     }
   },
   "TANCO": {
@@ -50848,6 +50938,16 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
       {
         "date": "2026-10-09",
         "category": "General Announcement",
@@ -50987,16 +51087,6 @@ window.NEWS_DATA = {
         "date": "2026-07-24",
         "category": "Dealings in Listed Securities",
         "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
-      },
-      {
-        "date": "2026-07-24",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
-      },
-      {
-        "date": "2026-07-14",
-        "category": "General Announcement",
-        "title": "OTHERS"
       }
     ],
     "entitlements": [],
@@ -51004,10 +51094,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:46.788Z",
+    "checkedAt": "2026-10-25T13:18:12.617Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:46.788Z",
-      "entitlements": "2026-10-16T14:43:46.788Z"
+      "announcements": "2026-10-25T13:18:12.617Z",
+      "entitlements": "2026-10-25T13:18:12.617Z"
     }
   },
   "TASHIN": {
@@ -51223,10 +51313,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:44.412Z",
+    "checkedAt": "2026-10-25T13:17:49.830Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:44.412Z",
-      "entitlements": "2026-10-16T14:43:44.412Z"
+      "announcements": "2026-10-25T13:17:49.830Z",
+      "entitlements": "2026-10-25T13:17:49.830Z"
     }
   },
   "TCS": {
@@ -51236,10 +51326,15 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' ONG KING SENG"
+        "title": "[2026-10-20] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' ONG KING SENG"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' ONG KING SENG"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -51384,11 +51479,6 @@ window.NEWS_DATA = {
         "date": "2025-12-18",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' ONG KING SENG"
-      },
-      {
-        "date": "2025-12-16",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' ONG KING SENG"
       }
     ],
     "entitlements": [
@@ -51415,10 +51505,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:39.082Z",
+    "checkedAt": "2026-10-25T13:18:19.002Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:39.082Z",
-      "entitlements": "2026-10-16T14:43:39.082Z"
+      "announcements": "2026-10-25T13:18:19.002Z",
+      "entitlements": "2026-10-25T13:18:19.002Z"
     }
   },
   "TEAMSTR": {
@@ -51598,10 +51688,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:48.555Z",
+    "checkedAt": "2026-10-25T13:17:38.897Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:48.555Z",
-      "entitlements": "2026-10-16T14:43:48.555Z"
+      "announcements": "2026-10-25T13:17:38.897Z",
+      "entitlements": "2026-10-25T13:17:38.897Z"
     }
   },
   "TECHSTORE": {
@@ -51774,10 +51864,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:45.416Z",
+    "checkedAt": "2026-10-25T13:18:03.560Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:45.416Z",
-      "entitlements": "2026-10-16T14:43:45.416Z"
+      "announcements": "2026-10-25T13:18:03.560Z",
+      "entitlements": "2026-10-25T13:18:03.560Z"
     }
   },
   "TELADAN": {
@@ -51785,12 +51875,47 @@ window.NEWS_DATA = {
     "newsBadges": [
       {
         "type": "RECENT_NEWS",
-        "label": "News: 2026-10-16",
+        "label": "News: 2026-10-23",
         "severity": "info",
-        "title": "[2026-10-16] Shares Buy Back - Immediate Announcement on Shares Buy Back"
+        "title": "[2026-10-23] Shares Buy Back - Immediate Announcement on Shares Buy Back"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement on Shares Buy Back"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement on Shares Buy Back"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement on Shares Buy Back"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement on Shares Buy Back"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Shares Buy Back",
+        "title": "Notice of SBB by a Company Pursuant to Section 127 (16) of CA 2016"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement on Shares Buy Back"
+      },
       {
         "date": "2026-10-16",
         "category": "Shares Buy Back",
@@ -51905,41 +52030,6 @@ window.NEWS_DATA = {
         "date": "2026-09-23",
         "category": "Additional Listing",
         "title": "Additional Listing Announcement /Subdivision of Shares"
-      },
-      {
-        "date": "2026-09-22",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-09-22",
-        "category": "Shares Buy Back",
-        "title": "Notice of SBB by a Company Pursuant to Section 127 (16) of CA 2016"
-      },
-      {
-        "date": "2026-09-21",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-09-21",
-        "category": "Additional Listing",
-        "title": "Additional Listing Announcement /Subdivision of Shares"
-      },
-      {
-        "date": "2026-09-18",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-09-17",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-09-17",
-        "category": "Additional Listing",
-        "title": "Additional Listing Announcement /Subdivision of Shares"
       }
     ],
     "entitlements": [
@@ -51993,10 +52083,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:47.228Z",
+    "checkedAt": "2026-10-25T13:17:59.984Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:47.228Z",
-      "entitlements": "2026-10-16T14:43:47.228Z"
+      "announcements": "2026-10-25T13:17:59.984Z",
+      "entitlements": "2026-10-25T13:17:59.984Z"
     }
   },
   "TFP": {
@@ -52006,10 +52096,15 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - TRITON CAPITAL FUND VCC"
+        "title": "[2026-10-19] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - TRITON CAPITAL FUND VCC"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - TRITON CAPITAL FUND VCC"
+      },
       {
         "date": "2026-10-09",
         "category": "General Announcement",
@@ -52154,11 +52249,6 @@ window.NEWS_DATA = {
         "date": "2026-07-03",
         "category": "General Announcement",
         "title": "OTHERS"
-      },
-      {
-        "date": "2026-07-02",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - TRITON CAPITAL FUND VCC"
       }
     ],
     "entitlements": [
@@ -52176,10 +52266,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:45.693Z",
+    "checkedAt": "2026-10-25T13:18:18.048Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:45.693Z",
-      "entitlements": "2026-10-16T14:43:45.693Z"
+      "announcements": "2026-10-25T13:18:18.048Z",
+      "entitlements": "2026-10-25T13:18:18.048Z"
     }
   },
   "THMY": {
@@ -52189,10 +52279,30 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -52322,26 +52432,6 @@ window.NEWS_DATA = {
         "date": "2026-09-02",
         "category": "General Meetings",
         "title": "General Meetings: Outcome of Meeting"
-      },
-      {
-        "date": "2026-09-02",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-08-28",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-08-27",
-        "category": "Financial Results",
-        "title": "Quarterly rpt on consolidated results for the financial period ended 30/06/2026"
-      },
-      {
-        "date": "2026-08-27",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [],
@@ -52349,10 +52439,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:30.349Z",
+    "checkedAt": "2026-10-25T13:17:21.801Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:30.349Z",
-      "entitlements": "2026-10-16T14:43:30.349Z"
+      "announcements": "2026-10-25T13:17:21.801Z",
+      "entitlements": "2026-10-25T13:17:21.801Z"
     }
   },
   "TJSETIA": {
@@ -52559,22 +52649,15 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:37.561Z",
+    "checkedAt": "2026-10-25T13:17:57.574Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:37.561Z",
-      "entitlements": "2026-10-16T14:43:37.561Z"
+      "announcements": "2026-10-25T13:17:57.574Z",
+      "entitlements": "2026-10-25T13:17:57.574Z"
     }
   },
   "TMK": {
     "hasNewsAlert": false,
-    "newsBadges": [
-      {
-        "type": "RECENT_NEWS",
-        "label": "News: 2026-09-18",
-        "severity": "info",
-        "title": "[2026-09-18] General Announcement - TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : RELATED PARTY TRANSACTIONS"
-      }
-    ],
+    "newsBadges": [],
     "announcements": [
       {
         "date": "2026-09-18",
@@ -52769,23 +52852,54 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:37.100Z",
+    "checkedAt": "2026-10-25T13:17:18.232Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:37.100Z",
-      "entitlements": "2026-10-16T14:43:37.100Z"
+      "announcements": "2026-10-25T13:17:18.232Z",
+      "entitlements": "2026-10-25T13:17:18.232Z"
     }
   },
   "TOPGLOV": {
-    "hasNewsAlert": false,
+    "hasNewsAlert": true,
     "newsBadges": [
+      {
+        "type": "EX_DIVIDEND",
+        "label": "Ex-Div: 2026-11-23",
+        "severity": "warning",
+        "title": "Final Dividend (0.0150) | Ex-Date: 2026-11-23"
+      },
       {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -52910,31 +53024,6 @@ window.NEWS_DATA = {
         "date": "2026-09-14",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-09-11",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-09-07",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
-      },
-      {
-        "date": "2026-09-03",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-08-28",
-        "category": "Change of Corp Info",
-        "title": "Change in Nomination and Remuneration Committee - PUAN EMELIA BINTI MATRAHAH"
-      },
-      {
-        "date": "2026-08-28",
-        "category": "Change of Corp Info",
-        "title": "Change in Risk Committee - PUAN AZRINA BINTI ARSHAD"
       }
     ],
     "entitlements": [
@@ -52988,22 +53077,15 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:34.029Z",
+    "checkedAt": "2026-10-25T13:17:16.690Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:34.029Z",
-      "entitlements": "2026-10-16T14:43:34.029Z"
+      "announcements": "2026-10-25T13:17:16.690Z",
+      "entitlements": "2026-10-25T13:17:16.690Z"
     }
   },
   "TOPMIX": {
     "hasNewsAlert": false,
-    "newsBadges": [
-      {
-        "type": "RECENT_NEWS",
-        "label": "News: 2026-09-23",
-        "severity": "info",
-        "title": "[2026-09-23] General Announcement - TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
-      }
-    ],
+    "newsBadges": [],
     "announcements": [
       {
         "date": "2026-09-23",
@@ -53207,10 +53289,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:48.860Z",
+    "checkedAt": "2026-10-25T13:18:17.696Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:48.860Z",
-      "entitlements": "2026-10-16T14:43:48.860Z"
+      "announcements": "2026-10-25T13:18:17.696Z",
+      "entitlements": "2026-10-25T13:18:17.696Z"
     }
   },
   "TOPVISN": {
@@ -53408,10 +53490,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:29.162Z",
+    "checkedAt": "2026-10-25T13:17:17.007Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:29.162Z",
-      "entitlements": "2026-10-16T14:43:29.162Z"
+      "announcements": "2026-10-25T13:17:17.007Z",
+      "entitlements": "2026-10-25T13:17:17.007Z"
     }
   },
   "TSA": {
@@ -53627,10 +53709,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:31.551Z",
+    "checkedAt": "2026-10-25T13:17:19.118Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:31.551Z",
-      "entitlements": "2026-10-16T14:43:31.551Z"
+      "announcements": "2026-10-25T13:17:19.118Z",
+      "entitlements": "2026-10-25T13:17:19.118Z"
     }
   },
   "TTVHB": {
@@ -53793,10 +53875,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:41.269Z",
+    "checkedAt": "2026-10-25T13:18:03.544Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:41.269Z",
-      "entitlements": "2026-10-16T14:43:41.269Z"
+      "announcements": "2026-10-25T13:18:03.544Z",
+      "entitlements": "2026-10-25T13:18:03.544Z"
     }
   },
   "UMC": {
@@ -53969,10 +54051,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:43.319Z",
+    "checkedAt": "2026-10-25T13:18:18.172Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:43.319Z",
-      "entitlements": "2026-10-16T14:43:43.319Z"
+      "announcements": "2026-10-25T13:18:18.172Z",
+      "entitlements": "2026-10-25T13:18:18.172Z"
     }
   },
   "UMCCA": {
@@ -53982,10 +54064,135 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PROSPER CAPITAL HOLDINGS SDN BHD"
+        "title": "[2026-10-23] Changes in Director's Interest (Section 219 of CA 2016) - MR TEE CHENG HUA"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR TEE CHENG HUA"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR TEE CHENG HUA"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - TEE CHENG HUA HOLDINGS SDN BHD"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR TEE KIM TEE @ TEE CHING TEE"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MERGEBOOM (M) SDN BHD"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PROSPER CAPITAL HOLDINGS SDN BHD"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PROSPER TRADING SDN. BHD."
+      },
+      {
+        "date": "2026-10-23",
+        "category": "General Announcement",
+        "title": "TAKE-OVERS & MERGERS (PARAGRAPH/RULE 9.19 (47A))"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "General Announcement",
+        "title": "TAKE-OVERS & MERGERS (PARAGRAPH/RULE 9.19 (47A))"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "General Announcement",
+        "title": "TAKE-OVERS & MERGERS (PARAGRAPH/RULE 9.19 (47A))"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR TEE CHENG HUA"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR TEE CHENG HUA"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - TEE CHENG HUA HOLDINGS SDN BHD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR TEE KIM TEE @ TEE CHING TEE"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MERGEBOOM (M) SDN BHD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PROSPER CAPITAL HOLDINGS SDN BHD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PROSPER TRADING SDN. BHD."
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MERGEBOOM (M) SDN BHD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "General Announcement",
+        "title": "TAKE-OVERS & MERGERS (PARAGRAPH/RULE 9.19 (47A))"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PROSPER TRADING SDN. BHD."
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Circular/Notice",
+        "title": "NOTIFICATION IN RELATION TO THE RECEIPT OF NOTICE OF CASH COMPENSATION SCHEME DATED 12 OCTOBER 2026 FROM UOB KAY HIAN (M) SDN BHD ON BEHALF OF PROSPER TRADING SDN BHD, TEE KIM TEE @ TEE CHING TEE AND TEE CHENG HUA."
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Circular/Notice",
+        "title": "NOTIFICATION TO THE SHAREHOLDERS OF UNITED MALACCA BERHAD IN RELATION TO THE RECEIPT OF NOTICE OF CONDITIONAL MANDATORY TAKE-OVER OFFER DATED 12 OCTOBER 2026 FROM UOB KAY HIAN (M) SDN BHD ON BEHALF OF PROSPER TRADING SDN BHD, TEE KIM TEE @ TEE CHING TEE AND TEE CHENG HUA."
+      },
+      {
+        "date": "2026-10-19",
+        "category": "General Announcement",
+        "title": "TAKE-OVERS & MERGERS (PARAGRAPH/RULE 9.19 (47A))"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -54010,131 +54217,6 @@ window.NEWS_DATA = {
         "date": "2026-10-15",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR TEE KIM TEE @ TEE CHING TEE"
-      },
-      {
-        "date": "2026-10-15",
-        "category": "Changes in Shareholdings",
-        "title": "Notice of Interest Sub. S-hldr (Section 137 of CA 2016) - MR TEE KIM TEE @ TEE CHING TEE"
-      },
-      {
-        "date": "2026-10-15",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - TEE CHENG HUA HOLDINGS SDN BHD"
-      },
-      {
-        "date": "2026-10-15",
-        "category": "Changes in Shareholdings",
-        "title": "Notice of Interest Sub. S-hldr (Section 137 of CA 2016) - TEE CHENG HUA HOLDINGS SDN BHD"
-      },
-      {
-        "date": "2026-10-15",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR TEE CHENG HUA"
-      },
-      {
-        "date": "2026-10-15",
-        "category": "Changes in Shareholdings",
-        "title": "Notice of Interest Sub. S-hldr (Section 137 of CA 2016) - MR TEE CHENG HUA"
-      },
-      {
-        "date": "2026-10-15",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-10-15",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR TEE CHENG HUA"
-      },
-      {
-        "date": "2026-10-15",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PROSPER TRADING SDN. BHD."
-      },
-      {
-        "date": "2026-10-15",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR TEE LIP ZHUN"
-      },
-      {
-        "date": "2026-10-15",
-        "category": "General Announcement",
-        "title": "TAKE-OVERS & MERGERS (PARAGRAPH/RULE 9.19 (47A))"
-      },
-      {
-        "date": "2026-10-14",
-        "category": "Listing Circulars",
-        "title": "UMCCA - Trading Halt and Resumption of Trading"
-      },
-      {
-        "date": "2026-10-14",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' SRI TEE LIP SIN"
-      },
-      {
-        "date": "2026-10-14",
-        "category": "Change of Corp Info",
-        "title": "Change in Boardroom - DATO' SRI TEE LIP SIN"
-      },
-      {
-        "date": "2026-10-14",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PROSPER TRADING SDN. BHD."
-      },
-      {
-        "date": "2026-10-14",
-        "category": "General Announcement",
-        "title": "TAKE-OVERS & MERGERS (PARAGRAPH/RULE 9.19 (47A))"
-      },
-      {
-        "date": "2026-10-13",
-        "category": "Changes in Shareholdings",
-        "title": "Notice of Person Ceasing (Section 139 of CA 2016) - OVERSEA-CHINESE BANKING CORPORATION LIMITED [\"OCBC\"]"
-      },
-      {
-        "date": "2026-10-13",
-        "category": "Changes in Shareholdings",
-        "title": "Notice of Person Ceasing (Section 139 of CA 2016) - GREAT EASTERN HOLDINGS LIMITED (\"GEH\")"
-      },
-      {
-        "date": "2026-10-13",
-        "category": "Changes in Shareholdings",
-        "title": "Notice of Person Ceasing (Section 139 of CA 2016) - THE GREAT EASTERN LIFE ASSURANCE COMPANY LIMITED (\"GELS\")"
-      },
-      {
-        "date": "2026-10-13",
-        "category": "Changes in Shareholdings",
-        "title": "Notice of Person Ceasing (Section 139 of CA 2016) - GREAT EASTERN CAPITAL (MALAYSIA) BERHAD (\"GEC\")"
-      },
-      {
-        "date": "2026-10-13",
-        "category": "Changes in Shareholdings",
-        "title": "Notice of Person Ceasing (Section 139 of CA 2016) - GREAT EASTERN LIFE ASSURANCE (MALAYSIA) BERHAD"
-      },
-      {
-        "date": "2026-10-13",
-        "category": "Quarterly Production",
-        "title": "DISCLOSURE ON QUARTERLY PRODUCTION"
-      },
-      {
-        "date": "2026-10-13",
-        "category": "General Announcement",
-        "title": "MONTHLY PRODUCTION FIGURES (MINING / PLANTATION / TIMBER)"
-      },
-      {
-        "date": "2026-10-12",
-        "category": "General Announcement",
-        "title": "TAKE-OVERS & MERGERS (PARAGRAPH/RULE 9.19 (47A))"
-      },
-      {
-        "date": "2026-10-12",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-10-12",
-        "category": "General Announcement",
-        "title": "TAKE-OVERS & MERGERS (PARAGRAPH/RULE 9.19 (47A))"
       }
     ],
     "entitlements": [
@@ -54188,10 +54270,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:32.276Z",
+    "checkedAt": "2026-10-25T13:17:19.068Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:32.276Z",
-      "entitlements": "2026-10-16T14:43:32.276Z"
+      "announcements": "2026-10-25T13:17:19.068Z",
+      "entitlements": "2026-10-25T13:17:19.068Z"
     }
   },
   "UMSINT": {
@@ -54199,12 +54281,32 @@ window.NEWS_DATA = {
     "newsBadges": [
       {
         "type": "RECENT_NEWS",
-        "label": "News: 2026-09-30",
+        "label": "News: 2026-10-20",
         "severity": "info",
-        "title": "[2026-09-30] General Announcement - OTHERS"
+        "title": "[2026-10-20] Change of Corp Info - Change of Address"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-20",
+        "category": "Change of Corp Info",
+        "title": "Change of Address"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Circular/Notice",
+        "title": "STATEMENT TO SHAREHOLDERS IN RELATION TO PROPOSED RENEWAL OF SHAREHOLDERS' MANDATE FOR THE AUTHORITY TO THE COMPANY TO PURCHASE ITS OWN SHARES OF UP TO TEN PER CENTUM (10%) OF THE TOTAL NUMBER OF ISSUED SHARES"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Annual Report",
+        "title": "Annual Report & CG Report - 2026"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "General Meetings",
+        "title": "General Meetings: Notice of Meeting"
+      },
       {
         "date": "2026-09-30",
         "category": "General Announcement",
@@ -54334,26 +54436,6 @@ window.NEWS_DATA = {
         "date": "2025-07-01",
         "category": "Change of Corp Info",
         "title": "Change in Boardroom - MR KEVIN CHUNG LI KIEN"
-      },
-      {
-        "date": "2025-07-01",
-        "category": "Change of Corp Info",
-        "title": "Change in Boardroom - MR CHEN SUNG FANG"
-      },
-      {
-        "date": "2025-07-01",
-        "category": "Change of Corp Info",
-        "title": "Change in Audit Committee - MR CHEN SUNG FANG"
-      },
-      {
-        "date": "2025-07-01",
-        "category": "Change of Corp Info",
-        "title": "Change in Nomination Committee - MR CHEN SUNG FANG"
-      },
-      {
-        "date": "2025-07-01",
-        "category": "Change of Corp Info",
-        "title": "Change in Remuneration Committee - MR CHEN SUNG FANG"
       }
     ],
     "entitlements": [
@@ -54407,10 +54489,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:44.899Z",
+    "checkedAt": "2026-10-25T13:17:37.539Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:44.899Z",
-      "entitlements": "2026-10-16T14:43:44.899Z"
+      "announcements": "2026-10-25T13:17:37.539Z",
+      "entitlements": "2026-10-25T13:17:37.539Z"
     }
   },
   "UNIPAC": {
@@ -54505,10 +54587,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:48.664Z",
+    "checkedAt": "2026-10-25T13:18:16.528Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:48.664Z",
-      "entitlements": "2026-10-16T14:43:48.664Z"
+      "announcements": "2026-10-25T13:18:16.528Z",
+      "entitlements": "2026-10-25T13:18:16.528Z"
     }
   },
   "UNIQUE": {
@@ -54724,10 +54806,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:42.761Z",
+    "checkedAt": "2026-10-25T13:17:46.798Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:42.761Z",
-      "entitlements": "2026-10-16T14:43:42.761Z"
+      "announcements": "2026-10-25T13:17:46.798Z",
+      "entitlements": "2026-10-25T13:17:46.798Z"
     }
   },
   "UNISEM": {
@@ -54737,10 +54819,30 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR JOHN CHIA SIN TET"
+        "title": "[2026-10-21] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR JOHN CHIA SIN TET"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR JOHN CHIA SIN TET"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings During Closed Period"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -54870,26 +54972,6 @@ window.NEWS_DATA = {
         "date": "2026-08-26",
         "category": "Changes in Shareholdings",
         "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR JOHN CHIA SIN TET"
-      },
-      {
-        "date": "2026-08-26",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-08-26",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR JOHN CHIA SIN TET"
-      },
-      {
-        "date": "2026-08-24",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-08-24",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR JOHN CHIA SIN TET"
       }
     ],
     "entitlements": [
@@ -54941,11 +55023,11 @@ window.NEWS_DATA = {
     ],
     "fetchStatus": {
       "announcements": "ok",
-      "entitlements": "ok"
+      "entitlements": "error"
     },
-    "checkedAt": "2026-10-16T14:43:47.901Z",
+    "checkedAt": "2026-10-25T13:18:14.667Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:47.901Z",
+      "announcements": "2026-10-25T13:18:14.667Z",
       "entitlements": "2026-10-16T14:43:47.901Z"
     }
   },
@@ -55146,10 +55228,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:33.287Z",
+    "checkedAt": "2026-10-25T13:17:21.774Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:33.287Z",
-      "entitlements": "2026-10-16T14:43:33.287Z"
+      "announcements": "2026-10-25T13:17:21.774Z",
+      "entitlements": "2026-10-25T13:17:21.774Z"
     }
   },
   "UTDPLT": {
@@ -55363,11 +55445,11 @@ window.NEWS_DATA = {
     ],
     "fetchStatus": {
       "announcements": "ok",
-      "entitlements": "ok"
+      "entitlements": "error"
     },
-    "checkedAt": "2026-10-16T14:43:44.205Z",
+    "checkedAt": "2026-10-25T13:17:49.134Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:44.205Z",
+      "announcements": "2026-10-25T13:17:49.134Z",
       "entitlements": "2026-10-16T14:43:44.205Z"
     }
   },
@@ -55378,10 +55460,50 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-09-25] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR HIN WAI MUN"
+        "title": "[2026-10-23] Changes in Director's Interest (Section 219 of CA 2016) - DATUK DR TING KOK HWA"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATUK DR TING KOK HWA"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK DR TING KOK HWA"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR HIN WAI MUN"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR HIN WAI MUN"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR CHONG TUOO CHOI"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings During Closed Period"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR CHONG TUOO CHOI"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
       {
         "date": "2026-10-01",
         "category": "Additional Listing",
@@ -55491,46 +55613,6 @@ window.NEWS_DATA = {
         "date": "2026-06-26",
         "category": "General Meetings",
         "title": "General Meetings: Notice of Meeting"
-      },
-      {
-        "date": "2026-04-23",
-        "category": "Financial Results",
-        "title": "Quarterly rpt on consolidated results for the financial period ended 28/02/2026"
-      },
-      {
-        "date": "2026-04-23",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-04-21",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-04-10",
-        "category": "General Announcement",
-        "title": "OTHERS"
-      },
-      {
-        "date": "2026-04-10",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATUK DR TING KOK HWA"
-      },
-      {
-        "date": "2026-04-10",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK DR TING KOK HWA"
-      },
-      {
-        "date": "2026-04-10",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings During Closed Period"
-      },
-      {
-        "date": "2026-04-08",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATUK DR TING KOK HWA"
       }
     ],
     "entitlements": [],
@@ -55538,10 +55620,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:31.239Z",
+    "checkedAt": "2026-10-25T13:17:10.782Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:31.239Z",
-      "entitlements": "2026-10-16T14:43:31.239Z"
+      "announcements": "2026-10-25T13:17:10.782Z",
+      "entitlements": "2026-10-25T13:17:10.782Z"
     }
   },
   "UWC": {
@@ -55748,10 +55830,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:29.987Z",
+    "checkedAt": "2026-10-25T13:17:15.510Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:29.987Z",
-      "entitlements": "2026-10-16T14:43:29.987Z"
+      "announcements": "2026-10-25T13:17:15.510Z",
+      "entitlements": "2026-10-25T13:17:15.510Z"
     }
   },
   "VANZO": {
@@ -55765,6 +55847,11 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
       {
         "date": "2026-10-13",
         "category": "Changes in Shareholdings",
@@ -55909,11 +55996,6 @@ window.NEWS_DATA = {
         "date": "2026-08-12",
         "category": "Dealings in Listed Securities",
         "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings During Closed Period"
-      },
-      {
-        "date": "2026-08-12",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - FRAGRANCE CENTURY SDN. BHD."
       }
     ],
     "entitlements": [
@@ -55940,22 +56022,15 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:35.899Z",
+    "checkedAt": "2026-10-25T13:17:24.809Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:35.899Z",
-      "entitlements": "2026-10-16T14:43:35.899Z"
+      "announcements": "2026-10-25T13:17:24.809Z",
+      "entitlements": "2026-10-25T13:17:24.809Z"
     }
   },
   "VERDANT": {
     "hasNewsAlert": false,
-    "newsBadges": [
-      {
-        "type": "RECENT_NEWS",
-        "label": "News: 2026-09-18",
-        "severity": "info",
-        "title": "[2026-09-18] Financial Results - Change in Financial Year End"
-      }
-    ],
+    "newsBadges": [],
     "announcements": [
       {
         "date": "2026-09-18",
@@ -56113,10 +56188,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:31.678Z",
+    "checkedAt": "2026-10-25T13:17:20.683Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:31.678Z",
-      "entitlements": "2026-10-16T14:43:31.678Z"
+      "announcements": "2026-10-25T13:17:20.683Z",
+      "entitlements": "2026-10-25T13:17:20.683Z"
     }
   },
   "VINVEST": {
@@ -56286,10 +56361,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:50.127Z",
+    "checkedAt": "2026-10-25T13:17:30.252Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:50.127Z",
-      "entitlements": "2026-10-16T14:43:50.127Z"
+      "announcements": "2026-10-25T13:17:30.252Z",
+      "entitlements": "2026-10-25T13:17:30.252Z"
     }
   },
   "VITROX": {
@@ -56505,10 +56580,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:29.573Z",
+    "checkedAt": "2026-10-25T13:17:12.733Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:29.573Z",
-      "entitlements": "2026-10-16T14:43:29.573Z"
+      "announcements": "2026-10-25T13:17:12.733Z",
+      "entitlements": "2026-10-25T13:17:12.733Z"
     }
   },
   "VLB": {
@@ -56678,10 +56753,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:30.887Z",
+    "checkedAt": "2026-10-25T13:17:11.104Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:30.887Z",
-      "entitlements": "2026-10-16T14:43:30.887Z"
+      "announcements": "2026-10-25T13:17:11.104Z",
+      "entitlements": "2026-10-25T13:17:11.104Z"
     }
   },
   "VOLCANO": {
@@ -56691,10 +56766,40 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK CH'NG HUAT SENG"
+        "title": "[2026-10-19] Changes in Director's Interest (Section 219 of CA 2016) - DATUK CH'NG HUAT SENG"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-19",
+        "category": "Circular/Notice",
+        "title": "VOLCANO BERHAD (\"THE COMPANY\") SHARE BUY-BACK STATEMENT PROPOSED AUTHORITY FOR SHARE BUY-BACK OF UP TO TEN PER CENTUM (10%) OF THE COMPANY'S TOTAL NUMBER OF ISSUED SHARES"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Annual Report",
+        "title": "Annual Report & CG Report - 2026"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATUK CH'NG HUAT SENG"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK CH'NG HUAT SENG"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Listing Circulars",
+        "title": "VOLCANO - Notice of Book Closure"
+      },
       {
         "date": "2026-10-16",
         "category": "Entitlements",
@@ -56814,36 +56919,6 @@ window.NEWS_DATA = {
         "date": "2026-09-18",
         "category": "Dealings in Listed Securities",
         "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-09-18",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR ANDREW SU MENG KIT"
-      },
-      {
-        "date": "2026-09-18",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR ANDREW SU MENG KIT"
-      },
-      {
-        "date": "2026-09-14",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR ANDREW SU MENG KIT"
-      },
-      {
-        "date": "2026-09-14",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR ANDREW SU MENG KIT"
-      },
-      {
-        "date": "2026-09-14",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-09-10",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR ANDREW SU MENG KIT"
       }
     ],
     "entitlements": [
@@ -56897,10 +56972,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:45.235Z",
+    "checkedAt": "2026-10-25T13:18:02.415Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:45.235Z",
-      "entitlements": "2026-10-16T14:43:45.235Z"
+      "announcements": "2026-10-25T13:18:02.415Z",
+      "entitlements": "2026-10-25T13:18:02.415Z"
     }
   },
   "VS": {
@@ -56910,10 +56985,20 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-10-22] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -57053,16 +57138,6 @@ window.NEWS_DATA = {
         "date": "2026-07-24",
         "category": "Changes in Shareholdings",
         "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR WONG CHEER FENG"
-      },
-      {
-        "date": "2026-07-24",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-07-21",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
       }
     ],
     "entitlements": [
@@ -57116,23 +57191,73 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:33.905Z",
+    "checkedAt": "2026-10-25T13:17:21.663Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:33.905Z",
-      "entitlements": "2026-10-16T14:43:33.905Z"
+      "announcements": "2026-10-25T13:17:21.663Z",
+      "entitlements": "2026-10-25T13:17:21.663Z"
     }
   },
   "VSTECS": {
     "hasNewsAlert": false,
     "newsBadges": [
       {
-        "type": "RECENT_NEWS",
-        "label": "News: 2026-10-02",
+        "type": "JERUNG_5PCT",
+        "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-02] General Announcement - OTHERS"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR FOO LEK CHOONG"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR FOO LEK CHOONG"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR FOO LEK CHOONG"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings During Closed Period"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR FOO LEK CHOONG"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR FOO LEK CHOONG"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR FOO LEK CHOONG"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR FOO LEK CHOONG"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+      },
       {
         "date": "2026-10-02",
         "category": "General Announcement",
@@ -57232,56 +57357,6 @@ window.NEWS_DATA = {
         "date": "2026-06-16",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MADAM LEE MARN FONG @ WU MARN FONG"
-      },
-      {
-        "date": "2026-06-16",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MADAM FOO TEEN WYNE"
-      },
-      {
-        "date": "2026-06-15",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MADAM ANNE RODRIGUES NEE KOH LAN HEONG"
-      },
-      {
-        "date": "2026-06-15",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR FOO LEK CHOONG"
-      },
-      {
-        "date": "2026-06-15",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' KHOO SIN AIK"
-      },
-      {
-        "date": "2026-06-15",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MADAM LEE MARN FONG @ WU MARN FONG"
-      },
-      {
-        "date": "2026-06-15",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-06-15",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR SOONG JAN HSUNG"
-      },
-      {
-        "date": "2026-06-09",
-        "category": "General Announcement",
-        "title": "NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : BONUS ISSUES"
-      },
-      {
-        "date": "2026-06-08",
-        "category": "General Announcement",
-        "title": "NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : BONUS ISSUES"
-      },
-      {
-        "date": "2026-05-29",
-        "category": "Change of Corp Info",
-        "title": "Change in Boardroom - MR FOO LEK CHOONG"
       }
     ],
     "entitlements": [
@@ -57333,11 +57408,11 @@ window.NEWS_DATA = {
     ],
     "fetchStatus": {
       "announcements": "ok",
-      "entitlements": "ok"
+      "entitlements": "error"
     },
-    "checkedAt": "2026-10-16T14:43:41.225Z",
+    "checkedAt": "2026-10-25T13:18:16.365Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:41.225Z",
+      "announcements": "2026-10-25T13:18:16.365Z",
       "entitlements": "2026-10-16T14:43:41.225Z"
     }
   },
@@ -57511,15 +57586,21 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:42.919Z",
+    "checkedAt": "2026-10-25T13:17:36.195Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:42.919Z",
-      "entitlements": "2026-10-16T14:43:42.919Z"
+      "announcements": "2026-10-25T13:17:36.195Z",
+      "entitlements": "2026-10-25T13:17:36.195Z"
     }
   },
   "WELLCHIP": {
     "hasNewsAlert": true,
     "newsBadges": [
+      {
+        "type": "JERUNG_5PCT",
+        "label": "🐋 Major Shareholder Activity",
+        "severity": "info",
+        "title": "[2026-10-23] Changes in Director's Interest (Section 219 of CA 2016) - MISS NG HOOI LANG"
+      },
       {
         "type": "AI_CATALYST",
         "label": "🤖 AI / Data Centre",
@@ -57534,6 +57615,41 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MISS NG HOOI LANG"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MISS NG HOOI LANG"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MISS TANG SOO YEN"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MISS NG HOOI LANG"
+      },
       {
         "date": "2026-10-16",
         "category": "Prospectus",
@@ -57648,41 +57764,6 @@ window.NEWS_DATA = {
         "date": "2026-06-22",
         "category": "Change of Corp Info",
         "title": "Change in Boardroom - MISS WONG CHIN CHIN"
-      },
-      {
-        "date": "2026-06-22",
-        "category": "General Meetings",
-        "title": "General Meetings: Outcome of Meeting"
-      },
-      {
-        "date": "2026-06-05",
-        "category": "General Announcement",
-        "title": "NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : FUND RAISING"
-      },
-      {
-        "date": "2026-05-22",
-        "category": "Financial Results",
-        "title": "Quarterly rpt on consolidated results for the financial period ended 31/03/2026"
-      },
-      {
-        "date": "2026-05-22",
-        "category": "General Announcement",
-        "title": "TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : RECURRENT RELATED PARTY TRANSACTIONS"
-      },
-      {
-        "date": "2026-04-30",
-        "category": "Annual Report",
-        "title": "Annual Report & CG Report - 2025"
-      },
-      {
-        "date": "2026-04-29",
-        "category": "General Meetings",
-        "title": "General Meetings: Notice of Meeting"
-      },
-      {
-        "date": "2026-04-17",
-        "category": "Listing Circulars",
-        "title": "WELLCHIP - Notice of Book Closure"
       }
     ],
     "entitlements": [
@@ -57709,10 +57790,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:36.545Z",
+    "checkedAt": "2026-10-25T13:17:52.774Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:36.545Z",
-      "entitlements": "2026-10-16T14:43:36.545Z"
+      "announcements": "2026-10-25T13:17:52.774Z",
+      "entitlements": "2026-10-25T13:17:52.774Z"
     }
   },
   "WELLS": {
@@ -57875,10 +57956,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:46.027Z",
+    "checkedAt": "2026-10-25T13:18:15.670Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:46.027Z",
-      "entitlements": "2026-10-16T14:43:46.027Z"
+      "announcements": "2026-10-25T13:18:15.670Z",
+      "entitlements": "2026-10-25T13:18:15.670Z"
     }
   },
   "WENTEL": {
@@ -58048,10 +58129,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:46.038Z",
+    "checkedAt": "2026-10-25T13:18:04.579Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:46.038Z",
-      "entitlements": "2026-10-16T14:43:46.038Z"
+      "announcements": "2026-10-25T13:18:04.579Z",
+      "entitlements": "2026-10-25T13:18:04.579Z"
     }
   },
   "WESTRVR": {
@@ -58221,10 +58302,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:28.065Z",
+    "checkedAt": "2026-10-25T13:17:21.356Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:28.065Z",
-      "entitlements": "2026-10-16T14:43:28.065Z"
+      "announcements": "2026-10-25T13:17:21.356Z",
+      "entitlements": "2026-10-25T13:17:21.356Z"
     }
   },
   "WINSTAR": {
@@ -58394,10 +58475,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:29.873Z",
+    "checkedAt": "2026-10-25T13:17:27.479Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:29.873Z",
-      "entitlements": "2026-10-16T14:43:29.873Z"
+      "announcements": "2026-10-25T13:17:27.479Z",
+      "entitlements": "2026-10-25T13:17:27.479Z"
     }
   },
   "WTEC": {
@@ -58577,10 +58658,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:40.683Z",
+    "checkedAt": "2026-10-25T13:17:25.877Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:40.683Z",
-      "entitlements": "2026-10-16T14:43:40.683Z"
+      "announcements": "2026-10-25T13:17:25.877Z",
+      "entitlements": "2026-10-25T13:17:25.877Z"
     }
   },
   "WTK": {
@@ -58794,11 +58875,11 @@ window.NEWS_DATA = {
     ],
     "fetchStatus": {
       "announcements": "ok",
-      "entitlements": "ok"
+      "entitlements": "error"
     },
-    "checkedAt": "2026-10-16T14:43:48.306Z",
+    "checkedAt": "2026-10-25T13:18:05.845Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:48.306Z",
+      "announcements": "2026-10-25T13:18:05.845Z",
       "entitlements": "2026-10-16T14:43:48.306Z"
     }
   },
@@ -58972,10 +59053,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:46.339Z",
+    "checkedAt": "2026-10-25T13:18:00.844Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:46.339Z",
-      "entitlements": "2026-10-16T14:43:46.339Z"
+      "announcements": "2026-10-25T13:18:00.844Z",
+      "entitlements": "2026-10-25T13:18:00.844Z"
     }
   },
   "YENHER": {
@@ -58985,10 +59066,25 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-08] Changes in Director's Interest (Section 219 of CA 2016) - MR CHENG MOOH KHENG"
+        "title": "[2026-10-21] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR CHENG MOOH KHENG"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR CHENG MOOH KHENG"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR CHENG MOOH KHENG"
+      },
       {
         "date": "2026-10-08",
         "category": "Changes in Shareholdings",
@@ -59123,21 +59219,6 @@ window.NEWS_DATA = {
         "date": "2026-03-26",
         "category": "Changes in Shareholdings",
         "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' CHENG MOOH TAT"
-      },
-      {
-        "date": "2026-03-26",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATIN THEOH MOOI TENG"
-      },
-      {
-        "date": "2026-03-04",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' LIM CHOON KHIM"
-      },
-      {
-        "date": "2026-03-04",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
       }
     ],
     "entitlements": [
@@ -59191,10 +59272,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:36.839Z",
+    "checkedAt": "2026-10-25T13:17:45.694Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:36.839Z",
-      "entitlements": "2026-10-16T14:43:36.839Z"
+      "announcements": "2026-10-25T13:17:45.694Z",
+      "entitlements": "2026-10-25T13:17:45.694Z"
     }
   },
   "YEWLEE": {
@@ -59204,10 +59285,30 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-05] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK ANG LEE LEONG"
+        "title": "[2026-10-21] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK ANG LEE LEONG"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK ANG LEE LEONG"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATUK ANG LEE LEONG"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
       {
         "date": "2026-10-12",
         "category": "Shares Buy Back",
@@ -59337,26 +59438,6 @@ window.NEWS_DATA = {
         "date": "2026-08-11",
         "category": "Additional Listing",
         "title": "Additional Listing Announcement /Subdivision of Shares"
-      },
-      {
-        "date": "2026-08-06",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings During Closed Period"
-      },
-      {
-        "date": "2026-08-05",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
-      },
-      {
-        "date": "2026-07-28",
-        "category": "Additional Listing",
-        "title": "Additional Listing Announcement /Subdivision of Shares"
-      },
-      {
-        "date": "2026-07-21",
-        "category": "Additional Listing",
-        "title": "Additional Listing Announcement /Subdivision of Shares"
       }
     ],
     "entitlements": [
@@ -59374,10 +59455,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:29.176Z",
+    "checkedAt": "2026-10-25T13:17:13.850Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:29.176Z",
-      "entitlements": "2026-10-16T14:43:29.176Z"
+      "announcements": "2026-10-25T13:17:13.850Z",
+      "entitlements": "2026-10-25T13:17:13.850Z"
     }
   },
   "YTL": {
@@ -59387,10 +59468,40 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Additional Listing",
+        "title": "Additional Listing Announcement /Subdivision of Shares"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
@@ -59510,36 +59621,6 @@ window.NEWS_DATA = {
         "date": "2026-09-25",
         "category": "Dealings in Listed Securities",
         "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-09-25",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-24",
-        "category": "Change of Corp Info",
-        "title": "Change in Boardroom - MISS YEOH PEI JEN"
-      },
-      {
-        "date": "2026-09-24",
-        "category": "Change of Corp Info",
-        "title": "Change in Boardroom - MR CHOY KIN MANN"
-      },
-      {
-        "date": "2026-09-24",
-        "category": "Change of Corp Info",
-        "title": "Change in Boardroom - MR YEOH KEONG HANN"
-      },
-      {
-        "date": "2026-09-24",
-        "category": "Change of Corp Info",
-        "title": "Change in Boardroom - MR YEOH KEONG YEOW"
-      },
-      {
-        "date": "2026-09-24",
-        "category": "Change of Corp Info",
-        "title": "Change in Boardroom - MISS YEOH PEI XIEN"
       }
     ],
     "entitlements": [
@@ -59593,10 +59674,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:45.669Z",
+    "checkedAt": "2026-10-25T13:17:42.495Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:45.669Z",
-      "entitlements": "2026-10-16T14:43:45.669Z"
+      "announcements": "2026-10-25T13:17:42.495Z",
+      "entitlements": "2026-10-25T13:17:42.495Z"
     }
   },
   "YXPM": {
@@ -59796,22 +59877,15 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:48.864Z",
+    "checkedAt": "2026-10-25T13:17:57.090Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:48.864Z",
-      "entitlements": "2026-10-16T14:43:48.864Z"
+      "announcements": "2026-10-25T13:17:57.090Z",
+      "entitlements": "2026-10-25T13:17:57.090Z"
     }
   },
   "ZANTAT": {
     "hasNewsAlert": false,
-    "newsBadges": [
-      {
-        "type": "RECENT_NEWS",
-        "label": "News: 2026-09-18",
-        "severity": "info",
-        "title": "[2026-09-18] General Announcement - OTHERS"
-      }
-    ],
+    "newsBadges": [],
     "announcements": [
       {
         "date": "2026-09-18",
@@ -59979,10 +60053,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-10-16T14:43:39.508Z",
+    "checkedAt": "2026-10-25T13:17:52.696Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:39.508Z",
-      "entitlements": "2026-10-16T14:43:39.508Z"
+      "announcements": "2026-10-25T13:17:52.696Z",
+      "entitlements": "2026-10-25T13:17:52.696Z"
     }
   },
   "ZETRIX": {
@@ -59998,10 +60072,75 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Director's Interest (Section 219 of CA 2016) - MR WONG THEAN SOON"
+        "title": "[2026-10-21] Changes in Director's Interest (Section 219 of CA 2016) - MR WONG THEAN SOON"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-10-23",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Change of Corp Info",
+        "title": "Change in Boardroom - DATO' DR NORRAESAH BINTI HAJI MOHAMAD"
+      },
+      {
+        "date": "2026-10-22",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR WONG THEAN SOON"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR WONG THEAN SOON"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR WONG THEAN SOON"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Listing Circulars",
+        "title": "ZETRIX - TRADING HALT & RESUMPTION OF TRADING"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
       {
         "date": "2026-10-16",
         "category": "Reply to Query",
@@ -60086,71 +60225,6 @@ window.NEWS_DATA = {
         "date": "2026-10-09",
         "category": "Changes in Shareholdings",
         "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR WONG THEAN SOON"
-      },
-      {
-        "date": "2026-10-08",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-10-08",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' DR NORRAESAH BINTI HAJI MOHAMAD"
-      },
-      {
-        "date": "2026-10-08",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR WONG THEAN SOON"
-      },
-      {
-        "date": "2026-10-08",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR WONG THEAN SOON"
-      },
-      {
-        "date": "2026-10-07",
-        "category": "Reply to Query",
-        "title": "CLARIFICATION ON NEWS ARTICLE APPEARING IN THE ONLINE PORTAL"
-      },
-      {
-        "date": "2026-10-07",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-10-07",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR WONG THEAN SOON"
-      },
-      {
-        "date": "2026-10-07",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR WONG THEAN SOON"
-      },
-      {
-        "date": "2026-10-06",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR WONG THEAN SOON"
-      },
-      {
-        "date": "2026-10-06",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR WONG THEAN SOON"
-      },
-      {
-        "date": "2026-10-06",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-10-06",
-        "category": "Reply to Query",
-        "title": "CLARIFICATION ON NEWS ARTICLE APPEARING IN THE ONLINE PORTAL"
-      },
-      {
-        "date": "2026-10-05",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR WONG THEAN SOON"
       }
     ],
     "entitlements": [
@@ -60202,11 +60276,11 @@ window.NEWS_DATA = {
     ],
     "fetchStatus": {
       "announcements": "ok",
-      "entitlements": "ok"
+      "entitlements": "error"
     },
-    "checkedAt": "2026-10-16T14:43:47.680Z",
+    "checkedAt": "2026-10-25T13:18:14.483Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-10-16T14:43:47.680Z",
+      "announcements": "2026-10-25T13:18:14.483Z",
       "entitlements": "2026-10-16T14:43:47.680Z"
     }
   }

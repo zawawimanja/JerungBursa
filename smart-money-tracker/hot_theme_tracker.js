@@ -1,17 +1,17 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-16T14:43:53.516Z",
+  "generatedAt": "2026-10-25T13:18:31.893Z",
   "dataDays": 98,
-  "totalTracked": 381,
+  "totalTracked": 383,
   "openCount": 37,
-  "closedCount": 344,
+  "closedCount": 346,
   "closedWins": 200,
   "closedWinRate": 58,
   "closedAvgGain": 9.6,
   "openPnl": 129.4,
-  "closedPnl": 3317.9,
-  "totalPnlNow": 3447.3
+  "closedPnl": 3309.1,
+  "totalPnlNow": 3438.5
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -4041,6 +4041,33 @@ window.HOT_THEME_TRACKER = {
    "exitPrice": 6.538
   },
   {
+   "id": "DNEX_2026-08-20_ADDON",
+   "name": "DNEX",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-08-20",
+   "entry": 0.515,
+   "entryFloor": 0.5,
+   "currentFloor": 0.5,
+   "currentPrice": 0.48,
+   "high": 0.515,
+   "highDate": "2026-08-20",
+   "maxGain": 0,
+   "finalGain": -5.8,
+   "day1ChangePct": 3,
+   "days": 3,
+   "lastDate": "2026-08-24",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor",
+    "Solar/RE"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false,
+   "slTrail": 0.485,
+   "exitDate": "2026-08-24",
+   "exitPrice": 0.485
+  },
+  {
    "id": "UWC_2026-08-19_ADDON",
    "name": "UWC",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -4091,6 +4118,33 @@ window.HOT_THEME_TRACKER = {
    "slTrail": 10.547,
    "exitDate": "2026-10-15",
    "exitPrice": 10.547
+  },
+  {
+   "id": "DNEX_2026-08-19_ADDON",
+   "name": "DNEX",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-08-19",
+   "entry": 0.5,
+   "entryFloor": 0.505,
+   "currentFloor": 0.5,
+   "currentPrice": 0.48,
+   "high": 0.515,
+   "highDate": "2026-08-20",
+   "maxGain": 3,
+   "finalGain": -3,
+   "day1ChangePct": 0,
+   "days": 4,
+   "lastDate": "2026-08-24",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor",
+    "Solar/RE"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false,
+   "slTrail": 0.485,
+   "exitDate": "2026-08-24",
+   "exitPrice": 0.485
   },
   {
    "id": "GREATEC_2026-08-19_ADDON",
@@ -10563,7 +10617,7 @@ window.HOT_THEME_TRACKER = {
 };
 window.HOT_THEME_NEW_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-16T14:43:53.516Z",
+  "generatedAt": "2026-10-25T13:18:31.893Z",
   "dataDays": 98,
   "totalTracked": 49,
   "openCount": 7,
@@ -11841,7 +11895,7 @@ window.HOT_THEME_NEW_TRACKER = {
 };
 window.HOT_THEME_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-16T14:43:53.516Z",
+  "generatedAt": "2026-10-25T13:18:31.894Z",
   "dataDays": 98,
   "totalTracked": 173,
   "openCount": 21,
@@ -16315,17 +16369,17 @@ window.HOT_THEME_ADDON_TRACKER = {
 };
 window.HOT_THEME_FLOOR_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-16T14:43:53.516Z",
+  "generatedAt": "2026-10-25T13:18:31.894Z",
   "dataDays": 98,
-  "totalTracked": 159,
+  "totalTracked": 161,
   "openCount": 9,
-  "closedCount": 150,
+  "closedCount": 152,
   "closedWins": 72,
-  "closedWinRate": 48,
-  "closedAvgGain": 3.5,
+  "closedWinRate": 47,
+  "closedAvgGain": 3.4,
   "openPnl": 98,
-  "closedPnl": 519.4,
-  "totalPnlNow": 617.4
+  "closedPnl": 510.6,
+  "totalPnlNow": 608.6
  },
  "trades": [
   {
@@ -18269,6 +18323,33 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "exitPrice": 10.547
   },
   {
+   "id": "DNEX_2026-08-19_ADDON",
+   "name": "DNEX",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-08-19",
+   "entry": 0.5,
+   "entryFloor": 0.505,
+   "currentFloor": 0.5,
+   "currentPrice": 0.48,
+   "high": 0.515,
+   "highDate": "2026-08-20",
+   "maxGain": 3,
+   "finalGain": -3,
+   "day1ChangePct": 0,
+   "days": 4,
+   "lastDate": "2026-08-24",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor",
+    "Solar/RE"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false,
+   "slTrail": 0.485,
+   "exitDate": "2026-08-24",
+   "exitPrice": 0.485
+  },
+  {
    "id": "VITROX_2026-08-20_ADDON",
    "name": "VITROX",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -18319,6 +18400,33 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "slTrail": 6.538,
    "exitDate": "2026-08-24",
    "exitPrice": 6.538
+  },
+  {
+   "id": "DNEX_2026-08-20_ADDON",
+   "name": "DNEX",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-08-20",
+   "entry": 0.515,
+   "entryFloor": 0.5,
+   "currentFloor": 0.5,
+   "currentPrice": 0.48,
+   "high": 0.515,
+   "highDate": "2026-08-20",
+   "maxGain": 0,
+   "finalGain": -5.8,
+   "day1ChangePct": 3,
+   "days": 3,
+   "lastDate": "2026-08-24",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor",
+    "Solar/RE"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false,
+   "slTrail": 0.485,
+   "exitDate": "2026-08-24",
+   "exitPrice": 0.485
   },
   {
    "id": "VITROX_2026-08-26_ADDON",
@@ -20460,17 +20568,17 @@ window.HOT_THEME_FLOOR_TRACKER = {
 };
 window.HOT_THEME_ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-16T14:43:53.516Z",
+  "generatedAt": "2026-10-25T13:18:31.893Z",
   "dataDays": 98,
-  "totalTracked": 381,
+  "totalTracked": 383,
   "openCount": 37,
-  "closedCount": 344,
+  "closedCount": 346,
   "closedWins": 200,
   "closedWinRate": 58,
   "closedAvgGain": 9.6,
   "openPnl": 129.4,
-  "closedPnl": 3317.9,
-  "totalPnlNow": 3447.3
+  "closedPnl": 3309.1,
+  "totalPnlNow": 3438.5
  },
  "trades": [
   {
@@ -23801,6 +23909,33 @@ window.HOT_THEME_ALL_TRACKER = {
    "exitPrice": 6.538
   },
   {
+   "id": "DNEX_2026-08-20_ADDON",
+   "name": "DNEX",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-08-20",
+   "entry": 0.515,
+   "entryFloor": 0.5,
+   "currentFloor": 0.5,
+   "currentPrice": 0.48,
+   "high": 0.515,
+   "highDate": "2026-08-20",
+   "maxGain": 0,
+   "finalGain": -5.8,
+   "day1ChangePct": 3,
+   "days": 3,
+   "lastDate": "2026-08-24",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor",
+    "Solar/RE"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false,
+   "slTrail": 0.485,
+   "exitDate": "2026-08-24",
+   "exitPrice": 0.485
+  },
+  {
    "id": "UWC_2026-08-19_ADDON",
    "name": "UWC",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -23851,6 +23986,33 @@ window.HOT_THEME_ALL_TRACKER = {
    "slTrail": 10.547,
    "exitDate": "2026-10-15",
    "exitPrice": 10.547
+  },
+  {
+   "id": "DNEX_2026-08-19_ADDON",
+   "name": "DNEX",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-08-19",
+   "entry": 0.5,
+   "entryFloor": 0.505,
+   "currentFloor": 0.5,
+   "currentPrice": 0.48,
+   "high": 0.515,
+   "highDate": "2026-08-20",
+   "maxGain": 3,
+   "finalGain": -3,
+   "day1ChangePct": 0,
+   "days": 4,
+   "lastDate": "2026-08-24",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor",
+    "Solar/RE"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false,
+   "slTrail": 0.485,
+   "exitDate": "2026-08-24",
+   "exitPrice": 0.485
   },
   {
    "id": "GREATEC_2026-08-19_ADDON",
