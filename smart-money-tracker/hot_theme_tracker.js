@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-25T13:18:31.893Z",
+  "generatedAt": "2026-10-25T13:21:01.765Z",
   "dataDays": 98,
   "totalTracked": 383,
   "openCount": 37,
@@ -10617,7 +10617,7 @@ window.HOT_THEME_TRACKER = {
 };
 window.HOT_THEME_NEW_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-25T13:18:31.893Z",
+  "generatedAt": "2026-10-25T13:21:01.765Z",
   "dataDays": 98,
   "totalTracked": 49,
   "openCount": 7,
@@ -11895,7 +11895,7 @@ window.HOT_THEME_NEW_TRACKER = {
 };
 window.HOT_THEME_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-25T13:18:31.894Z",
+  "generatedAt": "2026-10-25T13:21:01.765Z",
   "dataDays": 98,
   "totalTracked": 173,
   "openCount": 21,
@@ -16369,7 +16369,7 @@ window.HOT_THEME_ADDON_TRACKER = {
 };
 window.HOT_THEME_FLOOR_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-25T13:18:31.894Z",
+  "generatedAt": "2026-10-25T13:21:01.766Z",
   "dataDays": 98,
   "totalTracked": 161,
   "openCount": 9,
@@ -20568,7 +20568,7 @@ window.HOT_THEME_FLOOR_TRACKER = {
 };
 window.HOT_THEME_ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-25T13:18:31.893Z",
+  "generatedAt": "2026-10-25T13:21:01.765Z",
   "dataDays": 98,
   "totalTracked": 383,
   "openCount": 37,
