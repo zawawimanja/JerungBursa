@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact JerungBursa — Inquiries, feedback, and support for our Malaysia stock market analysis platform.">
+    <meta name="description" content="Contact JerungBursa — Inquiries, feedback, and discussion for our Malaysia stock market analysis platform.">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.jerungbursa.my/contact.html">
     <!-- Google AdSense -->
@@ -22,6 +22,7 @@
             --accent: #6366f1;
             --success: #10b981;
             --danger: #ef4444;
+            --telegram: #229ed9;
         }
 
         * {
@@ -35,7 +36,7 @@
             background-color: var(--bg-color);
             background-image: 
                 radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(16, 185, 129, 0.08) 0px, transparent 50%);
+                radial-gradient(at 100% 100%, rgba(34, 158, 217, 0.1) 0px, transparent 50%);
             background-attachment: fixed;
             color: var(--text-main);
             padding: 2rem 1.5rem;
@@ -59,7 +60,7 @@
             font-family: 'Outfit', sans-serif;
             font-size: 2.2rem;
             font-weight: 800;
-            background: linear-gradient(135deg, #a5b4fc 0%, #6366f1 50%, #34d399 100%);
+            background: linear-gradient(135deg, #a5b4fc 0%, #38bdf8 50%, #34d399 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             letter-spacing: -0.02em;
@@ -70,6 +71,7 @@
             gap: 0.8rem;
             justify-content: flex-start;
             margin-bottom: 2rem;
+            flex-wrap: wrap;
         }
 
         .btn-nav {
@@ -98,61 +100,100 @@
             backdrop-filter: blur(12px);
             border: 1px solid var(--panel-border);
             border-radius: 16px;
-            padding: 2.5rem;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            padding: 3rem 2rem;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
             margin-bottom: 3rem;
-            max-width: 600px;
+            max-width: 620px;
             margin-left: auto;
             margin-right: auto;
+            text-align: center;
         }
 
-        .form-group {
-            margin-bottom: 1.5rem;
+        .tg-badge-wrapper {
+            width: 86px;
+            height: 86px;
+            margin: 0 auto 1.5rem auto;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #2AABEE 0%, #229ED9 100%);
             display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px rgba(34, 158, 217, 0.4);
+            border: 2px solid rgba(255, 255, 255, 0.25);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .form-group label {
+        .tg-badge-wrapper:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 40px rgba(34, 158, 217, 0.55);
+        }
+
+        .btn-telegram {
+            background: linear-gradient(135deg, #0088cc, #229ed9);
+            color: white !important;
+            text-decoration: none;
+            font-size: 1.05rem;
+            font-weight: 600;
+            padding: 0.95rem 1.8rem;
+            border-radius: 0.85rem;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.65rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 20px rgba(0, 136, 204, 0.4);
+            transition: all 0.3s ease;
+            width: 100%;
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .btn-telegram:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(0, 136, 204, 0.6);
+            filter: brightness(1.08);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.85rem;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 0.75rem;
+            padding: 1rem 0.75rem;
+        }
+
+        .feature-icon {
+            font-size: 1.4rem;
+            margin-bottom: 0.4rem;
+            display: block;
+        }
+
+        .feature-title {
             font-size: 0.85rem;
             font-weight: 600;
+            color: white;
+        }
+
+        .feature-desc {
+            font-size: 0.75rem;
             color: var(--text-muted);
-            text-transform: uppercase;
+            margin-top: 0.25rem;
         }
 
-        .form-group input, .form-group textarea {
-            padding: 0.75rem 1rem;
-            border-radius: 8px;
-            background: rgba(0, 0, 0, 0.4);
-            border: 1px solid var(--panel-border);
-            color: white;
-            outline: none;
-            font-family: inherit;
-            transition: all 0.3s ease;
-        }
-
-        .form-group input:focus, .form-group textarea:focus {
-            border-color: var(--accent);
-            box-shadow: 0 0 10px rgba(99, 102, 241, 0.2);
-        }
-
-        .btn-submit {
-            background: var(--accent);
-            color: white;
-            border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
-            font-weight: 700;
-            font-size: 0.95rem;
-            cursor: pointer;
-            width: 100%;
-            transition: all 0.2s;
-            margin-top: 1rem;
-        }
-
-        .btn-submit:hover {
-            background: #4f46e5;
-            box-shadow: 0 0 15px rgba(99, 102, 241, 0.4);
+        @media (max-width: 560px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .glass-card {
+                padding: 2rem 1.25rem;
+            }
         }
 
         footer {
@@ -182,50 +223,71 @@
             <a href="index.html" class="btn-nav">
                 ← Main Dashboard
             </a>
+            <a href="donate.html" class="btn-nav" style="color: #ec4899; border-color: rgba(236,72,153,0.3);">
+                ♥ Support Us
+            </a>
         </div>
 
         <header>
             <h1>Contact Us</h1>
-            <p style="color: var(--text-muted); margin-top: 0.5rem;">Please reach out to us with any questions, inquiries, or feedback.</p>
+            <p style="color: var(--text-muted); margin-top: 0.5rem;">Have questions, suggestions, or want to discuss setups? Connect directly with us on Telegram.</p>
         </header>
 
         <main class="glass-card">
-            <div style="text-align: center; margin-bottom: 2rem; color: #cbd5e1; font-size: 0.95rem;">
-                <p>Official Support Email: <strong style="color: #6366f1;">support@jerungbursa.my</strong></p>
-                <p>Kuala Lumpur, Malaysia</p>
+            <div class="tg-badge-wrapper">
+                <svg width="44" height="44" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.77-1.17 3.35-1.37 3.73-1.38.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/>
+                </svg>
             </div>
 
-            <form onsubmit="event.preventDefault(); alert('Thank you for contacting us! We will respond to your email shortly.'); this.reset();">
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" required placeholder="e.g., John Doe">
+            <div style="display: inline-block; padding: 0.35rem 0.9rem; border-radius: 20px; background: rgba(34, 158, 217, 0.15); border: 1px solid rgba(34, 158, 217, 0.35); color: #38bdf8; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.85rem; letter-spacing: 0.3px;">
+                @santai_tradeMY
+            </div>
+
+            <h2 style="font-size: 1.6rem; margin-bottom: 0.5rem; color: white; font-family: 'Outfit', sans-serif;">Santai Trade MY</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.75rem;">
+                Sebarang pertanyaan, maklum balas, perbincangan teknik trading, atau laporan ralat sistem boleh dihantar terus melalui saluran Telegram <strong>Santai Trade MY</strong>. Pantas dan mudah tanpa perlu borang email!
+            </p>
+
+            <a href="https://t.me/santai_tradeMY" target="_blank" rel="noopener noreferrer" class="btn-telegram">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 0 0-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.77-1.17 3.35-1.37 3.73-1.38.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .37z"/>
+                </svg>
+                <span>Buka Telegram @santai_tradeMY</span>
+            </a>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">⚡</span>
+                    <div class="feature-title">Respon Pantas</div>
+                    <div class="feature-desc">Mesej terus admin</div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email Address</label>
-                    <input type="email" id="email" required placeholder="e.g., john@example.com">
+                <div class="feature-card">
+                    <span class="feature-icon">👥</span>
+                    <div class="feature-title">Komuniti Santai</div>
+                    <div class="feature-desc">Diskusi sesama trader</div>
                 </div>
-                <div class="form-group">
-                    <label for="subject">Subject</label>
-                    <input type="text" id="subject" required placeholder="Feedback / Data Inquiry / Collaboration">
+                <div class="feature-card">
+                    <span class="feature-icon">🔍</span>
+                    <div class="feature-title">Semak & Betul</div>
+                    <div class="feature-desc">Lapor ralat / feedback</div>
                 </div>
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" rows="5" required placeholder="Write your message here..."></textarea>
-                </div>
-                <button type="submit" class="btn-submit">
-                    Send Message
-                </button>
-            </form>
+            </div>
+
+            <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; color: var(--text-muted); font-size: 0.85rem; margin-top: 2rem;">
+                <span>📍 Kuala Lumpur, Malaysia</span>
+            </div>
         </main>
 
         <footer>
             <p>&copy; 2026 Jerung Bursa. All rights reserved.</p>
-            <div style="margin-top: 1rem;">
+            <div style="margin-top: 1rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                 <a href="articles.html">Articles & Insights</a>
                 <a href="privacy-policy.html">Privacy Policy</a>
                 <a href="terms.html">Terms of Service</a>
                 <a href="about.html">About Us</a>
                 <a href="contact.html" style="color: white; font-weight: 600;">Contact Us</a>
+                <a href="donate.html" style="color: #ec4899;">Donate</a>
             </div>
         </footer>
     </div>

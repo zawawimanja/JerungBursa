@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Support Jerung Bursa — Help us keep Bursa Malaysia quantitative scanners, backtests, and algorithms free and server infrastructure running.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.jerungbursa.my/donate.html">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6303372615694359" crossorigin="anonymous"></script>
+    <title>Support Us | Jerung Bursa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --panel-bg: rgba(22, 28, 45, 0.7);
+            --panel-border: rgba(51, 65, 85, 0.5);
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #6366f1;
+            --pink: #ec4899;
+            --success: #10b981;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.12) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(236, 72, 153, 0.1) 0px, transparent 50%);
+            background-attachment: fixed;
+            color: var(--text-main);
+            padding: 2rem 1.5rem;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        header {
+            margin-bottom: 2.5rem;
+            text-align: center;
+            border-bottom: 1px solid rgba(51, 65, 85, 0.3);
+            padding-bottom: 1.5rem;
+        }
+
+        header h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #f472b6 0%, #ec4899 50%, #a855f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: -0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0.8rem;
+            justify-content: flex-start;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-nav {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--panel-border);
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-nav:hover {
+            color: white;
+            background: rgba(255,255,255,0.08);
+            border-color: rgba(255,255,255,0.15);
+        }
+
+        .donate-card {
+            background: var(--panel-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--panel-border);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .donate-qr-wrap {
+            display: inline-block;
+            padding: 0.75rem;
+            border-radius: 1.25rem;
+            background: rgba(236, 72, 153, 0.08);
+            border: 1px solid rgba(236, 72, 153, 0.35);
+            box-shadow: 0 0 25px rgba(236, 72, 153, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .donate-qr-wrap:hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 35px rgba(236, 72, 153, 0.25);
+        }
+
+        .donate-qr-wrap img {
+            width: 280px;
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.75rem;
+            display: block;
+        }
+
+        .btn-contact {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            margin-top: 1rem;
+        }
+
+        .btn-contact:hover {
+            background: rgba(255, 255, 255, 0.12);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(51, 65, 85, 0.3);
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        footer a {
+            color: var(--text-muted);
+            text-decoration: none;
+            margin: 0 0.75rem;
+            transition: color 0.2s;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="nav-links">
+            <a href="index.html" class="btn-nav">
+                ← Main Dashboard
+            </a>
+            <a href="contact.html" class="btn-nav">
+                💬 Contact Us
+            </a>
+        </div>
+
+        <header>
+            <h1>Support Our Work</h1>
+            <p style="color: var(--text-muted); margin-top: 0.5rem;">Jerung Bursa is free &amp; volunteer-run. If our quant scanners, backtests, formulas and data have helped your trading, a small donation keeps the servers running and algorithms fresh.</p>
+        </header>
+
+        <main class="donate-card">
+            <div class="donate-qr-wrap">
+                <img src="assets/donate-qr.png" alt="Malaysia National QR (DuitNow) donation code for Jerung Bursa" width="280" height="317">
+            </div>
+
+            <h2 style="font-size: 1.3rem; margin: 1.5rem 0 0.5rem 0; color: white; display: flex; align-items: center; justify-content: center; gap: 0.5rem; font-family: 'Outfit', sans-serif;">
+                <span style="color: #ec4899;">📱</span> Scan to Donate
+            </h2>
+
+            <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.7; margin-bottom: 1.5rem;">
+                Open your bank or e-wallet app (Maybank2u, TNG eWallet, GrabPay, Boost, etc.), choose <strong style="color: white;">Scan &amp; Pay / DuitNow QR</strong>, and point your camera at the code above. Any amount is appreciated &mdash; RM1, RM5, RM10, whatever you can spare.
+            </p>
+
+            <a href="contact.html" class="btn-contact">
+                <span>Questions? Contact Us via Telegram</span>
+            </a>
+        </main>
+
+        <p style="text-align: center; color: var(--text-muted); font-size: 0.8rem; margin-top: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto; line-height: 1.6;">
+            Thank you for keeping this project free for all retail investors. Donations are completely voluntary and do not entitle donors to any personalized investment advice or guaranteed outcomes.
+        </p>
+
+        <footer>
+            <p>&copy; 2026 Jerung Bursa. All rights reserved.</p>
+            <div style="margin-top: 1rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="articles.html">Articles & Insights</a>
+                <a href="privacy-policy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="donate.html" style="color: #ec4899; font-weight: 600;">Donate</a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

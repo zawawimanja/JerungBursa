@@ -523,9 +523,11 @@ function generateArticleHtml(art) {
                 <a href="../terms.html">Terms of Service</a>
                 <a href="../about.html">About Us</a>
                 <a href="../contact.html">Contact Us</a>
+                <a href="../donate.html" style="color: #ec4899;">Donate</a>
             </div>
         </footer>
     </div>
+    <script src="../donate-banner.js"></script>
 </body>
 </html>
 `;
@@ -778,9 +780,11 @@ const hubHtml = `<!DOCTYPE html>
                 <a href="terms.html">Terms of Service</a>
                 <a href="about.html">About Us</a>
                 <a href="contact.html">Contact Us</a>
+                <a href="donate.html" style="color: #ec4899;">Donate</a>
             </div>
         </footer>
     </div>
+    <script src="donate-banner.js"></script>
 </body>
 </html>
 `;
@@ -802,6 +806,7 @@ const coreJerungUrls = [
     { url: 'https://www.jerungbursa.my/landing.html', priority: '0.5', changefreq: 'monthly' },
     { url: 'https://www.jerungbursa.my/about.html', priority: '0.5', changefreq: 'yearly' },
     { url: 'https://www.jerungbursa.my/contact.html', priority: '0.5', changefreq: 'yearly' },
+    { url: 'https://www.jerungbursa.my/donate.html', priority: '0.5', changefreq: 'yearly' },
     { url: 'https://www.jerungbursa.my/privacy-policy.html', priority: '0.4', changefreq: 'yearly' },
     { url: 'https://www.jerungbursa.my/terms.html', priority: '0.4', changefreq: 'yearly' },
 ];
