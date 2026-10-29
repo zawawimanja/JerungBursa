@@ -3,6 +3,25 @@
 
 window.jerungData = [
   {
+    "id": "klse-YTL-29-Oct-2026-employees-provident-fund",
+    "stockId": "ytl",
+    "stockName": "YTL POWER INTERNATIONAL BHD",
+    "symbol": "YTL",
+    "code": "YTL",
+    "market": "Main / ACE Market",
+    "sector": "General Bursa Equities",
+    "institution": "EMPLOYEES PROVIDENT FUND BOARD (KWSP)",
+    "institutionCategory": "GLIC",
+    "action": "Acquired",
+    "sharesChanged": null,
+    "totalHolding": null,
+    "percentage": null,
+    "filingDate": "29-Oct-2026",
+    "signal": "🔥 Heavy Accumulation",
+    "announcementUrl": "https://www.klsescreener.com/v2/announcements/view/11693573",
+    "insight": "Pemfailan rasmi Seksyen 138 Akta Syarikat 2016 oleh EMPLOYEES PROVIDENT FUND BOARD (KWSP)."
+  },
+  {
     "id": "klse-ORKIM-28-Oct-2026-employees-provident-fund",
     "stockId": "orkim",
     "stockName": "ORKIM BERHAD",
