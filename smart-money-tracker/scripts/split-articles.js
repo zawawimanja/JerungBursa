@@ -479,6 +479,7 @@ function generateArticleHtml(art) {
             <a href="../articles.html" class="btn-nav">📚 All Strategy Articles</a>
             <a href="../sop.html" class="btn-nav">📜 VVIP SOP</a>
             <a href="../formula.html" class="btn-nav">🧮 Formulas</a>
+            <a href="https://t.me/santai_tradeMY" target="_blank" rel="noopener noreferrer" class="btn-nav" style="background: linear-gradient(135deg, #0088cc, #229ed9); color: white; border-color: rgba(255,255,255,0.3); font-weight: 800; box-shadow: 0 2px 10px rgba(0, 136, 204, 0.35);">✈️ Join Telegram</a>
             <a href="https://www.ipobursa.my" target="_blank" class="btn-nav" style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc;">📊 BursaIPO Portal ↗</a>
         </div>
 
@@ -744,6 +745,7 @@ const hubHtml = `<!DOCTYPE html>
     <div class="container">
         <div class="nav-links">
             <a href="https://www.ipobursa.my" target="_blank" class="btn-nav" style="background: rgba(99, 102, 241, 0.2); color: #a5b4fc; border-color: rgba(99, 102, 241, 0.4); font-weight: 800;">📊 BursaIPO Portal ↗</a>
+            <a href="https://t.me/santai_tradeMY" target="_blank" rel="noopener noreferrer" class="btn-nav" style="background: linear-gradient(135deg, #0088cc, #229ed9); color: white; border-color: rgba(255,255,255,0.3); font-weight: 800; box-shadow: 0 2px 10px rgba(0, 136, 204, 0.35);">✈️ Join Telegram</a>
             <a href="index.html" class="btn-nav">← Main Dashboard</a>
             <a href="sop.html" class="btn-nav">📜 VVIP SOP</a>
             <a href="formula.html" class="btn-nav">🧮 Formulas & Indicators</a>
