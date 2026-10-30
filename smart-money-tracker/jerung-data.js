@@ -3,6 +3,25 @@
 
 window.jerungData = [
   {
+    "id": "klse-DIALOG-30-Oct-2026-kumpulan-wang-persaraan",
+    "stockId": "dialog",
+    "stockName": "DIALOG GROUP BERHAD",
+    "symbol": "DIALOG",
+    "code": "DIALOG",
+    "market": "Main / ACE Market",
+    "sector": "General Bursa Equities",
+    "institution": "KUMPULAN WANG PERSARAAN (KWAP)",
+    "institutionCategory": "GLIC",
+    "action": "Acquired",
+    "sharesChanged": null,
+    "totalHolding": null,
+    "percentage": null,
+    "filingDate": "30-Oct-2026",
+    "signal": "🔥 Heavy Accumulation",
+    "announcementUrl": "https://www.klsescreener.com/v2/announcements/view/11695477",
+    "insight": "Pemfailan rasmi Seksyen 138 Akta Syarikat 2016 oleh KUMPULAN WANG PERSARAAN (KWAP)."
+  },
+  {
     "id": "klse-AXIS-30-Oct-2026-kumpulan-wang-persaraan",
     "stockId": "axis",
     "stockName": "AXIS REAL ESTATE INVESTMENT TRUST",
