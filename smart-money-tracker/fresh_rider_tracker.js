@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual
 window.FRESH_RIDER_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T07:51:49.510Z",
+  "generatedAt": "2026-10-30T07:56:48.838Z",
   "dataDays": 99,
   "totalTracked": 26,
   "openCount": 5,
@@ -9,9 +9,9 @@ window.FRESH_RIDER_TRACKER = {
   "closedWins": 11,
   "closedWinRate": 52,
   "closedAvgGain": 12,
-  "openPnl": 178,
+  "openPnl": 176.6,
   "closedPnl": 251.1,
-  "totalPnlNow": 429.1
+  "totalPnlNow": 427.7
  },
  "backtest": {
   "dataStart": "2026-06-02",
@@ -19,8 +19,8 @@ window.FRESH_RIDER_TRACKER = {
   "dataDays": 99,
   "signals": 26,
   "winRate": 62,
-  "avgGain": 14.9,
-  "totalPnl": 387.1,
+  "avgGain": 14.8,
+  "totalPnl": 385.3,
   "worstLoss": -21.7
  },
  "trades": [
@@ -31,11 +31,11 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 0.36,
    "entryFloor": 0.335,
    "currentFloor": 0.36,
-   "currentPrice": 0.355,
+   "currentPrice": 0.35,
    "high": 0.36,
    "highDate": "2026-10-29",
    "maxGain": 0,
-   "finalGain": -1.4,
+   "finalGain": -2.8,
    "day1ChangePct": -2.7,
    "days": 2,
    "lastDate": "2026-10-30",
@@ -616,10 +616,10 @@ window.FRESH_RIDER_TRACKER = {
 };
 window.ADD_ON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T07:51:49.511Z",
+  "generatedAt": "2026-10-30T07:56:48.838Z",
   "dataDays": 99,
-  "totalTracked": 24,
-  "openCount": 3,
+  "totalTracked": 25,
+  "openCount": 4,
   "closedCount": 21,
   "closedWins": 13,
   "closedWinRate": 62,
@@ -642,6 +642,27 @@ window.ADD_ON_TRACKER = {
   "profitFactor": 18.18
  },
  "trades": [
+  {
+   "id": "MTTSL_2026-10-30_ADDON",
+   "name": "MTTSL",
+   "entryType": "⭐ ADD-ON A+",
+   "entryDate": "2026-10-30",
+   "entry": 1.28,
+   "entryFloor": 1.27,
+   "currentFloor": 1.27,
+   "currentPrice": 1.28,
+   "high": 1.28,
+   "highDate": "2026-10-30",
+   "maxGain": 0,
+   "finalGain": 0,
+   "day1ChangePct": 0.79,
+   "days": 1,
+   "lastDate": "2026-10-30",
+   "status": "OPEN",
+   "ipoYear": 2026,
+   "sector": "Transportation",
+   "isGoldenCombo": true
+  },
   {
    "id": "ISF_2026-08-07_ADDON",
    "name": "ISF",
@@ -1216,7 +1237,7 @@ window.ADD_ON_TRACKER = {
 };
 window.FLOOR_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T07:51:49.511Z",
+  "generatedAt": "2026-10-30T07:56:48.838Z",
   "dataDays": 99,
   "totalTracked": 29,
   "openCount": 1,
@@ -1224,9 +1245,9 @@ window.FLOOR_ADDON_TRACKER = {
   "closedWins": 15,
   "closedWinRate": 54,
   "closedAvgGain": 7.8,
-  "openPnl": -1.6,
+  "openPnl": -0.8,
   "closedPnl": 219,
-  "totalPnlNow": 217.4
+  "totalPnlNow": 218.2
  },
  "backtest": {
   "dataStart": "2026-06-02",
@@ -1234,12 +1255,12 @@ window.FLOOR_ADDON_TRACKER = {
   "dataDays": 99,
   "signals": 17,
   "winRate": 65,
-  "avgGain": 7.5,
-  "totalPnl": 127.7,
+  "avgGain": 7.6,
+  "totalPnl": 128.5,
   "worstLoss": -6.5,
   "grossWin": 153.4,
-  "grossLoss": 25.6,
-  "profitFactor": 5.99
+  "grossLoss": 24.8,
+  "profitFactor": 6.17
  },
  "trades": [
   {
@@ -1250,11 +1271,11 @@ window.FLOOR_ADDON_TRACKER = {
    "entry": 1.29,
    "entryFloor": 1.24,
    "currentFloor": 1.27,
-   "currentPrice": 1.27,
+   "currentPrice": 1.28,
    "high": 1.3,
    "highDate": "2026-10-28",
    "maxGain": 0.8,
-   "finalGain": -1.6,
+   "finalGain": -0.8,
    "day1ChangePct": 0,
    "days": 4,
    "lastDate": "2026-10-30",
@@ -1940,19 +1961,40 @@ window.FLOOR_ADDON_TRACKER = {
 };
 window.ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T07:51:49.511Z",
+  "generatedAt": "2026-10-30T07:56:48.839Z",
   "dataDays": 99,
-  "totalTracked": 79,
-  "openCount": 9,
+  "totalTracked": 80,
+  "openCount": 10,
   "closedCount": 70,
   "closedWins": 39,
   "closedWinRate": 56,
   "closedAvgGain": 10.6,
-  "openPnl": 279.4,
+  "openPnl": 278.8,
   "closedPnl": 741.8,
-  "totalPnlNow": 1021.2
+  "totalPnlNow": 1020.6
  },
  "trades": [
+  {
+   "id": "MTTSL_2026-10-30_ADDON",
+   "name": "MTTSL",
+   "entryType": "⭐ ADD-ON A+",
+   "entryDate": "2026-10-30",
+   "entry": 1.28,
+   "entryFloor": 1.27,
+   "currentFloor": 1.27,
+   "currentPrice": 1.28,
+   "high": 1.28,
+   "highDate": "2026-10-30",
+   "maxGain": 0,
+   "finalGain": 0,
+   "day1ChangePct": 0.79,
+   "days": 1,
+   "lastDate": "2026-10-30",
+   "status": "OPEN",
+   "ipoYear": 2026,
+   "sector": "Transportation",
+   "isGoldenCombo": true
+  },
   {
    "name": "PIONEER",
    "entryType": "🔥 NEW",
@@ -1960,11 +2002,11 @@ window.ALL_TRACKER = {
    "entry": 0.36,
    "entryFloor": 0.335,
    "currentFloor": 0.36,
-   "currentPrice": 0.355,
+   "currentPrice": 0.35,
    "high": 0.36,
    "highDate": "2026-10-29",
    "maxGain": 0,
-   "finalGain": -1.4,
+   "finalGain": -2.8,
    "day1ChangePct": -2.7,
    "days": 2,
    "lastDate": "2026-10-30",
@@ -2003,11 +2045,11 @@ window.ALL_TRACKER = {
    "entry": 1.29,
    "entryFloor": 1.24,
    "currentFloor": 1.27,
-   "currentPrice": 1.27,
+   "currentPrice": 1.28,
    "high": 1.3,
    "highDate": "2026-10-28",
    "maxGain": 0.8,
-   "finalGain": -1.6,
+   "finalGain": -0.8,
    "day1ChangePct": 0,
    "days": 4,
    "lastDate": "2026-10-30",
