@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T03:41:42.296Z",
+  "generatedAt": "2026-10-30T03:46:40.269Z",
   "dataDays": 103,
   "totalTracked": 392,
   "openCount": 42,
@@ -9,9 +9,9 @@ window.HOT_THEME_TRACKER = {
   "closedWins": 200,
   "closedWinRate": 57,
   "closedAvgGain": 9.4,
-  "openPnl": 168.5,
+  "openPnl": 168.6,
   "closedPnl": 3297.7,
-  "totalPnlNow": 3466.2
+  "totalPnlNow": 3466.3
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -740,10 +740,10 @@ window.HOT_THEME_TRACKER = {
   },
   {
    "date": "2026-10-30",
-   "themePct": 25.4,
+   "themePct": 25.9,
    "themeCount": 76,
    "totalCount": 314,
-   "ma5": 27.7
+   "ma5": 27.8
   }
  ],
  "themeTrend": "RISING",
@@ -753,15 +753,15 @@ window.HOT_THEME_TRACKER = {
    "name": "GREATEC",
    "entryType": "⭐ ADD-ON A+",
    "entryDate": "2026-10-30",
-   "entry": 2.62,
+   "entry": 2.63,
    "entryFloor": 2.56,
    "currentFloor": 2.56,
-   "currentPrice": 2.62,
-   "high": 2.62,
+   "currentPrice": 2.63,
+   "high": 2.63,
    "highDate": "2026-10-30",
    "maxGain": 0,
    "finalGain": 0,
-   "day1ChangePct": -2.24,
+   "day1ChangePct": -1.87,
    "days": 1,
    "lastDate": "2026-10-30",
    "status": "OPEN",
@@ -4151,11 +4151,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 6.25,
    "entryFloor": 7.79,
    "currentFloor": 7.53,
-   "currentPrice": 8.26,
+   "currentPrice": 8.27,
    "high": 8.76,
    "highDate": "2026-10-16",
    "maxGain": 40.2,
-   "finalGain": 32.2,
+   "finalGain": 32.3,
    "day1ChangePct": -1.11,
    "days": 51,
    "lastDate": "2026-10-30",
@@ -10874,7 +10874,7 @@ window.HOT_THEME_TRACKER = {
 };
 window.HOT_THEME_NEW_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T03:41:42.296Z",
+  "generatedAt": "2026-10-30T03:46:40.270Z",
   "dataDays": 103,
   "totalTracked": 51,
   "openCount": 7,
@@ -10882,9 +10882,9 @@ window.HOT_THEME_NEW_TRACKER = {
   "closedWins": 18,
   "closedWinRate": 41,
   "closedAvgGain": 8.8,
-  "openPnl": 45.9,
+  "openPnl": 46,
   "closedPnl": 385.1,
-  "totalPnlNow": 431
+  "totalPnlNow": 431.1
  },
  "trades": [
   {
@@ -12007,11 +12007,11 @@ window.HOT_THEME_NEW_TRACKER = {
    "entry": 6.25,
    "entryFloor": 7.79,
    "currentFloor": 7.53,
-   "currentPrice": 8.26,
+   "currentPrice": 8.27,
    "high": 8.76,
    "highDate": "2026-10-16",
    "maxGain": 40.2,
-   "finalGain": 32.2,
+   "finalGain": 32.3,
    "day1ChangePct": -1.11,
    "days": 51,
    "lastDate": "2026-10-30",
@@ -12204,7 +12204,7 @@ window.HOT_THEME_NEW_TRACKER = {
 };
 window.HOT_THEME_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T03:41:42.296Z",
+  "generatedAt": "2026-10-30T03:46:40.270Z",
   "dataDays": 103,
   "totalTracked": 174,
   "openCount": 20,
@@ -16683,15 +16683,15 @@ window.HOT_THEME_ADDON_TRACKER = {
    "name": "GREATEC",
    "entryType": "⭐ ADD-ON A+",
    "entryDate": "2026-10-30",
-   "entry": 2.62,
+   "entry": 2.63,
    "entryFloor": 2.56,
    "currentFloor": 2.56,
-   "currentPrice": 2.62,
-   "high": 2.62,
+   "currentPrice": 2.63,
+   "high": 2.63,
    "highDate": "2026-10-30",
    "maxGain": 0,
    "finalGain": 0,
-   "day1ChangePct": -2.24,
+   "day1ChangePct": -1.87,
    "days": 1,
    "lastDate": "2026-10-30",
    "status": "OPEN",
@@ -16705,7 +16705,7 @@ window.HOT_THEME_ADDON_TRACKER = {
 };
 window.HOT_THEME_FLOOR_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T03:41:42.297Z",
+  "generatedAt": "2026-10-30T03:46:40.270Z",
   "dataDays": 103,
   "totalTracked": 167,
   "openCount": 15,
@@ -21047,7 +21047,7 @@ window.HOT_THEME_FLOOR_TRACKER = {
 };
 window.HOT_THEME_ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T03:41:42.296Z",
+  "generatedAt": "2026-10-30T03:46:40.269Z",
   "dataDays": 103,
   "totalTracked": 392,
   "openCount": 42,
@@ -21055,9 +21055,9 @@ window.HOT_THEME_ALL_TRACKER = {
   "closedWins": 200,
   "closedWinRate": 57,
   "closedAvgGain": 9.4,
-  "openPnl": 168.5,
+  "openPnl": 168.6,
   "closedPnl": 3297.7,
-  "totalPnlNow": 3466.2
+  "totalPnlNow": 3466.3
  },
  "trades": [
   {
@@ -21065,15 +21065,15 @@ window.HOT_THEME_ALL_TRACKER = {
    "name": "GREATEC",
    "entryType": "⭐ ADD-ON A+",
    "entryDate": "2026-10-30",
-   "entry": 2.62,
+   "entry": 2.63,
    "entryFloor": 2.56,
    "currentFloor": 2.56,
-   "currentPrice": 2.62,
-   "high": 2.62,
+   "currentPrice": 2.63,
+   "high": 2.63,
    "highDate": "2026-10-30",
    "maxGain": 0,
    "finalGain": 0,
-   "day1ChangePct": -2.24,
+   "day1ChangePct": -1.87,
    "days": 1,
    "lastDate": "2026-10-30",
    "status": "OPEN",
@@ -24463,11 +24463,11 @@ window.HOT_THEME_ALL_TRACKER = {
    "entry": 6.25,
    "entryFloor": 7.79,
    "currentFloor": 7.53,
-   "currentPrice": 8.26,
+   "currentPrice": 8.27,
    "high": 8.76,
    "highDate": "2026-10-16",
    "maxGain": 40.2,
-   "finalGain": 32.2,
+   "finalGain": 32.3,
    "day1ChangePct": -1.11,
    "days": 51,
    "lastDate": "2026-10-30",

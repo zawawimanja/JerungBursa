@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-10-30T03:41:43.938Z",
+ "generatedAt": "2026-10-30T03:46:41.890Z",
  "totalDays": 99,
  "startDate": "2026-06-02",
  "endDate": "2026-10-30",
@@ -282446,17 +282446,17 @@ window.DAILY_EQUITY_TRACKER = {
    "totalSignals": 471,
    "openCount": 51,
    "closedCount": 420,
-   "openPnl": 451.3,
+   "openPnl": 454.2,
    "closedPnl": 4039.5,
-   "totalPnl": 4490.8,
-   "frPnl": 431.6,
+   "totalPnl": 4493.7,
+   "frPnl": 434.4,
    "addOnPnl": 593,
-   "htPnl": 3466.2,
-   "dailyPnlDelta": 45.6,
+   "htPnl": 3466.3,
+   "dailyPnlDelta": 48.5,
    "winRate": 56,
    "avgGain": 9.5,
    "peakGainer": {
-    "gain": 164.2,
+    "gain": 167,
     "name": "KEEMING"
    },
    "trades": [
@@ -282510,10 +282510,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-06-03",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.88,
-     "gainOnDay": 164.2,
+     "priceOnDay": 2.91,
+     "gainOnDay": 167,
      "dayChangePct": 0,
-     "pnlDeltaToday": -1.9
+     "pnlDeltaToday": 0.9
     },
     {
      "id": "FR:SUM_2026-09-11_🔥 NEW",
@@ -283335,9 +283335,9 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-30",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.62,
+     "priceOnDay": 2.63,
      "gainOnDay": 0,
-     "dayChangePct": -2.24,
+     "dayChangePct": -1.87,
      "pnlDeltaToday": 0
     },
     {
@@ -284787,10 +284787,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-08-21",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.26,
-     "gainOnDay": 32.2,
+     "priceOnDay": 8.27,
+     "gainOnDay": 32.3,
      "dayChangePct": 0,
-     "pnlDeltaToday": -8
+     "pnlDeltaToday": -7.9
     },
     {
      "id": "HT:NEXG_2026-08-21_NEW",
