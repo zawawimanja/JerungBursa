@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual
 window.FRESH_RIDER_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T02:56:36.638Z",
+  "generatedAt": "2026-10-30T03:01:37.286Z",
   "dataDays": 99,
   "totalTracked": 26,
   "openCount": 5,
@@ -9,9 +9,9 @@ window.FRESH_RIDER_TRACKER = {
   "closedWins": 11,
   "closedWinRate": 52,
   "closedAvgGain": 12,
-  "openPnl": 178.4,
+  "openPnl": 179.4,
   "closedPnl": 251.1,
-  "totalPnlNow": 429.5
+  "totalPnlNow": 430.5
  },
  "backtest": {
   "dataStart": "2026-06-02",
@@ -20,7 +20,7 @@ window.FRESH_RIDER_TRACKER = {
   "signals": 26,
   "winRate": 62,
   "avgGain": 15,
-  "totalPnl": 391.1,
+  "totalPnl": 390.2,
   "worstLoss": -21.7
  },
  "trades": [
@@ -115,11 +115,11 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 1.09,
    "entryFloor": 1.05,
    "currentFloor": 2.48,
-   "currentPrice": 2.83,
+   "currentPrice": 2.84,
    "high": 2.9,
    "highDate": "2026-10-29",
    "maxGain": 166.1,
-   "finalGain": 159.6,
+   "finalGain": 160.6,
    "day1ChangePct": 3.81,
    "days": 98,
    "lastDate": "2026-10-30",
@@ -616,7 +616,7 @@ window.FRESH_RIDER_TRACKER = {
 };
 window.ADD_ON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T02:56:36.639Z",
+  "generatedAt": "2026-10-30T03:01:37.287Z",
   "dataDays": 99,
   "totalTracked": 24,
   "openCount": 3,
@@ -1216,7 +1216,7 @@ window.ADD_ON_TRACKER = {
 };
 window.FLOOR_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T02:56:36.639Z",
+  "generatedAt": "2026-10-30T03:01:37.287Z",
   "dataDays": 99,
   "totalTracked": 29,
   "openCount": 1,
@@ -1940,7 +1940,7 @@ window.FLOOR_ADDON_TRACKER = {
 };
 window.ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T02:56:36.639Z",
+  "generatedAt": "2026-10-30T03:01:37.287Z",
   "dataDays": 99,
   "totalTracked": 79,
   "openCount": 9,
@@ -1948,9 +1948,9 @@ window.ALL_TRACKER = {
   "closedWins": 39,
   "closedWinRate": 56,
   "closedAvgGain": 10.6,
-  "openPnl": 286.3,
+  "openPnl": 287.3,
   "closedPnl": 741.8,
-  "totalPnlNow": 1028.1
+  "totalPnlNow": 1029.1
  },
  "trades": [
   {
@@ -2132,11 +2132,11 @@ window.ALL_TRACKER = {
    "entry": 1.09,
    "entryFloor": 1.05,
    "currentFloor": 2.48,
-   "currentPrice": 2.83,
+   "currentPrice": 2.84,
    "high": 2.9,
    "highDate": "2026-10-29",
    "maxGain": 166.1,
-   "finalGain": 159.6,
+   "finalGain": 160.6,
    "day1ChangePct": 3.81,
    "days": 98,
    "lastDate": "2026-10-30",
