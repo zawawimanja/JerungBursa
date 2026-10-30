@@ -1,17 +1,17 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T02:41:44.714Z",
+  "generatedAt": "2026-10-30T02:46:43.837Z",
   "dataDays": 103,
-  "totalTracked": 391,
-  "openCount": 41,
+  "totalTracked": 392,
+  "openCount": 42,
   "closedCount": 350,
   "closedWins": 200,
   "closedWinRate": 57,
   "closedAvgGain": 9.4,
-  "openPnl": 164.4,
+  "openPnl": 163.3,
   "closedPnl": 3297.7,
-  "totalPnlNow": 3462.1
+  "totalPnlNow": 3461
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -740,7 +740,7 @@ window.HOT_THEME_TRACKER = {
   },
   {
    "date": "2026-10-30",
-   "themePct": 36.6,
+   "themePct": 36.5,
    "themeCount": 76,
    "totalCount": 314,
    "ma5": 29.9
@@ -795,6 +795,29 @@ window.HOT_THEME_TRACKER = {
    "isGoldenCombo": false
   },
   {
+   "id": "PENTA_2026-10-30_ADDON",
+   "name": "PENTA",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-10-30",
+   "entry": 5.72,
+   "entryFloor": 5.6,
+   "currentFloor": 5.6,
+   "currentPrice": 5.72,
+   "high": 5.72,
+   "highDate": "2026-10-30",
+   "maxGain": 0,
+   "finalGain": 0,
+   "day1ChangePct": -2.89,
+   "days": 1,
+   "lastDate": "2026-10-30",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false
+  },
+  {
    "id": "EDELTEQ_2026-10-28_NEW",
    "name": "EDELTEQ",
    "entryType": "🔥 NEW",
@@ -802,11 +825,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 0.43,
    "entryFloor": 0.415,
    "currentFloor": 0.415,
-   "currentPrice": 0.425,
+   "currentPrice": 0.42,
    "high": 0.43,
    "highDate": "2026-10-28",
    "maxGain": 0,
-   "finalGain": -1.2,
+   "finalGain": -2.3,
    "day1ChangePct": 3.61,
    "days": 3,
    "lastDate": "2026-10-30",
@@ -10851,7 +10874,7 @@ window.HOT_THEME_TRACKER = {
 };
 window.HOT_THEME_NEW_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T02:41:44.714Z",
+  "generatedAt": "2026-10-30T02:46:43.837Z",
   "dataDays": 103,
   "totalTracked": 51,
   "openCount": 7,
@@ -10859,9 +10882,9 @@ window.HOT_THEME_NEW_TRACKER = {
   "closedWins": 18,
   "closedWinRate": 41,
   "closedAvgGain": 8.8,
-  "openPnl": 44.2,
+  "openPnl": 43.1,
   "closedPnl": 385.1,
-  "totalPnlNow": 429.3
+  "totalPnlNow": 428.2
  },
  "trades": [
   {
@@ -12161,11 +12184,11 @@ window.HOT_THEME_NEW_TRACKER = {
    "entry": 0.43,
    "entryFloor": 0.415,
    "currentFloor": 0.415,
-   "currentPrice": 0.425,
+   "currentPrice": 0.42,
    "high": 0.43,
    "highDate": "2026-10-28",
    "maxGain": 0,
-   "finalGain": -1.2,
+   "finalGain": -2.3,
    "day1ChangePct": 3.61,
    "days": 3,
    "lastDate": "2026-10-30",
@@ -12181,7 +12204,7 @@ window.HOT_THEME_NEW_TRACKER = {
 };
 window.HOT_THEME_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T02:41:44.714Z",
+  "generatedAt": "2026-10-30T02:46:43.838Z",
   "dataDays": 103,
   "totalTracked": 174,
   "openCount": 20,
@@ -16682,10 +16705,10 @@ window.HOT_THEME_ADDON_TRACKER = {
 };
 window.HOT_THEME_FLOOR_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T02:41:44.714Z",
+  "generatedAt": "2026-10-30T02:46:43.838Z",
   "dataDays": 103,
-  "totalTracked": 166,
-  "openCount": 14,
+  "totalTracked": 167,
+  "openCount": 15,
   "closedCount": 152,
   "closedWins": 72,
   "closedWinRate": 47,
@@ -20996,22 +21019,45 @@ window.HOT_THEME_FLOOR_TRACKER = {
    ],
    "confluence": 3,
    "isGoldenCombo": false
+  },
+  {
+   "id": "PENTA_2026-10-30_ADDON",
+   "name": "PENTA",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-10-30",
+   "entry": 5.72,
+   "entryFloor": 5.6,
+   "currentFloor": 5.6,
+   "currentPrice": 5.72,
+   "high": 5.72,
+   "highDate": "2026-10-30",
+   "maxGain": 0,
+   "finalGain": 0,
+   "day1ChangePct": -2.89,
+   "days": 1,
+   "lastDate": "2026-10-30",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false
   }
  ]
 };
 window.HOT_THEME_ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T02:41:44.714Z",
+  "generatedAt": "2026-10-30T02:46:43.837Z",
   "dataDays": 103,
-  "totalTracked": 391,
-  "openCount": 41,
+  "totalTracked": 392,
+  "openCount": 42,
   "closedCount": 350,
   "closedWins": 200,
   "closedWinRate": 57,
   "closedAvgGain": 9.4,
-  "openPnl": 164.4,
+  "openPnl": 163.3,
   "closedPnl": 3297.7,
-  "totalPnlNow": 3462.1
+  "totalPnlNow": 3461
  },
  "trades": [
   {
@@ -21061,6 +21107,29 @@ window.HOT_THEME_ALL_TRACKER = {
    "isGoldenCombo": false
   },
   {
+   "id": "PENTA_2026-10-30_ADDON",
+   "name": "PENTA",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-10-30",
+   "entry": 5.72,
+   "entryFloor": 5.6,
+   "currentFloor": 5.6,
+   "currentPrice": 5.72,
+   "high": 5.72,
+   "highDate": "2026-10-30",
+   "maxGain": 0,
+   "finalGain": 0,
+   "day1ChangePct": -2.89,
+   "days": 1,
+   "lastDate": "2026-10-30",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false
+  },
+  {
    "id": "EDELTEQ_2026-10-28_NEW",
    "name": "EDELTEQ",
    "entryType": "🔥 NEW",
@@ -21068,11 +21137,11 @@ window.HOT_THEME_ALL_TRACKER = {
    "entry": 0.43,
    "entryFloor": 0.415,
    "currentFloor": 0.415,
-   "currentPrice": 0.425,
+   "currentPrice": 0.42,
    "high": 0.43,
    "highDate": "2026-10-28",
    "maxGain": 0,
-   "finalGain": -1.2,
+   "finalGain": -2.3,
    "day1ChangePct": 3.61,
    "days": 3,
    "lastDate": "2026-10-30",
