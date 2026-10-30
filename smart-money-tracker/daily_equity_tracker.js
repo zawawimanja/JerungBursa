@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-10-30T03:56:43.547Z",
+ "generatedAt": "2026-10-30T04:01:51.610Z",
  "totalDays": 99,
  "startDate": "2026-06-02",
  "endDate": "2026-10-30",
@@ -282443,16 +282443,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-10-30",
-   "totalSignals": 472,
-   "openCount": 52,
+   "totalSignals": 471,
+   "openCount": 51,
    "closedCount": 420,
-   "openPnl": 460.3,
+   "openPnl": 458.5,
    "closedPnl": 4039.5,
-   "totalPnl": 4499.8,
-   "frPnl": 434.4,
+   "totalPnl": 4498,
+   "frPnl": 433.4,
    "addOnPnl": 593,
-   "htPnl": 3472.4,
-   "dailyPnlDelta": 54.6,
+   "htPnl": 3471.6,
+   "dailyPnlDelta": 52.8,
    "winRate": 57,
    "avgGain": 9.5,
    "peakGainer": {
@@ -282488,10 +282488,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-15",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.62,
-     "gainOnDay": 21.6,
-     "dayChangePct": -3.12,
-     "pnlDeltaToday": -3.9
+     "priceOnDay": 0.615,
+     "gainOnDay": 20.6,
+     "dayChangePct": -3.91,
+     "pnlDeltaToday": -4.9
     },
     {
      "id": "FR:EXSIMHB_2026-09-30_🔥 NEW",
@@ -283335,20 +283335,9 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-30",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.62,
+     "priceOnDay": 2.63,
      "gainOnDay": 0,
-     "dayChangePct": -2.24,
-     "pnlDeltaToday": 0
-    },
-    {
-     "id": "HT:UWC_2026-10-30_ADDON",
-     "name": "UWC",
-     "entryDate": "2026-10-30",
-     "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 7.39,
-     "gainOnDay": 0,
-     "dayChangePct": -3.27,
+     "dayChangePct": -1.87,
      "pnlDeltaToday": 0
     },
     {
@@ -283368,9 +283357,9 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-30",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 5.75,
+     "priceOnDay": 5.77,
      "gainOnDay": 0,
-     "dayChangePct": -2.38,
+     "dayChangePct": -2.04,
      "pnlDeltaToday": 0
     },
     {
@@ -283401,10 +283390,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-26",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.93,
-     "gainOnDay": 3.9,
-     "dayChangePct": 0.34,
-     "pnlDeltaToday": 0.4
+     "priceOnDay": 2.92,
+     "gainOnDay": 3.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:PENTA_2026-10-26_ADDON",
@@ -283412,10 +283401,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-26",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 5.75,
-     "gainOnDay": 2.3,
-     "dayChangePct": -2.38,
-     "pnlDeltaToday": -2.5
+     "priceOnDay": 5.77,
+     "gainOnDay": 2.7,
+     "dayChangePct": -2.04,
+     "pnlDeltaToday": -2.1
     },
     {
      "id": "HT:UWC_2026-10-26_ADDON",
@@ -283423,10 +283412,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-26",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 7.39,
-     "gainOnDay": 1.8,
-     "dayChangePct": -3.27,
-     "pnlDeltaToday": -3.4
+     "priceOnDay": 7.38,
+     "gainOnDay": 1.7,
+     "dayChangePct": -3.4,
+     "pnlDeltaToday": -3.5
     },
     {
      "id": "HT:RPLANET_2026-10-26_NEW",
@@ -283445,10 +283434,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-16",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.17,
-     "gainOnDay": 7.4,
-     "dayChangePct": -2.69,
-     "pnlDeltaToday": -3
+     "priceOnDay": 2.16,
+     "gainOnDay": 6.9,
+     "dayChangePct": -3.14,
+     "pnlDeltaToday": -3.5
     },
     {
      "id": "HT:MNHLDG_2026-10-14_ADDON",
@@ -284798,10 +284787,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-08-21",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.25,
-     "gainOnDay": 32,
+     "priceOnDay": 8.24,
+     "gainOnDay": 31.8,
      "dayChangePct": 0,
-     "pnlDeltaToday": -8.2
+     "pnlDeltaToday": -8.4
     },
     {
      "id": "HT:NEXG_2026-08-21_NEW",
