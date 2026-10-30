@@ -1,5 +1,24 @@
 [
   {
+    "id": "klse-UNISEM-30-Oct-2026-kumpulan-wang-persaraan",
+    "stockId": "unisem",
+    "stockName": "UNISEM (M) BERHAD",
+    "symbol": "UNISEM",
+    "code": "UNISEM",
+    "market": "Main / ACE Market",
+    "sector": "General Bursa Equities",
+    "institution": "KUMPULAN WANG PERSARAAN (KWAP)",
+    "institutionCategory": "GLIC",
+    "action": "Acquired",
+    "sharesChanged": null,
+    "totalHolding": null,
+    "percentage": null,
+    "filingDate": "30-Oct-2026",
+    "signal": "🔥 Heavy Accumulation",
+    "announcementUrl": "https://www.klsescreener.com/v2/announcements/view/11694809",
+    "insight": "Pemfailan rasmi Seksyen 138 Akta Syarikat 2016 oleh KUMPULAN WANG PERSARAAN (KWAP)."
+  },
+  {
     "id": "klse-IOI-30-Oct-2026-employees-provident-fund",
     "stockId": "ioi",
     "stockName": "IOI CORPORATION BERHAD",
