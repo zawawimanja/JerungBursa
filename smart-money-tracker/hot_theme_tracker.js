@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T02:31:41.455Z",
+  "generatedAt": "2026-10-30T02:36:41.742Z",
   "dataDays": 103,
   "totalTracked": 391,
   "openCount": 41,
@@ -9,9 +9,9 @@ window.HOT_THEME_TRACKER = {
   "closedWins": 200,
   "closedWinRate": 57,
   "closedAvgGain": 9.4,
-  "openPnl": 159.8,
+  "openPnl": 159.3,
   "closedPnl": 3297.7,
-  "totalPnlNow": 3457.5
+  "totalPnlNow": 3457
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -740,10 +740,10 @@ window.HOT_THEME_TRACKER = {
   },
   {
    "date": "2026-10-30",
-   "themePct": 37.9,
+   "themePct": 36.9,
    "themeCount": 76,
-   "totalCount": 313,
-   "ma5": 30.2
+   "totalCount": 314,
+   "ma5": 30
   }
  ],
  "themeTrend": "RISING",
@@ -751,17 +751,17 @@ window.HOT_THEME_TRACKER = {
   {
    "id": "GREATEC_2026-10-30_ADDON",
    "name": "GREATEC",
-   "entryType": "⭐ ADD-ON A+",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
    "entryDate": "2026-10-30",
-   "entry": 2.62,
+   "entry": 2.61,
    "entryFloor": 2.56,
    "currentFloor": 2.56,
-   "currentPrice": 2.62,
-   "high": 2.62,
+   "currentPrice": 2.61,
+   "high": 2.61,
    "highDate": "2026-10-30",
    "maxGain": 0,
    "finalGain": 0,
-   "day1ChangePct": -2.24,
+   "day1ChangePct": -2.61,
    "days": 1,
    "lastDate": "2026-10-30",
    "status": "OPEN",
@@ -776,15 +776,15 @@ window.HOT_THEME_TRACKER = {
    "name": "MNHLDG",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
    "entryDate": "2026-10-30",
-   "entry": 3.88,
+   "entry": 3.87,
    "entryFloor": 3.66,
    "currentFloor": 3.66,
-   "currentPrice": 3.88,
-   "high": 3.88,
+   "currentPrice": 3.87,
+   "high": 3.87,
    "highDate": "2026-10-30",
    "maxGain": 0,
    "finalGain": 0,
-   "day1ChangePct": -1.77,
+   "day1ChangePct": -2.03,
    "days": 1,
    "lastDate": "2026-10-30",
    "status": "OPEN",
@@ -898,11 +898,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 7.26,
    "entryFloor": 7.18,
    "currentFloor": 7.26,
-   "currentPrice": 7.32,
+   "currentPrice": 7.33,
    "high": 7.64,
    "highDate": "2026-10-29",
    "maxGain": 5.2,
-   "finalGain": 0.8,
+   "finalGain": 1,
    "day1ChangePct": 0.97,
    "days": 5,
    "lastDate": "2026-10-30",
@@ -6606,11 +6606,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 1.41,
    "entryFloor": 1.37,
    "currentFloor": 1.83,
-   "currentPrice": 1.83,
+   "currentPrice": 1.82,
    "high": 1.89,
    "highDate": "2026-10-27",
    "maxGain": 34,
-   "finalGain": 29.8,
+   "finalGain": 29.1,
    "day1ChangePct": -1.4,
    "days": 66,
    "lastDate": "2026-10-30",
@@ -10851,7 +10851,7 @@ window.HOT_THEME_TRACKER = {
 };
 window.HOT_THEME_NEW_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T02:31:41.455Z",
+  "generatedAt": "2026-10-30T02:36:41.742Z",
   "dataDays": 103,
   "totalTracked": 51,
   "openCount": 7,
@@ -10859,9 +10859,9 @@ window.HOT_THEME_NEW_TRACKER = {
   "closedWins": 18,
   "closedWinRate": 41,
   "closedAvgGain": 8.8,
-  "openPnl": 43.1,
+  "openPnl": 42.4,
   "closedPnl": 385.1,
-  "totalPnlNow": 428.2
+  "totalPnlNow": 427.5
  },
  "trades": [
   {
@@ -11756,11 +11756,11 @@ window.HOT_THEME_NEW_TRACKER = {
    "entry": 1.41,
    "entryFloor": 1.37,
    "currentFloor": 1.83,
-   "currentPrice": 1.83,
+   "currentPrice": 1.82,
    "high": 1.89,
    "highDate": "2026-10-27",
    "maxGain": 34,
-   "finalGain": 29.8,
+   "finalGain": 29.1,
    "day1ChangePct": -1.4,
    "days": 66,
    "lastDate": "2026-10-30",
@@ -12181,10 +12181,10 @@ window.HOT_THEME_NEW_TRACKER = {
 };
 window.HOT_THEME_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T02:31:41.455Z",
+  "generatedAt": "2026-10-30T02:36:41.742Z",
   "dataDays": 103,
-  "totalTracked": 174,
-  "openCount": 20,
+  "totalTracked": 173,
+  "openCount": 19,
   "closedCount": 154,
   "closedWins": 110,
   "closedWinRate": 71,
@@ -16654,45 +16654,22 @@ window.HOT_THEME_ADDON_TRACKER = {
    "slTrail": 0.297,
    "exitDate": "2026-10-26",
    "exitPrice": 0.297
-  },
-  {
-   "id": "GREATEC_2026-10-30_ADDON",
-   "name": "GREATEC",
-   "entryType": "⭐ ADD-ON A+",
-   "entryDate": "2026-10-30",
-   "entry": 2.62,
-   "entryFloor": 2.56,
-   "currentFloor": 2.56,
-   "currentPrice": 2.62,
-   "high": 2.62,
-   "highDate": "2026-10-30",
-   "maxGain": 0,
-   "finalGain": 0,
-   "day1ChangePct": -2.24,
-   "days": 1,
-   "lastDate": "2026-10-30",
-   "status": "OPEN",
-   "themes": [
-    "Semiconductor"
-   ],
-   "confluence": 3,
-   "isGoldenCombo": false
   }
  ]
 };
 window.HOT_THEME_FLOOR_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T02:31:41.456Z",
+  "generatedAt": "2026-10-30T02:36:41.742Z",
   "dataDays": 103,
-  "totalTracked": 166,
-  "openCount": 14,
+  "totalTracked": 167,
+  "openCount": 15,
   "closedCount": 152,
   "closedWins": 72,
   "closedWinRate": 47,
   "closedAvgGain": 3.4,
-  "openPnl": 117.9,
+  "openPnl": 118.1,
   "closedPnl": 510.6,
-  "totalPnlNow": 628.5
+  "totalPnlNow": 628.7
  },
  "trades": [
   {
@@ -20934,11 +20911,11 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "entry": 7.26,
    "entryFloor": 7.18,
    "currentFloor": 7.26,
-   "currentPrice": 7.32,
+   "currentPrice": 7.33,
    "high": 7.64,
    "highDate": "2026-10-29",
    "maxGain": 5.2,
-   "finalGain": 0.8,
+   "finalGain": 1,
    "day1ChangePct": 0.97,
    "days": 5,
    "lastDate": "2026-10-30",
@@ -20975,59 +20952,19 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "slTrail": 0.97
   },
   {
-   "id": "MNHLDG_2026-10-30_ADDON",
-   "name": "MNHLDG",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
-   "entryDate": "2026-10-30",
-   "entry": 3.88,
-   "entryFloor": 3.66,
-   "currentFloor": 3.66,
-   "currentPrice": 3.88,
-   "high": 3.88,
-   "highDate": "2026-10-30",
-   "maxGain": 0,
-   "finalGain": 0,
-   "day1ChangePct": -1.77,
-   "days": 1,
-   "lastDate": "2026-10-30",
-   "status": "OPEN",
-   "themes": [
-    "Solar/RE"
-   ],
-   "confluence": 3,
-   "isGoldenCombo": false
-  }
- ]
-};
-window.HOT_THEME_ALL_TRACKER = {
- "summary": {
-  "generatedAt": "2026-10-30T02:31:41.455Z",
-  "dataDays": 103,
-  "totalTracked": 391,
-  "openCount": 41,
-  "closedCount": 350,
-  "closedWins": 200,
-  "closedWinRate": 57,
-  "closedAvgGain": 9.4,
-  "openPnl": 159.8,
-  "closedPnl": 3297.7,
-  "totalPnlNow": 3457.5
- },
- "trades": [
-  {
    "id": "GREATEC_2026-10-30_ADDON",
    "name": "GREATEC",
-   "entryType": "⭐ ADD-ON A+",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
    "entryDate": "2026-10-30",
-   "entry": 2.62,
+   "entry": 2.61,
    "entryFloor": 2.56,
    "currentFloor": 2.56,
-   "currentPrice": 2.62,
-   "high": 2.62,
+   "currentPrice": 2.61,
+   "high": 2.61,
    "highDate": "2026-10-30",
    "maxGain": 0,
    "finalGain": 0,
-   "day1ChangePct": -2.24,
+   "day1ChangePct": -2.61,
    "days": 1,
    "lastDate": "2026-10-30",
    "status": "OPEN",
@@ -21042,15 +20979,78 @@ window.HOT_THEME_ALL_TRACKER = {
    "name": "MNHLDG",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
    "entryDate": "2026-10-30",
-   "entry": 3.88,
+   "entry": 3.87,
    "entryFloor": 3.66,
    "currentFloor": 3.66,
-   "currentPrice": 3.88,
-   "high": 3.88,
+   "currentPrice": 3.87,
+   "high": 3.87,
    "highDate": "2026-10-30",
    "maxGain": 0,
    "finalGain": 0,
-   "day1ChangePct": -1.77,
+   "day1ChangePct": -2.03,
+   "days": 1,
+   "lastDate": "2026-10-30",
+   "status": "OPEN",
+   "themes": [
+    "Solar/RE"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false
+  }
+ ]
+};
+window.HOT_THEME_ALL_TRACKER = {
+ "summary": {
+  "generatedAt": "2026-10-30T02:36:41.742Z",
+  "dataDays": 103,
+  "totalTracked": 391,
+  "openCount": 41,
+  "closedCount": 350,
+  "closedWins": 200,
+  "closedWinRate": 57,
+  "closedAvgGain": 9.4,
+  "openPnl": 159.3,
+  "closedPnl": 3297.7,
+  "totalPnlNow": 3457
+ },
+ "trades": [
+  {
+   "id": "GREATEC_2026-10-30_ADDON",
+   "name": "GREATEC",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-10-30",
+   "entry": 2.61,
+   "entryFloor": 2.56,
+   "currentFloor": 2.56,
+   "currentPrice": 2.61,
+   "high": 2.61,
+   "highDate": "2026-10-30",
+   "maxGain": 0,
+   "finalGain": 0,
+   "day1ChangePct": -2.61,
+   "days": 1,
+   "lastDate": "2026-10-30",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false
+  },
+  {
+   "id": "MNHLDG_2026-10-30_ADDON",
+   "name": "MNHLDG",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-10-30",
+   "entry": 3.87,
+   "entryFloor": 3.66,
+   "currentFloor": 3.66,
+   "currentPrice": 3.87,
+   "high": 3.87,
+   "highDate": "2026-10-30",
+   "maxGain": 0,
+   "finalGain": 0,
+   "day1ChangePct": -2.03,
    "days": 1,
    "lastDate": "2026-10-30",
    "status": "OPEN",
@@ -21164,11 +21164,11 @@ window.HOT_THEME_ALL_TRACKER = {
    "entry": 7.26,
    "entryFloor": 7.18,
    "currentFloor": 7.26,
-   "currentPrice": 7.32,
+   "currentPrice": 7.33,
    "high": 7.64,
    "highDate": "2026-10-29",
    "maxGain": 5.2,
-   "finalGain": 0.8,
+   "finalGain": 1,
    "day1ChangePct": 0.97,
    "days": 5,
    "lastDate": "2026-10-30",
@@ -26872,11 +26872,11 @@ window.HOT_THEME_ALL_TRACKER = {
    "entry": 1.41,
    "entryFloor": 1.37,
    "currentFloor": 1.83,
-   "currentPrice": 1.83,
+   "currentPrice": 1.82,
    "high": 1.89,
    "highDate": "2026-10-27",
    "maxGain": 34,
-   "finalGain": 29.8,
+   "finalGain": 29.1,
    "day1ChangePct": -1.4,
    "days": 66,
    "lastDate": "2026-10-30",
