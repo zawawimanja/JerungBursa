@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual
 window.FRESH_RIDER_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T03:21:37.864Z",
+  "generatedAt": "2026-10-30T03:26:38.825Z",
   "dataDays": 99,
   "totalTracked": 26,
   "openCount": 5,
@@ -9,9 +9,9 @@ window.FRESH_RIDER_TRACKER = {
   "closedWins": 11,
   "closedWinRate": 52,
   "closedAvgGain": 12,
-  "openPnl": 183.9,
+  "openPnl": 183,
   "closedPnl": 251.1,
-  "totalPnlNow": 435
+  "totalPnlNow": 434.1
  },
  "backtest": {
   "dataStart": "2026-06-02",
@@ -115,11 +115,11 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 1.09,
    "entryFloor": 1.05,
    "currentFloor": 2.48,
-   "currentPrice": 2.89,
+   "currentPrice": 2.88,
    "high": 2.9,
    "highDate": "2026-10-29",
    "maxGain": 166.1,
-   "finalGain": 165.1,
+   "finalGain": 164.2,
    "day1ChangePct": 3.81,
    "days": 98,
    "lastDate": "2026-10-30",
@@ -616,7 +616,7 @@ window.FRESH_RIDER_TRACKER = {
 };
 window.ADD_ON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T03:21:37.865Z",
+  "generatedAt": "2026-10-30T03:26:38.826Z",
   "dataDays": 99,
   "totalTracked": 24,
   "openCount": 3,
@@ -1216,7 +1216,7 @@ window.ADD_ON_TRACKER = {
 };
 window.FLOOR_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T03:21:37.865Z",
+  "generatedAt": "2026-10-30T03:26:38.826Z",
   "dataDays": 99,
   "totalTracked": 29,
   "openCount": 1,
@@ -1940,7 +1940,7 @@ window.FLOOR_ADDON_TRACKER = {
 };
 window.ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T03:21:37.865Z",
+  "generatedAt": "2026-10-30T03:26:38.826Z",
   "dataDays": 99,
   "totalTracked": 79,
   "openCount": 9,
@@ -1948,9 +1948,9 @@ window.ALL_TRACKER = {
   "closedWins": 39,
   "closedWinRate": 56,
   "closedAvgGain": 10.6,
-  "openPnl": 287,
+  "openPnl": 286.1,
   "closedPnl": 741.8,
-  "totalPnlNow": 1028.8
+  "totalPnlNow": 1027.9
  },
  "trades": [
   {
@@ -2132,11 +2132,11 @@ window.ALL_TRACKER = {
    "entry": 1.09,
    "entryFloor": 1.05,
    "currentFloor": 2.48,
-   "currentPrice": 2.89,
+   "currentPrice": 2.88,
    "high": 2.9,
    "highDate": "2026-10-29",
    "maxGain": 166.1,
-   "finalGain": 165.1,
+   "finalGain": 164.2,
    "day1ChangePct": 3.81,
    "days": 98,
    "lastDate": "2026-10-30",
