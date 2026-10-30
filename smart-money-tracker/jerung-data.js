@@ -3,6 +3,25 @@
 
 window.jerungData = [
   {
+    "id": "klse-CIMB-30-Oct-2026-kumpulan-wang-persaraan",
+    "stockId": "cimb",
+    "stockName": "CIMB GROUP HOLDINGS BERHAD",
+    "symbol": "CIMB",
+    "code": "CIMB",
+    "market": "Main / ACE Market",
+    "sector": "General Bursa Equities",
+    "institution": "KUMPULAN WANG PERSARAAN (KWAP)",
+    "institutionCategory": "GLIC",
+    "action": "Acquired",
+    "sharesChanged": null,
+    "totalHolding": null,
+    "percentage": null,
+    "filingDate": "30-Oct-2026",
+    "signal": "🔥 Heavy Accumulation",
+    "announcementUrl": "https://www.klsescreener.com/v2/announcements/view/11695595",
+    "insight": "Pemfailan rasmi Seksyen 138 Akta Syarikat 2016 oleh KUMPULAN WANG PERSARAAN (KWAP)."
+  },
+  {
     "id": "klse-EMPIRE PREMIUM FOOD BERHAD-30-Oct-2026-kumpulan-wang-persaraan",
     "stockId": "empire premium food berhad",
     "stockName": "EMPIRE PREMIUM FOOD BERHAD",
