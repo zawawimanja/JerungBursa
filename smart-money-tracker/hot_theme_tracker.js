@@ -1,17 +1,17 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T00:56:54.094Z",
+  "generatedAt": "2026-10-30T01:01:58.058Z",
   "dataDays": 103,
   "totalTracked": 389,
-  "openCount": 39,
-  "closedCount": 350,
-  "closedWins": 201,
+  "openCount": 40,
+  "closedCount": 349,
+  "closedWins": 200,
   "closedWinRate": 57,
   "closedAvgGain": 9.5,
-  "openPnl": 152.4,
-  "closedPnl": 3337.9,
-  "totalPnlNow": 3490.3
+  "openPnl": 192.6,
+  "closedPnl": 3306.1,
+  "totalPnlNow": 3498.7
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -4073,6 +4073,30 @@ window.HOT_THEME_TRACKER = {
    "slTrail": 0.181
   },
   {
+   "id": "MISC_2026-08-21_NEW",
+   "name": "MISC",
+   "entryType": "🔥 NEW",
+   "entryDate": "2026-08-21",
+   "entry": 6.25,
+   "entryFloor": 7.79,
+   "currentFloor": 7.53,
+   "currentPrice": 8.76,
+   "high": 8.76,
+   "highDate": "2026-10-16",
+   "maxGain": 40.2,
+   "finalGain": 40.2,
+   "day1ChangePct": -1.11,
+   "days": 11,
+   "lastDate": "2026-10-16",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false,
+   "slTrail": 8.234
+  },
+  {
    "id": "NEXG_2026-08-21_NEW",
    "name": "NEXG",
    "entryType": "🔥 NEW",
@@ -4097,32 +4121,6 @@ window.HOT_THEME_TRACKER = {
    "slTrail": 1.077,
    "exitDate": "2026-08-26",
    "exitPrice": 1.077
-  },
-  {
-   "id": "MISC_2026-08-21_NEW",
-   "name": "MISC",
-   "entryType": "🔥 NEW",
-   "entryDate": "2026-08-21",
-   "entry": 6.25,
-   "entryFloor": 7.79,
-   "currentFloor": 7.53,
-   "currentPrice": 8.2,
-   "high": 8.76,
-   "highDate": "2026-10-16",
-   "maxGain": 40.2,
-   "finalGain": 31.8,
-   "day1ChangePct": -1.11,
-   "days": 50,
-   "lastDate": "2026-10-29",
-   "status": "CLOSED_SL",
-   "themes": [
-    "Semiconductor"
-   ],
-   "confluence": 3,
-   "isGoldenCombo": false,
-   "slTrail": 8.234,
-   "exitDate": "2026-10-29",
-   "exitPrice": 8.234399999999999
   },
   {
    "id": "PENTA_2026-08-21_ADDON",
@@ -10805,17 +10803,17 @@ window.HOT_THEME_TRACKER = {
 };
 window.HOT_THEME_NEW_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T00:56:54.094Z",
+  "generatedAt": "2026-10-30T01:01:58.059Z",
   "dataDays": 103,
   "totalTracked": 51,
-  "openCount": 7,
-  "closedCount": 44,
-  "closedWins": 19,
-  "closedWinRate": 43,
-  "closedAvgGain": 9.7,
-  "openPnl": 9.6,
-  "closedPnl": 425.3,
-  "totalPnlNow": 434.9
+  "openCount": 8,
+  "closedCount": 43,
+  "closedWins": 18,
+  "closedWinRate": 42,
+  "closedAvgGain": 9.2,
+  "openPnl": 49.8,
+  "closedPnl": 393.5,
+  "totalPnlNow": 443.3
  },
  "trades": [
   {
@@ -11938,23 +11936,21 @@ window.HOT_THEME_NEW_TRACKER = {
    "entry": 6.25,
    "entryFloor": 7.79,
    "currentFloor": 7.53,
-   "currentPrice": 8.2,
+   "currentPrice": 8.76,
    "high": 8.76,
    "highDate": "2026-10-16",
    "maxGain": 40.2,
-   "finalGain": 31.8,
+   "finalGain": 40.2,
    "day1ChangePct": -1.11,
-   "days": 50,
-   "lastDate": "2026-10-29",
-   "status": "CLOSED_SL",
+   "days": 11,
+   "lastDate": "2026-10-16",
+   "status": "OPEN",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 8.234,
-   "exitDate": "2026-10-29",
-   "exitPrice": 8.234399999999999
+   "slTrail": 8.234
   },
   {
    "id": "MINOX_2026-09-07_NEW",
@@ -12135,7 +12131,7 @@ window.HOT_THEME_NEW_TRACKER = {
 };
 window.HOT_THEME_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T00:56:54.094Z",
+  "generatedAt": "2026-10-30T01:01:58.059Z",
   "dataDays": 103,
   "totalTracked": 173,
   "openCount": 19,
@@ -16613,7 +16609,7 @@ window.HOT_THEME_ADDON_TRACKER = {
 };
 window.HOT_THEME_FLOOR_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T00:56:54.094Z",
+  "generatedAt": "2026-10-30T01:01:58.059Z",
   "dataDays": 103,
   "totalTracked": 165,
   "openCount": 13,
@@ -20909,17 +20905,17 @@ window.HOT_THEME_FLOOR_TRACKER = {
 };
 window.HOT_THEME_ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T00:56:54.094Z",
+  "generatedAt": "2026-10-30T01:01:58.058Z",
   "dataDays": 103,
   "totalTracked": 389,
-  "openCount": 39,
-  "closedCount": 350,
-  "closedWins": 201,
+  "openCount": 40,
+  "closedCount": 349,
+  "closedWins": 200,
   "closedWinRate": 57,
   "closedAvgGain": 9.5,
-  "openPnl": 152.4,
-  "closedPnl": 3337.9,
-  "totalPnlNow": 3490.3
+  "openPnl": 192.6,
+  "closedPnl": 3306.1,
+  "totalPnlNow": 3498.7
  },
  "trades": [
   {
@@ -24247,6 +24243,30 @@ window.HOT_THEME_ALL_TRACKER = {
    "slTrail": 0.181
   },
   {
+   "id": "MISC_2026-08-21_NEW",
+   "name": "MISC",
+   "entryType": "🔥 NEW",
+   "entryDate": "2026-08-21",
+   "entry": 6.25,
+   "entryFloor": 7.79,
+   "currentFloor": 7.53,
+   "currentPrice": 8.76,
+   "high": 8.76,
+   "highDate": "2026-10-16",
+   "maxGain": 40.2,
+   "finalGain": 40.2,
+   "day1ChangePct": -1.11,
+   "days": 11,
+   "lastDate": "2026-10-16",
+   "status": "OPEN",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false,
+   "slTrail": 8.234
+  },
+  {
    "id": "NEXG_2026-08-21_NEW",
    "name": "NEXG",
    "entryType": "🔥 NEW",
@@ -24271,32 +24291,6 @@ window.HOT_THEME_ALL_TRACKER = {
    "slTrail": 1.077,
    "exitDate": "2026-08-26",
    "exitPrice": 1.077
-  },
-  {
-   "id": "MISC_2026-08-21_NEW",
-   "name": "MISC",
-   "entryType": "🔥 NEW",
-   "entryDate": "2026-08-21",
-   "entry": 6.25,
-   "entryFloor": 7.79,
-   "currentFloor": 7.53,
-   "currentPrice": 8.2,
-   "high": 8.76,
-   "highDate": "2026-10-16",
-   "maxGain": 40.2,
-   "finalGain": 31.8,
-   "day1ChangePct": -1.11,
-   "days": 50,
-   "lastDate": "2026-10-29",
-   "status": "CLOSED_SL",
-   "themes": [
-    "Semiconductor"
-   ],
-   "confluence": 3,
-   "isGoldenCombo": false,
-   "slTrail": 8.234,
-   "exitDate": "2026-10-29",
-   "exitPrice": 8.234399999999999
   },
   {
    "id": "PENTA_2026-08-21_ADDON",
