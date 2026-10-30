@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-10-30T09:11:55.103Z",
+ "generatedAt": "2026-10-30T09:16:52.867Z",
  "totalDays": 99,
  "startDate": "2026-06-02",
  "endDate": "2026-10-30",
@@ -86667,8 +86667,8 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-17",
-   "totalSignals": 289,
-   "openCount": 206,
+   "totalSignals": 290,
+   "openCount": 207,
    "closedCount": 83,
    "openPnl": 1956.4,
    "closedPnl": 50.2,
@@ -87221,6 +87221,17 @@ window.DAILY_EQUITY_TRACKER = {
      "priceOnDay": 5.42,
      "gainOnDay": 0,
      "dayChangePct": -1.63,
+     "pnlDeltaToday": 0
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.36,
+     "gainOnDay": 0,
+     "dayChangePct": 1.41,
      "pnlDeltaToday": 0
     },
     {
@@ -89867,8 +89878,8 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-18",
-   "totalSignals": 296,
-   "openCount": 213,
+   "totalSignals": 298,
+   "openCount": 215,
    "closedCount": 83,
    "openPnl": 2009.1,
    "closedPnl": 50.2,
@@ -89878,7 +89889,7 @@ window.DAILY_EQUITY_TRACKER = {
    "htPnl": 1407.5,
    "dailyPnlDelta": 52.7,
    "winRate": 61,
-   "avgGain": 7,
+   "avgGain": 6.9,
    "peakGainer": {
     "gain": 120.2,
     "name": "KEEMING"
@@ -90424,6 +90435,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.36,
+     "gainOnDay": 0,
+     "dayChangePct": 1.41,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:INARI_2026-08-18_ADDON",
      "name": "INARI",
      "entryDate": "2026-08-18",
@@ -90498,6 +90520,17 @@ window.DAILY_EQUITY_TRACKER = {
      "priceOnDay": 5.42,
      "gainOnDay": 0,
      "dayChangePct": -1.63,
+     "pnlDeltaToday": 0
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.36,
+     "gainOnDay": 0,
+     "dayChangePct": 1.41,
      "pnlDeltaToday": 0
     },
     {
@@ -93144,17 +93177,17 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-19",
-   "totalSignals": 300,
-   "openCount": 197,
+   "totalSignals": 303,
+   "openCount": 200,
    "closedCount": 103,
-   "openPnl": 1836.3,
+   "openPnl": 1833.5,
    "closedPnl": 154.6,
-   "totalPnl": 1990.9,
+   "totalPnl": 1988.1,
    "frPnl": 378.1,
    "addOnPnl": 363.7,
-   "htPnl": 1249.1,
-   "dailyPnlDelta": -68.4,
-   "winRate": 59,
+   "htPnl": 1246.3,
+   "dailyPnlDelta": -71.2,
+   "winRate": 58,
    "avgGain": 6.6,
    "peakGainer": {
     "gain": 128.4,
@@ -93679,6 +93712,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.355,
+     "gainOnDay": 0,
+     "dayChangePct": 1.43,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -93743,6 +93787,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -2.2,
      "dayChangePct": -2.75,
      "pnlDeltaToday": -2.2
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.355,
+     "gainOnDay": -1.4,
+     "dayChangePct": 1.43,
+     "pnlDeltaToday": -1.4
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -93820,6 +93875,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -2.2,
      "dayChangePct": -2.75,
      "pnlDeltaToday": -2.2
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.355,
+     "gainOnDay": -1.4,
+     "dayChangePct": 1.43,
+     "pnlDeltaToday": -1.4
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -96465,18 +96531,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-20",
-   "totalSignals": 304,
+   "totalSignals": 307,
    "openCount": 191,
-   "closedCount": 113,
+   "closedCount": 116,
    "openPnl": 2028.5,
-   "closedPnl": 211.2,
-   "totalPnl": 2239.7,
+   "closedPnl": 199.6,
+   "totalPnl": 2228.1,
    "frPnl": 386.2,
    "addOnPnl": 422.4,
-   "htPnl": 1431.1,
-   "dailyPnlDelta": 248.8,
-   "winRate": 58,
-   "avgGain": 7.4,
+   "htPnl": 1419.5,
+   "dailyPnlDelta": 240,
+   "winRate": 57,
+   "avgGain": 7.3,
    "peakGainer": {
     "gain": 128.4,
     "name": "KEEMING"
@@ -97044,6 +97110,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED_TODAY",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": -9.86,
+     "pnlDeltaToday": -3
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -97108,6 +97185,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -1.3,
      "dayChangePct": 0.94,
      "pnlDeltaToday": 0.9
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED_TODAY",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": -9.86,
+     "pnlDeltaToday": -2.9
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -97185,6 +97273,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -1.3,
      "dayChangePct": 0.94,
      "pnlDeltaToday": 0.9
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED_TODAY",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": -9.86,
+     "pnlDeltaToday": -2.9
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -99830,18 +99929,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-21",
-   "totalSignals": 310,
+   "totalSignals": 313,
    "openCount": 197,
-   "closedCount": 113,
+   "closedCount": 116,
    "openPnl": 1950.3,
-   "closedPnl": 211.2,
-   "totalPnl": 2161.5,
+   "closedPnl": 199.6,
+   "totalPnl": 2149.9,
    "frPnl": 371.7,
    "addOnPnl": 460.8,
-   "htPnl": 1329,
+   "htPnl": 1317.4,
    "dailyPnlDelta": -78.2,
-   "winRate": 53,
-   "avgGain": 7,
+   "winRate": 52,
+   "avgGain": 6.9,
    "peakGainer": {
     "gain": 124.8,
     "name": "KEEMING"
@@ -100475,6 +100574,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -1
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -100537,6 +100647,17 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "OPEN",
      "priceOnDay": 5.35,
      "gainOnDay": -1.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -100614,6 +100735,17 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "OPEN",
      "priceOnDay": 5.35,
      "gainOnDay": -1.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -103261,18 +103393,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-24",
-   "totalSignals": 314,
+   "totalSignals": 317,
    "openCount": 175,
-   "closedCount": 139,
+   "closedCount": 142,
    "openPnl": 1725.9,
-   "closedPnl": 262.3,
-   "totalPnl": 1988.2,
+   "closedPnl": 250.7,
+   "totalPnl": 1976.6,
    "frPnl": 365,
    "addOnPnl": 502.3,
-   "htPnl": 1120.9,
+   "htPnl": 1109.3,
    "dailyPnlDelta": -173.3,
-   "winRate": 52,
-   "avgGain": 6.3,
+   "winRate": 51,
+   "avgGain": 6.2,
    "peakGainer": {
     "gain": 125.7,
     "name": "KEEMING"
@@ -103950,6 +104082,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": -4.8
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -104014,6 +104157,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -4.6,
      "dayChangePct": -3.36,
      "pnlDeltaToday": -3.3
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -104091,6 +104245,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -4.6,
      "dayChangePct": -3.36,
      "pnlDeltaToday": -3.3
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -106736,18 +106901,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-26",
-   "totalSignals": 317,
+   "totalSignals": 320,
    "openCount": 177,
-   "closedCount": 140,
+   "closedCount": 143,
    "openPnl": 1941.7,
-   "closedPnl": 256.7,
-   "totalPnl": 2198.4,
+   "closedPnl": 245.1,
+   "totalPnl": 2186.8,
    "frPnl": 397.2,
    "addOnPnl": 584.1,
-   "htPnl": 1217.1,
+   "htPnl": 1205.5,
    "dailyPnlDelta": 210.2,
-   "winRate": 54,
-   "avgGain": 6.9,
+   "winRate": 53,
+   "avgGain": 6.8,
    "peakGainer": {
     "gain": 134.9,
     "name": "KEEMING"
@@ -107458,6 +107623,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -107522,6 +107698,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -1.3,
      "dayChangePct": 3.48,
      "pnlDeltaToday": 3.3
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -107599,6 +107786,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -1.3,
      "dayChangePct": 3.48,
      "pnlDeltaToday": 3.3
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -110244,18 +110442,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-27",
-   "totalSignals": 318,
+   "totalSignals": 321,
    "openCount": 178,
-   "closedCount": 140,
+   "closedCount": 143,
    "openPnl": 2042.6,
-   "closedPnl": 256.7,
-   "totalPnl": 2299.3,
+   "closedPnl": 245.1,
+   "totalPnl": 2287.7,
    "frPnl": 387.7,
    "addOnPnl": 550.9,
-   "htPnl": 1360.7,
+   "htPnl": 1349.1,
    "dailyPnlDelta": 100.9,
-   "winRate": 58,
-   "avgGain": 7.2,
+   "winRate": 57,
+   "avgGain": 7.1,
    "peakGainer": {
     "gain": 133.9,
     "name": "KEEMING"
@@ -110977,6 +111175,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -111041,6 +111250,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -0.2,
      "dayChangePct": 1.12,
      "pnlDeltaToday": 1.1
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -111118,6 +111338,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -0.2,
      "dayChangePct": 1.12,
      "pnlDeltaToday": 1.1
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -113763,18 +113994,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-08-28",
-   "totalSignals": 321,
+   "totalSignals": 324,
    "openCount": 177,
-   "closedCount": 144,
+   "closedCount": 147,
    "openPnl": 1703.3,
-   "closedPnl": 345.8,
-   "totalPnl": 2049.1,
+   "closedPnl": 334.2,
+   "totalPnl": 2037.5,
    "frPnl": 366.6,
    "addOnPnl": 479.3,
-   "htPnl": 1203.2,
+   "htPnl": 1191.6,
    "dailyPnlDelta": -250.2,
    "winRate": 55,
-   "avgGain": 6.4,
+   "avgGain": 6.3,
    "peakGainer": {
     "gain": 124.8,
     "name": "KEEMING"
@@ -114529,6 +114760,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -114593,6 +114835,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3.3,
      "dayChangePct": -3.14,
      "pnlDeltaToday": -3.1
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -114670,6 +114923,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3.3,
      "dayChangePct": -3.14,
      "pnlDeltaToday": -3.1
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -117315,18 +117579,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-01",
-   "totalSignals": 323,
+   "totalSignals": 326,
    "openCount": 167,
-   "closedCount": 156,
+   "closedCount": 159,
    "openPnl": 1357,
-   "closedPnl": 473.7,
-   "totalPnl": 1830.7,
+   "closedPnl": 462.1,
+   "totalPnl": 1819.1,
    "frPnl": 361.8,
    "addOnPnl": 429.6,
-   "htPnl": 1039.3,
+   "htPnl": 1027.7,
    "dailyPnlDelta": -218.4,
-   "winRate": 53,
-   "avgGain": 5.7,
+   "winRate": 52,
+   "avgGain": 5.6,
    "peakGainer": {
     "gain": 110.1,
     "name": "KEEMING"
@@ -118103,6 +118367,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -118167,6 +118442,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -2.6,
      "dayChangePct": 0.76,
      "pnlDeltaToday": 0.7
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -118244,6 +118530,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -2.6,
      "dayChangePct": 0.76,
      "pnlDeltaToday": 0.7
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -120889,18 +121186,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-02",
-   "totalSignals": 327,
+   "totalSignals": 330,
    "openCount": 163,
-   "closedCount": 164,
+   "closedCount": 167,
    "openPnl": 1357.4,
-   "closedPnl": 439.3,
-   "totalPnl": 1796.7,
+   "closedPnl": 427.7,
+   "totalPnl": 1785.1,
    "frPnl": 359.1,
    "addOnPnl": 420.6,
-   "htPnl": 1017,
+   "htPnl": 1005.4,
    "dailyPnlDelta": -34,
    "winRate": 50,
-   "avgGain": 5.5,
+   "avgGain": 5.4,
    "peakGainer": {
     "gain": 100,
     "name": "KEEMING"
@@ -121721,6 +122018,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -121785,6 +122093,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -4.2,
      "dayChangePct": -1.7,
      "pnlDeltaToday": -1.6
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -121862,6 +122181,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -4.2,
      "dayChangePct": -1.7,
      "pnlDeltaToday": -1.6
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -124507,18 +124837,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-03",
-   "totalSignals": 329,
+   "totalSignals": 332,
    "openCount": 158,
-   "closedCount": 171,
+   "closedCount": 174,
    "openPnl": 1599.3,
-   "closedPnl": 474.7,
-   "totalPnl": 2074,
+   "closedPnl": 463.1,
+   "totalPnl": 2062.4,
    "frPnl": 400.2,
    "addOnPnl": 442.5,
-   "htPnl": 1231.3,
+   "htPnl": 1219.7,
    "dailyPnlDelta": 277.3,
    "winRate": 54,
-   "avgGain": 6.3,
+   "avgGain": 6.2,
    "peakGainer": {
     "gain": 121.1,
     "name": "KEEMING"
@@ -125361,6 +125691,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -125425,6 +125766,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -6.1,
      "dayChangePct": -1.93,
      "pnlDeltaToday": -1.9
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -125502,6 +125854,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -6.1,
      "dayChangePct": -1.93,
      "pnlDeltaToday": -1.9
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -128147,15 +128510,15 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-04",
-   "totalSignals": 335,
+   "totalSignals": 338,
    "openCount": 164,
-   "closedCount": 171,
+   "closedCount": 174,
    "openPnl": 1683.4,
-   "closedPnl": 474.7,
-   "totalPnl": 2158.1,
+   "closedPnl": 463.1,
+   "totalPnl": 2146.5,
    "frPnl": 408.5,
    "addOnPnl": 474.8,
-   "htPnl": 1274.8,
+   "htPnl": 1263.2,
    "dailyPnlDelta": 84.1,
    "winRate": 53,
    "avgGain": 6.4,
@@ -129067,6 +129430,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -129131,6 +129505,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -6.6,
      "dayChangePct": -0.59,
      "pnlDeltaToday": -0.5
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -129208,6 +129593,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -6.6,
      "dayChangePct": -0.59,
      "pnlDeltaToday": -0.5
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -131853,18 +132249,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-07",
-   "totalSignals": 341,
+   "totalSignals": 344,
    "openCount": 168,
-   "closedCount": 173,
+   "closedCount": 176,
    "openPnl": 1676.1,
-   "closedPnl": 466.1,
-   "totalPnl": 2142.2,
+   "closedPnl": 454.5,
+   "totalPnl": 2130.6,
    "frPnl": 406.1,
    "addOnPnl": 501.7,
-   "htPnl": 1234.4,
+   "htPnl": 1222.8,
    "dailyPnlDelta": -15.9,
    "winRate": 52,
-   "avgGain": 6.3,
+   "avgGain": 6.2,
    "peakGainer": {
     "gain": 124.8,
     "name": "KEEMING"
@@ -132839,6 +133235,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -132903,6 +133310,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -6.8,
      "dayChangePct": -0.2,
      "pnlDeltaToday": -0.2
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -132980,6 +133398,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -6.8,
      "dayChangePct": -0.2,
      "pnlDeltaToday": -0.2
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -135625,15 +136054,15 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-08",
-   "totalSignals": 347,
+   "totalSignals": 350,
    "openCount": 170,
-   "closedCount": 177,
+   "closedCount": 180,
    "openPnl": 1877.1,
-   "closedPnl": 497.3,
-   "totalPnl": 2374.4,
+   "closedPnl": 485.7,
+   "totalPnl": 2362.8,
    "frPnl": 414.8,
    "addOnPnl": 508.8,
-   "htPnl": 1450.8,
+   "htPnl": 1439.2,
    "dailyPnlDelta": 232.2,
    "winRate": 54,
    "avgGain": 6.8,
@@ -136677,6 +137106,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -136741,6 +137181,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -7,
      "dayChangePct": -0.2,
      "pnlDeltaToday": -0.2
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -136818,6 +137269,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -7,
      "dayChangePct": -0.2,
      "pnlDeltaToday": -0.2
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -139463,18 +139925,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-09",
-   "totalSignals": 351,
+   "totalSignals": 354,
    "openCount": 174,
-   "closedCount": 177,
+   "closedCount": 180,
    "openPnl": 2610.2,
-   "closedPnl": 497.3,
-   "totalPnl": 3107.5,
+   "closedPnl": 485.7,
+   "totalPnl": 3095.9,
    "frPnl": 422.7,
    "addOnPnl": 596.1,
-   "htPnl": 2088.7,
+   "htPnl": 2077.1,
    "dailyPnlDelta": 733.1,
    "winRate": 56,
-   "avgGain": 8.9,
+   "avgGain": 8.7,
    "peakGainer": {
     "gain": 136.7,
     "name": "KEEMING"
@@ -140559,6 +141021,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -140623,6 +141096,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3.7,
      "dayChangePct": 3.57,
      "pnlDeltaToday": 3.3
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -140700,6 +141184,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3.7,
      "dayChangePct": 3.57,
      "pnlDeltaToday": 3.3
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -143345,18 +143840,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-10",
-   "totalSignals": 358,
+   "totalSignals": 361,
    "openCount": 181,
-   "closedCount": 177,
+   "closedCount": 180,
    "openPnl": 2701.4,
-   "closedPnl": 497.3,
-   "totalPnl": 3198.7,
+   "closedPnl": 485.7,
+   "totalPnl": 3187.1,
    "frPnl": 439,
    "addOnPnl": 642,
-   "htPnl": 2117.7,
+   "htPnl": 2106.1,
    "dailyPnlDelta": 91.2,
    "winRate": 56,
-   "avgGain": 8.9,
+   "avgGain": 8.8,
    "peakGainer": {
     "gain": 138.5,
     "name": "KEEMING"
@@ -144518,6 +145013,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -144582,6 +145088,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -0.4,
      "dayChangePct": 3.45,
      "pnlDeltaToday": 3.3
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -144659,6 +145176,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -0.4,
      "dayChangePct": 3.45,
      "pnlDeltaToday": 3.3
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -147304,18 +147832,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-11",
-   "totalSignals": 365,
+   "totalSignals": 368,
    "openCount": 187,
-   "closedCount": 178,
+   "closedCount": 181,
    "openPnl": 2156.5,
-   "closedPnl": 504.1,
-   "totalPnl": 2660.6,
+   "closedPnl": 492.5,
+   "totalPnl": 2649,
    "frPnl": 438.3,
    "addOnPnl": 579.9,
-   "htPnl": 1642.4,
+   "htPnl": 1630.8,
    "dailyPnlDelta": -538.1,
-   "winRate": 52,
-   "avgGain": 7.3,
+   "winRate": 51,
+   "avgGain": 7.2,
    "peakGainer": {
     "gain": 133.9,
     "name": "KEEMING"
@@ -148554,6 +149082,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -148618,6 +149157,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -2.6,
      "dayChangePct": -2.22,
      "pnlDeltaToday": -2.2
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -148695,6 +149245,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -2.6,
      "dayChangePct": -2.22,
      "pnlDeltaToday": -2.2
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -151340,18 +151901,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-14",
-   "totalSignals": 371,
+   "totalSignals": 374,
    "openCount": 193,
-   "closedCount": 178,
+   "closedCount": 181,
    "openPnl": 2156.5,
-   "closedPnl": 504.1,
-   "totalPnl": 2660.6,
+   "closedPnl": 492.5,
+   "totalPnl": 2649,
    "frPnl": 438.3,
    "addOnPnl": 579.9,
-   "htPnl": 1642.4,
+   "htPnl": 1630.8,
    "dailyPnlDelta": 0,
    "winRate": 51,
-   "avgGain": 7.2,
+   "avgGain": 7.1,
    "peakGainer": {
     "gain": 133.9,
     "name": "KEEMING"
@@ -152656,6 +153217,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -152719,6 +153291,17 @@ window.DAILY_EQUITY_TRACKER = {
      "priceOnDay": 5.28,
      "gainOnDay": -2.6,
      "dayChangePct": -2.22,
+     "pnlDeltaToday": 0
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
     {
@@ -152796,6 +153379,17 @@ window.DAILY_EQUITY_TRACKER = {
      "priceOnDay": 5.28,
      "gainOnDay": -2.6,
      "dayChangePct": -2.22,
+     "pnlDeltaToday": 0
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
     {
@@ -155442,18 +156036,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-15",
-   "totalSignals": 373,
+   "totalSignals": 376,
    "openCount": 152,
-   "closedCount": 221,
+   "closedCount": 224,
    "openPnl": 1289.1,
-   "closedPnl": 1011.3,
-   "totalPnl": 2300.4,
+   "closedPnl": 999.7,
+   "totalPnl": 2288.8,
    "frPnl": 392.4,
    "addOnPnl": 560.7,
-   "htPnl": 1347.3,
+   "htPnl": 1335.7,
    "dailyPnlDelta": -360.2,
-   "winRate": 49,
-   "avgGain": 6.2,
+   "winRate": 48,
+   "avgGain": 6.1,
    "peakGainer": {
     "gain": 116.5,
     "name": "KEEMING"
@@ -156780,6 +157374,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -156844,6 +157449,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -4.1,
      "dayChangePct": 1.96,
      "pnlDeltaToday": -1.5
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -156921,6 +157537,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -4.1,
      "dayChangePct": 1.96,
      "pnlDeltaToday": -1.5
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -159566,15 +160193,15 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-17",
-   "totalSignals": 377,
+   "totalSignals": 380,
    "openCount": 153,
-   "closedCount": 224,
+   "closedCount": 227,
    "openPnl": 1592,
-   "closedPnl": 988.6,
-   "totalPnl": 2580.6,
+   "closedPnl": 977,
+   "totalPnl": 2569,
    "frPnl": 391.8,
    "addOnPnl": 596.8,
-   "htPnl": 1592,
+   "htPnl": 1580.4,
    "dailyPnlDelta": 280.2,
    "winRate": 52,
    "avgGain": 6.8,
@@ -160948,6 +161575,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -161012,6 +161650,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3.7,
      "dayChangePct": 0.38,
      "pnlDeltaToday": 0.4
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -161089,6 +161738,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -3.7,
      "dayChangePct": 0.38,
      "pnlDeltaToday": 0.4
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -163734,18 +164394,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-18",
-   "totalSignals": 380,
+   "totalSignals": 383,
    "openCount": 156,
-   "closedCount": 224,
+   "closedCount": 227,
    "openPnl": 1923.3,
-   "closedPnl": 988.6,
-   "totalPnl": 2911.9,
+   "closedPnl": 977,
+   "totalPnl": 2900.3,
    "frPnl": 427.1,
    "addOnPnl": 683.4,
-   "htPnl": 1801.4,
+   "htPnl": 1789.8,
    "dailyPnlDelta": 331.3,
-   "winRate": 57,
-   "avgGain": 7.7,
+   "winRate": 56,
+   "avgGain": 7.6,
    "peakGainer": {
     "gain": 127.5,
     "name": "KEEMING"
@@ -165149,6 +165809,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -165213,6 +165884,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 2.2,
      "dayChangePct": 6.13,
      "pnlDeltaToday": 5.9
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -165290,6 +165972,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 2.2,
      "dayChangePct": 6.13,
      "pnlDeltaToday": 5.9
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -167935,18 +168628,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-21",
-   "totalSignals": 381,
+   "totalSignals": 384,
    "openCount": 157,
-   "closedCount": 224,
+   "closedCount": 227,
    "openPnl": 2430.7,
-   "closedPnl": 988.6,
-   "totalPnl": 3419.3,
+   "closedPnl": 977,
+   "totalPnl": 3407.7,
    "frPnl": 444.3,
    "addOnPnl": 705.4,
-   "htPnl": 2269.6,
+   "htPnl": 2258,
    "dailyPnlDelta": 507.4,
    "winRate": 58,
-   "avgGain": 9,
+   "avgGain": 8.9,
    "peakGainer": {
     "gain": 133,
     "name": "KEEMING"
@@ -169361,6 +170054,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -169425,6 +170129,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -0.4,
      "dayChangePct": -2.53,
      "pnlDeltaToday": -2.6
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -169502,6 +170217,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -0.4,
      "dayChangePct": -2.53,
      "pnlDeltaToday": -2.6
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -172147,18 +172873,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-22",
-   "totalSignals": 382,
+   "totalSignals": 385,
    "openCount": 158,
-   "closedCount": 224,
+   "closedCount": 227,
    "openPnl": 2677.1,
-   "closedPnl": 988.6,
-   "totalPnl": 3665.7,
+   "closedPnl": 977,
+   "totalPnl": 3654.1,
    "frPnl": 462.7,
    "addOnPnl": 783.7,
-   "htPnl": 2419.3,
+   "htPnl": 2407.7,
    "dailyPnlDelta": 246.4,
    "winRate": 63,
-   "avgGain": 9.6,
+   "avgGain": 9.5,
    "peakGainer": {
     "gain": 132.1,
     "name": "KEEMING"
@@ -173584,6 +174310,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -173648,6 +174385,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 0.6,
      "dayChangePct": 0.93,
      "pnlDeltaToday": 1
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -173725,6 +174473,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 0.6,
      "dayChangePct": 0.93,
      "pnlDeltaToday": 1
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -176370,18 +177129,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-23",
-   "totalSignals": 385,
+   "totalSignals": 388,
    "openCount": 160,
-   "closedCount": 225,
+   "closedCount": 228,
    "openPnl": 2735.2,
-   "closedPnl": 998.2,
-   "totalPnl": 3733.4,
+   "closedPnl": 986.6,
+   "totalPnl": 3721.8,
    "frPnl": 450.3,
    "addOnPnl": 771.4,
-   "htPnl": 2511.7,
+   "htPnl": 2500.1,
    "dailyPnlDelta": 67.7,
    "winRate": 59,
-   "avgGain": 9.7,
+   "avgGain": 9.6,
    "peakGainer": {
     "gain": 134.9,
     "name": "KEEMING"
@@ -177840,6 +178599,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -177904,6 +178674,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -0.2,
      "dayChangePct": -0.73,
      "pnlDeltaToday": -0.8
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -177981,6 +178762,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -0.2,
      "dayChangePct": -0.73,
      "pnlDeltaToday": -0.8
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -180626,18 +181418,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-24",
-   "totalSignals": 391,
+   "totalSignals": 394,
    "openCount": 166,
-   "closedCount": 225,
+   "closedCount": 228,
    "openPnl": 2846.1,
-   "closedPnl": 998.2,
-   "totalPnl": 3844.3,
+   "closedPnl": 986.6,
+   "totalPnl": 3832.7,
    "frPnl": 442.5,
    "addOnPnl": 788,
-   "htPnl": 2613.8,
+   "htPnl": 2602.2,
    "dailyPnlDelta": 110.9,
-   "winRate": 61,
-   "avgGain": 9.8,
+   "winRate": 60,
+   "avgGain": 9.7,
    "peakGainer": {
     "gain": 133,
     "name": "KEEMING"
@@ -182162,6 +182954,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -182226,6 +183029,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -4.4,
      "dayChangePct": -4.25,
      "pnlDeltaToday": -4.2
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -182303,6 +183117,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -4.4,
      "dayChangePct": -4.25,
      "pnlDeltaToday": -4.2
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -184948,18 +185773,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-25",
-   "totalSignals": 397,
+   "totalSignals": 400,
    "openCount": 171,
-   "closedCount": 226,
+   "closedCount": 229,
    "openPnl": 3252.2,
-   "closedPnl": 993.3,
-   "totalPnl": 4245.5,
+   "closedPnl": 981.7,
+   "totalPnl": 4233.9,
    "frPnl": 462.4,
    "addOnPnl": 814.4,
-   "htPnl": 2968.7,
+   "htPnl": 2957.1,
    "dailyPnlDelta": 401.2,
    "winRate": 62,
-   "avgGain": 10.7,
+   "avgGain": 10.6,
    "peakGainer": {
     "gain": 137.6,
     "name": "KEEMING"
@@ -186550,6 +187375,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -186614,6 +187450,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -2,
      "dayChangePct": 2.51,
      "pnlDeltaToday": 2.4
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -186691,6 +187538,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -2,
      "dayChangePct": 2.51,
      "pnlDeltaToday": 2.4
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -189336,18 +190194,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-28",
-   "totalSignals": 402,
+   "totalSignals": 405,
    "openCount": 176,
-   "closedCount": 226,
+   "closedCount": 229,
    "openPnl": 3146.6,
-   "closedPnl": 993.3,
-   "totalPnl": 4139.9,
+   "closedPnl": 981.7,
+   "totalPnl": 4128.3,
    "frPnl": 440.6,
    "addOnPnl": 769.5,
-   "htPnl": 2929.8,
+   "htPnl": 2918.2,
    "dailyPnlDelta": -105.6,
-   "winRate": 58,
-   "avgGain": 10.3,
+   "winRate": 57,
+   "avgGain": 10.2,
    "peakGainer": {
     "gain": 132.1,
     "name": "KEEMING"
@@ -190993,6 +191851,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -191057,6 +191926,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -4.1,
      "dayChangePct": -2.07,
      "pnlDeltaToday": -2.1
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -191134,6 +192014,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -4.1,
      "dayChangePct": -2.07,
      "pnlDeltaToday": -2.1
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -193779,18 +194670,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-29",
-   "totalSignals": 410,
+   "totalSignals": 413,
    "openCount": 183,
-   "closedCount": 227,
+   "closedCount": 230,
    "openPnl": 3744.8,
-   "closedPnl": 989.4,
-   "totalPnl": 4734.2,
+   "closedPnl": 977.8,
+   "totalPnl": 4722.6,
    "frPnl": 470.8,
    "addOnPnl": 816,
-   "htPnl": 3447.4,
+   "htPnl": 3435.8,
    "dailyPnlDelta": 594.3,
-   "winRate": 59,
-   "avgGain": 11.5,
+   "winRate": 58,
+   "avgGain": 11.4,
    "peakGainer": {
     "gain": 154.4,
     "name": "SAMAIDEN"
@@ -195524,6 +196415,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -195588,6 +196490,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -4.4,
      "dayChangePct": -0.38,
      "pnlDeltaToday": -0.3
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -195665,6 +196578,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -4.4,
      "dayChangePct": -0.38,
      "pnlDeltaToday": -0.3
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -198310,18 +199234,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-09-30",
-   "totalSignals": 418,
+   "totalSignals": 421,
    "openCount": 191,
-   "closedCount": 227,
+   "closedCount": 230,
    "openPnl": 3405.6,
-   "closedPnl": 989.4,
-   "totalPnl": 4395,
+   "closedPnl": 977.8,
+   "totalPnl": 4383.4,
    "frPnl": 461.3,
    "addOnPnl": 802.3,
-   "htPnl": 3131.4,
+   "htPnl": 3119.8,
    "dailyPnlDelta": -339.2,
    "winRate": 56,
-   "avgGain": 10.5,
+   "avgGain": 10.4,
    "peakGainer": {
     "gain": 142.2,
     "name": "KEEMING"
@@ -200143,6 +201067,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -200207,6 +201142,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -6.3,
      "dayChangePct": -1.93,
      "pnlDeltaToday": -1.9
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -200284,6 +201230,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -6.3,
      "dayChangePct": -1.93,
      "pnlDeltaToday": -1.9
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -202929,18 +203886,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-10-01",
-   "totalSignals": 425,
+   "totalSignals": 428,
    "openCount": 162,
-   "closedCount": 263,
+   "closedCount": 266,
    "openPnl": 1617.3,
-   "closedPnl": 2631.2,
-   "totalPnl": 4248.5,
+   "closedPnl": 2619.6,
+   "totalPnl": 4236.9,
    "frPnl": 450.4,
    "addOnPnl": 773.6,
-   "htPnl": 3024.5,
+   "htPnl": 3012.9,
    "dailyPnlDelta": -146.5,
    "winRate": 55,
-   "avgGain": 10,
+   "avgGain": 9.9,
    "peakGainer": {
     "gain": 139.1,
     "name": "SAMAIDEN"
@@ -204839,6 +205796,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -204903,6 +205871,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -6.6,
      "dayChangePct": -0.39,
      "pnlDeltaToday": -0.3
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -204980,6 +205959,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -6.6,
      "dayChangePct": -0.39,
      "pnlDeltaToday": -0.3
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -207625,18 +208615,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-10-02",
-   "totalSignals": 430,
+   "totalSignals": 433,
    "openCount": 162,
-   "closedCount": 268,
+   "closedCount": 271,
    "openPnl": 1938.4,
-   "closedPnl": 2608.2,
-   "totalPnl": 4546.6,
+   "closedPnl": 2596.6,
+   "totalPnl": 4535,
    "frPnl": 470.8,
    "addOnPnl": 791.3,
-   "htPnl": 3284.5,
+   "htPnl": 3272.9,
    "dailyPnlDelta": 298.1,
-   "winRate": 59,
-   "avgGain": 10.6,
+   "winRate": 58,
+   "avgGain": 10.5,
    "peakGainer": {
     "gain": 139.1,
     "name": "SAMAIDEN"
@@ -209590,6 +210580,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -209654,6 +210655,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -4.6,
      "dayChangePct": 2.17,
      "pnlDeltaToday": 2
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -209731,6 +210743,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": -4.6,
      "dayChangePct": 2.17,
      "pnlDeltaToday": 2
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -212376,18 +213399,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-10-05",
-   "totalSignals": 433,
+   "totalSignals": 436,
    "openCount": 165,
-   "closedCount": 268,
+   "closedCount": 271,
    "openPnl": 2552.7,
-   "closedPnl": 2608.2,
-   "totalPnl": 5160.9,
+   "closedPnl": 2596.6,
+   "totalPnl": 5149.3,
    "frPnl": 492.7,
    "addOnPnl": 939.1,
-   "htPnl": 3729.1,
+   "htPnl": 3717.5,
    "dailyPnlDelta": 614.3,
-   "winRate": 65,
-   "avgGain": 11.9,
+   "winRate": 64,
+   "avgGain": 11.8,
    "peakGainer": {
     "gain": 145,
     "name": "KEEMING"
@@ -214374,6 +215397,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -214438,6 +215472,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 0.4,
      "dayChangePct": 5.22,
      "pnlDeltaToday": 5
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -214515,6 +215560,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 0.4,
      "dayChangePct": 5.22,
      "pnlDeltaToday": 5
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -217160,18 +218216,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-10-06",
-   "totalSignals": 435,
+   "totalSignals": 438,
    "openCount": 167,
-   "closedCount": 268,
+   "closedCount": 271,
    "openPnl": 2980.5,
-   "closedPnl": 2608.2,
-   "totalPnl": 5588.7,
+   "closedPnl": 2596.6,
+   "totalPnl": 5577.1,
    "frPnl": 538.6,
    "addOnPnl": 925.2,
-   "htPnl": 4124.9,
+   "htPnl": 4113.3,
    "dailyPnlDelta": 427.8,
    "winRate": 67,
-   "avgGain": 12.8,
+   "avgGain": 12.7,
    "peakGainer": {
     "gain": 151.4,
     "name": "KEEMING"
@@ -219180,6 +220236,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -219244,6 +220311,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 12.2,
      "dayChangePct": 11.76,
      "pnlDeltaToday": 11.8
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -219321,6 +220399,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 12.2,
      "dayChangePct": 11.76,
      "pnlDeltaToday": 11.8
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -221966,18 +223055,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-10-07",
-   "totalSignals": 441,
+   "totalSignals": 444,
    "openCount": 172,
-   "closedCount": 269,
+   "closedCount": 272,
    "openPnl": 2940.9,
-   "closedPnl": 2618,
-   "totalPnl": 5558.9,
+   "closedPnl": 2606.4,
+   "totalPnl": 5547.3,
    "frPnl": 529.8,
    "addOnPnl": 904.1,
-   "htPnl": 4125,
+   "htPnl": 4113.4,
    "dailyPnlDelta": -29.8,
    "winRate": 66,
-   "avgGain": 12.6,
+   "avgGain": 12.5,
    "peakGainer": {
     "gain": 139.4,
     "name": "KEEMING"
@@ -224052,6 +225141,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -224116,6 +225216,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 10,
      "dayChangePct": -1.97,
      "pnlDeltaToday": -2.2
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -224193,6 +225304,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 10,
      "dayChangePct": -1.97,
      "pnlDeltaToday": -2.2
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -226838,18 +227960,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-10-08",
-   "totalSignals": 443,
+   "totalSignals": 446,
    "openCount": 156,
-   "closedCount": 287,
+   "closedCount": 290,
    "openPnl": 2591.7,
-   "closedPnl": 2620.6,
-   "totalPnl": 5212.3,
+   "closedPnl": 2609,
+   "totalPnl": 5200.7,
    "frPnl": 546.1,
    "addOnPnl": 849.8,
-   "htPnl": 3816.4,
+   "htPnl": 3804.8,
    "dailyPnlDelta": -346.6,
    "winRate": 63,
-   "avgGain": 11.8,
+   "avgGain": 11.7,
    "peakGainer": {
     "gain": 139.1,
     "name": "SAMAIDEN"
@@ -228946,6 +230068,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -229010,6 +230143,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 8.1,
      "dayChangePct": -1.68,
      "pnlDeltaToday": -1.9
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -229087,6 +230231,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 8.1,
      "dayChangePct": -1.68,
      "pnlDeltaToday": -1.9
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -231732,18 +232887,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-10-09",
-   "totalSignals": 446,
+   "totalSignals": 449,
    "openCount": 159,
-   "closedCount": 287,
+   "closedCount": 290,
    "openPnl": 2746.9,
-   "closedPnl": 2620.6,
-   "totalPnl": 5367.5,
+   "closedPnl": 2609,
+   "totalPnl": 5355.9,
    "frPnl": 554.2,
    "addOnPnl": 928.4,
-   "htPnl": 3884.9,
+   "htPnl": 3873.3,
    "dailyPnlDelta": 155.2,
-   "winRate": 63,
-   "avgGain": 12,
+   "winRate": 62,
+   "avgGain": 11.9,
    "peakGainer": {
     "gain": 145.9,
     "name": "KEEMING"
@@ -233873,6 +235028,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -233937,6 +235103,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 8.9,
      "dayChangePct": 0.68,
      "pnlDeltaToday": 0.8
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -234014,6 +235191,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 8.9,
      "dayChangePct": 0.68,
      "pnlDeltaToday": 0.8
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -236659,18 +237847,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-10-12",
-   "totalSignals": 452,
+   "totalSignals": 455,
    "openCount": 162,
-   "closedCount": 290,
+   "closedCount": 293,
    "openPnl": 2777.8,
-   "closedPnl": 2645.9,
-   "totalPnl": 5423.7,
+   "closedPnl": 2634.3,
+   "totalPnl": 5412.1,
    "frPnl": 547.8,
    "addOnPnl": 833.5,
-   "htPnl": 4042.4,
+   "htPnl": 4030.8,
    "dailyPnlDelta": 56.2,
    "winRate": 64,
-   "avgGain": 12,
+   "avgGain": 11.9,
    "peakGainer": {
     "gain": 154.1,
     "name": "KEEMING"
@@ -238866,6 +240054,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -238930,6 +240129,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 7.7,
      "dayChangePct": -1.02,
      "pnlDeltaToday": -1.2
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -239007,6 +240217,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 7.7,
      "dayChangePct": -1.02,
      "pnlDeltaToday": -1.2
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -241652,18 +242873,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-10-13",
-   "totalSignals": 456,
+   "totalSignals": 459,
    "openCount": 116,
-   "closedCount": 340,
+   "closedCount": 343,
    "openPnl": 1891.2,
-   "closedPnl": 2903.7,
-   "totalPnl": 4794.9,
+   "closedPnl": 2892.1,
+   "totalPnl": 4783.3,
    "frPnl": 511.6,
    "addOnPnl": 710.5,
-   "htPnl": 3572.8,
+   "htPnl": 3561.2,
    "dailyPnlDelta": -628.8,
-   "winRate": 60,
-   "avgGain": 10.5,
+   "winRate": 59,
+   "avgGain": 10.4,
    "peakGainer": {
     "gain": 141.3,
     "name": "KEEMING"
@@ -243903,6 +245124,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -243967,6 +245199,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 4.5,
      "dayChangePct": -6.61,
      "pnlDeltaToday": -3.2
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-18_ADDON",
@@ -244044,6 +245287,17 @@ window.DAILY_EQUITY_TRACKER = {
      "gainOnDay": 4.5,
      "dayChangePct": -6.61,
      "pnlDeltaToday": -3.2
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:INARI_2026-08-17_ADDON",
@@ -246689,18 +247943,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-10-14",
-   "totalSignals": 457,
+   "totalSignals": 460,
    "openCount": 109,
-   "closedCount": 348,
+   "closedCount": 351,
    "openPnl": 1902.1,
-   "closedPnl": 2881.9,
-   "totalPnl": 4784,
+   "closedPnl": 2870.3,
+   "totalPnl": 4772.4,
    "frPnl": 556.7,
    "addOnPnl": 664.7,
-   "htPnl": 3562.6,
+   "htPnl": 3551,
    "dailyPnlDelta": -10.9,
    "winRate": 60,
-   "avgGain": 10.5,
+   "avgGain": 10.4,
    "peakGainer": {
     "gain": 142.2,
     "name": "KEEMING"
@@ -248951,6 +250205,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -249013,6 +250278,17 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 5.665,
      "gainOnDay": 4.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -249090,6 +250366,17 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 5.665,
      "gainOnDay": 4.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -251737,18 +253024,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-10-15",
-   "totalSignals": 458,
+   "totalSignals": 461,
    "openCount": 44,
-   "closedCount": 414,
+   "closedCount": 417,
    "openPnl": 393.3,
-   "closedPnl": 4013.9,
-   "totalPnl": 4407.2,
+   "closedPnl": 4002.3,
+   "totalPnl": 4395.6,
    "frPnl": 467.4,
    "addOnPnl": 579.3,
-   "htPnl": 3360.5,
+   "htPnl": 3348.9,
    "dailyPnlDelta": -376.8,
    "winRate": 57,
-   "avgGain": 9.6,
+   "avgGain": 9.5,
    "peakGainer": {
     "gain": 139.1,
     "name": "SAMAIDEN"
@@ -254010,6 +255297,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -254072,6 +255370,17 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 5.665,
      "gainOnDay": 4.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -254149,6 +255458,17 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 5.665,
      "gainOnDay": 4.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -256796,15 +258116,15 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-10-16",
-   "totalSignals": 459,
+   "totalSignals": 462,
    "openCount": 45,
-   "closedCount": 414,
+   "closedCount": 417,
    "openPnl": 411.8,
-   "closedPnl": 4013.9,
-   "totalPnl": 4425.7,
+   "closedPnl": 4002.3,
+   "totalPnl": 4414.1,
    "frPnl": 483.6,
    "addOnPnl": 600.9,
-   "htPnl": 3341.2,
+   "htPnl": 3329.6,
    "dailyPnlDelta": 18.5,
    "winRate": 57,
    "avgGain": 9.6,
@@ -259080,6 +260400,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -259142,6 +260473,17 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 5.665,
      "gainOnDay": 4.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -259219,6 +260561,17 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 5.665,
      "gainOnDay": 4.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -261866,18 +263219,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-10-26",
-   "totalSignals": 463,
+   "totalSignals": 466,
    "openCount": 44,
-   "closedCount": 419,
+   "closedCount": 422,
    "openPnl": 306.4,
-   "closedPnl": 4047.9,
-   "totalPnl": 4354.3,
+   "closedPnl": 4036.3,
+   "totalPnl": 4342.7,
    "frPnl": 397.2,
    "addOnPnl": 610.6,
-   "htPnl": 3346.5,
+   "htPnl": 3334.9,
    "dailyPnlDelta": -71.4,
    "winRate": 56,
-   "avgGain": 9.4,
+   "avgGain": 9.3,
    "peakGainer": {
     "gain": 139.1,
     "name": "SAMAIDEN"
@@ -264194,6 +265547,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -264256,6 +265620,17 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 5.665,
      "gainOnDay": 4.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -264333,6 +265708,17 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 5.665,
      "gainOnDay": 4.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -266980,18 +268366,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-10-27",
-   "totalSignals": 465,
+   "totalSignals": 468,
    "openCount": 46,
-   "closedCount": 419,
+   "closedCount": 422,
    "openPnl": 383.1,
-   "closedPnl": 4047.9,
-   "totalPnl": 4431,
+   "closedPnl": 4036.3,
+   "totalPnl": 4419.4,
    "frPnl": 415.6,
    "addOnPnl": 610.6,
-   "htPnl": 3404.8,
+   "htPnl": 3393.2,
    "dailyPnlDelta": 76.7,
-   "winRate": 58,
-   "avgGain": 9.5,
+   "winRate": 57,
+   "avgGain": 9.4,
    "peakGainer": {
     "gain": 145.9,
     "name": "KEEMING"
@@ -269330,6 +270716,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -269392,6 +270789,17 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 5.665,
      "gainOnDay": 4.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -269469,6 +270877,17 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 5.665,
      "gainOnDay": 4.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -272116,18 +273535,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-10-28",
-   "totalSignals": 467,
+   "totalSignals": 470,
    "openCount": 48,
-   "closedCount": 419,
+   "closedCount": 422,
    "openPnl": 428.8,
-   "closedPnl": 4047.9,
-   "totalPnl": 4476.7,
+   "closedPnl": 4036.3,
+   "totalPnl": 4465.1,
    "frPnl": 423.7,
    "addOnPnl": 613.8,
-   "htPnl": 3439.2,
+   "htPnl": 3427.6,
    "dailyPnlDelta": 45.7,
    "winRate": 58,
-   "avgGain": 9.6,
+   "avgGain": 9.5,
    "peakGainer": {
     "gain": 154.1,
     "name": "KEEMING"
@@ -274488,6 +275907,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -274550,6 +275980,17 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 5.665,
      "gainOnDay": 4.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -274627,6 +276068,17 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 5.665,
      "gainOnDay": 4.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -277274,18 +278726,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-10-29",
-   "totalSignals": 468,
+   "totalSignals": 471,
    "openCount": 49,
-   "closedCount": 419,
+   "closedCount": 422,
    "openPnl": 397.3,
-   "closedPnl": 4047.9,
-   "totalPnl": 4445.2,
+   "closedPnl": 4036.3,
+   "totalPnl": 4433.6,
    "frPnl": 439.6,
    "addOnPnl": 604.2,
-   "htPnl": 3401.4,
+   "htPnl": 3389.8,
    "dailyPnlDelta": -31.5,
    "winRate": 57,
-   "avgGain": 9.5,
+   "avgGain": 9.4,
    "peakGainer": {
     "gain": 166.1,
     "name": "KEEMING"
@@ -279657,6 +281109,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -279719,6 +281182,17 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 5.665,
      "gainOnDay": 4.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -279796,6 +281270,17 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 5.665,
      "gainOnDay": 4.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -282443,18 +283928,18 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-10-30",
-   "totalSignals": 470,
-   "openCount": 50,
-   "closedCount": 420,
+   "totalSignals": 474,
+   "openCount": 51,
+   "closedCount": 423,
    "openPnl": 436.1,
-   "closedPnl": 4039.5,
-   "totalPnl": 4475.6,
+   "closedPnl": 4027.9,
+   "totalPnl": 4464,
    "frPnl": 429.3,
    "addOnPnl": 593.7,
-   "htPnl": 3452.6,
+   "htPnl": 3441,
    "dailyPnlDelta": 30.4,
-   "winRate": 57,
-   "avgGain": 9.5,
+   "winRate": 56,
+   "avgGain": 9.4,
    "peakGainer": {
     "gain": 166.1,
     "name": "KEEMING"
@@ -283349,6 +284834,17 @@ window.DAILY_EQUITY_TRACKER = {
      "priceOnDay": 2.63,
      "gainOnDay": 0,
      "dayChangePct": -1.87,
+     "pnlDeltaToday": 0
+    },
+    {
+     "id": "HT:MNHLDG_2026-10-30_ADDON",
+     "name": "MNHLDG",
+     "entryDate": "2026-10-30",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 3.89,
+     "gainOnDay": 0,
+     "dayChangePct": -1.52,
      "pnlDeltaToday": 0
     },
     {
@@ -284848,6 +286344,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:SFPTECH_2026-08-19_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-19",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -3,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:UWC_2026-08-19_ADDON",
      "name": "UWC",
      "entryDate": "2026-08-19",
@@ -284910,6 +286417,17 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 5.665,
      "gainOnDay": 4.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-18_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-18",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },
@@ -284987,6 +286505,17 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "CLOSED",
      "priceOnDay": 5.665,
      "gainOnDay": 4.5,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
+    },
+    {
+     "id": "HT:SFPTECH_2026-08-17_ADDON",
+     "name": "SFPTECH",
+     "entryDate": "2026-08-17",
+     "trackerType": "HT",
+     "statusOnDay": "CLOSED",
+     "priceOnDay": 0.344,
+     "gainOnDay": -4.3,
      "dayChangePct": 0,
      "pnlDeltaToday": 0
     },

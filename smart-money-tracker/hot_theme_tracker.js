@@ -1,17 +1,17 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T09:11:53.366Z",
+  "generatedAt": "2026-10-30T09:16:51.239Z",
   "dataDays": 103,
-  "totalTracked": 390,
-  "openCount": 40,
-  "closedCount": 350,
+  "totalTracked": 394,
+  "openCount": 41,
+  "closedCount": 353,
   "closedWins": 200,
   "closedWinRate": 57,
-  "closedAvgGain": 9.4,
+  "closedAvgGain": 9.3,
   "openPnl": 154.9,
-  "closedPnl": 3297.7,
-  "totalPnlNow": 3452.6
+  "closedPnl": 3286.1,
+  "totalPnlNow": 3441
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -740,10 +740,10 @@ window.HOT_THEME_TRACKER = {
   },
   {
    "date": "2026-10-30",
-   "themePct": 28.3,
-   "themeCount": 75,
-   "totalCount": 310,
-   "ma5": 28.2
+   "themePct": 28.5,
+   "themeCount": 76,
+   "totalCount": 313,
+   "ma5": 28.3
   }
  ],
  "themeTrend": "RISING",
@@ -767,6 +767,29 @@ window.HOT_THEME_TRACKER = {
    "status": "OPEN",
    "themes": [
     "Semiconductor"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false
+  },
+  {
+   "id": "MNHLDG_2026-10-30_ADDON",
+   "name": "MNHLDG",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-10-30",
+   "entry": 3.89,
+   "entryFloor": 3.66,
+   "currentFloor": 3.66,
+   "currentPrice": 3.89,
+   "high": 3.89,
+   "highDate": "2026-10-30",
+   "maxGain": 0,
+   "finalGain": 0,
+   "day1ChangePct": -1.52,
+   "days": 1,
+   "lastDate": "2026-10-30",
+   "status": "OPEN",
+   "themes": [
+    "Solar/RE"
    ],
    "confluence": 3,
    "isGoldenCombo": false
@@ -4279,6 +4302,32 @@ window.HOT_THEME_TRACKER = {
    "exitPrice": 0.485
   },
   {
+   "id": "SFPTECH_2026-08-19_ADDON",
+   "name": "SFPTECH",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-08-19",
+   "entry": 0.355,
+   "entryFloor": 0.355,
+   "currentFloor": 0.355,
+   "currentPrice": 0.32,
+   "high": 0.355,
+   "highDate": "2026-08-19",
+   "maxGain": 0,
+   "finalGain": -3,
+   "day1ChangePct": 1.43,
+   "days": 2,
+   "lastDate": "2026-08-20",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false,
+   "slTrail": 0.344,
+   "exitDate": "2026-08-20",
+   "exitPrice": 0.344
+  },
+  {
    "id": "UWC_2026-08-19_ADDON",
    "name": "UWC",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -4434,6 +4483,32 @@ window.HOT_THEME_TRACKER = {
    "slTrail": 5.665,
    "exitDate": "2026-10-13",
    "exitPrice": 5.665
+  },
+  {
+   "id": "SFPTECH_2026-08-18_ADDON",
+   "name": "SFPTECH",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-08-18",
+   "entry": 0.36,
+   "entryFloor": 0.355,
+   "currentFloor": 0.355,
+   "currentPrice": 0.32,
+   "high": 0.36,
+   "highDate": "2026-08-18",
+   "maxGain": 0,
+   "finalGain": -4.3,
+   "day1ChangePct": 1.41,
+   "days": 3,
+   "lastDate": "2026-08-20",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": true,
+   "slTrail": 0.344,
+   "exitDate": "2026-08-20",
+   "exitPrice": 0.344
   },
   {
    "id": "INARI_2026-08-18_ADDON",
@@ -4616,6 +4691,32 @@ window.HOT_THEME_TRACKER = {
    "slTrail": 5.665,
    "exitDate": "2026-10-13",
    "exitPrice": 5.665
+  },
+  {
+   "id": "SFPTECH_2026-08-17_ADDON",
+   "name": "SFPTECH",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-08-17",
+   "entry": 0.36,
+   "entryFloor": 0.355,
+   "currentFloor": 0.355,
+   "currentPrice": 0.32,
+   "high": 0.36,
+   "highDate": "2026-08-18",
+   "maxGain": 0,
+   "finalGain": -4.3,
+   "day1ChangePct": 1.41,
+   "days": 4,
+   "lastDate": "2026-08-20",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": true,
+   "slTrail": 0.344,
+   "exitDate": "2026-08-20",
+   "exitPrice": 0.344
   },
   {
    "id": "INARI_2026-08-17_ADDON",
@@ -10828,7 +10929,7 @@ window.HOT_THEME_TRACKER = {
 };
 window.HOT_THEME_NEW_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T09:11:53.366Z",
+  "generatedAt": "2026-10-30T09:16:51.239Z",
   "dataDays": 103,
   "totalTracked": 51,
   "openCount": 7,
@@ -12158,7 +12259,7 @@ window.HOT_THEME_NEW_TRACKER = {
 };
 window.HOT_THEME_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T09:11:53.367Z",
+  "generatedAt": "2026-10-30T09:16:51.239Z",
   "dataDays": 103,
   "totalTracked": 174,
   "openCount": 20,
@@ -16659,17 +16760,17 @@ window.HOT_THEME_ADDON_TRACKER = {
 };
 window.HOT_THEME_FLOOR_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T09:11:53.367Z",
+  "generatedAt": "2026-10-30T09:16:51.239Z",
   "dataDays": 103,
-  "totalTracked": 165,
-  "openCount": 13,
-  "closedCount": 152,
+  "totalTracked": 169,
+  "openCount": 14,
+  "closedCount": 155,
   "closedWins": 72,
-  "closedWinRate": 47,
-  "closedAvgGain": 3.4,
+  "closedWinRate": 46,
+  "closedAvgGain": 3.2,
   "openPnl": 114.3,
-  "closedPnl": 510.6,
-  "totalPnlNow": 624.9
+  "closedPnl": 499,
+  "totalPnlNow": 613.3
  },
  "trades": [
   {
@@ -18431,6 +18532,32 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "exitPrice": 5.665
   },
   {
+   "id": "SFPTECH_2026-08-17_ADDON",
+   "name": "SFPTECH",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-08-17",
+   "entry": 0.36,
+   "entryFloor": 0.355,
+   "currentFloor": 0.355,
+   "currentPrice": 0.32,
+   "high": 0.36,
+   "highDate": "2026-08-18",
+   "maxGain": 0,
+   "finalGain": -4.3,
+   "day1ChangePct": 1.41,
+   "days": 4,
+   "lastDate": "2026-08-20",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": true,
+   "slTrail": 0.344,
+   "exitDate": "2026-08-20",
+   "exitPrice": 0.344
+  },
+  {
    "id": "VITROX_2026-08-17_ADDON",
    "name": "VITROX",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -18509,6 +18636,32 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "exitPrice": 5.665
   },
   {
+   "id": "SFPTECH_2026-08-18_ADDON",
+   "name": "SFPTECH",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-08-18",
+   "entry": 0.36,
+   "entryFloor": 0.355,
+   "currentFloor": 0.355,
+   "currentPrice": 0.32,
+   "high": 0.36,
+   "highDate": "2026-08-18",
+   "maxGain": 0,
+   "finalGain": -4.3,
+   "day1ChangePct": 1.41,
+   "days": 3,
+   "lastDate": "2026-08-20",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": true,
+   "slTrail": 0.344,
+   "exitDate": "2026-08-20",
+   "exitPrice": 0.344
+  },
+  {
    "id": "MI_2026-08-18_ADDON",
    "name": "MI",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -18559,6 +18712,32 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "slTrail": 10.547,
    "exitDate": "2026-10-15",
    "exitPrice": 10.547
+  },
+  {
+   "id": "SFPTECH_2026-08-19_ADDON",
+   "name": "SFPTECH",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-08-19",
+   "entry": 0.355,
+   "entryFloor": 0.355,
+   "currentFloor": 0.355,
+   "currentPrice": 0.32,
+   "high": 0.355,
+   "highDate": "2026-08-19",
+   "maxGain": 0,
+   "finalGain": -3,
+   "day1ChangePct": 1.43,
+   "days": 2,
+   "lastDate": "2026-08-20",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false,
+   "slTrail": 0.344,
+   "exitDate": "2026-08-20",
+   "exitPrice": 0.344
   },
   {
    "id": "UWC_2026-08-19_ADDON",
@@ -20950,22 +21129,45 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "confluence": 3,
    "isGoldenCombo": true,
    "slTrail": 0.97
+  },
+  {
+   "id": "MNHLDG_2026-10-30_ADDON",
+   "name": "MNHLDG",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-10-30",
+   "entry": 3.89,
+   "entryFloor": 3.66,
+   "currentFloor": 3.66,
+   "currentPrice": 3.89,
+   "high": 3.89,
+   "highDate": "2026-10-30",
+   "maxGain": 0,
+   "finalGain": 0,
+   "day1ChangePct": -1.52,
+   "days": 1,
+   "lastDate": "2026-10-30",
+   "status": "OPEN",
+   "themes": [
+    "Solar/RE"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false
   }
  ]
 };
 window.HOT_THEME_ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T09:11:53.366Z",
+  "generatedAt": "2026-10-30T09:16:51.239Z",
   "dataDays": 103,
-  "totalTracked": 390,
-  "openCount": 40,
-  "closedCount": 350,
+  "totalTracked": 394,
+  "openCount": 41,
+  "closedCount": 353,
   "closedWins": 200,
   "closedWinRate": 57,
-  "closedAvgGain": 9.4,
+  "closedAvgGain": 9.3,
   "openPnl": 154.9,
-  "closedPnl": 3297.7,
-  "totalPnlNow": 3452.6
+  "closedPnl": 3286.1,
+  "totalPnlNow": 3441
  },
  "trades": [
   {
@@ -20987,6 +21189,29 @@ window.HOT_THEME_ALL_TRACKER = {
    "status": "OPEN",
    "themes": [
     "Semiconductor"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false
+  },
+  {
+   "id": "MNHLDG_2026-10-30_ADDON",
+   "name": "MNHLDG",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-10-30",
+   "entry": 3.89,
+   "entryFloor": 3.66,
+   "currentFloor": 3.66,
+   "currentPrice": 3.89,
+   "high": 3.89,
+   "highDate": "2026-10-30",
+   "maxGain": 0,
+   "finalGain": 0,
+   "day1ChangePct": -1.52,
+   "days": 1,
+   "lastDate": "2026-10-30",
+   "status": "OPEN",
+   "themes": [
+    "Solar/RE"
    ],
    "confluence": 3,
    "isGoldenCombo": false
@@ -24499,6 +24724,32 @@ window.HOT_THEME_ALL_TRACKER = {
    "exitPrice": 0.485
   },
   {
+   "id": "SFPTECH_2026-08-19_ADDON",
+   "name": "SFPTECH",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-08-19",
+   "entry": 0.355,
+   "entryFloor": 0.355,
+   "currentFloor": 0.355,
+   "currentPrice": 0.32,
+   "high": 0.355,
+   "highDate": "2026-08-19",
+   "maxGain": 0,
+   "finalGain": -3,
+   "day1ChangePct": 1.43,
+   "days": 2,
+   "lastDate": "2026-08-20",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false,
+   "slTrail": 0.344,
+   "exitDate": "2026-08-20",
+   "exitPrice": 0.344
+  },
+  {
    "id": "UWC_2026-08-19_ADDON",
    "name": "UWC",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -24654,6 +24905,32 @@ window.HOT_THEME_ALL_TRACKER = {
    "slTrail": 5.665,
    "exitDate": "2026-10-13",
    "exitPrice": 5.665
+  },
+  {
+   "id": "SFPTECH_2026-08-18_ADDON",
+   "name": "SFPTECH",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-08-18",
+   "entry": 0.36,
+   "entryFloor": 0.355,
+   "currentFloor": 0.355,
+   "currentPrice": 0.32,
+   "high": 0.36,
+   "highDate": "2026-08-18",
+   "maxGain": 0,
+   "finalGain": -4.3,
+   "day1ChangePct": 1.41,
+   "days": 3,
+   "lastDate": "2026-08-20",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": true,
+   "slTrail": 0.344,
+   "exitDate": "2026-08-20",
+   "exitPrice": 0.344
   },
   {
    "id": "INARI_2026-08-18_ADDON",
@@ -24836,6 +25113,32 @@ window.HOT_THEME_ALL_TRACKER = {
    "slTrail": 5.665,
    "exitDate": "2026-10-13",
    "exitPrice": 5.665
+  },
+  {
+   "id": "SFPTECH_2026-08-17_ADDON",
+   "name": "SFPTECH",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-08-17",
+   "entry": 0.36,
+   "entryFloor": 0.355,
+   "currentFloor": 0.355,
+   "currentPrice": 0.32,
+   "high": 0.36,
+   "highDate": "2026-08-18",
+   "maxGain": 0,
+   "finalGain": -4.3,
+   "day1ChangePct": 1.41,
+   "days": 4,
+   "lastDate": "2026-08-20",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": true,
+   "slTrail": 0.344,
+   "exitDate": "2026-08-20",
+   "exitPrice": 0.344
   },
   {
    "id": "INARI_2026-08-17_ADDON",
