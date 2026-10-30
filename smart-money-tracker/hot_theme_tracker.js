@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T13:54:38.760Z",
+  "generatedAt": "2026-10-30T16:39:37.891Z",
   "dataDays": 103,
   "totalTracked": 394,
   "openCount": 41,
@@ -9,9 +9,9 @@ window.HOT_THEME_TRACKER = {
   "closedWins": 200,
   "closedWinRate": 57,
   "closedAvgGain": 9.3,
-  "openPnl": 154.9,
+  "openPnl": 163.1,
   "closedPnl": 3286.1,
-  "totalPnlNow": 3441
+  "totalPnlNow": 3449.2
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -4128,14 +4128,14 @@ window.HOT_THEME_TRACKER = {
    "entry": 6.25,
    "entryFloor": 7.79,
    "currentFloor": 7.53,
-   "currentPrice": 8.25,
+   "currentPrice": 8.76,
    "high": 8.76,
    "highDate": "2026-10-16",
    "maxGain": 40.2,
-   "finalGain": 32,
+   "finalGain": 40.2,
    "day1ChangePct": -1.11,
-   "days": 51,
-   "lastDate": "2026-10-30",
+   "days": 11,
+   "lastDate": "2026-10-16",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -10929,7 +10929,7 @@ window.HOT_THEME_TRACKER = {
 };
 window.HOT_THEME_NEW_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T13:54:38.760Z",
+  "generatedAt": "2026-10-30T16:39:37.891Z",
   "dataDays": 103,
   "totalTracked": 51,
   "openCount": 7,
@@ -10937,9 +10937,9 @@ window.HOT_THEME_NEW_TRACKER = {
   "closedWins": 18,
   "closedWinRate": 41,
   "closedAvgGain": 8.8,
-  "openPnl": 42.5,
+  "openPnl": 50.7,
   "closedPnl": 385.1,
-  "totalPnlNow": 427.6
+  "totalPnlNow": 435.8
  },
  "trades": [
   {
@@ -12062,14 +12062,14 @@ window.HOT_THEME_NEW_TRACKER = {
    "entry": 6.25,
    "entryFloor": 7.79,
    "currentFloor": 7.53,
-   "currentPrice": 8.25,
+   "currentPrice": 8.76,
    "high": 8.76,
    "highDate": "2026-10-16",
    "maxGain": 40.2,
-   "finalGain": 32,
+   "finalGain": 40.2,
    "day1ChangePct": -1.11,
-   "days": 51,
-   "lastDate": "2026-10-30",
+   "days": 11,
+   "lastDate": "2026-10-16",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -12259,7 +12259,7 @@ window.HOT_THEME_NEW_TRACKER = {
 };
 window.HOT_THEME_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T13:54:38.761Z",
+  "generatedAt": "2026-10-30T16:39:37.891Z",
   "dataDays": 103,
   "totalTracked": 174,
   "openCount": 20,
@@ -16760,7 +16760,7 @@ window.HOT_THEME_ADDON_TRACKER = {
 };
 window.HOT_THEME_FLOOR_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T13:54:38.761Z",
+  "generatedAt": "2026-10-30T16:39:37.891Z",
   "dataDays": 103,
   "totalTracked": 169,
   "openCount": 14,
@@ -21157,7 +21157,7 @@ window.HOT_THEME_FLOOR_TRACKER = {
 };
 window.HOT_THEME_ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T13:54:38.760Z",
+  "generatedAt": "2026-10-30T16:39:37.891Z",
   "dataDays": 103,
   "totalTracked": 394,
   "openCount": 41,
@@ -21165,9 +21165,9 @@ window.HOT_THEME_ALL_TRACKER = {
   "closedWins": 200,
   "closedWinRate": 57,
   "closedAvgGain": 9.3,
-  "openPnl": 154.9,
+  "openPnl": 163.1,
   "closedPnl": 3286.1,
-  "totalPnlNow": 3441
+  "totalPnlNow": 3449.2
  },
  "trades": [
   {
@@ -24550,14 +24550,14 @@ window.HOT_THEME_ALL_TRACKER = {
    "entry": 6.25,
    "entryFloor": 7.79,
    "currentFloor": 7.53,
-   "currentPrice": 8.25,
+   "currentPrice": 8.76,
    "high": 8.76,
    "highDate": "2026-10-16",
    "maxGain": 40.2,
-   "finalGain": 32,
+   "finalGain": 40.2,
    "day1ChangePct": -1.11,
-   "days": 51,
-   "lastDate": "2026-10-30",
+   "days": 11,
+   "lastDate": "2026-10-16",
    "status": "OPEN",
    "themes": [
     "Semiconductor"

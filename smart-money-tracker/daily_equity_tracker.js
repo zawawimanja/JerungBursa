@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-10-30T13:54:39.832Z",
+ "generatedAt": "2026-10-30T16:39:39.039Z",
  "totalDays": 99,
  "startDate": "2026-06-02",
  "endDate": "2026-10-30",
@@ -283931,13 +283931,13 @@ window.DAILY_EQUITY_TRACKER = {
    "totalSignals": 474,
    "openCount": 51,
    "closedCount": 423,
-   "openPnl": 436.1,
+   "openPnl": 444.3,
    "closedPnl": 4027.9,
-   "totalPnl": 4464,
+   "totalPnl": 4472.2,
    "frPnl": 429.3,
    "addOnPnl": 593.7,
-   "htPnl": 3441,
-   "dailyPnlDelta": 30.4,
+   "htPnl": 3449.2,
+   "dailyPnlDelta": 38.6,
    "winRate": 56,
    "avgGain": 9.4,
    "peakGainer": {
@@ -286272,10 +286272,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-08-21",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.25,
-     "gainOnDay": 32,
+     "priceOnDay": 8.76,
+     "gainOnDay": 40.2,
      "dayChangePct": 0,
-     "pnlDeltaToday": -8.2
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:NEXG_2026-08-21_NEW",
