@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual
 window.FRESH_RIDER_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T04:01:46.614Z",
+  "generatedAt": "2026-10-30T04:06:37.326Z",
   "dataDays": 99,
   "totalTracked": 26,
   "openCount": 5,
@@ -9,9 +9,9 @@ window.FRESH_RIDER_TRACKER = {
   "closedWins": 11,
   "closedWinRate": 52,
   "closedAvgGain": 12,
-  "openPnl": 182.3,
+  "openPnl": 181.4,
   "closedPnl": 251.1,
-  "totalPnlNow": 433.4
+  "totalPnlNow": 432.5
  },
  "backtest": {
   "dataStart": "2026-06-02",
@@ -115,11 +115,11 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 1.09,
    "entryFloor": 1.05,
    "currentFloor": 2.48,
-   "currentPrice": 2.91,
-   "high": 2.91,
+   "currentPrice": 2.9,
+   "high": 2.9,
    "highDate": "2026-10-30",
-   "maxGain": 167,
-   "finalGain": 167,
+   "maxGain": 166.1,
+   "finalGain": 166.1,
    "day1ChangePct": 3.81,
    "days": 98,
    "lastDate": "2026-10-30",
@@ -127,7 +127,7 @@ window.FRESH_RIDER_TRACKER = {
    "ipoYear": 2026,
    "sector": "Consumer",
    "isGoldenCombo": false,
-   "slTrail": 2.474
+   "slTrail": 2.465
   },
   {
    "name": "SUM",
@@ -616,7 +616,7 @@ window.FRESH_RIDER_TRACKER = {
 };
 window.ADD_ON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T04:01:46.614Z",
+  "generatedAt": "2026-10-30T04:06:37.326Z",
   "dataDays": 99,
   "totalTracked": 24,
   "openCount": 3,
@@ -1216,7 +1216,7 @@ window.ADD_ON_TRACKER = {
 };
 window.FLOOR_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T04:01:46.614Z",
+  "generatedAt": "2026-10-30T04:06:37.326Z",
   "dataDays": 99,
   "totalTracked": 29,
   "openCount": 1,
@@ -1224,9 +1224,9 @@ window.FLOOR_ADDON_TRACKER = {
   "closedWins": 15,
   "closedWinRate": 54,
   "closedAvgGain": 7.8,
-  "openPnl": -3.1,
+  "openPnl": -2.3,
   "closedPnl": 219,
-  "totalPnlNow": 215.9
+  "totalPnlNow": 216.7
  },
  "backtest": {
   "dataStart": "2026-06-02",
@@ -1234,12 +1234,12 @@ window.FLOOR_ADDON_TRACKER = {
   "dataDays": 99,
   "signals": 17,
   "winRate": 65,
-  "avgGain": 7.4,
-  "totalPnl": 126.2,
+  "avgGain": 7.5,
+  "totalPnl": 127,
   "worstLoss": -6.5,
   "grossWin": 153.4,
-  "grossLoss": 27.2,
-  "profitFactor": 5.65
+  "grossLoss": 26.4,
+  "profitFactor": 5.81
  },
  "trades": [
   {
@@ -1250,11 +1250,11 @@ window.FLOOR_ADDON_TRACKER = {
    "entry": 1.29,
    "entryFloor": 1.24,
    "currentFloor": 1.27,
-   "currentPrice": 1.25,
+   "currentPrice": 1.26,
    "high": 1.3,
    "highDate": "2026-10-28",
    "maxGain": 0.8,
-   "finalGain": -3.1,
+   "finalGain": -2.3,
    "day1ChangePct": 0,
    "days": 4,
    "lastDate": "2026-10-30",
@@ -1940,7 +1940,7 @@ window.FLOOR_ADDON_TRACKER = {
 };
 window.ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-10-30T04:01:46.615Z",
+  "generatedAt": "2026-10-30T04:06:37.326Z",
   "dataDays": 99,
   "totalTracked": 79,
   "openCount": 9,
@@ -1948,9 +1948,9 @@ window.ALL_TRACKER = {
   "closedWins": 39,
   "closedWinRate": 56,
   "closedAvgGain": 10.6,
-  "openPnl": 284.6,
+  "openPnl": 284.5,
   "closedPnl": 741.8,
-  "totalPnlNow": 1026.4
+  "totalPnlNow": 1026.3
  },
  "trades": [
   {
@@ -2003,11 +2003,11 @@ window.ALL_TRACKER = {
    "entry": 1.29,
    "entryFloor": 1.24,
    "currentFloor": 1.27,
-   "currentPrice": 1.25,
+   "currentPrice": 1.26,
    "high": 1.3,
    "highDate": "2026-10-28",
    "maxGain": 0.8,
-   "finalGain": -3.1,
+   "finalGain": -2.3,
    "day1ChangePct": 0,
    "days": 4,
    "lastDate": "2026-10-30",
@@ -2132,11 +2132,11 @@ window.ALL_TRACKER = {
    "entry": 1.09,
    "entryFloor": 1.05,
    "currentFloor": 2.48,
-   "currentPrice": 2.91,
-   "high": 2.91,
+   "currentPrice": 2.9,
+   "high": 2.9,
    "highDate": "2026-10-30",
-   "maxGain": 167,
-   "finalGain": 167,
+   "maxGain": 166.1,
+   "finalGain": 166.1,
    "day1ChangePct": 3.81,
    "days": 98,
    "lastDate": "2026-10-30",
@@ -2144,7 +2144,7 @@ window.ALL_TRACKER = {
    "ipoYear": 2026,
    "sector": "Consumer",
    "isGoldenCombo": false,
-   "slTrail": 2.474
+   "slTrail": 2.465
   },
   {
    "name": "SUM",
