@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-11-02T07:23:20.673Z",
+ "generatedAt": "2026-11-02T07:25:48.149Z",
  "totalDays": 100,
  "startDate": "2026-06-02",
  "endDate": "2026-11-02",
@@ -289163,16 +289163,16 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-11-02",
-   "totalSignals": 475,
-   "openCount": 52,
+   "totalSignals": 476,
+   "openCount": 53,
    "closedCount": 423,
-   "openPnl": 376.1,
+   "openPnl": 376.4,
    "closedPnl": 4027.9,
-   "totalPnl": 4404,
+   "totalPnl": 4404.3,
    "frPnl": 410.9,
    "addOnPnl": 591.3,
-   "htPnl": 3401.8,
-   "dailyPnlDelta": 29.1,
+   "htPnl": 3402.1,
+   "dailyPnlDelta": 29.4,
    "winRate": 55,
    "avgGain": 9.3,
    "peakGainer": {
@@ -290072,15 +290072,26 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:CLOUDPT_2026-11-02_NEW",
+     "name": "CLOUDPT",
+     "entryDate": "2026-11-02",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.5,
+     "gainOnDay": 0,
+     "dayChangePct": -0.99,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:GREATEC_2026-10-30_ADDON",
      "name": "GREATEC",
      "entryDate": "2026-10-30",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.56,
-     "gainOnDay": -2.7,
-     "dayChangePct": -2.66,
-     "pnlDeltaToday": -2.7
+     "priceOnDay": 2.57,
+     "gainOnDay": -2.3,
+     "dayChangePct": -2.28,
+     "pnlDeltaToday": -2.3
     },
     {
      "id": "HT:MNHLDG_2026-10-30_ADDON",
@@ -290088,10 +290099,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-30",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 3.84,
-     "gainOnDay": -1.3,
-     "dayChangePct": -1.29,
-     "pnlDeltaToday": -1.3
+     "priceOnDay": 3.85,
+     "gainOnDay": -1,
+     "dayChangePct": -1.03,
+     "pnlDeltaToday": -1
     },
     {
      "id": "HT:EDELTEQ_2026-10-28_NEW",
@@ -290110,10 +290121,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-28",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.965,
-     "gainOnDay": -4.5,
-     "dayChangePct": -1.03,
-     "pnlDeltaToday": -1
+     "priceOnDay": 0.96,
+     "gainOnDay": -5,
+     "dayChangePct": -1.54,
+     "pnlDeltaToday": -1.5
     },
     {
      "id": "HT:PEKAT_2026-10-26_ADDON",
@@ -290121,10 +290132,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-26",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.86,
-     "gainOnDay": 1.4,
-     "dayChangePct": -2.39,
-     "pnlDeltaToday": -2.5
+     "priceOnDay": 2.85,
+     "gainOnDay": 1.1,
+     "dayChangePct": -2.73,
+     "pnlDeltaToday": -2.8
     },
     {
      "id": "HT:PENTA_2026-10-26_ADDON",
@@ -290132,10 +290143,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-26",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 5.49,
-     "gainOnDay": -2.3,
-     "dayChangePct": -3.17,
-     "pnlDeltaToday": -3.2
+     "priceOnDay": 5.48,
+     "gainOnDay": -2.5,
+     "dayChangePct": -3.35,
+     "pnlDeltaToday": -3.4
     },
     {
      "id": "HT:UWC_2026-10-26_ADDON",
@@ -290143,10 +290154,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-26",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 7.01,
-     "gainOnDay": -3.4,
-     "dayChangePct": -1.96,
-     "pnlDeltaToday": -1.9
+     "priceOnDay": 7.02,
+     "gainOnDay": -3.3,
+     "dayChangePct": -1.82,
+     "pnlDeltaToday": -1.8
     },
     {
      "id": "HT:RPLANET_2026-10-26_NEW",
@@ -290165,10 +290176,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-16",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.06,
-     "gainOnDay": 2,
-     "dayChangePct": -3.74,
-     "pnlDeltaToday": -3.9
+     "priceOnDay": 2.07,
+     "gainOnDay": 2.5,
+     "dayChangePct": -3.27,
+     "pnlDeltaToday": -3.4
     },
     {
      "id": "HT:MNHLDG_2026-10-14_ADDON",
