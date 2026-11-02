@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-11-02T07:28:24.504Z",
+ "generatedAt": "2026-11-02T07:33:25.250Z",
  "totalDays": 100,
  "startDate": "2026-06-02",
  "endDate": "2026-11-02",
@@ -289166,13 +289166,13 @@ window.DAILY_EQUITY_TRACKER = {
    "totalSignals": 476,
    "openCount": 53,
    "closedCount": 423,
-   "openPnl": 381.5,
+   "openPnl": 381.6,
    "closedPnl": 4027.9,
-   "totalPnl": 4409.4,
+   "totalPnl": 4409.5,
    "frPnl": 410.9,
    "addOnPnl": 591.3,
-   "htPnl": 3407.2,
-   "dailyPnlDelta": 34.5,
+   "htPnl": 3407.3,
+   "dailyPnlDelta": 34.6,
    "winRate": 55,
    "avgGain": 9.3,
    "peakGainer": {
@@ -290072,14 +290072,14 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
-     "id": "HT:CLOUDPT_2026-11-02_NEW",
-     "name": "CLOUDPT",
+     "id": "HT:SAMAIDEN_2026-11-02_ADDON",
+     "name": "SAMAIDEN",
      "entryDate": "2026-11-02",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.5,
+     "priceOnDay": 3.01,
      "gainOnDay": 0,
-     "dayChangePct": -0.99,
+     "dayChangePct": -1.95,
      "pnlDeltaToday": 0
     },
     {
@@ -290088,10 +290088,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-30",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.57,
-     "gainOnDay": -2.3,
-     "dayChangePct": -2.28,
-     "pnlDeltaToday": -2.3
+     "priceOnDay": 2.56,
+     "gainOnDay": -2.7,
+     "dayChangePct": -2.66,
+     "pnlDeltaToday": -2.7
     },
     {
      "id": "HT:MNHLDG_2026-10-30_ADDON",
@@ -290121,10 +290121,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-28",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.96,
-     "gainOnDay": -5,
-     "dayChangePct": -1.54,
-     "pnlDeltaToday": -1.5
+     "priceOnDay": 0.965,
+     "gainOnDay": -4.5,
+     "dayChangePct": -1.03,
+     "pnlDeltaToday": -1
     },
     {
      "id": "HT:PEKAT_2026-10-26_ADDON",

@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-02T07:28:22.436Z",
+  "generatedAt": "2026-11-02T07:33:23.609Z",
   "dataDays": 104,
   "totalTracked": 395,
   "openCount": 42,
@@ -9,9 +9,9 @@ window.HOT_THEME_TRACKER = {
   "closedWins": 200,
   "closedWinRate": 57,
   "closedAvgGain": 9.3,
-  "openPnl": 121.1,
+  "openPnl": 121.2,
   "closedPnl": 3286.1,
-  "totalPnlNow": 3407.2
+  "totalPnlNow": 3407.3
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -756,26 +756,26 @@ window.HOT_THEME_TRACKER = {
  "themeTrend": "RISING",
  "trades": [
   {
-   "id": "CLOUDPT_2026-11-02_NEW",
-   "name": "CLOUDPT",
-   "entryType": "🔥 NEW",
+   "id": "SAMAIDEN_2026-11-02_ADDON",
+   "name": "SAMAIDEN",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
    "entryDate": "2026-11-02",
-   "entry": 0.5,
-   "entryFloor": 0.5,
-   "currentFloor": 0.5,
-   "currentPrice": 0.5,
-   "high": 0.5,
+   "entry": 3.01,
+   "entryFloor": 3,
+   "currentFloor": 3,
+   "currentPrice": 3.01,
+   "high": 3.01,
    "highDate": "2026-11-02",
    "maxGain": 0,
    "finalGain": 0,
-   "day1ChangePct": -0.99,
+   "day1ChangePct": -1.95,
    "days": 1,
    "lastDate": "2026-11-02",
    "status": "OPEN",
    "themes": [
-    "Semiconductor"
+    "Solar/RE"
    ],
-   "confluence": 2,
+   "confluence": 3,
    "isGoldenCombo": false
   },
   {
@@ -786,11 +786,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 2.63,
    "entryFloor": 2.56,
    "currentFloor": 2.58,
-   "currentPrice": 2.57,
+   "currentPrice": 2.56,
    "high": 2.63,
    "highDate": "2026-10-30",
    "maxGain": 0,
-   "finalGain": -2.3,
+   "finalGain": -2.7,
    "day1ChangePct": -1.87,
    "days": 2,
    "lastDate": "2026-11-02",
@@ -858,11 +858,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 1.01,
    "entryFloor": 0.99,
    "currentFloor": 0.975,
-   "currentPrice": 0.96,
+   "currentPrice": 0.965,
    "high": 1.01,
    "highDate": "2026-10-28",
    "maxGain": 0,
-   "finalGain": -5,
+   "finalGain": -4.5,
    "day1ChangePct": 0,
    "days": 4,
    "lastDate": "2026-11-02",
@@ -10961,10 +10961,10 @@ window.HOT_THEME_TRACKER = {
 };
 window.HOT_THEME_NEW_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-02T07:28:22.436Z",
+  "generatedAt": "2026-11-02T07:33:23.609Z",
   "dataDays": 104,
-  "totalTracked": 52,
-  "openCount": 8,
+  "totalTracked": 51,
+  "openCount": 7,
   "closedCount": 44,
   "closedWins": 18,
   "closedWinRate": 41,
@@ -12286,35 +12286,12 @@ window.HOT_THEME_NEW_TRACKER = {
    "confluence": 2,
    "isGoldenCombo": false,
    "slTrail": 0.403
-  },
-  {
-   "id": "CLOUDPT_2026-11-02_NEW",
-   "name": "CLOUDPT",
-   "entryType": "🔥 NEW",
-   "entryDate": "2026-11-02",
-   "entry": 0.5,
-   "entryFloor": 0.5,
-   "currentFloor": 0.5,
-   "currentPrice": 0.5,
-   "high": 0.5,
-   "highDate": "2026-11-02",
-   "maxGain": 0,
-   "finalGain": 0,
-   "day1ChangePct": -0.99,
-   "days": 1,
-   "lastDate": "2026-11-02",
-   "status": "OPEN",
-   "themes": [
-    "Semiconductor"
-   ],
-   "confluence": 2,
-   "isGoldenCombo": false
   }
  ]
 };
 window.HOT_THEME_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-02T07:28:22.438Z",
+  "generatedAt": "2026-11-02T07:33:23.609Z",
   "dataDays": 104,
   "totalTracked": 174,
   "openCount": 20,
@@ -12322,9 +12299,9 @@ window.HOT_THEME_ADDON_TRACKER = {
   "closedWins": 110,
   "closedWinRate": 71,
   "closedAvgGain": 15.6,
-  "openPnl": -17.6,
+  "openPnl": -18,
   "closedPnl": 2402,
-  "totalPnlNow": 2384.4
+  "totalPnlNow": 2384
  },
  "trades": [
   {
@@ -16796,11 +16773,11 @@ window.HOT_THEME_ADDON_TRACKER = {
    "entry": 2.63,
    "entryFloor": 2.56,
    "currentFloor": 2.58,
-   "currentPrice": 2.57,
+   "currentPrice": 2.56,
    "high": 2.63,
    "highDate": "2026-10-30",
    "maxGain": 0,
-   "finalGain": -2.3,
+   "finalGain": -2.7,
    "day1ChangePct": -1.87,
    "days": 2,
    "lastDate": "2026-11-02",
@@ -16816,17 +16793,17 @@ window.HOT_THEME_ADDON_TRACKER = {
 };
 window.HOT_THEME_FLOOR_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-02T07:28:22.440Z",
+  "generatedAt": "2026-11-02T07:33:23.610Z",
   "dataDays": 104,
-  "totalTracked": 169,
-  "openCount": 14,
+  "totalTracked": 170,
+  "openCount": 15,
   "closedCount": 155,
   "closedWins": 72,
   "closedWinRate": 46,
   "closedAvgGain": 3.2,
-  "openPnl": 95.3,
+  "openPnl": 95.8,
   "closedPnl": 499,
-  "totalPnlNow": 594.3
+  "totalPnlNow": 594.8
  },
  "trades": [
   {
@@ -21170,11 +21147,11 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "entry": 1.01,
    "entryFloor": 0.99,
    "currentFloor": 0.975,
-   "currentPrice": 0.96,
+   "currentPrice": 0.965,
    "high": 1.01,
    "highDate": "2026-10-28",
    "maxGain": 0,
-   "finalGain": -5,
+   "finalGain": -4.5,
    "day1ChangePct": 0,
    "days": 4,
    "lastDate": "2026-11-02",
@@ -21209,12 +21186,35 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "confluence": 3,
    "isGoldenCombo": false,
    "slTrail": 3.715
+  },
+  {
+   "id": "SAMAIDEN_2026-11-02_ADDON",
+   "name": "SAMAIDEN",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-11-02",
+   "entry": 3.01,
+   "entryFloor": 3,
+   "currentFloor": 3,
+   "currentPrice": 3.01,
+   "high": 3.01,
+   "highDate": "2026-11-02",
+   "maxGain": 0,
+   "finalGain": 0,
+   "day1ChangePct": -1.95,
+   "days": 1,
+   "lastDate": "2026-11-02",
+   "status": "OPEN",
+   "themes": [
+    "Solar/RE"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false
   }
  ]
 };
 window.HOT_THEME_ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-02T07:28:22.436Z",
+  "generatedAt": "2026-11-02T07:33:23.609Z",
   "dataDays": 104,
   "totalTracked": 395,
   "openCount": 42,
@@ -21222,32 +21222,32 @@ window.HOT_THEME_ALL_TRACKER = {
   "closedWins": 200,
   "closedWinRate": 57,
   "closedAvgGain": 9.3,
-  "openPnl": 121.1,
+  "openPnl": 121.2,
   "closedPnl": 3286.1,
-  "totalPnlNow": 3407.2
+  "totalPnlNow": 3407.3
  },
  "trades": [
   {
-   "id": "CLOUDPT_2026-11-02_NEW",
-   "name": "CLOUDPT",
-   "entryType": "🔥 NEW",
+   "id": "SAMAIDEN_2026-11-02_ADDON",
+   "name": "SAMAIDEN",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
    "entryDate": "2026-11-02",
-   "entry": 0.5,
-   "entryFloor": 0.5,
-   "currentFloor": 0.5,
-   "currentPrice": 0.5,
-   "high": 0.5,
+   "entry": 3.01,
+   "entryFloor": 3,
+   "currentFloor": 3,
+   "currentPrice": 3.01,
+   "high": 3.01,
    "highDate": "2026-11-02",
    "maxGain": 0,
    "finalGain": 0,
-   "day1ChangePct": -0.99,
+   "day1ChangePct": -1.95,
    "days": 1,
    "lastDate": "2026-11-02",
    "status": "OPEN",
    "themes": [
-    "Semiconductor"
+    "Solar/RE"
    ],
-   "confluence": 2,
+   "confluence": 3,
    "isGoldenCombo": false
   },
   {
@@ -21258,11 +21258,11 @@ window.HOT_THEME_ALL_TRACKER = {
    "entry": 2.63,
    "entryFloor": 2.56,
    "currentFloor": 2.58,
-   "currentPrice": 2.57,
+   "currentPrice": 2.56,
    "high": 2.63,
    "highDate": "2026-10-30",
    "maxGain": 0,
-   "finalGain": -2.3,
+   "finalGain": -2.7,
    "day1ChangePct": -1.87,
    "days": 2,
    "lastDate": "2026-11-02",
@@ -21330,11 +21330,11 @@ window.HOT_THEME_ALL_TRACKER = {
    "entry": 1.01,
    "entryFloor": 0.99,
    "currentFloor": 0.975,
-   "currentPrice": 0.96,
+   "currentPrice": 0.965,
    "high": 1.01,
    "highDate": "2026-10-28",
    "maxGain": 0,
-   "finalGain": -5,
+   "finalGain": -4.5,
    "day1ChangePct": 0,
    "days": 4,
    "lastDate": "2026-11-02",
