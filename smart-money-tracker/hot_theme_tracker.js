@@ -1,17 +1,17 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-02T08:23:24.537Z",
+  "generatedAt": "2026-11-02T08:28:22.727Z",
   "dataDays": 104,
   "totalTracked": 396,
-  "openCount": 43,
-  "closedCount": 353,
+  "openCount": 42,
+  "closedCount": 354,
   "closedWins": 200,
-  "closedWinRate": 57,
+  "closedWinRate": 56,
   "closedAvgGain": 9.3,
-  "openPnl": 125.4,
-  "closedPnl": 3286.1,
-  "totalPnlNow": 3411.5
+  "openPnl": 128.7,
+  "closedPnl": 3283.1,
+  "totalPnlNow": 3411.8
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -19,8 +19,8 @@ window.HOT_THEME_TRACKER = {
   "dataDays": 104,
   "signals": 46,
   "winRate": 61,
-  "avgGain": 8.1,
-  "totalPnl": 370.8,
+  "avgGain": 8,
+  "totalPnl": 369.7,
   "worstLoss": -16
  },
  "themeStrength": [
@@ -747,7 +747,7 @@ window.HOT_THEME_TRACKER = {
   },
   {
    "date": "2026-11-02",
-   "themePct": 33.6,
+   "themePct": 33.5,
    "themeCount": 78,
    "totalCount": 316,
    "ma5": 30.8
@@ -809,11 +809,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 2.63,
    "entryFloor": 2.56,
    "currentFloor": 2.58,
-   "currentPrice": 2.56,
+   "currentPrice": 2.57,
    "high": 2.63,
    "highDate": "2026-10-30",
    "maxGain": 0,
-   "finalGain": -2.7,
+   "finalGain": -2.3,
    "day1ChangePct": -1.87,
    "days": 2,
    "lastDate": "2026-11-02",
@@ -857,11 +857,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 0.43,
    "entryFloor": 0.415,
    "currentFloor": 0.415,
-   "currentPrice": 0.41,
+   "currentPrice": 0.405,
    "high": 0.43,
    "highDate": "2026-10-28",
    "maxGain": 0,
-   "finalGain": -4.7,
+   "finalGain": -5.8,
    "day1ChangePct": 3.61,
    "days": 4,
    "lastDate": "2026-11-02",
@@ -922,30 +922,6 @@ window.HOT_THEME_TRACKER = {
    "slTrail": 2.735
   },
   {
-   "id": "PENTA_2026-10-26_ADDON",
-   "name": "PENTA",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
-   "entryDate": "2026-10-26",
-   "entry": 5.62,
-   "entryFloor": 5.4,
-   "currentFloor": 5.62,
-   "currentPrice": 5.47,
-   "high": 5.89,
-   "highDate": "2026-10-29",
-   "maxGain": 4.8,
-   "finalGain": -2.7,
-   "day1ChangePct": 2.18,
-   "days": 6,
-   "lastDate": "2026-11-02",
-   "status": "OPEN",
-   "themes": [
-    "Semiconductor"
-   ],
-   "confluence": 3,
-   "isGoldenCombo": false,
-   "slTrail": 5.451
-  },
-  {
    "id": "UWC_2026-10-26_ADDON",
    "name": "UWC",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -953,11 +929,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 7.26,
    "entryFloor": 7.18,
    "currentFloor": 7.15,
-   "currentPrice": 7.06,
+   "currentPrice": 7.08,
    "high": 7.64,
    "highDate": "2026-10-29",
    "maxGain": 5.2,
-   "finalGain": -2.8,
+   "finalGain": -2.5,
    "day1ChangePct": 0.97,
    "days": 6,
    "lastDate": "2026-11-02",
@@ -996,6 +972,32 @@ window.HOT_THEME_TRACKER = {
    "exitPrice": 0.247
   },
   {
+   "id": "PENTA_2026-10-26_ADDON",
+   "name": "PENTA",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-10-26",
+   "entry": 5.62,
+   "entryFloor": 5.4,
+   "currentFloor": 5.62,
+   "currentPrice": 5.45,
+   "high": 5.89,
+   "highDate": "2026-10-29",
+   "maxGain": 4.8,
+   "finalGain": -3,
+   "day1ChangePct": 2.18,
+   "days": 6,
+   "lastDate": "2026-11-02",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false,
+   "slTrail": 5.451,
+   "exitDate": "2026-11-02",
+   "exitPrice": 5.451
+  },
+  {
    "id": "NATGATE_2026-10-16_ADDON",
    "name": "NATGATE",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -1003,11 +1005,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 2.02,
    "entryFloor": 2,
    "currentFloor": 2.07,
-   "currentPrice": 2.05,
+   "currentPrice": 2.07,
    "high": 2.23,
    "highDate": "2026-10-29",
    "maxGain": 10.4,
-   "finalGain": 1.5,
+   "finalGain": 2.5,
    "day1ChangePct": 1,
    "days": 7,
    "lastDate": "2026-11-02",
@@ -10984,7 +10986,7 @@ window.HOT_THEME_TRACKER = {
 };
 window.HOT_THEME_NEW_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-02T08:23:24.538Z",
+  "generatedAt": "2026-11-02T08:28:22.727Z",
   "dataDays": 104,
   "totalTracked": 52,
   "openCount": 8,
@@ -10992,9 +10994,9 @@ window.HOT_THEME_NEW_TRACKER = {
   "closedWins": 18,
   "closedWinRate": 41,
   "closedAvgGain": 8.8,
-  "openPnl": 42.8,
+  "openPnl": 41.7,
   "closedPnl": 385.1,
-  "totalPnlNow": 427.9
+  "totalPnlNow": 426.8
  },
  "trades": [
   {
@@ -12294,11 +12296,11 @@ window.HOT_THEME_NEW_TRACKER = {
    "entry": 0.43,
    "entryFloor": 0.415,
    "currentFloor": 0.415,
-   "currentPrice": 0.41,
+   "currentPrice": 0.405,
    "high": 0.43,
    "highDate": "2026-10-28",
    "maxGain": 0,
-   "finalGain": -4.7,
+   "finalGain": -5.8,
    "day1ChangePct": 3.61,
    "days": 4,
    "lastDate": "2026-11-02",
@@ -12337,7 +12339,7 @@ window.HOT_THEME_NEW_TRACKER = {
 };
 window.HOT_THEME_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-02T08:23:24.540Z",
+  "generatedAt": "2026-11-02T08:28:22.728Z",
   "dataDays": 104,
   "totalTracked": 174,
   "openCount": 20,
@@ -12345,9 +12347,9 @@ window.HOT_THEME_ADDON_TRACKER = {
   "closedWins": 110,
   "closedWinRate": 71,
   "closedAvgGain": 15.6,
-  "openPnl": -12.6,
+  "openPnl": -12.2,
   "closedPnl": 2402,
-  "totalPnlNow": 2389.4
+  "totalPnlNow": 2389.8
  },
  "trades": [
   {
@@ -16819,11 +16821,11 @@ window.HOT_THEME_ADDON_TRACKER = {
    "entry": 2.63,
    "entryFloor": 2.56,
    "currentFloor": 2.58,
-   "currentPrice": 2.56,
+   "currentPrice": 2.57,
    "high": 2.63,
    "highDate": "2026-10-30",
    "maxGain": 0,
-   "finalGain": -2.7,
+   "finalGain": -2.3,
    "day1ChangePct": -1.87,
    "days": 2,
    "lastDate": "2026-11-02",
@@ -16839,17 +16841,17 @@ window.HOT_THEME_ADDON_TRACKER = {
 };
 window.HOT_THEME_FLOOR_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-02T08:23:24.540Z",
+  "generatedAt": "2026-11-02T08:28:22.728Z",
   "dataDays": 104,
   "totalTracked": 170,
-  "openCount": 15,
-  "closedCount": 155,
+  "openCount": 14,
+  "closedCount": 156,
   "closedWins": 72,
   "closedWinRate": 46,
   "closedAvgGain": 3.2,
-  "openPnl": 95.2,
-  "closedPnl": 499,
-  "totalPnlNow": 594.2
+  "openPnl": 99.2,
+  "closedPnl": 496,
+  "totalPnlNow": 595.2
  },
  "trades": [
   {
@@ -21097,11 +21099,11 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "entry": 2.02,
    "entryFloor": 2,
    "currentFloor": 2.07,
-   "currentPrice": 2.05,
+   "currentPrice": 2.07,
    "high": 2.23,
    "highDate": "2026-10-29",
    "maxGain": 10.4,
-   "finalGain": 1.5,
+   "finalGain": 2.5,
    "day1ChangePct": 1,
    "days": 7,
    "lastDate": "2026-11-02",
@@ -21145,21 +21147,23 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "entry": 5.62,
    "entryFloor": 5.4,
    "currentFloor": 5.62,
-   "currentPrice": 5.47,
+   "currentPrice": 5.45,
    "high": 5.89,
    "highDate": "2026-10-29",
    "maxGain": 4.8,
-   "finalGain": -2.7,
+   "finalGain": -3,
    "day1ChangePct": 2.18,
    "days": 6,
    "lastDate": "2026-11-02",
-   "status": "OPEN",
+   "status": "CLOSED_SL",
    "themes": [
     "Semiconductor"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 5.451
+   "slTrail": 5.451,
+   "exitDate": "2026-11-02",
+   "exitPrice": 5.451
   },
   {
    "id": "UWC_2026-10-26_ADDON",
@@ -21169,11 +21173,11 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "entry": 7.26,
    "entryFloor": 7.18,
    "currentFloor": 7.15,
-   "currentPrice": 7.06,
+   "currentPrice": 7.08,
    "high": 7.64,
    "highDate": "2026-10-29",
    "maxGain": 5.2,
-   "finalGain": -2.8,
+   "finalGain": -2.5,
    "day1ChangePct": 0.97,
    "days": 6,
    "lastDate": "2026-11-02",
@@ -21260,17 +21264,17 @@ window.HOT_THEME_FLOOR_TRACKER = {
 };
 window.HOT_THEME_ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-02T08:23:24.537Z",
+  "generatedAt": "2026-11-02T08:28:22.727Z",
   "dataDays": 104,
   "totalTracked": 396,
-  "openCount": 43,
-  "closedCount": 353,
+  "openCount": 42,
+  "closedCount": 354,
   "closedWins": 200,
-  "closedWinRate": 57,
+  "closedWinRate": 56,
   "closedAvgGain": 9.3,
-  "openPnl": 125.4,
-  "closedPnl": 3286.1,
-  "totalPnlNow": 3411.5
+  "openPnl": 128.7,
+  "closedPnl": 3283.1,
+  "totalPnlNow": 3411.8
  },
  "trades": [
   {
@@ -21327,11 +21331,11 @@ window.HOT_THEME_ALL_TRACKER = {
    "entry": 2.63,
    "entryFloor": 2.56,
    "currentFloor": 2.58,
-   "currentPrice": 2.56,
+   "currentPrice": 2.57,
    "high": 2.63,
    "highDate": "2026-10-30",
    "maxGain": 0,
-   "finalGain": -2.7,
+   "finalGain": -2.3,
    "day1ChangePct": -1.87,
    "days": 2,
    "lastDate": "2026-11-02",
@@ -21375,11 +21379,11 @@ window.HOT_THEME_ALL_TRACKER = {
    "entry": 0.43,
    "entryFloor": 0.415,
    "currentFloor": 0.415,
-   "currentPrice": 0.41,
+   "currentPrice": 0.405,
    "high": 0.43,
    "highDate": "2026-10-28",
    "maxGain": 0,
-   "finalGain": -4.7,
+   "finalGain": -5.8,
    "day1ChangePct": 3.61,
    "days": 4,
    "lastDate": "2026-11-02",
@@ -21440,30 +21444,6 @@ window.HOT_THEME_ALL_TRACKER = {
    "slTrail": 2.735
   },
   {
-   "id": "PENTA_2026-10-26_ADDON",
-   "name": "PENTA",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
-   "entryDate": "2026-10-26",
-   "entry": 5.62,
-   "entryFloor": 5.4,
-   "currentFloor": 5.62,
-   "currentPrice": 5.47,
-   "high": 5.89,
-   "highDate": "2026-10-29",
-   "maxGain": 4.8,
-   "finalGain": -2.7,
-   "day1ChangePct": 2.18,
-   "days": 6,
-   "lastDate": "2026-11-02",
-   "status": "OPEN",
-   "themes": [
-    "Semiconductor"
-   ],
-   "confluence": 3,
-   "isGoldenCombo": false,
-   "slTrail": 5.451
-  },
-  {
    "id": "UWC_2026-10-26_ADDON",
    "name": "UWC",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -21471,11 +21451,11 @@ window.HOT_THEME_ALL_TRACKER = {
    "entry": 7.26,
    "entryFloor": 7.18,
    "currentFloor": 7.15,
-   "currentPrice": 7.06,
+   "currentPrice": 7.08,
    "high": 7.64,
    "highDate": "2026-10-29",
    "maxGain": 5.2,
-   "finalGain": -2.8,
+   "finalGain": -2.5,
    "day1ChangePct": 0.97,
    "days": 6,
    "lastDate": "2026-11-02",
@@ -21514,6 +21494,32 @@ window.HOT_THEME_ALL_TRACKER = {
    "exitPrice": 0.247
   },
   {
+   "id": "PENTA_2026-10-26_ADDON",
+   "name": "PENTA",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-10-26",
+   "entry": 5.62,
+   "entryFloor": 5.4,
+   "currentFloor": 5.62,
+   "currentPrice": 5.45,
+   "high": 5.89,
+   "highDate": "2026-10-29",
+   "maxGain": 4.8,
+   "finalGain": -3,
+   "day1ChangePct": 2.18,
+   "days": 6,
+   "lastDate": "2026-11-02",
+   "status": "CLOSED_SL",
+   "themes": [
+    "Semiconductor"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false,
+   "slTrail": 5.451,
+   "exitDate": "2026-11-02",
+   "exitPrice": 5.451
+  },
+  {
    "id": "NATGATE_2026-10-16_ADDON",
    "name": "NATGATE",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -21521,11 +21527,11 @@ window.HOT_THEME_ALL_TRACKER = {
    "entry": 2.02,
    "entryFloor": 2,
    "currentFloor": 2.07,
-   "currentPrice": 2.05,
+   "currentPrice": 2.07,
    "high": 2.23,
    "highDate": "2026-10-29",
    "maxGain": 10.4,
-   "finalGain": 1.5,
+   "finalGain": 2.5,
    "day1ChangePct": 1,
    "days": 7,
    "lastDate": "2026-11-02",
