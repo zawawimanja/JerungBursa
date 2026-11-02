@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-11-02T04:08:29.500Z",
+ "generatedAt": "2026-11-02T04:13:28.415Z",
  "totalDays": 100,
  "startDate": "2026-06-02",
  "endDate": "2026-11-02",
@@ -289166,13 +289166,13 @@ window.DAILY_EQUITY_TRACKER = {
    "totalSignals": 475,
    "openCount": 52,
    "closedCount": 423,
-   "openPnl": 366.6,
+   "openPnl": 365.9,
    "closedPnl": 4027.9,
-   "totalPnl": 4394.5,
-   "frPnl": 407.9,
+   "totalPnl": 4393.8,
+   "frPnl": 407,
    "addOnPnl": 590.5,
-   "htPnl": 3396.1,
-   "dailyPnlDelta": 19.6,
+   "htPnl": 3396.3,
+   "dailyPnlDelta": 18.9,
    "winRate": 56,
    "avgGain": 9.3,
    "peakGainer": {
@@ -289208,10 +289208,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-15",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.6,
-     "gainOnDay": 17.6,
-     "dayChangePct": -1.64,
-     "pnlDeltaToday": -2
+     "priceOnDay": 0.595,
+     "gainOnDay": 16.7,
+     "dayChangePct": -2.46,
+     "pnlDeltaToday": -2.9
     },
     {
      "id": "FR:EXSIMHB_2026-09-30_🔥 NEW",
@@ -290132,10 +290132,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-26",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 5.49,
-     "gainOnDay": -2.3,
-     "dayChangePct": -3.17,
-     "pnlDeltaToday": -3.2
+     "priceOnDay": 5.46,
+     "gainOnDay": -2.8,
+     "dayChangePct": -3.7,
+     "pnlDeltaToday": -3.7
     },
     {
      "id": "HT:UWC_2026-10-26_ADDON",
@@ -290143,10 +290143,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-26",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 7,
-     "gainOnDay": -3.6,
-     "dayChangePct": -2.1,
-     "pnlDeltaToday": -2.1
+     "priceOnDay": 7.01,
+     "gainOnDay": -3.4,
+     "dayChangePct": -1.96,
+     "pnlDeltaToday": -1.9
     },
     {
      "id": "HT:RPLANET_2026-10-26_NEW",
@@ -290165,10 +290165,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-16",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.05,
-     "gainOnDay": 1.5,
-     "dayChangePct": -4.21,
-     "pnlDeltaToday": -4.4
+     "priceOnDay": 2.06,
+     "gainOnDay": 2,
+     "dayChangePct": -3.74,
+     "pnlDeltaToday": -3.9
     },
     {
      "id": "HT:MNHLDG_2026-10-14_ADDON",
