@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-11-02T07:33:25.250Z",
+ "generatedAt": "2026-11-02T07:43:22.505Z",
  "totalDays": 100,
  "startDate": "2026-06-02",
  "endDate": "2026-11-02",
@@ -289163,20 +289163,20 @@ window.DAILY_EQUITY_TRACKER = {
   },
   {
    "date": "2026-11-02",
-   "totalSignals": 476,
-   "openCount": 53,
+   "totalSignals": 477,
+   "openCount": 54,
    "closedCount": 423,
-   "openPnl": 381.6,
+   "openPnl": 376.3,
    "closedPnl": 4027.9,
-   "totalPnl": 4409.5,
-   "frPnl": 410.9,
+   "totalPnl": 4404.2,
+   "frPnl": 409,
    "addOnPnl": 591.3,
-   "htPnl": 3407.3,
-   "dailyPnlDelta": 34.6,
+   "htPnl": 3403.9,
+   "dailyPnlDelta": 29.3,
    "winRate": 55,
-   "avgGain": 9.3,
+   "avgGain": 9.2,
    "peakGainer": {
-    "gain": 157.8,
+    "gain": 156.9,
     "name": "KEEMING"
    },
    "trades": [
@@ -289219,10 +289219,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-09-30",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.5,
-     "gainOnDay": 0,
-     "dayChangePct": -1.96,
-     "pnlDeltaToday": -2
+     "priceOnDay": 0.495,
+     "gainOnDay": -1,
+     "dayChangePct": -2.94,
+     "pnlDeltaToday": -3
     },
     {
      "id": "FR:KEEMING_2026-06-03_🔥 NEW",
@@ -289230,10 +289230,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-06-03",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.81,
-     "gainOnDay": 157.8,
+     "priceOnDay": 2.8,
+     "gainOnDay": 156.9,
      "dayChangePct": 0,
-     "pnlDeltaToday": -8.3
+     "pnlDeltaToday": -9.2
     },
     {
      "id": "FR:SUM_2026-09-11_🔥 NEW",
@@ -290072,6 +290072,17 @@ window.DAILY_EQUITY_TRACKER = {
      "pnlDeltaToday": 0
     },
     {
+     "id": "HT:CLOUDPT_2026-11-02_NEW",
+     "name": "CLOUDPT",
+     "entryDate": "2026-11-02",
+     "trackerType": "HT",
+     "statusOnDay": "OPEN",
+     "priceOnDay": 0.5,
+     "gainOnDay": 0,
+     "dayChangePct": -0.99,
+     "pnlDeltaToday": 0
+    },
+    {
      "id": "HT:SAMAIDEN_2026-11-02_ADDON",
      "name": "SAMAIDEN",
      "entryDate": "2026-11-02",
@@ -290088,10 +290099,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-30",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.56,
-     "gainOnDay": -2.7,
-     "dayChangePct": -2.66,
-     "pnlDeltaToday": -2.7
+     "priceOnDay": 2.57,
+     "gainOnDay": -2.3,
+     "dayChangePct": -2.28,
+     "pnlDeltaToday": -2.3
     },
     {
      "id": "HT:MNHLDG_2026-10-30_ADDON",
@@ -290110,10 +290121,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-28",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.41,
-     "gainOnDay": -4.7,
-     "dayChangePct": -1.2,
-     "pnlDeltaToday": -1.2
+     "priceOnDay": 0.405,
+     "gainOnDay": -5.8,
+     "dayChangePct": -2.41,
+     "pnlDeltaToday": -2.3
     },
     {
      "id": "HT:HEGROUP_2026-10-28_ADDON",
@@ -290143,10 +290154,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-26",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 5.48,
-     "gainOnDay": -2.5,
-     "dayChangePct": -3.35,
-     "pnlDeltaToday": -3.4
+     "priceOnDay": 5.47,
+     "gainOnDay": -2.7,
+     "dayChangePct": -3.53,
+     "pnlDeltaToday": -3.6
     },
     {
      "id": "HT:UWC_2026-10-26_ADDON",
@@ -290154,10 +290165,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-26",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 7.02,
-     "gainOnDay": -3.3,
-     "dayChangePct": -1.82,
-     "pnlDeltaToday": -1.8
+     "priceOnDay": 7.06,
+     "gainOnDay": -2.8,
+     "dayChangePct": -1.26,
+     "pnlDeltaToday": -1.3
     },
     {
      "id": "HT:RPLANET_2026-10-26_NEW",
@@ -290858,10 +290869,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-09-18",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.43,
-     "gainOnDay": -3.7,
-     "dayChangePct": -1.06,
-     "pnlDeltaToday": -1.1
+     "priceOnDay": 8.42,
+     "gainOnDay": -3.8,
+     "dayChangePct": -1.17,
+     "pnlDeltaToday": -1.2
     },
     {
      "id": "HT:GREATEC_2026-09-18_ADDON",
@@ -290880,10 +290891,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-09-17",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.43,
-     "gainOnDay": -1.2,
-     "dayChangePct": -1.06,
-     "pnlDeltaToday": -1.1
+     "priceOnDay": 8.42,
+     "gainOnDay": -1.3,
+     "dayChangePct": -1.17,
+     "pnlDeltaToday": -1.2
     },
     {
      "id": "HT:NATGATE_2026-09-17_ADDON",
@@ -290924,10 +290935,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-09-14",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.43,
-     "gainOnDay": -0.4,
-     "dayChangePct": -1.06,
-     "pnlDeltaToday": -1.1
+     "priceOnDay": 8.42,
+     "gainOnDay": -0.5,
+     "dayChangePct": -1.17,
+     "pnlDeltaToday": -1.2
     },
     {
      "id": "HT:GREATEC_2026-09-14_ADDON",
@@ -290979,10 +290990,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-09-11",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.43,
-     "gainOnDay": -0.4,
-     "dayChangePct": -1.06,
-     "pnlDeltaToday": -1.1
+     "priceOnDay": 8.42,
+     "gainOnDay": -0.5,
+     "dayChangePct": -1.17,
+     "pnlDeltaToday": -1.2
     },
     {
      "id": "HT:SUM_2026-09-11_NEW",
@@ -291034,10 +291045,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-09-10",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.43,
-     "gainOnDay": -2.5,
-     "dayChangePct": -1.06,
-     "pnlDeltaToday": -1
+     "priceOnDay": 8.42,
+     "gainOnDay": -2.7,
+     "dayChangePct": -1.17,
+     "pnlDeltaToday": -1.2
     },
     {
      "id": "HT:NATGATE_2026-09-10_NEW",
@@ -291111,10 +291122,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-09-09",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.43,
-     "gainOnDay": -2.5,
-     "dayChangePct": -1.06,
-     "pnlDeltaToday": -1
+     "priceOnDay": 8.42,
+     "gainOnDay": -2.7,
+     "dayChangePct": -1.17,
+     "pnlDeltaToday": -1.2
     },
     {
      "id": "HT:CORAZA_2026-09-09_ADDON",
@@ -291155,10 +291166,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-09-08",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.43,
-     "gainOnDay": -3,
-     "dayChangePct": -1.06,
-     "pnlDeltaToday": -1
+     "priceOnDay": 8.42,
+     "gainOnDay": -3.1,
+     "dayChangePct": -1.17,
+     "pnlDeltaToday": -1.1
     },
     {
      "id": "HT:UWC_2026-09-08_ADDON",
@@ -291221,10 +291232,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-09-07",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.43,
-     "gainOnDay": -1.4,
-     "dayChangePct": -1.06,
-     "pnlDeltaToday": -1
+     "priceOnDay": 8.42,
+     "gainOnDay": -1.5,
+     "dayChangePct": -1.17,
+     "pnlDeltaToday": -1.1
     },
     {
      "id": "HT:VITROX_2026-09-07_ADDON",
@@ -291276,10 +291287,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-09-04",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.43,
-     "gainOnDay": -3,
-     "dayChangePct": -1.06,
-     "pnlDeltaToday": -1
+     "priceOnDay": 8.42,
+     "gainOnDay": -3.1,
+     "dayChangePct": -1.17,
+     "pnlDeltaToday": -1.1
     },
     {
      "id": "HT:DNEX_2026-09-04_ADDON",
@@ -291529,10 +291540,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-08-21",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.54,
-     "gainOnDay": 36.6,
-     "dayChangePct": 3.52,
-     "pnlDeltaToday": -3.6
+     "priceOnDay": 8.5,
+     "gainOnDay": 36,
+     "dayChangePct": 3.03,
+     "pnlDeltaToday": -4.2
     },
     {
      "id": "HT:NEXG_2026-08-21_NEW",
@@ -291826,10 +291837,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-08-14",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.43,
-     "gainOnDay": -3.1,
-     "dayChangePct": -1.06,
-     "pnlDeltaToday": -1
+     "priceOnDay": 8.42,
+     "gainOnDay": -3.2,
+     "dayChangePct": -1.17,
+     "pnlDeltaToday": -1.1
     },
     {
      "id": "HT:UWC_2026-08-14_ADDON",
@@ -291892,10 +291903,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-08-13",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.43,
-     "gainOnDay": -3.4,
-     "dayChangePct": -1.06,
-     "pnlDeltaToday": -1
+     "priceOnDay": 8.42,
+     "gainOnDay": -3.6,
+     "dayChangePct": -1.17,
+     "pnlDeltaToday": -1.2
     },
     {
      "id": "HT:VS_2026-08-13_NEW",
@@ -291936,10 +291947,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-08-12",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.43,
-     "gainOnDay": -3.8,
-     "dayChangePct": -1.06,
-     "pnlDeltaToday": -1.1
+     "priceOnDay": 8.42,
+     "gainOnDay": -3.9,
+     "dayChangePct": -1.17,
+     "pnlDeltaToday": -1.2
     },
     {
      "id": "HT:KEEMING_2026-08-12_ADDON",
@@ -292024,10 +292035,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-08-11",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.43,
-     "gainOnDay": -2.3,
-     "dayChangePct": -1.06,
-     "pnlDeltaToday": -1
+     "priceOnDay": 8.42,
+     "gainOnDay": -2.4,
+     "dayChangePct": -1.17,
+     "pnlDeltaToday": -1.1
     },
     {
      "id": "HT:KEEMING_2026-08-11_ADDON",
@@ -292068,10 +292079,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-08-10",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.43,
-     "gainOnDay": -3.1,
-     "dayChangePct": -1.06,
-     "pnlDeltaToday": -1
+     "priceOnDay": 8.42,
+     "gainOnDay": -3.2,
+     "dayChangePct": -1.17,
+     "pnlDeltaToday": -1.1
     },
     {
      "id": "HT:KEEMING_2026-08-10_ADDON",
@@ -292475,10 +292486,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-07-27",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.43,
-     "gainOnDay": 2.7,
-     "dayChangePct": -1.06,
-     "pnlDeltaToday": -1.1
+     "priceOnDay": 8.42,
+     "gainOnDay": 2.6,
+     "dayChangePct": -1.17,
+     "pnlDeltaToday": -1.2
     },
     {
      "id": "HT:VITROX_2026-07-27_ADDON",
@@ -292541,10 +292552,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-07-24",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.43,
-     "gainOnDay": 5.2,
-     "dayChangePct": -1.06,
-     "pnlDeltaToday": -1.2
+     "priceOnDay": 8.42,
+     "gainOnDay": 5.1,
+     "dayChangePct": -1.17,
+     "pnlDeltaToday": -1.3
     },
     {
      "id": "HT:VITROX_2026-07-24_ADDON",
@@ -292662,10 +292673,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-07-16",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.43,
-     "gainOnDay": 7.7,
-     "dayChangePct": -1.06,
-     "pnlDeltaToday": -1.1
+     "priceOnDay": 8.42,
+     "gainOnDay": 7.5,
+     "dayChangePct": -1.17,
+     "pnlDeltaToday": -1.3
     },
     {
      "id": "HT:SAM_2026-07-16_ADDON",
@@ -292981,10 +292992,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-07-08",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.43,
-     "gainOnDay": 8.5,
-     "dayChangePct": -1.06,
-     "pnlDeltaToday": -1.2
+     "priceOnDay": 8.42,
+     "gainOnDay": 8.4,
+     "dayChangePct": -1.17,
+     "pnlDeltaToday": -1.3
     },
     {
      "id": "HT:UWC_2026-07-08_ADDON",
@@ -293069,10 +293080,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-07-07",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.43,
-     "gainOnDay": 8.5,
-     "dayChangePct": -1.06,
-     "pnlDeltaToday": -1.2
+     "priceOnDay": 8.42,
+     "gainOnDay": 8.4,
+     "dayChangePct": -1.17,
+     "pnlDeltaToday": -1.3
     },
     {
      "id": "HT:UWC_2026-07-07_ADDON",
@@ -293201,10 +293212,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-07-03",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 8.43,
-     "gainOnDay": 5.4,
-     "dayChangePct": -1.06,
-     "pnlDeltaToday": -1.1
+     "priceOnDay": 8.42,
+     "gainOnDay": 5.3,
+     "dayChangePct": -1.17,
+     "pnlDeltaToday": -1.2
     },
     {
      "id": "HT:VITROX_2026-07-03_ADDON",
