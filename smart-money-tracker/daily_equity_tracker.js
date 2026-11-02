@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-11-02T06:58:23.174Z",
+ "generatedAt": "2026-11-02T07:03:26.475Z",
  "totalDays": 100,
  "startDate": "2026-06-02",
  "endDate": "2026-11-02",
@@ -289166,13 +289166,13 @@ window.DAILY_EQUITY_TRACKER = {
    "totalSignals": 475,
    "openCount": 52,
    "closedCount": 423,
-   "openPnl": 381.5,
+   "openPnl": 382.9,
    "closedPnl": 4027.9,
-   "totalPnl": 4409.4,
+   "totalPnl": 4410.8,
    "frPnl": 414.6,
    "addOnPnl": 591.3,
-   "htPnl": 3403.5,
-   "dailyPnlDelta": 34.5,
+   "htPnl": 3404.9,
+   "dailyPnlDelta": 35.9,
    "winRate": 55,
    "avgGain": 9.3,
    "peakGainer": {
@@ -290088,10 +290088,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-30",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 3.83,
-     "gainOnDay": -1.5,
-     "dayChangePct": -1.54,
-     "pnlDeltaToday": -1.5
+     "priceOnDay": 3.84,
+     "gainOnDay": -1.3,
+     "dayChangePct": -1.29,
+     "pnlDeltaToday": -1.3
     },
     {
      "id": "HT:EDELTEQ_2026-10-28_NEW",
@@ -290110,10 +290110,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-28",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.96,
-     "gainOnDay": -5,
-     "dayChangePct": -1.54,
-     "pnlDeltaToday": -1.5
+     "priceOnDay": 0.965,
+     "gainOnDay": -4.5,
+     "dayChangePct": -1.03,
+     "pnlDeltaToday": -1
     },
     {
      "id": "HT:PEKAT_2026-10-26_ADDON",
@@ -290132,10 +290132,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-26",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 5.47,
-     "gainOnDay": -2.7,
-     "dayChangePct": -3.53,
-     "pnlDeltaToday": -3.6
+     "priceOnDay": 5.46,
+     "gainOnDay": -2.8,
+     "dayChangePct": -3.7,
+     "pnlDeltaToday": -3.7
     },
     {
      "id": "HT:UWC_2026-10-26_ADDON",
@@ -290143,10 +290143,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-26",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 7,
-     "gainOnDay": -3.6,
-     "dayChangePct": -2.1,
-     "pnlDeltaToday": -2.1
+     "priceOnDay": 7.02,
+     "gainOnDay": -3.3,
+     "dayChangePct": -1.82,
+     "pnlDeltaToday": -1.8
     },
     {
      "id": "HT:RPLANET_2026-10-26_NEW",
@@ -290165,10 +290165,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-16",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.05,
-     "gainOnDay": 1.5,
-     "dayChangePct": -4.21,
-     "pnlDeltaToday": -4.4
+     "priceOnDay": 2.06,
+     "gainOnDay": 2,
+     "dayChangePct": -3.74,
+     "pnlDeltaToday": -3.9
     },
     {
      "id": "HT:MNHLDG_2026-10-14_ADDON",
