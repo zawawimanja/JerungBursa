@@ -1,5 +1,5 @@
 // Auto-generated Corporate News & Ex-Dividend Database
-// Generated At: 2026-11-06T07:45:21.547Z
+// Generated At: 2026-11-06T15:24:53.313Z
 window.NEWS_DATA = {
   "3REN": {
     "hasNewsAlert": false,
@@ -187,10 +187,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:39.242Z",
+    "checkedAt": "2026-11-06T15:25:10.326Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:39.242Z",
-      "entitlements": "2026-11-06T07:45:39.242Z"
+      "announcements": "2026-11-06T15:25:10.326Z",
+      "entitlements": "2026-11-06T15:25:10.326Z"
     }
   },
   "5ER": {
@@ -363,10 +363,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:26.634Z",
+    "checkedAt": "2026-11-06T15:24:57.667Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:26.634Z",
-      "entitlements": "2026-11-06T07:45:26.634Z"
+      "announcements": "2026-11-06T15:24:57.667Z",
+      "entitlements": "2026-11-06T15:24:57.667Z"
     }
   },
   "99 SPEED MART RETAIL": {
@@ -376,10 +376,15 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-05] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-11-05",
         "category": "Changes in Shareholdings",
@@ -524,11 +529,6 @@ window.NEWS_DATA = {
         "date": "2026-08-17",
         "category": "Financial Results",
         "title": "Quarterly rpt on consolidated results for the financial period ended 30/06/2026"
-      },
-      {
-        "date": "2026-08-17",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -573,10 +573,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:30.120Z",
+    "checkedAt": "2026-11-06T15:25:05.695Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:30.120Z",
-      "entitlements": "2026-11-06T07:45:30.120Z"
+      "announcements": "2026-11-06T15:25:05.695Z",
+      "entitlements": "2026-11-06T15:25:05.695Z"
     }
   },
   "A1AKK": {
@@ -756,10 +756,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:27.081Z",
+    "checkedAt": "2026-11-06T15:24:58.330Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:27.081Z",
-      "entitlements": "2026-11-06T07:45:27.081Z"
+      "announcements": "2026-11-06T15:24:58.330Z",
+      "entitlements": "2026-11-06T15:24:58.330Z"
     }
   },
   "AAGB": {
@@ -1102,10 +1102,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:38.389Z",
+    "checkedAt": "2026-11-06T15:25:09.697Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:38.389Z",
-      "entitlements": "2026-11-06T07:45:38.389Z"
+      "announcements": "2026-11-06T15:25:09.697Z",
+      "entitlements": "2026-11-06T15:25:09.697Z"
     }
   },
   "ACO": {
@@ -1321,10 +1321,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:29.829Z",
+    "checkedAt": "2026-11-06T15:25:02.132Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:29.829Z",
-      "entitlements": "2026-11-06T07:45:29.829Z"
+      "announcements": "2026-11-06T15:25:02.132Z",
+      "entitlements": "2026-11-06T15:25:02.132Z"
     }
   },
   "ADB": {
@@ -1540,10 +1540,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:37.334Z",
+    "checkedAt": "2026-11-06T15:25:09.067Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:37.334Z",
-      "entitlements": "2026-11-06T07:45:37.334Z"
+      "announcements": "2026-11-06T15:25:09.067Z",
+      "entitlements": "2026-11-06T15:25:09.067Z"
     }
   },
   "ADNEX": {
@@ -1708,10 +1708,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:26.748Z",
+    "checkedAt": "2026-11-06T15:24:56.043Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:26.748Z",
-      "entitlements": "2026-11-06T07:45:26.748Z"
+      "announcements": "2026-11-06T15:24:56.043Z",
+      "entitlements": "2026-11-06T15:24:56.043Z"
     }
   },
   "AGMO": {
@@ -1891,10 +1891,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:35.827Z",
+    "checkedAt": "2026-11-06T15:25:11.089Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:35.827Z",
-      "entitlements": "2026-11-06T07:45:35.827Z"
+      "announcements": "2026-11-06T15:25:11.089Z",
+      "entitlements": "2026-11-06T15:25:11.089Z"
     }
   },
   "AGRICOR": {
@@ -2076,10 +2076,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:33.459Z",
+    "checkedAt": "2026-11-06T15:24:57.753Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:33.459Z",
-      "entitlements": "2026-11-06T07:45:33.459Z"
+      "announcements": "2026-11-06T15:24:57.753Z",
+      "entitlements": "2026-11-06T15:24:57.753Z"
     }
   },
   "AGX": {
@@ -2277,10 +2277,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:26.246Z",
+    "checkedAt": "2026-11-06T15:24:57.334Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:26.246Z",
-      "entitlements": "2026-11-06T07:45:26.246Z"
+      "announcements": "2026-11-06T15:24:57.334Z",
+      "entitlements": "2026-11-06T15:24:57.334Z"
     }
   },
   "AIMAX": {
@@ -2489,12 +2489,17 @@ window.NEWS_DATA = {
     "newsBadges": [
       {
         "type": "RECENT_NEWS",
-        "label": "News: 2026-10-20",
+        "label": "News: 2026-11-06",
         "severity": "info",
-        "title": "[2026-10-20] Dealings in Listed Securities - DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+        "title": "[2026-11-06] Shares Buy Back - Immediate Announcement on Shares Buy Back"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement on Shares Buy Back"
+      },
       {
         "date": "2026-10-20",
         "category": "Dealings in Listed Securities",
@@ -2639,11 +2644,6 @@ window.NEWS_DATA = {
         "date": "2026-03-16",
         "category": "Shares Buy Back",
         "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-03-13",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
       }
     ],
     "entitlements": [
@@ -2670,10 +2670,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:39.500Z",
+    "checkedAt": "2026-11-06T15:25:10.941Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:39.500Z",
-      "entitlements": "2026-11-06T07:45:39.500Z"
+      "announcements": "2026-11-06T15:25:10.941Z",
+      "entitlements": "2026-11-06T15:25:10.941Z"
     }
   },
   "AIZO": {
@@ -3090,10 +3090,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:33.418Z",
+    "checkedAt": "2026-11-06T15:25:04.947Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:33.418Z",
-      "entitlements": "2026-11-06T07:45:33.418Z"
+      "announcements": "2026-11-06T15:25:04.947Z",
+      "entitlements": "2026-11-06T15:25:04.947Z"
     }
   },
   "ALPHA": {
@@ -3103,10 +3103,30 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-02] Changes in Director's Interest (Section 219 of CA 2016) - DATO' DR LEE SOON SOO"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ACE SPECIALISTS SDN BHD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ACE SPECIALISTS SDN BHD"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' DR LEE SOON SOO"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO DR LEE SOON SOO"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
       {
         "date": "2026-11-05",
         "category": "General Announcement",
@@ -3236,26 +3256,6 @@ window.NEWS_DATA = {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
         "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' DR LEE SOON SOO"
-      },
-      {
-        "date": "2026-10-16",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO DR LEE SOON SOO"
-      },
-      {
-        "date": "2026-10-16",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings During Closed Period"
-      },
-      {
-        "date": "2026-10-16",
-        "category": "Shares Buy Back",
-        "title": "Notice of SBB by a Company Pursuant to Section 127 (16) of CA 2016"
-      },
-      {
-        "date": "2026-10-15",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO DR LEE SOON SOO"
       }
     ],
     "entitlements": [
@@ -3309,10 +3309,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:24.326Z",
+    "checkedAt": "2026-11-06T15:24:55.938Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:24.326Z",
-      "entitlements": "2026-11-06T07:45:24.326Z"
+      "announcements": "2026-11-06T15:24:55.938Z",
+      "entitlements": "2026-11-06T15:24:55.938Z"
     }
   },
   "AMBANK": {
@@ -3701,10 +3701,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:30.777Z",
+    "checkedAt": "2026-11-06T15:24:58.895Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:30.777Z",
-      "entitlements": "2026-11-06T07:45:30.777Z"
+      "announcements": "2026-11-06T15:24:58.895Z",
+      "entitlements": "2026-11-06T15:24:58.895Z"
     }
   },
   "AMEREIT": {
@@ -3926,10 +3926,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:37.742Z",
+    "checkedAt": "2026-11-06T15:25:07.784Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:37.742Z",
-      "entitlements": "2026-11-06T07:45:37.742Z"
+      "announcements": "2026-11-06T15:25:07.784Z",
+      "entitlements": "2026-11-06T15:25:07.784Z"
     }
   },
   "AMS": {
@@ -4109,10 +4109,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:39.540Z",
+    "checkedAt": "2026-11-06T15:25:09.017Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:39.540Z",
-      "entitlements": "2026-11-06T07:45:39.540Z"
+      "announcements": "2026-11-06T15:25:09.017Z",
+      "entitlements": "2026-11-06T15:25:09.017Z"
     }
   },
   "ANEKA": {
@@ -4282,10 +4282,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:41.399Z",
+    "checkedAt": "2026-11-06T15:25:11.553Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:41.399Z",
-      "entitlements": "2026-11-06T07:45:41.399Z"
+      "announcements": "2026-11-06T15:25:11.553Z",
+      "entitlements": "2026-11-06T15:25:11.553Z"
     }
   },
   "APM": {
@@ -4693,10 +4693,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:40.036Z",
+    "checkedAt": "2026-11-06T15:25:11.120Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:40.036Z",
-      "entitlements": "2026-11-06T07:45:40.036Z"
+      "announcements": "2026-11-06T15:25:11.120Z",
+      "entitlements": "2026-11-06T15:25:11.120Z"
     }
   },
   "ASM": {
@@ -4866,10 +4866,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:40.435Z",
+    "checkedAt": "2026-11-06T15:25:11.469Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:40.435Z",
-      "entitlements": "2026-11-06T07:45:40.435Z"
+      "announcements": "2026-11-06T15:25:11.469Z",
+      "entitlements": "2026-11-06T15:25:11.469Z"
     }
   },
   "ATECH": {
@@ -5085,10 +5085,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:39.645Z",
+    "checkedAt": "2026-11-06T15:25:10.387Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:39.645Z",
-      "entitlements": "2026-11-06T07:45:39.645Z"
+      "announcements": "2026-11-06T15:25:10.387Z",
+      "entitlements": "2026-11-06T15:25:10.387Z"
     }
   },
   "AXIATA": {
@@ -5098,10 +5098,15 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-05] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-11-05",
         "category": "Changes in Shareholdings",
@@ -5246,11 +5251,6 @@ window.NEWS_DATA = {
         "date": "2026-09-04",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-03",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -5304,10 +5304,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:33.908Z",
+    "checkedAt": "2026-11-06T15:25:05.451Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:33.908Z",
-      "entitlements": "2026-11-06T07:45:33.908Z"
+      "announcements": "2026-11-06T15:25:05.451Z",
+      "entitlements": "2026-11-06T15:25:05.451Z"
     }
   },
   "AXTERIA": {
@@ -5706,10 +5706,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:34.854Z",
+    "checkedAt": "2026-11-06T15:25:06.667Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:34.854Z",
-      "entitlements": "2026-11-06T07:45:34.854Z"
+      "announcements": "2026-11-06T15:25:06.667Z",
+      "entitlements": "2026-11-06T15:25:06.667Z"
     }
   },
   "BAT": {
@@ -6144,10 +6144,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:36.746Z",
+    "checkedAt": "2026-11-06T15:25:08.364Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:36.746Z",
-      "entitlements": "2026-11-06T07:45:36.746Z"
+      "announcements": "2026-11-06T15:25:08.364Z",
+      "entitlements": "2026-11-06T15:25:08.364Z"
     }
   },
   "BFIELD": {
@@ -6255,10 +6255,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:31.005Z",
+    "checkedAt": "2026-11-06T15:25:07.312Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:31.005Z",
-      "entitlements": "2026-11-06T07:45:31.005Z"
+      "announcements": "2026-11-06T15:25:07.312Z",
+      "entitlements": "2026-11-06T15:25:07.312Z"
     }
   },
   "BMGREEN": {
@@ -6474,10 +6474,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:36.452Z",
+    "checkedAt": "2026-11-06T15:25:02.514Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:36.452Z",
-      "entitlements": "2026-11-06T07:45:36.452Z"
+      "announcements": "2026-11-06T15:25:02.514Z",
+      "entitlements": "2026-11-06T15:25:02.514Z"
     }
   },
   "BMS": {
@@ -6666,10 +6666,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:32.559Z",
+    "checkedAt": "2026-11-06T15:25:04.449Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:32.559Z",
-      "entitlements": "2026-11-06T07:45:32.559Z"
+      "announcements": "2026-11-06T15:25:04.449Z",
+      "entitlements": "2026-11-06T15:25:04.449Z"
     }
   },
   "BUSCAP": {
@@ -6845,10 +6845,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:23.926Z",
+    "checkedAt": "2026-11-06T15:24:55.394Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:23.926Z",
-      "entitlements": "2026-11-06T07:45:23.926Z"
+      "announcements": "2026-11-06T15:24:55.394Z",
+      "entitlements": "2026-11-06T15:24:55.394Z"
     }
   },
   "BWYS": {
@@ -7021,10 +7021,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:41.181Z",
+    "checkedAt": "2026-11-06T15:25:11.932Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:41.181Z",
-      "entitlements": "2026-11-06T07:45:41.181Z"
+      "announcements": "2026-11-06T15:25:11.932Z",
+      "entitlements": "2026-11-06T15:25:11.932Z"
     }
   },
   "CAMAROE": {
@@ -7187,10 +7187,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:26.597Z",
+    "checkedAt": "2026-11-06T15:24:57.415Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:26.597Z",
-      "entitlements": "2026-11-06T07:45:26.597Z"
+      "announcements": "2026-11-06T15:24:57.415Z",
+      "entitlements": "2026-11-06T15:24:57.415Z"
     }
   },
   "CAPITALA": {
@@ -7618,10 +7618,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:29.293Z",
+    "checkedAt": "2026-11-06T15:24:58.542Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:29.293Z",
-      "entitlements": "2026-11-06T07:45:29.293Z"
+      "announcements": "2026-11-06T15:24:58.542Z",
+      "entitlements": "2026-11-06T15:24:58.542Z"
     }
   },
   "CBHB": {
@@ -7810,10 +7810,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:33.600Z",
+    "checkedAt": "2026-11-06T15:25:04.587Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:33.600Z",
-      "entitlements": "2026-11-06T07:45:33.600Z"
+      "announcements": "2026-11-06T15:25:04.587Z",
+      "entitlements": "2026-11-06T15:25:04.587Z"
     }
   },
   "CDB": {
@@ -8230,10 +8230,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:29.378Z",
+    "checkedAt": "2026-11-06T15:25:05.073Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:29.378Z",
-      "entitlements": "2026-11-06T07:45:29.378Z"
+      "announcements": "2026-11-06T15:25:05.073Z",
+      "entitlements": "2026-11-06T15:25:05.073Z"
     }
   },
   "CEKD": {
@@ -8449,10 +8449,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:40.883Z",
+    "checkedAt": "2026-11-06T15:25:11.771Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:40.883Z",
-      "entitlements": "2026-11-06T07:45:40.883Z"
+      "announcements": "2026-11-06T15:25:11.771Z",
+      "entitlements": "2026-11-06T15:25:11.771Z"
     }
   },
   "CENGILD": {
@@ -8668,10 +8668,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:39.952Z",
+    "checkedAt": "2026-11-06T15:25:10.748Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:39.952Z",
-      "entitlements": "2026-11-06T07:45:39.952Z"
+      "announcements": "2026-11-06T15:25:10.748Z",
+      "entitlements": "2026-11-06T15:25:10.748Z"
     }
   },
   "CGB": {
@@ -9088,10 +9088,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:37.537Z",
+    "checkedAt": "2026-11-06T15:25:00.842Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:37.537Z",
-      "entitlements": "2026-11-06T07:45:37.537Z"
+      "announcements": "2026-11-06T15:25:00.842Z",
+      "entitlements": "2026-11-06T15:25:00.842Z"
     }
   },
   "CHEEDING": {
@@ -9273,10 +9273,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:31.029Z",
+    "checkedAt": "2026-11-06T15:25:05.461Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:31.029Z",
-      "entitlements": "2026-11-06T07:45:31.029Z"
+      "announcements": "2026-11-06T15:25:05.461Z",
+      "entitlements": "2026-11-06T15:25:05.461Z"
     }
   },
   "CIMB": {
@@ -9286,10 +9286,20 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-05] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
       {
         "date": "2026-11-05",
         "category": "Changes in Shareholdings",
@@ -9429,16 +9439,6 @@ window.NEWS_DATA = {
         "date": "2026-10-20",
         "category": "Change of Corp Info",
         "title": "Change in Audit Committee - TAN SRI DATO' DR WEE HOE SOON @ GOOI HOE SOON"
-      },
-      {
-        "date": "2026-10-20",
-        "category": "Change of Corp Info",
-        "title": "Change in Boardroom - TAN SRI DATO' DR WEE HOE SOON @ GOOI HOE SOON"
-      },
-      {
-        "date": "2026-10-19",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -9492,10 +9492,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:37.388Z",
+    "checkedAt": "2026-11-06T15:25:08.999Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:37.388Z",
-      "entitlements": "2026-11-06T07:45:37.388Z"
+      "announcements": "2026-11-06T15:25:08.999Z",
+      "entitlements": "2026-11-06T15:25:08.999Z"
     }
   },
   "CITAGLB": {
@@ -9887,10 +9887,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:39.968Z",
+    "checkedAt": "2026-11-06T15:25:04.986Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:39.968Z",
-      "entitlements": "2026-11-06T07:45:39.968Z"
+      "announcements": "2026-11-06T15:25:04.986Z",
+      "entitlements": "2026-11-06T15:25:04.986Z"
     }
   },
   "CLITE": {
@@ -10070,10 +10070,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:27.795Z",
+    "checkedAt": "2026-11-06T15:24:58.104Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:27.795Z",
-      "entitlements": "2026-11-06T07:45:27.795Z"
+      "announcements": "2026-11-06T15:24:58.104Z",
+      "entitlements": "2026-11-06T15:24:58.104Z"
     }
   },
   "CLOUDPT": {
@@ -10295,10 +10295,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:33.052Z",
+    "checkedAt": "2026-11-06T15:25:04.654Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:33.052Z",
-      "entitlements": "2026-11-06T07:45:33.052Z"
+      "announcements": "2026-11-06T15:25:04.654Z",
+      "entitlements": "2026-11-06T15:25:04.654Z"
     }
   },
   "CNERGEN": {
@@ -10505,10 +10505,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:25.483Z",
+    "checkedAt": "2026-11-06T15:24:57.037Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:25.483Z",
-      "entitlements": "2026-11-06T07:45:25.483Z"
+      "announcements": "2026-11-06T15:24:57.037Z",
+      "entitlements": "2026-11-06T15:24:57.037Z"
     }
   },
   "COLFORM": {
@@ -10697,10 +10697,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:27.911Z",
+    "checkedAt": "2026-11-06T15:24:56.844Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:27.911Z",
-      "entitlements": "2026-11-06T07:45:27.911Z"
+      "announcements": "2026-11-06T15:24:56.844Z",
+      "entitlements": "2026-11-06T15:24:56.844Z"
     }
   },
   "CORAZA": {
@@ -10870,10 +10870,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:36.411Z",
+    "checkedAt": "2026-11-06T15:25:08.098Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:36.411Z",
-      "entitlements": "2026-11-06T07:45:36.411Z"
+      "announcements": "2026-11-06T15:25:08.098Z",
+      "entitlements": "2026-11-06T15:25:08.098Z"
     }
   },
   "CPETECH": {
@@ -11080,10 +11080,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:38.792Z",
+    "checkedAt": "2026-11-06T15:25:05.814Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:38.792Z",
-      "entitlements": "2026-11-06T07:45:38.792Z"
+      "announcements": "2026-11-06T15:25:05.814Z",
+      "entitlements": "2026-11-06T15:25:05.814Z"
     }
   },
   "CREST": {
@@ -11292,10 +11292,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:26.054Z",
+    "checkedAt": "2026-11-06T15:24:57.272Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:26.054Z",
-      "entitlements": "2026-11-06T07:45:26.054Z"
+      "announcements": "2026-11-06T15:24:57.272Z",
+      "entitlements": "2026-11-06T15:24:57.272Z"
     }
   },
   "CRPMATE": {
@@ -11477,10 +11477,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:30.647Z",
+    "checkedAt": "2026-11-06T15:25:05.843Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:30.647Z",
-      "entitlements": "2026-11-06T07:45:30.647Z"
+      "announcements": "2026-11-06T15:25:05.843Z",
+      "entitlements": "2026-11-06T15:25:05.843Z"
     }
   },
   "CTOS": {
@@ -11490,10 +11490,40 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-05] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABRDN MALAYSIA SDN BHD"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABRDN HOLDINGS LIMITED"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABERDEEN GROUP PLC"
+      },
       {
         "date": "2026-11-05",
         "category": "Changes in Shareholdings",
@@ -11613,36 +11643,6 @@ window.NEWS_DATA = {
         "date": "2026-10-23",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-22",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-10-22",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-21",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-21",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-10-20",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-10-20",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -11696,10 +11696,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:33.631Z",
+    "checkedAt": "2026-11-06T15:25:05.013Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:33.631Z",
-      "entitlements": "2026-11-06T07:45:33.631Z"
+      "announcements": "2026-11-06T15:25:05.013Z",
+      "entitlements": "2026-11-06T15:25:05.013Z"
     }
   },
   "DAY3": {
@@ -11890,10 +11890,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:37.770Z",
+    "checkedAt": "2026-11-06T15:25:09.424Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:37.770Z",
-      "entitlements": "2026-11-06T07:45:37.770Z"
+      "announcements": "2026-11-06T15:25:09.424Z",
+      "entitlements": "2026-11-06T15:25:09.424Z"
     }
   },
   "DCHCARE": {
@@ -12056,10 +12056,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:36.939Z",
+    "checkedAt": "2026-11-06T15:25:11.136Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:36.939Z",
-      "entitlements": "2026-11-06T07:45:36.939Z"
+      "announcements": "2026-11-06T15:25:11.136Z",
+      "entitlements": "2026-11-06T15:25:11.136Z"
     }
   },
   "DENGKIL": {
@@ -12229,10 +12229,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:31.376Z",
+    "checkedAt": "2026-11-06T15:25:11.345Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:31.376Z",
-      "entitlements": "2026-11-06T07:45:31.376Z"
+      "announcements": "2026-11-06T15:25:11.345Z",
+      "entitlements": "2026-11-06T15:25:11.345Z"
     }
   },
   "DESTINI": {
@@ -12412,10 +12412,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:40.478Z",
+    "checkedAt": "2026-11-06T15:25:11.523Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:40.478Z",
-      "entitlements": "2026-11-06T07:45:40.478Z"
+      "announcements": "2026-11-06T15:25:11.523Z",
+      "entitlements": "2026-11-06T15:25:11.523Z"
     }
   },
   "DLADY": {
@@ -12631,10 +12631,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:33.312Z",
+    "checkedAt": "2026-11-06T15:25:03.115Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:33.312Z",
-      "entitlements": "2026-11-06T07:45:33.312Z"
+      "announcements": "2026-11-06T15:25:03.115Z",
+      "entitlements": "2026-11-06T15:25:03.115Z"
     }
   },
   "DNEX": {
@@ -12850,10 +12850,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:38.613Z",
+    "checkedAt": "2026-11-06T15:25:09.855Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:38.613Z",
-      "entitlements": "2026-11-06T07:45:38.613Z"
+      "announcements": "2026-11-06T15:25:09.855Z",
+      "entitlements": "2026-11-06T15:25:09.855Z"
     }
   },
   "DPIH": {
@@ -13069,10 +13069,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:34.517Z",
+    "checkedAt": "2026-11-06T15:25:11.537Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:34.517Z",
-      "entitlements": "2026-11-06T07:45:34.517Z"
+      "announcements": "2026-11-06T15:25:11.537Z",
+      "entitlements": "2026-11-06T15:25:11.537Z"
     }
   },
   "DSS": {
@@ -13270,10 +13270,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:25.857Z",
+    "checkedAt": "2026-11-06T15:25:00.817Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:25.857Z",
-      "entitlements": "2026-11-06T07:45:25.857Z"
+      "announcements": "2026-11-06T15:25:00.817Z",
+      "entitlements": "2026-11-06T15:25:00.817Z"
     }
   },
   "DUFU": {
@@ -13489,10 +13489,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:38.350Z",
+    "checkedAt": "2026-11-06T15:25:08.154Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:38.350Z",
-      "entitlements": "2026-11-06T07:45:38.350Z"
+      "announcements": "2026-11-06T15:25:08.154Z",
+      "entitlements": "2026-11-06T15:25:08.154Z"
     }
   },
   "DXN": {
@@ -13518,6 +13518,11 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Shares Buy Back",
+        "title": "Notice of SBB by a Company Pursuant to Section 127 (16) of CA 2016"
+      },
       {
         "date": "2026-11-05",
         "category": "Shares Buy Back",
@@ -13662,11 +13667,6 @@ window.NEWS_DATA = {
         "date": "2026-10-09",
         "category": "Shares Buy Back",
         "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-10-09",
-        "category": "Shares Buy Back",
-        "title": "Notice of SBB by a Company Pursuant to Section 127 (16) of CA 2016"
       }
     ],
     "entitlements": [
@@ -13720,10 +13720,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:27.252Z",
+    "checkedAt": "2026-11-06T15:24:55.686Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:27.252Z",
-      "entitlements": "2026-11-06T07:45:27.252Z"
+      "announcements": "2026-11-06T15:24:55.686Z",
+      "entitlements": "2026-11-06T15:24:55.686Z"
     }
   },
   "ECA": {
@@ -13893,10 +13893,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:39.580Z",
+    "checkedAt": "2026-11-06T15:25:03.599Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:39.580Z",
-      "entitlements": "2026-11-06T07:45:39.580Z"
+      "announcements": "2026-11-06T15:25:03.599Z",
+      "entitlements": "2026-11-06T15:25:03.599Z"
     }
   },
   "ECKEM": {
@@ -13984,10 +13984,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:27.462Z",
+    "checkedAt": "2026-11-06T15:25:05.171Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:27.462Z",
-      "entitlements": "2026-11-06T07:45:27.462Z"
+      "announcements": "2026-11-06T15:25:05.171Z",
+      "entitlements": "2026-11-06T15:25:05.171Z"
     }
   },
   "ECOGRP": {
@@ -14123,10 +14123,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:27.053Z",
+    "checkedAt": "2026-11-06T15:24:57.743Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:27.053Z",
-      "entitlements": "2026-11-06T07:45:27.053Z"
+      "announcements": "2026-11-06T15:24:57.743Z",
+      "entitlements": "2026-11-06T15:24:57.743Z"
     }
   },
   "ECOMATE": {
@@ -14324,10 +14324,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:24.481Z",
+    "checkedAt": "2026-11-06T15:24:58.160Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:24.481Z",
-      "entitlements": "2026-11-06T07:45:24.481Z"
+      "announcements": "2026-11-06T15:24:58.160Z",
+      "entitlements": "2026-11-06T15:24:58.160Z"
     }
   },
   "ECOSHOP": {
@@ -14549,10 +14549,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:32.142Z",
+    "checkedAt": "2026-11-06T15:24:58.486Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:32.142Z",
-      "entitlements": "2026-11-06T07:45:32.142Z"
+      "announcements": "2026-11-06T15:24:58.486Z",
+      "entitlements": "2026-11-06T15:24:58.486Z"
     }
   },
   "ECOSYS": {
@@ -14622,10 +14622,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:25.725Z",
+    "checkedAt": "2026-11-06T15:24:57.205Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:25.725Z",
-      "entitlements": "2026-11-06T07:45:25.725Z"
+      "announcements": "2026-11-06T15:24:57.205Z",
+      "entitlements": "2026-11-06T15:24:57.205Z"
     }
   },
   "EDELTEQ": {
@@ -14633,12 +14633,17 @@ window.NEWS_DATA = {
     "newsBadges": [
       {
         "type": "RECENT_NEWS",
-        "label": "News: 2026-11-03",
+        "label": "News: 2026-11-06",
         "severity": "info",
-        "title": "[2026-11-03] General Announcement - NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : FUND RAISING"
+        "title": "[2026-11-06] General Announcement - TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "General Announcement",
+        "title": "TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
+      },
       {
         "date": "2026-11-03",
         "category": "General Announcement",
@@ -14783,11 +14788,6 @@ window.NEWS_DATA = {
         "date": "2026-02-23",
         "category": "General Meetings",
         "title": "General Meetings: Outcome of Meeting"
-      },
-      {
-        "date": "2026-01-14",
-        "category": "General Announcement",
-        "title": "TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
       }
     ],
     "entitlements": [
@@ -14805,10 +14805,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:32.980Z",
+    "checkedAt": "2026-11-06T15:25:05.024Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:32.980Z",
-      "entitlements": "2026-11-06T07:45:32.980Z"
+      "announcements": "2026-11-06T15:25:05.024Z",
+      "entitlements": "2026-11-06T15:25:05.024Z"
     }
   },
   "EFRAME": {
@@ -14997,10 +14997,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:34.915Z",
+    "checkedAt": "2026-11-06T15:25:06.790Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:34.915Z",
-      "entitlements": "2026-11-06T07:45:34.915Z"
+      "announcements": "2026-11-06T15:25:06.790Z",
+      "entitlements": "2026-11-06T15:25:06.790Z"
     }
   },
   "EIB": {
@@ -15170,10 +15170,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:40.925Z",
+    "checkedAt": "2026-11-06T15:25:11.847Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:40.925Z",
-      "entitlements": "2026-11-06T07:45:40.925Z"
+      "announcements": "2026-11-06T15:25:11.847Z",
+      "entitlements": "2026-11-06T15:25:11.847Z"
     }
   },
   "EIPOWER": {
@@ -15321,10 +15321,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:31.000Z",
+    "checkedAt": "2026-11-06T15:25:03.119Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:31.000Z",
-      "entitlements": "2026-11-06T07:45:31.000Z"
+      "announcements": "2026-11-06T15:25:03.119Z",
+      "entitlements": "2026-11-06T15:25:03.119Z"
     }
   },
   "ELRIDGE": {
@@ -15494,10 +15494,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:23.667Z",
+    "checkedAt": "2026-11-06T15:24:55.639Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:23.667Z",
-      "entitlements": "2026-11-06T07:45:23.667Z"
+      "announcements": "2026-11-06T15:24:55.639Z",
+      "entitlements": "2026-11-06T15:24:55.639Z"
     }
   },
   "ELSA": {
@@ -15667,10 +15667,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:32.663Z",
+    "checkedAt": "2026-11-06T15:25:08.010Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:32.663Z",
-      "entitlements": "2026-11-06T07:45:32.663Z"
+      "announcements": "2026-11-06T15:25:08.010Z",
+      "entitlements": "2026-11-06T15:25:08.010Z"
     }
   },
   "EMCC": {
@@ -15861,10 +15861,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:30.627Z",
+    "checkedAt": "2026-11-06T15:25:03.703Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:30.627Z",
-      "entitlements": "2026-11-06T07:45:30.627Z"
+      "announcements": "2026-11-06T15:25:03.703Z",
+      "entitlements": "2026-11-06T15:25:03.703Z"
     }
   },
   "EMPIRE": {
@@ -16044,10 +16044,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:32.509Z",
+    "checkedAt": "2026-11-06T15:25:04.388Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:32.509Z",
-      "entitlements": "2026-11-06T07:45:32.509Z"
+      "announcements": "2026-11-06T15:25:04.388Z",
+      "entitlements": "2026-11-06T15:25:04.388Z"
     }
   },
   "ENEST": {
@@ -16132,10 +16132,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:32.200Z",
+    "checkedAt": "2026-11-06T15:25:03.967Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:32.200Z",
-      "entitlements": "2026-11-06T07:45:32.200Z"
+      "announcements": "2026-11-06T15:25:03.967Z",
+      "entitlements": "2026-11-06T15:25:03.967Z"
     }
   },
   "ENPRO": {
@@ -16305,10 +16305,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:25.421Z",
+    "checkedAt": "2026-11-06T15:25:03.217Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:25.421Z",
-      "entitlements": "2026-11-06T07:45:25.421Z"
+      "announcements": "2026-11-06T15:25:03.217Z",
+      "entitlements": "2026-11-06T15:25:03.217Z"
     }
   },
   "EPB": {
@@ -16488,10 +16488,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:29.188Z",
+    "checkedAt": "2026-11-06T15:24:59.752Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:29.188Z",
-      "entitlements": "2026-11-06T07:45:29.188Z"
+      "announcements": "2026-11-06T15:24:59.752Z",
+      "entitlements": "2026-11-06T15:24:59.752Z"
     }
   },
   "EVOCOM": {
@@ -16566,10 +16566,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:31.091Z",
+    "checkedAt": "2026-11-06T15:25:03.242Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:31.091Z",
-      "entitlements": "2026-11-06T07:45:31.091Z"
+      "announcements": "2026-11-06T15:25:03.242Z",
+      "entitlements": "2026-11-06T15:25:03.242Z"
     }
   },
   "EWICAP": {
@@ -16951,29 +16951,34 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:26.767Z",
+    "checkedAt": "2026-11-06T15:24:54.752Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:26.767Z",
-      "entitlements": "2026-11-06T07:45:26.767Z"
+      "announcements": "2026-11-06T15:24:54.752Z",
+      "entitlements": "2026-11-06T15:24:54.752Z"
     }
   },
   "F&N": {
     "hasNewsAlert": true,
     "newsBadges": [
       {
+        "type": "JERUNG_5PCT",
+        "label": "🐋 Major Shareholder Activity",
+        "severity": "info",
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
         "type": "EARNINGS_QR",
         "label": "Earnings Release",
         "severity": "danger",
         "title": "[2026-11-05] Quarterly rpt on consolidated results for the financial period ended 30/09/2026"
-      },
-      {
-        "type": "JERUNG_5PCT",
-        "label": "🐋 Major Shareholder Activity",
-        "severity": "info",
-        "title": "[2026-11-05] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-11-05",
         "category": "Financial Results",
@@ -17118,11 +17123,6 @@ window.NEWS_DATA = {
         "date": "2026-05-25",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
-      },
-      {
-        "date": "2026-05-25",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -17176,10 +17176,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:31.795Z",
+    "checkedAt": "2026-11-06T15:24:59.394Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:31.795Z",
-      "entitlements": "2026-11-06T07:45:31.795Z"
+      "announcements": "2026-11-06T15:24:59.394Z",
+      "entitlements": "2026-11-06T15:24:59.394Z"
     }
   },
   "FAMIERA": {
@@ -17324,10 +17324,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:24.697Z",
+    "checkedAt": "2026-11-06T15:24:58.812Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:24.697Z",
-      "entitlements": "2026-11-06T07:45:24.697Z"
+      "announcements": "2026-11-06T15:24:58.812Z",
+      "entitlements": "2026-11-06T15:24:58.812Z"
     }
   },
   "FCW": {
@@ -17721,10 +17721,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:39.946Z",
+    "checkedAt": "2026-11-06T15:25:10.761Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:39.946Z",
-      "entitlements": "2026-11-06T07:45:39.946Z"
+      "announcements": "2026-11-06T15:25:10.761Z",
+      "entitlements": "2026-11-06T15:25:10.761Z"
     }
   },
   "FFB": {
@@ -17940,10 +17940,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:31.831Z",
+    "checkedAt": "2026-11-06T15:25:06.185Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:31.831Z",
-      "entitlements": "2026-11-06T07:45:31.831Z"
+      "announcements": "2026-11-06T15:25:06.185Z",
+      "entitlements": "2026-11-06T15:25:06.185Z"
     }
   },
   "FIBON": {
@@ -18332,10 +18332,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:40.902Z",
+    "checkedAt": "2026-11-06T15:25:07.271Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:40.902Z",
-      "entitlements": "2026-11-06T07:45:40.902Z"
+      "announcements": "2026-11-06T15:25:07.271Z",
+      "entitlements": "2026-11-06T15:25:07.271Z"
     }
   },
   "FLEXI": {
@@ -18515,10 +18515,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:29.604Z",
+    "checkedAt": "2026-11-06T15:25:01.258Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:29.604Z",
-      "entitlements": "2026-11-06T07:45:29.604Z"
+      "announcements": "2026-11-06T15:25:01.258Z",
+      "entitlements": "2026-11-06T15:25:01.258Z"
     }
   },
   "FOODIE": {
@@ -18737,10 +18737,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:28.569Z",
+    "checkedAt": "2026-11-06T15:25:02.865Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:28.569Z",
-      "entitlements": "2026-11-06T07:45:28.569Z"
+      "announcements": "2026-11-06T15:25:02.865Z",
+      "entitlements": "2026-11-06T15:25:02.865Z"
     }
   },
   "FPHB": {
@@ -18920,10 +18920,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:28.428Z",
+    "checkedAt": "2026-11-06T15:24:59.241Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:28.428Z",
-      "entitlements": "2026-11-06T07:45:28.428Z"
+      "announcements": "2026-11-06T15:24:59.241Z",
+      "entitlements": "2026-11-06T15:24:59.241Z"
     }
   },
   "FRONTKN": {
@@ -19225,10 +19225,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:34.203Z",
+    "checkedAt": "2026-11-06T15:25:03.485Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:34.203Z",
-      "entitlements": "2026-11-06T07:45:34.203Z"
+      "announcements": "2026-11-06T15:25:03.485Z",
+      "entitlements": "2026-11-06T15:25:03.485Z"
     }
   },
   "GDGROUP": {
@@ -19396,10 +19396,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:34.504Z",
+    "checkedAt": "2026-11-06T15:25:09.058Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:34.504Z",
-      "entitlements": "2026-11-06T07:45:34.504Z"
+      "announcements": "2026-11-06T15:25:09.058Z",
+      "entitlements": "2026-11-06T15:25:09.058Z"
     }
   },
   "GENERGY": {
@@ -19588,10 +19588,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:36.904Z",
+    "checkedAt": "2026-11-06T15:25:07.403Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:36.904Z",
-      "entitlements": "2026-11-06T07:45:36.904Z"
+      "announcements": "2026-11-06T15:25:07.403Z",
+      "entitlements": "2026-11-06T15:25:07.403Z"
     }
   },
   "GEOHAN": {
@@ -19754,10 +19754,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:30.973Z",
+    "checkedAt": "2026-11-06T15:25:06.796Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:30.973Z",
-      "entitlements": "2026-11-06T07:45:30.973Z"
+      "announcements": "2026-11-06T15:25:06.796Z",
+      "entitlements": "2026-11-06T15:25:06.796Z"
     }
   },
   "GESHEN": {
@@ -20138,10 +20138,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:28.768Z",
+    "checkedAt": "2026-11-06T15:25:00.822Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:28.768Z",
-      "entitlements": "2026-11-06T07:45:28.768Z"
+      "announcements": "2026-11-06T15:25:00.822Z",
+      "entitlements": "2026-11-06T15:25:00.822Z"
     }
   },
   "GIIB": {
@@ -20562,10 +20562,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:34.655Z",
+    "checkedAt": "2026-11-06T15:25:06.600Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:34.655Z",
-      "entitlements": "2026-11-06T07:45:34.655Z"
+      "announcements": "2026-11-06T15:25:06.600Z",
+      "entitlements": "2026-11-06T15:25:06.600Z"
     }
   },
   "GOHUB": {
@@ -20735,10 +20735,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:35.548Z",
+    "checkedAt": "2026-11-06T15:25:09.434Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:35.548Z",
-      "entitlements": "2026-11-06T07:45:35.548Z"
+      "announcements": "2026-11-06T15:25:09.434Z",
+      "entitlements": "2026-11-06T15:25:09.434Z"
     }
   },
   "GOLDLI": {
@@ -20836,10 +20836,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:31.953Z",
+    "checkedAt": "2026-11-06T15:24:58.913Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:31.953Z",
-      "entitlements": "2026-11-06T07:45:31.953Z"
+      "announcements": "2026-11-06T15:24:58.913Z",
+      "entitlements": "2026-11-06T15:24:58.913Z"
     }
   },
   "GREATEC": {
@@ -20849,10 +20849,15 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-05] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-11-05",
         "category": "Changes in Shareholdings",
@@ -20997,11 +21002,6 @@ window.NEWS_DATA = {
         "date": "2026-10-07",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-06",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [],
@@ -21009,10 +21009,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:29.370Z",
+    "checkedAt": "2026-11-06T15:24:59.298Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:29.370Z",
-      "entitlements": "2026-11-06T07:45:29.370Z"
+      "announcements": "2026-11-06T15:24:59.298Z",
+      "entitlements": "2026-11-06T15:24:59.298Z"
     }
   },
   "GTA": {
@@ -21177,10 +21177,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:30.253Z",
+    "checkedAt": "2026-11-06T15:25:00.126Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:30.253Z",
-      "entitlements": "2026-11-06T07:45:30.253Z"
+      "announcements": "2026-11-06T15:25:00.126Z",
+      "entitlements": "2026-11-06T15:25:00.126Z"
     }
   },
   "HAILY": {
@@ -21396,10 +21396,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:40.424Z",
+    "checkedAt": "2026-11-06T15:25:11.210Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:40.424Z",
-      "entitlements": "2026-11-06T07:45:40.424Z"
+      "announcements": "2026-11-06T15:25:11.210Z",
+      "entitlements": "2026-11-06T15:25:11.210Z"
     }
   },
   "HAWK": {
@@ -21569,10 +21569,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:31.123Z",
+    "checkedAt": "2026-11-06T15:25:11.083Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:31.123Z",
-      "entitlements": "2026-11-06T07:45:31.123Z"
+      "announcements": "2026-11-06T15:25:11.083Z",
+      "entitlements": "2026-11-06T15:25:11.083Z"
     }
   },
   "HEGROUP": {
@@ -21770,10 +21770,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:39.100Z",
+    "checkedAt": "2026-11-06T15:25:09.930Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:39.100Z",
-      "entitlements": "2026-11-06T07:45:39.100Z"
+      "announcements": "2026-11-06T15:25:09.930Z",
+      "entitlements": "2026-11-06T15:25:09.930Z"
     }
   },
   "HEIM": {
@@ -21982,10 +21982,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:32.218Z",
+    "checkedAt": "2026-11-06T15:25:02.425Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:32.218Z",
-      "entitlements": "2026-11-06T07:45:32.218Z"
+      "announcements": "2026-11-06T15:25:02.425Z",
+      "entitlements": "2026-11-06T15:25:02.425Z"
     }
   },
   "HENGYUAN": {
@@ -22219,6 +22219,11 @@ window.NEWS_DATA = {
     ],
     "announcements": [
       {
+        "date": "2026-11-06",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings During Closed Period"
+      },
+      {
         "date": "2026-11-03",
         "category": "General Announcement",
         "title": "MEMORANDUM OF UNDERSTANDING"
@@ -22362,11 +22367,6 @@ window.NEWS_DATA = {
         "date": "2026-08-24",
         "category": "General Announcement",
         "title": "PROVISION OF FINANCIAL ASSISTANCE"
-      },
-      {
-        "date": "2026-08-20",
-        "category": "General Announcement",
-        "title": "TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
       }
     ],
     "entitlements": [
@@ -22384,10 +22384,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:39.602Z",
+    "checkedAt": "2026-11-06T15:25:10.671Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:39.602Z",
-      "entitlements": "2026-11-06T07:45:39.602Z"
+      "announcements": "2026-11-06T15:25:10.671Z",
+      "entitlements": "2026-11-06T15:25:10.671Z"
     }
   },
   "HI": {
@@ -22603,10 +22603,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:37.713Z",
+    "checkedAt": "2026-11-06T15:25:03.592Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:37.713Z",
-      "entitlements": "2026-11-06T07:45:37.713Z"
+      "announcements": "2026-11-06T15:25:03.592Z",
+      "entitlements": "2026-11-06T15:25:03.592Z"
     }
   },
   "HIBISCS": {
@@ -22998,10 +22998,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:23.640Z",
+    "checkedAt": "2026-11-06T15:24:54.667Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:23.640Z",
-      "entitlements": "2026-11-06T07:45:23.640Z"
+      "announcements": "2026-11-06T15:24:54.667Z",
+      "entitlements": "2026-11-06T15:24:54.667Z"
     }
   },
   "HLBANK": {
@@ -23011,10 +23011,15 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-05] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-11-05",
         "category": "Changes in Shareholdings",
@@ -23159,11 +23164,6 @@ window.NEWS_DATA = {
         "date": "2026-10-01",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-30",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -23217,10 +23217,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:38.594Z",
+    "checkedAt": "2026-11-06T15:25:07.300Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:38.594Z",
-      "entitlements": "2026-11-06T07:45:38.594Z"
+      "announcements": "2026-11-06T15:25:07.300Z",
+      "entitlements": "2026-11-06T15:25:07.300Z"
     }
   },
   "HLFG": {
@@ -23436,10 +23436,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:36.541Z",
+    "checkedAt": "2026-11-06T15:25:02.387Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:36.541Z",
-      "entitlements": "2026-11-06T07:45:36.541Z"
+      "announcements": "2026-11-06T15:25:02.387Z",
+      "entitlements": "2026-11-06T15:25:02.387Z"
     }
   },
   "HLIND": {
@@ -23655,10 +23655,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:26.023Z",
+    "checkedAt": "2026-11-06T15:25:08.049Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:26.023Z",
-      "entitlements": "2026-11-06T07:45:26.023Z"
+      "announcements": "2026-11-06T15:25:08.049Z",
+      "entitlements": "2026-11-06T15:25:08.049Z"
     }
   },
   "HOCKSOON": {
@@ -23776,10 +23776,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:39.668Z",
+    "checkedAt": "2026-11-06T15:25:10.700Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:39.668Z",
-      "entitlements": "2026-11-06T07:45:39.668Z"
+      "announcements": "2026-11-06T15:25:10.700Z",
+      "entitlements": "2026-11-06T15:25:10.700Z"
     }
   },
   "HONGSENG": {
@@ -23977,10 +23977,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:40.289Z",
+    "checkedAt": "2026-11-06T15:25:07.434Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:40.289Z",
-      "entitlements": "2026-11-06T07:45:40.289Z"
+      "announcements": "2026-11-06T15:25:07.434Z",
+      "entitlements": "2026-11-06T15:25:07.434Z"
     }
   },
   "HPMT": {
@@ -24189,10 +24189,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:31.425Z",
+    "checkedAt": "2026-11-06T15:25:06.607Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:31.425Z",
-      "entitlements": "2026-11-06T07:45:31.425Z"
+      "announcements": "2026-11-06T15:25:06.607Z",
+      "entitlements": "2026-11-06T15:25:06.607Z"
     }
   },
   "HPPHB": {
@@ -24408,10 +24408,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:36.267Z",
+    "checkedAt": "2026-11-06T15:25:08.028Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:36.267Z",
-      "entitlements": "2026-11-06T07:45:36.267Z"
+      "announcements": "2026-11-06T15:25:08.028Z",
+      "entitlements": "2026-11-06T15:25:08.028Z"
     }
   },
   "HSSBAKERY": {
@@ -24524,16 +24524,38 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:40.914Z",
+    "checkedAt": "2026-11-06T15:25:11.563Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:40.914Z",
-      "entitlements": "2026-11-06T07:45:40.914Z"
+      "announcements": "2026-11-06T15:25:11.563Z",
+      "entitlements": "2026-11-06T15:25:11.563Z"
     }
   },
   "IAB": {
     "hasNewsAlert": false,
-    "newsBadges": [],
+    "newsBadges": [
+      {
+        "type": "JERUNG_5PCT",
+        "label": "🐋 Major Shareholder Activity",
+        "severity": "info",
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR WEE KHIAM HUI"
+      }
+    ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR WEE KHIAM HUI"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR WEE KHIAM HUI"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
       {
         "date": "2026-10-06",
         "category": "General Announcement",
@@ -24668,21 +24690,6 @@ window.NEWS_DATA = {
         "date": "2026-03-10",
         "category": "Changes in Shareholdings",
         "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR WEE KHIAM HU"
-      },
-      {
-        "date": "2026-03-10",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR WEE KHIAM HUI"
-      },
-      {
-        "date": "2026-03-10",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings During Closed Period"
-      },
-      {
-        "date": "2026-03-06",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
       }
     ],
     "entitlements": [],
@@ -24690,10 +24697,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:34.418Z",
+    "checkedAt": "2026-11-06T15:25:03.979Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:34.418Z",
-      "entitlements": "2026-11-06T07:45:34.418Z"
+      "announcements": "2026-11-06T15:25:03.979Z",
+      "entitlements": "2026-11-06T15:25:03.979Z"
     }
   },
   "ICENTS": {
@@ -24863,10 +24870,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:31.941Z",
+    "checkedAt": "2026-11-06T15:24:58.937Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:31.941Z",
-      "entitlements": "2026-11-06T07:45:31.941Z"
+      "announcements": "2026-11-06T15:24:58.937Z",
+      "entitlements": "2026-11-06T15:24:58.937Z"
     }
   },
   "ICONIC": {
@@ -25230,10 +25237,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:32.285Z",
+    "checkedAt": "2026-11-06T15:25:01.967Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:32.285Z",
-      "entitlements": "2026-11-06T07:45:32.285Z"
+      "announcements": "2026-11-06T15:25:01.967Z",
+      "entitlements": "2026-11-06T15:25:01.967Z"
     }
   },
   "IGBREIT": {
@@ -25479,6 +25486,11 @@ window.NEWS_DATA = {
     ],
     "announcements": [
       {
+        "date": "2026-11-06",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
+      {
         "date": "2026-11-04",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
@@ -25622,11 +25634,6 @@ window.NEWS_DATA = {
         "date": "2026-10-05",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-05",
-        "category": "Change of Corp Info",
-        "title": "Change in Boardroom - DATUK JOHAN BIN IDRIS"
       }
     ],
     "entitlements": [
@@ -25680,10 +25687,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:38.137Z",
+    "checkedAt": "2026-11-06T15:25:03.353Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:38.137Z",
-      "entitlements": "2026-11-06T07:45:38.137Z"
+      "announcements": "2026-11-06T15:25:03.353Z",
+      "entitlements": "2026-11-06T15:25:03.353Z"
     }
   },
   "INARI": {
@@ -25693,10 +25700,15 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-05] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-11-05",
         "category": "Changes in Shareholdings",
@@ -25841,11 +25853,6 @@ window.NEWS_DATA = {
         "date": "2026-10-19",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-10-16",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -25899,10 +25906,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:30.110Z",
+    "checkedAt": "2026-11-06T15:25:01.511Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:30.110Z",
-      "entitlements": "2026-11-06T07:45:30.110Z"
+      "announcements": "2026-11-06T15:25:01.511Z",
+      "entitlements": "2026-11-06T15:25:01.511Z"
     }
   },
   "INFOM": {
@@ -26100,10 +26107,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:22.997Z",
+    "checkedAt": "2026-11-06T15:24:54.636Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:22.997Z",
-      "entitlements": "2026-11-06T07:45:22.997Z"
+      "announcements": "2026-11-06T15:24:54.636Z",
+      "entitlements": "2026-11-06T15:24:54.636Z"
     }
   },
   "INFOTEC": {
@@ -26319,10 +26326,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:40.490Z",
+    "checkedAt": "2026-11-06T15:25:07.545Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:40.490Z",
-      "entitlements": "2026-11-06T07:45:40.490Z"
+      "announcements": "2026-11-06T15:25:07.545Z",
+      "entitlements": "2026-11-06T15:25:07.545Z"
     }
   },
   "INNATURE": {
@@ -26531,10 +26538,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:34.561Z",
+    "checkedAt": "2026-11-06T15:25:06.429Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:34.561Z",
-      "entitlements": "2026-11-06T07:45:34.561Z"
+      "announcements": "2026-11-06T15:25:06.429Z",
+      "entitlements": "2026-11-06T15:25:06.429Z"
     }
   },
   "INSPACE": {
@@ -26542,12 +26549,17 @@ window.NEWS_DATA = {
     "newsBadges": [
       {
         "type": "RECENT_NEWS",
-        "label": "News: 2026-10-26",
+        "label": "News: 2026-11-06",
         "severity": "info",
-        "title": "[2026-10-26] Financial Results - Quarterly rpt on consolidated results for the financial period ended 31/08/2026"
+        "title": "[2026-11-06] General Announcement - OTHERS"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
       {
         "date": "2026-10-26",
         "category": "Financial Results",
@@ -26692,11 +26704,6 @@ window.NEWS_DATA = {
         "date": "2026-04-30",
         "category": "Financial Results",
         "title": "Quarterly rpt on consolidated results for the financial period ended 28/02/2026"
-      },
-      {
-        "date": "2026-04-24",
-        "category": "General Announcement",
-        "title": "OTHERS"
       }
     ],
     "entitlements": [],
@@ -26704,10 +26711,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:41.238Z",
+    "checkedAt": "2026-11-06T15:25:12.071Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:41.238Z",
-      "entitlements": "2026-11-06T07:45:41.238Z"
+      "announcements": "2026-11-06T15:25:12.071Z",
+      "entitlements": "2026-11-06T15:25:12.071Z"
     }
   },
   "ISF": {
@@ -26877,10 +26884,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:23.050Z",
+    "checkedAt": "2026-11-06T15:24:55.196Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:23.050Z",
-      "entitlements": "2026-11-06T07:45:23.050Z"
+      "announcements": "2026-11-06T15:24:55.196Z",
+      "entitlements": "2026-11-06T15:24:55.196Z"
     }
   },
   "ITMAX": {
@@ -27096,10 +27103,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:30.218Z",
+    "checkedAt": "2026-11-06T15:25:02.205Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:30.218Z",
-      "entitlements": "2026-11-06T07:45:30.218Z"
+      "announcements": "2026-11-06T15:25:02.205Z",
+      "entitlements": "2026-11-06T15:25:02.205Z"
     }
   },
   "JAKS": {
@@ -27279,10 +27286,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:38.771Z",
+    "checkedAt": "2026-11-06T15:25:09.915Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:38.771Z",
-      "entitlements": "2026-11-06T07:45:38.771Z"
+      "announcements": "2026-11-06T15:25:09.915Z",
+      "entitlements": "2026-11-06T15:25:09.915Z"
     }
   },
   "JCY": {
@@ -27498,10 +27505,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:38.699Z",
+    "checkedAt": "2026-11-06T15:25:09.887Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:38.699Z",
-      "entitlements": "2026-11-06T07:45:38.699Z"
+      "announcements": "2026-11-06T15:25:09.887Z",
+      "entitlements": "2026-11-06T15:25:09.887Z"
     }
   },
   "JPG": {
@@ -27511,7 +27518,7 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
       },
       {
         "type": "EV_CATALYST",
@@ -27521,6 +27528,16 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement on Shares Buy Back"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
       {
         "date": "2026-11-06",
         "category": "Changes in Shareholdings",
@@ -27660,16 +27677,6 @@ window.NEWS_DATA = {
         "date": "2026-10-15",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-15",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-10-14",
-        "category": "General Announcement",
-        "title": "MONTHLY PRODUCTION FIGURES (MINING / PLANTATION / TIMBER)"
       }
     ],
     "entitlements": [
@@ -27723,10 +27730,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:34.898Z",
+    "checkedAt": "2026-11-06T15:25:06.935Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:34.898Z",
-      "entitlements": "2026-11-06T07:45:34.898Z"
+      "announcements": "2026-11-06T15:25:06.935Z",
+      "entitlements": "2026-11-06T15:25:06.935Z"
     }
   },
   "JSSOLAR": {
@@ -27896,10 +27903,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:29.679Z",
+    "checkedAt": "2026-11-06T15:25:01.414Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:29.679Z",
-      "entitlements": "2026-11-06T07:45:29.679Z"
+      "announcements": "2026-11-06T15:25:01.414Z",
+      "entitlements": "2026-11-06T15:25:01.414Z"
     }
   },
   "JTGROUP": {
@@ -28069,10 +28076,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:38.658Z",
+    "checkedAt": "2026-11-06T15:25:09.867Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:38.658Z",
-      "entitlements": "2026-11-06T07:45:38.658Z"
+      "announcements": "2026-11-06T15:25:09.867Z",
+      "entitlements": "2026-11-06T15:25:09.867Z"
     }
   },
   "KEEMING": {
@@ -28242,10 +28249,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:30.632Z",
+    "checkedAt": "2026-11-06T15:24:55.133Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:30.632Z",
-      "entitlements": "2026-11-06T07:45:30.632Z"
+      "announcements": "2026-11-06T15:24:55.133Z",
+      "entitlements": "2026-11-06T15:24:55.133Z"
     }
   },
   "KENERGY": {
@@ -28427,10 +28434,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:39.934Z",
+    "checkedAt": "2026-11-06T15:25:10.725Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:39.934Z",
-      "entitlements": "2026-11-06T07:45:39.934Z"
+      "announcements": "2026-11-06T15:25:10.725Z",
+      "entitlements": "2026-11-06T15:25:10.725Z"
     }
   },
   "KESM": {
@@ -28659,10 +28666,20 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-16] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATIN OOI SOO PING"
+        "title": "[2026-11-06] Changes in Director's Interest (Section 219 of CA 2016) - DATO' KEE CHIT HUEI"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' KEE CHIT HUEI"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
+      },
       {
         "date": "2026-11-04",
         "category": "Additional Listing",
@@ -28802,16 +28819,6 @@ window.NEWS_DATA = {
         "date": "2026-10-01",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATIN OOI SOO PING"
-      },
-      {
-        "date": "2026-09-25",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR CHIA CHEE HOONG"
-      },
-      {
-        "date": "2026-09-25",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
       }
     ],
     "entitlements": [
@@ -28865,10 +28872,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:30.581Z",
+    "checkedAt": "2026-11-06T15:24:56.954Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:30.581Z",
-      "entitlements": "2026-11-06T07:45:30.581Z"
+      "announcements": "2026-11-06T15:24:56.954Z",
+      "entitlements": "2026-11-06T15:24:56.954Z"
     }
   },
   "KGB": {
@@ -29084,10 +29091,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:36.885Z",
+    "checkedAt": "2026-11-06T15:25:04.647Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:36.885Z",
-      "entitlements": "2026-11-06T07:45:36.885Z"
+      "announcements": "2026-11-06T15:25:04.647Z",
+      "entitlements": "2026-11-06T15:25:04.647Z"
     }
   },
   "KGW": {
@@ -29250,10 +29257,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:34.023Z",
+    "checkedAt": "2026-11-06T15:25:05.324Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:34.023Z",
-      "entitlements": "2026-11-06T07:45:34.023Z"
+      "announcements": "2026-11-06T15:25:05.324Z",
+      "entitlements": "2026-11-06T15:25:05.324Z"
     }
   },
   "KHB": {
@@ -29433,10 +29440,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:26.442Z",
+    "checkedAt": "2026-11-06T15:25:02.140Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:26.442Z",
-      "entitlements": "2026-11-06T07:45:26.442Z"
+      "announcements": "2026-11-06T15:25:02.140Z",
+      "entitlements": "2026-11-06T15:25:02.140Z"
     }
   },
   "KHJB": {
@@ -29645,10 +29652,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:33.658Z",
+    "checkedAt": "2026-11-06T15:25:05.392Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:33.658Z",
-      "entitlements": "2026-11-06T07:45:33.658Z"
+      "announcements": "2026-11-06T15:25:05.392Z",
+      "entitlements": "2026-11-06T15:25:05.392Z"
     }
   },
   "KINERGY": {
@@ -30076,10 +30083,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:31.948Z",
+    "checkedAt": "2026-11-06T15:25:03.993Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:31.948Z",
-      "entitlements": "2026-11-06T07:45:31.948Z"
+      "announcements": "2026-11-06T15:25:03.993Z",
+      "entitlements": "2026-11-06T15:25:03.993Z"
     }
   },
   "KJTS": {
@@ -30277,10 +30284,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:30.243Z",
+    "checkedAt": "2026-11-06T15:25:04.066Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:30.243Z",
-      "entitlements": "2026-11-06T07:45:30.243Z"
+      "announcements": "2026-11-06T15:25:04.066Z",
+      "entitlements": "2026-11-06T15:25:04.066Z"
     }
   },
   "KLCC": {
@@ -30290,11 +30297,21 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-05] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
       {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
         "date": "2026-11-05",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
@@ -30431,16 +30448,6 @@ window.NEWS_DATA = {
       },
       {
         "date": "2026-09-18",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-17",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-17",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
@@ -30496,10 +30503,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:35.009Z",
+    "checkedAt": "2026-11-06T15:25:01.962Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:35.009Z",
-      "entitlements": "2026-11-06T07:45:35.009Z"
+      "announcements": "2026-11-06T15:25:01.962Z",
+      "entitlements": "2026-11-06T15:25:01.962Z"
     }
   },
   "KLK": {
@@ -30509,10 +30516,15 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-05] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-11-05",
         "category": "Changes in Shareholdings",
@@ -30657,11 +30669,6 @@ window.NEWS_DATA = {
         "date": "2026-09-23",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-22",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -30715,10 +30722,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:29.164Z",
+    "checkedAt": "2026-11-06T15:24:59.910Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:29.164Z",
-      "entitlements": "2026-11-06T07:45:29.164Z"
+      "announcements": "2026-11-06T15:24:59.910Z",
+      "entitlements": "2026-11-06T15:24:59.910Z"
     }
   },
   "KOBAY": {
@@ -31117,10 +31124,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:30.900Z",
+    "checkedAt": "2026-11-06T15:25:02.758Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:30.900Z",
-      "entitlements": "2026-11-06T07:45:30.900Z"
+      "announcements": "2026-11-06T15:25:02.758Z",
+      "entitlements": "2026-11-06T15:25:02.758Z"
     }
   },
   "KPJ": {
@@ -31528,10 +31535,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:35.370Z",
+    "checkedAt": "2026-11-06T15:25:08.345Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:35.370Z",
-      "entitlements": "2026-11-06T07:45:35.370Z"
+      "announcements": "2026-11-06T15:25:08.345Z",
+      "entitlements": "2026-11-06T15:25:08.345Z"
     }
   },
   "KUCINGKO": {
@@ -31711,10 +31718,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:37.349Z",
+    "checkedAt": "2026-11-06T15:25:09.130Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:37.349Z",
-      "entitlements": "2026-11-06T07:45:37.349Z"
+      "announcements": "2026-11-06T15:25:09.130Z",
+      "entitlements": "2026-11-06T15:25:09.130Z"
     }
   },
   "L&G": {
@@ -32117,10 +32124,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:26.193Z",
+    "checkedAt": "2026-11-06T15:24:57.251Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:26.193Z",
-      "entitlements": "2026-11-06T07:45:26.193Z"
+      "announcements": "2026-11-06T15:24:57.251Z",
+      "entitlements": "2026-11-06T15:24:57.251Z"
     }
   },
   "LACMED": {
@@ -32300,10 +32307,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:29.561Z",
+    "checkedAt": "2026-11-06T15:25:01.096Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:29.561Z",
-      "entitlements": "2026-11-06T07:45:29.561Z"
+      "announcements": "2026-11-06T15:25:01.096Z",
+      "entitlements": "2026-11-06T15:25:01.096Z"
     }
   },
   "LEFORM": {
@@ -32476,10 +32483,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:27.395Z",
+    "checkedAt": "2026-11-06T15:24:58.175Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:27.395Z",
-      "entitlements": "2026-11-06T07:45:27.395Z"
+      "announcements": "2026-11-06T15:24:58.175Z",
+      "entitlements": "2026-11-06T15:24:58.175Z"
     }
   },
   "LGMS": {
@@ -32695,29 +32702,74 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:23.694Z",
+    "checkedAt": "2026-11-06T15:24:55.051Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:23.694Z",
-      "entitlements": "2026-11-06T07:45:23.694Z"
+      "announcements": "2026-11-06T15:24:55.051Z",
+      "entitlements": "2026-11-06T15:24:55.051Z"
     }
   },
   "LHI": {
     "hasNewsAlert": false,
     "newsBadges": [
       {
+        "type": "JERUNG_5PCT",
+        "label": "🐋 Major Shareholder Activity",
+        "severity": "info",
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LAU JOO HAN"
+      },
+      {
         "type": "SHAREHOLDING",
         "label": "Insider Action",
         "severity": "info",
         "title": "[2026-11-05] PUBLIC SHAREHOLDINGS SPREAD"
-      },
-      {
-        "type": "JERUNG_5PCT",
-        "label": "🐋 Major Shareholder Activity",
-        "severity": "info",
-        "title": "[2026-11-05] Changes in Director's Interest (Section 219 of CA 2016) - MR LAU JOO HAN"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings During Closed Period"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LAU JOO HAN"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR LAU JOO HAN"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATUK LAU JOO HONG"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK LAU JOO HONG"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LAU JOO HENG"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LAU JUI PENG"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - CW LAU & SONS SDN BHD"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMERGING GLORY SDN BHD"
+      },
       {
         "date": "2026-11-05",
         "category": "General Announcement",
@@ -32822,51 +32874,6 @@ window.NEWS_DATA = {
         "date": "2026-11-03",
         "category": "Changes in Shareholdings",
         "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR LAU JOO HAN"
-      },
-      {
-        "date": "2026-11-03",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LAU JOO HAN"
-      },
-      {
-        "date": "2026-11-03",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK LAU JOO HONG"
-      },
-      {
-        "date": "2026-11-03",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATUK LAU JOO HONG"
-      },
-      {
-        "date": "2026-11-03",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LAU JOO HENG"
-      },
-      {
-        "date": "2026-11-03",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR LAU JUI PENG"
-      },
-      {
-        "date": "2026-11-03",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - CW LAU & SONS SDN BHD"
-      },
-      {
-        "date": "2026-11-03",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMERGING GLORY SDN BHD"
-      },
-      {
-        "date": "2026-11-03",
-        "category": "Additional Listing",
-        "title": "Additional Listing Announcement /Subdivision of Shares"
-      },
-      {
-        "date": "2026-10-20",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
       }
     ],
     "entitlements": [
@@ -32920,10 +32927,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:35.136Z",
+    "checkedAt": "2026-11-06T15:25:02.406Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:35.136Z",
-      "entitlements": "2026-11-06T07:45:35.136Z"
+      "announcements": "2026-11-06T15:25:02.406Z",
+      "entitlements": "2026-11-06T15:25:02.406Z"
     }
   },
   "LIFTECH": {
@@ -33036,10 +33043,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:31.268Z",
+    "checkedAt": "2026-11-06T15:25:05.743Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:31.268Z",
-      "entitlements": "2026-11-06T07:45:31.268Z"
+      "announcements": "2026-11-06T15:25:05.743Z",
+      "entitlements": "2026-11-06T15:25:05.743Z"
     }
   },
   "LSH": {
@@ -33049,10 +33056,25 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-05] Changes in Director's Interest (Section 219 of CA 2016) - MR LIM DING SHYONG"
+        "title": "[2026-11-06] Changes in Director's Interest (Section 219 of CA 2016) - DATUK LIM KENG GUAN"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings During Closed Period"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATUK LIM KENG GUAN"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK LIM KENG GUAN"
+      },
       {
         "date": "2026-11-05",
         "category": "Dealings in Listed Securities",
@@ -33187,21 +33209,6 @@ window.NEWS_DATA = {
         "date": "2026-10-19",
         "category": "Changes in Shareholdings",
         "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATUK LIM KENG GUAN"
-      },
-      {
-        "date": "2026-10-19",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATUK LIM KENG GUAN"
-      },
-      {
-        "date": "2026-10-16",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-10-16",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR LIM DING SHYONG"
       }
     ],
     "entitlements": [
@@ -33255,10 +33262,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:35.407Z",
+    "checkedAt": "2026-11-06T15:25:07.179Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:35.407Z",
-      "entitlements": "2026-11-06T07:45:35.407Z"
+      "announcements": "2026-11-06T15:25:07.179Z",
+      "entitlements": "2026-11-06T15:25:07.179Z"
     }
   },
   "LWSABAH": {
@@ -33447,10 +33454,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:34.006Z",
+    "checkedAt": "2026-11-06T15:25:05.754Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:34.006Z",
-      "entitlements": "2026-11-06T07:45:34.006Z"
+      "announcements": "2026-11-06T15:25:05.754Z",
+      "entitlements": "2026-11-06T15:25:05.754Z"
     }
   },
   "M&G": {
@@ -34059,10 +34066,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:32.493Z",
+    "checkedAt": "2026-11-06T15:25:05.891Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:32.493Z",
-      "entitlements": "2026-11-06T07:45:32.493Z"
+      "announcements": "2026-11-06T15:25:05.891Z",
+      "entitlements": "2026-11-06T15:25:05.891Z"
     }
   },
   "MAXIS": {
@@ -34291,10 +34298,35 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-05] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PERMODALAN NASIONAL BERHAD"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN) (\"KWAP\")"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - YAYASAN PELABURAN BUMIPUTRA"
+      },
       {
         "date": "2026-11-05",
         "category": "Changes in Shareholdings",
@@ -34419,31 +34451,6 @@ window.NEWS_DATA = {
         "date": "2026-10-23",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-23",
-        "category": "General Announcement",
-        "title": "NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : OTHER ISSUE OF SECURITIES"
-      },
-      {
-        "date": "2026-10-22",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN) (\"KWAP\")"
-      },
-      {
-        "date": "2026-10-22",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
-      },
-      {
-        "date": "2026-10-22",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PERMODALAN NASIONAL BERHAD"
-      },
-      {
-        "date": "2026-10-22",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - YAYASAN PELABURAN BUMIPUTRA"
       }
     ],
     "entitlements": [
@@ -34497,10 +34504,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:36.003Z",
+    "checkedAt": "2026-11-06T15:25:01.652Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:36.003Z",
-      "entitlements": "2026-11-06T07:45:36.003Z"
+      "announcements": "2026-11-06T15:25:01.652Z",
+      "entitlements": "2026-11-06T15:25:01.652Z"
     }
   },
   "MBN": {
@@ -34670,10 +34677,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:26.779Z",
+    "checkedAt": "2026-11-06T15:24:57.379Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:26.779Z",
-      "entitlements": "2026-11-06T07:45:26.779Z"
+      "announcements": "2026-11-06T15:24:57.379Z",
+      "entitlements": "2026-11-06T15:24:57.379Z"
     }
   },
   "MCEMENT": {
@@ -34889,10 +34896,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:39.207Z",
+    "checkedAt": "2026-11-06T15:25:10.168Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:39.207Z",
-      "entitlements": "2026-11-06T07:45:39.207Z"
+      "announcements": "2026-11-06T15:25:10.168Z",
+      "entitlements": "2026-11-06T15:25:10.168Z"
     }
   },
   "MCLEAN": {
@@ -35072,10 +35079,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:39.150Z",
+    "checkedAt": "2026-11-06T15:25:10.270Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:39.150Z",
-      "entitlements": "2026-11-06T07:45:39.150Z"
+      "announcements": "2026-11-06T15:25:10.270Z",
+      "entitlements": "2026-11-06T15:25:10.270Z"
     }
   },
   "MEGAFB": {
@@ -35264,10 +35271,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:38.221Z",
+    "checkedAt": "2026-11-06T15:25:05.854Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:38.221Z",
-      "entitlements": "2026-11-06T07:45:38.221Z"
+      "announcements": "2026-11-06T15:25:05.854Z",
+      "entitlements": "2026-11-06T15:25:05.854Z"
     }
   },
   "MENTIGA": {
@@ -35668,10 +35675,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:26.619Z",
+    "checkedAt": "2026-11-06T15:25:04.054Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:26.619Z",
-      "entitlements": "2026-11-06T07:45:26.619Z"
+      "announcements": "2026-11-06T15:25:04.054Z",
+      "entitlements": "2026-11-06T15:25:04.054Z"
     }
   },
   "MESTRON": {
@@ -35685,6 +35692,16 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement on Shares Buy Back"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Shares Buy Back",
+        "title": "Notice of SBB by a Company Pursuant to Section 127 (16) of CA 2016"
+      },
       {
         "date": "2026-10-30",
         "category": "Shares Buy Back",
@@ -35824,16 +35841,6 @@ window.NEWS_DATA = {
         "date": "2026-09-14",
         "category": "Shares Buy Back",
         "title": "Notice of SBB by a Company Pursuant to Section 127 (16) of CA 2016"
-      },
-      {
-        "date": "2026-09-11",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-09-10",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
       }
     ],
     "entitlements": [
@@ -35878,10 +35885,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:31.967Z",
+    "checkedAt": "2026-11-06T15:25:02.245Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:31.967Z",
-      "entitlements": "2026-11-06T07:45:31.967Z"
+      "announcements": "2026-11-06T15:25:02.245Z",
+      "entitlements": "2026-11-06T15:25:02.245Z"
     }
   },
   "METRO": {
@@ -36051,10 +36058,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:31.453Z",
+    "checkedAt": "2026-11-06T15:25:03.406Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:31.453Z",
-      "entitlements": "2026-11-06T07:45:31.453Z"
+      "announcements": "2026-11-06T15:25:03.406Z",
+      "entitlements": "2026-11-06T15:25:03.406Z"
     }
   },
   "MFGROUP": {
@@ -36224,10 +36231,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:32.828Z",
+    "checkedAt": "2026-11-06T15:25:04.424Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:32.828Z",
-      "entitlements": "2026-11-06T07:45:32.828Z"
+      "announcements": "2026-11-06T15:25:04.424Z",
+      "entitlements": "2026-11-06T15:25:04.424Z"
     }
   },
   "MI": {
@@ -36241,6 +36248,11 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement on Shares Buy Back"
+      },
       {
         "date": "2026-11-04",
         "category": "Shares Buy Back",
@@ -36385,11 +36397,6 @@ window.NEWS_DATA = {
         "date": "2026-09-01",
         "category": "Circular/Notice",
         "title": "CIRCULAR TO SHAREHOLDERS IN RELATION TO THE PROPOSED LISTING OF Mi MATERIAL HOLDING PTE. LTD. (TO BE RENAMED Mi MATERIAL HOLDING LIMITED) ON THE MAINBOARD OF SINGAPORE EXCHANGE SECURITIES TRADING LIMITED (\"PROPOSED LISTING\") AND NOTICE OF EXTRAORDINARY GENERAL MEETING"
-      },
-      {
-        "date": "2026-08-28",
-        "category": "General Meetings",
-        "title": "General Meetings: Notice of Meeting"
       }
     ],
     "entitlements": [
@@ -36443,10 +36450,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:37.253Z",
+    "checkedAt": "2026-11-06T15:24:56.077Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:37.253Z",
-      "entitlements": "2026-11-06T07:45:37.253Z"
+      "announcements": "2026-11-06T15:24:56.077Z",
+      "entitlements": "2026-11-06T15:24:56.077Z"
     }
   },
   "MINOX": {
@@ -36644,10 +36651,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:36.900Z",
+    "checkedAt": "2026-11-06T15:25:08.653Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:36.900Z",
-      "entitlements": "2026-11-06T07:45:36.900Z"
+      "announcements": "2026-11-06T15:25:08.653Z",
+      "entitlements": "2026-11-06T15:25:08.653Z"
     }
   },
   "MISC": {
@@ -36863,7 +36870,7 @@ window.NEWS_DATA = {
       "announcements": "error",
       "entitlements": "error"
     },
-    "checkedAt": "2026-11-06T07:45:40.914Z",
+    "checkedAt": "2026-11-06T15:25:11.799Z",
     "lastSuccessfulAt": {
       "announcements": "2026-11-05T17:56:49.234Z",
       "entitlements": "2026-11-05T17:56:49.234Z"
@@ -37082,10 +37089,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:29.200Z",
+    "checkedAt": "2026-11-06T15:24:56.988Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:29.200Z",
-      "entitlements": "2026-11-06T07:45:29.200Z"
+      "announcements": "2026-11-06T15:24:56.988Z",
+      "entitlements": "2026-11-06T15:24:56.988Z"
     }
   },
   "MMCS": {
@@ -37225,10 +37232,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:35.238Z",
+    "checkedAt": "2026-11-06T15:25:04.038Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:35.238Z",
-      "entitlements": "2026-11-06T07:45:35.238Z"
+      "announcements": "2026-11-06T15:25:04.038Z",
+      "entitlements": "2026-11-06T15:25:04.038Z"
     }
   },
   "MNHLDG": {
@@ -37417,10 +37424,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:31.562Z",
+    "checkedAt": "2026-11-06T15:24:55.109Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:31.562Z",
-      "entitlements": "2026-11-06T07:45:31.562Z"
+      "announcements": "2026-11-06T15:24:55.109Z",
+      "entitlements": "2026-11-06T15:24:55.109Z"
     }
   },
   "MOBILIA": {
@@ -37627,10 +37634,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:41.355Z",
+    "checkedAt": "2026-11-06T15:25:12.119Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:41.355Z",
-      "entitlements": "2026-11-06T07:45:41.355Z"
+      "announcements": "2026-11-06T15:25:12.119Z",
+      "entitlements": "2026-11-06T15:25:12.119Z"
     }
   },
   "MPI": {
@@ -37640,10 +37647,15 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-05] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-11-05",
         "category": "Changes in Shareholdings",
@@ -37788,11 +37800,6 @@ window.NEWS_DATA = {
         "date": "2026-10-05",
         "category": "Annual Report",
         "title": "Annual Report & CG Report - 2026"
-      },
-      {
-        "date": "2026-10-02",
-        "category": "General Meetings",
-        "title": "General Meetings: Notice of Meeting"
       }
     ],
     "entitlements": [
@@ -37846,10 +37853,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:29.808Z",
+    "checkedAt": "2026-11-06T15:25:01.565Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:29.808Z",
-      "entitlements": "2026-11-06T07:45:29.808Z"
+      "announcements": "2026-11-06T15:25:01.565Z",
+      "entitlements": "2026-11-06T15:25:01.565Z"
     }
   },
   "MRDIY": {
@@ -37859,10 +37866,20 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-05] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-11-05",
         "category": "Changes in Shareholdings",
@@ -38002,16 +38019,6 @@ window.NEWS_DATA = {
         "date": "2026-09-22",
         "category": "Dealings in Listed Securities",
         "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
-      },
-      {
-        "date": "2026-09-22",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-21",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -38065,10 +38072,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:33.977Z",
+    "checkedAt": "2026-11-06T15:24:59.947Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:33.977Z",
-      "entitlements": "2026-11-06T07:45:33.977Z"
+      "announcements": "2026-11-06T15:24:59.947Z",
+      "entitlements": "2026-11-06T15:24:59.947Z"
     }
   },
   "MSB": {
@@ -38231,10 +38238,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:40.848Z",
+    "checkedAt": "2026-11-06T15:25:11.459Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:40.848Z",
-      "entitlements": "2026-11-06T07:45:40.848Z"
+      "announcements": "2026-11-06T15:25:11.459Z",
+      "entitlements": "2026-11-06T15:25:11.459Z"
     }
   },
   "MSTGOLF": {
@@ -38441,10 +38448,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:37.360Z",
+    "checkedAt": "2026-11-06T15:25:09.325Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:37.360Z",
-      "entitlements": "2026-11-06T07:45:37.360Z"
+      "announcements": "2026-11-06T15:25:09.325Z",
+      "entitlements": "2026-11-06T15:25:09.325Z"
     }
   },
   "MTAG": {
@@ -38660,10 +38667,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:35.401Z",
+    "checkedAt": "2026-11-06T15:25:06.967Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:35.401Z",
-      "entitlements": "2026-11-06T07:45:35.401Z"
+      "announcements": "2026-11-06T15:25:06.967Z",
+      "entitlements": "2026-11-06T15:25:06.967Z"
     }
   },
   "MTEC": {
@@ -38879,10 +38886,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:24.489Z",
+    "checkedAt": "2026-11-06T15:24:56.235Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:24.489Z",
-      "entitlements": "2026-11-06T07:45:24.489Z"
+      "announcements": "2026-11-06T15:24:56.235Z",
+      "entitlements": "2026-11-06T15:24:56.235Z"
     }
   },
   "MTTSL": {
@@ -38892,10 +38899,25 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-05] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABERDEEN GROUP PLC"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABERDEEN GROUP PLC"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABERDEEN GROUP PLC"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABRDN HOLDINGS LIMITED"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABRDN MALAYSIA SDN. BHD."
+      },
       {
         "date": "2026-11-05",
         "category": "Changes in Shareholdings",
@@ -39030,21 +39052,6 @@ window.NEWS_DATA = {
         "date": "2026-10-22",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR OOI LEAN HIN"
-      },
-      {
-        "date": "2026-10-22",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABERDEEN GROUP PLC"
-      },
-      {
-        "date": "2026-10-22",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABRDN HOLDINGS LIMITED"
-      },
-      {
-        "date": "2026-10-22",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABRDN MALAYSIA SDN. BHD."
       }
     ],
     "entitlements": [
@@ -39062,10 +39069,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:23.707Z",
+    "checkedAt": "2026-11-06T15:24:54.647Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:23.707Z",
-      "entitlements": "2026-11-06T07:45:23.707Z"
+      "announcements": "2026-11-06T15:24:54.647Z",
+      "entitlements": "2026-11-06T15:24:54.647Z"
     }
   },
   "NADIBHD": {
@@ -39265,10 +39272,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:27.496Z",
+    "checkedAt": "2026-11-06T15:24:58.690Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:27.496Z",
-      "entitlements": "2026-11-06T07:45:27.496Z"
+      "announcements": "2026-11-06T15:24:58.690Z",
+      "entitlements": "2026-11-06T15:24:58.690Z"
     }
   },
   "NATGATE": {
@@ -39484,10 +39491,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:35.711Z",
+    "checkedAt": "2026-11-06T15:25:07.569Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:35.711Z",
-      "entitlements": "2026-11-06T07:45:35.711Z"
+      "announcements": "2026-11-06T15:25:07.569Z",
+      "entitlements": "2026-11-06T15:25:07.569Z"
     }
   },
   "NE": {
@@ -39657,16 +39664,28 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:35.898Z",
+    "checkedAt": "2026-11-06T15:25:07.720Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:35.898Z",
-      "entitlements": "2026-11-06T07:45:35.898Z"
+      "announcements": "2026-11-06T15:25:07.720Z",
+      "entitlements": "2026-11-06T15:25:07.720Z"
     }
   },
   "NESTCON": {
     "hasNewsAlert": false,
-    "newsBadges": [],
+    "newsBadges": [
+      {
+        "type": "RECENT_NEWS",
+        "label": "News: 2026-11-06",
+        "severity": "info",
+        "title": "[2026-11-06] General Announcement - OTHERS"
+      }
+    ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
       {
         "date": "2026-09-22",
         "category": "General Announcement",
@@ -39811,11 +39830,6 @@ window.NEWS_DATA = {
         "date": "2026-06-30",
         "category": "General Meetings",
         "title": "General Meetings: Outcome of Meeting"
-      },
-      {
-        "date": "2026-06-15",
-        "category": "Circular/Notice",
-        "title": "CIRCULAR TO SHAREHOLDERS IN RELATION TO THE (I) PROPOSED ACQUISITION BY NESTCON ISKANDAR PUTERI SDN. BHD., AN INDIRECT 70%-OWNED SUBSIDIARY OF NESTCON, OF 3 PARCELS OF LAND LOCATED IN MUKIM PULAI, DAERAH JOHOR BAHRU, JOHOR DARUL TA'ZIM, WITH A TOTAL LAND AREA OF APPROXIMATELY 33,782.284 SQUARE ME"
       }
     ],
     "entitlements": [],
@@ -39823,10 +39837,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:28.409Z",
+    "checkedAt": "2026-11-06T15:24:59.369Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:28.409Z",
-      "entitlements": "2026-11-06T07:45:28.409Z"
+      "announcements": "2026-11-06T15:24:59.369Z",
+      "entitlements": "2026-11-06T15:24:59.369Z"
     }
   },
   "NESTLE": {
@@ -39842,10 +39856,15 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-05] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-11-05",
         "category": "Changes in Shareholdings",
@@ -39990,11 +40009,6 @@ window.NEWS_DATA = {
         "date": "2026-07-07",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-07-03",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -40048,10 +40062,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:24.875Z",
+    "checkedAt": "2026-11-06T15:24:56.609Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:24.875Z",
-      "entitlements": "2026-11-06T07:45:24.875Z"
+      "announcements": "2026-11-06T15:24:56.609Z",
+      "entitlements": "2026-11-06T15:24:56.609Z"
     }
   },
   "NEXG": {
@@ -40061,10 +40075,25 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-05] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' HAJI ISHAK BIN ISMAIL"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' HAJI ISHAK BIN ISMAIL"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' HAJI ISHAK BIN ISMAIL"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings During Closed Period"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' HAJI ISHAK BIN ISMAIL"
+      },
       {
         "date": "2026-11-05",
         "category": "Changes in Shareholdings",
@@ -40199,21 +40228,6 @@ window.NEWS_DATA = {
         "date": "2026-07-30",
         "category": "Annual Report",
         "title": "Annual Report & CG Report - 2026"
-      },
-      {
-        "date": "2026-07-30",
-        "category": "Circular/Notice",
-        "title": "PART A: STATEMENT TO SHAREHOLDERS IN RELATION TO THE PROPOSED RENEWAL OF SHARE BUY-BACK AUTHORITY PART B: CIRCULAR TO SHAREHOLDERS IN RELATION TO THE PROPOSED CHANGE OF NAME"
-      },
-      {
-        "date": "2026-07-29",
-        "category": "General Meetings",
-        "title": "General Meetings: Notice of Meeting"
-      },
-      {
-        "date": "2026-07-28",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
       }
     ],
     "entitlements": [
@@ -40267,10 +40281,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:28.652Z",
+    "checkedAt": "2026-11-06T15:25:00.633Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:28.652Z",
-      "entitlements": "2026-11-06T07:45:28.652Z"
+      "announcements": "2026-11-06T15:25:00.633Z",
+      "entitlements": "2026-11-06T15:25:00.633Z"
     }
   },
   "NEXGRAM": {
@@ -40440,7 +40454,7 @@ window.NEWS_DATA = {
       "announcements": "error",
       "entitlements": "error"
     },
-    "checkedAt": "2026-11-06T07:45:40.914Z",
+    "checkedAt": "2026-11-06T15:25:11.799Z",
     "lastSuccessfulAt": {
       "announcements": "2026-11-03T15:30:09.711Z",
       "entitlements": "2026-11-03T15:30:09.711Z"
@@ -40832,10 +40846,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:24.974Z",
+    "checkedAt": "2026-11-06T15:24:56.622Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:24.974Z",
-      "entitlements": "2026-11-06T07:45:24.974Z"
+      "announcements": "2026-11-06T15:24:56.622Z",
+      "entitlements": "2026-11-06T15:24:56.622Z"
     }
   },
   "NWEBHD": {
@@ -40905,10 +40919,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:25.615Z",
+    "checkedAt": "2026-11-06T15:24:57.700Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:25.615Z",
-      "entitlements": "2026-11-06T07:45:25.615Z"
+      "announcements": "2026-11-06T15:24:57.700Z",
+      "entitlements": "2026-11-06T15:24:57.700Z"
     }
   },
   "OBHB": {
@@ -41121,10 +41135,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:27.940Z",
+    "checkedAt": "2026-11-06T15:24:58.880Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:27.940Z",
-      "entitlements": "2026-11-06T07:45:27.940Z"
+      "announcements": "2026-11-06T15:24:58.880Z",
+      "entitlements": "2026-11-06T15:24:58.880Z"
     }
   },
   "OFB": {
@@ -41297,10 +41311,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:34.731Z",
+    "checkedAt": "2026-11-06T15:25:06.617Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:34.731Z",
-      "entitlements": "2026-11-06T07:45:34.731Z"
+      "announcements": "2026-11-06T15:25:06.617Z",
+      "entitlements": "2026-11-06T15:25:06.617Z"
     }
   },
   "OGM": {
@@ -41463,10 +41477,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:28.663Z",
+    "checkedAt": "2026-11-06T15:24:59.793Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:28.663Z",
-      "entitlements": "2026-11-06T07:45:28.663Z"
+      "announcements": "2026-11-06T15:24:59.793Z",
+      "entitlements": "2026-11-06T15:24:59.793Z"
     }
   },
   "OGX": {
@@ -41646,10 +41660,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:30.989Z",
+    "checkedAt": "2026-11-06T15:25:02.906Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:30.989Z",
-      "entitlements": "2026-11-06T07:45:30.989Z"
+      "announcements": "2026-11-06T15:25:02.906Z",
+      "entitlements": "2026-11-06T15:25:02.906Z"
     }
   },
   "OHM": {
@@ -41847,10 +41861,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:35.514Z",
+    "checkedAt": "2026-11-06T15:25:07.520Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:35.514Z",
-      "entitlements": "2026-11-06T07:45:35.514Z"
+      "announcements": "2026-11-06T15:25:07.520Z",
+      "entitlements": "2026-11-06T15:25:07.520Z"
     }
   },
   "OPPSTAR": {
@@ -42048,10 +42062,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:35.938Z",
+    "checkedAt": "2026-11-06T15:25:07.713Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:35.938Z",
-      "entitlements": "2026-11-06T07:45:35.938Z"
+      "announcements": "2026-11-06T15:25:07.713Z",
+      "entitlements": "2026-11-06T15:25:07.713Z"
     }
   },
   "OPTIMAX": {
@@ -42260,10 +42274,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:33.219Z",
+    "checkedAt": "2026-11-06T15:25:04.846Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:33.219Z",
-      "entitlements": "2026-11-06T07:45:33.219Z"
+      "announcements": "2026-11-06T15:25:04.846Z",
+      "entitlements": "2026-11-06T15:25:04.846Z"
     }
   },
   "ORGABIO": {
@@ -42443,10 +42457,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:27.560Z",
+    "checkedAt": "2026-11-06T15:24:58.562Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:27.560Z",
-      "entitlements": "2026-11-06T07:45:27.560Z"
+      "announcements": "2026-11-06T15:24:58.562Z",
+      "entitlements": "2026-11-06T15:24:58.562Z"
     }
   },
   "ORKIM": {
@@ -42456,10 +42470,25 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-28] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EASTSPRING INVESTMENTS BERHAD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EASTSPRING INVESTMENTS BERHAD"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PRUDENTIAL PLC"
+      },
       {
         "date": "2026-11-05",
         "category": "General Announcement",
@@ -42594,21 +42623,6 @@ window.NEWS_DATA = {
         "date": "2026-09-10",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EASTSPRING INVESTMENTS BERHAD"
-      },
-      {
-        "date": "2026-09-09",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-09-08",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-09-07",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
       }
     ],
     "entitlements": [
@@ -42635,23 +42649,33 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:29.819Z",
+    "checkedAt": "2026-11-06T15:25:02.675Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:29.819Z",
-      "entitlements": "2026-11-06T07:45:29.819Z"
+      "announcements": "2026-11-06T15:25:02.675Z",
+      "entitlements": "2026-11-06T15:25:02.675Z"
     }
   },
   "OVH": {
     "hasNewsAlert": false,
     "newsBadges": [
       {
-        "type": "RECENT_NEWS",
-        "label": "News: 2026-11-04",
+        "type": "JERUNG_5PCT",
+        "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-04] Dealings in Listed Securities - DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
+        "title": "[2026-11-06] Changes in Director's Interest (Section 219 of CA 2016) - MR WILLIE HO HUAT VOON"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR WILLIE HO HUAT VOON"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings During Closed Period"
+      },
       {
         "date": "2026-11-04",
         "category": "Dealings in Listed Securities",
@@ -42791,16 +42815,6 @@ window.NEWS_DATA = {
         "date": "2026-06-19",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PUAN SHARIFAH NUR FARESHA BINTI WAN ABDUL KHALEG"
-      },
-      {
-        "date": "2026-06-19",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR TEE SENG MIAN"
-      },
-      {
-        "date": "2026-06-19",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MAJUCO MOTOR SDN. BHD."
       }
     ],
     "entitlements": [],
@@ -42808,10 +42822,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:26.406Z",
+    "checkedAt": "2026-11-06T15:24:58.554Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:26.406Z",
-      "entitlements": "2026-11-06T07:45:26.406Z"
+      "announcements": "2026-11-06T15:24:58.554Z",
+      "entitlements": "2026-11-06T15:24:58.554Z"
     }
   },
   "OXB": {
@@ -42991,10 +43005,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:29.998Z",
+    "checkedAt": "2026-11-06T15:24:59.961Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:29.998Z",
-      "entitlements": "2026-11-06T07:45:29.998Z"
+      "announcements": "2026-11-06T15:24:59.961Z",
+      "entitlements": "2026-11-06T15:24:59.961Z"
     }
   },
   "PANDA": {
@@ -43194,10 +43208,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:36.796Z",
+    "checkedAt": "2026-11-06T15:25:06.269Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:36.796Z",
-      "entitlements": "2026-11-06T07:45:36.796Z"
+      "announcements": "2026-11-06T15:25:06.269Z",
+      "entitlements": "2026-11-06T15:25:06.269Z"
     }
   },
   "PARADIGM": {
@@ -43395,10 +43409,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:32.851Z",
+    "checkedAt": "2026-11-06T15:25:02.529Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:32.851Z",
-      "entitlements": "2026-11-06T07:45:32.851Z"
+      "announcements": "2026-11-06T15:25:02.529Z",
+      "entitlements": "2026-11-06T15:25:02.529Z"
     }
   },
   "PBBANK": {
@@ -43627,10 +43641,15 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-05] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD (\"EPF BOARD\")"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD (\"EPF BOARD\")"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD (\"EPF BOARD\")"
+      },
       {
         "date": "2026-11-05",
         "category": "Changes in Shareholdings",
@@ -43775,11 +43794,6 @@ window.NEWS_DATA = {
         "date": "2026-08-17",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD (\"EPF BOARD\")"
-      },
-      {
-        "date": "2026-08-12",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD (\"EPF BOARD\")"
       }
     ],
     "entitlements": [
@@ -43833,10 +43847,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:38.267Z",
+    "checkedAt": "2026-11-06T15:25:09.488Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:38.267Z",
-      "entitlements": "2026-11-06T07:45:38.267Z"
+      "announcements": "2026-11-06T15:25:09.488Z",
+      "entitlements": "2026-11-06T15:25:09.488Z"
     }
   },
   "PEKAT": {
@@ -44034,10 +44048,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:24.524Z",
+    "checkedAt": "2026-11-06T15:24:55.005Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:24.524Z",
-      "entitlements": "2026-11-06T07:45:24.524Z"
+      "announcements": "2026-11-06T15:24:55.005Z",
+      "entitlements": "2026-11-06T15:24:55.005Z"
     }
   },
   "PENTA": {
@@ -44047,7 +44061,7 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-05] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       },
       {
         "type": "EARNINGS_QR",
@@ -44057,6 +44071,21 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PRUDENTIAL PLC"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
       {
         "date": "2026-11-05",
         "category": "Changes in Shareholdings",
@@ -44191,21 +44220,6 @@ window.NEWS_DATA = {
         "date": "2026-10-16",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-16",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
-      },
-      {
-        "date": "2026-10-15",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-15",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PRUDENTIAL PLC"
       }
     ],
     "entitlements": [
@@ -44259,10 +44273,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:31.766Z",
+    "checkedAt": "2026-11-06T15:25:01.705Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:31.766Z",
-      "entitlements": "2026-11-06T07:45:31.766Z"
+      "announcements": "2026-11-06T15:25:01.705Z",
+      "entitlements": "2026-11-06T15:25:01.705Z"
     }
   },
   "PENTECH": {
@@ -44412,10 +44426,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:34.423Z",
+    "checkedAt": "2026-11-06T15:25:06.105Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:34.423Z",
-      "entitlements": "2026-11-06T07:45:34.423Z"
+      "announcements": "2026-11-06T15:25:06.105Z",
+      "entitlements": "2026-11-06T15:25:06.105Z"
     }
   },
   "PEOPLE": {
@@ -44588,10 +44602,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:26.592Z",
+    "checkedAt": "2026-11-06T15:24:57.953Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:26.592Z",
-      "entitlements": "2026-11-06T07:45:26.592Z"
+      "announcements": "2026-11-06T15:24:57.953Z",
+      "entitlements": "2026-11-06T15:24:57.953Z"
     }
   },
   "PETDAG": {
@@ -44601,10 +44615,15 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-05] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD (\"EPF BOARD\")"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD (\"EPF BOARD\")"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD (\"EPF BOARD\")"
+      },
       {
         "date": "2026-11-05",
         "category": "Changes in Shareholdings",
@@ -44749,11 +44768,6 @@ window.NEWS_DATA = {
         "date": "2026-06-04",
         "category": "Changes in Shareholdings",
         "title": "Changes in Director's Interest (Section 219 of CA 2016) - ENCIK AZRUL BIN OSMAN RANI"
-      },
-      {
-        "date": "2026-06-04",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
       }
     ],
     "entitlements": [
@@ -44807,10 +44821,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:30.407Z",
+    "checkedAt": "2026-11-06T15:25:03.537Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:30.407Z",
-      "entitlements": "2026-11-06T07:45:30.407Z"
+      "announcements": "2026-11-06T15:25:03.537Z",
+      "entitlements": "2026-11-06T15:25:03.537Z"
     }
   },
   "PETGAS": {
@@ -44820,10 +44834,15 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-05] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-11-05",
         "category": "Changes in Shareholdings",
@@ -44968,11 +44987,6 @@ window.NEWS_DATA = {
         "date": "2026-09-15",
         "category": "General Announcement",
         "title": "OTHERS"
-      },
-      {
-        "date": "2026-09-11",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -45026,10 +45040,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:25.766Z",
+    "checkedAt": "2026-11-06T15:24:56.395Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:25.766Z",
-      "entitlements": "2026-11-06T07:45:25.766Z"
+      "announcements": "2026-11-06T15:24:56.395Z",
+      "entitlements": "2026-11-06T15:24:56.395Z"
     }
   },
   "PGLOBAL": {
@@ -45245,10 +45259,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:22.945Z",
+    "checkedAt": "2026-11-06T15:24:55.251Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:22.945Z",
-      "entitlements": "2026-11-06T07:45:22.945Z"
+      "announcements": "2026-11-06T15:24:55.251Z",
+      "entitlements": "2026-11-06T15:24:55.251Z"
     }
   },
   "PIONEER": {
@@ -45308,10 +45322,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:33.671Z",
+    "checkedAt": "2026-11-06T15:25:01.811Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:33.671Z",
-      "entitlements": "2026-11-06T07:45:33.671Z"
+      "announcements": "2026-11-06T15:25:01.811Z",
+      "entitlements": "2026-11-06T15:25:01.811Z"
     }
   },
   "PJBUMI": {
@@ -45693,10 +45707,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:28.204Z",
+    "checkedAt": "2026-11-06T15:24:59.923Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:28.204Z",
-      "entitlements": "2026-11-06T07:45:28.204Z"
+      "announcements": "2026-11-06T15:24:59.923Z",
+      "entitlements": "2026-11-06T15:24:59.923Z"
     }
   },
   "PLYTEC": {
@@ -45876,10 +45890,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:37.833Z",
+    "checkedAt": "2026-11-06T15:25:11.799Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:37.833Z",
-      "entitlements": "2026-11-06T07:45:37.833Z"
+      "announcements": "2026-11-06T15:25:11.799Z",
+      "entitlements": "2026-11-06T15:25:11.799Z"
     }
   },
   "PMCK": {
@@ -46074,10 +46088,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:32.719Z",
+    "checkedAt": "2026-11-06T15:25:11.100Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:32.719Z",
-      "entitlements": "2026-11-06T07:45:32.719Z"
+      "announcements": "2026-11-06T15:25:11.100Z",
+      "entitlements": "2026-11-06T15:25:11.100Z"
     }
   },
   "PMETAL": {
@@ -46087,10 +46101,15 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-05] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-11-05",
         "category": "Changes in Shareholdings",
@@ -46235,11 +46254,6 @@ window.NEWS_DATA = {
         "date": "2026-10-07",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-10-06",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -46293,10 +46307,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:34.199Z",
+    "checkedAt": "2026-11-06T15:25:08.005Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:34.199Z",
-      "entitlements": "2026-11-06T07:45:34.199Z"
+      "announcements": "2026-11-06T15:25:08.005Z",
+      "entitlements": "2026-11-06T15:25:08.005Z"
     }
   },
   "PMIBHD": {
@@ -46469,10 +46483,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:28.542Z",
+    "checkedAt": "2026-11-06T15:25:08.671Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:28.542Z",
-      "entitlements": "2026-11-06T07:45:28.542Z"
+      "announcements": "2026-11-06T15:25:08.671Z",
+      "entitlements": "2026-11-06T15:25:08.671Z"
     }
   },
   "PMW": {
@@ -46652,10 +46666,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:25.438Z",
+    "checkedAt": "2026-11-06T15:24:56.443Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:25.438Z",
-      "entitlements": "2026-11-06T07:45:25.438Z"
+      "announcements": "2026-11-06T15:24:56.443Z",
+      "entitlements": "2026-11-06T15:24:56.443Z"
     }
   },
   "POLYMER": {
@@ -46837,10 +46851,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:36.550Z",
+    "checkedAt": "2026-11-06T15:25:08.319Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:36.550Z",
-      "entitlements": "2026-11-06T07:45:36.550Z"
+      "announcements": "2026-11-06T15:25:08.319Z",
+      "entitlements": "2026-11-06T15:25:08.319Z"
     }
   },
   "POWER": {
@@ -47003,12 +47017,12 @@ window.NEWS_DATA = {
     "entitlements": [],
     "fetchStatus": {
       "announcements": "ok",
-      "entitlements": "error"
+      "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:40.769Z",
+    "checkedAt": "2026-11-06T15:25:01.390Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:40.769Z",
-      "entitlements": "2026-11-05T17:57:01.989Z"
+      "announcements": "2026-11-06T15:25:01.390Z",
+      "entitlements": "2026-11-06T15:25:01.390Z"
     }
   },
   "PPB": {
@@ -47224,10 +47238,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:32.471Z",
+    "checkedAt": "2026-11-06T15:25:03.567Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:32.471Z",
-      "entitlements": "2026-11-06T07:45:32.471Z"
+      "announcements": "2026-11-06T15:25:03.567Z",
+      "entitlements": "2026-11-06T15:25:03.567Z"
     }
   },
   "PPJACK": {
@@ -47443,10 +47457,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:26.207Z",
+    "checkedAt": "2026-11-06T15:24:58.402Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:26.207Z",
-      "entitlements": "2026-11-06T07:45:26.207Z"
+      "announcements": "2026-11-06T15:24:58.402Z",
+      "entitlements": "2026-11-06T15:24:58.402Z"
     }
   },
   "PSP": {
@@ -47635,10 +47649,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:32.877Z",
+    "checkedAt": "2026-11-06T15:25:04.503Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:32.877Z",
-      "entitlements": "2026-11-06T07:45:32.877Z"
+      "announcements": "2026-11-06T15:25:04.503Z",
+      "entitlements": "2026-11-06T15:25:04.503Z"
     }
   },
   "PTRB": {
@@ -47836,10 +47850,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:33.464Z",
+    "checkedAt": "2026-11-06T15:25:04.962Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:33.464Z",
-      "entitlements": "2026-11-06T07:45:33.464Z"
+      "announcements": "2026-11-06T15:25:04.962Z",
+      "entitlements": "2026-11-06T15:25:04.962Z"
     }
   },
   "PWRWELL": {
@@ -48048,10 +48062,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:37.643Z",
+    "checkedAt": "2026-11-06T15:25:09.345Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:37.643Z",
-      "entitlements": "2026-11-06T07:45:37.643Z"
+      "announcements": "2026-11-06T15:25:09.345Z",
+      "entitlements": "2026-11-06T15:25:09.345Z"
     }
   },
   "QL": {
@@ -48061,10 +48075,15 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-02] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-11-02",
         "category": "Changes in Shareholdings",
@@ -48209,11 +48228,6 @@ window.NEWS_DATA = {
         "date": "2026-07-27",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-07-27",
-        "category": "Listing Circulars",
-        "title": "QL - Notice of Book Closure"
       }
     ],
     "entitlements": [
@@ -48267,10 +48281,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:35.109Z",
+    "checkedAt": "2026-11-06T15:25:02.106Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:35.109Z",
-      "entitlements": "2026-11-06T07:45:35.109Z"
+      "announcements": "2026-11-06T15:25:02.106Z",
+      "entitlements": "2026-11-06T15:25:02.106Z"
     }
   },
   "RADIUM": {
@@ -48461,10 +48475,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:24.051Z",
+    "checkedAt": "2026-11-06T15:24:55.554Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:24.051Z",
-      "entitlements": "2026-11-06T07:45:24.051Z"
+      "announcements": "2026-11-06T15:24:55.554Z",
+      "entitlements": "2026-11-06T15:24:55.554Z"
     }
   },
   "RAMSSOL": {
@@ -48644,10 +48658,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:25.030Z",
+    "checkedAt": "2026-11-06T15:25:00.274Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:25.030Z",
-      "entitlements": "2026-11-06T07:45:25.030Z"
+      "announcements": "2026-11-06T15:25:00.274Z",
+      "entitlements": "2026-11-06T15:25:00.274Z"
     }
   },
   "RANHILL": {
@@ -48863,10 +48877,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:24.196Z",
+    "checkedAt": "2026-11-06T15:24:55.923Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:24.196Z",
-      "entitlements": "2026-11-06T07:45:24.196Z"
+      "announcements": "2026-11-06T15:24:55.923Z",
+      "entitlements": "2026-11-06T15:24:55.923Z"
     }
   },
   "REACHTEN": {
@@ -48880,6 +48894,11 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement on Shares Buy Back"
+      },
       {
         "date": "2026-11-05",
         "category": "Shares Buy Back",
@@ -49024,11 +49043,6 @@ window.NEWS_DATA = {
         "date": "2026-09-14",
         "category": "Shares Buy Back",
         "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-09-11",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
       }
     ],
     "entitlements": [
@@ -49064,10 +49078,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:28.858Z",
+    "checkedAt": "2026-11-06T15:25:01.127Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:28.858Z",
-      "entitlements": "2026-11-06T07:45:28.858Z"
+      "announcements": "2026-11-06T15:25:01.127Z",
+      "entitlements": "2026-11-06T15:25:01.127Z"
     }
   },
   "RESTNGO": {
@@ -49207,10 +49221,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:40.365Z",
+    "checkedAt": "2026-11-06T15:25:08.479Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:40.365Z",
-      "entitlements": "2026-11-06T07:45:40.365Z"
+      "announcements": "2026-11-06T15:25:08.479Z",
+      "entitlements": "2026-11-06T15:25:08.479Z"
     }
   },
   "RHBBANK": {
@@ -49636,10 +49650,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:27.034Z",
+    "checkedAt": "2026-11-06T15:24:57.767Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:27.034Z",
-      "entitlements": "2026-11-06T07:45:27.034Z"
+      "announcements": "2026-11-06T15:24:57.767Z",
+      "entitlements": "2026-11-06T15:24:57.767Z"
     }
   },
   "RPLANET": {
@@ -49769,10 +49783,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:35.345Z",
+    "checkedAt": "2026-11-06T15:25:07.155Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:35.345Z",
-      "entitlements": "2026-11-06T07:45:35.345Z"
+      "announcements": "2026-11-06T15:25:07.155Z",
+      "entitlements": "2026-11-06T15:25:07.155Z"
     }
   },
   "RT": {
@@ -49837,10 +49851,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:35.754Z",
+    "checkedAt": "2026-11-06T15:25:08.015Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:35.754Z",
-      "entitlements": "2026-11-06T07:45:35.754Z"
+      "announcements": "2026-11-06T15:25:08.015Z",
+      "entitlements": "2026-11-06T15:25:08.015Z"
     }
   },
   "RTECH": {
@@ -50013,10 +50027,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:29.394Z",
+    "checkedAt": "2026-11-06T15:25:00.448Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:29.394Z",
-      "entitlements": "2026-11-06T07:45:29.394Z"
+      "announcements": "2026-11-06T15:25:00.448Z",
+      "entitlements": "2026-11-06T15:25:00.448Z"
     }
   },
   "SAG": {
@@ -50205,10 +50219,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:30.682Z",
+    "checkedAt": "2026-11-06T15:25:02.765Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:30.682Z",
-      "entitlements": "2026-11-06T07:45:30.682Z"
+      "announcements": "2026-11-06T15:25:02.765Z",
+      "entitlements": "2026-11-06T15:25:02.765Z"
     }
   },
   "SALIRAN": {
@@ -50378,10 +50392,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:22.981Z",
+    "checkedAt": "2026-11-06T15:24:54.585Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:22.981Z",
-      "entitlements": "2026-11-06T07:45:22.981Z"
+      "announcements": "2026-11-06T15:24:54.585Z",
+      "entitlements": "2026-11-06T15:24:54.585Z"
     }
   },
   "SAM": {
@@ -50597,10 +50611,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:30.164Z",
+    "checkedAt": "2026-11-06T15:25:01.789Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:30.164Z",
-      "entitlements": "2026-11-06T07:45:30.164Z"
+      "announcements": "2026-11-06T15:25:01.789Z",
+      "entitlements": "2026-11-06T15:25:01.789Z"
     }
   },
   "SAMAIDEN": {
@@ -50816,10 +50830,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:24.032Z",
+    "checkedAt": "2026-11-06T15:24:55.596Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:24.032Z",
-      "entitlements": "2026-11-06T07:45:24.032Z"
+      "announcements": "2026-11-06T15:24:55.596Z",
+      "entitlements": "2026-11-06T15:24:55.596Z"
     }
   },
   "SBH": {
@@ -50829,10 +50843,25 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-23] Changes in Director's Interest (Section 219 of CA 2016) - MR TAN BOO NAM"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR TAN BOO NAM"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings During Closed Period"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR TAN BOO NAM"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR TAN BOO NAM"
+      },
       {
         "date": "2026-10-23",
         "category": "Dealings in Listed Securities",
@@ -50967,21 +50996,6 @@ window.NEWS_DATA = {
         "date": "2026-08-06",
         "category": "Dealings in Listed Securities",
         "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings During Closed Period"
-      },
-      {
-        "date": "2026-08-06",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR TAN BOO NAM"
-      },
-      {
-        "date": "2026-08-06",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR TAN BOO NAM"
-      },
-      {
-        "date": "2026-07-31",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Intention to Deal During Closed Period"
       }
     ],
     "entitlements": [
@@ -51017,10 +51031,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:26.234Z",
+    "checkedAt": "2026-11-06T15:24:58.927Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:26.234Z",
-      "entitlements": "2026-11-06T07:45:26.234Z"
+      "announcements": "2026-11-06T15:24:58.927Z",
+      "entitlements": "2026-11-06T15:24:58.927Z"
     }
   },
   "SBS": {
@@ -51030,10 +51044,30 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-05] Changes in Director's Interest (Section 219 of CA 2016) - MR WONG CHUN MUN"
+        "title": "[2026-11-06] Changes in Director's Interest (Section 219 of CA 2016) - WARREN CHENG"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings During Closed Period"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - WARREN CHENG"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - WONG CHUN MUN"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR WONG CHUN MUN"
+      },
       {
         "date": "2026-11-05",
         "category": "Changes in Shareholdings",
@@ -51163,26 +51197,6 @@ window.NEWS_DATA = {
         "date": "2026-02-20",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR WONG CHUN MUN"
-      },
-      {
-        "date": "2026-02-20",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - WONG CHUN MUN"
-      },
-      {
-        "date": "2026-02-20",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings During Closed Period"
-      },
-      {
-        "date": "2026-02-19",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR WONG CHUN MUN"
-      },
-      {
-        "date": "2026-02-19",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR WONG CHUN MUN"
       }
     ],
     "entitlements": [],
@@ -51190,10 +51204,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:40.016Z",
+    "checkedAt": "2026-11-06T15:25:10.796Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:40.016Z",
-      "entitlements": "2026-11-06T07:45:40.016Z"
+      "announcements": "2026-11-06T15:25:10.796Z",
+      "entitlements": "2026-11-06T15:25:10.796Z"
     }
   },
   "SCB": {
@@ -51356,10 +51370,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:31.480Z",
+    "checkedAt": "2026-11-06T15:24:59.117Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:31.480Z",
-      "entitlements": "2026-11-06T07:45:31.480Z"
+      "announcements": "2026-11-06T15:24:59.117Z",
+      "entitlements": "2026-11-06T15:24:59.117Z"
     }
   },
   "SCGBHD": {
@@ -51369,10 +51383,15 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-05] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-11-05",
         "category": "Changes in Shareholdings",
@@ -51517,11 +51536,6 @@ window.NEWS_DATA = {
         "date": "2026-10-01",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - SINO SHIELD SDN. BHD."
-      },
-      {
-        "date": "2026-10-01",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR TUNG ENG HAI"
       }
     ],
     "entitlements": [
@@ -51575,10 +51589,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:28.111Z",
+    "checkedAt": "2026-11-06T15:25:01.751Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:28.111Z",
-      "entitlements": "2026-11-06T07:45:28.111Z"
+      "announcements": "2026-11-06T15:25:01.751Z",
+      "entitlements": "2026-11-06T15:25:01.751Z"
     }
   },
   "SDCG": {
@@ -51767,10 +51781,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:22.965Z",
+    "checkedAt": "2026-11-06T15:24:54.690Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:22.965Z",
-      "entitlements": "2026-11-06T07:45:22.965Z"
+      "announcements": "2026-11-06T15:24:54.690Z",
+      "entitlements": "2026-11-06T15:24:54.690Z"
     }
   },
   "SDG": {
@@ -51780,7 +51794,7 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-05] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
       },
       {
         "type": "EARNINGS_QR",
@@ -51790,6 +51804,11 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
+      },
       {
         "date": "2026-11-05",
         "category": "Changes in Shareholdings",
@@ -51934,11 +51953,6 @@ window.NEWS_DATA = {
         "date": "2026-10-15",
         "category": "General Announcement",
         "title": "OTHERS"
-      },
-      {
-        "date": "2026-10-13",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -51992,10 +52006,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:36.397Z",
+    "checkedAt": "2026-11-06T15:25:08.223Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:36.397Z",
-      "entitlements": "2026-11-06T07:45:36.397Z"
+      "announcements": "2026-11-06T15:25:08.223Z",
+      "entitlements": "2026-11-06T15:25:08.223Z"
     }
   },
   "SDS": {
@@ -52211,10 +52225,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:25.971Z",
+    "checkedAt": "2026-11-06T15:24:56.871Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:25.971Z",
-      "entitlements": "2026-11-06T07:45:25.971Z"
+      "announcements": "2026-11-06T15:24:56.871Z",
+      "entitlements": "2026-11-06T15:24:56.871Z"
     }
   },
   "SEMICO": {
@@ -52412,10 +52426,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:23.835Z",
+    "checkedAt": "2026-11-06T15:24:55.500Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:23.835Z",
-      "entitlements": "2026-11-06T07:45:23.835Z"
+      "announcements": "2026-11-06T15:24:55.500Z",
+      "entitlements": "2026-11-06T15:24:55.500Z"
     }
   },
   "SENFONG": {
@@ -52631,10 +52645,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:23.679Z",
+    "checkedAt": "2026-11-06T15:24:54.619Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:23.679Z",
-      "entitlements": "2026-11-06T07:45:23.679Z"
+      "announcements": "2026-11-06T15:24:54.619Z",
+      "entitlements": "2026-11-06T15:24:54.619Z"
     }
   },
   "SENHENG": {
@@ -52843,10 +52857,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:36.102Z",
+    "checkedAt": "2026-11-06T15:25:06.199Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:36.102Z",
-      "entitlements": "2026-11-06T07:45:36.102Z"
+      "announcements": "2026-11-06T15:25:06.199Z",
+      "entitlements": "2026-11-06T15:25:06.199Z"
     }
   },
   "SET": {
@@ -53026,10 +53040,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:27.216Z",
+    "checkedAt": "2026-11-06T15:24:58.124Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:27.216Z",
-      "entitlements": "2026-11-06T07:45:27.216Z"
+      "announcements": "2026-11-06T15:24:58.124Z",
+      "entitlements": "2026-11-06T15:24:58.124Z"
     }
   },
   "SFPTECH": {
@@ -53245,10 +53259,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:39.248Z",
+    "checkedAt": "2026-11-06T15:25:10.254Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:39.248Z",
-      "entitlements": "2026-11-06T07:45:39.248Z"
+      "announcements": "2026-11-06T15:25:10.254Z",
+      "entitlements": "2026-11-06T15:25:10.254Z"
     }
   },
   "SIME": {
@@ -53464,10 +53478,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:28.397Z",
+    "checkedAt": "2026-11-06T15:24:59.354Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:28.397Z",
-      "entitlements": "2026-11-06T07:45:28.397Z"
+      "announcements": "2026-11-06T15:24:59.354Z",
+      "entitlements": "2026-11-06T15:24:59.354Z"
     }
   },
   "SINKUNG": {
@@ -53630,10 +53644,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:37.120Z",
+    "checkedAt": "2026-11-06T15:25:08.681Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:37.120Z",
-      "entitlements": "2026-11-06T07:45:37.120Z"
+      "announcements": "2026-11-06T15:25:08.681Z",
+      "entitlements": "2026-11-06T15:25:08.681Z"
     }
   },
   "SKPRES": {
@@ -53849,10 +53863,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:32.415Z",
+    "checkedAt": "2026-11-06T15:25:03.962Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:32.415Z",
-      "entitlements": "2026-11-06T07:45:32.415Z"
+      "announcements": "2026-11-06T15:25:03.962Z",
+      "entitlements": "2026-11-06T15:25:03.962Z"
     }
   },
   "SKYECHIP": {
@@ -54028,10 +54042,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:27.988Z",
+    "checkedAt": "2026-11-06T15:25:00.116Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:27.988Z",
-      "entitlements": "2026-11-06T07:45:27.988Z"
+      "announcements": "2026-11-06T15:25:00.116Z",
+      "entitlements": "2026-11-06T15:25:00.116Z"
     }
   },
   "SKYWLD": {
@@ -54240,10 +54254,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:35.463Z",
+    "checkedAt": "2026-11-06T15:25:10.695Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:35.463Z",
-      "entitlements": "2026-11-06T07:45:35.463Z"
+      "announcements": "2026-11-06T15:25:10.695Z",
+      "entitlements": "2026-11-06T15:25:10.695Z"
     }
   },
   "SLG": {
@@ -54328,10 +54342,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:34.287Z",
+    "checkedAt": "2026-11-06T15:25:09.006Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:34.287Z",
-      "entitlements": "2026-11-06T07:45:34.287Z"
+      "announcements": "2026-11-06T15:25:09.006Z",
+      "entitlements": "2026-11-06T15:25:09.006Z"
     }
   },
   "SLVEST": {
@@ -54341,10 +54355,15 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-05] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PRUDENTIAL PLC"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PRUDENTIAL PLC"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - PRUDENTIAL PLC"
+      },
       {
         "date": "2026-11-05",
         "category": "Changes in Shareholdings",
@@ -54489,11 +54508,6 @@ window.NEWS_DATA = {
         "date": "2026-09-25",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - URUSHARTA JAMAAH SDN. BHD."
-      },
-      {
-        "date": "2026-09-24",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - URUSHARTA JAMAAH SDN. BHD."
       }
     ],
     "entitlements": [
@@ -54511,10 +54525,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:24.239Z",
+    "checkedAt": "2026-11-06T15:24:56.031Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:24.239Z",
-      "entitlements": "2026-11-06T07:45:24.239Z"
+      "announcements": "2026-11-06T15:24:56.031Z",
+      "entitlements": "2026-11-06T15:24:56.031Z"
     }
   },
   "SNS": {
@@ -54736,10 +54750,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:39.189Z",
+    "checkedAt": "2026-11-06T15:25:10.313Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:39.189Z",
-      "entitlements": "2026-11-06T07:45:39.189Z"
+      "announcements": "2026-11-06T15:25:10.313Z",
+      "entitlements": "2026-11-06T15:25:10.313Z"
     }
   },
   "SOP": {
@@ -54955,10 +54969,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:34.485Z",
+    "checkedAt": "2026-11-06T15:25:06.247Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:34.485Z",
-      "entitlements": "2026-11-06T07:45:34.485Z"
+      "announcements": "2026-11-06T15:25:06.247Z",
+      "entitlements": "2026-11-06T15:25:06.247Z"
     }
   },
   "SORENTO": {
@@ -55180,10 +55194,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:29.307Z",
+    "checkedAt": "2026-11-06T15:24:57.352Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:29.307Z",
-      "entitlements": "2026-11-06T07:45:29.307Z"
+      "announcements": "2026-11-06T15:24:57.352Z",
+      "entitlements": "2026-11-06T15:24:57.352Z"
     }
   },
   "SPRING": {
@@ -55383,10 +55397,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:40.412Z",
+    "checkedAt": "2026-11-06T15:25:11.887Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:40.412Z",
-      "entitlements": "2026-11-06T07:45:40.412Z"
+      "announcements": "2026-11-06T15:25:11.887Z",
+      "entitlements": "2026-11-06T15:25:11.887Z"
     }
   },
   "SRKK": {
@@ -55568,10 +55582,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:36.477Z",
+    "checkedAt": "2026-11-06T15:25:10.473Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:36.477Z",
-      "entitlements": "2026-11-06T07:45:36.477Z"
+      "announcements": "2026-11-06T15:25:10.473Z",
+      "entitlements": "2026-11-06T15:25:10.473Z"
     }
   },
   "SSF": {
@@ -55778,10 +55792,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:24.208Z",
+    "checkedAt": "2026-11-06T15:24:55.627Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:24.208Z",
-      "entitlements": "2026-11-06T07:45:24.208Z"
+      "announcements": "2026-11-06T15:24:55.627Z",
+      "entitlements": "2026-11-06T15:24:55.627Z"
     }
   },
   "STRATUS": {
@@ -55951,10 +55965,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:35.768Z",
+    "checkedAt": "2026-11-06T15:25:02.615Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:35.768Z",
-      "entitlements": "2026-11-06T07:45:35.768Z"
+      "announcements": "2026-11-06T15:25:02.615Z",
+      "entitlements": "2026-11-06T15:25:02.615Z"
     }
   },
   "SUM": {
@@ -56124,10 +56138,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:37.299Z",
+    "checkedAt": "2026-11-06T15:25:06.206Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:37.299Z",
-      "entitlements": "2026-11-06T07:45:37.299Z"
+      "announcements": "2026-11-06T15:25:06.206Z",
+      "entitlements": "2026-11-06T15:25:06.206Z"
     }
   },
   "SUMI": {
@@ -56307,10 +56321,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:25.333Z",
+    "checkedAt": "2026-11-06T15:24:56.627Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:25.333Z",
-      "entitlements": "2026-11-06T07:45:25.333Z"
+      "announcements": "2026-11-06T15:24:56.627Z",
+      "entitlements": "2026-11-06T15:24:56.627Z"
     }
   },
   "SUNCON": {
@@ -56320,10 +56334,15 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-05] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-11-05",
         "category": "Changes in Shareholdings",
@@ -56468,11 +56487,6 @@ window.NEWS_DATA = {
         "date": "2026-10-06",
         "category": "Additional Listing",
         "title": "Additional Listing Announcement /Subdivision of Shares"
-      },
-      {
-        "date": "2026-09-30",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [
@@ -56526,10 +56540,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:23.633Z",
+    "checkedAt": "2026-11-06T15:24:56.428Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:23.633Z",
-      "entitlements": "2026-11-06T07:45:23.633Z"
+      "announcements": "2026-11-06T15:24:56.428Z",
+      "entitlements": "2026-11-06T15:24:56.428Z"
     }
   },
   "SUNLOGY": {
@@ -56699,10 +56713,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:32.940Z",
+    "checkedAt": "2026-11-06T15:25:04.492Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:32.940Z",
-      "entitlements": "2026-11-06T07:45:32.940Z"
+      "announcements": "2026-11-06T15:25:04.492Z",
+      "entitlements": "2026-11-06T15:25:04.492Z"
     }
   },
   "SUNMED": {
@@ -56712,10 +56726,15 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-04] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-11-05",
         "category": "General Announcement",
@@ -56860,11 +56879,6 @@ window.NEWS_DATA = {
         "date": "2026-09-25",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-24",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
       }
     ],
     "entitlements": [],
@@ -56872,10 +56886,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:28.939Z",
+    "checkedAt": "2026-11-06T15:24:59.690Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:28.939Z",
-      "entitlements": "2026-11-06T07:45:28.939Z"
+      "announcements": "2026-11-06T15:24:59.690Z",
+      "entitlements": "2026-11-06T15:24:59.690Z"
     }
   },
   "SUNVIEW": {
@@ -57045,10 +57059,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:23.461Z",
+    "checkedAt": "2026-11-06T15:24:55.056Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:23.461Z",
-      "entitlements": "2026-11-06T07:45:23.461Z"
+      "announcements": "2026-11-06T15:24:55.056Z",
+      "entitlements": "2026-11-06T15:24:55.056Z"
     }
   },
   "SUPERMX": {
@@ -57474,10 +57488,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:29.045Z",
+    "checkedAt": "2026-11-06T15:25:05.420Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:29.045Z",
-      "entitlements": "2026-11-06T07:45:29.045Z"
+      "announcements": "2026-11-06T15:25:05.420Z",
+      "entitlements": "2026-11-06T15:25:05.420Z"
     }
   },
   "SWIFT": {
@@ -57491,6 +57505,41 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Change of Corp Info",
+        "title": "Change in Nomination and Remuneration Committee - DR IZHAR BIN CHE MEE"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Change of Corp Info",
+        "title": "Change in Audit Committee - PUAN ZALILA BINTI MOHD TOON"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Change of Corp Info",
+        "title": "Change of Company Secretary - LIM LIH CHAU"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Change of Corp Info",
+        "title": "Change in Boardroom - DR IZHAR BIN CHE MEE"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Change of Corp Info",
+        "title": "Change in Nomination and Remuneration Committee - DATO' GOPIKRISHNAN A/L N.S. MENON"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Change of Corp Info",
+        "title": "Change of Company Secretary - TEE ZHEN WAN"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Change of Corp Info",
+        "title": "Change in Boardroom - PUAN ZALILA BINTI MOHD TOON"
+      },
       {
         "date": "2026-11-05",
         "category": "Changes in Shareholdings",
@@ -57605,41 +57654,6 @@ window.NEWS_DATA = {
         "date": "2026-07-08",
         "category": "Shares Buy Back",
         "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-07-06",
-        "category": "Shares Buy Back",
-        "title": "Notice of SBB by a Company Pursuant to Section 127 (16) of CA 2016"
-      },
-      {
-        "date": "2026-07-02",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-06-29",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-06-26",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
-      },
-      {
-        "date": "2026-06-19",
-        "category": "Shares Buy Back",
-        "title": "Notice of SBB by a Company Pursuant to Section 127 (16) of CA 2016"
-      },
-      {
-        "date": "2026-06-11",
-        "category": "Change of Corp Info",
-        "title": "Change in Nomination and Remuneration Committee - DATUK NORIPAH BINTI KAMSO"
-      },
-      {
-        "date": "2026-06-11",
-        "category": "Change of Corp Info",
-        "title": "Change in Audit Committee - DATUK NORIPAH BINTI KAMSO"
       }
     ],
     "entitlements": [
@@ -57693,10 +57707,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:39.902Z",
+    "checkedAt": "2026-11-06T15:25:05.677Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:39.902Z",
-      "entitlements": "2026-11-06T07:45:39.902Z"
+      "announcements": "2026-11-06T15:25:05.677Z",
+      "entitlements": "2026-11-06T15:25:05.677Z"
     }
   },
   "SYNERGY": {
@@ -57896,10 +57910,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:41.044Z",
+    "checkedAt": "2026-11-06T15:25:11.894Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:41.044Z",
-      "entitlements": "2026-11-06T07:45:41.044Z"
+      "announcements": "2026-11-06T15:25:11.894Z",
+      "entitlements": "2026-11-06T15:25:11.894Z"
     }
   },
   "TAGHILL": {
@@ -58069,10 +58083,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:27.023Z",
+    "checkedAt": "2026-11-06T15:24:57.732Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:27.023Z",
-      "entitlements": "2026-11-06T07:45:27.023Z"
+      "announcements": "2026-11-06T15:24:57.732Z",
+      "entitlements": "2026-11-06T15:24:57.732Z"
     }
   },
   "TANCO": {
@@ -58242,10 +58256,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:31.914Z",
+    "checkedAt": "2026-11-06T15:25:03.671Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:31.914Z",
-      "entitlements": "2026-11-06T07:45:31.914Z"
+      "announcements": "2026-11-06T15:25:03.671Z",
+      "entitlements": "2026-11-06T15:25:03.671Z"
     }
   },
   "TASHIN": {
@@ -58454,10 +58468,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:28.423Z",
+    "checkedAt": "2026-11-06T15:24:59.255Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:28.423Z",
-      "entitlements": "2026-11-06T07:45:28.423Z"
+      "announcements": "2026-11-06T15:24:59.255Z",
+      "entitlements": "2026-11-06T15:24:59.255Z"
     }
   },
   "TCS": {
@@ -58646,10 +58660,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:40.735Z",
+    "checkedAt": "2026-11-06T15:25:11.664Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:40.735Z",
-      "entitlements": "2026-11-06T07:45:40.735Z"
+      "announcements": "2026-11-06T15:25:11.664Z",
+      "entitlements": "2026-11-06T15:25:11.664Z"
     }
   },
   "TEAMSTR": {
@@ -58822,10 +58836,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:25.255Z",
+    "checkedAt": "2026-11-06T15:24:56.731Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:25.255Z",
-      "entitlements": "2026-11-06T07:45:25.255Z"
+      "announcements": "2026-11-06T15:24:56.731Z",
+      "entitlements": "2026-11-06T15:24:56.731Z"
     }
   },
   "TECHSTORE": {
@@ -59005,10 +59019,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:36.848Z",
+    "checkedAt": "2026-11-06T15:25:08.530Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:36.848Z",
-      "entitlements": "2026-11-06T07:45:36.848Z"
+      "announcements": "2026-11-06T15:25:08.530Z",
+      "entitlements": "2026-11-06T15:25:08.530Z"
     }
   },
   "TELADAN": {
@@ -59016,12 +59030,17 @@ window.NEWS_DATA = {
     "newsBadges": [
       {
         "type": "RECENT_NEWS",
-        "label": "News: 2026-11-05",
+        "label": "News: 2026-11-06",
         "severity": "info",
-        "title": "[2026-11-05] Shares Buy Back - Immediate Announcement on Shares Buy Back"
+        "title": "[2026-11-06] Shares Buy Back - Immediate Announcement on Shares Buy Back"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Shares Buy Back",
+        "title": "Immediate Announcement on Shares Buy Back"
+      },
       {
         "date": "2026-11-05",
         "category": "Shares Buy Back",
@@ -59166,11 +59185,6 @@ window.NEWS_DATA = {
         "date": "2026-10-01",
         "category": "General Announcement",
         "title": "OTHERS"
-      },
-      {
-        "date": "2026-10-01",
-        "category": "Shares Buy Back",
-        "title": "Immediate Announcement on Shares Buy Back"
       }
     ],
     "entitlements": [
@@ -59224,10 +59238,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:35.858Z",
+    "checkedAt": "2026-11-06T15:24:59.676Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:35.858Z",
-      "entitlements": "2026-11-06T07:45:35.858Z"
+      "announcements": "2026-11-06T15:24:59.676Z",
+      "entitlements": "2026-11-06T15:24:59.676Z"
     }
   },
   "TENAGA": {
@@ -59632,10 +59646,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:34.541Z",
+    "checkedAt": "2026-11-06T15:25:06.362Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:34.541Z",
-      "entitlements": "2026-11-06T07:45:34.541Z"
+      "announcements": "2026-11-06T15:25:06.362Z",
+      "entitlements": "2026-11-06T15:25:06.362Z"
     }
   },
   "THMY": {
@@ -59645,10 +59659,15 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-05] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-11-05",
         "category": "Changes in Shareholdings",
@@ -59793,11 +59812,6 @@ window.NEWS_DATA = {
         "date": "2026-09-11",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
-      },
-      {
-        "date": "2026-09-10",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "entitlements": [],
@@ -59805,10 +59819,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:32.928Z",
+    "checkedAt": "2026-11-06T15:25:07.201Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:32.928Z",
-      "entitlements": "2026-11-06T07:45:32.928Z"
+      "announcements": "2026-11-06T15:25:07.201Z",
+      "entitlements": "2026-11-06T15:25:07.201Z"
     }
   },
   "TJSETIA": {
@@ -60015,10 +60029,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:34.932Z",
+    "checkedAt": "2026-11-06T15:25:06.854Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:34.932Z",
-      "entitlements": "2026-11-06T07:45:34.932Z"
+      "announcements": "2026-11-06T15:25:06.854Z",
+      "entitlements": "2026-11-06T15:25:06.854Z"
     }
   },
   "TM": {
@@ -60437,10 +60451,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:24.095Z",
+    "checkedAt": "2026-11-06T15:24:55.646Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:24.095Z",
-      "entitlements": "2026-11-06T07:45:24.095Z"
+      "announcements": "2026-11-06T15:24:55.646Z",
+      "entitlements": "2026-11-06T15:24:55.646Z"
     }
   },
   "TOPGLOV": {
@@ -60662,10 +60676,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:24.831Z",
+    "checkedAt": "2026-11-06T15:24:56.332Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:24.831Z",
-      "entitlements": "2026-11-06T07:45:24.831Z"
+      "announcements": "2026-11-06T15:24:56.332Z",
+      "entitlements": "2026-11-06T15:24:56.332Z"
     }
   },
   "TOPMIX": {
@@ -60673,12 +60687,17 @@ window.NEWS_DATA = {
     "newsBadges": [
       {
         "type": "RECENT_NEWS",
-        "label": "News: 2026-11-02",
+        "label": "News: 2026-11-06",
         "severity": "info",
-        "title": "[2026-11-02] General Announcement - TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
+        "title": "[2026-11-06] General Announcement - TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "General Announcement",
+        "title": "TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
+      },
       {
         "date": "2026-11-02",
         "category": "General Announcement",
@@ -60823,11 +60842,6 @@ window.NEWS_DATA = {
         "date": "2025-08-20",
         "category": "Financial Results",
         "title": "Quarterly rpt on consolidated results for the financial period ended 30/06/2025"
-      },
-      {
-        "date": "2025-07-30",
-        "category": "General Announcement",
-        "title": "TRANSACTIONS (CHAPTER 10 OF LISTING REQUIREMENTS) : NON RELATED PARTY TRANSACTIONS"
       }
     ],
     "entitlements": [
@@ -60881,10 +60895,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:31.334Z",
+    "checkedAt": "2026-11-06T15:25:09.043Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:31.334Z",
-      "entitlements": "2026-11-06T07:45:31.334Z"
+      "announcements": "2026-11-06T15:25:09.043Z",
+      "entitlements": "2026-11-06T15:25:09.043Z"
     }
   },
   "TOPVISN": {
@@ -61082,10 +61096,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:25.805Z",
+    "checkedAt": "2026-11-06T15:24:57.107Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:25.805Z",
-      "entitlements": "2026-11-06T07:45:25.805Z"
+      "announcements": "2026-11-06T15:24:57.107Z",
+      "entitlements": "2026-11-06T15:24:57.107Z"
     }
   },
   "TSA": {
@@ -61301,10 +61315,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:24.920Z",
+    "checkedAt": "2026-11-06T15:24:55.296Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:24.920Z",
-      "entitlements": "2026-11-06T07:45:24.920Z"
+      "announcements": "2026-11-06T15:24:55.296Z",
+      "entitlements": "2026-11-06T15:24:55.296Z"
     }
   },
   "TTVHB": {
@@ -61474,10 +61488,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:39.618Z",
+    "checkedAt": "2026-11-06T15:25:10.359Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:39.618Z",
-      "entitlements": "2026-11-06T07:45:39.618Z"
+      "announcements": "2026-11-06T15:25:10.359Z",
+      "entitlements": "2026-11-06T15:25:10.359Z"
     }
   },
   "UMC": {
@@ -61650,10 +61664,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:36.112Z",
+    "checkedAt": "2026-11-06T15:25:08.488Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:36.112Z",
-      "entitlements": "2026-11-06T07:45:36.112Z"
+      "announcements": "2026-11-06T15:25:08.488Z",
+      "entitlements": "2026-11-06T15:25:08.488Z"
     }
   },
   "UMCCA": {
@@ -61869,10 +61883,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:24.908Z",
+    "checkedAt": "2026-11-06T15:24:56.126Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:24.908Z",
-      "entitlements": "2026-11-06T07:45:24.908Z"
+      "announcements": "2026-11-06T15:24:56.126Z",
+      "entitlements": "2026-11-06T15:24:56.126Z"
     }
   },
   "UMSINT": {
@@ -62088,10 +62102,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:27.656Z",
+    "checkedAt": "2026-11-06T15:24:58.874Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:27.656Z",
-      "entitlements": "2026-11-06T07:45:27.656Z"
+      "announcements": "2026-11-06T15:24:58.874Z",
+      "entitlements": "2026-11-06T15:24:58.874Z"
     }
   },
   "UNIPAC": {
@@ -62196,10 +62210,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:34.924Z",
+    "checkedAt": "2026-11-06T15:25:06.958Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:34.924Z",
-      "entitlements": "2026-11-06T07:45:34.924Z"
+      "announcements": "2026-11-06T15:25:06.958Z",
+      "entitlements": "2026-11-06T15:25:06.958Z"
     }
   },
   "UNIQUE": {
@@ -62408,10 +62422,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:33.278Z",
+    "checkedAt": "2026-11-06T15:25:08.619Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:33.278Z",
-      "entitlements": "2026-11-06T07:45:33.278Z"
+      "announcements": "2026-11-06T15:25:08.619Z",
+      "entitlements": "2026-11-06T15:25:08.619Z"
     }
   },
   "UNISEM": {
@@ -62639,10 +62653,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:33.950Z",
+    "checkedAt": "2026-11-06T15:25:00.896Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:33.950Z",
-      "entitlements": "2026-11-06T07:45:33.950Z"
+      "announcements": "2026-11-06T15:25:00.896Z",
+      "entitlements": "2026-11-06T15:25:00.896Z"
     }
   },
   "UNITRAD": {
@@ -62849,10 +62863,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:33.447Z",
+    "checkedAt": "2026-11-06T15:25:04.884Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:33.447Z",
-      "entitlements": "2026-11-06T07:45:33.447Z"
+      "announcements": "2026-11-06T15:25:04.884Z",
+      "entitlements": "2026-11-06T15:25:04.884Z"
     }
   },
   "UTDPLT": {
@@ -63068,10 +63082,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:38.753Z",
+    "checkedAt": "2026-11-06T15:25:10.065Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:38.753Z",
-      "entitlements": "2026-11-06T07:45:38.753Z"
+      "announcements": "2026-11-06T15:25:10.065Z",
+      "entitlements": "2026-11-06T15:25:10.065Z"
     }
   },
   "UUE": {
@@ -63241,10 +63255,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:28.118Z",
+    "checkedAt": "2026-11-06T15:24:57.990Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:28.118Z",
-      "entitlements": "2026-11-06T07:45:28.118Z"
+      "announcements": "2026-11-06T15:24:57.990Z",
+      "entitlements": "2026-11-06T15:24:57.990Z"
     }
   },
   "UWC": {
@@ -63451,10 +63465,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:38.162Z",
+    "checkedAt": "2026-11-06T15:25:09.563Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:38.162Z",
-      "entitlements": "2026-11-06T07:45:38.162Z"
+      "announcements": "2026-11-06T15:25:09.563Z",
+      "entitlements": "2026-11-06T15:25:09.563Z"
     }
   },
   "VANZO": {
@@ -63658,10 +63672,229 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:40.653Z",
+    "checkedAt": "2026-11-06T15:25:08.717Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:40.653Z",
-      "entitlements": "2026-11-06T07:45:40.653Z"
+      "announcements": "2026-11-06T15:25:08.717Z",
+      "entitlements": "2026-11-06T15:25:08.717Z"
+    }
+  },
+  "VELESTO": {
+    "hasNewsAlert": false,
+    "newsBadges": [
+      {
+        "type": "JERUNG_5PCT",
+        "label": "🐋 Major Shareholder Activity",
+        "severity": "info",
+        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD-AMANAH SAHAM BUMIPUTERA"
+      }
+    ],
+    "announcements": [
+      {
+        "date": "2026-11-04",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-11-04",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
+      {
+        "date": "2026-10-23",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD-AMANAH SAHAM BUMIPUTERA"
+      },
+      {
+        "date": "2026-10-21",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD-AMANAH SAHAM BUMIPUTERA"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD-AMANAH SAHAM BUMIPUTERA"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABERDEEN GROUP PLC"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABRDN MALAYSIA SDN BHD"
+      },
+      {
+        "date": "2026-10-20",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABRDN HOLDINGS LIMITED"
+      },
+      {
+        "date": "2026-10-19",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-16",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-15",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-14",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-08",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABERDEEN GROUP PLC"
+      },
+      {
+        "date": "2026-10-08",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABRDN HOLDINGS LIMITED"
+      },
+      {
+        "date": "2026-10-08",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABRDN MALAYSIA SDN BHD"
+      },
+      {
+        "date": "2026-10-07",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-07",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-10-07",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABERDEEN GROUP PLC"
+      },
+      {
+        "date": "2026-10-07",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABRDN MALAYSIA SDN BHD"
+      },
+      {
+        "date": "2026-10-07",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - ABRDN HOLDINGS LIMITED"
+      },
+      {
+        "date": "2026-10-02",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD-AMANAH SAHAM BUMIPUTERA"
+      },
+      {
+        "date": "2026-09-30",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
+      },
+      {
+        "date": "2026-09-29",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-09-29",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD- AMANAH SAHAM BUMIPUTERA"
+      },
+      {
+        "date": "2026-09-28",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-09-28",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD - AMANAH SAHAM BUMIPUTERA"
+      },
+      {
+        "date": "2026-09-25",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-09-25",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD AMANAH SAHAM BUMIPUTERA"
+      },
+      {
+        "date": "2026-09-24",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - KUMPULAN WANG PERSARAAN (DIPERBADANKAN)"
+      },
+      {
+        "date": "2026-09-24",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - AMANAHRAYA TRUSTEES BERHAD-AMANAH SAHAM BUMIPUTERA"
+      }
+    ],
+    "entitlements": [
+      {
+        "annDate": "21 Aug 2026",
+        "financialYear": "31 Dec 2026",
+        "type": "Interim Dividend",
+        "exDate": "2026-10-19",
+        "paymentDate": "18 Nov 2026",
+        "amount": "0.0025",
+        "isDividend": true
+      },
+      {
+        "annDate": "19 May 2026",
+        "financialYear": "31 Dec 2026",
+        "type": "Interim Dividend",
+        "exDate": "2026-07-17",
+        "paymentDate": "17 Aug 2026",
+        "amount": "0.0075",
+        "isDividend": true
+      },
+      {
+        "annDate": "25 Feb 2026",
+        "financialYear": "31 Dec 2025",
+        "type": "Interim Dividend",
+        "exDate": "2026-04-23",
+        "paymentDate": "22 May 2026",
+        "amount": "0.0225",
+        "isDividend": true
+      },
+      {
+        "annDate": "22 Aug 2025",
+        "financialYear": "31 Dec 2025",
+        "type": "Interim Dividend",
+        "exDate": "2025-10-17",
+        "paymentDate": "18 Nov 2025",
+        "amount": "0.0075",
+        "isDividend": true
+      },
+      {
+        "annDate": "27 Feb 2025",
+        "financialYear": "31 Dec 2024",
+        "type": "Interim Dividend",
+        "exDate": "2025-04-24",
+        "paymentDate": "23 May 2025",
+        "amount": "0.0100",
+        "isDividend": true
+      }
+    ],
+    "fetchStatus": {
+      "announcements": "ok",
+      "entitlements": "ok"
+    },
+    "checkedAt": "2026-11-06T15:25:05.414Z",
+    "lastSuccessfulAt": {
+      "announcements": "2026-11-06T15:25:05.414Z",
+      "entitlements": "2026-11-06T15:25:05.414Z"
     }
   },
   "VERDANT": {
@@ -63831,10 +64064,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:28.746Z",
+    "checkedAt": "2026-11-06T15:24:59.551Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:28.746Z",
-      "entitlements": "2026-11-06T07:45:28.746Z"
+      "announcements": "2026-11-06T15:24:59.551Z",
+      "entitlements": "2026-11-06T15:24:59.551Z"
     }
   },
   "VINVEST": {
@@ -64004,10 +64237,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:26.229Z",
+    "checkedAt": "2026-11-06T15:25:01.006Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:26.229Z",
-      "entitlements": "2026-11-06T07:45:26.229Z"
+      "announcements": "2026-11-06T15:25:01.006Z",
+      "entitlements": "2026-11-06T15:25:01.006Z"
     }
   },
   "VITROX": {
@@ -64223,10 +64456,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:23.266Z",
+    "checkedAt": "2026-11-06T15:24:57.946Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:23.266Z",
-      "entitlements": "2026-11-06T07:45:23.266Z"
+      "announcements": "2026-11-06T15:24:57.946Z",
+      "entitlements": "2026-11-06T15:24:57.946Z"
     }
   },
   "VLB": {
@@ -64396,10 +64629,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:25.309Z",
+    "checkedAt": "2026-11-06T15:24:56.994Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:25.309Z",
-      "entitlements": "2026-11-06T07:45:25.309Z"
+      "announcements": "2026-11-06T15:24:56.994Z",
+      "entitlements": "2026-11-06T15:24:56.994Z"
     }
   },
   "VOLCANO": {
@@ -64621,10 +64854,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:27.675Z",
+    "checkedAt": "2026-11-06T15:24:58.507Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:27.675Z",
-      "entitlements": "2026-11-06T07:45:27.675Z"
+      "announcements": "2026-11-06T15:24:58.507Z",
+      "entitlements": "2026-11-06T15:24:58.507Z"
     }
   },
   "VS": {
@@ -64634,10 +64867,15 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-11-04] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - EMPLOYEES PROVIDENT FUND BOARD"
+      },
       {
         "date": "2026-11-04",
         "category": "Changes in Shareholdings",
@@ -64782,11 +65020,6 @@ window.NEWS_DATA = {
         "date": "2026-08-13",
         "category": "Additional Listing",
         "title": "Additional Listing Announcement /Subdivision of Shares"
-      },
-      {
-        "date": "2026-08-12",
-        "category": "Dealings in Listed Securities",
-        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings Outside Closed Period"
       }
     ],
     "entitlements": [
@@ -64840,10 +65073,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:25.848Z",
+    "checkedAt": "2026-11-06T15:24:56.538Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:25.848Z",
-      "entitlements": "2026-11-06T07:45:25.848Z"
+      "announcements": "2026-11-06T15:24:56.538Z",
+      "entitlements": "2026-11-06T15:24:56.538Z"
     }
   },
   "VSTECS": {
@@ -64853,10 +65086,25 @@ window.NEWS_DATA = {
         "type": "JERUNG_5PCT",
         "label": "🐋 Major Shareholder Activity",
         "severity": "info",
-        "title": "[2026-10-23] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR FOO LEK CHOONG"
+        "title": "[2026-11-06] Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR FOO LEK CHOONG"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR FOO LEK CHOONG"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Changes in Shareholdings",
+        "title": "Changes in Director's Interest (Section 219 of CA 2016) - MR FOO LEK CHOONG"
+      },
+      {
+        "date": "2026-11-06",
+        "category": "Dealings in Listed Securities",
+        "title": "DEALINGS IN LISTED SECURITIES (CHAPTER 14 OF LISTING REQUIREMENTS) : Dealings During Closed Period"
+      },
       {
         "date": "2026-10-28",
         "category": "General Announcement",
@@ -64991,21 +65239,6 @@ window.NEWS_DATA = {
         "date": "2026-06-19",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - VSTECS HOLDINGS (SINGAPORE) LIMITED"
-      },
-      {
-        "date": "2026-06-19",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DASAR TECHNOLOGIES SDN. BHD."
-      },
-      {
-        "date": "2026-06-16",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - SENGIN SDN. BHD."
-      },
-      {
-        "date": "2026-06-16",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - MR FOO LEK CHOONG"
       }
     ],
     "entitlements": [
@@ -65059,10 +65292,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:39.210Z",
+    "checkedAt": "2026-11-06T15:25:09.374Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:39.210Z",
-      "entitlements": "2026-11-06T07:45:39.210Z"
+      "announcements": "2026-11-06T15:25:09.374Z",
+      "entitlements": "2026-11-06T15:25:09.374Z"
     }
   },
   "VTC": {
@@ -65242,10 +65475,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:30.554Z",
+    "checkedAt": "2026-11-06T15:25:03.156Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:30.554Z",
-      "entitlements": "2026-11-06T07:45:30.554Z"
+      "announcements": "2026-11-06T15:25:03.156Z",
+      "entitlements": "2026-11-06T15:25:03.156Z"
     }
   },
   "WELLCHIP": {
@@ -65271,6 +65504,11 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "General Announcement",
+        "title": "NEW ISSUE OF SECURITIES (CHAPTER 6 OF LISTING REQUIREMENTS) : FUND RAISING"
+      },
       {
         "date": "2026-10-23",
         "category": "Changes in Shareholdings",
@@ -65415,11 +65653,6 @@ window.NEWS_DATA = {
         "date": "2026-06-22",
         "category": "Change of Corp Info",
         "title": "Change in Nomination Committee - MISS WONG CHIN CHIN"
-      },
-      {
-        "date": "2026-06-22",
-        "category": "Change of Corp Info",
-        "title": "Change in Boardroom - MISS WONG CHIN CHIN"
       }
     ],
     "entitlements": [
@@ -65446,10 +65679,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:30.437Z",
+    "checkedAt": "2026-11-06T15:25:06.484Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:30.437Z",
-      "entitlements": "2026-11-06T07:45:30.437Z"
+      "announcements": "2026-11-06T15:25:06.484Z",
+      "entitlements": "2026-11-06T15:25:06.484Z"
     }
   },
   "WELLS": {
@@ -65612,10 +65845,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:25.325Z",
+    "checkedAt": "2026-11-06T15:24:56.764Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:25.325Z",
-      "entitlements": "2026-11-06T07:45:25.325Z"
+      "announcements": "2026-11-06T15:24:56.764Z",
+      "entitlements": "2026-11-06T15:24:56.764Z"
     }
   },
   "WENTEL": {
@@ -65778,10 +66011,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:29.833Z",
+    "checkedAt": "2026-11-06T15:24:59.399Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:29.833Z",
-      "entitlements": "2026-11-06T07:45:29.833Z"
+      "announcements": "2026-11-06T15:24:59.399Z",
+      "entitlements": "2026-11-06T15:24:59.399Z"
     }
   },
   "WESTRVR": {
@@ -65951,10 +66184,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:23.006Z",
+    "checkedAt": "2026-11-06T15:25:02.651Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:23.006Z",
-      "entitlements": "2026-11-06T07:45:23.006Z"
+      "announcements": "2026-11-06T15:25:02.651Z",
+      "entitlements": "2026-11-06T15:25:02.651Z"
     }
   },
   "WINSTAR": {
@@ -66124,10 +66357,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:27.348Z",
+    "checkedAt": "2026-11-06T15:24:58.072Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:27.348Z",
-      "entitlements": "2026-11-06T07:45:27.348Z"
+      "announcements": "2026-11-06T15:24:58.072Z",
+      "entitlements": "2026-11-06T15:24:58.072Z"
     }
   },
   "WPRTS": {
@@ -66519,10 +66752,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:27.474Z",
+    "checkedAt": "2026-11-06T15:24:58.475Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:27.474Z",
-      "entitlements": "2026-11-06T07:45:27.474Z"
+      "announcements": "2026-11-06T15:24:58.475Z",
+      "entitlements": "2026-11-06T15:24:58.475Z"
     }
   },
   "WTK": {
@@ -66530,12 +66763,17 @@ window.NEWS_DATA = {
     "newsBadges": [
       {
         "type": "RECENT_NEWS",
-        "label": "News: 2026-10-07",
+        "label": "News: 2026-11-06",
         "severity": "info",
-        "title": "[2026-10-07] Quarterly Production - DISCLOSURE ON QUARTERLY PRODUCTION"
+        "title": "[2026-11-06] General Announcement - MONTHLY PRODUCTION FIGURES (MINING / PLANTATION / TIMBER)"
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "General Announcement",
+        "title": "MONTHLY PRODUCTION FIGURES (MINING / PLANTATION / TIMBER)"
+      },
       {
         "date": "2026-10-07",
         "category": "Quarterly Production",
@@ -66680,11 +66918,6 @@ window.NEWS_DATA = {
         "date": "2026-09-01",
         "category": "Changes in Shareholdings",
         "title": "Changes in Sub. S-hldr's Int (Section 138 of CA 2016) - DATO' SRI PATRICK WONG HAW YEONG"
-      },
-      {
-        "date": "2026-09-01",
-        "category": "Changes in Shareholdings",
-        "title": "Changes in Director's Interest (Section 219 of CA 2016) - DATO' SRI PATRICK WONG HAW YEONG"
       }
     ],
     "entitlements": [
@@ -66738,10 +66971,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:32.434Z",
+    "checkedAt": "2026-11-06T15:25:04.100Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:32.434Z",
-      "entitlements": "2026-11-06T07:45:32.434Z"
+      "announcements": "2026-11-06T15:25:04.100Z",
+      "entitlements": "2026-11-06T15:25:04.100Z"
     }
   },
   "XPB": {
@@ -66914,10 +67147,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:33.166Z",
+    "checkedAt": "2026-11-06T15:25:03.000Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:33.166Z",
-      "entitlements": "2026-11-06T07:45:33.166Z"
+      "announcements": "2026-11-06T15:25:03.000Z",
+      "entitlements": "2026-11-06T15:25:03.000Z"
     }
   },
   "YENHER": {
@@ -67133,10 +67366,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:28.808Z",
+    "checkedAt": "2026-11-06T15:25:03.022Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:28.808Z",
-      "entitlements": "2026-11-06T07:45:28.808Z"
+      "announcements": "2026-11-06T15:25:03.022Z",
+      "entitlements": "2026-11-06T15:25:03.022Z"
     }
   },
   "YEWLEE": {
@@ -67316,10 +67549,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:23.030Z",
+    "checkedAt": "2026-11-06T15:24:54.659Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:23.030Z",
-      "entitlements": "2026-11-06T07:45:23.030Z"
+      "announcements": "2026-11-06T15:24:54.659Z",
+      "entitlements": "2026-11-06T15:24:54.659Z"
     }
   },
   "YTL": {
@@ -67535,10 +67768,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:38.012Z",
+    "checkedAt": "2026-11-06T15:25:08.928Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:38.012Z",
-      "entitlements": "2026-11-06T07:45:38.012Z"
+      "announcements": "2026-11-06T15:25:08.928Z",
+      "entitlements": "2026-11-06T15:25:08.928Z"
     }
   },
   "YTLPOWR": {
@@ -67957,10 +68190,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:41.115Z",
+    "checkedAt": "2026-11-06T15:25:11.993Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:41.115Z",
-      "entitlements": "2026-11-06T07:45:41.115Z"
+      "announcements": "2026-11-06T15:25:11.993Z",
+      "entitlements": "2026-11-06T15:25:11.993Z"
     }
   },
   "ZANTAT": {
@@ -68133,10 +68366,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:37.701Z",
+    "checkedAt": "2026-11-06T15:25:11.112Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:37.701Z",
-      "entitlements": "2026-11-06T07:45:37.701Z"
+      "announcements": "2026-11-06T15:25:11.112Z",
+      "entitlements": "2026-11-06T15:25:11.112Z"
     }
   },
   "ZETRIX": {
@@ -68150,6 +68383,11 @@ window.NEWS_DATA = {
       }
     ],
     "announcements": [
+      {
+        "date": "2026-11-06",
+        "category": "General Announcement",
+        "title": "OTHERS"
+      },
       {
         "date": "2026-11-05",
         "category": "General Announcement",
@@ -68294,11 +68532,6 @@ window.NEWS_DATA = {
         "date": "2026-10-19",
         "category": "Listing Circulars",
         "title": "ZETRIX - TRADING HALT & RESUMPTION OF TRADING"
-      },
-      {
-        "date": "2026-10-19",
-        "category": "General Announcement",
-        "title": "OTHERS"
       }
     ],
     "entitlements": [
@@ -68352,10 +68585,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-06T07:45:38.202Z",
+    "checkedAt": "2026-11-06T15:25:09.821Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-06T07:45:38.202Z",
-      "entitlements": "2026-11-06T07:45:38.202Z"
+      "announcements": "2026-11-06T15:25:09.821Z",
+      "entitlements": "2026-11-06T15:25:09.821Z"
     }
   }
 };
