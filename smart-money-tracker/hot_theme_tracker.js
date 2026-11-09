@@ -1,10 +1,10 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-09T07:43:50.485Z",
-  "dataDays": 108,
-  "totalTracked": 401,
-  "openCount": 19,
+  "generatedAt": "2026-11-09T17:50:45.555Z",
+  "dataDays": 109,
+  "totalTracked": 402,
+  "openCount": 20,
   "closedCount": 382,
   "closedWins": 208,
   "closedWinRate": 54,
@@ -15,12 +15,12 @@ window.HOT_THEME_TRACKER = {
  },
  "backtest": {
   "dataStart": "2026-05-25",
-  "dataEnd": "2026-11-06",
-  "dataDays": 108,
-  "signals": 48,
-  "winRate": 58,
-  "avgGain": 7.1,
-  "totalPnl": 340.6,
+  "dataEnd": "2026-11-10",
+  "dataDays": 109,
+  "signals": 49,
+  "winRate": 57,
+  "avgGain": 6.9,
+  "totalPnl": 336.9,
   "worstLoss": -16
  },
  "themeStrength": [
@@ -779,10 +779,40 @@ window.HOT_THEME_TRACKER = {
    "themeCount": 77,
    "totalCount": 313,
    "ma5": 36.5
+  },
+  {
+   "date": "2026-11-10",
+   "themePct": 45.5,
+   "themeCount": 77,
+   "totalCount": 313,
+   "ma5": 38.8
   }
  ],
  "themeTrend": "RISING",
  "trades": [
+  {
+   "id": "SLVEST_2026-11-10_ADDON",
+   "name": "SLVEST",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-11-10",
+   "entry": 4.11,
+   "entryFloor": 4.08,
+   "currentFloor": 4.08,
+   "currentPrice": 4.11,
+   "high": 4.11,
+   "highDate": "2026-11-10",
+   "maxGain": 0,
+   "finalGain": 0,
+   "day1ChangePct": 0.74,
+   "days": 1,
+   "lastDate": "2026-11-10",
+   "status": "OPEN",
+   "themes": [
+    "Solar/RE"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false
+  },
   {
    "id": "SLVEST_2026-11-06_ADDON",
    "name": "SLVEST",
@@ -793,18 +823,19 @@ window.HOT_THEME_TRACKER = {
    "currentFloor": 4.08,
    "currentPrice": 4.11,
    "high": 4.11,
-   "highDate": "2026-11-06",
+   "highDate": "2026-11-10",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": 0.74,
-   "days": 1,
-   "lastDate": "2026-11-06",
+   "days": 2,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
    ],
    "confluence": 3,
-   "isGoldenCombo": false
+   "isGoldenCombo": false,
+   "slTrail": 3.958
   },
   {
    "id": "SUNVIEW_2026-11-05_ADDON",
@@ -820,8 +851,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 1.2,
    "finalGain": 1.2,
    "day1ChangePct": 1.22,
-   "days": 2,
-   "lastDate": "2026-11-06",
+   "days": 3,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -844,8 +875,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 0,
    "finalGain": -3.7,
    "day1ChangePct": 0.94,
-   "days": 3,
-   "lastDate": "2026-11-06",
+   "days": 4,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -861,22 +892,22 @@ window.HOT_THEME_TRACKER = {
    "entryDate": "2026-11-03",
    "entry": 1.14,
    "entryFloor": 1.08,
-   "currentFloor": 1.08,
+   "currentFloor": 1.05,
    "currentPrice": 1.05,
    "high": 1.14,
    "highDate": "2026-11-03",
    "maxGain": 0,
    "finalGain": -7.9,
    "day1ChangePct": 4.59,
-   "days": 4,
-   "lastDate": "2026-11-06",
+   "days": 5,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
    ],
    "confluence": 2,
    "isGoldenCombo": false,
-   "slTrail": 1.048
+   "slTrail": 1.018
   },
   {
    "id": "PEKAT_2026-11-03_ADDON",
@@ -892,8 +923,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 5.6,
    "finalGain": 2.4,
    "day1ChangePct": 0.7,
-   "days": 4,
-   "lastDate": "2026-11-06",
+   "days": 5,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -942,8 +973,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 2.7,
    "finalGain": -0.3,
    "day1ChangePct": -1.95,
-   "days": 5,
-   "lastDate": "2026-11-06",
+   "days": 6,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -966,8 +997,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 0,
    "finalGain": -1.8,
    "day1ChangePct": -1.52,
-   "days": 5,
-   "lastDate": "2026-11-06",
+   "days": 6,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -1016,8 +1047,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 0,
    "finalGain": -5,
    "day1ChangePct": 0,
-   "days": 8,
-   "lastDate": "2026-11-06",
+   "days": 9,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -1066,8 +1097,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 7.4,
    "finalGain": 4.3,
    "day1ChangePct": 2.55,
-   "days": 10,
-   "lastDate": "2026-11-06",
+   "days": 11,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -9517,8 +9548,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 0,
    "day1ChangePct": 0,
-   "days": 94,
-   "lastDate": "2026-11-06",
+   "days": 95,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -9645,8 +9676,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 0,
    "day1ChangePct": 0,
-   "days": 95,
-   "lastDate": "2026-11-06",
+   "days": 96,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -9877,8 +9908,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 0,
    "day1ChangePct": 0.59,
-   "days": 97,
-   "lastDate": "2026-11-06",
+   "days": 98,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -10213,8 +10244,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 0,
    "day1ChangePct": 0.59,
-   "days": 100,
-   "lastDate": "2026-11-06",
+   "days": 101,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -10734,8 +10765,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 0,
    "day1ChangePct": -0.58,
-   "days": 103,
-   "lastDate": "2026-11-06",
+   "days": 104,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -11191,8 +11222,8 @@ window.HOT_THEME_TRACKER = {
 };
 window.HOT_THEME_NEW_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-09T07:43:50.485Z",
-  "dataDays": 108,
+  "generatedAt": "2026-11-09T17:50:45.555Z",
+  "dataDays": 109,
   "totalTracked": 54,
   "openCount": 5,
   "closedCount": 49,
@@ -11505,8 +11536,8 @@ window.HOT_THEME_NEW_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 0,
    "day1ChangePct": -0.58,
-   "days": 103,
-   "lastDate": "2026-11-06",
+   "days": 104,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -12532,22 +12563,22 @@ window.HOT_THEME_NEW_TRACKER = {
    "entryDate": "2026-11-03",
    "entry": 1.14,
    "entryFloor": 1.08,
-   "currentFloor": 1.08,
+   "currentFloor": 1.05,
    "currentPrice": 1.05,
    "high": 1.14,
    "highDate": "2026-11-03",
    "maxGain": 0,
    "finalGain": -7.9,
    "day1ChangePct": 4.59,
-   "days": 4,
-   "lastDate": "2026-11-06",
+   "days": 5,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
    ],
    "confluence": 2,
    "isGoldenCombo": false,
-   "slTrail": 1.048
+   "slTrail": 1.018
   },
   {
    "id": "CLOUDPT_2026-11-03_NEW",
@@ -12589,8 +12620,8 @@ window.HOT_THEME_NEW_TRACKER = {
    "maxGain": 0,
    "finalGain": -3.7,
    "day1ChangePct": 0.94,
-   "days": 3,
-   "lastDate": "2026-11-06",
+   "days": 4,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -12603,8 +12634,8 @@ window.HOT_THEME_NEW_TRACKER = {
 };
 window.HOT_THEME_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-09T07:43:50.485Z",
-  "dataDays": 108,
+  "generatedAt": "2026-11-09T17:50:45.555Z",
+  "dataDays": 109,
   "totalTracked": 175,
   "openCount": 5,
   "closedCount": 170,
@@ -12787,8 +12818,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 0,
    "day1ChangePct": 0.59,
-   "days": 100,
-   "lastDate": "2026-11-06",
+   "days": 101,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -12993,8 +13024,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 0,
    "day1ChangePct": 0.59,
-   "days": 97,
-   "lastDate": "2026-11-06",
+   "days": 98,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -13121,8 +13152,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 0,
    "day1ChangePct": 0,
-   "days": 95,
-   "lastDate": "2026-11-06",
+   "days": 96,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -13197,8 +13228,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 0,
    "day1ChangePct": 0,
-   "days": 94,
-   "lastDate": "2026-11-06",
+   "days": 95,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -17147,8 +17178,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 1.2,
    "finalGain": 1.2,
    "day1ChangePct": 1.22,
-   "days": 2,
-   "lastDate": "2026-11-06",
+   "days": 3,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -17161,10 +17192,10 @@ window.HOT_THEME_ADDON_TRACKER = {
 };
 window.HOT_THEME_FLOOR_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-09T07:43:50.485Z",
-  "dataDays": 108,
-  "totalTracked": 172,
-  "openCount": 9,
+  "generatedAt": "2026-11-09T17:50:45.555Z",
+  "dataDays": 109,
+  "totalTracked": 173,
+  "openCount": 10,
   "closedCount": 163,
   "closedWins": 76,
   "closedWinRate": 47,
@@ -21461,8 +21492,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 7.4,
    "finalGain": 4.3,
    "day1ChangePct": 2.55,
-   "days": 10,
-   "lastDate": "2026-11-06",
+   "days": 11,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -21537,8 +21568,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 0,
    "finalGain": -5,
    "day1ChangePct": 0,
-   "days": 8,
-   "lastDate": "2026-11-06",
+   "days": 9,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -21561,8 +21592,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 0,
    "finalGain": -1.8,
    "day1ChangePct": -1.52,
-   "days": 5,
-   "lastDate": "2026-11-06",
+   "days": 6,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -21585,8 +21616,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 2.7,
    "finalGain": -0.3,
    "day1ChangePct": -1.95,
-   "days": 5,
-   "lastDate": "2026-11-06",
+   "days": 6,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -21609,8 +21640,8 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "maxGain": 5.6,
    "finalGain": 2.4,
    "day1ChangePct": 0.7,
-   "days": 4,
-   "lastDate": "2026-11-06",
+   "days": 5,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -21629,12 +21660,36 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "currentFloor": 4.08,
    "currentPrice": 4.11,
    "high": 4.11,
-   "highDate": "2026-11-06",
+   "highDate": "2026-11-10",
+   "maxGain": 0,
+   "finalGain": 0,
+   "day1ChangePct": 0.74,
+   "days": 2,
+   "lastDate": "2026-11-10",
+   "status": "OPEN",
+   "themes": [
+    "Solar/RE"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false,
+   "slTrail": 3.958
+  },
+  {
+   "id": "SLVEST_2026-11-10_ADDON",
+   "name": "SLVEST",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-11-10",
+   "entry": 4.11,
+   "entryFloor": 4.08,
+   "currentFloor": 4.08,
+   "currentPrice": 4.11,
+   "high": 4.11,
+   "highDate": "2026-11-10",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": 0.74,
    "days": 1,
-   "lastDate": "2026-11-06",
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -21646,10 +21701,10 @@ window.HOT_THEME_FLOOR_TRACKER = {
 };
 window.HOT_THEME_ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-09T07:43:50.485Z",
-  "dataDays": 108,
-  "totalTracked": 401,
-  "openCount": 19,
+  "generatedAt": "2026-11-09T17:50:45.555Z",
+  "dataDays": 109,
+  "totalTracked": 402,
+  "openCount": 20,
   "closedCount": 382,
   "closedWins": 208,
   "closedWinRate": 54,
@@ -21660,6 +21715,29 @@ window.HOT_THEME_ALL_TRACKER = {
  },
  "trades": [
   {
+   "id": "SLVEST_2026-11-10_ADDON",
+   "name": "SLVEST",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-11-10",
+   "entry": 4.11,
+   "entryFloor": 4.08,
+   "currentFloor": 4.08,
+   "currentPrice": 4.11,
+   "high": 4.11,
+   "highDate": "2026-11-10",
+   "maxGain": 0,
+   "finalGain": 0,
+   "day1ChangePct": 0.74,
+   "days": 1,
+   "lastDate": "2026-11-10",
+   "status": "OPEN",
+   "themes": [
+    "Solar/RE"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false
+  },
+  {
    "id": "SLVEST_2026-11-06_ADDON",
    "name": "SLVEST",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -21669,18 +21747,19 @@ window.HOT_THEME_ALL_TRACKER = {
    "currentFloor": 4.08,
    "currentPrice": 4.11,
    "high": 4.11,
-   "highDate": "2026-11-06",
+   "highDate": "2026-11-10",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": 0.74,
-   "days": 1,
-   "lastDate": "2026-11-06",
+   "days": 2,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
    ],
    "confluence": 3,
-   "isGoldenCombo": false
+   "isGoldenCombo": false,
+   "slTrail": 3.958
   },
   {
    "id": "SUNVIEW_2026-11-05_ADDON",
@@ -21696,8 +21775,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 1.2,
    "finalGain": 1.2,
    "day1ChangePct": 1.22,
-   "days": 2,
-   "lastDate": "2026-11-06",
+   "days": 3,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -21720,8 +21799,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 0,
    "finalGain": -3.7,
    "day1ChangePct": 0.94,
-   "days": 3,
-   "lastDate": "2026-11-06",
+   "days": 4,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -21737,22 +21816,22 @@ window.HOT_THEME_ALL_TRACKER = {
    "entryDate": "2026-11-03",
    "entry": 1.14,
    "entryFloor": 1.08,
-   "currentFloor": 1.08,
+   "currentFloor": 1.05,
    "currentPrice": 1.05,
    "high": 1.14,
    "highDate": "2026-11-03",
    "maxGain": 0,
    "finalGain": -7.9,
    "day1ChangePct": 4.59,
-   "days": 4,
-   "lastDate": "2026-11-06",
+   "days": 5,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
    ],
    "confluence": 2,
    "isGoldenCombo": false,
-   "slTrail": 1.048
+   "slTrail": 1.018
   },
   {
    "id": "PEKAT_2026-11-03_ADDON",
@@ -21768,8 +21847,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 5.6,
    "finalGain": 2.4,
    "day1ChangePct": 0.7,
-   "days": 4,
-   "lastDate": "2026-11-06",
+   "days": 5,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -21818,8 +21897,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 2.7,
    "finalGain": -0.3,
    "day1ChangePct": -1.95,
-   "days": 5,
-   "lastDate": "2026-11-06",
+   "days": 6,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -21842,8 +21921,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 0,
    "finalGain": -1.8,
    "day1ChangePct": -1.52,
-   "days": 5,
-   "lastDate": "2026-11-06",
+   "days": 6,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -21892,8 +21971,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 0,
    "finalGain": -5,
    "day1ChangePct": 0,
-   "days": 8,
-   "lastDate": "2026-11-06",
+   "days": 9,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -21942,8 +22021,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 7.4,
    "finalGain": 4.3,
    "day1ChangePct": 2.55,
-   "days": 10,
-   "lastDate": "2026-11-06",
+   "days": 11,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Solar/RE"
@@ -30393,8 +30472,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 0,
    "day1ChangePct": 0,
-   "days": 94,
-   "lastDate": "2026-11-06",
+   "days": 95,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -30521,8 +30600,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 0,
    "day1ChangePct": 0,
-   "days": 95,
-   "lastDate": "2026-11-06",
+   "days": 96,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -30753,8 +30832,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 0,
    "day1ChangePct": 0.59,
-   "days": 97,
-   "lastDate": "2026-11-06",
+   "days": 98,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -31089,8 +31168,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 0,
    "day1ChangePct": 0.59,
-   "days": 100,
-   "lastDate": "2026-11-06",
+   "days": 101,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -31610,8 +31689,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 0,
    "day1ChangePct": -0.58,
-   "days": 103,
-   "lastDate": "2026-11-06",
+   "days": 104,
+   "lastDate": "2026-11-10",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
