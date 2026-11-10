@@ -1,17 +1,17 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-10T03:49:31.512Z",
+  "generatedAt": "2026-11-10T03:53:40.846Z",
   "dataDays": 109,
-  "totalTracked": 402,
-  "openCount": 20,
+  "totalTracked": 401,
+  "openCount": 19,
   "closedCount": 382,
   "closedWins": 208,
   "closedWinRate": 54,
   "closedAvgGain": 8.5,
-  "openPnl": 62.3,
+  "openPnl": 63.3,
   "closedPnl": 3248.9,
-  "totalPnlNow": 3311.2
+  "totalPnlNow": 3312.2
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -791,29 +791,6 @@ window.HOT_THEME_TRACKER = {
  "themeTrend": "RISING",
  "trades": [
   {
-   "id": "SUNVIEW_2026-11-10_ADDON",
-   "name": "SUNVIEW",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
-   "entryDate": "2026-11-10",
-   "entry": 0.42,
-   "entryFloor": 0.405,
-   "currentFloor": 0.405,
-   "currentPrice": 0.42,
-   "high": 0.42,
-   "highDate": "2026-11-10",
-   "maxGain": 0,
-   "finalGain": 0,
-   "day1ChangePct": 0,
-   "days": 1,
-   "lastDate": "2026-11-10",
-   "status": "OPEN",
-   "themes": [
-    "Solar/RE"
-   ],
-   "confluence": 3,
-   "isGoldenCombo": false
-  },
-  {
    "id": "SLVEST_2026-11-06_ADDON",
    "name": "SLVEST",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -845,11 +822,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 0.415,
    "entryFloor": 0.405,
    "currentFloor": 0.405,
-   "currentPrice": 0.42,
-   "high": 0.42,
-   "highDate": "2026-11-06",
-   "maxGain": 1.2,
-   "finalGain": 1.2,
+   "currentPrice": 0.425,
+   "high": 0.425,
+   "highDate": "2026-11-10",
+   "maxGain": 2.4,
+   "finalGain": 2.4,
    "day1ChangePct": 1.22,
    "days": 3,
    "lastDate": "2026-11-10",
@@ -991,11 +968,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 3.89,
    "entryFloor": 3.66,
    "currentFloor": 3.7,
-   "currentPrice": 3.79,
+   "currentPrice": 3.78,
    "high": 3.89,
    "highDate": "2026-10-30",
    "maxGain": 0,
-   "finalGain": -2.6,
+   "finalGain": -2.8,
    "day1ChangePct": -1.52,
    "days": 6,
    "lastDate": "2026-11-10",
@@ -11222,7 +11199,7 @@ window.HOT_THEME_TRACKER = {
 };
 window.HOT_THEME_NEW_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-10T03:49:31.512Z",
+  "generatedAt": "2026-11-10T03:53:40.846Z",
   "dataDays": 109,
   "totalTracked": 54,
   "openCount": 5,
@@ -12634,7 +12611,7 @@ window.HOT_THEME_NEW_TRACKER = {
 };
 window.HOT_THEME_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-10T03:49:31.515Z",
+  "generatedAt": "2026-11-10T03:53:40.847Z",
   "dataDays": 109,
   "totalTracked": 175,
   "openCount": 5,
@@ -12642,9 +12619,9 @@ window.HOT_THEME_ADDON_TRACKER = {
   "closedWins": 112,
   "closedWinRate": 66,
   "closedAvgGain": 13.8,
-  "openPnl": 6,
+  "openPnl": 7.2,
   "closedPnl": 2339.4,
-  "totalPnlNow": 2345.4
+  "totalPnlNow": 2346.6
  },
  "trades": [
   {
@@ -17172,11 +17149,11 @@ window.HOT_THEME_ADDON_TRACKER = {
    "entry": 0.415,
    "entryFloor": 0.405,
    "currentFloor": 0.405,
-   "currentPrice": 0.42,
-   "high": 0.42,
-   "highDate": "2026-11-06",
-   "maxGain": 1.2,
-   "finalGain": 1.2,
+   "currentPrice": 0.425,
+   "high": 0.425,
+   "highDate": "2026-11-10",
+   "maxGain": 2.4,
+   "finalGain": 2.4,
    "day1ChangePct": 1.22,
    "days": 3,
    "lastDate": "2026-11-10",
@@ -17192,17 +17169,17 @@ window.HOT_THEME_ADDON_TRACKER = {
 };
 window.HOT_THEME_FLOOR_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-10T03:49:31.520Z",
+  "generatedAt": "2026-11-10T03:53:40.847Z",
   "dataDays": 109,
-  "totalTracked": 173,
-  "openCount": 10,
+  "totalTracked": 172,
+  "openCount": 9,
   "closedCount": 163,
   "closedWins": 76,
   "closedWinRate": 47,
   "closedAvgGain": 3.1,
-  "openPnl": 66.2,
+  "openPnl": 66,
   "closedPnl": 498.6,
-  "totalPnlNow": 564.8
+  "totalPnlNow": 564.6
  },
  "trades": [
   {
@@ -21586,11 +21563,11 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "entry": 3.89,
    "entryFloor": 3.66,
    "currentFloor": 3.7,
-   "currentPrice": 3.79,
+   "currentPrice": 3.78,
    "high": 3.89,
    "highDate": "2026-10-30",
    "maxGain": 0,
-   "finalGain": -2.6,
+   "finalGain": -2.8,
    "day1ChangePct": -1.52,
    "days": 6,
    "lastDate": "2026-11-10",
@@ -21673,70 +21650,24 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "confluence": 3,
    "isGoldenCombo": false,
    "slTrail": 3.958
-  },
-  {
-   "id": "SUNVIEW_2026-11-10_ADDON",
-   "name": "SUNVIEW",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
-   "entryDate": "2026-11-10",
-   "entry": 0.42,
-   "entryFloor": 0.405,
-   "currentFloor": 0.405,
-   "currentPrice": 0.42,
-   "high": 0.42,
-   "highDate": "2026-11-10",
-   "maxGain": 0,
-   "finalGain": 0,
-   "day1ChangePct": 0,
-   "days": 1,
-   "lastDate": "2026-11-10",
-   "status": "OPEN",
-   "themes": [
-    "Solar/RE"
-   ],
-   "confluence": 3,
-   "isGoldenCombo": false
   }
  ]
 };
 window.HOT_THEME_ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-10T03:49:31.512Z",
+  "generatedAt": "2026-11-10T03:53:40.846Z",
   "dataDays": 109,
-  "totalTracked": 402,
-  "openCount": 20,
+  "totalTracked": 401,
+  "openCount": 19,
   "closedCount": 382,
   "closedWins": 208,
   "closedWinRate": 54,
   "closedAvgGain": 8.5,
-  "openPnl": 62.3,
+  "openPnl": 63.3,
   "closedPnl": 3248.9,
-  "totalPnlNow": 3311.2
+  "totalPnlNow": 3312.2
  },
  "trades": [
-  {
-   "id": "SUNVIEW_2026-11-10_ADDON",
-   "name": "SUNVIEW",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
-   "entryDate": "2026-11-10",
-   "entry": 0.42,
-   "entryFloor": 0.405,
-   "currentFloor": 0.405,
-   "currentPrice": 0.42,
-   "high": 0.42,
-   "highDate": "2026-11-10",
-   "maxGain": 0,
-   "finalGain": 0,
-   "day1ChangePct": 0,
-   "days": 1,
-   "lastDate": "2026-11-10",
-   "status": "OPEN",
-   "themes": [
-    "Solar/RE"
-   ],
-   "confluence": 3,
-   "isGoldenCombo": false
-  },
   {
    "id": "SLVEST_2026-11-06_ADDON",
    "name": "SLVEST",
@@ -21769,11 +21700,11 @@ window.HOT_THEME_ALL_TRACKER = {
    "entry": 0.415,
    "entryFloor": 0.405,
    "currentFloor": 0.405,
-   "currentPrice": 0.42,
-   "high": 0.42,
-   "highDate": "2026-11-06",
-   "maxGain": 1.2,
-   "finalGain": 1.2,
+   "currentPrice": 0.425,
+   "high": 0.425,
+   "highDate": "2026-11-10",
+   "maxGain": 2.4,
+   "finalGain": 2.4,
    "day1ChangePct": 1.22,
    "days": 3,
    "lastDate": "2026-11-10",
@@ -21915,11 +21846,11 @@ window.HOT_THEME_ALL_TRACKER = {
    "entry": 3.89,
    "entryFloor": 3.66,
    "currentFloor": 3.7,
-   "currentPrice": 3.79,
+   "currentPrice": 3.78,
    "high": 3.89,
    "highDate": "2026-10-30",
    "maxGain": 0,
-   "finalGain": -2.6,
+   "finalGain": -2.8,
    "day1ChangePct": -1.52,
    "days": 6,
    "lastDate": "2026-11-10",
