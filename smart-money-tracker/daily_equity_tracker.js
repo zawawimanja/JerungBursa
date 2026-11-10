@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-11-10T04:18:38.219Z",
+ "generatedAt": "2026-11-10T04:23:59.414Z",
  "totalDays": 105,
  "startDate": "2026-06-02",
  "endDate": "2026-11-10",
@@ -315682,13 +315682,13 @@ window.DAILY_EQUITY_TRACKER = {
    "totalSignals": 483,
    "openCount": 24,
    "closedCount": 459,
-   "openPnl": 328.8,
+   "openPnl": 326.8,
    "closedPnl": 3949.9,
-   "totalPnl": 4278.7,
+   "totalPnl": 4276.7,
    "frPnl": 366.2,
    "addOnPnl": 599.1,
-   "htPnl": 3313.4,
-   "dailyPnlDelta": 94.2,
+   "htPnl": 3311.4,
+   "dailyPnlDelta": 92.2,
    "winRate": 54,
    "avgGain": 8.9,
    "peakGainer": {
@@ -316604,10 +316604,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-11-06",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 4.01,
-     "gainOnDay": -2.4,
-     "dayChangePct": -2.43,
-     "pnlDeltaToday": -2.4
+     "priceOnDay": 4,
+     "gainOnDay": -2.7,
+     "dayChangePct": -2.68,
+     "pnlDeltaToday": -2.7
     },
     {
      "id": "HT:SUNVIEW_2026-11-05_ADDON",
@@ -316648,10 +316648,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-11-03",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.84,
-     "gainOnDay": -1,
-     "dayChangePct": -3.4,
-     "pnlDeltaToday": -3.4
+     "priceOnDay": 2.82,
+     "gainOnDay": -1.7,
+     "dayChangePct": -4.08,
+     "pnlDeltaToday": -4.1
     },
     {
      "id": "HT:CLOUDPT_2026-11-03_NEW",
@@ -316681,10 +316681,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-30",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 3.8,
-     "gainOnDay": -2.3,
-     "dayChangePct": -0.52,
-     "pnlDeltaToday": -0.5
+     "priceOnDay": 3.79,
+     "gainOnDay": -2.6,
+     "dayChangePct": -0.79,
+     "pnlDeltaToday": -0.8
     },
     {
      "id": "HT:GREATEC_2026-10-30_ADDON",
@@ -316725,10 +316725,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-26",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.84,
-     "gainOnDay": 0.7,
-     "dayChangePct": -3.4,
-     "pnlDeltaToday": -3.6
+     "priceOnDay": 2.82,
+     "gainOnDay": 0,
+     "dayChangePct": -4.08,
+     "pnlDeltaToday": -4.3
     },
     {
      "id": "HT:RPLANET_2026-10-26_NEW",
