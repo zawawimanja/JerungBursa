@@ -1,17 +1,17 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-10T03:53:40.846Z",
+  "generatedAt": "2026-11-10T03:59:23.272Z",
   "dataDays": 109,
   "totalTracked": 401,
-  "openCount": 19,
-  "closedCount": 382,
+  "openCount": 18,
+  "closedCount": 383,
   "closedWins": 208,
   "closedWinRate": 54,
   "closedAvgGain": 8.5,
-  "openPnl": 63.3,
-  "closedPnl": 3248.9,
-  "totalPnlNow": 3312.2
+  "openPnl": 69,
+  "closedPnl": 3244.6,
+  "totalPnlNow": 3313.6
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -782,10 +782,10 @@ window.HOT_THEME_TRACKER = {
   },
   {
    "date": "2026-11-10",
-   "themePct": 32.4,
-   "themeCount": 78,
-   "totalCount": 316,
-   "ma5": 36.2
+   "themePct": 34,
+   "themeCount": 77,
+   "totalCount": 314,
+   "ma5": 36.5
   }
  ],
  "themeTrend": "RISING",
@@ -798,11 +798,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 4.11,
    "entryFloor": 4.08,
    "currentFloor": 4.08,
-   "currentPrice": 4.02,
+   "currentPrice": 4.03,
    "high": 4.11,
    "highDate": "2026-11-06",
    "maxGain": 0,
-   "finalGain": -2.2,
+   "finalGain": -1.9,
    "day1ChangePct": 0.74,
    "days": 2,
    "lastDate": "2026-11-10",
@@ -822,11 +822,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 0.415,
    "entryFloor": 0.405,
    "currentFloor": 0.405,
-   "currentPrice": 0.425,
-   "high": 0.425,
+   "currentPrice": 0.43,
+   "high": 0.43,
    "highDate": "2026-11-10",
-   "maxGain": 2.4,
-   "finalGain": 2.4,
+   "maxGain": 3.6,
+   "finalGain": 3.6,
    "day1ChangePct": 1.22,
    "days": 3,
    "lastDate": "2026-11-10",
@@ -944,21 +944,23 @@ window.HOT_THEME_TRACKER = {
    "entry": 3.01,
    "entryFloor": 3,
    "currentFloor": 2.97,
-   "currentPrice": 2.9,
+   "currentPrice": 2.88,
    "high": 3.09,
    "highDate": "2026-11-04",
    "maxGain": 2.7,
-   "finalGain": -3.7,
+   "finalGain": -4.3,
    "day1ChangePct": -1.95,
    "days": 6,
    "lastDate": "2026-11-10",
-   "status": "OPEN",
+   "status": "CLOSED_SL",
    "themes": [
     "Solar/RE"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 2.881
+   "slTrail": 2.881,
+   "exitDate": "2026-11-10",
+   "exitPrice": 2.881
   },
   {
    "id": "MNHLDG_2026-10-30_ADDON",
@@ -968,11 +970,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 3.89,
    "entryFloor": 3.66,
    "currentFloor": 3.7,
-   "currentPrice": 3.78,
+   "currentPrice": 3.8,
    "high": 3.89,
    "highDate": "2026-10-30",
    "maxGain": 0,
-   "finalGain": -2.8,
+   "finalGain": -2.3,
    "day1ChangePct": -1.52,
    "days": 6,
    "lastDate": "2026-11-10",
@@ -11199,7 +11201,7 @@ window.HOT_THEME_TRACKER = {
 };
 window.HOT_THEME_NEW_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-10T03:53:40.846Z",
+  "generatedAt": "2026-11-10T03:59:23.272Z",
   "dataDays": 109,
   "totalTracked": 54,
   "openCount": 5,
@@ -12611,7 +12613,7 @@ window.HOT_THEME_NEW_TRACKER = {
 };
 window.HOT_THEME_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-10T03:53:40.847Z",
+  "generatedAt": "2026-11-10T03:59:23.274Z",
   "dataDays": 109,
   "totalTracked": 175,
   "openCount": 5,
@@ -12619,9 +12621,9 @@ window.HOT_THEME_ADDON_TRACKER = {
   "closedWins": 112,
   "closedWinRate": 66,
   "closedAvgGain": 13.8,
-  "openPnl": 7.2,
+  "openPnl": 8.4,
   "closedPnl": 2339.4,
-  "totalPnlNow": 2346.6
+  "totalPnlNow": 2347.8
  },
  "trades": [
   {
@@ -17149,11 +17151,11 @@ window.HOT_THEME_ADDON_TRACKER = {
    "entry": 0.415,
    "entryFloor": 0.405,
    "currentFloor": 0.405,
-   "currentPrice": 0.425,
-   "high": 0.425,
+   "currentPrice": 0.43,
+   "high": 0.43,
    "highDate": "2026-11-10",
-   "maxGain": 2.4,
-   "finalGain": 2.4,
+   "maxGain": 3.6,
+   "finalGain": 3.6,
    "day1ChangePct": 1.22,
    "days": 3,
    "lastDate": "2026-11-10",
@@ -17169,17 +17171,17 @@ window.HOT_THEME_ADDON_TRACKER = {
 };
 window.HOT_THEME_FLOOR_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-10T03:53:40.847Z",
+  "generatedAt": "2026-11-10T03:59:23.276Z",
   "dataDays": 109,
   "totalTracked": 172,
-  "openCount": 9,
-  "closedCount": 163,
+  "openCount": 8,
+  "closedCount": 164,
   "closedWins": 76,
-  "closedWinRate": 47,
-  "closedAvgGain": 3.1,
-  "openPnl": 66,
-  "closedPnl": 498.6,
-  "totalPnlNow": 564.6
+  "closedWinRate": 46,
+  "closedAvgGain": 3,
+  "openPnl": 70.5,
+  "closedPnl": 494.3,
+  "totalPnlNow": 564.8
  },
  "trades": [
   {
@@ -21563,11 +21565,11 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "entry": 3.89,
    "entryFloor": 3.66,
    "currentFloor": 3.7,
-   "currentPrice": 3.78,
+   "currentPrice": 3.8,
    "high": 3.89,
    "highDate": "2026-10-30",
    "maxGain": 0,
-   "finalGain": -2.8,
+   "finalGain": -2.3,
    "day1ChangePct": -1.52,
    "days": 6,
    "lastDate": "2026-11-10",
@@ -21587,21 +21589,23 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "entry": 3.01,
    "entryFloor": 3,
    "currentFloor": 2.97,
-   "currentPrice": 2.9,
+   "currentPrice": 2.88,
    "high": 3.09,
    "highDate": "2026-11-04",
    "maxGain": 2.7,
-   "finalGain": -3.7,
+   "finalGain": -4.3,
    "day1ChangePct": -1.95,
    "days": 6,
    "lastDate": "2026-11-10",
-   "status": "OPEN",
+   "status": "CLOSED_SL",
    "themes": [
     "Solar/RE"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 2.881
+   "slTrail": 2.881,
+   "exitDate": "2026-11-10",
+   "exitPrice": 2.881
   },
   {
    "id": "PEKAT_2026-11-03_ADDON",
@@ -21635,11 +21639,11 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "entry": 4.11,
    "entryFloor": 4.08,
    "currentFloor": 4.08,
-   "currentPrice": 4.02,
+   "currentPrice": 4.03,
    "high": 4.11,
    "highDate": "2026-11-06",
    "maxGain": 0,
-   "finalGain": -2.2,
+   "finalGain": -1.9,
    "day1ChangePct": 0.74,
    "days": 2,
    "lastDate": "2026-11-10",
@@ -21655,17 +21659,17 @@ window.HOT_THEME_FLOOR_TRACKER = {
 };
 window.HOT_THEME_ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-10T03:53:40.846Z",
+  "generatedAt": "2026-11-10T03:59:23.272Z",
   "dataDays": 109,
   "totalTracked": 401,
-  "openCount": 19,
-  "closedCount": 382,
+  "openCount": 18,
+  "closedCount": 383,
   "closedWins": 208,
   "closedWinRate": 54,
   "closedAvgGain": 8.5,
-  "openPnl": 63.3,
-  "closedPnl": 3248.9,
-  "totalPnlNow": 3312.2
+  "openPnl": 69,
+  "closedPnl": 3244.6,
+  "totalPnlNow": 3313.6
  },
  "trades": [
   {
@@ -21676,11 +21680,11 @@ window.HOT_THEME_ALL_TRACKER = {
    "entry": 4.11,
    "entryFloor": 4.08,
    "currentFloor": 4.08,
-   "currentPrice": 4.02,
+   "currentPrice": 4.03,
    "high": 4.11,
    "highDate": "2026-11-06",
    "maxGain": 0,
-   "finalGain": -2.2,
+   "finalGain": -1.9,
    "day1ChangePct": 0.74,
    "days": 2,
    "lastDate": "2026-11-10",
@@ -21700,11 +21704,11 @@ window.HOT_THEME_ALL_TRACKER = {
    "entry": 0.415,
    "entryFloor": 0.405,
    "currentFloor": 0.405,
-   "currentPrice": 0.425,
-   "high": 0.425,
+   "currentPrice": 0.43,
+   "high": 0.43,
    "highDate": "2026-11-10",
-   "maxGain": 2.4,
-   "finalGain": 2.4,
+   "maxGain": 3.6,
+   "finalGain": 3.6,
    "day1ChangePct": 1.22,
    "days": 3,
    "lastDate": "2026-11-10",
@@ -21822,21 +21826,23 @@ window.HOT_THEME_ALL_TRACKER = {
    "entry": 3.01,
    "entryFloor": 3,
    "currentFloor": 2.97,
-   "currentPrice": 2.9,
+   "currentPrice": 2.88,
    "high": 3.09,
    "highDate": "2026-11-04",
    "maxGain": 2.7,
-   "finalGain": -3.7,
+   "finalGain": -4.3,
    "day1ChangePct": -1.95,
    "days": 6,
    "lastDate": "2026-11-10",
-   "status": "OPEN",
+   "status": "CLOSED_SL",
    "themes": [
     "Solar/RE"
    ],
    "confluence": 3,
    "isGoldenCombo": false,
-   "slTrail": 2.881
+   "slTrail": 2.881,
+   "exitDate": "2026-11-10",
+   "exitPrice": 2.881
   },
   {
    "id": "MNHLDG_2026-10-30_ADDON",
@@ -21846,11 +21852,11 @@ window.HOT_THEME_ALL_TRACKER = {
    "entry": 3.89,
    "entryFloor": 3.66,
    "currentFloor": 3.7,
-   "currentPrice": 3.78,
+   "currentPrice": 3.8,
    "high": 3.89,
    "highDate": "2026-10-30",
    "maxGain": 0,
-   "finalGain": -2.8,
+   "finalGain": -2.3,
    "day1ChangePct": -1.52,
    "days": 6,
    "lastDate": "2026-11-10",

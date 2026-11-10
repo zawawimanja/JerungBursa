@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-11-10T03:53:43.995Z",
+ "generatedAt": "2026-11-10T03:59:29.898Z",
  "totalDays": 105,
  "startDate": "2026-06-02",
  "endDate": "2026-11-10",
@@ -315680,19 +315680,19 @@ window.DAILY_EQUITY_TRACKER = {
   {
    "date": "2026-11-10",
    "totalSignals": 483,
-   "openCount": 25,
-   "closedCount": 458,
-   "openPnl": 330.4,
-   "closedPnl": 3954.2,
-   "totalPnl": 4284.6,
-   "frPnl": 370.9,
+   "openCount": 24,
+   "closedCount": 459,
+   "openPnl": 333.3,
+   "closedPnl": 3949.9,
+   "totalPnl": 4283.2,
+   "frPnl": 368.1,
    "addOnPnl": 601.5,
-   "htPnl": 3312.2,
-   "dailyPnlDelta": 100.1,
+   "htPnl": 3313.6,
+   "dailyPnlDelta": 98.7,
    "winRate": 54,
    "avgGain": 8.9,
    "peakGainer": {
-    "gain": 142.2,
+    "gain": 139.4,
     "name": "KEEMING"
    },
    "trades": [
@@ -315713,10 +315713,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-06-03",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.64,
-     "gainOnDay": 142.2,
-     "dayChangePct": 0.76,
-     "pnlDeltaToday": 1.8
+     "priceOnDay": 2.61,
+     "gainOnDay": 139.4,
+     "dayChangePct": -0.38,
+     "pnlDeltaToday": -1
     },
     {
      "id": "FR:WESTRVR_2026-10-27_🔥 NEW",
@@ -316604,10 +316604,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-11-06",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 4.02,
-     "gainOnDay": -2.2,
-     "dayChangePct": -2.19,
-     "pnlDeltaToday": -2.2
+     "priceOnDay": 4.03,
+     "gainOnDay": -1.9,
+     "dayChangePct": -1.95,
+     "pnlDeltaToday": -1.9
     },
     {
      "id": "HT:SUNVIEW_2026-11-05_ADDON",
@@ -316615,10 +316615,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-11-05",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.425,
-     "gainOnDay": 2.4,
-     "dayChangePct": 1.19,
-     "pnlDeltaToday": 1.2
+     "priceOnDay": 0.43,
+     "gainOnDay": 3.6,
+     "dayChangePct": 2.38,
+     "pnlDeltaToday": 2.4
     },
     {
      "id": "HT:LGMS_2026-11-04_NEW",
@@ -316669,11 +316669,11 @@ window.DAILY_EQUITY_TRACKER = {
      "name": "SAMAIDEN",
      "entryDate": "2026-11-02",
      "trackerType": "HT",
-     "statusOnDay": "OPEN",
-     "priceOnDay": 2.9,
-     "gainOnDay": -3.7,
-     "dayChangePct": -3.33,
-     "pnlDeltaToday": -3.4
+     "statusOnDay": "CLOSED_TODAY",
+     "priceOnDay": 2.881,
+     "gainOnDay": -4.3,
+     "dayChangePct": -4,
+     "pnlDeltaToday": -4
     },
     {
      "id": "HT:MNHLDG_2026-10-30_ADDON",
@@ -316681,10 +316681,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-30",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 3.78,
-     "gainOnDay": -2.8,
-     "dayChangePct": -1.05,
-     "pnlDeltaToday": -1
+     "priceOnDay": 3.8,
+     "gainOnDay": -2.3,
+     "dayChangePct": -0.52,
+     "pnlDeltaToday": -0.5
     },
     {
      "id": "HT:GREATEC_2026-10-30_ADDON",
@@ -318828,7 +318828,7 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "OPEN",
      "priceOnDay": 1.85,
      "gainOnDay": 24.2,
-     "dayChangePct": -2.37,
+     "dayChangePct": -2.63,
      "pnlDeltaToday": 0
     },
     {
@@ -318861,7 +318861,7 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "OPEN",
      "priceOnDay": 1.85,
      "gainOnDay": 23.3,
-     "dayChangePct": -2.37,
+     "dayChangePct": -2.63,
      "pnlDeltaToday": 0
     },
     {

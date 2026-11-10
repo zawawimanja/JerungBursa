@@ -1,5 +1,5 @@
 // Auto-generated Corporate News & Ex-Dividend Database
-// Generated At: 2026-11-10T03:53:10.926Z
+// Generated At: 2026-11-10T03:58:20.726Z
 window.NEWS_DATA = {
   "3REN": {
     "hasNewsAlert": false,
@@ -187,10 +187,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:27.163Z",
+    "checkedAt": "2026-11-10T03:58:56.197Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:27.163Z",
-      "entitlements": "2026-11-10T03:53:27.163Z"
+      "announcements": "2026-11-10T03:58:56.197Z",
+      "entitlements": "2026-11-10T03:58:56.197Z"
     }
   },
   "5ER": {
@@ -363,10 +363,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.736Z",
+    "checkedAt": "2026-11-10T03:58:29.257Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.736Z",
-      "entitlements": "2026-11-10T03:53:14.736Z"
+      "announcements": "2026-11-10T03:58:29.257Z",
+      "entitlements": "2026-11-10T03:58:29.257Z"
     }
   },
   "99 SPEED MART RETAIL": {
@@ -573,10 +573,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:17.474Z",
+    "checkedAt": "2026-11-10T03:58:36.707Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:17.474Z",
-      "entitlements": "2026-11-10T03:53:17.474Z"
+      "announcements": "2026-11-10T03:58:36.707Z",
+      "entitlements": "2026-11-10T03:58:36.707Z"
     }
   },
   "A1AKK": {
@@ -756,10 +756,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.918Z",
+    "checkedAt": "2026-11-10T03:58:29.753Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.918Z",
-      "entitlements": "2026-11-10T03:53:14.918Z"
+      "announcements": "2026-11-10T03:58:29.753Z",
+      "entitlements": "2026-11-10T03:58:29.753Z"
     }
   },
   "AAGB": {
@@ -1088,10 +1088,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:25.282Z",
+    "checkedAt": "2026-11-10T03:58:51.429Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:25.282Z",
-      "entitlements": "2026-11-10T03:53:25.282Z"
+      "announcements": "2026-11-10T03:58:51.429Z",
+      "entitlements": "2026-11-10T03:58:51.429Z"
     }
   },
   "ACO": {
@@ -1307,10 +1307,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:23.869Z",
+    "checkedAt": "2026-11-10T03:58:50.613Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:23.869Z",
-      "entitlements": "2026-11-10T03:53:23.869Z"
+      "announcements": "2026-11-10T03:58:50.613Z",
+      "entitlements": "2026-11-10T03:58:50.613Z"
     }
   },
   "ADB": {
@@ -1519,10 +1519,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:23.341Z",
+    "checkedAt": "2026-11-10T03:58:50.237Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:23.341Z",
-      "entitlements": "2026-11-10T03:53:23.341Z"
+      "announcements": "2026-11-10T03:58:50.237Z",
+      "entitlements": "2026-11-10T03:58:50.237Z"
     }
   },
   "ADNEX": {
@@ -1687,10 +1687,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:12.921Z",
+    "checkedAt": "2026-11-10T03:58:23.942Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:12.921Z",
-      "entitlements": "2026-11-10T03:53:12.921Z"
+      "announcements": "2026-11-10T03:58:23.942Z",
+      "entitlements": "2026-11-10T03:58:23.942Z"
     }
   },
   "AGMO": {
@@ -1863,10 +1863,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:27.226Z",
+    "checkedAt": "2026-11-10T03:58:56.880Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:27.226Z",
-      "entitlements": "2026-11-10T03:53:27.226Z"
+      "announcements": "2026-11-10T03:58:56.880Z",
+      "entitlements": "2026-11-10T03:58:56.880Z"
     }
   },
   "AGRICOR": {
@@ -2048,10 +2048,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.328Z",
+    "checkedAt": "2026-11-10T03:58:39.206Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.328Z",
-      "entitlements": "2026-11-10T03:53:18.328Z"
+      "announcements": "2026-11-10T03:58:39.206Z",
+      "entitlements": "2026-11-10T03:58:39.206Z"
     }
   },
   "AGX": {
@@ -2249,10 +2249,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:15.168Z",
+    "checkedAt": "2026-11-10T03:58:31.391Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:15.168Z",
-      "entitlements": "2026-11-10T03:53:15.168Z"
+      "announcements": "2026-11-10T03:58:31.391Z",
+      "entitlements": "2026-11-10T03:58:31.391Z"
     }
   },
   "AIMAX": {
@@ -2642,10 +2642,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:27.425Z",
+    "checkedAt": "2026-11-10T03:58:57.347Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:27.425Z",
-      "entitlements": "2026-11-10T03:53:27.425Z"
+      "announcements": "2026-11-10T03:58:57.347Z",
+      "entitlements": "2026-11-10T03:58:57.347Z"
     }
   },
   "AIZO": {
@@ -3062,10 +3062,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.560Z",
+    "checkedAt": "2026-11-10T03:58:39.390Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.560Z",
-      "entitlements": "2026-11-10T03:53:18.560Z"
+      "announcements": "2026-11-10T03:58:39.390Z",
+      "entitlements": "2026-11-10T03:58:39.390Z"
     }
   },
   "ALPHA": {
@@ -3281,10 +3281,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:13.473Z",
+    "checkedAt": "2026-11-10T03:58:27.168Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:13.473Z",
-      "entitlements": "2026-11-10T03:53:13.473Z"
+      "announcements": "2026-11-10T03:58:27.168Z",
+      "entitlements": "2026-11-10T03:58:27.168Z"
     }
   },
   "AMBANK": {
@@ -3673,10 +3673,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:19.798Z",
+    "checkedAt": "2026-11-10T03:58:42.907Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:19.798Z",
-      "entitlements": "2026-11-10T03:53:19.798Z"
+      "announcements": "2026-11-10T03:58:42.907Z",
+      "entitlements": "2026-11-10T03:58:42.907Z"
     }
   },
   "AMEREIT": {
@@ -3898,10 +3898,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:21.791Z",
+    "checkedAt": "2026-11-10T03:58:46.778Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:21.791Z",
-      "entitlements": "2026-11-10T03:53:21.791Z"
+      "announcements": "2026-11-10T03:58:46.778Z",
+      "entitlements": "2026-11-10T03:58:46.778Z"
     }
   },
   "AMS": {
@@ -4081,10 +4081,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:24.396Z",
+    "checkedAt": "2026-11-10T03:58:50.492Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:24.396Z",
-      "entitlements": "2026-11-10T03:53:24.396Z"
+      "announcements": "2026-11-10T03:58:50.492Z",
+      "entitlements": "2026-11-10T03:58:50.492Z"
     }
   },
   "ANEKA": {
@@ -4254,10 +4254,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:28.773Z",
+    "checkedAt": "2026-11-10T03:58:59.445Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:28.773Z",
-      "entitlements": "2026-11-10T03:53:28.773Z"
+      "announcements": "2026-11-10T03:58:59.445Z",
+      "entitlements": "2026-11-10T03:58:59.445Z"
     }
   },
   "APM": {
@@ -4665,10 +4665,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:27.722Z",
+    "checkedAt": "2026-11-10T03:58:57.735Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:27.722Z",
-      "entitlements": "2026-11-10T03:53:27.722Z"
+      "announcements": "2026-11-10T03:58:57.735Z",
+      "entitlements": "2026-11-10T03:58:57.735Z"
     }
   },
   "ASM": {
@@ -4838,10 +4838,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:28.216Z",
+    "checkedAt": "2026-11-10T03:58:58.197Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:28.216Z",
-      "entitlements": "2026-11-10T03:53:28.216Z"
+      "announcements": "2026-11-10T03:58:58.197Z",
+      "entitlements": "2026-11-10T03:58:58.197Z"
     }
   },
   "ATECH": {
@@ -5057,10 +5057,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:27.018Z",
+    "checkedAt": "2026-11-10T03:58:56.018Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:27.018Z",
-      "entitlements": "2026-11-10T03:53:27.018Z"
+      "announcements": "2026-11-10T03:58:56.018Z",
+      "entitlements": "2026-11-10T03:58:56.018Z"
     }
   },
   "AXIATA": {
@@ -5276,10 +5276,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:17.393Z",
+    "checkedAt": "2026-11-10T03:58:40.748Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:17.393Z",
-      "entitlements": "2026-11-10T03:53:17.393Z"
+      "announcements": "2026-11-10T03:58:40.748Z",
+      "entitlements": "2026-11-10T03:58:40.748Z"
     }
   },
   "AXTERIA": {
@@ -5678,10 +5678,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:19.109Z",
+    "checkedAt": "2026-11-10T03:58:41.812Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:19.109Z",
-      "entitlements": "2026-11-10T03:53:19.109Z"
+      "announcements": "2026-11-10T03:58:41.812Z",
+      "entitlements": "2026-11-10T03:58:41.812Z"
     }
   },
   "BAT": {
@@ -6116,10 +6116,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:20.044Z",
+    "checkedAt": "2026-11-10T03:58:44.251Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:20.044Z",
-      "entitlements": "2026-11-10T03:53:20.044Z"
+      "announcements": "2026-11-10T03:58:44.251Z",
+      "entitlements": "2026-11-10T03:58:44.251Z"
     }
   },
   "BFIELD": {
@@ -6227,10 +6227,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.502Z",
+    "checkedAt": "2026-11-10T03:58:39.796Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.502Z",
-      "entitlements": "2026-11-10T03:53:18.502Z"
+      "announcements": "2026-11-10T03:58:39.796Z",
+      "entitlements": "2026-11-10T03:58:39.796Z"
     }
   },
   "BMGREEN": {
@@ -6446,10 +6446,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:23.523Z",
+    "checkedAt": "2026-11-10T03:58:50.020Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:23.523Z",
-      "entitlements": "2026-11-10T03:53:23.523Z"
+      "announcements": "2026-11-10T03:58:50.020Z",
+      "entitlements": "2026-11-10T03:58:50.020Z"
     }
   },
   "BMS": {
@@ -6638,10 +6638,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:16.391Z",
+    "checkedAt": "2026-11-10T03:58:34.451Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:16.391Z",
-      "entitlements": "2026-11-10T03:53:16.391Z"
+      "announcements": "2026-11-10T03:58:34.451Z",
+      "entitlements": "2026-11-10T03:58:34.451Z"
     }
   },
   "BUSCAP": {
@@ -6817,10 +6817,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:12.945Z",
+    "checkedAt": "2026-11-10T03:58:23.814Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:12.945Z",
-      "entitlements": "2026-11-10T03:53:12.945Z"
+      "announcements": "2026-11-10T03:58:23.814Z",
+      "entitlements": "2026-11-10T03:58:23.814Z"
     }
   },
   "BWYS": {
@@ -6993,10 +6993,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:28.138Z",
+    "checkedAt": "2026-11-10T03:58:58.385Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:28.138Z",
-      "entitlements": "2026-11-10T03:53:28.138Z"
+      "announcements": "2026-11-10T03:58:58.385Z",
+      "entitlements": "2026-11-10T03:58:58.385Z"
     }
   },
   "CAMAROE": {
@@ -7159,10 +7159,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:17.018Z",
+    "checkedAt": "2026-11-10T03:58:35.841Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:17.018Z",
-      "entitlements": "2026-11-10T03:53:17.018Z"
+      "announcements": "2026-11-10T03:58:35.841Z",
+      "entitlements": "2026-11-10T03:58:35.841Z"
     }
   },
   "CAPITALA": {
@@ -7590,10 +7590,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.902Z",
+    "checkedAt": "2026-11-10T03:58:29.912Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.902Z",
-      "entitlements": "2026-11-10T03:53:14.902Z"
+      "announcements": "2026-11-10T03:58:29.912Z",
+      "entitlements": "2026-11-10T03:58:29.912Z"
     }
   },
   "CBHB": {
@@ -7782,10 +7782,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:20.015Z",
+    "checkedAt": "2026-11-10T03:58:43.915Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:20.015Z",
-      "entitlements": "2026-11-10T03:53:20.015Z"
+      "announcements": "2026-11-10T03:58:43.915Z",
+      "entitlements": "2026-11-10T03:58:43.915Z"
     }
   },
   "CDB": {
@@ -8202,10 +8202,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:23.034Z",
+    "checkedAt": "2026-11-10T03:58:48.037Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:23.034Z",
-      "entitlements": "2026-11-10T03:53:23.034Z"
+      "announcements": "2026-11-10T03:58:48.037Z",
+      "entitlements": "2026-11-10T03:58:48.037Z"
     }
   },
   "CEKD": {
@@ -8421,10 +8421,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:28.788Z",
+    "checkedAt": "2026-11-10T03:58:59.482Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:28.788Z",
-      "entitlements": "2026-11-10T03:53:28.788Z"
+      "announcements": "2026-11-10T03:58:59.482Z",
+      "entitlements": "2026-11-10T03:58:59.482Z"
     }
   },
   "CENGILD": {
@@ -8640,10 +8640,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:23.992Z",
+    "checkedAt": "2026-11-10T03:58:50.170Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:23.992Z",
-      "entitlements": "2026-11-10T03:53:23.992Z"
+      "announcements": "2026-11-10T03:58:50.170Z",
+      "entitlements": "2026-11-10T03:58:50.170Z"
     }
   },
   "CGB": {
@@ -9060,10 +9060,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:24.024Z",
+    "checkedAt": "2026-11-10T03:58:50.450Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:24.024Z",
-      "entitlements": "2026-11-10T03:53:24.024Z"
+      "announcements": "2026-11-10T03:58:50.450Z",
+      "entitlements": "2026-11-10T03:58:50.450Z"
     }
   },
   "CHEEDING": {
@@ -9245,10 +9245,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:16.015Z",
+    "checkedAt": "2026-11-10T03:58:33.153Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:16.015Z",
-      "entitlements": "2026-11-10T03:53:16.015Z"
+      "announcements": "2026-11-10T03:58:33.153Z",
+      "entitlements": "2026-11-10T03:58:33.153Z"
     }
   },
   "CIMB": {
@@ -9464,10 +9464,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:23.258Z",
+    "checkedAt": "2026-11-10T03:58:48.977Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:23.258Z",
-      "entitlements": "2026-11-10T03:53:23.258Z"
+      "announcements": "2026-11-10T03:58:48.977Z",
+      "entitlements": "2026-11-10T03:58:48.977Z"
     }
   },
   "CITAGLB": {
@@ -9859,10 +9859,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.658Z",
+    "checkedAt": "2026-11-10T03:58:39.988Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.658Z",
-      "entitlements": "2026-11-10T03:53:18.658Z"
+      "announcements": "2026-11-10T03:58:39.988Z",
+      "entitlements": "2026-11-10T03:58:39.988Z"
     }
   },
   "CLITE": {
@@ -10042,10 +10042,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.051Z",
+    "checkedAt": "2026-11-10T03:58:41.842Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.051Z",
-      "entitlements": "2026-11-10T03:53:18.051Z"
+      "announcements": "2026-11-10T03:58:41.842Z",
+      "entitlements": "2026-11-10T03:58:41.842Z"
     }
   },
   "CLOUDPT": {
@@ -10267,10 +10267,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:23.151Z",
+    "checkedAt": "2026-11-10T03:58:49.851Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:23.151Z",
-      "entitlements": "2026-11-10T03:53:23.151Z"
+      "announcements": "2026-11-10T03:58:49.851Z",
+      "entitlements": "2026-11-10T03:58:49.851Z"
     }
   },
   "CNERGEN": {
@@ -10477,10 +10477,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.358Z",
+    "checkedAt": "2026-11-10T03:58:28.975Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.358Z",
-      "entitlements": "2026-11-10T03:53:14.358Z"
+      "announcements": "2026-11-10T03:58:28.975Z",
+      "entitlements": "2026-11-10T03:58:28.975Z"
     }
   },
   "COLFORM": {
@@ -10669,10 +10669,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:15.279Z",
+    "checkedAt": "2026-11-10T03:58:31.058Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:15.279Z",
-      "entitlements": "2026-11-10T03:53:15.279Z"
+      "announcements": "2026-11-10T03:58:31.058Z",
+      "entitlements": "2026-11-10T03:58:31.058Z"
     }
   },
   "CORAZA": {
@@ -10842,10 +10842,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:26.443Z",
+    "checkedAt": "2026-11-10T03:58:55.064Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:26.443Z",
-      "entitlements": "2026-11-10T03:53:26.443Z"
+      "announcements": "2026-11-10T03:58:55.064Z",
+      "entitlements": "2026-11-10T03:58:55.064Z"
     }
   },
   "CPETECH": {
@@ -11052,10 +11052,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:26.897Z",
+    "checkedAt": "2026-11-10T03:58:55.133Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:26.897Z",
-      "entitlements": "2026-11-10T03:53:26.897Z"
+      "announcements": "2026-11-10T03:58:55.133Z",
+      "entitlements": "2026-11-10T03:58:55.133Z"
     }
   },
   "CREST": {
@@ -11264,10 +11264,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:13.568Z",
+    "checkedAt": "2026-11-10T03:58:26.235Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:13.568Z",
-      "entitlements": "2026-11-10T03:53:13.568Z"
+      "announcements": "2026-11-10T03:58:26.235Z",
+      "entitlements": "2026-11-10T03:58:26.235Z"
     }
   },
   "CRPMATE": {
@@ -11449,10 +11449,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.667Z",
+    "checkedAt": "2026-11-10T03:58:29.105Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.667Z",
-      "entitlements": "2026-11-10T03:53:14.667Z"
+      "announcements": "2026-11-10T03:58:29.105Z",
+      "entitlements": "2026-11-10T03:58:29.105Z"
     }
   },
   "CTOS": {
@@ -11668,10 +11668,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:26.019Z",
+    "checkedAt": "2026-11-10T03:58:54.470Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:26.019Z",
-      "entitlements": "2026-11-10T03:53:26.019Z"
+      "announcements": "2026-11-10T03:58:54.470Z",
+      "entitlements": "2026-11-10T03:58:54.470Z"
     }
   },
   "DAY3": {
@@ -11862,10 +11862,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.582Z",
+    "checkedAt": "2026-11-10T03:58:39.562Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.582Z",
-      "entitlements": "2026-11-10T03:53:18.582Z"
+      "announcements": "2026-11-10T03:58:39.562Z",
+      "entitlements": "2026-11-10T03:58:39.562Z"
     }
   },
   "DCHCARE": {
@@ -12028,10 +12028,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:27.872Z",
+    "checkedAt": "2026-11-10T03:58:57.835Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:27.872Z",
-      "entitlements": "2026-11-10T03:53:27.872Z"
+      "announcements": "2026-11-10T03:58:57.835Z",
+      "entitlements": "2026-11-10T03:58:57.835Z"
     }
   },
   "DENGKIL": {
@@ -12201,10 +12201,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:16.861Z",
+    "checkedAt": "2026-11-10T03:58:35.776Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:16.861Z",
-      "entitlements": "2026-11-10T03:53:16.861Z"
+      "announcements": "2026-11-10T03:58:35.776Z",
+      "entitlements": "2026-11-10T03:58:35.776Z"
     }
   },
   "DESTINI": {
@@ -12384,10 +12384,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:27.278Z",
+    "checkedAt": "2026-11-10T03:58:56.719Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:27.278Z",
-      "entitlements": "2026-11-10T03:53:27.278Z"
+      "announcements": "2026-11-10T03:58:56.719Z",
+      "entitlements": "2026-11-10T03:58:56.719Z"
     }
   },
   "DLADY": {
@@ -12603,10 +12603,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.163Z",
+    "checkedAt": "2026-11-10T03:58:38.649Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.163Z",
-      "entitlements": "2026-11-10T03:53:18.163Z"
+      "announcements": "2026-11-10T03:58:38.649Z",
+      "entitlements": "2026-11-10T03:58:38.649Z"
     }
   },
   "DNEX": {
@@ -12822,10 +12822,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:25.356Z",
+    "checkedAt": "2026-11-10T03:58:52.679Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:25.356Z",
-      "entitlements": "2026-11-10T03:53:25.356Z"
+      "announcements": "2026-11-10T03:58:52.679Z",
+      "entitlements": "2026-11-10T03:58:52.679Z"
     }
   },
   "DPIH": {
@@ -13041,10 +13041,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:28.643Z",
+    "checkedAt": "2026-11-10T03:58:59.251Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:28.643Z",
-      "entitlements": "2026-11-10T03:53:28.643Z"
+      "announcements": "2026-11-10T03:58:59.251Z",
+      "entitlements": "2026-11-10T03:58:59.251Z"
     }
   },
   "DSS": {
@@ -13242,10 +13242,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:15.722Z",
+    "checkedAt": "2026-11-10T03:58:32.187Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:15.722Z",
-      "entitlements": "2026-11-10T03:53:15.722Z"
+      "announcements": "2026-11-10T03:58:32.187Z",
+      "entitlements": "2026-11-10T03:58:32.187Z"
     }
   },
   "DUFU": {
@@ -13461,10 +13461,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:26.604Z",
+    "checkedAt": "2026-11-10T03:58:55.258Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:26.604Z",
-      "entitlements": "2026-11-10T03:53:26.604Z"
+      "announcements": "2026-11-10T03:58:55.258Z",
+      "entitlements": "2026-11-10T03:58:55.258Z"
     }
   },
   "DXN": {
@@ -13692,10 +13692,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:13.485Z",
+    "checkedAt": "2026-11-10T03:58:27.623Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:13.485Z",
-      "entitlements": "2026-11-10T03:53:13.485Z"
+      "announcements": "2026-11-10T03:58:27.623Z",
+      "entitlements": "2026-11-10T03:58:27.623Z"
     }
   },
   "ECA": {
@@ -13865,10 +13865,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:26.409Z",
+    "checkedAt": "2026-11-10T03:58:54.994Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:26.409Z",
-      "entitlements": "2026-11-10T03:53:26.409Z"
+      "announcements": "2026-11-10T03:58:54.994Z",
+      "entitlements": "2026-11-10T03:58:54.994Z"
     }
   },
   "ECKEM": {
@@ -13956,10 +13956,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:27.971Z",
+    "checkedAt": "2026-11-10T03:58:58.470Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:27.971Z",
-      "entitlements": "2026-11-10T03:53:27.971Z"
+      "announcements": "2026-11-10T03:58:58.470Z",
+      "entitlements": "2026-11-10T03:58:58.470Z"
     }
   },
   "ECOGRP": {
@@ -14095,10 +14095,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:19.934Z",
+    "checkedAt": "2026-11-10T03:58:43.842Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:19.934Z",
-      "entitlements": "2026-11-10T03:53:19.934Z"
+      "announcements": "2026-11-10T03:58:43.842Z",
+      "entitlements": "2026-11-10T03:58:43.842Z"
     }
   },
   "ECOMATE": {
@@ -14296,10 +14296,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:12.972Z",
+    "checkedAt": "2026-11-10T03:58:24.092Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:12.972Z",
-      "entitlements": "2026-11-10T03:53:12.972Z"
+      "announcements": "2026-11-10T03:58:24.092Z",
+      "entitlements": "2026-11-10T03:58:24.092Z"
     }
   },
   "ECOSHOP": {
@@ -14521,10 +14521,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:15.791Z",
+    "checkedAt": "2026-11-10T03:58:32.926Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:15.791Z",
-      "entitlements": "2026-11-10T03:53:15.791Z"
+      "announcements": "2026-11-10T03:58:32.926Z",
+      "entitlements": "2026-11-10T03:58:32.926Z"
     }
   },
   "ECOSYS": {
@@ -14594,10 +14594,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.016Z",
+    "checkedAt": "2026-11-10T03:58:27.301Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.016Z",
-      "entitlements": "2026-11-10T03:53:14.016Z"
+      "announcements": "2026-11-10T03:58:27.301Z",
+      "entitlements": "2026-11-10T03:58:27.301Z"
     }
   },
   "EDELTEQ": {
@@ -14777,10 +14777,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:16.672Z",
+    "checkedAt": "2026-11-10T03:58:34.802Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:16.672Z",
-      "entitlements": "2026-11-10T03:53:16.672Z"
+      "announcements": "2026-11-10T03:58:34.802Z",
+      "entitlements": "2026-11-10T03:58:34.802Z"
     }
   },
   "EFRAME": {
@@ -14969,10 +14969,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.140Z",
+    "checkedAt": "2026-11-10T03:58:38.274Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.140Z",
-      "entitlements": "2026-11-10T03:53:18.140Z"
+      "announcements": "2026-11-10T03:58:38.274Z",
+      "entitlements": "2026-11-10T03:58:38.274Z"
     }
   },
   "EIB": {
@@ -15142,10 +15142,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:15.953Z",
+    "checkedAt": "2026-11-10T03:58:32.718Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:15.953Z",
-      "entitlements": "2026-11-10T03:53:15.953Z"
+      "announcements": "2026-11-10T03:58:32.718Z",
+      "entitlements": "2026-11-10T03:58:32.718Z"
     }
   },
   "EIPOWER": {
@@ -15293,10 +15293,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:15.405Z",
+    "checkedAt": "2026-11-10T03:58:35.040Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:15.405Z",
-      "entitlements": "2026-11-10T03:53:15.405Z"
+      "announcements": "2026-11-10T03:58:35.040Z",
+      "entitlements": "2026-11-10T03:58:35.040Z"
     }
   },
   "ELRIDGE": {
@@ -15466,10 +15466,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:13.189Z",
+    "checkedAt": "2026-11-10T03:58:24.441Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:13.189Z",
-      "entitlements": "2026-11-10T03:53:13.189Z"
+      "announcements": "2026-11-10T03:58:24.441Z",
+      "entitlements": "2026-11-10T03:58:24.441Z"
     }
   },
   "ELSA": {
@@ -15639,10 +15639,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:17.766Z",
+    "checkedAt": "2026-11-10T03:58:37.636Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:17.766Z",
-      "entitlements": "2026-11-10T03:53:17.766Z"
+      "announcements": "2026-11-10T03:58:37.636Z",
+      "entitlements": "2026-11-10T03:58:37.636Z"
     }
   },
   "EMCC": {
@@ -15833,10 +15833,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:17.257Z",
+    "checkedAt": "2026-11-10T03:58:36.216Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:17.257Z",
-      "entitlements": "2026-11-10T03:53:17.257Z"
+      "announcements": "2026-11-10T03:58:36.216Z",
+      "entitlements": "2026-11-10T03:58:36.216Z"
     }
   },
   "EMPIRE": {
@@ -16016,10 +16016,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:16.400Z",
+    "checkedAt": "2026-11-10T03:58:34.236Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:16.400Z",
-      "entitlements": "2026-11-10T03:53:16.400Z"
+      "announcements": "2026-11-10T03:58:34.236Z",
+      "entitlements": "2026-11-10T03:58:34.236Z"
     }
   },
   "ENEST": {
@@ -16104,10 +16104,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.640Z",
+    "checkedAt": "2026-11-10T03:58:28.807Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.640Z",
-      "entitlements": "2026-11-10T03:53:14.640Z"
+      "announcements": "2026-11-10T03:58:28.807Z",
+      "entitlements": "2026-11-10T03:58:28.807Z"
     }
   },
   "ENPRO": {
@@ -16277,10 +16277,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:15.023Z",
+    "checkedAt": "2026-11-10T03:58:34.074Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:15.023Z",
-      "entitlements": "2026-11-10T03:53:15.023Z"
+      "announcements": "2026-11-10T03:58:34.074Z",
+      "entitlements": "2026-11-10T03:58:34.074Z"
     }
   },
   "EPB": {
@@ -16460,10 +16460,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:22.832Z",
+    "checkedAt": "2026-11-10T03:58:49.300Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:22.832Z",
-      "entitlements": "2026-11-10T03:53:22.832Z"
+      "announcements": "2026-11-10T03:58:49.300Z",
+      "entitlements": "2026-11-10T03:58:49.300Z"
     }
   },
   "EVOCOM": {
@@ -16538,10 +16538,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:27.322Z",
+    "checkedAt": "2026-11-10T03:58:57.567Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:27.322Z",
-      "entitlements": "2026-11-10T03:53:27.322Z"
+      "announcements": "2026-11-10T03:58:57.567Z",
+      "entitlements": "2026-11-10T03:58:57.567Z"
     }
   },
   "EWICAP": {
@@ -16923,10 +16923,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.791Z",
+    "checkedAt": "2026-11-10T03:58:29.367Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.791Z",
-      "entitlements": "2026-11-10T03:53:14.791Z"
+      "announcements": "2026-11-10T03:58:29.367Z",
+      "entitlements": "2026-11-10T03:58:29.367Z"
     }
   },
   "F&N": {
@@ -17148,10 +17148,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.033Z",
+    "checkedAt": "2026-11-10T03:58:41.568Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.033Z",
-      "entitlements": "2026-11-10T03:53:18.033Z"
+      "announcements": "2026-11-10T03:58:41.568Z",
+      "entitlements": "2026-11-10T03:58:41.568Z"
     }
   },
   "FAMIERA": {
@@ -17296,10 +17296,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:17.723Z",
+    "checkedAt": "2026-11-10T03:58:38.003Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:17.723Z",
-      "entitlements": "2026-11-10T03:53:17.723Z"
+      "announcements": "2026-11-10T03:58:38.003Z",
+      "entitlements": "2026-11-10T03:58:38.003Z"
     }
   },
   "FCW": {
@@ -17693,10 +17693,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:20.106Z",
+    "checkedAt": "2026-11-10T03:58:44.057Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:20.106Z",
-      "entitlements": "2026-11-10T03:53:20.106Z"
+      "announcements": "2026-11-10T03:58:44.057Z",
+      "entitlements": "2026-11-10T03:58:44.057Z"
     }
   },
   "FFB": {
@@ -17912,10 +17912,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:19.015Z",
+    "checkedAt": "2026-11-10T03:58:42.319Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:19.015Z",
-      "entitlements": "2026-11-10T03:53:19.015Z"
+      "announcements": "2026-11-10T03:58:42.319Z",
+      "entitlements": "2026-11-10T03:58:42.319Z"
     }
   },
   "FIBON": {
@@ -18297,10 +18297,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.595Z",
+    "checkedAt": "2026-11-10T03:58:39.619Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.595Z",
-      "entitlements": "2026-11-10T03:53:18.595Z"
+      "announcements": "2026-11-10T03:58:39.619Z",
+      "entitlements": "2026-11-10T03:58:39.619Z"
     }
   },
   "FLEXI": {
@@ -18480,10 +18480,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:22.898Z",
+    "checkedAt": "2026-11-10T03:58:48.651Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:22.898Z",
-      "entitlements": "2026-11-10T03:53:22.898Z"
+      "announcements": "2026-11-10T03:58:48.651Z",
+      "entitlements": "2026-11-10T03:58:48.651Z"
     }
   },
   "FOODIE": {
@@ -18702,10 +18702,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.681Z",
+    "checkedAt": "2026-11-10T03:58:40.070Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.681Z",
-      "entitlements": "2026-11-10T03:53:18.681Z"
+      "announcements": "2026-11-10T03:58:40.070Z",
+      "entitlements": "2026-11-10T03:58:40.070Z"
     }
   },
   "FPHB": {
@@ -18885,10 +18885,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:15.300Z",
+    "checkedAt": "2026-11-10T03:58:30.919Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:15.300Z",
-      "entitlements": "2026-11-10T03:53:15.300Z"
+      "announcements": "2026-11-10T03:58:30.919Z",
+      "entitlements": "2026-11-10T03:58:30.919Z"
     }
   },
   "FRONTKN": {
@@ -19196,10 +19196,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:22.511Z",
+    "checkedAt": "2026-11-10T03:58:48.108Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:22.511Z",
-      "entitlements": "2026-11-10T03:53:22.511Z"
+      "announcements": "2026-11-10T03:58:48.108Z",
+      "entitlements": "2026-11-10T03:58:48.108Z"
     }
   },
   "GDGROUP": {
@@ -19367,10 +19367,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:20.937Z",
+    "checkedAt": "2026-11-10T03:58:46.304Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:20.937Z",
-      "entitlements": "2026-11-10T03:53:20.937Z"
+      "announcements": "2026-11-10T03:58:46.304Z",
+      "entitlements": "2026-11-10T03:58:46.304Z"
     }
   },
   "GENERGY": {
@@ -19559,10 +19559,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:20.547Z",
+    "checkedAt": "2026-11-10T03:58:46.254Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:20.547Z",
-      "entitlements": "2026-11-10T03:53:20.547Z"
+      "announcements": "2026-11-10T03:58:46.254Z",
+      "entitlements": "2026-11-10T03:58:46.254Z"
     }
   },
   "GEOHAN": {
@@ -19725,10 +19725,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:17.706Z",
+    "checkedAt": "2026-11-10T03:58:36.909Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:17.706Z",
-      "entitlements": "2026-11-10T03:53:17.706Z"
+      "announcements": "2026-11-10T03:58:36.909Z",
+      "entitlements": "2026-11-10T03:58:36.909Z"
     }
   },
   "GESHEN": {
@@ -20109,10 +20109,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:16.640Z",
+    "checkedAt": "2026-11-10T03:58:34.601Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:16.640Z",
-      "entitlements": "2026-11-10T03:53:16.640Z"
+      "announcements": "2026-11-10T03:58:34.601Z",
+      "entitlements": "2026-11-10T03:58:34.601Z"
     }
   },
   "GIIB": {
@@ -20533,10 +20533,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:19.716Z",
+    "checkedAt": "2026-11-10T03:58:42.211Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:19.716Z",
-      "entitlements": "2026-11-10T03:53:19.716Z"
+      "announcements": "2026-11-10T03:58:42.211Z",
+      "entitlements": "2026-11-10T03:58:42.211Z"
     }
   },
   "GOHUB": {
@@ -20699,10 +20699,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:28.358Z",
+    "checkedAt": "2026-11-10T03:58:58.441Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:28.358Z",
-      "entitlements": "2026-11-10T03:53:28.358Z"
+      "announcements": "2026-11-10T03:58:58.441Z",
+      "entitlements": "2026-11-10T03:58:58.441Z"
     }
   },
   "GOLDLI": {
@@ -20800,10 +20800,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:16.181Z",
+    "checkedAt": "2026-11-10T03:58:34.129Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:16.181Z",
-      "entitlements": "2026-11-10T03:53:16.181Z"
+      "announcements": "2026-11-10T03:58:34.129Z",
+      "entitlements": "2026-11-10T03:58:34.129Z"
     }
   },
   "GREATEC": {
@@ -20973,10 +20973,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:25.674Z",
+    "checkedAt": "2026-11-10T03:58:52.502Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:25.674Z",
-      "entitlements": "2026-11-10T03:53:25.674Z"
+      "announcements": "2026-11-10T03:58:52.502Z",
+      "entitlements": "2026-11-10T03:58:52.502Z"
     }
   },
   "GTA": {
@@ -21141,10 +21141,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:20.872Z",
+    "checkedAt": "2026-11-10T03:58:39.503Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:20.872Z",
-      "entitlements": "2026-11-10T03:53:20.872Z"
+      "announcements": "2026-11-10T03:58:39.503Z",
+      "entitlements": "2026-11-10T03:58:39.503Z"
     }
   },
   "HAILY": {
@@ -21360,10 +21360,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:27.301Z",
+    "checkedAt": "2026-11-10T03:58:57.019Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:27.301Z",
-      "entitlements": "2026-11-10T03:53:27.301Z"
+      "announcements": "2026-11-10T03:58:57.019Z",
+      "entitlements": "2026-11-10T03:58:57.019Z"
     }
   },
   "HAWK": {
@@ -21533,10 +21533,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:16.875Z",
+    "checkedAt": "2026-11-10T03:58:35.458Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:16.875Z",
-      "entitlements": "2026-11-10T03:53:16.875Z"
+      "announcements": "2026-11-10T03:58:35.458Z",
+      "entitlements": "2026-11-10T03:58:35.458Z"
     }
   },
   "HEGROUP": {
@@ -21734,10 +21734,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:22.210Z",
+    "checkedAt": "2026-11-10T03:58:47.632Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:22.210Z",
-      "entitlements": "2026-11-10T03:53:22.210Z"
+      "announcements": "2026-11-10T03:58:47.632Z",
+      "entitlements": "2026-11-10T03:58:47.632Z"
     }
   },
   "HEIM": {
@@ -21946,10 +21946,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:17.567Z",
+    "checkedAt": "2026-11-10T03:58:36.634Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:17.567Z",
-      "entitlements": "2026-11-10T03:53:17.567Z"
+      "announcements": "2026-11-10T03:58:36.634Z",
+      "entitlements": "2026-11-10T03:58:36.634Z"
     }
   },
   "HENGYUAN": {
@@ -22165,10 +22165,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:22.467Z",
+    "checkedAt": "2026-11-10T03:58:47.065Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:22.467Z",
-      "entitlements": "2026-11-10T03:53:22.467Z"
+      "announcements": "2026-11-10T03:58:47.065Z",
+      "entitlements": "2026-11-10T03:58:47.065Z"
     }
   },
   "HHRG": {
@@ -22348,10 +22348,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:26.970Z",
+    "checkedAt": "2026-11-10T03:58:56.519Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:26.970Z",
-      "entitlements": "2026-11-10T03:53:26.970Z"
+      "announcements": "2026-11-10T03:58:56.519Z",
+      "entitlements": "2026-11-10T03:58:56.519Z"
     }
   },
   "HI": {
@@ -22567,10 +22567,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:26.915Z",
+    "checkedAt": "2026-11-10T03:58:55.869Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:26.915Z",
-      "entitlements": "2026-11-10T03:53:26.915Z"
+      "announcements": "2026-11-10T03:58:55.869Z",
+      "entitlements": "2026-11-10T03:58:55.869Z"
     }
   },
   "HIBISCS": {
@@ -22962,10 +22962,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:12.595Z",
+    "checkedAt": "2026-11-10T03:58:22.972Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:12.595Z",
-      "entitlements": "2026-11-10T03:53:12.595Z"
+      "announcements": "2026-11-10T03:58:22.972Z",
+      "entitlements": "2026-11-10T03:58:22.972Z"
     }
   },
   "HLBANK": {
@@ -23181,10 +23181,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:25.644Z",
+    "checkedAt": "2026-11-10T03:58:52.473Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:25.644Z",
-      "entitlements": "2026-11-10T03:53:25.644Z"
+      "announcements": "2026-11-10T03:58:52.473Z",
+      "entitlements": "2026-11-10T03:58:52.473Z"
     }
   },
   "HLFG": {
@@ -23400,10 +23400,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.494Z",
+    "checkedAt": "2026-11-10T03:58:39.084Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.494Z",
-      "entitlements": "2026-11-10T03:53:18.494Z"
+      "announcements": "2026-11-10T03:58:39.084Z",
+      "entitlements": "2026-11-10T03:58:39.084Z"
     }
   },
   "HLIND": {
@@ -23619,10 +23619,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:19.906Z",
+    "checkedAt": "2026-11-10T03:58:42.938Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:19.906Z",
-      "entitlements": "2026-11-10T03:53:19.906Z"
+      "announcements": "2026-11-10T03:58:42.938Z",
+      "entitlements": "2026-11-10T03:58:42.938Z"
     }
   },
   "HOCKSOON": {
@@ -23740,10 +23740,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:28.104Z",
+    "checkedAt": "2026-11-10T03:58:58.233Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:28.104Z",
-      "entitlements": "2026-11-10T03:53:28.104Z"
+      "announcements": "2026-11-10T03:58:58.233Z",
+      "entitlements": "2026-11-10T03:58:58.233Z"
     }
   },
   "HONGSENG": {
@@ -23941,10 +23941,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:23.069Z",
+    "checkedAt": "2026-11-10T03:58:48.333Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:23.069Z",
-      "entitlements": "2026-11-10T03:53:23.069Z"
+      "announcements": "2026-11-10T03:58:48.333Z",
+      "entitlements": "2026-11-10T03:58:48.333Z"
     }
   },
   "HPMT": {
@@ -24153,10 +24153,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:19.582Z",
+    "checkedAt": "2026-11-10T03:58:42.528Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:19.582Z",
-      "entitlements": "2026-11-10T03:53:19.582Z"
+      "announcements": "2026-11-10T03:58:42.528Z",
+      "entitlements": "2026-11-10T03:58:42.528Z"
     }
   },
   "HPPHB": {
@@ -24372,10 +24372,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:22.152Z",
+    "checkedAt": "2026-11-10T03:58:47.279Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:22.152Z",
-      "entitlements": "2026-11-10T03:53:22.152Z"
+      "announcements": "2026-11-10T03:58:47.279Z",
+      "entitlements": "2026-11-10T03:58:47.279Z"
     }
   },
   "HSSBAKERY": {
@@ -24488,10 +24488,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.777Z",
+    "checkedAt": "2026-11-10T03:58:40.194Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.777Z",
-      "entitlements": "2026-11-10T03:53:18.777Z"
+      "announcements": "2026-11-10T03:58:40.194Z",
+      "entitlements": "2026-11-10T03:58:40.194Z"
     }
   },
   "IAB": {
@@ -24661,10 +24661,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.431Z",
+    "checkedAt": "2026-11-10T03:58:38.826Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.431Z",
-      "entitlements": "2026-11-10T03:53:18.431Z"
+      "announcements": "2026-11-10T03:58:38.826Z",
+      "entitlements": "2026-11-10T03:58:38.826Z"
     }
   },
   "ICENTS": {
@@ -24834,10 +24834,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.855Z",
+    "checkedAt": "2026-11-10T03:58:41.632Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.855Z",
-      "entitlements": "2026-11-10T03:53:18.855Z"
+      "announcements": "2026-11-10T03:58:41.632Z",
+      "entitlements": "2026-11-10T03:58:41.632Z"
     }
   },
   "ICONIC": {
@@ -25201,10 +25201,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:16.041Z",
+    "checkedAt": "2026-11-10T03:58:33.086Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:16.041Z",
-      "entitlements": "2026-11-10T03:53:16.041Z"
+      "announcements": "2026-11-10T03:58:33.086Z",
+      "entitlements": "2026-11-10T03:58:33.086Z"
     }
   },
   "IGBREIT": {
@@ -25645,10 +25645,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:25.323Z",
+    "checkedAt": "2026-11-10T03:58:51.331Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:25.323Z",
-      "entitlements": "2026-11-10T03:53:25.323Z"
+      "announcements": "2026-11-10T03:58:51.331Z",
+      "entitlements": "2026-11-10T03:58:51.331Z"
     }
   },
   "INARI": {
@@ -25864,10 +25864,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:24.622Z",
+    "checkedAt": "2026-11-10T03:58:52.033Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:24.622Z",
-      "entitlements": "2026-11-10T03:53:24.622Z"
+      "announcements": "2026-11-10T03:58:52.033Z",
+      "entitlements": "2026-11-10T03:58:52.033Z"
     }
   },
   "INFOM": {
@@ -26065,10 +26065,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:13.428Z",
+    "checkedAt": "2026-11-10T03:58:26.071Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:13.428Z",
-      "entitlements": "2026-11-10T03:53:13.428Z"
+      "announcements": "2026-11-10T03:58:26.071Z",
+      "entitlements": "2026-11-10T03:58:26.071Z"
     }
   },
   "INFOTEC": {
@@ -26284,10 +26284,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:23.490Z",
+    "checkedAt": "2026-11-10T03:58:49.420Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:23.490Z",
-      "entitlements": "2026-11-10T03:53:23.490Z"
+      "announcements": "2026-11-10T03:58:49.420Z",
+      "entitlements": "2026-11-10T03:58:49.420Z"
     }
   },
   "INNATURE": {
@@ -26496,10 +26496,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:19.145Z",
+    "checkedAt": "2026-11-10T03:58:42.078Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:19.145Z",
-      "entitlements": "2026-11-10T03:53:19.145Z"
+      "announcements": "2026-11-10T03:58:42.078Z",
+      "entitlements": "2026-11-10T03:58:42.078Z"
     }
   },
   "INSPACE": {
@@ -26669,10 +26669,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:21.543Z",
+    "checkedAt": "2026-11-10T03:58:46.388Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:21.543Z",
-      "entitlements": "2026-11-10T03:53:21.543Z"
+      "announcements": "2026-11-10T03:58:46.388Z",
+      "entitlements": "2026-11-10T03:58:46.388Z"
     }
   },
   "ISF": {
@@ -26842,10 +26842,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:12.486Z",
+    "checkedAt": "2026-11-10T03:58:22.833Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:12.486Z",
-      "entitlements": "2026-11-10T03:53:12.486Z"
+      "announcements": "2026-11-10T03:58:22.833Z",
+      "entitlements": "2026-11-10T03:58:22.833Z"
     }
   },
   "ITMAX": {
@@ -27061,10 +27061,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.669Z",
+    "checkedAt": "2026-11-10T03:58:40.349Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.669Z",
-      "entitlements": "2026-11-10T03:53:18.669Z"
+      "announcements": "2026-11-10T03:58:40.349Z",
+      "entitlements": "2026-11-10T03:58:40.349Z"
     }
   },
   "JAKS": {
@@ -27244,10 +27244,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:26.710Z",
+    "checkedAt": "2026-11-10T03:58:54.830Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:26.710Z",
-      "entitlements": "2026-11-10T03:53:26.710Z"
+      "announcements": "2026-11-10T03:58:54.830Z",
+      "entitlements": "2026-11-10T03:58:54.830Z"
     }
   },
   "JCY": {
@@ -27463,10 +27463,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:26.232Z",
+    "checkedAt": "2026-11-10T03:58:53.686Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:26.232Z",
-      "entitlements": "2026-11-10T03:53:26.232Z"
+      "announcements": "2026-11-10T03:58:53.686Z",
+      "entitlements": "2026-11-10T03:58:53.686Z"
     }
   },
   "JPG": {
@@ -27688,10 +27688,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:16.842Z",
+    "checkedAt": "2026-11-10T03:58:35.313Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:16.842Z",
-      "entitlements": "2026-11-10T03:53:16.842Z"
+      "announcements": "2026-11-10T03:58:35.313Z",
+      "entitlements": "2026-11-10T03:58:35.313Z"
     }
   },
   "JSSOLAR": {
@@ -27861,10 +27861,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:16.277Z",
+    "checkedAt": "2026-11-10T03:58:32.600Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:16.277Z",
-      "entitlements": "2026-11-10T03:53:16.277Z"
+      "announcements": "2026-11-10T03:58:32.600Z",
+      "entitlements": "2026-11-10T03:58:32.600Z"
     }
   },
   "JTGROUP": {
@@ -28034,10 +28034,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:24.071Z",
+    "checkedAt": "2026-11-10T03:58:43.949Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:24.071Z",
-      "entitlements": "2026-11-10T03:53:24.071Z"
+      "announcements": "2026-11-10T03:58:43.949Z",
+      "entitlements": "2026-11-10T03:58:43.949Z"
     }
   },
   "KEEMING": {
@@ -28207,10 +28207,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:13.322Z",
+    "checkedAt": "2026-11-10T03:58:27.116Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:13.322Z",
-      "entitlements": "2026-11-10T03:53:13.322Z"
+      "announcements": "2026-11-10T03:58:27.116Z",
+      "entitlements": "2026-11-10T03:58:27.116Z"
     }
   },
   "KENERGY": {
@@ -28392,10 +28392,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:27.788Z",
+    "checkedAt": "2026-11-10T03:58:57.936Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:27.788Z",
-      "entitlements": "2026-11-10T03:53:27.788Z"
+      "announcements": "2026-11-10T03:58:57.936Z",
+      "entitlements": "2026-11-10T03:58:57.936Z"
     }
   },
   "KESM": {
@@ -28830,10 +28830,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:17.686Z",
+    "checkedAt": "2026-11-10T03:58:37.954Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:17.686Z",
-      "entitlements": "2026-11-10T03:53:17.686Z"
+      "announcements": "2026-11-10T03:58:37.954Z",
+      "entitlements": "2026-11-10T03:58:37.954Z"
     }
   },
   "KGB": {
@@ -29049,10 +29049,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:25.447Z",
+    "checkedAt": "2026-11-10T03:58:52.852Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:25.447Z",
-      "entitlements": "2026-11-10T03:53:25.447Z"
+      "announcements": "2026-11-10T03:58:52.852Z",
+      "entitlements": "2026-11-10T03:58:52.852Z"
     }
   },
   "KGW": {
@@ -29215,10 +29215,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:16.943Z",
+    "checkedAt": "2026-11-10T03:58:35.806Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:16.943Z",
-      "entitlements": "2026-11-10T03:53:16.943Z"
+      "announcements": "2026-11-10T03:58:35.806Z",
+      "entitlements": "2026-11-10T03:58:35.806Z"
     }
   },
   "KHB": {
@@ -29398,10 +29398,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:28.823Z",
+    "checkedAt": "2026-11-10T03:58:59.336Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:28.823Z",
-      "entitlements": "2026-11-10T03:53:28.823Z"
+      "announcements": "2026-11-10T03:58:59.336Z",
+      "entitlements": "2026-11-10T03:58:59.336Z"
     }
   },
   "KHJB": {
@@ -29610,10 +29610,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:28.029Z",
+    "checkedAt": "2026-11-10T03:58:58.597Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:28.029Z",
-      "entitlements": "2026-11-10T03:53:28.029Z"
+      "announcements": "2026-11-10T03:58:58.597Z",
+      "entitlements": "2026-11-10T03:58:58.597Z"
     }
   },
   "KINERGY": {
@@ -30041,10 +30041,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.845Z",
+    "checkedAt": "2026-11-10T03:58:41.282Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.845Z",
-      "entitlements": "2026-11-10T03:53:18.845Z"
+      "announcements": "2026-11-10T03:58:41.282Z",
+      "entitlements": "2026-11-10T03:58:41.282Z"
     }
   },
   "KJTS": {
@@ -30242,10 +30242,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:13.774Z",
+    "checkedAt": "2026-11-10T03:58:27.244Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:13.774Z",
-      "entitlements": "2026-11-10T03:53:13.774Z"
+      "announcements": "2026-11-10T03:58:27.244Z",
+      "entitlements": "2026-11-10T03:58:27.244Z"
     }
   },
   "KLCC": {
@@ -30461,10 +30461,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:19.847Z",
+    "checkedAt": "2026-11-10T03:58:37.483Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:19.847Z",
-      "entitlements": "2026-11-10T03:53:19.847Z"
+      "announcements": "2026-11-10T03:58:37.483Z",
+      "entitlements": "2026-11-10T03:58:37.483Z"
     }
   },
   "KLK": {
@@ -30680,10 +30680,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:15.482Z",
+    "checkedAt": "2026-11-10T03:58:33.419Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:15.482Z",
-      "entitlements": "2026-11-10T03:53:15.482Z"
+      "announcements": "2026-11-10T03:58:33.419Z",
+      "entitlements": "2026-11-10T03:58:33.419Z"
     }
   },
   "KOBAY": {
@@ -31082,10 +31082,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:17.112Z",
+    "checkedAt": "2026-11-10T03:58:36.103Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:17.112Z",
-      "entitlements": "2026-11-10T03:53:17.112Z"
+      "announcements": "2026-11-10T03:58:36.103Z",
+      "entitlements": "2026-11-10T03:58:36.103Z"
     }
   },
   "KPJ": {
@@ -31493,10 +31493,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:28.439Z",
+    "checkedAt": "2026-11-10T03:58:59.012Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:28.439Z",
-      "entitlements": "2026-11-10T03:53:28.439Z"
+      "announcements": "2026-11-10T03:58:59.012Z",
+      "entitlements": "2026-11-10T03:58:59.012Z"
     }
   },
   "KUCINGKO": {
@@ -31676,10 +31676,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:23.450Z",
+    "checkedAt": "2026-11-10T03:58:50.327Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:23.450Z",
-      "entitlements": "2026-11-10T03:53:23.450Z"
+      "announcements": "2026-11-10T03:58:50.327Z",
+      "entitlements": "2026-11-10T03:58:50.327Z"
     }
   },
   "L&G": {
@@ -32082,10 +32082,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.371Z",
+    "checkedAt": "2026-11-10T03:58:29.027Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.371Z",
-      "entitlements": "2026-11-10T03:53:14.371Z"
+      "announcements": "2026-11-10T03:58:29.027Z",
+      "entitlements": "2026-11-10T03:58:29.027Z"
     }
   },
   "LACMED": {
@@ -32265,10 +32265,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.509Z",
+    "checkedAt": "2026-11-10T03:58:39.476Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.509Z",
-      "entitlements": "2026-11-10T03:53:18.509Z"
+      "announcements": "2026-11-10T03:58:39.476Z",
+      "entitlements": "2026-11-10T03:58:39.476Z"
     }
   },
   "LEFORM": {
@@ -32441,10 +32441,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:16.699Z",
+    "checkedAt": "2026-11-10T03:58:35.126Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:16.699Z",
-      "entitlements": "2026-11-10T03:53:16.699Z"
+      "announcements": "2026-11-10T03:58:35.126Z",
+      "entitlements": "2026-11-10T03:58:35.126Z"
     }
   },
   "LGMS": {
@@ -32660,10 +32660,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:13.082Z",
+    "checkedAt": "2026-11-10T03:58:25.237Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:13.082Z",
-      "entitlements": "2026-11-10T03:53:13.082Z"
+      "announcements": "2026-11-10T03:58:25.237Z",
+      "entitlements": "2026-11-10T03:58:25.237Z"
     }
   },
   "LHI": {
@@ -32885,10 +32885,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:16.431Z",
+    "checkedAt": "2026-11-10T03:58:33.747Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:16.431Z",
-      "entitlements": "2026-11-10T03:53:16.431Z"
+      "announcements": "2026-11-10T03:58:33.747Z",
+      "entitlements": "2026-11-10T03:58:33.747Z"
     }
   },
   "LIFTECH": {
@@ -33001,10 +33001,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.708Z",
+    "checkedAt": "2026-11-10T03:58:40.552Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.708Z",
-      "entitlements": "2026-11-10T03:53:18.708Z"
+      "announcements": "2026-11-10T03:58:40.552Z",
+      "entitlements": "2026-11-10T03:58:40.552Z"
     }
   },
   "LSH": {
@@ -33220,10 +33220,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:20.524Z",
+    "checkedAt": "2026-11-10T03:58:44.471Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:20.524Z",
-      "entitlements": "2026-11-10T03:53:20.524Z"
+      "announcements": "2026-11-10T03:58:44.471Z",
+      "entitlements": "2026-11-10T03:58:44.471Z"
     }
   },
   "LWSABAH": {
@@ -33412,10 +33412,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:16.339Z",
+    "checkedAt": "2026-11-10T03:58:34.532Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:16.339Z",
-      "entitlements": "2026-11-10T03:53:16.339Z"
+      "announcements": "2026-11-10T03:58:34.532Z",
+      "entitlements": "2026-11-10T03:58:34.532Z"
     }
   },
   "M&G": {
@@ -34024,10 +34024,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:20.458Z",
+    "checkedAt": "2026-11-10T03:58:43.676Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:20.458Z",
-      "entitlements": "2026-11-10T03:53:20.458Z"
+      "announcements": "2026-11-10T03:58:43.676Z",
+      "entitlements": "2026-11-10T03:58:43.676Z"
     }
   },
   "MAXIS": {
@@ -34462,10 +34462,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:21.439Z",
+    "checkedAt": "2026-11-10T03:58:45.750Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:21.439Z",
-      "entitlements": "2026-11-10T03:53:21.439Z"
+      "announcements": "2026-11-10T03:58:45.750Z",
+      "entitlements": "2026-11-10T03:58:45.750Z"
     }
   },
   "MBN": {
@@ -34635,10 +34635,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:17.714Z",
+    "checkedAt": "2026-11-10T03:58:36.940Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:17.714Z",
-      "entitlements": "2026-11-10T03:53:17.714Z"
+      "announcements": "2026-11-10T03:58:36.940Z",
+      "entitlements": "2026-11-10T03:58:36.940Z"
     }
   },
   "MCEMENT": {
@@ -34854,10 +34854,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:21.675Z",
+    "checkedAt": "2026-11-10T03:58:46.196Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:21.675Z",
-      "entitlements": "2026-11-10T03:53:21.675Z"
+      "announcements": "2026-11-10T03:58:46.196Z",
+      "entitlements": "2026-11-10T03:58:46.196Z"
     }
   },
   "MCLEAN": {
@@ -35037,10 +35037,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:26.380Z",
+    "checkedAt": "2026-11-10T03:58:54.802Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:26.380Z",
-      "entitlements": "2026-11-10T03:53:26.380Z"
+      "announcements": "2026-11-10T03:58:54.802Z",
+      "entitlements": "2026-11-10T03:58:54.802Z"
     }
   },
   "MEGAFB": {
@@ -35229,10 +35229,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:25.806Z",
+    "checkedAt": "2026-11-10T03:58:53.899Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:25.806Z",
-      "entitlements": "2026-11-10T03:53:25.806Z"
+      "announcements": "2026-11-10T03:58:53.899Z",
+      "entitlements": "2026-11-10T03:58:53.899Z"
     }
   },
   "MENTIGA": {
@@ -35633,10 +35633,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:16.614Z",
+    "checkedAt": "2026-11-10T03:58:34.874Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:16.614Z",
-      "entitlements": "2026-11-10T03:53:16.614Z"
+      "announcements": "2026-11-10T03:58:34.874Z",
+      "entitlements": "2026-11-10T03:58:34.874Z"
     }
   },
   "MESTRON": {
@@ -35843,10 +35843,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:17.099Z",
+    "checkedAt": "2026-11-10T03:58:35.982Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:17.099Z",
-      "entitlements": "2026-11-10T03:53:17.099Z"
+      "announcements": "2026-11-10T03:58:35.982Z",
+      "entitlements": "2026-11-10T03:58:35.982Z"
     }
   },
   "METRO": {
@@ -36016,10 +36016,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.824Z",
+    "checkedAt": "2026-11-10T03:58:40.838Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.824Z",
-      "entitlements": "2026-11-10T03:53:18.824Z"
+      "announcements": "2026-11-10T03:58:40.838Z",
+      "entitlements": "2026-11-10T03:58:40.838Z"
     }
   },
   "MFGROUP": {
@@ -36189,10 +36189,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:17.817Z",
+    "checkedAt": "2026-11-10T03:58:37.821Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:17.817Z",
-      "entitlements": "2026-11-10T03:53:17.817Z"
+      "announcements": "2026-11-10T03:58:37.821Z",
+      "entitlements": "2026-11-10T03:58:37.821Z"
     }
   },
   "MI": {
@@ -36408,10 +36408,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:23.297Z",
+    "checkedAt": "2026-11-10T03:58:49.064Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:23.297Z",
-      "entitlements": "2026-11-10T03:53:23.297Z"
+      "announcements": "2026-11-10T03:58:49.064Z",
+      "entitlements": "2026-11-10T03:58:49.064Z"
     }
   },
   "MINOX": {
@@ -36609,10 +36609,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:27.955Z",
+    "checkedAt": "2026-11-10T03:58:57.761Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:27.955Z",
-      "entitlements": "2026-11-10T03:53:27.955Z"
+      "announcements": "2026-11-10T03:58:57.761Z",
+      "entitlements": "2026-11-10T03:58:57.761Z"
     }
   },
   "MISC": {
@@ -36828,7 +36828,7 @@ window.NEWS_DATA = {
       "announcements": "error",
       "entitlements": "error"
     },
-    "checkedAt": "2026-11-10T03:53:28.440Z",
+    "checkedAt": "2026-11-10T03:58:59.014Z",
     "lastSuccessfulAt": {
       "announcements": "2026-11-05T17:56:49.234Z",
       "entitlements": "2026-11-05T17:56:49.234Z"
@@ -37047,10 +37047,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:15.540Z",
+    "checkedAt": "2026-11-10T03:58:31.784Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:15.540Z",
-      "entitlements": "2026-11-10T03:53:15.540Z"
+      "announcements": "2026-11-10T03:58:31.784Z",
+      "entitlements": "2026-11-10T03:58:31.784Z"
     }
   },
   "MMCS": {
@@ -37190,10 +37190,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.695Z",
+    "checkedAt": "2026-11-10T03:58:40.017Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.695Z",
-      "entitlements": "2026-11-10T03:53:18.695Z"
+      "announcements": "2026-11-10T03:58:40.017Z",
+      "entitlements": "2026-11-10T03:58:40.017Z"
     }
   },
   "MNHLDG": {
@@ -37382,10 +37382,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.619Z",
+    "checkedAt": "2026-11-10T03:58:40.273Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.619Z",
-      "entitlements": "2026-11-10T03:53:18.619Z"
+      "announcements": "2026-11-10T03:58:40.273Z",
+      "entitlements": "2026-11-10T03:58:40.273Z"
     }
   },
   "MOBILIA": {
@@ -37592,10 +37592,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:28.188Z",
+    "checkedAt": "2026-11-10T03:58:58.541Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:28.188Z",
-      "entitlements": "2026-11-10T03:53:28.188Z"
+      "announcements": "2026-11-10T03:58:58.541Z",
+      "entitlements": "2026-11-10T03:58:58.541Z"
     }
   },
   "MPI": {
@@ -37811,10 +37811,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:26.196Z",
+    "checkedAt": "2026-11-10T03:58:53.797Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:26.196Z",
-      "entitlements": "2026-11-10T03:53:26.196Z"
+      "announcements": "2026-11-10T03:58:53.797Z",
+      "entitlements": "2026-11-10T03:58:53.797Z"
     }
   },
   "MRDIY": {
@@ -38030,10 +38030,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:22.570Z",
+    "checkedAt": "2026-11-10T03:58:48.457Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:22.570Z",
-      "entitlements": "2026-11-10T03:53:22.570Z"
+      "announcements": "2026-11-10T03:58:48.457Z",
+      "entitlements": "2026-11-10T03:58:48.457Z"
     }
   },
   "MSB": {
@@ -38196,10 +38196,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:17.123Z",
+    "checkedAt": "2026-11-10T03:58:36.050Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:17.123Z",
-      "entitlements": "2026-11-10T03:53:17.123Z"
+      "announcements": "2026-11-10T03:58:36.050Z",
+      "entitlements": "2026-11-10T03:58:36.050Z"
     }
   },
   "MSTGOLF": {
@@ -38406,10 +38406,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:16.965Z",
+    "checkedAt": "2026-11-10T03:58:35.388Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:16.965Z",
-      "entitlements": "2026-11-10T03:53:16.965Z"
+      "announcements": "2026-11-10T03:58:35.388Z",
+      "entitlements": "2026-11-10T03:58:35.388Z"
     }
   },
   "MTAG": {
@@ -38625,10 +38625,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:22.312Z",
+    "checkedAt": "2026-11-10T03:58:46.952Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:22.312Z",
-      "entitlements": "2026-11-10T03:53:22.312Z"
+      "announcements": "2026-11-10T03:58:46.952Z",
+      "entitlements": "2026-11-10T03:58:46.952Z"
     }
   },
   "MTEC": {
@@ -38844,10 +38844,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:13.041Z",
+    "checkedAt": "2026-11-10T03:58:24.364Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:13.041Z",
-      "entitlements": "2026-11-10T03:53:13.041Z"
+      "announcements": "2026-11-10T03:58:24.364Z",
+      "entitlements": "2026-11-10T03:58:24.364Z"
     }
   },
   "MTTSL": {
@@ -39027,10 +39027,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:13.059Z",
+    "checkedAt": "2026-11-10T03:58:23.493Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:13.059Z",
-      "entitlements": "2026-11-10T03:53:13.059Z"
+      "announcements": "2026-11-10T03:58:23.493Z",
+      "entitlements": "2026-11-10T03:58:23.493Z"
     }
   },
   "NADIBHD": {
@@ -39230,10 +39230,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:15.289Z",
+    "checkedAt": "2026-11-10T03:58:30.999Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:15.289Z",
-      "entitlements": "2026-11-10T03:53:15.289Z"
+      "announcements": "2026-11-10T03:58:30.999Z",
+      "entitlements": "2026-11-10T03:58:30.999Z"
     }
   },
   "NATGATE": {
@@ -39449,10 +39449,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:24.142Z",
+    "checkedAt": "2026-11-10T03:58:50.872Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:24.142Z",
-      "entitlements": "2026-11-10T03:53:24.142Z"
+      "announcements": "2026-11-10T03:58:50.872Z",
+      "entitlements": "2026-11-10T03:58:50.872Z"
     }
   },
   "NE": {
@@ -39615,10 +39615,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:26.873Z",
+    "checkedAt": "2026-11-10T03:58:56.419Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:26.873Z",
-      "entitlements": "2026-11-10T03:53:26.873Z"
+      "announcements": "2026-11-10T03:58:56.419Z",
+      "entitlements": "2026-11-10T03:58:56.419Z"
     }
   },
   "NESTCON": {
@@ -39788,10 +39788,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:19.921Z",
+    "checkedAt": "2026-11-10T03:58:43.233Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:19.921Z",
-      "entitlements": "2026-11-10T03:53:19.921Z"
+      "announcements": "2026-11-10T03:58:43.233Z",
+      "entitlements": "2026-11-10T03:58:43.233Z"
     }
   },
   "NESTLE": {
@@ -40013,10 +40013,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:13.906Z",
+    "checkedAt": "2026-11-10T03:58:26.556Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:13.906Z",
-      "entitlements": "2026-11-10T03:53:13.906Z"
+      "announcements": "2026-11-10T03:58:26.556Z",
+      "entitlements": "2026-11-10T03:58:26.556Z"
     }
   },
   "NEXG": {
@@ -40232,10 +40232,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:15.525Z",
+    "checkedAt": "2026-11-10T03:58:31.564Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:15.525Z",
-      "entitlements": "2026-11-10T03:53:15.525Z"
+      "announcements": "2026-11-10T03:58:31.564Z",
+      "entitlements": "2026-11-10T03:58:31.564Z"
     }
   },
   "NEXGRAM": {
@@ -40405,7 +40405,7 @@ window.NEWS_DATA = {
       "announcements": "error",
       "entitlements": "error"
     },
-    "checkedAt": "2026-11-10T03:53:28.441Z",
+    "checkedAt": "2026-11-10T03:58:59.016Z",
     "lastSuccessfulAt": {
       "announcements": "2026-11-03T15:30:09.711Z",
       "entitlements": "2026-11-03T15:30:09.711Z"
@@ -40624,10 +40624,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:25.532Z",
+    "checkedAt": "2026-11-10T03:58:54.309Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:25.532Z",
-      "entitlements": "2026-11-10T03:53:25.532Z"
+      "announcements": "2026-11-10T03:58:54.309Z",
+      "entitlements": "2026-11-10T03:58:54.309Z"
     }
   },
   "NORTHERN": {
@@ -40797,10 +40797,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:13.740Z",
+    "checkedAt": "2026-11-10T03:58:27.665Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:13.740Z",
-      "entitlements": "2026-11-10T03:53:13.740Z"
+      "announcements": "2026-11-10T03:58:27.665Z",
+      "entitlements": "2026-11-10T03:58:27.665Z"
     }
   },
   "NWEBHD": {
@@ -40870,10 +40870,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.340Z",
+    "checkedAt": "2026-11-10T03:58:28.904Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.340Z",
-      "entitlements": "2026-11-10T03:53:14.340Z"
+      "announcements": "2026-11-10T03:58:28.904Z",
+      "entitlements": "2026-11-10T03:58:28.904Z"
     }
   },
   "OBHB": {
@@ -41080,10 +41080,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:19.087Z",
+    "checkedAt": "2026-11-10T03:58:41.886Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:19.087Z",
-      "entitlements": "2026-11-10T03:53:19.087Z"
+      "announcements": "2026-11-10T03:58:41.886Z",
+      "entitlements": "2026-11-10T03:58:41.886Z"
     }
   },
   "OFB": {
@@ -41256,10 +41256,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:19.557Z",
+    "checkedAt": "2026-11-10T03:58:42.175Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:19.557Z",
-      "entitlements": "2026-11-10T03:53:19.557Z"
+      "announcements": "2026-11-10T03:58:42.175Z",
+      "entitlements": "2026-11-10T03:58:42.175Z"
     }
   },
   "OGM": {
@@ -41422,10 +41422,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:15.704Z",
+    "checkedAt": "2026-11-10T03:58:31.968Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:15.704Z",
-      "entitlements": "2026-11-10T03:53:15.704Z"
+      "announcements": "2026-11-10T03:58:31.968Z",
+      "entitlements": "2026-11-10T03:58:31.968Z"
     }
   },
   "OGX": {
@@ -41605,10 +41605,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:20.772Z",
+    "checkedAt": "2026-11-10T03:58:44.783Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:20.772Z",
-      "entitlements": "2026-11-10T03:53:20.772Z"
+      "announcements": "2026-11-10T03:58:44.783Z",
+      "entitlements": "2026-11-10T03:58:44.783Z"
     }
   },
   "OHM": {
@@ -41806,10 +41806,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.806Z",
+    "checkedAt": "2026-11-10T03:58:35.746Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.806Z",
-      "entitlements": "2026-11-10T03:53:18.806Z"
+      "announcements": "2026-11-10T03:58:35.746Z",
+      "entitlements": "2026-11-10T03:58:35.746Z"
     }
   },
   "OPPSTAR": {
@@ -42007,10 +42007,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:19.781Z",
+    "checkedAt": "2026-11-10T03:58:43.123Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:19.781Z",
-      "entitlements": "2026-11-10T03:53:19.781Z"
+      "announcements": "2026-11-10T03:58:43.123Z",
+      "entitlements": "2026-11-10T03:58:43.123Z"
     }
   },
   "OPTIMAX": {
@@ -42219,10 +42219,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.068Z",
+    "checkedAt": "2026-11-10T03:58:38.235Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.068Z",
-      "entitlements": "2026-11-10T03:53:18.068Z"
+      "announcements": "2026-11-10T03:58:38.235Z",
+      "entitlements": "2026-11-10T03:58:38.235Z"
     }
   },
   "ORGABIO": {
@@ -42402,10 +42402,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:20.127Z",
+    "checkedAt": "2026-11-10T03:58:44.094Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:20.127Z",
-      "entitlements": "2026-11-10T03:53:20.127Z"
+      "announcements": "2026-11-10T03:58:44.094Z",
+      "entitlements": "2026-11-10T03:58:44.094Z"
     }
   },
   "ORKIM": {
@@ -42594,10 +42594,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:16.551Z",
+    "checkedAt": "2026-11-10T03:58:34.933Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:16.551Z",
-      "entitlements": "2026-11-10T03:53:16.551Z"
+      "announcements": "2026-11-10T03:58:34.933Z",
+      "entitlements": "2026-11-10T03:58:34.933Z"
     }
   },
   "OVH": {
@@ -42767,10 +42767,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:16.199Z",
+    "checkedAt": "2026-11-10T03:58:33.244Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:16.199Z",
-      "entitlements": "2026-11-10T03:53:16.199Z"
+      "announcements": "2026-11-10T03:58:33.244Z",
+      "entitlements": "2026-11-10T03:58:33.244Z"
     }
   },
   "OXB": {
@@ -42950,10 +42950,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:13.921Z",
+    "checkedAt": "2026-11-10T03:58:27.006Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:13.921Z",
-      "entitlements": "2026-11-10T03:53:13.921Z"
+      "announcements": "2026-11-10T03:58:27.006Z",
+      "entitlements": "2026-11-10T03:58:27.006Z"
     }
   },
   "PANDA": {
@@ -43153,10 +43153,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:27.181Z",
+    "checkedAt": "2026-11-10T03:58:56.682Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:27.181Z",
-      "entitlements": "2026-11-10T03:53:27.181Z"
+      "announcements": "2026-11-10T03:58:56.682Z",
+      "entitlements": "2026-11-10T03:58:56.682Z"
     }
   },
   "PARADIGM": {
@@ -43354,10 +43354,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:17.732Z",
+    "checkedAt": "2026-11-10T03:58:37.603Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:17.732Z",
-      "entitlements": "2026-11-10T03:53:17.732Z"
+      "announcements": "2026-11-10T03:58:37.603Z",
+      "entitlements": "2026-11-10T03:58:37.603Z"
     }
   },
   "PBBANK": {
@@ -43798,10 +43798,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:24.913Z",
+    "checkedAt": "2026-11-10T03:58:53.133Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:24.913Z",
-      "entitlements": "2026-11-10T03:53:24.913Z"
+      "announcements": "2026-11-10T03:58:53.133Z",
+      "entitlements": "2026-11-10T03:58:53.133Z"
     }
   },
   "PEKAT": {
@@ -43999,10 +43999,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:12.994Z",
+    "checkedAt": "2026-11-10T03:58:23.168Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:12.994Z",
-      "entitlements": "2026-11-10T03:53:12.994Z"
+      "announcements": "2026-11-10T03:58:23.168Z",
+      "entitlements": "2026-11-10T03:58:23.168Z"
     }
   },
   "PENTA": {
@@ -44224,10 +44224,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:25.089Z",
+    "checkedAt": "2026-11-10T03:58:52.152Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:25.089Z",
-      "entitlements": "2026-11-10T03:53:25.089Z"
+      "announcements": "2026-11-10T03:58:52.152Z",
+      "entitlements": "2026-11-10T03:58:52.152Z"
     }
   },
   "PENTECH": {
@@ -44377,10 +44377,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:26.993Z",
+    "checkedAt": "2026-11-10T03:58:55.695Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:26.993Z",
-      "entitlements": "2026-11-10T03:53:26.993Z"
+      "announcements": "2026-11-10T03:58:55.695Z",
+      "entitlements": "2026-11-10T03:58:55.695Z"
     }
   },
   "PEOPLE": {
@@ -44553,10 +44553,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.520Z",
+    "checkedAt": "2026-11-10T03:58:29.492Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.520Z",
-      "entitlements": "2026-11-10T03:53:14.520Z"
+      "announcements": "2026-11-10T03:58:29.492Z",
+      "entitlements": "2026-11-10T03:58:29.492Z"
     }
   },
   "PETDAG": {
@@ -44743,19 +44743,19 @@ window.NEWS_DATA = {
       {
         "annDate": "24 Feb 2026",
         "financialYear": "31 Dec 2025",
-        "type": "Interim Dividend",
+        "type": "Special Dividend",
         "exDate": "2026-03-10",
         "paymentDate": "25 Mar 2026",
-        "amount": "0.2600",
+        "amount": "0.2000",
         "isDividend": true
       },
       {
         "annDate": "24 Feb 2026",
         "financialYear": "31 Dec 2025",
-        "type": "Special Dividend",
+        "type": "Interim Dividend",
         "exDate": "2026-03-10",
         "paymentDate": "25 Mar 2026",
-        "amount": "0.2000",
+        "amount": "0.2600",
         "isDividend": true
       },
       {
@@ -44772,10 +44772,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:16.306Z",
+    "checkedAt": "2026-11-10T03:58:33.647Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:16.306Z",
-      "entitlements": "2026-11-10T03:53:16.306Z"
+      "announcements": "2026-11-10T03:58:33.647Z",
+      "entitlements": "2026-11-10T03:58:33.647Z"
     }
   },
   "PETGAS": {
@@ -44991,10 +44991,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.621Z",
+    "checkedAt": "2026-11-10T03:58:28.699Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.621Z",
-      "entitlements": "2026-11-10T03:53:14.621Z"
+      "announcements": "2026-11-10T03:58:28.699Z",
+      "entitlements": "2026-11-10T03:58:28.699Z"
     }
   },
   "PGLOBAL": {
@@ -45210,10 +45210,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.097Z",
+    "checkedAt": "2026-11-10T03:58:27.478Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.097Z",
-      "entitlements": "2026-11-10T03:53:14.097Z"
+      "announcements": "2026-11-10T03:58:27.478Z",
+      "entitlements": "2026-11-10T03:58:27.478Z"
     }
   },
   "PIONEER": {
@@ -45273,10 +45273,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:15.451Z",
+    "checkedAt": "2026-11-10T03:58:31.428Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:15.451Z",
-      "entitlements": "2026-11-10T03:53:15.451Z"
+      "announcements": "2026-11-10T03:58:31.428Z",
+      "entitlements": "2026-11-10T03:58:31.428Z"
     }
   },
   "PJBUMI": {
@@ -45658,10 +45658,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:15.611Z",
+    "checkedAt": "2026-11-10T03:58:32.249Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:15.611Z",
-      "entitlements": "2026-11-10T03:53:15.611Z"
+      "announcements": "2026-11-10T03:58:32.249Z",
+      "entitlements": "2026-11-10T03:58:32.249Z"
     }
   },
   "PLYTEC": {
@@ -45834,10 +45834,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:28.262Z",
+    "checkedAt": "2026-11-10T03:58:58.786Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:28.262Z",
-      "entitlements": "2026-11-10T03:53:28.262Z"
+      "announcements": "2026-11-10T03:58:58.786Z",
+      "entitlements": "2026-11-10T03:58:58.786Z"
     }
   },
   "PMCK": {
@@ -46026,10 +46026,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:23.479Z",
+    "checkedAt": "2026-11-10T03:58:49.392Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:23.479Z",
-      "entitlements": "2026-11-10T03:53:23.479Z"
+      "announcements": "2026-11-10T03:58:49.392Z",
+      "entitlements": "2026-11-10T03:58:49.392Z"
     }
   },
   "PMETAL": {
@@ -46245,10 +46245,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:20.635Z",
+    "checkedAt": "2026-11-10T03:58:44.982Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:20.635Z",
-      "entitlements": "2026-11-10T03:53:20.635Z"
+      "announcements": "2026-11-10T03:58:44.982Z",
+      "entitlements": "2026-11-10T03:58:44.982Z"
     }
   },
   "PMIBHD": {
@@ -46421,10 +46421,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:23.375Z",
+    "checkedAt": "2026-11-10T03:58:49.746Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:23.375Z",
-      "entitlements": "2026-11-10T03:53:23.375Z"
+      "announcements": "2026-11-10T03:58:49.746Z",
+      "entitlements": "2026-11-10T03:58:49.746Z"
     }
   },
   "PMW": {
@@ -46604,10 +46604,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.755Z",
+    "checkedAt": "2026-11-10T03:58:29.444Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.755Z",
-      "entitlements": "2026-11-10T03:53:14.755Z"
+      "announcements": "2026-11-10T03:58:29.444Z",
+      "entitlements": "2026-11-10T03:58:29.444Z"
     }
   },
   "POLYMER": {
@@ -46789,10 +46789,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:20.004Z",
+    "checkedAt": "2026-11-10T03:58:44.170Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:20.004Z",
-      "entitlements": "2026-11-10T03:53:20.004Z"
+      "announcements": "2026-11-10T03:58:44.170Z",
+      "entitlements": "2026-11-10T03:58:44.170Z"
     }
   },
   "POWER": {
@@ -46954,13 +46954,13 @@ window.NEWS_DATA = {
     ],
     "entitlements": [],
     "fetchStatus": {
-      "announcements": "ok",
+      "announcements": "error",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:15.883Z",
+    "checkedAt": "2026-11-10T03:58:37.489Z",
     "lastSuccessfulAt": {
       "announcements": "2026-11-10T03:53:15.883Z",
-      "entitlements": "2026-11-10T03:53:15.883Z"
+      "entitlements": "2026-11-10T03:58:37.489Z"
     }
   },
   "PPB": {
@@ -47176,10 +47176,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:20.717Z",
+    "checkedAt": "2026-11-10T03:58:45.193Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:20.717Z",
-      "entitlements": "2026-11-10T03:53:20.717Z"
+      "announcements": "2026-11-10T03:58:45.193Z",
+      "entitlements": "2026-11-10T03:58:45.193Z"
     }
   },
   "PPJACK": {
@@ -47395,10 +47395,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:20.057Z",
+    "checkedAt": "2026-11-10T03:58:44.355Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:20.057Z",
-      "entitlements": "2026-11-10T03:53:20.057Z"
+      "announcements": "2026-11-10T03:58:44.355Z",
+      "entitlements": "2026-11-10T03:58:44.355Z"
     }
   },
   "PSP": {
@@ -47587,10 +47587,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:17.907Z",
+    "checkedAt": "2026-11-10T03:58:37.866Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:17.907Z",
-      "entitlements": "2026-11-10T03:53:17.907Z"
+      "announcements": "2026-11-10T03:58:37.866Z",
+      "entitlements": "2026-11-10T03:58:37.866Z"
     }
   },
   "PTRB": {
@@ -47788,10 +47788,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.176Z",
+    "checkedAt": "2026-11-10T03:58:38.362Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.176Z",
-      "entitlements": "2026-11-10T03:53:18.176Z"
+      "announcements": "2026-11-10T03:58:38.362Z",
+      "entitlements": "2026-11-10T03:58:38.362Z"
     }
   },
   "PWRWELL": {
@@ -48000,10 +48000,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:26.737Z",
+    "checkedAt": "2026-11-10T03:58:55.500Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:26.737Z",
-      "entitlements": "2026-11-10T03:53:26.737Z"
+      "announcements": "2026-11-10T03:58:55.500Z",
+      "entitlements": "2026-11-10T03:58:55.500Z"
     }
   },
   "QL": {
@@ -48219,10 +48219,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:17.663Z",
+    "checkedAt": "2026-11-10T03:58:37.262Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:17.663Z",
-      "entitlements": "2026-11-10T03:53:17.663Z"
+      "announcements": "2026-11-10T03:58:37.262Z",
+      "entitlements": "2026-11-10T03:58:37.262Z"
     }
   },
   "RADIUM": {
@@ -48413,10 +48413,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:13.454Z",
+    "checkedAt": "2026-11-10T03:58:25.335Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:13.454Z",
-      "entitlements": "2026-11-10T03:53:13.454Z"
+      "announcements": "2026-11-10T03:58:25.335Z",
+      "entitlements": "2026-11-10T03:58:25.335Z"
     }
   },
   "RAMSSOL": {
@@ -48596,10 +48596,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:15.113Z",
+    "checkedAt": "2026-11-10T03:58:30.504Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:15.113Z",
-      "entitlements": "2026-11-10T03:53:15.113Z"
+      "announcements": "2026-11-10T03:58:30.504Z",
+      "entitlements": "2026-11-10T03:58:30.504Z"
     }
   },
   "RANHILL": {
@@ -48815,10 +48815,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:12.720Z",
+    "checkedAt": "2026-11-10T03:58:25.061Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:12.720Z",
-      "entitlements": "2026-11-10T03:53:12.720Z"
+      "announcements": "2026-11-10T03:58:25.061Z",
+      "entitlements": "2026-11-10T03:58:25.061Z"
     }
   },
   "REACHTEN": {
@@ -49016,10 +49016,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:20.385Z",
+    "checkedAt": "2026-11-10T03:58:44.500Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:20.385Z",
-      "entitlements": "2026-11-10T03:53:20.385Z"
+      "announcements": "2026-11-10T03:58:44.500Z",
+      "entitlements": "2026-11-10T03:58:44.500Z"
     }
   },
   "RESTNGO": {
@@ -49159,10 +49159,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:27.454Z",
+    "checkedAt": "2026-11-10T03:58:57.462Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:27.454Z",
-      "entitlements": "2026-11-10T03:53:27.454Z"
+      "announcements": "2026-11-10T03:58:57.462Z",
+      "entitlements": "2026-11-10T03:58:57.462Z"
     }
   },
   "RHBBANK": {
@@ -49588,10 +49588,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:23.502Z",
+    "checkedAt": "2026-11-10T03:58:49.492Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:23.502Z",
-      "entitlements": "2026-11-10T03:53:23.502Z"
+      "announcements": "2026-11-10T03:58:49.492Z",
+      "entitlements": "2026-11-10T03:58:49.492Z"
     }
   },
   "RPLANET": {
@@ -49721,10 +49721,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:15.491Z",
+    "checkedAt": "2026-11-10T03:58:31.718Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:15.491Z",
-      "entitlements": "2026-11-10T03:53:15.491Z"
+      "announcements": "2026-11-10T03:58:31.718Z",
+      "entitlements": "2026-11-10T03:58:31.718Z"
     }
   },
   "RT": {
@@ -49789,10 +49789,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:21.524Z",
+    "checkedAt": "2026-11-10T03:58:46.399Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:21.524Z",
-      "entitlements": "2026-11-10T03:53:21.524Z"
+      "announcements": "2026-11-10T03:58:46.399Z",
+      "entitlements": "2026-11-10T03:58:46.399Z"
     }
   },
   "RTECH": {
@@ -49965,10 +49965,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.870Z",
+    "checkedAt": "2026-11-10T03:58:30.273Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.870Z",
-      "entitlements": "2026-11-10T03:53:14.870Z"
+      "announcements": "2026-11-10T03:58:30.273Z",
+      "entitlements": "2026-11-10T03:58:30.273Z"
     }
   },
   "SAG": {
@@ -50157,10 +50157,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:16.683Z",
+    "checkedAt": "2026-11-10T03:58:35.156Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:16.683Z",
-      "entitlements": "2026-11-10T03:53:16.683Z"
+      "announcements": "2026-11-10T03:58:35.156Z",
+      "entitlements": "2026-11-10T03:58:35.156Z"
     }
   },
   "SALIRAN": {
@@ -50330,10 +50330,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.000Z",
+    "checkedAt": "2026-11-10T03:58:26.943Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.000Z",
-      "entitlements": "2026-11-10T03:53:14.000Z"
+      "announcements": "2026-11-10T03:58:26.943Z",
+      "entitlements": "2026-11-10T03:58:26.943Z"
     }
   },
   "SAM": {
@@ -50549,10 +50549,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:22.735Z",
+    "checkedAt": "2026-11-10T03:58:47.902Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:22.735Z",
-      "entitlements": "2026-11-10T03:53:22.735Z"
+      "announcements": "2026-11-10T03:58:47.902Z",
+      "entitlements": "2026-11-10T03:58:47.902Z"
     }
   },
   "SAMAIDEN": {
@@ -50768,10 +50768,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:13.365Z",
+    "checkedAt": "2026-11-10T03:58:23.998Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:13.365Z",
-      "entitlements": "2026-11-10T03:53:13.365Z"
+      "announcements": "2026-11-10T03:58:23.998Z",
+      "entitlements": "2026-11-10T03:58:23.998Z"
     }
   },
   "SBH": {
@@ -50969,10 +50969,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.853Z",
+    "checkedAt": "2026-11-10T03:58:30.324Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.853Z",
-      "entitlements": "2026-11-10T03:53:14.853Z"
+      "announcements": "2026-11-10T03:58:30.324Z",
+      "entitlements": "2026-11-10T03:58:30.324Z"
     }
   },
   "SBS": {
@@ -51142,10 +51142,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:16.448Z",
+    "checkedAt": "2026-11-10T03:58:34.384Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:16.448Z",
-      "entitlements": "2026-11-10T03:53:16.448Z"
+      "announcements": "2026-11-10T03:58:34.384Z",
+      "entitlements": "2026-11-10T03:58:34.384Z"
     }
   },
   "SCB": {
@@ -51308,10 +51308,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:15.259Z",
+    "checkedAt": "2026-11-10T03:58:31.276Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:15.259Z",
-      "entitlements": "2026-11-10T03:53:15.259Z"
+      "announcements": "2026-11-10T03:58:31.276Z",
+      "entitlements": "2026-11-10T03:58:31.276Z"
     }
   },
   "SCGBHD": {
@@ -51527,10 +51527,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.986Z",
+    "checkedAt": "2026-11-10T03:58:45.791Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.986Z",
-      "entitlements": "2026-11-10T03:53:18.986Z"
+      "announcements": "2026-11-10T03:58:45.791Z",
+      "entitlements": "2026-11-10T03:58:45.791Z"
     }
   },
   "SDCG": {
@@ -51719,10 +51719,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:12.550Z",
+    "checkedAt": "2026-11-10T03:58:22.581Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:12.550Z",
-      "entitlements": "2026-11-10T03:53:12.550Z"
+      "announcements": "2026-11-10T03:58:22.581Z",
+      "entitlements": "2026-11-10T03:58:22.581Z"
     }
   },
   "SDG": {
@@ -51944,10 +51944,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:19.542Z",
+    "checkedAt": "2026-11-10T03:58:41.204Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:19.542Z",
-      "entitlements": "2026-11-10T03:53:19.542Z"
+      "announcements": "2026-11-10T03:58:41.204Z",
+      "entitlements": "2026-11-10T03:58:41.204Z"
     }
   },
   "SDS": {
@@ -52163,10 +52163,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:15.761Z",
+    "checkedAt": "2026-11-10T03:58:32.069Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:15.761Z",
-      "entitlements": "2026-11-10T03:53:15.761Z"
+      "announcements": "2026-11-10T03:58:32.069Z",
+      "entitlements": "2026-11-10T03:58:32.069Z"
     }
   },
   "SEMICO": {
@@ -52364,10 +52364,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:13.515Z",
+    "checkedAt": "2026-11-10T03:58:25.281Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:13.515Z",
-      "entitlements": "2026-11-10T03:53:13.515Z"
+      "announcements": "2026-11-10T03:58:25.281Z",
+      "entitlements": "2026-11-10T03:58:25.281Z"
     }
   },
   "SENFONG": {
@@ -52583,10 +52583,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:13.341Z",
+    "checkedAt": "2026-11-10T03:58:25.105Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:13.341Z",
-      "entitlements": "2026-11-10T03:53:13.341Z"
+      "announcements": "2026-11-10T03:58:25.105Z",
+      "entitlements": "2026-11-10T03:58:25.105Z"
     }
   },
   "SENHENG": {
@@ -52795,10 +52795,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:19.668Z",
+    "checkedAt": "2026-11-10T03:58:42.566Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:19.668Z",
-      "entitlements": "2026-11-10T03:53:19.668Z"
+      "announcements": "2026-11-10T03:58:42.566Z",
+      "entitlements": "2026-11-10T03:58:42.566Z"
     }
   },
   "SET": {
@@ -52978,10 +52978,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:15.831Z",
+    "checkedAt": "2026-11-10T03:58:33.033Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:15.831Z",
-      "entitlements": "2026-11-10T03:53:15.831Z"
+      "announcements": "2026-11-10T03:58:33.033Z",
+      "entitlements": "2026-11-10T03:58:33.033Z"
     }
   },
   "SFPTECH": {
@@ -53197,10 +53197,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:26.853Z",
+    "checkedAt": "2026-11-10T03:58:55.635Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:26.853Z",
-      "entitlements": "2026-11-10T03:53:26.853Z"
+      "announcements": "2026-11-10T03:58:55.635Z",
+      "entitlements": "2026-11-10T03:58:55.635Z"
     }
   },
   "SIME": {
@@ -53416,10 +53416,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:16.153Z",
+    "checkedAt": "2026-11-10T03:58:32.541Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:16.153Z",
-      "entitlements": "2026-11-10T03:53:16.153Z"
+      "announcements": "2026-11-10T03:58:32.541Z",
+      "entitlements": "2026-11-10T03:58:32.541Z"
     }
   },
   "SINKUNG": {
@@ -53582,10 +53582,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:28.417Z",
+    "checkedAt": "2026-11-10T03:58:58.758Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:28.417Z",
-      "entitlements": "2026-11-10T03:53:28.417Z"
+      "announcements": "2026-11-10T03:58:58.758Z",
+      "entitlements": "2026-11-10T03:58:58.758Z"
     }
   },
   "SKPRES": {
@@ -53801,10 +53801,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:16.534Z",
+    "checkedAt": "2026-11-10T03:58:34.020Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:16.534Z",
-      "entitlements": "2026-11-10T03:53:16.534Z"
+      "announcements": "2026-11-10T03:58:34.020Z",
+      "entitlements": "2026-11-10T03:58:34.020Z"
     }
   },
   "SKYECHIP": {
@@ -53974,10 +53974,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:23.123Z",
+    "checkedAt": "2026-11-10T03:58:49.120Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:23.123Z",
-      "entitlements": "2026-11-10T03:53:23.123Z"
+      "announcements": "2026-11-10T03:58:49.120Z",
+      "entitlements": "2026-11-10T03:58:49.120Z"
     }
   },
   "SKYWLD": {
@@ -54186,10 +54186,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:27.405Z",
+    "checkedAt": "2026-11-10T03:58:57.633Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:27.405Z",
-      "entitlements": "2026-11-10T03:53:27.405Z"
+      "announcements": "2026-11-10T03:58:57.633Z",
+      "entitlements": "2026-11-10T03:58:57.633Z"
     }
   },
   "SLG": {
@@ -54274,10 +54274,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:21.573Z",
+    "checkedAt": "2026-11-10T03:58:46.020Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:21.573Z",
-      "entitlements": "2026-11-10T03:53:21.573Z"
+      "announcements": "2026-11-10T03:58:46.020Z",
+      "entitlements": "2026-11-10T03:58:46.020Z"
     }
   },
   "SLVEST": {
@@ -54457,10 +54457,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:12.668Z",
+    "checkedAt": "2026-11-10T03:58:23.349Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:12.668Z",
-      "entitlements": "2026-11-10T03:53:12.668Z"
+      "announcements": "2026-11-10T03:58:23.349Z",
+      "entitlements": "2026-11-10T03:58:23.349Z"
     }
   },
   "SNS": {
@@ -54676,10 +54676,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:22.761Z",
+    "checkedAt": "2026-11-10T03:58:47.930Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:22.761Z",
-      "entitlements": "2026-11-10T03:53:22.761Z"
+      "announcements": "2026-11-10T03:58:47.930Z",
+      "entitlements": "2026-11-10T03:58:47.930Z"
     }
   },
   "SOP": {
@@ -54895,10 +54895,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.408Z",
+    "checkedAt": "2026-11-10T03:58:38.803Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.408Z",
-      "entitlements": "2026-11-10T03:53:18.408Z"
+      "announcements": "2026-11-10T03:58:38.803Z",
+      "entitlements": "2026-11-10T03:58:38.803Z"
     }
   },
   "SORENTO": {
@@ -55120,10 +55120,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.492Z",
+    "checkedAt": "2026-11-10T03:58:28.765Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.492Z",
-      "entitlements": "2026-11-10T03:53:14.492Z"
+      "announcements": "2026-11-10T03:58:28.765Z",
+      "entitlements": "2026-11-10T03:58:28.765Z"
     }
   },
   "SPRING": {
@@ -55323,10 +55323,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:28.802Z",
+    "checkedAt": "2026-11-10T03:58:59.277Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:28.802Z",
-      "entitlements": "2026-11-10T03:53:28.802Z"
+      "announcements": "2026-11-10T03:58:59.277Z",
+      "entitlements": "2026-11-10T03:58:59.277Z"
     }
   },
   "SRKK": {
@@ -55508,10 +55508,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:27.288Z",
+    "checkedAt": "2026-11-10T03:58:56.948Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:27.288Z",
-      "entitlements": "2026-11-10T03:53:27.288Z"
+      "announcements": "2026-11-10T03:58:56.948Z",
+      "entitlements": "2026-11-10T03:58:56.948Z"
     }
   },
   "SSF": {
@@ -55718,10 +55718,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:13.504Z",
+    "checkedAt": "2026-11-10T03:58:26.702Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:13.504Z",
-      "entitlements": "2026-11-10T03:53:13.504Z"
+      "announcements": "2026-11-10T03:58:26.702Z",
+      "entitlements": "2026-11-10T03:58:26.702Z"
     }
   },
   "STRATUS": {
@@ -55891,10 +55891,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:25.858Z",
+    "checkedAt": "2026-11-10T03:58:55.186Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:25.858Z",
-      "entitlements": "2026-11-10T03:53:25.858Z"
+      "announcements": "2026-11-10T03:58:55.186Z",
+      "entitlements": "2026-11-10T03:58:55.186Z"
     }
   },
   "SUM": {
@@ -56064,10 +56064,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:19.768Z",
+    "checkedAt": "2026-11-10T03:58:43.051Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:19.768Z",
-      "entitlements": "2026-11-10T03:53:19.768Z"
+      "announcements": "2026-11-10T03:58:43.051Z",
+      "entitlements": "2026-11-10T03:58:43.051Z"
     }
   },
   "SUMI": {
@@ -56247,10 +56247,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.985Z",
+    "checkedAt": "2026-11-10T03:58:30.053Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.985Z",
-      "entitlements": "2026-11-10T03:53:14.985Z"
+      "announcements": "2026-11-10T03:58:30.053Z",
+      "entitlements": "2026-11-10T03:58:30.053Z"
     }
   },
   "SUNCON": {
@@ -56466,10 +56466,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:13.641Z",
+    "checkedAt": "2026-11-10T03:58:26.833Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:13.641Z",
-      "entitlements": "2026-11-10T03:53:13.641Z"
+      "announcements": "2026-11-10T03:58:26.833Z",
+      "entitlements": "2026-11-10T03:58:26.833Z"
     }
   },
   "SUNLOGY": {
@@ -56639,10 +56639,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:23.130Z",
+    "checkedAt": "2026-11-10T03:58:49.780Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:23.130Z",
-      "entitlements": "2026-11-10T03:53:23.130Z"
+      "announcements": "2026-11-10T03:58:49.780Z",
+      "entitlements": "2026-11-10T03:58:49.780Z"
     }
   },
   "SUNMED": {
@@ -56812,10 +56812,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:15.397Z",
+    "checkedAt": "2026-11-10T03:58:31.905Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:15.397Z",
-      "entitlements": "2026-11-10T03:53:15.397Z"
+      "announcements": "2026-11-10T03:58:31.905Z",
+      "entitlements": "2026-11-10T03:58:31.905Z"
     }
   },
   "SUNVIEW": {
@@ -56985,10 +56985,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:12.573Z",
+    "checkedAt": "2026-11-10T03:58:25.529Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:12.573Z",
-      "entitlements": "2026-11-10T03:53:12.573Z"
+      "announcements": "2026-11-10T03:58:25.529Z",
+      "entitlements": "2026-11-10T03:58:25.529Z"
     }
   },
   "SUPERMX": {
@@ -57414,10 +57414,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:27.637Z",
+    "checkedAt": "2026-11-10T03:58:57.537Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:27.637Z",
-      "entitlements": "2026-11-10T03:53:27.637Z"
+      "announcements": "2026-11-10T03:58:57.537Z",
+      "entitlements": "2026-11-10T03:58:57.537Z"
     }
   },
   "SWIFT": {
@@ -57633,10 +57633,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:27.809Z",
+    "checkedAt": "2026-11-10T03:58:57.312Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:27.809Z",
-      "entitlements": "2026-11-10T03:53:27.809Z"
+      "announcements": "2026-11-10T03:58:57.312Z",
+      "entitlements": "2026-11-10T03:58:57.312Z"
     }
   },
   "SYNERGY": {
@@ -57836,10 +57836,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:28.306Z",
+    "checkedAt": "2026-11-10T03:58:58.873Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:28.306Z",
-      "entitlements": "2026-11-10T03:53:28.306Z"
+      "announcements": "2026-11-10T03:58:58.873Z",
+      "entitlements": "2026-11-10T03:58:58.873Z"
     }
   },
   "TAGHILL": {
@@ -58009,10 +58009,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:16.172Z",
+    "checkedAt": "2026-11-10T03:58:34.173Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:16.172Z",
-      "entitlements": "2026-11-10T03:53:16.172Z"
+      "announcements": "2026-11-10T03:58:34.173Z",
+      "entitlements": "2026-11-10T03:58:34.173Z"
     }
   },
   "TANCO": {
@@ -58182,10 +58182,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:21.661Z",
+    "checkedAt": "2026-11-10T03:58:46.604Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:21.661Z",
-      "entitlements": "2026-11-10T03:53:21.661Z"
+      "announcements": "2026-11-10T03:58:46.604Z",
+      "entitlements": "2026-11-10T03:58:46.604Z"
     }
   },
   "TASHIN": {
@@ -58394,10 +58394,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:15.237Z",
+    "checkedAt": "2026-11-10T03:58:30.574Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:15.237Z",
-      "entitlements": "2026-11-10T03:53:15.237Z"
+      "announcements": "2026-11-10T03:58:30.574Z",
+      "entitlements": "2026-11-10T03:58:30.574Z"
     }
   },
   "TCS": {
@@ -58586,10 +58586,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:28.556Z",
+    "checkedAt": "2026-11-10T03:58:59.626Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:28.556Z",
-      "entitlements": "2026-11-10T03:53:28.556Z"
+      "announcements": "2026-11-10T03:58:59.626Z",
+      "entitlements": "2026-11-10T03:58:59.626Z"
     }
   },
   "TEAMSTR": {
@@ -58762,10 +58762,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:13.202Z",
+    "checkedAt": "2026-11-10T03:58:25.170Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:13.202Z",
-      "entitlements": "2026-11-10T03:53:13.202Z"
+      "announcements": "2026-11-10T03:58:25.170Z",
+      "entitlements": "2026-11-10T03:58:25.170Z"
     }
   },
   "TECHSTORE": {
@@ -58945,10 +58945,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:22.999Z",
+    "checkedAt": "2026-11-10T03:58:48.196Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:22.999Z",
-      "entitlements": "2026-11-10T03:53:22.999Z"
+      "announcements": "2026-11-10T03:58:48.196Z",
+      "entitlements": "2026-11-10T03:58:48.196Z"
     }
   },
   "TELADAN": {
@@ -59164,10 +59164,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:21.930Z",
+    "checkedAt": "2026-11-10T03:58:47.448Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:21.930Z",
-      "entitlements": "2026-11-10T03:53:21.930Z"
+      "announcements": "2026-11-10T03:58:47.448Z",
+      "entitlements": "2026-11-10T03:58:47.448Z"
     }
   },
   "TENAGA": {
@@ -59572,10 +59572,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:21.892Z",
+    "checkedAt": "2026-11-10T03:58:47.368Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:21.892Z",
-      "entitlements": "2026-11-10T03:53:21.892Z"
+      "announcements": "2026-11-10T03:58:47.368Z",
+      "entitlements": "2026-11-10T03:58:47.368Z"
     }
   },
   "THMY": {
@@ -59745,10 +59745,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:21.747Z",
+    "checkedAt": "2026-11-10T03:58:46.222Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:21.747Z",
-      "entitlements": "2026-11-10T03:53:21.747Z"
+      "announcements": "2026-11-10T03:58:46.222Z",
+      "entitlements": "2026-11-10T03:58:46.222Z"
     }
   },
   "TJSETIA": {
@@ -59955,10 +59955,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:19.791Z",
+    "checkedAt": "2026-11-10T03:58:42.615Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:19.791Z",
-      "entitlements": "2026-11-10T03:53:19.791Z"
+      "announcements": "2026-11-10T03:58:42.615Z",
+      "entitlements": "2026-11-10T03:58:42.615Z"
     }
   },
   "TM": {
@@ -60377,10 +60377,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:13.160Z",
+    "checkedAt": "2026-11-10T03:58:24.176Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:13.160Z",
-      "entitlements": "2026-11-10T03:53:13.160Z"
+      "announcements": "2026-11-10T03:58:24.176Z",
+      "entitlements": "2026-11-10T03:58:24.176Z"
     }
   },
   "TOPGLOV": {
@@ -60821,10 +60821,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:23.630Z",
+    "checkedAt": "2026-11-10T03:58:49.976Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:23.630Z",
-      "entitlements": "2026-11-10T03:53:23.630Z"
+      "announcements": "2026-11-10T03:58:49.976Z",
+      "entitlements": "2026-11-10T03:58:49.976Z"
     }
   },
   "TOPVISN": {
@@ -61015,10 +61015,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.120Z",
+    "checkedAt": "2026-11-10T03:58:27.995Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.120Z",
-      "entitlements": "2026-11-10T03:53:14.120Z"
+      "announcements": "2026-11-10T03:58:27.995Z",
+      "entitlements": "2026-11-10T03:58:27.995Z"
     }
   },
   "TSA": {
@@ -61234,10 +61234,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.157Z",
+    "checkedAt": "2026-11-10T03:58:27.551Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.157Z",
-      "entitlements": "2026-11-10T03:53:14.157Z"
+      "announcements": "2026-11-10T03:58:27.551Z",
+      "entitlements": "2026-11-10T03:58:27.551Z"
     }
   },
   "TTVHB": {
@@ -61407,10 +61407,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:27.125Z",
+    "checkedAt": "2026-11-10T03:58:56.283Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:27.125Z",
-      "entitlements": "2026-11-10T03:53:27.125Z"
+      "announcements": "2026-11-10T03:58:56.283Z",
+      "entitlements": "2026-11-10T03:58:56.283Z"
     }
   },
   "UMC": {
@@ -61583,10 +61583,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:27.042Z",
+    "checkedAt": "2026-11-10T03:58:57.096Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:27.042Z",
-      "entitlements": "2026-11-10T03:53:27.042Z"
+      "announcements": "2026-11-10T03:58:57.096Z",
+      "entitlements": "2026-11-10T03:58:57.096Z"
     }
   },
   "UMCCA": {
@@ -61802,10 +61802,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:12.877Z",
+    "checkedAt": "2026-11-10T03:58:25.765Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:12.877Z",
-      "entitlements": "2026-11-10T03:53:12.877Z"
+      "announcements": "2026-11-10T03:58:25.765Z",
+      "entitlements": "2026-11-10T03:58:25.765Z"
     }
   },
   "UMSINT": {
@@ -62021,10 +62021,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:15.049Z",
+    "checkedAt": "2026-11-10T03:58:30.427Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:15.049Z",
-      "entitlements": "2026-11-10T03:53:15.049Z"
+      "announcements": "2026-11-10T03:58:30.427Z",
+      "entitlements": "2026-11-10T03:58:30.427Z"
     }
   },
   "UNIPAC": {
@@ -62129,10 +62129,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:27.068Z",
+    "checkedAt": "2026-11-10T03:58:56.122Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:27.068Z",
-      "entitlements": "2026-11-10T03:53:27.068Z"
+      "announcements": "2026-11-10T03:58:56.122Z",
+      "entitlements": "2026-11-10T03:58:56.122Z"
     }
   },
   "UNIQUE": {
@@ -62341,10 +62341,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:22.614Z",
+    "checkedAt": "2026-11-10T03:58:46.915Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:22.614Z",
-      "entitlements": "2026-11-10T03:53:22.614Z"
+      "announcements": "2026-11-10T03:58:46.915Z",
+      "entitlements": "2026-11-10T03:58:46.915Z"
     }
   },
   "UNISEM": {
@@ -62572,10 +62572,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:24.967Z",
+    "checkedAt": "2026-11-10T03:58:53.225Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:24.967Z",
-      "entitlements": "2026-11-10T03:53:24.967Z"
+      "announcements": "2026-11-10T03:58:53.225Z",
+      "entitlements": "2026-11-10T03:58:53.225Z"
     }
   },
   "UNITRAD": {
@@ -62782,10 +62782,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:18.356Z",
+    "checkedAt": "2026-11-10T03:58:39.307Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:18.356Z",
-      "entitlements": "2026-11-10T03:53:18.356Z"
+      "announcements": "2026-11-10T03:58:39.307Z",
+      "entitlements": "2026-11-10T03:58:39.307Z"
     }
   },
   "UTDPLT": {
@@ -63001,10 +63001,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:26.549Z",
+    "checkedAt": "2026-11-10T03:58:54.066Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:26.549Z",
-      "entitlements": "2026-11-10T03:53:26.549Z"
+      "announcements": "2026-11-10T03:58:54.066Z",
+      "entitlements": "2026-11-10T03:58:54.066Z"
     }
   },
   "UUE": {
@@ -63174,10 +63174,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:16.853Z",
+    "checkedAt": "2026-11-10T03:58:34.996Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:16.853Z",
-      "entitlements": "2026-11-10T03:53:16.853Z"
+      "announcements": "2026-11-10T03:58:34.996Z",
+      "entitlements": "2026-11-10T03:58:34.996Z"
     }
   },
   "UWC": {
@@ -63384,10 +63384,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:24.330Z",
+    "checkedAt": "2026-11-10T03:58:51.300Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:24.330Z",
-      "entitlements": "2026-11-10T03:53:24.330Z"
+      "announcements": "2026-11-10T03:58:51.300Z",
+      "entitlements": "2026-11-10T03:58:51.300Z"
     }
   },
   "VANZO": {
@@ -63591,10 +63591,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:27.688Z",
+    "checkedAt": "2026-11-10T03:58:58.098Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:27.688Z",
-      "entitlements": "2026-11-10T03:53:27.688Z"
+      "announcements": "2026-11-10T03:58:58.098Z",
+      "entitlements": "2026-11-10T03:58:58.098Z"
     }
   },
   "VELESTO": {
@@ -63983,10 +63983,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:15.845Z",
+    "checkedAt": "2026-11-10T03:58:32.655Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:15.845Z",
-      "entitlements": "2026-11-10T03:53:15.845Z"
+      "announcements": "2026-11-10T03:58:32.655Z",
+      "entitlements": "2026-11-10T03:58:32.655Z"
     }
   },
   "VINVEST": {
@@ -64156,10 +64156,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.315Z",
+    "checkedAt": "2026-11-10T03:58:27.933Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.315Z",
-      "entitlements": "2026-11-10T03:53:14.315Z"
+      "announcements": "2026-11-10T03:58:27.933Z",
+      "entitlements": "2026-11-10T03:58:27.933Z"
     }
   },
   "VITROX": {
@@ -64375,10 +64375,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:17.350Z",
+    "checkedAt": "2026-11-10T03:58:36.450Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:17.350Z",
-      "entitlements": "2026-11-10T03:53:17.350Z"
+      "announcements": "2026-11-10T03:58:36.450Z",
+      "entitlements": "2026-11-10T03:58:36.450Z"
     }
   },
   "VLB": {
@@ -64548,10 +64548,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.972Z",
+    "checkedAt": "2026-11-10T03:58:29.994Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.972Z",
-      "entitlements": "2026-11-10T03:53:14.972Z"
+      "announcements": "2026-11-10T03:58:29.994Z",
+      "entitlements": "2026-11-10T03:58:29.994Z"
     }
   },
   "VOLCANO": {
@@ -64773,10 +64773,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.721Z",
+    "checkedAt": "2026-11-10T03:58:29.597Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.721Z",
-      "entitlements": "2026-11-10T03:53:14.721Z"
+      "announcements": "2026-11-10T03:58:29.597Z",
+      "entitlements": "2026-11-10T03:58:29.597Z"
     }
   },
   "VS": {
@@ -64992,10 +64992,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.464Z",
+    "checkedAt": "2026-11-10T03:58:28.278Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.464Z",
-      "entitlements": "2026-11-10T03:53:14.464Z"
+      "announcements": "2026-11-10T03:58:28.278Z",
+      "entitlements": "2026-11-10T03:58:28.278Z"
     }
   },
   "VSTECS": {
@@ -65211,10 +65211,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:26.797Z",
+    "checkedAt": "2026-11-10T03:58:55.536Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:26.797Z",
-      "entitlements": "2026-11-10T03:53:26.797Z"
+      "announcements": "2026-11-10T03:58:55.536Z",
+      "entitlements": "2026-11-10T03:58:55.536Z"
     }
   },
   "VTC": {
@@ -65394,10 +65394,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:15.268Z",
+    "checkedAt": "2026-11-10T03:58:31.143Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:15.268Z",
-      "entitlements": "2026-11-10T03:53:15.268Z"
+      "announcements": "2026-11-10T03:58:31.143Z",
+      "entitlements": "2026-11-10T03:58:31.143Z"
     }
   },
   "WELLCHIP": {
@@ -65598,10 +65598,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:17.485Z",
+    "checkedAt": "2026-11-10T03:58:37.026Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:17.485Z",
-      "entitlements": "2026-11-10T03:53:17.485Z"
+      "announcements": "2026-11-10T03:58:37.026Z",
+      "entitlements": "2026-11-10T03:58:37.026Z"
     }
   },
   "WELLS": {
@@ -65764,10 +65764,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:13.948Z",
+    "checkedAt": "2026-11-10T03:58:28.422Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:13.948Z",
-      "entitlements": "2026-11-10T03:53:13.948Z"
+      "announcements": "2026-11-10T03:58:28.422Z",
+      "entitlements": "2026-11-10T03:58:28.422Z"
     }
   },
   "WENTEL": {
@@ -65930,10 +65930,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:27.136Z",
+    "checkedAt": "2026-11-10T03:58:56.062Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:27.136Z",
-      "entitlements": "2026-11-10T03:53:27.136Z"
+      "announcements": "2026-11-10T03:58:56.062Z",
+      "entitlements": "2026-11-10T03:58:56.062Z"
     }
   },
   "WESTRVR": {
@@ -66103,10 +66103,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.997Z",
+    "checkedAt": "2026-11-10T03:58:30.836Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.997Z",
-      "entitlements": "2026-11-10T03:53:14.997Z"
+      "announcements": "2026-11-10T03:58:30.836Z",
+      "entitlements": "2026-11-10T03:58:30.836Z"
     }
   },
   "WINSTAR": {
@@ -66276,10 +66276,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:15.637Z",
+    "checkedAt": "2026-11-10T03:58:30.705Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:15.637Z",
-      "entitlements": "2026-11-10T03:53:15.637Z"
+      "announcements": "2026-11-10T03:58:30.705Z",
+      "entitlements": "2026-11-10T03:58:30.705Z"
     }
   },
   "WPRTS": {
@@ -66495,10 +66495,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:13.285Z",
+    "checkedAt": "2026-11-10T03:58:24.790Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:13.285Z",
-      "entitlements": "2026-11-10T03:53:13.285Z"
+      "announcements": "2026-11-10T03:58:24.790Z",
+      "entitlements": "2026-11-10T03:58:24.790Z"
     }
   },
   "WTEC": {
@@ -66671,10 +66671,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.282Z",
+    "checkedAt": "2026-11-10T03:58:28.499Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.282Z",
-      "entitlements": "2026-11-10T03:53:14.282Z"
+      "announcements": "2026-11-10T03:58:28.499Z",
+      "entitlements": "2026-11-10T03:58:28.499Z"
     }
   },
   "WTK": {
@@ -66890,10 +66890,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:23.705Z",
+    "checkedAt": "2026-11-10T03:58:43.636Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:23.705Z",
-      "entitlements": "2026-11-10T03:53:23.705Z"
+      "announcements": "2026-11-10T03:58:43.636Z",
+      "entitlements": "2026-11-10T03:58:43.636Z"
     }
   },
   "XPB": {
@@ -67066,10 +67066,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:20.732Z",
+    "checkedAt": "2026-11-10T03:58:44.586Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:20.732Z",
-      "entitlements": "2026-11-10T03:53:20.732Z"
+      "announcements": "2026-11-10T03:58:44.586Z",
+      "entitlements": "2026-11-10T03:58:44.586Z"
     }
   },
   "YENHER": {
@@ -67285,10 +67285,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:19.167Z",
+    "checkedAt": "2026-11-10T03:58:42.022Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:19.167Z",
-      "entitlements": "2026-11-10T03:53:19.167Z"
+      "announcements": "2026-11-10T03:58:42.022Z",
+      "entitlements": "2026-11-10T03:58:42.022Z"
     }
   },
   "YEWLEE": {
@@ -67468,10 +67468,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:14.033Z",
+    "checkedAt": "2026-11-10T03:58:27.741Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:14.033Z",
-      "entitlements": "2026-11-10T03:53:14.033Z"
+      "announcements": "2026-11-10T03:58:27.741Z",
+      "entitlements": "2026-11-10T03:58:27.741Z"
     }
   },
   "YINSON": {
@@ -68131,10 +68131,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:24.756Z",
+    "checkedAt": "2026-11-10T03:58:51.726Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:24.756Z",
-      "entitlements": "2026-11-10T03:53:24.756Z"
+      "announcements": "2026-11-10T03:58:51.726Z",
+      "entitlements": "2026-11-10T03:58:51.726Z"
     }
   },
   "YXPM": {
@@ -68334,10 +68334,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:28.710Z",
+    "checkedAt": "2026-11-10T03:58:59.381Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:28.710Z",
-      "entitlements": "2026-11-10T03:53:28.710Z"
+      "announcements": "2026-11-10T03:58:59.381Z",
+      "entitlements": "2026-11-10T03:58:59.381Z"
     }
   },
   "ZANTAT": {
@@ -68510,10 +68510,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:22.852Z",
+    "checkedAt": "2026-11-10T03:58:48.622Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:22.852Z",
-      "entitlements": "2026-11-10T03:53:22.852Z"
+      "announcements": "2026-11-10T03:58:48.622Z",
+      "entitlements": "2026-11-10T03:58:48.622Z"
     }
   },
   "ZETRIX": {
@@ -68729,10 +68729,10 @@ window.NEWS_DATA = {
       "announcements": "ok",
       "entitlements": "ok"
     },
-    "checkedAt": "2026-11-10T03:53:20.819Z",
+    "checkedAt": "2026-11-10T03:58:50.816Z",
     "lastSuccessfulAt": {
-      "announcements": "2026-11-10T03:53:20.819Z",
-      "entitlements": "2026-11-10T03:53:20.819Z"
+      "announcements": "2026-11-10T03:58:50.816Z",
+      "entitlements": "2026-11-10T03:58:50.816Z"
     }
   }
 };
