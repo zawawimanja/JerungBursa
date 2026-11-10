@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual
 window.FRESH_RIDER_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-10T02:43:26.073Z",
+  "generatedAt": "2026-11-10T02:48:38.072Z",
   "dataDays": 105,
   "totalTracked": 26,
   "openCount": 2,
@@ -622,7 +622,7 @@ window.FRESH_RIDER_TRACKER = {
 };
 window.ADD_ON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-10T02:43:26.073Z",
+  "generatedAt": "2026-11-10T02:48:38.073Z",
   "dataDays": 105,
   "totalTracked": 27,
   "openCount": 3,
@@ -630,9 +630,9 @@ window.ADD_ON_TRACKER = {
   "closedWins": 13,
   "closedWinRate": 54,
   "closedAvgGain": 10.7,
-  "openPnl": 136.9,
+  "openPnl": 139.2,
   "closedPnl": 257.6,
-  "totalPnlNow": 394.5
+  "totalPnlNow": 396.8
  },
  "backtest": {
   "dataStart": "2026-06-02",
@@ -656,11 +656,11 @@ window.ADD_ON_TRACKER = {
    "entry": 0.625,
    "entryFloor": 0.62,
    "currentFloor": 0.83,
-   "currentPrice": 0.905,
-   "high": 0.905,
-   "highDate": "2026-10-09",
-   "maxGain": 44.8,
-   "finalGain": 44.8,
+   "currentPrice": 0.91,
+   "high": 0.91,
+   "highDate": "2026-11-10",
+   "maxGain": 45.6,
+   "finalGain": 45.6,
    "day1ChangePct": -3.1,
    "days": 59,
    "lastDate": "2026-11-10",
@@ -668,7 +668,7 @@ window.ADD_ON_TRACKER = {
    "ipoYear": 2026,
    "sector": "Consumer",
    "isGoldenCombo": false,
-   "slTrail": 0.769
+   "slTrail": 0.773
   },
   {
    "id": "ISF_2026-07-29_ADDON",
@@ -678,11 +678,11 @@ window.ADD_ON_TRACKER = {
    "entry": 0.63,
    "entryFloor": 0.61,
    "currentFloor": 0.83,
-   "currentPrice": 0.905,
-   "high": 0.905,
-   "highDate": "2026-10-09",
-   "maxGain": 43.7,
-   "finalGain": 43.7,
+   "currentPrice": 0.91,
+   "high": 0.91,
+   "highDate": "2026-11-10",
+   "maxGain": 44.4,
+   "finalGain": 44.4,
    "day1ChangePct": 3.28,
    "days": 66,
    "lastDate": "2026-11-10",
@@ -690,7 +690,7 @@ window.ADD_ON_TRACKER = {
    "ipoYear": 2026,
    "sector": "Consumer",
    "isGoldenCombo": false,
-   "slTrail": 0.769
+   "slTrail": 0.773
   },
   {
    "id": "ISF_2026-07-28_ADDON",
@@ -700,11 +700,11 @@ window.ADD_ON_TRACKER = {
    "entry": 0.61,
    "entryFloor": 0.61,
    "currentFloor": 0.83,
-   "currentPrice": 0.905,
-   "high": 0.905,
-   "highDate": "2026-10-09",
-   "maxGain": 48.4,
-   "finalGain": 48.4,
+   "currentPrice": 0.91,
+   "high": 0.91,
+   "highDate": "2026-11-10",
+   "maxGain": 49.2,
+   "finalGain": 49.2,
    "day1ChangePct": -3.17,
    "days": 67,
    "lastDate": "2026-11-10",
@@ -712,7 +712,7 @@ window.ADD_ON_TRACKER = {
    "ipoYear": 2026,
    "sector": "Consumer",
    "isGoldenCombo": false,
-   "slTrail": 0.769
+   "slTrail": 0.773
   },
   {
    "id": "MTTSL_2026-10-30_ADDON",
@@ -1294,7 +1294,7 @@ window.ADD_ON_TRACKER = {
 };
 window.FLOOR_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-10T02:43:26.073Z",
+  "generatedAt": "2026-11-10T02:48:38.073Z",
   "dataDays": 105,
   "totalTracked": 29,
   "openCount": 1,
@@ -2018,7 +2018,7 @@ window.FLOOR_ADDON_TRACKER = {
 };
 window.ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-10T02:43:26.073Z",
+  "generatedAt": "2026-11-10T02:48:38.073Z",
   "dataDays": 105,
   "totalTracked": 82,
   "openCount": 6,
@@ -2026,9 +2026,9 @@ window.ALL_TRACKER = {
   "closedWins": 40,
   "closedWinRate": 53,
   "closedAvgGain": 9.3,
-  "openPnl": 275.9,
+  "openPnl": 278.2,
   "closedPnl": 705.3,
-  "totalPnlNow": 981.2
+  "totalPnlNow": 983.5
  },
  "trades": [
   {
@@ -2082,11 +2082,11 @@ window.ALL_TRACKER = {
    "entry": 0.625,
    "entryFloor": 0.62,
    "currentFloor": 0.83,
-   "currentPrice": 0.905,
-   "high": 0.905,
-   "highDate": "2026-10-09",
-   "maxGain": 44.8,
-   "finalGain": 44.8,
+   "currentPrice": 0.91,
+   "high": 0.91,
+   "highDate": "2026-11-10",
+   "maxGain": 45.6,
+   "finalGain": 45.6,
    "day1ChangePct": -3.1,
    "days": 59,
    "lastDate": "2026-11-10",
@@ -2094,7 +2094,7 @@ window.ALL_TRACKER = {
    "ipoYear": 2026,
    "sector": "Consumer",
    "isGoldenCombo": false,
-   "slTrail": 0.769
+   "slTrail": 0.773
   },
   {
    "id": "ISF_2026-07-29_ADDON",
@@ -2104,11 +2104,11 @@ window.ALL_TRACKER = {
    "entry": 0.63,
    "entryFloor": 0.61,
    "currentFloor": 0.83,
-   "currentPrice": 0.905,
-   "high": 0.905,
-   "highDate": "2026-10-09",
-   "maxGain": 43.7,
-   "finalGain": 43.7,
+   "currentPrice": 0.91,
+   "high": 0.91,
+   "highDate": "2026-11-10",
+   "maxGain": 44.4,
+   "finalGain": 44.4,
    "day1ChangePct": 3.28,
    "days": 66,
    "lastDate": "2026-11-10",
@@ -2116,7 +2116,7 @@ window.ALL_TRACKER = {
    "ipoYear": 2026,
    "sector": "Consumer",
    "isGoldenCombo": false,
-   "slTrail": 0.769
+   "slTrail": 0.773
   },
   {
    "id": "ISF_2026-07-28_ADDON",
@@ -2126,11 +2126,11 @@ window.ALL_TRACKER = {
    "entry": 0.61,
    "entryFloor": 0.61,
    "currentFloor": 0.83,
-   "currentPrice": 0.905,
-   "high": 0.905,
-   "highDate": "2026-10-09",
-   "maxGain": 48.4,
-   "finalGain": 48.4,
+   "currentPrice": 0.91,
+   "high": 0.91,
+   "highDate": "2026-11-10",
+   "maxGain": 49.2,
+   "finalGain": 49.2,
    "day1ChangePct": -3.17,
    "days": 67,
    "lastDate": "2026-11-10",
@@ -2138,7 +2138,7 @@ window.ALL_TRACKER = {
    "ipoYear": 2026,
    "sector": "Consumer",
    "isGoldenCombo": false,
-   "slTrail": 0.769
+   "slTrail": 0.773
   },
   {
    "name": "KEEMING",
