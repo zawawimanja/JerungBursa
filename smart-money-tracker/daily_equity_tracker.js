@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-11-10T03:59:29.898Z",
+ "generatedAt": "2026-11-10T04:04:17.765Z",
  "totalDays": 105,
  "startDate": "2026-06-02",
  "endDate": "2026-11-10",
@@ -315682,17 +315682,17 @@ window.DAILY_EQUITY_TRACKER = {
    "totalSignals": 483,
    "openCount": 24,
    "closedCount": 459,
-   "openPnl": 333.3,
+   "openPnl": 333.4,
    "closedPnl": 3949.9,
-   "totalPnl": 4283.2,
-   "frPnl": 368.1,
+   "totalPnl": 4283.3,
+   "frPnl": 370,
    "addOnPnl": 601.5,
-   "htPnl": 3313.6,
-   "dailyPnlDelta": 98.7,
+   "htPnl": 3311.8,
+   "dailyPnlDelta": 98.8,
    "winRate": 54,
    "avgGain": 8.9,
    "peakGainer": {
-    "gain": 139.4,
+    "gain": 141.3,
     "name": "KEEMING"
    },
    "trades": [
@@ -315713,10 +315713,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-06-03",
      "trackerType": "FR",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.61,
-     "gainOnDay": 139.4,
-     "dayChangePct": -0.38,
-     "pnlDeltaToday": -1
+     "priceOnDay": 2.63,
+     "gainOnDay": 141.3,
+     "dayChangePct": 0.38,
+     "pnlDeltaToday": 0.9
     },
     {
      "id": "FR:WESTRVR_2026-10-27_🔥 NEW",
@@ -316604,10 +316604,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-11-06",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 4.03,
-     "gainOnDay": -1.9,
-     "dayChangePct": -1.95,
-     "pnlDeltaToday": -1.9
+     "priceOnDay": 4.02,
+     "gainOnDay": -2.2,
+     "dayChangePct": -2.19,
+     "pnlDeltaToday": -2.2
     },
     {
      "id": "HT:SUNVIEW_2026-11-05_ADDON",
@@ -316615,10 +316615,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-11-05",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 0.43,
-     "gainOnDay": 3.6,
-     "dayChangePct": 2.38,
-     "pnlDeltaToday": 2.4
+     "priceOnDay": 0.425,
+     "gainOnDay": 2.4,
+     "dayChangePct": 1.19,
+     "pnlDeltaToday": 1.2
     },
     {
      "id": "HT:LGMS_2026-11-04_NEW",
@@ -316681,10 +316681,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-30",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 3.8,
-     "gainOnDay": -2.3,
-     "dayChangePct": -0.52,
-     "pnlDeltaToday": -0.5
+     "priceOnDay": 3.79,
+     "gainOnDay": -2.6,
+     "dayChangePct": -0.79,
+     "pnlDeltaToday": -0.8
     },
     {
      "id": "HT:GREATEC_2026-10-30_ADDON",
