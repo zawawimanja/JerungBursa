@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-11-10T07:33:59.877Z",
+ "generatedAt": "2026-11-10T07:38:57.781Z",
  "totalDays": 105,
  "startDate": "2026-06-02",
  "endDate": "2026-11-10",
@@ -315682,13 +315682,13 @@ window.DAILY_EQUITY_TRACKER = {
    "totalSignals": 484,
    "openCount": 26,
    "closedCount": 458,
-   "openPnl": 325.1,
+   "openPnl": 323.5,
    "closedPnl": 3954.2,
-   "totalPnl": 4279.3,
+   "totalPnl": 4277.7,
    "frPnl": 364.4,
    "addOnPnl": 599.1,
-   "htPnl": 3315.8,
-   "dailyPnlDelta": 94.8,
+   "htPnl": 3314.2,
+   "dailyPnlDelta": 93.2,
    "winRate": 54,
    "avgGain": 8.8,
    "peakGainer": {
@@ -316604,9 +316604,9 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-11-10",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 4.07,
+     "priceOnDay": 4.06,
      "gainOnDay": 0,
-     "dayChangePct": -0.97,
+     "dayChangePct": -1.22,
      "pnlDeltaToday": 0
     },
     {
@@ -316615,10 +316615,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-11-06",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 4.07,
-     "gainOnDay": -1,
-     "dayChangePct": -0.97,
-     "pnlDeltaToday": -1
+     "priceOnDay": 4.06,
+     "gainOnDay": -1.2,
+     "dayChangePct": -1.22,
+     "pnlDeltaToday": -1.2
     },
     {
      "id": "HT:SUNVIEW_2026-11-05_ADDON",
@@ -316659,10 +316659,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-11-03",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.84,
-     "gainOnDay": -1,
-     "dayChangePct": -3.4,
-     "pnlDeltaToday": -3.4
+     "priceOnDay": 2.82,
+     "gainOnDay": -1.7,
+     "dayChangePct": -4.08,
+     "pnlDeltaToday": -4.1
     },
     {
      "id": "HT:CLOUDPT_2026-11-03_NEW",
@@ -316736,10 +316736,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-26",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.84,
-     "gainOnDay": 0.7,
-     "dayChangePct": -3.4,
-     "pnlDeltaToday": -3.6
+     "priceOnDay": 2.82,
+     "gainOnDay": 0,
+     "dayChangePct": -4.08,
+     "pnlDeltaToday": -4.3
     },
     {
      "id": "HT:RPLANET_2026-10-26_NEW",
