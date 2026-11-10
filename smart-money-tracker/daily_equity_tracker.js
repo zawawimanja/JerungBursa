@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-11-10T02:58:30.997Z",
+ "generatedAt": "2026-11-10T03:03:26.558Z",
  "totalDays": 105,
  "startDate": "2026-06-02",
  "endDate": "2026-11-10",
@@ -315682,13 +315682,13 @@ window.DAILY_EQUITY_TRACKER = {
    "totalSignals": 483,
    "openCount": 25,
    "closedCount": 458,
-   "openPnl": 349.9,
+   "openPnl": 349,
    "closedPnl": 3954.2,
-   "totalPnl": 4304.1,
+   "totalPnl": 4303.2,
    "frPnl": 370,
    "addOnPnl": 611.9,
-   "htPnl": 3322.2,
-   "dailyPnlDelta": 119.6,
+   "htPnl": 3321.3,
+   "dailyPnlDelta": 118.7,
    "winRate": 55,
    "avgGain": 8.9,
    "peakGainer": {
@@ -316604,10 +316604,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-11-06",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 4.06,
-     "gainOnDay": -1.2,
-     "dayChangePct": -1.22,
-     "pnlDeltaToday": -1.2
+     "priceOnDay": 4.03,
+     "gainOnDay": -1.9,
+     "dayChangePct": -1.95,
+     "pnlDeltaToday": -1.9
     },
     {
      "id": "HT:SUNVIEW_2026-11-05_ADDON",
@@ -316670,10 +316670,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-11-02",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 2.94,
-     "gainOnDay": -2.3,
-     "dayChangePct": -2,
-     "pnlDeltaToday": -2
+     "priceOnDay": 2.95,
+     "gainOnDay": -2,
+     "dayChangePct": -1.67,
+     "pnlDeltaToday": -1.7
     },
     {
      "id": "HT:MNHLDG_2026-10-30_ADDON",
@@ -316681,10 +316681,10 @@ window.DAILY_EQUITY_TRACKER = {
      "entryDate": "2026-10-30",
      "trackerType": "HT",
      "statusOnDay": "OPEN",
-     "priceOnDay": 3.84,
-     "gainOnDay": -1.3,
-     "dayChangePct": 0.52,
-     "pnlDeltaToday": 0.5
+     "priceOnDay": 3.82,
+     "gainOnDay": -1.8,
+     "dayChangePct": 0,
+     "pnlDeltaToday": 0
     },
     {
      "id": "HT:GREATEC_2026-10-30_ADDON",
@@ -318828,7 +318828,7 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "OPEN",
      "priceOnDay": 1.85,
      "gainOnDay": 24.2,
-     "dayChangePct": 0,
+     "dayChangePct": -2.11,
      "pnlDeltaToday": 0
     },
     {
@@ -318861,7 +318861,7 @@ window.DAILY_EQUITY_TRACKER = {
      "statusOnDay": "OPEN",
      "priceOnDay": 1.85,
      "gainOnDay": 23.3,
-     "dayChangePct": -1.84,
+     "dayChangePct": -2.11,
      "pnlDeltaToday": 0
     },
     {
