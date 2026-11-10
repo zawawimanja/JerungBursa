@@ -1,5 +1,24 @@
 [
   {
+    "id": "klse-SIME-10-Nov-2026-employees-provident-fund",
+    "stockId": "sime",
+    "stockName": "SIME DARBY BERHAD",
+    "symbol": "SIME",
+    "code": "SIME",
+    "market": "Main / ACE Market",
+    "sector": "General Bursa Equities",
+    "institution": "EMPLOYEES PROVIDENT FUND BOARD (KWSP)",
+    "institutionCategory": "GLIC",
+    "action": "Acquired",
+    "sharesChanged": null,
+    "totalHolding": null,
+    "percentage": null,
+    "filingDate": "10-Nov-2026",
+    "signal": "🔥 Heavy Accumulation",
+    "announcementUrl": "https://www.klsescreener.com/v2/announcements/view/11699405",
+    "insight": "Pemfailan rasmi Seksyen 138 Akta Syarikat 2016 oleh EMPLOYEES PROVIDENT FUND BOARD (KWSP)."
+  },
+  {
     "id": "klse-SDG-10-Nov-2026-employees-provident-fund",
     "stockId": "sdg",
     "stockName": "SD GUTHRIE BERHAD",
