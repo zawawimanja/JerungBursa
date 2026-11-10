@@ -1,17 +1,17 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-10T07:38:54.572Z",
+  "generatedAt": "2026-11-10T07:44:07.487Z",
   "dataDays": 109,
-  "totalTracked": 402,
-  "openCount": 20,
+  "totalTracked": 403,
+  "openCount": 21,
   "closedCount": 382,
   "closedWins": 208,
   "closedWinRate": 54,
   "closedAvgGain": 8.5,
-  "openPnl": 65.3,
+  "openPnl": 63.4,
   "closedPnl": 3248.9,
-  "totalPnlNow": 3314.2
+  "totalPnlNow": 3312.3
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -791,6 +791,29 @@ window.HOT_THEME_TRACKER = {
  "themeTrend": "RISING",
  "trades": [
   {
+   "id": "SUNVIEW_2026-11-10_ADDON",
+   "name": "SUNVIEW",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-11-10",
+   "entry": 0.42,
+   "entryFloor": 0.405,
+   "currentFloor": 0.405,
+   "currentPrice": 0.42,
+   "high": 0.42,
+   "highDate": "2026-11-10",
+   "maxGain": 0,
+   "finalGain": 0,
+   "day1ChangePct": 0,
+   "days": 1,
+   "lastDate": "2026-11-10",
+   "status": "OPEN",
+   "themes": [
+    "Solar/RE"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false
+  },
+  {
    "id": "SLVEST_2026-11-10_ADDON",
    "name": "SLVEST",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -845,11 +868,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 0.415,
    "entryFloor": 0.405,
    "currentFloor": 0.405,
-   "currentPrice": 0.425,
-   "high": 0.425,
-   "highDate": "2026-11-10",
-   "maxGain": 2.4,
-   "finalGain": 2.4,
+   "currentPrice": 0.42,
+   "high": 0.42,
+   "highDate": "2026-11-06",
+   "maxGain": 1.2,
+   "finalGain": 1.2,
    "day1ChangePct": 1.22,
    "days": 3,
    "lastDate": "2026-11-10",
@@ -991,11 +1014,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 3.89,
    "entryFloor": 3.66,
    "currentFloor": 3.7,
-   "currentPrice": 3.72,
+   "currentPrice": 3.73,
    "high": 3.89,
    "highDate": "2026-10-30",
    "maxGain": 0,
-   "finalGain": -4.4,
+   "finalGain": -4.1,
    "day1ChangePct": -1.52,
    "days": 6,
    "lastDate": "2026-11-10",
@@ -1041,11 +1064,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 1.01,
    "entryFloor": 0.99,
    "currentFloor": 0.94,
-   "currentPrice": 0.975,
+   "currentPrice": 0.965,
    "high": 1.01,
    "highDate": "2026-10-28",
    "maxGain": 0,
-   "finalGain": -3.5,
+   "finalGain": -4.5,
    "day1ChangePct": 0,
    "days": 9,
    "lastDate": "2026-11-10",
@@ -11222,7 +11245,7 @@ window.HOT_THEME_TRACKER = {
 };
 window.HOT_THEME_NEW_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-10T07:38:54.573Z",
+  "generatedAt": "2026-11-10T07:44:07.488Z",
   "dataDays": 109,
   "totalTracked": 54,
   "openCount": 5,
@@ -12634,7 +12657,7 @@ window.HOT_THEME_NEW_TRACKER = {
 };
 window.HOT_THEME_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-10T07:38:54.575Z",
+  "generatedAt": "2026-11-10T07:44:07.492Z",
   "dataDays": 109,
   "totalTracked": 175,
   "openCount": 5,
@@ -12642,9 +12665,9 @@ window.HOT_THEME_ADDON_TRACKER = {
   "closedWins": 112,
   "closedWinRate": 66,
   "closedAvgGain": 13.8,
-  "openPnl": 7.2,
+  "openPnl": 6,
   "closedPnl": 2339.4,
-  "totalPnlNow": 2346.6
+  "totalPnlNow": 2345.4
  },
  "trades": [
   {
@@ -17172,11 +17195,11 @@ window.HOT_THEME_ADDON_TRACKER = {
    "entry": 0.415,
    "entryFloor": 0.405,
    "currentFloor": 0.405,
-   "currentPrice": 0.425,
-   "high": 0.425,
-   "highDate": "2026-11-10",
-   "maxGain": 2.4,
-   "finalGain": 2.4,
+   "currentPrice": 0.42,
+   "high": 0.42,
+   "highDate": "2026-11-06",
+   "maxGain": 1.2,
+   "finalGain": 1.2,
    "day1ChangePct": 1.22,
    "days": 3,
    "lastDate": "2026-11-10",
@@ -17192,17 +17215,17 @@ window.HOT_THEME_ADDON_TRACKER = {
 };
 window.HOT_THEME_FLOOR_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-10T07:38:54.576Z",
+  "generatedAt": "2026-11-10T07:44:07.493Z",
   "dataDays": 109,
-  "totalTracked": 173,
-  "openCount": 10,
+  "totalTracked": 174,
+  "openCount": 11,
   "closedCount": 163,
   "closedWins": 76,
   "closedWinRate": 47,
   "closedAvgGain": 3.1,
-  "openPnl": 65.2,
+  "openPnl": 64.5,
   "closedPnl": 498.6,
-  "totalPnlNow": 563.8
+  "totalPnlNow": 563.1
  },
  "trades": [
   {
@@ -21562,11 +21585,11 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "entry": 1.01,
    "entryFloor": 0.99,
    "currentFloor": 0.94,
-   "currentPrice": 0.975,
+   "currentPrice": 0.965,
    "high": 1.01,
    "highDate": "2026-10-28",
    "maxGain": 0,
-   "finalGain": -3.5,
+   "finalGain": -4.5,
    "day1ChangePct": 0,
    "days": 9,
    "lastDate": "2026-11-10",
@@ -21586,11 +21609,11 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "entry": 3.89,
    "entryFloor": 3.66,
    "currentFloor": 3.7,
-   "currentPrice": 3.72,
+   "currentPrice": 3.73,
    "high": 3.89,
    "highDate": "2026-10-30",
    "maxGain": 0,
-   "finalGain": -4.4,
+   "finalGain": -4.1,
    "day1ChangePct": -1.52,
    "days": 6,
    "lastDate": "2026-11-10",
@@ -21675,6 +21698,29 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "slTrail": 3.958
   },
   {
+   "id": "SUNVIEW_2026-11-10_ADDON",
+   "name": "SUNVIEW",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-11-10",
+   "entry": 0.42,
+   "entryFloor": 0.405,
+   "currentFloor": 0.405,
+   "currentPrice": 0.42,
+   "high": 0.42,
+   "highDate": "2026-11-10",
+   "maxGain": 0,
+   "finalGain": 0,
+   "day1ChangePct": 0,
+   "days": 1,
+   "lastDate": "2026-11-10",
+   "status": "OPEN",
+   "themes": [
+    "Solar/RE"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false
+  },
+  {
    "id": "SLVEST_2026-11-10_ADDON",
    "name": "SLVEST",
    "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
@@ -21701,19 +21747,42 @@ window.HOT_THEME_FLOOR_TRACKER = {
 };
 window.HOT_THEME_ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-10T07:38:54.572Z",
+  "generatedAt": "2026-11-10T07:44:07.487Z",
   "dataDays": 109,
-  "totalTracked": 402,
-  "openCount": 20,
+  "totalTracked": 403,
+  "openCount": 21,
   "closedCount": 382,
   "closedWins": 208,
   "closedWinRate": 54,
   "closedAvgGain": 8.5,
-  "openPnl": 65.3,
+  "openPnl": 63.4,
   "closedPnl": 3248.9,
-  "totalPnlNow": 3314.2
+  "totalPnlNow": 3312.3
  },
  "trades": [
+  {
+   "id": "SUNVIEW_2026-11-10_ADDON",
+   "name": "SUNVIEW",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-11-10",
+   "entry": 0.42,
+   "entryFloor": 0.405,
+   "currentFloor": 0.405,
+   "currentPrice": 0.42,
+   "high": 0.42,
+   "highDate": "2026-11-10",
+   "maxGain": 0,
+   "finalGain": 0,
+   "day1ChangePct": 0,
+   "days": 1,
+   "lastDate": "2026-11-10",
+   "status": "OPEN",
+   "themes": [
+    "Solar/RE"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false
+  },
   {
    "id": "SLVEST_2026-11-10_ADDON",
    "name": "SLVEST",
@@ -21769,11 +21838,11 @@ window.HOT_THEME_ALL_TRACKER = {
    "entry": 0.415,
    "entryFloor": 0.405,
    "currentFloor": 0.405,
-   "currentPrice": 0.425,
-   "high": 0.425,
-   "highDate": "2026-11-10",
-   "maxGain": 2.4,
-   "finalGain": 2.4,
+   "currentPrice": 0.42,
+   "high": 0.42,
+   "highDate": "2026-11-06",
+   "maxGain": 1.2,
+   "finalGain": 1.2,
    "day1ChangePct": 1.22,
    "days": 3,
    "lastDate": "2026-11-10",
@@ -21915,11 +21984,11 @@ window.HOT_THEME_ALL_TRACKER = {
    "entry": 3.89,
    "entryFloor": 3.66,
    "currentFloor": 3.7,
-   "currentPrice": 3.72,
+   "currentPrice": 3.73,
    "high": 3.89,
    "highDate": "2026-10-30",
    "maxGain": 0,
-   "finalGain": -4.4,
+   "finalGain": -4.1,
    "day1ChangePct": -1.52,
    "days": 6,
    "lastDate": "2026-11-10",
@@ -21965,11 +22034,11 @@ window.HOT_THEME_ALL_TRACKER = {
    "entry": 1.01,
    "entryFloor": 0.99,
    "currentFloor": 0.94,
-   "currentPrice": 0.975,
+   "currentPrice": 0.965,
    "high": 1.01,
    "highDate": "2026-10-28",
    "maxGain": 0,
-   "finalGain": -3.5,
+   "finalGain": -4.5,
    "day1ChangePct": 0,
    "days": 9,
    "lastDate": "2026-11-10",
