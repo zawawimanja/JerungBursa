@@ -3,6 +3,25 @@
 
 window.jerungData = [
   {
+    "id": "klse-IOI-13-Nov-2026-employees-provident-fund",
+    "stockId": "ioi",
+    "stockName": "IOI CORPORATION BERHAD",
+    "symbol": "IOI",
+    "code": "IOI",
+    "market": "Main / ACE Market",
+    "sector": "General Bursa Equities",
+    "institution": "EMPLOYEES PROVIDENT FUND BOARD (KWSP)",
+    "institutionCategory": "GLIC",
+    "action": "Acquired",
+    "sharesChanged": null,
+    "totalHolding": null,
+    "percentage": null,
+    "filingDate": "13-Nov-2026",
+    "signal": "🔥 Heavy Accumulation",
+    "announcementUrl": "https://www.klsescreener.com/v2/announcements/view/11701479",
+    "insight": "Pemfailan rasmi Seksyen 138 Akta Syarikat 2016 oleh EMPLOYEES PROVIDENT FUND BOARD (KWSP)."
+  },
+  {
     "id": "klse-GAMUDA-12-Nov-2026-employees-provident-fund",
     "stockId": "gamuda",
     "stockName": "GAMUDA BERHAD",
