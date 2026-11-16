@@ -1,6 +1,6 @@
 // AUTO-GENERATED oleh generate_daily_equity_tracker.js — jangan edit manual
 window.DAILY_EQUITY_TRACKER = {
- "generatedAt": "2026-11-16T17:30:29.181Z",
+ "generatedAt": "2026-11-16T20:15:09.805Z",
  "totalDays": 110,
  "startDate": "2026-06-02",
  "endDate": "2026-11-17",
