@@ -1,10 +1,10 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-17T08:53:52.980Z",
-  "dataDays": 114,
-  "totalTracked": 404,
-  "openCount": 11,
+  "generatedAt": "2026-11-17T18:17:24.424Z",
+  "dataDays": 115,
+  "totalTracked": 405,
+  "openCount": 12,
   "closedCount": 393,
   "closedWins": 209,
   "closedWinRate": 53,
@@ -15,12 +15,12 @@ window.HOT_THEME_TRACKER = {
  },
  "backtest": {
   "dataStart": "2026-05-25",
-  "dataEnd": "2026-11-17",
-  "dataDays": 114,
+  "dataEnd": "2026-11-18",
+  "dataDays": 115,
   "signals": 49,
-  "winRate": 57,
-  "avgGain": 6.5,
-  "totalPnl": 317.3,
+  "winRate": 59,
+  "avgGain": 6.6,
+  "totalPnl": 323.8,
   "worstLoss": -16
  },
  "themeStrength": [
@@ -821,10 +821,40 @@ window.HOT_THEME_TRACKER = {
    "themeCount": 77,
    "totalCount": 317,
    "ma5": 32.2
+  },
+  {
+   "date": "2026-11-18",
+   "themePct": 30.3,
+   "themeCount": 77,
+   "totalCount": 317,
+   "ma5": 31
   }
  ],
  "themeTrend": "FLAT/FALLING",
  "trades": [
+  {
+   "id": "SUNVIEW_2026-11-18_ADDON",
+   "name": "SUNVIEW",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-11-18",
+   "entry": 0.425,
+   "entryFloor": 0.405,
+   "currentFloor": 0.405,
+   "currentPrice": 0.425,
+   "high": 0.425,
+   "highDate": "2026-11-18",
+   "maxGain": 0,
+   "finalGain": 0,
+   "day1ChangePct": 0,
+   "days": 1,
+   "lastDate": "2026-11-18",
+   "status": "OPEN",
+   "themes": [
+    "Solar/RE"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false
+  },
   {
    "id": "HI_2026-11-17_NEW",
    "name": "HI",
@@ -832,22 +862,23 @@ window.HOT_THEME_TRACKER = {
    "entryDate": "2026-11-17",
    "entry": 1.76,
    "entryFloor": 1.73,
-   "currentFloor": 1.73,
+   "currentFloor": 1.74,
    "currentPrice": 1.76,
    "high": 1.76,
    "highDate": "2026-11-17",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": 0,
-   "days": 1,
-   "lastDate": "2026-11-17",
+   "days": 2,
+   "lastDate": "2026-11-18",
    "status": "OPEN",
    "themes": [
     "Semiconductor",
     "Solar/RE"
    ],
    "confluence": 2,
-   "isGoldenCombo": false
+   "isGoldenCombo": false,
+   "slTrail": 1.688
   },
   {
    "id": "SUNVIEW_2026-11-13_ADDON",
@@ -9654,8 +9685,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 1.2,
    "day1ChangePct": 0,
-   "days": 100,
-   "lastDate": "2026-11-17",
+   "days": 101,
+   "lastDate": "2026-11-18",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -9782,8 +9813,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 1.2,
    "day1ChangePct": 0,
-   "days": 101,
-   "lastDate": "2026-11-17",
+   "days": 102,
+   "lastDate": "2026-11-18",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -10014,8 +10045,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 1.2,
    "day1ChangePct": 0.59,
-   "days": 103,
-   "lastDate": "2026-11-17",
+   "days": 104,
+   "lastDate": "2026-11-18",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -10350,8 +10381,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 1.2,
    "day1ChangePct": 0.59,
-   "days": 106,
-   "lastDate": "2026-11-17",
+   "days": 107,
+   "lastDate": "2026-11-18",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -10871,8 +10902,8 @@ window.HOT_THEME_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 1.2,
    "day1ChangePct": -0.58,
-   "days": 109,
-   "lastDate": "2026-11-17",
+   "days": 110,
+   "lastDate": "2026-11-18",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -11328,8 +11359,8 @@ window.HOT_THEME_TRACKER = {
 };
 window.HOT_THEME_NEW_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-17T08:53:52.980Z",
-  "dataDays": 114,
+  "generatedAt": "2026-11-17T18:17:24.424Z",
+  "dataDays": 115,
   "totalTracked": 55,
   "openCount": 4,
   "closedCount": 51,
@@ -11642,8 +11673,8 @@ window.HOT_THEME_NEW_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 1.2,
    "day1ChangePct": -0.58,
-   "days": 109,
-   "lastDate": "2026-11-17",
+   "days": 110,
+   "lastDate": "2026-11-18",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -12747,29 +12778,30 @@ window.HOT_THEME_NEW_TRACKER = {
    "entryDate": "2026-11-17",
    "entry": 1.76,
    "entryFloor": 1.73,
-   "currentFloor": 1.73,
+   "currentFloor": 1.74,
    "currentPrice": 1.76,
    "high": 1.76,
    "highDate": "2026-11-17",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": 0,
-   "days": 1,
-   "lastDate": "2026-11-17",
+   "days": 2,
+   "lastDate": "2026-11-18",
    "status": "OPEN",
    "themes": [
     "Semiconductor",
     "Solar/RE"
    ],
    "confluence": 2,
-   "isGoldenCombo": false
+   "isGoldenCombo": false,
+   "slTrail": 1.688
   }
  ]
 };
 window.HOT_THEME_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-17T08:53:52.980Z",
-  "dataDays": 114,
+  "generatedAt": "2026-11-17T18:17:24.424Z",
+  "dataDays": 115,
   "totalTracked": 176,
   "openCount": 4,
   "closedCount": 172,
@@ -12952,8 +12984,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 1.2,
    "day1ChangePct": 0.59,
-   "days": 106,
-   "lastDate": "2026-11-17",
+   "days": 107,
+   "lastDate": "2026-11-18",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -13158,8 +13190,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 1.2,
    "day1ChangePct": 0.59,
-   "days": 103,
-   "lastDate": "2026-11-17",
+   "days": 104,
+   "lastDate": "2026-11-18",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -13286,8 +13318,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 1.2,
    "day1ChangePct": 0,
-   "days": 101,
-   "lastDate": "2026-11-17",
+   "days": 102,
+   "lastDate": "2026-11-18",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -13362,8 +13394,8 @@ window.HOT_THEME_ADDON_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 1.2,
    "day1ChangePct": 0,
-   "days": 100,
-   "lastDate": "2026-11-17",
+   "days": 101,
+   "lastDate": "2026-11-18",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -17354,10 +17386,10 @@ window.HOT_THEME_ADDON_TRACKER = {
 };
 window.HOT_THEME_FLOOR_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-17T08:53:52.980Z",
-  "dataDays": 114,
-  "totalTracked": 173,
-  "openCount": 3,
+  "generatedAt": "2026-11-17T18:17:24.424Z",
+  "dataDays": 115,
+  "totalTracked": 174,
+  "openCount": 4,
   "closedCount": 170,
   "closedWins": 76,
   "closedWinRate": 45,
@@ -21873,15 +21905,38 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "slTrail": 3.928,
    "exitDate": "2026-11-16",
    "exitPrice": 3.928
+  },
+  {
+   "id": "SUNVIEW_2026-11-18_ADDON",
+   "name": "SUNVIEW",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-11-18",
+   "entry": 0.425,
+   "entryFloor": 0.405,
+   "currentFloor": 0.405,
+   "currentPrice": 0.425,
+   "high": 0.425,
+   "highDate": "2026-11-18",
+   "maxGain": 0,
+   "finalGain": 0,
+   "day1ChangePct": 0,
+   "days": 1,
+   "lastDate": "2026-11-18",
+   "status": "OPEN",
+   "themes": [
+    "Solar/RE"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false
   }
  ]
 };
 window.HOT_THEME_ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-17T08:53:52.980Z",
-  "dataDays": 114,
-  "totalTracked": 404,
-  "openCount": 11,
+  "generatedAt": "2026-11-17T18:17:24.424Z",
+  "dataDays": 115,
+  "totalTracked": 405,
+  "openCount": 12,
   "closedCount": 393,
   "closedWins": 209,
   "closedWinRate": 53,
@@ -21892,28 +21947,52 @@ window.HOT_THEME_ALL_TRACKER = {
  },
  "trades": [
   {
+   "id": "SUNVIEW_2026-11-18_ADDON",
+   "name": "SUNVIEW",
+   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
+   "entryDate": "2026-11-18",
+   "entry": 0.425,
+   "entryFloor": 0.405,
+   "currentFloor": 0.405,
+   "currentPrice": 0.425,
+   "high": 0.425,
+   "highDate": "2026-11-18",
+   "maxGain": 0,
+   "finalGain": 0,
+   "day1ChangePct": 0,
+   "days": 1,
+   "lastDate": "2026-11-18",
+   "status": "OPEN",
+   "themes": [
+    "Solar/RE"
+   ],
+   "confluence": 3,
+   "isGoldenCombo": false
+  },
+  {
    "id": "HI_2026-11-17_NEW",
    "name": "HI",
    "entryType": "🔥 NEW",
    "entryDate": "2026-11-17",
    "entry": 1.76,
    "entryFloor": 1.73,
-   "currentFloor": 1.73,
+   "currentFloor": 1.74,
    "currentPrice": 1.76,
    "high": 1.76,
    "highDate": "2026-11-17",
    "maxGain": 0,
    "finalGain": 0,
    "day1ChangePct": 0,
-   "days": 1,
-   "lastDate": "2026-11-17",
+   "days": 2,
+   "lastDate": "2026-11-18",
    "status": "OPEN",
    "themes": [
     "Semiconductor",
     "Solar/RE"
    ],
    "confluence": 2,
-   "isGoldenCombo": false
+   "isGoldenCombo": false,
+   "slTrail": 1.688
   },
   {
    "id": "SUNVIEW_2026-11-13_ADDON",
@@ -30720,8 +30799,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 1.2,
    "day1ChangePct": 0,
-   "days": 100,
-   "lastDate": "2026-11-17",
+   "days": 101,
+   "lastDate": "2026-11-18",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -30848,8 +30927,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 1.2,
    "day1ChangePct": 0,
-   "days": 101,
-   "lastDate": "2026-11-17",
+   "days": 102,
+   "lastDate": "2026-11-18",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -31080,8 +31159,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 1.2,
    "day1ChangePct": 0.59,
-   "days": 103,
-   "lastDate": "2026-11-17",
+   "days": 104,
+   "lastDate": "2026-11-18",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -31416,8 +31495,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 1.2,
    "day1ChangePct": 0.59,
-   "days": 106,
-   "lastDate": "2026-11-17",
+   "days": 107,
+   "lastDate": "2026-11-18",
    "status": "OPEN",
    "themes": [
     "Semiconductor"
@@ -31937,8 +32016,8 @@ window.HOT_THEME_ALL_TRACKER = {
    "maxGain": 1.8,
    "finalGain": 1.2,
    "day1ChangePct": -0.58,
-   "days": 109,
-   "lastDate": "2026-11-17",
+   "days": 110,
+   "lastDate": "2026-11-18",
    "status": "OPEN",
    "themes": [
     "Semiconductor"

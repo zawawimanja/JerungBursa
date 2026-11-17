@@ -1,22 +1,22 @@
 // AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual
 window.FRESH_RIDER_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-17T08:53:50.434Z",
-  "dataDays": 110,
+  "generatedAt": "2026-11-17T18:17:21.833Z",
+  "dataDays": 111,
   "totalTracked": 26,
   "openCount": 1,
   "closedCount": 25,
   "closedWins": 13,
   "closedWinRate": 52,
   "closedAvgGain": 13.5,
-  "openPnl": -1,
+  "openPnl": 1,
   "closedPnl": 337.9,
-  "totalPnlNow": 336.9
+  "totalPnlNow": 338.9
  },
  "backtest": {
   "dataStart": "2026-06-02",
-  "dataEnd": "2026-11-17",
-  "dataDays": 110,
+  "dataEnd": "2026-11-18",
+  "dataDays": 111,
   "signals": 27,
   "winRate": 59,
   "avgGain": 13.8,
@@ -31,14 +31,14 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 0.5,
    "entryFloor": 0.495,
    "currentFloor": 0.495,
-   "currentPrice": 0.495,
+   "currentPrice": 0.505,
    "high": 0.51,
    "highDate": "2026-10-30",
    "maxGain": 2,
-   "finalGain": -1,
+   "finalGain": 1,
    "day1ChangePct": 1.01,
-   "days": 29,
-   "lastDate": "2026-11-17",
+   "days": 30,
+   "lastDate": "2026-11-18",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Consumer",
@@ -624,8 +624,8 @@ window.FRESH_RIDER_TRACKER = {
 };
 window.ADD_ON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-17T08:53:50.434Z",
-  "dataDays": 110,
+  "generatedAt": "2026-11-17T18:17:21.834Z",
+  "dataDays": 111,
   "totalTracked": 27,
   "openCount": 0,
   "closedCount": 27,
@@ -638,8 +638,8 @@ window.ADD_ON_TRACKER = {
  },
  "backtest": {
   "dataStart": "2026-06-02",
-  "dataEnd": "2026-11-17",
-  "dataDays": 110,
+  "dataEnd": "2026-11-18",
+  "dataDays": 111,
   "signals": 6,
   "winRate": 83,
   "avgGain": 16.8,
@@ -1302,30 +1302,30 @@ window.ADD_ON_TRACKER = {
 };
 window.FLOOR_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-17T08:53:50.434Z",
-  "dataDays": 110,
+  "generatedAt": "2026-11-17T18:17:21.834Z",
+  "dataDays": 111,
   "totalTracked": 29,
   "openCount": 1,
   "closedCount": 28,
   "closedWins": 15,
   "closedWinRate": 54,
   "closedAvgGain": 7.8,
-  "openPnl": 0,
+  "openPnl": 5.4,
   "closedPnl": 219,
-  "totalPnlNow": 219
+  "totalPnlNow": 224.4
  },
  "backtest": {
   "dataStart": "2026-06-02",
-  "dataEnd": "2026-11-17",
-  "dataDays": 110,
+  "dataEnd": "2026-11-18",
+  "dataDays": 111,
   "signals": 20,
-  "winRate": 55,
-  "avgGain": 6.5,
-  "totalPnl": 129.3,
+  "winRate": 75,
+  "avgGain": 7.5,
+  "totalPnl": 151,
   "worstLoss": -6.5,
-  "grossWin": 153.4,
+  "grossWin": 175.1,
   "grossLoss": 24.1,
-  "profitFactor": 6.37
+  "profitFactor": 7.27
  },
  "trades": [
   {
@@ -1336,19 +1336,19 @@ window.FLOOR_ADDON_TRACKER = {
    "entry": 1.29,
    "entryFloor": 1.24,
    "currentFloor": 1.29,
-   "currentPrice": 1.29,
-   "high": 1.34,
-   "highDate": "2026-11-11",
-   "maxGain": 3.9,
-   "finalGain": 0,
+   "currentPrice": 1.36,
+   "high": 1.36,
+   "highDate": "2026-11-18",
+   "maxGain": 5.4,
+   "finalGain": 5.4,
    "day1ChangePct": 0,
-   "days": 15,
-   "lastDate": "2026-11-17",
+   "days": 16,
+   "lastDate": "2026-11-18",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Transportation",
    "isGoldenCombo": false,
-   "slTrail": 1.203
+   "slTrail": 1.29
   },
   {
    "id": "CBHB_2026-07-09_ADDON",
@@ -2026,17 +2026,17 @@ window.FLOOR_ADDON_TRACKER = {
 };
 window.ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-17T08:53:50.434Z",
-  "dataDays": 110,
+  "generatedAt": "2026-11-17T18:17:21.834Z",
+  "dataDays": 111,
   "totalTracked": 82,
   "openCount": 2,
   "closedCount": 80,
   "closedWins": 44,
   "closedWinRate": 55,
   "closedAvgGain": 11.1,
-  "openPnl": -1,
+  "openPnl": 6.4,
   "closedPnl": 891,
-  "totalPnlNow": 890
+  "totalPnlNow": 897.4
  },
  "trades": [
   {
@@ -2047,19 +2047,19 @@ window.ALL_TRACKER = {
    "entry": 1.29,
    "entryFloor": 1.24,
    "currentFloor": 1.29,
-   "currentPrice": 1.29,
-   "high": 1.34,
-   "highDate": "2026-11-11",
-   "maxGain": 3.9,
-   "finalGain": 0,
+   "currentPrice": 1.36,
+   "high": 1.36,
+   "highDate": "2026-11-18",
+   "maxGain": 5.4,
+   "finalGain": 5.4,
    "day1ChangePct": 0,
-   "days": 15,
-   "lastDate": "2026-11-17",
+   "days": 16,
+   "lastDate": "2026-11-18",
    "status": "OPEN",
    "ipoYear": 2026,
    "sector": "Transportation",
    "isGoldenCombo": false,
-   "slTrail": 1.203
+   "slTrail": 1.29
   },
   {
    "name": "EXSIMHB",
@@ -2068,14 +2068,14 @@ window.ALL_TRACKER = {
    "entry": 0.5,
    "entryFloor": 0.495,
    "currentFloor": 0.495,
-   "currentPrice": 0.495,
+   "currentPrice": 0.505,
    "high": 0.51,
    "highDate": "2026-10-30",
    "maxGain": 2,
-   "finalGain": -1,
+   "finalGain": 1,
    "day1ChangePct": 1.01,
-   "days": 29,
-   "lastDate": "2026-11-17",
+   "days": 30,
+   "lastDate": "2026-11-18",
    "status": "OPEN",
    "ipoYear": 2025,
    "sector": "Consumer",
