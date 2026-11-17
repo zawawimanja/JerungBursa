@@ -1,7 +1,7 @@
 // AUTO-GENERATED oleh generate_fresh_rider_tracker.js — jangan edit manual
 window.FRESH_RIDER_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-16T20:15:06.438Z",
+  "generatedAt": "2026-11-17T08:53:50.434Z",
   "dataDays": 110,
   "totalTracked": 26,
   "openCount": 1,
@@ -9,9 +9,9 @@ window.FRESH_RIDER_TRACKER = {
   "closedWins": 13,
   "closedWinRate": 52,
   "closedAvgGain": 13.5,
-  "openPnl": 2,
+  "openPnl": -1,
   "closedPnl": 337.9,
-  "totalPnlNow": 339.9
+  "totalPnlNow": 336.9
  },
  "backtest": {
   "dataStart": "2026-06-02",
@@ -31,11 +31,11 @@ window.FRESH_RIDER_TRACKER = {
    "entry": 0.5,
    "entryFloor": 0.495,
    "currentFloor": 0.495,
-   "currentPrice": 0.51,
+   "currentPrice": 0.495,
    "high": 0.51,
    "highDate": "2026-10-30",
    "maxGain": 2,
-   "finalGain": 2,
+   "finalGain": -1,
    "day1ChangePct": 1.01,
    "days": 29,
    "lastDate": "2026-11-17",
@@ -624,7 +624,7 @@ window.FRESH_RIDER_TRACKER = {
 };
 window.ADD_ON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-16T20:15:06.438Z",
+  "generatedAt": "2026-11-17T08:53:50.434Z",
   "dataDays": 110,
   "totalTracked": 27,
   "openCount": 0,
@@ -1302,7 +1302,7 @@ window.ADD_ON_TRACKER = {
 };
 window.FLOOR_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-16T20:15:06.438Z",
+  "generatedAt": "2026-11-17T08:53:50.434Z",
   "dataDays": 110,
   "totalTracked": 29,
   "openCount": 1,
@@ -1310,22 +1310,22 @@ window.FLOOR_ADDON_TRACKER = {
   "closedWins": 15,
   "closedWinRate": 54,
   "closedAvgGain": 7.8,
-  "openPnl": 1.6,
+  "openPnl": 0,
   "closedPnl": 219,
-  "totalPnlNow": 220.6
+  "totalPnlNow": 219
  },
  "backtest": {
   "dataStart": "2026-06-02",
   "dataEnd": "2026-11-17",
   "dataDays": 110,
   "signals": 20,
-  "winRate": 75,
-  "avgGain": 6.8,
-  "totalPnl": 135.5,
+  "winRate": 55,
+  "avgGain": 6.5,
+  "totalPnl": 129.3,
   "worstLoss": -6.5,
-  "grossWin": 159.6,
+  "grossWin": 153.4,
   "grossLoss": 24.1,
-  "profitFactor": 6.63
+  "profitFactor": 6.37
  },
  "trades": [
   {
@@ -1336,11 +1336,11 @@ window.FLOOR_ADDON_TRACKER = {
    "entry": 1.29,
    "entryFloor": 1.24,
    "currentFloor": 1.29,
-   "currentPrice": 1.31,
+   "currentPrice": 1.29,
    "high": 1.34,
    "highDate": "2026-11-11",
    "maxGain": 3.9,
-   "finalGain": 1.6,
+   "finalGain": 0,
    "day1ChangePct": 0,
    "days": 15,
    "lastDate": "2026-11-17",
@@ -2026,7 +2026,7 @@ window.FLOOR_ADDON_TRACKER = {
 };
 window.ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-16T20:15:06.438Z",
+  "generatedAt": "2026-11-17T08:53:50.434Z",
   "dataDays": 110,
   "totalTracked": 82,
   "openCount": 2,
@@ -2034,9 +2034,9 @@ window.ALL_TRACKER = {
   "closedWins": 44,
   "closedWinRate": 55,
   "closedAvgGain": 11.1,
-  "openPnl": 3.6,
+  "openPnl": -1,
   "closedPnl": 891,
-  "totalPnlNow": 894.6
+  "totalPnlNow": 890
  },
  "trades": [
   {
@@ -2047,11 +2047,11 @@ window.ALL_TRACKER = {
    "entry": 1.29,
    "entryFloor": 1.24,
    "currentFloor": 1.29,
-   "currentPrice": 1.31,
+   "currentPrice": 1.29,
    "high": 1.34,
    "highDate": "2026-11-11",
    "maxGain": 3.9,
-   "finalGain": 1.6,
+   "finalGain": 0,
    "day1ChangePct": 0,
    "days": 15,
    "lastDate": "2026-11-17",
@@ -2068,11 +2068,11 @@ window.ALL_TRACKER = {
    "entry": 0.5,
    "entryFloor": 0.495,
    "currentFloor": 0.495,
-   "currentPrice": 0.51,
+   "currentPrice": 0.495,
    "high": 0.51,
    "highDate": "2026-10-30",
    "maxGain": 2,
-   "finalGain": 2,
+   "finalGain": -1,
    "day1ChangePct": 1.01,
    "days": 29,
    "lastDate": "2026-11-17",
