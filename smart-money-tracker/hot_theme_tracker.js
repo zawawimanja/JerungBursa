@@ -1,17 +1,17 @@
 // AUTO-GENERATED oleh generate_hot_theme_tracker.js — jangan edit manual
 window.HOT_THEME_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-17T19:04:05.468Z",
+  "generatedAt": "2026-11-18T08:18:31.840Z",
   "dataDays": 115,
-  "totalTracked": 405,
-  "openCount": 12,
+  "totalTracked": 404,
+  "openCount": 11,
   "closedCount": 393,
   "closedWins": 209,
   "closedWinRate": 53,
   "closedAvgGain": 8.1,
-  "openPnl": 81.3,
+  "openPnl": 78.5,
   "closedPnl": 3191.9,
-  "totalPnlNow": 3273.2
+  "totalPnlNow": 3270.4
  },
  "backtest": {
   "dataStart": "2026-05-25",
@@ -19,8 +19,8 @@ window.HOT_THEME_TRACKER = {
   "dataDays": 115,
   "signals": 49,
   "winRate": 59,
-  "avgGain": 6.6,
-  "totalPnl": 323.8,
+  "avgGain": 6.5,
+  "totalPnl": 318,
   "worstLoss": -16
  },
  "themeStrength": [
@@ -824,37 +824,14 @@ window.HOT_THEME_TRACKER = {
   },
   {
    "date": "2026-11-18",
-   "themePct": 30.3,
+   "themePct": 20.5,
    "themeCount": 77,
-   "totalCount": 317,
-   "ma5": 31
+   "totalCount": 315,
+   "ma5": 29
   }
  ],
  "themeTrend": "FLAT/FALLING",
  "trades": [
-  {
-   "id": "SUNVIEW_2026-11-18_ADDON",
-   "name": "SUNVIEW",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
-   "entryDate": "2026-11-18",
-   "entry": 0.425,
-   "entryFloor": 0.405,
-   "currentFloor": 0.405,
-   "currentPrice": 0.425,
-   "high": 0.425,
-   "highDate": "2026-11-18",
-   "maxGain": 0,
-   "finalGain": 0,
-   "day1ChangePct": 0,
-   "days": 1,
-   "lastDate": "2026-11-18",
-   "status": "OPEN",
-   "themes": [
-    "Solar/RE"
-   ],
-   "confluence": 3,
-   "isGoldenCombo": false
-  },
   {
    "id": "HI_2026-11-17_NEW",
    "name": "HI",
@@ -863,11 +840,11 @@ window.HOT_THEME_TRACKER = {
    "entry": 1.76,
    "entryFloor": 1.73,
    "currentFloor": 1.74,
-   "currentPrice": 1.76,
+   "currentPrice": 1.71,
    "high": 1.76,
    "highDate": "2026-11-17",
    "maxGain": 0,
-   "finalGain": 0,
+   "finalGain": -2.8,
    "day1ChangePct": 0,
    "days": 2,
    "lastDate": "2026-11-18",
@@ -11359,7 +11336,7 @@ window.HOT_THEME_TRACKER = {
 };
 window.HOT_THEME_NEW_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-17T19:04:05.468Z",
+  "generatedAt": "2026-11-18T08:18:31.840Z",
   "dataDays": 115,
   "totalTracked": 55,
   "openCount": 4,
@@ -11367,9 +11344,9 @@ window.HOT_THEME_NEW_TRACKER = {
   "closedWins": 21,
   "closedWinRate": 41,
   "closedAvgGain": 7.8,
-  "openPnl": -2.2,
+  "openPnl": -5,
   "closedPnl": 399.2,
-  "totalPnlNow": 397
+  "totalPnlNow": 394.2
  },
  "trades": [
   {
@@ -12779,11 +12756,11 @@ window.HOT_THEME_NEW_TRACKER = {
    "entry": 1.76,
    "entryFloor": 1.73,
    "currentFloor": 1.74,
-   "currentPrice": 1.76,
+   "currentPrice": 1.71,
    "high": 1.76,
    "highDate": "2026-11-17",
    "maxGain": 0,
-   "finalGain": 0,
+   "finalGain": -2.8,
    "day1ChangePct": 0,
    "days": 2,
    "lastDate": "2026-11-18",
@@ -12800,7 +12777,7 @@ window.HOT_THEME_NEW_TRACKER = {
 };
 window.HOT_THEME_ADDON_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-17T19:04:05.469Z",
+  "generatedAt": "2026-11-18T08:18:31.840Z",
   "dataDays": 115,
   "totalTracked": 176,
   "openCount": 4,
@@ -17386,10 +17363,10 @@ window.HOT_THEME_ADDON_TRACKER = {
 };
 window.HOT_THEME_FLOOR_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-17T19:04:05.469Z",
+  "generatedAt": "2026-11-18T08:18:31.840Z",
   "dataDays": 115,
-  "totalTracked": 174,
-  "openCount": 4,
+  "totalTracked": 173,
+  "openCount": 3,
   "closedCount": 170,
   "closedWins": 76,
   "closedWinRate": 45,
@@ -21905,70 +21882,24 @@ window.HOT_THEME_FLOOR_TRACKER = {
    "slTrail": 3.928,
    "exitDate": "2026-11-16",
    "exitPrice": 3.928
-  },
-  {
-   "id": "SUNVIEW_2026-11-18_ADDON",
-   "name": "SUNVIEW",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
-   "entryDate": "2026-11-18",
-   "entry": 0.425,
-   "entryFloor": 0.405,
-   "currentFloor": 0.405,
-   "currentPrice": 0.425,
-   "high": 0.425,
-   "highDate": "2026-11-18",
-   "maxGain": 0,
-   "finalGain": 0,
-   "day1ChangePct": 0,
-   "days": 1,
-   "lastDate": "2026-11-18",
-   "status": "OPEN",
-   "themes": [
-    "Solar/RE"
-   ],
-   "confluence": 3,
-   "isGoldenCombo": false
   }
  ]
 };
 window.HOT_THEME_ALL_TRACKER = {
  "summary": {
-  "generatedAt": "2026-11-17T19:04:05.468Z",
+  "generatedAt": "2026-11-18T08:18:31.840Z",
   "dataDays": 115,
-  "totalTracked": 405,
-  "openCount": 12,
+  "totalTracked": 404,
+  "openCount": 11,
   "closedCount": 393,
   "closedWins": 209,
   "closedWinRate": 53,
   "closedAvgGain": 8.1,
-  "openPnl": 81.3,
+  "openPnl": 78.5,
   "closedPnl": 3191.9,
-  "totalPnlNow": 3273.2
+  "totalPnlNow": 3270.4
  },
  "trades": [
-  {
-   "id": "SUNVIEW_2026-11-18_ADDON",
-   "name": "SUNVIEW",
-   "entryType": "🛡️ ADD-ON (LANTAI RAPAT)",
-   "entryDate": "2026-11-18",
-   "entry": 0.425,
-   "entryFloor": 0.405,
-   "currentFloor": 0.405,
-   "currentPrice": 0.425,
-   "high": 0.425,
-   "highDate": "2026-11-18",
-   "maxGain": 0,
-   "finalGain": 0,
-   "day1ChangePct": 0,
-   "days": 1,
-   "lastDate": "2026-11-18",
-   "status": "OPEN",
-   "themes": [
-    "Solar/RE"
-   ],
-   "confluence": 3,
-   "isGoldenCombo": false
-  },
   {
    "id": "HI_2026-11-17_NEW",
    "name": "HI",
@@ -21977,11 +21908,11 @@ window.HOT_THEME_ALL_TRACKER = {
    "entry": 1.76,
    "entryFloor": 1.73,
    "currentFloor": 1.74,
-   "currentPrice": 1.76,
+   "currentPrice": 1.71,
    "high": 1.76,
    "highDate": "2026-11-17",
    "maxGain": 0,
-   "finalGain": 0,
+   "finalGain": -2.8,
    "day1ChangePct": 0,
    "days": 2,
    "lastDate": "2026-11-18",
