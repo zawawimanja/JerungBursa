@@ -360,5 +360,8 @@
   "HI": "5335.KL",
   "GHS": "0387.KL",
   "IMPACT": "0483.KL",
-  "SKACAP": "0480.KL"
+  "SKACAP": "0480.KL",
+  "EMITS": "0486.KL",
+  "YES": "0485.KL",
+  "IOIREIT": "5359.KL"
 }
